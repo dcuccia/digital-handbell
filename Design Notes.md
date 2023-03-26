@@ -1,7 +1,8 @@
 2023-03-25 Episode 0
 
 - Microprocessor board to "play" wav files
-    - Adafruit QT PY
+    - Adafruit ESP32 S2 QT Py: https://www.adafruit.com/product/5395
+    - Adafruit RP2040 QT PY
         - board with Raspberry Pi RP2040: https://www.adafruit.com/product/4900
         - AirLift breakout: https://www.adafruit.com/product/4201
     - Challenger MKII with WiFi/BLE and accelerometer: https://ilabs.se/product/challenger-rp2040-wifi-ble-mkii-with-chip-antenna-and-16bit-accelerometer/?currency=USD
