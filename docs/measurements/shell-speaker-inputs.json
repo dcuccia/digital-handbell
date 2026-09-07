@@ -1,0 +1,47 @@
+{
+  "recorded_on": "2026-09-07",
+  "units": "mm",
+  "status": "Screening inputs, not fabrication dimensions",
+  "shell": {
+    "source": "Owner-reported approximate dimensions",
+    "listing": "https://www.amazon.com/dp/B01EABRWO6",
+    "inside_diameter_at_lip": 70,
+    "inside_diameter_at_unspecified_taper_station": 40,
+    "taper_station_description": "Halfway down the smaller tapered part",
+    "taper_station_depth_from_lip": null,
+    "bell_body_height": 44,
+    "handle_height": 85,
+    "handle_internal_space_verified": false,
+    "profile_verified": false
+  },
+  "speaker_40mm_candidate": {
+    "owner_candidate_name": "Gikfun EK1794",
+    "dimension_source": "Retail dimension image supplied by owner; image is not redistributed",
+    "frame_diameter_nominal": 40.5,
+    "frame_diameter_tolerance": 0.4,
+    "overall_height_nominal": 18,
+    "overall_height_tolerance": 0.5,
+    "magnet_diameter_nominal": 22,
+    "magnet_diameter_tolerance": 0.5,
+    "rim_axial_dimension_nominal": 2.7,
+    "rim_axial_dimension_tolerance": 0.3,
+    "rim_dimension_is_additional_to_overall_height": false,
+    "basket_profile_and_terminal_envelope_verified": false,
+    "vendor_listing": "https://gikfun.com/products/gikfun-4ohm-40mm-diameter-3w-full-range-audio-speaker-stereo-woofer-loudspeaker-for-arduino-pack-of-2pcs",
+    "vendor_impedance_ohm": 4,
+    "vendor_title_power_w": 3,
+    "vendor_description_input_power_rating_w": 2,
+    "qualified_continuous_power_w": null
+  },
+  "speaker_2inch_comparison": {
+    "owner_part_name": "Gikfun EK1725",
+    "quantity_reported_on_hand": 2,
+    "vendor_listing": "https://gikfun.com/products/gikfun-2-4ohm-3w-full-range-audio-speaker-stereo-woofer-loudspeaker-for-arduino-pack-of-2pcs",
+    "vendor_nominal_diameter_inch": 2,
+    "vendor_height_mm": 30,
+    "vendor_power_rating_w": 3,
+    "vendor_impedance_ohm": 4,
+    "owner_measured_envelope_mm": null,
+    "qualified_continuous_power_w": null
+  }
+}

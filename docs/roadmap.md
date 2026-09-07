@@ -46,6 +46,13 @@ noted in issue text when appropriate. An epic is done when its acceptance
 criteria and linked evidence are complete, not when a proposed plan exists.
 Create focused child issues as implementation details become known.
 
+**2026-09-07 scope update:** the
+[compact power/packaging review](compact-power-and-packaging.md) adds approved
+GPIO19-button/STEMMA removal, boosted mono audio, a printed cartridge/grille
+and early S3-MINI RF exploration. These are next-revision tasks, not changes
+already made to 0.1 CAD. Early E12 work may inform carrier freeze without making
+network connectivity a prerequisite for the first sounding instrument.
+
 <!-- TRACKING:START -->
 **Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
 All twelve epics were initialized as Todo with a Phase field matching their
@@ -90,6 +97,8 @@ speaker, battery, or board diameter.
 - [ ] Measure several shells and make a dated inner-profile drawing with
   tolerances, clapper/handle intrusion, USB-access candidates, and photographs
   or sketches that are licensed for publication.
+- [ ] Refine the captured B01EABRWO6 estimates into depth-indexed IDs; locate
+  the 40 mm station and measure actual speaker/cell/terminal envelopes.
 - [ ] Identify cell envelope/protection/temperature constraints and whether
   playing during charge is required; do not select a charge resistor yet.
 - [ ] Define representative build quantities and class-set assembly/charging
@@ -119,6 +128,8 @@ that a novice can open and inspect.
   nets, symbol pin numbers, packages, footprints, layers, and design rules.
 - [ ] Record all importer repairs and upstream documentation discrepancies;
   define the source-to-derivative block mapping.
+- [ ] Preserve notices and review the selected boost source at import; resolve
+  MiniBoost's approximately 5 V source divider versus 5.2 V prose explicitly.
 
 **Acceptance:** Another contributor can reproduce the import and open native
 files/PDFs without missing libraries. Connectivity differences are explained.
@@ -141,6 +152,8 @@ integrated 5768 before ordering custom boards.
   versioned libraries and original or explicitly licensed sound assets.
 - [ ] Compare candidate drivers at controlled levels and representative cavity
   conditions; record sound, clipping, current, mass, and depth.
+- [ ] Compare on-hand EK1725 and the smaller EK1794 candidate; resolve the
+  latter's 3 W/2 W seller conflict separately from the 3 W electronics target.
 - [ ] Measure strike-to-sound and ready/sleep wake behavior, idle hiss, clicks,
   startup/reset, and USB insertion/removal; evaluate mixer buffering.
 - [ ] Evaluate the baseline power selection and establish cell/charger and
@@ -166,6 +179,11 @@ reference blocks, not by merging breakout diagrams blindly.
 - [ ] Preserve RP2040 core/USB/flash/clock/recovery and the initial GPIO contract.
 - [ ] Remove unused servo/NeoPixel/header branches while retaining shared
   amp switching, pullups, biasing, protection, and decoupling.
+- [ ] Remove STEMMA QT; add a keyed GPIO19-to-GND button harness, retain simple
+  charge/status LEDs, and review compact recovery/test access.
+- [ ] Integrate a pinned compact boost block after exact-part review; cover
+  default-off enable, 5 V-class rail budget, independent mute/mono mode,
+  low-cell current, USB transitions and signal-pin backfeed.
 - [ ] Select exact cell/charger current, source path, protection, temperature,
   cutoff/off and charging-use policy from evidence.
 - [ ] Define amp gain/channel/mute, speaker connector, I2S sequencing, status,
@@ -194,6 +212,10 @@ concept before imposing a PCB outline.
 - [ ] Compare shallow/light and deeper drivers in representative rear cavities.
 - [ ] Prototype USB-slot/opposite screw, separate speaker carrier, and
   multilevel carrier concepts with cardboard/inert mock-ups then prints.
+- [ ] Compare a solid disk behind the magnet with near-mouth annular/offset
+  placement and an optional shallow mouth extension; do not infer fit from area.
+- [ ] Develop a removable printed cartridge/baffle/grille with a separate
+  bonded mounting interface, accessible harnesses and serviceable cell.
 - [ ] Establish USB anchor/support load path; compare SMT threaded hardware
   against carrier-mounted captive nuts/inserts.
 - [ ] Verify outward-facing connector access and complete assembly order,
@@ -226,6 +248,8 @@ behavior without conflating audio buffering and motion sampling.
   sensor without requiring on-chip ML.
 - [ ] Implement selected note/configuration, damping/polyphony, envelopes,
   digital limits, and quiet/power modes with bounded resource use.
+- [ ] Map GPIO19 using EXTERNAL_BUTTON rather than stock board.BUTTON;
+  remove NeoPixel status assumptions and define selected-slot audio/mute states.
 - [ ] Establish asset provenance, firmware/library versions, USB update/recovery,
   and custom-board definition/authorized identity requirements.
 
@@ -246,10 +270,14 @@ dataset/replay procedure, measurements, programming guide.
 envelope and compare realistic assembled costs.
 
 - [ ] Place actual courtyards/connectors/test access inside mechanical keepouts.
+- [ ] Compare RP2040 and S3-MINI floorplans using the same audio/power block;
+  account for narrow annular bands, component height and antenna clearances.
 - [ ] Attempt one-face SMT/two-layer routing with continuous return references,
   short amp supply loops, paired BTL routing, and reviewed USB/core layout.
 - [ ] If needed, compare four layers and stacked boards with explicit
   diameter/depth, assembly labor, yield, and cost tradeoffs.
+- [ ] Include Standard two-face factory assembly as a quoted alternative;
+  do not move only the inductor or assume bottom-terminated hand rework is easy.
 - [ ] Review footprints/polarity, 3D clearances, thermal copper, test points,
   fiducials/panel tabs, USB overhang, and unusual fastener assembly.
 - [ ] Run DRC and independent layout review; obtain current BOM/assembly
@@ -380,9 +408,15 @@ case justifies added cost, energy, software and mechanical complexity.
   APIs, USB provisioning, memory, radio power, assembly and actual cost.
 - [ ] Evaluate antenna keepouts and propagation inside the metal bell; do not
   treat a radio-capable chip as a working RF design.
-- [ ] Evaluate six-axis sensing only for measured unmet gesture requirements.
+- [ ] Prototype sound/configuration updates and optional asynchronous practice
+  telemetry with real shell/speaker/cell placement before shared-carrier freeze.
+- [ ] Evaluate learned gesture processing only for measured unmet requirements;
+  LSM6DSOX six-axis sensing is already approved in the non-wireless draft.
 - [ ] Prototype interoperability, identity/provisioning, updates and power
   modes while preserving a usable standalone instrument.
+- [ ] Use QR/stable identity separate from musical-note assignment, explicit
+  enrollment, USB recovery and protected updates; distinguish file maintenance
+  from full interpreter OTA and verify the exact CircuitPython build.
 
 **Acceptance:** An evidence-backed go/no-go decision and separate hardware/
 firmware requirements precede any replacement of the working non-wireless

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="480" viewBox="0 0 1100 480">
+    <rect width="1100" height="480" fill="white"/>
+    <g font-family="Arial, sans-serif" font-size="15" fill="#172b4d">
+      <text x="25" y="30" font-size="22" font-weight="bold">Packaging sensitivity screen - NOT fabrication CAD</text>
+      <text x="25" y="56">The 40 mm station depth is UNMEASURED. This illustration explicitly assumes z=22 mm.</text>
+      <text x="65" y="88" font-weight="bold">A. Solid PCB behind speaker</text>
+      <path d="M 60.0 110 L 120.0 198.0 M 340.0 110 L 280.0 198.0"
+            stroke="#b7791f" stroke-width="3" stroke-dasharray="7 4" fill="none"/>
+      <line x1="60.0" y1="110" x2="340.0" y2="110" stroke="#64748b"/>
+      <text x="142" y="104">70 mm lip ID</text>
+      <rect x="118.2" y="110" width="163.6" height="74.0"
+            fill="#d1fae5" stroke="#047857"/>
+      <text x="125" y="138">Speaker envelope</text>
+      <text x="127" y="159">40.9 x 18.5 mm</text>
+      <text x="65" y="300">Dashed taper is assumed, not measured</text>
+
+        <line x1="100" y1="192.0" x2="300" y2="192.0" stroke="#b42318" stroke-width="5"/>
+        <text x="65" y="326">Example 50 mm PCB at z=20.5 mm</text>
+        <text x="65" y="348">Interpolated opening: 42.0 mm before clearance</text>
+      <text x="65" y="375">PCB thickness, components, grille and cell omitted.</text>
+      <text x="580" y="88" font-weight="bold">B. Near-mouth annular PCB area</text>
+      <circle cx="755" cy="205" r="132" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+      <circle cx="755" cy="205" r="86" fill="white" stroke="#1d4ed8" stroke-width="2"/>
+      <text x="671" y="196">43 mm aperture</text>
+      <text x="688" y="219">66 mm outside</text>
+      <rect x="856" y="164" width="61.6" height="82" fill="#fee2e2" fill-opacity=".8" stroke="#b42318" stroke-width="2"/>
+      <text x="923" y="184">S3-MINI body</text>
+      <text x="923" y="207">15.4 x 20.5</text>
+      <text x="580" y="365">Gross area: 1969 mm2; only 11.5 mm radial width.</text>
+      <text x="580" y="387">Red rectangle illustrates a fit conflict, not a placement.</text>
+      <text x="25" y="432">An offset aperture / wider electronics bay or separate controller location requires a real 3D fit study.</text>
+      <text x="25" y="457">Original diagram from owner-reported estimates and retail dimensions; no supplied product image reproduced.</text>
+    </g></svg>

@@ -1,6 +1,6 @@
 # Project brief
 
-Captured from the project discussion on 2026-09-06. Requirements below distinguish
+Captured from the project discussions on 2026-09-06 and 2026-09-07. Requirements below distinguish
 requested outcomes from implementation hypotheses. Numeric performance, cost,
 and mechanical limits are deliberately not invented.
 
@@ -12,9 +12,10 @@ should be economical enough for schools, churches, and educational groups, with
 straightforward assembly, charging, programming, and repair.
 
 The starting enclosure is a children's play handbell with its clapper removed.
-The speaker faces outward through the bell opening. A circular PCB sits behind
-the speaker; a protected single-cell LiPo and a retaining structure share the
-remaining volume. The intended musical note range, player ages, and whether
+The speaker faces outward through the bell opening. A compact PCB, protected
+single-cell LiPo and printed retaining structure share the remaining volume.
+A solid disk behind the speaker was the initial concept; a near-mouth
+annular/offset board is now also a fit-study candidate. The intended musical note range, player ages, and whether
 each bell has a fixed or selectable note remain open.
 
 ## Requirements register
@@ -24,11 +25,11 @@ each bell has a fixed or selectable note remain open.
 | R01 | Maintain a public project under `dcuccia` with durable plans and epics | Existing repository retained; GitHub execution tracking |
 | R02 | MCU capable of I2S audio; prefer RP2040 for the first experiment | Working baseline; RP2040 implements I2S through PIO |
 | R03 | Prefer CircuitPython and novice-friendly USB programming | Working baseline; custom-board identity/provisioning still required |
-| R04 | Integrated I2S DAC/class-D amplifier and local mono speaker | MAX98357A candidate; no separate DAC needed |
+| R04 | Integrated I2S DAC/class-D amplifier and local mono 4 ohm speaker; design electronics for the 3 W high end | MAX98357A; boosted rail required for this target; 3 W low-distortion or speaker qualification is not established |
 | R05 | Rechargeable 1S LiPo with USB-C charging | Cell, protection, charge current, temperature handling, and runtime TBD |
 | R06 | Motion sensing for a natural ringing gesture | Owner-approved LSM6DSOX in the draft; compare acceleration/gyro against stock LIS3DH for strike plus chest-stop/rest; performance and assembled BOM not frozen |
 | R07 | USB-C at the circular board edge, usable from outside the bell | Connector, shell slot, cable clearance, and load transfer TBD |
-| R08 | Speaker faces outward; electronics sit behind it | Measure internal taper and usable depth with actual parts |
+| R08 | Speaker faces outward; package electronics behind/around it in the shell | Owner estimates and retail speaker drawing captured; axial profile, basket, cell and clearances remain open |
 | R09 | Prefer outward-facing component/connectors for accessible assembly | Confirm assembly sequence before speaker blocks access |
 | R10 | Plug-in speaker wiring, preferably a keyed JST-family connector | Exact family, polarity marking, pitch, retention, and current rating TBD |
 | R11 | Prefer one-face component assembly on a two-layer circular PCB | Feasibility goal, not a committed diameter or layer count |
@@ -37,15 +38,18 @@ each bell has a fixed or selectable note remain open.
 | R14 | Preserve clean audio behavior when combining reference circuits | Review supply loops, return paths, startup/mute behavior, and layout |
 | R15 | Reuse mature, documented, code-supported open hardware | Prefer pinned Adafruit sources, guides, examples, and known errata |
 | R16 | Proper attribution across electronics, code, assets, and documentation | Maintain per-source license/provenance and modifications |
-| R17 | Remove unnecessary duplicated circuitry and peripheral branches | Removal must preserve shared rails, protection, pullups, and decoupling |
+| R17 | Remove Feather headers, servo/RGB branches and STEMMA QT; retain simple charge/status LEDs | Approved for next revision, not yet wired; preserve shared rails, protection, pullups and decoupling |
 | R18 | Very low total cost and straightforward novice assembly | Target unit/set prices and quantities TBD; quote complete BOM and labor |
 | R19 | JLCPCB-compatible fabrication/assembly; evaluate OSH Park | Separate bare-board service from assembly service |
 | R20 | Beginner-friendly design tooling and instructions | KiCad recommended; record installed version and import procedure |
-| R21 | Retain ESP32-S3 wireless as a possible future direction | Not needed for first bell; RF and software work are separate scope |
+| R21 | Evaluate an ESP32-S3-MINI wireless variant alongside RP2040 research | Sound programming, QR identity, optional asynchronous training telemetry; first sounding baseline stays local/offline |
 | R22 | Robust retention, battery containment, and serviceability | Safety, shake/drop, fastener, and USB-load evidence needed |
 | R23 | Educationally useful operation and maintenance | Note assignment, controls, recovery, charging workflow, and kit instructions TBD |
 | R24 | Record uncertainty and measured versus estimated results honestly | Do not turn vendor examples, ERC/DRC passes, or calculations into product qualification |
 | R25 | Distinguish a handbell strike from a chest-stop/rest damping gesture | Added 2026-09-07; evaluate temporal motion context, gyro benefit, and handling/contact ambiguity |
+| R26 | Dedicated two-pin keyed button harness on RP2040 GPIO19 / schematic BUTTON net | Owner-approved replacement for STEMMA QT; stock CircuitPython alias is EXTERNAL_BUTTON, not board.BUTTON; connector/protection/debounce pending |
+| R27 | Print the cartridge and speaker grille; preassemble outside the bell | Prefer removable cartridge with separately bonded mounting interface; retention, acoustic and dimensional evidence pending |
+| R28 | Use 0402 where electrically and mechanically appropriate | Not a requirement to shrink bulk capacitors, magnetics, power parts or connectors indiscriminately |
 
 ## 2026-09-07 clarification
 
@@ -58,6 +62,28 @@ meaningfully more capable motion sensor, while preferring mature reference
 hardware, documented CircuitPython support, and straightforward tooling.
 This is budget latitude for a justified upgrade, not a verified supplier-price
 delta or a requirement to use on-chip machine learning.
+
+## 2026-09-07 compact power and packaging inputs
+
+The owner has the [B01EABRWO6 handbell set](https://www.amazon.com/dp/B01EABRWO6),
+not necessarily the initial inspiration listing. Reported approximate dimensions
+are 70 mm inside the lip, 40 mm inside an unspecified station halfway down the
+smaller taper, 44 mm bell-body height and 85 mm handle height. **The axial
+position of the 40 mm measurement and usable handle interior are unknown.**
+
+Two Gikfun EK1725 2-inch speakers are already on hand. EK1794 40 mm speakers
+are an unpurchased comparison candidate. The owner-supplied retail drawing
+gives 40.5 +/-0.4 mm frame diameter, 22 +/-0.5 mm magnet diameter and
+18 +/-0.5 mm overall depth; its 2.7 +/-0.3 mm rim dimension is not extra depth.
+The 40 mm seller's 3 W title conflicts with a 2 W description rating.
+Do not silently resolve this into a continuous/peak distinction.
+
+The [power/fit review](compact-power-and-packaging.md) records approved
+reductions, source-backed boost candidates, current budgets and manufacturing
+options. [Structured inputs](measurements/shell-speaker-inputs.json) preserve
+the origin and uncertainty of the dimensions. No cell, final outline or
+boost/inductor MPN has been frozen, and the published 0.1 schematic has not yet
+been rewired for these decisions.
 
 ## Mechanical concepts to preserve
 
@@ -72,8 +98,11 @@ pads and a distant SMT nut must not be assumed to provide it.
 speaker to the bell housing, with separate PCB mounting features.
 
 **Concept C: multilevel carrier.** A printed internal structure retains speaker,
-PCB, and battery and attaches or bonds inside the bell. Explore assembly access,
-adhesive/paint compatibility, print creep, repair, and drop retention.
+PCB, battery and printed grille for assembly outside the bell. Prefer bonding
+only its mounting interface, leaving the cartridge and battery serviceable.
+Compare a shallow mouth extension and an offset/annular electronics bay against
+a solid disk behind the magnet. Explore assembly access, adhesive/paint
+compatibility, print creep, repair and drop retention.
 
 For all concepts, evaluate metal-shell insulation, cell clearance, captive
 hardware, screw-length stops, cable strain relief, acoustic volume, and speaker
@@ -98,9 +127,10 @@ The RP2040 "less than a dollar" expectation is an unverified sourcing hypothesis
 not an approved BOM price. Price the actual supplier, quantity, assembly SKU,
 shipping, taxes, and yield.
 
-## Initial scope boundary
+## Current scope boundary
 
-The next engineering artifact is a reviewed, reduced schematic derived from
-the selected baseline. This planning revision does not assert a completed CAD
-import, selected cell, final speaker, routing solution, or finished firmware.
-Wireless coordination, apps, and fleet management remain later options.
+The native 0.1 schematic integrates LSM6DSOX and resolves the imported ERC
+findings. The next electrical artifact is its purpose-built reduction and
+power/audio revision. The latest review is not that new schematic, a selected
+cell, a final speaker, a routed PCB or finished firmware. Early S3 radio
+experiments are in scope; a deployed wireless training system is not implied.

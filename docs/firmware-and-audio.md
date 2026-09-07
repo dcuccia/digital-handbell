@@ -84,6 +84,56 @@ lists about 1 W into 4 ohm at 3.3 V and 1% THD. Select level limits using the
 actual speaker and rail range; distinguish unclipped output from maximum
 headline power.
 
+### Approved compact-revision behavior
+
+The owner now requests a 4 ohm mono speaker and electronics capable of the
+3 W high end with a boosted rail. The MAX98357A's typical 5 V / 4 ohm figures
+are 2.5 W at 1% THD+N and 3.2 W at 10% THD+N under its specified test conditions.
+The candidate 40 mm Gikfun speaker has conflicting seller power ratings.
+Neither the electronics target nor a software volume limit qualifies that
+speaker. See the [power/fit review](compact-power-and-packaging.md).
+
+Use an explicitly selected I2S channel, or verified identical samples in both
+slots. Mono does not eliminate BCLK/LRCLK or their valid timing. Keep 9 dB gain
+as the starting evaluation setting rather than automatically choosing maximum
+gain; determine digital headroom and a speaker-specific limit from evidence.
+For shutdown, fade/drain the audio, assert mute, then sequence clocks and
+power. Do not remove LRCLK while BCLK continues; the datasheet warns of
+unexpected/DC output in that condition. Verify reset and fault defaults too.
+
+The approved external button uses GPIO19, the schematic `BUTTON` net and stock
+`EXTERNAL_BUTTON` alias, not stock `board.BUTTON` (GPIO7). Give physical
+chest-stop and explicit enrollment gestures separate, debounced state-machine
+semantics. Keep the ordinary GPIO13 status LED; removing NeoPixel hardware
+also requires updating the board's status configuration.
+
+## Early ESP32-S3 wireless experiment
+
+Wireless remains optional to sounding a bell, but its enclosure feasibility
+should be explored **before freezing a shared carrier**, not after layout.
+Prioritize sound-file/configuration programming over streaming live audio.
+Optional practice telemetry should be timestamped/asynchronous, with dropped
+or disconnected transport unable to delay a local strike or damping action.
+Do not collect or publish identifying student data by default.
+
+Use stable device identity plus a QR label, separately assignable musical note,
+and explicit local enrollment (for example a long button press plus LED/chirp).
+A unique ID is not an authentication secret. Reserve a USB recovery route.
+Pairing gestures must not silently remap an instrument during ordinary playing.
+
+S3-MINI-1 `-N8` has 8 MB flash without PSRAM; `-N4R2` trades down to 4 MB flash
+for 2 MB PSRAM. Select the exact module/build from actual sound-storage and
+working-memory budgets, not body size alone. CircuitPython support exists for
+both S3 and C3, but C3 lacks a CIRCUITPY USB mass-storage workflow. Check the
+chosen build's BLE and I2S APIs instead of inferring them from the chip radio.
+
+CircuitPython's [web workflow](https://docs.circuitpython.org/en/latest/docs/workflows.html#web)
+supports file/code/config maintenance; it is not a complete secure interpreter
+OTA system. Its documented HTTP Basic authentication is unencrypted. Use a
+controlled development network and define authenticated updates, interrupted
+write recovery and access policy before educational deployment. A future
+training server is a separate deliverable, not implemented firmware here.
+
 ## Power and educational workflow
 
 Define ready-to-play, sounding, idle, sleep/off, USB maintenance, and charging

@@ -12,6 +12,11 @@ or child-use-qualified design.** The
 LSM6DSOX and include the [ERC disposition](hardware/handbell/reports/erc-review.md).
 No custom PCB, firmware, or enclosure has been released.
 
+The [compact power and packaging review](docs/compact-power-and-packaging.md)
+records the next approved reduction, smaller boost candidate, actual shell
+estimates and printed-cartridge direction. Those changes are **not yet wired
+into the 0.1 schematic**.
+
 The working first-revision baseline is the
 [Adafruit RP2040 Prop-Maker Feather (5768)](https://www.adafruit.com/product/5768):
 RP2040, CircuitPython, MAX98357A I2S DAC/amplifier, LIS3DH accelerometer, USB-C,
@@ -36,6 +41,7 @@ assembled cost and final electrical decisions remain evidence gates.
 | [Firmware and audio](docs/firmware-and-audio.md) | CircuitPython, bell assets, strike detection, quiet idle, and power modes |
 | [Motion-sensor decision](docs/motion-sensing.md) | LIS3DH versus six-axis sensing, chest-stop limits, CircuitPython APIs, and sourcing |
 | [Mechanics and manufacturing](docs/mechanics-and-manufacturing.md) | Speaker/board trade space, measurements, mounting, JLCPCB and OSH Park |
+| [Compact power and packaging review](docs/compact-power-and-packaging.md) | Approved next revision, boost/cell/mute review, speaker-rating conflict and fit constraints |
 | [Validation plan](docs/validation-plan.md) | Measurements and evidence required before each hardware release |
 | [Decision log](docs/decisions.md) | Provisional decisions and the evidence needed to close them |
 | [Roadmap and epics](docs/roadmap.md) | Milestones, dependencies, scope, and acceptance criteria |
@@ -56,9 +62,9 @@ relationships, and links to supporting plans.
   copper layers. Establish diameter through real placement and measured shell
   geometry, not the sum of chip areas. Compare four layers and stacked boards
   if evidence warrants them.
-- Keep wireless optional. Evaluate six-axis sensing now for the explicit
-  chest-stop/rest requirement; the unchanged reference board itself has neither
-  a radio nor a gyroscope.
+- Keep sounding local/offline; evaluate an S3-MINI wireless variant early
+  enough to inform antenna/carrier choices. The draft already has six-axis
+  sensing; the unchanged reference has neither a radio nor a gyroscope.
 - Optimize complete assembled cost and novice assembly, not merely IC prices.
   Fine-pitch soldering should not be a prerequisite for an educational kit.
 

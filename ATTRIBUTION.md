@@ -28,6 +28,12 @@ obligations.
 No third-party firmware or sound recordings are vendored. The original project
 [MIT license](LICENSE) is unchanged.
 
+The original packaging-screen SVG, calculation script and factual measurement
+records use the project's MIT documentation/software terms. The owner's retail
+speaker image and vendor photos are **not redistributed**. The PowerBoost and
+MiniBoost sources added to the catalog are linked/inspected only, not vendored
+or adapted yet.
+
 ## License boundaries
 
 | Material | Policy |
@@ -73,6 +79,13 @@ Six-axis sources added 2026-09-07: **4438 imported/adapted; 4503 reference only*
 |---|---|
 | 4438 LSM6DSOX | [README](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/blob/c05abef4675b0380fbf3d23171615a2f1ac0b130/README.md) and [license.txt](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/blob/c05abef4675b0380fbf3d23171615a2f1ac0b130/license.txt): CC BY-SA 3.0 Unported |
 | 4503 LSM6DS3TR-C | [README](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/README.md) and [license.txt](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/license.txt) specify CC BY-SA 3.0, while a separate [LICENSE](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/LICENSE) contains MIT. Scope unresolved; do not discard either notice or treat the MIT badge as hardware clearance. |
+
+Boost sources added 2026-09-07: **catalog-only, no CAD import or adaptation yet**.
+
+| Source | License evidence |
+|---|---|
+| 2030 PowerBoost 1000 Basic | [README](https://github.com/adafruit/Adafruit-PowerBoost-1000-PCB/blob/493d06d70537ce418355b395bb251a661d683150/README.md), [license.txt](https://github.com/adafruit/Adafruit-PowerBoost-1000-PCB/blob/493d06d70537ce418355b395bb251a661d683150/license.txt): CC BY-SA 3.0 Unported; Limor Fried/Ladyada |
+| 4654 MiniBoost TPS61023 | [README](https://github.com/adafruit/Adafruit-TPS61023-PCB/blob/82b5a33a1900a5c13849029bc84e7856a44086e0/README.md), [license.txt](https://github.com/adafruit/Adafruit-TPS61023-PCB/blob/82b5a33a1900a5c13849029bc84e7856a44086e0/license.txt): CC BY-SA 3.0 Unported; Limor Fried/Ladyada |
 
 Preserve the upstream attribution to Limor Fried/Ladyada and Adafruit Industries
 and any additional named contributors as actually stated in the source.

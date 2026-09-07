@@ -8,6 +8,9 @@ All upstream implementation claims refer to the
 [pinned source catalog](reference-designs.md), particularly the
 [5768 schematic](https://github.com/adafruit/Adafruit-RP2040-Prop-Maker-Feather-PCB/blob/408fa9a40c0a01a3a65497ef42a29e0b08fe711e/Adafruit%20Feather%20RP2040%20Prop-Maker.sch).
 
+The diagram below describes the **published 0.1, unboosted** circuit, not the
+approved next revision.
+
 ```mermaid
 flowchart LR
     USB[USB-C: 5 V and USB data] --> SEL[USB / battery source selection]
@@ -107,6 +110,45 @@ while using a build that treats it as its status NeoPixel.
 The integrated 5768 provides a servo connection, not a generic motor-driver
 subsystem to remove wholesale. The older 3988's analog amp and RGB drivers are
 different circuitry; do not merge those assumptions.
+
+## Approved next revision: compact instrument, not Feather expansion board
+
+The [2026-09-07 power/packaging review](compact-power-and-packaging.md) records
+the next revision. These changes are **not yet in the native schematic**:
+
+- Remove JP1/JP3 Feather headers, SERVO0, OUTPUTS0, LED1 NeoPixel, IC2 external
+  RGB level shifter, its dedicated R19, and CONN1 STEMMA QT. Reconcile every
+  branch against shared circuitry rather than deleting by graphical proximity.
+- Add a two-pin button harness from the GPIO19 `BUTTON` net to GND, with a
+  defined released state and cable/debounce/protection review. In stock
+  CircuitPython this is `EXTERNAL_BUTTON`; `board.BUTTON` refers to GPIO7.
+  Preserve R14/R15 and the IMU's shared I2C bus after CONN1 removal.
+- Replace the large speaker terminal with a selected keyed/current-rated
+  connector. Make battery, speaker and button harnesses physically distinct
+  where possible; neither BTL speaker lead is ground.
+- Keep CHG0 hardware charge indication and L0 GPIO13 firmware status, reviewing
+  LED current/visibility. L0 is not a reset LED. Remove RGB status definitions
+  in the custom CircuitPython board configuration.
+- Add deliberate independent amplifier shutdown and channel selection, plus a
+  source-backed boosted audio branch for the requested 3 W high-end scenario.
+  Keep the logic/IMU rail separate from the boosted rail, with a continuous
+  ground reference and reviewed high-current return paths.
+- Place small power/I2S/control/IMU/debug pads where accessible; preserve BOOT
+  recovery and reset access even if physical service switches become pads.
+  TP3 is BOOT/USBBOOT, not RESET; TP4/TP5 are SWCLK/SWDIO.
+
+Preserve C18 on **VCORE** and C16 on the shared **V+** rail. Do not discard
+Q1/Q2, source selection or shared bias/bypass components until the replacement
+power topology explicitly accounts for their functions. A converter's enable
+pin is not, by itself, proof of output isolation, discharge, safe startup or
+freedom from I2S/control back-power.
+
+The cross-platform contract is functional, not pin-compatible: I2S data/clocks,
+I2C and IMU interrupt, user button, amplifier mute/power, status and battery
+monitoring if selected. An S3-MINI variant needs its own core power budget,
+boot/USB/debug pin assignment, board definition, memory configuration and RF
+layout. It should reuse the reviewed audio/power design without putting radio
+or file transfers in the strike-to-sound critical path.
 
 ## Audio layout principles
 

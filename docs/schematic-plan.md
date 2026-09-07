@@ -52,6 +52,13 @@ than silently inventing substitutes.
 | Motion | Approved LSM6DSOX, Mode 1 straps, supply, address, pullups, interrupts, orientation |
 | Controls and test | Power/note/volume controls as selected, necessary indications, battery sense if selected, test-point and production-programming map |
 
+The [approved compact-revision scope](compact-power-and-packaging.md) removes
+Feather/servo/RGB/STEMMA branches, adds the GPIO19 two-pin button harness and
+independent audio mute, and targets a source-backed boosted amplifier rail.
+The 0.1 artifacts do not yet implement these decisions. Reuse small, reviewed
+0402 support parts where suitable; qualify bulk capacitance and magnetics
+instead of mechanically shrinking every footprint.
+
 Do not copy the LIS3DH breakout's level shifting and regulator into an already
 compatible 3.3 V system without a reason. Equally, do not remove a shared I2C
 pullup or power-switch bias resistor merely because a connector disappears.
@@ -74,6 +81,9 @@ pullup or power-switch bias resistor merely because a connector disappears.
   misrepresented as cell-temperature protection.
 - [ ] Speaker impedance/power, gain, digital level limits, BTL labeling,
   SD_MODE/channel thresholds, and rail range are consistent.
+- [ ] Boost inductor/capacitor ratings and effective values, switching loops,
+  low-cell current, enable/isolation/discharge, startup and USB transitions
+  are reviewed against the selected reference and exact parts.
 - [ ] Quiescent/off states and power sequencing are defined, including possible
   back-power through I2S/control pins when the amp supply is off.
 - [ ] Candidate MPNs, footprints, pad numbering, stock/assembly options,

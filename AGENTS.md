@@ -28,6 +28,13 @@
   protection, and recovery access when removing peripheral branches.
 - Separate components-on-one-face from two copper layers. Do not promise board
   diameter, runtime, price, or child suitability without the relevant evidence.
+- Read `docs/compact-power-and-packaging.md` before the next reduction/power
+  revision. Its approved changes are not yet in 0.1 CAD. MiniBoost's pinned
+  divider is approximately 5 V despite 5.2 V prose; the 40 mm speaker has
+  conflicting seller power ratings. Do not treat either as resolved by a title.
+- Keep the measured/assumed geometry distinction: the shell's 40 mm ID has no
+  known axial station. The z=22 mm taper example is hypothetical, not a measured
+  fit model. GPIO19 is stock EXTERNAL_BUTTON; stock board.BUTTON is GPIO7.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use

@@ -1,6 +1,6 @@
 # Reference-design catalog
 
-Research snapshot: 2026-09-06. Product IDs are the stable catalog keys.
+Research snapshot, updated 2026-09-07. Product IDs are the stable catalog keys.
 Repository commits below pin inspected sources, not the revision guaranteed to
 ship in a purchased product. Reference boards are useful design evidence, not
 proof that a reduced circular relayout will work identically.
@@ -54,6 +54,29 @@ The inspected [Adafruit CircuitPython LSM6DS](https://github.com/adafruit/Adafru
 source is `cdfc14a687a138aa0f2c6abab061bfc1bfafa561`, separately MIT-licensed.
 Current subclass modules expose acceleration in m/s^2 and gyro in rad/s.
 
+## Boost references added 2026-09-07
+
+These are inspected, **catalog-only** sources, not imported KiCad blocks or
+qualified handbell parts. The owner independently identified MiniBoost during
+the same review. Both source READMEs credit Limor Fried/Ladyada for Adafruit
+Industries and both `license.txt` files specify CC BY-SA 3.0 Unported.
+
+| Product | Source findings / role | Pinned hardware |
+|---|---|---|
+| [2030 PowerBoost 1000 Basic](https://www.adafruit.com/product/2030) | TPS61030RSAR; 6.8 uH, 8 x 8 mm inductor footprint; nominal 5.175 V; no charger | [Source](https://github.com/adafruit/Adafruit-PowerBoost-1000-PCB/tree/493d06d70537ce418355b395bb251a661d683150), `493d06d70537ce418355b395bb251a661d683150`; [downloads](https://learn.adafruit.com/adafruit-powerboost-1000-basic/downloads) |
+| [4654 MiniBoost TPS61023](https://www.adafruit.com/product/4654) | Leading compact boost candidate: SOT563, 1 uH / 5 x 5 mm inductor footprint, three 22 uF/0805 capacitors; no charger; exact magnetic/capacitor MPNs unresolved | [Source](https://github.com/adafruit/Adafruit-TPS61023-PCB/tree/82b5a33a1900a5c13849029bc84e7856a44086e0), `82b5a33a1900a5c13849029bc84e7856a44086e0`; `Adafruit TPS61023.sch` / `.brd` |
+
+MiniBoost's source uses **732 kohm/100 kohm feedback**, corresponding to a
+5 V-class rail, while product/README prose says 5.2 V. This is unresolved
+source/prose disagreement, not a measurement of a retail unit. Source EN has
+a 100 kohm pull-up to VIN; the derivative needs its own default-state/MCU
+voltage review. Full circuit, current and layout implications are in the
+[compact review](compact-power-and-packaging.md).
+
+The [WE-MAIA family](https://www.we-online.com/en/components/products/WE-MAIA)
+is an owner-proposed magnetic alternative, not a reviewed drop-in MPN.
+Use exact manufacturer curves/land patterns before substituting.
+
 ## Software and primary technical sources
 
 | Source | Evidence / intended use |
@@ -67,6 +90,10 @@ Current subclass modules expose acceleration in m/s^2 and gyro in rad/s.
 | [MCP73831 datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf) | Charge-current setting, termination, thermal regulation, operating limits |
 | [Microchip AN1149](https://ww1.microchip.com/downloads/en/appnotes/01149b.pdf) | External load sharing and why a system load on the battery node can affect termination |
 | [RP2040 hardware-design guide](https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf) | Core/clock/flash/USB and PCB implementation cross-check; review before schematic freeze |
+| [TPS61030 datasheet](https://www.ti.com/lit/ds/symlink/tps61030.pdf) | PowerBoost controller limits, shutdown, magnetics, compensation and layout |
+| [TPS61023 datasheet](https://www.ti.com/lit/ds/symlink/tps61023.pdf) | MiniBoost controller pinout, approximately 0.6 V reference, valley current limit, true disconnect/pass-through and layout |
+| [ESP32-S3-MINI-1/-1U datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-mini-1_mini-1u_datasheet_en.pdf) | Reviewed v1.7: antenna module 15.4 x 20.5 x 2.4 mm; -N8 = 8 MB flash/no PSRAM; -N4R2 = 4 MB flash/2 MB PSRAM; exact variant/build and RF clearances matter |
+| [ESP32-C3-MINI-1 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1_datasheet_en.pdf) | Reviewed v2.2: antenna module 13.2 x 16.6 x 2.4 mm; recommended N4X/H4X versus legacy NRND N4/H4; not S3 native USB or pin-compatible |
 
 ## Documentation discrepancies and limits
 
@@ -93,10 +120,16 @@ Current subclass modules expose acceleration in m/s^2 and gyro in rad/s.
 
 ## Enclosure and historical sources
 
-The new shell reference is
+The initial shell inspiration was
 [Amazon B09P4NTLWK](https://www.amazon.com/Colorful-Handbells-Musical-Instrument-Wedding/dp/B09P4NTLWK).
 Its usable internal dimensions were **not established** by the accessible
-listing. It is one candidate, not a selected vendor or a mechanical drawing.
+listing. The owner subsequently identified the actually purchased
+[B01EABRWO6 set](https://www.amazon.com/dp/B01EABRWO6). Its reported estimates and
+the owner-supplied 40 mm-speaker drawing are captured in the
+[measurement record](measurements/shell-speaker-inputs.json), not treated as
+qualified manufacturing dimensions. Gikfun EK1725/EK1794 comparisons and the
+40 mm seller power-rating conflict are in
+[mechanics and manufacturing](mechanics-and-manufacturing.md).
 
 Preserved from [2023 notes](../Design%20Notes.md), not newly selected:
 

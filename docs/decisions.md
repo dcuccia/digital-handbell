@@ -1,6 +1,6 @@
 # Decision log
 
-Planning snapshot: 2026-09-06. A provisional choice is a starting point for
+Planning snapshot, updated 2026-09-07. A provisional choice is a starting point for
 experiments, not a final component or manufacturing commitment.
 
 | ID | Decision / question | Current disposition | Evidence to close or revisit |
@@ -11,15 +11,15 @@ experiments, not a final component or manufacturing commitment.
 | D04 | Sensor | Owner approved LSM6DSOX on 2026-09-07; integrated at 0x6A in the separate draft; retain LIS3DH for bench comparison | Gyro-enabled/disabled gesture comparison, driver initialization, full electrical review, and assembled BOM quote |
 | D05 | CAD | KiCad 10.0.6 exercised; both pinned references converted; handbell draft has 0 ERC errors/warnings with no exclusions | Complete footprint/layout review, reduction and electrical freeze remain open |
 | D06 | Hardware reuse license | Retain source-compatible CC BY-SA 3.0 for adaptations of verified sources; preserve root MIT for original code/docs | Full notices and per-file provenance at import; resolve 4884 version before use |
-| D07 | Packaging | Prefer circular, one-face assembly, two copper layers | Measured shell stack, complete placement/routing and comparative quotes |
-| D08 | Audio rail and quiet idle | Start by studying 5768's unboosted switched rail; independent mute/boost remain open | Headroom, noise/clicks, current, low-cell behavior and sequencing |
-| D09 | Cell and charger | No cell/capacity/current selected; do not adopt 196/200 mA blindly | Cell data, thermal/protection strategy, runtime and USB input budget |
+| D07 | Packaging | Prefer one-face/two-layer; compare solid disk with near-mouth annular/offset board | Depth-indexed shell profile, complete placement/routing and comparative quotes |
+| D08 | Audio rail and quiet idle | Owner approves independent mute and boosted 4 ohm/3 W-high-end design; investigate TPS61023 first | Exact power parts, 5 V-class rail budget, noise, low-cell behavior and sequencing; not yet wired |
+| D09 | Cell and charger | No pack selected; screen protected 1S packs for at least 2 A continuous plus transient margin; no automatic need for 1S2P | Full load/thermal/protection/runtime/USB budget and cell-specific charging |
 | D10 | Play while charging | Unresolved; must be explicitly permitted or prevented | System power-path/input-current and charging/temperature evidence |
-| D11 | Speaker and cavity | No selected driver; compare shallow/light vs deeper alternatives | Actual fit, matched-level listening/response, mass, distortion and current |
-| D12 | USB and mounting | Preserve slot/opposite screw and printed-carrier concepts; neither selected | Supported load path, assembly access, retention and isolation |
+| D11 | Speaker and cavity | EK1725 on hand; smaller EK1794 candidate has conflicting 3 W title / 2 W description | Actual fit, qualified power limits, matched-level response, mass, distortion and current |
+| D12 | USB and mounting | Printed removable cartridge and grille, preassembled outside shell, is leading concept | Bonded mounting interface, supported USB load path, service access, retention and isolation |
 | D13 | Musical behavior | Note range, tuning, fixed/selectable note, retrigger/damping/polyphony and controls open | Requirements and prototype comparison |
 | D14 | Fabrication/assembly | Quote JLCPCB populated boards; use OSH Park as bare-board alternative | DFM acceptance and complete cost at actual quantities |
-| D15 | Future wireless | ESP32-S3 is the preferred candidate to evaluate before C3 for native USB usability | Explicit use case, CircuitPython protocol support, RF/metal-shell assessment, power and synchronization |
+| D15 | Wireless exploration | Owner favors S3-MINI; evaluate early for sound programming, QR identity and optional practice telemetry | Exact memory/build, RF with real shell/cell/speaker, power budget and protected updates; local sounding remains offline |
 
 For a change, append date, rationale, alternatives, affected requirements,
 upstream/prototype evidence, and the deciding issue. Do not overwrite an earlier
@@ -80,6 +80,46 @@ redefinition documented in [motion sensing](motion-sensing.md). Correct/read
 back CTRL9_XL before bring-up. No firmware or physical-hardware outcome is
 claimed. E02/E04 remain open, especially for full import/footprint review,
 peripheral reduction, cell/power/audio choices and independent signoff.
+
+## 2026-09-07: approved compact power and cartridge direction
+
+The owner approved removing STEMMA QT in favor of a two-pin GPIO19 button
+harness, independent amplifier mute/channel review, compact service access,
+simple charge/status indication, and a printed cartridge plus grille.
+Headers/servo/RGB branches are no longer desired expansion features.
+These changes are recorded for the next revision; **the 0.1 CAD is unchanged**.
+
+D08 advances from an unboosted study to a requested **3 W high-end electronics
+scenario into 4 ohm**, not 3 W clean output or speaker qualification. Compare
+PowerBoost 1000 Basic with the substantially smaller TPS61023 source block.
+Inspecting the latter found 732 kohm/100 kohm feedback (approximately 5 V)
+despite its 5.2 V prose. Resolve the rail explicitly, preserve tight power-loop
+layout, and review exact magnetics/capacitors rather than calling WE-MAIA a
+drop-in. Neither source is a charger.
+
+D09 remains pack-specific: 500 mAh capacity does not imply a 0.5 A limit.
+The full-output scenario needs about 0.90-1.42 A for audio alone across the
+illustrative voltage/efficiency range. Prefer a suitably rated factory-protected
+pack over improvised cell paralleling. Charge-and-play remains undecided.
+
+D07/D11/D12 now use the owner's B01EABRWO6 shell estimates: 70 mm lip ID,
+40 mm at an unspecified taper station, 44 mm body height and 85 mm handle
+height. A retail 40 mm-speaker drawing gives a 40.9 mm maximum frame and
+18.5 mm maximum depth. Its seller rating conflict is unresolved. Study an
+offset/annular near-mouth PCB and removable printed cartridge before enforcing
+a small disk behind the magnet. The hypothetical z=22 mm taper is explicitly
+not a measured profile.
+
+D15 permits early S3-MINI RF/firmware experiments before shared-carrier freeze.
+Sound programming comes first; asynchronous practice telemetry is optional,
+and local ringing must not depend on connectivity. Keep stable QR identity
+separate from note assignment and authentication. Exact memory variant and
+interpreter update strategy remain open.
+
+Evidence, assumptions and next gates are in the
+[power/fit review](compact-power-and-packaging.md) and
+[mechanical screen](mechanics-and-manufacturing.md). Owning epics:
+E01/#1, E04/#4, E05/#5, E06/#6, E07/#7 and E12/#12.
 
 ## Initial risk register
 

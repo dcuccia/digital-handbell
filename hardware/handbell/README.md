@@ -12,6 +12,12 @@ retains the other Feather branches to keep this change reviewable. Removing
 servo/NeoPixel/header circuitry and selecting the speaker connector remain E04
 work, not completed reductions hidden inside this revision.
 
+**Later 2026-09-07 scope update:** the owner approved the compact GPIO19-button,
+no-STEMMA/header/RGB revision and a boosted audio/mute review. The
+[power/packaging assessment](../../docs/compact-power-and-packaging.md) records
+those decisions, candidate sources and remaining gates. This directory's
+native CAD/PDF/netlist still represents **0.1**, not that forthcoming revision.
+
 ## Artifacts and scope
 
 | Artifact | Purpose |

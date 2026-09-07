@@ -1,13 +1,29 @@
 # Mechanics, acoustics, and manufacturing
 
-Status: trade study and measurement plan. No enclosure, speaker, cell, PCB
-diameter, assembly quote, or production process has been selected.
+Status: trade study and measurement plan, updated 2026-09-07. The owner has
+shells and 2-inch speakers; no final driver, cell, PCB outline, assembly quote
+or production process has been selected.
 
 ## Measure before choosing a circle
 
-The [candidate shell listing](https://www.amazon.com/Colorful-Handbells-Musical-Instrument-Wedding/dp/B09P4NTLWK)
-did not establish usable internal geometry. External dimensions and photographs
-cannot substitute for inner taper, handle/clapper intrusion, and tolerances.
+The initial [inspiration listing](https://www.amazon.com/Colorful-Handbells-Musical-Instrument-Wedding/dp/B09P4NTLWK)
+did not establish usable internal geometry. The owner actually has
+[B01EABRWO6 shells](https://www.amazon.com/dp/B01EABRWO6). Owner estimates and
+the supplied retail speaker dimensions are captured in
+[structured inputs](measurements/shell-speaker-inputs.json); do not substitute
+external photographs for inner taper, handle/clapper intrusion and tolerances.
+
+| Owner-reported shell input | Approximate value / limitation |
+|---|---|
+| Inside diameter just inside lip | 70 mm |
+| Inside diameter halfway down the smaller tapered region | 40 mm; depth from lip not specified |
+| Bell-body height | 44 mm |
+| Handle height | 85 mm; hollow/usable interior not established |
+
+Use the lip plane as axial datum `z=0`, positive inward. Record clear ID at
+known depths (for example every 5 mm), including ovality and the minimum usable
+diameter after the clapper is removed. Identify the existing 40 mm station.
+Measure the candidate USB opening at its proposed depth, not just at the lip.
 
 Measure several shells, ideally across more than one set. Record inner diameter
 at multiple heights, ovality, wall thickness, lip profile, depth, handle/clapper
@@ -22,6 +38,63 @@ and assembly/tool access.
 
 Begin with cardboard circles and an inert battery-sized block, then a simple
 printed carrier. Do not test fit by compressing a live pouch cell.
+
+## Why the axial stack now matters
+
+The 40 mm speaker drawing's worst-case frame diameter is **40.9 mm**, magnet
+diameter **22.5 mm**, and overall depth **18.5 mm**. Its rim dimension is included
+in that height. The basket profile, terminals, rear vent and excursion envelope
+are not fully established. A 40 mm nominal opening cannot pass a 40.9 mm frame.
+
+For a **sensitivity example only**, assume the 40 mm shell ID occurs 22 mm
+inward and a straight taper connects it to the 70 mm lip:
+
+```text
+ID(z) = 70 - (30/22)*z, for 0 <= z <= 22 mm
+```
+
+At 18.5 mm depth this hypothetical cavity is 44.8 mm wide. Add an illustrative
+2 mm gap behind the speaker and the PCB plane sees only **42.0 mm** before
+board thickness, component height, carrier, battery or other clearances.
+Under that assumption, 55/50/45 mm PCB planes must be no deeper than
+11.0/14.7/18.3 mm, respectively. The owner did **not** measure the 40 mm station
+at 22 mm; these numbers are not a fit finding or a profile extrapolation.
+
+![Explicitly hypothetical packaging comparison](images/packaging-screen.svg)
+
+The original diagram and [numeric screen](measurements/packaging-screen.json)
+are generated with standard-library Python:
+
+```powershell
+python .\tools\screen_packaging.py --assumed-40mm-depth 22
+```
+
+The required argument makes the invented station explicit. The
+[input record](measurements/shell-speaker-inputs.json) still stores its actual
+depth as `null`. No supplied product photo/drawing is redistributed.
+
+Study a **near-mouth annular/C-shaped or offset board** rather than forcing all
+electronics onto a disk behind the magnet:
+
+| Hypothetical outer / inner diameter | Gross annulus area | Area after 1 mm excluded at both edges | Radial width |
+|---|---:|---:|---:|
+| 64 / 43 mm | 1,765 mm^2 | 1,429 mm^2 | 10.5 mm |
+| 66 / 43 mm | 1,969 mm^2 | 1,627 mm^2 | 11.5 mm |
+| 68 / 43 mm | 2,180 mm^2 | 1,831 mm^2 | 12.5 mm |
+
+The 66/43 example has the gross area of a 50.1 mm solid disk, but its narrow
+band is harder to place/route. **A 15.4 mm-wide S3-MINI body does not fit wholly
+in this uniform band**; it needs a wider bay, offset aperture, permitted
+overhang with real 3D clearance, or another location. Antenna keepouts are extra.
+These examples are not selected outlines and do not prove that the battery,
+USB or power block fits.
+
+Component height near the tapered wall matters even when the PCB plane fits.
+A shallow printed mouth extension, or components facing outward toward a
+standoff grille, may create room. Model USB access and antenna placement with
+that choice; neither a printed bezel nor an open mouth guarantees usable RF.
+Do not block speaker vents or assume the smaller magnet diameter describes
+the entire basket.
 
 ## One face, two layers, and board-area estimates
 
@@ -66,6 +139,8 @@ power ratings use different conditions and are not direct loudness comparisons.
 
 | Example | Stated envelope / mass | Electrical rating | Use in the trade study |
 |---|---|---|---|
+| [Gikfun 40 mm, owner candidate EK1794](https://gikfun.com/products/gikfun-4ohm-40mm-diameter-3w-full-range-audio-speaker-stereo-woofer-loudspeaker-for-arduino-pack-of-2pcs) | Retail drawing: 40.5 +/-0.4 mm diameter, 18 +/-0.5 mm depth, 22 +/-0.5 mm magnet | 4 ohm; **3 W title versus 2 W input-power rating in description** | More compact owner candidate; no assumed continuous/peak interpretation; qualify intended signal and limits |
+| [Gikfun 2-inch, owner part EK1725](https://gikfun.com/products/gikfun-2-4ohm-3w-full-range-audio-speaker-stereo-woofer-loudspeaker-for-arduino-pack-of-2pcs) | Seller says 2-inch diameter, 30 mm height; measure the two on-hand units | Seller says 3 W, 4 ohm | Immediate acoustic comparison; substantially deeper nominal envelope |
 | [Adafruit 1890](https://www.adafruit.com/product/1890) | 28 mm diameter x 4.5 mm; listing says 6 g | 8 ohm; datasheet 0.25 W continuous, 0.5 W short-term max | Very shallow/light baseline; enforce a suitable output limit |
 | [Same Sky CMS-28468N](https://www.sameskydevices.com/product/product-resources/cms-28468n.pdf) | 28 mm diameter x 4.6 mm; 5.3 g | 8 ohm; 0.5 W nominal, 1 W max under stated test | Shallow, manufacturer-documented alternative |
 | [Visaton BF 37, 8 ohm](https://www.visaton.de/en/products/drivers/fullrange-systems/bf-37-8-ohm) | 41 mm max frame extent, 37 mm across flats; 23.8 mm total depth; 33.1 g | 8 ohm; 5 W rated | Deeper/heavier comparison, not proof of fit or superior sound in this cavity |
@@ -87,9 +162,13 @@ See [miniature-speaker enclosure guidance](https://www.sameskydevices.com/blog/t
 
 ## Retention and assembly concepts
 
-Retain all three ideas in the [brief](project-brief.md): USB slot plus opposite
-fastener, separate printed speaker adapter, and multilevel printed carrier.
-Prototype each cheaply before choosing.
+Retain all three ideas in the [brief](project-brief.md). The current leading
+concept is a **printed, removable cartridge and grille**, preassembled outside
+the bell. A separately bonded mounting ring or interface retains it inside the
+shell; do not permanently glue the battery into an inaccessible assembly.
+Use printed baffle/speaker seats, independent cell retention and PCB supports.
+Grille open area, stiffness, print orientation, cone clearance and rattle
+behavior need physical evaluation. Prototype with inert fit pieces first.
 
 USB insertion, removal, and cable-lever loads should transfer from connector
 shell anchors through nearby PCB/carrier supports into the enclosure. Signal
@@ -137,6 +216,16 @@ from the one-face layout goal. See the dated [motion/sourcing report](motion-sen
 | Fine pitch | Economic lists 0402 minimum packages under supported conditions. Prefer factory assembly of fine-pitch ICs rather than requiring novice reflow. |
 | Parts | Basic/Extended/Preferred Extended status changes setup charges; catalog/LCSC presence is not a guaranteed assembled part reservation. |
 | Odd mechanics | SMT threaded hardware or unusual connectors may require custom/manual operations and a separate quote. |
+
+On 2026-09-07 the rendered official capability table again confirmed
+**Economic: single-sided placement; Standard: single- and double-sided**.
+It lists 0402 / 0201 minimum packages respectively and X-ray for specified parts
+in both services; not every QFN/LGA automatically requires Standard.
+One-face remains the preference, not a guarantee of Economic eligibility.
+If two faces win the trade study, factory assembly is preferable to assuming
+novice backside inductor rework. Many small molded inductors have bottom
+terminations, and moving the inductor alone can enlarge critical switching
+loops. Treat IC, inductor, input/output capacitors and return paths as a block.
 
 Additional official guidance:
 [panelization](https://jlcpcb.com/help/article/pcb-panelization),

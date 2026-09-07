@@ -1,0 +1,66 @@
+{
+  "status": "Not for fabrication; hypothetical geometry and area only",
+  "assumptions": {
+    "linear_interpolation_between_lip_and_hypothetical_station": true,
+    "assumed_40mm_station_z_mm": 22.0,
+    "actual_40mm_station_z_mm": null,
+    "speaker_front_at_lip_plane_for_this_example": true,
+    "example_speaker_to_pcb_gap_mm": 2.0,
+    "pcb_thickness_components_grille_cell_cables_not_included": true
+  },
+  "speaker_retail_drawing_maxima_mm": {
+    "frame_diameter": 40.9,
+    "overall_height": 18.5,
+    "magnet_diameter": 22.5
+  },
+  "latest_plane_depth_before_any_clearance_mm": {
+    "55": 11.0,
+    "50": 14.666666666666668,
+    "45": 18.333333333333336,
+    "40": 22.0
+  },
+  "example_pcb_plane_z_mm": 20.5,
+  "interpolated_cavity_diameter_at_example_plane_mm": 42.04545454545455,
+  "annular_area_examples": [
+    {
+      "outer_diameter_mm": 64,
+      "inner_diameter_mm": 43,
+      "gross_area_mm2": 1764.7896731540663,
+      "area_equivalent_solid_disk_diameter_mm": 47.40253157796533,
+      "area_after_1mm_allowance_at_both_edges_mm2": 1428.6392592199584,
+      "radial_band_width_mm": 10.5
+    },
+    {
+      "outer_diameter_mm": 66,
+      "inner_diameter_mm": 43,
+      "gross_area_mm2": 1968.993195637403,
+      "area_equivalent_solid_disk_diameter_mm": 50.06995106848019,
+      "area_after_1mm_allowance_at_both_edges_mm2": 1626.5595963961152,
+      "radial_band_width_mm": 11.5
+    },
+    {
+      "outer_diameter_mm": 68,
+      "inner_diameter_mm": 43,
+      "gross_area_mm2": 2179.4799034279195,
+      "area_equivalent_solid_disk_diameter_mm": 52.67826876426369,
+      "area_after_1mm_allowance_at_both_edges_mm2": 1830.763118879452,
+      "radial_band_width_mm": 12.5
+    },
+    {
+      "outer_diameter_mm": 66,
+      "inner_diameter_mm": 45,
+      "gross_area_mm2": 1830.763118879452,
+      "area_equivalent_solid_disk_diameter_mm": 48.28043081829324,
+      "area_after_1mm_allowance_at_both_edges_mm2": 1482.0463343309848,
+      "radial_band_width_mm": 10.5
+    }
+  ],
+  "caveats": [
+    "No inference of actual taper shape or extrapolation beyond the hypothetical station.",
+    "The 2.7 mm rim dimension is within the 18 mm overall speaker height, not added to it.",
+    "Gross annular area does not prove component placement or routability.",
+    "A uniform 66/43 mm ring is only 11.5 mm wide: a 15.4 mm-wide S3-MINI body cannot fit wholly in that band.",
+    "Near-mouth components have height; fitting the PCB plane alone does not prove component clearance.",
+    "Carrier wall, aperture/basket/terminal clearance, thermal paths and antenna keepouts remain unknown."
+  ]
+}
