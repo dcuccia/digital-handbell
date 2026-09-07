@@ -4,9 +4,17 @@ This independent project gratefully builds on Adafruit's published hardware,
 learning guides, and CircuitPython ecosystem. Attribution does not imply
 Adafruit's endorsement, manufacture, or qualification of our derivative.
 
-**Current inventory:** this planning revision contains original prose and links.
-It does not redistribute upstream CAD, code, recordings, photographs, logos,
-or library assets. The original project [MIT license](LICENSE) is unchanged.
+**Current inventory:** original project documentation plus the
+[Adafruit 5768 reference package](hardware/reference/adafruit-5768/README.md).
+That package contains pinned upstream EAGLE sources, their original README and
+license, a KiCad conversion with imported symbols/footprints, and derived review
+exports. The entire hardware reference package is covered by its
+[CC BY-SA 3.0 license](hardware/reference/adafruit-5768/LICENSE.txt), not the root
+MIT license. Upstream markings embedded in the reference are retained as source
+provenance, not as branding for a new handbell product.
+
+No third-party firmware or sound recordings are vendored. The original project
+[MIT license](LICENSE) is unchanged.
 
 ## License boundaries
 

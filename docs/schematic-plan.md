@@ -2,12 +2,16 @@
 
 ## Tool choice and beginner workflow
 
-**Recommend KiCad**, an open-source schematic/PCB tool with native editable
+**Use KiCad**, an open-source schematic/PCB tool with native editable
 project files, electrical/design rule checking, 3D viewing, and manufacturing
-exports. It was not installed or exercised during this planning revision.
-Do not buy an EDA subscription or assume a plugin is needed for this baseline.
+exports. KiCad 10.0.6 and its standard libraries were installed and exercised on
+2026-09-07. The upstream 5768 schematic and PCB have been imported into native
+files; see [setup/readiness](kicad-setup.md) and the
+[reference package](../hardware/reference/adafruit-5768/README.md).
+This is a working reference conversion with open review findings, not the
+reduced handbell schematic. No EDA subscription or third-party importer is needed.
 
-The [official KiCad project-manager manual](https://docs.kicad.org/9.0/en/kicad/kicad.html)
+The [official KiCad project-manager manual](https://docs.kicad.org/10.0/en/kicad/kicad.html)
 documents importing EAGLE 6.x-or-newer XML `.sch` / `.brd` projects through
 **File > Import Non-KiCad Project**. The inspected Adafruit sources use that
 format. Import is a supported route, not a promise of lossless translation.
@@ -81,8 +85,9 @@ pullup or power-switch bias resistor merely because a connector disappears.
 The schematic epic must deliver native KiCad project/schematic files,
 project-local custom libraries where needed, an exported PDF, BOM draft,
 net/pin comparison, import/change report, license notices, and recorded review.
-The repository currently has **none of these completed design artifacts**;
-their absence is intentional at this planning stage.
+The repository now contains a converted upstream reference and its initial
+review exports, but **not a completed handbell derivative**. Imported-reference
+ERC findings and footprint/symbol review remain open before derivative freeze.
 
 Use project-relative library paths. Exclude machine-local preferences, lock
 files, caches, and credentials; do not exclude necessary custom footprints or

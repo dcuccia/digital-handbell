@@ -1,0 +1,134 @@
+(footprint "PLABEL75"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "7b64dc5e-844e-4a34-9595-888fd8e748dc")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "ebfd4adc-b64f-4256-b616-7a1252650a45")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "95f349fb-e276-4128-9e3b-a2b137cd784d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c4e4295f-853d-45b4-bdc8-270fa3f3ab01")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_poly
+		(pts
+			(xy -0.26 -0.3) (xy 0.22 -0.3) (xy 0.22 -0.32) (xy -0.26 -0.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "User.2")
+		(uuid "63d629ac-a328-444b-a7be-5eb8f394a2a3")
+	)
+	(fp_poly
+		(pts
+			(xy -0.26 -0.28) (xy 0.22 -0.28) (xy 0.22 -0.3) (xy -0.26 -0.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "User.2")
+		(uuid "f4171a6b-6508-4ac0-b770-f1859fbf27ac")
+	)
+	(fp_poly
+		(pts
+			(xy -0.26 -0.25) (xy 0.22 -0.25) (xy 0.22 -0.28) (xy -0.26 -0.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "User.2")
+		(uuid "c9fb62cc-45a1-48ea-a89f-462e651d4f13")
+	)
+	(fp_poly
+		(pts
+			(xy -0.26 -0.23) (xy 0.22 -0.23) (xy 0.22 -0.25) (xy -0.26 -0.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "User.2")
+		(uuid "d2d831bd-01d5-4d60-8b93-8e94931c68ab")
+	)
+	(fp_poly
+		(pts
+			(xy -0.26 -0.21) (xy 0.22 -0.21) (xy 0.22 -0.23) (xy -0.26 -0.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "User.2")
+		(uuid "bb720a02-17c5-4347-8311-ffe7c85c1b75")
+	)
+	(fp_poly
+		(pts
+			(xy -0.26 -0.19) (xy 0.22 -0.19) (xy 0.22 -0.21) (xy -0.26 -0.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "User.2")
+		(uuid "fd37d5be-fb04-487a-8f37-7faa70f81f5d")
+	)
+	(fp_poly
+		(pts
+			(xy -0.26 -0.17) (xy 0.22 -0.17) (xy 0.22 -0.19) (xy -0.26 -0.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "User.2")
+		(uuid "b99fe336-2bbb-442d-b434-77372babe93c")
+	)
+	(embedded_fonts no)
+)

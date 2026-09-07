@@ -5,8 +5,11 @@ music-making. Replace the clapper in a children's play handbell with a speaker,
 rechargeable battery, and compact electronics. A natural ringing gesture should
 produce a convincing bell sound; the instrument should be quiet between notes.
 
-**Status: research and planning, not a fabrication-ready or child-use-qualified
-design.** No custom schematic, PCB, firmware, or enclosure has been released.
+**Status: reference import and prototyping preparation, not a fabrication-ready
+or child-use-qualified design.** An attributed
+[KiCad conversion of the upstream reference](hardware/reference/adafruit-5768/README.md)
+is available. No custom handbell schematic, PCB, firmware, or enclosure has been
+released.
 
 The working first-revision baseline is the
 [Adafruit RP2040 Prop-Maker Feather (5768)](https://www.adafruit.com/product/5768):
@@ -23,6 +26,7 @@ board. This is a starting hypothesis, not a frozen BOM.
 | [Reference catalog](docs/reference-designs.md) | Every proposed source, learning guides, source revisions, and important corrections |
 | [Architecture](docs/architecture.md) | Proposed blocks, verified baseline GPIOs, and retain/remove decisions |
 | [Schematic and CAD plan](docs/schematic-plan.md) | Beginner-oriented KiCad setup/import path and schematic review gates |
+| [KiCad setup and readiness](docs/kicad-setup.md) | Installed tooling, opening the native reference, and remaining import-review work |
 | [Firmware and audio](docs/firmware-and-audio.md) | CircuitPython, bell assets, strike detection, quiet idle, and power modes |
 | [Mechanics and manufacturing](docs/mechanics-and-manufacturing.md) | Speaker/board trade space, measurements, mounting, JLCPCB and OSH Park |
 | [Validation plan](docs/validation-plan.md) | Measurements and evidence required before each hardware release |

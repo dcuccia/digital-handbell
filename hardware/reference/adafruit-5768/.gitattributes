@@ -1,0 +1,3 @@
+# Preserve the upstream Git object bytes and license across Windows checkouts.
+upstream/** -text
+LICENSE.txt -text

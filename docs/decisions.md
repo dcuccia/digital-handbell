@@ -9,7 +9,7 @@ experiments, not a final component or manufacturing commitment.
 | D02 | Integrated baseline | Prefer Adafruit 5768 for first bench work and schematic derivation | Audio/motion/power experiments and import review |
 | D03 | First MCU/runtime | RP2040 + CircuitPython provisionally preferred; no first-revision wireless requirement | Latency, audio/memory, idle/wake and USB workflow evidence |
 | D04 | Sensor | Start with LIS3DH acceleration, preserving the original six-DOF idea as an option | Recorded gesture corpus and measured false/missed triggers |
-| D05 | CAD | Recommend KiCad with reviewed import of pinned EAGLE XML | Installed-version import/equivalence report; manual redraw only if justified |
+| D05 | CAD | KiCad 10.0.6 installed; pinned EAGLE reference converted on 2026-09-07 | Initial connected-net comparison passes; ERC and complete footprint/layout review remain open |
 | D06 | Hardware reuse license | Retain source-compatible CC BY-SA 3.0 for adaptations of verified sources; preserve root MIT for original code/docs | Full notices and per-file provenance at import; resolve 4884 version before use |
 | D07 | Packaging | Prefer circular, one-face assembly, two copper layers | Measured shell stack, complete placement/routing and comparative quotes |
 | D08 | Audio rail and quiet idle | Start by studying 5768's unboosted switched rail; independent mute/boost remain open | Headroom, noise/clicks, current, low-cell behavior and sequencing |
@@ -24,6 +24,20 @@ experiments, not a final component or manufacturing commitment.
 For a change, append date, rationale, alternatives, affected requirements,
 upstream/prototype evidence, and the deciding issue. Do not overwrite an earlier
 decision's rationale as if the new choice had always been established.
+
+## 2026-09-07: precursor scope and CAD readiness
+
+The owner clarified that the 2023 wireless/6-DOF work is a precursor vision,
+not a binding requirement for the current instrument. Preserve it as history
+without treating every earlier feature as mandatory.
+
+D05 advances from a recommendation to an exercised toolchain: KiCad 10.0.6,
+standard libraries, native schematic/PCB import, schematic PDF/netlist exports,
+and ERC execution. All 71 nonempty upstream board-signal pin groups match the
+imported schematic after accounting for six reference-name conversions.
+The initial import still has 50 ERC findings. The
+[reference report](../hardware/reference/adafruit-5768/README.md) records the
+limits; this is not schematic approval or a handbell design release.
 
 ## Initial risk register
 

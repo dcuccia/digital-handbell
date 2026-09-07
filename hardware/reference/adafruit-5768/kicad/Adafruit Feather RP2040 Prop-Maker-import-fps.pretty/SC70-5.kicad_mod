@@ -1,0 +1,200 @@
+(footprint "SC70-5"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SMT SC70-5\n\nSOT353 - Philips Semiconductors\nSource: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_HCT1G66_3.pdf")
+	(property "Reference" "REF**"
+		(at -2.54 -1.27 0)
+		(layer "F.SilkS")
+		(uuid "9a37ad0b-b1b1-4c5c-9e2f-fbf2833ca899")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "SC70-5"
+		(at -2.54 2.54 0)
+		(layer "F.Fab")
+		(uuid "21b9c58d-d8df-4524-8cc7-e335a31f231f")
+		(effects
+			(font
+				(size 1.1684 1.1684)
+				(thickness 0.1016)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4812ac65-c7c4-4923-b606-1bcd1ce4be50")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "74f47236-542c-4933-b82c-2d5c08e08062")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1 -0.55)
+		(end -1 0.55)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "107b970e-2ad4-4525-8634-0c374e9612e6")
+	)
+	(fp_line
+		(start 1 0.55)
+		(end 1 -0.55)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3771620d-512a-45e5-92ba-0d9f88064359")
+	)
+	(fp_line
+		(start -1 0.55)
+		(end 1 0.55)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9d1706c9-5a30-41b7-afba-94c31fb8da05")
+	)
+	(fp_line
+		(start 1 -0.55)
+		(end -1 -0.55)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0fcb3b59-131e-4989-a605-7d558adb9e4c")
+	)
+	(fp_poly
+		(pts
+			(xy -0.775 -0.6) (xy -0.525 -0.6) (xy -0.525 -1.05) (xy -0.775 -1.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "6926b0e0-2df1-4635-9847-3f1a5d7f47b2")
+	)
+	(fp_poly
+		(pts
+			(xy -0.775 1.05) (xy -0.525 1.05) (xy -0.525 0.6) (xy -0.775 0.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "a4ddbc11-af5a-4621-9967-1e43e229b884")
+	)
+	(fp_poly
+		(pts
+			(xy -0.125 1.05) (xy 0.125 1.05) (xy 0.125 0.6) (xy -0.125 0.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "4c9d0167-5acd-4dd4-acae-4a6edc096e08")
+	)
+	(fp_poly
+		(pts
+			(xy 0.525 -0.6) (xy 0.775 -0.6) (xy 0.775 -1.05) (xy 0.525 -1.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "c12600a3-5483-479f-a098-d6c606fd1a4a")
+	)
+	(fp_poly
+		(pts
+			(xy 0.525 1.05) (xy 0.775 1.05) (xy 0.775 0.6) (xy 0.525 0.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "7bad2569-4406-4d36-a9e6-91206ea4d38a")
+	)
+	(pad "1" smd rect
+		(at -0.65 0.85)
+		(size 0.4 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "08bc7a40-2102-4954-a02a-8ec9a6c011d9")
+	)
+	(pad "2" smd rect
+		(at 0 0.85)
+		(size 0.4 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "7a3d07fc-99ca-4fef-872a-a8a7e6b6ba25")
+	)
+	(pad "3" smd rect
+		(at 0.65 0.85)
+		(size 0.4 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "7a2bc7eb-5e3f-43d3-9036-94efa47668ac")
+	)
+	(pad "4" smd rect
+		(at 0.65 -0.85)
+		(size 0.4 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "5af30b9e-815e-4546-9121-f2fbbc398096")
+	)
+	(pad "5" smd rect
+		(at -0.65 -0.85)
+		(size 0.4 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "50fc04cc-ba94-4dbe-8d0a-b7edb087d170")
+	)
+	(embedded_fonts no)
+)
