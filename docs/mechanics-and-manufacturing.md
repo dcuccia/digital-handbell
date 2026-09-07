@@ -122,6 +122,11 @@ Consult the current
 [assembly FAQs](https://jlcpcb.com/help/article/pcb-assembly-faqs)
 when quoting; the following is a 2026-09-06 research snapshot, not order approval.
 
+**2026-09-07 sensor update:** the inspected JLC listings for the recommended
+LSM6DSOX and alternate LSM6DS3TR-C were Standard-only/Extended with required
+X-ray inspection. Requote the entire BOM rather than assuming Economic assembly
+from the one-face layout goal. See the dated [motion/sourcing report](motion-sensing.md).
+
 | Topic | Planning consequence |
 |---|---|
 | Economic vs Standard | Economic advertises single-side placement on 2/4/6-layer boards; Standard supports single/double-side. Select the service from the complete job, not layer count alone. |

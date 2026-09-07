@@ -8,7 +8,7 @@ experiments, not a final component or manufacturing commitment.
 | D01 | Repository continuity | Retain the existing public `dcuccia/digital-handbell`, history, MIT license, 2023 notes and diagram | New planning and linked execution issues |
 | D02 | Integrated baseline | Prefer Adafruit 5768 for first bench work and schematic derivation | Audio/motion/power experiments and import review |
 | D03 | First MCU/runtime | RP2040 + CircuitPython provisionally preferred; no first-revision wireless requirement | Latency, audio/memory, idle/wake and USB workflow evidence |
-| D04 | Sensor | Start with LIS3DH acceleration, preserving the original six-DOF idea as an option | Recorded gesture corpus and measured false/missed triggers |
+| D04 | Sensor | As of 2026-09-07, prefer evaluating LSM6DSOX for strike plus chest-stop/rest; retain LIS3DH for bench comparison | Gyro-enabled/disabled gesture comparison, false damping, electrical review, and assembled BOM quote |
 | D05 | CAD | KiCad 10.0.6 installed; pinned EAGLE reference converted on 2026-09-07 | Initial connected-net comparison passes; ERC and complete footprint/layout review remain open |
 | D06 | Hardware reuse license | Retain source-compatible CC BY-SA 3.0 for adaptations of verified sources; preserve root MIT for original code/docs | Full notices and per-file provenance at import; resolve 4884 version before use |
 | D07 | Packaging | Prefer circular, one-face assembly, two copper layers | Measured shell stack, complete placement/routing and comparative quotes |
@@ -38,6 +38,27 @@ imported schematic after accounting for six reference-name conversions.
 The initial import still has 50 ERC findings. The
 [reference report](../hardware/reference/adafruit-5768/README.md) records the
 limits; this is not schematic approval or a handbell design release.
+
+## 2026-09-07: six-axis motion recommendation
+
+D04 originally proposed LIS3DH-first evaluation on the stock reference. With
+the explicit strike **and chest-stop/rest** requirement, recommend LSM6DSOX
+(Adafruit 4438) as the derivative's primary candidate. It adds angular-rate
+evidence through a straightforward, inspected CircuitPython I2C driver and
+has clear CC BY-SA 3.0 hardware provenance. The owner allows approximately
+$1-2 sensor-related BOM increase when capability justifies it.
+
+Retrieved LCSC sensor-only deltas were about $1.67 at ten or $1.39 at 100;
+assembled-board cost remains unquoted. JLC's candidate listings were
+Standard-only/Extended with X-ray requirements, so assembly economics must be
+revisited for the whole BOM. LSM6DS3TR-C is cheaper in the retrieved channel but
+has unresolved hardware-license scope and distributor lifecycle descriptions.
+
+Use a temporal stroke/return/settle classifier before considering on-chip ML.
+Neither accelerometer nor gyro identifies actual chest contact with certainty.
+The [motion decision](motion-sensing.md) records sources, current API units,
+bench wiring, alternate interactions, and evidence gates. No sensor substitution
+has been made to the imported reference.
 
 ## Initial risk register
 

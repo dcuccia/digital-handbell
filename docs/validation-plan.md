@@ -15,7 +15,7 @@ disposition. Preserve measured versus calculated versus vendor-specified labels.
 | V04 | R05, R22 | Cell datasheet/protection/polarity, current/voltage/temperature limits, safe retention and cutoff strategy | Before cell-powered prototype |
 | V05 | R04, R13-R14 | Acoustic response/timbre, SPL at fixed distance, clipping/distortion, driver excursion and temperature at defined levels | Speaker and gain selection |
 | V06 | R13-R14 | Idle hiss/noise with stated bandwidth/distance, startup/shutdown clicks, USB/no-USB transitions, reload/reset, low battery | Audio/power design selection |
-| V07 | R03, R06, R13 | Strike-to-sound latency distribution and jitter, repeated strikes, missed/false triggers on defined motion corpus | Firmware and sensor selection |
+| V07 | R03, R06, R13, R25 | Strike-to-sound latency/jitter, repeated strokes, missed/false strikes and false damping; compare gyro-enabled/disabled chest-stop/rest recognition on the same motion corpus | Firmware and sensor selection |
 | V08 | R05, R13 | Ready/play/sleep/off currents, peak current, actual runtime under a stated duty cycle, wake/first-strike behavior | Battery/power-mode selection |
 | V09 | R05, R07 | USB-only/battery-only/combined operation, cable/source limits, unplug/replug, charger termination and thermal behavior | Before permitting play while charging |
 | V10 | R07-R12, R22 | USB mating/load path, speaker/cell retention, cable abrasion, screw intrusion, metal insulation, shake/drop serviceability | Before educational pilot |

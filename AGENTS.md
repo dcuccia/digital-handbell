@@ -14,6 +14,12 @@
   Import fidelity and source-to-net equivalence must be reviewed before reuse.
 - The working baseline is RP2040 Prop-Maker Feather 5768, not analog-audio
   FeatherWing 3988. LIS3DH is accelerometer-only; RP2040 I2S uses PIO.
+- The imported reference retains LIS3DH. The proposed derivative should
+  evaluate LSM6DSOX for strike plus chest-stop/rest; read `docs/motion-sensing.md`.
+  Neither an IMU nor a pose classifier proves physical chest contact.
+- KiCad 10.0.6 has been exercised. The native reference package under
+  `hardware/reference/adafruit-5768` is CC BY-SA 3.0, not root MIT, and has
+  unresolved initial ERC findings. Do not modify it as if it were the derivative.
 - Preserve shared power-selection/switching circuitry, pullups, decoupling,
   protection, and recovery access when removing peripheral branches.
 - Separate components-on-one-face from two copper layers. Do not promise board

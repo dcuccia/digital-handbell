@@ -18,6 +18,11 @@ and single-cell LiPo charging. We intend to reuse documented, code-supported
 open hardware, remove unnecessary peripheral branches, and create a circular
 board. This is a starting hypothesis, not a frozen BOM.
 
+For the handbell derivative, [LSM6DSOX is the recommended six-axis sensor
+candidate](docs/motion-sensing.md) for strike plus chest-stop/rest recognition.
+The imported reference retains its original LIS3DH; no substitution is made
+until the gesture, electrical, and assembly decisions are reviewed.
+
 ## Start here
 
 | Document | Purpose |
@@ -28,6 +33,7 @@ board. This is a starting hypothesis, not a frozen BOM.
 | [Schematic and CAD plan](docs/schematic-plan.md) | Beginner-oriented KiCad setup/import path and schematic review gates |
 | [KiCad setup and readiness](docs/kicad-setup.md) | Installed tooling, opening the native reference, and remaining import-review work |
 | [Firmware and audio](docs/firmware-and-audio.md) | CircuitPython, bell assets, strike detection, quiet idle, and power modes |
+| [Motion-sensor decision](docs/motion-sensing.md) | LIS3DH versus six-axis sensing, chest-stop limits, CircuitPython APIs, and sourcing |
 | [Mechanics and manufacturing](docs/mechanics-and-manufacturing.md) | Speaker/board trade space, measurements, mounting, JLCPCB and OSH Park |
 | [Validation plan](docs/validation-plan.md) | Measurements and evidence required before each hardware release |
 | [Decision log](docs/decisions.md) | Provisional decisions and the evidence needed to close them |
@@ -49,8 +55,9 @@ relationships, and links to supporting plans.
   copper layers. Establish diameter through real placement and measured shell
   geometry, not the sum of chip areas. Compare four layers and stacked boards
   if evidence warrants them.
-- Keep wireless and a six-axis IMU as explicit future decisions. The current
-  baseline has neither a radio nor a gyroscope.
+- Keep wireless optional. Evaluate six-axis sensing now for the explicit
+  chest-stop/rest requirement; the unchanged reference board itself has neither
+  a radio nor a gyroscope.
 - Optimize complete assembled cost and novice assembly, not merely IC prices.
   Fine-pitch soldering should not be a prerequisite for an educational kit.
 

@@ -55,6 +55,13 @@ the conclusion comes from README attribution language **and the actual
 | 2809 LIS3DH | [README](https://github.com/adafruit/Adafruit-LIS3DH-Breakout-PCB/blob/f5f3e1b33fec19a56b2c14c69bb1b97c1c4f2861/README.md), [CC BY-SA 3.0](https://github.com/adafruit/Adafruit-LIS3DH-Breakout-PCB/blob/f5f3e1b33fec19a56b2c14c69bb1b97c1c4f2861/license.txt) |
 | 4884 Feather RP2040 | [README](https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/ea88166891ee0a1697a3899a5d55ab3722a2f125/README.md) says Creative Commons Attribution/Share-Alike but omits a version and references an absent `license.txt`. **Version unresolved: do not silently assign 3.0 or import until resolved.** |
 
+Six-axis candidates added 2026-09-07, currently **reference only**:
+
+| Source | License evidence / disposition |
+|---|---|
+| 4438 LSM6DSOX | [README](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/blob/c05abef4675b0380fbf3d23171615a2f1ac0b130/README.md) and [license.txt](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/blob/c05abef4675b0380fbf3d23171615a2f1ac0b130/license.txt): CC BY-SA 3.0 Unported |
+| 4503 LSM6DS3TR-C | [README](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/README.md) and [license.txt](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/license.txt) specify CC BY-SA 3.0, while a separate [LICENSE](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/LICENSE) contains MIT. Scope unresolved; do not discard either notice or treat the MIT badge as hardware clearance. |
+
 Preserve the upstream attribution to Limor Fried/Ladyada and Adafruit Industries
 and any additional named contributors as actually stated in the source.
 The relevant READMEs request that their attribution text accompany
@@ -62,6 +69,8 @@ redistribution; retain it verbatim in notices at import time.
 
 ## Software evidence
 
+- [Adafruit CircuitPython LSM6DS LICENSE](https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS/blob/cdfc14a687a138aa0f2c6abab061bfc1bfafa561/LICENSE):
+  MIT, independently of the hardware references; no driver files vendored yet.
 - [CircuitPython LICENSE](https://github.com/adafruit/circuitpython/blob/d897c15f24b2a6de6529f138aed4705327020dab/LICENSE):
   MIT default with per-file/license exceptions. Audit included dependencies.
 - [Adafruit CircuitPython LIS3DH LICENSE](https://github.com/adafruit/Adafruit_CircuitPython_LIS3DH/blob/cd40b482a098a62ecce1b4c62a1f1930be984e16/LICENSE):

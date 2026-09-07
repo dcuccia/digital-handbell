@@ -29,11 +29,16 @@ compatibility guarantees for every future component.
 Standard symbols include RP2040, MAX98357A, MCP73831-2-OT, LIS3DH, and LSM6DS3.
 A similarly named symbol is not proof that its package/pinout matches a selected
 suffix such as LSM6DS3TR-C. Review the exact MPN and footprint before use.
+An exact LSM6DSOX symbol was not found in the installed `Sensor_Motion`
+library. The [recommended SOX block](motion-sensing.md) still needs its
+source-derived symbol/footprint imported and reviewed from Adafruit 4438;
+the now-exercised EAGLE import path supports that work. Do not substitute the
+LSM6DS3 symbol merely because the package outline looks similar.
 
 ## Open the reference
 
 1. Start **KiCad 10.0** from the Windows Start menu.
-2. Choose **File > Open Existing Project** and open:
+2. Choose **File > Open Project** and open:
 
    ```text
    C:\Projects\dcuccia\digital-handbell\hardware\reference\adafruit-5768\kicad\Adafruit Feather RP2040 Prop-Maker.kicad_pro

@@ -26,7 +26,7 @@ each bell has a fixed or selectable note remain open.
 | R03 | Prefer CircuitPython and novice-friendly USB programming | Working baseline; custom-board identity/provisioning still required |
 | R04 | Integrated I2S DAC/class-D amplifier and local mono speaker | MAX98357A candidate; no separate DAC needed |
 | R05 | Rechargeable 1S LiPo with USB-C charging | Cell, protection, charge current, temperature handling, and runtime TBD |
-| R06 | Motion sensing for a natural ringing gesture | LIS3DH candidate; determine whether a gyroscope is necessary |
+| R06 | Motion sensing for a natural ringing gesture | Evaluate LSM6DSOX acceleration/gyro against stock LIS3DH for strike plus chest-stop/rest; not a frozen BOM |
 | R07 | USB-C at the circular board edge, usable from outside the bell | Connector, shell slot, cable clearance, and load transfer TBD |
 | R08 | Speaker faces outward; electronics sit behind it | Measure internal taper and usable depth with actual parts |
 | R09 | Prefer outward-facing component/connectors for accessible assembly | Confirm assembly sequence before speaker blocks access |
@@ -45,6 +45,19 @@ each bell has a fixed or selectable note remain open.
 | R22 | Robust retention, battery containment, and serviceability | Safety, shake/drop, fastener, and USB-load evidence needed |
 | R23 | Educationally useful operation and maintenance | Note assignment, controls, recovery, charging workflow, and kit instructions TBD |
 | R24 | Record uncertainty and measured versus estimated results honestly | Do not turn vendor examples, ERC/DRC passes, or calculations into product qualification |
+| R25 | Distinguish a handbell strike from a chest-stop/rest damping gesture | Added 2026-09-07; evaluate temporal motion context, gyro benefit, and handling/contact ambiguity |
+
+## 2026-09-07 clarification
+
+The 2023 work is an earlier precursor vision, not a requirement to retain all
+its features. The current gesture requirements explicitly include both a
+handbell strike and bringing the bell to the chest to stop/damp it and rest.
+
+The owner is open to approximately **$1-2 additional component BOM cost** for a
+meaningfully more capable motion sensor, while preferring mature reference
+hardware, documented CircuitPython support, and straightforward tooling.
+This is budget latitude for a justified upgrade, not a verified supplier-price
+delta or a requirement to use on-chip machine learning.
 
 ## Mechanical concepts to preserve
 

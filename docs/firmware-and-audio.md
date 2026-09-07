@@ -12,6 +12,12 @@ Sources and pinned revisions are in the [catalog](reference-designs.md).
 Record the exact CircuitPython build, library bundle, application revision,
 asset hashes, wiring, and board revision for every measurement.
 
+For the explicit chest-stop/rest requirement, add the
+[LSM6DSOX comparison experiment](motion-sensing.md) to the stock LIS3DH setup.
+The LSM6DS driver returns gyro values in **radians/second**. Use the actual
+`adafruit_lsm6ds.lsm6dsox.LSM6DSOX` class and Feather bus, not an outdated guide
+constructor or another board's IMU power aliases.
+
 ## Experiments before choosing behavior
 
 | Question | Experiment and recorded result |
@@ -22,6 +28,7 @@ asset hashes, wiring, and board revision for every measurement.
 | Natural trigger? | Record timestamped acceleration from ringing, pickup, set-down, walking, deliberate shaking, and sound playback |
 | Accelerometer enough? | Quantify missed strikes and false triggers before paying the cost/power/layout penalty of a six-axis sensor |
 | Damping/retrigger/polyphony? | Define what happens on rapid repeated strokes and simulated hand damping; compare restart, overlap, and release envelopes |
+| Chest-stop versus ordinary handling? | Compare recent-stroke context, return trajectory, gyro/pose features, and settling; a tap alone does not prove chest contact |
 | Quiet ready state or power-gated idle? | Measure hiss, click transients, current, and first-strike latency in both modes |
 
 No musical or usability threshold is approved yet. Set targets with the project

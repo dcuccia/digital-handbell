@@ -5,7 +5,7 @@ Repository commits below pin inspected sources, not the revision guaranteed to
 ship in a purchased product. Reference boards are useful design evidence, not
 proof that a reduced circular relayout will work identically.
 
-All twelve Adafruit electronics repositories below contain native EAGLE XML
+All Adafruit electronics repositories cataloged below contain native EAGLE XML
 `.sch` and `.brd` files. See [CAD workflow](schematic-plan.md) and
 [licensing](../ATTRIBUTION.md) before copying or converting them.
 
@@ -36,6 +36,21 @@ contains a different, newer stereo design. For 3988 use
 | [5405: QT Py ESP32-C3](https://www.adafruit.com/product/5405) | ESP32-C3FH4, 4 MB flash, hardware I2S, Wi-Fi/BLE-capable MCU. Fixed-function USB Serial/JTAG, not an S3-style USB device controller; no charger. | [Guide](https://learn.adafruit.com/adafruit-qt-py-esp32-c3-wifi-dev-board), [downloads](https://learn.adafruit.com/adafruit-qt-py-esp32-c3-wifi-dev-board/downloads) | [Adafruit-QT-Py-ESP32-C3-PCB](https://github.com/adafruit/Adafruit-QT-Py-ESP32-C3-PCB/tree/8618fb52d806fb184ec5807490db0a9b084ffa9c), `8618fb52d806fb184ec5807490db0a9b084ffa9c` |
 | [4410: USB-C Micro-Lipo charger](https://www.adafruit.com/product/4410) | MCP73831, 100 mA default / advertised 500 mA jumper option. Charger only, not a managed system power path. Select `Adafruit USB C microlipo charger.*`, not another connector variant. | [Guide](https://learn.adafruit.com/adafruit-microlipo-and-minilipo-battery-chargers), [downloads](https://learn.adafruit.com/adafruit-microlipo-and-minilipo-battery-chargers/downloads) | [Adafruit-MicroLipo-PCB](https://github.com/adafruit/Adafruit-MicroLipo-PCB/tree/d8ab4b0f00c69a9f337a8d697bd15e0b9bae2e25), `d8ab4b0f00c69a9f337a8d697bd15e0b9bae2e25` |
 | [2809: LIS3DH triple-axis accelerometer](https://www.adafruit.com/product/2809) | Three acceleration axes, selectable +/-2/4/8/16 g, I2C/SPI, tap/motion interrupt. **No gyroscope.** Breakout regulation and level shifting may be redundant in a common 3.3 V system. | [Guide](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout), [downloads](https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/downloads) | [Adafruit-LIS3DH-Breakout-PCB](https://github.com/adafruit/Adafruit-LIS3DH-Breakout-PCB/tree/f5f3e1b33fec19a56b2c14c69bb1b97c1c4f2861), `f5f3e1b33fec19a56b2c14c69bb1b97c1c4f2861` |
+
+## Six-axis candidates added 2026-09-07
+
+See the [motion-sensor decision](motion-sensing.md) for the recommendation,
+chest-stop ambiguity, software API details, and dated sourcing/assembly findings.
+These references are cataloged, not vendored or substituted into the 5768.
+
+| Product | Role and qualification | Guide | Hardware source |
+|---|---|---|---|
+| [4438: LSM6DSOX 6-DoF IMU](https://www.adafruit.com/product/4438) | Primary acceleration/gyro candidate; clear CC BY-SA 3.0 hardware notice; basic I2C readout supported without ML | [Guide](https://learn.adafruit.com/lsm6dsox-and-ism330dhc-6-dof-imu), [downloads](https://learn.adafruit.com/lsm6dsox-and-ism330dhc-6-dof-imu/downloads) | [Adafruit-LSM6DSOX-PCB](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/tree/c05abef4675b0380fbf3d23171615a2f1ac0b130), `c05abef4675b0380fbf3d23171615a2f1ac0b130`; `Adafruit_LSM6DSOX.sch` / `.brd` |
+| [4503: LSM6DS3TR-C 6-DoF IMU](https://www.adafruit.com/product/4503) | Economical alternative; resolve overlapping MIT/CC hardware notices and inconsistent lifecycle descriptions before production use | [Guide](https://learn.adafruit.com/adafruit-lsm6ds3tr-c-6-dof-accel-gyro-imu), [downloads](https://learn.adafruit.com/adafruit-lsm6ds3tr-c-6-dof-accel-gyro-imu/downloads) | [Adafruit-LSM6DS3TR-C-PCB](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/tree/9bf02b7214d35f2699bfd24737865511e4f9f114), `9bf02b7214d35f2699bfd24737865511e4f9f114`; `Adafruit_LSM6DS3.sch` / `.brd` |
+
+The inspected [Adafruit CircuitPython LSM6DS](https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS/tree/cdfc14a687a138aa0f2c6abab061bfc1bfafa561)
+source is `cdfc14a687a138aa0f2c6abab061bfc1bfafa561`, separately MIT-licensed.
+Current subclass modules expose acceleration in m/s^2 and gyro in rad/s.
 
 ## Software and primary technical sources
 

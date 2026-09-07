@@ -221,7 +221,9 @@ behavior without conflating audio buffering and motion sampling.
   traces; define replayable false/missed-trigger scenarios.
 - [ ] Implement and tune a nonblocking gesture state machine with hysteresis,
   retrigger handling, orientation/gravity treatment, and velocity response.
-- [ ] Compare accelerometer-only results against criteria; justify any gyro.
+- [ ] Compare stock LIS3DH against the recommended LSM6DSOX using the same
+  strike/chest-stop/rest traces; measure false damping and justify the final
+  sensor without requiring on-chip ML.
 - [ ] Implement selected note/configuration, damping/polyphony, envelopes,
   digital limits, and quiet/power modes with bounded resource use.
 - [ ] Establish asset provenance, firmware/library versions, USB update/recovery,

@@ -28,6 +28,20 @@ This is a logical diagram, not wiring instructions. Protection, decoupling,
 clocking, reset, USB CC terminations, test access, and control/status circuits
 must be explicit in the schematic.
 
+## 2026-09-07 sensor direction for the derivative
+
+The new chest-stop/rest requirement justifies evaluating a gyro now.
+[LSM6DSOX / Adafruit 4438](motion-sensing.md) is the recommended six-axis
+candidate; LSM6DS3TR-C is the cost-led alternative pending sourcing/license
+clarification. This is not a drop-in substitution or a completed design change.
+The diagram and verified baseline below still describe the unchanged 5768.
+
+Bench comparison can retain the onboard LIS3DH at 0x18 and connect the external
+LSM6DSOX at 0x6A on the same I2C bus. For the actual derivative, review the new
+package, pin mapping, straps, power/decoupling, interrupt wiring, and Python
+driver before replacing the LIS3DH block. Neither sensor directly proves
+physical chest contact.
+
 ## Verified 5768 baseline
 
 | Block | Upstream implementation | Handbell implication |
