@@ -6,6 +6,13 @@ or production process has been selected.
 
 ## Measure before choosing a circle
 
+**Current feasibility model:** the owner now assumes D50 at z13 tapering
+linearly to D34 at z43. The [FreeCAD study](mechanical-feasibility.md) and
+[43 mm placement](electrical-reduction-and-placement.md) use that profile.
+The z22 calculation below is preserved as a **superseded sensitivity example**,
+not the current fit model. Real-shell tolerances, clapper intrusion, USB slot,
+cell and mating harnesses remain measurement gates.
+
 The initial [inspiration listing](https://www.amazon.com/Colorful-Handbells-Musical-Instrument-Wedding/dp/B09P4NTLWK)
 did not establish usable internal geometry. The owner actually has
 [B01EABRWO6 shells](https://www.amazon.com/dp/B01EABRWO6). Owner estimates and

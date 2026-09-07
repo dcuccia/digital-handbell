@@ -9,10 +9,10 @@ experiments, not a final component or manufacturing commitment.
 | D02 | Integrated baseline | Prefer Adafruit 5768 for first bench work and schematic derivation | Audio/motion/power experiments and import review |
 | D03 | First MCU/runtime | RP2040 + CircuitPython provisionally preferred; no first-revision wireless requirement | Latency, audio/memory, idle/wake and USB workflow evidence |
 | D04 | Sensor | Owner approved LSM6DSOX on 2026-09-07; integrated at 0x6A in the separate draft; retain LIS3DH for bench comparison | Gyro-enabled/disabled gesture comparison, driver initialization, full electrical review, and assembled BOM quote |
-| D05 | CAD | KiCad 10.0.6 exercised; both pinned references converted; handbell draft has 0 ERC errors/warnings with no exclusions | Complete footprint/layout review, reduction and electrical freeze remain open |
+| D05 | CAD | KiCad 10.0.6 exercised; three pinned references converted; reduced draft has 0 ERC errors/warnings with no exclusions | Complete footprint/routing review and electrical freeze remain open |
 | D06 | Hardware reuse license | Retain source-compatible CC BY-SA 3.0 for adaptations of verified sources; preserve root MIT for original code/docs | Full notices and per-file provenance at import; resolve 4884 version before use |
-| D07 | Packaging | Prefer one-face/two-layer; compare solid disk with near-mouth annular/offset board | Depth-indexed shell profile, complete placement/routing and comparative quotes |
-| D08 | Audio rail and quiet idle | Owner approves independent mute and boosted 4 ohm/3 W-high-end design; investigate TPS61023 first | Exact power parts, 5 V-class rail budget, noise, low-cell behavior and sequencing; not yet wired |
+| D07 | Packaging | 0.2 investigates an inward-component 43 mm solid disk at z20..21.6 using the owner's new taper assumption | Real-shell/part tolerances, carrier access, complete routing and comparative quotes |
+| D08 | Audio rail and quiet idle | TPS61023 5 V-class boost and independent GPIO20 mute implemented in 0.2; mono-left selection and initial 9 dB gain | Exact power parts, rail budget, noise, low-cell behavior and sequencing remain unqualified |
 | D09 | Cell and charger | No pack selected; screen protected 1S packs for at least 2 A continuous plus transient margin; no automatic need for 1S2P | Full load/thermal/protection/runtime/USB budget and cell-specific charging |
 | D10 | Play while charging | Unresolved; must be explicitly permitted or prevented | System power-path/input-current and charging/temperature evidence |
 | D11 | Speaker and cavity | EK1725 on hand; smaller EK1794 candidate has conflicting 3 W title / 2 W description | Actual fit, qualified power limits, matched-level response, mass, distortion and current |
@@ -121,7 +121,30 @@ Evidence, assumptions and next gates are in the
 [mechanical screen](mechanics-and-manufacturing.md). Owning epics:
 E01/#1, E04/#4, E05/#5, E06/#6, E07/#7 and E12/#12.
 
-## Initial risk register
+## 0.2: implemented reduction and revised axial assumption
+
+The owner requested electrical reduction and actual-footprint placement/FreeCAD
+feasibility, explicitly assuming 50 mm ID at z13 tapering linearly to 34 mm at
+z43. Near the opening, the approximately flat first 5 mm and curved transition
+remain adjustable. This is a working profile, not a measured tolerance model.
+The earlier hypothetical 40 mm-at-z22 screen is superseded.
+
+The [0.2 handoff](electrical-reduction-and-placement.md) implements the approved
+reduction, TPS61023 boost, GPIO20 mute, filtered GPIO19 button harness and
+distinct speaker connector. Copper recovery/debug access replaces large
+headers and physical service switches. C29 remains DNP pending effective
+capacitance/compensation review; no cell is selected. Reference copper semantics
+were corrected only in documented derivative footprints, without suppressing
+the unresolved USB hole-clearance findings.
+
+The 43 mm candidate has 74 fitted top-face parts, 18 reverse copper features and
+one DNP provision, with no routing. Its inward-facing component choice is a
+feasibility alternative to the original outward-facing preference, not a
+silent requirement change; assembly, LED visibility and service access must
+be demonstrated. E04/E05/E07 remain open until their broader acceptance gates
+are met. The mechanical handoff records the separate STEP/STL fit study.
+
+## Risk register
 
 | Risk | Mitigation / owning epic |
 |---|---|

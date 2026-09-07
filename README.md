@@ -5,24 +5,27 @@ music-making. Replace the clapper in a children's play handbell with a speaker,
 rechargeable battery, and compact electronics. A natural ringing gesture should
 produce a convincing bell sound; the instrument should be quiet between notes.
 
-**Status: first handbell schematic integration draft, not a fabrication-ready
-or child-use-qualified design.** The
+**Status: 0.2 reduced schematic and 43 mm unrouted placement/3D feasibility draft,
+not a fabrication-ready or child-use-qualified design.** The
 [native KiCad draft](hardware/handbell/README.md) and
 [schematic PDF](hardware/handbell/reports/handbell-schematic.pdf) integrate
-LSM6DSOX and include the [ERC disposition](hardware/handbell/reports/erc-review.md).
-No custom PCB, firmware, or enclosure has been released.
+LSM6DSOX, TPS61023 audio boost, independent mute, keyed speaker/button connectors
+and service pads. Feather/RGB/servo/STEMMA extras are removed.
+The [0.2 handoff](docs/electrical-reduction-and-placement.md) and
+[mechanical models](docs/mechanical-feasibility.md) distinguish actual CAD,
+screening assumptions and unresolved fit/power/manufacturing gates.
+No routed PCB or functioning firmware has been released.
 
 The [compact power and packaging review](docs/compact-power-and-packaging.md)
-records the next approved reduction, smaller boost candidate, actual shell
-estimates and printed-cartridge direction. Those changes are **not yet wired
-into the 0.1 schematic**.
+records the earlier decisions behind this revision. Its hypothetical taper
+example is superseded by the owner's z13/50 mm to z43/34 mm working profile.
 
 The working first-revision baseline is the
 [Adafruit RP2040 Prop-Maker Feather (5768)](https://www.adafruit.com/product/5768):
 RP2040, CircuitPython, MAX98357A I2S DAC/amplifier, LIS3DH accelerometer, USB-C,
-and single-cell LiPo charging. We intend to reuse documented, code-supported
-open hardware, remove unnecessary peripheral branches, and create a circular
-board. This is a starting hypothesis, not a frozen BOM.
+and single-cell LiPo charging. Its documented, code-supported circuitry is
+adapted into the reduced circular candidate, with the sensor and audio-power
+changes described above. This is not a frozen BOM.
 
 The owner-approved [LSM6DSOX six-axis sensor](docs/motion-sensing.md) is now in
 the separate handbell draft for strike plus chest-stop/rest development.
@@ -42,6 +45,9 @@ assembled cost and final electrical decisions remain evidence gates.
 | [Motion-sensor decision](docs/motion-sensing.md) | LIS3DH versus six-axis sensing, chest-stop limits, CircuitPython APIs, and sourcing |
 | [Mechanics and manufacturing](docs/mechanics-and-manufacturing.md) | Speaker/board trade space, measurements, mounting, JLCPCB and OSH Park |
 | [Compact power and packaging review](docs/compact-power-and-packaging.md) | Approved next revision, boost/cell/mute review, speaker-rating conflict and fit constraints |
+| [0.2 reduction and placement](docs/electrical-reduction-and-placement.md) | Implemented circuits, 43 mm candidate, service map and open routing/DFM gates |
+| [Mechanical feasibility](docs/mechanical-feasibility.md) | Editable FreeCAD, STEP/STL, assumed shell profile and cartridge interference findings |
+| [Routing readiness](docs/routing-readiness.md) | Print-fit checkpoint, electrical floorplanning gates and the path to reviewed Gerbers/BOM/CPL |
 | [Validation plan](docs/validation-plan.md) | Measurements and evidence required before each hardware release |
 | [Decision log](docs/decisions.md) | Provisional decisions and the evidence needed to close them |
 | [Roadmap and epics](docs/roadmap.md) | Milestones, dependencies, scope, and acceptance criteria |

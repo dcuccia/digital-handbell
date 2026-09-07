@@ -10,7 +10,8 @@ files; see [setup/readiness](kicad-setup.md) and the
 [reference package](../hardware/reference/adafruit-5768/README.md).
 The separate [handbell integration draft](../hardware/handbell/README.md) now
 contains LSM6DSOX and the dispositions of the original 50 ERC findings.
-It is not yet the fully reduced/frozen schematic. No EDA subscription or
+The [0.2 reduction](electrical-reduction-and-placement.md) is implemented but not
+electrically frozen. No EDA subscription or
 third-party importer is needed.
 
 The [official KiCad project-manager manual](https://docs.kicad.org/10.0/en/kicad/kicad.html)
@@ -55,7 +56,7 @@ than silently inventing substitutes.
 The [approved compact-revision scope](compact-power-and-packaging.md) removes
 Feather/servo/RGB/STEMMA branches, adds the GPIO19 two-pin button harness and
 independent audio mute, and targets a source-backed boosted amplifier rail.
-The 0.1 artifacts do not yet implement these decisions. Reuse small, reviewed
+The current 0.2 artifacts implement these decisions. Reuse small, reviewed
 0402 support parts where suitable; qualify bulk capacitance and magnetics
 instead of mechanically shrinking every footprint.
 
@@ -89,7 +90,7 @@ pullup or power-switch bias resistor merely because a connector disappears.
 - [ ] Candidate MPNs, footprints, pad numbering, stock/assembly options,
   substitutions, and at least provisional costs are linked to the BOM.
 - [x] ERC findings are resolved or individually justified; no blanket disabling
-  (0.1 draft; rerun after every schematic change).
+  (current 0.2 draft; rerun after every schematic change).
 - [ ] Reviewer signs off the schematic together with known limits. ERC alone
   is not evidence of functional, acoustic, thermal, or safety performance.
 
@@ -98,9 +99,9 @@ pullup or power-switch bias resistor merely because a connector disappears.
 The schematic epic must deliver native KiCad project/schematic files,
 project-local custom libraries where needed, an exported PDF, BOM draft,
 net/pin comparison, import/change report, license notices, and recorded review.
-The repository contains both upstream references and a separate **0.1 handbell
-integration draft**, with PDF, BOM draft, net/pad comparison and clean ERC.
-Peripheral reduction, complete MPN/footprint review, cell/audio decisions and
+The repository contains three upstream references and a separate **0.2 handbell
+draft**, with PDF, BOM draft, net/pad comparison, clean ERC and unrouted placement.
+Complete MPN/footprint review, cell/audio decisions and
 independent electrical signoff remain open before derivative freeze.
 
 Use project-relative library paths. Exclude machine-local preferences, lock

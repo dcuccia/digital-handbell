@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680">
+<rect width="1100" height="680" fill="#fafafa"/>
+<style>text{font-family:Arial,sans-serif;fill:#17202a}</style>
+<text x="25" y="32" font-size="22">Original inert fit dummies - PLA, mm, 100% scale</text>
+<text x="25" y="58" font-size="13">Illustrative speaker geometry is invented between supplied dimensions. No source image is included.</text>
+<polygon points="53.500,245.000 53.500,228.800 64.000,228.800 97.000,173.000 109.000,173.000 109.000,137.000 241.000,137.000 241.000,173.000 253.000,173.000 286.000,228.800 296.500,228.800 296.500,245.000" fill="#bcd4e6" stroke="#1d3557" stroke-width="2"/>
+<rect x="52.300" y="134.000" width="245.400" height="111.000" fill="none" stroke="#b22222" stroke-dasharray="6,4"/>
+<text x="25" y="282" font-size="13">Blue: illustrative only. Red: maximum collision envelope.</text>
+<text x="25" y="306" font-size="13">Print wide frame face down; no hollow basket, terminals or cone.</text>
+<text x="530" y="100" font-size="17">Standalone print dimensions (X x Y x Z, mm)</text>
+<text x="530" y="128" font-size="12">populated-pcba-proxy.stl: 43.000 x 43.465 x 6.600</text>
+<text x="530" y="157" font-size="12">speaker-envelope-nominal.stl: 40.500 x 40.500 x 18.000</text>
+<text x="530" y="186" font-size="12">speaker-envelope-maximum.stl: 40.900 x 40.900 x 18.500</text>
+<text x="530" y="215" font-size="12">speaker-illustrative-unmeasured.stl: 40.500 x 40.500 x 18.000</text>
+<text x="530" y="244" font-size="12">battery-dummy-primary.stl: 20.000 x 30.000 x 8.000</text>
+<text x="530" y="273" font-size="12">battery-clearance-primary.stl: 22.000 x 32.000 x 10.000</text>
+<text x="530" y="302" font-size="12">battery-dummy-compact.stl: 18.000 x 28.000 x 8.000</text>
+<text x="530" y="331" font-size="12">battery-clearance-compact.stl: 20.000 x 30.000 x 10.000</text>
+<text x="25" y="490" font-size="13">PCBA: one fused solid. Component proxies remain at 1:1 scale; small 0402 details are not enlarged.</text>
+<text x="25" y="519" font-size="13">Battery clearance gauges include free space; they are not battery dimensions or live-cell restraints.</text>
+<text x="25" y="548" font-size="13">All new dummy STL/STEP files have Z=0 at the print bed; restore the reported datum when checking the assembly.</text>
+<text x="25" y="577" font-size="13">Use the installed K1C/nozzle PLA profile. Inspect tiny features and the USB overhang in the slicer.</text>
+<text x="25" y="606" font-size="13">No image, thermal model, mass/acoustic equivalence, retention qualification or routing approval is implied.</text>
+</svg>

@@ -56,8 +56,9 @@ Current subclass modules expose acceleration in m/s^2 and gyro in rad/s.
 
 ## Boost references added 2026-09-07
 
-These are inspected, **catalog-only** sources, not imported KiCad blocks or
-qualified handbell parts. The owner independently identified MiniBoost during
+PowerBoost remains **catalog-only**. MiniBoost is now
+[imported/adapted in 0.2](../hardware/reference/adafruit-4654/README.md), not a
+qualified power subsystem. The owner independently identified MiniBoost during
 the same review. Both source READMEs credit Limor Fried/Ladyada for Adafruit
 Industries and both `license.txt` files specify CC BY-SA 3.0 Unported.
 

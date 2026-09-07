@@ -86,6 +86,12 @@ headline power.
 
 ### Approved compact-revision behavior
 
+This scope is now wired in [0.2](electrical-reduction-and-placement.md):
+GPIO20 **HIGH=mute / LOW=play**, GPIO23 enables switched input and boost,
+SD_MODE selects left audio when unmuted, and the gain jumper remains open/9 dB.
+There is no delivered firmware yet. Preserve the stock GPIO19 `EXTERNAL_BUTTON`
+distinction and remove the old servo/NeoPixel roles in the custom board definition.
+
 The owner now requests a 4 ohm mono speaker and electronics capable of the
 3 W high end with a boosted rail. The MAX98357A's typical 5 V / 4 ohm figures
 are 2.5 W at 1% THD+N and 3.2 W at 10% THD+N under its specified test conditions.

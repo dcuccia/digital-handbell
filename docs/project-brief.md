@@ -30,15 +30,15 @@ each bell has a fixed or selectable note remain open.
 | R06 | Motion sensing for a natural ringing gesture | Owner-approved LSM6DSOX in the draft; compare acceleration/gyro against stock LIS3DH for strike plus chest-stop/rest; performance and assembled BOM not frozen |
 | R07 | USB-C at the circular board edge, usable from outside the bell | Connector, shell slot, cable clearance, and load transfer TBD |
 | R08 | Speaker faces outward; package electronics behind/around it in the shell | Owner estimates and retail speaker drawing captured; axial profile, basket, cell and clearances remain open |
-| R09 | Prefer outward-facing component/connectors for accessible assembly | Confirm assembly sequence before speaker blocks access |
-| R10 | Plug-in speaker wiring, preferably a keyed JST-family connector | Exact family, polarity marking, pitch, retention, and current rating TBD |
+| R09 | Prefer outward-facing component/connectors for accessible assembly | 0.2 compares inward-facing components to recover axial space; preassembly and service access still need confirmation |
+| R10 | Plug-in speaker wiring, preferably a keyed JST-family connector | 0.2 selects distinct Molex Pico-Lock; final mating envelope/current qualification pending |
 | R11 | Prefer one-face component assembly on a two-layer circular PCB | Feasibility goal, not a committed diameter or layer count |
 | R12 | Consider two stacked PCBs if justified by fit or cost | Compare added height, interconnects, supports, labor, and failure points |
 | R13 | Good bell timbre, useful acoustic output, quiet between chimes | Define note range, SPL/distance, noise, distortion, and transient targets |
 | R14 | Preserve clean audio behavior when combining reference circuits | Review supply loops, return paths, startup/mute behavior, and layout |
 | R15 | Reuse mature, documented, code-supported open hardware | Prefer pinned Adafruit sources, guides, examples, and known errata |
 | R16 | Proper attribution across electronics, code, assets, and documentation | Maintain per-source license/provenance and modifications |
-| R17 | Remove Feather headers, servo/RGB branches and STEMMA QT; retain simple charge/status LEDs | Approved for next revision, not yet wired; preserve shared rails, protection, pullups and decoupling |
+| R17 | Remove Feather headers, servo/RGB branches and STEMMA QT; retain simple charge/status LEDs | Implemented in 0.2; shared rails, pullups and decoupling retained |
 | R18 | Very low total cost and straightforward novice assembly | Target unit/set prices and quantities TBD; quote complete BOM and labor |
 | R19 | JLCPCB-compatible fabrication/assembly; evaluate OSH Park | Separate bare-board service from assembly service |
 | R20 | Beginner-friendly design tooling and instructions | KiCad recommended; record installed version and import procedure |
@@ -72,7 +72,9 @@ smaller taper, 44 mm bell-body height and 85 mm handle height. **The axial
 position of the 40 mm measurement and usable handle interior are unknown.**
 
 Two Gikfun EK1725 2-inch speakers are already on hand. EK1794 40 mm speakers
-are an unpurchased comparison candidate. The owner-supplied retail drawing
+were initially an unpurchased comparison candidate. The owner subsequently
+reported ordering them, with arrival expected Wednesday, 2026-09-09; actual
+dimensions and power limits are not yet qualified. The owner-supplied retail drawing
 gives 40.5 +/-0.4 mm frame diameter, 22 +/-0.5 mm magnet diameter and
 18 +/-0.5 mm overall depth; its 2.7 +/-0.3 mm rim dimension is not extra depth.
 The 40 mm seller's 3 W title conflicts with a 2 W description rating.
@@ -127,10 +129,16 @@ The RP2040 "less than a dollar" expectation is an unverified sourcing hypothesis
 not an approved BOM price. Price the actual supplier, quantity, assembly SKU,
 shipping, taxes, and yield.
 
-## Current scope boundary
+## Current 0.2 scope and owner profile update
 
-The native 0.1 schematic integrates LSM6DSOX and resolves the imported ERC
-findings. The next electrical artifact is its purpose-built reduction and
-power/audio revision. The latest review is not that new schematic, a selected
-cell, a final speaker, a routed PCB or finished firmware. Early S3 radio
-experiments are in scope; a deployed wireless training system is not implied.
+The owner subsequently requested actual reduction, placement and FreeCAD
+STEP/STL work, with a working shell ID of 50 mm at z=13 mm inward, tapering
+linearly to 34 mm at z=43 mm. The near-face 5 mm and curved transition remain
+approximate. These assumptions supersede the earlier hypothetical z22 screen;
+they do not establish manufacturing tolerances or a measured 3D shell.
+
+The native [0.2 schematic and 43 mm placement](electrical-reduction-and-placement.md)
+implement the reduction and boost/mute/button revision. The
+[FreeCAD study](mechanical-feasibility.md) uses the updated profile.
+No cell, qualified speaker, routed PCB or functioning firmware is released.
+Early S3 radio experiments remain in scope; a deployed training system is not implied.

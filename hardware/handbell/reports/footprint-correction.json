@@ -1,0 +1,49 @@
+{
+  "source": "Adafruit 5768 pinned DFN2015-3 imported footprint",
+  "license": "CC BY-SA 3.0 Unported; derivative of Limor Fried/Ladyada for Adafruit Industries",
+  "change": "Associate the existing F.Cu drain polygon with pad 3 instead of leaving it as netless footprint graphics.",
+  "copper_polygon_mm": [
+    [
+      0.555,
+      -0.16
+    ],
+    [
+      1.155,
+      -0.16
+    ],
+    [
+      1.155,
+      0.16
+    ],
+    [
+      0.555,
+      0.16
+    ],
+    [
+      0.555,
+      0.655
+    ],
+    [
+      -0.405,
+      0.655
+    ],
+    [
+      -0.405,
+      -0.655
+    ],
+    [
+      0.555,
+      -0.655
+    ]
+  ],
+  "source_pad3_rectangle_contained_in_polygon_mm": [
+    0.5,
+    -0.155,
+    1.15,
+    0.155
+  ],
+  "new_anchor": "0.01mm square at origin, inside source polygon; no extra copper area",
+  "apertures": "Original explicit mask/paste windows retained; original pad3 mask margin0.0508 and zero paste margin reproduced as explicit rectangles.",
+  "unchanged": "Other pads, external copper union, mask/paste union, package outline and component origin.",
+  "limitations": "Import-fidelity correction, not new manufacturer/package or thermal qualification."
+}

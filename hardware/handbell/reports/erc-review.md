@@ -1,4 +1,12 @@
-# ERC review: reference to handbell 0.1
+# ERC review: original 0.1 dispositions and current 0.2
+
+**Current 0.2:** the electrical reduction, boost/mute/button circuits and
+service-pad changes also have **0 ERC errors / 0 warnings** under the unchanged
+rules and empty exclusions. See the [revision handoff](../../../docs/electrical-reduction-and-placement.md)
+and [current connectivity report](connectivity-review.json): 62 retained
+components, 73 projected groups, source imports 71/17/6, and explicit changes.
+The historical dispositions below describe 0.1; removed peripherals are no
+longer present. They are retained as an audit trail, not a current BOM.
 
 Reviewed 2026-09-07 using KiCad 10.0.6. **All 50 original findings are individually
 disposed of in the separate derivative: 13 errors and 37 warnings.** The final
@@ -100,7 +108,7 @@ explicit NC markers; their footprint lands remain present for soldering.
 - [SOX Mode 1 source and pin table](../README.md#lsm6dsox-electrical-contract)
   identifies the actual ST revision and the source-versus-breakout differences.
 
-The [connectivity review](connectivity-review.json) compares fresh exports:
+The original 0.1 connectivity review compared fresh exports:
 **76 retained components and 75 retained connection groups**, unchanged values
 and footprints outside IC4, the intended C23/C24/TP4/TP5/TP6 additions,
 all 14 sensor pins/lands and the GPIO contract. It also reproduces the source

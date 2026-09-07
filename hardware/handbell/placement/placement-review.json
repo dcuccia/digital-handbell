@@ -1,0 +1,27 @@
+{
+  "scope": "Unrouted correspondence/placement screen, NOT DRC or fabrication approval",
+  "pcb_sha256": "b6cf79252d57320216007e99ce561fcc20ace4631e767fe9b3ca76687f75254d",
+  "schematic_sha256": "6cb52b0514da7dbd1dc803f5935abf9a90933beaab3eac5102c4b165c083c31c",
+  "references": 93,
+  "physical_pads_checked": 298,
+  "fitted_front": 74,
+  "copper_only_back": 18,
+  "dnp": [
+    "C29"
+  ],
+  "native_drc_counts": {
+    "hole_clearance": 4,
+    "silk_edge_clearance": 2,
+    "text_height": 69,
+    "text_thickness": 3,
+    "silk_overlap": 37,
+    "silk_over_copper": 82
+  },
+  "native_schematic_parity_counts": {
+    "net_conflict": 46
+  },
+  "cli_parity_limitation": "CLI fallback omits auto/NC pins. Full exported pin/net correspondence is checked above; paired-editor GUI parity must be recorded separately.",
+  "gui_schematic_parity_findings": 0,
+  "unconnected_items": 203,
+  "unresolved_gate": "X6 source footprint NPTH clearance and unfinished silk; all routing still absent."
+}

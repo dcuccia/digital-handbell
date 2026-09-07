@@ -1,22 +1,24 @@
-# Handbell schematic: 0.1 integration draft
+# Handbell: 0.2 electrical and placement draft
 
-**LSM6DSOX is integrated; this is not a fabrication release.** Open
+**Reduced electronics and a 43 mm unrouted candidate; not a fabrication release.** Open
 [`handbell.kicad_pro`](handbell.kicad_pro) in KiCad 10.0.6, then its schematic.
 For a CAD-free view, use the [schematic PDF](reports/handbell-schematic.pdf).
-There is deliberately **no handbell PCB layout** in this directory.
+The PCB editor opens [`handbell.kicad_pcb`](handbell.kicad_pcb), an actual-footprint
+placement with no tracks/vias/zones. Start with the
+[0.2 handoff](../../docs/electrical-reduction-and-placement.md) for boost, mute,
+connectors, service access, geometry and unresolved DRC/power gates.
 
-The owner approved the sensor change on 2026-09-07. This revision replaces the
+The owner approved the sensor change on 2026-09-07. The earlier 0.1 replaced the
 5768 reference's LIS3DH, resolves its original ERC findings in a separate
-derivative, and establishes explicit sensor/debug connections. It intentionally
-retains the other Feather branches to keep this change reviewable. Removing
-servo/NeoPixel/header circuitry and selecting the speaker connector remain E04
-work, not completed reductions hidden inside this revision.
+derivative, and established explicit sensor/debug connections. That history
+remains in commit `ef3d6ab2bf822cff79d41573f05b5916c6a7133e`.
 
 **Later 2026-09-07 scope update:** the owner approved the compact GPIO19-button,
 no-STEMMA/header/RGB revision and a boosted audio/mute review. The
 [power/packaging assessment](../../docs/compact-power-and-packaging.md) records
-those decisions, candidate sources and remaining gates. This directory's
-native CAD/PDF/netlist still represents **0.1**, not that forthcoming revision.
+those decisions, candidate sources and remaining gates. This directory now
+implements **0.2**: TPS61023 boost, independent GPIO20 mute, GPIO19 button,
+keyed speaker connector, service pads and removal of expansion/RGB branches.
 
 ## Artifacts and scope
 
@@ -26,10 +28,13 @@ native CAD/PDF/netlist still represents **0.1**, not that forthcoming revision.
 | [PDF](reports/handbell-schematic.pdf), [XML netlist](reports/handbell-netlist.xml) | Human and machine-readable views |
 | [ERC disposition](reports/erc-review.md), [machine-readable dispositions](reports/erc-dispositions.json) | Individual treatment of all 50 original findings and collateral warnings |
 | [Current ERC](reports/handbell-erc.json) | Zero errors and zero warnings under the unchanged baseline rules; no exclusions |
-| [Connectivity/pad review](reports/connectivity-review.json) | 76 retained components, 75 retained connection groups, all 14 sensor lands |
+| [Connectivity/pad review](reports/connectivity-review.json) | 62 retained components, 73 projected groups, explicit changes, all sensor/boost lands |
 | [BOM draft](reports/bom-draft.csv) | Values and footprints, with incomplete MPN/assembly choices explicitly marked |
+| [Placement](placement/placement-top.svg), [manifest](placement/placement-manifest.json), [review](placement/placement-review.json) | 74 fitted front parts, 18 reverse copper features, one DNP provision |
+| [Native DRC](placement/placement-drc.json), [substrate STEP](placement/pcb-substrate.step) | Unresolved findings retained; substrate-only STEP is not a populated model |
 
-The footprint table refers to the two sibling reference packages using
+The footprint table refers to three sibling reference packages and the local
+`Handbell.pretty` correction library using
 `${KIPRJMOD}`-relative paths. Keep the **whole repository checkout** together;
 copying only this directory omits required footprints. Standard KiCad libraries
 provide `power:PWR_FLAG`. The exported schematic also embeds its symbols.
@@ -47,14 +52,17 @@ This independent adaptation is **CC BY-SA 3.0 Unported**:
   **Bryan Siepert for Adafruit Industries**, source commit
   `c05abef4675b0380fbf3d23171615a2f1ac0b130`.
   [Full original notice and source](../reference/adafruit-4438/upstream/README.md).
+- Boost: Adafruit TPS61023 MiniBoost 4654, Limor Fried/Ladyada for Adafruit
+  Industries, commit `82b5a33a1900a5c13849029bc84e7856a44086e0`.
+  [Full original notice and source](../reference/adafruit-4654/upstream/README.md).
 - Integration, changed wiring, electrical pin types, annotations and review:
   the dcuccia digital-handbell project, with AI assistance, 2026-09-07.
-- The standard KiCad `PWR_FLAG` symbol is used in the design under KiCad's
+- Standard KiCad power, connector, SOT23 and solder-jumper material is used in the design under KiCad's
   [CC BY-SA 4.0 library license with design exception](https://www.kicad.org/libraries/license/).
   It is not redistributed in `Handbell.kicad_sym` as a library collection.
   Original verification scripts under `tools` remain MIT-licensed.
 
-Both upstream references are preserved separately. The old Adafruit graphical
+All three upstream references are preserved separately. The old Adafruit graphical
 title frame was removed from this derivative and replaced with an independent
 title block carrying attribution; upstream notices were not removed.
 
@@ -99,11 +107,11 @@ ST fetch failed; page numbers above are **Rev 3**, not Rev 4. Original Adafruit
 pin-to-pad mapping is in its pinned
 [schematic lines 5463-5482](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/blob/c05abef4675b0380fbf3d23171615a2f1ac0b130/Adafruit_LSM6DSOX.sch#L5463-L5482).
 
-## Preserved and changed connections
+## Historical 0.1 integration changes
 
-All non-sensor component values, footprints and pin-to-pin groups are retained.
+In 0.1, all non-sensor component values, footprints and pin-to-pin groups were retained.
 I2S remains GPIO16 data, GPIO17 bit clock and GPIO18 word select; amplifier
-power enable remains GPIO23. Changes beyond the sensor are:
+power enable remains GPIO23. The original changes beyond the sensor were:
 
 - TP4 on SWCLK and TP5 on SWDIO make debug-pad intent explicit. They reuse the
   reference's 1.5 mm copper test-pad footprint; they are not fitted components.
@@ -131,11 +139,11 @@ Keep sensor-hub master, pass-through, OIS and DEN disabled. Retain the default
 auxiliary pull-ups when leaving pads 10/11 NC. Route chosen events explicitly
 to INT1; a physical interrupt wire does not configure interrupt behavior.
 
-## Not resolved by this revision
+## Not resolved by 0.2
 
 Cell choice, charger current/temperature/protection, cutoff and play-while-charge
-policy; speaker impedance/power, gain and quiet-idle sequencing; USB input/ESD
-review; final controls/connectors; complete MPN/assembly quote; circular fit,
+policy; qualified speaker power and measured quiet-idle sequencing; USB input/ESD
+review; final mating harnesses; complete MPN/assembly quote; real-shell circular fit,
 orientation, placement/routing, ground/current-return paths and mechanical
 support; actual sound, latency, gestures, runtime and safety.
 
@@ -158,9 +166,10 @@ $Reports = ".\hardware\handbell\reports"
 python .\tools\check_handbell.py --kicad-cli $Cli
 ```
 
-Stop on a nonzero exit code. The final command freshly exports all three
-schematics in temporary storage, checks both source imports and the derivative,
+Stop on a nonzero exit code. The final command freshly exports all four
+schematics in temporary storage, checks three source imports and the derivative,
 and updates the connectivity report and BOM draft. It uses only Python's
-standard library. Its expected changes describe this 0.1 integration; future
+standard library. Its expected changes describe this 0.2 integration; future
 intentional reductions must update that explicit contract, not bypass it.
-These commands do not create or qualify a PCB.
+These commands do not qualify a PCB. See the 0.2 handoff for placement generation
+and the `--placement` correspondence review.

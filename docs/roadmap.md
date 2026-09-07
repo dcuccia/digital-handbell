@@ -49,8 +49,11 @@ Create focused child issues as implementation details become known.
 **2026-09-07 scope update:** the
 [compact power/packaging review](compact-power-and-packaging.md) adds approved
 GPIO19-button/STEMMA removal, boosted mono audio, a printed cartridge/grille
-and early S3-MINI RF exploration. These are next-revision tasks, not changes
-already made to 0.1 CAD. Early E12 work may inform carrier freeze without making
+and early S3-MINI RF exploration. The [0.2 handoff](electrical-reduction-and-placement.md)
+now delivers the electrical reduction and an unrouted 43 mm placement; the
+[mechanical handoff](mechanical-feasibility.md) records FreeCAD feasibility.
+The broad bench, routing, sourcing and safety gates remain open.
+Early E12 work may inform carrier freeze without making
 network connectivity a prerequisite for the first sounding instrument.
 
 <!-- TRACKING:START -->

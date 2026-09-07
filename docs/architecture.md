@@ -2,14 +2,14 @@
 
 Status: schematic integration draft, not frozen. The
 [handbell derivative](../hardware/handbell/README.md) adapts Adafruit 5768 and
-now has a native schematic/netlist with LSM6DSOX. Peripheral reduction,
-cell/speaker choices and physical layout are still open.
+now has LSM6DSOX, TPS61023 boost, independent mute and reduced peripheral
+wiring. Cell/speaker qualification and routing remain open; the
+[0.2 handoff](electrical-reduction-and-placement.md) covers the 43 mm placement.
 All upstream implementation claims refer to the
 [pinned source catalog](reference-designs.md), particularly the
 [5768 schematic](https://github.com/adafruit/Adafruit-RP2040-Prop-Maker-Feather-PCB/blob/408fa9a40c0a01a3a65497ef42a29e0b08fe711e/Adafruit%20Feather%20RP2040%20Prop-Maker.sch).
 
-The diagram below describes the **published 0.1, unboosted** circuit, not the
-approved next revision.
+The diagram below describes the current **0.2 boosted** circuit.
 
 ```mermaid
 flowchart LR
@@ -25,7 +25,10 @@ flowchart LR
     SEL --> SW[Switched amplifier rail]
     MCU -->|Power enable| SW
     MCU -->|I2S: data / BCLK / LRCLK| AMP[MAX98357A DAC + class-D amp]
-    SW --> AMP
+    SW --> BOOST[TPS61023: VAMP about 5 V]
+    MCU -->|POWER / EN| BOOST
+    MCU -->|AMP_MUTE via Q4| AMP
+    BOOST --> AMP
     AMP -->|BTL pair: neither lead is ground| SPK[Speaker]
 ```
 
@@ -111,10 +114,11 @@ The integrated 5768 provides a servo connection, not a generic motor-driver
 subsystem to remove wholesale. The older 3988's analog amp and RGB drivers are
 different circuitry; do not merge those assumptions.
 
-## Approved next revision: compact instrument, not Feather expansion board
+## Implemented 0.2 scope: compact instrument, not Feather expansion board
 
 The [2026-09-07 power/packaging review](compact-power-and-packaging.md) records
-the next revision. These changes are **not yet in the native schematic**:
+the rationale. The following scope is now in the schematic; complete electrical
+qualification is still pending:
 
 - Remove JP1/JP3 Feather headers, SERVO0, OUTPUTS0, LED1 NeoPixel, IC2 external
   RGB level shifter, its dedicated R19, and CONN1 STEMMA QT. Reconcile every
@@ -137,7 +141,8 @@ the next revision. These changes are **not yet in the native schematic**:
   recovery and reset access even if physical service switches become pads.
   TP3 is BOOT/USBBOOT, not RESET; TP4/TP5 are SWCLK/SWDIO.
 
-Preserve C18 on **VCORE** and C16 on the shared **V+** rail. Do not discard
+Preserve C18 on **VCORE**; in 0.2 C16 is explicitly moved from V+ to **VAMP**.
+Do not discard
 Q1/Q2, source selection or shared bias/bypass components until the replacement
 power topology explicitly accounts for their functions. A converter's enable
 pin is not, by itself, proof of output isolation, discharge, safe startup or

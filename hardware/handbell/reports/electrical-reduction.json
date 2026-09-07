@@ -1,0 +1,235 @@
+{
+  "revision": "0.2-draft",
+  "basis_commit": "ef3d6ab2bf822cff79d41573f05b5916c6a7133e",
+  "removed_references": [
+    "CONN1",
+    "IC2",
+    "JP1",
+    "JP3",
+    "LED1",
+    "OUTPUTS0",
+    "R19",
+    "SERVO0",
+    "SW1",
+    "SW2",
+    "U$31",
+    "U$32",
+    "U$34",
+    "U$35"
+  ],
+  "new_references": [
+    "C25",
+    "C26",
+    "C27",
+    "C28",
+    "C29",
+    "J1",
+    "J2",
+    "L1",
+    "Q4",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP16",
+    "TP7",
+    "TP8",
+    "TP9",
+    "U5"
+  ],
+  "dnp_references": [
+    "C29"
+  ],
+  "copper_only_excluded_from_fitted_bom": [
+    "CHG_EN0",
+    "D+1",
+    "D-1",
+    "GAIN0",
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP16",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9"
+  ],
+  "new_reference_pin_nets": {
+    "U5": {
+      "1": "BOOST_FB",
+      "2": "POWER",
+      "3": "V+",
+      "4": "GND",
+      "5": "BOOST_SW",
+      "6": "VAMP"
+    },
+    "L1": {
+      "P$1": "V+",
+      "P$2": "BOOST_SW"
+    },
+    "C26": {
+      "1": "V+",
+      "2": "GND"
+    },
+    "C27": {
+      "1": "VAMP",
+      "2": "GND"
+    },
+    "C28": {
+      "1": "VAMP",
+      "2": "GND"
+    },
+    "C25": {
+      "1": "BUTTON",
+      "2": "GND"
+    },
+    "C29": {
+      "1": "VAMP",
+      "2": "BOOST_FB"
+    },
+    "R23": {
+      "1": "VAMP",
+      "2": "BOOST_FB"
+    },
+    "R24": {
+      "1": "BOOST_FB",
+      "2": "GND"
+    },
+    "R20": {
+      "1": "+3V3",
+      "2": "AMP_MUTE"
+    },
+    "R21": {
+      "1": "+3V3",
+      "2": "BUTTON"
+    },
+    "R22": {
+      "1": "BUTTON",
+      "2": "BUTTON_EXT"
+    },
+    "Q4": {
+      "1": "AMP_MUTE",
+      "2": "GND",
+      "3": "I2S_MOD"
+    },
+    "J1": {
+      "1": "VO+",
+      "2": "VO-"
+    },
+    "J2": {
+      "1": "BUTTON_EXT",
+      "2": "GND"
+    },
+    "TP7": {
+      "P$1": "~{RESET}"
+    },
+    "TP8": {
+      "P$1": "GND"
+    },
+    "TP9": {
+      "P$1": "+3V3"
+    },
+    "TP10": {
+      "P$1": "VAMP"
+    },
+    "TP11": {
+      "P$1": "VBAT"
+    },
+    "TP12": {
+      "P$1": "I2S_DIN"
+    },
+    "TP13": {
+      "P$1": "I2S_BCLK"
+    },
+    "TP14": {
+      "P$1": "I2S_LRCLK"
+    },
+    "TP15": {
+      "P$1": "AMP_MUTE"
+    },
+    "TP16": {
+      "P$1": "POWER"
+    }
+  },
+  "new_gpio_no_connects": [
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "17",
+    "18",
+    "2",
+    "3",
+    "32",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "6",
+    "7",
+    "8"
+  ],
+  "retained_pins_moved_from_V+_to_VAMP": [
+    [
+      "C16",
+      "1"
+    ],
+    [
+      "C19",
+      "1"
+    ],
+    [
+      "GAIN0",
+      "3"
+    ],
+    [
+      "R18",
+      "2"
+    ],
+    [
+      "U4",
+      "7"
+    ],
+    [
+      "U4",
+      "8"
+    ]
+  ],
+  "changed_values": {
+    "R18": {
+      "old": "1M",
+      "new": "10K"
+    }
+  },
+  "changed_footprints": {
+    "Q3": "Handbell:DFN2015-3_DrainPad",
+    "CHG_EN0": "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm",
+    "GAIN0": "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
+  },
+  "renamed_net": {
+    "SERVO": "AMP_MUTE"
+  },
+  "unresolved": [
+    "cell/charge/temperature/cutoff/USB policy",
+    "power passive MPNs and effective values",
+    "speaker power rating",
+    "cable/ESD review",
+    "placement/routing/thermal/quiet-state evidence"
+  ]
+}

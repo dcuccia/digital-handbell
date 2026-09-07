@@ -1,0 +1,97 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-07T13:36:40",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/5a7d8761-89e3-41ed-aab8-ef5cba0bf0a1",
+            "violations": [
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #U$4 Pin 1 [VIN, Power input, Line]",
+                            "pos": {
+                                "x": 0.4318,
+                                "y": 0.7366
+                            },
+                            "uuid": "519100bd-090a-4172-816a-356a0b016df2"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #U$2 Pin 1 [VDD, Power input, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.7874
+                            },
+                            "uuid": "bd9725c9-974c-466e-bc28-3f195793a2fc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #U$1 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.9652
+                            },
+                            "uuid": "73badfea-b1ae-403d-b1a8-89610bacf1de"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.1016 mm",
+                            "pos": {
+                                "x": 1.524,
+                                "y": 1.2446
+                            },
+                            "uuid": "ea7186d8-9888-4b7f-b2ef-5242c0dfe133"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                }
+            ]
+        }
+    ],
+    "source": "Adafruit TPS61023.kicad_sch"
+}

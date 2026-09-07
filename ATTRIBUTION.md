@@ -6,8 +6,10 @@ Adafruit's endorsement, manufacture, or qualification of our derivative.
 
 **Current inventory:** original project documentation and MIT verification
 scripts, the [5768 reference](hardware/reference/adafruit-5768/README.md),
-the [4438 SOX reference](hardware/reference/adafruit-4438/README.md), and the
-[handbell schematic adaptation](hardware/handbell/README.md). Both reference
+the [4438 SOX reference](hardware/reference/adafruit-4438/README.md),
+the [4654 MiniBoost reference](hardware/reference/adafruit-4654/README.md), and the
+[handbell schematic/placement adaptation](hardware/handbell/README.md), plus the
+[mechanical study and inert print set](mechanical/README.md). All three reference
 packages contain pinned EAGLE sources, complete original notices/licenses,
 native KiCad conversions and review exports. The references and adapted hardware
 retain **CC BY-SA 3.0**, not the root MIT license. Upstream markings in the
@@ -19,7 +21,8 @@ not attribute every Adafruit design to the same person. Full original READMEs
 remain beside each source, including text required by their redistribution
 notices. The derivative records its changed pin types, wiring and title block.
 
-The derivative embeds the standard KiCad `power:PWR_FLAG` as design data
+The derivative embeds standard KiCad `power:PWR_FLAG`, connector, SOT23 and
+solder-jumper library material as design data
 under the [KiCad library license's design exception](https://www.kicad.org/libraries/license/).
 It is not included in the derivative's redistributed custom-symbol library.
 That exception does not override the Adafruit hardware's separate ShareAlike
@@ -31,8 +34,10 @@ No third-party firmware or sound recordings are vendored. The original project
 The original packaging-screen SVG, calculation script and factual measurement
 records use the project's MIT documentation/software terms. The owner's retail
 speaker image and vendor photos are **not redistributed**. The PowerBoost and
-MiniBoost sources added to the catalog are linked/inspected only, not vendored
-or adapted yet.
+MiniBoost sources are distinguished: PowerBoost remains catalog-only;
+MiniBoost is now vendored and adapted with full notices. Original mechanical
+work has its own [license declaration](mechanical/README.md); component proxies
+are not copied manufacturer STEP models.
 
 ## License boundaries
 
@@ -42,7 +47,7 @@ or adapted yet.
 | Imported/adapted hardware | Preserve applicable upstream notices and license; plan to retain CC BY-SA 3.0 for adaptations of the verified 3.0 sources |
 | Third-party software and libraries | Retain actual per-file/dependency licenses and copyright notices; do not infer them from hardware licensing |
 | Bell recordings, images, models, and guide text | Establish rights separately; link rather than copy until verified |
-| Original future mechanical designs | Record an explicit license before release; do not assume an electronics license covers every CAD asset |
+| Original mechanical designs | MIT under `mechanical/LICENSE`; mixed populated exports retain the separate electronics-context notices described in `mechanical/README.md` |
 | Names and logos | No implication of endorsement; no automatic trademark rights from an open hardware license |
 
 The root MIT license does not override ShareAlike obligations. Put the complete
@@ -80,7 +85,7 @@ Six-axis sources added 2026-09-07: **4438 imported/adapted; 4503 reference only*
 | 4438 LSM6DSOX | [README](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/blob/c05abef4675b0380fbf3d23171615a2f1ac0b130/README.md) and [license.txt](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/blob/c05abef4675b0380fbf3d23171615a2f1ac0b130/license.txt): CC BY-SA 3.0 Unported |
 | 4503 LSM6DS3TR-C | [README](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/README.md) and [license.txt](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/license.txt) specify CC BY-SA 3.0, while a separate [LICENSE](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/blob/9bf02b7214d35f2699bfd24737865511e4f9f114/LICENSE) contains MIT. Scope unresolved; do not discard either notice or treat the MIT badge as hardware clearance. |
 
-Boost sources added 2026-09-07: **catalog-only, no CAD import or adaptation yet**.
+Boost sources added 2026-09-07: **2030 catalog-only; 4654 imported/adapted in 0.2**.
 
 | Source | License evidence |
 |---|---|

@@ -12,10 +12,22 @@
     "bell_body_height": 44,
     "handle_height": 85,
     "handle_internal_space_verified": false,
-    "profile_verified": false
+    "profile_verified": false,
+    "current_working_profile": {
+      "source": "Subsequent explicit owner assumption for FreeCAD feasibility",
+      "datum": "z=0 at bell opening, positive inward",
+      "linear_start_z": 13,
+      "linear_start_inside_diameter": 50,
+      "linear_end_z": 43,
+      "linear_end_inside_diameter": 34,
+      "near_face_almost_flat_travel": 5,
+      "near_face_transition_verified": false,
+      "note": "Supersedes the hypothetical 40mm-at-z22 screen, not the earlier historical measurement record. Not a qualified tolerance profile."
+    }
   },
   "speaker_40mm_candidate": {
     "owner_candidate_name": "Gikfun EK1794",
+    "availability_update": "Owner reports speakers ordered; expected 2026-09-09, not yet measured",
     "dimension_source": "Retail dimension image supplied by owner; image is not redistributed",
     "frame_diameter_nominal": 40.5,
     "frame_diameter_tolerance": 0.4,

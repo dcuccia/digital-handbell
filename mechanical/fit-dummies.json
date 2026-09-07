@@ -1,0 +1,268 @@
+{
+  "units": "mm",
+  "scale": "100%; no fit-to-bed resizing",
+  "scope": "Exact supplied proxy geometry, not manufacturer bodies; illustrative speaker explicitly separate",
+  "placement_sha256": "bca8252da704c28e0982eacd353149119c557c5a6a1f0f5452f98bc73d00af41",
+  "objects": {
+    "PopulatedPCBAFitDummy": {
+      "stl": "populated-pcba-proxy.stl",
+      "step": "populated-pcba-proxy.step",
+      "description": "INERT bonded union of physical board and exact supplied rectangular proxies. No detail enlargement, added bridges, cables, underside anchors or copper-only/DNP solids. Not manufacturer bodies, a routed board, or a qualified physical assembly.",
+      "assembly_reference_z_mm": 20.0,
+      "print_origin": "XY centered; flat print bed at Z=0; coordinates in mm",
+      "shape": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 3718.0199878206413,
+        "bounds": {
+          "min_mm": [
+            -21.5,
+            -21.965,
+            0.0
+          ],
+          "max_mm": [
+            21.5,
+            21.5,
+            6.600000000000001
+          ],
+          "size_mm": [
+            43.0,
+            43.465,
+            6.600000000000001
+          ]
+        }
+      },
+      "component_count": 74,
+      "component_detail_scale": 1.0,
+      "source_board": {
+        "diameter_mm": 43.0,
+        "thickness_mm": 1.6,
+        "front_z_mm": 20.0,
+        "component_face": "inward"
+      },
+      "print_rotation_x_deg": 0,
+      "print_translation_z_mm": -20.0
+    },
+    "SpeakerNominalFitDummy": {
+      "stl": "speaker-envelope-nominal.stl",
+      "step": null,
+      "description": "Nominal full cylinder; retail frame/depth, not basket/terminals/excursion.",
+      "assembly_reference_z_mm": 0.0,
+      "print_origin": "XY centered; flat print bed at Z=0; coordinates in mm",
+      "shape": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 23188.48807522796,
+        "bounds": {
+          "min_mm": [
+            -20.25,
+            -20.25,
+            0.0
+          ],
+          "max_mm": [
+            20.25,
+            20.25,
+            18.0
+          ],
+          "size_mm": [
+            40.5,
+            40.5,
+            18.0
+          ]
+        }
+      }
+    },
+    "SpeakerMaximumFitDummy": {
+      "stl": "speaker-envelope-maximum.stl",
+      "step": null,
+      "description": "Full worst-case frame/depth cylinder, also used for hard collision screening. Terminal and excursion envelopes remain unknown.",
+      "assembly_reference_z_mm": 0.0,
+      "print_origin": "XY centered; flat print bed at Z=0; coordinates in mm",
+      "shape": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 24305.70518168838,
+        "bounds": {
+          "min_mm": [
+            -20.45,
+            -20.45,
+            0.0
+          ],
+          "max_mm": [
+            20.45,
+            20.45,
+            18.5
+          ],
+          "size_mm": [
+            40.9,
+            40.9,
+            18.5
+          ]
+        }
+      }
+    },
+    "SpeakerIllustrativeFitDummy": {
+      "stl": "speaker-illustrative-unmeasured.stl",
+      "step": "speaker-illustrative-unmeasured.step",
+      "description": "ILLUSTRATIVE ONLY: nominal frame, overall depth, rim and magnet diameter. Solid tapered basket diameters and magnet start/depth are adjustable inventions, not image measurements. Rim is included in overall depth. Never replaces the full collision cylinder.",
+      "assembly_reference_z_mm": 0.0,
+      "print_origin": "XY centered; flat print bed at Z=0; coordinates in mm",
+      "shape": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 13080.315537532377,
+        "bounds": {
+          "min_mm": [
+            -20.25,
+            -20.25,
+            0.0
+          ],
+          "max_mm": [
+            20.25,
+            20.25,
+            18.0
+          ],
+          "size_mm": [
+            40.5,
+            40.5,
+            18.0
+          ]
+        }
+      },
+      "assumed_basket_front_diameter_mm": 37.0,
+      "assumed_basket_rear_diameter_mm": 26.0,
+      "assumed_magnet_front_z_mm": 12.0,
+      "derived_unmeasured_magnet_height_mm": 6.0,
+      "used_for_hard_collision_screen": false
+    },
+    "BatteryPrimaryFitDummy": {
+      "stl": "battery-dummy-primary.stl",
+      "step": null,
+      "description": "INERT dimensional block only; no selected pack, capacity, current, charge or swelling qualification.",
+      "assembly_reference_z_mm": 28.0,
+      "print_origin": "XY centered; flat print bed at Z=0; coordinates in mm",
+      "shape": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 4800.0,
+        "bounds": {
+          "min_mm": [
+            -10.0,
+            -15.0,
+            0.0
+          ],
+          "max_mm": [
+            10.0,
+            15.0,
+            8.0
+          ],
+          "size_mm": [
+            20.0,
+            30.0,
+            8.0
+          ]
+        }
+      }
+    },
+    "BatteryPrimaryClearanceGauge": {
+      "stl": "battery-clearance-primary.stl",
+      "step": null,
+      "description": "SOLID CLEARANCE GAUGE, not a battery: includes assumed free space on all six faces. Never compress a live cell to achieve this fit.",
+      "assembly_reference_z_mm": 27.0,
+      "print_origin": "XY centered; flat print bed at Z=0; coordinates in mm",
+      "shape": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 7039.999999999999,
+        "bounds": {
+          "min_mm": [
+            -11.0,
+            -16.0,
+            0.0
+          ],
+          "max_mm": [
+            11.0,
+            16.0,
+            10.0
+          ],
+          "size_mm": [
+            22.0,
+            32.0,
+            10.0
+          ]
+        }
+      },
+      "represented_dummy_dimensions_mm": [
+        20.0,
+        30.0,
+        8.0
+      ],
+      "clearance_per_face_mm": 1.0
+    },
+    "BatteryCompactFitDummy": {
+      "stl": "battery-dummy-compact.stl",
+      "step": null,
+      "description": "INERT dimensional block only; no selected pack, capacity, current, charge or swelling qualification.",
+      "assembly_reference_z_mm": 28.0,
+      "print_origin": "XY centered; flat print bed at Z=0; coordinates in mm",
+      "shape": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 4032.0,
+        "bounds": {
+          "min_mm": [
+            -9.0,
+            -14.0,
+            0.0
+          ],
+          "max_mm": [
+            9.0,
+            14.0,
+            8.0
+          ],
+          "size_mm": [
+            18.0,
+            28.0,
+            8.0
+          ]
+        }
+      }
+    },
+    "BatteryCompactClearanceGauge": {
+      "stl": "battery-clearance-compact.stl",
+      "step": null,
+      "description": "SOLID CLEARANCE GAUGE, not a battery: includes assumed free space on all six faces. Never compress a live cell to achieve this fit.",
+      "assembly_reference_z_mm": 27.0,
+      "print_origin": "XY centered; flat print bed at Z=0; coordinates in mm",
+      "shape": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 6000.0,
+        "bounds": {
+          "min_mm": [
+            -10.0,
+            -15.0,
+            0.0
+          ],
+          "max_mm": [
+            10.0,
+            15.0,
+            10.0
+          ],
+          "size_mm": [
+            20.0,
+            30.0,
+            10.0
+          ]
+        }
+      },
+      "represented_dummy_dimensions_mm": [
+        18.0,
+        28.0,
+        8.0
+      ],
+      "clearance_per_face_mm": 1.0
+    }
+  },
+  "print_guidance": "Creality K1C, PLA: use the installed nozzle/filament PLA profile. Inspect fine details and USB overhang; no verified slicer profile or G-code supplied. Fit-only, never live battery retention, heated parts or a child-use assembly."
+}

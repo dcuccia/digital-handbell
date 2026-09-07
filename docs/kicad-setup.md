@@ -44,8 +44,9 @@ C:\Projects\dcuccia\digital-handbell\hardware\handbell\handbell.kicad_pro
 ```
 
 Open its schematic, or read the
-[PDF](../hardware/handbell/reports/handbell-schematic.pdf). The project deliberately
-has no PCB yet. Keep the whole checkout: its footprint table references the
+[PDF](../hardware/handbell/reports/handbell-schematic.pdf). The current 0.2
+also has a **43 mm unrouted placement**, not a fabrication-ready PCB.
+Keep the whole checkout: its footprint table references the
 sibling reference packages. The [handoff](../hardware/handbell/README.md)
 includes repeatable strict ERC and net/pad comparison commands.
 
@@ -115,6 +116,9 @@ design-rule equivalence, or functional performance.
 See the [import report](../hardware/reference/adafruit-5768/README.md).
 E02 remains open for the remaining geometry/design-rule reviews. The separate
 [handbell draft](../hardware/handbell/README.md) resolves all 50 original findings
-and has zero current ERC findings; E04 remains open for reduction, electrical
+and has zero current ERC findings; E04 remains open for unresolved electrical
 decisions and complete review. The unchanged SOX breakout reference has its own
 24 initial findings, preserved with that reference rather than globally waived.
+The MiniBoost reference adds four preserved initial findings. Native PCB/STEP
+and placement-specific limits are covered in the
+[0.2 handoff](electrical-reduction-and-placement.md).

@@ -84,3 +84,22 @@ def loads(text):
 def load(path):
     text = Path(path).read_text(encoding="utf-8-sig")
     return text, loads(text)
+
+
+def pcb_net_name(name):
+    """Escape pin-name slashes in flat auto-nets, not hierarchical label paths."""
+    if name and name.startswith(("unconnected-", "Net-")):
+        return name.replace("/", "{slash}")
+    return name
+
+
+def apply_edits(text, edits):
+    """Apply nonoverlapping source-span edits, then reject malformed output."""
+    previous = len(text) + 1
+    for start, end, replacement in sorted(edits, key=lambda edit: (edit[0], edit[1]), reverse=True):
+        if not (0 <= start <= end <= len(text)) or end > previous:
+            raise ValueError("Invalid or overlapping source edits")
+        text = text[:start] + replacement + text[end:]
+        previous = start
+    loads(text)
+    return text

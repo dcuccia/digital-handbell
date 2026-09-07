@@ -1,0 +1,23 @@
+{
+  "upstream_commit": "82b5a33a1900a5c13849029bc84e7856a44086e0",
+  "source_sha256": {
+    "Adafruit TPS61023.brd": "13224064e8ab7bb03679d0fe0cf53fd36057c7b8925c87a00c7c64bb50138bd9",
+    "Adafruit TPS61023.sch": "24b124bd27300b9915d69eb1ddf8aa7f7960b94b1b980f9eab2aaa09e5d29e96",
+    "license.txt": "1f63e1f4676a433423b2c2ff1ccd9e80093f341f10b81f0ac0106342bc7bbe89",
+    "README.md": "cf32e70ec72cfdcc2999113b5be41a313480211c0a1cf61e9df841a474ed7e0b"
+  },
+  "connected_source_groups": 6,
+  "matching_native_groups": 6,
+  "exported_footprints": [
+    "0603-NO",
+    "0805-NO",
+    "1X04_ROUND",
+    "FIDUCIAL_1MM",
+    "INDUCTOR_5X5MM_TDK_VLC5045",
+    "MOUNTINGHOLE_2.5_PLATED",
+    "SOT563"
+  ],
+  "source_native_pad_locations_checked": 18,
+  "method": "KiCad native EAGLE schematic GUI import and PCB CLI import; standalone footprints normalized from native PCB pose and checked against source pads. No circuit change.",
+  "scope": "Connectivity and physical pad geometry, not component ratings, routing/thermal qualification or assembled hardware performance."
+}

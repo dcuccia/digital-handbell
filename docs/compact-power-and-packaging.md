@@ -1,5 +1,11 @@
 # Compact power and packaging review
 
+**Historical review:** the subsequent [0.2 electrical/placement handoff](electrical-reduction-and-placement.md)
+implements the reduction and TPS61023 block. The [FreeCAD study](mechanical-feasibility.md)
+uses the newer owner-assumed D50 at z13 to D34 at z43 profile. Statements below
+about unchanged 0.1 CAD and the earlier hypothetical taper describe this review
+at its original publication, not the current repository.
+
 Date: 2026-09-07. **Recommendation: investigate the smaller Adafruit TPS61023
 MiniBoost circuit, one suitably rated protected 1S pack, and a printed
 near-mouth cartridge before forcing a solid PCB behind the speaker.**

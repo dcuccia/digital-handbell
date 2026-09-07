@@ -5,20 +5,195 @@
   "source_schematic_sha256_lf": {
     "baseline": "5db850c1fc54d153daade8047d5181941cbcb3ddd0ab1e93d0f4248fc7a6dcc7",
     "sox": "c12b1fae97555960c48051dd4617cf4ba997573723b6b4cf9c8f9039889be33e",
-    "handbell": "37a526f5ef6ef03e6443c0ca73e16a7e9f4f621d4728beba0b5646c16802ea0f"
+    "boost": "39cb08bcbc8ae215eae3fa0154e84a61ddb8eaaeddacf2f710ed7517997c6bde",
+    "handbell": "6cb52b0514da7dbd1dc803f5935abf9a90933beaab3eac5102c4b165c083c31c"
   },
   "source_connected_groups_matching_native": {
     "adafruit_5768": 71,
-    "adafruit_4438": 17
+    "adafruit_4438": 17,
+    "adafruit_4654": 6
   },
-  "retained_components": 76,
-  "retained_connection_groups": 75,
+  "revision": "0.2-draft",
+  "retained_components": 62,
+  "retained_connection_groups": 73,
   "added_components_or_copper_features": [
     "C23",
     "C24",
+    "C25",
+    "C26",
+    "C27",
+    "C28",
+    "C29",
+    "J1",
+    "J2",
+    "L1",
+    "Q4",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP16",
     "TP4",
     "TP5",
-    "TP6"
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9",
+    "U5"
+  ],
+  "removed_components_or_features": [
+    "CONN1",
+    "IC2",
+    "JP1",
+    "JP3",
+    "LED1",
+    "OUTPUTS0",
+    "R19",
+    "SERVO0",
+    "SW1",
+    "SW2",
+    "U$31",
+    "U$32",
+    "U$34",
+    "U$35"
+  ],
+  "retained_amp_pins_moved_to_VAMP": [
+    [
+      "C16",
+      "1"
+    ],
+    [
+      "C19",
+      "1"
+    ],
+    [
+      "GAIN0",
+      "3"
+    ],
+    [
+      "R18",
+      "2"
+    ],
+    [
+      "U4",
+      "7"
+    ],
+    [
+      "U4",
+      "8"
+    ]
+  ],
+  "intentional_footprint_changes": {
+    "Q3": "Handbell:DFN2015-3_DrainPad",
+    "CHG_EN0": "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm",
+    "GAIN0": "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm"
+  },
+  "new_pin_net_contract": {
+    "U5": {
+      "1": "BOOST_FB",
+      "2": "POWER",
+      "3": "V+",
+      "4": "GND",
+      "5": "BOOST_SW",
+      "6": "VAMP"
+    },
+    "L1": {
+      "P$1": "V+",
+      "P$2": "BOOST_SW"
+    },
+    "Q4": {
+      "1": "AMP_MUTE",
+      "2": "GND",
+      "3": "I2S_MOD"
+    },
+    "R20": {
+      "1": "+3V3",
+      "2": "AMP_MUTE"
+    },
+    "R21": {
+      "1": "+3V3",
+      "2": "BUTTON"
+    },
+    "R22": {
+      "1": "BUTTON",
+      "2": "BUTTON_EXT"
+    },
+    "R23": {
+      "1": "VAMP",
+      "2": "BOOST_FB"
+    },
+    "R24": {
+      "1": "BOOST_FB",
+      "2": "GND"
+    },
+    "C25": {
+      "1": "BUTTON",
+      "2": "GND"
+    },
+    "C26": {
+      "1": "V+",
+      "2": "GND"
+    },
+    "C27": {
+      "1": "VAMP",
+      "2": "GND"
+    },
+    "C28": {
+      "1": "VAMP",
+      "2": "GND"
+    },
+    "C29": {
+      "1": "VAMP",
+      "2": "BOOST_FB"
+    },
+    "J1": {
+      "1": "VO+",
+      "2": "VO-"
+    },
+    "J2": {
+      "1": "BUTTON_EXT",
+      "2": "GND"
+    },
+    "TP7": {
+      "P$1": "~{RESET}"
+    },
+    "TP8": {
+      "P$1": "GND"
+    },
+    "TP9": {
+      "P$1": "+3V3"
+    },
+    "TP10": {
+      "P$1": "VAMP"
+    },
+    "TP11": {
+      "P$1": "VBAT"
+    },
+    "TP12": {
+      "P$1": "I2S_DIN"
+    },
+    "TP13": {
+      "P$1": "I2S_BCLK"
+    },
+    "TP14": {
+      "P$1": "I2S_LRCLK"
+    },
+    "TP15": {
+      "P$1": "AMP_MUTE"
+    },
+    "TP16": {
+      "P$1": "POWER"
+    }
+  },
+  "dnp_references": [
+    "C29"
   ],
   "sensor_pin_nets": {
     "1": "GND",
@@ -206,6 +381,108 @@
       "rotation_deg": 270.0
     }
   ],
+  "boost_footprint_pads": {
+    "SOT563": [
+      {
+        "pad": "5",
+        "position_mm": [
+          0.635,
+          0.0
+        ],
+        "size_mm": [
+          0.65,
+          0.275
+        ],
+        "rotation_deg": 0.0
+      },
+      {
+        "pad": "6",
+        "position_mm": [
+          0.635,
+          -0.5
+        ],
+        "size_mm": [
+          0.65,
+          0.275
+        ],
+        "rotation_deg": 0.0
+      },
+      {
+        "pad": "4",
+        "position_mm": [
+          0.635,
+          0.5
+        ],
+        "size_mm": [
+          0.65,
+          0.275
+        ],
+        "rotation_deg": 0.0
+      },
+      {
+        "pad": "1",
+        "position_mm": [
+          -0.635,
+          -0.5
+        ],
+        "size_mm": [
+          0.65,
+          0.275
+        ],
+        "rotation_deg": 0.0
+      },
+      {
+        "pad": "2",
+        "position_mm": [
+          -0.635,
+          0.0
+        ],
+        "size_mm": [
+          0.65,
+          0.275
+        ],
+        "rotation_deg": 0.0
+      },
+      {
+        "pad": "3",
+        "position_mm": [
+          -0.635,
+          0.5
+        ],
+        "size_mm": [
+          0.65,
+          0.275
+        ],
+        "rotation_deg": 0.0
+      }
+    ],
+    "INDUCTOR_5X5MM_TDK_VLC5045": [
+      {
+        "pad": "P$1",
+        "position_mm": [
+          -1.6,
+          0.0
+        ],
+        "size_mm": [
+          2.0,
+          5.0
+        ],
+        "rotation_deg": 0.0
+      },
+      {
+        "pad": "P$2",
+        "position_mm": [
+          1.6,
+          0.0
+        ],
+        "size_mm": [
+          2.0,
+          5.0
+        ],
+        "rotation_deg": 0.0
+      }
+    ]
+  },
   "erc_configuration_unchanged": true,
   "erc_exclusions": [],
   "erc_errors": 0,
