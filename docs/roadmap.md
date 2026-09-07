@@ -8,11 +8,11 @@ shell, acoustic, and assembly feasibility work.
 
 | Milestone | Outcome | Epics |
 |---|---|---|
-| M0 - Discovery and reference proof | Requirements, measured envelope, reusable source baseline and bench evidence | E01-E03 |
-| M1 - Schematic and subsystem prototypes | Reviewed reduced schematic, mechanical concept, instrument behavior | E04-E06 |
-| M2 - Custom hardware prototype | Manufacturable layout, populated first boards, integrated bring-up | E07-E09 |
-| M3 - Educational pilot and open release | Appropriate safety review, usable kit and reproducible release | E10-E11 |
-| M4 - Future wireless exploration | Optional evidence-driven connected instrument | E12 |
+| [M0 - Discovery and reference proof](https://github.com/dcuccia/digital-handbell/milestone/1) | Requirements, measured envelope, reusable source baseline and bench evidence | E01-E03 |
+| [M1 - Schematic and subsystem prototypes](https://github.com/dcuccia/digital-handbell/milestone/2) | Reviewed reduced schematic, mechanical concept, instrument behavior | E04-E06 |
+| [M2 - Custom hardware prototype](https://github.com/dcuccia/digital-handbell/milestone/3) | Manufacturable layout, populated first boards, integrated bring-up | E07-E09 |
+| [M3 - Educational pilot and open release](https://github.com/dcuccia/digital-handbell/milestone/4) | Appropriate safety review, usable kit and reproducible release | E10-E11 |
+| [M4 - Future wireless exploration](https://github.com/dcuccia/digital-handbell/milestone/5) | Optional evidence-driven connected instrument | E12 |
 
 ## Execution and dependencies
 
@@ -47,7 +47,31 @@ criteria and linked evidence are complete, not when a proposed plan exists.
 Create focused child issues as implementation details become known.
 
 <!-- TRACKING:START -->
-GitHub epic and Project links will be recorded here during publication.
+**Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
+All twelve epics were initialized as Todo with a Phase field matching their
+milestone. Current status belongs on the Project/issues, not this static table.
+The first ready workstreams are E01 (requirements/measurements) and E02
+(provenance/CAD import).
+
+| Epic | GitHub issue | Completion dependencies |
+|---|---|---|
+| E01 | [#1 Requirements, shell measurements, and acceptance targets](https://github.com/dcuccia/digital-handbell/issues/1) | None |
+| E02 | [#2 Provenance, KiCad setup, and reference import](https://github.com/dcuccia/digital-handbell/issues/2) | None |
+| E03 | [#3 Bench proof of sound, motion, power, and quiet idle](https://github.com/dcuccia/digital-handbell/issues/3) | E01 |
+| E04 | [#4 Reduced handbell schematic and electrical review](https://github.com/dcuccia/digital-handbell/issues/4) | E01, E02, E03 |
+| E05 | [#5 Speaker, enclosure, and assembly architecture](https://github.com/dcuccia/digital-handbell/issues/5) | E01, E03 |
+| E06 | [#6 Instrument firmware, sound assets, and gesture behavior](https://github.com/dcuccia/digital-handbell/issues/6) | E01, E03 |
+| E07 | [#7 Circular PCB layout, DFM, and cost comparison](https://github.com/dcuccia/digital-handbell/issues/7) | E04, E05 |
+| E08 | [#8 Prototype fabrication, assembly, and production files](https://github.com/dcuccia/digital-handbell/issues/8) | E07 |
+| E09 | [#9 Board bring-up and enclosed instrument integration](https://github.com/dcuccia/digital-handbell/issues/9) | E06, E08 |
+| E10 | [#10 Safety, durability, and supervised educational pilot](https://github.com/dcuccia/digital-handbell/issues/10) | E09 |
+| E11 | [#11 Open release, kit documentation, and sustainable cost](https://github.com/dcuccia/digital-handbell/issues/11) | E10 |
+| E12 | [#12 Optional wireless and advanced sensing](https://github.com/dcuccia/digital-handbell/issues/12) | E11 for product integration only |
+
+These relationships are also recorded as GitHub native blocked-by dependencies.
+E12 does not block the first release. Initial issue checklists are seeded from
+the specifications below; maintain scope changes in both the specification and
+issue, and keep execution progress/evidence on the issue.
 <!-- TRACKING:END -->
 
 ## E01 - Requirements, shell measurements, and acceptance targets

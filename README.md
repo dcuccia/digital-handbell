@@ -30,8 +30,12 @@ board. This is a starting hypothesis, not a frozen BOM.
 | [Roadmap and epics](docs/roadmap.md) | Milestones, dependencies, scope, and acceptance criteria |
 | [Attribution and licensing](ATTRIBUTION.md) | Hardware, software, sound-asset, and documentation provenance |
 
-Track execution in [GitHub Issues](https://github.com/dcuccia/digital-handbell/issues).
-The roadmap records the associated Project board once created.
+Track execution in the public
+[Digital Handbell Project](https://github.com/users/dcuccia/projects/1),
+[12 epic issues](https://github.com/dcuccia/digital-handbell/issues?q=is%3Aissue%20label%3Aepic),
+and [five milestones](https://github.com/dcuccia/digital-handbell/milestones).
+The epics include checklists, acceptance criteria, native blocked-by
+relationships, and links to supporting plans.
 
 ## Design direction
 
