@@ -1,0 +1,1096 @@
+{
+  "date": "2026-09-07",
+  "input": "hardware/reference/adafruit-5768/reports/reference-erc.json",
+  "input_sha256_lf": "5a58ae7bef3d270d3729d6d26a4d2272130a61dc9980657a9286cb4bfa9e6758",
+  "hash_normalization": "UTF-8 text with CRLF/CR normalized to LF; the original report is not modified.",
+  "original_counts": {
+    "error": 13,
+    "warning": 37
+  },
+  "findings": [
+    {
+      "id": "ERC-01",
+      "original": {
+        "description": "Input Power pin not driven by any Output Power pins",
+        "items": [
+          {
+            "description": "Symbol #U$3 Pin 1 [1.2V, Power input, Line]",
+            "pos": {
+              "x": 0.2794,
+              "y": 0.9398
+            },
+            "uuid": "b989d870-a327-4d94-b1f3-524c3b354e2f"
+          }
+        ],
+        "severity": "error",
+        "type": "power_pin_not_driven"
+      },
+      "disposition": "Corrected VREG_VOUT to power_out. Renamed the inherited 1.2V label to VCORE without changing connections; RP2040 reset nominal is 1.1 V.",
+      "location": "IC1.45 / core rail",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-02",
+      "original": {
+        "description": "Input Power pin not driven by any Output Power pins",
+        "items": [
+          {
+            "description": "Symbol #U$15 Pin 1 [VBUS, Power input, Line]",
+            "pos": {
+              "x": 0.3302,
+              "y": 0.381
+            },
+            "uuid": "8d479d63-bfcb-4f7f-a23c-2adeb94badd0"
+          }
+        ],
+        "severity": "error",
+        "type": "power_pin_not_driven"
+      },
+      "disposition": "Added #FLG01 declaring the external USB source; this does not validate USB current budget or power states.",
+      "location": "VBUS",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-03",
+      "original": {
+        "description": "Input Power pin not driven by any Output Power pins",
+        "items": [
+          {
+            "description": "Symbol #GND1 Pin 1 [GND, Power input, Line]",
+            "pos": {
+              "x": 0.4826,
+              "y": 1.8034
+            },
+            "uuid": "3700577f-1fdb-4695-9536-19428efa1307"
+          }
+        ],
+        "severity": "error",
+        "type": "power_pin_not_driven"
+      },
+      "disposition": "Added #FLG02 declaring the external power-return domain; no ground split or physical source added.",
+      "location": "GND",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-04",
+      "original": {
+        "description": "Input Power pin not driven by any Output Power pins",
+        "items": [
+          {
+            "description": "Symbol U2 Pin 1 [IN, Power input, Line]",
+            "pos": {
+              "x": 0.635,
+              "y": 0.508
+            },
+            "uuid": "45dd61e2-4c3f-4f9b-8027-48d09cf228cf"
+          }
+        ],
+        "severity": "error",
+        "type": "power_pin_not_driven"
+      },
+      "disposition": "Added #FLG03 at the output domain of the retained D4/Q3 discrete source-selection circuit.",
+      "location": "U2.1 / VHI",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-05",
+      "original": {
+        "description": "Pin not connected",
+        "items": [
+          {
+            "description": "Symbol U2 Pin 4 [P4, Bidirectional, Line]",
+            "pos": {
+              "x": 0.8382,
+              "y": 0.5588
+            },
+            "uuid": "52a9e748-488d-411c-ab60-a4cccf33e4f3"
+          }
+        ],
+        "severity": "error",
+        "type": "pin_not_connected"
+      },
+      "disposition": "Named pin NC and added an explicit no-connect marker for the fixed-output RT9080. Not applicable to an adjustable RT9080N SNS variant.",
+      "location": "U2.4",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-06",
+      "original": {
+        "description": "Pin not connected",
+        "items": [
+          {
+            "description": "Symbol X6 Pin A8 [SBU1, Bidirectional, Line]",
+            "pos": {
+              "x": 1.7526,
+              "y": 1.0668
+            },
+            "uuid": "6cf39fd4-3b6f-421e-b2c1-805cb854295a"
+          }
+        ],
+        "severity": "error",
+        "type": "pin_not_connected"
+      },
+      "disposition": "Explicit NC for the USB2-only connector; CC and USB data wiring retained.",
+      "location": "X6.A8 / SBU1",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-07",
+      "original": {
+        "description": "Pin not connected",
+        "items": [
+          {
+            "description": "Symbol X6 Pin B8 [SBU2, Bidirectional, Line]",
+            "pos": {
+              "x": 1.7526,
+              "y": 1.0922
+            },
+            "uuid": "23e7d92d-ebcb-4d85-8db0-bd3df306af93"
+          }
+        ],
+        "severity": "error",
+        "type": "pin_not_connected"
+      },
+      "disposition": "Explicit NC for the USB2-only connector; CC and USB data wiring retained.",
+      "location": "X6.B8 / SBU2",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-08",
+      "original": {
+        "description": "Input Power pin not driven by any Output Power pins",
+        "items": [
+          {
+            "description": "Symbol U3 Pin 3 [VBAT, Power input, Line]",
+            "pos": {
+              "x": 2.032,
+              "y": 0.508
+            },
+            "uuid": "69616000-a0f5-4f91-a6c2-76b067d6e523"
+          }
+        ],
+        "severity": "error",
+        "type": "power_pin_not_driven"
+      },
+      "disposition": "Corrected MCP73831 VBAT to power_out, as specified for its battery charge-control output.",
+      "location": "U3.3 / charge output",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-09",
+      "original": {
+        "description": "Pin not connected",
+        "items": [
+          {
+            "description": "Symbol IC4 Pin 9 [INT2, Output, Line]",
+            "pos": {
+              "x": 2.159,
+              "y": 2.0574
+            },
+            "uuid": "09850f5b-b8cd-4bb9-9108-517c28e74a91"
+          }
+        ],
+        "severity": "error",
+        "type": "pin_not_connected"
+      },
+      "disposition": "Superseded by sensor replacement. SOX pad 9 INT2 is connected to TP6, not left ambiguously open or tied to a rail.",
+      "location": "Old IC4.9 / INT2",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-10",
+      "original": {
+        "description": "Input Power pin not driven by any Output Power pins",
+        "items": [
+          {
+            "description": "Symbol #U$16 Pin 1 [VBAT, Power input, Line]",
+            "pos": {
+              "x": 2.3114,
+              "y": 0.381
+            },
+            "uuid": "16971370-a279-4b83-9dfe-26d163adb9a2"
+          }
+        ],
+        "severity": "error",
+        "type": "power_pin_not_driven"
+      },
+      "disposition": "Added #FLG04 declaring the external cell source. It is on the battery side of CHG_EN0; it does not provide cell protection.",
+      "location": "VBAT",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-11",
+      "original": {
+        "description": "Input Power pin not driven by any Output Power pins",
+        "items": [
+          {
+            "description": "Symbol #P+1 Pin 1 [V+, Power input, Line]",
+            "pos": {
+              "x": 2.921,
+              "y": 2.0828
+            },
+            "uuid": "4c3d98a2-193f-4bc9-b3a7-07c1157cc83b"
+          }
+        ],
+        "severity": "error",
+        "type": "power_pin_not_driven"
+      },
+      "disposition": "Added #FLG05 declaring Q1's switched peripheral-supply domain. Disabled-state/back-power behavior still requires review.",
+      "location": "V+",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-12",
+      "original": {
+        "description": "Pin not connected",
+        "items": [
+          {
+            "description": "Symbol LED1 Pin 3 [DO, Output, Line]",
+            "pos": {
+              "x": 2.9972,
+              "y": 0.5842
+            },
+            "uuid": "60e16a14-1a40-4828-ba65-9422a2a95e84"
+          }
+        ],
+        "severity": "error",
+        "type": "pin_not_connected"
+      },
+      "disposition": "Explicit NC on the retained onboard status NeoPixel's unused data output.",
+      "location": "LED1.3 / DO",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-13",
+      "original": {
+        "description": "Input Power pin not driven by any Output Power pins",
+        "items": [
+          {
+            "description": "Symbol #+3V1 Pin 1 [+3V3, Power input, Line]",
+            "pos": {
+              "x": 3.429,
+              "y": 0.8636
+            },
+            "uuid": "87c252d2-d40c-4f1e-9041-25ad494c7faf"
+          }
+        ],
+        "severity": "error",
+        "type": "power_pin_not_driven"
+      },
+      "disposition": "Corrected the fixed-output RT9080 VOUT pin to power_out; no redundant +3V3 power flag added.",
+      "location": "U2.5 / +3V3",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-14",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Vertical Wire, length 0.1524 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 0.381
+            },
+            "uuid": "df3394de-6210-45c7-911c-17f69dd661eb"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing ~{RESET} label anchor; connected endpoints retained.",
+      "location": "RESET",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-15",
+      "original": {
+        "description": "Label connected to only one pin",
+        "items": [
+          {
+            "description": "Global Label 'SWCLK'",
+            "pos": {
+              "x": 1.3716,
+              "y": 2.286
+            },
+            "uuid": "ac482d2d-d84b-46e1-8970-6371879452da"
+          }
+        ],
+        "severity": "warning",
+        "type": "isolated_pin_label"
+      },
+      "disposition": "Added explicit TP4 using the source's 1.5 mm copper test-pad footprint.",
+      "location": "SWCLK label / IC1.24",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-16",
+      "original": {
+        "description": "Label connected to only one pin",
+        "items": [
+          {
+            "description": "Global Label 'SWDIO'",
+            "pos": {
+              "x": 1.3716,
+              "y": 2.3114
+            },
+            "uuid": "fc859a05-d0cc-4837-a56a-f5953461b389"
+          }
+        ],
+        "severity": "warning",
+        "type": "isolated_pin_label"
+      },
+      "disposition": "Added explicit TP5 using the source's 1.5 mm copper test-pad footprint.",
+      "location": "SWDIO label / IC1.25",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-17",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.4986
+            },
+            "uuid": "84722263-0dc9-4917-92d3-0ff5d6465048"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing TX label anchor; connected endpoints retained.",
+      "location": "TX",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-18",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.397,
+              "y": 1.524
+            },
+            "uuid": "7b766022-730d-42b7-8874-2f660359d6df"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing RX label anchor; connected endpoints retained.",
+      "location": "RX",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-19",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.5494
+            },
+            "uuid": "0d23ccbf-4d8f-4a76-b14f-3e26829e7f9a"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing SDA label anchor; connected endpoints retained.",
+      "location": "SDA",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-20",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.5748
+            },
+            "uuid": "3112d6dc-0d16-4c07-83d8-709819288f23"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing SCL label anchor; connected endpoints retained.",
+      "location": "SCL",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-21",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.6002
+            },
+            "uuid": "53853251-21b8-4d82-acc9-65d482923bc2"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D4 label anchor; connected endpoints retained.",
+      "location": "D4",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-22",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.6256
+            },
+            "uuid": "35916ebb-73d6-4679-99f1-c87a1279376f"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D5 label anchor; connected endpoints retained.",
+      "location": "D5",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-23",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.651
+            },
+            "uuid": "72669d51-c161-4137-bf1a-a33450c8ee8b"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D6 label anchor; connected endpoints retained.",
+      "location": "D6",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-24",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.6764
+            },
+            "uuid": "8f0afce3-5c60-42f5-b99e-11767c5740eb"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing USBBOOT label anchor; connected endpoints retained.",
+      "location": "USBBOOT",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-25",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.7272
+            },
+            "uuid": "646b3205-23ce-4194-aed8-28aa337e7d6f"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing MISO label anchor; connected endpoints retained.",
+      "location": "MISO",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-26",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.7526
+            },
+            "uuid": "7b6dfd50-ce72-436d-876e-7d03771d2589"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D9 label anchor; connected endpoints retained.",
+      "location": "D9",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-27",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.778
+            },
+            "uuid": "3e2618ee-b838-43c9-97b7-eddfde47d7a6"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D10 label anchor; connected endpoints retained.",
+      "location": "D10",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-28",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.8034
+            },
+            "uuid": "355ce552-3f30-4bfd-a639-bfd83a413725"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D11 label anchor; connected endpoints retained.",
+      "location": "D11",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-29",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.8288
+            },
+            "uuid": "4f017ca9-e339-4593-8ea3-a9a53707316e"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D12 label anchor; connected endpoints retained.",
+      "location": "D12",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-30",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.8542
+            },
+            "uuid": "f496bd58-eca8-4da1-ad0f-5829f5b7f99d"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D13 label anchor; connected endpoints retained.",
+      "location": "D13",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-31",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.8796
+            },
+            "uuid": "7c4b0759-38c3-43ab-816e-6e8676536655"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing SCK label anchor; connected endpoints retained.",
+      "location": "SCK",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-32",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0762 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.905
+            },
+            "uuid": "72d55b52-d4c7-4444-b28b-0f2f2ba335fa"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing MOSI label anchor; connected endpoints retained.",
+      "location": "MOSI",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-33",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1270 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 1.9558
+            },
+            "uuid": "4f0a2911-773d-4136-a8fa-084345d01b4f"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing I2S_DIN label anchor; connected endpoints retained.",
+      "location": "I2S_DIN",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-34",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1270 mm",
+            "pos": {
+              "x": 1.4478,
+              "y": 1.9812
+            },
+            "uuid": "fe14afca-e2dd-4c23-8ee0-796f0661aa1b"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing I2S_BCLK label anchor; connected endpoints retained.",
+      "location": "I2S_BCLK",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-35",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1270 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 2.0066
+            },
+            "uuid": "db1fe5ac-07b2-4880-ad71-4a7f5b6c7e17"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing I2S_LRCLK label anchor; connected endpoints retained.",
+      "location": "I2S_LRCLK",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-36",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1270 mm",
+            "pos": {
+              "x": 1.4478,
+              "y": 2.032
+            },
+            "uuid": "91d49828-0864-47cb-8193-00219d9bac0d"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing BUTTON label anchor; connected endpoints retained.",
+      "location": "BUTTON",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-37",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1270 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 2.0574
+            },
+            "uuid": "22dcfd05-a9d9-4a9a-b428-c8623cc8c46a"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing SERVO label anchor; connected endpoints retained.",
+      "location": "SERVO",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-38",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1270 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 2.0828
+            },
+            "uuid": "e0713e4f-a34b-4390-bd7a-1f0a83a19e88"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing PIXELS label anchor; connected endpoints retained.",
+      "location": "PIXELS",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-39",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1270 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 2.1082
+            },
+            "uuid": "add92809-632e-4ecf-a77b-c1067d9bfe1e"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing INT label anchor; connected endpoints retained.",
+      "location": "INT",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-40",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1270 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 2.1336
+            },
+            "uuid": "820d1981-7c0e-43ae-be5b-18e9e087f617"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing POWER label anchor; connected endpoints retained.",
+      "location": "POWER",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-41",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1524 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 2.2098
+            },
+            "uuid": "59c0cbb7-10ff-45fc-a4f7-f3fddd1f8351"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D- label anchor; connected endpoints retained.",
+      "location": "D-",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-42",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1524 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 2.2352
+            },
+            "uuid": "6c4285d6-8c40-41a3-8322-6541047faa7a"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing D+ label anchor; connected endpoints retained.",
+      "location": "D+",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-43",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1524 mm",
+            "pos": {
+              "x": 1.4732,
+              "y": 2.286
+            },
+            "uuid": "9f4f99a4-1730-44cf-814f-f4426e72675d"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing SWCLK label anchor; connected endpoints retained.",
+      "location": "SWCLK",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-44",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1524 mm",
+            "pos": {
+              "x": 1.3208,
+              "y": 2.3114
+            },
+            "uuid": "fc49a2df-085f-456a-8976-87ea0c65f7ec"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing SWDIO label anchor; connected endpoints retained.",
+      "location": "SWDIO",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-45",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1524 mm",
+            "pos": {
+              "x": 1.7018,
+              "y": 2.4384
+            },
+            "uuid": "cf2e469b-60ec-4af1-b86a-64a0ab09c5c2"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing PIXELS label anchor; connected endpoints retained.",
+      "location": "level-shifter PIXELS",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-46",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1524 mm",
+            "pos": {
+              "x": 2.159,
+              "y": 2.0066
+            },
+            "uuid": "b8482bf4-d407-40d0-ab25-54f9e15ee963"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Superseded by the replacement block. A new terminated INT connection links SOX INT1 to the preserved GPIO22 net.",
+      "location": "Old sensor INT stub",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-47",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1016 mm",
+            "pos": {
+              "x": 2.921,
+              "y": 2.3876
+            },
+            "uuid": "26ba1c8d-2c77-4427-906a-e56e33418219"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Removed redundant open tail; the existing connected branch is retained.",
+      "location": "POWER extension",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-48",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.0508 mm",
+            "pos": {
+              "x": 3.4544,
+              "y": 1.778
+            },
+            "uuid": "98b1127f-958a-4e23-8dcd-541f0a59395d"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Removed redundant open tail; the existing connected branch is retained.",
+      "location": "GAIN extension",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-49",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1016 mm",
+            "pos": {
+              "x": 3.683,
+              "y": 1.6256
+            },
+            "uuid": "b62113da-32ec-45d7-b65b-7d29fda19f02"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing VO+ label anchor; connected endpoints retained.",
+      "location": "VO+",
+      "status": "resolved-in-derivative"
+    },
+    {
+      "id": "ERC-50",
+      "original": {
+        "description": "Unconnected wire endpoint",
+        "items": [
+          {
+            "description": "Horizontal Wire, length 0.1778 mm",
+            "pos": {
+              "x": 3.6068,
+              "y": 1.7018
+            },
+            "uuid": "0b7a4747-5722-4f45-8d1e-89f6b261b649"
+          }
+        ],
+        "severity": "warning",
+        "type": "unconnected_wire_endpoint"
+      },
+      "disposition": "Trimmed the open wire tail to the existing VO- label anchor; connected endpoints retained.",
+      "location": "VO-",
+      "status": "resolved-in-derivative"
+    }
+  ],
+  "collateral_warnings_after_source_declarations": [
+    {
+      "pins": "Old IC4.7 SDO and IC4.10 RES(GND)",
+      "warnings": 2,
+      "disposition": "Removed with LIS3DH. The new SOX mode-specific symbol treats address/unused Mode 1 strap inputs correctly."
+    },
+    {
+      "pins": "CONN1.MT1, CONN1.MT2",
+      "warnings": 2,
+      "disposition": "Mechanical mounting terminals are passive, not bidirectional logic drivers."
+    },
+    {
+      "pins": "X1.NC1, X1.NC2",
+      "warnings": 2,
+      "disposition": "Battery-connector mounting terminals are passive; existing ground connections and pad numbers retained."
+    },
+    {
+      "pins": "Q2.2 S",
+      "warnings": 1,
+      "disposition": "MOSFET source is passive. Consistently corrected its drain to passive and gate to input as well."
+    },
+    {
+      "pins": "U1.8 VCC, U1.4 VSS, U1.PAD VSS",
+      "warnings": 3,
+      "disposition": "Flash supply/ground pins are power inputs; physical pin/pad identifiers and connections retained."
+    }
+  ],
+  "final": {
+    "errors": 0,
+    "warnings": 0,
+    "erc_configuration_changed": false,
+    "exclusions_added": 0
+  },
+  "scope_limit": "AI-assisted source, pin, net and ERC review; independent whole-design electrical and physical-hardware signoff remains open."
+}

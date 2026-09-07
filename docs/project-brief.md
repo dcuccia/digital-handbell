@@ -26,7 +26,7 @@ each bell has a fixed or selectable note remain open.
 | R03 | Prefer CircuitPython and novice-friendly USB programming | Working baseline; custom-board identity/provisioning still required |
 | R04 | Integrated I2S DAC/class-D amplifier and local mono speaker | MAX98357A candidate; no separate DAC needed |
 | R05 | Rechargeable 1S LiPo with USB-C charging | Cell, protection, charge current, temperature handling, and runtime TBD |
-| R06 | Motion sensing for a natural ringing gesture | Evaluate LSM6DSOX acceleration/gyro against stock LIS3DH for strike plus chest-stop/rest; not a frozen BOM |
+| R06 | Motion sensing for a natural ringing gesture | Owner-approved LSM6DSOX in the draft; compare acceleration/gyro against stock LIS3DH for strike plus chest-stop/rest; performance and assembled BOM not frozen |
 | R07 | USB-C at the circular board edge, usable from outside the bell | Connector, shell slot, cable clearance, and load transfer TBD |
 | R08 | Speaker faces outward; electronics sit behind it | Measure internal taper and usable depth with actual parts |
 | R09 | Prefer outward-facing component/connectors for accessible assembly | Confirm assembly sequence before speaker blocks access |

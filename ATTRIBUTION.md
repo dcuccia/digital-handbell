@@ -4,14 +4,26 @@ This independent project gratefully builds on Adafruit's published hardware,
 learning guides, and CircuitPython ecosystem. Attribution does not imply
 Adafruit's endorsement, manufacture, or qualification of our derivative.
 
-**Current inventory:** original project documentation plus the
-[Adafruit 5768 reference package](hardware/reference/adafruit-5768/README.md).
-That package contains pinned upstream EAGLE sources, their original README and
-license, a KiCad conversion with imported symbols/footprints, and derived review
-exports. The entire hardware reference package is covered by its
-[CC BY-SA 3.0 license](hardware/reference/adafruit-5768/LICENSE.txt), not the root
-MIT license. Upstream markings embedded in the reference are retained as source
-provenance, not as branding for a new handbell product.
+**Current inventory:** original project documentation and MIT verification
+scripts, the [5768 reference](hardware/reference/adafruit-5768/README.md),
+the [4438 SOX reference](hardware/reference/adafruit-4438/README.md), and the
+[handbell schematic adaptation](hardware/handbell/README.md). Both reference
+packages contain pinned EAGLE sources, complete original notices/licenses,
+native KiCad conversions and review exports. The references and adapted hardware
+retain **CC BY-SA 3.0**, not the root MIT license. Upstream markings in the
+references are provenance, not branding for the new handbell design.
+
+The SOX hardware credits **Bryan Siepert for Adafruit Industries**. Preserve
+that exact credit alongside the 5768 source's Limor Fried/Ladyada credit; do
+not attribute every Adafruit design to the same person. Full original READMEs
+remain beside each source, including text required by their redistribution
+notices. The derivative records its changed pin types, wiring and title block.
+
+The derivative embeds the standard KiCad `power:PWR_FLAG` as design data
+under the [KiCad library license's design exception](https://www.kicad.org/libraries/license/).
+It is not included in the derivative's redistributed custom-symbol library.
+That exception does not override the Adafruit hardware's separate ShareAlike
+obligations.
 
 No third-party firmware or sound recordings are vendored. The original project
 [MIT license](LICENSE) is unchanged.
@@ -55,7 +67,7 @@ the conclusion comes from README attribution language **and the actual
 | 2809 LIS3DH | [README](https://github.com/adafruit/Adafruit-LIS3DH-Breakout-PCB/blob/f5f3e1b33fec19a56b2c14c69bb1b97c1c4f2861/README.md), [CC BY-SA 3.0](https://github.com/adafruit/Adafruit-LIS3DH-Breakout-PCB/blob/f5f3e1b33fec19a56b2c14c69bb1b97c1c4f2861/license.txt) |
 | 4884 Feather RP2040 | [README](https://github.com/adafruit/Adafruit-Feather-RP2040-PCB/blob/ea88166891ee0a1697a3899a5d55ab3722a2f125/README.md) says Creative Commons Attribution/Share-Alike but omits a version and references an absent `license.txt`. **Version unresolved: do not silently assign 3.0 or import until resolved.** |
 
-Six-axis candidates added 2026-09-07, currently **reference only**:
+Six-axis sources added 2026-09-07: **4438 imported/adapted; 4503 reference only**.
 
 | Source | License evidence / disposition |
 |---|---|

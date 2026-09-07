@@ -8,8 +8,8 @@ experiments, not a final component or manufacturing commitment.
 | D01 | Repository continuity | Retain the existing public `dcuccia/digital-handbell`, history, MIT license, 2023 notes and diagram | New planning and linked execution issues |
 | D02 | Integrated baseline | Prefer Adafruit 5768 for first bench work and schematic derivation | Audio/motion/power experiments and import review |
 | D03 | First MCU/runtime | RP2040 + CircuitPython provisionally preferred; no first-revision wireless requirement | Latency, audio/memory, idle/wake and USB workflow evidence |
-| D04 | Sensor | As of 2026-09-07, prefer evaluating LSM6DSOX for strike plus chest-stop/rest; retain LIS3DH for bench comparison | Gyro-enabled/disabled gesture comparison, false damping, electrical review, and assembled BOM quote |
-| D05 | CAD | KiCad 10.0.6 installed; pinned EAGLE reference converted on 2026-09-07 | Initial connected-net comparison passes; ERC and complete footprint/layout review remain open |
+| D04 | Sensor | Owner approved LSM6DSOX on 2026-09-07; integrated at 0x6A in the separate draft; retain LIS3DH for bench comparison | Gyro-enabled/disabled gesture comparison, driver initialization, full electrical review, and assembled BOM quote |
+| D05 | CAD | KiCad 10.0.6 exercised; both pinned references converted; handbell draft has 0 ERC errors/warnings with no exclusions | Complete footprint/layout review, reduction and electrical freeze remain open |
 | D06 | Hardware reuse license | Retain source-compatible CC BY-SA 3.0 for adaptations of verified sources; preserve root MIT for original code/docs | Full notices and per-file provenance at import; resolve 4884 version before use |
 | D07 | Packaging | Prefer circular, one-face assembly, two copper layers | Measured shell stack, complete placement/routing and comparative quotes |
 | D08 | Audio rail and quiet idle | Start by studying 5768's unboosted switched rail; independent mute/boost remain open | Headroom, noise/clicks, current, low-cell behavior and sequencing |
@@ -59,6 +59,27 @@ Neither accelerometer nor gyro identifies actual chest contact with certainty.
 The [motion decision](motion-sensing.md) records sources, current API units,
 bench wiring, alternate interactions, and evidence gates. No sensor substitution
 has been made to the imported reference.
+
+## 2026-09-07: owner approval and schematic integration
+
+D04 advances from recommendation to owner-approved **LSM6DSOXTR**. The
+[0.1 schematic draft](../hardware/handbell/README.md) replaces IC4's LIS3DH with
+the actual 4438 symbol/footprint and ST Mode 1 connections. It retains the
+shared 10 kohm I2C pull-ups, adds one local 100 nF bypass at each supply,
+keeps INT1 on GPIO22 and exposes INT2 at TP6 only. No duplicate regulator or
+breakout level shifter is added. The old references remain unchanged.
+
+The [ERC record](../hardware/handbell/reports/erc-review.md) disposes of every
+original finding, including incorrect imported power-pin semantics and dangling
+wire tails. TP4/TP5 make SWD access explicit. All 76 non-sensor components retain
+their values, footprints and connection topology. The source `1.2V` name is
+changed to `VCORE` without a circuit change; the RP2040 reset nominal is 1.1 V.
+
+Source review also found the pinned CircuitPython `_i3c_disable` descriptor
+redefinition documented in [motion sensing](motion-sensing.md). Correct/read
+back CTRL9_XL before bring-up. No firmware or physical-hardware outcome is
+claimed. E02/E04 remain open, especially for full import/footprint review,
+peripheral reduction, cell/power/audio choices and independent signoff.
 
 ## Initial risk register
 

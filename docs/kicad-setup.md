@@ -30,10 +30,24 @@ Standard symbols include RP2040, MAX98357A, MCP73831-2-OT, LIS3DH, and LSM6DS3.
 A similarly named symbol is not proof that its package/pinout matches a selected
 suffix such as LSM6DS3TR-C. Review the exact MPN and footprint before use.
 An exact LSM6DSOX symbol was not found in the installed `Sensor_Motion`
-library. The [recommended SOX block](motion-sensing.md) still needs its
-source-derived symbol/footprint imported and reviewed from Adafruit 4438;
-the now-exercised EAGLE import path supports that work. Do not substitute the
-LSM6DS3 symbol merely because the package outline looks similar.
+library. The [approved SOX block](../hardware/handbell/README.md) now uses the
+actual Adafruit 4438 imported symbol/footprint, with all 14 physical pad mappings
+compared and its symbol specialized to Mode 1. Do not substitute the LSM6DS3
+symbol merely because the package outline looks similar.
+
+## Open the handbell draft
+
+Use **File > Open Project** and select:
+
+```text
+C:\Projects\dcuccia\digital-handbell\hardware\handbell\handbell.kicad_pro
+```
+
+Open its schematic, or read the
+[PDF](../hardware/handbell/reports/handbell-schematic.pdf). The project deliberately
+has no PCB yet. Keep the whole checkout: its footprint table references the
+sibling reference packages. The [handoff](../hardware/handbell/README.md)
+includes repeatable strict ERC and net/pad comparison commands.
 
 ## Open the reference
 
@@ -69,8 +83,8 @@ $Schematic = "$Reference\kicad\Adafruit Feather RP2040 Prop-Maker.kicad_sch"
 
 Adjust the checkout/install path on another machine. ERC without
 `--exit-code-violations` can return success while reporting violations; inspect
-the report. A future enforcement command should use that flag once the
-reference and project-specific rules have been reviewed.
+the report. The handbell derivative now uses that flag for enforcement, without
+changing the inherited severity matrix or adding exclusions.
 
 ## Import behavior actually observed
 
@@ -99,4 +113,8 @@ connectivity evidence but does not prove footprint accuracy, layout geometry,
 design-rule equivalence, or functional performance.
 
 See the [import report](../hardware/reference/adafruit-5768/README.md).
-E02 remains open for these reviews; E04 still owns the actual handbell schematic.
+E02 remains open for the remaining geometry/design-rule reviews. The separate
+[handbell draft](../hardware/handbell/README.md) resolves all 50 original findings
+and has zero current ERC findings; E04 remains open for reduction, electrical
+decisions and complete review. The unchanged SOX breakout reference has its own
+24 initial findings, preserved with that reference rather than globally waived.

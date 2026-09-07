@@ -1,13 +1,14 @@
 # Motion sensing: strike and chest-stop/rest
 
-Recommendation dated 2026-09-07: **evaluate LSM6DSOX as the primary six-axis
-upgrade**, using Adafruit's PID 4438 breakout and CircuitPython driver.
+Decision updated 2026-09-07: **the owner approved LSM6DSOX**, and it is integrated
+in the [separate handbell schematic draft](../hardware/handbell/README.md),
+using Adafruit PID 4438 source material and ST's fixed Mode 1 wiring.
 LSM6DS3TR-C / PID 4503 is the economical runner-up, with sourcing and hardware
 license-scope questions to resolve. Keep the stock LIS3DH as a comparison sensor
 on the bench. The imported 5768 reference has not been modified.
 
-This is an engineering recommendation, **not measured handbell recognition
-performance or a frozen BOM**.
+This is a component/design direction, **not measured handbell recognition
+performance or a frozen assembled BOM**.
 
 ## Is LIS3DH enough?
 
@@ -91,6 +92,23 @@ Documentation traps discovered during source inspection:
   aliases, not the Prop-Maker Feather's wiring.
 - LIS3DH's convenient `shake()` samples with sleeps over a default roughly
   100 ms window; do not assume it is a low-latency instrument trigger.
+- **Bring-up gate:** the pinned LSM6DS base class defines `_i3c_disable` at
+  CTRL9_XL bit 1, then redefines it at bit 0. The SOX constructor uses the
+  redefined descriptor. ST specifies bit 1 for I3C disable and reserved bit 0
+  clear. Verify a corrected driver revision or narrowly reviewed initialization
+  before using this snapshot; do not merely set another bit while leaving the
+  reserved bit set.
+
+Exact defect evidence:
+[base driver lines 202-208](https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS/blob/cdfc14a687a138aa0f2c6abab061bfc1bfafa561/adafruit_lsm6ds/__init__.py#L202-L208),
+[SOX constructor lines 54-58](https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS/blob/cdfc14a687a138aa0f2c6abab061bfc1bfafa561/adafruit_lsm6ds/lsm6dsox.py#L54-L58),
+ST DS12814 Rev 3 p.65 and the
+[ST register definition](https://github.com/STMicroelectronics/lsm6dsox-pid/blob/9570c27f142448b9e9d83bc9b746a5851c0ee785/lsm6dsox_reg.h#L541-L560).
+Tracked under E06 as [issue #13](https://github.com/dcuccia/digital-handbell/issues/13).
+Required register outcome: bit 1 set, bit 0 clear, other bits preserved.
+No driver code is vendored or patched here, and no I2C failure has been measured
+on a physical bell. Keep hub/pass-through/OIS/DEN disabled for the draft's
+grounded SDx/SCx and NC auxiliary outputs.
 
 See [LSM6DS driver source](https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS/blob/cdfc14a687a138aa0f2c6abab061bfc1bfafa561/adafruit_lsm6ds/__init__.py)
 and [LIS3DH source](https://github.com/adafruit/Adafruit_CircuitPython_LIS3DH/blob/cd40b482a098a62ecce1b4c62a1f1930be984e16/adafruit_lis3dh.py).
@@ -178,7 +196,10 @@ commit `9bf02b7214d35f2699bfd24737865511e4f9f114`, EAGLE
 but a separate `LICENSE` contains MIT. Preserve all notices and clarify scope
 before distributing an adaptation; a GitHub badge is not sufficient.
 
-Neither sensor board nor its software has been vendored in this revision.
-Before freezing the handbell sensor, require the comparison dataset, electrical
-review, exact assembly quote/availability, and resolved licensing for any source
-actually copied. E03/E06 own the experiments; E04 owns the eventual substitution.
+The [4438 hardware reference](../hardware/reference/adafruit-4438/README.md) is
+now vendored with full notices; the software and DS3TR-C hardware are not.
+The derivative uses the imported SOX symbol/footprint with reviewed Mode 1
+connections, not a pin-compatible replacement. Before freezing the design,
+require the comparison dataset, full electrical review and exact assembly
+quote/availability. E03/E06 own the experiments and driver bring-up; E04 owns
+the schematic and its remaining decisions.

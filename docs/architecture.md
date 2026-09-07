@@ -1,7 +1,9 @@
 # Proposed architecture
 
-Status: provisional, schematic-first. The selected *research baseline* is
-Adafruit 5768; no custom netlist has been produced.
+Status: schematic integration draft, not frozen. The
+[handbell derivative](../hardware/handbell/README.md) adapts Adafruit 5768 and
+now has a native schematic/netlist with LSM6DSOX. Peripheral reduction,
+cell/speaker choices and physical layout are still open.
 All upstream implementation claims refer to the
 [pinned source catalog](reference-designs.md), particularly the
 [5768 schematic](https://github.com/adafruit/Adafruit-RP2040-Prop-Maker-Feather-PCB/blob/408fa9a40c0a01a3a65497ef42a29e0b08fe711e/Adafruit%20Feather%20RP2040%20Prop-Maker.sch).
@@ -14,7 +16,7 @@ flowchart LR
     BAT --> SEL
     SEL --> LDO[3.3 V regulator]
     LDO --> MCU[RP2040 + QSPI flash]
-    LDO --> ACC[LIS3DH + interrupt]
+    LDO --> ACC[LSM6DSOX + INT1]
     ACC <-->|I2C| MCU
     USB <-->|USB D+ / D-| MCU
     SEL --> SW[Switched amplifier rail]
@@ -30,17 +32,18 @@ must be explicit in the schematic.
 
 ## 2026-09-07 sensor direction for the derivative
 
-The new chest-stop/rest requirement justifies evaluating a gyro now.
-[LSM6DSOX / Adafruit 4438](motion-sensing.md) is the recommended six-axis
-candidate; LSM6DS3TR-C is the cost-led alternative pending sourcing/license
-clarification. This is not a drop-in substitution or a completed design change.
-The diagram and verified baseline below still describe the unchanged 5768.
+The owner approved [LSM6DSOX / Adafruit 4438](motion-sensing.md). The separate
+draft implements regulated 3.3 V I2C at 0x6A, two local 100 nF bypass capacitors,
+ST Mode 1 auxiliary-pin straps, INT1 on GPIO22 and INT2 at TP6 only.
+It does not copy a second regulator or level shifter into this 3.3 V system.
+The diagram describes that derivative; the table below records the unchanged
+5768 baseline. LSM6DS3TR-C remains an alternative, not an imported source.
 
 Bench comparison can retain the onboard LIS3DH at 0x18 and connect the external
-LSM6DSOX at 0x6A on the same I2C bus. For the actual derivative, review the new
-package, pin mapping, straps, power/decoupling, interrupt wiring, and Python
-driver before replacing the LIS3DH block. Neither sensor directly proves
-physical chest contact.
+LSM6DSOX at 0x6A on the same I2C bus. The
+[pin/footprint and ERC records](../hardware/handbell/README.md) cover the
+substitution; the Python initialization defect documented there is a bring-up
+gate. Neither sensor directly proves physical chest contact.
 
 ## Verified 5768 baseline
 
@@ -79,7 +82,7 @@ Source:
 | I2S word select | `I2S_WORD_SELECT` | 18 |
 | Switched peripheral supply, active high | `EXTERNAL_POWER` | 23 |
 | I2C SDA / SCL | `SDA` / `SCL` | 2 / 3 |
-| LIS3DH INT1 | `ACCELEROMETER_INTERRUPT` | 22 |
+| Sensor INT1 (LIS3DH reference / LSM6DSOX draft) | `ACCELEROMETER_INTERRUPT` in stock board definition | 22 |
 | Optional external button | `EXTERNAL_BUTTON` | 19 |
 | Optional onboard boot button input | `BUTTON` / `BOOT` | 7 |
 | Onboard status NeoPixel | `NEOPIXEL` | 4 |
@@ -97,7 +100,7 @@ while using a build that treats it as its status NeoPixel.
 |---|---|---|
 | MCU core, clock, flash, USB and recovery access | Feather headers and unused breakout pads | Final connector/control set |
 | I2S amp, gain/channel network, supply bypassing, relevant output network | Large speaker terminal block, replaced by selected keyed connector | Independent SD_MODE control; gain and digital limiting |
-| Sensor and interrupt, required I2C pullups | STEMMA connector and breakout-only regulator/level shifters where genuinely redundant | Six-axis sensor if gesture evidence requires it |
+| Approved LSM6DSOX, INT1 and required I2C pullups | STEMMA connector and breakout-only regulator/level shifters where genuinely redundant | INT2 MCU route if needed; gesture configuration |
 | Charger support and source-selection circuit | Duplicate USB connectors, charger circuits and regulators from combining breakouts | Cell protection, temperature sensing, current setting, input protection |
 | Shared amplifier power switching and bias resistors | Servo header; external NeoPixel connector, level shifter and dedicated branch parts | Real off/sleep policy, battery sensing, status indication |
 

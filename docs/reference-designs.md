@@ -39,13 +39,15 @@ contains a different, newer stereo design. For 3988 use
 
 ## Six-axis candidates added 2026-09-07
 
-See the [motion-sensor decision](motion-sensing.md) for the recommendation,
+See the [motion-sensor decision](motion-sensing.md) for the owner-approved choice,
 chest-stop ambiguity, software API details, and dated sourcing/assembly findings.
-These references are cataloged, not vendored or substituted into the 5768.
+The [4438 source](../hardware/reference/adafruit-4438/README.md) is now vendored
+and adapted in the separate handbell draft. The 5768 reference remains unchanged;
+4503 remains catalog-only.
 
 | Product | Role and qualification | Guide | Hardware source |
 |---|---|---|---|
-| [4438: LSM6DSOX 6-DoF IMU](https://www.adafruit.com/product/4438) | Primary acceleration/gyro candidate; clear CC BY-SA 3.0 hardware notice; basic I2C readout supported without ML | [Guide](https://learn.adafruit.com/lsm6dsox-and-ism330dhc-6-dof-imu), [downloads](https://learn.adafruit.com/lsm6dsox-and-ism330dhc-6-dof-imu/downloads) | [Adafruit-LSM6DSOX-PCB](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/tree/c05abef4675b0380fbf3d23171615a2f1ac0b130), `c05abef4675b0380fbf3d23171615a2f1ac0b130`; `Adafruit_LSM6DSOX.sch` / `.brd` |
+| [4438: LSM6DSOX 6-DoF IMU](https://www.adafruit.com/product/4438) | Owner-approved and integrated; CC BY-SA 3.0 hardware; basic I2C readout without ML, with the documented CTRL9_XL bring-up gate | [Guide](https://learn.adafruit.com/lsm6dsox-and-ism330dhc-6-dof-imu), [downloads](https://learn.adafruit.com/lsm6dsox-and-ism330dhc-6-dof-imu/downloads) | [Adafruit-LSM6DSOX-PCB](https://github.com/adafruit/Adafruit-LSM6DSOX-PCB/tree/c05abef4675b0380fbf3d23171615a2f1ac0b130), `c05abef4675b0380fbf3d23171615a2f1ac0b130`; `Adafruit_LSM6DSOX.sch` / `.brd` |
 | [4503: LSM6DS3TR-C 6-DoF IMU](https://www.adafruit.com/product/4503) | Economical alternative; resolve overlapping MIT/CC hardware notices and inconsistent lifecycle descriptions before production use | [Guide](https://learn.adafruit.com/adafruit-lsm6ds3tr-c-6-dof-accel-gyro-imu), [downloads](https://learn.adafruit.com/adafruit-lsm6ds3tr-c-6-dof-accel-gyro-imu/downloads) | [Adafruit-LSM6DS3TR-C-PCB](https://github.com/adafruit/Adafruit-LSM6DS3TR-C-PCB/tree/9bf02b7214d35f2699bfd24737865511e4f9f114), `9bf02b7214d35f2699bfd24737865511e4f9f114`; `Adafruit_LSM6DS3.sch` / `.brd` |
 
 The inspected [Adafruit CircuitPython LSM6DS](https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS/tree/cdfc14a687a138aa0f2c6abab061bfc1bfafa561)

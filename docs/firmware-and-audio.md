@@ -2,7 +2,7 @@
 
 ## Starting stack
 
-Use the purchased RP2040 Prop-Maker Feather to prove the signal chain before
+Use an owner-approved RP2040 Prop-Maker Feather bench setup to prove the signal chain before
 custom-board bring-up. The documented starting APIs are
 `audiobusio.I2SOut`, `audiocore.WaveFile`, `audiomixer.Mixer`, and
 `adafruit_lis3dh` with `adafruit_bus_device`. `synthio` is a separate synthesis
@@ -17,6 +17,10 @@ For the explicit chest-stop/rest requirement, add the
 The LSM6DS driver returns gyro values in **radians/second**. Use the actual
 `adafruit_lsm6ds.lsm6dsox.LSM6DSOX` class and Feather bus, not an outdated guide
 constructor or another board's IMU power aliases.
+The separate schematic now uses LSM6DSOX. Before bring-up, address the
+[pinned driver's CTRL9_XL descriptor defect](motion-sensing.md): I3C-disable
+bit 1 must be set and reserved bit 0 clear, without disturbing other fields.
+No hardware purchase or working firmware is implied by this plan.
 
 ## Experiments before choosing behavior
 

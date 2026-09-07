@@ -5,11 +5,12 @@ music-making. Replace the clapper in a children's play handbell with a speaker,
 rechargeable battery, and compact electronics. A natural ringing gesture should
 produce a convincing bell sound; the instrument should be quiet between notes.
 
-**Status: reference import and prototyping preparation, not a fabrication-ready
-or child-use-qualified design.** An attributed
-[KiCad conversion of the upstream reference](hardware/reference/adafruit-5768/README.md)
-is available. No custom handbell schematic, PCB, firmware, or enclosure has been
-released.
+**Status: first handbell schematic integration draft, not a fabrication-ready
+or child-use-qualified design.** The
+[native KiCad draft](hardware/handbell/README.md) and
+[schematic PDF](hardware/handbell/reports/handbell-schematic.pdf) integrate
+LSM6DSOX and include the [ERC disposition](hardware/handbell/reports/erc-review.md).
+No custom PCB, firmware, or enclosure has been released.
 
 The working first-revision baseline is the
 [Adafruit RP2040 Prop-Maker Feather (5768)](https://www.adafruit.com/product/5768):
@@ -18,10 +19,10 @@ and single-cell LiPo charging. We intend to reuse documented, code-supported
 open hardware, remove unnecessary peripheral branches, and create a circular
 board. This is a starting hypothesis, not a frozen BOM.
 
-For the handbell derivative, [LSM6DSOX is the recommended six-axis sensor
-candidate](docs/motion-sensing.md) for strike plus chest-stop/rest recognition.
-The imported reference retains its original LIS3DH; no substitution is made
-until the gesture, electrical, and assembly decisions are reviewed.
+The owner-approved [LSM6DSOX six-axis sensor](docs/motion-sensing.md) is now in
+the separate handbell draft for strike plus chest-stop/rest development.
+The imported reference retains its original LIS3DH. Gesture performance,
+assembled cost and final electrical decisions remain evidence gates.
 
 ## Start here
 
@@ -77,6 +78,7 @@ software, images, or recordings. Most candidate Adafruit hardware sources use
 CC BY-SA 3.0; adapted material must retain its applicable terms and notices.
 See [ATTRIBUTION.md](ATTRIBUTION.md) before importing anything.
 
-This planning revision links to upstream sources; it does not vendor their CAD,
-code, recordings, or branding. This is an independent project, not an
+Pinned, licensed Adafruit CAD and notices are vendored in the reference
+packages; the separate derivative identifies its modifications. No third-party
+firmware or recordings are vendored. This is an independent project, not an
 Adafruit-endorsed product.

@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Projects\dcuccia\digital-handbell\hardware\reference\adafruit-4438\kicad\Adafruit_LSM6DSOX.kicad_sch</source>
+    <date>2026-09-07T08:59:59</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Adafruit_LSM6DSOX.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:0603-NO</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:0603-NO</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="CAP_CERAMIC0603_NO" description="Ceramic Capacitors&#xA;&#xA;For new designs, use the packages preceded by an '_' character since they are more reliable:&#xA;&#xA;The following footprints should be used on most boards:&#xA;&#xA;• _0402 - Standard footprint for regular board layouts&#xA;• _0603 - Standard footprint for regular board layouts&#xA;• _0805 - Standard footprint for regular board layouts&#xA;• _1206 - Standard footprint for regular board layouts&#xA;&#xA;For extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):&#xA;&#xA;• _0402MP - Micro-pitch footprint for very dense/compact boards&#xA;• _0603MP - Micro-pitch footprint for very dense/compact boards&#xA;• _0805MP - Micro-pitch footprint for very dense/compact boards&#xA;• _1206MP - Micro-pitch footprint for very dense/compact boards"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0be1bc46-8ac8-43dd-9104-7f9c4636c516</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>10uF</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:0805-NO</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:0805-NO</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE" description="Ceramic Capacitors&#xA;&#xA;For new designs, use the packages preceded by an '_' character since they are more reliable:&#xA;&#xA;The following footprints should be used on most boards:&#xA;&#xA;• _0402 - Standard footprint for regular board layouts&#xA;• _0603 - Standard footprint for regular board layouts&#xA;• _0805 - Standard footprint for regular board layouts&#xA;• _1206 - Standard footprint for regular board layouts&#xA;&#xA;For extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):&#xA;&#xA;• _0402MP - Micro-pitch footprint for very dense/compact boards&#xA;• _0603MP - Micro-pitch footprint for very dense/compact boards&#xA;• _0805MP - Micro-pitch footprint for very dense/compact boards&#xA;• _1206MP - Micro-pitch footprint for very dense/compact boards"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>50c4f622-fd3d-4a4d-b9f8-03545d197c44</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:0805-NO</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:0805-NO</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE" description="Ceramic Capacitors&#xA;&#xA;For new designs, use the packages preceded by an '_' character since they are more reliable:&#xA;&#xA;The following footprints should be used on most boards:&#xA;&#xA;• _0402 - Standard footprint for regular board layouts&#xA;• _0603 - Standard footprint for regular board layouts&#xA;• _0805 - Standard footprint for regular board layouts&#xA;• _1206 - Standard footprint for regular board layouts&#xA;&#xA;For extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):&#xA;&#xA;• _0402MP - Micro-pitch footprint for very dense/compact boards&#xA;• _0603MP - Micro-pitch footprint for very dense/compact boards&#xA;• _0805MP - Micro-pitch footprint for very dense/compact boards&#xA;• _1206MP - Micro-pitch footprint for very dense/compact boards"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9cbd3cff-8af7-47ce-8e93-9eb98659645d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="CONN3">
+      <value>STEMMA_I2C_QT</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:JST_SH4</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:JST_SH4</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="STEMMA_I2C_QT" description=""/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62305db1-a2ab-44b5-a987-f4b282d131c8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="MT1"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="MT2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="CONN4">
+      <value>STEMMA_I2C_QT</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:JST_SH4</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:JST_SH4</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="STEMMA_I2C_QT" description=""/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>89f95fe8-6116-49ee-b34b-4dbfb85d8beb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="MT1"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="MT2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>GREEN</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:CHIPLED_0603_NOOUTLINE</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:CHIPLED_0603_NOOUTLINE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="LED0603_NOOUTLINE" description="LED&#xA;&#xA;0603 - 0603 Surface Mount Package&#xA;&#xA;2mA:&#xA;&#xA;• Green LED - Low Power (3.9mcd, 2ma, 1.7Vf) - Digikey: 475-2709-2-ND&#xA;• Orange LED - Low Power (9.8mcd, 2ma, 1.8Vf) - Digikey: 475-1194-2-ND&#xA;• Red LED - Low Power (5mcd, 2ma, 1.8Vf) - Digikey: 475-1195-2-ND&#xA;• Yellow LED - Low Power (7mcd, 2ma, 1.8Vf) - Digikey: 475-1196-2-ND&#xA;&#xA;5mA:&#xA;&#xA;• Blue LED - Low Power (17mcd, 5ma, 2.9Vf) - Digikey: LNJ937W8CRACT-ND&#xA;&#xA;0805 - 0805 Surface Mount Package&#xA;&#xA;2mA:&#xA;&#xA;• Red LED (8.8mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2510-1-ND]&#xA;• Green LED (5mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2730-1-ND]&#xA;• Yellow LED (11.3mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2555-1-ND]&#xA;&#xA;20mA:&#xA;&#xA;• Red LED (104mcd, 20mA, Diffused) - LS R976 [Digikey: 475-1278-6-ND]&#xA;• Red LED (12mcd, 20mA, 2.0Vf, Clear) - APT2012EC [Digikey: 754-1128-1-ND]&#xA;• Green LED (15mcd, 20mA, 2.2Vf, Clear) - APT2012GC [Digikey: 754-1131-1-ND]&#xA;• Orange LED (160mcd, 20mA, 2.1Vf, Clear) - APT2012SECK [Digikey: 754-1130-1-ND]&#xA;&#xA;• 1206 - 1206 Surface Mount Package&#xA;&#xA;• Green LED (26mcd, 20mA, Diffused) - LG N971  [Digikey: 475-1407-6-ND]&#xA;• Red LED (15mcd, 20mA, Diffused) - LH N974 [Digikey: 475-1416-6-ND]&#xA;&#xA;• Cree - Cree High-Power Surface Mount LEDs&#xA;&#xA;• XPEBWT-L1-0000-00D50 - White 111lm 350mA 2.9Vf 6200K 110°&#xA;• XTEAWT-00-0000-00000LEE3 - White 114lm 350mA 2.85Vf 5000K 115°&#xA;&#xA;• Everlight - Everlight 45-21 Series Surface Mount LEDs&#xA;&#xA;• 45-21/QK2C-B2832AC2CB2/2T - Warm White 2000mcd 20mA 3.25Vf 3050K 120°&#xA;• 45-21/LK2C-B38452C4CB2/2T - Nuetral White 2000mcd 20mA 3.25Vf 4150K 120°&#xA;• 45-21/LK2C-B50634C6CB2/2T - Cold White 2200mcd 20mA 3.25Vf 5650K 120°&#xA;&#xA;• PLCC2 Reverse Mount&#xA;&#xA;• LS T77K-J1L2-1-0-2-R18-Z - Red 11.25mcd 2mA 1.8Vf 630nm 120°&#xA;• LO T77K-L1M2-24-Z - Orange 19.6mcd 2mA 1.8Vf 606nm 120°&#xA;• LY T77K-K2M1-26-Z - Yellow 15.7mcd 2mA 1.8Vf 587nm 120°"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>93c12364-0967-4c69-a156-f7e5e22d54eb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="A"/>
+            <pin num="C"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>1N4148</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:SOD-323</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:SOD-323</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="DIODESOD-323" description="Diode&#xA;&#xA;SMA     Model   Volts   Amps   Type   Vf   Ir   Digikey #   Notes     SSA34-E3   40V   3A   Schottky   480mV @ 3A   200uA @ 40V   SSA34-E3/61TGITR-ND        CDBA120-G   20V   1A   Schottky   500mV @ 1A   500uA @ 20V   641-1014-6-ND   REEL     MBRA210   10V   2A   Schottky   350mV @ 2A   700uA @ 10V   MBRA210LT3      SOD-123     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54T1G   30V   200mA   Schottky   800mV @ 200mA   2uA @ 25V   BAT54T1GOSTR-ND        B0530W   30V   500mA   Schottky   430mV @ 500mA   130uA @ 30V   B0530W-FDICT-ND   REEL     MBR120   20V   1A   Schottky   340mV @ 1A      MBR120VLSFT1GOSCT-ND      SOD-323     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     PMEG2005EJ   20V   500mA   Schottky   355mV @ 500mA      568-4110-1-ND        ZLLS410   10V   570mA   Schottky   380mV @ 570mA      ZLLS410CT-ND        1N4148WS   75V   150mA   Silicon/Simple   1V      1N4148WSFSCT-ND   REEL   SOD-523     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54XV2   30V   200mA   Schottky   0.8V @ 100mA      BAT54XV2CT-ND        TB751S   30V   30mA   Schottky         RB751S-40TE61CT-ND      SOT23-R/W(R = Solder Paste/Reflow Ovens, W = Hand-Soldering)      Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54FILM   40V   300mA   Schottky         497-7162-1-ND       POWERDI-5      Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     PDS560   60V   5A   Schottky   670mV @ 5A   150uA @ 60V   PDS560DICT-ND"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>807a0e03-bdda-4e6a-8235-68c81f5aa616</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="A"/>
+            <pin num="C"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="FID3">
+      <value>FIDUCIAL_1MM</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:FIDUCIAL_1MM</footprint>
+      <fields>
+        <field name="BOM">EXCLUDE</field>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:FIDUCIAL_1MM</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="FIDUCIAL_1MM" description="Fiducial Alignment Points&#xA;&#xA;Various fiducial points for machine vision alignment."/>
+      <property name="BOM" value="EXCLUDE"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ac968c1b-3598-47a6-b559-c99e528de081</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="FID4">
+      <value>FIDUCIAL_1MM</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:FIDUCIAL_1MM</footprint>
+      <fields>
+        <field name="BOM">EXCLUDE</field>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:FIDUCIAL_1MM</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="FIDUCIAL_1MM" description="Fiducial Alignment Points&#xA;&#xA;Various fiducial points for machine vision alignment."/>
+      <property name="BOM" value="EXCLUDE"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a67885c-e554-4250-825f-143ded90c668</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JP1">
+      <value>HEADER-1X970MIL</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:1X09_ROUND_70</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:1X09_ROUND_70</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="HEADER-1X970MIL" description="PIN HEADER"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>386740fc-987a-464c-ad48-205a9da3a65e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JP2">
+      <value>HEADER-1X570MIL</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:1X05_ROUND_70</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:1X05_ROUND_70</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="HEADER-1X570MIL" description="PIN HEADER"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>77e4bd8f-7c72-4739-a46a-4517e8f1fb3e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>BSS138</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:SOT363</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:SOT363</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="MOSFET-N_DUAL" description="Dual N-Channel MOSFET&#xA;&#xA;SOT363 (2.0x1.25mm)&#xA;&#xA;• 2N7002PS - 60V, 320mA [Digikey: 568-5984-1-ND]"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bc2ca3eb-281e-4ccf-9d62-d4ce3710052b 173fc67f-02df-452b-8b23-f402423e204b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="1"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:RESPACK_4X0603</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:RESPACK_4X0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="RESISTOR_4PACK" description="Resistor Packs (4 resistors)&#xA;&#xA;4 x 0603&#xA;&#xA;• 10K 1/16W - Digikey: YC164J-10KCT-ND"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a9bae126-ba70-428f-ab85-aee96415b039 a4d49095-f32c-417c-ab4f-23729e30faea c6b0a361-a5a4-4322-91de-5be4a4b73f4d 33d909fc-d110-4f76-bed0-c68898f3e91e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="2"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="3"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+        <unit name="D">
+          <pins>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>10K</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:RESPACK_4X0603</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:RESPACK_4X0603</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="RESISTOR_4PACK" description="Resistor Packs (4 resistors)&#xA;&#xA;4 x 0603&#xA;&#xA;• 10K 1/16W - Digikey: YC164J-10KCT-ND"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9aa052e9-a922-4d32-b826-2ffae989ae04 464d43d9-29f6-48a0-9380-29f8db7f0e3d 2bfeefed-1c24-4aa0-a2e3-34d08ca0a3c7 230e21cf-8041-4e34-adf0-dc926b9220e3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+        <unit name="B">
+          <pins>
+            <pin num="2"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+        <unit name="C">
+          <pins>
+            <pin num="3"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+        <unit name="D">
+          <pins>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SJ1">
+      <value>SOLDERJUMPER</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:SOLDERJUMPER_ARROW_NOPASTE</footprint>
+      <fields>
+        <field name="BOM">EXCLUDE</field>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:SOLDERJUMPER_ARROW_NOPASTE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="SOLDERJUMPER" description="SMD Solder JUMPER&#xA;&#xA;Solder the two pads together to create a connection, or remove the solder to break it.&#xA;&#xA;REFLOW - Use this footprint for solder paste and reflow ovens. WAVE - Use this footprint for hand-soldering (larger pads).&#xA;&#xA;CLOSED - Has a trace between the two pads to ensure it is closed by default.  The trace needs to be cut to disable the jumper, and can be closed again by creating a solder bridge between the two pads."/>
+      <property name="BOM" value="EXCLUDE"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4238c558-131b-4c4c-8c03-7629cda499f8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U$1">
+      <value>MOUNTINGHOLE2.5</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:MOUNTINGHOLE_2.5_PLATED</footprint>
+      <fields>
+        <field name="BOM">EXCLUDE</field>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:MOUNTINGHOLE_2.5_PLATED</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="MOUNTINGHOLE2.5" description="Mounting Hole&#xA;&#xA;For #2 screws (0.086&quot;/2.18mm width, 0.094&quot;/2.4mm hole) use 2.5mm"/>
+      <property name="BOM" value="EXCLUDE"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e08bee4-8369-4beb-b64c-de8ace020455</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U$2">
+      <value>LSM6DSOX</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:LGA-14L</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:LGA-14L</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="LSM6DSOX" description=""/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01a376ea-945d-49ec-86a3-fd3d500651a6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="1"/>
+            <pin num="12"/>
+            <pin num="8"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="5"/>
+            <pin num="4"/>
+            <pin num="9"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="11"/>
+            <pin num="10"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U$17">
+      <value>MOUNTINGHOLE2.5</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:MOUNTINGHOLE_2.5_PLATED</footprint>
+      <fields>
+        <field name="BOM">EXCLUDE</field>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:MOUNTINGHOLE_2.5_PLATED</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="MOUNTINGHOLE2.5" description="Mounting Hole&#xA;&#xA;For #2 screws (0.086&quot;/2.18mm width, 0.094&quot;/2.4mm hole) use 2.5mm"/>
+      <property name="BOM" value="EXCLUDE"/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc8f3f9f-5c6a-425e-978a-7f5ec52e23bc</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>AP2112K-3.3</value>
+      <footprint>Adafruit_LSM6DSOX-import-fps:SOT23-5</footprint>
+      <fields>
+        <field name="Footprint">Adafruit_LSM6DSOX-import-fps:SOT23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Adafruit_LSM6DSOX-eagle-import" part="VREG_SOT23-5" description="SOT23-5 Fixed Voltage Regulators&#xA;&#xA;Part Current Out V Out V In V Dropout θJA (°C/W) TJ (°C) Digikey Part No.     ADP121   150mA   3.3V   3.4-5.5V   0.09V @ 150mA   --   --   ADP121-AUJZ33R7CT-ND     ADP121   150mA   3.0V   3.1-5.5V   0.09V @ 150mA   --   --   ADP121-AUJZ30R7CT-ND     ADP122   300mA   3.3V   3.4-5.5V   0.085V @ 300mA   --   --   ADP122AUJZ-3.3-R7CT-ND     ADP1712   300mA   3.3V   3.5-5.5V   0.17V @ 300mA   --   --   ADP1712AUJZ-3.3-R7TR-ND     AP7311 (Low Cost)   150mA   3.3V   3.5-6V   0.15V @ 150mA   --   --   AP7311-33WG-7DICT-ND      LD39015M18R   150mA   1.8V   1.9V-5.5V   0.08V @ 100mA   --   --   497-6977-1-ND      LP2985A-33DBVR   150mA   3.3V   3.3-16V   0.28V @ 150mA   206   150   296-18479-1-ND      MCP1824T-3302E/OT   300mA   3.3V   3.5V-6V   0.2V @ 300mA   --   --   MCP1824T-3302E/OTCT-ND      MIC5205-2.5YM5 TR   150mA   2.5V   2.7-16V   0.165V @ 150mA   --   --   576-1257-2-ND     MIC5205-3.0YM5 TR   150mA   3.0V   3.2V-16V   0.165V @ 150mA   --   --   576-1258-2-ND     MIC5205-3.3YM5 TR   150mA   3.3V   3.5V-16V   0.165V @ 150mA   --   --   576-1259-2-ND     TPS780330220   150mA   3.3V+2.2V   3.6-5.5V   250mV Max   --   --   296-23332-1-ND     TDA3663/N1,135   100mA   3.3V   3.5-45V   0.18V @ 50mA   --   --   568-5343-1-ND&#xA;&#xA;Max operating temp can be calculated using θJA, TJ (max junction temperature), and power in watts.  Set the &quot;Maximum Ambient Temperature&quot; until it reaches TJ (&quot;Max Junction Temperature&quot;), which is the absolute limit for safe use of the regulator: http://www.daycounter.com/Calculators/Heat-Sink-Temperature-Calculator.phtml Heat Sink Temperature Calculator&#xA;&#xA;For example, With 12V source into a 3.3V LP2985 and a 30mA load, we are dissipating (12V-3.3V) * 0.03A = 0.261W.  With a θJA of 206 °C/W, a TJ of 150°C, and 261mW we can safely use the chip without a heat sink up to 75°C (=147.1°C Junction Temperature)."/>
+      <property name="Sheetname" value="Adafruit_LSM6DSOX_1"/>
+      <property name="Sheetfile" value="Adafruit_LSM6DSOX.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>67bd2398-6115-4274-b6fe-0a22e03fbc9d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="CAP_CERAMIC0603_NO">
+      <description>Ceramic Capacitors
+
+For new designs, use the packages preceded by an '_' character since they are more reliable:
+
+The following footprints should be used on most boards:
+
+• _0402 - Standard footprint for regular board layouts
+• _0603 - Standard footprint for regular board layouts
+• _0805 - Standard footprint for regular board layouts
+• _1206 - Standard footprint for regular board layouts
+
+For extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):
+
+• _0402MP - Micro-pitch footprint for very dense/compact boards
+• _0603MP - Micro-pitch footprint for very dense/compact boards
+• _0805MP - Micro-pitch footprint for very dense/compact boards
+• _1206MP - Micro-pitch footprint for very dense/compact boards</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:0603-NO</field>
+        <field name="Datasheet"/>
+        <field name="Description">Ceramic Capacitors
+
+For new designs, use the packages preceded by an '_' character since they are more reliable:
+
+The following footprints should be used on most boards:
+
+• _0402 - Standard footprint for regular board layouts
+• _0603 - Standard footprint for regular board layouts
+• _0805 - Standard footprint for regular board layouts
+• _1206 - Standard footprint for regular board layouts
+
+For extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):
+
+• _0402MP - Micro-pitch footprint for very dense/compact boards
+• _0603MP - Micro-pitch footprint for very dense/compact boards
+• _0805MP - Micro-pitch footprint for very dense/compact boards
+• _1206MP - Micro-pitch footprint for very dense/compact boards</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE">
+      <description>Ceramic Capacitors
+
+For new designs, use the packages preceded by an '_' character since they are more reliable:
+
+The following footprints should be used on most boards:
+
+• _0402 - Standard footprint for regular board layouts
+• _0603 - Standard footprint for regular board layouts
+• _0805 - Standard footprint for regular board layouts
+• _1206 - Standard footprint for regular board layouts
+
+For extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):
+
+• _0402MP - Micro-pitch footprint for very dense/compact boards
+• _0603MP - Micro-pitch footprint for very dense/compact boards
+• _0805MP - Micro-pitch footprint for very dense/compact boards
+• _1206MP - Micro-pitch footprint for very dense/compact boards</description>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:0805-NO</field>
+        <field name="Datasheet"/>
+        <field name="Description">Ceramic Capacitors
+
+For new designs, use the packages preceded by an '_' character since they are more reliable:
+
+The following footprints should be used on most boards:
+
+• _0402 - Standard footprint for regular board layouts
+• _0603 - Standard footprint for regular board layouts
+• _0805 - Standard footprint for regular board layouts
+• _1206 - Standard footprint for regular board layouts
+
+For extremely tight-pitch boards where space is at a premium, the following 'micro-pitch' footprints can be used (smaller pads, no silkscreen outline, etc.):
+
+• _0402MP - Micro-pitch footprint for very dense/compact boards
+• _0603MP - Micro-pitch footprint for very dense/compact boards
+• _0805MP - Micro-pitch footprint for very dense/compact boards
+• _1206MP - Micro-pitch footprint for very dense/compact boards</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="DIODESOD-323">
+      <description>Diode
+
+SMA     Model   Volts   Amps   Type   Vf   Ir   Digikey #   Notes     SSA34-E3   40V   3A   Schottky   480mV @ 3A   200uA @ 40V   SSA34-E3/61TGITR-ND        CDBA120-G   20V   1A   Schottky   500mV @ 1A   500uA @ 20V   641-1014-6-ND   REEL     MBRA210   10V   2A   Schottky   350mV @ 2A   700uA @ 10V   MBRA210LT3      SOD-123     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54T1G   30V   200mA   Schottky   800mV @ 200mA   2uA @ 25V   BAT54T1GOSTR-ND        B0530W   30V   500mA   Schottky   430mV @ 500mA   130uA @ 30V   B0530W-FDICT-ND   REEL     MBR120   20V   1A   Schottky   340mV @ 1A      MBR120VLSFT1GOSCT-ND      SOD-323     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     PMEG2005EJ   20V   500mA   Schottky   355mV @ 500mA      568-4110-1-ND        ZLLS410   10V   570mA   Schottky   380mV @ 570mA      ZLLS410CT-ND        1N4148WS   75V   150mA   Silicon/Simple   1V      1N4148WSFSCT-ND   REEL   SOD-523     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54XV2   30V   200mA   Schottky   0.8V @ 100mA      BAT54XV2CT-ND        TB751S   30V   30mA   Schottky         RB751S-40TE61CT-ND      SOT23-R/W(R = Solder Paste/Reflow Ovens, W = Hand-Soldering)      Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54FILM   40V   300mA   Schottky         497-7162-1-ND       POWERDI-5      Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     PDS560   60V   5A   Schottky   670mV @ 5A   150uA @ 60V   PDS560DICT-ND</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:SOD-323</field>
+        <field name="Datasheet"/>
+        <field name="Description">Diode
+
+SMA     Model   Volts   Amps   Type   Vf   Ir   Digikey #   Notes     SSA34-E3   40V   3A   Schottky   480mV @ 3A   200uA @ 40V   SSA34-E3/61TGITR-ND        CDBA120-G   20V   1A   Schottky   500mV @ 1A   500uA @ 20V   641-1014-6-ND   REEL     MBRA210   10V   2A   Schottky   350mV @ 2A   700uA @ 10V   MBRA210LT3      SOD-123     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54T1G   30V   200mA   Schottky   800mV @ 200mA   2uA @ 25V   BAT54T1GOSTR-ND        B0530W   30V   500mA   Schottky   430mV @ 500mA   130uA @ 30V   B0530W-FDICT-ND   REEL     MBR120   20V   1A   Schottky   340mV @ 1A      MBR120VLSFT1GOSCT-ND      SOD-323     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     PMEG2005EJ   20V   500mA   Schottky   355mV @ 500mA      568-4110-1-ND        ZLLS410   10V   570mA   Schottky   380mV @ 570mA      ZLLS410CT-ND        1N4148WS   75V   150mA   Silicon/Simple   1V      1N4148WSFSCT-ND   REEL   SOD-523     Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54XV2   30V   200mA   Schottky   0.8V @ 100mA      BAT54XV2CT-ND        TB751S   30V   30mA   Schottky         RB751S-40TE61CT-ND      SOT23-R/W(R = Solder Paste/Reflow Ovens, W = Hand-Soldering)      Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     BAT54FILM   40V   300mA   Schottky         497-7162-1-ND       POWERDI-5      Model   Volts   Amps   Type   Vf   Ir   Order #   Notes     PDS560   60V   5A   Schottky   670mV @ 5A   150uA @ 60V   PDS560DICT-ND</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="FIDUCIAL_1MM">
+      <description>Fiducial Alignment Points
+
+Various fiducial points for machine vision alignment.</description>
+      <fields>
+        <field name="Reference">FID</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:FIDUCIAL_1MM</field>
+        <field name="Datasheet"/>
+        <field name="Description">Fiducial Alignment Points
+
+Various fiducial points for machine vision alignment.</field>
+        <field name="BOM">EXCLUDE</field>
+      </fields>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="HEADER-1X570MIL">
+      <description>PIN HEADER</description>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:1X05_ROUND_70</field>
+        <field name="Datasheet"/>
+        <field name="Description">PIN HEADER</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="HEADER-1X970MIL">
+      <description>PIN HEADER</description>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:1X09_ROUND_70</field>
+        <field name="Datasheet"/>
+        <field name="Description">PIN HEADER</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="LED0603_NOOUTLINE">
+      <description>LED
+
+0603 - 0603 Surface Mount Package
+
+2mA:
+
+• Green LED - Low Power (3.9mcd, 2ma, 1.7Vf) - Digikey: 475-2709-2-ND
+• Orange LED - Low Power (9.8mcd, 2ma, 1.8Vf) - Digikey: 475-1194-2-ND
+• Red LED - Low Power (5mcd, 2ma, 1.8Vf) - Digikey: 475-1195-2-ND
+• Yellow LED - Low Power (7mcd, 2ma, 1.8Vf) - Digikey: 475-1196-2-ND
+
+5mA:
+
+• Blue LED - Low Power (17mcd, 5ma, 2.9Vf) - Digikey: LNJ937W8CRACT-ND
+
+0805 - 0805 Surface Mount Package
+
+2mA:
+
+• Red LED (8.8mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2510-1-ND]
+• Green LED (5mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2730-1-ND]
+• Yellow LED (11.3mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2555-1-ND]
+
+20mA:
+
+• Red LED (104mcd, 20mA, Diffused) - LS R976 [Digikey: 475-1278-6-ND]
+• Red LED (12mcd, 20mA, 2.0Vf, Clear) - APT2012EC [Digikey: 754-1128-1-ND]
+• Green LED (15mcd, 20mA, 2.2Vf, Clear) - APT2012GC [Digikey: 754-1131-1-ND]
+• Orange LED (160mcd, 20mA, 2.1Vf, Clear) - APT2012SECK [Digikey: 754-1130-1-ND]
+
+• 1206 - 1206 Surface Mount Package
+
+• Green LED (26mcd, 20mA, Diffused) - LG N971  [Digikey: 475-1407-6-ND]
+• Red LED (15mcd, 20mA, Diffused) - LH N974 [Digikey: 475-1416-6-ND]
+
+• Cree - Cree High-Power Surface Mount LEDs
+
+• XPEBWT-L1-0000-00D50 - White 111lm 350mA 2.9Vf 6200K 110°
+• XTEAWT-00-0000-00000LEE3 - White 114lm 350mA 2.85Vf 5000K 115°
+
+• Everlight - Everlight 45-21 Series Surface Mount LEDs
+
+• 45-21/QK2C-B2832AC2CB2/2T - Warm White 2000mcd 20mA 3.25Vf 3050K 120°
+• 45-21/LK2C-B38452C4CB2/2T - Nuetral White 2000mcd 20mA 3.25Vf 4150K 120°
+• 45-21/LK2C-B50634C6CB2/2T - Cold White 2200mcd 20mA 3.25Vf 5650K 120°
+
+• PLCC2 Reverse Mount
+
+• LS T77K-J1L2-1-0-2-R18-Z - Red 11.25mcd 2mA 1.8Vf 630nm 120°
+• LO T77K-L1M2-24-Z - Orange 19.6mcd 2mA 1.8Vf 606nm 120°
+• LY T77K-K2M1-26-Z - Yellow 15.7mcd 2mA 1.8Vf 587nm 120°</description>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:CHIPLED_0603_NOOUTLINE</field>
+        <field name="Datasheet"/>
+        <field name="Description">LED
+
+0603 - 0603 Surface Mount Package
+
+2mA:
+
+• Green LED - Low Power (3.9mcd, 2ma, 1.7Vf) - Digikey: 475-2709-2-ND
+• Orange LED - Low Power (9.8mcd, 2ma, 1.8Vf) - Digikey: 475-1194-2-ND
+• Red LED - Low Power (5mcd, 2ma, 1.8Vf) - Digikey: 475-1195-2-ND
+• Yellow LED - Low Power (7mcd, 2ma, 1.8Vf) - Digikey: 475-1196-2-ND
+
+5mA:
+
+• Blue LED - Low Power (17mcd, 5ma, 2.9Vf) - Digikey: LNJ937W8CRACT-ND
+
+0805 - 0805 Surface Mount Package
+
+2mA:
+
+• Red LED (8.8mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2510-1-ND]
+• Green LED (5mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2730-1-ND]
+• Yellow LED (11.3mcd, 2mA, 1.8Vf, Clear) - Low Power [Digikey: 475-2555-1-ND]
+
+20mA:
+
+• Red LED (104mcd, 20mA, Diffused) - LS R976 [Digikey: 475-1278-6-ND]
+• Red LED (12mcd, 20mA, 2.0Vf, Clear) - APT2012EC [Digikey: 754-1128-1-ND]
+• Green LED (15mcd, 20mA, 2.2Vf, Clear) - APT2012GC [Digikey: 754-1131-1-ND]
+• Orange LED (160mcd, 20mA, 2.1Vf, Clear) - APT2012SECK [Digikey: 754-1130-1-ND]
+
+• 1206 - 1206 Surface Mount Package
+
+• Green LED (26mcd, 20mA, Diffused) - LG N971  [Digikey: 475-1407-6-ND]
+• Red LED (15mcd, 20mA, Diffused) - LH N974 [Digikey: 475-1416-6-ND]
+
+• Cree - Cree High-Power Surface Mount LEDs
+
+• XPEBWT-L1-0000-00D50 - White 111lm 350mA 2.9Vf 6200K 110°
+• XTEAWT-00-0000-00000LEE3 - White 114lm 350mA 2.85Vf 5000K 115°
+
+• Everlight - Everlight 45-21 Series Surface Mount LEDs
+
+• 45-21/QK2C-B2832AC2CB2/2T - Warm White 2000mcd 20mA 3.25Vf 3050K 120°
+• 45-21/LK2C-B38452C4CB2/2T - Nuetral White 2000mcd 20mA 3.25Vf 4150K 120°
+• 45-21/LK2C-B50634C6CB2/2T - Cold White 2200mcd 20mA 3.25Vf 5650K 120°
+
+• PLCC2 Reverse Mount
+
+• LS T77K-J1L2-1-0-2-R18-Z - Red 11.25mcd 2mA 1.8Vf 630nm 120°
+• LO T77K-L1M2-24-Z - Orange 19.6mcd 2mA 1.8Vf 606nm 120°
+• LY T77K-K2M1-26-Z - Yellow 15.7mcd 2mA 1.8Vf 587nm 120°</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="LSM6DSOX">
+      <fields>
+        <field name="Reference"/>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:LGA-14L</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="SDO" type="bidirectional"/>
+        <pin num="2" name="SDX" type="bidirectional"/>
+        <pin num="3" name="SCX" type="bidirectional"/>
+        <pin num="4" name="INT1" type="bidirectional"/>
+        <pin num="5" name="VDDIO" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VDD" type="power_in"/>
+        <pin num="9" name="INT2" type="bidirectional"/>
+        <pin num="10" name="OCS_AUX" type="bidirectional"/>
+        <pin num="11" name="SDO_AUX" type="bidirectional"/>
+        <pin num="12" name="CS" type="bidirectional"/>
+        <pin num="13" name="SCL" type="bidirectional"/>
+        <pin num="14" name="SDA" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="MOSFET-N_DUAL">
+      <description>Dual N-Channel MOSFET
+
+SOT363 (2.0x1.25mm)
+
+• 2N7002PS - 60V, 320mA [Digikey: 568-5984-1-ND]</description>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:SOT363</field>
+        <field name="Datasheet"/>
+        <field name="Description">Dual N-Channel MOSFET
+
+SOT363 (2.0x1.25mm)
+
+• 2N7002PS - 60V, 320mA [Digikey: 568-5984-1-ND]</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="bidirectional"/>
+        <pin num="2" name="G" type="bidirectional"/>
+        <pin num="3" name="D" type="bidirectional"/>
+        <pin num="4" name="S" type="bidirectional"/>
+        <pin num="5" name="G" type="bidirectional"/>
+        <pin num="6" name="D" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="MOUNTINGHOLE2.5">
+      <description>Mounting Hole
+
+For #2 screws (0.086"/2.18mm width, 0.094"/2.4mm hole) use 2.5mm</description>
+      <fields>
+        <field name="Reference"/>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:MOUNTINGHOLE_2.5_PLATED</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole
+
+For #2 screws (0.086"/2.18mm width, 0.094"/2.4mm hole) use 2.5mm</field>
+        <field name="BOM">EXCLUDE</field>
+      </fields>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="RESISTOR_4PACK">
+      <description>Resistor Packs (4 resistors)
+
+4 x 0603
+
+• 10K 1/16W - Digikey: YC164J-10KCT-ND</description>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:RESPACK_4X0603</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor Packs (4 resistors)
+
+4 x 0603
+
+• 10K 1/16W - Digikey: YC164J-10KCT-ND</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="1" type="passive"/>
+        <pin num="3" name="1" type="passive"/>
+        <pin num="4" name="1" type="passive"/>
+        <pin num="5" name="2" type="passive"/>
+        <pin num="6" name="2" type="passive"/>
+        <pin num="7" name="2" type="passive"/>
+        <pin num="8" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="SOLDERJUMPER">
+      <description>SMD Solder JUMPER
+
+Solder the two pads together to create a connection, or remove the solder to break it.
+
+REFLOW - Use this footprint for solder paste and reflow ovens. WAVE - Use this footprint for hand-soldering (larger pads).
+
+CLOSED - Has a trace between the two pads to ensure it is closed by default.  The trace needs to be cut to disable the jumper, and can be closed again by creating a solder bridge between the two pads.</description>
+      <fields>
+        <field name="Reference">SJ</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:SOLDERJUMPER_ARROW_NOPASTE</field>
+        <field name="Datasheet"/>
+        <field name="Description">SMD Solder JUMPER
+
+Solder the two pads together to create a connection, or remove the solder to break it.
+
+REFLOW - Use this footprint for solder paste and reflow ovens. WAVE - Use this footprint for hand-soldering (larger pads).
+
+CLOSED - Has a trace between the two pads to ensure it is closed by default.  The trace needs to be cut to disable the jumper, and can be closed again by creating a solder bridge between the two pads.</field>
+        <field name="BOM">EXCLUDE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="STEMMA_I2C_QT">
+      <fields>
+        <field name="Reference">CONN</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:JST_SH4</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="V+" type="passive"/>
+        <pin num="3" name="SDA" type="passive"/>
+        <pin num="4" name="SCL" type="passive"/>
+        <pin num="MT1" name="MT" type="bidirectional"/>
+        <pin num="MT2" name="MT" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Adafruit_LSM6DSOX-eagle-import" part="VREG_SOT23-5">
+      <description>SOT23-5 Fixed Voltage Regulators
+
+Part Current Out V Out V In V Dropout θJA (°C/W) TJ (°C) Digikey Part No.     ADP121   150mA   3.3V   3.4-5.5V   0.09V @ 150mA   --   --   ADP121-AUJZ33R7CT-ND     ADP121   150mA   3.0V   3.1-5.5V   0.09V @ 150mA   --   --   ADP121-AUJZ30R7CT-ND     ADP122   300mA   3.3V   3.4-5.5V   0.085V @ 300mA   --   --   ADP122AUJZ-3.3-R7CT-ND     ADP1712   300mA   3.3V   3.5-5.5V   0.17V @ 300mA   --   --   ADP1712AUJZ-3.3-R7TR-ND     AP7311 (Low Cost)   150mA   3.3V   3.5-6V   0.15V @ 150mA   --   --   AP7311-33WG-7DICT-ND      LD39015M18R   150mA   1.8V   1.9V-5.5V   0.08V @ 100mA   --   --   497-6977-1-ND      LP2985A-33DBVR   150mA   3.3V   3.3-16V   0.28V @ 150mA   206   150   296-18479-1-ND      MCP1824T-3302E/OT   300mA   3.3V   3.5V-6V   0.2V @ 300mA   --   --   MCP1824T-3302E/OTCT-ND      MIC5205-2.5YM5 TR   150mA   2.5V   2.7-16V   0.165V @ 150mA   --   --   576-1257-2-ND     MIC5205-3.0YM5 TR   150mA   3.0V   3.2V-16V   0.165V @ 150mA   --   --   576-1258-2-ND     MIC5205-3.3YM5 TR   150mA   3.3V   3.5V-16V   0.165V @ 150mA   --   --   576-1259-2-ND     TPS780330220   150mA   3.3V+2.2V   3.6-5.5V   250mV Max   --   --   296-23332-1-ND     TDA3663/N1,135   100mA   3.3V   3.5-45V   0.18V @ 50mA   --   --   568-5343-1-ND
+
+Max operating temp can be calculated using θJA, TJ (max junction temperature), and power in watts.  Set the "Maximum Ambient Temperature" until it reaches TJ ("Max Junction Temperature"), which is the absolute limit for safe use of the regulator: http://www.daycounter.com/Calculators/Heat-Sink-Temperature-Calculator.phtml Heat Sink Temperature Calculator
+
+For example, With 12V source into a 3.3V LP2985 and a 30mA load, we are dissipating (12V-3.3V) * 0.03A = 0.261W.  With a θJA of 206 °C/W, a TJ of 150°C, and 261mW we can safely use the chip without a heat sink up to 75°C (=147.1°C Junction Temperature).</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value"/>
+        <field name="Footprint">Adafruit_LSM6DSOX:SOT23-5</field>
+        <field name="Datasheet"/>
+        <field name="Description">SOT23-5 Fixed Voltage Regulators
+
+Part Current Out V Out V In V Dropout θJA (°C/W) TJ (°C) Digikey Part No.     ADP121   150mA   3.3V   3.4-5.5V   0.09V @ 150mA   --   --   ADP121-AUJZ33R7CT-ND     ADP121   150mA   3.0V   3.1-5.5V   0.09V @ 150mA   --   --   ADP121-AUJZ30R7CT-ND     ADP122   300mA   3.3V   3.4-5.5V   0.085V @ 300mA   --   --   ADP122AUJZ-3.3-R7CT-ND     ADP1712   300mA   3.3V   3.5-5.5V   0.17V @ 300mA   --   --   ADP1712AUJZ-3.3-R7TR-ND     AP7311 (Low Cost)   150mA   3.3V   3.5-6V   0.15V @ 150mA   --   --   AP7311-33WG-7DICT-ND      LD39015M18R   150mA   1.8V   1.9V-5.5V   0.08V @ 100mA   --   --   497-6977-1-ND      LP2985A-33DBVR   150mA   3.3V   3.3-16V   0.28V @ 150mA   206   150   296-18479-1-ND      MCP1824T-3302E/OT   300mA   3.3V   3.5V-6V   0.2V @ 300mA   --   --   MCP1824T-3302E/OTCT-ND      MIC5205-2.5YM5 TR   150mA   2.5V   2.7-16V   0.165V @ 150mA   --   --   576-1257-2-ND     MIC5205-3.0YM5 TR   150mA   3.0V   3.2V-16V   0.165V @ 150mA   --   --   576-1258-2-ND     MIC5205-3.3YM5 TR   150mA   3.3V   3.5V-16V   0.165V @ 150mA   --   --   576-1259-2-ND     TPS780330220   150mA   3.3V+2.2V   3.6-5.5V   250mV Max   --   --   296-23332-1-ND     TDA3663/N1,135   100mA   3.3V   3.5-45V   0.18V @ 50mA   --   --   568-5343-1-ND
+
+Max operating temp can be calculated using θJA, TJ (max junction temperature), and power in watts.  Set the "Maximum Ambient Temperature" until it reaches TJ ("Max Junction Temperature"), which is the absolute limit for safe use of the regulator: http://www.daycounter.com/Calculators/Heat-Sink-Temperature-Calculator.phtml Heat Sink Temperature Calculator
+
+For example, With 12V source into a 3.3V LP2985 and a 30mA load, we are dissipating (12V-3.3V) * 0.03A = 0.261W.  With a θJA of 206 °C/W, a TJ of 150°C, and 261mW we can safely use the chip without a heat sink up to 75°C (=147.1°C Junction Temperature).</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="P4" type="bidirectional"/>
+        <pin num="5" name="OUT" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Adafruit_LSM6DSOX-eagle-import">
+      <uri>${KIPRJMOD}/Adafruit_LSM6DSOX-eagle-import.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="3.3V" class="lowpower">
+      <node ref="C1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="C3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="JP1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="G_2" pintype="bidirectional"/>
+      <node ref="Q2" pin="5" pinfunction="G_5" pintype="bidirectional"/>
+      <node ref="R2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="1_2" pintype="passive"/>
+      <node ref="R2" pin="6" pinfunction="2_6" pintype="passive"/>
+      <node ref="R3" pin="3" pinfunction="1_3" pintype="passive"/>
+      <node ref="R3" pin="4" pinfunction="1_4" pintype="passive"/>
+      <node ref="R3" pin="5" pinfunction="2_5" pintype="passive"/>
+      <node ref="SJ1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U$2" pin="5" pinfunction="VDDIO_5" pintype="power_in"/>
+      <node ref="U$2" pin="8" pinfunction="VDD_8" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="OUT_5" pintype="power_in"/>
+    </net>
+    <net code="2" name="CS_3V" class="Default">
+      <node ref="D2" pin="A" pinfunction="A_A" pintype="passive"/>
+      <node ref="R3" pin="6" pinfunction="2_6" pintype="passive"/>
+      <node ref="U$2" pin="12" pinfunction="CS_12" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="CS_5V" class="Default">
+      <node ref="D2" pin="C" pinfunction="C_C" pintype="passive"/>
+      <node ref="JP1" pin="7" pinfunction="7_7" pintype="passive"/>
+    </net>
+    <net code="4" name="GND" class="highpower">
+      <node ref="C1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="C3" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="CONN3" pin="1" pinfunction="GND_1" pintype="passive"/>
+      <node ref="CONN4" pin="1" pinfunction="GND_1" pintype="passive"/>
+      <node ref="D1" pin="C" pinfunction="C_C" pintype="passive"/>
+      <node ref="JP1" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="JP2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R2" pin="4" pinfunction="1_4" pintype="passive"/>
+      <node ref="U$2" pin="6" pinfunction="GND_6" pintype="power_in"/>
+      <node ref="U$2" pin="7" pinfunction="GND_7" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
+    </net>
+    <net code="5" name="INT1" class="Default">
+      <node ref="JP1" pin="8" pinfunction="8_8" pintype="passive"/>
+      <node ref="U$2" pin="4" pinfunction="INT1_4" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="INT2" class="Default">
+      <node ref="JP1" pin="9" pinfunction="9_9" pintype="passive"/>
+      <node ref="U$2" pin="9" pinfunction="INT2_9" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="Net-(R2C-1)" class="Default">
+      <node ref="D1" pin="A" pinfunction="A_A" pintype="passive"/>
+      <node ref="R2" pin="3" pinfunction="1_3" pintype="passive"/>
+    </net>
+    <net code="8" name="OCS_AUX" class="Default">
+      <node ref="JP2" pin="3" pinfunction="3_3" pintype="passive"/>
+      <node ref="U$2" pin="10" pinfunction="OCS_AUX_10" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="SCL" class="Default">
+      <node ref="CONN3" pin="4" pinfunction="SCL_4" pintype="passive"/>
+      <node ref="CONN4" pin="4" pinfunction="SCL_4" pintype="passive"/>
+      <node ref="JP1" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="Q2" pin="6" pinfunction="D_6" pintype="bidirectional"/>
+      <node ref="R3" pin="2" pinfunction="1_2" pintype="passive"/>
+    </net>
+    <net code="10" name="SCL_3V" class="Default">
+      <node ref="Q2" pin="1" pinfunction="S_1" pintype="bidirectional"/>
+      <node ref="R2" pin="8" pinfunction="2_8" pintype="passive"/>
+      <node ref="U$2" pin="13" pinfunction="SCL_13" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="SCX" class="Default">
+      <node ref="JP2" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="U$2" pin="3" pinfunction="SCX_3" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="SDA" class="Default">
+      <node ref="CONN3" pin="3" pinfunction="SDA_3" pintype="passive"/>
+      <node ref="CONN4" pin="3" pinfunction="SDA_3" pintype="passive"/>
+      <node ref="JP1" pin="5" pinfunction="5_5" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D_3" pintype="bidirectional"/>
+      <node ref="R3" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="13" name="SDA_3V" class="Default">
+      <node ref="Q2" pin="4" pinfunction="S_4" pintype="bidirectional"/>
+      <node ref="R2" pin="7" pinfunction="2_7" pintype="passive"/>
+      <node ref="U$2" pin="14" pinfunction="SDA_14" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="SDO" class="Default">
+      <node ref="JP1" pin="6" pinfunction="6_6" pintype="passive"/>
+      <node ref="R2" pin="5" pinfunction="2_5" pintype="passive"/>
+      <node ref="SJ1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U$2" pin="1" pinfunction="SDO_1" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="SDO_AUX" class="Default">
+      <node ref="JP2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="U$2" pin="11" pinfunction="SDO_AUX_11" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="SDX" class="Default">
+      <node ref="JP2" pin="4" pinfunction="4_4" pintype="passive"/>
+      <node ref="U$2" pin="2" pinfunction="SDX_2" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="VCC" class="highpower">
+      <node ref="C2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="CONN3" pin="2" pinfunction="V+_2" pintype="passive"/>
+      <node ref="CONN4" pin="2" pinfunction="V+_2" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="R3" pin="7" pinfunction="2_7" pintype="passive"/>
+      <node ref="R3" pin="8" pinfunction="2_8" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="IN_1" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="EN_3" pintype="input"/>
+    </net>
+    <net code="18" name="unconnected-(U2-P4-Pad4)" class="Default">
+      <node ref="U2" pin="4" pinfunction="P4_4" pintype="bidirectional"/>
+    </net>
+  </nets>
+</export>

@@ -8,8 +8,10 @@ exports. KiCad 10.0.6 and its standard libraries were installed and exercised on
 2026-09-07. The upstream 5768 schematic and PCB have been imported into native
 files; see [setup/readiness](kicad-setup.md) and the
 [reference package](../hardware/reference/adafruit-5768/README.md).
-This is a working reference conversion with open review findings, not the
-reduced handbell schematic. No EDA subscription or third-party importer is needed.
+The separate [handbell integration draft](../hardware/handbell/README.md) now
+contains LSM6DSOX and the dispositions of the original 50 ERC findings.
+It is not yet the fully reduced/frozen schematic. No EDA subscription or
+third-party importer is needed.
 
 The [official KiCad project-manager manual](https://docs.kicad.org/10.0/en/kicad/kicad.html)
 documents importing EAGLE 6.x-or-newer XML `.sch` / `.brd` projects through
@@ -47,7 +49,7 @@ than silently inventing substitutes.
 | Charger and system power | Cell-specific charger current/voltage, source selection, protection/temperature strategy, input budget, status, cutoff/off behavior |
 | RP2040 core | All supply pins/decouplers, 12 MHz clock, QSPI flash, reset, BOOT recovery, SWD/test contacts, USB series/support parts |
 | Audio | MAX98357A variant, rail, gain/channel selection, SD_MODE behavior, local bulk/bypass, output EMI network, keyed speaker connector |
-| Motion | LIS3DH or justified replacement, supply, address, pullups, interrupts, orientation |
+| Motion | Approved LSM6DSOX, Mode 1 straps, supply, address, pullups, interrupts, orientation |
 | Controls and test | Power/note/volume controls as selected, necessary indications, battery sense if selected, test-point and production-programming map |
 
 Do not copy the LIS3DH breakout's level shifting and regulator into an already
@@ -56,7 +58,7 @@ pullup or power-switch bias resistor merely because a connector disappears.
 
 ## Schematic review checklist
 
-- [ ] Source revisions, license evidence, and a retained/removed/changed block
+- [x] Source revisions, license evidence, and a retained/removed/changed block
   inventory are recorded; imported reference netlist is reviewable.
 - [ ] Every power pin, exposed pad, no-connect, pullup, decoupler, flash/clock
   support component, and required test connection is accounted for.
@@ -76,7 +78,8 @@ pullup or power-switch bias resistor merely because a connector disappears.
   back-power through I2S/control pins when the amp supply is off.
 - [ ] Candidate MPNs, footprints, pad numbering, stock/assembly options,
   substitutions, and at least provisional costs are linked to the BOM.
-- [ ] ERC findings are resolved or individually justified; no blanket disabling.
+- [x] ERC findings are resolved or individually justified; no blanket disabling
+  (0.1 draft; rerun after every schematic change).
 - [ ] Reviewer signs off the schematic together with known limits. ERC alone
   is not evidence of functional, acoustic, thermal, or safety performance.
 
@@ -85,9 +88,10 @@ pullup or power-switch bias resistor merely because a connector disappears.
 The schematic epic must deliver native KiCad project/schematic files,
 project-local custom libraries where needed, an exported PDF, BOM draft,
 net/pin comparison, import/change report, license notices, and recorded review.
-The repository now contains a converted upstream reference and its initial
-review exports, but **not a completed handbell derivative**. Imported-reference
-ERC findings and footprint/symbol review remain open before derivative freeze.
+The repository contains both upstream references and a separate **0.1 handbell
+integration draft**, with PDF, BOM draft, net/pad comparison and clean ERC.
+Peripheral reduction, complete MPN/footprint review, cell/audio decisions and
+independent electrical signoff remain open before derivative freeze.
 
 Use project-relative library paths. Exclude machine-local preferences, lock
 files, caches, and credentials; do not exclude necessary custom footprints or

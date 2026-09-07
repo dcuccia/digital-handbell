@@ -1,0 +1,213 @@
+{
+  "kicad_version": "10.0.6",
+  "scope": "Net topology, preserved component values/footprints, sensor pads, GPIO contract and ERC; not layout/function/safety approval.",
+  "hash_normalization": "Review hashes use UTF-8 text with CRLF/CR normalized to LF; upstream source-byte hashes are recorded separately.",
+  "source_schematic_sha256_lf": {
+    "baseline": "5db850c1fc54d153daade8047d5181941cbcb3ddd0ab1e93d0f4248fc7a6dcc7",
+    "sox": "c12b1fae97555960c48051dd4617cf4ba997573723b6b4cf9c8f9039889be33e",
+    "handbell": "37a526f5ef6ef03e6443c0ca73e16a7e9f4f621d4728beba0b5646c16802ea0f"
+  },
+  "source_connected_groups_matching_native": {
+    "adafruit_5768": 71,
+    "adafruit_4438": 17
+  },
+  "retained_components": 76,
+  "retained_connection_groups": 75,
+  "added_components_or_copper_features": [
+    "C23",
+    "C24",
+    "TP4",
+    "TP5",
+    "TP6"
+  ],
+  "sensor_pin_nets": {
+    "1": "GND",
+    "2": "GND",
+    "3": "GND",
+    "4": "INT",
+    "5": "+3V3",
+    "6": "GND",
+    "7": "GND",
+    "8": "+3V3",
+    "9": "/IMU_INT2",
+    "10": "unconnected-(IC4-OCS_AUX-Pad10)",
+    "11": "unconnected-(IC4-SDO_AUX-Pad11)",
+    "12": "+3V3",
+    "13": "SCL",
+    "14": "SDA"
+  },
+  "sensor_footprint_pads": [
+    {
+      "pad": "1",
+      "position_mm": [
+        -1.1625,
+        -0.75
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 0
+    },
+    {
+      "pad": "2",
+      "position_mm": [
+        -1.1625,
+        -0.25
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 0
+    },
+    {
+      "pad": "3",
+      "position_mm": [
+        -1.1625,
+        0.25
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 0
+    },
+    {
+      "pad": "4",
+      "position_mm": [
+        -1.1625,
+        0.75
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 0
+    },
+    {
+      "pad": "5",
+      "position_mm": [
+        -0.5,
+        0.9125
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 90.0
+    },
+    {
+      "pad": "6",
+      "position_mm": [
+        0.0,
+        0.9125
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 90.0
+    },
+    {
+      "pad": "7",
+      "position_mm": [
+        0.5,
+        0.9125
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 90.0
+    },
+    {
+      "pad": "8",
+      "position_mm": [
+        1.1625,
+        0.75
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 180.0
+    },
+    {
+      "pad": "9",
+      "position_mm": [
+        1.1625,
+        0.25
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 180.0
+    },
+    {
+      "pad": "10",
+      "position_mm": [
+        1.1625,
+        -0.25
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 180.0
+    },
+    {
+      "pad": "11",
+      "position_mm": [
+        1.1625,
+        -0.75
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 180.0
+    },
+    {
+      "pad": "12",
+      "position_mm": [
+        0.5,
+        -0.9125
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 270.0
+    },
+    {
+      "pad": "13",
+      "position_mm": [
+        0.0,
+        -0.9125
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 270.0
+    },
+    {
+      "pad": "14",
+      "position_mm": [
+        -0.5,
+        -0.9125
+      ],
+      "size_mm": [
+        0.475,
+        0.25
+      ],
+      "rotation_deg": 270.0
+    }
+  ],
+  "erc_configuration_unchanged": true,
+  "erc_exclusions": [],
+  "erc_errors": 0,
+  "erc_warnings": 0
+}
