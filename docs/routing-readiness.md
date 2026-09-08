@@ -11,6 +11,13 @@ owner's **Creality K1C using PLA**. Keep the current 43 mm placement manifest
 fixed for that fit study; later electrical placement changes must regenerate
 the populated-board mock-up rather than silently diverge from it.
 
+**Orientation alternative, not a changed print:** the owner prefers the
+populated face toward the speaker and handle-side space for a cylindrical
+cell, using PCB contacts (through-hole or SMT) and a printed capture cradle
+without battery wires. The [mechanical alternative](mechanical-feasibility.md#2026-09-07-speaker-facing-electronics-and-cylindrical-cell-alternative)
+records the current cell-only screen and unclosed speaker/retention gates.
+The original inward-component fit files are unchanged.
+
 ## What can proceed now
 
 Review and refine critical placement against the actual RP2040, MAX98357A,
@@ -39,7 +46,7 @@ The feedback net is a sensing connection, not part of a high-current route.
 |---|---|
 | Board/carrier interface | Inert print fit, insertion/removal sequence, USB slot/load path, PCB support locations and usable service access |
 | Actual speaker | Caliper measurements of the basket, magnet, terminals, vent and front clearance; the supplied image does not dimension the complete profile |
-| Battery | A real protected pack with suitable current/charge ratings and a complete lead/connector envelope; a rectangular dummy is not a selected battery |
+| Battery | A real protected pack/cell with suitable current/charge ratings; model either its complete harness or PCB-contact/cradle envelope, reverse-insertion protection and service access; neither a rectangular dummy nor a bare-cylinder screen selects a battery |
 | Boost parts | Exact inductor and capacitor MPNs, land patterns/heights, saturation/thermal current and effective capacitance; settle the C29 DNP/compensation decision |
 | Connectors | Mated body and cable-bend envelopes, polarity/retention/current ratings, and USB manufacturer land-pattern review |
 | Power policy | USB input budget, charge/play policy, low-cell cutoff/protection and startup/mute/brownout behavior |

@@ -41,6 +41,10 @@
   and documented Q3/jumper corrections; do not silence USB clearance findings.
 - Mechanical component heights and battery blocks are screening placeholders,
   not qualified parts. Follow the FreeCAD handoff before changing shared geometry.
+- Preserve the 0.2 print snapshot while investigating the owner's preferred
+  speaker-facing electronics/handle-side cell alternative. PCB battery contacts
+  may be through-hole or SMT with a capture cradle; no cell/holder is selected.
+  Do not treat flipping the board as resolution of its speaker conflicts.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use

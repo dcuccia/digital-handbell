@@ -201,6 +201,100 @@ allowance, protected leads, connector and independent restraint remain open.
 
 ## Removable-cartridge fit prints
 
+### 2026-09-07: speaker-facing electronics and cylindrical-cell alternative
+
+The owner clarified the intended orientation: **populated PCB face toward the
+speaker/opening; battery on the opposite, handle-facing side**. The owner has
+started printing the existing fit kit and explicitly calls this a thought
+experiment. The released inward-component 0.2 models remain unchanged; this is
+an alternative to investigate, not a claim that flipping the current placement
+produces a complete fit.
+
+The preferred battery attachment concept is PCB-mounted metal contacts plus an
+original printed capture cradle, without a battery wire harness. **Through-hole
+or SMT contacts are both acceptable.** A mechanically fixed commercial CR123A
+holder is a comparison option, not a selected part. Optimize complete assembly
+cost, insertion/retention and occupied volume rather than contact style alone.
+
+#### Cell-only screen
+
+A cell lying across the PCB is more plausible than one pointing along the bell
+axis. As a concrete size example, [KeepPower's protected RCR123A 800 mAh page](https://www.keeppower.com.cn/products_detail.php?id=635)
+specifies a maximum 16.8 mm diameter and 34 mm length, 3.7 V nominal and 4.2 V
+maximum. This does not establish its discharge capability for the handbell or
+select that SKU; protected/button-top dimensions vary by product.
+
+With the substrate unchanged at z20..21.6, assume the bottom of a centered,
+horizontal cell is at z22.6, leaving an illustrative 1 mm above the
+handle-facing board surface:
+
+| Bare envelope in otherwise empty handle-side space | Analytic cavity screen |
+|---|---|
+| Diameter 16.8 x length 34 mm | Top at z39.4; approximately 0.575 mm minimum radial shell margin |
+| Nominal diameter 18 x length 35 mm | Top at z40.6; approximately 0.325 mm radial interference before button/protection additions or mounting hardware |
+
+These calculations use the existing assumed linear taper, not a new FreeCAD
+assembly or measured fit. For cell half-length `a`, radius `r`, center depth
+`zc`, and taper slope `k=8/30`, the minimum radial margin for these two
+centered cylinders is:
+
+```text
+R(zc) - sqrt(1+k*k) * sqrt(a*a+r*r)
+R(z) = 25 - (8/30)*(z-13)
+```
+
+The limiting slice is within each cylinder's height. Contacts, cradle, shell
+variation, assembly clearance, insulation and the terminal/button details are
+not included. The small positive 16340 result is therefore a reason to study
+the alternative, not usable tolerance already allocated to a holder.
+
+#### What must change or be established
+
+The existing outward-face screen has 13 component overlaps with the full
+speaker cylinder. A real, narrower basket/magnet may leave useful peripheral
+space, but its undimensioned profile must not be treated as empty. Measure the
+actual speaker, terminals, vent and excursion; then repartition the tall parts
+and preserve electrical placement constraints. Moving the board toward the
+handle to clear the speaker sacrifices the cell's taper clearance. Do not just
+flip the current board and declare those conflicts resolved.
+
+The printed cradle/cover must carry cell inertia and insertion loads through
+supported mechanical attachments, with positive axial and radial capture.
+Spring contacts provide electrical contact pressure; their solder joints must
+not be the sole restraint in a shaken instrument. Include an insulating
+barrier/keepout and protect the cell wrapper from edges. Solder mask alone is
+not a qualified barrier against the metal cell can. Do not locate attachment
+loads through the IMU or thermally sensitive power area.
+
+Through-hole contacts would usually be inserted from the battery side and
+soldered on the populated, speaker-facing side: their holes, pads and trimmed
+tails consume speaker clearance and routing/return-plane space. SMT contacts
+on the battery side avoid through-hole tails but add reverse-face assembly
+operations or manual attachment; they do not retain the "all fitted parts on
+one face" assumption. Compare actual part drawings, insertion force, current,
+contact resistance, plating, solder process and complete assembly cost. No
+specific contact/holder footprint or price is qualified in this follow-up.
+
+Electrical adoption requires cell-specific current/charge limits, reverse
+insertion protection, contact-bounce/brownout review and a revised schematic/BOM.
+A removable cell's protection circuit is not automatically protection against
+reverse insertion into the instrument. A CR123A-shaped holder does not establish
+compatibility with a protected 16340's dimensions or authorize charging a
+disposable CR123A or 3.2 V LiFePO4 cell. Use an approved 4.2 V-charge Li-ion cell,
+clear compartment identification and controlled access suitable for the
+eventual educational product; the fit prints are not that safety design.
+
+Commercial contacts can be used with original cradle geometry. If adapting a
+3D-print repository design instead, inspect its actual license and preserve
+attribution before copying; a downloadable STL is not automatically open for
+every use. No third-party holder CAD has been imported.
+
+Owning epics: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
+[E05/#5](https://github.com/dcuccia/digital-handbell/issues/5) and
+[E07/#7](https://github.com/dcuccia/digital-handbell/issues/7).
+
+### Existing fit-print geometry
+
 The physical study separates a mounting interface, removable carrier/baffle and
 grille. It is intended to explore preassembly outside the bell rather than
 permanently bonding the entire electronics/battery stack into the shell.

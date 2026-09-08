@@ -11,9 +11,9 @@ experiments, not a final component or manufacturing commitment.
 | D04 | Sensor | Owner approved LSM6DSOX on 2026-09-07; integrated at 0x6A in the separate draft; retain LIS3DH for bench comparison | Gyro-enabled/disabled gesture comparison, driver initialization, full electrical review, and assembled BOM quote |
 | D05 | CAD | KiCad 10.0.6 exercised; three pinned references converted; reduced draft has 0 ERC errors/warnings with no exclusions | Complete footprint/routing review and electrical freeze remain open |
 | D06 | Hardware reuse license | Retain source-compatible CC BY-SA 3.0 for adaptations of verified sources; preserve root MIT for original code/docs | Full notices and per-file provenance at import; resolve 4884 version before use |
-| D07 | Packaging | 0.2 investigates an inward-component 43 mm solid disk at z20..21.6 using the owner's new taper assumption | Real-shell/part tolerances, carrier access, complete routing and comparative quotes |
+| D07 | Packaging | Preserve the inward-component 0.2 print snapshot; owner prefers speaker-facing electronics with handle-side battery space for the next alternative | Actual speaker profile, cell/contact/cradle fit, real-shell tolerances, carrier access and electrical placement |
 | D08 | Audio rail and quiet idle | TPS61023 5 V-class boost and independent GPIO20 mute implemented in 0.2; mono-left selection and initial 9 dB gain | Exact power parts, rail budget, noise, low-cell behavior and sequencing remain unqualified |
-| D09 | Cell and charger | No pack selected; screen protected 1S packs for at least 2 A continuous plus transient margin; no automatic need for 1S2P | Full load/thermal/protection/runtime/USB budget and cell-specific charging |
+| D09 | Cell and charger | No pack selected; compare pouch and compact protected 16340 options; screen for at least 2 A continuous plus transient margin; PCB contacts may be through-hole or SMT | Full load/thermal/protection/runtime/USB budget, cell-specific charging, reverse insertion and mechanical capture |
 | D10 | Play while charging | Unresolved; must be explicitly permitted or prevented | System power-path/input-current and charging/temperature evidence |
 | D11 | Speaker and cavity | EK1725 on hand; smaller EK1794 candidate has conflicting 3 W title / 2 W description | Actual fit, qualified power limits, matched-level response, mass, distortion and current |
 | D12 | USB and mounting | Printed removable cartridge and grille, preassembled outside shell, is leading concept | Bonded mounting interface, supported USB load path, service access, retention and isolation |
@@ -143,6 +143,26 @@ feasibility alternative to the original outward-facing preference, not a
 silent requirement change; assembly, LED visibility and service access must
 be demonstrated. E04/E05/E07 remain open until their broader acceptance gates
 are met. The mechanical handoff records the separate STEP/STL fit study.
+
+## 2026-09-07: orientation clarification and wire-free cell capture
+
+The owner clarified the desired next packaging alternative: electronics toward
+the speaker, with handle-side space for a cylindrical cell and its retention.
+Prefer PCB contacts plus a printed capture cradle without battery wires;
+through-hole and SMT are both acceptable. Compare a mechanically fixed
+commercial CR123A holder on total cost and fit. No cell or contact is selected.
+
+The [mechanical alternative](mechanical-feasibility.md#2026-09-07-speaker-facing-electronics-and-cylindrical-cell-alternative)
+records the cell-only 16340/18350 screen, speaker conflicts, contact mounting and
+electrical safety gates. The initial positive compact-16340 result does not
+include mounting/tolerances or qualify its discharge capability. A populated
+face toward the speaker must be re-placed against the real speaker profile;
+it is not a geometry-only flip of the existing layout.
+
+The owner has begun printing the original fit kit and identifies this as a
+thought experiment. Preserve that snapshot and its hashes; this update changes
+planning only, not the schematic, native PCB, manifest or STEP/STL/FCStd files.
+Affected decisions: D07/D09/D12; owning epics E04/#4, E05/#5 and E07/#7.
 
 ## Risk register
 
