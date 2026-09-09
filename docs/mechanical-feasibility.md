@@ -1,5 +1,14 @@
 # FreeCAD mechanical feasibility
 
+**Current measurement follow-up, 2026-09-09:** the
+[separate measured-speaker study](../mechanical/studies/2026-09-09-measured-speaker/README.md)
+uses the owner's arrived-part measurements and captures physical print feedback.
+The speaker is 40 mm OD and 19 mm deep, not the earlier 18.5 mm retail maximum.
+Its measured basket rear is D32 at z12, followed by a D22 x H7 magnet.
+The original artifacts and findings below are preserved as the September 7
+snapshot, not silently regenerated. The new outward-facing screen does not yet
+establish a complete fit or reinforced carrier.
+
 **2026-09-07: actual editable CAD and fit-print artifacts, not a demonstrated
 complete fit.** FreeCAD generated the
 [native document](../mechanical/handbell-feasibility.FCStd),

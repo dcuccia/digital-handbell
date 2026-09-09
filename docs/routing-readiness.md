@@ -5,11 +5,13 @@ The 0.2 PCB contains real footprints and correct pin/net assignments, but no
 tracks, vias or ground planes. Its ratsnest lines show required connections;
 they are not copper and do not demonstrate a usable current-return path.
 
-The owner reports the 40 mm speakers are ordered, with arrival expected
-**Wednesday, 2026-09-09**. Inert mock-ups can be printed before then on the
-owner's **Creality K1C using PLA**. Keep the current 43 mm placement manifest
-fixed for that fit study; later electrical placement changes must regenerate
-the populated-board mock-up rather than silently diverge from it.
+The 40 mm speaker arrived and was measured on **2026-09-09**. The owner printed
+the existing parts in PLA on a Creality K1C: the populated-PCBA proxy was good
+and could fit relatively deeply, while some unspecified other pieces were
+flimsy. No insertion depth/orientation was reported. Keep the original 43 mm
+placement manifest fixed for that print snapshot; later electrical placement
+changes must regenerate the populated-board mock-up rather than silently
+diverge from it. See the [measured follow-up](../mechanical/studies/2026-09-09-measured-speaker/README.md).
 
 **Orientation alternative, not a changed print:** the owner prefers the
 populated face toward the speaker and handle-side space for a cylindrical
@@ -45,7 +47,7 @@ The feedback net is a sensing connection, not part of a high-current route.
 | Gate | Needed evidence |
 |---|---|
 | Board/carrier interface | Inert print fit, insertion/removal sequence, USB slot/load path, PCB support locations and usable service access |
-| Actual speaker | Caliper measurements of the basket, magnet, terminals, vent and front clearance; the supplied image does not dimension the complete profile |
+| Actual speaker | Owner measured D40/H19, D32 basket rear at z12 and D22/H7 magnet; intermediate basket/rim detail, terminals, wire exits, vent, excursion and tolerance remain open |
 | Battery | A real protected pack/cell with suitable current/charge ratings; model either its complete harness or PCB-contact/cradle envelope, reverse-insertion protection and service access; neither a rectangular dummy nor a bare-cylinder screen selects a battery |
 | Boost parts | Exact inductor and capacitor MPNs, land patterns/heights, saturation/thermal current and effective capacitance; settle the C29 DNP/compensation decision |
 | Connectors | Mated body and cable-bend envelopes, polarity/retention/current ratings, and USB manufacturer land-pattern review |
@@ -91,10 +93,12 @@ The board proxy must remain connected/printable without pretending its boxes
 are exact manufacturer bodies.
 
 For the speaker, distinguish an illustrative stepped/basket shape from the
-**40.9 mm diameter x 18.5 mm deep conservative envelope**. The image specifies
-frame 40.5 +/-0.4 mm, magnet 22 +/-0.5 mm, overall depth 18 +/-0.5 mm and rim
-2.7 +/-0.3 mm. It does not specify magnet thickness, basket taper or terminals.
-Do not claim inferred intermediate dimensions are measured.
+**40.9 mm diameter x 18.5 mm deep conservative envelope**. The historical image specifies frame 40.5 +/-0.4 mm, magnet 22 +/-0.5 mm,
+overall depth 18 +/-0.5 mm and rim 2.7 +/-0.3 mm. The arrived speaker's **19 mm**
+reported depth supersedes that earlier 18.5 mm gauge for current fit work.
+The new study separates owner-measured stations from assumed straight basket
+interpolation and from a stepped body envelope. Terminals, vent and tolerances
+are still unknown; do not treat an interpolated shape as a measured full profile.
 
 Import in millimetres at **100% scale**. Start with the slicer's established
 K1C/PLA profile rather than invented temperatures or speeds. Measure a printed

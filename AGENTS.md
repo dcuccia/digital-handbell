@@ -45,6 +45,11 @@
   speaker-facing electronics/handle-side cell alternative. PCB battery contacts
   may be through-hole or SMT with a capture cradle; no cell/holder is selected.
   Do not treat flipping the board as resolution of its speaker conflicts.
+- September 9 owner measurements supersede the old speaker gauge for new work:
+  D40/H19 overall, D32 basket rear at z12, D22/H7 magnet. Keep the original print
+  files intact; use the separate measured-speaker study. The good PCBA print
+  has no measured insertion depth, and unspecified flimsy parts are not yet
+  identified failures. Do not invent tolerances, reinforced parts or holder fit.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use

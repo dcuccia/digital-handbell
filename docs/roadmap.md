@@ -56,6 +56,13 @@ The broad bench, routing, sourcing and safety gates remain open.
 Early E12 work may inform carrier freeze without making
 network connectivity a prerequisite for the first sounding instrument.
 
+**2026-09-09 measurement update:** the speaker arrived and its key stations are
+recorded in the [measured-speaker study](../mechanical/studies/2026-09-09-measured-speaker/README.md).
+The PCBA proxy received positive physical fit feedback, while unspecified other
+printed parts need structural reconsideration. [PCB battery-contact research](battery-contact-options.md)
+compares compact-cell mounting without selecting a cell or freezing a layout.
+E01/E04/E05/E07 remain open; the original print snapshot is preserved.
+
 <!-- TRACKING:START -->
 **Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
 All twelve epics were initialized as Todo with a Phase field matching their

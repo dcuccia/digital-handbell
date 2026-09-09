@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520">
+<rect width="1120" height="520" fill="#fafafa"/>
+<style>text{font-family:Arial,sans-serif;fill:#17202a}</style>
+<text x="24" y="32" font-size="22">Measured speaker stations - 2026-09-09</text>
+<text x="24" y="58" font-size="13">Original geometry; basket interpolation is assumed. No terminal, vent, tolerance or retention approval.</text>
+<rect x="50.0" y="102" width="280.0" height="84.0" fill="#fff0d1" stroke="#a65f00" stroke-dasharray="5,4"/>
+<polygon points="50.00,102.00 78.00,186.00 113.00,186.00 113.00,235.00 267.00,235.00 267.00,186.00 302.00,186.00 330.00,102.00" fill="#d9eaf8" stroke="#21618c" stroke-width="2"/>
+<text x="42" y="270" font-size="14">Blue: linear basket interpolation + magnet</text>
+<text x="42" y="294" font-size="14">Dashed: full-width basket screening envelope</text>
+<text x="42" y="326" font-size="14">Frame D40; rear basket D32 at z12</text>
+<text x="42" y="350" font-size="14">Magnet D22 x H7; total depth 19 mm</text>
+<text x="455" y="106" font-size="17">Speaker-facing components; unchanged rigidly flipped PCB</text>
+<text x="455" y="134" font-size="13">Board front z | body overlaps | min speaker gap | board contained</text>
+<text x="455" y="164" font-size="14">20 mm | C1, C5, C20, D3, J1, L1, Q1, Q4, U2, U3, X1 | 0.00 mm | yes</text>
+<text x="455" y="193" font-size="14">20.5 mm | C1, C5, C20, J1, L1, X1 | 0.00 mm | yes</text>
+<text x="455" y="222" font-size="14">21 mm | J1, L1, X1 | 0.00 mm | yes</text>
+<text x="455" y="251" font-size="14">22 mm | J1, L1, X1 | 0.00 mm | yes</text>
+<text x="455" y="280" font-size="14">23 mm | L1, X1 | 0.00 mm | yes</text>
+<text x="455" y="309" font-size="14">24 mm | none | 0.00 mm | yes</text>
+<text x="24" y="425" font-size="14">All depths are modeled choices, NOT measured insertion depths. Existing print and KiCad files are unchanged.</text>
+<text x="24" y="453" font-size="14">Cylindrical/pouch alternatives are in fit-report.json; no contacts, cradle or cell rating has been qualified.</text>
+<text x="24" y="481" font-size="14">No reinforced carrier/grille is released here: the owner did not identify which other parts were flimsy.</text>
+</svg>

@@ -87,6 +87,23 @@ the origin and uncertainty of the dimensions. No cell, final outline or
 boost/inductor MPN has been frozen, and the published 0.1 schematic has not yet
 been rewired for these decisions.
 
+## 2026-09-09 physical follow-up
+
+The speaker arrived. The owner reports 40 mm frame OD, 19 mm overall depth,
+32 mm basket-rear OD at 12 mm depth, and a 22 mm diameter x 7 mm magnet.
+The [measured study](../mechanical/studies/2026-09-09-measured-speaker/README.md)
+supersedes the earlier speaker-size assumption for new fit work without
+overwriting the historical files or manufacturer uncertainty.
+
+The populated-PCBA proxy printed well and could fit relatively deeply, with
+no depth/orientation supplied. Some unspecified other mechanical pieces were
+flimsy. Preserve the successful PCBA gauge and investigate structural load
+paths rather than guessing which part failed or blindly thickening all parts.
+Battery height remains a key constraint. Keep compact protected 16340 and flat
+pouch alternatives active; the owner specifically requests SMD contact research
+and supplied [Keystone 54](https://us.rs-online.com/product/keystone-electronics/54/70229904/)
+as a through-hole example. Through-hole or SMT remains acceptable.
+
 ## Mechanical concepts to preserve
 
 **Concept A: shell slot and opposite fastener.** The edge USB-C connector fits

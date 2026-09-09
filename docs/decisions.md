@@ -1,6 +1,6 @@
 # Decision log
 
-Planning snapshot, updated 2026-09-07. A provisional choice is a starting point for
+Planning snapshot, updated 2026-09-09. A provisional choice is a starting point for
 experiments, not a final component or manufacturing commitment.
 
 | ID | Decision / question | Current disposition | Evidence to close or revisit |
@@ -15,7 +15,7 @@ experiments, not a final component or manufacturing commitment.
 | D08 | Audio rail and quiet idle | TPS61023 5 V-class boost and independent GPIO20 mute implemented in 0.2; mono-left selection and initial 9 dB gain | Exact power parts, rail budget, noise, low-cell behavior and sequencing remain unqualified |
 | D09 | Cell and charger | No pack selected; compare pouch and compact protected 16340 options; screen for at least 2 A continuous plus transient margin; PCB contacts may be through-hole or SMT | Full load/thermal/protection/runtime/USB budget, cell-specific charging, reverse insertion and mechanical capture |
 | D10 | Play while charging | Unresolved; must be explicitly permitted or prevented | System power-path/input-current and charging/temperature evidence |
-| D11 | Speaker and cavity | EK1725 on hand; smaller EK1794 candidate has conflicting 3 W title / 2 W description | Actual fit, qualified power limits, matched-level response, mass, distortion and current |
+| D11 | Speaker and cavity | Arrived EK1794 measured D40/H19, D32 basket rear at z12, D22/H7 magnet; seller 3 W title / 2 W description remains unresolved | Intermediate profile, terminals/vent, tolerances, actual full-stack fit, qualified power and acoustic/current behavior |
 | D12 | USB and mounting | Printed removable cartridge and grille, preassembled outside shell, is leading concept | Bonded mounting interface, supported USB load path, service access, retention and isolation |
 | D13 | Musical behavior | Note range, tuning, fixed/selectable note, retrigger/damping/polyphony and controls open | Requirements and prototype comparison |
 | D14 | Fabrication/assembly | Quote JLCPCB populated boards; use OSH Park as bare-board alternative | DFM acceptance and complete cost at actual quantities |
@@ -163,6 +163,38 @@ The owner has begun printing the original fit kit and identifies this as a
 thought experiment. Preserve that snapshot and its hashes; this update changes
 planning only, not the schematic, native PCB, manifest or STEP/STL/FCStd files.
 Affected decisions: D07/D09/D12; owning epics E04/#4, E05/#5 and E07/#7.
+
+## 2026-09-09: arrived speaker and physical print feedback
+
+The owner measured the arrived speaker: 40 mm frame OD, 19 mm front-to-magnet
+rear depth, 32 mm basket rear OD at 12 mm from the front, and a 22 mm diameter,
+7 mm tall magnet. The [input record](measurements/shell-speaker-inputs.json)
+preserves these separately from the historical retailer dimensions. The old
+18.5 mm-deep speaker gauge is too short for this measured part.
+
+The owner reports that the populated-PCBA proxy print was good and could fit
+relatively deeply. No insertion depth or tested orientation was supplied; this
+does not replace the assumed shell taper. Some unspecified other parts were
+flimsy. Record that feedback without labeling any particular rail/grille as a
+confirmed failure or claiming that a stronger carrier has been delivered.
+
+The [separate measured-station study](../mechanical/studies/2026-09-09-measured-speaker/README.md)
+preserves the earlier artifacts and compares a rigidly flipped, unchanged
+placement at six depths. No tested depth has the illustrative 0.5 mm nominal
+speaker-body gap; moving the board inward also consumes cylindrical-cell space.
+L1, J1 and the existing wired-battery connector X1 are key floorplanning
+constraints. A wire-free cell design should not retain X1 by default.
+
+D09 continues to compare compact protected 16340 and flat-pouch options. The
+owner considers 16340 economical and requested particular attention to SMD
+contacts, supplying Keystone 54 as a through-hole example. Through-hole remains
+acceptable. [Contact research](battery-contact-options.md) must distinguish
+part/drawing evidence from approximate price, bare-cell clearance and complete
+clip/cradle fit; no battery/contact is selected.
+
+Affected decisions: D07/D09/D11/D12; owning epics E01/#1, E04/#4, E05/#5 and
+E07/#7. The next mechanical floorplan must respect the measured magnet,
+electrical power-loop/bypass constraints and independent structural capture.
 
 ## Risk register
 

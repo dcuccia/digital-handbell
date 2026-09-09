@@ -1,8 +1,10 @@
 # Mechanics, acoustics, and manufacturing
 
-Status: trade study and measurement plan, updated 2026-09-07. The owner has
-shells and 2-inch speakers; no final driver, cell, PCB outline, assembly quote
-or production process has been selected.
+Status: trade study and measurement plan, updated 2026-09-09. The owner has
+shells, 2-inch speakers and the arrived EK1794. Its reported measurements are
+D40/H19, a D32 basket rear at z12 and D22/H7 magnet; see the
+[measured-speaker study](../mechanical/studies/2026-09-09-measured-speaker/README.md).
+No cell, final PCB outline, assembly quote or production process is selected.
 
 ## Measure before choosing a circle
 
@@ -48,10 +50,13 @@ printed carrier. Do not test fit by compressing a live pouch cell.
 
 ## Why the axial stack now matters
 
-The 40 mm speaker drawing's worst-case frame diameter is **40.9 mm**, magnet
+The historical 40 mm speaker drawing's worst-case frame diameter is **40.9 mm**, magnet
 diameter **22.5 mm**, and overall depth **18.5 mm**. Its rim dimension is included
 in that height. The basket profile, terminals, rear vent and excursion envelope
-are not fully established. A 40 mm nominal opening cannot pass a 40.9 mm frame.
+are not fully established. Those are retailer dimensions, not the current
+arrived-part measurements: the owner's reported **19 mm** depth exceeds the
+old 18.5 mm gauge. Keep the following calculation as historical sensitivity
+analysis; use the new study for current station-based geometry.
 
 For a **sensitivity example only**, assume the 40 mm shell ID occurs 22 mm
 inward and a straight taper connects it to the 70 mm lip:
@@ -146,7 +151,7 @@ power ratings use different conditions and are not direct loudness comparisons.
 
 | Example | Stated envelope / mass | Electrical rating | Use in the trade study |
 |---|---|---|---|
-| [Gikfun 40 mm, owner candidate EK1794](https://gikfun.com/products/gikfun-4ohm-40mm-diameter-3w-full-range-audio-speaker-stereo-woofer-loudspeaker-for-arduino-pack-of-2pcs) | Retail drawing: 40.5 +/-0.4 mm diameter, 18 +/-0.5 mm depth, 22 +/-0.5 mm magnet | 4 ohm; **3 W title versus 2 W input-power rating in description** | More compact owner candidate; no assumed continuous/peak interpretation; qualify intended signal and limits |
+| [Gikfun 40 mm, owner candidate EK1794](https://gikfun.com/products/gikfun-4ohm-40mm-diameter-3w-full-range-audio-speaker-stereo-woofer-loudspeaker-for-arduino-pack-of-2pcs) | Owner measured D40/H19, basket rear D32 at z12 and magnet D22/H7 on September 9; no tolerance limits established | Seller 4 ohm; **3 W title versus 2 W input-power rating in description** | Arrived and dimensioned at key stations; no assumed continuous/peak interpretation; qualify intended signal and limits |
 | [Gikfun 2-inch, owner part EK1725](https://gikfun.com/products/gikfun-2-4ohm-3w-full-range-audio-speaker-stereo-woofer-loudspeaker-for-arduino-pack-of-2pcs) | Seller says 2-inch diameter, 30 mm height; measure the two on-hand units | Seller says 3 W, 4 ohm | Immediate acoustic comparison; substantially deeper nominal envelope |
 | [Adafruit 1890](https://www.adafruit.com/product/1890) | 28 mm diameter x 4.5 mm; listing says 6 g | 8 ohm; datasheet 0.25 W continuous, 0.5 W short-term max | Very shallow/light baseline; enforce a suitable output limit |
 | [Same Sky CMS-28468N](https://www.sameskydevices.com/product/product-resources/cms-28468n.pdf) | 28 mm diameter x 4.6 mm; 5.3 g | 8 ohm; 0.5 W nominal, 1 W max under stated test | Shallow, manufacturer-documented alternative |

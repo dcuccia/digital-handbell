@@ -16,6 +16,13 @@ The [0.2 handoff](docs/electrical-reduction-and-placement.md) and
 screening assumptions and unresolved fit/power/manufacturing gates.
 No routed PCB or functioning firmware has been released.
 
+**September 9 measurements:** the arrived speaker is 40 mm OD x 19 mm overall,
+with a 32 mm basket rear at 12 mm and a 22 mm x 7 mm magnet. The
+[measured-speaker follow-up](mechanical/studies/2026-09-09-measured-speaker/README.md)
+keeps the original print files intact and compares speaker-facing electronics
+with cylindrical/pouch battery space. The PCBA print received positive fit
+feedback; some other pieces need structural reconsideration.
+
 The [compact power and packaging review](docs/compact-power-and-packaging.md)
 records the earlier decisions behind this revision. Its hypothetical taper
 example is superseded by the owner's z13/50 mm to z43/34 mm working profile.

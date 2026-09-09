@@ -26,6 +26,25 @@ disposition. Preserve measured versus calculated versus vendor-specified labels.
 
 ## First bench procedure
 
+### September 9 partial mechanical evidence
+
+The [measured-speaker study](../mechanical/studies/2026-09-09-measured-speaker/README.md)
+records owner-measured speaker stations and qualitative print feedback. This
+advances V01 but does not close it: no shell-depth profile, inserted-PCB depth,
+complete terminal/vent/tolerance envelope or assembled cell/contact/carrier fit
+has been established. Some other printed pieces were reported flimsy without
+identifying the pieces or failure locations; V10 remains open.
+
+For the proposed speaker-facing PCB, record the IMU axes relative to the bell
+and the final cell mass/location before gesture collection. A physical PCB
+flip changes that transform; do not reuse orientation assumptions silently.
+For a removable contact-mounted cell, include contact resistance/voltage drop,
+momentary contact loss and reset behavior, independent mechanical capture,
+wrapper/metal-can insulation and reverse-insertion protection in V04/V08/V10.
+Do not treat a contact's catalog current rating as shake/drop or system approval.
+
+### Electrical and acoustic bench work
+
 Start with the integrated reference board and a current-limited bench supply,
 then a documented compatible protected cell only after its limits are reviewed.
 Confirm speaker impedance and BTL wiring before enabling audio. Compare a small

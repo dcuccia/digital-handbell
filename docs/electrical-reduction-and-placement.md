@@ -160,8 +160,12 @@ not a demonstrated insertion path, cable fit or structural mounting method.
 
 The FreeCAD handoff adds speaker, cell placeholders and carrier geometry.
 Use its reported interferences and assumptions rather than inferring a complete
-fit from the circle above. A 40.9 x 18.5 mm cylinder conservatively represents
-the candidate speaker, not a measured basket/terminal/vent model.
+fit from the circle above. The original September 7 study used a 40.9 x 18.5 mm
+retail cylinder, not a measured basket/terminal/vent model. The
+[September 9 follow-up](../mechanical/studies/2026-09-09-measured-speaker/README.md)
+uses the owner's arrived-part stations including **19 mm** overall depth and
+preserves the original files. It identifies the magnet/placement and battery
+constraints for the next speaker-facing electrical floorplan.
 
 The [routing-readiness handoff](routing-readiness.md) records the owner's
 K1C/PLA fit-print plan and the concrete gates between this ratsnest and a

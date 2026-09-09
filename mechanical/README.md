@@ -1,5 +1,13 @@
 # Handbell mechanical feasibility artifacts
 
+**September 9 update:** the arrived speaker measures 40 mm OD and **19 mm**
+overall depth, with a D32 basket rear at z12 and D22 x H7 magnet. The
+[separate measured-speaker study](studies/2026-09-09-measured-speaker/README.md)
+records those stations, speaker-facing PCB conflicts, battery-space comparisons
+and physical print feedback. The files below are the unchanged September 7
+snapshot; its **18.5 mm speaker gauge is not deep enough for the measured part**.
+No reinforced carrier or new battery holder has been released.
+
 **Inert dimensional study, not a complete fitted assembly or child-use hardware.**
 The editable FreeCAD document includes the current 74-part placement as rectangular
 proxies, directly from the final supplied manifest with **no height overrides**.
