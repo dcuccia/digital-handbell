@@ -66,6 +66,35 @@ before file overhead. An 8 MB flash device is shared with firmware/filesystem
 overhead. Count actual free space, asset count, RAM buffers, mixer voices, and
 CPU load before promising a complete note set.
 
+**2026-09-10 capacity clarification:** 8 MB was inherited from the Prop-Maker
+reference, not established as a handbell requirement. The owner's lower-end
+RP2040 use case is one or a few approximately five-second chimes. Two such
+44.1 kHz/16-bit mono recordings need 882,000 bytes before headers. Keeping
+external flash is necessary for standalone firmware/storage on this RP2040
+design; embedding audio in the firmware does not eliminate that chip.
+The [flash sourcing comparison](flash-sourcing.md) separates stocked
+footprint-change alternatives from near-4x4 options without verified stock.
+
+The inspected CircuitPython revision
+[`fd40abc29cf5c8ea111e16b3e6cc21b180974ae3`](https://github.com/adafruit/circuitpython/tree/fd40abc29cf5c8ea111e16b3e6cc21b180974ae3)
+normally reserves 1020 KiB for firmware plus 4 KiB for settings, leaving
+1 MiB of partition space on a 2 MiB device or 3 MiB on a 4 MiB device,
+before filesystem overhead, Python code and libraries. A 2 MiB build is
+plausible but relatively tight for two full-rate WAVs; 4 MiB leaves more
+room without requiring MP3 or abandoning CircuitPython.
+
+Importantly, RP2040
+[`internal_flash.c`](https://github.com/adafruit/circuitpython/blob/fd40abc29cf5c8ea111e16b3e6cc21b180974ae3/ports/raspberrypi/supervisor/internal_flash.c)
+reads the JEDEC capacity byte at runtime. A density change does not, by
+itself, prove that an existing UF2 will address beyond the device. Conversely,
+capacity detection does not establish boot compatibility: the
+[`gen_stage2.py`](https://github.com/adafruit/circuitpython/blob/fd40abc29cf5c8ea111e16b3e6cc21b180974ae3/ports/raspberrypi/gen_stage2.py)
+configuration also determines quad-enable writes and read mode. Select the
+exact flash family/suffix in the handbell board definition and exercise
+cold boot, BOOTSEL recovery, filesystem sizing/read/write and audio streaming
+before approving a smaller flash. The stock Feather configuration is not
+automatically a qualified handbell build.
+
 Choose sample rate, voice count, and mixer buffer size experimentally. Larger
 buffers may reduce underruns while increasing trigger-to-sound delay. The
 historical [CircuitPython issue 7322](https://github.com/adafruit/circuitpython/issues/7322)

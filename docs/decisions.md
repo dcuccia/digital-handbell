@@ -1,6 +1,6 @@
 # Decision log
 
-Planning snapshot, updated 2026-09-09. A provisional choice is a starting point for
+Planning snapshot, updated 2026-09-10. A provisional choice is a starting point for
 experiments, not a final component or manufacturing commitment.
 
 | ID | Decision / question | Current disposition | Evidence to close or revisit |
@@ -20,6 +20,7 @@ experiments, not a final component or manufacturing commitment.
 | D13 | Musical behavior | Note range, tuning, fixed/selectable note, retrigger/damping/polyphony and controls open | Requirements and prototype comparison |
 | D14 | Fabrication/assembly | Evaluate JLC Standard two-sided for the wing draft: Economic is single-sided and the selected IMU listing is already Standard Only; OSH Park remains a bare-board alternative | Actual job/BOM eligibility, framing/panelization, DFM and complete quantity-specific quote |
 | D15 | Wireless exploration | Owner favors S3-MINI; evaluate early for sound programming, QR identity and optional practice telemetry | Exact memory/build, RF with real shell/cell/speaker, power budget and protected updates; local sounding remains offline |
+| D16 | RP2040 flash capacity/sourcing | 8 MB inherited, not required; evaluate 2/4 MB for a few short chimes. Stocked alternatives found require new footprints; closest Winbond 4x4 XG options lack verified immediate stock | Exact source/MPN, lands and paste, boot configuration, filesystem/audio budget and read/write/cold-boot evidence |
 
 For a change, append date, rationale, alternatives, affected requirements,
 upstream/prototype evidence, and the deciding issue. Do not overwrite an earlier
@@ -232,6 +233,29 @@ price table's setup+stencil subtotal rises from USD33.77 to USD67.54 for
 Standard one versus two faces. The [cost/source record](electromechanical-wing-iteration.md#assembly-cost-is-a-decision-gate-not-a-reason-to-stop-drafting)
 also retains Standard's framing/minimum-manufacturing-size gate and conflicting
 older FAQ manual prices. No assembly order or file submission was made.
+
+## 2026-09-10: smaller flash and authorized-distributor availability
+
+The owner narrowed the lower-end RP2040 storage use case to one or a few
+approximately five-second chimes and requested 2 MB / 4 MB near-drop-in
+parts at major distributors. The [sourcing record](flash-sourcing.md) finds
+stocked DigiKey alternatives, but not an immediately stocked 4 x 4 mm
+near-drop-in: W25Q16JVUXIQ TR is 2 x 3 mm; MX25L3233FM2I-08G is 200-mil SOP.
+Verified USD offers were retrieved through a regional DigiKey site, not a
+US-address checkout. Mouser live stock could not be verified.
+
+Winbond XGIQ parts are the near-footprint candidates, with matching nominal
+terminal pitch/overlap and permission to ground the center pad; their
+center-pad/paste/tolerance treatment still requires approval. No hardware,
+placement, fit-print artifact, BOM selection or purchase is changed.
+
+Pinned CircuitPython source supports the Winbond density families and the
+Macronix family. RP2040 capacity detection is dynamic; density reduction alone
+does not establish a UF2 incompatibility. Exact boot/QE configuration and
+real filesystem/audio behavior still require review. The prior out-of-stock
+8 MB candidate price is not a required flash cost.
+
+Affected decisions: D03/D05/D16; owning epics E04/#4, E06/#6, E07/#7 and E08/#8.
 
 ## Risk register
 

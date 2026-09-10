@@ -55,7 +55,7 @@ gate. Neither sensor directly proves physical chest contact.
 
 | Block | Upstream implementation | Handbell implication |
 |---|---|---|
-| MCU | RP2040, 12 MHz crystal, external 8 MB QSPI flash | Preserve support circuitry and compatible flash; filesystem space is less than raw flash capacity |
+| MCU | RP2040, 12 MHz crystal, external 8 MB QSPI flash | 8 MB is inherited, not a required handbell capacity; evaluate supported 2/4 MB alternatives while preserving the 3.3 V QSPI interface and recovery access; filesystem space is less than raw capacity |
 | Audio | MAX98357A mono I2S DAC/class-D amp; default 9 dB gain | A separate DAC is redundant; channel and gain configuration need a deliberate choice |
 | Sensor | LIS3DH at I2C address 0x18; INT1 wired | Three acceleration axes, no angular-rate measurement |
 | Charger | MCP73831T-2ACI/OT; R8=5.1 kohm, about 196 mA nominal | Do not copy charge current until the actual cell is chosen |
