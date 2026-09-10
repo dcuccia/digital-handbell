@@ -63,6 +63,13 @@ printed parts need structural reconsideration. [PCB battery-contact research](ba
 compares compact-cell mounting without selecting a cell or freezing a layout.
 E01/E04/E05/E07 remain open; the original print snapshot is preserved.
 
+The subsequent [wing/cartridge iteration](electromechanical-wing-iteration.md)
+adds a separate native two-face placement, ground-assigned M2 mounting
+interfaces and a two-piece body/yoke concept with STEP/STL/FreeCAD files.
+Neither battery retention nor shell attachment is complete. Supplier-tier
+eligibility, actual contacts/cell, loaded retention and final routing remain completion
+gates rather than reasons to block this draft work.
+
 <!-- TRACKING:START -->
 **Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
 All twelve epics were initialized as Todo with a Phase field matching their

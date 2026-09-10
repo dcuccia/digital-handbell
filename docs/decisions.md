@@ -11,14 +11,14 @@ experiments, not a final component or manufacturing commitment.
 | D04 | Sensor | Owner approved LSM6DSOX on 2026-09-07; integrated at 0x6A in the separate draft; retain LIS3DH for bench comparison | Gyro-enabled/disabled gesture comparison, driver initialization, full electrical review, and assembled BOM quote |
 | D05 | CAD | KiCad 10.0.6 exercised; three pinned references converted; reduced draft has 0 ERC errors/warnings with no exclusions | Complete footprint/routing review and electrical freeze remain open |
 | D06 | Hardware reuse license | Retain source-compatible CC BY-SA 3.0 for adaptations of verified sources; preserve root MIT for original code/docs | Full notices and per-file provenance at import; resolve 4884 version before use |
-| D07 | Packaging | Preserve the inward-component 0.2 print snapshot; owner prefers speaker-facing electronics with handle-side battery space for the next alternative | Actual speaker profile, cell/contact/cradle fit, real-shell tolerances, carrier access and electrical placement |
+| D07 | Packaging | Preserve the original print snapshot; separate 43 mm wing draft uses speaker-facing electronics, selective rear boost/audio groups and two M2 mounting interfaces | Actual cell/contact/cartridge fit, real-shell tolerances, insertion/service path and routing-led placement |
 | D08 | Audio rail and quiet idle | TPS61023 5 V-class boost and independent GPIO20 mute implemented in 0.2; mono-left selection and initial 9 dB gain | Exact power parts, rail budget, noise, low-cell behavior and sequencing remain unqualified |
 | D09 | Cell and charger | No pack selected; compare pouch and compact protected 16340 options; screen for at least 2 A continuous plus transient margin; PCB contacts may be through-hole or SMT | Full load/thermal/protection/runtime/USB budget, cell-specific charging, reverse insertion and mechanical capture |
 | D10 | Play while charging | Unresolved; must be explicitly permitted or prevented | System power-path/input-current and charging/temperature evidence |
 | D11 | Speaker and cavity | Arrived EK1794 measured D40/H19, D32 basket rear at z12, D22/H7 magnet; seller 3 W title / 2 W description remains unresolved | Intermediate profile, terminals/vent, tolerances, actual full-stack fit, qualified power and acoustic/current behavior |
-| D12 | USB and mounting | Printed removable cartridge and grille, preassembled outside shell, is leading concept | Bonded mounting interface, supported USB load path, service access, retention and isolation |
+| D12 | USB and mounting | Separate two-piece body/yoke draft integrates grille, speaker seat and PCB supports for external preassembly; no battery retainer or shell attachment implemented | Shell attachment, supported USB load path, service access, bearing/preload, hardware, retention and isolation |
 | D13 | Musical behavior | Note range, tuning, fixed/selectable note, retrigger/damping/polyphony and controls open | Requirements and prototype comparison |
-| D14 | Fabrication/assembly | Quote JLCPCB populated boards; use OSH Park as bare-board alternative | DFM acceptance and complete cost at actual quantities |
+| D14 | Fabrication/assembly | Evaluate JLC Standard two-sided for the wing draft: Economic is single-sided and the selected IMU listing is already Standard Only; OSH Park remains a bare-board alternative | Actual job/BOM eligibility, framing/panelization, DFM and complete quantity-specific quote |
 | D15 | Wireless exploration | Owner favors S3-MINI; evaluate early for sound programming, QR identity and optional practice telemetry | Exact memory/build, RF with real shell/cell/speaker, power budget and protected updates; local sounding remains offline |
 
 For a change, append date, rationale, alternatives, affected requirements,
@@ -195,6 +195,43 @@ clip/cradle fit; no battery/contact is selected.
 Affected decisions: D07/D09/D11/D12; owning epics E01/#1, E04/#4, E05/#5 and
 E07/#7. The next mechanical floorplan must respect the measured magnet,
 electrical power-loop/bypass constraints and independent structural capture.
+
+## 2026-09-09: selective rear wings and integrated supports
+
+The owner requested a draft placement iteration that considers two-sided
+assembly, especially its cost-tier implications, and larger parts on the
+battery-free back wings. The owner also proposed ground-assigned through holes
+for stronger standoffs and fewer separate printed pieces, while retaining a
+workable speaker loading path.
+
+The [wing draft](../hardware/handbell/iterations/wing-draft/README.md) keeps
+62 fitted components on the speaker-facing F side and 11 on B, with a central
+battery/contact reservation and USB through-board-anchor exclusion. X1 is
+consistently DNP; this is not a completed replacement battery interface.
+MH1/MH2 use stock plated 2.2 mm bores and 4.4 mm GND-assigned copper pads.
+No trace/plane means those pads are not yet physically grounded.
+
+The [electromechanical handoff](electromechanical-wing-iteration.md) records
+the shared interface, delivered two-piece body/yoke and final-layout gates.
+The D72 external flange registers at the assumed D70 mouth; it is not
+shell attachment. Speaker insertion precedes the yoke and PCB. Nominal
+component/yoke and structure/shell gaps around 0.25-0.35 mm remain tolerance
+gates, and no retained battery is supplied. Factory
+two-sided assembly and an inexpensive manual-completion alternative must be
+compared on the actual job/BOM, not assumed equivalent from PCB layer count.
+Do not make unsupported source-rotation, strength, insertion or cell-fit claims.
+
+Affected decisions: D07/D09/D12/D14; owning epics E04/#4, E05/#5, E07/#7 and
+E08/#8. No previous baseline or printable model is silently replaced.
+
+Official JLC capabilities retrieved September 9 confirm Economic single-sided
+and Standard single/double-sided component placement, independently of copper
+layer count. C481766 (selected SOX) is currently Standard Only with required
+X-ray; no whole-job quote/approval is inferred. The dedicated September 8
+price table's setup+stencil subtotal rises from USD33.77 to USD67.54 for
+Standard one versus two faces. The [cost/source record](electromechanical-wing-iteration.md#assembly-cost-is-a-decision-gate-not-a-reason-to-stop-drafting)
+also retains Standard's framing/minimum-manufacturing-size gate and conflicting
+older FAQ manual prices. No assembly order or file submission was made.
 
 ## Risk register
 

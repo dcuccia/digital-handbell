@@ -113,6 +113,12 @@ the entire basket.
 **One-sided assembly** means components placed on one PCB face. **Two-layer**
 means two copper layers. These are different constraints.
 
+The [new wing iteration](electromechanical-wing-iteration.md) explicitly
+compares selective rear-face power/audio placement with the original one-face
+goal. Its mounting and battery/USB reservations are shared with the integrated
+cartridge study. Do not infer low-tier assembly eligibility from layer count
+or from having only a few rear components.
+
 The KB2040 provides a relevant two-layer RP2040 precedent. QT Py RP2040's
 compactness also uses bottom-side components, so its dimensions do not prove
 our one-face target. Connectors, power/thermal copper, test access, routing,

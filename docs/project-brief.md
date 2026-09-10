@@ -13,7 +13,7 @@ straightforward assembly, charging, programming, and repair.
 
 The starting enclosure is a children's play handbell with its clapper removed.
 The speaker faces outward through the bell opening. A compact PCB, protected
-single-cell LiPo and printed retaining structure share the remaining volume.
+single-cell Li-ion battery and printed retaining structure share the remaining volume.
 A solid disk behind the speaker was the initial concept; a near-mouth
 annular/offset board is now also a fit-study candidate. The intended musical note range, player ages, and whether
 each bell has a fixed or selectable note remain open.
@@ -26,13 +26,13 @@ each bell has a fixed or selectable note remain open.
 | R02 | MCU capable of I2S audio; prefer RP2040 for the first experiment | Working baseline; RP2040 implements I2S through PIO |
 | R03 | Prefer CircuitPython and novice-friendly USB programming | Working baseline; custom-board identity/provisioning still required |
 | R04 | Integrated I2S DAC/class-D amplifier and local mono 4 ohm speaker; design electronics for the 3 W high end | MAX98357A; boosted rail required for this target; 3 W low-distortion or speaker qualification is not established |
-| R05 | Rechargeable 1S LiPo with USB-C charging | Cell, protection, charge current, temperature handling, and runtime TBD |
+| R05 | Rechargeable protected 1S Li-ion, pouch or cylindrical, with USB-C charging | Exact cell/contact or harness, protection, charge current, temperature handling and runtime TBD |
 | R06 | Motion sensing for a natural ringing gesture | Owner-approved LSM6DSOX in the draft; compare acceleration/gyro against stock LIS3DH for strike plus chest-stop/rest; performance and assembled BOM not frozen |
 | R07 | USB-C at the circular board edge, usable from outside the bell | Connector, shell slot, cable clearance, and load transfer TBD |
 | R08 | Speaker faces outward; package electronics behind/around it in the shell | Owner estimates and retail speaker drawing captured; axial profile, basket, cell and clearances remain open |
-| R09 | Prefer outward-facing component/connectors for accessible assembly | 0.2 compares inward-facing components to recover axial space; preassembly and service access still need confirmation |
+| R09 | Prefer speaker-facing electronics/connectors for accessible assembly | Separate wing draft uses speaker-facing F and selective handle-facing B groups; loading and service access still need confirmation |
 | R10 | Plug-in speaker wiring, preferably a keyed JST-family connector | 0.2 selects distinct Molex Pico-Lock; final mating envelope/current qualification pending |
-| R11 | Prefer one-face component assembly on a two-layer circular PCB | Feasibility goal, not a committed diameter or layer count |
+| R11 | Compare one-face assembly with selective rear-wing population on a two-layer circular PCB | Owner requested a two-face draft subject to supplier-tier and total-cost review; no manufacturing route frozen |
 | R12 | Consider two stacked PCBs if justified by fit or cost | Compare added height, interconnects, supports, labor, and failure points |
 | R13 | Good bell timbre, useful acoustic output, quiet between chimes | Define note range, SPL/distance, noise, distortion, and transient targets |
 | R14 | Preserve clean audio behavior when combining reference circuits | Review supply loops, return paths, startup/mute behavior, and layout |
@@ -48,8 +48,9 @@ each bell has a fixed or selectable note remain open.
 | R24 | Record uncertainty and measured versus estimated results honestly | Do not turn vendor examples, ERC/DRC passes, or calculations into product qualification |
 | R25 | Distinguish a handbell strike from a chest-stop/rest damping gesture | Added 2026-09-07; evaluate temporal motion context, gyro benefit, and handling/contact ambiguity |
 | R26 | Dedicated two-pin keyed button harness on RP2040 GPIO19 / schematic BUTTON net | Owner-approved replacement for STEMMA QT; stock CircuitPython alias is EXTERNAL_BUTTON, not board.BUTTON; connector/protection/debounce pending |
-| R27 | Print the cartridge and speaker grille; preassemble outside the bell | Prefer removable cartridge with separately bonded mounting interface; retention, acoustic and dimensional evidence pending |
+| R27 | Print an integrated cartridge/grille; preassemble outside the bell with fewer separate pieces | Prefer integrated grille/seat/supports and minimal removable capture/service pieces; speaker insertion, retention and acoustic/structural evidence pending |
 | R28 | Use 0402 where electrically and mechanically appropriate | Not a requirement to shrink bulk capacitors, magnetics, power parts or connectors indiscriminately |
+| R29 | Consider GND-assigned through-hole mounting points for sturdy, handle-side-fastened supports | Wing draft has two M2 plated clearances; hardware, load paths, insulation and eventual grounding still need qualification |
 
 ## 2026-09-07 clarification
 

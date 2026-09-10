@@ -50,6 +50,16 @@
   files intact; use the separate measured-speaker study. The good PCBA print
   has no measured insertion depth, and unspecified flimsy parts are not yet
   identified failures. Do not invent tolerances, reinforced parts or holder fit.
+- The separate `hardware/handbell/iterations/wing-draft` uses schema-2 mixed-face
+  proxies, explicit z bounds and M2 mounting interfaces. Use its dedicated
+  generation/checking tools, not the original placement generator. Reserve
+  USB through-board anchors on B; X1 is DNP across all three schematic units.
+  Do not transfer the old GUI parity approval to this variant or count B-side
+  fitted parts as copper-only BOM exclusions.
+- The integrated-cartridge study consumes that exact manifest. Its two printed
+  pieces do not include battery retention or shell attachment; D72 is an
+  external flange, not a diameter to shrink to the D70 mouth. Preserve the
+  required speaker-before-yoke-before-PCB sequence and recorded small gaps.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use

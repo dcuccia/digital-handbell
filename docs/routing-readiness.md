@@ -1,5 +1,10 @@
 # From fit mock-up to routed PCB
 
+**Next iteration:** the [two-face wing/cartridge handoff](electromechanical-wing-iteration.md)
+and [native wing placement](../hardware/handbell/iterations/wing-draft/README.md)
+record the separate 62F/11B candidate, mounting interfaces and current gates.
+The earlier 0.2 print checkpoint below remains preserved, not overwritten.
+
 **Current stopping point: print-fit and electrical floorplanning, not Gerbers.**
 The 0.2 PCB contains real footprints and correct pin/net assignments, but no
 tracks, vias or ground planes. Its ratsnest lines show required connections;

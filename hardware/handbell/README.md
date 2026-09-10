@@ -1,5 +1,12 @@
 # Handbell: 0.2 electrical and placement draft
 
+**Later placement alternative:** the separate
+[wing draft](iterations/wing-draft/README.md) adds selective rear-face
+population and M2 mounting interfaces for the
+[integrated cartridge](../../mechanical/studies/2026-09-09-integrated-cartridge/README.md).
+This directory's original 0.2 CAD and print snapshot remain unchanged;
+open the variant's project for the newer placement.
+
 **Reduced electronics and a 43 mm unrouted candidate; not a fabrication release.** Open
 [`handbell.kicad_pro`](handbell.kicad_pro) in KiCad 10.0.6, then its schematic.
 For a CAD-free view, use the [schematic PDF](reports/handbell-schematic.pdf).

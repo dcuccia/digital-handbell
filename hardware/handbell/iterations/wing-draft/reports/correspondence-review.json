@@ -1,0 +1,27 @@
+{
+  "status": "Draft correspondence, not routing/hardware/fabrication approval",
+  "physical_pads_checked": 300,
+  "x1_dnp_units": 3,
+  "native_manifest_body_poses_checked": 73,
+  "native_erc_findings": 0,
+  "native_physical_findings": 264,
+  "retained_usb_hole_findings": 4,
+  "unconnected_items": 205,
+  "cli_auto_pin_fallback_findings": 46,
+  "paired_editor_gui_review_performed_for_this_variant": false,
+  "inputs": {
+    "handbell.kicad_sch": "6bc7b028174050af8d85c2485d31b7d34fd6230401a4e9a34f2dbcf11fa0dd5e",
+    "handbell.kicad_pcb": "b436dec367f4289ed5cbe96cb69e69b1f291684f86304a8baccf361dbe1891c4",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement-manifest.json": "d78f06c8793b69e0d4d2ae1dab5687bb57284abac32e0f68830c0995b6bd8f34",
+    "reports/erc.json": "58be911c67019ba6d2abb9e322bc9b5b21434114929bf1c2e6095478d9a23e06",
+    "reports/drc.json": "bceb6fceecf1fc3ba1514bc9d1aee44adf6c6b63ef98c313b49cfabe2a774a18",
+    "reports/handbell-netlist.xml": "d2778d6dd9ae78300ed597d4cf19bc9998a548b358c5e884c6a447013ac62f61",
+    "reports/native-input-bindings.json": "c18aec5488c72e4dc2ac73b7b3c5b1452e690f6a62edd34c11dc98015eb0398c"
+  },
+  "limits": [
+    "No new GUI parity approval is inferred from the baseline's GUI review.",
+    "The known CLI fallback and all native findings remain in the complete report.",
+    "Source geometry fit, exact contacts/cell, power/thermal routing and mechanical retention remain gates."
+  ]
+}

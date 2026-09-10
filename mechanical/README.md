@@ -1,5 +1,14 @@
 # Handbell mechanical feasibility artifacts
 
+**Integrated wing draft:** the
+[two-piece cartridge study](studies/2026-09-09-integrated-cartridge/README.md)
+adds an integral grille/seat/support body, removable capture yoke and a new
+two-face PCBA proxy with mounting holes. It uses the separate native wing
+placement and preserves every older print below. Its D72 flange is external;
+insertion order, small nominal clearances and unqualified hardware/retention
+are described in its own handoff. Do not substitute it for a finished battery
+holder or shell attachment.
+
 **September 9 update:** the arrived speaker measures 40 mm OD and **19 mm**
 overall depth, with a D32 basket rear at z12 and D22 x H7 magnet. The
 [separate measured-speaker study](studies/2026-09-09-measured-speaker/README.md)

@@ -16,6 +16,17 @@ The [0.2 handoff](docs/electrical-reduction-and-placement.md) and
 screening assumptions and unresolved fit/power/manufacturing gates.
 No routed PCB or functioning firmware has been released.
 
+**Latest placement/fit draft:** the [two-face wing placement](hardware/handbell/iterations/wing-draft/README.md)
+keeps a central battery/contact reservation, moves the boost and amplifier
+blocks to rear wings, and adds two GND-assigned M2 mounting holes. The
+[two-piece cartridge](mechanical/studies/2026-09-09-integrated-cartridge/README.md)
+provides an integrated grille/seat/support body, removable capture yoke and
+new populated-PCBA STEP/STL. Its 72 mm flange sits outside the assumed 70 mm
+mouth; it does not yet include battery retention or shell attachment. The
+[electromechanical handoff](docs/electromechanical-wing-iteration.md) separates
+draft progress from the remaining cell, retention, routing and assembly-cost
+gates. The original project/print files remain intact.
+
 **September 9 measurements:** the arrived speaker is 40 mm OD x 19 mm overall,
 with a 32 mm basket rear at 12 mm and a 22 mm x 7 mm magnet. The
 [measured-speaker follow-up](mechanical/studies/2026-09-09-measured-speaker/README.md)
@@ -54,6 +65,7 @@ assembled cost and final electrical decisions remain evidence gates.
 | [Compact power and packaging review](docs/compact-power-and-packaging.md) | Approved next revision, boost/cell/mute review, speaker-rating conflict and fit constraints |
 | [0.2 reduction and placement](docs/electrical-reduction-and-placement.md) | Implemented circuits, 43 mm candidate, service map and open routing/DFM gates |
 | [Mechanical feasibility](docs/mechanical-feasibility.md) | Editable FreeCAD, STEP/STL, assumed shell profile and cartridge interference findings |
+| [Wing/cartridge iteration](docs/electromechanical-wing-iteration.md) | Latest two-face placement, two-piece fit models, mounting interfaces and JLC assembly-tier findings |
 | [Routing readiness](docs/routing-readiness.md) | Print-fit checkpoint, electrical floorplanning gates and the path to reviewed Gerbers/BOM/CPL |
 | [Validation plan](docs/validation-plan.md) | Measurements and evidence required before each hardware release |
 | [Decision log](docs/decisions.md) | Provisional decisions and the evidence needed to close them |
@@ -71,10 +83,11 @@ relationships, and links to supporting plans.
 
 - Start with a bench demonstration using the integrated Prop-Maker Feather,
   while developing the reduced schematic in parallel.
-- Prefer a single circular PCB with components assembled on one face and two
-  copper layers. Establish diameter through real placement and measured shell
-  geometry, not the sum of chip areas. Compare four layers and stacked boards
-  if evidence warrants them.
+- Prefer a single circular PCB and compare selective rear-wing population
+  against the original one-face assembly goal using complete assembly cost.
+  Two copper layers remain the draft baseline. Establish diameter through real
+  placement and measured shell geometry, not the sum of chip areas; compare
+  four layers or stacked boards if evidence warrants them.
 - Keep sounding local/offline; evaluate an S3-MINI wireless variant early
   enough to inform antenna/carrier choices. The draft already has six-axis
   sensing; the unchanged reference has neither a radio nor a gyroscope.

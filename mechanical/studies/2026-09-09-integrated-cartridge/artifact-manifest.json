@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "input": {
+    "placement_path": "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\wing-draft\\placement-manifest.json",
+    "placement_sha256": "d78f06c8793b69e0d4d2ae1dab5687bb57284abac32e0f68830c0995b6bd8f34",
+    "electrical_pcb_sha256": "b436dec367f4289ed5cbe96cb69e69b1f291684f86304a8baccf361dbe1891c4",
+    "electrical_schematic_sha256": "6bc7b028174050af8d85c2485d31b7d34fd6230401a4e9a34f2dbcf11fa0dd5e",
+    "builder_sha256": "e027b5c8c755699ed6a16ea2fe3d6c9f137fd4a72bcd2a0df4048a7f3f814559",
+    "helper_sha256": "c9ef5a33a86cd8f3635f6aa6171c2d84b6d7662f68bcb578d9cd9a43bdfb3aab",
+    "shell_parameters_sha256": "a69f632702b0e067b616b138abc277d67ff4d00c1be3e67955dfa3b57b2c4450"
+  },
+  "artifacts": {
+    "integrated-cartridge-assembly.step": {
+      "sha256": "0104c09f6d57c1ebf9bdb138f3f478369cbb55eac189561956a2322832961286",
+      "bytes": 664137,
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 14,
+        "volume_mm3": 35596.18333291331,
+        "bounds": {
+          "min_mm": [
+            -36.0,
+            -36.0,
+            -4.5
+          ],
+          "max_mm": [
+            36.0,
+            36.0,
+            27.1
+          ],
+          "size_mm": [
+            72.0,
+            72.0,
+            31.6
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 0.0
+    },
+    "populated-wing-pcba-proxy.step": {
+      "sha256": "e9eb31dd463c7a62a9aeb32b82de232ae58498e131fe86f10550af3617d7944e",
+      "bytes": 462278,
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 3319.455741065901,
+        "bounds": {
+          "min_mm": [
+            -21.5,
+            -21.965,
+            17.0
+          ],
+          "max_mm": [
+            21.5,
+            21.5,
+            27.1
+          ],
+          "size_mm": [
+            43.0,
+            43.465,
+            10.100000000000001
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 0.0
+    },
+    "INERT-integrated-grille-seat-body.stl": {
+      "sha256": "b82685494613583360e1c78aec31806c7ed43416922ea110bb8dc9d4da3310e2",
+      "units": "unitless STL; import as mm at 100 percent",
+      "connected_components": 1,
+      "manifold": true,
+      "self_intersections": false,
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 12007.331074347578,
+        "bounds": {
+          "min_mm": [
+            -35.97541427612305,
+            -35.99385452270508,
+            -4.5
+          ],
+          "max_mm": [
+            36.0,
+            35.99385452270508,
+            9.0
+          ],
+          "size_mm": [
+            71.97541427612305,
+            71.98770904541016,
+            13.5
+          ]
+        }
+      },
+      "relative_volume_error": 0.0008760830718848306,
+      "maximum_bound_error_mm": 1.5062151774714039e-06
+    },
+    "INERT-removable-capture-yoke.stl": {
+      "sha256": "e2e265fda38b7c8076a9dbdbb2f9ff75c126e42bae0dbbd2f7c0b00f60bfe5e8",
+      "units": "unitless STL; import as mm at 100 percent",
+      "connected_components": 1,
+      "manifold": true,
+      "self_intersections": false,
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 2270.5026746681215,
+        "bounds": {
+          "min_mm": [
+            -18.49677085876465,
+            -22.89752197265625,
+            9.0
+          ],
+          "max_mm": [
+            18.5,
+            22.89752197265625,
+            20.5
+          ],
+          "size_mm": [
+            36.99677085876465,
+            45.7950439453125,
+            11.5
+          ]
+        }
+      },
+      "relative_volume_error": 0.00042571064930956395,
+      "maximum_bound_error_mm": 6.435825987693988e-07
+    },
+    "INERT-populated-wing-pcba-proxy.stl": {
+      "sha256": "68869eff140c978d23566a77694c138c29dd870214ec0a877a8242d6a696c274",
+      "units": "unitless STL; import as mm at 100 percent",
+      "connected_components": 1,
+      "manifold": true,
+      "self_intersections": false,
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 3317.3690669173507,
+        "bounds": {
+          "min_mm": [
+            -21.5,
+            -21.96500015258789,
+            17.0
+          ],
+          "max_mm": [
+            21.5,
+            21.5,
+            27.100000381469727
+          ],
+          "size_mm": [
+            43.0,
+            43.46500015258789,
+            10.100000381469727
+          ]
+        }
+      },
+      "relative_volume_error": 0.0006291855439108005,
+      "maximum_bound_error_mm": 3.8146972514141453e-07
+    },
+    "INERT-measured-speaker-body-screen.stl": {
+      "sha256": "b32cb89916d11485a7d01aaac45ff06bf8a8659192a8ed34e06827d1598ae45e",
+      "units": "unitless STL; import as mm at 100 percent",
+      "connected_components": 1,
+      "manifold": true,
+      "self_intersections": false,
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 17724.035468243168,
+        "bounds": {
+          "min_mm": [
+            -20.0,
+            -20.0,
+            0.0
+          ],
+          "max_mm": [
+            20.0,
+            20.0,
+            19.0
+          ],
+          "size_mm": [
+            40.0,
+            40.0,
+            19.0
+          ]
+        }
+      },
+      "relative_volume_error": 0.000932465042420948,
+      "maximum_bound_error_mm": 0.0
+    },
+    "integrated-cartridge-draft.FCStd": {
+      "sha256": "dc93ff5178296d5454ffafa46be9ed5f790ab7f3f03e8245b9686f49da82d7c4",
+      "reopened_shape_count": 103,
+      "source_snapshots_present": true,
+      "parameters_sheet_present": true
+    },
+    "placement-snapshot.json": {
+      "sha256": "d78f06c8793b69e0d4d2ae1dab5687bb57284abac32e0f68830c0995b6bd8f34"
+    },
+    "parameters.json": {
+      "sha256": "de060ff9ad166df00a29119b4b8d3103bd9f7dd2d904d63854344906ee7db155"
+    },
+    "shell-parameters-snapshot.json": {
+      "sha256": "a69f632702b0e067b616b138abc277d67ff4d00c1be3e67955dfa3b57b2c4450"
+    },
+    "integrated-cartridge-views.svg": {
+      "sha256": "d1e0e1ca5da61dffa597bb894b571ff79f1d6a179325e3fbbafb7a979694fd01"
+    },
+    "README.md": {
+      "sha256": "b2094ef80fe58bbdbd949026c9d222a6d6ede752b7d249145006434233467607"
+    },
+    "review-status.json": {
+      "sha256": "9712bdc423ee2941791b9d089ce52f065d4493a1e2d1e79f071933f39fdfb258"
+    }
+  },
+  "fit_report_sha256": "8d31e2f14bb179cbd27291b2bc37b3e90bc67e6cb08838c7f6fa185dd743a546",
+  "license_scope": "Original mechanics/code/SVG MIT under mechanical/LICENSE. Mixed electronics context retains hardware/handbell CC BY-SA 3.0 notices."
+}
