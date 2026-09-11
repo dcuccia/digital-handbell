@@ -89,6 +89,91 @@ Contact prices exclude the cell, cradle, fasteners, shipping, tax and PCB
 assembly operations. Do not convert a UK retail listing into an assumed US/JLC
 assembled cost. Nothing has been purchased or ordered.
 
+## 2026-09-11: Vapcell T8 and PCB-level protection alternative
+
+The owner proposed the
+[Liion Wholesale Vapcell T8 button-top offer](https://liionwholesale.com/products/vapcell-t8-16340-rcr123a-3a-button-top-850mah-battery-genuine?variant=31955045056581)
+at **USD2.69 each for 100**, an owner-reported quantity price not independently
+reproduced from the retrieved page. The seller explicitly lists **Protected:
+NO**, 850 mAh typical / 820 mAh minimum, 3.6 V nominal / 4.2 V peak,
+3 A manufacturer-rated maximum discharge, and approximate 16.4 x 34.0 mm.
+
+[Vapcell's T8 specification](https://www.vapcelltech.com/h-pd-60.html?fromMid=470)
+explicitly describes **3 A maximum continuous discharge**, 4.20 V end of
+charge, 2.5 V end of discharge, 500 mA standard CC/CV charge with 100 mA
+cutoff, and 1000 mA quick charge. These are manufacturer claims, not project
+measurements. The nominal voltage and paper continuous-current rating suit
+the current screening target; neither approves the enclosed system.
+
+Two details need clarification before selecting the exact supplied version:
+
+- Vapcell gives 16.4 x 34.0 mm but also says adding a button top can add
+  2-3 mm. The retailer describes its button-top item as approximately
+  34.0 mm. Obtain the actual maximum total length, button dimensions and
+  tolerances; do not silently model it as either 34 or 36-37 mm.
+- The manufacturer page gives 100 mA charge termination, while the
+  [2020 independent review](https://lygte-info.dk/review/batteries2012/Vapcell%20INR16340%20850mAh%20T8%20(Cyan)%202020%20UK.html)
+  quotes 50 mA. Those historical review cells were supplied by Vapcell, and
+  the review's favorable conclusion concerns capacity at 1 A or below.
+  It does not qualify today's batch at the handbell's load. Confirm the
+  applicable charge specification, low-cell sag and temperature behavior.
+
+The integrated USB charger on the earlier Fenix candidate is not needed by
+the handbell. An unprotected cell can instead be considered with protection
+on the main PCB; this changes where protection lives rather than removing
+it. The current design assumed a factory-protected pack and does **not**
+already implement that alternative.
+
+### What the current charger and power circuit actually provide
+
+The wing netlist retains `MCP73831T-2ACI/OT`, R8 = 5.1 kohm, the closed
+charge-enable jumper, D4/Q3 source selection and Q1/Q2 audio-rail switching.
+There is no dedicated cell-protector IC, battery fault-disconnect FET pair,
+cell thermistor or qualified reverse-insertion stage. The regulator EN pin
+is pulled up; no autonomous cell undervoltage cutoff is established.
+
+| Function | Current implementation / limit |
+|---|---|
+| Normal charging | MCP73831 CC/CV to nominal 4.20 V, about 196 mA programmed current; preconditioning, termination and automatic recharge |
+| Charge-current limit | Applies to the charger path, not cell discharge current into the whole board or a battery short |
+| Charger thermal protection | Die-temperature regulation/shutdown; not measurement of cell temperature |
+| Input loss / reverse leakage | Charger input UVLO and reverse blocking prevent back-discharge through the charger; neither is cell undervoltage protection or reverse-insertion protection |
+| Cell overvoltage fault disconnect | Not separately implemented; normal 4.2 V regulation is not an independent overcharge protector |
+| Cell overdischarge cutoff | Not implemented as a battery-protection function |
+| Cell discharge overcurrent / short disconnect | Not implemented as a whole-cell protection function |
+| Cold/hot-cell charge inhibit | No NTC input on this five-pin charger and no cell-temperature circuit in the draft |
+| Charge safety timer | No built-in timeout in this charger |
+| Boost local protection | TPS61023 switch-current limit, output OVP/short protection and thermal shutdown; not a whole-cell BMS |
+
+Microchip's [manufacturer-authored MCP73831 datasheet, Adafruit mirror](https://cdn-shop.adafruit.com/datasheets/MCP73831.pdf)
+is DS21984A (2005), sections 4.5-4.9, 5.1, 6.1.1.4 and the ordering table.
+Its AC option terminates at 7.5% of programmed current: approximately
+14.7 mA with the present R8. Although 196 mA is below Vapcell's published
+500 mA standard current, the resulting complete charge profile is not the
+same as either published T8 termination example. Review the exact current
+device/cell specifications before changing R8 or approving charging.
+
+[TI's TPS61023 description](https://www.ti.com/product/TPS61023) specifies
+a 3.7 A typical **valley switch-current** limit and 5.7 V **output** OVP.
+It can run at input voltages far below the cell's published discharge endpoint.
+Neither number is a safe battery discharge-current/undervoltage setting.
+Similarly, the USB/battery selector is not a general-purpose BMS.
+
+Adopting the unprotected T8 would require a reviewed single-cell protector
+with charge/discharge fault isolation (commonly a protector IC plus
+back-to-back MOSFETs, or an integrated equivalent), coordinated thresholds,
+delays and fault currents, cell-temperature charging policy, and explicit
+reverse-insertion handling. Both charging and discharge paths must respect
+the protection stage, without an unintended USB/ground bypass. Independent
+retention, insulation and a short-safe battery compartment remain necessary.
+Protection on the PCB does not protect a loose cell outside the instrument.
+
+There is no series-cell balancing requirement for this 1S design. A fuel
+gauge is optional and cannot substitute for hardware fault protection.
+This is a credible cell/architecture candidate, **not approval to insert an
+unprotected cell into the current draft**. No new circuit, part selection,
+purchase or fit claim is made. Owning epics: E04/#4, E05/#5 and E07/#7.
+
 ## What counts as a complete comparison
 
 | Evidence | Why it matters here |

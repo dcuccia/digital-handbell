@@ -96,6 +96,12 @@ runtime and lead/connector ratings. Do not improvise loose-cell paralleling.
 Input-current budgeting and play-while-charge policy remain open: a 5 V USB
 connector does not imply unrestricted current.
 
+**2026-09-11 alternative under review:** the owner's proposed unprotected
+[Vapcell T8 and protection-function review](battery-contact-options.md#2026-09-11-vapcell-t8-and-pcb-level-protection-alternative)
+could move cell protection onto the main PCB. The current charger/source
+selector does not already supply a complete cell-protection system; the
+factory-protected-pack assumption above cannot simply be dropped.
+
 J1's exact mating harness/current and body envelope still need primary
 manufacturer confirmation. J2 is deliberately **side-entry**: the
 [JST drawing](https://www.jst-mfg.com/product/pdf/eng/eSH.pdf) gives 2.95 mm
