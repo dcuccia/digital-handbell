@@ -1,0 +1,62 @@
+{
+  "generated_pcb_sha256": "11e74fbc2cb51d4be762a2725b3b9cb19a80b7e02b19a319fb1e5ebb74cb6bb5",
+  "script_sha256": "7da21b7b4757985619adabbf79ae62c27c96c285473a18d7cf67332d73ea9c69",
+  "steps": 0,
+  "seed": 163404,
+  "fitted_by_side": {
+    "B": 13,
+    "F": 70
+  },
+  "front_z_mm": 14.25,
+  "usb_mouth_y_mm": -27.9,
+  "guard_target_mm": 1.0,
+  "preserved_xy": true,
+  "physical_pads": 325,
+  "planning": {
+    "intercluster_overlaps": [],
+    "constraint_violations": [],
+    "retained_source_cluster_planning_overlaps": [
+      {
+        "left": "C26",
+        "right": "L1",
+        "area_mm2": 0.15523200000016713
+      },
+      {
+        "left": "C27",
+        "right": "C28",
+        "area_mm2": 0.4382560000000002
+      },
+      {
+        "left": "C27",
+        "right": "L1",
+        "area_mm2": 0.481367999999981
+      },
+      {
+        "left": "C27",
+        "right": "U5",
+        "area_mm2": 0.12693900000009967
+      },
+      {
+        "left": "C28",
+        "right": "L1",
+        "area_mm2": 0.015227200000008973
+      },
+      {
+        "left": "R6",
+        "right": "Y1",
+        "area_mm2": 0.5182959999999999
+      }
+    ]
+  },
+  "editable_artifacts": {
+    "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+    "fp-lib-table": "0f78c9f6acf89ef9771d2666e3044b38f1de79b2ae29ceae5ba2cc103e3b8f52",
+    "sym-lib-table": "f638e1490a3903c06c916fe7070ddffa7d9c7b18201690aee92ffcca2e11a6fa",
+    "battery-contact-interface.json": "e93d72ef211b7615634f255153a413b826d05c1495fa19d967c64456b647c4a6",
+    "T8.pretty\\BQ29700_DSE6.kicad_mod": "d872bb3d326e1931a629a89bee77d4693d6c041e00c6e954eedeeec78e46ce58",
+    "T8.pretty\\CSD83325L_YJE6.kicad_mod": "8a642c2383551e10b64daeb4bfa6393093b0c4f50acea6e544bcad3d425c1e2b",
+    "T8.pretty\\ERJ6BW_0805.kicad_mod": "da4628fe0e6a278e9b6cf1624aea14db315defc429e4571088f2dbb7b2ecc741",
+    "T8.pretty\\Keystone_254_RevC.kicad_mod": "64f9e325d8022977226a8dd8c098f47c0102ccbae7ab2087aa26281b779b1d57",
+    "T8.pretty\\Winbond_USON8_UX_2x3.kicad_mod": "eb5000fe59d3c9ad0d3d8dd81d7c956929f6b38995079a9061d471ad926115c7"
+  }
+}

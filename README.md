@@ -25,7 +25,15 @@ profile, supported USB access and reversible servicing. A complete placed
 FreeCAD assembly is the owner-review checkpoint before routing. Earlier
 profiles and prints below remain historical snapshots, not current tolerances.
 
-**Latest placement/fit draft:** the [two-face wing placement](hardware/handbell/iterations/wing-draft/README.md)
+The [new native T8 placement](hardware/handbell/iterations/t8-protected-draft/README.md)
+implements **83 fitted parts**, including two SMT battery contacts, an eight-part
+cell-protection stage and the smaller Winbond flash footprint. Its
+[schematic PDF](hardware/handbell/iterations/t8-protected-draft/reports/handbell-schematic.pdf)
+and [electrical handoff](docs/t8-electrical-revision.md) explain the protected
+return, sourcing and current/charging limits. It remains unrouted and does not
+approve live-cell operation.
+
+**Preserved September 9 placement/fit draft:** the [two-face wing placement](hardware/handbell/iterations/wing-draft/README.md)
 keeps a central battery/contact reservation, moves the boost and amplifier
 blocks to rear wings, and adds two GND-assigned M2 mounting holes. The
 [two-piece cartridge](mechanical/studies/2026-09-09-integrated-cartridge/README.md)
@@ -75,6 +83,8 @@ assembled cost and final electrical decisions remain evidence gates.
 | [0.2 reduction and placement](docs/electrical-reduction-and-placement.md) | Implemented circuits, 43 mm candidate, service map and open routing/DFM gates |
 | [Mechanical feasibility](docs/mechanical-feasibility.md) | Editable FreeCAD, STEP/STL, assumed shell profile and cartridge interference findings |
 | [Wing/cartridge iteration](docs/electromechanical-wing-iteration.md) | Latest two-face placement, two-piece fit models, mounting interfaces and JLC assembly-tier findings |
+| [Measured-shell T8 integration](docs/t8-integration-plan.md) | September 11 measurements, compact protection/contact/capture revision and owner review before routing |
+| [T8 electrical revision](docs/t8-electrical-revision.md) | Actual 2 MB flash lands, protected battery return, pin map, current tradeoffs and remaining gates |
 | [Routing readiness](docs/routing-readiness.md) | Print-fit checkpoint, electrical floorplanning gates and the path to reviewed Gerbers/BOM/CPL |
 | [Validation plan](docs/validation-plan.md) | Measurements and evidence required before each hardware release |
 | [Decision log](docs/decisions.md) | Provisional decisions and the evidence needed to close them |

@@ -31,6 +31,14 @@ obligations.
 No third-party firmware or sound recordings are vendored. The original project
 [MIT license](LICENSE) is unchanged.
 
+The separate [T8 electrical revision](hardware/handbell/iterations/t8-protected-draft/README.md)
+retains the Adafruit-derived hardware's CC BY-SA 3.0 notices. Its added
+protection circuit, Winbond UX lands and thin battery-contact primitives are
+original factual implementations informed by linked manufacturer documents,
+not imported vendor CAD. The new [source evidence](hardware/handbell/iterations/t8-protected-draft/source-evidence.json)
+records document revisions, inspected hashes and reuse limits. Manufacturer
+PDFs, images and STEP models are not redistributed.
+
 The original packaging-screen SVG, calculation script and factual measurement
 records use the project's MIT documentation/software terms. The owner's retail
 speaker image and vendor photos are **not redistributed**. The PowerBoost and

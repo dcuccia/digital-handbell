@@ -36,6 +36,14 @@ Intermediate concave curvature, the final closure above z41.75, roundness,
 production variation and handle-fastener intrusion remain unmeasured. A
 rendered curve is not new measurement evidence.
 
+**Same-day spacing feedback:** the owner visually estimates approximately
+1 mm of recoverable speaker-to-PCB headspace in the print. Record this as an
+[eyeball estimate](measurements/2026-09-11-spacing-feedback.json), not a
+minimum-clearance measurement. Evaluate 0.5 and 1.0 mm PCB/battery compression
+with the speaker fixed, and identify the limiting fitted component. Reclaim
+that space where the actual geometry permits before increasing exterior
+front protrusion; bare-board clearance alone is not sufficient.
+
 The owner confirms the new printed design fits inside the bell but seems
 slightly undersized radially. This supports revising the front register and
 flange; it does not establish a measured clearance or require enlarging the
@@ -44,6 +52,14 @@ assumed D70 mouth, so its bearing against the now-measured ID71.68 needs
 reconsideration rather than uniform scaling of every part.
 
 ## Electrical and battery scope
+
+The [native T8 revision](../hardware/handbell/iterations/t8-protected-draft/README.md)
+now implements the separate circuit and placement: **83 fitted components**
+(70 speaker-side F / 13 handle-side B), including two Keystone 254 revision C
+SMT contacts, the Winbond UX flash and eight protection components. The
+[electrical handoff](t8-electrical-revision.md) owns the exact pin/land maps,
+source evidence and limitations. This is not a blanket circuit or live-cell
+approval.
 
 Use the owner's preferred **Vapcell T8 button-top** as the next candidate and
 the stocked **W25Q16JVUXIQ TR, 2 MB** flash option. The flash requires its
@@ -65,6 +81,15 @@ overdischarge. Review a small single-cell fault protector and isolation
 devices, all charging/discharge paths, and actual footprint area. No fuel
 gauge or series-cell balancing is required by this 1S architecture.
 
+The implemented BQ29700DSER/common-drain CSD83325L/shunt stage occupies
+approximately an **8 x 6 mm planning area**, with six associated passives.
+Its conservative overcurrent selection can trip below 2 A at low cell
+voltage; it is not a guaranteed 3 A current regulator or a promise of
+full-output audio at every state of charge. Exact fault-current/SOA, thermal,
+charging, cell-temperature and reverse-insertion gates remain in the
+electrical handoff. Do not present the added protection as closing those
+unimplemented functions.
+
 The earlier schematic connected battery negative directly to board GND.
 With a low-side protector, **raw cell negative and protected system GND are
 different nets**, joined through the conducting protection stage in normal
@@ -72,6 +97,12 @@ operation and separated on cutoff. USB shield/ground, screw pads and signal
 returns must not accidentally bridge that separation. If a different topology
 is selected, document its actual grounding contract rather than repeating this
 example as an implemented fact.
+
+This low-side arrangement is now implemented as `CELL_NEG` versus `GND`.
+USB signal ground is protected system GND. The retained X6 shell anchors
+M1-M4 are **unassigned**, not a reviewed shield-to-ground bond; cable/shield
+contact can still reference external metal, so mechanical insulation remains
+necessary.
 
 Keep the metal bell electrically isolated from terminals, cell can, board
 fasteners and USB hardware. A floating bell can still short a cell if both

@@ -1,0 +1,60 @@
+{
+  "review_date": "2026-09-11",
+  "reviewer": "digital-handbell project with Copilot assistance; no independent physical-safety approval",
+  "manufacturer_material_redistributed": false,
+  "reuse_type": "Independent factual circuit/land/kinematic implementations; no vendor CAD, PDF, image or model copied",
+  "manufacturer_documents": [
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/bq2970.pdf",
+      "revision": "TI SLUSBU9I August2024; DSE0006A drawing4220552/B January2024",
+      "sha256_of_inspected_pdf": "33ecbecf2eca2276a7afa6cf41aa6f8016ef4a71572a52d6941dfba8f3def126",
+      "review_scope": "Device table,pin map,thresholds,timers,typical application and land example; all-NSMD local adaptation explicitly documented."
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/csd83325l.pdf",
+      "revision": "TI SLPS494C November2023; YJE0006A4221674/C July2023",
+      "sha256_of_inspected_pdf": "0ab1b3586d7fe6b47616eb4ce68e8258ec69bef35d1bbc44cf4ce6588937c819",
+      "review_scope": "Common-drain topology,A1/C1=S1,B1=G1,A2/C2=S2,B2=G2; resistance and pulse conditions; NSMD pads."
+    },
+    {
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6661/W25Q16JV.pdf",
+      "revision": "Winbond RevisionI December24,2024; section11.3 printedp67",
+      "sha256_of_inspected_pdf": "a1e966f4a80bfb3786a3f781cfeff28c774b824ec92e10090038f9dec823e5f3",
+      "review_scope": "UX 3x2mm body,0.5pitch,.6maxheight; exposed strip0.2x1.6, not oldXG area. Independent land/paste implementation."
+    },
+    {
+      "url": "https://ken.keyeuro.eu/pdf/254.pdf",
+      "revision": "Keystone254 revisionC September14,2023",
+      "sha256_of_inspected_pdf": "8a14bc6e870c39fd1c7b3cc26381bc9a17d1ce8f0eb4ff2f34358a5a13da69d6",
+      "review_scope": "SMT pad dimensions and thin metal dimensional data; longitudinal loaded dimple and free travel not supplied."
+    }
+  ],
+  "upstream_adaptations": [
+    {
+      "product": "5768",
+      "commit": "408fa9a40c0a01a3a65497ef42a29e0b08fe711e",
+      "author": "Limor Fried/Ladyada for Adafruit Industries",
+      "notice": "notices/adafruit-5768-README.md"
+    },
+    {
+      "product": "4438",
+      "commit": "c05abef4675b0380fbf3d23171615a2f1ac0b130",
+      "author": "Bryan Siepert for Adafruit Industries",
+      "notice": "notices/adafruit-4438-README.md"
+    },
+    {
+      "product": "4654",
+      "commit": "82b5a33a1900a5c13849029bc84e7856a44086e0",
+      "author": "Limor Fried/Ladyada for Adafruit Industries",
+      "notice": "notices/adafruit-4654-README.md"
+    }
+  ],
+  "hardware_license": "CC BY-SA3.0 Unported; LICENSE.txt; KiCad library design exception for standard design material",
+  "existing_source_changes": "None. New derivative removesX1,changesU1 toUX2MB,addsBQ29700+common-drainFET+series33mohm+filter/gatepassives+twoSMTcontacts; updatesplacementandlocaledgeinterfaces.",
+  "availability_limits": "See docs/t8-electrical-revision.md; no verified current numeric protection-parts stock/price or assembledquote. Marketplace page is not proof of authorized stock.",
+  "baseline_native_hashes": {
+    "handbell.kicad_sch": "6bc7b028174050af8d85c2485d31b7d34fd6230401a4e9a34f2dbcf11fa0dd5e",
+    "handbell.kicad_pcb": "b436dec367f4289ed5cbe96cb69e69b1f291684f86304a8baccf361dbe1891c4",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990"
+  }
+}

@@ -7,6 +7,13 @@ stations, but wants the complete revised FreeCAD assembly first. The new
 cell/contact/protection, smaller-flash footprint, USB and service interfaces
 must be represented together; the old wing manifest cannot certify them.
 
+The separate [83-part native T8 placement](../hardware/handbell/iterations/t8-protected-draft/README.md)
+now supplies the new flash, contacts and protected return. Its
+[electrical review](t8-electrical-revision.md) keeps the low-cell current
+tradeoff and missing reverse-cell/temperature charging functions explicit.
+These are draft engineering inputs, not closed safety gates. The complete
+mechanical rebind and owner review remain prerequisites to starting routing.
+
 **Next iteration:** the [two-face wing/cartridge handoff](electromechanical-wing-iteration.md)
 and [native wing placement](../hardware/handbell/iterations/wing-draft/README.md)
 record the separate 62F/11B candidate, mounting interfaces and current gates.

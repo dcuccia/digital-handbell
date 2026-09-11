@@ -1,0 +1,18 @@
+{
+  "recorded_on": "2026-09-11",
+  "source": "Owner visual inspection of the printed assembly",
+  "exact_feedback": "from my print, speaker to pcb spacing looks generous. just eyeballing, but there's probably at least 1mm \"free\" headspace that we could lose?",
+  "estimated_recoverable_spacing_mm": 1.0,
+  "evidence_type": "Qualitative visual estimate, not a caliper measurement",
+  "measured_minimum_component_to_speaker_clearance_mm": null,
+  "precise_surfaces_or_limiting_component_identified": false,
+  "requested_cad_sensitivity": {
+    "pcb_and_battery_mouthward_shifts_mm": [0.5, 1.0],
+    "speaker_fixed_for_comparison": true,
+    "preserve_actual_component_geometry": true,
+    "report_limiting_component_and_clearance": true,
+    "note": "Evaluate recoverable component-to-speaker clearance, not only bare-board-to-magnet distance. A full-stack translation preserves relative gaps; PCB-only translation does not."
+  },
+  "status": "Potential space-saving lead; not approval to remove 1 mm of clearance unconditionally",
+  "related_measurements": "2026-09-11-shell-speaker-inputs.json"
+}
