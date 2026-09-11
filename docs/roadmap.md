@@ -70,6 +70,15 @@ Neither battery retention nor shell attachment is complete. Supplier-tier
 eligibility, actual contacts/cell, loaded retention and final routing remain completion
 gates rather than reasons to block this draft work.
 
+**2026-09-11 next revision:** the owner confirms the wing/cartridge fit and
+provides [new caliper stations](measurements/2026-09-11-shell-speaker-inputs.json),
+a corrected D21.70 speaker magnet and a 1.15 mm working wall assumption.
+The [T8 integration plan](t8-integration-plan.md) advances compact on-board
+cell protection, actual wire-free contacts/capture, 2 MB Winbond flash, a
+closer-fitting mouth profile, supported USB access and serviceable shell
+attachment. Review the complete new FreeCAD assembly **before routing**.
+This does not close the broader E04/E05/E07 electrical, retention or DFM gates.
+
 <!-- TRACKING:START -->
 **Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
 All twelve epics were initialized as Todo with a Phase field matching their

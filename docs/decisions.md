@@ -1,6 +1,6 @@
 # Decision log
 
-Planning snapshot, updated 2026-09-10. A provisional choice is a starting point for
+Planning snapshot, updated 2026-09-11. A provisional choice is a starting point for
 experiments, not a final component or manufacturing commitment.
 
 | ID | Decision / question | Current disposition | Evidence to close or revisit |
@@ -13,14 +13,14 @@ experiments, not a final component or manufacturing commitment.
 | D06 | Hardware reuse license | Retain source-compatible CC BY-SA 3.0 for adaptations of verified sources; preserve root MIT for original code/docs | Full notices and per-file provenance at import; resolve 4884 version before use |
 | D07 | Packaging | Preserve the original print snapshot; separate 43 mm wing draft uses speaker-facing electronics, selective rear boost/audio groups and two M2 mounting interfaces | Actual cell/contact/cartridge fit, real-shell tolerances, insertion/service path and routing-led placement |
 | D08 | Audio rail and quiet idle | TPS61023 5 V-class boost and independent GPIO20 mute implemented in 0.2; mono-left selection and initial 9 dB gain | Exact power parts, rail budget, noise, low-cell behavior and sequencing remain unqualified |
-| D09 | Cell and charger | No pack selected; compare pouch and compact protected 16340 options; screen for at least 2 A continuous plus transient margin; PCB contacts may be through-hole or SMT | Full load/thermal/protection/runtime/USB budget, cell-specific charging, reverse insertion and mechanical capture |
+| D09 | Cell and charger | Owner requests a Vapcell T8 button-top contact/capture revision with compact PCB-level protection; retain >=2 A continuous screening plus transient margin; no live-cell approval | Exact supplied dimensions/button, contact load/travel, complete charging/protection/temperature/USB behavior, reverse insertion and mechanical capture |
 | D10 | Play while charging | Unresolved; must be explicitly permitted or prevented | System power-path/input-current and charging/temperature evidence |
-| D11 | Speaker and cavity | Arrived EK1794 measured D40/H19, D32 basket rear at z12, D22/H7 magnet; seller 3 W title / 2 W description remains unresolved | Intermediate profile, terminals/vent, tolerances, actual full-stack fit, qualified power and acoustic/current behavior |
+| D11 | Speaker and cavity | Arrived EK1794 D40/H19, basket rear D32 at z12, updated magnet D21.70/H7; September 11 measured shell stations and owner-assumed uniform 1.15 wall govern new work | Inconsistent raw OD/ID versus wall readings preserved; intermediate/final taper, terminals/vent, tolerances, full-stack retention, power and acoustic behavior |
 | D12 | USB and mounting | Separate two-piece body/yoke draft integrates grille, speaker seat and PCB supports for external preassembly; no battery retainer or shell attachment implemented | Shell attachment, supported USB load path, service access, bearing/preload, hardware, retention and isolation |
 | D13 | Musical behavior | Note range, tuning, fixed/selectable note, retrigger/damping/polyphony and controls open | Requirements and prototype comparison |
 | D14 | Fabrication/assembly | Evaluate JLC Standard two-sided for the wing draft: Economic is single-sided and the selected IMU listing is already Standard Only; OSH Park remains a bare-board alternative | Actual job/BOM eligibility, framing/panelization, DFM and complete quantity-specific quote |
 | D15 | Wireless exploration | Owner favors S3-MINI; evaluate early for sound programming, QR identity and optional practice telemetry | Exact memory/build, RF with real shell/cell/speaker, power budget and protected updates; local sounding remains offline |
-| D16 | RP2040 flash capacity/sourcing | 8 MB inherited, not required; evaluate 2/4 MB for a few short chimes. Stocked alternatives found require new footprints; closest Winbond 4x4 XG options lack verified immediate stock | Exact source/MPN, lands and paste, boot configuration, filesystem/audio budget and read/write/cold-boot evidence |
+| D16 | RP2040 flash capacity/sourcing | Owner requests stocked 2 MB W25Q16JVUXIQ TR for the next draft; new USON2x3 footprint, not a drop-in for inherited USON4x4 | Reviewed lands/paste, exact boot configuration, filesystem/audio budget and read/write/cold-boot evidence |
 
 For a change, append date, rationale, alternatives, affected requirements,
 upstream/prototype evidence, and the deciding issue. Do not overwrite an earlier
@@ -256,6 +256,46 @@ real filesystem/audio behavior still require review. The prior out-of-stock
 8 MB candidate price is not a required flash cost.
 
 Affected decisions: D03/D05/D16; owning epics E04/#4, E06/#6, E07/#7 and E08/#8.
+
+## 2026-09-11: measured shell, T8 integration and owner review before routing
+
+The owner confirms that the September 9 print iteration fits inside the bell
+but is slightly small radially, and supplies
+[new caliper measurements](measurements/2026-09-11-shell-speaker-inputs.json).
+The first concave taper ends at z14.90, not z10 or the old assumed z13.
+The final taper starts at approximately z41.75 with OD38.42; the speaker
+magnet is now measured as D21.70. Other September 9 speaker stations remain
+current. The owner explicitly requests a uniform 1.15 mm working wall,
+despite the differing apparent thicknesses from the raw diameter pairs.
+Keep those discrepancies visible and distinguish measured IDs from the
+calculated upper ID36.12 and interpolated curves.
+
+The owner requests an integrated contact/capture design around the unprotected
+Vapcell T8 and the stocked 2 MB Winbond USON2x3 option. Compact whole-cell
+protection is part of the electrical revision under review; the suggestion
+of relying only on the boost converter is not adopted because battery-rail
+shorts, other loads and cell overdischarge are outside its protection scope.
+Cell versus board grounding, insulation from the metal bell, reverse
+insertion and charging policy must be explicit. Neither this decision nor
+the quoted cell price approves purchase or live-cell use.
+
+D12 advances to a request for positive, reversible cartridge attachment,
+insulating battery capture, and supported USB access biased toward outside
+flush mounting where the footprint and service path permit. The old holes
+were M2 clearance/heat-set-insert provisions, not M3; choose coherent hardware
+and explain it in the new handoff rather than enlarging holes indiscriminately.
+Reduce the magnet-opening play using a declared print allowance, not an
+invented measurement tolerance or an unspecified interference fit.
+
+The [integration plan](t8-integration-plan.md) requires a complete placed
+FreeCAD assembly for owner review **before committing to routing**. Preserve
+the old native projects and print files as snapshots, and bind the new
+mechanics to the exact revised electrical placement. The remaining power
+parts, USB land-pattern, manufacturing and physical qualification gates are
+not closed by successful model generation.
+
+Affected decisions: D07/D09/D11/D12/D16; owning epics E01/#1, E04/#4,
+E05/#5, E07/#7 and E10/#10.
 
 ## Risk register
 

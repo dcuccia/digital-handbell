@@ -16,6 +16,15 @@ The [0.2 handoff](docs/electrical-reduction-and-placement.md) and
 screening assumptions and unresolved fit/power/manufacturing gates.
 No routed PCB or functioning firmware has been released.
 
+**September 11 revision:** the owner confirms the newer print assembly fits,
+supplies [measured shell stations](docs/measurements/2026-09-11-shell-speaker-inputs.json),
+and refines the speaker magnet to **21.70 mm OD**. The
+[next integration plan](docs/t8-integration-plan.md) combines the Vapcell T8
+contact/capture candidate, compact cell protection, 2 MB flash, revised mouth
+profile, supported USB access and reversible servicing. A complete placed
+FreeCAD assembly is the owner-review checkpoint before routing. Earlier
+profiles and prints below remain historical snapshots, not current tolerances.
+
 **Latest placement/fit draft:** the [two-face wing placement](hardware/handbell/iterations/wing-draft/README.md)
 keeps a central battery/contact reservation, moves the boost and amplifier
 blocks to rear wings, and adds two GND-assigned M2 mounting holes. The

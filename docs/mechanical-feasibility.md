@@ -1,6 +1,14 @@
 # FreeCAD mechanical feasibility
 
-**Current measurement follow-up, 2026-09-09:** the
+**September 11 update:** [new shell stations and owner clarifications](measurements/2026-09-11-shell-speaker-inputs.json)
+supersede the old assumed taper for new work. The first concave section ends
+at z14.90; the owner requests a uniform 1.15 mm working wall and now measures
+the speaker magnet as D21.70. The
+[T8 integration plan](t8-integration-plan.md) includes actual battery capture,
+USB access and service attachment before routing. Preserve the old artifacts
+and their original parameter/manifest bindings.
+
+**Historical measurement follow-up, 2026-09-09:** the
 [separate measured-speaker study](../mechanical/studies/2026-09-09-measured-speaker/README.md)
 uses the owner's arrived-part measurements and captures physical print feedback.
 The speaker is 40 mm OD and 19 mm deep, not the earlier 18.5 mm retail maximum.

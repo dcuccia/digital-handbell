@@ -1,5 +1,12 @@
 # From fit mock-up to routed PCB
 
+**September 11 owner-requested checkpoint:** implement and inspect the
+[measured-shell T8 integration](t8-integration-plan.md) before starting copper.
+The owner confirms the previous cartridge fits and has supplied new shell
+stations, but wants the complete revised FreeCAD assembly first. The new
+cell/contact/protection, smaller-flash footprint, USB and service interfaces
+must be represented together; the old wing manifest cannot certify them.
+
 **Next iteration:** the [two-face wing/cartridge handoff](electromechanical-wing-iteration.md)
 and [native wing placement](../hardware/handbell/iterations/wing-draft/README.md)
 record the separate 62F/11B candidate, mounting interfaces and current gates.
@@ -52,8 +59,8 @@ The feedback net is a sensing connection, not part of a high-current route.
 | Gate | Needed evidence |
 |---|---|
 | Board/carrier interface | Inert print fit, insertion/removal sequence, USB slot/load path, PCB support locations and usable service access |
-| Actual speaker | Owner measured D40/H19, D32 basket rear at z12 and D22/H7 magnet; intermediate basket/rim detail, terminals, wire exits, vent, excursion and tolerance remain open |
-| Battery | A real protected pack/cell with suitable current/charge ratings; model either its complete harness or PCB-contact/cradle envelope, reverse-insertion protection and service access; neither a rectangular dummy nor a bare-cylinder screen selects a battery |
+| Actual speaker | Owner measured D40/H19, D32 basket rear at z12 and now D21.70/H7 magnet; intermediate basket/rim detail, terminals, wire exits, vent, excursion and tolerance remain open |
+| Battery | Suitable current/charge ratings and reviewed protection, either on the cell or the instrument PCB; model complete contacts/capture/insulation, reverse-insertion handling and service access. The T8 candidate is unprotected, and boost protection alone does not satisfy this gate |
 | Boost parts | Exact inductor and capacitor MPNs, land patterns/heights, saturation/thermal current and effective capacitance; settle the C29 DNP/compensation decision |
 | Connectors | Mated body and cable-bend envelopes, polarity/retention/current ratings, and USB manufacturer land-pattern review |
 | Power policy | USB input budget, charge/play policy, low-cell cutoff/protection and startup/mute/brownout behavior |

@@ -32,10 +32,14 @@
   revision and its explicit remaining gates. MiniBoost's pinned
   divider is approximately 5 V despite 5.2 V prose; the 40 mm speaker has
   conflicting seller power ratings. Do not treat either as resolved by a title.
-- Keep the measured/assumed geometry distinction: the owner now specifies a
-  working linear taper D50 at z13 to D34 at z43. The lip interpolation remains
-  uncertain; the old z22 example is superseded. GPIO19 is stock EXTERNAL_BUTTON;
-  stock board.BUTTON is GPIO7. GPIO20 is active-high AMP_MUTE.
+- Keep measured geometry separate from assumptions. For new work use
+  `docs/measurements/2026-09-11-shell-speaker-inputs.json`: ID71.68 at z0,
+  ID69.75 at z4.9, ID50 at confirmed z14.9; OD38.42 at approximate z41.75.
+  Owner assumes a uniform 1.15 mm wall; upper ID36.12 is inferred, raw OD/ID
+  discrepancies remain unresolved, and curve/final-closure shapes are not
+  measured. The old z13/D50 to z43/D34 profile belongs to preserved studies.
+  GPIO19 is stock EXTERNAL_BUTTON; stock board.BUTTON is GPIO7.
+  GPIO20 is active-high AMP_MUTE.
 - The 43 mm placement has no routing. Do not overwrite it with the generator
   after manual changes. Preserve local KiCad 10 pad angles, source libraries
   and documented Q3/jumper corrections; do not silence USB clearance findings.
@@ -45,8 +49,9 @@
   speaker-facing electronics/handle-side cell alternative. PCB battery contacts
   may be through-hole or SMT with a capture cradle; no cell/holder is selected.
   Do not treat flipping the board as resolution of its speaker conflicts.
-- September 9 owner measurements supersede the old speaker gauge for new work:
-  D40/H19 overall, D32 basket rear at z12, D22/H7 magnet. Keep the original print
+- Owner speaker measurements supersede the old gauge for new work:
+  D40/H19 overall, D32 basket rear at z12, magnet H7 and September 11 D21.70
+  (superseding D22). Keep the original print
   files intact; use the separate measured-speaker study. The good PCBA print
   has no measured insertion depth, and unspecified flimsy parts are not yet
   identified failures. Do not invent tolerances, reinforced parts or holder fit.
@@ -60,6 +65,14 @@
   pieces do not include battery retention or shell attachment; D72 is an
   external flange, not a diameter to shrink to the D70 mouth. Preserve the
   required speaker-before-yoke-before-PCB sequence and recorded small gaps.
+- The September 11 T8 revision must remain separate from the wing/print
+  snapshots and consume its own exact placement manifest. Whole-cell
+  protection cannot be replaced by TPS61023-only protection. Distinguish raw
+  cell negative from protected GND for a low-side cutoff; insulate the cell
+  can, both contacts and hardware from the metal bell and avoid ground bypasses.
+  The 1-1.5 mm proud-plastic request is a design target, not qualified insulation.
+  New hardware, USB access and reversible service paths must appear together
+  in FreeCAD for owner review before routing. Read `docs/t8-integration-plan.md`.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use
