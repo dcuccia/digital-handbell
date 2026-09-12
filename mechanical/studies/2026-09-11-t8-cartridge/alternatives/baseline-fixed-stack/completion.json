@@ -1,0 +1,35 @@
+{
+  "token": "039b05c3335b48589cb31c46719627fb",
+  "input_hashes": {
+    "placement": "ddd9a1300ab76f6cf099f668c2ff3cbbf5fc1abd639c204314e22b760b665031",
+    "measurements": "824ede16efc2505efb80cd21c259b527bd8f2c2c1ef4a164992540410364255a",
+    "builder": "f3dd12ac254038f5962d3ba919741c3315812556e763bf74feefe8e1a7a866c6",
+    "helper": "c9ef5a33a86cd8f3635f6aa6171c2d84b6d7662f68bcb578d9cd9a43bdfb3aab",
+    "contact_interface": "1580ae48b2041ba34387e0c46c78ee6a006d8ece15614b9dc67e50c61a0160c9",
+    "electrical_pcb": "0d178c37c25cd04dd71e6999cb375189cceefea9933bc8e53dac7b2367717b63",
+    "electrical_schematic": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f"
+  },
+  "summary": {
+    "fitted_manifest_components": 83,
+    "explicit_contact_objects": 2,
+    "explicit_contact_brep_solids": 6,
+    "primary_printed_pieces": 4,
+    "structural_solid_counts": {
+      "body": 1,
+      "yoke": 1,
+      "cradle": 1,
+      "cover": 1
+    },
+    "nonintentional_material_intersections": 0,
+    "shell_conflicting_parts": [
+      "cradle",
+      "cover",
+      "contact_BT1",
+      "contact_BT2"
+    ],
+    "complete_cartridge_withdrawal_max_intersection_mm3": 138.3595114474925,
+    "live_cell_or_child_use_qualified": false,
+    "routing_approved": false
+  },
+  "artifact_manifest_sha256": "2beb635f4f1d802f4682b53c4f33069b929989095f22a7ef5634a9995767abd5"
+}

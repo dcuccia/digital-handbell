@@ -147,6 +147,63 @@ and a screw-clearance hole serve different purposes.
 
 ## Completion and routing sequence
 
+### Delivered placed-review assembly
+
+The [coordinated T8 study](../mechanical/studies/2026-09-11-t8-cartridge/README.md)
+contains the exact 83-part placement, full contact primitives, four structural
+pieces, speaker, provisional cell, fasteners and working shell. Open
+`mechanical\studies\2026-09-11-t8-cartridge\t8-cartridge.FCStd`.
+The complete model was also opened in FreeCAD 1.1.3 using a session-only view
+copy; the generated native file was not resaved or changed by that GUI review.
+The image below hides the external handle and makes the shell, cover and PCB
+partly transparent for internal visibility; it does not remove physical parts
+from the supplied assembly.
+
+![T8 cartridge review with transparent shell and capture](../mechanical/views/t8-cartridge-review.png)
+
+The current four pieces are the body/grille/register/USB bezel, speaker yoke,
+insulating battery cradle and removable cover. Six **M2x6 screws with M2 captive
+nuts** replace the former heat-set-insert placeholders. Two separate insulating
+shell screws attach the cartridge; remove these and unplug USB before pulling
+the whole cartridge through the mouth-open slot. Speaker insertion still
+precedes yoke and PCB installation.
+
+The full Keystone 254 contact/guard envelope, rather than the bare cell,
+requires the proposed **6.25 mm mouthward shift**. The speaker starts at z-6.25
+and the grille at z-10.75; the D75.5 flange is external. The model's nominal
+guard-to-shell gap is about 0.294 mm with a 1.0 mm plastic target. These are
+calculated values against an assumed/interpolated shell, not measured fit
+tolerances or an owner-approved exterior. The USB mouth is approximately
+0.045 mm outside the working wall at midheight only, not flush across its
+entire face.
+
+**The suggested 1 mm spacing reduction is not available unchanged.** In the
+current model the bare-board-to-magnet gap is 1.5 mm, but the tightest fitted
+parts leave only 0.5 mm. The separate sensitivity preserves component XY and
+heights and moves the front-side parts toward the fixed speaker:
+
+| PCB mouthward reduction | Speaker result | Unchanged-yoke result |
+|---|---|---|
+| 0.5 mm | D4, IC1, IC4, Q3 and Y1 touch with zero positive clearance | About 0.250 mm minimum gap; no material overlap |
+| 1.0 mm | 30 component proxies intersect the speaker | About 0.250 mm minimum gap; no material overlap |
+
+The [fit report](../mechanical/studies/2026-09-11-t8-cartridge/fit-report.json)
+retains the per-component results and expressly marks this comparison as
+**not applied** to the delivered geometry. Reclaiming that space would need a
+new placement or better supported component/speaker geometry, not simply
+shorter standoffs. It does not retrospectively contradict the owner's visual
+observation of open space elsewhere in the print.
+
+The native and full STEP retain both contacts. The inert PCBA STL explicitly
+omits them because the current folded-root approximation is not a valid
+manifold print mesh; it is not a spring/contact fit test. Exact cell/button
+dimensions, loaded contact shape/force, reverse insertion, insulation seams,
+thermal/charging policy, hardware strength, USB lands/tails and actual printed
+fit remain open. No live-cell use, physical shell modification, routing or
+fabrication is approved by this review artifact.
+
+### Remaining sequence
+
 1. Record the measurements and settle the working geometric interpretation.
 2. Implement the separate native schematic/placement with flash, cell-contact
    and compact protection changes; preserve unrelated connections and source

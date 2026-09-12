@@ -1,0 +1,207 @@
+{
+  "generated_utc": "2026-09-11T23:15:09.461209+00:00",
+  "units": "mm",
+  "input": {
+    "manifest_sha256": "ddd9a1300ab76f6cf099f668c2ff3cbbf5fc1abd639c204314e22b760b665031",
+    "interface_sha256": "1580ae48b2041ba34387e0c46c78ee6a006d8ece15614b9dc67e50c61a0160c9",
+    "native_sha256": "036dc890b7b37719446510fe3590de3f3f4070edc97a9d3aa7bddf721eafcf54",
+    "script_sha256": "f35008b224c6888a66f4bc56a55c386d6d9acbce2042593ae962da5f52937680",
+    "source": "Frozen baseline-fixed-stack snapshot, not mutable current output"
+  },
+  "method": "Test requested1.5/2 shifts, then two quarter-mm brackets from analytic limiting upper-contact corner. Not a blind optimizer. Whole stack translates rigidly; no cell/metal/relative-gap changes.",
+  "guard_clearance_assumption_mm": 0.1,
+  "desired_nominal_guard_shell_margin_mm": 0.25,
+  "cases": [
+    {
+      "whole_stack_mouthward_shift_mm": 1.5,
+      "plastic_wall_mm": 1.0,
+      "cell": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 1.4563666409848794
+      },
+      "contacts": [
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 0.20537879646814455
+        },
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 0.20537879646814394
+        }
+      ],
+      "complete_conservative_guard_stock": {
+        "shell_intersection_mm3": 27.475278684381976,
+        "shell_distance_mm": 0.0
+      }
+    },
+    {
+      "whole_stack_mouthward_shift_mm": 2.0,
+      "plastic_wall_mm": 1.0,
+      "cell": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 1.5814910368693091
+      },
+      "contacts": [
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 0.33050319235257736
+        },
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 0.3305031923525791
+        }
+      ],
+      "complete_conservative_guard_stock": {
+        "shell_intersection_mm3": 18.845148820814053,
+        "shell_distance_mm": 0.0
+      }
+    },
+    {
+      "whole_stack_mouthward_shift_mm": 6.0,
+      "plastic_wall_mm": 1.0,
+      "cell": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 2.5824862039447583
+      },
+      "contacts": [
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 1.3314983594280199
+        },
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 1.3314983594280214
+        }
+      ],
+      "complete_conservative_guard_stock": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 0.23149835942801988
+      }
+    },
+    {
+      "whole_stack_mouthward_shift_mm": 6.25,
+      "plastic_wall_mm": 1.0,
+      "cell": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 2.64504840188697
+      },
+      "contacts": [
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 1.394060557370236
+        },
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 1.3940605573702358
+        }
+      ],
+      "complete_conservative_guard_stock": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 0.29406055737023606
+      }
+    },
+    {
+      "whole_stack_mouthward_shift_mm": 1.5,
+      "plastic_wall_mm": 1.25,
+      "cell": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 1.4563666409848794
+      },
+      "contacts": [
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 0.20537879646814455
+        },
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 0.20537879646814394
+        }
+      ],
+      "complete_conservative_guard_stock": {
+        "shell_intersection_mm3": 57.0432865801186,
+        "shell_distance_mm": 0.0
+      }
+    },
+    {
+      "whole_stack_mouthward_shift_mm": 2.0,
+      "plastic_wall_mm": 1.25,
+      "cell": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 1.5814910368693091
+      },
+      "contacts": [
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 0.33050319235257736
+        },
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 0.3305031923525791
+        }
+      ],
+      "complete_conservative_guard_stock": {
+        "shell_intersection_mm3": 42.601514952773,
+        "shell_distance_mm": 0.0
+      }
+    },
+    {
+      "whole_stack_mouthward_shift_mm": 7.0,
+      "plastic_wall_mm": 1.25,
+      "cell": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 2.8327349957136216
+      },
+      "contacts": [
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 1.581747151196885
+        },
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 1.5817471511968866
+        }
+      ],
+      "complete_conservative_guard_stock": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 0.23174715119688052
+      }
+    },
+    {
+      "whole_stack_mouthward_shift_mm": 7.25,
+      "plastic_wall_mm": 1.25,
+      "cell": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 2.895297193655835
+      },
+      "contacts": [
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 1.6443093491390988
+        },
+        {
+          "shell_intersection_mm3": 0,
+          "shell_distance_mm": 1.6443093491391008
+        }
+      ],
+      "complete_conservative_guard_stock": {
+        "shell_intersection_mm3": 0,
+        "shell_distance_mm": 0.29430934913909573
+      }
+    }
+  ],
+  "qualifications": "No contact-force, positive-ear/can insulation, print-tolerance or live-cell approval.",
+  "analytic_brackets": [
+    {
+      "wall_mm": 1.0,
+      "limiting_corner_radius_mm": 19.026508481589573,
+      "analytic_shift_for_margin_mm": 6.073932986613839,
+      "quarter_mm_candidate": 6.25
+    },
+    {
+      "wall_mm": 1.25,
+      "limiting_corner_radius_mm": 19.026508481589573,
+      "analytic_shift_for_margin_mm": 7.072938808911309,
+      "quarter_mm_candidate": 7.25
+    }
+  ]
+}

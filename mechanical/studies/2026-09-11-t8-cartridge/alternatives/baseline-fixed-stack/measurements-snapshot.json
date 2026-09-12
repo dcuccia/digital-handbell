@@ -1,0 +1,140 @@
+{
+  "recorded_on": "2026-09-11",
+  "units": "mm",
+  "source": "Owner caliper measurements and same-conversation clarifications",
+  "status": "Measured stations plus explicitly separate working CAD assumptions; not manufacturing tolerances",
+  "datum": "Bell mouth/front face is z=0; positive z points toward the handle",
+  "raw_shell_measurements": {
+    "mouth": {
+      "z_mm": 0.0,
+      "outside_diameter_mm": 73.15,
+      "inside_diameter_mm": 71.68
+    },
+    "first_taper_start": {
+      "z_mm": 4.9,
+      "outside_diameter_mm": 73.15,
+      "inside_diameter_mm": 69.75
+    },
+    "first_concave_taper": {
+      "axial_travel_mm": 10.0,
+      "start_z_mm": 4.9,
+      "end_z_mm": 14.9,
+      "end_z_confirmed_by_owner": true,
+      "end_outside_diameter_mm": 51.5,
+      "end_inside_diameter_mm": 50.0,
+      "end_diameters_described_as": "rough",
+      "intermediate_curve_points_measured": false
+    },
+    "final_taper_start": {
+      "z_mm": 41.75,
+      "z_described_as": "approximately",
+      "outside_diameter_mm": 38.42,
+      "inside_diameter_mm": null
+    },
+    "overall_height_mm": 45.55,
+    "direct_lip_wall_thickness_mm": 1.15,
+    "measurement_uncertainty_mm": null,
+    "sample_count": null,
+    "roundness_or_diameter_direction_measured": false,
+    "handle": {
+      "height_mm": 85.5,
+      "outside_diameter_at_bell_mm": 18.52,
+      "outside_diameter_at_top_mm": 15.01,
+      "internal_space_verified": false,
+      "attachment_intrusion_measured": false
+    }
+  },
+  "owner_clarifications": [
+    {
+      "topic": "First concave taper datum",
+      "answer": "The 50 mm ID station is z=14.90 mm, following 4.90 mm plus 10.00 mm axial travel."
+    },
+    {
+      "topic": "Upper taper and wall thickness",
+      "exact_answer": "41.75, approximately. let's assume the wall thickness is 1.15mm uniformly, as that's what i measure at the outside lip directly"
+    },
+    {
+      "topic": "Magnet identity",
+      "answer": "The 21.70 mm measurement is the speaker magnet, not a battery magnet."
+    }
+  ],
+  "derived_quantities_not_additional_measurements": {
+    "half_od_minus_id_at_mouth_mm": 0.735,
+    "half_od_minus_id_at_z4_9_mm": 1.7,
+    "half_od_minus_id_at_z14_9_mm": 0.75,
+    "inferred_inside_diameter_at_z41_75_mm": 36.12,
+    "inferred_inside_diameter_formula": "38.42 - 2 * 1.15",
+    "note": "The paired diameters and direct lip-thickness reading do not define a consistent uniform shell. Preserve all raw observations rather than silently correcting one to agree with another. OD/ID differences are apparent radial thicknesses, not a measurement of thickness normal to a curved wall."
+  },
+  "working_cad_profile": {
+    "uniform_wall_thickness_mm": 1.15,
+    "uniform_wall_thickness_status": "Explicit owner-requested working assumption",
+    "inside_stations": [
+      {
+        "z_mm": 0.0,
+        "diameter_mm": 71.68,
+        "basis": "Owner-measured ID"
+      },
+      {
+        "z_mm": 4.9,
+        "diameter_mm": 69.75,
+        "basis": "Owner-measured ID"
+      },
+      {
+        "z_mm": 14.9,
+        "diameter_mm": 50.0,
+        "basis": "Owner-measured rough ID; axial station explicitly confirmed"
+      },
+      {
+        "z_mm": 41.75,
+        "diameter_mm": 36.12,
+        "basis": "Inferred from measured OD and assumed uniform wall; axial station approximate"
+      }
+    ],
+    "outer_profile_rule": "Use a documented 1.15 mm working wall around the selected inside profile; resulting model OD need not equal every conflicting raw OD. CAD must state whether the wall is a radial offset or a normal-thickness construction.",
+    "interpolation_between_stations": "A CAD interpolation, not measured curvature",
+    "final_taper_41_75_to_45_55": "Shape and handle attachment intrusion are not measured; any rendered closure is provisional",
+    "supersedes_for_new_work": "The earlier assumed D50 at z13 to D34 at z43 profile",
+    "preserve_previous_models": true
+  },
+  "speaker_measurements": {
+    "frame_diameter_mm": 40.0,
+    "front_to_magnet_rear_mm": 19.0,
+    "basket_rear_z_from_speaker_front_mm": 12.0,
+    "basket_rear_diameter_mm": 32.0,
+    "magnet_height_mm": 7.0,
+    "magnet_diameter_mm": 21.7,
+    "magnet_diameter_recorded_on": "2026-09-11",
+    "other_dimensions_recorded_on": "2026-09-09",
+    "superseded_magnet_diameter_mm": 22.0,
+    "magnet_identity_confirmed_by_owner": true,
+    "measurement_uncertainty_mm": null,
+    "front_rim_bearing_thickness_mm": null,
+    "intermediate_basket_profile_measured": false,
+    "terminal_wire_and_vent_envelopes_measured": false
+  },
+  "print_feedback": {
+    "tested_revision": "September 9 wing-placement/integrated-cartridge print iteration",
+    "owner_report": "New design fits inside the bell; seems a little small radially.",
+    "numeric_installed_clearance_mm": null,
+    "numeric_insertion_depth_mm": null,
+    "loaded_battery_fit_confirmed": false,
+    "speaker_capture_feedback": "Opening around the magnet could be smaller/tighter.",
+    "fastener_feedback": "Printed PCB/capture holes did not accommodate presumed M3 screws; owner asked whether smaller screws and heat-set inserts were intended.",
+    "prior_hardware_contract": "M2 screws; 2.2 mm PCB clearance drills; D3 x L4 insert envelopes were unqualified placeholders, not M3 receptacles.",
+    "note": "Physical fit feedback does not establish retention strength, live-cell insulation, temperature behavior or finished-PCBA fit."
+  },
+  "new_design_requests": {
+    "cell_candidate": "Vapcell T8 16340 button top, provisional D16.4 x L34.0 mm from seller",
+    "cell_dimensions_measured_by_owner": false,
+    "battery_retention": "PCB contacts with captive insulating plastic structure, wire-free if feasible",
+    "plastic_proud_of_conductive_parts_target_mm": [1.0, 1.5],
+    "insulation_note": "This is a design target, not measured clearance or a safety rating. Include the negative cell can, both end contacts, fasteners, USB shell, side directions and insertion/service motion; highest-z clearance alone is insufficient.",
+    "protection": "Compact whole-cell protection revision; boost-only protection is not a substitute",
+    "flash": "W25Q16JVUXIQ TR, 2 MB, new USON-8 2 x 3 mm footprint",
+    "usb": "Prefer maximum supported connector protrusion, ideally flush with the working outside shell, plus a supported insulated port and feasible removal path",
+    "service": "Define shell attachment and reversible cartridge removal before routing",
+    "routing": "Show complete placed FreeCAD assembly to owner before committing to routing"
+  },
+  "related_epics": [1, 4, 5, 7, 10]
+}

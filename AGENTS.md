@@ -73,6 +73,13 @@
   The 1-1.5 mm proud-plastic request is a design target, not qualified insulation.
   New hardware, USB access and reversible service paths must appear together
   in FreeCAD for owner review before routing. Read `docs/t8-integration-plan.md`.
+- The separate T8 cartridge uses the exact 83-part T8 manifest, four printed
+  pieces and M2x6 captive-nut joints. Its 6.25 mm mouthward stack shift and
+  10.75 mm grille projection are review alternatives, not an approved exterior.
+  Use `build_t8_cartridge.py` / `check_t8_cartridge.py`; preserve the fixed-stack
+  evidence. Full contacts stay in native/STEP; the inert PCBA STL explicitly
+  omits BT1/BT2. The owner's approximate 1 mm spacing observation is not a
+  measured clearance or permission to reduce component heights.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use

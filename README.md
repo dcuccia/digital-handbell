@@ -33,6 +33,13 @@ and [electrical handoff](docs/t8-electrical-revision.md) explain the protected
 return, sourcing and current/charging limits. It remains unrouted and does not
 approve live-cell operation.
 
+The coordinated [T8 cartridge review model](mechanical/studies/2026-09-11-t8-cartridge/README.md)
+adds a four-piece body/yoke/cradle/cover, M2 captive-nut hardware, insulating
+shell attachment and a mouth-open USB service slot. Its current contact/guard
+geometry requires a **6.25 mm mouthward stack shift**, putting the grille
+10.75 mm outside the mouth. This is a review alternative, not an approved
+final exterior or permission to route. Earlier print files remain unchanged.
+
 **Preserved September 9 placement/fit draft:** the [two-face wing placement](hardware/handbell/iterations/wing-draft/README.md)
 keeps a central battery/contact reservation, moves the boost and amplifier
 blocks to rear wings, and adds two GND-assigned M2 mounting holes. The
@@ -82,9 +89,10 @@ assembled cost and final electrical decisions remain evidence gates.
 | [Compact power and packaging review](docs/compact-power-and-packaging.md) | Approved next revision, boost/cell/mute review, speaker-rating conflict and fit constraints |
 | [0.2 reduction and placement](docs/electrical-reduction-and-placement.md) | Implemented circuits, 43 mm candidate, service map and open routing/DFM gates |
 | [Mechanical feasibility](docs/mechanical-feasibility.md) | Editable FreeCAD, STEP/STL, assumed shell profile and cartridge interference findings |
-| [Wing/cartridge iteration](docs/electromechanical-wing-iteration.md) | Latest two-face placement, two-piece fit models, mounting interfaces and JLC assembly-tier findings |
+| [Wing/cartridge iteration](docs/electromechanical-wing-iteration.md) | Preserved September 9 placement, two-piece fit models and JLC assembly-tier findings |
 | [Measured-shell T8 integration](docs/t8-integration-plan.md) | September 11 measurements, compact protection/contact/capture revision and owner review before routing |
 | [T8 electrical revision](docs/t8-electrical-revision.md) | Actual 2 MB flash lands, protected battery return, pin map, current tradeoffs and remaining gates |
+| [T8 cartridge model](mechanical/studies/2026-09-11-t8-cartridge/README.md) | Complete placed FreeCAD/STEP assembly, four inert structural prints, M2 service sequence and explicit fit limitations |
 | [Routing readiness](docs/routing-readiness.md) | Print-fit checkpoint, electrical floorplanning gates and the path to reviewed Gerbers/BOM/CPL |
 | [Validation plan](docs/validation-plan.md) | Measurements and evidence required before each hardware release |
 | [Decision log](docs/decisions.md) | Provisional decisions and the evidence needed to close them |

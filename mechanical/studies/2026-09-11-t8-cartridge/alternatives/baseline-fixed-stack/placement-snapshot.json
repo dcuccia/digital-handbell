@@ -1,0 +1,2698 @@
+{
+  "schema_version": 2,
+  "units": "mm",
+  "status": "T8 native placed engineering draft; no routing/live-cell/fabrication approval",
+  "board": {
+    "diameter_mm": 43.0,
+    "thickness_mm": 1.6,
+    "front_z_mm": 20.5,
+    "front_face": "speaker",
+    "component_face": "mixed",
+    "outline_common_xy_mm": [
+      [
+        21.37662274541982,
+        2.3
+      ],
+      [
+        21.283510285243196,
+        3.0433846187997884
+      ],
+      [
+        21.164554158825062,
+        3.783073784392906
+      ],
+      [
+        21.019898809557848,
+        4.518169323514612
+      ],
+      [
+        20.84971988631322,
+        5.2477786407464775
+      ],
+      [
+        20.65422403015906,
+        5.971015802357247
+      ],
+      [
+        20.433648623443972,
+        6.687002612054688
+      ],
+      [
+        20.188261501553935,
+        7.394869677342214
+      ],
+      [
+        19.918360627691115,
+        8.093757465185396
+      ],
+      [
+        19.62427373106978,
+        8.78281734570659
+      ],
+      [
+        19.30635790896854,
+        9.461212622640286
+      ],
+      [
+        18.964999193122257,
+        10.12811954929799
+      ],
+      [
+        18.60061208098002,
+        10.782728328808995
+      ],
+      [
+        18.21363903239844,
+        11.424244097422465
+      ],
+      [
+        17.80454993238135,
+        12.051887889676841
+      ],
+      [
+        17.373841520518326,
+        12.664897584264684
+      ],
+      [
+        16.92203678781482,
+        13.262528829444323
+      ],
+      [
+        16.449684341646304,
+        13.844055946874686
+      ],
+      [
+        15.957357739607525,
+        14.408772812775824
+      ],
+      [
+        15.445654793065811,
+        14.955993715345135
+      ],
+      [
+        14.915196841263969,
+        15.485054187388215
+      ],
+      [
+        14.366627996854376,
+        15.995311813153254
+      ],
+      [
+        13.800614363780193,
+        16.486147008389313
+      ],
+      [
+        13.217843228453548,
+        16.956963772681263
+      ],
+      [
+        12.6190222252127,
+        17.40719041314789
+      ],
+      [
+        12.004878477071603,
+        17.836280238624393
+      ],
+      [
+        11.376157712805188,
+        18.243712223486288
+      ],
+      [
+        10.733623361442458,
+        18.628991640308843
+      ],
+      [
+        10.078055625266906,
+        18.99165066059362
+      ],
+      [
+        9.41025053244989,
+        19.33124892283286
+      ],
+      [
+        8.731018970467302,
+        19.64737406722181
+      ],
+      [
+        8.041185701473175,
+        19.939642236369824
+      ],
+      [
+        7.341588360825938,
+        20.207698541402113
+      ],
+      [
+        6.633076439983192,
+        20.451217492886332
+      ],
+      [
+        5.916510255000186,
+        20.6699033960606
+      ],
+      [
+        5.192759901884408,
+        20.863490709883173
+      ],
+      [
+        4.462704200074827,
+        21.031744369467656
+      ],
+      [
+        3.7272296253286097,
+        21.174460071512396
+      ],
+      [
+        2.987229233311115,
+        21.291464522377307
+      ],
+      [
+        2.2436015751961573,
+        21.38261564850702
+      ],
+      [
+        1.497249606593352,
+        21.447802768944797
+      ],
+      [
+        0.7490795911273015,
+        21.486946729727716
+      ],
+      [
+        -3.4574636968047687e-15,
+        21.5
+      ],
+      [
+        -0.7490795911273038,
+        21.486946729727716
+      ],
+      [
+        -1.4972496065933636,
+        21.447802768944797
+      ],
+      [
+        -2.243601575196169,
+        21.38261564850702
+      ],
+      [
+        -2.987229233311127,
+        21.291464522377304
+      ],
+      [
+        -3.7272296253286212,
+        21.174460071512392
+      ],
+      [
+        -4.462704200074834,
+        21.031744369467656
+      ],
+      [
+        -5.1927599018844095,
+        20.863490709883173
+      ],
+      [
+        -5.916510255000189,
+        20.6699033960606
+      ],
+      [
+        -6.633076439983198,
+        20.45121749288633
+      ],
+      [
+        -7.341588360825945,
+        20.207698541402113
+      ],
+      [
+        -8.041185701473179,
+        19.939642236369824
+      ],
+      [
+        -8.731018970467302,
+        19.647374067221808
+      ],
+      [
+        -9.410250532449897,
+        19.331248922832856
+      ],
+      [
+        -10.078055625266908,
+        18.991650660593617
+      ],
+      [
+        -10.733623361442454,
+        18.628991640308843
+      ],
+      [
+        -11.376157712805188,
+        18.243712223486288
+      ],
+      [
+        -12.004878477071601,
+        17.836280238624393
+      ],
+      [
+        -12.619022225212698,
+        17.407190413147895
+      ],
+      [
+        -13.217843228453551,
+        16.956963772681256
+      ],
+      [
+        -13.800614363780195,
+        16.48614700838931
+      ],
+      [
+        -14.366627996854373,
+        15.995311813153256
+      ],
+      [
+        -14.91519684126397,
+        15.485054187388213
+      ],
+      [
+        -15.445654793065808,
+        14.955993715345137
+      ],
+      [
+        -15.957357739607533,
+        14.408772812775819
+      ],
+      [
+        -16.449684341646307,
+        13.844055946874686
+      ],
+      [
+        -16.92203678781482,
+        13.262528829444326
+      ],
+      [
+        -17.37384152051833,
+        12.664897584264681
+      ],
+      [
+        -17.80454993238135,
+        12.051887889676841
+      ],
+      [
+        -18.213639032398444,
+        11.424244097422458
+      ],
+      [
+        -18.600612080980024,
+        10.782728328808993
+      ],
+      [
+        -18.964999193122257,
+        10.128119549297988
+      ],
+      [
+        -19.306357908968543,
+        9.461212622640277
+      ],
+      [
+        -19.62427373106978,
+        8.782817345706588
+      ],
+      [
+        -19.918360627691115,
+        8.093757465185398
+      ],
+      [
+        -20.188261501553935,
+        7.394869677342208
+      ],
+      [
+        -20.433648623443972,
+        6.6870026120546875
+      ],
+      [
+        -20.654224030159064,
+        5.971015802357237
+      ],
+      [
+        -20.849719886313224,
+        5.247778640746472
+      ],
+      [
+        -21.019898809557848,
+        4.518169323514609
+      ],
+      [
+        -21.16455415882506,
+        3.7830737843929074
+      ],
+      [
+        -21.283510285243196,
+        3.0433846187997933
+      ],
+      [
+        -21.37662274541982,
+        2.299999999999999
+      ],
+      [
+        -22.25,
+        2.3
+      ],
+      [
+        -22.25,
+        -2.3
+      ],
+      [
+        -21.37662274541982,
+        -2.2999999999999936
+      ],
+      [
+        -21.285834534675207,
+        -3.02708575405922
+      ],
+      [
+        -21.170323157839146,
+        -3.750655595047302
+      ],
+      [
+        -21.030222779581113,
+        -4.469869107836124
+      ],
+      [
+        -20.8656961243137,
+        -5.183890937105089
+      ],
+      [
+        -20.67693428719073,
+        -5.891891757593345
+      ],
+      [
+        -20.464156512153206,
+        -6.593049237348187
+      ],
+      [
+        -20.22760993728088,
+        -7.28654899285085
+      ],
+      [
+        -19.967569307745215,
+        -7.971585534910306
+      ],
+      [
+        -19.684336656697134,
+        -8.647363204226448
+      ],
+      [
+        -19.378240954460207,
+        -9.313097095536005
+      ],
+      [
+        -19.04963772643674,
+        -9.968013969267806
+      ],
+      [
+        -18.69890864017053,
+        -10.611353149648538
+      ],
+      [
+        -18.326461062045958,
+        -11.242367408215825
+      ],
+      [
+        -17.932727584138252,
+        -11.860323831712483
+      ],
+      [
+        -17.518165521764512,
+        -12.464504673353899
+      ],
+      [
+        -17.083256382319092,
+        -13.054208186479714
+      ],
+      [
+        -16.628505306010226,
+        -13.628749439621735
+      ],
+      [
+        -16.154440479147514,
+        -14.187461112041161
+      ],
+      [
+        -15.661612520661762,
+        -14.72969426881124
+      ],
+      [
+        -15.15059384256962,
+        -15.254819114545132
+      ],
+      [
+        -14.621977985125934,
+        -15.762225724893439
+      ],
+      [
+        -14.07637892743596,
+        -16.251324754961882
+      ],
+      [
+        -13.51443037432816,
+        -16.721548123826228
+      ],
+      [
+        -12.936785020315913,
+        -17.172349674349455
+      ],
+      [
+        -12.344113791502954,
+        -17.60320580753479
+      ],
+      [
+        -11.737105066313148,
+        -18.0136160906778
+      ],
+      [
+        -11.116463875949634,
+        -18.403103838611216
+      ],
+      [
+        -10.482911085512042,
+        -18.771216667367323
+      ],
+      [
+        -9.83718255672288,
+        -19.117527019614936
+      ],
+      [
+        -9.180028293235575,
+        -19.441632661260584
+      ],
+      [
+        -8.512211569516882,
+        -19.74315714863717
+      ],
+      [
+        -7.8345080443154504,
+        -20.02175026573742
+      ],
+      [
+        -7.147704859746241,
+        -20.277088430984364
+      ],
+      [
+        -6.45259972703719,
+        -20.50887507306628
+      ],
+      [
+        -5.750000000000002,
+        -20.7168409753997
+      ],
+      [
+        -5.75,
+        -24.1
+      ],
+      [
+        5.75,
+        -24.1
+      ],
+      [
+        5.749999999999995,
+        -20.716840975399702
+      ],
+      [
+        6.452599727037183,
+        -20.508875073066285
+      ],
+      [
+        7.147704859746234,
+        -20.277088430984367
+      ],
+      [
+        7.834508044315443,
+        -20.021750265737424
+      ],
+      [
+        8.512211569516873,
+        -19.743157148637174
+      ],
+      [
+        9.180028293235567,
+        -19.441632661260588
+      ],
+      [
+        9.837182556722873,
+        -19.117527019614936
+      ],
+      [
+        10.482911085512034,
+        -18.771216667367327
+      ],
+      [
+        11.116463875949627,
+        -18.40310383861122
+      ],
+      [
+        11.737105066313141,
+        -18.013616090677807
+      ],
+      [
+        12.344113791502947,
+        -17.603205807534795
+      ],
+      [
+        12.936785020315906,
+        -17.17234967434946
+      ],
+      [
+        13.514430374328155,
+        -16.72154812382623
+      ],
+      [
+        14.076378927435952,
+        -16.25132475496189
+      ],
+      [
+        14.621977985125929,
+        -15.762225724893444
+      ],
+      [
+        15.150593842569613,
+        -15.254819114545137
+      ],
+      [
+        15.661612520661755,
+        -14.729694268811247
+      ],
+      [
+        16.15444047914751,
+        -14.187461112041166
+      ],
+      [
+        16.62850530601022,
+        -13.628749439621743
+      ],
+      [
+        17.08325638231909,
+        -13.05420818647972
+      ],
+      [
+        17.518165521764505,
+        -12.464504673353906
+      ],
+      [
+        17.93272758413824,
+        -11.860323831712497
+      ],
+      [
+        18.326461062045947,
+        -11.24236740821584
+      ],
+      [
+        18.69890864017052,
+        -10.611353149648554
+      ],
+      [
+        19.04963772643673,
+        -9.968013969267822
+      ],
+      [
+        19.3782409544602,
+        -9.31309709553602
+      ],
+      [
+        19.684336656697127,
+        -8.647363204226464
+      ],
+      [
+        19.967569307745208,
+        -7.971585534910322
+      ],
+      [
+        20.227609937280874,
+        -7.286548992850867
+      ],
+      [
+        20.464156512153203,
+        -6.593049237348204
+      ],
+      [
+        20.676934287190726,
+        -5.891891757593362
+      ],
+      [
+        20.865696124313693,
+        -5.183890937105106
+      ],
+      [
+        21.030222779581106,
+        -4.469869107836141
+      ],
+      [
+        21.170323157839142,
+        -3.750655595047319
+      ],
+      [
+        21.285834534675203,
+        -3.0270857540592373
+      ],
+      [
+        21.37662274541982,
+        -2.300000000000011
+      ],
+      [
+        22.25,
+        -2.3
+      ],
+      [
+        22.25,
+        2.3
+      ]
+    ],
+    "outline_note": "D43 body with original local contact-pad support tabs and supported USB tongue; polygonized circle segments <=0.75mm.",
+    "contact_tabs": {
+      "outer_x_mm": 22.25,
+      "half_width_y_mm": 2.3
+    },
+    "usb_tongue": {
+      "half_width_x_mm": 5.75,
+      "outer_y_mm": -24.1
+    }
+  },
+  "coordinate_convention": "Exact wing convention: common centered assembly XY; mathematical rotation=-native KiCad rotation. F speaker/B handle. Native origin100,100.",
+  "generated_pcb_sha256": "0d178c37c25cd04dd71e6999cb375189cceefea9933bc8e53dac7b2367717b63",
+  "schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+  "baseline_pcb_sha256": "b436dec367f4289ed5cbe96cb69e69b1f291684f86304a8baccf361dbe1891c4",
+  "baseline_schematic_sha256": "6bc7b028174050af8d85c2485d31b7d34fd6230401a4e9a34f2dbcf11fa0dd5e",
+  "source_baseline": "hardware\\handbell\\iterations\\wing-draft",
+  "components": [
+    {
+      "reference": "BT1",
+      "value": "Keystone 254 POS",
+      "mpn": "254",
+      "footprint": "T8:Keystone_254_RevC",
+      "x_mm": 11.625,
+      "y_mm": 0,
+      "width_mm": 20.25,
+      "depth_mm": 17.0,
+      "height_mm": 16.59,
+      "rotation_deg": 0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 38.69,
+      "height_source": "254 drawing nominal; loaded geometry remains gate",
+      "proxy_kind": "dimensioned_contact_primitives",
+      "geometry_interface": "battery-contact-interface.json",
+      "requires_shell_cutout": false,
+      "cluster": "contact",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "BT2",
+      "value": "Keystone 254 NEG",
+      "mpn": "254",
+      "footprint": "T8:Keystone_254_RevC",
+      "x_mm": -11.625,
+      "y_mm": 0,
+      "width_mm": 20.25,
+      "depth_mm": 17.0,
+      "height_mm": 16.59,
+      "rotation_deg": -180,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 38.69,
+      "height_source": "254 drawing nominal; loaded geometry remains gate",
+      "proxy_kind": "dimensioned_contact_primitives",
+      "geometry_interface": "battery-contact-interface.json",
+      "requires_shell_cutout": false,
+      "cluster": "contact",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C1",
+      "value": "10uF/16V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "x_mm": -5.819979472476282,
+      "y_mm": -12.535117781725628,
+      "width_mm": 3.1399999999999997,
+      "depth_mm": 1.5,
+      "height_mm": 2.0,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 18.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C2",
+      "value": "22pF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -7.49140435918114,
+      "y_mm": -0.20821410138604426,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        -0.3475067346770615,
+        -0.06864416519797123
+      ]
+    },
+    {
+      "reference": "C3",
+      "value": "22pF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -7.49134576001491,
+      "y_mm": 1.91402689872797,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        -0.25854813551080724,
+        0.021596834916032037
+      ]
+    },
+    {
+      "reference": "C4",
+      "value": "10uF/16V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "x_mm": -13.40489585066286,
+      "y_mm": -5.309687160140248,
+      "width_mm": 3.1399999999999997,
+      "depth_mm": 1.5,
+      "height_mm": 2.0,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 18.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C5",
+      "value": "10uF/16V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "x_mm": -11.417907322916909,
+      "y_mm": -10.812875946116476,
+      "width_mm": 3.1399999999999997,
+      "depth_mm": 1.5,
+      "height_mm": 2.0,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 18.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C6",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 8.689622354698768,
+      "y_mm": -0.18245119265868878,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        -0.01608002079713966,
+        -0.423881256470616
+      ]
+    },
+    {
+      "reference": "C7",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 8.460428674671865,
+      "y_mm": 2.217699133763336,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.008726299175948249,
+        -0.11923093004859142
+      ]
+    },
+    {
+      "reference": "C8",
+      "value": "1uF/25V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 8.463328867512827,
+      "y_mm": 3.418004124930473,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -0.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.011626492016910461,
+        0.1920740611185483
+      ]
+    },
+    {
+      "reference": "C9",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -5.7657690166990365,
+      "y_mm": 3.036206288068109,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.006528607805037723,
+        0.06427622425617541
+      ]
+    },
+    {
+      "reference": "C10",
+      "value": "1uF/25V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 3.0597343937547063,
+      "y_mm": -7.5635736292242335,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        -0.129173981741193,
+        -0.0022076930361540903
+      ]
+    },
+    {
+      "reference": "C11",
+      "value": "1uF/25V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -7.169297624504098,
+      "y_mm": 6.972430063811933,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "reference": "C12",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 3.059361371674209,
+      "y_mm": -6.228689148710615,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        -0.1218410038217057,
+        0.0068807874774510225
+      ]
+    },
+    {
+      "reference": "C13",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 7.694268108621919,
+      "y_mm": 4.61809858999006,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -0.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.0680657331260095,
+        0.5031685261781291
+      ]
+    },
+    {
+      "reference": "C14",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -2.832031902044347,
+      "y_mm": 1.4423436541909973,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.27326572245972924,
+        0.3119135903790604
+      ]
+    },
+    {
+      "reference": "C15",
+      "value": "1uF/25V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -2.4087040394840513,
+      "y_mm": -1.4169492338241125,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        -0.0019064149799739027,
+        -0.007379297636044613
+      ]
+    },
+    {
+      "reference": "C16",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 10.584753581437928,
+      "y_mm": -15.261327969747331,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 22.75,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "amp-local-bypass",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C17",
+      "value": "1uF/25V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 8.39097433140491,
+      "y_mm": 1.0175935067449355,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -0.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.0027719559089991463,
+        -0.11283655706700224
+      ]
+    },
+    {
+      "reference": "C18",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -2.8331310078491625,
+      "y_mm": 2.6443130446826357,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -0.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.2721666166549137,
+        0.6248829808707046
+      ]
+    },
+    {
+      "reference": "C19",
+      "value": "10uF/16V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "x_mm": 7.434753581437887,
+      "y_mm": -15.811327969747364,
+      "width_mm": 3.1399999999999997,
+      "depth_mm": 1.5,
+      "height_mm": 2.0,
+      "rotation_deg": 0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 24.1,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "amp-local-bypass",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C20",
+      "value": "10uF/16V",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "x_mm": -2.3103050229969826,
+      "y_mm": 15.99589117827857,
+      "width_mm": 3.1399999999999997,
+      "depth_mm": 1.5,
+      "height_mm": 2.0,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 18.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C21",
+      "value": "220pF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 14.791365977815698,
+      "y_mm": -9.715066922425116,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C22",
+      "value": "220pF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 13.080782520627555,
+      "y_mm": -7.435522214413735,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C23",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -10.654586571661879,
+      "y_mm": 0.6955739222246476,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C24",
+      "value": "0.1uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -19.009646966353706,
+      "y_mm": -1.7471028168524134,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C25",
+      "value": "10nF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 5.624694864743649,
+      "y_mm": 9.474633614043851,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C26",
+      "value": "22uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "x_mm": -5.867351136462827,
+      "y_mm": 11.000738954606266,
+      "width_mm": 3.1399999999999997,
+      "depth_mm": 1.5,
+      "height_mm": 2.0,
+      "rotation_deg": -0.0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 24.1,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "boost-source",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C27",
+      "value": "22uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "x_mm": -0.7873511364628221,
+      "y_mm": 12.905738954606267,
+      "width_mm": 3.1399999999999997,
+      "depth_mm": 1.5,
+      "height_mm": 2.0,
+      "rotation_deg": -180.0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 24.1,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "boost-source",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C28",
+      "value": "22uF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "x_mm": -0.7873511364628221,
+      "y_mm": 11.026138954606267,
+      "width_mm": 3.1399999999999997,
+      "depth_mm": 1.5,
+      "height_mm": 2.0,
+      "rotation_deg": -180.0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 24.1,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "boost-source",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "C30",
+      "value": "100n 16V X7R",
+      "mpn": "GRM155R71C104KA88D",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -11.596466456519815,
+      "y_mm": 5.550217008344768,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "protection",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "CHG0",
+      "value": "ORANGE",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:CHIPLED_0603_NOOUTLINE",
+      "x_mm": 6.197162590548922,
+      "y_mm": 11.285293496233479,
+      "width_mm": 0.9,
+      "depth_mm": 2.3,
+      "height_mm": 1.0,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "D3",
+      "value": "1N4148",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323_MINI",
+      "x_mm": -13.304174904617032,
+      "y_mm": 13.644105172300915,
+      "width_mm": 3.04,
+      "depth_mm": 1.4,
+      "height_mm": 1.1,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 19.4,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "D4",
+      "value": "PMEG2020AEA",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323F",
+      "x_mm": -7.822392118282123,
+      "y_mm": -9.43244890084208,
+      "width_mm": 3.0,
+      "depth_mm": 1.3,
+      "height_mm": 1.0,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "FB1",
+      "value": "Ferrite",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0603-NO",
+      "x_mm": 11.830722307826745,
+      "y_mm": -3.330769516838968,
+      "width_mm": 2.775,
+      "depth_mm": 1.0,
+      "height_mm": 1.0,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "FB2",
+      "value": "Ferrite",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0603-NO",
+      "x_mm": 11.798118748705582,
+      "y_mm": -6.085109980157923,
+      "width_mm": 2.775,
+      "depth_mm": 1.0,
+      "height_mm": 1.0,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "IC1",
+      "value": "RP2040_QFN56",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:QFN56_7MM_REDUCEDEPAD",
+      "x_mm": 2.455939875495904,
+      "y_mm": 1.2206925638119317,
+      "width_mm": 7.8484750000000005,
+      "depth_mm": 7.8484750000000005,
+      "height_mm": 1.0,
+      "rotation_deg": -270.0,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "reference": "IC4",
+      "value": "LSM6DSOXTR",
+      "mpn": "",
+      "footprint": "Adafruit_LSM6DSOX-import-fps:LGA-14L",
+      "x_mm": -9.924163167355442,
+      "y_mm": -5.767241066649348,
+      "width_mm": 3.302,
+      "depth_mm": 2.794,
+      "height_mm": 1.0,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "J1",
+      "value": "504050-0291",
+      "mpn": "504050-0291",
+      "footprint": "Connector_Molex:Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal",
+      "x_mm": 16.452206440174177,
+      "y_mm": -0.7426416624376491,
+      "width_mm": 7.96,
+      "depth_mm": 6.72,
+      "height_mm": 3.1,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 17.4,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "J2",
+      "value": "SM02B-SRSS-TB",
+      "mpn": "SM02B-SRSS-TB",
+      "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+      "x_mm": 13.498886656976758,
+      "y_mm": 8.160291648878582,
+      "width_mm": 4.8,
+      "depth_mm": 6.25,
+      "height_mm": 3.1,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 17.4,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "L0",
+      "value": "RED",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:CHIPLED_0603_NOOUTLINE",
+      "x_mm": -16.649047041690537,
+      "y_mm": -5.608927319659872,
+      "width_mm": 0.9,
+      "depth_mm": 2.3,
+      "height_mm": 1.0,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "L1",
+      "value": "1uH (MPN pending)",
+      "mpn": "",
+      "footprint": "Adafruit TPS61023-import-fps:INDUCTOR_5X5MM_TDK_VLC5045",
+      "x_mm": -5.359351136462838,
+      "y_mm": 15.064738954606227,
+      "width_mm": 5.7,
+      "depth_mm": 5.5,
+      "height_mm": 5.0,
+      "rotation_deg": -90.0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 27.1,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "boost-source",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "Q1",
+      "value": "AO3401",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
+      "x_mm": -13.459248121587818,
+      "y_mm": 1.1298719518144378,
+      "width_mm": 3.3448,
+      "depth_mm": 3.2,
+      "height_mm": 1.5,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.0,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "Q2",
+      "value": "C20917",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
+      "x_mm": -18.59447684725238,
+      "y_mm": 2.105191111916996,
+      "width_mm": 3.3448,
+      "depth_mm": 3.2,
+      "height_mm": 1.5,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.0,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "Q3",
+      "value": "DMG3415UFY",
+      "mpn": "",
+      "footprint": "Handbell:DFN2015-3_DrainPad",
+      "x_mm": -2.052490018322363,
+      "y_mm": -12.078382519134545,
+      "width_mm": 2.8550000000000004,
+      "depth_mm": 1.575,
+      "height_mm": 1.0,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "Q4",
+      "value": "AO3400A",
+      "mpn": "AO3400A",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "x_mm": 16.069390600333975,
+      "y_mm": -7.227300482331769,
+      "width_mm": 3.35,
+      "depth_mm": 3.12,
+      "height_mm": 1.5,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.0,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "Q5",
+      "value": "CSD83325L",
+      "mpn": "CSD83325L",
+      "footprint": "T8:CSD83325L_YJE6",
+      "x_mm": -14.396466456519816,
+      "y_mm": 7.350217008344767,
+      "width_mm": 1.15,
+      "depth_mm": 2.2,
+      "height_mm": 0.22,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 20.28,
+      "z_max_mm": 20.5,
+      "height_source": "Manufacturer package maximum",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "protection",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R1",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -4.509898629503132,
+      "y_mm": 8.798714498238144,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R2",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 9.662175274751549,
+      "y_mm": 11.442053060220678,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R3",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -11.704036541390668,
+      "y_mm": -8.717868963141692,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R4",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -0.39138809322754076,
+      "y_mm": -10.712168169459419,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R5",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 4.717902375495913,
+      "y_mm": -7.264269936188066,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "reference": "R6",
+      "value": "1K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -3.105297624504075,
+      "y_mm": 0.24143006381192714,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -0.0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "reference": "R7",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -16.298110312821333,
+      "y_mm": -11.211810947536877,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R8",
+      "value": "5.1K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -3.1272082197161826,
+      "y_mm": 7.140689004760588,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R9",
+      "value": "22 ohm",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 6.275768536232115,
+      "y_mm": -15.877404316678012,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R10",
+      "value": "22 ohm",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -7.7922538096799725,
+      "y_mm": -10.934652800168907,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R11",
+      "value": "1K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -3.057531144726085,
+      "y_mm": 4.697262304417358,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R12",
+      "value": "5.1K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 8.423782270851081,
+      "y_mm": -14.510969732805714,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R13",
+      "value": "5.1K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 8.351557862231015,
+      "y_mm": -15.727081795003816,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R14",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -14.505449771740054,
+      "y_mm": -3.244860632629557,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R15",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -13.362747430993112,
+      "y_mm": -7.545041912602628,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R16",
+      "value": "100K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -15.769450103123388,
+      "y_mm": -1.8310491065966668,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R17",
+      "value": "100K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -16.730387188108033,
+      "y_mm": 5.0921657065545896,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R18",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 6.534753581437899,
+      "y_mm": -11.711327969747334,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 22.75,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "amp-local-bypass",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R20",
+      "value": "4.7K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 10.02012668823495,
+      "y_mm": -1.3836238889215584,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R21",
+      "value": "10K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 2.996414940433003,
+      "y_mm": 6.952827051596506,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R22",
+      "value": "1K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 8.1977752119047,
+      "y_mm": 10.123341402364897,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R23",
+      "value": "732K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 0.6096488635371757,
+      "y_mm": 15.293338954606245,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270.0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 22.75,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "boost-source",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R24",
+      "value": "100K",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": 0.6096488635371757,
+      "y_mm": 18.36673895460616,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -270.0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 22.75,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "boost-source",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R25",
+      "value": "330R",
+      "mpn": "RC0402FR-07330RL",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -11.596466456519815,
+      "y_mm": 9.350217008344767,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "protection",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R26",
+      "value": "2.2k",
+      "mpn": "RC0402FR-072K2L",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -14.596466456519815,
+      "y_mm": 5.550217008344768,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "protection",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R27",
+      "value": "33m 1% 0.5W",
+      "mpn": "ERJ-6BWFR033V",
+      "footprint": "T8:ERJ6BW_0805",
+      "x_mm": -14.596466456519815,
+      "y_mm": 9.550217008344767,
+      "width_mm": 3.0,
+      "depth_mm": 1.4,
+      "height_mm": 0.7,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.8,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "protection",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R28",
+      "value": "5.1M gate discharge",
+      "mpn": "RC0402FR-075M1L",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -17.196466456519822,
+      "y_mm": 6.750217008344766,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "protection",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "R29",
+      "value": "5.1M gate discharge",
+      "mpn": "RC0402FR-075M1L",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+      "x_mm": -17.196466456519822,
+      "y_mm": 9.350217008344767,
+      "width_mm": 1.616,
+      "depth_mm": 0.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.85,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "protection",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "U1",
+      "value": "W25Q16JVUXIQ TR / 2MB",
+      "mpn": "W25Q16JVUXIQ TR",
+      "footprint": "T8:Winbond_USON8_UX_2x3",
+      "x_mm": 7.728202375495914,
+      "y_mm": -6.589569936188065,
+      "width_mm": 3.1,
+      "depth_mm": 2.0,
+      "height_mm": 0.6,
+      "rotation_deg": -0.0,
+      "side": "F",
+      "z_min_mm": 19.9,
+      "z_max_mm": 20.5,
+      "height_source": "Manufacturer package maximum",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "reference": "U2",
+      "value": "RT9080-3.3",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-5",
+      "x_mm": -15.974880647189014,
+      "y_mm": -8.459799068213268,
+      "width_mm": 3.3,
+      "depth_mm": 3.8002000000000002,
+      "height_mm": 1.5,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 19.0,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "U3",
+      "value": "MCP73831T-2ACI/OT",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-5",
+      "x_mm": 4.648505348450861,
+      "y_mm": 13.888074095733682,
+      "width_mm": 3.3,
+      "depth_mm": 3.8002000000000002,
+      "height_mm": 1.5,
+      "rotation_deg": -90,
+      "side": "F",
+      "z_min_mm": 19.0,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "U4",
+      "value": "MAX98357A",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:QFN16_3MM",
+      "x_mm": 9.934753581437926,
+      "y_mm": -12.411327969747333,
+      "width_mm": 4.141418,
+      "depth_mm": 3.8,
+      "height_mm": 1.0,
+      "rotation_deg": 0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 23.1,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "amp-local-bypass",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "U5",
+      "value": "TPS61023DRLR",
+      "mpn": "TPS61023DRLR",
+      "footprint": "Adafruit TPS61023-import-fps:SOT563",
+      "x_mm": -1.1683511364628263,
+      "y_mm": 15.064738954606227,
+      "width_mm": 1.92,
+      "depth_mm": 1.6,
+      "height_mm": 0.65,
+      "rotation_deg": -90.0,
+      "side": "B",
+      "z_min_mm": 22.1,
+      "z_max_mm": 22.75,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "boost-source",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "U6",
+      "value": "BQ29700DSER",
+      "mpn": "BQ29700DSER",
+      "footprint": "T8:BQ29700_DSE6",
+      "x_mm": -11.496466456519817,
+      "y_mm": 7.350217008344767,
+      "width_mm": 1.9,
+      "depth_mm": 1.5,
+      "height_mm": 0.8,
+      "rotation_deg": 0,
+      "side": "F",
+      "z_min_mm": 19.7,
+      "z_max_mm": 20.5,
+      "height_source": "Manufacturer package maximum",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "protection",
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "X6",
+      "value": "USB Type C",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:USB_C_CUSB31-CFM2AX-01-X",
+      "x_mm": 0,
+      "y_mm": -21.185000000000002,
+      "width_mm": 9.64,
+      "depth_mm": 7.93,
+      "height_mm": 3.5,
+      "rotation_deg": -180,
+      "side": "F",
+      "z_min_mm": 17.0,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": true,
+      "cluster": null,
+      "core_cap_adjustment_local_mm": null
+    },
+    {
+      "reference": "Y1",
+      "value": "12MHz/12pF",
+      "mpn": "",
+      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:CRYSTAL_2.5X2",
+      "x_mm": -5.391297624504074,
+      "y_mm": 0.6859300638119324,
+      "width_mm": 3.0,
+      "depth_mm": 2.5,
+      "height_mm": 1.0,
+      "rotation_deg": -90.0,
+      "side": "F",
+      "z_min_mm": 19.5,
+      "z_max_mm": 20.5,
+      "height_source": "Unqualified component-height planning proxy",
+      "proxy_kind": "envelope",
+      "geometry_interface": null,
+      "requires_shell_cutout": false,
+      "cluster": "core-refined",
+      "core_cap_adjustment_local_mm": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "mounting_holes": [
+    {
+      "reference": "MH1",
+      "x_mm": 10.0,
+      "y_mm": 15.7,
+      "drill_mm": 2.2,
+      "pad_diameter_mm": 4.4,
+      "keepout_radius_mm": 3.2,
+      "net": "GND"
+    },
+    {
+      "reference": "MH2",
+      "x_mm": -10.0,
+      "y_mm": -15.7,
+      "drill_mm": 2.2,
+      "pad_diameter_mm": 4.4,
+      "keepout_radius_mm": 3.2,
+      "net": "GND"
+    }
+  ],
+  "battery_reservation": {
+    "x_min_mm": -19.0,
+    "x_max_mm": 19.0,
+    "y_min_mm": -10.0,
+    "y_max_mm": 10.0,
+    "status": "Planning reservation only; no fitted contacts, selected cell or retained assembly approval"
+  },
+  "battery_contact_interface": "battery-contact-interface.json",
+  "battery_contact_interface_sha256": "1580ae48b2041ba34387e0c46c78ee6a006d8ece15614b9dc67e50c61a0160c9",
+  "usb_interface": {
+    "reference": "X6",
+    "native_origin_common_xy_mm": [
+      0,
+      -20.07
+    ],
+    "body_mouth_center_common_xy_mm": [
+      0,
+      -25.15
+    ],
+    "body_fab_width_mm": 8.94,
+    "body_fab_depth_mm": 7.35,
+    "body_back_y_mm": -17.8,
+    "body_front_z_mm": 17.0,
+    "body_back_z_mm": 20.5,
+    "mouth_basis": "Retained CUSB31-CFM2AX-01-X F.Fab y=5.08 transformed by180deg. Width/height are source/proxy, not qualified plug envelope.",
+    "support_gate": "Tongue requires matched shell opening and repeatable carrier support. Flush target at approximate midheight only; no physical USB approval."
+  },
+  "cross_face_keepouts": [
+    {
+      "x": 0.0,
+      "y": -21.185000000000002,
+      "plan_w": 10.64,
+      "plan_h": 8.93,
+      "angle": 0.0,
+      "side": "B",
+      "source": "X6 body/drill projection plus 0.5 mm per edge; anchor height unqualified"
+    }
+  ],
+  "dnp_footprint_reservations": [
+    "C29"
+  ],
+  "copper_only_features": [
+    {
+      "reference": "CHG_EN0",
+      "x_mm": 18.049278336608964,
+      "y_mm": 5.381328501499596,
+      "side": "F"
+    },
+    {
+      "reference": "D+1",
+      "x_mm": 17.40156733860871,
+      "y_mm": 7.928973367918703,
+      "side": "F"
+    },
+    {
+      "reference": "D-1",
+      "x_mm": 13.486950105739552,
+      "y_mm": 12.70397900152051,
+      "side": "F"
+    },
+    {
+      "reference": "GAIN0",
+      "x_mm": 1.3005484061408332,
+      "y_mm": 17.28844158831549,
+      "side": "F"
+    },
+    {
+      "reference": "TP3",
+      "x_mm": -14.240042773342527,
+      "y_mm": -11.798643384814394,
+      "side": "F"
+    },
+    {
+      "reference": "TP4",
+      "x_mm": -4.396133183969579,
+      "y_mm": -14.535902042139476,
+      "side": "F"
+    },
+    {
+      "reference": "TP5",
+      "x_mm": 0.01829280567046651,
+      "y_mm": -12.794408225469883,
+      "side": "F"
+    },
+    {
+      "reference": "TP6",
+      "x_mm": -4.100801949010546,
+      "y_mm": -10.534643878349334,
+      "side": "F"
+    },
+    {
+      "reference": "TP7",
+      "x_mm": 8.541522185312399,
+      "y_mm": -12.884265134485924,
+      "side": "F"
+    },
+    {
+      "reference": "TP8",
+      "x_mm": 13.379626747041787,
+      "y_mm": -11.350661784901474,
+      "side": "F"
+    },
+    {
+      "reference": "TP9",
+      "x_mm": 12.714648712594508,
+      "y_mm": -9.229588031198432,
+      "side": "F"
+    },
+    {
+      "reference": "TP10",
+      "x_mm": -0.30988632137248245,
+      "y_mm": 14.41904053021638,
+      "side": "F"
+    },
+    {
+      "reference": "TP11",
+      "x_mm": -2.8594427363367396,
+      "y_mm": 18.816653984267145,
+      "side": "F"
+    },
+    {
+      "reference": "TP12",
+      "x_mm": -8.404359268507445,
+      "y_mm": 15.224191298406073,
+      "side": "F"
+    },
+    {
+      "reference": "TP13",
+      "x_mm": -10.528001494368928,
+      "y_mm": 13.700413886216593,
+      "side": "F"
+    },
+    {
+      "reference": "TP14",
+      "x_mm": -18.796524827716247,
+      "y_mm": 6.003543773922373,
+      "side": "F"
+    },
+    {
+      "reference": "TP15",
+      "x_mm": -17.382040599154873,
+      "y_mm": -0.7599172000366922,
+      "side": "F"
+    },
+    {
+      "reference": "TP16",
+      "x_mm": -16.878991812380757,
+      "y_mm": -3.908207535056238,
+      "side": "F"
+    }
+  ],
+  "planning": {
+    "intercluster_overlaps": [],
+    "constraint_violations": [],
+    "retained_source_cluster_planning_overlaps": [
+      {
+        "left": "C26",
+        "right": "L1",
+        "area_mm2": 0.15523200000016713
+      },
+      {
+        "left": "C27",
+        "right": "C28",
+        "area_mm2": 0.4382560000000002
+      },
+      {
+        "left": "C27",
+        "right": "L1",
+        "area_mm2": 0.481367999999981
+      },
+      {
+        "left": "C27",
+        "right": "U5",
+        "area_mm2": 0.12693900000009967
+      },
+      {
+        "left": "C28",
+        "right": "L1",
+        "area_mm2": 0.015227200000008973
+      },
+      {
+        "left": "R6",
+        "right": "Y1",
+        "area_mm2": 0.5182959999999999
+      }
+    ]
+  },
+  "limits": [
+    "No copper routing; all net assignments require routing before electrical continuity exists.",
+    "Core/boost/amplifier relative poses retained; new protector shares no copper/ground with raw-cell return except specified cutoff.",
+    "Contacts use thin kinematic geometry, not solid collision boxes. Loaded spring/positive button/current rating unqualified.",
+    "Temperature charge inhibit and reverse-insertion protection NOT implemented: no live cell authorization.",
+    "R8 remains5.1k; charger termination mismatch needs exact cell review.",
+    "Four inherited USB hole clearances remain open; no GUI parity approval transferred."
+  ]
+}

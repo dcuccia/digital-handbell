@@ -79,6 +79,14 @@ closer-fitting mouth profile, supported USB access and serviceable shell
 attachment. Review the complete new FreeCAD assembly **before routing**.
 This does not close the broader E04/E05/E07 electrical, retention or DFM gates.
 
+The coordinated [four-piece T8 cartridge](../mechanical/studies/2026-09-11-t8-cartridge/README.md)
+consumes the exact 83-part electrical placement and adds battery capture,
+M2 captive-nut joints, insulating shell fasteners and a mouth-open USB slot.
+Its 6.25 mm mouthward stack shift is a proposed fit tradeoff, not an owner
+approval of the increased front projection. The original fixed-stack
+interference evidence and the owner's 0.5/1.0 mm spacing comparison are retained
+separately. E05/E07 remain open for physical fit and placement approval.
+
 <!-- TRACKING:START -->
 **Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
 All twelve epics were initialized as Todo with a Phase field matching their

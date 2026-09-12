@@ -11,10 +11,13 @@ The separate [83-part native T8 placement](../hardware/handbell/iterations/t8-pr
 now supplies the new flash, contacts and protected return. Its
 [electrical review](t8-electrical-revision.md) keeps the low-cell current
 tradeoff and missing reverse-cell/temperature charging functions explicit.
-These are draft engineering inputs, not closed safety gates. The complete
-mechanical rebind and owner review remain prerequisites to starting routing.
+These are draft engineering inputs, not closed safety gates. The
+[coordinated T8 cartridge](../mechanical/studies/2026-09-11-t8-cartridge/README.md)
+binds that exact placement into the full assembly. Owner review of the
+6.25 mm mouthward shift and resulting exterior, actual contact/cell fit, USB
+access and service arrangement still precedes routing.
 
-**Next iteration:** the [two-face wing/cartridge handoff](electromechanical-wing-iteration.md)
+**Preserved September 9 iteration:** the [two-face wing/cartridge handoff](electromechanical-wing-iteration.md)
 and [native wing placement](../hardware/handbell/iterations/wing-draft/README.md)
 record the separate 62F/11B candidate, mounting interfaces and current gates.
 The earlier 0.2 print checkpoint below remains preserved, not overwritten.

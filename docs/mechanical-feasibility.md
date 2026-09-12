@@ -8,6 +8,17 @@ the speaker magnet as D21.70. The
 USB access and service attachment before routing. Preserve the old artifacts
 and their original parameter/manifest bindings.
 
+The [complete T8 cartridge](../mechanical/studies/2026-09-11-t8-cartridge/README.md)
+is the current separate review model: open
+`mechanical\studies\2026-09-11-t8-cartridge\t8-cartridge.FCStd`.
+It contains the exact 83-part placement, full contact primitives, speaker,
+provisional T8 cell, four printed structural pieces, M2 hardware and the
+working shell. The contact/guard fit requires a proposed 6.25 mm mouthward
+stack shift, so the grille front is 10.75 mm outside the mouth.
+Use its dedicated reproduction instructions, not the September 7 commands
+below. The contact-free PCBA print dummy deliberately omits BT1/BT2 while the
+full native/STEP models retain them; it cannot qualify spring or cell fit.
+
 **Historical measurement follow-up, 2026-09-09:** the
 [separate measured-speaker study](../mechanical/studies/2026-09-09-measured-speaker/README.md)
 uses the owner's arrived-part measurements and captures physical print feedback.

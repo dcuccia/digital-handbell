@@ -1,0 +1,191 @@
+{
+  "mpn": "Keystone 254",
+  "drawing": "254 revision C, 2023-09-14",
+  "source": "https://ken.keyeuro.eu/pdf/254.pdf",
+  "coordinate_frame": "Common assembly XYZ; right contact BT1; left BT2 is X/Y rotation180.",
+  "pcb_side": "B",
+  "pcb_z_mm": 15.85,
+  "cell_axis": "X",
+  "cell_nominal": {
+    "diameter_mm": 16.4,
+    "total_length_mm": 34.0,
+    "center_mm": [
+      0,
+      0,
+      25.63
+    ],
+    "positive_end_x_mm": 17.0,
+    "negative_end_x_mm": -17.0,
+    "status": "Retailer approximate button-top length; manufacturer generic button addition conflicts. Not maximum/tolerance."
+  },
+  "contacts": [
+    {
+      "reference": "BT1",
+      "polarity": "+",
+      "center_mm": [
+        11.625,
+        0,
+        15.85
+      ],
+      "rotation_deg": 0,
+      "net": "VBAT",
+      "pads": [
+        {
+          "center_mm": [
+            3.62,
+            0,
+            15.85
+          ],
+          "size_mm": [
+            4.24,
+            5.2
+          ]
+        },
+        {
+          "center_mm": [
+            19.63,
+            0,
+            15.85
+          ],
+          "size_mm": [
+            4.24,
+            3.3
+          ]
+        }
+      ]
+    },
+    {
+      "reference": "BT2",
+      "polarity": "-",
+      "center_mm": [
+        -11.625,
+        0,
+        15.85
+      ],
+      "rotation_deg": 180,
+      "net": "CELL_NEG",
+      "pads": [
+        {
+          "center_mm": [
+            -3.62,
+            0,
+            15.85
+          ],
+          "size_mm": [
+            4.24,
+            5.2
+          ]
+        },
+        {
+          "center_mm": [
+            -19.63,
+            0,
+            15.85
+          ],
+          "size_mm": [
+            4.24,
+            3.3
+          ]
+        }
+      ]
+    }
+  ],
+  "drawing_dimensions_mm": {
+    "steel_thickness": 0.3,
+    "base_length": 19.88,
+    "base_width": 11.13,
+    "overall_height_nominal": 16.59,
+    "overall_height_tolerance": 0.38,
+    "dimple_height_nominal": 9.78,
+    "dimple_height_tolerance": 0.38,
+    "unloaded_transverse_envelope_reference": 16.61,
+    "ear_axial_length": 9.53,
+    "spring_face_width": 8.89,
+    "outer_solder_tab_width": 3.18
+  },
+  "right_contact_original_primitives": {
+    "status": "Original kinematic screening interpretation, NOT vendor CAD or measured loaded spring geometry. Mirror for BT2.",
+    "base_tabs": [
+      {
+        "x_min": 1.685,
+        "x_max": 5.685,
+        "y_width": 5.08,
+        "z_min": 15.85,
+        "thickness": 0.3
+      },
+      {
+        "x_min": 18.685,
+        "x_max": 21.565,
+        "y_width": 3.18,
+        "z_min": 15.85,
+        "thickness": 0.3
+      }
+    ],
+    "under_cell_base": {
+      "x_min": 5.685,
+      "x_max": 18.685,
+      "y_width": 11.13,
+      "z_min": 15.85,
+      "thickness": 0.3
+    },
+    "spring_xz_polyline": [
+      [
+        18.685,
+        16.15
+      ],
+      [
+        18.685,
+        17.75
+      ],
+      [
+        17.8,
+        21.75
+      ],
+      [
+        17.0,
+        25.63
+      ],
+      [
+        17.8,
+        29.25
+      ],
+      [
+        18.2,
+        32.44
+      ]
+    ],
+    "spring_y_width": 8.89,
+    "spring_thickness": 0.3,
+    "spring_surface": "Polyline is the cell-facing surface; build thickness toward +X for BT1, -X for mirrored BT2, NOT symmetrically into the cell.",
+    "ears": {
+      "x_min": 5.685,
+      "axial_length": 9.53,
+      "axis_center_yz": [
+        0,
+        25.63
+      ],
+      "inner_radius": 8.2,
+      "thickness": 0.3,
+      "angle_degrees": [
+        [
+          -80,
+          52
+        ],
+        [
+          128,
+          260
+        ]
+      ],
+      "status": "Assumed conforming loaded arcs, not an allowed travel/force envelope; reconcile unloaded16.61 with actual samples."
+    },
+    "candidate_loaded_outer_width_mm": 17.0
+  },
+  "pair_inner_pad_edge_gap_mm": 3.0,
+  "pair_gap_basis": "Project adjustable spacing; <= drawing CR123A L3.66max. L is NOT cell length.",
+  "loaded_end_contact_x_mm": [
+    -17.0,
+    17.0
+  ],
+  "loaded_state_gate": "Dimple longitudinal datum, free span, spring travel/load and exact positive button geometry not specified; no preload qualified.",
+  "insulation_gate": "CELL_NEG/cell can/contact metal must not touch USB GND, grounded screws or metal shell. Plastic capture carries mechanical load."
+}

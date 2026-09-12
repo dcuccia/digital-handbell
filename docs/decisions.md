@@ -297,6 +297,29 @@ not closed by successful model generation.
 Affected decisions: D07/D09/D11/D12/D16; owning epics E01/#1, E04/#4,
 E05/#5, E07/#7 and E10/#10.
 
+### Implemented review alternative: four-piece protected-T8 cartridge
+
+The [coordinated model](../mechanical/studies/2026-09-11-t8-cartridge/README.md)
+uses the exact 83-part T8 placement, D22.1 magnet opening, D75.5 external flange,
+four printed structural pieces and M2x6 captive-nut joints rather than the
+old unselected heat-set inserts. Two separate insulating shell fasteners and
+a mouth-open USB slot permit proposed whole-cartridge withdrawal; USB solder
+anchors are not the intended shell load path.
+
+Full contact/guard geometry did not fit at the original axial placement.
+The bounded study selects a **6.25 mm mouthward translation** with a 1.0 mm
+plastic target and 0.10 mm nominal clearance. Speaker front becomes z-6.25
+and grille front z-10.75. This is an engineering review alternative, **not an
+owner-approved exterior**. Neither thinner undocumented insulation nor clipped
+contact solids are used to hide the initial conflict. The initial model and
+the 1.5/2.0 mm alternatives remain available as evidence.
+
+The owner's approximate 1 mm spare-space observation remains a visual estimate.
+The fit report includes 0.5/1.0 mm speaker-fixed spacing sensitivities without
+silently changing released component heights or support/USB interfaces.
+Positive nominal CAD gaps do not qualify cell dimensions, contact force,
+wrapper abrasion, reverse insertion, thermal behavior or physical retention.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |

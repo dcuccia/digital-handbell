@@ -39,6 +39,12 @@ not imported vendor CAD. The new [source evidence](hardware/handbell/iterations/
 records document revisions, inspected hashes and reuse limits. Manufacturer
 PDFs, images and STEP models are not redistributed.
 
+The [coordinated T8 cartridge](mechanical/studies/2026-09-11-t8-cartridge/README.md)
+adds original MIT mechanical geometry and scripts. Its populated FreeCAD/STEP
+exports retain the separate electronics' CC BY-SA 3.0 context and notices;
+do not label a mixed assembly as entirely MIT or mistake the original contact
+approximations for manufacturer-approved CAD.
+
 The original packaging-screen SVG, calculation script and factual measurement
 records use the project's MIT documentation/software terms. The owner's retail
 speaker image and vendor photos are **not redistributed**. The PowerBoost and

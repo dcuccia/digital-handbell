@@ -1,0 +1,359 @@
+{
+  "input_hashes": {
+    "placement": "4e8e27f7241e76850ef4fb9719a45acf0ab49ccfe9e1d651ef60f278b20da46c",
+    "measurements": "824ede16efc2505efb80cd21c259b527bd8f2c2c1ef4a164992540410364255a",
+    "spacing_feedback": "ab3d96cc5dc6df4e2a84025c13d61a42c60c271ec084963c31174eb7ba86c186",
+    "builder": "22e806153f313685a9a96d12b90070bb1985259b50261011ac6ce0d298a4f04c",
+    "helper": "c9ef5a33a86cd8f3635f6aa6171c2d84b6d7662f68bcb578d9cd9a43bdfb3aab",
+    "contact_interface": "e93d72ef211b7615634f255153a413b826d05c1495fa19d967c64456b647c4a6",
+    "electrical_pcb": "11e74fbc2cb51d4be762a2725b3b9cb19a80b7e02b19a319fb1e5ebb74cb6bb5",
+    "electrical_schematic": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f"
+  },
+  "artifacts": {
+    "t8-cartridge-assembly.step": {
+      "sha256": "cee1188bebe0c8c3723bccc2ddca27fab75f7a6e1b976c6f6e4ef06ba252e3de",
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 110,
+        "volume_mm3": 57666.11397492456,
+        "bounds": {
+          "min_mm": [
+            -38.72862354133231,
+            -37.75,
+            -10.75
+          ],
+          "max_mm": [
+            38.72862354134045,
+            37.75,
+            35.23
+          ],
+          "size_mm": [
+            77.45724708267275,
+            75.5,
+            45.98
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 6.700417998217745e-12,
+      "volume_delta_mm3": 0.013197234562539961,
+      "maximum_per_solid_symmetric_difference_mm3": 0.0,
+      "brep_roundtrip_verified_not_only_bounds": true
+    },
+    "t8-cartridge-with-shell.step": {
+      "sha256": "672fd599d79f6ecfbbdc102aa3745902f8f63a868b424ada26f340123a90e4c4",
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 112,
+        "volume_mm3": 85125.81596437363,
+        "bounds": {
+          "min_mm": [
+            -38.72862354133231,
+            -37.75,
+            -10.75
+          ],
+          "max_mm": [
+            38.72862354134045,
+            37.75,
+            131.05
+          ],
+          "size_mm": [
+            77.45724708267275,
+            75.5,
+            141.8
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 6.700417998217745e-12,
+      "volume_delta_mm3": 0.057729169668164104,
+      "maximum_per_solid_symmetric_difference_mm3": 0.0,
+      "brep_roundtrip_verified_not_only_bounds": true
+    },
+    "body.step": {
+      "sha256": "194cfc735f2953a4e2bc9c6f081fe8f27b3169297f9d50c1357f6f8ce4dc3900",
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 22661.85556573649,
+        "bounds": {
+          "min_mm": [
+            -37.75,
+            -37.75,
+            -10.75
+          ],
+          "max_mm": [
+            37.75,
+            37.75,
+            17.45
+          ],
+          "size_mm": [
+            75.5,
+            75.5,
+            28.2
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 0.0,
+      "volume_delta_mm3": 0.016945289444265654,
+      "maximum_per_solid_symmetric_difference_mm3": 0.0,
+      "brep_roundtrip_verified_not_only_bounds": true
+    },
+    "yoke.step": {
+      "sha256": "ff4987c401973010ad2a26247da8d40f6de1979d5d1d674309d30e2693dc8164",
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 2117.0473907103255,
+        "bounds": {
+          "min_mm": [
+            -17.5,
+            -24.085858741209098,
+            1.75
+          ],
+          "max_mm": [
+            17.5,
+            24.085858741207655,
+            14.25
+          ],
+          "size_mm": [
+            35.0,
+            48.17171748241675,
+            12.5
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 2.9523050670832163e-12,
+      "volume_delta_mm3": -7.3456111294945e-05,
+      "maximum_per_solid_symmetric_difference_mm3": 0.0,
+      "brep_roundtrip_verified_not_only_bounds": true
+    },
+    "battery-cradle.step": {
+      "sha256": "abc061451d76d854e4022de537aded10866de170867a496fa9f91365324056dc",
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 2112.207589754023,
+        "bounds": {
+          "min_mm": [
+            -22.665000000000003,
+            -18.9,
+            15.496594252984842
+          ],
+          "max_mm": [
+            22.665000000000003,
+            18.9,
+            25.750000000000004
+          ],
+          "size_mm": [
+            45.330000000000005,
+            37.8,
+            10.253405747015162
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 2.705327872831731e-08,
+      "volume_delta_mm3": 3.128846537947538e-05,
+      "maximum_per_solid_symmetric_difference_mm3": 0.0,
+      "brep_roundtrip_verified_not_only_bounds": true
+    },
+    "battery-cover.step": {
+      "sha256": "769c4d94fae5959cc9641cc20219b23c60f1a66b1d3739c60fef0cb89209124a",
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 1615.2183476134303,
+        "bounds": {
+          "min_mm": [
+            -19.6,
+            -14.2,
+            25.74999999999999
+          ],
+          "max_mm": [
+            19.6,
+            14.2,
+            35.23
+          ],
+          "size_mm": [
+            39.2,
+            28.4,
+            9.480000000000008
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 3.552713678800501e-15,
+      "volume_delta_mm3": -0.0018658243654954276,
+      "maximum_per_solid_symmetric_difference_mm3": 0.0,
+      "brep_roundtrip_verified_not_only_bounds": true
+    },
+    "populated-t8-pcba.step": {
+      "sha256": "8ad43091e7e62586c487043860288c7f0bcfd21995b3996d0198f3db35fe7a44",
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 5,
+        "volume_mm3": 3839.6826189693884,
+        "bounds": {
+          "min_mm": [
+            -22.25,
+            -27.9,
+            10.75
+          ],
+          "max_mm": [
+            22.25,
+            21.500000000000277,
+            32.44
+          ],
+          "size_mm": [
+            44.5,
+            49.400000000000276,
+            21.689999999999998
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 2.7711166694643907e-13,
+      "volume_delta_mm3": -4.756657290272415e-10,
+      "maximum_per_solid_symmetric_difference_mm3": 0.0,
+      "brep_roundtrip_verified_not_only_bounds": true
+    },
+    "populated-t8-pcba-without-contacts.step": {
+      "sha256": "9fcdf210753a7fb01625bb74b6107e03d817236fc4bc377d4d57c1fb35219dad",
+      "units": "mm (STEP SI_UNIT)",
+      "roundtrip": {
+        "valid": true,
+        "solid_count": 1,
+        "volume_mm3": 3428.296169508373,
+        "bounds": {
+          "min_mm": [
+            -22.25,
+            -27.9,
+            10.75
+          ],
+          "max_mm": [
+            22.25,
+            21.500000000000277,
+            20.85
+          ],
+          "size_mm": [
+            44.5,
+            49.400000000000276,
+            10.100000000000001
+          ]
+        }
+      },
+      "maximum_bound_error_mm": 2.7711166694643907e-13,
+      "volume_delta_mm3": -4.210960469208658e-10,
+      "maximum_per_solid_symmetric_difference_mm3": 0.0,
+      "brep_roundtrip_verified_not_only_bounds": true
+    },
+    "INERT-body.stl": {
+      "sha256": "ce4c47905a06bf41511433688fe1181c28a8acfb114c0273b60f8be3bd3092fd",
+      "units": "unitless; import mm at 100%",
+      "connected_components": 1,
+      "closed_manifold": true,
+      "self_intersections": false,
+      "reconstructed_brep_solid_count": 1,
+      "relative_volume_error": 0.0008394803105198837,
+      "status": "INERT ONLY"
+    },
+    "INERT-yoke.stl": {
+      "sha256": "e11763598593538aa798ffb8d4e625aaf1353b490654d7ff98f715638e535ce3",
+      "units": "unitless; import mm at 100%",
+      "connected_components": 1,
+      "closed_manifold": true,
+      "self_intersections": false,
+      "reconstructed_brep_solid_count": 1,
+      "relative_volume_error": 0.00039479239776559453,
+      "status": "INERT ONLY"
+    },
+    "INERT-battery-cradle.stl": {
+      "sha256": "3f0d602650d36b54ad2c9c8fea9ba9ad01020466801cdb3c04493771ae9471cb",
+      "units": "unitless; import mm at 100%",
+      "connected_components": 1,
+      "closed_manifold": true,
+      "self_intersections": false,
+      "reconstructed_brep_solid_count": 1,
+      "relative_volume_error": 0.00023092145110808522,
+      "status": "INERT ONLY"
+    },
+    "INERT-battery-cover.stl": {
+      "sha256": "51224c95759524af68a5904eeec3e205f18d5d4b2ae94f00f8414772cbf40a13",
+      "units": "unitless; import mm at 100%",
+      "connected_components": 1,
+      "closed_manifold": true,
+      "self_intersections": false,
+      "reconstructed_brep_solid_count": 1,
+      "relative_volume_error": 0.0003283726252591984,
+      "status": "INERT ONLY"
+    },
+    "INERT-speaker-body-screen.stl": {
+      "sha256": "d3f1f8b7dae620e4fa8e27c5c511d888cf37d17c7c45410b400cc4673aaf9956",
+      "units": "unitless; import mm at 100%",
+      "connected_components": 1,
+      "closed_manifold": true,
+      "self_intersections": false,
+      "reconstructed_brep_solid_count": 1,
+      "relative_volume_error": 0.0005969128590051607,
+      "status": "INERT ONLY"
+    },
+    "INERT-T8-full-cell.stl": {
+      "sha256": "2d39c124a0013c903317e03b35931ca943ce1b6a22fa653be4e18fb835734cd6",
+      "units": "unitless; import mm at 100%",
+      "connected_components": 1,
+      "closed_manifold": true,
+      "self_intersections": false,
+      "reconstructed_brep_solid_count": 1,
+      "relative_volume_error": 0.000594782890234912,
+      "status": "INERT ONLY"
+    },
+    "INERT-populated-t8-pcba-without-contacts.stl": {
+      "sha256": "41714175ea059ebdbffcebbffa5e448549b27c1525af35c57430582cf6cf695d",
+      "units": "unitless; import mm at 100%",
+      "connected_components": 1,
+      "closed_manifold": true,
+      "self_intersections": false,
+      "reconstructed_brep_solid_count": 1,
+      "relative_volume_error": 5.4912871769074005e-06,
+      "status": "INERT ONLY"
+    },
+    "t8-cartridge.FCStd": {
+      "sha256": "96d1dfb0b2a59c8c19e471dd7e86c22400463677788a20e3fbff4d23152fe3e6",
+      "reopened_shape_count": 118,
+      "maximum_brep_symmetric_difference_mm3": 0.0,
+      "raw_source_bytes_verified": true,
+      "display_metadata_written": true,
+      "GUI_display_exercised": false
+    },
+    "placement-snapshot.json": {
+      "sha256": "4e8e27f7241e76850ef4fb9719a45acf0ab49ccfe9e1d651ef60f278b20da46c",
+      "exact_source_bytes": true
+    },
+    "measurements-snapshot.json": {
+      "sha256": "824ede16efc2505efb80cd21c259b527bd8f2c2c1ef4a164992540410364255a",
+      "exact_source_bytes": true
+    },
+    "contact_interface-snapshot.json": {
+      "sha256": "e93d72ef211b7615634f255153a413b826d05c1495fa19d967c64456b647c4a6",
+      "exact_source_bytes": true
+    },
+    "fit-report.json": {
+      "sha256": "b3cf4e25de42f3ce09c551ab3580f997bc3ede1af2c594d79ff098bdfdc4289a"
+    },
+    "parameters.json": {
+      "sha256": "f3b8c8930d3830471a8c3460f7287c212ade8099d928ef422ef2342418d9dd10"
+    },
+    "inner-outer-profile-and-datums.svg": {
+      "sha256": "55f88808e708b60b011ebbe17e0edd79caeeb6245f44a47006e15b651f236457"
+    },
+    "README.md": {
+      "sha256": "d674ea8393152f180ce34c89500363b607ec715789cfc66a3cafd292b10fa823"
+    },
+    "REPRODUCE.md": {
+      "sha256": "542862112da40c7393d7b6ed196118e8a6f51759c2e4acd104144b48be652a01"
+    }
+  }
+}
