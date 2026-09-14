@@ -15,8 +15,14 @@ show 92 to 86 unconnected items, not a comparison with the older 59-item
 filled-zone recovery. Four inherited USB clearance errors and three newly
 identified Clock footprint/library mismatch warnings remain, alongside
 silkscreen/text findings. The routing increment adds no new physical findings.
-Resolve the three library/instance warnings as the next bounded definition
-item; do not hide them or combine that item with the remaining MCU routing.
+The subsequent bounded definition item resolves those three warnings by
+explicitly marking the two libraries and three instances as SMD. Their implicit
+assembly classifications differed; no pad geometry or copper changed. All other
+findings and the 86-item count persist. MCU approaches/returns are next.
+
+The owner now explicitly authorizes starting the next ready bounded item after
+each successful published checkpoint. Retain the per-item time/retry limits
+below; stop promptly on a pause request or concrete blocker.
 
 This is not a manufacturing release or an updated full mechanical binding.
 The definition-only `702f53b` stage and original recovered copper remain

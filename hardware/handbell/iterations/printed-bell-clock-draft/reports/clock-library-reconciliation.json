@@ -1,0 +1,24 @@
+{
+  "input_commit": "54a40d7",
+  "input_pcb_sha256": "67ea9a7ba6c8b0ef9c3a8dc3ca22dc42b2cd40f1dcdedd9f7bdcf503d4a292a6",
+  "output_pcb_sha256": "9472e9887da88826fe8cfa1145ab53afb8adba2a0a5fbf20d6fc45d90f85acc6",
+  "placement_manifest_sha256": "ee0b23dbea1ee8dea74f8417628082629fd1cfed35948010ea3b63f31a1e7f6a",
+  "kicad_version": "10.0.6",
+  "change": "Explicit (attr smd) on Y1/C2/C3 board instances and their two Clock library definitions. Correct assembly classification; no geometry changes.",
+  "cause": "Without explicit attributes, native board instances loaded as unspecified (0), while versionless library modules loaded as through-hole (1). Setting both to SMD (2) resolves native comparison.",
+  "native_library_matches": {
+    "Y1": true,
+    "C2": true,
+    "C3": true
+  },
+  "pads_poses_properties_and_copper_unchanged": true,
+  "drc_report_sha256": "32ed0f0c1c53aac9478121f362640efade3733d0b38fac4a0fac8271a146adb5",
+  "only_findings_removed": "three lib_footprint_mismatch warnings",
+  "unconnected_items": 86,
+  "unconnected_comparison": "Same count and identical physical pad/copper geometry; native airwire endpoint witness selection differs, so report arrays are not claimed identical.",
+  "remaining": "MCU clock approaches, final returns, zone refill and other global release gates remain pending.",
+  "libraries_sha256": {
+    "ABM8_272_T3.kicad_mod": "8380283ecd343d3ae2183feb11958d117bea7d34287ba48fe9b79a712f46eaa1",
+    "GRM1555C1H150JA01D.kicad_mod": "15976e6c903751f46c6f46635c50b45bf7f2f379b9efb0c67a2d1b8069cb3e5e"
+  }
+}

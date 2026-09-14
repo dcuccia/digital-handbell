@@ -12,6 +12,10 @@
   process timeouts; a tool's initial output wait is not a termination timeout.
   If the work will exceed the budget, checkpoint and split it rather than
   silently extending the task.
+- The owner explicitly authorizes sequential bounded items as of September 14:
+  after publishing a successful checkpoint, announce and start the next ready
+  item without waiting for another prompt. Keep the per-item budget and retry
+  limit; a blocker or pause request still stops the affected work promptly.
 - Allow at most one corrective retry within that budget. Do not turn a failed
   attempt into an open-ended search, optimization, routing or check/fix loop.
   Return a concrete blocker and preserve the usable work when the budget ends.
@@ -36,7 +40,8 @@
   use the available task-cancellation controls when a forced stop is needed.
 - Keep the handoff sufficient for a fresh session to resume: exact starting
   artifact, relevant decision, applied/unapplied changes and one next item.
-  Do not automatically roll through the entire backlog after a checkpoint.
+  Automatic continuation requires the owner's explicit authorization above;
+  it does not authorize an unbounded task or skipping dependency gates.
 
 ## Design and provenance
 

@@ -7,8 +7,9 @@ output hashes are in `reports/clock-definition.json`. The recovered
 
 The definition-only stage is preserved in commit `702f53b`. The current PCB adds
 the first local copper increment; its current hash and exact added segments are
-in `reports/clock-local-routing.json`. The older clock-definition report binds
-the earlier stage, not the current PCB.
+in `reports/clock-local-routing.json`. A subsequent metadata-only library
+reconciliation is bound by `reports/clock-library-reconciliation.json`, the
+current stage report. Older reports bind their named stages, not later PCBs.
 
 ## Implemented scope
 
@@ -54,8 +55,22 @@ reports **92 to 86 unconnected items** under matching unfilled-zone conditions.
 This is not comparable to the recovered board's 59-item filled-zone result.
 The complete non-silkscreen finding multiset is unchanged: four inherited USB
 hole-clearance errors and **three Clock footprint/library mismatch warnings**.
-The latter were discovered by this resumed check and remain a definition
-reconciliation gate, not a waiver. Existing silkscreen/text findings also remain.
+The latter were discovered by this resumed check and resolved in the subsequent
+metadata-only step below. Existing silkscreen/text findings remain.
+
+### Clock library reconciliation
+
+All three Clock board instances now match their native libraries. The mismatch
+was assembly classification, **not pad geometry**: the unspecified board
+instances loaded with attribute 0, while the versionless library modules
+defaulted to through-hole attribute 1. Explicit `(attr smd)` sets both to the
+correct surface-mount attribute 2. The definition generator now emits this
+metadata too; it was not rerun over the routed board.
+
+No pads, nets, positions, rotations or copper changed. Native DRC removes exactly
+the three library warnings; all other findings persist. The unfilled-zone
+unconnected count remains 86, although the native report selects different
+airwire endpoint witnesses. The exact pad/copper geometry remains unchanged.
 
 The MCU XIN/XOUT approaches, Y1 pin 2 ground and the capacitor/case-ground
 island's connection to protected ground remain unfinished. Those routes need
@@ -87,7 +102,6 @@ The exercised before/after DRC commands each had a 30-second process timeout.
 `tools/route_clock_local.py` at the repository root applies only to the pinned
 `702f53b` definition PCB and refuses to rerun over this increment.
 
-Next item: reconcile the three Clock library/instance warnings without changing
-pad geometry or placements; then resume the MCU approaches and return paths as
-a separate bounded routing item. USB, other part revisions, mechanical rebinding and vendor exports remain
+Next item: resume the MCU approaches and return paths as a separate bounded
+routing item. USB, other part revisions, mechanical rebinding and vendor exports remain
 separate work. No procurement, powered-cell or child-use approval is implied.

@@ -99,7 +99,7 @@ def main():
         f = loads(block)
         changes = [(f.items[1].start, f.items[1].end, json.dumps("Clock:" + NAMES[ref]))]
         changes += prop_edits(f, {"Value": "12MHz/CL10pF" if ref == "Y1" else "15pF"})
-        changes.append((f.end-1, f.end-1, metadata(ref)))
+        changes.append((f.end-1, f.end-1, "\n(attr smd)" + metadata(ref)))
         for pad in f.children("pad"):
             number = pad.atoms()[1]
             x, y = ((-1.15 if number in ("1", "4") else 1.15),
