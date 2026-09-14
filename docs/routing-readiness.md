@@ -1,5 +1,14 @@
 # From fit mock-up to routed PCB
 
+## September 14 cost-aware closure direction
+
+The owner approves the [closure plan](pcb-closure-plan.md): one active
+candidate, a finite repair/disposition list, geometry decisions before final
+routing, and complete checks at coherent milestones. The plan's current
+ledger distinguishes necessary corrections from unresolved example-pattern
+reviews. It supersedes the early one-retry policy below; retain the current
+two-correction and sequential-continuation limits in `AGENTS.md`.
+
 ## September 14 all-front clock network completed locally
 
 The [current clock revision](../hardware/handbell/iterations/printed-bell-clock-draft/README.md)

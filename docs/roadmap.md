@@ -16,6 +16,12 @@ shell, acoustic, and assembly feasibility work.
 
 ## Execution and dependencies
 
+**September 14 execution update:** the owner-approved
+[cost-aware closure plan](pcb-closure-plan.md) coordinates the remaining
+E04/E05/E07/E08 geometry, routing and quotation work. It preserves previous
+studies, batches bookkeeping and uses coherent closure milestones rather
+than open-ended routing tasks. It does not waive the completion gates below.
+
 Dependencies below are **completion gates**, not a ban on parallel investigation.
 For example, initial schematic drafting can start while the bench experiment
 runs; schematic freeze waits for its relevant electrical decisions. Measurement

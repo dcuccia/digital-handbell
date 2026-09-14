@@ -2,6 +2,9 @@
 
 ## Bounded engineering work
 
+- Apply the [cost-aware closure plan](docs/pcb-closure-plan.md). Optimize for
+  closing a stable candidate, not the number of microtasks or reports produced.
+  Keep one active candidate and preserve older work as evidence.
 - Divide potentially long work (schematics, sourcing, placement, PCB routing,
   CAD, exports and validation) into bite-sized, independently reviewable items.
   Name the exact references, nets, files or mechanical interface, expected
@@ -43,6 +46,33 @@
   artifact, relevant decision, applied/unapplied changes and one next item.
   Automatic continuation requires the owner's explicit authorization above;
   it does not authorize an unbounded task or skipping dependency gates.
+
+### General agent efficiency principles
+
+These principles also apply to software work; hardware-specific gates remain
+in the linked closure plan.
+
+- Freeze settled requirements and dependencies before expensive downstream
+  work. Reopen them only for a concrete conflict, not speculative improvement.
+- Keep a promising candidate with a finite repair list. A local regression
+  calls for a local repair attempt, not automatic abandonment or acceptance.
+- Count root defects, not repeated diagnostic witnesses. Preserve the
+  evidence, but group findings by the actual connection or behavior to repair.
+- Batch related bookkeeping. Use cheap scoped checks during iteration and
+  complete checks at coherent milestones; never substitute scoped evidence
+  for a release gate. Reuse unchanged evidence only when its inputs/invariants
+  are demonstrably unchanged.
+- Prefer existing deterministic tools to repeated model reasoning or new
+  one-off frameworks. Time slow stages once before optimizing; a timeout
+  indicates incomplete evidence, not necessarily a defective design.
+- Make each bounded item a coherent closure pass, not a single field edit.
+  Keep reports concise and source-bound; regenerate large exports only when
+  needed for review or milestone handoff.
+- Preserve functional, safety, recovery and provenance requirements.
+  Optional simplifications need explicit dispositions, not hidden exclusions.
+- Escalate structural redesign, exhausted corrective attempts or repeated
+  lack of measurable progress. Do not broaden the task or promise a remaining
+  dollar cost without evidence.
 
 ## Design and provenance
 

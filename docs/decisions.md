@@ -434,6 +434,22 @@ The 3.3 V reference does not qualify oscillator startup/drive at battery-fed
 LDO dropout. A supplier quotation, order or powered release is not implied.
 Affected decisions: D02/D03/D05/D14; epics E04/#4, E07/#7 and E08/#8.
 
+## 2026-09-14: cost-aware prototype closure
+
+The owner approves the [PCB closure plan](pcb-closure-plan.md) and requests
+durable repository guidance plus incremental execution. Keep a promising
+candidate with a finite repair list instead of abandoning it after a local
+regression. Freeze required geometry decisions before expensive final routing;
+batch metadata, reuse deterministic tools and perform complete checks at
+coherent milestones. Generalizable agent principles are recorded in
+`AGENTS.md`, without changing personal/global agent configuration.
+
+Continue sequential bounded foreground items with up to two corrections,
+and stop promptly on an owner pause. Preserve all earlier work and source
+attribution. The target is a consistent engineering-prototype quotation
+package, not functional/safety signoff or authorization to upload/order.
+Owning epics: E04/#4, E05/#5, E07/#7 and E08/#8.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |
