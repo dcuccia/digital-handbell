@@ -1,0 +1,55 @@
+{
+  "status": "WORKING_COPY_ONLY_NOT_ACCEPTED",
+  "input_commit": "31d2b66",
+  "accepted_pcb_sha256": "0c81f57fd3046248448d778230800849527c8a8ecaf501454314c82fffbe8db0",
+  "actual_design_changes": [],
+  "scope": "Refill the existing F GND zone in an isolated copy; preserve every original declaration and splice only filled-polygon caches. No B pour, vias, new tracks or rule-area changes.",
+  "zone_inventory": {
+    "ground_zones": 1,
+    "ground_zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+    "pour_only_exclusions": 10,
+    "private_pickoffs": ["R26.2 to R27.2", "R24.2 to C28.2"]
+  },
+  "initial_cli_refill": {
+    "process_timeout_seconds": 45,
+    "kicad_version": "10.0.6",
+    "filled_polygon_entries": 25,
+    "polygon_points": 5596,
+    "spliced_working_pcb_sha256": "de6810ec49825c69b3234bb0c72eb0963ca803617e4f7c9887a485cbe2ebbef3",
+    "native_and_independent_graph_unconnected_items": 58,
+    "new_physical_drc_findings": [],
+    "private_pickoff_and_exclusion_guards": "passed",
+    "current_unfilled_baseline_lost_connected_pad_pairs": 0,
+    "recovered_filled_baseline_lost_connected_pad_pairs": 21,
+    "regression": "C25.2 (GND) lost its previous connectivity to a 21-pad ground group. This is one separated pad, not 21 independent routing defects.",
+    "disposition": "Rejected despite the lower airwire count. A count-only progress metric would hide the regression.",
+    "airwire_groups": {
+      "GND": 21,
+      "VCORE": 5,
+      "USB_both_sides_of_series_resistors": 4,
+      "other_power_audio_and_control": 28
+    }
+  },
+  "recorded_settings_replay": {
+    "reason": "Original accepted fill generation used explicit in-memory settings rather than assuming generic CLI refill is equivalent.",
+    "settings": {
+      "clearance_mm": 0.2,
+      "edge_clearance_mm": 0.25,
+      "hole_clearance_mm": 0.25,
+      "hole_to_hole_mm": 0.25,
+      "polygon_error_mm": 0.001,
+      "min_thickness_mm": 0.25,
+      "pad_connection": "solid with original overrides preserved",
+      "island_removal": "always"
+    },
+    "native_fill": "completed in working copy",
+    "filled_polygon_entries": 24,
+    "polygon_points": 10365,
+    "working_pcb_sha256": "307122d6838df5dda24331091c463930889a2185fb01b57ae95cab107337c408",
+    "independent_validation": "Terminated at the 60-second process limit; no complete result accepted.",
+    "disposition": "Unverified proposal retained privately. Do not infer that C25 or the other guards passed.",
+    "cause_limit": "The cause of the C25 difference is not established; no claim that clock movement alone caused it."
+  },
+  "next_bounded_item": "Determine C25 ground continuity under the recorded fill settings with focused, time-bounded checks, then resolve any genuine missing return. Finish the independent protection/connectivity proof before applying fill.",
+  "remaining": "Accepted board remains unfilled with 82 native unconnected items. Neither working copy is a released PCB or manufacturing artifact."
+}

@@ -28,6 +28,22 @@ effective-capacitance, clock-drive, assembly, full mechanical and supplier gates
 Identity coverage is not manufacturing approval. Physical findings and the
 82 unfilled opens are unchanged.
 
+## Ground-fill investigation: not applied
+
+The [isolated refill investigation](reports/front-ground-refill-investigation.json)
+preserves the existing one-F-zone/ten-exclusion plan and does not modify this
+accepted PCB. A generic refill produced 58 opens, but comparison with the
+recovered filled baseline exposed loss of C25's previous ground connectivity.
+The private-pickoff and exclusion guards passed; the connectivity regression
+still makes that proposal unacceptable.
+
+Replaying the earlier fill's explicit in-memory settings produced a different
+working copy. Its full independent validation reached a 60-second process
+limit, so no complete result or C25 recovery is claimed. Both attempts remain
+unapplied. The next focused item must establish that continuity and complete
+the independent proof before accepting a ground fill; the current board still
+has the documented 82 unfilled opens.
+
 ## Ordinary resistor identities applied
 
 All 27 ordinary 0402 resistors now carry the selected Yageo orderables in the
