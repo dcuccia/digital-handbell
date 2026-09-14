@@ -1,0 +1,49 @@
+{
+  "authorization": "Parent-authorized conservative U1/U6 body-depth corrections, September14,2026",
+  "evidence_scope": "Manufacturer maxima carried forward from the read-only BOM audit and T8 source evidence; no new physical measurement or PDF redistribution",
+  "audit_reference": "docs/pcba-bom-readiness.md",
+  "changes": [
+    {
+      "reference": "U1",
+      "old_depth_mm": 2.0,
+      "new_depth_mm": 2.1,
+      "dimension_basis": "Winbond UX E=2.0 +/-0.1mm; width envelope already covers D=3.0 +/-0.1mm.",
+      "manufacturer_document": {
+        "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6661/W25Q16JV.pdf",
+        "revision": "Winbond Revision I December24,2024; section11.3 printedp67",
+        "previously_inspected_pdf_sha256": "a1e966f4a80bfb3786a3f781cfeff28c774b824ec92e10090038f9dec823e5f3"
+      },
+      "rotation_deg": -90,
+      "local_depth_axis_board_xy_unit": [
+        1.0,
+        0.0
+      ],
+      "unchanged_width_height_mm": [
+        3.1,
+        0.6
+      ],
+      "native_geometry_changed_by_envelope_adjustment": false
+    },
+    {
+      "reference": "U6",
+      "old_depth_mm": 1.5,
+      "new_depth_mm": 1.55,
+      "dimension_basis": "TI DSE0006A permits 1.55mm maximum body depth; width envelope is already larger.",
+      "manufacturer_document": {
+        "url": "https://www.ti.com/lit/ds/symlink/bq2970.pdf",
+        "revision": "TI SLUSBU9I August2024; DSE0006A drawing4220552/B January2024",
+        "previously_inspected_pdf_sha256": "33ecbecf2eca2276a7afa6cf41aa6f8016ef4a71572a52d6941dfba8f3def126"
+      },
+      "rotation_deg": 0,
+      "local_depth_axis_board_xy_unit": [
+        -0.0,
+        1.0
+      ],
+      "unchanged_width_height_mm": [
+        1.9,
+        0.8
+      ],
+      "native_geometry_changed_by_envelope_adjustment": false
+    }
+  ]
+}

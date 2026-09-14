@@ -5,8 +5,9 @@
 permits critical routing after coordinated engineering interface review,
 without another owner viewing turn. The all-front D43 placement and complete
 D70 printed assembly now retain the original PCB M2/USB/contact datums.
-The earlier stage-1 PCB remains an immutable unrouted checkpoint; a separate
-routing candidate and a fresh exact mechanical bind are required.
+The earlier stage-1 PCB remains an immutable unrouted checkpoint. The separate
+power-rework candidate now has a fresh exact mechanical bind; every subsequent
+electrical change still needs its own current-source bind.
 This does not close the power, USB land-pattern, actual cell/contact,
 manufacturing or physical qualification gates below.
 
@@ -21,6 +22,16 @@ boost/protection-sense poses while retaining the D43, face, mount, USB and
 contact interfaces; it needs a fresh exact mechanical bind before acceptance.
 The review records provisional current/drop/copper assumptions, not a
 thermal or manufacturing approval.
+
+**September 14 milestone:** the
+[power-rework package](../hardware/handbell/iterations/printed-bell-power-rework/README.md)
+implements the F-side output loops and independent R26 pickoff. Its ten
+recorded pose changes and conservative U1/U6 envelope enlargements fit the
+complete regenerated assembly without changing the shell or fixed interfaces.
+There are still 155 unconnected items, including the main Q1-to-boost feed;
+power budgets, full routing and ground spreading are not closed. The
+[USB qualification finding](usb-connector-qualification.md) adds an actual
+lost-slot import correction, not merely an existing DRC disposition.
 
 **September 11 owner-requested checkpoint:** implement and inspect the
 [measured-shell T8 integration](t8-integration-plan.md) before starting copper.

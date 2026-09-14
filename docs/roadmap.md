@@ -99,9 +99,13 @@ thermal/retention gates, and does not authorize fabrication.
 
 The first copper checkpoint is now published separately. An owner-requested
 [power-routing review](../hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
-identified boost-loop and protector-sense corrections. E07 is reworking those
-before further signal optimization; E05 must consume the exact resulting
-placement rather than transfer the old fit approval to moved parts.
+identified boost-loop and protector-sense corrections. The
+[separate power-rework milestone](../hardware/handbell/iterations/printed-bell-power-rework/README.md)
+implements those changes, and E05 now consumes that exact PCB and placement
+in the complete printed assembly. E07 still has 155 unconnected items and
+open power-budget work. E02/E04/E07/E08 also track the newly discovered
+[USB slot-import and land-pattern qualification gap](usb-connector-qualification.md);
+neither the old source geometry nor a global clearance waiver resolves it.
 
 **Quotation handoff:** the owner now explicitly expects complete PCB+PCBA
 upload assets for both JLCPCB and PCBWay, not only an initial routing draft.

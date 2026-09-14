@@ -1,0 +1,16 @@
+# Preserve byte-bound native inputs and reports across checkout.
+.gitattributes -text
+*.json -text
+*.xml -text
+*.svg -text
+*.md -text
+*.txt -text
+*.csv -text
+*.kicad_pcb -text
+*.kicad_sch -text
+*.kicad_pro -text
+*.kicad_sym -text
+*.kicad_mod -text
+fp-lib-table -text
+sym-lib-table -text
+screen_current_mechanical.py -text

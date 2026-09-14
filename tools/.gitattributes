@@ -1,4 +1,6 @@
 # The FreeCAD report and embedded source snapshot identify these exact bytes.
+.gitattributes -text
+kicad_sexpr.py -text
 build_mechanical.py -text
 screen_measured_speaker.py -text
 draft_wing_placement.py -text
@@ -15,5 +17,8 @@ check_printed_bell_routing.py -text
 build_printed_bell.py -text
 check_printed_bell.py -text
 view_printed_bell.FCMacro -text
+route_printed_bell_power_rework.py -text
+check_printed_bell_power_rework.py -text
+analyze_printed_bell_power_paths.py -text
 route_printed_bell.py -text
 check_printed_bell_routing.py -text

@@ -9,9 +9,9 @@
     "frozen_t8_report": "b3cf4e25de42f3ce09c551ab3580f997bc3ede1af2c594d79ff098bdfdc4289a",
     "frozen_t8_placement": "4e8e27f7241e76850ef4fb9719a45acf0ab49ccfe9e1d651ef60f278b20da46c",
     "frozen_t8_contact": "e93d72ef211b7615634f255153a413b826d05c1495fa19d967c64456b647c4a6",
-    "placement": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+    "placement": "60e394c41bcfd7734b41c7713100360253164381f0217eed325386bd49977799",
     "contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
-    "pcb": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+    "pcb": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
     "schematic": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
     "library_13": "46b1831b0fa4c724b83411a5d7498f59494c80201cee6fdbb13d20cf504a4d42",
     "library_14": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
@@ -49,12 +49,12 @@
   },
   "artifacts": {
     "printed-bell-complete.step": {
-      "sha256": "f20c5d9b6f100619d830f13652fc33240e6db4402ab38bed1c918a3b7b9ce9d4",
+      "sha256": "289e30cd0885945e8e1dd548ccecd8b6f9a629dc24b53760d811a85f546aa6e3",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
         "solid_count": 117,
-        "volume_mm3": 87566.25016889292,
+        "volume_mm3": 87566.51216910702,
         "bounds": {
           "min_mm": [
             -35.0,
@@ -74,17 +74,17 @@
         }
       },
       "maximum_bound_error_mm": 0.0,
-      "volume_delta_mm3": -0.002336047138669528,
+      "volume_delta_mm3": -0.0023362124775303528,
       "maximum_per_solid_symmetric_difference_mm3": 0.0,
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "removable-cartridge.step": {
-      "sha256": "00475a0bb6928295fba997577c9827a94f47a59ca9cf7f5a34acbc90b6c95ea6",
+      "sha256": "ad0becbb23cb16a4fe8b07a4de8ec02caa04fea374095dbf6878ef3b872ca6e9",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
         "solid_count": 106,
-        "volume_mm3": 44523.98712321906,
+        "volume_mm3": 44524.24912338061,
         "bounds": {
           "min_mm": [
             -32.7,
@@ -104,17 +104,17 @@
         }
       },
       "maximum_bound_error_mm": 7.105427357601002e-15,
-      "volume_delta_mm3": -0.0033529701468069106,
+      "volume_delta_mm3": -0.003353618420078419,
       "maximum_per_solid_symmetric_difference_mm3": 0.0,
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "full-populated-pcba.step": {
-      "sha256": "0734035681ca2c37f6b95a6d46e246565f501b80b468fe7de750f201109d7a4c",
+      "sha256": "6aed8a2727edcbcaa3155872b192b14594959266a0cc227beca31c1112ab57e4",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
         "solid_count": 88,
-        "volume_mm3": 3839.6826189693193,
+        "volume_mm3": 3839.9446189693676,
         "bounds": {
           "min_mm": [
             -22.25,
@@ -134,17 +134,17 @@
         }
       },
       "maximum_bound_error_mm": 2.7711166694643907e-13,
-      "volume_delta_mm3": -5.315996531862766e-10,
+      "volume_delta_mm3": -4.82032191939652e-10,
       "maximum_per_solid_symmetric_difference_mm3": 0.0,
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "INERT-pcba-without-contacts.step": {
-      "sha256": "429fc24f60f74bf9c9ae85af35195e401fa3948dbfba39744345617c259edf73",
+      "sha256": "ec75708a8f5cb4d682e72888d23980197b54cef212eefa82680d48971db27848",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
         "solid_count": 1,
-        "volume_mm3": 3428.2961695083186,
+        "volume_mm3": 3428.558169508368,
         "bounds": {
           "min_mm": [
             -22.25,
@@ -164,12 +164,12 @@
         }
       },
       "maximum_bound_error_mm": 2.7711166694643907e-13,
-      "volume_delta_mm3": -4.94765117764473e-10,
+      "volume_delta_mm3": -4.4792614062316716e-10,
       "maximum_per_solid_symmetric_difference_mm3": 0.0,
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "shell.step": {
-      "sha256": "e14edb1614fc627e47bb1d41ec3eab83bdfca6593a1c08abf4293e8bbdeb8645",
+      "sha256": "2b6f7d8fe4f79866421c38013f26331be57908869cb456c15c23bd56e233da1b",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -199,7 +199,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "black-handle.step": {
-      "sha256": "951e54d1149e3e1b9652be51e8fe16addc3977265bdc6da1b04a32b1af5c3e54",
+      "sha256": "c0083c8c30331746962d342e943333cf7def48922ca963428a19eb1e3499043b",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -229,7 +229,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "flush-carrier.step": {
-      "sha256": "a3383ac6d7da443558e90d1d4d5bc047a385ccfa5262a5807a96102c4980b6fe",
+      "sha256": "7bd4001f2c135941dce7e35db5c3c1f5438456821686b681d3b0a6cbb5e6a0d5",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -259,7 +259,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "yoke.step": {
-      "sha256": "32c0e915748447de89dedff7ebe6e912f369871d2b4fa10b3dcf7ccbb3059f04",
+      "sha256": "0c213f8c4a89957a7928a4b48530bba2f3104f5234822d84cf869d9d32102fde",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -289,7 +289,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "cell-cradle.step": {
-      "sha256": "d42abe4f52bf6182e604bb685434b5ed1aebbf6a2bc0d5196f1bd8d7e2a42440",
+      "sha256": "5e76c41b1c3825712704d70c4ba2f804d4e854a205f9edb59499bc6c60c54bf7",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -319,7 +319,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "cell-cover.step": {
-      "sha256": "e23b59435bc13f30d01d97cfe070b49f5e79a0721a2abc90f40197b10a813596",
+      "sha256": "195fe3bc3b4c2cae948a08944b53587d5a66bea2ce512e9ea8f7698fa056cae2",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -349,7 +349,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "speaker.step": {
-      "sha256": "9f82457f3af7efeb8f8bfc32f196ecfe9aa359305a73445852ce8b4d2dcdc92e",
+      "sha256": "a40f7ce52d9e1c8a0825d28a2c9133e4b2c0917ac925a6c9b4aa915e4f8a5fd8",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -379,7 +379,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "inert-cell.step": {
-      "sha256": "79ede4d5da5abf284f0c5948a87b163f26add1ac68bcd2615648ef92871c87f3",
+      "sha256": "eadf5f26e7b239ffc0e6f998926180ddb7aefc60215a60d361568cd1dbe535b2",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -409,7 +409,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "printed-bell.FCStd": {
-      "sha256": "f0dae8f6e5c62fa41f64d16ebe4bbf2f22cd5f65a266f279c2537c6fae2416fc",
+      "sha256": "2a923489d72297a27e0bd05760b09d3ed2e19513efced5a6510add9d7b53cb4b",
       "brep_roundtrip_verified": true,
       "maximum_object_symmetric_difference_mm3": 0
     },
@@ -474,13 +474,13 @@
       "status": "INERT ONLY"
     },
     "INERT-pcba-without-contacts.stl": {
-      "sha256": "539a0627f8f2672cdad31c91be5b08bd8847114759769de6e9c9dec1cef4f68d",
+      "sha256": "e63df1c35f30709b695d03005483094556c0f983cd8211c802f19c75e8854271",
       "units": "unitless; import mm at 100%",
       "connected_components": 1,
       "closed_manifold": true,
       "self_intersections": false,
       "reconstructed_brep_solid_count": 1,
-      "relative_volume_error": 2.6198675630905205e-05,
+      "relative_volume_error": 2.483289880171087e-05,
       "status": "INERT ONLY"
     },
     "INERT-speaker.stl": {
@@ -504,7 +504,7 @@
       "status": "INERT ONLY"
     },
     "fit-report.json": {
-      "sha256": "f2a8fb6003cdcf2fe7422de25fdc6e68877f106f5639810440d8bc93182541cf"
+      "sha256": "35c629217e12b7b292ab6ca4a3757f5fa70a5968bd6fb7a8ad49997be9e46a44"
     },
     "original-profile.svg": {
       "sha256": "af7f7dbd89dc911ecd811c06e300d049e5f5fa2b326698527099ed8683146b65"
@@ -513,7 +513,7 @@
       "sha256": "e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e"
     },
     "placement-snapshot.json": {
-      "sha256": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4"
+      "sha256": "60e394c41bcfd7734b41c7713100360253164381f0217eed325386bd49977799"
     },
     "contact_interface-snapshot.json": {
       "sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"

@@ -40,7 +40,13 @@ contains real tracks/vias and reduces unconnected items from 222 to 148.
 It remains incomplete and inoperable. The owner-requested
 [high-current review](hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
 identified boost output-capacitor loop and protector-sense pickoff corrections.
-Those are being reworked separately before freezing the power-layout baseline.
+The [separate power-rework milestone](hardware/handbell/iterations/printed-bell-power-rework/README.md)
+now implements those corrections, and the complete FreeCAD assembly has been
+rebuilt around its exact placement. It still has **155 unconnected items**;
+the main switched-battery feed, other routing, sourced parts and manufacturing
+inputs remain unfinished. A newly identified
+[USB import/land-pattern problem](docs/usb-connector-qualification.md) must also
+be corrected before the quotation package.
 
 The intended handoff includes [full PCB+PCBA quotation assets](docs/pcba-quotation-plan.md)
 for JLCPCB and PCBWay after completing the design, not just the partial

@@ -96,13 +96,23 @@
   nose-approach screen is not actual USB mating or sealing qualification.
 - The first `printed-bell-routing` candidate contains partial copper, not a
   power-layout approval. Read its `reports/power-routing-review.md`: the boost
-  output-capacitor loop and shared protector-sense pickup require rework in a
+  output-capacitor loop and shared protector-sense pickup required rework in a
   separate candidate. Keep actual load/ripple/sense paths distinct, account
   for pad/parallel-copper overlaps when evaluating necks, and do not infer
   ampacity from DRC. Current/copper/drop/temperature targets are provisional.
   Prioritize paired power/return routing and local switching loops over
   preserving an initial local floorplan; rebind moved parts into the full
   mechanical model. Preserve contact-base exclusions and CELL_NEG isolation.
+- The separate `printed-bell-power-rework` implements those two topology
+  corrections and has a matching complete CAD assembly, but retains 155
+  unconnected items and open power budgets. Preserve this milestone while
+  completing routing. Bind authoritative source bytes, not ignored KiCad
+  `.kicad_prl` preferences or other ambient personal state.
+- Read `docs/usb-connector-qualification.md`: the import lost four elongated
+  USB anchor openings, leaving round drills. Restoring slots without reviewing
+  annular rings is insufficient. Qualify the complete manufacturer pattern,
+  paste, pickup datum and tail/body geometry; do not waive global clearances
+  or edit the archived reference. SMD-only CPL export can omit fitted X6.
 - The owner expects full PCB+PCBA quotation assets for JLCPCB and PCBWay.
   Follow `docs/pcba-quotation-plan.md`; include both fitted rear contacts and
   verify actual placement centres/rotations. Do not label unrouted exports

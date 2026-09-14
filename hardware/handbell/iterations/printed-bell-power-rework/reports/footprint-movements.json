@@ -1,0 +1,142 @@
+[
+  {
+    "reference": "C26",
+    "old_native_pose": [
+      -4.442650999999998,
+      18.407437,
+      0.0
+    ],
+    "new_native_pose": [
+      -9.5,
+      10.9,
+      180
+    ],
+    "rationale": "Face V+ directly toward the inductor input, with GND facing the shunt-return approach; avoid crossing its opposite-polarity land."
+  },
+  {
+    "reference": "C27",
+    "old_native_pose": [
+      -7.265563,
+      15.705806999999993,
+      270.0
+    ],
+    "new_native_pose": [
+      0.1,
+      15.2,
+      270
+    ],
+    "rationale": "First output capacitor directly faces U5 VOUT/GND with both connections on F."
+  },
+  {
+    "reference": "C28",
+    "old_native_pose": [
+      -9.383487000000002,
+      15.802423000000005,
+      270.0
+    ],
+    "new_native_pose": [
+      2.2,
+      15.2,
+      270
+    ],
+    "rationale": "Parallel second output capacitor on the same broad F positive/ground buses."
+  },
+  {
+    "reference": "C29",
+    "old_native_pose": [
+      -6.603257999999997,
+      12.098490999999996,
+      0.0
+    ],
+    "new_native_pose": [
+      -5.7,
+      11,
+      0
+    ],
+    "rationale": "Keep the DNP snubber/service reservation clear of the relocated full-size inductor; do not fit or change circuit."
+  },
+  {
+    "reference": "L1",
+    "old_native_pose": [
+      0.4786529999999942,
+      15.758567999999997,
+      180.0
+    ],
+    "new_native_pose": [
+      -7,
+      14.8,
+      0
+    ],
+    "rationale": "Move full-height inductor behind U5, not between VOUT/GND and output capacitors; retain annular magnet clearance."
+  },
+  {
+    "reference": "R23",
+    "old_native_pose": [
+      -4.199078,
+      13.802443999999994,
+      180.0
+    ],
+    "new_native_pose": [
+      -1.8,
+      12.7,
+      180
+    ],
+    "rationale": "Keep feedback divider adjacent to FB and take voltage from the output capacitor, away from SW."
+  },
+  {
+    "reference": "R24",
+    "old_native_pose": [
+      -4.197681000000003,
+      12.592618000000002,
+      0.0
+    ],
+    "new_native_pose": [
+      -2.1,
+      11.4,
+      0
+    ],
+    "rationale": "Keep FB node short; use a separately reserved quiet capacitor-ground reference, not the switching-return maze."
+  },
+  {
+    "reference": "R25",
+    "old_native_pose": [
+      -11.599530999999999,
+      9.349843000000007,
+      0.0
+    ],
+    "new_native_pose": [
+      -9.2,
+      8.3,
+      0
+    ],
+    "rationale": "Clear the R27 load-return approach formerly obstructed by this bias resistor; retain local U6 filtered supply."
+  },
+  {
+    "reference": "R26",
+    "old_native_pose": [
+      -14.602592000000001,
+      5.549142000000003,
+      0.0
+    ],
+    "new_native_pose": [
+      -13.6,
+      11.7,
+      90
+    ],
+    "rationale": "Put sense resistor beside R27 system-side land for an independent direct pickoff."
+  },
+  {
+    "reference": "U5",
+    "old_native_pose": [
+      -4.198999000000001,
+      16.001796,
+      0.0
+    ],
+    "new_native_pose": [
+      -2.7,
+      15.2,
+      0
+    ],
+    "rationale": "Face both output-capacitor rows; SW escapes under the package toward the inductor behind it, per SLVAES4."
+  }
+]

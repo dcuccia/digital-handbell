@@ -7,30 +7,41 @@ versions. Ordinary launcher Python needs no FreeCAD modules or extra package.
 ## Current exact all-front bind
 
 ```powershell
-python .\tools\build_printed_bell.py --placement .\hardware\handbell\iterations\printed-bell-front\placement-manifest.json
+python .\tools\build_printed_bell.py --placement .\hardware\handbell\iterations\printed-bell-power-rework\placement-manifest.json
 python .\tools\check_printed_bell.py
 ```
 
-This writes the current assembly to the study root. The completed stage-1
-manifest begins `71071718`; the PCB begins `17dc83ce`. Full hashes are in
+This writes the current assembly to the study root. The completed power-rework
+manifest begins `60e394c4`; the PCB begins `6132f8d3`. Full hashes are in
 README, `fit-report.json` and `artifact-manifest.json`.
 After copper-only routing changes, the parent must supply the regenerated
 manifest with actual new PCB hash and repeat the complete bind. Geometry
 can remain unchanged; a stale input hash is still not an approved release.
 
-For the final routed-candidate handoff, use the `printed-bell-routing`
-placement manifest instead. After the completed generation and mechanical
-check, run the actual-glyph screen against the rebound native:
+After the completed generation and mechanical check, run this candidate's
+actual-glyph screen against the rebound native:
 
 ```powershell
-python .\hardware\handbell\iterations\printed-bell-routing\screen_service_labels.py --current-mechanical
+python .\hardware\handbell\iterations\printed-bell-power-rework\screen_current_mechanical.py
 ```
 
-The command rejects a native still bound to stage 1 and writes a separate
+The command rejects a native bound to another electrical candidate and writes a separate
 `service-label-current-mechanical-review.json` beside the routing reports.
 Its exact current-native and completion bindings supplement, rather than
 overwrite, the earlier immutable release/visibility evidence. This report
 is not an input to model generation, avoiding a circular evidence dependency.
+
+This intermediate power milestone is not the final routed/quote candidate.
+Changing the USB footprint, sourced-part envelopes or electrical bytes requires
+another complete bind and the corresponding candidate's label screen.
+
+On the September 14 GUI run, FreeCAD 1.1.3 emitted a nonfatal
+`Reading failed from embedded file: GuiDocument.xml` message while restoring
+the headless-written display metadata. All four views were produced from the
+intact native, and the view macro left that source unchanged. The minimal
+display XML has no Camera element; GUI-state cleanup remains a separate
+handoff item, not permission to replace the bound source with a GUI-resaved
+file or to ignore a geometry/hash failure.
 
 ## Optional explicit development reproduction
 

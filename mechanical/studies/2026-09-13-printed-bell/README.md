@@ -1,11 +1,19 @@
 # Original printed bell — September 13
 
-**Exact all-front stage-1 assembly; coordinated mechanical interface ready
-for the parent's authorized routing stage.** The native and exports at this
-study root bind the actual `printed-bell-front` PCB, schematic, manifest,
+**Exact all-front power-rework assembly; an intermediate routing milestone,
+not the final fabrication model.** The native and exports at this
+study root bind the actual `printed-bell-power-rework` PCB, schematic, manifest,
 contact companion and source libraries: **81 F electronic parts plus two
 fitted B contacts**. No PCB growth, changed mounts, USB relocation, lowered
 cell or shortened inductor was required.
+
+The ten local power-layout pose changes and audited U1/U6 maximum-depth
+enlargements are now represented in the full assembly. D3 still gives the
+smallest nominal component/speaker gap, 0.400 mm; L1 retains its 0.700 mm
+yoke gap. All seven actual rear service labels have separate current-model
+visibility evidence in the electrical package. The six structural print
+geometries are unchanged. The prior stage-1 assembly remains in commit
+`4bbdcbb0ee1724b450b66f3a03abcaa8c48333d1`.
 
 The current checker passes exact input/output hashes, native/STEP BRep
 round trips, all nine inert meshes, zero static material overlaps and the
@@ -40,14 +48,18 @@ do not silently treat a changed PCB hash as already reviewed.
 
 | Bound source | SHA256 |
 |---|---|
-| Placement manifest | `710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4` |
-| Actual PCB | `17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53` |
+| Placement manifest | `60e394c41bcfd7734b41c7713100360253164381f0217eed325386bd49977799` |
+| Actual PCB | `6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1` |
 | Actual schematic | `e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f` |
 | Contact companion | `f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b` |
 | Dated design-input bytes | `e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e` |
+| Current FreeCAD native | `2a923489d72297a27e0bd05760b09d3ed2e19513efced5a6510add9d7b53cb4b` |
 
-The electrical package retains its four known USB clearance findings and
-unfinished silk/text findings; mechanical release does not waive them.
+The electrical package retains 155 unconnected items, four known USB clearance
+findings and unfinished silk/text work; mechanical release does not waive them.
+The newly documented lost USB anchor-slot import and exact connector drawing
+remain qualification work, so this model does not approve the current USB
+drills or a future replacement footprint.
 Actual USB tails/cable, loaded contact/cell geometry, insulation, strength,
 temperature and printing gates remain open as detailed below.
 

@@ -210,11 +210,36 @@ does not establish adequate current capacity, acceptable temperature rise
 or safe short-circuit behaviour. The initial routing checkpoint is published
 as review evidence, not declared a finished power layout.
 
-After the required corrections, the mechanical package must
-be rebound to the routed candidate's exact bytes and its views refreshed.
-The current mechanical geometry still binds the immutable stage-1 board;
-unchanged footprint positions are not permission to ignore a different
-native PCB hash.
+### September 14: power rework and current assembly
+
+The [separate power-rework candidate](../hardware/handbell/iterations/printed-bell-power-rework/README.md)
+now has direct F-side C27/C28 supply/return loops, a short independent
+R26-to-R27.2 pickoff, a separate capacitor-ground reference for R24, amplifier
+bypass/distribution routing and an additional parallel protection-return via.
+Ten local poses changed; U1/U6 body-depth proxies now include the audited
+manufacturer maxima. The original placements and first routing package remain
+unchanged.
+
+The candidate has **674 tracks, 35 vias, no zones and 155 unconnected items**.
+It deliberately reopens some earlier connections rather than preserve an
+inferior power topology. The main Q1-to-boost feed and other power/signal nets
+remain open. Shorter output loops do not prove thermal/current performance;
+the SW neck and sampled voltage-drop cases retain explicit limitations.
+
+The complete corrected FreeCAD assembly, exports and four views now bind
+PCB `6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1`
+and manifest `60e394c41bcfd7734b41c7713100360253164381f0217eed325386bd49977799`.
+Native SHA-256 is
+`2a923489d72297a27e0bd05760b09d3ed2e19513efced5a6510add9d7b53cb4b`.
+There are no nominal material overlaps; the smallest component/speaker gap
+remains D3's 0.400 mm, and L1 retains its 5 mm height and 0.700 mm yoke gap.
+All seven actual rear labels have a separate exact-current-model service
+screen. This is conservative CAD evidence, not physical fit or safety signoff.
+
+The shell, six structural prints, mounts, contact/cell datums and insulation
+were not reduced or resized. A subsequent sourced-part or
+[USB land-pattern correction](usb-connector-qualification.md) still requires
+another exact bind; this intermediate assembly is not the final quote model.
 
 Owning epics: E04/#4 electrical, E05/#5 mechanics, E07/#7 placement/routing,
 E10/#10 eventual qualification.

@@ -17,6 +17,10 @@ placeholder ZIP and call it the completed handoff.
 The [initial BOM-readiness audit](pcba-bom-readiness.md) separates recoverable
 identities from genuinely unselected parts and records the exact population,
 package-envelope corrections and sourcing/process work still required.
+The [USB qualification study](usb-connector-qualification.md) also records
+lost anchor-slot geometry in the import, the four real locator-to-copper
+clearances, mixed-mount placement/paste concerns and the required
+drawing-supported correction. This is not resolved by a global DRC waiver.
 
 ## Package contents
 
@@ -47,6 +51,14 @@ The current population is **81 front electronic parts and two rear Keystone
 placement list. The supplier may choose an appropriate assembly operation,
 but its price must include fitting them; do not describe this as purely
 single-sided assembly or silently leave those contacts for the owner.
+
+X6 also belongs in the fitted population even though its present mixed-mount
+footprint lacks the SMD-only export attribute. Its plated anchors and the tall
+rear contacts need explicit assembly-operation confirmation. The current
+contact model reaches 16.59 mm from the B face; this is nominal geometry, not
+a verified machine-height allowance or maximum qualified part dimension.
+Include any necessary secondary soldering/fixture operation in the quote
+rather than assuming both sides fit a standard automated process.
 
 Derive the final population from the actual approved variant. Exclude DNP,
 copper-only/test-feature references and mechanical holes from fitted component

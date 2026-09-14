@@ -1,6 +1,6 @@
 {
   "status": "EXACT_ALL_FRONT_ENGINEERING_REVIEW",
-  "generated_utc": "2026-09-14T03:26:48.848393+00:00",
+  "generated_utc": "2026-09-14T08:07:51.120418+00:00",
   "input": {
     "paths": {
       "design_input": "docs\\design-inputs\\2026-09-13-printed-bell.json",
@@ -12,43 +12,43 @@
       "frozen_t8_report": "mechanical\\studies\\2026-09-11-t8-cartridge\\fit-report.json",
       "frozen_t8_placement": "mechanical\\studies\\2026-09-11-t8-cartridge\\placement-snapshot.json",
       "frozen_t8_contact": "mechanical\\studies\\2026-09-11-t8-cartridge\\contact_interface-snapshot.json",
-      "placement": "hardware\\handbell\\iterations\\printed-bell-front\\placement-manifest.json",
-      "contact_interface": "hardware\\handbell\\iterations\\printed-bell-front\\battery-contact-interface.json",
-      "pcb": "hardware\\handbell\\iterations\\printed-bell-front\\handbell.kicad_pcb",
-      "schematic": "hardware\\handbell\\iterations\\printed-bell-front\\handbell.kicad_sch",
-      "library_13": "hardware\\handbell\\iterations\\printed-bell-front\\fp-lib-table",
-      "library_14": "hardware\\handbell\\iterations\\printed-bell-front\\Handbell.kicad_sym",
-      "library_15": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0603-NO.kicad_mod",
-      "library_16": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0805-NO.kicad_mod",
-      "library_17": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\_0402NO.kicad_mod",
-      "library_18": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\B1,27.kicad_mod",
-      "library_19": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CHIPLED_0603_NOOUTLINE.kicad_mod",
-      "library_20": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CRYSTAL_2.5X2.kicad_mod",
-      "library_21": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN16_3MM.kicad_mod",
-      "library_22": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN56_7MM_REDUCEDEPAD.kicad_mod",
-      "library_23": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323_MINI.kicad_mod",
-      "library_24": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323F.kicad_mod",
-      "library_25": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-5.kicad_mod",
-      "library_26": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-WIDE.kicad_mod",
-      "library_27": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\TESTPOINT_ROUND_1.5MM_NO.kicad_mod",
-      "library_28": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\USB_C_CUSB31-CFM2AX-01-X.kicad_mod",
-      "library_29": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit TPS61023-import-fps.pretty\\INDUCTOR_5X5MM_TDK_VLC5045.kicad_mod",
-      "library_30": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit TPS61023-import-fps.pretty\\SOT563.kicad_mod",
-      "library_31": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Adafruit_LSM6DSOX-import-fps.pretty\\LGA-14L.kicad_mod",
-      "library_32": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Connector_JST.pretty\\JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal.kicad_mod",
-      "library_33": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Connector_Molex.pretty\\Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal.kicad_mod",
-      "library_34": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Handbell.pretty\\DFN2015-3_DrainPad.kicad_mod",
-      "library_35": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Jumper.pretty\\SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm.kicad_mod",
-      "library_36": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Jumper.pretty\\SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm.kicad_mod",
-      "library_37": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\MountingHole.pretty\\MountingHole_2.2mm_M2_Pad.kicad_mod",
-      "library_38": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod",
-      "library_39": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\T8.pretty\\BQ29700_DSE6.kicad_mod",
-      "library_40": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\T8.pretty\\CSD83325L_YJE6.kicad_mod",
-      "library_41": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\T8.pretty\\ERJ6BW_0805.kicad_mod",
-      "library_42": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\T8.pretty\\Keystone_254_RevC.kicad_mod",
-      "library_43": "hardware\\handbell\\iterations\\printed-bell-front\\libraries\\T8.pretty\\Winbond_USON8_UX_2x3.kicad_mod",
-      "library_44": "hardware\\handbell\\iterations\\printed-bell-front\\sym-lib-table",
-      "library_45": "hardware\\handbell\\iterations\\printed-bell-front\\T8.kicad_sym"
+      "placement": "hardware\\handbell\\iterations\\printed-bell-power-rework\\placement-manifest.json",
+      "contact_interface": "hardware\\handbell\\iterations\\printed-bell-power-rework\\battery-contact-interface.json",
+      "pcb": "hardware\\handbell\\iterations\\printed-bell-power-rework\\handbell.kicad_pcb",
+      "schematic": "hardware\\handbell\\iterations\\printed-bell-power-rework\\handbell.kicad_sch",
+      "library_13": "hardware\\handbell\\iterations\\printed-bell-power-rework\\fp-lib-table",
+      "library_14": "hardware\\handbell\\iterations\\printed-bell-power-rework\\Handbell.kicad_sym",
+      "library_15": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0603-NO.kicad_mod",
+      "library_16": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0805-NO.kicad_mod",
+      "library_17": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\_0402NO.kicad_mod",
+      "library_18": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\B1,27.kicad_mod",
+      "library_19": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CHIPLED_0603_NOOUTLINE.kicad_mod",
+      "library_20": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CRYSTAL_2.5X2.kicad_mod",
+      "library_21": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN16_3MM.kicad_mod",
+      "library_22": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN56_7MM_REDUCEDEPAD.kicad_mod",
+      "library_23": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323_MINI.kicad_mod",
+      "library_24": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323F.kicad_mod",
+      "library_25": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-5.kicad_mod",
+      "library_26": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-WIDE.kicad_mod",
+      "library_27": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\TESTPOINT_ROUND_1.5MM_NO.kicad_mod",
+      "library_28": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\USB_C_CUSB31-CFM2AX-01-X.kicad_mod",
+      "library_29": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit TPS61023-import-fps.pretty\\INDUCTOR_5X5MM_TDK_VLC5045.kicad_mod",
+      "library_30": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit TPS61023-import-fps.pretty\\SOT563.kicad_mod",
+      "library_31": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Adafruit_LSM6DSOX-import-fps.pretty\\LGA-14L.kicad_mod",
+      "library_32": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Connector_JST.pretty\\JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal.kicad_mod",
+      "library_33": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Connector_Molex.pretty\\Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal.kicad_mod",
+      "library_34": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Handbell.pretty\\DFN2015-3_DrainPad.kicad_mod",
+      "library_35": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Jumper.pretty\\SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm.kicad_mod",
+      "library_36": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Jumper.pretty\\SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm.kicad_mod",
+      "library_37": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\MountingHole.pretty\\MountingHole_2.2mm_M2_Pad.kicad_mod",
+      "library_38": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod",
+      "library_39": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\T8.pretty\\BQ29700_DSE6.kicad_mod",
+      "library_40": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\T8.pretty\\CSD83325L_YJE6.kicad_mod",
+      "library_41": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\T8.pretty\\ERJ6BW_0805.kicad_mod",
+      "library_42": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\T8.pretty\\Keystone_254_RevC.kicad_mod",
+      "library_43": "hardware\\handbell\\iterations\\printed-bell-power-rework\\libraries\\T8.pretty\\Winbond_USON8_UX_2x3.kicad_mod",
+      "library_44": "hardware\\handbell\\iterations\\printed-bell-power-rework\\sym-lib-table",
+      "library_45": "hardware\\handbell\\iterations\\printed-bell-power-rework\\T8.kicad_sym"
     },
     "sha256": {
       "design_input": "e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e",
@@ -60,9 +60,9 @@
       "frozen_t8_report": "b3cf4e25de42f3ce09c551ab3580f997bc3ede1af2c594d79ff098bdfdc4289a",
       "frozen_t8_placement": "4e8e27f7241e76850ef4fb9719a45acf0ab49ccfe9e1d651ef60f278b20da46c",
       "frozen_t8_contact": "e93d72ef211b7615634f255153a413b826d05c1495fa19d967c64456b647c4a6",
-      "placement": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+      "placement": "60e394c41bcfd7734b41c7713100360253164381f0217eed325386bd49977799",
       "contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
-      "pcb": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+      "pcb": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
       "schematic": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
       "library_13": "46b1831b0fa4c724b83411a5d7498f59494c80201cee6fdbb13d20cf504a4d42",
       "library_14": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
@@ -3992,67 +3992,67 @@
     "Component_C26": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 6.5
+        "distance_mm": 2.030504646124169
       },
       "yoke": {
         "intersection_mm3": 0.0,
-        "distance_mm": 3.720453648798156
+        "distance_mm": 3.700000000000003
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 15.158191823577976
+        "distance_mm": 18.600327911891608
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 8.198608033248735
+        "distance_mm": 3.8347394016055083
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 12.323034272566588
+        "distance_mm": 11.499999999999957
       }
     },
     "Component_C27": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 4.715140315382371
+        "distance_mm": 2.779999739373407
       },
       "yoke": {
         "intersection_mm3": 0.0,
-        "distance_mm": 3.6999999999999993
+        "distance_mm": 3.700000000000003
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 18.099587866966782
+        "distance_mm": 13.02939932563466
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 6.95043688595055
+        "distance_mm": 6.161371575174966
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 11.510684679068115
+        "distance_mm": 12.288433713749372
       }
     },
     "Component_C28": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 5.79628984892475
+        "distance_mm": 2.8569106298314026
       },
       "yoke": {
         "intersection_mm3": 0.0,
-        "distance_mm": 3.6999999999999993
+        "distance_mm": 3.700000000000003
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 18.5
+        "distance_mm": 11.996687135586619
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 6.962715894520423
+        "distance_mm": 4.169232749570554
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 11.500045706436344
+        "distance_mm": 12.288433801231552
       }
     },
     "Component_C30": {
@@ -4300,7 +4300,7 @@
     "Component_L1": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 2.1585680646299608
+        "distance_mm": 1.894606695259848
       },
       "yoke": {
         "intersection_mm3": 0.0,
@@ -4308,15 +4308,15 @@
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 8.923016518259434
+        "distance_mm": 14.460330557908398
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 3.8223355222597712
+        "distance_mm": 5.617670718717436
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 12.060342334855601
+        "distance_mm": 11.499999999999957
       }
     },
     "Component_Q1": {
@@ -4894,7 +4894,7 @@
     "Component_R23": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 3.187195001847956
+        "distance_mm": 1.8026043118069215
       },
       "yoke": {
         "intersection_mm3": 0.0,
@@ -4902,21 +4902,21 @@
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 17.345702377583773
+        "distance_mm": 16.275791964134957
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 7.050294223224057
+        "distance_mm": 6.592774145271976
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 11.640685239540545
+        "distance_mm": 11.910701186225099
       }
     },
     "Component_R24": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 2.0827509371246373
+        "distance_mm": 0.9099920482707434
       },
       "yoke": {
         "intersection_mm3": 0.0,
@@ -4924,21 +4924,21 @@
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 17.760658811273924
+        "distance_mm": 17.002648323576697
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 5.8835616494888505
+        "distance_mm": 5.338004708161155
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 11.639139983322224
+        "distance_mm": 11.640136952473945
       }
     },
     "Component_R25": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 3.3437607821353756
+        "distance_mm": 1.1297546079461553
       },
       "yoke": {
         "intersection_mm3": 0.0,
@@ -4946,11 +4946,11 @@
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 19.980702228287715
+        "distance_mm": 20.423176633355887
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 2.871841881455482
+        "distance_mm": 2.083800568249249
       },
       "cover": {
         "intersection_mm3": 0.0,
@@ -4960,23 +4960,23 @@
     "Component_R26": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 4.000883042016944
+        "distance_mm": 6.397577830871088
       },
       "yoke": {
         "intersection_mm3": 0.0,
-        "distance_mm": 5.050000000000004
+        "distance_mm": 5.050000000000001
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 19.90786059596894
+        "distance_mm": 19.85
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 1.5999999999999943
+        "distance_mm": 4.519682219628803
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 11.623428927960742
+        "distance_mm": 11.5
       }
     },
     "Component_R27": {
@@ -5052,7 +5052,7 @@
       },
       "yoke": {
         "intersection_mm3": 0.0,
-        "distance_mm": 5.574917221981156
+        "distance_mm": 5.5582711014207495
       },
       "body": {
         "intersection_mm3": 0.0,
@@ -5136,29 +5136,29 @@
     "Component_U5": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 4.769382646873402
+        "distance_mm": 3.752286475581063
       },
       "yoke": {
         "intersection_mm3": 0.0,
-        "distance_mm": 5.050000000000001
+        "distance_mm": 5.050000000000004
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 16.59498063844621
+        "distance_mm": 15.77356380853763
       },
       "cradle": {
         "intersection_mm3": 0.0,
-        "distance_mm": 7.3430041886823005
+        "distance_mm": 7.660260898964424
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 11.771138879267623
+        "distance_mm": 11.971616308594394
       }
     },
     "Component_U6": {
       "speaker": {
         "intersection_mm3": 0.0,
-        "distance_mm": 1.742893055684916
+        "distance_mm": 1.7307786066892064
       },
       "yoke": {
         "intersection_mm3": 0.0,
@@ -5166,7 +5166,7 @@
       },
       "body": {
         "intersection_mm3": 0.0,
-        "distance_mm": 19.949499880824373
+        "distance_mm": 19.94735312950554
       },
       "cradle": {
         "intersection_mm3": 0.0,
@@ -5174,7 +5174,7 @@
       },
       "cover": {
         "intersection_mm3": 0.0,
-        "distance_mm": 11.51086885100977
+        "distance_mm": 11.509809799488727
       }
     },
     "Component_X6": {
