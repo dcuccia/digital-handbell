@@ -2,7 +2,7 @@
 
 September 14, 2026. The
 [device register](../hardware/handbell/parts/device-component-candidates.json)
-selects **twelve formerly blank prototype device identities** and confirms
+selects **thirteen formerly blank prototype device identities** and confirms
 Q4. It records manufacturer sources, pin/polarity details, local-axis maximum
 dimensions and unresolved manufacturing gates. These identities are not a
 released supplier BOM, approval to purchase, or proof that every inherited
@@ -22,6 +22,7 @@ land/paste pattern is suitable.
 | U2 | Richtek RT9080-33GJ5 | Fixed 3.3 V, non-N variant: pin 4 NC, not SNS |
 | U3 | Microchip MCP73831T-2ACI/OT | Exact existing charger options retained |
 | U4 | MAX98357AETE+T | T1633+4 16-TQFN, not the WLP option |
+| Y1 | Abracon ABM8-272-T3 | RP2040 reference; deliberate 3225 footprint and 15 pF load-capacitor revision |
 
 The researcher preserved original manufacturer documents and actual catalog
 records locally; the parent confirmed all 24 named source hashes and
@@ -112,29 +113,54 @@ mold-compound changes in other tables. This supports current manufacturing
 continuity, not a stock/lifetime guarantee or an observed Active field.
 No reverse-cell or ideal-diode protection is added.
 
-## Crystal decision still open
+## Selected clock-reference revision
 
 The bounded 2520 search did not establish a lower-ESR exact orderable.
 ECS-120-12-36-AGN-TR remains a conditional 12 MHz/12 pF/150 ohm option,
 not the preferred reference. A seemingly lower-ESR Multicomp ordering string
 had contradictory primary tables; its suffix was not accepted as a rating.
 
-The next local-fit candidate is **Abracon ABM8-272-T3**, explicitly recommended
+Select **Abracon ABM8-272-T3**, explicitly recommended
 in Raspberry Pi's RP2040 hardware guide: 12 MHz, 10 pF load, 50 ohm maximum
 ESR and 200 microwatt maximum drive. Its 3.2 x 2.5 mm package is larger than
-the old crystal, but the board must remain D43. Complete the actual land,
-height and fit handoff before native adoption. The current manufacturer PDF
-contains only three sheets and references an absent height table; its
-0.8 mm header is not silently promoted to a tolerance-qualified maximum.
+the old crystal, but the board must remain D43. This is authorization to
+implement the local revision, not a claim that the finished routing fits.
+
+The exact 2024 manufacturer PDF still contains only three sheets and
+references an absent height table. The matching manufacturer-hosted
+[ABM8 family drawing](https://abracon.com/Resonators/abm8.pdf), revised
+July 29, 2020, supplies the actual **0.80 mm maximum** height table and
+recommended lands. Its body/terminal dimensions, pin arrangement and
+variable-chamfer note match the exact part. Use it for geometry only;
+its generic electrical/MSL defaults do not override the exact part.
+
+Use four **1.30 x 1.05 mm rectangular lands at 2.30 x 1.75 mm centre pitch**,
+with 1.00/0.70 mm X/Y gaps. The new **3.60 x 2.80 x 1.00 mm screening
+envelope** contains both maximum bare body and recommended copper while
+retaining the existing height allowance. It is not a qualified placement
+courtyard. The register specifies body-centred pin coordinates; chamfer
+location alone does not identify pin 1 or the assembly rotation.
 
 This reference uses 15 pF load capacitors and 1 kohm series resistance for
-3.3 V IOVDD. C2/C3 remain 22 pF in the earlier passive register until an
-explicit sourced update supersedes them. Even the tested reference needs
+3.3 V IOVDD. C2/C3 now explicitly select **Murata GRM1555C1H150JA01D**,
+15 pF/C0G/50 V/+/-5%, replacing only the earlier 22 pF group. The original
+catalog response and part-specific PDF agree on the complete orderable,
+maximum 1.05 x 0.55 x 0.55 mm body and D packing.
+
+While rerouting this clock cluster, select dedicated **0.40 x 0.50 mm
+capacitor lands at X +/-0.40 mm**. These follow the manufacturer's reflow
+range, unlike the old 0.60 mm pad length. Update corresponding paste/mask;
+do not alter all 0402 footprints or shrink the existing capacitor proxies.
+Keep C3 on the crystal side of R6, and keep R6 at 1 kohm.
+
+Even the tested reference needs
 startup/drive/load evaluation on this layout, particularly when the battery
 and LDO approach dropout rather than maintaining 3.3 V.
+The Pi guide explicitly warns that reduced IOVDD can stop oscillation with
+1 kohm; any later damping change must also recheck drive at maximum IOVDD.
 
-The current Y1 symbol has only pins 1/3, while physical pads 2/4 have no net.
-A selected crystal with grounded metal-case pads needs a corresponding
+The preserved Y1 symbol has only pins 1/3, while physical pads 2/4 have no net.
+The selected crystal's grounded metal-case pads require a corresponding
 four-terminal symbol, schematic/netlist and PCB grounding change. A PCB-only
 ground assignment would not close source equivalence.
 

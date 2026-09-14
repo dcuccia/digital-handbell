@@ -10,8 +10,9 @@ non-boost capacitors and 27 ordinary resistors. It provides identities for
 C26-C28, the power inductor/beads, shunt and remaining device/connector
 selections are outside this register.
 
-The choices preserve existing nominal capacitance/resistance and specified
-minimum voltage. They prefer consistent Murata/Yageo families, including the
+The choices preserve existing nominal values and specified minimum voltage
+except the explicit **C2/C3 22-to-15 pF clock-reference revision** below.
+They prefer consistent Murata/Yageo families, including the
 already recorded C30/R25/R26/R28/R29 identities. Application/land/paste/
 supplier review remains explicit; importing this list must not be mistaken
 for closing the whole [quotation handoff](../../../docs/pcba-quotation-plan.md).
@@ -33,12 +34,23 @@ already selected 10 uF capacitors sharing the oversized source pattern.
 No larger body envelope is required for these six parts; keep the conservative
 heights. See [power-component selection](../../../docs/power-component-selection.md).
 
-`device-component-candidates.json` selects eleven formerly blank device
-identities and confirms Q4, while keeping Q3 replacement and Y1 crystal
-decisions explicitly pending. It records diode-height and permitted-flash
+`device-component-candidates.json` selects thirteen formerly blank device
+identities and confirms Q4, including **DMP2045UFY4-7** for Q3 and the
+tested **ABM8-272-T3** clock reference. It records diode-height and permitted-flash
 screening corrections, correct package/pin variants, and remaining land/
 paste/thermal-via gates. See
 [device-component selection](../../../docs/device-component-selection.md).
+
+Y1 requires a deliberately larger 3225 footprint and four-terminal schematic,
+with a 3.60 x 2.80 x 1.00 mm screening envelope, within the unchanged D43 board.
+Its exact electrical sheet and matching family geometry have different source
+roles; generic crystal electrical defaults must not replace the exact part.
+C2/C3 now select **GRM1555C1H150JA01D, 15 pF**, with dedicated
+manufacturer-range 0.40 x 0.50 mm lands. Their retained `source_values`
+still describe the immutable 22 pF base; `selected_value` explicitly records
+the new value. No other passive group changes, and R6 remains 1 kohm.
+Actual native fit/routing, the complete mechanical bind, supplier process and
+low-cell oscillator behavior remain open.
 
 ## Direct source evidence
 

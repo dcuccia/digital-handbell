@@ -1,9 +1,10 @@
 {
   "schema_version": 1,
-  "status": "Twelve formerly blank prototype device identities selected, plus Q4 confirmation; not a released supplier BOM or ordering/qualification approval",
+  "status": "Thirteen formerly blank prototype device identities selected, plus Q4 confirmation; native fit/implementation and supplier BOM closure remain open",
   "review_date": "2026-09-14",
   "research_register_sha256": "70a21998d23f0ea5cd6c49317b36d505a6af66627b2bbc019e7ac19cd1e1114b",
   "q3_followup_register_sha256": "1e40755be5059cd936ffb19c9549d229cc27d6b30e9463eaeea7cc589981a665",
+  "clock_handoff_sha256": "1e58c9cd5f1df915932914de10bdac887d0d55b730d6166545a427ac8b810c62",
   "native_basis": "hardware\\handbell\\iterations\\printed-bell-power-rework",
   "native_basis_sha256": {
     "reports/bom-draft.csv": "b760b993757a85d4b0bb9b32155a34244e6282fbc9127692afbd5df36a8bd0e0",
@@ -22,6 +23,63 @@
     "Manufacturer body, permitted flash, solder standoff, placement tolerance and qualified mounted assembly are distinct quantities."
   ],
   "groups": [
+    {
+      "references": ["Y1"],
+      "manufacturer": "Abracon",
+      "mpn": "ABM8-272-T3",
+      "selected_value": "12MHz / CL10pF",
+      "manufacturer_package": "ABM8 four-terminal 3.2 x 2.5 mm ceramic SMD crystal",
+      "packing": "3000 pieces/reel",
+      "status": "Selected prototype reference; implement within unchanged D43, not a claim of completed native fit or powered qualification",
+      "evidence_ids": ["abracon-exact", "abracon-geometry", "rp2040-guide"],
+      "body_nominal_xyz_mm": [3.2, 2.5, null],
+      "body_maximum_xyz_mm": [3.4, 2.7, 0.8],
+      "selected_proxy_xyz_mm": [3.6, 2.8, 1.0],
+      "dimensions_note": "Body-centred local axes. Exact 2024 body/terminals match the 2020 ABM8 family drawing; actual Table 2 in the latter corroborates 0.80 mm maximum height. Do not infer that maximum from the exact PDF header or shrink the 1.0 mm screen.",
+      "electrical": {
+        "frequency_Hz": 12000000,
+        "mode": "Fundamental-AT",
+        "load_capacitance_pF": 10,
+        "ESR_max_ohm": 50,
+        "shunt_capacitance_max_pF": 3,
+        "drive_typ_microwatt": 10,
+        "drive_max_microwatt": 200,
+        "tolerance_plus_minus_ppm_at_25_C": 30,
+        "stability_plus_minus_ppm": 30,
+        "operating_temperature_C": [-40, 85],
+        "aging_plus_minus_ppm_first_year_at_25_plus_minus_3_C": 5,
+        "MSL": 1
+      },
+      "selected_land_pattern": {
+        "coordinate_convention": "Top view; local X right, Y down; body-centred origin. Not a final placed-board coordinate or approved CPL rotation.",
+        "shape": "rectangular",
+        "pad_size_xy_mm": [1.3, 1.05],
+        "inner_gap_xy_mm": [1.0, 0.7],
+        "centre_pitch_xy_mm": [2.3, 1.75],
+        "copper_bbox_xy_mm": [3.6, 2.8],
+        "pads": [
+          {"pin": "1", "xy_mm": [-1.15, 0.875], "net_role": "Existing C3/R6 crystal-side resonator node"},
+          {"pin": "2", "xy_mm": [1.15, 0.875], "net_role": "GND"},
+          {"pin": "3", "xy_mm": [1.15, -0.875], "net_role": "Existing XIN/C2 resonator node"},
+          {"pin": "4", "xy_mm": [-1.15, -0.875], "net_role": "GND"}
+        ],
+        "basis": "Actual manufacturer recommended land drawing, generic ABM8 physical page 2; dimensions in parentheses are nominal references."
+      },
+      "native_change_requirements": [
+        "Replace the old 2520 footprint deliberately; add a four-terminal symbol and matching schematic/netlist/PCB case grounds, not PCB-only net assignments.",
+        "Keep C3 on the crystal side of R6. Select 15 pF C2/C3 from the explicitly superseding standard-passive register and retain 1 kohm R6.",
+        "Keep D43, all fixed mount/USB/contact interfaces and 81 F electronics plus two B contacts. Coordinate rather than grow the board if local fit fails.",
+        "Increase the old 3.0 x 2.5 x 1.0 proxy to 3.6 x 2.8 x 1.0; the latter encloses recommended copper too, not a qualified placement courtyard.",
+        "Chamfer may be at pin 1, 3 or 4. It is not a sole pin-1 or 90-degree rotation witness; establish assembly/feed orientation explicitly."
+      ],
+      "remaining_gates": [
+        "Exact 2024 electrical data override generic family ESR, drive, tolerance and MSL defaults; generic source is geometry corroboration only.",
+        "Complete actual native/local fit, short oscillator paths/returns, paste/mask/courtyard and matched assembly rotations before quoting.",
+        "The Pi 1 kohm/15 pF reference assumes 3.3 V IOVDD. Battery-fed LDO dropout can reduce drive and prevent oscillation; net naming does not establish voltage.",
+        "Measure cold/hot/low-cell startup, restart, source transitions, frequency and crystal drive with non-loading probing; no silent damping reduction.",
+        "No functional, thermal, live-cell, procurement or child-use approval is implied."
+      ]
+    },
     {
       "references": ["Q3"],
       "manufacturer": "Diodes Incorporated",
@@ -971,6 +1029,27 @@
     }
   ],
   "sources": {
+    "abracon-exact": {
+      "sha256": "aead22b6bd9d6f8ad4472352f70fce3ade633e90b9772ba80fabe8fd0856ae91",
+      "url": "https://abracon.com/datasheets/ABM8-272-T3.pdf",
+      "inspected_pdf_pages_1_based": [1, 2, 3],
+      "description": "Exact ABM8-272-T3 drawing456603 RevB, 2024-09-16. Three physical pages labelled2/4/6of9; exact electrical specifications, body/terminals/pins and packing. Referenced Table2 is absent.",
+      "local_evidence_filename": "abracon-abm8-272-t3.pdf"
+    },
+    "abracon-geometry": {
+      "sha256": "564ac331d8bf38b4ae1222444b0d9cfea3a6ba29148a8be906b2e0ffe40471d8",
+      "url": "https://abracon.com/Resonators/abm8.pdf",
+      "inspected_pdf_pages_1_based": [2],
+      "description": "Manufacturer-hosted ABM8 family sheet revised2020-07-29. Matching body/terminal/pin geometry, actual0.80MAX height Table2 and recommended lands. Geometry corroboration only, not exact-part electrical defaults or a missing-page reconstruction.",
+      "local_evidence_filename": "abracon-abm8-generic-primary.pdf"
+    },
+    "rp2040-guide": {
+      "sha256": "51c4f430153fcdbf3209d9b3b41662c8527ff0150bc25777e3fcd6f5221a1c19",
+      "url": "https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf",
+      "inspected_pdf_pages_1_based": [10, 11],
+      "description": "Hardware Design with RP2040, printed pages9-10; tested ABM8-272-T3/15pF/1kohm at3.3V IOVDD and explicit lower-IOVDD oscillator warning. Guide R5 corresponds to project R6.",
+      "local_evidence_filename": "rp2040-hardware.pdf"
+    },
     "q3-old": {
       "sha256": "9e81cde7b1b7d7d53cf9f0bbb070072e1443127ea9ddc47db713cb4c33b05614",
       "url": "https://www.diodes.com/datasheet/download/DMG3415UFY4.pdf",
@@ -1211,24 +1290,5 @@
       "local_evidence_filename": "lcsc-pmeg.html"
     }
   },
-  "pending_decisions_not_selected": {
-    "Y1": {
-      "initial_conditional_candidate": "ECS-120-12-36-AGN-TR",
-      "initial_candidate_ESR_max_ohm": 150,
-      "next_action": "Bounded 2520 search did not establish a better exact part. Evaluate the RP2040 guide's tested ABM8-272-T3 3225 reference within unchanged D43, with 15 pF load capacitors and retained 1 kohm R6. Complete land/height/capacitor sourcing and local fit before replacing the current 22 pF selection.",
-      "preferred_reference": {
-        "mpn": "ABM8-272-T3",
-        "frequency_Hz": 12000000,
-        "load_capacitance_pF": 10,
-        "ESR_max_ohm": 50,
-        "drive_max_microwatt": 200,
-        "manufacturer_url": "https://abracon.com/datasheets/ABM8-272-T3.pdf",
-        "manufacturer_pdf_sha256": "aead22b6bd9d6f8ad4472352f70fce3ade633e90b9772ba80fabe8fd0856ae91",
-        "guide_url": "https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf",
-        "guide_sha256": "51c4f430153fcdbf3209d9b3b41662c8527ff0150bc25777e3fcd6f5221a1c19",
-        "limits": "Reference values assume 3.3 V IOVDD; actual battery/LDO dropout, startup, load and drive remain powered gates. The current three-page manufacturer PDF omits the referenced height Table 2 and a recommended land pattern."
-      },
-      "case_ground_gate": "Existing symbol has only pins 1/3 and PCB pads 2/4 have no net. A selected grounded-case crystal requires a matching four-terminal symbol/schematic/netlist/PCB, not PCB-only grounds."
-    }
-  }
+  "pending_decisions_not_selected": {}
 }

@@ -5,6 +5,7 @@
   "base_bom": "hardware\\handbell\\iterations\\printed-bell-routing\\reports\\bom-draft.csv",
   "base_bom_sha256": "b760b993757a85d4b0bb9b32155a34244e6282fbc9127692afbd5df36a8bd0e0",
   "scope": "26 non-boost capacitors and 27 ordinary resistors; excludes C26-C28 and R27",
+  "value_policy": "source_values describe the immutable base BOM. selected_value, when present, explicitly supersedes that value only for the new quote candidate; all other nominal values remain unchanged.",
   "profiles": {
     "murata-0805": {
       "manufacturer": "Murata",
@@ -55,17 +56,36 @@
       "datasheet_sha256": "49de3057e7b09e3134b505cde1875d9c5856af7e04c635db9996609fe0f8f781"
     },
     {
-      "mpn": "GRM1555C1H220JA01D",
+      "mpn": "GRM1555C1H150JA01D",
       "profile": "murata-0402",
       "references": ["C2", "C3"],
       "source_values": ["22pF"],
-      "capacitance_F": 0.000000000022,
+      "selected_value": "15pF",
+      "capacitance_F": 0.000000000015,
       "rated_voltage_V": 50,
       "dielectric": "C0G",
       "tolerance_percent": 5,
-      "manufacturer_record_sha256": "4dee1aff8adea90d439d751ba4e4116cbfebe92ba32bdecc890f3f98ab2fd1bf",
-      "datasheet_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H220JA01-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730153307",
-      "datasheet_sha256": "25192d46bc6ca4a47fecc3204bb16207213d5329ea3b090f243ab2f20a65fc4d"
+      "manufacturer_product_url": "https://pim.murata.com/en-us/pim/details/?partNum=GRM1555C1H150JA01D",
+      "manufacturer_catalog_response_sha256": "5d88f4fe5204aba23f8651cb0cc11fb4f0d0ec9af9d74f755ed7d47b9f3cdc22",
+      "datasheet_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H150JA01-01A-EN_PDF_CERAMICCAPACITORSMD",
+      "datasheet_sha256": "c0ec67c96a26f56d3d2dbb4c6b5aa6536f100e74c6919f3079c8604abe655a15",
+      "inspected_pdf_pages_1_based": [2, 27],
+      "packing": "180 mm reel, 8 mm paper tape, 2 mm pitch, 10000/reel; exact D order example and catalog",
+      "lifecycle": "Manufacturer catalog In Production at review; not a stock or lifetime guarantee",
+      "supersedes": {
+        "mpn": "GRM1555C1H220JA01D",
+        "capacitance_F": 0.000000000022,
+        "register_commit": "fa2a35bdb4d788741909edd68ed9eb2f6ccf4969",
+        "reason": "Explicit ABM8-272-T3 clock-reference selection; only C2/C3 change from 22 to 15 pF, with R6 retained at 1 kohm."
+      },
+      "selected_reflow_lands": {
+        "scope": "C2/C3 only; dedicated footprint in new candidate, not a global 0402 substitution",
+        "pad_size_xy_mm": [0.4, 0.5],
+        "pad_centres_xy_mm": [[-0.4, 0.0], [0.4, 0.0]],
+        "gap_mm": 0.4,
+        "basis": "Murata p27 Table2 reflow GRM15: a0.30..0.50, b0.35..0.45, c0.40..0.60 mm. Old pad length0.60 exceeds recommended b; new0.40 is within range.",
+        "requirements": "Preserve pin1 GND/pin2 respective resonator node, retain old1.616x0.60x0.65 proxy, and update corresponding paste/mask without duplicate apertures."
+      }
     },
     {
       "mpn": "GRM155R71C104KA88D",

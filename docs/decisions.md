@@ -412,6 +412,28 @@ These are source/implementation decisions, not completed routing, a supplier
 quotation package, procurement approval or powered qualification.
 Affected decisions: D02/D03/D05/D14; epics E04/#4, E07/#7 and E08/#8.
 
+## 2026-09-14: clock-source selection completed
+
+The bounded follow-up found matching primary ABM8 package evidence, including
+the actual 0.80 mm maximum-height table and recommended lands. Select
+**ABM8-272-T3** and explicitly supersede only C2/C3 with
+**GRM1555C1H150JA01D, 15 pF**, retaining 1 kohm R6. This closes the selection
+left open in the preceding entry, not the local-fit or powered gates.
+
+The [device register](../hardware/handbell/parts/device-component-candidates.json)
+records the exact/family source distinction, four-terminal pin/ground mapping,
+1.30 x 1.05 mm crystal lands and 3.60 x 2.80 x 1.00 mm screening envelope.
+The [passive register](../hardware/handbell/parts/standard-passive-candidates.json)
+records the explicit 22-to-15 pF supersession and C2/C3-specific
+0.40 x 0.50 mm reflow lands; other 0402 footprints and conservative capacitor
+proxies are not changed by this decision.
+
+Native implementation must remain inside D43 and preserve all fixed
+interfaces. Rebind the complete assembly after actual placement/routing.
+The 3.3 V reference does not qualify oscillator startup/drive at battery-fed
+LDO dropout. A supplier quotation, order or powered release is not implied.
+Affected decisions: D02/D03/D05/D14; epics E04/#4, E07/#7 and E08/#8.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |
