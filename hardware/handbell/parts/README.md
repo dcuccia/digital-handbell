@@ -19,9 +19,12 @@ for closing the whole [quotation handoff](../../../docs/pcba-quotation-plan.md).
 
 **Scoped native application:** the continuing
 [clock/integration draft](../iterations/printed-bell-clock-draft/README.md) now
-implements the Y1/C2/C3 clock revision, selected Q3 identity and all 27 ordinary
-0402 resistor identities. The resistor step filled 23 blank MPNs and confirmed
-four existing ones without changing values or geometry; R27 is excluded.
+implements the Y1/C2/C3 clock revision, selected Q3 identity, all 27 ordinary
+0402 resistor identities and all 26 non-boost capacitor identities. The resistor
+step filled 23 blank MPNs and confirmed four; the capacitor step filled 23 and
+confirmed three. Nominal values and geometry were preserved by those identity
+steps; R27 and C26-C28 are excluded. Native coverage is now 65/83 fitted MPNs,
+not a count of supplier-qualified or geometry-approved parts.
 The frozen source packages remain unchanged. Other selected identities and
 their part-specific land/assembly gates must still be applied explicitly.
 

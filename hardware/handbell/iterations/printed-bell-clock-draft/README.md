@@ -9,7 +9,24 @@ The definition-only stage is preserved in commit `702f53b`, the first local
 connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; **the latest identity stage is bound
-by `reports/resistor-identities.json` and the placement manifest.**
+by `reports/capacitor-identities.json` and the placement manifest.**
+
+## Non-boost capacitor identities applied
+
+The 26 non-boost capacitors now carry their selected Murata identities:
+**23 previously blank MPNs filled**, with C2/C3/C30 confirmed. The existing
+15 pF C2/C3 revision is preserved; no capacitance labels, voltage selections,
+footprints, placements or copper changed. C26-C28 are excluded. C30's former
+TI circuit link is retained as `CircuitReference` alongside its actual
+capacitor datasheet.
+
+The [current schematic PDF](reports/capacitor-schematic.pdf) and
+`reports/capacitor-identities.json` record this step. Native MPN coverage is now
+**65 of 83 fitted parts**, with 18 still blank. The five 10 uF capacitors'
+documented land/paste treatment remains a separate pending change, as do DC-bias/
+effective-capacitance, clock-drive, assembly, full mechanical and supplier gates.
+Identity coverage is not manufacturing approval. Physical findings and the
+82 unfilled opens are unchanged.
 
 ## Ordinary resistor identities applied
 

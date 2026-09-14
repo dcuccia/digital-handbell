@@ -1,0 +1,233 @@
+{
+  "input_commit": "b9aa839",
+  "input_sha256": {
+    "handbell.kicad_pcb": "db015def0686c333fe11f0d98662883ab12b96be98ed23b3ac922c09bb902f50",
+    "handbell.kicad_sch": "6ae69f745e9f9058679ea7cc286b173933336427f8368025d36886676c0c8e15",
+    "placement-manifest.json": "654a76c9a242875c44e5201548530611d37214036fdfc97d60f5e7bd2c6207c7"
+  },
+  "output_pcb_sha256": "0c81f57fd3046248448d778230800849527c8a8ecaf501454314c82fffbe8db0",
+  "output_schematic_sha256": "4fa984b65e618b8c3fdb07c2cd5be0d79e9a9cd4cbc8a3ac4e7c64c6e53ce5c0",
+  "placement_manifest_sha256": "5b42e6f484c6dde2d7f62251d71009645da5fcac1384ee9de71b186d7a1a37fc",
+  "generator_sha256": "640631ee02f44610bf39c0e2f7c0c7ddce375cf9f734abdd283539a34ff3af78",
+  "shared_editor_sha256": "c16de4cedd067758957110f55736c8161f2bb371a7bdcee039b79e30121a53ea",
+  "selection_register_sha256": "a87597727b9ca385725476e68a83692cf7c15ff24eb23d9a1afc7c3d16b4c689",
+  "references": {
+    "C1": {
+      "value": "10uF/16V",
+      "previous_mpn": "",
+      "MPN": "GRM21BR61C106KE15L",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C106KE15-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170904"
+    },
+    "C2": {
+      "value": "15pF",
+      "previous_mpn": "GRM1555C1H150JA01D",
+      "MPN": "GRM1555C1H150JA01D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H150JA01-01A-EN_PDF_CERAMICCAPACITORSMD"
+    },
+    "C3": {
+      "value": "15pF",
+      "previous_mpn": "GRM1555C1H150JA01D",
+      "MPN": "GRM1555C1H150JA01D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H150JA01-01A-EN_PDF_CERAMICCAPACITORSMD"
+    },
+    "C4": {
+      "value": "10uF/16V",
+      "previous_mpn": "",
+      "MPN": "GRM21BR61C106KE15L",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C106KE15-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170904"
+    },
+    "C5": {
+      "value": "10uF/16V",
+      "previous_mpn": "",
+      "MPN": "GRM21BR61C106KE15L",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C106KE15-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170904"
+    },
+    "C6": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C7": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C8": {
+      "value": "1uF/25V",
+      "previous_mpn": "",
+      "MPN": "GRM155R61E105KA12D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R61E105KA12-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155325"
+    },
+    "C9": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C10": {
+      "value": "1uF/25V",
+      "previous_mpn": "",
+      "MPN": "GRM155R61E105KA12D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R61E105KA12-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155325"
+    },
+    "C11": {
+      "value": "1uF/25V",
+      "previous_mpn": "",
+      "MPN": "GRM155R61E105KA12D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R61E105KA12-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155325"
+    },
+    "C12": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C13": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C14": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C15": {
+      "value": "1uF/25V",
+      "previous_mpn": "",
+      "MPN": "GRM155R61E105KA12D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R61E105KA12-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155325"
+    },
+    "C16": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C17": {
+      "value": "1uF/25V",
+      "previous_mpn": "",
+      "MPN": "GRM155R61E105KA12D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R61E105KA12-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155325"
+    },
+    "C18": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C19": {
+      "value": "10uF/16V",
+      "previous_mpn": "",
+      "MPN": "GRM21BR61C106KE15L",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C106KE15-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170904"
+    },
+    "C20": {
+      "value": "10uF/16V",
+      "previous_mpn": "",
+      "MPN": "GRM21BR61C106KE15L",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C106KE15-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170904"
+    },
+    "C21": {
+      "value": "220pF",
+      "previous_mpn": "",
+      "MPN": "GRM1555C1H221JA01D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H221JA01-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730153309"
+    },
+    "C22": {
+      "value": "220pF",
+      "previous_mpn": "",
+      "MPN": "GRM1555C1H221JA01D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H221JA01-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730153309"
+    },
+    "C23": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C24": {
+      "value": "0.1uF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436"
+    },
+    "C25": {
+      "value": "10nF",
+      "previous_mpn": "",
+      "MPN": "GRM155R71C103KA01D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C103KA01-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155434"
+    },
+    "C30": {
+      "value": "100n 16V X7R",
+      "previous_mpn": "GRM155R71C104KA88D",
+      "MPN": "GRM155R71C104KA88D",
+      "Manufacturer": "Murata",
+      "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436",
+      "CircuitReference": "https://www.ti.com/lit/ds/symlink/bq2970.pdf"
+    }
+  },
+  "previously_blank_mpn_count": 23,
+  "existing_matching_mpn_count": 3,
+  "scope": "26 non-boost capacitor identities only; no values, ratings, footprints, poses, nets or copper changed. Preserve the already-applied C2/C3 15pF revision.",
+  "remaining_gates": [
+    "Apply candidates deliberately to the final sourced BOM; do not rewrite immutable snapshots.",
+    "Check each application's effective capacitance, temperature/tolerance and transient behavior, especially local audio bypassing and the selected crystal.",
+    "Compare actual land/paste and pickup orientation to the final native footprint; package names are not placement instructions.",
+    "Maximum body dimensions do not include a qualified mounted solder-standoff or PCB-warp tolerance stack.",
+    "Keep existing conservative mechanical proxies; this register does not authorize shrinking them.",
+    "Confirm supplier part-code/stock/assembly eligibility at quotation time; no inventory, cost or order guarantee is made.",
+    "C1/C4/C5/C19/C20 10uF land/paste treatment in power-component-candidates remains unapplied.",
+    "No effective-capacitance, startup/clock-drive, thermal or supplier qualification is implied.",
+    "C26-C28, inductor, ferrites and other selected devices remain separate items."
+  ],
+  "native_evidence": {
+    "kicad_version": "10.0.6",
+    "all_values_geometry_and_copper_unchanged": true,
+    "all_ref_pin_net_assignments_unchanged": true,
+    "physical_finding_multiset_unchanged": true,
+    "erc_findings": 0,
+    "unfilled_unconnected_items": 82,
+    "artifact_sha256": {
+      "capacitor-erc.json": "bd1328eba171b4f5ea1a44733f450f9d0af72755d7a2b210fbe05368c575f5b5",
+      "capacitor-drc.json": "249c73acb127dbdb725a0567b335e6796f3787ba5d423ad7040b6cb7725dbe1a",
+      "capacitor-netlist.xml": "82568759dbab6256f383a296429bcb6fb699a5657bc20db9e2614ad57584680f",
+      "capacitor-schematic.pdf": "a12bd658e381fad296743ac7e5f327f3cdf3ec9bdc332e3743f63fd8a8826626"
+    }
+  },
+  "native_fitted_mpn_progress": {
+    "fitted_parts": 83,
+    "nonblank_mpn": 65,
+    "blank_mpn": 18,
+    "scope": "Identity coverage only, not source/footprint/supplier approval"
+  }
+}

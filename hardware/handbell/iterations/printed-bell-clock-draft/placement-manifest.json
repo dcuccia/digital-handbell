@@ -739,8 +739,8 @@
     "C29"
   ],
   "status": "CLOCK_CLUSTER_ROUTED_GLOBAL_GATES_OPEN",
-  "generated_pcb_sha256": "db015def0686c333fe11f0d98662883ab12b96be98ed23b3ac922c09bb902f50",
-  "schematic_sha256": "6ae69f745e9f9058679ea7cc286b173933336427f8368025d36886676c0c8e15",
+  "generated_pcb_sha256": "0c81f57fd3046248448d778230800849527c8a8ecaf501454314c82fffbe8db0",
+  "schematic_sha256": "4fa984b65e618b8c3fdb07c2cd5be0d79e9a9cd4cbc8a3ac4e7c64c6e53ce5c0",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
   "source_baseline": "hardware\\handbell\\iterations\\printed-bell-power-rework",
@@ -827,7 +827,7 @@
     {
       "reference": "C1",
       "value": "10uF/16V",
-      "mpn": "",
+      "mpn": "GRM21BR61C106KE15L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
       "x_mm": -4.03477525138161,
       "y_mm": -13.791181511626117,
@@ -846,7 +846,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "source-selection"
+      "cluster": "source-selection",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C2",
@@ -870,7 +871,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C3",
@@ -894,12 +896,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C4",
       "value": "10uF/16V",
-      "mpn": "",
+      "mpn": "GRM21BR61C106KE15L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
       "x_mm": -15.993581077462425,
       "y_mm": -9.414015008881018,
@@ -918,12 +921,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "logic-power"
+      "cluster": "logic-power",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C5",
       "value": "10uF/16V",
-      "mpn": "",
+      "mpn": "GRM21BR61C106KE15L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
       "x_mm": -16.178591078663505,
       "y_mm": -2.508548373503283,
@@ -942,12 +946,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "logic-power"
+      "cluster": "logic-power",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C6",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.497898178906023,
       "y_mm": -0.400256220811345,
@@ -966,12 +971,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C7",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 7.803336067647409,
       "y_mm": 2.2000142956648623,
@@ -990,12 +996,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C8",
       "value": "1uF/25V",
-      "mpn": "",
+      "mpn": "GRM155R61E105KA12D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.501068995683033,
       "y_mm": 2.2001454707590473,
@@ -1014,12 +1021,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C9",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 2.6155339247877816,
       "y_mm": -5.271328381255263,
@@ -1038,12 +1046,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C10",
       "value": "1uF/25V",
-      "mpn": "",
+      "mpn": "GRM155R61E105KA12D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 8.5999998857099,
       "y_mm": -2.1999998610159537,
@@ -1062,12 +1071,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C11",
       "value": "1uF/25V",
-      "mpn": "",
+      "mpn": "GRM155R61E105KA12D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -0.9940734332060867,
       "y_mm": 5.195622995911029,
@@ -1086,12 +1096,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C12",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -0.9999502550049966,
       "y_mm": -5.269923287865696,
@@ -1110,12 +1121,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C13",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.502545755654523,
       "y_mm": 3.5005374879615547,
@@ -1134,12 +1146,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C14",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -5.195705374594452,
       "y_mm": 2.3045037177294287,
@@ -1158,12 +1171,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C15",
       "value": "1uF/25V",
-      "mpn": "",
+      "mpn": "GRM155R61E105KA12D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 2.5891427813971433,
       "y_mm": 5.196168342415729,
@@ -1182,12 +1196,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C16",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 11.339589954670302,
       "y_mm": -6.983098907906168,
@@ -1206,12 +1221,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C17",
       "value": "1uF/25V",
-      "mpn": "",
+      "mpn": "GRM155R61E105KA12D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.499429397569307,
       "y_mm": 0.8976751175629059,
@@ -1230,12 +1246,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C18",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -5.196360323671945,
       "y_mm": 1.0034487248696602,
@@ -1254,12 +1271,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C19",
       "value": "10uF/16V",
-      "mpn": "",
+      "mpn": "GRM21BR61C106KE15L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
       "x_mm": 14.218730538985735,
       "y_mm": -6.937370108200173,
@@ -1278,12 +1296,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C20",
       "value": "10uF/16V",
-      "mpn": "",
+      "mpn": "GRM21BR61C106KE15L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
       "x_mm": 4.846036382495191,
       "y_mm": -16.283888775390707,
@@ -1302,12 +1321,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "charger"
+      "cluster": "charger",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C21",
       "value": "220pF",
-      "mpn": "",
+      "mpn": "GRM1555C1H221JA01D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 16.752667278630856,
       "y_mm": -11.20515026453107,
@@ -1326,12 +1346,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C22",
       "value": "220pF",
-      "mpn": "",
+      "mpn": "GRM1555C1H221JA01D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 16.951889780280872,
       "y_mm": -9.08876792023952,
@@ -1350,12 +1371,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C23",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -10.697164663378496,
       "y_mm": -8.508385740243954,
@@ -1374,12 +1396,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "imu"
+      "cluster": "imu",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C24",
       "value": "0.1uF",
-      "mpn": "",
+      "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -7.9959165859080965,
       "y_mm": -6.000331014864747,
@@ -1398,12 +1421,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "imu"
+      "cluster": "imu",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C25",
       "value": "10nF",
-      "mpn": "",
+      "mpn": "GRM155R71C103KA01D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 4.990239308212022,
       "y_mm": 7.507130336077958,
@@ -1422,7 +1446,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Murata"
     },
     {
       "reference": "C26",
@@ -1518,7 +1543,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "protection"
+      "cluster": "protection",
+      "manufacturer": "Murata"
     },
     {
       "reference": "CHG0",
@@ -3374,5 +3400,5 @@
       }
     ]
   },
-  "current_stage_report": "reports/resistor-identities.json"
+  "current_stage_report": "reports/capacitor-identities.json"
 }
