@@ -26,6 +26,13 @@ component tolerance to the mechanical handoff. This is not an exact
 manufacturer footprint, an implemented native change or supplier approval;
 see [the USB qualification record](../../../docs/usb-connector-qualification.md).
 
+`power-component-candidates.json` selects the six L1/C26-C28/FB1-FB2 prototype
+candidates and records their current/bias data and required native land/paste
+changes. It also covers the closely coupled land treatment for the five
+already selected 10 uF capacitors sharing the oversized source pattern.
+No larger body envelope is required for these six parts; keep the conservative
+heights. See [power-component selection](../../../docs/power-component-selection.md).
+
 ## Direct source evidence
 
 On September 14, 2026, the actual manufacturer product pages, their public

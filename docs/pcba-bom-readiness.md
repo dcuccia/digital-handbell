@@ -25,6 +25,23 @@ dimensions and the actual Yageo TCR range are recorded from direct sources.
 Application, final land/paste/placement and supplier review remain open;
 this is progress toward the complete BOM, not a completed quotation package.
 
+## Subsequent source decisions
+
+The [USB register](../hardware/handbell/parts/hro-usb-candidate.json) identifies
+X6 and its required engineering footprint/mechanical correction. The
+[power-component register](../hardware/handbell/parts/power-component-candidates.json)
+now selects L1, C26-C28 and FB1/FB2 prototype candidates, with actual biased
+capacitance/current evidence and source-backed land/paste changes. The five
+already selected 10 uF capacitors receive the corresponding part-specific
+land treatment because they share the oversized source pattern.
+
+These provide candidate identities for seven more formerly blank references.
+Thirteen originally blank device identities remain under focused research.
+The selected parts still need to be applied to the new native candidate and
+matched final supplier BOM; neither this progress nor the existing MPN fields
+establishes complete package/process qualification. The audit tables below
+retain the original draft's definitions rather than rewriting its history.
+
 ## Capacitors: 29 fitted
 
 | Group | Count | Existing definition and required action |
