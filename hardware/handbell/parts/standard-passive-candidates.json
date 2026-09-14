@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-14",
+  "status": "manufacturer-verified prototype candidates; not a quotation BOM or assembly approval",
+  "base_bom": "hardware\\handbell\\iterations\\printed-bell-routing\\reports\\bom-draft.csv",
+  "base_bom_sha256": "b760b993757a85d4b0bb9b32155a34244e6282fbc9127692afbd5df36a8bd0e0",
+  "scope": "26 non-boost capacitors and 27 ordinary resistors; excludes C26-C28 and R27",
+  "profiles": {
+    "murata-0805": {
+      "manufacturer": "Murata",
+      "kind": "capacitor",
+      "package_imperial": "0805",
+      "nominal_body_mm": [2.0, 1.25, 1.25],
+      "positive_body_tolerance_mm": [0.1, 0.1, 0.1],
+      "maximum_body_mm": [2.1, 1.35, 1.35]
+    },
+    "murata-0402": {
+      "manufacturer": "Murata",
+      "kind": "capacitor",
+      "package_imperial": "0402",
+      "nominal_body_mm": [1.0, 0.5, 0.5],
+      "positive_body_tolerance_mm": [0.05, 0.05, 0.05],
+      "maximum_body_mm": [1.05, 0.55, 0.55]
+    },
+    "yageo-0402": {
+      "manufacturer": "Yageo",
+      "kind": "resistor",
+      "package_imperial": "0402",
+      "nominal_body_mm": [1.0, 0.5, 0.35],
+      "positive_body_tolerance_mm": [0.05, 0.05, 0.05],
+      "maximum_body_mm": [1.05, 0.55, 0.4],
+      "tolerance_percent": 1,
+      "rated_power_W_at_70_C": 0.0625,
+      "maximum_working_voltage_V": 50,
+      "working_voltage_rule": "min(50 V, sqrt(derated rated_power_W * resistance_ohm))",
+      "tcr_ppm_per_C": 100,
+      "tcr_scope": "Selected 1/16 W values are above 10 ohm and no more than 10 Mohm; this includes 5.1 Mohm.",
+      "datasheet_url": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "datasheet_revision": "RC_L V.14, November 14, 2025; pages 4, 5 and 7",
+      "datasheet_sha256": "7b6f0ae72708ca4b38126f84b5407a3e970a94cb60bc1a0afdaeb25a23d839bb"
+    }
+  },
+  "parts": [
+    {
+      "mpn": "GRM21BR61C106KE15L",
+      "profile": "murata-0805",
+      "references": ["C1", "C4", "C5", "C19", "C20"],
+      "source_values": ["10uF/16V"],
+      "capacitance_F": 0.00001,
+      "rated_voltage_V": 16,
+      "dielectric": "X5R",
+      "tolerance_percent": 10,
+      "manufacturer_record_sha256": "2ccacb8f23ea0ba4478b436d32664cdb9f0d486178ee2bc6e01da4a079d710bd",
+      "datasheet_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C106KE15-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170904",
+      "datasheet_sha256": "49de3057e7b09e3134b505cde1875d9c5856af7e04c635db9996609fe0f8f781"
+    },
+    {
+      "mpn": "GRM1555C1H220JA01D",
+      "profile": "murata-0402",
+      "references": ["C2", "C3"],
+      "source_values": ["22pF"],
+      "capacitance_F": 0.000000000022,
+      "rated_voltage_V": 50,
+      "dielectric": "C0G",
+      "tolerance_percent": 5,
+      "manufacturer_record_sha256": "4dee1aff8adea90d439d751ba4e4116cbfebe92ba32bdecc890f3f98ab2fd1bf",
+      "datasheet_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H220JA01-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730153307",
+      "datasheet_sha256": "25192d46bc6ca4a47fecc3204bb16207213d5329ea3b090f243ab2f20a65fc4d"
+    },
+    {
+      "mpn": "GRM155R71C104KA88D",
+      "profile": "murata-0402",
+      "references": ["C6", "C7", "C9", "C12", "C13", "C14", "C16", "C18", "C23", "C24", "C30"],
+      "source_values": ["0.1uF", "100n 16V X7R"],
+      "capacitance_F": 0.0000001,
+      "rated_voltage_V": 16,
+      "dielectric": "X7R",
+      "tolerance_percent": 10,
+      "manufacturer_record_sha256": "42dd91287149f96937fcea65a86af75681100501abd96c37bfd824f14718a59e",
+      "datasheet_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C104KA88-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155436",
+      "datasheet_sha256": "530d3a4bf8e67af48379d3d027c23f87d1433a5c59abc51d313dada0d9e4b031"
+    },
+    {
+      "mpn": "GRM155R61E105KA12D",
+      "profile": "murata-0402",
+      "references": ["C8", "C10", "C11", "C15", "C17"],
+      "source_values": ["1uF/25V"],
+      "capacitance_F": 0.000001,
+      "rated_voltage_V": 25,
+      "dielectric": "X5R",
+      "tolerance_percent": 10,
+      "manufacturer_record_sha256": "99b54d75910e6d6f263d5d7d3fbd94665a86b43364adc17765dec8b4a3d4b8b7",
+      "datasheet_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R61E105KA12-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155325",
+      "datasheet_sha256": "1f30f06dbc1b4ea7570eda5fe94512b801e3a404cc2e2f2151aaa7e6bfbcf3c5"
+    },
+    {
+      "mpn": "GRM1555C1H221JA01D",
+      "profile": "murata-0402",
+      "references": ["C21", "C22"],
+      "source_values": ["220pF"],
+      "capacitance_F": 0.00000000022,
+      "rated_voltage_V": 50,
+      "dielectric": "C0G",
+      "tolerance_percent": 5,
+      "manufacturer_record_sha256": "acea9eb7f26bca55055e690ccb4092b5a52e0cf842d2e38add30a9b225bfb326",
+      "datasheet_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM1555C1H221JA01-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730153309",
+      "datasheet_sha256": "afa0099fd786a8b57e17a4ba9a8b0e7cafaa457270cd6e8af2c48b94f6c20bd0"
+    },
+    {
+      "mpn": "GRM155R71C103KA01D",
+      "profile": "murata-0402",
+      "references": ["C25"],
+      "source_values": ["10nF"],
+      "capacitance_F": 0.00000001,
+      "rated_voltage_V": 16,
+      "dielectric": "X7R",
+      "tolerance_percent": 10,
+      "manufacturer_record_sha256": "a61e3ee60f971b83f62d24988bf417c9e41b7c5c23a42dd3e2932a952d05c226",
+      "datasheet_url": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM155R71C103KA01-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730155434",
+      "datasheet_sha256": "88d72f6066ed560f0e8429bd1da78b8f80c51499a9c6052c1ff241308702f6a7"
+    },
+    {
+      "mpn": "RC0402FR-0710KL",
+      "profile": "yageo-0402",
+      "references": ["R1", "R2", "R3", "R4", "R5", "R7", "R14", "R15", "R18", "R21"],
+      "source_values": ["10K"],
+      "resistance_ohm": 10000,
+      "manufacturer_record_sha256": "e072beb4b14aba2992bfc67b3f2af81cb6e3db3f7ce70190e5e21e5b1e520395"
+    },
+    {
+      "mpn": "RC0402FR-071KL",
+      "profile": "yageo-0402",
+      "references": ["R6", "R11", "R22"],
+      "source_values": ["1K"],
+      "resistance_ohm": 1000,
+      "manufacturer_record_sha256": "a765354ca54d486fbf5233947348419d9f2e037b7a40e1101835b8312775ba82"
+    },
+    {
+      "mpn": "RC0402FR-075K1L",
+      "profile": "yageo-0402",
+      "references": ["R8", "R12", "R13"],
+      "source_values": ["5.1K"],
+      "resistance_ohm": 5100,
+      "manufacturer_record_sha256": "539eca9a7eb64e06059ce660efa57b5285162faa3e8374bcb91e6eec1adf757a"
+    },
+    {
+      "mpn": "RC0402FR-0722RL",
+      "profile": "yageo-0402",
+      "references": ["R9", "R10"],
+      "source_values": ["22 ohm"],
+      "resistance_ohm": 22,
+      "manufacturer_record_sha256": "53a6c38b14e7d7ca8a7d3f706f0171552fb551deb0129fe445c0370adb7519ef"
+    },
+    {
+      "mpn": "RC0402FR-07100KL",
+      "profile": "yageo-0402",
+      "references": ["R16", "R17", "R24"],
+      "source_values": ["100K"],
+      "resistance_ohm": 100000,
+      "manufacturer_record_sha256": "139af3a0269b61e4208b5bde2171af4eaf9df88dc2ba804423b045068cc23f16"
+    },
+    {
+      "mpn": "RC0402FR-074K7L",
+      "profile": "yageo-0402",
+      "references": ["R20"],
+      "source_values": ["4.7K"],
+      "resistance_ohm": 4700,
+      "manufacturer_record_sha256": "642673056d8395361b480f9402dad5b73d9e47bf00fbe0636caa639e77178c1d"
+    },
+    {
+      "mpn": "RC0402FR-07732KL",
+      "profile": "yageo-0402",
+      "references": ["R23"],
+      "source_values": ["732K"],
+      "resistance_ohm": 732000,
+      "manufacturer_record_sha256": "f1e71f4852b8c74fb4072dcd66ba64e115511b83477b5db6286d129d39352c1e"
+    },
+    {
+      "mpn": "RC0402FR-07330RL",
+      "profile": "yageo-0402",
+      "references": ["R25"],
+      "source_values": ["330R"],
+      "resistance_ohm": 330,
+      "manufacturer_record_sha256": "7836a3401d3b826d2922674534756ba0f4c0e9331ecddd2c9b2d26ada6d03359"
+    },
+    {
+      "mpn": "RC0402FR-072K2L",
+      "profile": "yageo-0402",
+      "references": ["R26"],
+      "source_values": ["2.2k"],
+      "resistance_ohm": 2200,
+      "manufacturer_record_sha256": "cdb2ec43d502a1cc67041be68e9cca40c0cbd8dadd16c0c6ffb7ad1ccdae5c7f"
+    },
+    {
+      "mpn": "RC0402FR-075M1L",
+      "profile": "yageo-0402",
+      "references": ["R28", "R29"],
+      "source_values": ["5.1M gate discharge"],
+      "resistance_ohm": 5100000,
+      "manufacturer_record_sha256": "7046a84e282c79c58d44a04270c252eeed74a9b36ac5baba9d20b7e663d1dc13"
+    }
+  ],
+  "remaining_gates": [
+    "Apply candidates deliberately to the final sourced BOM; do not rewrite immutable snapshots.",
+    "Check each application's effective capacitance, temperature/tolerance and transient behavior, especially local audio bypassing and the selected crystal.",
+    "Compare actual land/paste and pickup orientation to the final native footprint; package names are not placement instructions.",
+    "Maximum body dimensions do not include a qualified mounted solder-standoff or PCB-warp tolerance stack.",
+    "Keep existing conservative mechanical proxies; this register does not authorize shrinking them.",
+    "Confirm supplier part-code/stock/assembly eligibility at quotation time; no inventory, cost or order guarantee is made."
+  ]
+}
