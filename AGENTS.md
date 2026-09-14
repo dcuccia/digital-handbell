@@ -80,6 +80,14 @@
   evidence. Full contacts stay in native/STEP; the inert PCBA STL explicitly
   omits BT1/BT2. The owner's approximate 1 mm spacing observation is not a
   measured clearance or permission to reduce component heights.
+- September 13 authorizes a separate single-piece printed bell, flush removable
+  cartridge and black handle, plus an all-front electronic SMT study with
+  explicit battery-contact exceptions. Read `docs/printed-bell-revision.md`
+  and its dated design-input contract. Preserve the successful T8 fit snapshot.
+  The owner now permits routing after coordinated engineering review establishes
+  stable PCB mounts, USB/service and contact interfaces; this is not fabrication
+  approval. Silk-PLA appearance is not strength/thermal qualification. Do not
+  trace or redistribute the supplied reference photographs.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use
