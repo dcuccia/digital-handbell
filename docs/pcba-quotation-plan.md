@@ -14,6 +14,10 @@ Power corrections, remaining routing, final part/placement consistency and
 manufacturing inputs are still being developed. Do not generate an unrouted
 placeholder ZIP and call it the completed handoff.
 
+The [initial BOM-readiness audit](pcba-bom-readiness.md) separates recoverable
+identities from genuinely unselected parts and records the exact population,
+package-envelope corrections and sourcing/process work still required.
+
 ## Package contents
 
 Prepare supplier-specific BOM/placement files with the same versioned native
