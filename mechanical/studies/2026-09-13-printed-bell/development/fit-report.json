@@ -1,0 +1,3275 @@
+{
+  "status": "DEVELOPMENT_FROZEN_MIXED_FACE_NOT_FINAL",
+  "generated_utc": "2026-09-14T02:08:28.295007+00:00",
+  "input": {
+    "paths": {
+      "design_input": "docs\\design-inputs\\2026-09-13-printed-bell.json",
+      "builder": "tools\\build_printed_bell.py",
+      "checker": "tools\\check_printed_bell.py",
+      "geometry_helper": "tools\\build_mechanical.py",
+      "export_helper": "tools\\build_t8_cartridge.py",
+      "frozen_t8_native": "mechanical\\studies\\2026-09-11-t8-cartridge\\t8-cartridge.FCStd",
+      "frozen_t8_report": "mechanical\\studies\\2026-09-11-t8-cartridge\\fit-report.json",
+      "frozen_t8_placement": "mechanical\\studies\\2026-09-11-t8-cartridge\\placement-snapshot.json",
+      "frozen_t8_contact": "mechanical\\studies\\2026-09-11-t8-cartridge\\contact_interface-snapshot.json"
+    },
+    "sha256": {
+      "design_input": "e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e",
+      "builder": "e4c5fb50097d76053fd5180b7f46b93ef2742f5387cda6b507c65a26e852ca13",
+      "checker": "f00591d30a76e74cf5340fad5221de0daf35b974929412e307e2ed7d4221b3e4",
+      "geometry_helper": "c9ef5a33a86cd8f3635f6aa6171c2d84b6d7662f68bcb578d9cd9a43bdfb3aab",
+      "export_helper": "22e806153f313685a9a96d12b90070bb1985259b50261011ac6ce0d298a4f04c",
+      "frozen_t8_native": "96d1dfb0b2a59c8c19e471dd7e86c22400463677788a20e3fbff4d23152fe3e6",
+      "frozen_t8_report": "b3cf4e25de42f3ce09c551ab3580f997bc3ede1af2c594d79ff098bdfdc4289a",
+      "frozen_t8_placement": "4e8e27f7241e76850ef4fb9719a45acf0ab49ccfe9e1d651ef60f278b20da46c",
+      "frozen_t8_contact": "e93d72ef211b7615634f255153a413b826d05c1495fa19d967c64456b647c4a6"
+    }
+  },
+  "toolchain": {
+    "freecad": [
+      "1",
+      "1",
+      "3",
+      "20260725 (Git shallow)",
+      "Unknown",
+      "2026/07/25 04:52:02",
+      "grafted,grafted",
+      "145529fe741292ff0b3977a01195bf0247425794"
+    ],
+    "opencascade": "7.8.1",
+    "python": "3.11.14 | packaged by conda-forge | (main, Oct 13 2025, 14:00:26) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "frame": {
+    "mouth_grille_z": 0,
+    "speaker_front_z": 4.5,
+    "speaker_basket_rear_z": 16.5,
+    "speaker_magnet_rear_z": 23.5,
+    "pcb_F_z": 25,
+    "pcb_B_z": 26.6,
+    "cell_center_z": 36.38
+  },
+  "dimensions": {
+    "maximum_shell_diameter_mm": 70,
+    "body_height_mm": 55.8,
+    "handle_above_crown_mm": 80,
+    "overall_height_mm": 135.8,
+    "comparison_old_diameter_mm": 75.5,
+    "comparison_old_body_height_mm": 56.3,
+    "grille_projection_mm": 0,
+    "pcb_diameter_mm": 43.0
+  },
+  "profiles": {
+    "original_outer_bezier_poles_rz_mm": [
+      [
+        [
+          35,
+          0
+        ],
+        [
+          31.5,
+          5
+        ],
+        [
+          28.7,
+          14
+        ],
+        [
+          27.0,
+          27
+        ]
+      ],
+      [
+        [
+          27.0,
+          27
+        ],
+        [
+          26.25,
+          33
+        ],
+        [
+          24.9,
+          38
+        ],
+        [
+          23.9,
+          42
+        ]
+      ],
+      [
+        [
+          23.9,
+          42
+        ],
+        [
+          22.0,
+          49.6
+        ],
+        [
+          17,
+          55.8
+        ],
+        [
+          10,
+          55.8
+        ]
+      ]
+    ],
+    "original_inner_bezier_poles_rz_mm": [
+      [
+        [
+          33.0,
+          0
+        ],
+        [
+          29.5,
+          5
+        ],
+        [
+          26.7,
+          14
+        ],
+        [
+          25.0,
+          27
+        ]
+      ],
+      [
+        [
+          25.0,
+          27
+        ],
+        [
+          24.25,
+          33
+        ],
+        [
+          22.9,
+          38
+        ],
+        [
+          21.9,
+          42
+        ]
+      ],
+      [
+        [
+          21.9,
+          42
+        ],
+        [
+          21.4,
+          44
+        ],
+        [
+          21,
+          45.0
+        ],
+        [
+          20.5,
+          46.5
+        ]
+      ],
+      [
+        [
+          20.5,
+          46.5
+        ],
+        [
+          17,
+          48
+        ],
+        [
+          11.0,
+          51.3
+        ],
+        [
+          6.3,
+          51.3
+        ]
+      ]
+    ],
+    "original_handle_bezier_poles_rz_mm": [
+      [
+        [
+          10,
+          55.8
+        ],
+        [
+          10,
+          61.8
+        ],
+        [
+          8,
+          67
+        ],
+        [
+          7.7,
+          77.8
+        ]
+      ],
+      [
+        [
+          7.7,
+          77.8
+        ],
+        [
+          7.2,
+          95
+        ],
+        [
+          8.2,
+          107
+        ],
+        [
+          10.5,
+          117.8
+        ]
+      ],
+      [
+        [
+          10.5,
+          117.8
+        ],
+        [
+          12.7,
+          128
+        ],
+        [
+          11.5,
+          135.8
+        ],
+        [
+          0,
+          135.8
+        ]
+      ]
+    ],
+    "wall_rule": "Independently authored cavity; no constant normal wall claim. Crown intentionally thickened.",
+    "reference_photographs_used_as_geometry": false
+  },
+  "structural_parts": {
+    "OnePiecePrintedBellShell": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 21682.26397636049,
+      "bounds": {
+        "min_mm": [
+          -35.0,
+          -34.18698582794336,
+          0.0
+        ],
+        "max_mm": [
+          35.0,
+          35.0,
+          55.8
+        ],
+        "size_mm": [
+          70.0,
+          69.18698582794336,
+          55.8
+        ]
+      }
+    },
+    "BlackKeyedHandleCaptiveMetalNut": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 19882.961953300615,
+      "bounds": {
+        "min_mm": [
+          -11.4046875,
+          -11.4046875,
+          53.8
+        ],
+        "max_mm": [
+          11.4046875,
+          11.4046875,
+          135.8
+        ],
+        "size_mm": [
+          22.809375,
+          22.809375,
+          82.00000000000001
+        ]
+      }
+    },
+    "FlushGrilleCarrierAndConcealedPortBezel": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 9593.969393311543,
+      "bounds": {
+        "min_mm": [
+          -32.7,
+          -35.0,
+          0.0
+        ],
+        "max_mm": [
+          32.7,
+          32.7,
+          27.000000000000004
+        ],
+        "size_mm": [
+          65.4,
+          67.7,
+          27.000000000000004
+        ]
+      }
+    },
+    "RetainedSpeakerCaptureYoke": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2117.047464166435,
+      "bounds": {
+        "min_mm": [
+          -17.5,
+          -24.085858741206156,
+          12.5
+        ],
+        "max_mm": [
+          17.5,
+          24.085858741206156,
+          25.0
+        ],
+        "size_mm": [
+          35.0,
+          48.17171748241231,
+          12.5
+        ]
+      }
+    },
+    "RetainedInsulatingCellCradle": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 2112.2075584655554,
+      "bounds": {
+        "min_mm": [
+          -22.665000000000003,
+          -18.9,
+          26.246594225931563
+        ],
+        "max_mm": [
+          22.665000000000003,
+          18.9,
+          36.50000000000001
+        ],
+        "size_mm": [
+          45.330000000000005,
+          37.8,
+          10.253405774068444
+        ]
+      }
+    },
+    "RetainedRemovableCellCover": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 1596.5301018655932,
+      "bounds": {
+        "min_mm": [
+          -19.6,
+          -14.2,
+          36.49999999999998
+        ],
+        "max_mm": [
+          19.6,
+          14.2,
+          45.98
+        ],
+        "size_mm": [
+          39.2,
+          28.4,
+          9.480000000000018
+        ]
+      }
+    }
+  },
+  "material_intersections": [],
+  "assembly_paths": {
+    "cartridge_withdrawal_minus_z": [
+      {
+        "translation_mm": 0,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      },
+      {
+        "translation_mm": 0.3,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      },
+      {
+        "translation_mm": 1,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      },
+      {
+        "translation_mm": 3.3,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      },
+      {
+        "translation_mm": 8,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      },
+      {
+        "translation_mm": 16,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      },
+      {
+        "translation_mm": 28,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      },
+      {
+        "translation_mm": 48,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      },
+      {
+        "translation_mm": 58,
+        "overlaps_mm3": {
+          "shell": 0,
+          "handle_screw": 0,
+          "handle_washer": 0
+        }
+      }
+    ],
+    "unselected_usb_plug_approach": [
+      {
+        "outward_y_mm": 0,
+        "overlaps_mm3": {
+          "shell": 0,
+          "bezel": 0
+        }
+      },
+      {
+        "outward_y_mm": 2,
+        "overlaps_mm3": {
+          "shell": 0,
+          "bezel": 0
+        }
+      },
+      {
+        "outward_y_mm": 5,
+        "overlaps_mm3": {
+          "shell": 0,
+          "bezel": 0
+        }
+      },
+      {
+        "outward_y_mm": 12,
+        "overlaps_mm3": {
+          "shell": 0,
+          "bezel": 0
+        }
+      }
+    ],
+    "handle_tool_empty_shell": {
+      "shell": 0,
+      "handle": 0
+    },
+    "handle_nut_side_load": [
+      {
+        "positive_y_mm": 0,
+        "overlap_mm3": 0
+      },
+      {
+        "positive_y_mm": 2,
+        "overlap_mm3": 0
+      },
+      {
+        "positive_y_mm": 5,
+        "overlap_mm3": 0
+      },
+      {
+        "positive_y_mm": 8,
+        "overlap_mm3": 0
+      },
+      {
+        "positive_y_mm": 12,
+        "overlap_mm3": 0
+      },
+      {
+        "positive_y_mm": 18,
+        "overlap_mm3": 0
+      }
+    ],
+    "handle_screw_washer_insertion_empty_shell": [
+      {
+        "mouthward_z_mm": 0,
+        "overlaps_mm3": {
+          "shell": 0
+        }
+      },
+      {
+        "mouthward_z_mm": 2,
+        "overlaps_mm3": {
+          "shell": 0
+        }
+      },
+      {
+        "mouthward_z_mm": 8,
+        "overlaps_mm3": {
+          "shell": 0
+        }
+      },
+      {
+        "mouthward_z_mm": 20,
+        "overlaps_mm3": {
+          "shell": 0
+        }
+      },
+      {
+        "mouthward_z_mm": 45,
+        "overlaps_mm3": {
+          "shell": 0
+        }
+      },
+      {
+        "mouthward_z_mm": 65,
+        "overlaps_mm3": {
+          "shell": 0
+        }
+      }
+    ],
+    "shell_nut_radial_insertion_before_cartridge": [
+      [
+        {
+          "radial_inward_mm": 0,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 2,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 5,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 10,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 16,
+          "overlap_mm3": 0
+        }
+      ],
+      [
+        {
+          "radial_inward_mm": 0,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 2,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 5,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 10,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 16,
+          "overlap_mm3": 0
+        }
+      ],
+      [
+        {
+          "radial_inward_mm": 0,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 2,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 5,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 10,
+          "overlap_mm3": 0
+        },
+        {
+          "radial_inward_mm": 16,
+          "overlap_mm3": 0
+        }
+      ]
+    ],
+    "speaker_load_before_yoke": [
+      {
+        "handleward_mm": 0,
+        "body_overlap_mm3": 0
+      },
+      {
+        "handleward_mm": 1,
+        "body_overlap_mm3": 0
+      },
+      {
+        "handleward_mm": 5,
+        "body_overlap_mm3": 0
+      },
+      {
+        "handleward_mm": 12,
+        "body_overlap_mm3": 0
+      },
+      {
+        "handleward_mm": 25,
+        "body_overlap_mm3": 0
+      },
+      {
+        "handleward_mm": 40,
+        "body_overlap_mm3": 0
+      }
+    ],
+    "yoke_over_magnet_before_pcba": [
+      {
+        "handleward_mm": 0,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0
+        }
+      },
+      {
+        "handleward_mm": 1,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0
+        }
+      },
+      {
+        "handleward_mm": 5,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0
+        }
+      },
+      {
+        "handleward_mm": 12,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0
+        }
+      },
+      {
+        "handleward_mm": 25,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0
+        }
+      },
+      {
+        "handleward_mm": 40,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0
+        }
+      }
+    ],
+    "pcba_lowering_into_open_top_carrier": [
+      {
+        "handleward_mm": 0,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0,
+          "yoke": 0
+        }
+      },
+      {
+        "handleward_mm": 0.5,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0,
+          "yoke": 0
+        }
+      },
+      {
+        "handleward_mm": 2,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0,
+          "yoke": 0
+        }
+      },
+      {
+        "handleward_mm": 6,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0,
+          "yoke": 0
+        }
+      },
+      {
+        "handleward_mm": 15,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0,
+          "yoke": 0
+        }
+      },
+      {
+        "handleward_mm": 35,
+        "overlaps_mm3": {
+          "speaker": 0,
+          "body": 0,
+          "yoke": 0
+        }
+      }
+    ],
+    "cover_removal_with_cell_still_captured_by_cradle": [
+      {
+        "handleward_mm": 0,
+        "overlaps_mm3": {
+          "cell": 0,
+          "cradle": 0,
+          "pcba": 0
+        }
+      },
+      {
+        "handleward_mm": 0.5,
+        "overlaps_mm3": {
+          "cell": 0,
+          "cradle": 0,
+          "pcba": 0
+        }
+      },
+      {
+        "handleward_mm": 2,
+        "overlaps_mm3": {
+          "cell": 0,
+          "cradle": 0,
+          "pcba": 0
+        }
+      },
+      {
+        "handleward_mm": 6,
+        "overlaps_mm3": {
+          "cell": 0,
+          "cradle": 0,
+          "pcba": 0
+        }
+      },
+      {
+        "handleward_mm": 15,
+        "overlaps_mm3": {
+          "cell": 0,
+          "cradle": 0,
+          "pcba": 0
+        }
+      },
+      {
+        "handleward_mm": 35,
+        "overlaps_mm3": {
+          "cell": 0,
+          "cradle": 0,
+          "pcba": 0
+        }
+      }
+    ],
+    "retained_m2_straight_tool_access": {
+      "YokeM2x6_1": {
+        "body": 0,
+        "yoke": 0
+      },
+      "YokeM2x6_2": {
+        "body": 0,
+        "yoke": 0
+      },
+      "MH1M2x6": {
+        "body": 0,
+        "yoke": 0,
+        "cradle": 0,
+        "cover": 0
+      },
+      "MH2M2x6": {
+        "body": 0,
+        "yoke": 0,
+        "cradle": 0,
+        "cover": 0
+      },
+      "CoverM2x6_1": {
+        "body": 0,
+        "yoke": 0,
+        "cradle": 0,
+        "cover": 0
+      },
+      "CoverM2x6_3": {
+        "body": 0,
+        "yoke": 0,
+        "cradle": 0,
+        "cover": 0
+      }
+    },
+    "cell_capture_outside_shell": {
+      "X-1": {
+        "cradle": 28.129426721704647,
+        "cover": 16.776907972355616
+      },
+      "X1": {
+        "cradle": 28.129426721705094,
+        "cover": 16.776907972355982
+      },
+      "Y-1": {
+        "cradle": 50.19273723226144,
+        "cover": 55.16026674677076
+      },
+      "Y1": {
+        "cradle": 50.19273723226001,
+        "cover": 55.16026674677043
+      },
+      "Z-1": {
+        "cradle": 114.58344332682996,
+        "cover": 0
+      },
+      "Z1": {
+        "cradle": 0,
+        "cover": 162.76631476944078
+      }
+    },
+    "sequence": [
+      "Empty shell: slide M4 nut into handle, key shoulder into crown, insert washer/screw and tighten from mouth.",
+      "Empty shell: radially side-load the three roofed M2 nut pockets from cavity; no cartridge present.",
+      "Outside shell: load body M2 nuts, speaker first, then retained yoke and two M2x6 screws.",
+      "Side-load yoke nuts, lower PCBA through open-top USB carrier, add empty cradle and two M2x6 screws.",
+      "Evaluate only an inert cell; side-load cover nuts, fit retained capture cover and two M2x6 screws.",
+      "Unplug first; align integral port bezel with mouth-open shell channel; insert complete captured cartridge.",
+      "Fit three recessed front M2x8 screws. Reverse for service; shell/handle load path stays independent of PCB."
+    ]
+  },
+  "component_clearances": {
+    "Component_C1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6780216572935163
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.35582104193010916
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 8.682926879289328
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6390877383106228
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.705896722903134
+      }
+    },
+    "Component_C2": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.974547669826007
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.852438250754076
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.706620121110625
+      }
+    },
+    "Component_C3": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.772769273724769
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 21.4554681995533
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.881554774899543
+      }
+    },
+    "Component_C4": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.8328824324119963
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.700000000000003
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.157215377966262
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.694702546261274
+      }
+    },
+    "Component_C5": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.229870416580191
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.9371240538835242
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 10.70981428808911
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.854238790546432
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.509341816328165
+      }
+    },
+    "Component_C6": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.279631289224652
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 20.04439037838306
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.075901623133982
+      }
+    },
+    "Component_C7": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.252860973733575
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 18.321612479213275
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.00900456279849
+      }
+    },
+    "Component_C8": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.160243956597649
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 17.486955109879982
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.493026435677228
+      }
+    },
+    "Component_C9": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.247480969443921
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 22.516200728657903
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.525200055649835
+      }
+    },
+    "Component_C10": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.543605924556099
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.266270710597574
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.117812217340558
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.50824537089198
+      }
+    },
+    "Component_C11": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.0569256784016465
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 21.120429000304604
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.529107650262388
+      }
+    },
+    "Component_C12": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.122645947245995
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 15.572907086241443
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.7686190633277499
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.635483213268252
+      }
+    },
+    "Component_C13": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.197106151802255
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 16.945183013815328
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.7657467871342258
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.057142650241106
+      }
+    },
+    "Component_C14": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 8.64321298631366
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 22.55
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.65914104614788
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.23788048627844
+      }
+    },
+    "Component_C15": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 9.078780085022776
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.811237025949772
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6529570891294172
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.005602722144168
+      }
+    },
+    "Component_C16": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.676294803636577
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.309497658520322
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 8.346386800488533
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.9378649863139
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 9.281277944201412
+      }
+    },
+    "Component_C17": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.3469667457302785
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.21247152405276
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.600874528163038
+      }
+    },
+    "Component_C18": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 8.12688042553389
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 22.55
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.685585963450384
+      }
+    },
+    "Component_C19": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.151160410162935
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.300000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.938672030252636
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.7406251104613983
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.960391261472958
+      }
+    },
+    "Component_C20": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.6600271554647708
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.6999999999999993
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.371437524158448
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.928615860687606
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.14507922849197
+      }
+    },
+    "Component_C21": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.067414565657859
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.935609123102806
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.181645498451508
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_C22": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.452633727862949
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 15.259264657342896
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6677503273142562
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.53238375075199
+      }
+    },
+    "Component_C23": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.75042798835332
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.389039502211146
+      }
+    },
+    "Component_C24": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.850000000000001
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.198392410458575
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 18.136450009948696
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_C25": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.7163308723517097
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.940899550235097
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.9762830639471773
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_C26": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.1113123221085934
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.300000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 20.29508900403086
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.2688013861230414
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.899999999999956
+      }
+    },
+    "Component_C27": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.3637708330943528
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.443143876197144
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 16.917370855331104
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.132269036174881
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 8.400575429677131
+      }
+    },
+    "Component_C28": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.1000000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.003024320486394
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 17.658359856595705
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.5890430914935005
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.960173324871998
+      }
+    },
+    "Component_C30": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.4285538145660661
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 20.30727484229992
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.823988442579294
+      }
+    },
+    "Component_CHG0": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.2111592543206309
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5703714721174133
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.43952613754345
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.241889060689716
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.566235498078498
+      }
+    },
+    "Component_D3": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.650868728444599
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.599999999999998
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.4
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.688745844405652
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_D4": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.5
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.4582711841176828
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.024599941843261
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.653976233442444
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_FB1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8170161694578489
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.700000000000003
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 17.780280736921178
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.8591123171412547
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.137187989264621
+      }
+    },
+    "Component_FB2": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.086098236367865
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.700000000000003
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 15.78261546973219
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.675033557102832
+      }
+    },
+    "Component_IC1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.5
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.498584102609113
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 17.38127112597174
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.924721921808791
+      }
+    },
+    "Component_IC4": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.5
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.699999999999999
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.398398774257025
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6000000000000014
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.56047473169126
+      }
+    },
+    "Component_J1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.2422064401741775
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.599999999999998
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 15.495314388449058
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.5
+      }
+    },
+    "Component_J2": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.337676030059345
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.349417733110769
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 10.324606825129372
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6000000000000014
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.5
+      }
+    },
+    "Component_L0": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.507826571304066
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.699999999999999
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.962987142025675
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_L1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.507236958415441
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.300000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 17.751615063077796
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.29999999999999716
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.899999999999956
+      }
+    },
+    "Component_Q1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.9368481215878184
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.200000000000003
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 18.670255291403294
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.807586499727991
+      }
+    },
+    "Component_Q2": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.079616146973771
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.199999999999999
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.0
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.5
+      }
+    },
+    "Component_Q3": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.5
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.288651043917239
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 8.722521698820698
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.577393120160473
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.579161280337233
+      }
+    },
+    "Component_Q4": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.619866693414685
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.199999999999999
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 15.030954888073374
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_Q5": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.269511337484489
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.480000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 20.288713485815855
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6037916912518515
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.50607721091428
+      }
+    },
+    "Component_R1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.075806208003715
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.683765148886316
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.450905715680735
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_R2": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.4251863942431577
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.2501542859896601
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.907166905254615
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6194372994342823
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.546463416738469
+      }
+    },
+    "Component_R3": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.0401973739823833
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.5419401270889694
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.650862974871279
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.373299307282045
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_R4": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 10.722753492652684
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.742864281570532
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.515900108178807
+      }
+    },
+    "Component_R5": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.281117098214019
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.062470362809162
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.600055069985444
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.502237461292282
+      }
+    },
+    "Component_R6": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 8.712309209966403
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 21.95432260899036
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.7513902780003527
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.87198424351609
+      }
+    },
+    "Component_R7": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.850000000000001
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.705232710497097
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.57795539932988
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.035932288695843
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.574662687003574
+      }
+    },
+    "Component_R8": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.588688407566026
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.82344573272086
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.051962214218281
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.50533835368135
+      }
+    },
+    "Component_R9": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.427973722678103
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.954963392318706
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.126785487526774
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.637485612675201
+      }
+    },
+    "Component_R10": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.056881943001735
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.4795956035062263
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 10.996775047848288
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.179266654155695
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.546517181352586
+      }
+    },
+    "Component_R11": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.832121864293933
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 21.30798790181166
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6192997549568937
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.834513533928757
+      }
+    },
+    "Component_R12": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.341090577974504
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.636878876380842
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.95987541943734
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.500425461839383
+      }
+    },
+    "Component_R13": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.379536057329338
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.538127912963856
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.220420830023457
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.573743909823195
+      }
+    },
+    "Component_R14": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.662936542456183
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 16.51486683516204
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.736999697832642
+      }
+    },
+    "Component_R15": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.940492797559728
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.759787369272408
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.881728048619957
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6016210654119936
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.5026334144218
+      }
+    },
+    "Component_R16": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.730239121668225
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 17.568299885696803
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.702336599928126
+      }
+    },
+    "Component_R17": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.8400942217171945
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.85
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6230953612403254
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_R18": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.5403744911805135
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.300000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 10.687416588358207
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.238327969747333
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 9.249999999999957
+      }
+    },
+    "Component_R20": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050833673062802
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 20.44553109243863
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.0
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.40797777772178
+      }
+    },
+    "Component_R21": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8500000000000014
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.803598894602507
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 17.325217051636443
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.9262296636486917
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.547499948452828
+      }
+    },
+    "Component_R22": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6060808317066129
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.7996784031342592
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.77065175196695
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.4080785607425437
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_R23": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.780142343078442
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.103788701358271
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 16.174339916793194
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.7381192907815874
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 10.604634360492113
+      }
+    },
+    "Component_R24": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.392822002002003
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.285490998990877
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 15.810499286703308
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.07843706049469
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.400889402655741
+      }
+    },
+    "Component_R25": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.3417226771186512
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.980952316723354
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.8721525337100657
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_R26": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.9956629178446375
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.050000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.90826852421203
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.624320797236562
+      }
+    },
+    "Component_R27": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.020594523101534
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.0
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.8
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.708352520178872
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_R28": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.111883077346982
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.066689550934627
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.85
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_R29": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.850000000000001
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.2493911228449415
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.85
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 2.466565161600008
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_U1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.8999999999999986
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.099999999999998
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 14.544632088797918
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6000000000000014
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.537129975373608
+      }
+    },
+    "Component_U2": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.905375508750287
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.6717734664422377
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 12.165467646917254
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.499999999999957
+      }
+    },
+    "Component_U3": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.692893985522682
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.2551910278904208
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.766187443337284
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6202229663585732
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.798872520832461
+      }
+    },
+    "Component_U4": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.846686720198902
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.300000000000001
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 9.198432691650556
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.846327969747332
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 8.899999999999956
+      }
+    },
+    "Component_U5": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.498294441324355
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 7.300000000000004
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 16.793856076737754
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.75388299614235
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 10.42379282827624
+      }
+    },
+    "Component_U6": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.738637132263604
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 4.900000000000002
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 19.950221158905023
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.5999999999999943
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 11.510818687350548
+      }
+    },
+    "Component_X6": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 5.0
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.307703130572635
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.1999999999999993
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 3.860266338825818
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.440956067185104
+      }
+    },
+    "Component_Y1": {
+      "speaker": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.5
+      },
+      "yoke": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 6.209595007624346
+      },
+      "body": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 20.202677926482014
+      },
+      "cradle": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 1.6631835457789501
+      },
+      "cover": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 13.023872075530415
+      }
+    }
+  },
+  "cross_face_usb_anchor_reservations": {
+    "1": {
+      "exact_manifest_record": {
+        "x": 0.0,
+        "y": -23.935000000000002,
+        "plan_w": 10.64,
+        "plan_h": 8.93,
+        "angle": 0.0,
+        "side": "B",
+        "source": "X6 body/drill projection plus 0.5 mm per edge; anchor height unqualified"
+      },
+      "planning_projection_z_mm": [
+        26.6,
+        46.5
+      ],
+      "physical_occupied_height": false,
+      "note": "Reservation only; real through-board tails remain unmeasured. Not an all-front BOM exclusion."
+    }
+  },
+  "contact_retention": {
+    "geometry": "Unchanged frozen T8 yoke/cradle and actual thin contacts translated +10.75 mm; cover has straight upper-spring service channels with added exterior stock.",
+    "actual_under_cell_section_mm": 1.0799999999999983,
+    "section_xyz_mm": [
+      [
+        8,
+        0,
+        27.0
+      ],
+      [
+        8,
+        0,
+        28.08
+      ]
+    ],
+    "steel_base_mm": 0.3,
+    "dimple_above_B_mm": 9.78,
+    "inherited_constructive_guard_stock_evidence": {
+      "valid": true,
+      "solid_count": 1,
+      "volume_mm3": 11711.390076236834,
+      "bounds": {
+        "min_mm": [
+          -22.665000000000003,
+          -9.6,
+          14.749999999999998
+        ],
+        "max_mm": [
+          22.665000000000003,
+          9.6,
+          35.23
+        ],
+        "size_mm": [
+          45.330000000000005,
+          19.2,
+          20.479999999999997
+        ]
+      },
+      "uncut_shell": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.29406055737023884
+      },
+      "cut_shell": {
+        "intersection_mm3": 0.0,
+        "distance_mm": 0.29406055737023884
+      },
+      "outside_working_cavity_excluding_port_and_open_mouth_mm3": 0,
+      "plastic_wall_target_mm": 1.0,
+      "contact_clearance_assumption_mm": 0.1,
+      "nominal_minimum_shell_margin_target_mm": 0.25,
+      "closed_stock_wall_lower_bound_mm": 1.0,
+      "wall_bound_witnesses": [
+        {
+          "primitive": "BT1_0",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_1",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_2",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_3",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_4",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_5",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_6",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_7",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_8",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT1_9",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_0",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_1",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_2",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_3",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_4",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_5",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_6",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_7",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_8",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "BT2_9",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        },
+        {
+          "primitive": "cell",
+          "proved_dilation_radius_mm": 1.0,
+          "inner_outside_own_stock_mm3": 0,
+          "dilated_pocket_outside_own_stock_mm3": 0,
+          "stock_outside_global_stock_mm3": 0
+        }
+      ],
+      "global_void_outside_proved_pocket_union_mm3": 0,
+      "shell_margin_target_met": true,
+      "note": "Each ACTUAL pocket is positively offset by the tested wall radius and the full resulting BRep is contained in its own stock. Every stock is contained in global stock; global pocket equals the proved pocket union. Dilation distributes over union, so closed-stock wall is at least the tested radius. This avoids OCC's unsupported nested-shell extrema operation without substituting a bounding-box distance. Before intentional PCB landing/fastener reliefs; no clipping to bell shell."
+    },
+    "wall_proof_scope": "Unchanged cradle/local guard evidence; historical shell margins do not apply. Cover end-pocket modification is separately witnessed below.",
+    "cover_service_channels": {
+      "reason": "Old cover withdrawal check excluded contact metal; full thin spring tips obstructed rigid removal.",
+      "pocket_positive_x_mm": [
+        16.9,
+        18.6
+      ],
+      "pocket_y_mm": [
+        -4.545,
+        4.545
+      ],
+      "pocket_z_mm": [
+        36.5,
+        43.29
+      ],
+      "external_end_side_top_wall_mm": 1.0,
+      "actual_wall_witness_missing_volumes_mm3": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scope": "Full rectangular external end, side and top wall witness solids contained in released cover. Split seam and cell-facing contact opening intentional; not a global dielectric rating."
+    },
+    "no_internal_insulation_removed": true,
+    "all_six_half_mm_displacements_meet_plastic": true
+  },
+  "handle_joint": {
+    "working_screw": "M4x16 pan head, nominal D8/H3.1; supplier dimensional-table tolerance screen, not hardware-lot qualification",
+    "washer_OD_ID_H_mm": [
+      12,
+      4.3,
+      1
+    ],
+    "nut_AF_H_mm": [
+      7,
+      3.2
+    ],
+    "screw_head_z_mm": [
+      47.2,
+      50.3
+    ],
+    "washer_z_mm": [
+      50.3,
+      51.3
+    ],
+    "nut_z_mm": [
+      59.65,
+      62.85
+    ],
+    "screw_tip_z_mm": 66.3,
+    "nominal_full_nut_height_covered_mm": 3.2,
+    "nominal_tip_beyond_nut_mm": 3.45,
+    "supplier_dimension_evidence": {
+      "scope": "Parent-confirmed supplier dimensional tables, not inspected ISO primary standards.",
+      "screw_url": "https://www.fasteners.eu/standards/ISO/7045/",
+      "screw_table_label": "Page explicitly displays DIN 7985 table",
+      "head_diameter_min_max_mm": [
+        7.64,
+        8.0
+      ],
+      "head_height_nominal_max_mm": [
+        3.1,
+        3.25
+      ],
+      "M4x16_underhead_length_min_max_mm": [
+        15.65,
+        16.35
+      ],
+      "M4x20_underhead_length_min_max_mm": [
+        19.6,
+        20.4
+      ],
+      "nut_url": "https://www.fasteners.eu/standards/ISO/4032/",
+      "nut_AF_min_max_mm": [
+        6.78,
+        7.0
+      ],
+      "nut_height_min_max_mm": [
+        2.9,
+        3.2
+      ],
+      "washer_url": "https://www.fasteners.eu/standards/DIN/9021/",
+      "washer_ID_min_max_mm": [
+        4.3,
+        4.48
+      ],
+      "washer_OD_min_max_mm": [
+        11.57,
+        12
+      ],
+      "washer_height_min_max_mm": [
+        0.9,
+        1.1
+      ]
+    },
+    "supplier_tolerance_screen": {
+      "MaximumMouthwardHead": {
+        "underhead_z_mm": 50.199999999999996,
+        "head_bottom_z_mm": 46.949999999999996,
+        "length_mm": 15.65,
+        "tip_z_mm": 65.85,
+        "screw_to_cell": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 2.3699999999999974
+        },
+        "screw_to_cover": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 1.1327510759209178
+        },
+        "washer_to_cell": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 5.619999999999997
+        },
+        "installed_overlap_mm3": {
+          "shell": 0,
+          "handle": 0
+        },
+        "insertion_empty_shell": [
+          {
+            "mouthward_z_mm": 0,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 2,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 8,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 20,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 45,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 65,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          }
+        ]
+      },
+      "MaximumHandlewardTip": {
+        "underhead_z_mm": 50.4,
+        "head_bottom_z_mm": 47.15,
+        "length_mm": 16.35,
+        "tip_z_mm": 66.75,
+        "screw_to_cell": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 2.5700000000000003
+        },
+        "screw_to_cover": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 1.3080997668373782
+        },
+        "washer_to_cell": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 5.82
+        },
+        "installed_overlap_mm3": {
+          "shell": 0,
+          "handle": 0
+        },
+        "insertion_empty_shell": [
+          {
+            "mouthward_z_mm": 0,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 2,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 8,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 20,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 45,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 65,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          }
+        ]
+      },
+      "MaximumWasherAndLength": {
+        "underhead_z_mm": 50.199999999999996,
+        "head_bottom_z_mm": 46.949999999999996,
+        "length_mm": 16.35,
+        "tip_z_mm": 66.55,
+        "screw_to_cell": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 2.3699999999999974
+        },
+        "screw_to_cover": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 1.1327510759209178
+        },
+        "washer_to_cell": {
+          "intersection_mm3": 0.0,
+          "distance_mm": 5.619999999999997
+        },
+        "installed_overlap_mm3": {
+          "shell": 0,
+          "handle": 0
+        },
+        "insertion_empty_shell": [
+          {
+            "mouthward_z_mm": 0,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 2,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 8,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 20,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 45,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          },
+          {
+            "mouthward_z_mm": 65,
+            "overlaps_mm3": {
+              "shell": 0
+            }
+          }
+        ]
+      }
+    },
+    "worst_case_head_bottom_z_mm": 46.95,
+    "worst_case_tip_z_range_mm": [
+      65.85,
+      66.75
+    ],
+    "minimum_tip_past_maximum_height_nut_mm": 3.0,
+    "full_nut_body_height_covered_range_mm": [
+      2.9,
+      3.2
+    ],
+    "engagement_scope": "Screw covers the complete nut body even at minimum length; usable threads/chamfers and fully threaded supplier part require confirmation. Nut body height is not certified effective thread engagement.",
+    "blind_bore_end_z_mm": 68,
+    "minimum_tip_to_blind_end_gap_mm": 1.25,
+    "minimum_supplier_washer_annular_face_area_mm2": 89.37399130473092,
+    "M4x20_alternative": "Not interchangeable: maximum tip z70.8 exceeds the current blind bore end z68 by2.8 mm; redesign/rebind before use.",
+    "bearing_material_below_key_pocket_mm": 2.35,
+    "bearing_annulus_OD_ID_H_mm": [
+      12,
+      4.4,
+      2.35
+    ],
+    "bearing_witness_outside_actual_shell_mm3": 0,
+    "key_tenon_xyz_mm": [
+      12,
+      10,
+      2
+    ],
+    "key_pocket_xyz_mm": [
+      12.3,
+      10.3,
+      2.15
+    ],
+    "screw_to_cell": {
+      "intersection_mm3": 0.0,
+      "distance_mm": 2.6200000000000045
+    },
+    "screw_to_cover": {
+      "intersection_mm3": 0.0,
+      "distance_mm": 1.353005912773486
+    },
+    "washer_to_cell": {
+      "intersection_mm3": 0.0,
+      "distance_mm": 5.719999999999999
+    },
+    "load_path": "Handle nut -> metal screw/washer -> integral shell crown; keyed shoulder resists rotation. Cartridge not a structural tie.",
+    "wood_option": "Same original external turning silhouette; metal cross-dowel/insert and keyed interface require separate design. No wood pilot or plastic thread qualified."
+  },
+  "usb": {
+    "actual_source_reference": "X6",
+    "source_proxy_bounds": {
+      "min_mm": [
+        -4.820000000000001,
+        -27.900000000000002,
+        21.5
+      ],
+      "max_mm": [
+        4.820000000000001,
+        -19.970000000000002,
+        25.0
+      ],
+      "size_mm": [
+        9.640000000000002,
+        7.93,
+        3.5
+      ]
+    },
+    "native_origin_xy_mm": [
+      0,
+      -22.82
+    ],
+    "mouth_xy_mm": [
+      0,
+      -27.9
+    ],
+    "mouth_open_channel_width_height_mm": [
+      15,
+      27.3
+    ],
+    "color_matched_integral_bezel_width_mm": 14.4,
+    "nominal_nose_opening_width_height_mm": [
+      9.2,
+      3.1
+    ],
+    "source_body_to_underledge_nominal_gap_mm": 0.2,
+    "plug_scope": "Unselected 8.8x8x2.6 male nose only; final pose touches source mouth, not a mating-depth/overmold qualification.",
+    "load_path": "Carrier ledge/rails and keyed bezel react handling loads through carrier/front screws/shell, not a claim of solder-tail load capacity.",
+    "tails": "Through-board anchor height/real tails unmeasured; no invented occupied tail-height solid."
+  },
+  "print_orientation": {
+    "shell": "Mouth down, handle up. One solid including three attachment lugs.",
+    "carrier": "Grille face down, separately printed.",
+    "handle": "Base down; sideways nut tunnel and closed crown require slicer support review.",
+    "supports": "Upper internal crown slopes and nut-pocket roofs need explicit slicer support/bridging review. Mouth gives support-removal access BEFORE assembly. No universal support-free claim."
+  },
+  "pcba_stl_scope": {
+    "omitted_only_from_inert_stl": [
+      "BT1",
+      "BT2"
+    ],
+    "full_native_step_contacts": true,
+    "reason": "Preserved thin T8 contacts have known fold-root mesh defects; no metal bridge added."
+  },
+  "routing_interface": {
+    "mechanically_bound_to_final_all_front_manifest": false,
+    "mechanical_freeze_recommended": false,
+    "outline_mounts_usb_contacts_may_change_without_rebind": false,
+    "routing_is_not_fabrication_approval": true
+  },
+  "gates": [
+    "No live cell, fabrication, purchase, child-use or print-strength approval.",
+    "Cell loaded geometry/contact forces, positive button, wrapper abrasion and contact insulation remain unqualified.",
+    "Speaker rim, terminals, wire routing, cone excursion and acoustics remain unqualified.",
+    "Silk PLA finish is not creep, impact, thermal, dielectric or flame qualification.",
+    "Printed allowances are nominal CAD choices, not measured tolerances.",
+    "USB male nose is not a selected mating cable; no connector-tail height is inferred.",
+    "M2/M4 hardware dimensions, screw engagement, nut retention and torque require actual part/slicer/physical review.",
+    "Service paths are declared finite rigid poses, not an exhaustive continuous/deforming-motion proof.",
+    "Original photos/artwork are not imported or redistributed."
+  ]
+}

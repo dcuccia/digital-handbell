@@ -1,0 +1,34 @@
+{
+  "status": "AUTHORIZED_TO_BEGIN_CRITICAL_ROUTING_NOT_FABRICATION",
+  "owner_authorization_date": "2026-09-13",
+  "basis": "Owner permits unattended routing after stable mechanical interfaces; completed exact all-front assembly now supports that interface.",
+  "stage_1_commit": "23cb3fe26707f094ce3eaf365807c322bd2844ed",
+  "placement_sha256": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+  "pcb_sha256": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+  "schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+  "contact_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+  "mechanical_completion_token": "578113de769f41d193bd85828117fe36",
+  "mechanical_artifact_manifest_sha256": "bfd44881fa7df19e3f19803b3c7b0d9ad385991e7764d5ae580eafded79f7899",
+  "mechanical_native_sha256": "5c11f0237bf23eb55d5ebaa726b0282038c2c1bce42be34d4eb33dd7a8d01b38",
+  "mechanical_interface_review": {
+    "exact_current_input_binding": true,
+    "reported_static_material_overlaps": 0,
+    "reported_service_paths_clear": true,
+    "mechanical_freeze_recommended": true,
+    "pcb_diameter_mm": 43.0,
+    "pcb_front_z_mm": 25.0,
+    "pcb_back_z_mm": 26.6,
+    "mounts_usb_contacts_and_component_poses_frozen": true
+  },
+  "constraints": [
+    "Create a separate printed-bell-routing native candidate; preserve the published stage-1 board and its mechanical bind.",
+    "Keep all footprint poses, local pad rotations, libraries, board/mount/USB/contact geometry and schematic nets unchanged.",
+    "Rebind the mechanical artifacts to the final routed candidate's exact bytes, even for copper-only changes.",
+    "Add useful B-side polarity/orientation silk without adding copper or moving contacts.",
+    "Avoid both raw contact nets and contact-base projections with protected-GND vias/pours; do not bridge CELL_NEG to GND.",
+    "Route genuine critical connections and validate native connectivity/clearances; an intent list is not completed routing.",
+    "Do not waive existing USB hole clearances or silently select a high-current/USB-impedance safety rating.",
+    "If a footprint or mechanical datum must move, obtain a new coordinated review before adopting it.",
+    "No fabrication, purchase, live-cell use or child-use qualification is granted."
+  ]
+}
