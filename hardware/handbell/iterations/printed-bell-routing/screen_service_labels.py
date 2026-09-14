@@ -1,5 +1,6 @@
 # SPDX-License-Identifier: MIT
-"""Screen actual KiCad glyphs and the pinned corrected capture, without saving CAD."""
+"""Screen actual KiCad glyphs against pinned or explicitly rebound capture CAD."""
+import argparse
 import base64
 import hashlib
 import io
@@ -14,6 +15,7 @@ from zipfile import ZipFile
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
+MECHANICAL = ROOT / "mechanical" / "studies" / "2026-09-13-printed-bell"
 VISIBILITY_COMMIT = "4bbdcbb0ee1724b450b66f3a03abcaa8c48333d1"
 VISIBILITY_GIT_PATH = "mechanical/studies/2026-09-13-printed-bell/printed-bell.FCStd"
 VISIBILITY_NATIVE_SHA256 = "f0dae8f6e5c62fa41f64d16ebe4bbf2f22cd5f65a266f279c2537c6fae2416fc"
@@ -64,7 +66,7 @@ def mechanical_screen(work):
         App.closeDocument(document.Name)
 
 
-def review():
+def review(current_mechanical=False):
     sys.path.insert(0, str(ROOT / "tools"))
     import route_printed_bell as route
     route.verify_release()
@@ -110,7 +112,23 @@ def review():
                        "B_copper_conflicts": conflicts, "mount_keepout_margins_mm": mount_distances,
                        "mechanical_text_reservation": reservation})
     labels.sort(key=lambda item: item["text"])
-    native = visibility_native()
+    if current_mechanical:
+        checked = subprocess.run([sys.executable, str(ROOT / "tools" / "check_printed_bell.py")],
+                                 cwd=ROOT, capture_output=True, text=True, timeout=120)
+        route.prep.require(checked.returncode == 0,
+                           "Current mechanical evidence is not valid: "+checked.stdout+checked.stderr)
+        mechanical_paths = [MECHANICAL / name for name in (
+            "printed-bell.FCStd", "artifact-manifest.json", "fit-report.json",
+            "completion.json", "review-status.json")]
+        mechanical_bindings = {str(p.relative_to(ROOT)): route.sha(p) for p in mechanical_paths}
+        native = mechanical_paths[0].read_bytes()
+        visibility_basis = {"current_mechanical_bindings_sha256": mechanical_bindings}
+        expected_source = HERE
+    else:
+        native = visibility_native()
+        visibility_basis = {"mechanical_visibility_commit": VISIBILITY_COMMIT,
+                            "mechanical_visibility_git_path": VISIBILITY_GIT_PATH}
+        expected_source = route.SOURCE
     embedded_inputs = {}
     with ZipFile(io.BytesIO(native)) as archive:
         tree = ET.fromstring(archive.read("Document.xml"))
@@ -119,7 +137,9 @@ def review():
             item = tree.find(f".//ObjectData/Object[@name='Raw_{key}']/Properties/Property[@name='Text']/String")
             route.prep.require(item is not None, "Corrected model lacks embedded interface: "+key)
             digest = hashlib.sha256(base64.b64decode(item.attrib["value"], validate=True)).hexdigest()
-            route.prep.require(digest == route.sha(route.SOURCE / filename), "Corrected model interface changed: "+key)
+            message = ("Current model is not bound to routed candidate: " if current_mechanical
+                       else "Corrected model interface changed: ")
+            route.prep.require(digest == route.sha(expected_source / filename), message+key)
             embedded_inputs[key] = digest
     freecad = Path(os.environ["LOCALAPPDATA"]) / "Programs" / "FreeCAD 1.1" / "bin" / "FreeCADCmd.exe"
     with tempfile.TemporaryDirectory(prefix=".service-label-", dir=HERE / "reports") as directory:
@@ -140,30 +160,37 @@ def review():
     route.prep.require(all(item["clear"] for item in mechanical["labels"]),
                        "Service text obscured by capture: "+json.dumps(mechanical["labels"]))
     route.prep.require(before == route.sha(board_path), "Service screen changed native PCB")
+    if current_mechanical:
+        route.prep.require(mechanical_bindings == {str(p.relative_to(ROOT)): route.sha(p) for p in mechanical_paths},
+                           "Current mechanical evidence changed during the service screen")
     report = {
         "scope": "Nominal CAD/glyph service-view screen, not readability, chemistry, reversal or safety qualification",
         "view": "Cartridge outside shell; cover and its screws removed; cell, cradle, contacts and retained hardware installed; look along -Z",
         "pcb_sha256": before, "tool_sha256": route.sha(__file__),
         "mechanical_release_commit": route.RELEASE_COMMIT,
-        "mechanical_visibility_commit": VISIBILITY_COMMIT,
-        "mechanical_visibility_git_path": VISIBILITY_GIT_PATH,
+        **visibility_basis,
         "mechanical_native_sha256": hashlib.sha256(native).hexdigest(),
-        "embedded_stage1_inputs_sha256": embedded_inputs,
+        ("embedded_routed_inputs_sha256" if current_mechanical else "embedded_stage1_inputs_sha256"): embedded_inputs,
         "freecad_cli_sha256": route.sha(freecad),
         "kicad_version": pcb.GetBuildVersion(), "glyph_envelope_margin_mm": .2,
         "labels": labels, "mechanical": mechanical,
         "required_compartment_label": ["1S Li-ion 4.2V ONLY", "NO PRIMARY CR123A"],
         "gates": [
-            "Parent must repeat visibility review after rebinding this corrected model to actual routed candidate",
+            ("Repeat after any PCB, label or mechanical change" if current_mechanical else
+             "Parent must repeat visibility review after rebinding this corrected model to actual routed candidate"),
             "Print legibility and actual service-state visibility require physical review",
             "Use a visible compartment label if PCB guidance is obscured in any supported insertion workflow",
             "Charger cannot identify primary-cell chemistry; polarity marks do not prevent wrong-cell charging",
             "No live-cell, charging, reversal or safety approval",
         ],
     }
-    route.write(HERE / "reports" / "service-label-review.json", report)
+    name = "service-label-current-mechanical-review.json" if current_mechanical else "service-label-review.json"
+    route.write(HERE / "reports" / name, report)
     return report
 
 
 if __name__ == "__main__":
-    review()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--current-mechanical", action="store_true",
+                        help="Require the current completed model to embed this routed candidate; write a separate report.")
+    review(current_mechanical=parser.parse_args().current_mechanical)

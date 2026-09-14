@@ -282,6 +282,22 @@ that equality in `routing-build.json`. The mechanical rebind must use these
 new PCB/manifest bytes even though all copper and physical interfaces are
 unchanged.
 
+After the parent completes the final mechanical rebind, repeat actual-glyph
+visibility against that exact current model:
+
+```powershell
+python .\hardware\handbell\iterations\printed-bell-routing\screen_service_labels.py --current-mechanical
+```
+
+This first requires a completed, byte-bound mechanical package and rejects a
+model still embedding the old stage-1 PCB or manifest. It opens only a temporary
+copy, repeats the same geometric screen, verifies that the source evidence did
+not change, and writes `reports/service-label-current-mechanical-review.json`.
+That separate report records the current native, completion and artifact
+bindings without replacing the immutable visibility or copper-release
+evidence. It is deliberately not an electrical-manifest input: refreshing a
+visibility report must not cause a circular mechanical/electrical rebind.
+
 ## Unclosed qualification and attribution
 
 The unchanged MCP73831 profile, absence of cell-temperature charge inhibit/

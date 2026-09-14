@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-14T04:29:16.318964+00:00",
+  "generated_utc": "2026-09-14T04:45:11.246233+00:00",
   "kicad_version": "10.0.6",
   "cli_sha256": "393525236969434e24bc710334efe244fb285ef6596a1aea8e74353ef4db5477",
   "inputs": {
@@ -17,8 +17,8 @@
     "hardware\\handbell\\iterations\\printed-bell-routing\\routing-data.json": "ba91b88c5780dde7e8f20e9ef9df967f66d3cf3ff06cf0679c56c56e5dfecff2",
     "hardware\\handbell\\iterations\\printed-bell-routing\\routing-build.json": "f08e5df722eb5b090ff36fabe6592fa933d5044daf9c75c06cac1ec506967015",
     "hardware\\handbell\\iterations\\printed-bell-routing\\source-evidence.json": "6852a3a6ec685db1992697d0095449eb86b4fb911712eb4d31518728fcc92524",
-    "hardware\\handbell\\iterations\\printed-bell-routing\\screen_service_labels.py": "3b2b57073f56b2b708180a5c106723835eba9614861e54106d6050616be744a4",
-    "hardware\\handbell\\iterations\\printed-bell-routing\\reports\\service-label-review.json": "6194ac04d00b5dfd402c0044329ac3354a74f9572b8d2e366ffc6e798558805e",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\screen_service_labels.py": "b45610c38bdfbf9325c040476559c4fa7306436bc76c87f3e5bc0530e2358f5a",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\reports\\service-label-review.json": "7fb8203ae1458f06674dd23cea7afd0da58f8e1f67e1f3a3b3f8c5c3704b0e41",
     "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0603-NO.kicad_mod": "c14953f81c04418ff86a4479830b5a6ad298e329ebe30604b5fc5a8c254c574a",
     "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0805-NO.kicad_mod": "a563b5eca037b284cb99458f46a5fae7f2595c3b8b690cb55dbeffd8f7e9b615",
     "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\_0402NO.kicad_mod": "ab6815fc1f67f26ca97701d45024b9e6552d3347ae1fcd46c6e131c4acc8621c",
@@ -68,15 +68,15 @@
     "git:4bbdcbb0ee1724b450b66f3a03abcaa8c48333d1:mechanical/studies/2026-09-13-printed-bell/printed-bell.FCStd": "f0dae8f6e5c62fa41f64d16ebe4bbf2f22cd5f65a266f279c2537c6fae2416fc"
   },
   "reports": {
-    "erc.json": "75ece6363ab3d472b1fab726f8c039d9d9bc1712942181b9c8b6cdd2e5f0e8ee",
-    "drc.json": "73fc5bb6c4d31e73a453a13a6647b4dd588c341fc9164c462a8632a54e9b1c78",
-    "handbell-netlist.xml": "fcc43f97c99c700a1bd1aa3bbb777bafde47393699040037ddf6f1df19ca01ff",
-    "handbell-schematic.pdf": "96b3e6f253e3360ee70d83507159ecfa00004200177be555a4798a93dc8af38f",
-    "front-native.pdf": "c5a471af0054cf2f02e8da25ca50d042026682aea09b3cb612b44ac039f6d366",
-    "rear-native.pdf": "69919466e7b2c6b28274ddca5368586cbfcc75bf1cf4a21f0d514724e487fc76",
-    "front-native.svg": "cf16bdf49412358835384d3660791c014eeaeb2e0441fb921d8ed04ba25c85e8",
-    "rear-native.svg": "a7c3cddd4e58ba6a8432b343ad019f16c4218fc6b87f55185c5ebc373bf9461a",
-    "schematic-svg/handbell.svg": "fbeba0617ac7b769e7b72beb96a86407b991fda44bcca59cef4f9ba836a5de4c"
+    "erc.json": "e948b8bc15f73d39a768be4bda112eaa7a59c16bd5c66db53fc937539e7b3798",
+    "drc.json": "59b84467d3cdd1417fedc98399f2d0585fab725b1bcf52c7ad468d8c1512208e",
+    "handbell-netlist.xml": "654c80e7aa67335c42d35ab4624333d1b0761ba5bf2a0cc2ace5d9a80987fc2e",
+    "handbell-schematic.pdf": "3b3890827e6d7b210993f2d16e3cbb84d8b8c5716ac5f3799819dbcb4e5884e9",
+    "front-native.pdf": "2c69cab661e23ddeff7d5d2326e42bcfd73f1e7135aab1eb9fdc841d538dd6e5",
+    "rear-native.pdf": "512cdfc2a9fe70487949b1577bcf5ec30c31a2b7a68bf26596f70c9b5bef31e4",
+    "front-native.svg": "c25e1989389671dba289d6479847c613c14b32dc8bce7ee26dd9f5f5510d2120",
+    "rear-native.svg": "aec7e03b14b82217d0b60a7b571bd8ee24ee833cd5b4242661497b8ace962619",
+    "schematic-svg/handbell.svg": "6561434f7e1e81bd457e899fc0bfbf03d308abab1f889a17434f9d277e932760"
   },
   "commands": [
     {

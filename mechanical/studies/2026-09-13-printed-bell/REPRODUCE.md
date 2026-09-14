@@ -18,6 +18,20 @@ After copper-only routing changes, the parent must supply the regenerated
 manifest with actual new PCB hash and repeat the complete bind. Geometry
 can remain unchanged; a stale input hash is still not an approved release.
 
+For the final routed-candidate handoff, use the `printed-bell-routing`
+placement manifest instead. After the completed generation and mechanical
+check, run the actual-glyph screen against the rebound native:
+
+```powershell
+python .\hardware\handbell\iterations\printed-bell-routing\screen_service_labels.py --current-mechanical
+```
+
+The command rejects a native still bound to stage 1 and writes a separate
+`service-label-current-mechanical-review.json` beside the routing reports.
+Its exact current-native and completion bindings supplement, rather than
+overwrite, the earlier immutable release/visibility evidence. This report
+is not an input to model generation, avoiding a circular evidence dependency.
+
 ## Optional explicit development reproduction
 
 ```powershell
