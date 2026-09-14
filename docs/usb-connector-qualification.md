@@ -15,10 +15,14 @@ is not a separately qualified alternative part number.
 
 The current JLC-linked one-page drawing was retrieved with SHA-256
 `6ae33d50ac47820114661138dc4e4659f40fdc5d4f485b46685dfec338da1a9e`.
-Its graphical dimension lettering still needs complete visual transcription;
-OCR alone did not support approval. The researcher is preserving a readable
-session-local copy and its actual source URL. Do not redistribute an
-unlicensed manufacturer PDF or silently substitute the older drawing.
+The parent has now downloaded those exact bytes and visually read the full
+page and detailed crops, including contrast-enhanced views that retain the
+watermark. The original PDF is unchanged and remains session-local.
+[The current product page](https://jlcpcb.com/partdetail/Korean_HropartsElec-TYPE_C_31_M12/C165948)
+provides expiring download links; do not commit signed URLs or credentials.
+The actual drawing is dated **2020-12-08, revision A** and names
+`TYPE-C-31-M-12`, despite its generic `DETECTOR SWITCHS` title. Do not
+redistribute the PDF or silently substitute the older drawing.
 
 An [older distributor-hosted HRO drawing](https://electronilab.co/wp-content/uploads/2021/05/ConectorUSB_C_Korean-Hroparts-Elec-TYPE-C-31-M-12.pdf)
 has SHA-256 `10f5c109651db799ec59d9cf3d7a343886569807ae03d3dd9094df92bf156e1d`;
@@ -113,13 +117,55 @@ depends on the eventual copper weight, solder-mask process and color.
 
 ## Required next revision
 
-Read the current drawing at useful resolution; resolve all signal/anchor/
-locator dimensions, body and tail extents, seating plane and finished slots.
-Then make an X6-only, drawing-supported correction in a new active candidate,
-with explicit pad-name/net mapping, native drills/copper/mask/paste evidence
-and a common vendor process. Preserve the frozen reference and routed
-checkpoints. Rebind the full mechanical model and revisit the port/body/tail
-interface; the current intermediate model does not approve changed USB geometry.
+The [dimension and authorized-candidate register](../hardware/handbell/parts/hro-usb-candidate.json)
+separates literal drawing values, derived coordinates and intentional project
+deviations. **The current drawing differs from both the old EAGLE source and
+the cited stock KiCad implementation.** In particular, its mouthward slots
+are **0.6 x 1.4 mm**, not 0.6 x 1.2 mm; recommended locators are 0.60 mm, not
+0.65 mm. Its 1.14 mm signal lands are essentially aligned with the original
+Adafruit lands, not the stock KiCad row's larger rearward offset.
+
+The authorized X6-only engineering variant retains the source's 0.65 mm
+locators and inner signal lands. It uses actual 0.6 x 1.7 / 0.6 x 1.4 mm
+plated slots, with enlarged 1.1 x 2.2 / 1.1 x 1.9 mm oval copper lands for
+0.25 mm nominal annulus. Only the four outer combined GND/VBUS lands and
+their reduced paste apertures move 0.20 mm rearward, away from the locating
+holes. Their original sizes remain intact. Their new nominal Y interval
+[-3.05,-1.90] mm still contains the complete nominal terminal projection
+[-2.67,-2.27] mm; this is not a guaranteed worst-case terminal/placement stack.
+The global clearance rule is not reduced. For the quote baseline, remove the
+four anchor paste polygons and explicitly require **secondary soldering of
+all four plated anchors after the SMT operation**. This avoids inventing a
+qualified pin-in-paste volume from the old overprinted rectangles. Supplier
+acceptance, short-tail wetting and barrel fill remain open; the anchors must
+not simply be left unsoldered. Intrusive reflow would require a separately
+reviewed stencil/process revision, not an undocumented supplier assumption.
+
+This is a **drawing-supported, explicitly modified engineering footprint**,
+not a claim of exact manufacturer-recommended geometry or physical
+qualification. No stock KiCad CAD is imported. The new routing-candidate owner
+has the implementation instructions; native copper/mask/paste/drill and
+electrical mapping evidence are still required.
+
+The side view shows a 3.26 mm body height above the SMT seating plane and four
+tails 1.01 mm below it, with 0.10 mm general tolerance and a 0.10 mm seating
+profile callout.
+The tails therefore nominally end inside a 1.6 mm PCB; do not assume visible
+tail protrusion or an already qualified through-hole solder process. Keep
+the existing conservative B-side reservations.
+
+The body drawing supports the existing nominal 8.94 x 7.35 mm body and mouth
+datum. However, the 6.28 +/-0.15 mm mouth-to-locator dimension requires a
+front component bound at y=-28.05, beyond the old nominal-only proxy. That
+leaves only 0.05 mm to the current bezel rear plane. The next mechanical
+revision must restore useful clearance without hiding the component bound;
+moving only the printed bezel 0.15 mm outward would recover the earlier
+0.20 mm screening gap without changing PCB/mouth datums or wall thickness.
+That adjustment and the new exact full-CAD bind are not yet implemented.
+
+Preserve the frozen reference and routed checkpoints. Component/PCB/placement
+tolerances, actual part fit, supplier assembly operation, cable mating and
+mechanical qualification remain separate gates.
 
 Track through E02/#2 source fidelity, E04/#4 schematic/footprint, E05/#5
 mechanical interface, E07/#7 layout and E08/#8 fabrication quotation.

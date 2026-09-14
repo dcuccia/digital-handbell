@@ -16,6 +16,16 @@ already recorded C30/R25/R26/R28/R29 identities. Application/land/paste/
 supplier review remains explicit; importing this list must not be mistaken
 for closing the whole [quotation handoff](../../../docs/pcba-quotation-plan.md).
 
+`hro-usb-candidate.json` separately identifies **HRO TYPE-C-31-M-12 / C165948**
+for X6. It records the visually read 2020-12-08 drawing, derived datums and
+explicit project DFM deviations for the new quote candidate. Its current
+1.4 mm front-slot recommendation differs from the old source; true plated
+slots, larger annular rings, four shifted power/ground lands and matching
+paste are required. It also adds the previously absent mouth-position
+component tolerance to the mechanical handoff. This is not an exact
+manufacturer footprint, an implemented native change or supplier approval;
+see [the USB qualification record](../../../docs/usb-connector-qualification.md).
+
 ## Direct source evidence
 
 On September 14, 2026, the actual manufacturer product pages, their public
@@ -75,8 +85,9 @@ Search summaries had incorrectly reported some nominal dimensions as maxima,
 misread 732 kohm and assigned a different high-resistance TCR range. Those
 claims were discarded in favor of direct manufacturer records.
 
-These are manufacturer body limits, not project measurements or a qualified
-mounted-assembly envelope. Existing conservative proxies are retained.
+These passive body limits are manufacturer data, not project measurements or
+a qualified mounted-assembly envelope. Their existing conservative proxies
+are retained; the separate USB register explicitly requires a larger front bound.
 Part-specific DC-bias and circuit behavior, final supplier codes, placement/
 paste and assembly processes remain to be resolved in the complete handoff.
 The manufacturer catalog's production indication is not a stock promise.
