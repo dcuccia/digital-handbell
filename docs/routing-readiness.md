@@ -2,6 +2,12 @@
 
 ## September 14 cost-aware closure direction
 
+The following USB pass implements the authorized slot/land/paste correction
+and one local CC/VBUS repair, keeping all previous connected groups. The
+current filled board has **57 opens and zero native DRC errors**; 234
+silkscreen/text warnings and the wider manufacturing/physical gates remain.
+See the [USB handoff](usb-connector-qualification.md#current-native-implementation).
+
 The first closure pass accepts the saved recorded-settings ground fill:
 **57 opens**, C25's previous ground connectivity restored without a move,
 and unchanged physical findings. The

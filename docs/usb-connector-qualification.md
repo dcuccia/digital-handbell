@@ -1,5 +1,22 @@
 # USB-C connector: source fidelity and quotation gate
 
+## Current native implementation
+
+The [continuing clock/integration draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md#usb-geometry-and-local-approaches-corrected)
+now implements the authorized HRO variant below, with actual slots, enlarged
+annuli, outer land/paste moves and no anchor paste. One local CC1/CC2/VBUS
+correction preserves connectivity without moving X6 or adding vias.
+The minimum native locator/outer-land gap is 0.37536 mm; the four old
+hole-clearance errors are gone. The filled board retains 57 opens and 234
+silkscreen/text warnings, with zero native DRC errors and empty ERC.
+
+`reports/usb-geometry.json` binds the native geometry, unchanged pin mapping,
+four exported slot commands, local repair inventory and exact source/output
+hashes. The conservative body/reservation bound is implemented in the manifest;
+the bezel adjustment and complete mechanical rebind remain pending.
+This is an engineering footprint, not supplier or physical qualification.
+The dated investigation below remains the source/decision history.
+
 September 14, 2026. This is a source/manufacturing review, not a selected
 replacement footprint or vendor approval. It applies to X6 in the initial
 and power-rework routing candidates. Preserve the pinned EAGLE source and

@@ -722,25 +722,28 @@
     },
     "shield_bond_status": "Retained shell-anchor pads unassigned; no reviewed shield bond. Insulate conductive shield independently.",
     "mouth_basis": "Retained CUSB31-CFM2AX-01-X F.Fab y=5.08 transformed by180deg. Width/height are source/proxy, not qualified plug envelope.",
-    "support_gate": "Tongue requires matched shell opening and repeatable carrier support. Flush target at approximate midheight only; no physical USB approval."
+    "support_gate": "Tongue requires matched shell opening and repeatable carrier support. Flush target at approximate midheight only; no physical USB approval.",
+    "selected_mpn": "TYPE-C-31-M-12",
+    "component_front_bound_common_y_mm": -28.05,
+    "anchor_assembly": "Secondary solder all four plated anchors; supplier acceptance pending"
   },
   "cross_face_keepouts": [
     {
       "x": 0.0,
-      "y": -23.935000000000002,
+      "y": -24.01,
       "plan_w": 10.64,
-      "plan_h": 8.93,
+      "plan_h": 9.08,
       "angle": 0.0,
       "side": "B",
-      "source": "X6 body/drill projection plus 0.5 mm per edge; anchor height unqualified"
+      "source": "X6 conservative body/drill projection plus 0.5 mm per edge; secondary-anchor solder remains unqualified"
     }
   ],
   "dnp_footprint_reservations": [
     "C29"
   ],
   "status": "CLOCK_CLUSTER_ROUTED_GLOBAL_GATES_OPEN",
-  "generated_pcb_sha256": "307122d6838df5dda24331091c463930889a2185fb01b57ae95cab107337c408",
-  "schematic_sha256": "4fa984b65e618b8c3fdb07c2cd5be0d79e9a9cd4cbc8a3ac4e7c64c6e53ce5c0",
+  "generated_pcb_sha256": "060bab15944bcd8be8b6de61f05d242e2d975501fc900a21a379cd2b8d413ff5",
+  "schematic_sha256": "98b5e71e17c4dd8fcdf841be9b816bac600f2fa8ee6ee14058fc887bdb4e1654",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
   "source_baseline": "hardware\\handbell\\iterations\\printed-bell-power-rework",
@@ -2777,12 +2780,12 @@
     {
       "reference": "X6",
       "value": "USB Type C",
-      "mpn": "",
-      "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:USB_C_CUSB31-CFM2AX-01-X",
+      "mpn": "TYPE-C-31-M-12",
+      "footprint": "Handbell:USB_C_HRO_TYPE_C_31_M_12_Handbell",
       "x_mm": 1.3654811810492991e-16,
-      "y_mm": -23.935000000000002,
+      "y_mm": -24.01,
       "width_mm": 9.64,
-      "depth_mm": 7.93,
+      "depth_mm": 8.08,
       "height_mm": 3.5,
       "rotation_deg": -180,
       "side": "F",
@@ -2796,7 +2799,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": true,
-      "cluster": "interfaces"
+      "cluster": "interfaces",
+      "manufacturer": "HRO / Korean Hroparts Elec"
     },
     {
       "reference": "Y1",
@@ -3340,7 +3344,7 @@
     "Retained MCP73831 charge/termination profile requires cell approval.",
     "Unselected inductor/capacitors/ferrites are not qualified by footprint or screening height.",
     "BT1/BT2 are fitted B SMT operations: no single-side-reflow or Economic-tier claim.",
-    "USB anchors M1-M4 remain unassigned. Four inherited 0.25 mm hole-clearance findings remain.",
+    "USB anchors M1-M4 remain unassigned; the documented slot/land correction is applied. Secondary solder and full mechanical qualification remain open.",
     "Partial tracks/vias; no claim of complete circuit or current/thermal/USB-impedance qualification.",
     "Changed F poses require exact new mechanical rebind; prior model does not approve these poses.",
     "U1/U6 maximum-depth envelopes are enlarged; old nominal clearances do not include these component tolerances or approve the new fit.",
@@ -3400,5 +3404,5 @@
       }
     ]
   },
-  "current_stage_report": "reports/front-ground-acceptance.json"
+  "current_stage_report": "reports/usb-geometry.json"
 }

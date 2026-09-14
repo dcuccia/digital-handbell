@@ -17,6 +17,14 @@ screening assumptions and unresolved fit/power/manufacturing gates.
 A separate partial-routing checkpoint is now available; no fabrication-ready
 PCB or functioning firmware has been released.
 
+**September 14 closure work:** the [current integration draft](hardware/handbell/iterations/printed-bell-clock-draft/README.md)
+has its local clock routed, recorded ground fill restored, and USB slot/land
+correction applied with local CC/VBUS repairs. It retains **57 unconnected
+items**, with zero native DRC errors and 234 silkscreen/text warnings.
+The [cost-aware closure plan](docs/pcb-closure-plan.md) tracks remaining
+geometry, routing and matched PCB+PCBA quotation inputs. This is still an
+engineering checkpoint, not a complete or qualified board.
+
 **September 13 printed-bell revision:** the owner reports that the latest
 inert pieces fit and authorizes a single-piece printed bell, flush removable
 cartridge and black handle. The separate

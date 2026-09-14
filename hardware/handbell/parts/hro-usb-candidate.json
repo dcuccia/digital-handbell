@@ -1,6 +1,14 @@
 {
   "schema_version": 1,
-  "status": "Selected for the quote candidate; native implementation and supplier/physical qualification pending",
+  "status": "Applied in printed-bell-clock-draft; supplier, full mechanical and physical qualification remain pending",
+  "native_application": {
+    "package": "hardware/handbell/iterations/printed-bell-clock-draft",
+    "report": "reports/usb-geometry.json",
+    "pcb_sha256": "060bab15944bcd8be8b6de61f05d242e2d975501fc900a21a379cd2b8d413ff5",
+    "footprint": "Handbell:USB_C_HRO_TYPE_C_31_M_12_Handbell",
+    "minimum_native_outer_land_locator_gap_mm": 0.3753615137912704,
+    "remaining": "Secondary anchor soldering, supplier pickup/rotation, full CAD/bezel rebind and physical qualification."
+  },
   "reference": "X6",
   "manufacturer": "HRO / Korean Hroparts Elec",
   "mpn": "TYPE-C-31-M-12",

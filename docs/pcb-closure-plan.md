@@ -37,6 +37,13 @@ The starting facts and rejected trial above remain historical evidence.
 The standalone refill recipe reproduces the accepted cache from the unfilled
 source; geometry changes still require a new refill and review.
 
+**USB closure result:** the authorized X6 pattern and local CC/VBUS repairs are
+now applied, with 57 opens and zero native DRC errors. The four slot commands,
+unchanged pin mapping and preserved connected groups are source-bound in the
+[USB report](../hardware/handbell/iterations/printed-bell-clock-draft/reports/usb-geometry.json).
+MPN coverage is 66/83. Remaining warnings, power geometry, supplier soldering
+and full CAD/bezel integration are still open.
+
 1. **Geometry decisions, then necessary corrections.** Dispose of remaining
    package/land/paste/envelope questions once, using existing source evidence.
    Correct actual terminal, pin-map, clearance and assembly problems before
@@ -66,7 +73,7 @@ unresolved disposition; it is not permission to fabricate unchanged.
 | Scope | Disposition for the next passes | Closure evidence |
 |---|---|---|
 | Y1/C2/C3/R6; Q3 | Retain accepted clock geometry/copper and corrected Q3 lands. Do not reopen their selections. | Current clock and Q3 reports; final mechanical bind still required. |
-| X6 USB | Required correction: actual plated slots, adequate annuli, four outer land/paste moves and no anchor paste under the documented secondary-solder process. | Native geometry/net/paste/drill checks against the [authorized drawing-based variant](usb-connector-qualification.md); supplier process acceptance remains open. |
+| X6 USB | Native correction applied, including local CC/VBUS repairs. Retain the new lands and datum. | [Source-bound native result](usb-connector-qualification.md#current-native-implementation); supplier process and mechanical acceptance remain open. |
 | L1, C26-C28, C1/C4/C5/C19/C20, FB1/FB2 | Implement the already documented part-specific land/paste treatment as coherent power regions, with local reconnection. Do not silently reclassify these decisions as optional. | [Power selection](power-component-selection.md); remeasure changed loop/neck and private-terminal geometry. |
 | CHG0/L0, D3/D4, U2, U4 | Review actual terminal coverage, paste/mask and thermal-via feasibility. Manufacturer-example differences require explicit retain/change dispositions, not automatic global replacement. | [Device register](device-component-selection.md), selected drawings and actual native lands; U4 exposed-pad/paste treatment remains open. |
 | D3/D4, Q1/Q2/Q4, U3 | Apply already documented conservative envelope enlargements without shrinking other proxies or losing pose-dependent offsets. | Device register and final full-CAD fit. |

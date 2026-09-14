@@ -9,10 +9,42 @@ The definition-only stage is preserved in commit `702f53b`, the first local
 connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; the latest identity stage is bound
-by `reports/capacitor-identities.json`. **The current filled board is bound
-by `reports/front-ground-acceptance.json` and the placement manifest.**
+by `reports/capacitor-identities.json`. **The current USB-corrected filled board
+is bound by `reports/usb-geometry.json` and the placement manifest.**
 
-## Recorded-settings ground fill accepted
+## USB geometry and local approaches corrected
+
+X6 now uses the drawing-based `Handbell:USB_C_HRO_TYPE_C_31_M_12_Handbell`
+footprint and selected **HRO TYPE-C-31-M-12** identity. The four real plated
+slots have 0.25 mm nominal annuli; the four outer GND/VBUS lands and reduced
+paste move as documented, while inner lands and locators remain intact.
+Native minimum outer-land/locator clearance is **0.37536 mm**. Diagnostic
+Excellon output contains four actual slot commands, not merely oval copper.
+
+One local correction clears the resulting CC1/CC2/VBUS route conflicts:
+adjust the CC approaches and shorten the VBUS wrap using its existing via.
+Two existing vias move, no vias are added, and trace widths are retained.
+The relocated VBUS via is tented on both faces under the exercised native
+settings; actual solder-mask/assembly acceptance remains a supplier gate.
+No component or connector datum moves. The USB conservative envelope and
+rear reservation grow by the documented 0.15 mm front allowance; the printed
+bezel and full assembly have **not** yet been rebound.
+
+The filled candidate preserves all previously connected groups and both
+private returns. There are **57 opens, zero native DRC errors and 234 remaining
+silkscreen/text warnings**; native ERC is empty. This is not complete routing,
+current-capacity, USB signal-integrity, functional or manufacturing approval.
+All four anchors require the explicitly quoted secondary soldering operation.
+X6 remains a fitted mixed-mount part, not an SMD-only export exclusion.
+
+Native MPN coverage is **66/83**, with 17 blank. The exact PCB SHA-256 is
+`060bab15944bcd8be8b6de61f05d242e2d975501fc900a21a379cd2b8d413ff5`.
+`tools/apply_usb_geometry.py` stages this correction from its pinned input
+without overwriting an existing package; refill/review still follow generation.
+The custom footprint adapts the retained Adafruit hardware under CC BY-SA 3.0;
+no stock KiCad or manufacturer CAD was newly imported.
+
+## Recorded-settings ground fill accepted (preceding checkpoint)
 
 The preserved replay restores C25.2 to all 21 previous ground peers, without
 moving C25 or adding a trace. Both previous connected-group baselines survive;

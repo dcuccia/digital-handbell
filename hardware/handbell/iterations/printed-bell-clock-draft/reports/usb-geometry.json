@@ -1,0 +1,462 @@
+{
+  "status": "ACCEPTED_USB_GEOMETRY_AND_LOCAL_COPPER_NOT_QUOTE_READY",
+  "input_pcb_sha256": "307122d6838df5dda24331091c463930889a2185fb01b57ae95cab107337c408",
+  "register_sha256": "7596545cbbef3d8b39405add4803d14e07f89bf9038dafeaf3ca21297986eb93",
+  "generator_sha256": "d486c3ec8c0a94dd1ed164ff22cf89ff9b58ac0fe82fa679592cd0f24854e050",
+  "output_pcb_sha256": "060bab15944bcd8be8b6de61f05d242e2d975501fc900a21a379cd2b8d413ff5",
+  "output_schematic_sha256": "98b5e71e17c4dd8fcdf841be9b816bac600f2fa8ee6ee14058fc887bdb4e1654",
+  "pad_uuid_to_net_unchanged": true,
+  "removed_anchor_paste_uuids": [
+    "25859d28-dece-53c9-93df-34fc31649239",
+    "857d0a21-ca9d-5ca5-84be-26d88c6dfb85",
+    "f7fdc730-86c8-570e-a855-79e9aab42e05",
+    "c8caddc6-fd29-5d4a-a2f9-37b3a344665b"
+  ],
+  "shifted_outer_paste_uuids": [
+    "3b7b24bd-6dfe-5328-b2e4-b97662987b12",
+    "6ad8c596-e59f-598c-9512-6535f5190c69",
+    "86d467f3-791f-5289-9c2f-4b0e35047e0a",
+    "dcbea8e7-135d-5e28-bb80-ebbe56eba4a1"
+  ],
+  "ground_fill_invalidated": true,
+  "fixed_connector_origin_unchanged": true,
+  "selected_variant": {
+    "scope": "New quote candidate only; preserve archived reference and routing milestones",
+    "manufacturer_exact_pattern": false,
+    "base": "Adafruit-derived X6 footprint, CC BY-SA 3.0; no new stock KiCad CAD import",
+    "footprint_origin_common_xy_mm": [
+      0.0,
+      -22.82
+    ],
+    "native_rotation_deg": 180,
+    "nominal_mouth_common_xy_mm": [
+      0.0,
+      -27.9
+    ],
+    "locator_centers_local_xy_mm": [
+      [
+        -2.89,
+        -1.2
+      ],
+      [
+        2.89,
+        -1.2
+      ]
+    ],
+    "retained_locator_diameter_mm": 0.65,
+    "locator_deviation": "Retain the code-backed source's 0.05 mm larger hole than the current recommended layout; physical peg/hole/tolerance fit remains a gate.",
+    "anchor_x_centers_local_mm": [
+      -4.325,
+      4.325
+    ],
+    "rear_anchor_y_local_mm": -1.7,
+    "front_anchor_y_local_mm": 2.48,
+    "rear_plated_slot_mm": [
+      0.6,
+      1.7
+    ],
+    "front_plated_slot_mm": [
+      0.6,
+      1.4
+    ],
+    "rear_oval_copper_mm": [
+      1.1,
+      2.2
+    ],
+    "front_oval_copper_mm": [
+      1.1,
+      1.9
+    ],
+    "nominal_anchor_annulus_mm": 0.25,
+    "outer_pads_to_shift": [
+      "A1B12",
+      "A4B9",
+      "B1A12",
+      "B4A9"
+    ],
+    "outer_pad_local_y_shift_mm": -0.2,
+    "outer_pad_center_local_y_mm": -2.475,
+    "retained_outer_pad_size_mm": [
+      0.575,
+      1.15
+    ],
+    "shift_corresponding_four_explicit_paste_apertures": true,
+    "retain_eight_inner_pads_and_paste": true,
+    "anchor_paste_for_quote_baseline": "Remove the four anchor F.Paste polygons; do not add automatic anchor paste.",
+    "anchor_assembly_for_quote_baseline": "After the SMT operation, solder all four plated shell anchors in an explicitly quoted secondary operation. Supplier must confirm short-tail/barrel wetting and hole fill. Intrusive reflow is an alternative only after a separately reviewed stencil/process revision.",
+    "nominal_terminal_y_projection_local_mm": [
+      -2.67,
+      -2.27
+    ],
+    "nominal_terminal_projection_basis": "Body rear -2.27 plus the dimensioned 0.40 mm rearward terminal projection; nominal only.",
+    "moved_outer_land_y_extent_local_mm": [
+      -3.05,
+      -1.9
+    ],
+    "nominal_toe_and_heel_extension_mm": [
+      0.38,
+      0.37
+    ],
+    "retain_original_mask_margins": true,
+    "retained_inner_mask_web_mm": 0.1234,
+    "shield_anchor_nets": {
+      "M1": null,
+      "M2": null,
+      "M3": null,
+      "M4": null
+    },
+    "sbu_not_connected": [
+      "A8",
+      "B8"
+    ],
+    "assembly_population": "Fitted mixed-mount X6; never omit through an SMD-only CPL filter.",
+    "paste_gate": "Supplier acceptance and qualification of the quoted secondary soldering remain open. Do not leave anchors unsoldered, duplicate paste or silently assume intrusive reflow.",
+    "pickup_gate": "Nominal body geometric center (0,-24.225) is a possible documented project centroid witness, not a manufacturer-approved vacuum pickup point."
+  },
+  "local_copper_repairs": {
+    "nets": [
+      "CC1",
+      "CC2",
+      "VBUS"
+    ],
+    "removed_track_uuids": [
+      "318437f4-fa67-5d9e-b35a-e2a02e3e0d6c",
+      "3d626e95-efbf-5c3f-85f6-ee7a5b77c29d",
+      "5219b022-f6e8-50c8-85ab-96851214bb2c",
+      "862e2b2a-46b1-522c-b1dc-8272d2a634f5",
+      "e5368300-6b5a-522b-90b9-da09b595dd23"
+    ],
+    "changed_copper_uuids": [
+      "035a896c-b52b-533c-a74f-f165f4d21113",
+      "203eab2d-ae36-5021-bfdf-4dbe3b69013e",
+      "499c0010-e031-51d1-a859-f24e29d23f84",
+      "4cc36db8-8b94-54c6-b930-2cae03aec8be",
+      "4f03f82a-861c-58f0-a5ee-f348432e28d3",
+      "4f811afd-ce85-596b-9393-c575424d7bd8",
+      "bf2ef9ec-26cf-571f-81ba-12904b274194",
+      "e04f0259-574b-56aa-b542-72fdc13d1427",
+      "f21c0995-ef6c-5da8-983a-8f93527dc484"
+    ],
+    "added_track_uuids": [
+      "f48acb9f-9b31-56ef-95fc-d3c730990951",
+      "720c123c-68c7-539a-9479-30f9d3050e24",
+      "b503f1ee-d1f3-50c8-82b1-e6ca8b495a85",
+      "13a9f11a-ebef-5764-84cd-30e0dd7eb0e2",
+      "89d93280-69b7-5ec9-bf3e-a196a4495408"
+    ],
+    "new_vias": 0,
+    "relocated_existing_vias": 2,
+    "rationale": "Clear enlarged anchors and moved outer lands. Shorten the VBUS wrap using its existing via on a clear rearward escape; retain widths and all endpoints."
+  },
+  "remaining": "57 opens and 234 silkscreen/text warnings. Power/current review, supplier secondary-anchor soldering, pickup/rotation and exact full-CAD/bezel rebind remain open; no fabrication or safety approval.",
+  "unfilled_candidate_sha256": "43171ce8c679c387a0eda1decec296fb6352866f990516196a14c0e191e9c7a9",
+  "local_geometry_check": {
+    "pcb_sha256": "43171ce8c679c387a0eda1decec296fb6352866f990516196a14c0e191e9c7a9",
+    "non_X6_footprints_and_non_fill_objects_outside_declared_copper_repairs_unchanged": true,
+    "schematic_changes_only_X6_properties": true,
+    "split_primitive_connected_groups": [],
+    "shorts": [],
+    "native_library_match": true,
+    "actual_anchors": [
+      {
+        "pad": "M1",
+        "native_angle_deg": 270.0,
+        "size_before_rotation_mm": [
+          2.2,
+          1.1
+        ],
+        "slot_before_rotation_mm": [
+          1.7,
+          0.6
+        ]
+      },
+      {
+        "pad": "M2",
+        "native_angle_deg": 270.0,
+        "size_before_rotation_mm": [
+          2.2,
+          1.1
+        ],
+        "slot_before_rotation_mm": [
+          1.7,
+          0.6
+        ]
+      },
+      {
+        "pad": "M3",
+        "native_angle_deg": 270.0,
+        "size_before_rotation_mm": [
+          1.9,
+          1.1
+        ],
+        "slot_before_rotation_mm": [
+          1.4,
+          0.6
+        ]
+      },
+      {
+        "pad": "M4",
+        "native_angle_deg": 270.0,
+        "size_before_rotation_mm": [
+          1.9,
+          1.1
+        ],
+        "slot_before_rotation_mm": [
+          1.4,
+          0.6
+        ]
+      }
+    ],
+    "actual_outer_pad_to_locator_gaps": [
+      {
+        "pad": "A1B12",
+        "locator_uuid": "3189c891-57a7-5dc7-a5bb-00a7292a0f02",
+        "gap_mm": 0.3753615137912704
+      },
+      {
+        "pad": "A1B12",
+        "locator_uuid": "8e659786-985c-5a3b-8d6a-fd715282132b",
+        "gap_mm": 5.51957066430033
+      },
+      {
+        "pad": "A4B9",
+        "locator_uuid": "3189c891-57a7-5dc7-a5bb-00a7292a0f02",
+        "gap_mm": 0.40370175655064805
+      },
+      {
+        "pad": "A4B9",
+        "locator_uuid": "8e659786-985c-5a3b-8d6a-fd715282132b",
+        "gap_mm": 4.726238090805065
+      },
+      {
+        "pad": "B1A12",
+        "locator_uuid": "3189c891-57a7-5dc7-a5bb-00a7292a0f02",
+        "gap_mm": 5.51957066430033
+      },
+      {
+        "pad": "B1A12",
+        "locator_uuid": "8e659786-985c-5a3b-8d6a-fd715282132b",
+        "gap_mm": 0.3753615137912704
+      },
+      {
+        "pad": "B4A9",
+        "locator_uuid": "3189c891-57a7-5dc7-a5bb-00a7292a0f02",
+        "gap_mm": 4.726238090805065
+      },
+      {
+        "pad": "B4A9",
+        "locator_uuid": "8e659786-985c-5a3b-8d6a-fd715282132b",
+        "gap_mm": 0.40370175655064805
+      }
+    ],
+    "minimum_gap_mm": 0.3753615137912704,
+    "unfilled_graph_opens": 82
+  },
+  "filled_connectivity_check": {
+    "input_pcb_sha256": "307122d6838df5dda24331091c463930889a2185fb01b57ae95cab107337c408",
+    "output_pcb_sha256": "060bab15944bcd8be8b6de61f05d242e2d975501fc900a21a379cd2b8d413ff5",
+    "split_previously_connected_groups": [],
+    "native_unconnected": 57,
+    "independent_graph_unconnected": 57,
+    "private_pickoffs": [
+      {
+        "from": "R26.2",
+        "to": "R27.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+            "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      },
+      {
+        "from": "R24.2",
+        "to": "C28.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          },
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      }
+    ],
+    "fill_exclusion_and_foreign_net_guards": "passed",
+    "shorts": [],
+    "floating_copper": [],
+    "native_errors": 0,
+    "native_warnings": 234,
+    "elapsed_seconds": 50.5,
+    "source_graph_sha256": "a71a4228cd4b433c119b72edd3f711dca5eb1066363b7bc07379a89756851012",
+    "source_guard_sha256": "7f9c919265ca2a800f4f4af25c158cef6542e41e5a708709962e90f3de17fd0d",
+    "inherited_via_tenting": null,
+    "remaining_nets": [
+      {
+        "net": "+3V3",
+        "opens": 1
+      },
+      {
+        "net": "AMP_MUTE",
+        "opens": 2
+      },
+      {
+        "net": "BUTTON",
+        "opens": 1
+      },
+      {
+        "net": "D+",
+        "opens": 1
+      },
+      {
+        "net": "D-",
+        "opens": 1
+      },
+      {
+        "net": "D13",
+        "opens": 1
+      },
+      {
+        "net": "GAIN",
+        "opens": 1
+      },
+      {
+        "net": "GND",
+        "opens": 20
+      },
+      {
+        "net": "I2S_BCLK",
+        "opens": 2
+      },
+      {
+        "net": "I2S_DIN",
+        "opens": 2
+      },
+      {
+        "net": "I2S_LRCLK",
+        "opens": 2
+      },
+      {
+        "net": "INT",
+        "opens": 1
+      },
+      {
+        "net": "Net-(CHG0-PadC)",
+        "opens": 1
+      },
+      {
+        "net": "Net-(FB2-P$1)",
+        "opens": 1
+      },
+      {
+        "net": "POWER",
+        "opens": 2
+      },
+      {
+        "net": "SCL",
+        "opens": 1
+      },
+      {
+        "net": "SWCLK",
+        "opens": 1
+      },
+      {
+        "net": "SWDIO",
+        "opens": 1
+      },
+      {
+        "net": "USB_D+",
+        "opens": 1
+      },
+      {
+        "net": "USB_D-",
+        "opens": 1
+      },
+      {
+        "net": "VAMP",
+        "opens": 1
+      },
+      {
+        "net": "VBAT",
+        "opens": 1
+      },
+      {
+        "net": "VBUS",
+        "opens": 2
+      },
+      {
+        "net": "VCORE",
+        "opens": 5
+      },
+      {
+        "net": "VHI",
+        "opens": 1
+      },
+      {
+        "net": "VO+",
+        "opens": 1
+      },
+      {
+        "net": "~{RESET}",
+        "opens": 2
+      }
+    ]
+  },
+  "erc_violations": 0,
+  "erc_reused_from_identical_schematic_sha256": "98b5e71e17c4dd8fcdf841be9b816bac600f2fa8ee6ee14058fc887bdb4e1654",
+  "diagnostic_excellon_sha256": "be728d39ae3aca8a55dcc6f4929af3515646197dee3d44f11172a21f5d13745b",
+  "actual_excellon_slot_commands": [
+    "X95.675Y-74.3G85X95.675Y-75.1",
+    "X95.675Y-78.33G85X95.675Y-79.43",
+    "X104.325Y-74.3G85X104.325Y-75.1",
+    "X104.325Y-78.33G85X104.325Y-79.43"
+  ],
+  "native_effective_via_tenting": {
+    "front": true,
+    "back": true,
+    "basis": "KiCad 10.0.6 native design settings; relocated VBUS via is absent from F.Mask and B.Mask."
+  },
+  "mpn_coverage": {
+    "fitted": 83,
+    "identified": 66,
+    "blank": 17
+  },
+  "initial_geometry_trial": {
+    "new_clearance_errors": 5,
+    "new_mask_bridge_errors": 1,
+    "corrective_attempts": 1,
+    "repair_nets": [
+      "CC1",
+      "CC2",
+      "VBUS"
+    ]
+  },
+  "placement_manifest_sha256": "cc4d47e3f8b817da6a3ddda2810a474159e9f9e569cb61bbf1dca58829d86357"
+}
