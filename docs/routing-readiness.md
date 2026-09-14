@@ -1,5 +1,27 @@
 # From fit mock-up to routed PCB
 
+## September 14 first local clock copper
+
+The [isolated clock draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md)
+now contains the selected crystal/capacitor definitions and a first increment of
+15 F-side tracks. It connects the crystal, load capacitors and R6 locally, plus
+initial ground links, without moving components, adding vias or changing any
+existing copper. MCU XIN/XOUT approaches and final case/capacitor returns remain
+unfinished. The native detail image and exact track inventory accompany the draft.
+
+The resumed DRC works with an initialized isolated KiCad configuration; the
+normal user configuration still timed out. Matching **unfilled-zone** checks
+show 92 to 86 unconnected items, not a comparison with the older 59-item
+filled-zone recovery. Four inherited USB clearance errors and three newly
+identified Clock footprint/library mismatch warnings remain, alongside
+silkscreen/text findings. The routing increment adds no new physical findings.
+Resolve the three library/instance warnings as the next bounded definition
+item; do not hide them or combine that item with the remaining MCU routing.
+
+This is not a manufacturing release or an updated full mechanical binding.
+The definition-only `702f53b` stage and original recovered copper remain
+preserved. No background routing task is running.
+
 ## September 14 bounded restart
 
 The owner cancelled the long-running routing agent and requests small,

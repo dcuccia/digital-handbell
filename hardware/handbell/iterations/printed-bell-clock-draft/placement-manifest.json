@@ -738,8 +738,8 @@
   "dnp_footprint_reservations": [
     "C29"
   ],
-  "status": "CLOCK_DEFINITIONS_ONLY_ROUTING_AND_ZONE_REFILL_PENDING",
-  "generated_pcb_sha256": "6b26bcc4a43f4af0e1a5c507c8dfc987c025bd45b4dec51748df75bb5bc99192",
+  "status": "CLOCK_LOCAL_CONNECTIONS_PARTIAL_NO_ZONE_REFILL",
+  "generated_pcb_sha256": "67ea9a7ba6c8b0ef9c3a8dc3ca22dc42b2cd40f1dcdedd9f7bdcf503d4a292a6",
   "schematic_sha256": "51fec9d33a95ea712f26df13689ce1321f0c6084110fef97cd927fdc0ea4f865",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
@@ -3294,7 +3294,7 @@
     "Thermal-pad and under-body via assembly process is unresolved; no fill/cap mandate or standard-via qualification."
   ],
   "stage1_manifest_sha256": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
-  "routing_report": "reports/completion-review.json",
+  "routing_report": "reports/clock-local-routing.json",
   "mechanical_release_sha256": "1ec81f6dfede4c040a78f164c91c21a3d77a3ec02ce7b7284b89bad5ddb217e5",
   "mechanical_rebind_required": true,
   "proxy_envelope_adjustments": {

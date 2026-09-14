@@ -1,0 +1,303 @@
+{
+  "status": "CLOCK_LOCAL_CONNECTIONS_PARTIAL_NO_ZONE_REFILL",
+  "kicad_version": "10.0.6",
+  "input_pcb_sha256": "6b26bcc4a43f4af0e1a5c507c8dfc987c025bd45b4dec51748df75bb5bc99192",
+  "input_commit": "702f53b",
+  "output_pcb_sha256": "67ea9a7ba6c8b0ef9c3a8dc3ca22dc42b2cd40f1dcdedd9f7bdcf503d4a292a6",
+  "schematic_sha256": "51fec9d33a95ea712f26df13689ce1321f0c6084110fef97cd927fdc0ea4f865",
+  "generator_sha256": "b3c1008379515c1d8a802053858d5a35c5c69d24636f464f88148f0ac65f6cd3",
+  "changed_footprints": [],
+  "removed_tracks": [],
+  "new_vias": [],
+  "added_tracks": [
+    {
+      "uuid": "fe3b2855-0a3b-538a-a747-f56df98e5c8e",
+      "from": "C2.2",
+      "to": "Y1.3",
+      "net": "Net-(IC1-XIN)",
+      "start_mm": [
+        90.9036,
+        96.55245
+      ],
+      "end_mm": [
+        91.899655,
+        96.55245
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "a16b648b-f895-5228-8d71-cf94cc599652",
+      "from": "C2.2",
+      "to": "Y1.3",
+      "net": "Net-(IC1-XIN)",
+      "start_mm": [
+        91.899655,
+        96.55245
+      ],
+      "end_mm": [
+        92.199801,
+        96.852596
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "f4c151f2-b9be-5de9-b5e9-dc7ef8a9e170",
+      "from": "C3.2",
+      "to": "Y1.1",
+      "net": "Net-(C3-Pad2)",
+      "start_mm": [
+        90.899181,
+        99.599331
+      ],
+      "end_mm": [
+        90.899181,
+        100.1
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "491e4c49-ec73-5ad7-b6f7-13daef15788c",
+      "from": "C3.2",
+      "to": "Y1.1",
+      "net": "Net-(C3-Pad2)",
+      "start_mm": [
+        90.899181,
+        100.1
+      ],
+      "end_mm": [
+        93.2,
+        100.1
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "58b4bcbf-7b31-5dcb-9e38-b5d1905a415a",
+      "from": "C3.2",
+      "to": "Y1.1",
+      "net": "Net-(C3-Pad2)",
+      "start_mm": [
+        93.2,
+        100.1
+      ],
+      "end_mm": [
+        93.949801,
+        99.350199
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "e383e906-9196-54d3-b2f6-07a5991235ff",
+      "from": "C3.2",
+      "to": "Y1.1",
+      "net": "Net-(C3-Pad2)",
+      "start_mm": [
+        93.949801,
+        99.350199
+      ],
+      "end_mm": [
+        93.949801,
+        99.152596
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "5025fecc-de38-50b7-804c-b500b6fbf3f9",
+      "from": "Y1.1",
+      "to": "R6.1",
+      "net": "Net-(C3-Pad2)",
+      "start_mm": [
+        93.949801,
+        99.152596
+      ],
+      "end_mm": [
+        94.6,
+        99.152596
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "6264cd68-e54f-5fdf-81d1-9ad586b1c3a2",
+      "from": "Y1.1",
+      "to": "R6.1",
+      "net": "Net-(C3-Pad2)",
+      "start_mm": [
+        94.6,
+        99.152596
+      ],
+      "end_mm": [
+        95.161305,
+        99.713901
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "d3edf34d-f166-5df7-afa0-39c64ad9bf16",
+      "from": "Y1.1",
+      "to": "R6.1",
+      "net": "Net-(C3-Pad2)",
+      "start_mm": [
+        95.161305,
+        99.713901
+      ],
+      "end_mm": [
+        95.175414,
+        99.713901
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "e69f3768-a7f3-5946-8c3a-66316f68a2d7",
+      "from": "C2.1",
+      "to": "C3.1",
+      "net": "GND",
+      "start_mm": [
+        90.9036,
+        97.35245
+      ],
+      "end_mm": [
+        90.9036,
+        98.794912
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "c921197a-c111-5ca7-9319-a461134e81c7",
+      "from": "C2.1",
+      "to": "C3.1",
+      "net": "GND",
+      "start_mm": [
+        90.9036,
+        98.794912
+      ],
+      "end_mm": [
+        90.899181,
+        98.799331
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "3ac80696-1536-5dd4-8b20-c106a2b0f2c8",
+      "from": "C3.1",
+      "to": "Y1.4",
+      "net": "GND",
+      "start_mm": [
+        90.899181,
+        98.799331
+      ],
+      "end_mm": [
+        91.846536,
+        98.799331
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "a0957838-3712-57e8-809b-b449d89a23f4",
+      "from": "C3.1",
+      "to": "Y1.4",
+      "net": "GND",
+      "start_mm": [
+        91.846536,
+        98.799331
+      ],
+      "end_mm": [
+        92.199801,
+        99.152596
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "94a3d4fb-83aa-5505-a601-2330fa59021a",
+      "from": "IC1.19",
+      "to": "IC1.P$1",
+      "net": "GND",
+      "start_mm": [
+        96.55,
+        99.0
+      ],
+      "end_mm": [
+        100.0,
+        99.0
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    },
+    {
+      "uuid": "9e39f0c7-b1b5-52a5-85d5-feda752f477e",
+      "from": "IC1.19",
+      "to": "IC1.P$1",
+      "net": "GND",
+      "start_mm": [
+        100.0,
+        99.0
+      ],
+      "end_mm": [
+        100.0,
+        100.0
+      ],
+      "width_mm": 0.1778,
+      "layer": "F.Cu"
+    }
+  ],
+  "new_track_foreign_copper_screen_mm": 0.2,
+  "native_connected_pairs": [
+    [
+      "C2.2",
+      "Y1.3"
+    ],
+    [
+      "C3.2",
+      "Y1.1"
+    ],
+    [
+      "Y1.1",
+      "R6.1"
+    ],
+    [
+      "C2.1",
+      "C3.1"
+    ],
+    [
+      "C3.1",
+      "Y1.4"
+    ],
+    [
+      "IC1.19",
+      "IC1.P$1"
+    ]
+  ],
+  "limitations": [
+    "Local primitive copper screen and physical connectivity, not full DRC/DFM approval.",
+    "No zone refill; zone outlines are not counted as connected copper.",
+    "XIN and XOUT MCU approaches remain unrouted.",
+    "Y1.2 and the C2/C3/Y1.4 return island still need protected-ground connections.",
+    "Three Clock library footprint mismatch warnings need separate resolution.",
+    "No finished mechanical rebinding, fabrication or quotation package."
+  ],
+  "native_drc": {
+    "configuration": "Same initialized isolated KiCad 10 configuration for both runs; personal settings not distributed",
+    "refill_zones": false,
+    "before_unconnected_items": 92,
+    "after_unconnected_items": 86,
+    "non_silkscreen_finding_multiset_unchanged": true,
+    "existing_usb_hole_clearance_errors": 4,
+    "existing_clock_library_mismatch_warnings": 3,
+    "baseline_report_sha256": "f7e28b254c326cf1024f5cb3565fd61f4725e085f3fadeb47a4f757bc6effc06",
+    "routed_report_sha256": "e0afd484daf34d77a097284ac9fd72f96df90b3f5bf354c61baac1904f8df2a0",
+    "front_image_sha256": "487c726d2777a5548d3d1281ad7afb8c9a38f949df9a4026e838b01bb939f778",
+    "timeout_seconds_per_command": 30
+  },
+  "placement_manifest_sha256": "af50b69d4034d99a3f422282cc5c8bfb10da5407edca72d0b17d1d97446bc0c1"
+}
