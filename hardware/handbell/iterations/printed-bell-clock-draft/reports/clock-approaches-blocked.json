@@ -1,0 +1,43 @@
+{
+  "status": "BLOCKED_PROPOSAL_NOT_APPLIED",
+  "accepted_input_commit": "1a83d8c",
+  "accepted_pcb_sha256": "9472e9887da88826fe8cfa1145ab53afb8adba2a0a5fbf20d6fc45d90f85acc6",
+  "experiment": "tools/experiments/route_clock_approaches.py",
+  "proposed_scope": "Move Y1 left 0.50 mm, C2/C3 left 0.30 mm, R6 left 0.35 mm and rotate R6 180 degrees; replace only prior local-clock connections and complete the clock/return network on F.",
+  "reason_for_all_front": "The raw-negative contact metal base extends behind the cluster. Copper-only collision checks would not qualify ground vias beneath that metal.",
+  "native_version": "10.0.6",
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "Native access violation (3221225477) during the in-memory mutation approach. No board output written.",
+      "correction": "Stage proposed root poses and local-track removals as text, then load a fresh temporary native board instead of mutating SWIG-owned collections."
+    },
+    {
+      "attempt": 2,
+      "result": "Fresh native load succeeded. Proposed same-face envelope screen passed, but moved-pad copper screen rejected C3.2 before any new-route or final-connectivity proof.",
+      "blocker": {
+        "pad": "C3.2",
+        "proposed_pad_center_mm": [90.599181, 99.599331],
+        "obstacle_net": "+3V3",
+        "obstacle_uuid": "27b0d9fc-891a-55ad-9cba-3b733856d82e",
+        "obstacle_layer": "F.Cu",
+        "obstacle_start_mm": [91.1747, 101.0],
+        "obstacle_end_mm": [86.3576, 96.1829],
+        "obstacle_width_mm": 0.1778,
+        "native_separation_bracket_mm": [0.176367, 0.176375],
+        "configured_minimum_clearance_mm": 0.1778,
+        "conservative_candidate_screen_mm": 0.2,
+        "short": false,
+        "fails_configured_minimum": true
+      }
+    }
+  ],
+  "actual_design_changes": [],
+  "unproven": [
+    "Remaining proposed moved-pad clearances after the first rejected pad",
+    "All proposed new tracks and complete all-front connectivity",
+    "Final native DRC and current mechanical rebinding"
+  ],
+  "next_bounded_item": "Revise only the C3 proposal enough to clear the existing +3V3 trace while preserving the new crystal envelope, before considering the remaining unexecuted clock approach gates. Do not weaken clearance rules or move the unrelated power trace silently.",
+  "pause_policy": "The one corrective retry is exhausted for this item. No further automatic routing retry or background task was started."
+}

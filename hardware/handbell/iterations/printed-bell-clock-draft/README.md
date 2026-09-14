@@ -105,3 +105,23 @@ The exercised before/after DRC commands each had a 30-second process timeout.
 Next item: resume the MCU approaches and return paths as a separate bounded
 routing item. USB, other part revisions, mechanical rebinding and vendor exports remain
 separate work. No procurement, powered-cell or child-use approval is implied.
+
+## Subsequent all-front approach proposal: blocked, not applied
+
+The [blocked-proposal record](reports/clock-approaches-blocked.json) preserves
+the next attempted step. It proposed small Y1/C2/C3/R6 shifts and an R6 rotation
+to route the clock and ground network on F, avoiding the raw-negative contact
+metal behind the cluster. **None of those moves or routes is in this PCB.**
+
+An initial native access violation was avoided by staging the proposed edits
+as text and loading a fresh native board. That single corrective attempt then
+stopped at a real clearance failure: proposed C3 pad 2 is about 0.1764 mm from
+the existing diagonal `+3V3` track, below the configured 0.1778 mm minimum and
+the proposal's conservative 0.20 mm screen. It is not a short, but it is not
+acceptable clearance. Later track/connectivity gates were not reached.
+
+The experiment is under `tools/experiments/route_clock_approaches.py`; its
+input-hash guard and pre-write gates preserve the accepted `1a83d8c` board.
+The next bounded item must revise that C3 proposal before proceeding, without
+waiving clearances or silently editing the unrelated power trace. No background
+routing task remains active.

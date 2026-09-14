@@ -20,6 +20,13 @@ explicitly marking the two libraries and three instances as SMD. Their implicit
 assembly classifications differed; no pad geometry or copper changed. All other
 findings and the 86-item count persist. MCU approaches/returns are next.
 
+The first all-front MCU/return proposal was then **blocked before writing**:
+its C3 move leaves approximately 0.1764 mm to an existing `+3V3` track, below
+the 0.1778 mm minimum. The experiment and exact obstacle are preserved in the
+clock draft's `reports/clock-approaches-blocked.json`. The accepted board is
+unchanged; later proposed routes are not proven. Stop this exhausted-retry
+item rather than broadening the move/routing search.
+
 The owner now explicitly authorizes starting the next ready bounded item after
 each successful published checkpoint. Retain the per-item time/retry limits
 below; stop promptly on a pause request or concrete blocker.
