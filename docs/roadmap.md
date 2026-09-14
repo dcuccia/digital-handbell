@@ -103,6 +103,13 @@ identified boost-loop and protector-sense corrections. E07 is reworking those
 before further signal optimization; E05 must consume the exact resulting
 placement rather than transfer the old fit approval to moved parts.
 
+**Quotation handoff:** the owner now explicitly expects complete PCB+PCBA
+upload assets for both JLCPCB and PCBWay, not only an initial routing draft.
+The [quotation plan](pcba-quotation-plan.md) defines matched Gerber/drill,
+supplier BOM/placement and assembly/process assets, including both rear
+contacts. Completing this package does not authorize a supplier upload/order
+or claim production/safety qualification.
+
 <!-- TRACKING:START -->
 **Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
 All twelve epics were initialized as Todo with a Phase field matching their

@@ -40,7 +40,7 @@
   measured. The old z13/D50 to z43/D34 profile belongs to preserved studies.
   GPIO19 is stock EXTERNAL_BUTTON; stock board.BUTTON is GPIO7.
   GPIO20 is active-high AMP_MUTE.
-- The 43 mm placement has no routing. Do not overwrite it with the generator
+- The original 0.2 43 mm placement has no routing. Do not overwrite it with the generator
   after manual changes. Preserve local KiCad 10 pad angles, source libraries
   and documented Q3/jumper corrections; do not silence USB clearance findings.
 - Mechanical component heights and battery blocks are screening placeholders,
@@ -94,6 +94,20 @@
   shell has an 80 mm keyed M4x16 handle and three internal front-retention
   joints; preserve their closed exterior skin and real USB front lip. A
   nose-approach screen is not actual USB mating or sealing qualification.
+- The first `printed-bell-routing` candidate contains partial copper, not a
+  power-layout approval. Read its `reports/power-routing-review.md`: the boost
+  output-capacitor loop and shared protector-sense pickup require rework in a
+  separate candidate. Keep actual load/ripple/sense paths distinct, account
+  for pad/parallel-copper overlaps when evaluating necks, and do not infer
+  ampacity from DRC. Current/copper/drop/temperature targets are provisional.
+  Prioritize paired power/return routing and local switching loops over
+  preserving an initial local floorplan; rebind moved parts into the full
+  mechanical model. Preserve contact-base exclusions and CELL_NEG isolation.
+- The owner expects full PCB+PCBA quotation assets for JLCPCB and PCBWay.
+  Follow `docs/pcba-quotation-plan.md`; include both fitted rear contacts and
+  verify actual placement centres/rotations. Do not label unrouted exports
+  quote-ready, confuse quotation with safety qualification, or upload/order
+  on the owner's behalf without approval.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use

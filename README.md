@@ -42,6 +42,10 @@ It remains incomplete and inoperable. The owner-requested
 identified boost output-capacitor loop and protector-sense pickoff corrections.
 Those are being reworked separately before freezing the power-layout baseline.
 
+The intended handoff includes [full PCB+PCBA quotation assets](docs/pcba-quotation-plan.md)
+for JLCPCB and PCBWay after completing the design, not just the partial
+routing checkpoint. No supplier upload or order is authorized.
+
 **September 11 revision:** the owner confirms the newer print assembly fits,
 supplies [measured shell stations](docs/measurements/2026-09-11-shell-speaker-inputs.json),
 and refines the speaker magnet to **21.70 mm OD**. The
