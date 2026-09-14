@@ -1,5 +1,59 @@
 # From fit mock-up to routed PCB
 
+## September 14 bounded restart
+
+The owner cancelled the long-running routing agent and requests small,
+reviewable work items instead of another open-ended completion task.
+The post-cancellation working checkpoint has **1,124 tracks, 87 vias and
+59 unconnected items**. Its PCB SHA-256 is
+`2d88301f48ad05dc01384b90111f16615f176a7f4704eab82a1e3560ef5c8bc0`;
+placement SHA-256 is
+`404a8c53dc0ce28f8769ec4a1926452564cbd3cd5f8c27d95b7ac2ebee1b55de`.
+A separate private recovery copy preserves the final saved files. The
+candidate remains incomplete and does not include all later part decisions.
+
+For this restart, use **one foreground work item per turn**, without
+background routing agents. Aim for 10-15 minutes per item; stop earlier when
+the item is done or a blocker appears. Give commands explicit finite timeouts.
+Allow at most one corrective retry within that budget, not a search/routing
+loop. Report exactly what changed and what remains; publish accepted coherent
+checkpoints before moving to another subsystem. A timeout or incomplete
+result ends the item rather than authorizing a larger task.
+
+| Next bounded item | Scope and stopping point |
+|---|---|
+| Restart baseline | Confirm cancellation, preserve the final saved checkpoint and explain the selected clock change. No routing regeneration. |
+| Clock definitions and placement | Only Y1, C2/C3 and the necessary case-ground connections; retain R6 and D43. Apply the selected schematic/footprint definitions and inspect local fit. Stop if an unrelated move or wider redesign is needed. |
+| Clock copper | Route only the oscillator/load-capacitor cluster and its returns; disclose any remaining opens. No USB, power-stage or whole-board routing in the same item. |
+
+Subsequent USB, power and remaining-signal items must likewise name a small
+set of references/nets and an explicit stopping point before starting.
+Distinguish actual connectivity/clearance defects from departures from a
+manufacturer's example land pattern; the latter require a reasoned
+disposition, not an automatic global footprint redesign.
+
+### Why the clock selection differs from the Adafruit source
+
+No failure of Adafruit's clock circuit was demonstrated. The pinned source
+records Y1 as **12 MHz / 12 pF, 2520**, with **22 pF C2/C3**, but an exact Y1
+manufacturer orderable had not been established for our sourced assembly BOM.
+A purchasable 2520 candidate had 150 ohm maximum ESR; that does not prove it
+would fail, but it is not automatically equivalent to the original part.
+
+The explicit project choice is instead the Raspberry Pi RP2040 guide's
+tested **ABM8-272-T3**, 12 MHz with 10 pF specified load and 50 ohm maximum
+ESR. This is a sourcing/reference choice, not evidence that Adafruit required
+a redesign. The **15 pF C2/C3** values follow that different load requirement:
+the two capacitors contribute approximately their series combination, plus
+layout/pin stray capacitance. They are a matched oscillator-network change,
+not an independent capacitor upgrade. R6 remains 1 kohm.
+
+The [clock-source decision](device-component-selection.md#selected-clock-reference-revision)
+records the larger 3225 footprint and manufacturer evidence. Its sourcing
+is complete; native application is still pending in the recovered board.
+Neither copying Adafruit nor using the Pi reference eliminates startup,
+frequency and drive evaluation on our actual layout and low-battery supply.
+
 **September 13 authorization:** the owner approves the
 [printed-bell/front-electronics direction](printed-bell-revision.md) and
 permits critical routing after coordinated engineering interface review,
