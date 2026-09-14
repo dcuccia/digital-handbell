@@ -1,0 +1,9 @@
+# Native, source and report bindings refer to exact bytes after checkout.
+*.json -text
+*.xml -text
+*.svg -text
+*.csv -text
+fp-lib-table -text
+sym-lib-table -text
+*.md -text
+*.txt -text

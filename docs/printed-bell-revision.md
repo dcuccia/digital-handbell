@@ -42,6 +42,15 @@ possible. The two B-side Keystone SMT contacts remain fitted components and
 assembly work; this must not be advertised as a single-side reflow BOM without
 an explicit contact-attachment process.
 
+This is an assembly-flexibility improvement, not a guaranteed JLCPCB Economic
+qualification. The [September 9 supplier review](electromechanical-wing-iteration.md#assembly-cost-is-a-decision-gate-not-a-reason-to-stop-drafting)
+found an explicit Standard-only listing for the selected LSM6DSOX, independent
+of placement face. Obtain a current whole-BOM/process determination rather
+than silently deleting rear contacts from the master BOM or asking a novice
+to fit the fine-pitch IMU. Compare factory-complete assembly with an explicitly
+quoted secondary contact-attachment process. Two copper layers remain a
+separate decision from one-face electronic SMT population.
+
 A central M4 machine screw, broad washer and captive metal nut is the working
 printed-handle selection. It is similar in size class to an 8-32 screw but not
 thread-compatible. Use a keyed locating shoulder and a shell load path clear
@@ -60,6 +69,28 @@ of the battery. A wood-screw option is not qualified by a printed nut pocket.
 Final placement and routing status, dimensions, screw engagement and measured
 or modeled findings will be recorded below when available. No fabrication,
 live-cell or child-use approval follows from this engineering iteration.
+
+## Delivered electrical stage 1
+
+The [separate native placement](../hardware/handbell/iterations/printed-bell-front/README.md)
+retains the **43 mm main PCB body**, its exact contact tabs/USB tongue, original
+two M2 mounting holes and the initial USB datum. It now has **81 fitted
+electronic parts on F and only two battery contacts on B**, with the unchanged
+83-part T8 circuit and all 325 physical pad records preserved.
+
+The RP2040 supply/crystal/flash, boost, amplifier and protection groups are
+electrically floorplanned rather than merely repacked by body area. The native
+package records actual pad distances, source guidance and remaining copper
+layout requirements. Its fixed interface has been handed to the mechanical
+consumer. The stage-1 manifest SHA-256 is:
+
+`710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4`
+
+Stage 1 is deliberately **unrouted**. ERC is zero; the four original USB
+hole-clearance findings remain alongside unfinished silkscreen/text and
+unconnected-net findings. No inherited GUI parity approval is transferred.
+Routing waits for the complete mechanical interface review, not merely this
+placement result.
 
 Owning epics: E04/#4 electrical, E05/#5 mechanics, E07/#7 placement/routing,
 E10/#10 eventual qualification.

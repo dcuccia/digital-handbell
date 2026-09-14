@@ -1,0 +1,1545 @@
+{
+  "script_sha256": "ada3cb2b250f06bbf1edf43c73e8b66ef91e99bc61b0725c75bf44ce5d02b03c",
+  "seed": 13092026,
+  "steps": 140000,
+  "diameters_attempted_mm": [
+    43.0
+  ],
+  "fitted_by_side": {
+    "B": 2,
+    "F": 81
+  },
+  "movements": [
+    {
+      "reference": "C1",
+      "from_native_xy_angle": [
+        -5.819979,
+        -12.535118,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -4.034775,
+        -13.791182,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C2",
+      "from_native_xy_angle": [
+        -7.491404,
+        -0.208214,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -9.0964,
+        -3.04755,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C3",
+      "from_native_xy_angle": [
+        -7.491346,
+        1.914027,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        -9.100819,
+        -0.800669,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C4",
+      "from_native_xy_angle": [
+        -13.404896,
+        -5.309687,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -15.993581,
+        -9.414015,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C5",
+      "from_native_xy_angle": [
+        -11.417907,
+        -10.812876,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -16.178591,
+        -2.508548,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C6",
+      "from_native_xy_angle": [
+        8.689622,
+        -0.182451,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        5.497898,
+        -0.400256,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C7",
+      "from_native_xy_angle": [
+        8.460429,
+        2.217699,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        7.803336,
+        2.200014,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C8",
+      "from_native_xy_angle": [
+        8.463329,
+        3.418004,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        5.501069,
+        2.200145,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C9",
+      "from_native_xy_angle": [
+        -5.765769,
+        3.036206,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        2.615534,
+        -5.271328,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C10",
+      "from_native_xy_angle": [
+        3.059734,
+        -7.563574,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        5.294511,
+        -6.217731,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C11",
+      "from_native_xy_angle": [
+        -7.169298,
+        6.97243,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -0.994073,
+        5.195623,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C12",
+      "from_native_xy_angle": [
+        3.059361,
+        -6.228689,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -0.99995,
+        -5.269923,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C13",
+      "from_native_xy_angle": [
+        7.694268,
+        4.618099,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        5.502546,
+        3.500537,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C14",
+      "from_native_xy_angle": [
+        -2.832032,
+        1.442344,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -5.195705,
+        2.304504,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C15",
+      "from_native_xy_angle": [
+        -2.408704,
+        -1.416949,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        2.589143,
+        5.196168,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C16",
+      "from_native_xy_angle": [
+        10.584754,
+        -15.261328,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        11.33959,
+        -6.983099,
+        0
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "C17",
+      "from_native_xy_angle": [
+        8.390974,
+        1.017594,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        5.499429,
+        0.897675,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C18",
+      "from_native_xy_angle": [
+        -2.833131,
+        2.644313,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -5.19636,
+        1.003449,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C19",
+      "from_native_xy_angle": [
+        7.434754,
+        -15.811328,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        14.218731,
+        -6.93737,
+        0
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "C20",
+      "from_native_xy_angle": [
+        -2.310305,
+        15.995891,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        4.846036,
+        -16.283889,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C21",
+      "from_native_xy_angle": [
+        14.791366,
+        -9.715067,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        16.752667,
+        -11.20515,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C22",
+      "from_native_xy_angle": [
+        13.080783,
+        -7.435522,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        16.95189,
+        -9.088768,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C23",
+      "from_native_xy_angle": [
+        -10.654587,
+        0.695574,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -10.697165,
+        -8.508386,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C24",
+      "from_native_xy_angle": [
+        -19.009647,
+        -1.747103,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -7.995917,
+        -6.000331,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C25",
+      "from_native_xy_angle": [
+        5.624695,
+        9.474634,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        4.990239,
+        7.50713,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C26",
+      "from_native_xy_angle": [
+        -5.867351,
+        11.000739,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -4.442651,
+        18.407437,
+        0
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "C27",
+      "from_native_xy_angle": [
+        -0.787351,
+        12.905739,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -7.265563,
+        15.705807,
+        270
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "C28",
+      "from_native_xy_angle": [
+        -0.787351,
+        11.026139,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -9.383487,
+        15.802423,
+        270
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "C29",
+      "from_native_xy_angle": [
+        -14.092897,
+        -1.353883,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -6.603258,
+        12.098491,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "C30",
+      "from_native_xy_angle": [
+        -11.596466,
+        5.550217,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -11.596821,
+        5.551993,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "CHG0",
+      "from_native_xy_angle": [
+        6.197163,
+        11.285293,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        7.249567,
+        -17.898013,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "CHG_EN0",
+      "from_native_xy_angle": [
+        18.049278,
+        5.381329,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        1.804949,
+        -18.467984,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "D+1",
+      "from_native_xy_angle": [
+        17.401567,
+        7.928973,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        18.050104,
+        4.365071,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "D-1",
+      "from_native_xy_angle": [
+        13.48695,
+        12.703979,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        17.785719,
+        6.543881,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "D3",
+      "from_native_xy_angle": [
+        -13.304175,
+        13.644105,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        8.553,
+        -6.166061,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "D4",
+      "from_native_xy_angle": [
+        -7.822392,
+        -9.432449,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -2.000859,
+        -8.498968,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "FB1",
+      "from_native_xy_angle": [
+        11.830722,
+        -3.33077,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        14.513146,
+        -9.989708,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "FB2",
+      "from_native_xy_angle": [
+        11.798119,
+        -6.08511,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        14.513529,
+        -12.074352,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "GAIN0",
+      "from_native_xy_angle": [
+        1.300548,
+        17.538442,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        0.260031,
+        9.260848,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "IC1",
+      "from_native_xy_angle": [
+        2.419202,
+        1.25743,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        0.0,
+        0.0,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "IC4",
+      "from_native_xy_angle": [
+        -9.924163,
+        -5.767241,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        -10.500194,
+        -6.007289,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "J1",
+      "from_native_xy_angle": [
+        16.387206,
+        -0.742642,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        16.5,
+        -1.0,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "J2",
+      "from_native_xy_angle": [
+        13.498887,
+        7.810292,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        14.0,
+        8.0,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "L0",
+      "from_native_xy_angle": [
+        -16.649047,
+        -5.608927,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -5.00046,
+        9.003011,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "L1",
+      "from_native_xy_angle": [
+        -5.359351,
+        15.064739,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        0.478653,
+        15.758568,
+        180
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "Q1",
+      "from_native_xy_angle": [
+        -13.459248,
+        1.129872,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -18.872664,
+        1.307474,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "Q2",
+      "from_native_xy_angle": [
+        -18.594477,
+        2.105191,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -13.027555,
+        1.315177,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "Q3",
+      "from_native_xy_angle": [
+        -2.05249,
+        -12.350883,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -1.997257,
+        -11.500683,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "Q4",
+      "from_native_xy_angle": [
+        16.069391,
+        -7.2273,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        10.633404,
+        -14.051652,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "Q5",
+      "from_native_xy_angle": [
+        -14.396466,
+        7.350217,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -14.400825,
+        7.35048,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R1",
+      "from_native_xy_angle": [
+        -4.509899,
+        8.798714,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -4.511007,
+        5.005938,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R2",
+      "from_native_xy_angle": [
+        9.662175,
+        11.442053,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        4.51505,
+        -18.704371,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R3",
+      "from_native_xy_angle": [
+        -11.704037,
+        -8.717869,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -18.437273,
+        -6.197757,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R4",
+      "from_native_xy_angle": [
+        -0.391388,
+        -10.712168,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        0.201085,
+        -11.50129,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R5",
+      "from_native_xy_angle": [
+        4.717902,
+        -7.26427,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        7.001181,
+        -6.301464,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R6",
+      "from_native_xy_angle": [
+        -3.105298,
+        0.24143,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -4.824586,
+        -0.794099,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R7",
+      "from_native_xy_angle": [
+        -16.29811,
+        -11.211811,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -2.998764,
+        8.006721,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R8",
+      "from_native_xy_angle": [
+        -3.127208,
+        7.140689,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        5.698911,
+        -13.498922,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R9",
+      "from_native_xy_angle": [
+        6.275769,
+        -15.877404,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        8.105371,
+        0.242334,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R10",
+      "from_native_xy_angle": [
+        -7.792254,
+        -10.934653,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        8.109565,
+        -0.959133,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R11",
+      "from_native_xy_angle": [
+        -3.057531,
+        4.697262,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        4.999982,
+        -7.997817,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R12",
+      "from_native_xy_angle": [
+        8.423782,
+        -14.51097,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        6.631292,
+        -19.199924,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R13",
+      "from_native_xy_angle": [
+        8.351558,
+        -15.727082,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -5.497377,
+        -19.119706,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R14",
+      "from_native_xy_angle": [
+        -14.50545,
+        -3.244861,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -12.905531,
+        -5.28197,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R15",
+      "from_native_xy_angle": [
+        -13.362747,
+        -7.545042,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        -12.917332,
+        -7.398059,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R16",
+      "from_native_xy_angle": [
+        -15.76945,
+        -1.831049,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        -16.500569,
+        3.801519,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R17",
+      "from_native_xy_angle": [
+        -16.730387,
+        5.092166,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -13.300505,
+        -1.494712,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R18",
+      "from_native_xy_angle": [
+        6.534754,
+        -11.711328,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        7.633456,
+        -9.00382,
+        90
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "R20",
+      "from_native_xy_angle": [
+        10.020127,
+        -1.383624,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        7.633897,
+        -12.683743,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R21",
+      "from_native_xy_angle": [
+        2.996415,
+        6.952827,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        2.999181,
+        7.519537,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R22",
+      "from_native_xy_angle": [
+        8.197775,
+        10.123341,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        8.001343,
+        7.492733,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R23",
+      "from_native_xy_angle": [
+        0.609649,
+        15.293339,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        -4.199078,
+        13.802444,
+        180
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "R24",
+      "from_native_xy_angle": [
+        0.609649,
+        18.366739,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        -4.197681,
+        12.592618,
+        0
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "R25",
+      "from_native_xy_angle": [
+        -11.596466,
+        9.350217,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -11.599531,
+        9.349843,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R26",
+      "from_native_xy_angle": [
+        -14.596466,
+        5.550217,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -14.602592,
+        5.549142,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R27",
+      "from_native_xy_angle": [
+        -14.596466,
+        9.550217,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -14.600981,
+        9.500966,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R28",
+      "from_native_xy_angle": [
+        -17.196466,
+        6.750217,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -17.200715,
+        6.750382,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "R29",
+      "from_native_xy_angle": [
+        -17.196466,
+        9.350217,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -17.200149,
+        9.351077,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP3",
+      "from_native_xy_angle": [
+        -14.240043,
+        -11.798643,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -15.167764,
+        -11.414047,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP4",
+      "from_native_xy_angle": [
+        -4.396133,
+        -14.535902,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        -10.681651,
+        -11.499884,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP5",
+      "from_native_xy_angle": [
+        0.018293,
+        -12.794408,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -4.92632,
+        -17.308301,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP6",
+      "from_native_xy_angle": [
+        -4.100802,
+        -10.534644,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        -0.845615,
+        -18.213891,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP7",
+      "from_native_xy_angle": [
+        8.541522,
+        -12.884265,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        7.703226,
+        -16.124292,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP8",
+      "from_native_xy_angle": [
+        13.379627,
+        -11.350662,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        13.642219,
+        -13.824675,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP9",
+      "from_native_xy_angle": [
+        12.714649,
+        -9.229588,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        17.03928,
+        -6.488488,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP10",
+      "from_native_xy_angle": [
+        -0.309886,
+        14.419041,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        5.785486,
+        15.976724,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP11",
+      "from_native_xy_angle": [
+        -2.859443,
+        18.816654,
+        270.0
+      ],
+      "to_native_xy_angle": [
+        1.703666,
+        19.758703,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP12",
+      "from_native_xy_angle": [
+        -8.404359,
+        15.224191,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -7.263141,
+        18.532942,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP13",
+      "from_native_xy_angle": [
+        -10.528001,
+        13.700414,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -11.383978,
+        14.393995,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP14",
+      "from_native_xy_angle": [
+        -18.796525,
+        6.003544,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -15.193382,
+        11.45178,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP15",
+      "from_native_xy_angle": [
+        -17.382041,
+        -0.759917,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -15.950006,
+        2.103333,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "TP16",
+      "from_native_xy_angle": [
+        -16.878992,
+        -3.908208,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -18.998848,
+        -3.361877,
+        270
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "U1",
+      "from_native_xy_angle": [
+        7.728202,
+        -6.58957,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        6.301448,
+        -3.359246,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "U2",
+      "from_native_xy_angle": [
+        -15.974881,
+        -8.459799,
+        180.0
+      ],
+      "to_native_xy_angle": [
+        -15.93676,
+        -6.0078,
+        180
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "U3",
+      "from_native_xy_angle": [
+        4.648505,
+        13.888074,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        1.69527,
+        -15.311837,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "U4",
+      "from_native_xy_angle": [
+        10.105463,
+        -12.411328,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        10.725323,
+        -10.087789,
+        0
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "U5",
+      "from_native_xy_angle": [
+        -1.168351,
+        15.064739,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -4.198999,
+        16.001796,
+        0
+      ],
+      "from_side": "B",
+      "to_side": "F"
+    },
+    {
+      "reference": "U6",
+      "from_native_xy_angle": [
+        -11.496466,
+        7.350217,
+        0.0
+      ],
+      "to_native_xy_angle": [
+        -11.502673,
+        7.349061,
+        0
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    },
+    {
+      "reference": "Y1",
+      "from_native_xy_angle": [
+        -5.391298,
+        0.68593,
+        90.0
+      ],
+      "to_native_xy_angle": [
+        -6.925199,
+        -1.997404,
+        90
+      ],
+      "from_side": "F",
+      "to_side": "F"
+    }
+  ],
+  "planning": {
+    "constraint_violations": [],
+    "planning_overlaps": [],
+    "scope": "All footprint/drawing planning rectangles checked, including intracluster pairs. Not a router."
+  },
+  "generated_pcb_sha256": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+  "protected_output_hashes": {
+    "handbell.kicad_sch": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "fp-lib-table": "46b1831b0fa4c724b83411a5d7498f59494c80201cee6fdbb13d20cf504a4d42",
+    "sym-lib-table": "f4b9862f164896e713c31fc59e7ba2b47954869801ab6f11762a13159f6f4638",
+    "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+    "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+    "placement-manifest.json": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+    "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "design-input-snapshot.json": "e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0603-NO.kicad_mod": "c14953f81c04418ff86a4479830b5a6ad298e329ebe30604b5fc5a8c254c574a",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0805-NO.kicad_mod": "a563b5eca037b284cb99458f46a5fae7f2595c3b8b690cb55dbeffd8f7e9b615",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\_0402NO.kicad_mod": "ab6815fc1f67f26ca97701d45024b9e6552d3347ae1fcd46c6e131c4acc8621c",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\B1,27.kicad_mod": "249d02d7ead81cef19169ca6534e0ba989cf1116ec85e66a7b24d8e65a4e556f",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CHIPLED_0603_NOOUTLINE.kicad_mod": "e2c56ba7827556e51659afeec3d5af0216f10397104097540c5827072c39ee6f",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CRYSTAL_2.5X2.kicad_mod": "e111e8f7406bdf20253c0db856db2cf7e0813c368268f231f5ad42e4b3d28ff3",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN16_3MM.kicad_mod": "c51a93a5820a8b814bfeb85398e483a57ae51a917c2e199581f17200639c8aa1",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN56_7MM_REDUCEDEPAD.kicad_mod": "ce3e3010817a404fe8608f342bf7d8cbf9c264b24529d443e2ffc856455863da",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323_MINI.kicad_mod": "5d2445ed080542ae06693db292d3107786158f8e8db1f397d321697fe649aa7e",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323F.kicad_mod": "414e7e48868c39d38ebdd994447d6d494dc754eaebe83138efb7b36da53c8715",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-5.kicad_mod": "ccad3823870006c7c8e1850db78746cfe9b95ceb7be29fb78f73cebf96e0a6c5",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-WIDE.kicad_mod": "0ac23f1cbd41e51aeb883399c687329e1348deaaefde9af63bb169826c8c0c73",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\TESTPOINT_ROUND_1.5MM_NO.kicad_mod": "82a990e62680e44faad31f1ea5a149abcb7ac75979a7ed6d39e4bdc408ac05d6",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\USB_C_CUSB31-CFM2AX-01-X.kicad_mod": "6724f8cc8029149b74302eda7e77dbe6b59657c5164539d462a5bf5ec4337efa",
+    "libraries\\Adafruit TPS61023-import-fps.pretty\\INDUCTOR_5X5MM_TDK_VLC5045.kicad_mod": "e44c59b8c3d525b1495d7b304edf832a89f861dd9260adba8672f3d86e98610b",
+    "libraries\\Adafruit TPS61023-import-fps.pretty\\SOT563.kicad_mod": "e542ee16f8bde94e3a1b9e3dfd74674c6de8a688f7187b884dcfd52fe632a1a8",
+    "libraries\\Adafruit_LSM6DSOX-import-fps.pretty\\LGA-14L.kicad_mod": "8869520c410b861d8e4dfc4665f632c23b1a405cf36b2e986dd7f7bdea886dd3",
+    "libraries\\Connector_JST.pretty\\JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal.kicad_mod": "eae5fb2dc2cfa27b8fb40061a31f0ad255fc9b8055104f90d1b295b12fd82cc4",
+    "libraries\\Connector_Molex.pretty\\Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal.kicad_mod": "af5e990006f7b48081c1775f431ed75cc4375dfb1cf5cbcda95e391331e7a3c5",
+    "libraries\\Handbell.pretty\\DFN2015-3_DrainPad.kicad_mod": "8a61dfef2dc6903db5f7aaf7dbe8a893125222160d1f90abff42329b286849c9",
+    "libraries\\Jumper.pretty\\SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm.kicad_mod": "9425ee76a0ba3ca7ab18957545f5c484da27ec3dae3344d3a0a58b67f16ba6b4",
+    "libraries\\Jumper.pretty\\SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm.kicad_mod": "3da90be1bd92445ba8434fcff2806538d9cb621bc52054646e10beb8c53c765d",
+    "libraries\\MountingHole.pretty\\MountingHole_2.2mm_M2_Pad.kicad_mod": "bab9811a2bb7e6ce6f6fe69aec3b592f6ee0d216964bcaa0a828b985e0937ca6",
+    "libraries\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5",
+    "libraries\\T8.pretty\\BQ29700_DSE6.kicad_mod": "d872bb3d326e1931a629a89bee77d4693d6c041e00c6e954eedeeec78e46ce58",
+    "libraries\\T8.pretty\\CSD83325L_YJE6.kicad_mod": "8a642c2383551e10b64daeb4bfa6393093b0c4f50acea6e544bcad3d425c1e2b",
+    "libraries\\T8.pretty\\ERJ6BW_0805.kicad_mod": "da4628fe0e6a278e9b6cf1624aea14db315defc429e4571088f2dbb7b2ecc741",
+    "libraries\\T8.pretty\\Keystone_254_RevC.kicad_mod": "64f9e325d8022977226a8dd8c098f47c0102ccbae7ab2087aa26281b779b1d57",
+    "libraries\\T8.pretty\\Winbond_USON8_UX_2x3.kicad_mod": "eb5000fe59d3c9ad0d3d8dd81d7c956929f6b38995079a9061d471ad926115c7"
+  }
+}

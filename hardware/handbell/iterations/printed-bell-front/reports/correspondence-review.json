@@ -1,0 +1,3428 @@
+{
+  "status": "Stage 1 completed; unrouted, conditional mechanical consumer interface, not functional signoff",
+  "hashes": {
+    "placement-manifest.json": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+    "handbell.kicad_pcb": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+    "handbell.kicad_sch": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "native_binding_sha256": "f9a9ce08028ef36843020efe608c41985e92dbc1a826791faf843c64d49c140b",
+  "inventory": {
+    "references": 104,
+    "fitted": 83,
+    "F": 81,
+    "B": 2,
+    "copper_only": 18,
+    "DNP": [
+      "C29"
+    ],
+    "mounts": [
+      "MH1",
+      "MH2"
+    ],
+    "physical_pad_records": 325,
+    "numbered_copper_pad_records": 322
+  },
+  "erc_count": 0,
+  "physical_drc_types": {
+    "hole_clearance": 4,
+    "silk_edge_clearance": 5,
+    "text_height": 72,
+    "text_thickness": 2,
+    "silk_overlap": 51,
+    "silk_over_copper": 103
+  },
+  "unconnected_count": 222,
+  "schematic_parity_count": 46,
+  "electrical_floorplan": {
+    "critical_pairs": [
+      {
+        "name": "QSPI clock",
+        "from": "IC1.52",
+        "to": "U1.6",
+        "straight_line_pad_distance_mm": 4.758743,
+        "project_floorplan_max_mm": 8.0
+      },
+      {
+        "name": "Flash bypass",
+        "from": "U1.8",
+        "to": "C10.1",
+        "straight_line_pad_distance_mm": 1.130081,
+        "project_floorplan_max_mm": 3.0
+      },
+      {
+        "name": "VREG input 1uF",
+        "from": "IC1.44",
+        "to": "C15.1",
+        "straight_line_pad_distance_mm": 2.63288,
+        "project_floorplan_max_mm": 3.5
+      },
+      {
+        "name": "VREG output 1uF",
+        "from": "IC1.45",
+        "to": "C8.1",
+        "straight_line_pad_distance_mm": 1.594107,
+        "project_floorplan_max_mm": 3.0
+      },
+      {
+        "name": "USB series D-",
+        "from": "IC1.46",
+        "to": "R9.2",
+        "straight_line_pad_distance_mm": 4.305912,
+        "project_floorplan_max_mm": 6.0
+      },
+      {
+        "name": "USB series D+",
+        "from": "IC1.47",
+        "to": "R10.2",
+        "straight_line_pad_distance_mm": 4.590609,
+        "project_floorplan_max_mm": 6.0
+      },
+      {
+        "name": "Crystal input",
+        "from": "IC1.20",
+        "to": "Y1.3",
+        "straight_line_pad_distance_mm": 4.663766,
+        "project_floorplan_max_mm": 6.0
+      },
+      {
+        "name": "Crystal output series resistor",
+        "from": "IC1.21",
+        "to": "R6.2",
+        "straight_line_pad_distance_mm": 1.761848,
+        "project_floorplan_max_mm": 4.0
+      },
+      {
+        "name": "Inductor SW",
+        "from": "L1.P$2",
+        "to": "U5.5",
+        "straight_line_pad_distance_mm": 2.454732,
+        "project_floorplan_max_mm": 4.0
+      },
+      {
+        "name": "Boost VIN capacitor",
+        "from": "U5.3",
+        "to": "C26.1",
+        "straight_line_pad_distance_mm": 1.98584,
+        "project_floorplan_max_mm": 4.0
+      },
+      {
+        "name": "Boost VIN capacitor return",
+        "from": "U5.4",
+        "to": "C26.2",
+        "straight_line_pad_distance_mm": 1.906976,
+        "project_floorplan_max_mm": 4.0
+      },
+      {
+        "name": "Boost output capacitor",
+        "from": "U5.6",
+        "to": "C27.1",
+        "straight_line_pad_distance_mm": 3.775987,
+        "project_floorplan_max_mm": 4.5
+      },
+      {
+        "name": "Boost output capacitor return",
+        "from": "U5.4",
+        "to": "C27.2",
+        "straight_line_pad_distance_mm": 3.704767,
+        "project_floorplan_max_mm": 5.0
+      },
+      {
+        "name": "Boost FB upper",
+        "from": "U5.1",
+        "to": "R23.2",
+        "straight_line_pad_distance_mm": 1.704085,
+        "project_floorplan_max_mm": 4.0
+      },
+      {
+        "name": "Boost FB lower",
+        "from": "U5.1",
+        "to": "R24.1",
+        "straight_line_pad_distance_mm": 2.912007,
+        "project_floorplan_max_mm": 5.0
+      },
+      {
+        "name": "Amplifier local PVDD",
+        "from": "U4.7",
+        "to": "C16.1",
+        "straight_line_pad_distance_mm": 1.611114,
+        "project_floorplan_max_mm": 3.0
+      },
+      {
+        "name": "Amplifier bulk PVDD",
+        "from": "U4.8",
+        "to": "C19.1",
+        "straight_line_pad_distance_mm": 2.437252,
+        "project_floorplan_max_mm": 5.0
+      },
+      {
+        "name": "BTL positive ferrite",
+        "from": "U4.9",
+        "to": "FB1.1",
+        "straight_line_pad_distance_mm": 1.578713,
+        "project_floorplan_max_mm": 4.0
+      },
+      {
+        "name": "BTL negative ferrite",
+        "from": "U4.10",
+        "to": "FB2.1",
+        "straight_line_pad_distance_mm": 2.659069,
+        "project_floorplan_max_mm": 4.5
+      },
+      {
+        "name": "Protector filtered supply",
+        "from": "U6.5",
+        "to": "C30.1",
+        "straight_line_pad_distance_mm": 2.162085,
+        "project_floorplan_max_mm": 3.5
+      }
+    ],
+    "rp2040_decoupling": [
+      {
+        "mcu_pin": "1",
+        "net": "+3V3",
+        "closest_capacitor": "C9",
+        "power_pad_distance_mm": 1.31342
+      },
+      {
+        "mcu_pin": "10",
+        "net": "+3V3",
+        "closest_capacitor": "C12",
+        "power_pad_distance_mm": 1.311923
+      },
+      {
+        "mcu_pin": "22",
+        "net": "+3V3",
+        "closest_capacitor": "C14",
+        "power_pad_distance_mm": 2.441485
+      },
+      {
+        "mcu_pin": "23",
+        "net": "VCORE",
+        "closest_capacitor": "C18",
+        "power_pad_distance_mm": 1.302423
+      },
+      {
+        "mcu_pin": "33",
+        "net": "+3V3",
+        "closest_capacitor": "C11",
+        "power_pad_distance_mm": 1.237637
+      },
+      {
+        "mcu_pin": "42",
+        "net": "+3V3",
+        "closest_capacitor": "C15",
+        "power_pad_distance_mm": 1.238216
+      },
+      {
+        "mcu_pin": "43",
+        "net": "+3V3",
+        "closest_capacitor": "C13",
+        "power_pad_distance_mm": 1.787901
+      },
+      {
+        "mcu_pin": "44",
+        "net": "+3V3",
+        "closest_capacitor": "C17",
+        "power_pad_distance_mm": 2.017933
+      },
+      {
+        "mcu_pin": "45",
+        "net": "VCORE",
+        "closest_capacitor": "C8",
+        "power_pad_distance_mm": 1.594107
+      },
+      {
+        "mcu_pin": "48",
+        "net": "+3V3",
+        "closest_capacitor": "C17",
+        "power_pad_distance_mm": 1.569909
+      },
+      {
+        "mcu_pin": "49",
+        "net": "+3V3",
+        "closest_capacitor": "C17",
+        "power_pad_distance_mm": 1.691967
+      },
+      {
+        "mcu_pin": "50",
+        "net": "VCORE",
+        "closest_capacitor": "C6",
+        "power_pad_distance_mm": 1.552865
+      }
+    ],
+    "scope": "Pad-to-pad straight lines, not routed lengths or manufacturer-approved distance limits. Local copper loops, return paths, Kelvin sensing, thermal vias and BTL symmetry remain routing gates."
+  },
+  "all_physical_pads": [
+    {
+      "reference": "MH1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "MH2",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "BT1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VBAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "BT1",
+      "physical_pad_index": 1,
+      "pad_number": "1",
+      "net": "VBAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "BT2",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "/CELL_NEG",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "BT2",
+      "physical_pad_index": 1,
+      "pad_number": "1",
+      "net": "/CELL_NEG",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VHI",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C1",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C2",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C2",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "Net-(IC1-XIN)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C3",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C3",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "Net-(C3-Pad2)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C4",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C4",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C5",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C5",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C6",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C6",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VCORE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C7",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C7",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VCORE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C8",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VCORE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C8",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C9",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C9",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C10",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C10",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C11",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C11",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C12",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C12",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C13",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C13",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C14",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C14",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C15",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C15",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C16",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C16",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C17",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C17",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C18",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C18",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VCORE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C19",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C19",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C20",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VBAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C20",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C21",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VO-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C21",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C22",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VO+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C22",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C23",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C23",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C24",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C24",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C25",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "BUTTON",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C25",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C26",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "V+",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C26",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C27",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C27",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C28",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C28",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "C29",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C29",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "BOOST_FB",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C30",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "/PROT_BAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "C30",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "/CELL_NEG",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "CHG0",
+      "physical_pad_index": 0,
+      "pad_number": "A",
+      "net": "VBUS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "CHG0",
+      "physical_pad_index": 1,
+      "pad_number": "C",
+      "net": "Net-(CHG0-PadC)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "CHG_EN0",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "Net-(U3-VBAT)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "CHG_EN0",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VBAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "D+1",
+      "physical_pad_index": 0,
+      "pad_number": "TP",
+      "net": "USB_D+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "D-1",
+      "physical_pad_index": 0,
+      "pad_number": "TP",
+      "net": "USB_D-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "D3",
+      "physical_pad_index": 0,
+      "pad_number": "A",
+      "net": "Net-(D3-PadA)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "D3",
+      "physical_pad_index": 1,
+      "pad_number": "C",
+      "net": "USBBOOT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "D4",
+      "physical_pad_index": 0,
+      "pad_number": "A",
+      "net": "VBUS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "D4",
+      "physical_pad_index": 1,
+      "pad_number": "C",
+      "net": "VHI",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "FB1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "Net-(FB1-P$1)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "FB1",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VO+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "FB2",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "Net-(FB2-P$1)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "FB2",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VO-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "GAIN0",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "GAIN0",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GAIN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "GAIN0",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "unconnected-(IC1-GPIO0-Pad2)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "unconnected-(IC1-GPIO1-Pad3)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 3,
+      "pad_number": "4",
+      "net": "SDA",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 4,
+      "pad_number": "5",
+      "net": "SCL",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 5,
+      "pad_number": "6",
+      "net": "unconnected-(IC1-GPIO4-Pad6)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 6,
+      "pad_number": "7",
+      "net": "unconnected-(IC1-GPIO5-Pad7)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 7,
+      "pad_number": "8",
+      "net": "unconnected-(IC1-GPIO6-Pad8)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 8,
+      "pad_number": "9",
+      "net": "USBBOOT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 9,
+      "pad_number": "10",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 10,
+      "pad_number": "11",
+      "net": "unconnected-(IC1-GPIO8-Pad11)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 11,
+      "pad_number": "12",
+      "net": "unconnected-(IC1-GPIO9-Pad12)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 12,
+      "pad_number": "13",
+      "net": "unconnected-(IC1-GPIO10-Pad13)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 13,
+      "pad_number": "14",
+      "net": "unconnected-(IC1-GPIO11-Pad14)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 14,
+      "pad_number": "15",
+      "net": "unconnected-(IC1-GPIO12-Pad15)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 15,
+      "pad_number": "16",
+      "net": "D13",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 16,
+      "pad_number": "17",
+      "net": "unconnected-(IC1-GPIO14-Pad17)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 17,
+      "pad_number": "18",
+      "net": "unconnected-(IC1-GPIO15-Pad18)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 18,
+      "pad_number": "19",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 19,
+      "pad_number": "20",
+      "net": "Net-(IC1-XIN)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 20,
+      "pad_number": "21",
+      "net": "Net-(IC1-XOUT)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 21,
+      "pad_number": "22",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 22,
+      "pad_number": "23",
+      "net": "VCORE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 23,
+      "pad_number": "24",
+      "net": "SWCLK",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 24,
+      "pad_number": "25",
+      "net": "SWDIO",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 25,
+      "pad_number": "26",
+      "net": "~{RESET}",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 26,
+      "pad_number": "27",
+      "net": "I2S_DIN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 27,
+      "pad_number": "28",
+      "net": "I2S_BCLK",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 28,
+      "pad_number": "29",
+      "net": "I2S_LRCLK",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 29,
+      "pad_number": "30",
+      "net": "BUTTON",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 30,
+      "pad_number": "31",
+      "net": "AMP_MUTE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 31,
+      "pad_number": "32",
+      "net": "unconnected-(IC1-GPIO21-Pad32)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 32,
+      "pad_number": "33",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 33,
+      "pad_number": "34",
+      "net": "INT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 34,
+      "pad_number": "35",
+      "net": "POWER",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 35,
+      "pad_number": "36",
+      "net": "unconnected-(IC1-GPIO24-Pad36)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 36,
+      "pad_number": "37",
+      "net": "unconnected-(IC1-GPIO25-Pad37)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 37,
+      "pad_number": "38",
+      "net": "unconnected-(IC1-GPIO26{slash}AD0-Pad38)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 38,
+      "pad_number": "39",
+      "net": "unconnected-(IC1-GPIO27{slash}AD1-Pad39)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 39,
+      "pad_number": "40",
+      "net": "unconnected-(IC1-GPIO28{slash}AD2-Pad40)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 40,
+      "pad_number": "41",
+      "net": "unconnected-(IC1-GPIO29{slash}AD3-Pad41)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 41,
+      "pad_number": "42",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 42,
+      "pad_number": "43",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 43,
+      "pad_number": "44",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 44,
+      "pad_number": "45",
+      "net": "VCORE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 45,
+      "pad_number": "46",
+      "net": "D-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 46,
+      "pad_number": "47",
+      "net": "D+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 47,
+      "pad_number": "48",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 48,
+      "pad_number": "49",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 49,
+      "pad_number": "50",
+      "net": "VCORE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 50,
+      "pad_number": "51",
+      "net": "QSPI_DATA[3]",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 51,
+      "pad_number": "52",
+      "net": "QSPI_SCK",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 52,
+      "pad_number": "53",
+      "net": "QSPI_DATA[0]",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 53,
+      "pad_number": "54",
+      "net": "QSPI_DATA[2]",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 54,
+      "pad_number": "55",
+      "net": "QSPI_DATA[1]",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 55,
+      "pad_number": "56",
+      "net": "QSPI_CS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC1",
+      "physical_pad_index": 56,
+      "pad_number": "P$1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 3,
+      "pad_number": "4",
+      "net": "INT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 4,
+      "pad_number": "5",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 5,
+      "pad_number": "6",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 6,
+      "pad_number": "7",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 7,
+      "pad_number": "8",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 8,
+      "pad_number": "9",
+      "net": "/IMU_INT2",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 9,
+      "pad_number": "10",
+      "net": "unconnected-(IC4-OCS_AUX-Pad10)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 10,
+      "pad_number": "11",
+      "net": "unconnected-(IC4-SDO_AUX-Pad11)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 11,
+      "pad_number": "12",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 12,
+      "pad_number": "13",
+      "net": "SCL",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "IC4",
+      "physical_pad_index": 13,
+      "pad_number": "14",
+      "net": "SDA",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "J1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VO+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "J1",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VO-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "J1",
+      "physical_pad_index": 2,
+      "pad_number": "MP",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "J1",
+      "physical_pad_index": 3,
+      "pad_number": "MP",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "J2",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "BUTTON_EXT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "J2",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "J2",
+      "physical_pad_index": 2,
+      "pad_number": "MP",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "J2",
+      "physical_pad_index": 3,
+      "pad_number": "MP",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "L0",
+      "physical_pad_index": 0,
+      "pad_number": "A",
+      "net": "Net-(L0-PadA)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "L0",
+      "physical_pad_index": 1,
+      "pad_number": "C",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "L1",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "V+",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "L1",
+      "physical_pad_index": 1,
+      "pad_number": "P$2",
+      "net": "BOOST_SW",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "Q1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "~{ENABLE}",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q1",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VHI",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q1",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "V+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q2",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "POWER",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q2",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q2",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "~{ENABLE}",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q3",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VBUS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q3",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VHI",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q3",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "VBAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q4",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "AMP_MUTE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q4",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q4",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "I2S_MOD",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q5",
+      "physical_pad_index": 0,
+      "pad_number": "A1",
+      "net": "/CELL_NEG",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q5",
+      "physical_pad_index": 1,
+      "pad_number": "A2",
+      "net": "/PROT_FET_RETURN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q5",
+      "physical_pad_index": 2,
+      "pad_number": "B1",
+      "net": "/PROT_DOUT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q5",
+      "physical_pad_index": 3,
+      "pad_number": "B2",
+      "net": "/PROT_COUT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q5",
+      "physical_pad_index": 4,
+      "pad_number": "C1",
+      "net": "/CELL_NEG",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Q5",
+      "physical_pad_index": 5,
+      "pad_number": "C2",
+      "net": "/PROT_FET_RETURN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R1",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "~{RESET}",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R2",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "Net-(CHG0-PadC)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R2",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "Net-(U3-STAT)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R3",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "EN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R3",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VHI",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R4",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R4",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VBUS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R5",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "QSPI_CS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R5",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R6",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "Net-(C3-Pad2)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R6",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "Net-(IC1-XOUT)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R7",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "D13",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R7",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "Net-(L0-PadA)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R8",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "Net-(U3-PROG)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R8",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R9",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "USB_D-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R9",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "D-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R10",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "USB_D+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R10",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "D+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R11",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "QSPI_CS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R11",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "Net-(D3-PadA)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R12",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R12",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "CC2",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R13",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R13",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "CC1",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R14",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R14",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "SCL",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R15",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R15",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "SDA",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R16",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "~{ENABLE}",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R16",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VHI",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R17",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "POWER",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R17",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R18",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "I2S_MOD",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "R18",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "R20",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R20",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "AMP_MUTE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R21",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R21",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "BUTTON",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R22",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "BUTTON",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R22",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "BUTTON_EXT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R23",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "R23",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "BOOST_FB",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "R24",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "BOOST_FB",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "R24",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "R25",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VBAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R25",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "/PROT_BAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R26",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "/PROT_VM",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R26",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R27",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "/PROT_FET_RETURN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R27",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R28",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "/PROT_DOUT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R28",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "/CELL_NEG",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R29",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "/PROT_COUT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "R29",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "/PROT_FET_RETURN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP3",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "USBBOOT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP4",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "SWCLK",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP5",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "SWDIO",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP6",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "/IMU_INT2",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP7",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "~{RESET}",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP8",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP9",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP10",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP11",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "VBAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP12",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "I2S_DIN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP13",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "I2S_BCLK",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP14",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "I2S_LRCLK",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP15",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "AMP_MUTE",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "TP16",
+      "physical_pad_index": 0,
+      "pad_number": "P$1",
+      "net": "POWER",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "QSPI_CS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "QSPI_DATA[1]",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "QSPI_DATA[2]",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 3,
+      "pad_number": "4",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 4,
+      "pad_number": "8",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 5,
+      "pad_number": "7",
+      "net": "QSPI_DATA[3]",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 6,
+      "pad_number": "6",
+      "net": "QSPI_SCK",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 7,
+      "pad_number": "5",
+      "net": "QSPI_DATA[0]",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 8,
+      "pad_number": "PAD",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U1",
+      "physical_pad_index": 9,
+      "pad_number": "",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U2",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "VHI",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U2",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U2",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "EN",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U2",
+      "physical_pad_index": 3,
+      "pad_number": "4",
+      "net": "unconnected-(U2-NC-Pad4)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U2",
+      "physical_pad_index": 4,
+      "pad_number": "5",
+      "net": "+3V3",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U3",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "Net-(U3-STAT)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U3",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U3",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "Net-(U3-VBAT)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U3",
+      "physical_pad_index": 3,
+      "pad_number": "4",
+      "net": "VBUS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U3",
+      "physical_pad_index": 4,
+      "pad_number": "5",
+      "net": "Net-(U3-PROG)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "I2S_DIN",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "GAIN",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 3,
+      "pad_number": "4",
+      "net": "I2S_MOD",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 4,
+      "pad_number": "5",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 5,
+      "pad_number": "6",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 6,
+      "pad_number": "7",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 7,
+      "pad_number": "8",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 8,
+      "pad_number": "9",
+      "net": "Net-(FB1-P$1)",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 9,
+      "pad_number": "10",
+      "net": "Net-(FB2-P$1)",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 10,
+      "pad_number": "11",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 11,
+      "pad_number": "12",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 12,
+      "pad_number": "13",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 13,
+      "pad_number": "14",
+      "net": "I2S_LRCLK",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 14,
+      "pad_number": "15",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 15,
+      "pad_number": "16",
+      "net": "I2S_BCLK",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U4",
+      "physical_pad_index": 16,
+      "pad_number": "THERMAL",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U5",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "BOOST_FB",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U5",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": "POWER",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U5",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "V+",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U5",
+      "physical_pad_index": 3,
+      "pad_number": "4",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U5",
+      "physical_pad_index": 4,
+      "pad_number": "5",
+      "net": "BOOST_SW",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U5",
+      "physical_pad_index": 5,
+      "pad_number": "6",
+      "net": "VAMP",
+      "geometry_preserved": true,
+      "B_to_F_transform": true
+    },
+    {
+      "reference": "U6",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "unconnected-(U6-NC-Pad1)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U6",
+      "physical_pad_index": 1,
+      "pad_number": "6",
+      "net": "/PROT_VM",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U6",
+      "physical_pad_index": 2,
+      "pad_number": "2",
+      "net": "/PROT_COUT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U6",
+      "physical_pad_index": 3,
+      "pad_number": "5",
+      "net": "/PROT_BAT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U6",
+      "physical_pad_index": 4,
+      "pad_number": "3",
+      "net": "/PROT_DOUT",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "U6",
+      "physical_pad_index": 5,
+      "pad_number": "4",
+      "net": "/CELL_NEG",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 0,
+      "pad_number": "",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 1,
+      "pad_number": "",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 2,
+      "pad_number": "A1B12",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 3,
+      "pad_number": "A4B9",
+      "net": "VBUS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 4,
+      "pad_number": "A5",
+      "net": "CC1",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 5,
+      "pad_number": "A6",
+      "net": "USB_D+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 6,
+      "pad_number": "A7",
+      "net": "USB_D-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 7,
+      "pad_number": "A8",
+      "net": "unconnected-(X6-SBU1-PadA8)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 8,
+      "pad_number": "B1A12",
+      "net": "GND",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 9,
+      "pad_number": "B4A9",
+      "net": "VBUS",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 10,
+      "pad_number": "B5",
+      "net": "CC2",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 11,
+      "pad_number": "B6",
+      "net": "USB_D+",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 12,
+      "pad_number": "B7",
+      "net": "USB_D-",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 13,
+      "pad_number": "B8",
+      "net": "unconnected-(X6-SBU2-PadB8)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 14,
+      "pad_number": "M1",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 15,
+      "pad_number": "M2",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 16,
+      "pad_number": "M3",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "X6",
+      "physical_pad_index": 17,
+      "pad_number": "M4",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Y1",
+      "physical_pad_index": 0,
+      "pad_number": "1",
+      "net": "Net-(C3-Pad2)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Y1",
+      "physical_pad_index": 1,
+      "pad_number": "2",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Y1",
+      "physical_pad_index": 2,
+      "pad_number": "3",
+      "net": "Net-(IC1-XIN)",
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    },
+    {
+      "reference": "Y1",
+      "physical_pad_index": 3,
+      "pad_number": "4",
+      "net": null,
+      "geometry_preserved": true,
+      "B_to_F_transform": false
+    }
+  ],
+  "speaker_proxy_screen": [
+    {
+      "reference": "C1",
+      "minimum_proxy_radius_mm": 12.654921,
+      "z_min_mm": 23.0,
+      "magnet_radial_gap_mm": 1.804921,
+      "magnet_axial_gap_mm": -0.5
+    },
+    {
+      "reference": "C2",
+      "minimum_proxy_radius_mm": 9.077017,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -1.772983,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C3",
+      "minimum_proxy_radius_mm": 8.800819,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -2.049181,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C4",
+      "minimum_proxy_radius_mm": 16.82572,
+      "z_min_mm": 23.0,
+      "magnet_radial_gap_mm": 5.97572,
+      "magnet_axial_gap_mm": -0.5
+    },
+    {
+      "reference": "C5",
+      "minimum_proxy_radius_mm": 14.714055,
+      "z_min_mm": 23.0,
+      "magnet_radial_gap_mm": 3.864055,
+      "magnet_axial_gap_mm": -0.5
+    },
+    {
+      "reference": "C6",
+      "minimum_proxy_radius_mm": 4.690969,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -6.159031,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C7",
+      "minimum_proxy_radius_mm": 7.248778,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -3.601222,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C8",
+      "minimum_proxy_radius_mm": 5.063146,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -5.786854,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C9",
+      "minimum_proxy_radius_mm": 5.02822,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -5.82178,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C10",
+      "minimum_proxy_radius_mm": 7.362766,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -3.487234,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C11",
+      "minimum_proxy_radius_mm": 4.442181,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -6.407819,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C12",
+      "minimum_proxy_radius_mm": 4.516491,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -6.333509,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C13",
+      "minimum_proxy_radius_mm": 5.681743,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -5.168257,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C14",
+      "minimum_proxy_radius_mm": 4.823898,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -6.026102,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C15",
+      "minimum_proxy_radius_mm": 4.949363,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -5.900637,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C16",
+      "minimum_proxy_radius_mm": 12.473099,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 1.623099,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C17",
+      "minimum_proxy_radius_mm": 4.729347,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -6.120653,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C18",
+      "minimum_proxy_radius_mm": 4.444383,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -6.405617,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C19",
+      "minimum_proxy_radius_mm": 14.080978,
+      "z_min_mm": 23.0,
+      "magnet_radial_gap_mm": 3.230978,
+      "magnet_axial_gap_mm": -0.5
+    },
+    {
+      "reference": "C20",
+      "minimum_proxy_radius_mm": 15.273377,
+      "z_min_mm": 23.0,
+      "magnet_radial_gap_mm": 4.423377,
+      "magnet_axial_gap_mm": -0.5
+    },
+    {
+      "reference": "C21",
+      "minimum_proxy_radius_mm": 19.462553,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 8.612553,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C22",
+      "minimum_proxy_radius_mm": 18.597219,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 7.747219,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C23",
+      "minimum_proxy_radius_mm": 12.851972,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 2.001972,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C24",
+      "minimum_proxy_radius_mm": 9.283719,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -1.566281,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C25",
+      "minimum_proxy_radius_mm": 8.332697,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -2.517303,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "C26",
+      "minimum_proxy_radius_mm": 17.889584,
+      "z_min_mm": 23.0,
+      "magnet_radial_gap_mm": 7.039584,
+      "magnet_axial_gap_mm": -0.5
+    },
+    {
+      "reference": "C27",
+      "minimum_proxy_radius_mm": 15.565141,
+      "z_min_mm": 23.0,
+      "magnet_radial_gap_mm": 4.715141,
+      "magnet_axial_gap_mm": -0.5
+    },
+    {
+      "reference": "C28",
+      "minimum_proxy_radius_mm": 16.64629,
+      "z_min_mm": 23.0,
+      "magnet_radial_gap_mm": 5.79629,
+      "magnet_axial_gap_mm": -0.5
+    },
+    {
+      "reference": "C30",
+      "minimum_proxy_radius_mm": 11.999254,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 1.149254,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "CHG0",
+      "minimum_proxy_radius_mm": 18.483449,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": 7.633449,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "D3",
+      "minimum_proxy_radius_mm": 9.124445,
+      "z_min_mm": 23.9,
+      "magnet_radial_gap_mm": -1.725555,
+      "magnet_axial_gap_mm": 0.4
+    },
+    {
+      "reference": "D4",
+      "minimum_proxy_radius_mm": 7.864932,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": -2.985068,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "FB1",
+      "minimum_proxy_radius_mm": 16.196825,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": 5.346825,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "FB2",
+      "minimum_proxy_radius_mm": 17.500236,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": 6.650236,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "IC1",
+      "minimum_proxy_radius_mm": 0.0,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": -10.85,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "IC4",
+      "minimum_proxy_radius_mm": 10.091848,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": -0.758152,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "J1",
+      "minimum_proxy_radius_mm": 13.205,
+      "z_min_mm": 21.9,
+      "magnet_radial_gap_mm": 2.355,
+      "magnet_axial_gap_mm": -1.6
+    },
+    {
+      "reference": "J2",
+      "minimum_proxy_radius_mm": 12.722446,
+      "z_min_mm": 21.9,
+      "magnet_radial_gap_mm": 1.872446,
+      "magnet_axial_gap_mm": -1.6
+    },
+    {
+      "reference": "L0",
+      "minimum_proxy_radius_mm": 9.379768,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": -1.470232,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "L1",
+      "minimum_proxy_radius_mm": 13.008568,
+      "z_min_mm": 20.0,
+      "magnet_radial_gap_mm": 2.158568,
+      "magnet_axial_gap_mm": -3.5
+    },
+    {
+      "reference": "Q1",
+      "minimum_proxy_radius_mm": 17.200264,
+      "z_min_mm": 23.5,
+      "magnet_radial_gap_mm": 6.350264,
+      "magnet_axial_gap_mm": 0.0
+    },
+    {
+      "reference": "Q2",
+      "minimum_proxy_radius_mm": 11.355155,
+      "z_min_mm": 23.5,
+      "magnet_radial_gap_mm": 0.505155,
+      "magnet_axial_gap_mm": 0.0
+    },
+    {
+      "reference": "Q3",
+      "minimum_proxy_radius_mm": 9.875065,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": -0.974935,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "Q4",
+      "minimum_proxy_radius_mm": 15.371869,
+      "z_min_mm": 23.5,
+      "magnet_radial_gap_mm": 4.521869,
+      "magnet_axial_gap_mm": 0.0
+    },
+    {
+      "reference": "Q5",
+      "minimum_proxy_radius_mm": 14.927125,
+      "z_min_mm": 24.78,
+      "magnet_radial_gap_mm": 4.077125,
+      "magnet_axial_gap_mm": 1.28
+    },
+    {
+      "reference": "R1",
+      "minimum_proxy_radius_mm": 5.988164,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -4.861836,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R2",
+      "minimum_proxy_radius_mm": 18.774,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 7.924,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R3",
+      "minimum_proxy_radius_mm": 18.921156,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 8.071156,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R4",
+      "minimum_proxy_radius_mm": 10.69329,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -0.15671,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R5",
+      "minimum_proxy_radius_mm": 8.665101,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -2.184899,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R6",
+      "minimum_proxy_radius_mm": 4.524586,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -6.325414,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R7",
+      "minimum_proxy_radius_mm": 7.687972,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -3.162028,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R8",
+      "minimum_proxy_radius_mm": 14.075957,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 3.225957,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R9",
+      "minimum_proxy_radius_mm": 7.297371,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -3.552629,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R10",
+      "minimum_proxy_radius_mm": 7.331256,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -3.518744,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R11",
+      "minimum_proxy_radius_mm": 8.765221,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -2.084779,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R12",
+      "minimum_proxy_radius_mm": 19.7767,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 8.9267,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R13",
+      "minimum_proxy_radius_mm": 19.395143,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 8.545143,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R14",
+      "minimum_proxy_radius_mm": 13.375942,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 2.525942,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R15",
+      "minimum_proxy_radius_mm": 14.234674,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 3.384674,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R16",
+      "minimum_proxy_radius_mm": 16.078475,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 5.228475,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R17",
+      "minimum_proxy_radius_mm": 12.549503,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 1.699503,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R18",
+      "minimum_proxy_radius_mm": 10.997774,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 0.147774,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R20",
+      "minimum_proxy_radius_mm": 13.957769,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 3.107769,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R21",
+      "minimum_proxy_radius_mm": 7.233969,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -3.616031,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R22",
+      "minimum_proxy_radius_mm": 10.172492,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": -0.677508,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R23",
+      "minimum_proxy_radius_mm": 13.92176,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 3.07176,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R24",
+      "minimum_proxy_radius_mm": 12.751408,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 1.901408,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R25",
+      "minimum_proxy_radius_mm": 14.08392,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 3.23392,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R26",
+      "minimum_proxy_radius_mm": 14.759548,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 3.909548,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R27",
+      "minimum_proxy_radius_mm": 15.782671,
+      "z_min_mm": 24.3,
+      "magnet_radial_gap_mm": 4.932671,
+      "magnet_axial_gap_mm": 0.8
+    },
+    {
+      "reference": "R28",
+      "minimum_proxy_radius_mm": 17.914968,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 7.064968,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "R29",
+      "minimum_proxy_radius_mm": 18.936716,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 8.086716,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "U1",
+      "minimum_proxy_radius_mm": 5.601671,
+      "z_min_mm": 24.4,
+      "magnet_radial_gap_mm": -5.248329,
+      "magnet_axial_gap_mm": 0.9
+    },
+    {
+      "reference": "U2",
+      "minimum_proxy_radius_mm": 14.865554,
+      "z_min_mm": 23.5,
+      "magnet_radial_gap_mm": 4.015554,
+      "magnet_axial_gap_mm": 0.0
+    },
+    {
+      "reference": "U3",
+      "minimum_proxy_radius_mm": 13.661837,
+      "z_min_mm": 23.5,
+      "magnet_radial_gap_mm": 2.811837,
+      "magnet_axial_gap_mm": 0.0
+    },
+    {
+      "reference": "U4",
+      "minimum_proxy_radius_mm": 11.790527,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": 0.940527,
+      "magnet_axial_gap_mm": 0.5
+    },
+    {
+      "reference": "U5",
+      "minimum_proxy_radius_mm": 15.543028,
+      "z_min_mm": 24.35,
+      "magnet_radial_gap_mm": 4.693028,
+      "magnet_axial_gap_mm": 0.85
+    },
+    {
+      "reference": "U6",
+      "minimum_proxy_radius_mm": 12.446145,
+      "z_min_mm": 24.2,
+      "magnet_radial_gap_mm": 1.596145,
+      "magnet_axial_gap_mm": 0.7
+    },
+    {
+      "reference": "X6",
+      "minimum_proxy_radius_mm": 19.97,
+      "z_min_mm": 21.5,
+      "magnet_radial_gap_mm": 9.12,
+      "magnet_axial_gap_mm": -2.0
+    },
+    {
+      "reference": "Y1",
+      "minimum_proxy_radius_mm": 5.696955,
+      "z_min_mm": 24.0,
+      "magnet_radial_gap_mm": -5.153045,
+      "magnet_axial_gap_mm": 0.5
+    }
+  ],
+  "native_geometry_scope": "Every physical pad's net and complete local copper/paste/mask/drill/custom-polygon geometry compared, including inverse B/F mirror and KiCad 10 local pad angles."
+}

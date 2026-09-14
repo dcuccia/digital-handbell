@@ -5,8 +5,8 @@ music-making. Replace the clapper in a children's play handbell with a speaker,
 rechargeable battery, and compact electronics. A natural ringing gesture should
 produce a convincing bell sound; the instrument should be quiet between notes.
 
-**Status: 0.2 reduced schematic and 43 mm unrouted placement/3D feasibility draft,
-not a fabrication-ready or child-use-qualified design.** The
+**Status: schematic, PCB and mechanical engineering drafts, not a
+fabrication-ready or child-use-qualified design.** The preserved 0.2
 [native KiCad draft](hardware/handbell/README.md) and
 [schematic PDF](hardware/handbell/reports/handbell-schematic.pdf) integrate
 LSM6DSOX, TPS61023 audio boost, independent mute, keyed speaker/button connectors
@@ -15,6 +15,17 @@ The [0.2 handoff](docs/electrical-reduction-and-placement.md) and
 [mechanical models](docs/mechanical-feasibility.md) distinguish actual CAD,
 screening assumptions and unresolved fit/power/manufacturing gates.
 No routed PCB or functioning firmware has been released.
+
+**September 13 printed-bell revision:** the owner reports that the latest
+inert pieces fit and authorizes a single-piece printed bell, flush removable
+cartridge and black handle. The separate
+[front-electronics placement](hardware/handbell/iterations/printed-bell-front/README.md)
+fits **81 electronic parts on F and two battery contacts on B without growing
+the D43 PCB**. Rear SMT contacts still require assembly work.
+The [coordinated revision](docs/printed-bell-revision.md) records the new
+interfaces, conditional routing authorization and pending mechanical results;
+[material/handle notes](docs/printed-bell-material-and-handle.md) distinguish
+silk-PLA guidance from qualified structural or thermal performance.
 
 **September 11 revision:** the owner confirms the newer print assembly fits,
 supplies [measured shell stations](docs/measurements/2026-09-11-shell-speaker-inputs.json),
