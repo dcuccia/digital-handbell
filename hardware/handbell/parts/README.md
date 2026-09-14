@@ -17,6 +17,14 @@ already recorded C30/R25/R26/R28/R29 identities. Application/land/paste/
 supplier review remains explicit; importing this list must not be mistaken
 for closing the whole [quotation handoff](../../../docs/pcba-quotation-plan.md).
 
+**Scoped native application:** the continuing
+[clock/integration draft](../iterations/printed-bell-clock-draft/README.md) now
+implements the Y1/C2/C3 clock revision, selected Q3 identity and all 27 ordinary
+0402 resistor identities. The resistor step filled 23 blank MPNs and confirmed
+four existing ones without changing values or geometry; R27 is excluded.
+The frozen source packages remain unchanged. Other selected identities and
+their part-specific land/assembly gates must still be applied explicitly.
+
 `hro-usb-candidate.json` separately identifies **HRO TYPE-C-31-M-12 / C165948**
 for X6. It records the visually read 2020-12-08 drawing, derived datums and
 explicit project DFM deviations for the new quote candidate. Its current
@@ -49,8 +57,9 @@ C2/C3 now select **GRM1555C1H150JA01D, 15 pF**, with dedicated
 manufacturer-range 0.40 x 0.50 mm lands. Their retained `source_values`
 still describe the immutable 22 pF base; `selected_value` explicitly records
 the new value. No other passive group changes, and R6 remains 1 kohm.
-Actual native fit/routing, the complete mechanical bind, supplier process and
-low-cell oscillator behavior remain open.
+The continuing draft now has local all-front clock routing. The complete
+mechanical bind, supplier process and powered/low-cell oscillator behavior
+remain open.
 
 ## Direct source evidence
 

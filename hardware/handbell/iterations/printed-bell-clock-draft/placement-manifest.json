@@ -739,8 +739,8 @@
     "C29"
   ],
   "status": "CLOCK_CLUSTER_ROUTED_GLOBAL_GATES_OPEN",
-  "generated_pcb_sha256": "26ce1155ef09f6636787e6f29603dc8b969798f6f6bf1c517439f6a902fe69c1",
-  "schematic_sha256": "fb12238e75cfdabb488d1e77ccbe6a1ca4b66e23fbf9a95c8c74e74619e6a454",
+  "generated_pcb_sha256": "db015def0686c333fe11f0d98662883ab12b96be98ed23b3ac922c09bb902f50",
+  "schematic_sha256": "6ae69f745e9f9058679ea7cc286b173933336427f8368025d36886676c0c8e15",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
   "source_baseline": "hardware\\handbell\\iterations\\printed-bell-power-rework",
@@ -1908,7 +1908,7 @@
     {
       "reference": "R1",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -4.511006976617875,
       "y_mm": 5.005937639079117,
@@ -1927,12 +1927,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R2",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 4.515049688961151,
       "y_mm": -18.704370553492698,
@@ -1951,12 +1952,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "charger"
+      "cluster": "charger",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R3",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -18.43727274494443,
       "y_mm": -6.197757289613751,
@@ -1975,12 +1977,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "logic-power"
+      "cluster": "logic-power",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R4",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 0.2010854815845955,
       "y_mm": -11.501289537911736,
@@ -1999,12 +2002,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "source-selection"
+      "cluster": "source-selection",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R5",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 6.901181008808079,
       "y_mm": -6.701463821982733,
@@ -2023,12 +2027,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R6",
       "value": "1K",
-      "mpn": "",
+      "mpn": "RC0402FR-071KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -5.174585621613198,
       "y_mm": -0.7940986493612106,
@@ -2047,12 +2052,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R7",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -3.000000126523542,
       "y_mm": 9.999999689850348,
@@ -2071,12 +2077,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R8",
       "value": "5.1K",
-      "mpn": "",
+      "mpn": "RC0402FR-075K1L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.69891114988441,
       "y_mm": -13.49892215321233,
@@ -2095,12 +2102,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "charger"
+      "cluster": "charger",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R9",
       "value": "22 ohm",
-      "mpn": "",
+      "mpn": "RC0402FR-0722RL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 8.105370675710938,
       "y_mm": 0.6423343734330099,
@@ -2119,12 +2127,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R10",
       "value": "22 ohm",
-      "mpn": "",
+      "mpn": "RC0402FR-0722RL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 8.10956458709884,
       "y_mm": -0.5591332119038975,
@@ -2143,12 +2152,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R11",
       "value": "1K",
-      "mpn": "",
+      "mpn": "RC0402FR-071KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 4.9999818739648,
       "y_mm": -7.997816533579073,
@@ -2167,12 +2177,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R12",
       "value": "5.1K",
-      "mpn": "",
+      "mpn": "RC0402FR-075K1L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 6.63129218839263,
       "y_mm": -19.199923894326375,
@@ -2191,12 +2202,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R13",
       "value": "5.1K",
-      "mpn": "",
+      "mpn": "RC0402FR-075K1L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -5.497377343038181,
       "y_mm": -19.119706242461852,
@@ -2215,12 +2227,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R14",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -12.905531236768203,
       "y_mm": -5.28197022386488,
@@ -2239,12 +2252,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "imu"
+      "cluster": "imu",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R15",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -12.917332170352086,
       "y_mm": -7.398058605359716,
@@ -2263,12 +2277,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "imu"
+      "cluster": "imu",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R16",
       "value": "100K",
-      "mpn": "",
+      "mpn": "RC0402FR-07100KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -16.500568501452406,
       "y_mm": 3.8015187217910946,
@@ -2287,12 +2302,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "audio-switch"
+      "cluster": "audio-switch",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R17",
       "value": "100K",
-      "mpn": "",
+      "mpn": "RC0402FR-07100KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -13.300505251754664,
       "y_mm": -1.4947124064832704,
@@ -2311,12 +2327,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "audio-switch"
+      "cluster": "audio-switch",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R18",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 7.633456166028797,
       "y_mm": -9.003819794486324,
@@ -2335,12 +2352,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R20",
       "value": "4.7K",
-      "mpn": "",
+      "mpn": "RC0402FR-074K7L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 7.633897248677423,
       "y_mm": -12.683742620888975,
@@ -2359,12 +2377,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R21",
       "value": "10K",
-      "mpn": "",
+      "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 2.9991807346254595,
       "y_mm": 7.519537470032677,
@@ -2383,12 +2402,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R22",
       "value": "1K",
-      "mpn": "",
+      "mpn": "RC0402FR-071KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 8.001343090025399,
       "y_mm": 7.492733164033366,
@@ -2407,12 +2427,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R23",
       "value": "732K",
-      "mpn": "",
+      "mpn": "RC0402FR-07732KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -1.8000000424905986,
       "y_mm": 12.700000314165056,
@@ -2431,12 +2452,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "boost"
+      "cluster": "boost",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R24",
       "value": "100K",
-      "mpn": "",
+      "mpn": "RC0402FR-07100KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -2.100000312762399,
       "y_mm": 11.40000012775944,
@@ -2455,7 +2477,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "boost"
+      "cluster": "boost",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R25",
@@ -2479,7 +2502,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "protection"
+      "cluster": "protection",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R26",
@@ -2503,7 +2527,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "protection"
+      "cluster": "protection",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R27",
@@ -2551,7 +2576,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "protection"
+      "cluster": "protection",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "R29",
@@ -2575,7 +2601,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "protection"
+      "cluster": "protection",
+      "manufacturer": "Yageo"
     },
     {
       "reference": "U1",
@@ -3347,5 +3374,5 @@
       }
     ]
   },
-  "current_stage_report": "reports/q3-native-identity.json"
+  "current_stage_report": "reports/resistor-identities.json"
 }

@@ -8,8 +8,23 @@ output hashes are in `reports/clock-definition.json`. The recovered
 The definition-only stage is preserved in commit `702f53b`, the first local
 connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
-by `reports/clock-approaches.json`; **the latest metadata-only Q3 stage is bound
-by `reports/q3-native-identity.json` and the placement manifest.**
+by `reports/clock-approaches.json`; **the latest identity stage is bound
+by `reports/resistor-identities.json` and the placement manifest.**
+
+## Ordinary resistor identities applied
+
+All 27 ordinary 0402 resistors now carry the selected Yageo orderables in the
+schematic, PCB and manifest: **23 previously blank MPNs filled and four existing
+MPNs confirmed**. All resistance values, footprints, poses, pads, nets and
+copper are unchanged. R27, the current-sense shunt, is excluded.
+
+The manufacturer datasheet field now links to the verified Yageo RC_L family
+sheet. The former TI BQ2970 links on R25/R26/R28/R29 are preserved as hidden
+`CircuitReference` fields rather than discarded or labelled resistor datasheets.
+The [current schematic PDF](reports/resistor-schematic.pdf) accompanies the
+scoped report. The native manifest now has **42 of 83 fitted parts with an MPN**,
+leaving 41 blank. This is identity coverage, not footprint, supplier, power or
+assembly qualification; physical findings and the 82 unfilled opens persist.
 
 ## Q3 source-selection identity applied
 

@@ -1,0 +1,263 @@
+{
+  "input_commit": "ac109c4",
+  "input_sha256": {
+    "handbell.kicad_pcb": "26ce1155ef09f6636787e6f29603dc8b969798f6f6bf1c517439f6a902fe69c1",
+    "handbell.kicad_sch": "fb12238e75cfdabb488d1e77ccbe6a1ca4b66e23fbf9a95c8c74e74619e6a454",
+    "placement-manifest.json": "6915c3be784aedc104f5fb1530f7aefa31481c9a708966acb451bd5e5c98a054"
+  },
+  "output_pcb_sha256": "db015def0686c333fe11f0d98662883ab12b96be98ed23b3ac922c09bb902f50",
+  "output_schematic_sha256": "6ae69f745e9f9058679ea7cc286b173933336427f8368025d36886676c0c8e15",
+  "placement_manifest_sha256": "654a76c9a242875c44e5201548530611d37214036fdfc97d60f5e7bd2c6207c7",
+  "generator_sha256": "c3751562bff9b1683d885483d3b811b6b43acc4b6aafeba8b91845e56ce8d13b",
+  "selection_register_sha256": "a87597727b9ca385725476e68a83692cf7c15ff24eb23d9a1afc7c3d16b4c689",
+  "references": {
+    "R1": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R2": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R3": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R4": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R5": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R6": {
+      "value": "1K",
+      "mpn": "RC0402FR-071KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R7": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R8": {
+      "value": "5.1K",
+      "mpn": "RC0402FR-075K1L",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R9": {
+      "value": "22 ohm",
+      "mpn": "RC0402FR-0722RL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R10": {
+      "value": "22 ohm",
+      "mpn": "RC0402FR-0722RL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R11": {
+      "value": "1K",
+      "mpn": "RC0402FR-071KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R12": {
+      "value": "5.1K",
+      "mpn": "RC0402FR-075K1L",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R13": {
+      "value": "5.1K",
+      "mpn": "RC0402FR-075K1L",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R14": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R15": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R16": {
+      "value": "100K",
+      "mpn": "RC0402FR-07100KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R17": {
+      "value": "100K",
+      "mpn": "RC0402FR-07100KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R18": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R20": {
+      "value": "4.7K",
+      "mpn": "RC0402FR-074K7L",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R21": {
+      "value": "10K",
+      "mpn": "RC0402FR-0710KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R22": {
+      "value": "1K",
+      "mpn": "RC0402FR-071KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R23": {
+      "value": "732K",
+      "mpn": "RC0402FR-07732KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R24": {
+      "value": "100K",
+      "mpn": "RC0402FR-07100KL",
+      "previous_mpn": "",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": null
+    },
+    "R25": {
+      "value": "330R",
+      "mpn": "RC0402FR-07330RL",
+      "previous_mpn": "RC0402FR-07330RL",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": "https://www.ti.com/lit/ds/symlink/bq2970.pdf"
+    },
+    "R26": {
+      "value": "2.2k",
+      "mpn": "RC0402FR-072K2L",
+      "previous_mpn": "RC0402FR-072K2L",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": "https://www.ti.com/lit/ds/symlink/bq2970.pdf"
+    },
+    "R28": {
+      "value": "5.1M gate discharge",
+      "mpn": "RC0402FR-075M1L",
+      "previous_mpn": "RC0402FR-075M1L",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": "https://www.ti.com/lit/ds/symlink/bq2970.pdf"
+    },
+    "R29": {
+      "value": "5.1M gate discharge",
+      "mpn": "RC0402FR-075M1L",
+      "previous_mpn": "RC0402FR-075M1L",
+      "manufacturer": "Yageo",
+      "datasheet": "https://yageogroup.com/component-documentation/download/datasheet/RC0402FR-0710KL?lang=en",
+      "preserved_circuit_reference": "https://www.ti.com/lit/ds/symlink/bq2970.pdf"
+    }
+  },
+  "previously_blank_mpn_count": 23,
+  "existing_matching_mpn_count": 4,
+  "scope": "27 ordinary 0402 resistors only. Identity fields only; nominal values, symbol/library types, all geometry, pads, nets and copper retained. R27 excluded.",
+  "datasheet_policy": "Use the verified Yageo RC_L family sheet. Preserve four former BQ2970 links as CircuitReference instead of mislabelling them resistor datasheets.",
+  "remaining_gates": [
+    "Apply candidates deliberately to the final sourced BOM; do not rewrite immutable snapshots.",
+    "Check each application's effective capacitance, temperature/tolerance and transient behavior, especially local audio bypassing and the selected crystal.",
+    "Compare actual land/paste and pickup orientation to the final native footprint; package names are not placement instructions.",
+    "Maximum body dimensions do not include a qualified mounted solder-standoff or PCB-warp tolerance stack.",
+    "Keep existing conservative mechanical proxies; this register does not authorize shrinking them.",
+    "Confirm supplier part-code/stock/assembly eligibility at quotation time; no inventory, cost or order guarantee is made."
+  ],
+  "native_evidence": {
+    "kicad_version": "10.0.6",
+    "all_values_geometry_and_copper_unchanged": true,
+    "all_ref_pin_net_assignments_unchanged": true,
+    "physical_finding_multiset_unchanged": true,
+    "erc_findings": 0,
+    "unfilled_unconnected_items": 82,
+    "artifact_sha256": {
+      "resistor-erc.json": "f8148afc65d570dda4fa538e42c567f015ef65a2b89d3057b3407ed70414bda9",
+      "resistor-drc.json": "64bbae7a0424994ae15b46c115ed5e8b9a377932e160c8792e9b4c0f126aee9c",
+      "resistor-netlist.xml": "9fa1ea55e21e4c7bde081426443630dcbbf717a1c351780d1d515cc776dd9d41",
+      "resistor-schematic.pdf": "dab5213625f1a1ab0106070d41b834c66bb288fa924ecaf2057fa152a3675391"
+    }
+  },
+  "native_fitted_mpn_progress": {
+    "fitted_parts": 83,
+    "nonblank_mpn": 42,
+    "blank_mpn": 41,
+    "scope": "Identity coverage only, not part/footprint/supplier qualification"
+  }
+}
