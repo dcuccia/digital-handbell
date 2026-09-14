@@ -6,6 +6,11 @@ not a purchase, assembly or safety approval. The
 records exact source URLs/hashes, dimensions, native changes and limits.
 The frozen references and power-routing milestone are not edited.
 
+The selected identities are now applied in the continuing
+[clock/integration draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md#all-fitted-part-identities-applied).
+The land/paste changes below remain pending; assigning an MPN did not change
+the inherited copper or qualify its solder joints.
+
 | References | Selected exact part | Important source limits |
 |---|---|---|
 | L1 | TDK **VLS5045EX-1R0N** | 1 uH +/-30%; 19.5 milliohm maximum DCR; manufacturer current figures use separate inductance-drop and temperature-rise criteria |

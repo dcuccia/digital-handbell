@@ -44,6 +44,12 @@ unchanged pin mapping and preserved connected groups are source-bound in the
 MPN coverage is 66/83. Remaining warnings, power geometry, supplier soldering
 and full CAD/bezel integration are still open.
 
+**Identity closure result:** one final device/power batch completes **83/83
+matching fitted MPNs** across schematic, PCB and manifest, with geometry and
+copper unchanged. The [complete-identity schematic](../hardware/handbell/iterations/printed-bell-clock-draft/reports/identified-schematic.pdf)
+is available for novice review. Blank fields are closed; land/paste, envelope,
+existing-part audit and supplier/assembly qualification are not.
+
 1. **Geometry decisions, then necessary corrections.** Dispose of remaining
    package/land/paste/envelope questions once, using existing source evidence.
    Correct actual terminal, pin-map, clearance and assembly problems before

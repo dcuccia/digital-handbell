@@ -8,6 +8,11 @@ dimensions and unresolved manufacturing gates. These identities are not a
 released supplier BOM, approval to purchase, or proof that every inherited
 land/paste pattern is suitable.
 
+All selected device identities are now applied in the continuing
+[clock/integration draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md#all-fitted-part-identities-applied).
+Its final identity batch preserves geometry. Except for the separately completed
+clock/Q3 work, the envelope and land/paste dispositions below remain open.
+
 | Reference | Selected identity | Principal distinction |
 |---|---|---|
 | CHG0 | Kingbright APT1608LSECK/J4-PRV | Low-current orange; J4, not J3 |

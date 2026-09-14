@@ -23,10 +23,13 @@ implements the Y1/C2/C3 clock revision, selected Q3 identity, all 27 ordinary
 0402 resistor identities and all 26 non-boost capacitor identities. The resistor
 step filled 23 blank MPNs and confirmed four; the capacitor step filled 23 and
 confirmed three. Nominal values and geometry were preserved by those identity
-steps; R27 and C26-C28 are excluded. Native coverage is now 65/83 fitted MPNs,
-not a count of supplier-qualified or geometry-approved parts.
-The frozen source packages remain unchanged. Other selected identities and
-their part-specific land/assembly gates must still be applied explicitly.
+steps; R27 and C26-C28 were excluded from those ordinary-passive batches.
+The subsequent USB correction and final 17-reference device/power batch now
+complete **83/83 fitted MPNs**, matching across PCB, schematic and manifest.
+This is not a count of supplier-qualified or geometry-approved parts.
+The [current schematic PDF](../iterations/printed-bell-clock-draft/reports/identified-schematic.pdf)
+and `reports/remaining-identities.json` bind that milestone. The frozen source
+packages remain unchanged; part-specific land/envelope/assembly gates remain.
 
 `hro-usb-candidate.json` separately identifies **HRO TYPE-C-31-M-12 / C165948**
 for X6. It records the visually read 2020-12-08 drawing, derived datums and
@@ -35,7 +38,8 @@ explicit project DFM deviations for the new quote candidate. Its current
 slots, larger annular rings, four shifted power/ground lands and matching
 paste are required. It also adds the previously absent mouth-position
 component tolerance to the mechanical handoff. This is not an exact
-manufacturer footprint, an implemented native change or supplier approval;
+manufacturer footprint or supplier approval. Its native implementation is now
+applied in the continuing draft, with local CC/VBUS repairs and no X6 move;
 see [the USB qualification record](../../../docs/usb-connector-qualification.md).
 
 `power-component-candidates.json` selects the six L1/C26-C28/FB1-FB2 prototype

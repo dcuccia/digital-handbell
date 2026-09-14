@@ -8,9 +8,30 @@ output hashes are in `reports/clock-definition.json`. The recovered
 The definition-only stage is preserved in commit `702f53b`, the first local
 connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
-by `reports/clock-approaches.json`; the latest identity stage is bound
-by `reports/capacitor-identities.json`. **The current USB-corrected filled board
-is bound by `reports/usb-geometry.json` and the placement manifest.**
+by `reports/clock-approaches.json`; USB geometry is bound by
+`reports/usb-geometry.json`. **The current complete-identity board is bound
+by `reports/remaining-identities.json` and the placement manifest.**
+Figures and hashes in the earlier stage sections below are historical.
+
+## All fitted part identities applied
+
+All **83 fitted parts now have matching MPNs in the schematic, PCB and
+manifest**, including both rear contacts and mixed-mount X6. One final batch
+applies the 17 remaining selected device/power identities without new sourcing
+or geometry changes. Q2's vendor-code value label becomes `AO3400A`; L1's
+stale `MPN pending` suffix is removed while retaining 1 uH.
+
+The [complete-identity schematic PDF](reports/identified-schematic.pdf) is the
+current novice-readable circuit view. Native ERC is empty. All copper, pads,
+nets, poses, fill, rules and other geometry are unchanged from the USB stage;
+its 57 opens and geometric evidence remain applicable. The current PCB SHA-256
+is `7f2abd76c716364b77356bb251e889ea2dfcc1efe9eaa3e33e55b59a7cd8ba16`.
+
+This closes **blank identity fields**, not footprint/assembly qualification or
+the supplier BOM. Required power lands, device-envelope/disposition work,
+existing-part audit, full routing and exact mechanical integration remain.
+`tools/apply_remaining_identities.py` uses the shared field editor and checks
+all fitted identities plus the unchanged non-identity native structure.
 
 ## USB geometry and local approaches corrected
 

@@ -1,0 +1,306 @@
+{
+  "input_commit": "7fed80e",
+  "input_sha256": {
+    "handbell.kicad_pcb": "060bab15944bcd8be8b6de61f05d242e2d975501fc900a21a379cd2b8d413ff5",
+    "handbell.kicad_sch": "98b5e71e17c4dd8fcdf841be9b816bac600f2fa8ee6ee14058fc887bdb4e1654"
+  },
+  "output_pcb_sha256": "7f2abd76c716364b77356bb251e889ea2dfcc1efe9eaa3e33e55b59a7cd8ba16",
+  "output_schematic_sha256": "1665a28740ff47bcb37d447880e89910904452e5123aa5488deecac2a0f744a7",
+  "placement_manifest_sha256": "fa4ee39c79a13e2fbaa59bb9c734a40c44b41b7ea63495ffb82a730a57a9e199",
+  "generator_sha256": "b277867e48ab622d19cf85e08918e4bed58d03a0462446c827ae290db13e6085",
+  "selection_registers": {
+    "device-component-candidates.json": "36019582d37c0af6abf418ea04ca4ca79a8ca9e95826f73ceb8db6da8a4b77b4",
+    "power-component-candidates.json": "96af2c618a9cc5ca991164b165408b9a01300598574b2e8b6eff0b22d8cc46a7"
+  },
+  "references": [
+    "C26",
+    "C27",
+    "C28",
+    "CHG0",
+    "D3",
+    "D4",
+    "FB1",
+    "FB2",
+    "IC1",
+    "IC4",
+    "L0",
+    "L1",
+    "Q1",
+    "Q2",
+    "U2",
+    "U3",
+    "U4"
+  ],
+  "applied_fields": {
+    "footprint": {
+      "C26": {
+        "value": "22uF",
+        "previous_mpn": "",
+        "MPN": "GRM21BR61C226ME44L",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C226ME44-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170906"
+      },
+      "C27": {
+        "value": "22uF",
+        "previous_mpn": "",
+        "MPN": "GRM21BR61C226ME44L",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C226ME44-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170906"
+      },
+      "C28": {
+        "value": "22uF",
+        "previous_mpn": "",
+        "MPN": "GRM21BR61C226ME44L",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C226ME44-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170906"
+      },
+      "CHG0": {
+        "value": "ORANGE",
+        "previous_mpn": "",
+        "MPN": "APT1608LSECK/J4-PRV",
+        "Manufacturer": "Kingbright",
+        "Datasheet": "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608LSECK-J4-PRV.pdf"
+      },
+      "D3": {
+        "value": "1N4148",
+        "previous_mpn": "",
+        "MPN": "1N4148WS-7-F",
+        "Manufacturer": "Diodes Incorporated",
+        "Datasheet": "https://www.diodes.com/datasheet/download/1N4148WS.pdf"
+      },
+      "D4": {
+        "value": "PMEG2020AEA",
+        "previous_mpn": "",
+        "MPN": "PMEG2020AEA,115",
+        "Manufacturer": "Nexperia",
+        "Datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG2020AEA.pdf"
+      },
+      "FB1": {
+        "value": "Ferrite",
+        "previous_mpn": "",
+        "MPN": "BLM18SG121TN1D",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ferriteBeadInductortypefilter/ENFA0003_PDF_FERRITEBEADINDUCTORTYPEFILTER?lastModifiedDatetime=20260603144239"
+      },
+      "FB2": {
+        "value": "Ferrite",
+        "previous_mpn": "",
+        "MPN": "BLM18SG121TN1D",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ferriteBeadInductortypefilter/ENFA0003_PDF_FERRITEBEADINDUCTORTYPEFILTER?lastModifiedDatetime=20260603144239"
+      },
+      "IC1": {
+        "value": "RP2040_QFN56",
+        "previous_mpn": "",
+        "MPN": "RP2040",
+        "Manufacturer": "Raspberry Pi",
+        "Datasheet": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf"
+      },
+      "IC4": {
+        "value": "LSM6DSOXTR",
+        "previous_mpn": "",
+        "MPN": "LSM6DSOXTR",
+        "Manufacturer": "STMicroelectronics",
+        "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/fa6a99ef5791a87a2f52fed9abb2f6b1.pdf?productCode=C481766"
+      },
+      "L0": {
+        "value": "RED",
+        "previous_mpn": "",
+        "MPN": "APT1608LSECK/J3-PRV",
+        "Manufacturer": "Kingbright",
+        "Datasheet": "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608LSECK-J3-PRV.pdf"
+      },
+      "L1": {
+        "value": "1uH (MPN pending)",
+        "previous_mpn": "",
+        "MPN": "VLS5045EX-1R0N",
+        "Manufacturer": "TDK",
+        "Datasheet": "https://product.tdk.com/en/search/inductor/inductor/smd/info?part_no=VLS5045EX-1R0N",
+        "Value": "1uH"
+      },
+      "Q1": {
+        "value": "AO3401",
+        "previous_mpn": "",
+        "MPN": "AO3401",
+        "Manufacturer": "Alpha & Omega Semiconductor",
+        "Datasheet": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3401.pdf"
+      },
+      "Q2": {
+        "value": "C20917",
+        "previous_mpn": "",
+        "MPN": "AO3400A",
+        "Manufacturer": "Alpha & Omega Semiconductor",
+        "Datasheet": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf",
+        "Value": "AO3400A"
+      },
+      "U2": {
+        "value": "RT9080-3.3",
+        "previous_mpn": "",
+        "MPN": "RT9080-33GJ5",
+        "Manufacturer": "Richtek",
+        "Datasheet": "https://www.richtek.com/assets/product_file/RT9080/DS9080-09.pdf"
+      },
+      "U3": {
+        "value": "MCP73831T-2ACI/OT",
+        "previous_mpn": "",
+        "MPN": "MCP73831T-2ACI/OT",
+        "Manufacturer": "Microchip Technology",
+        "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP73831-Family-Data-Sheet-DS20001984H.pdf"
+      },
+      "U4": {
+        "value": "MAX98357A",
+        "previous_mpn": "",
+        "MPN": "MAX98357AETE+T",
+        "Manufacturer": "Analog Devices / Maxim Integrated",
+        "Datasheet": "https://cdn-shop.adafruit.com/product-files/3006/MAX98357A-MAX98357B.pdf"
+      }
+    },
+    "symbol": {
+      "CHG0": {
+        "value": "ORANGE",
+        "previous_mpn": "",
+        "MPN": "APT1608LSECK/J4-PRV",
+        "Manufacturer": "Kingbright",
+        "Datasheet": "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608LSECK-J4-PRV.pdf"
+      },
+      "L0": {
+        "value": "RED",
+        "previous_mpn": "",
+        "MPN": "APT1608LSECK/J3-PRV",
+        "Manufacturer": "Kingbright",
+        "Datasheet": "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608LSECK-J3-PRV.pdf"
+      },
+      "FB2": {
+        "value": "Ferrite",
+        "previous_mpn": "",
+        "MPN": "BLM18SG121TN1D",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ferriteBeadInductortypefilter/ENFA0003_PDF_FERRITEBEADINDUCTORTYPEFILTER?lastModifiedDatetime=20260603144239"
+      },
+      "Q1": {
+        "value": "AO3401",
+        "previous_mpn": "",
+        "MPN": "AO3401",
+        "Manufacturer": "Alpha & Omega Semiconductor",
+        "Datasheet": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3401.pdf"
+      },
+      "U2": {
+        "value": "RT9080-3.3",
+        "previous_mpn": "",
+        "MPN": "RT9080-33GJ5",
+        "Manufacturer": "Richtek",
+        "Datasheet": "https://www.richtek.com/assets/product_file/RT9080/DS9080-09.pdf"
+      },
+      "Q2": {
+        "value": "C20917",
+        "previous_mpn": "",
+        "MPN": "AO3400A",
+        "Manufacturer": "Alpha & Omega Semiconductor",
+        "Datasheet": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf",
+        "Value": "AO3400A"
+      },
+      "FB1": {
+        "value": "Ferrite",
+        "previous_mpn": "",
+        "MPN": "BLM18SG121TN1D",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ferriteBeadInductortypefilter/ENFA0003_PDF_FERRITEBEADINDUCTORTYPEFILTER?lastModifiedDatetime=20260603144239"
+      },
+      "D3": {
+        "value": "1N4148",
+        "previous_mpn": "",
+        "MPN": "1N4148WS-7-F",
+        "Manufacturer": "Diodes Incorporated",
+        "Datasheet": "https://www.diodes.com/datasheet/download/1N4148WS.pdf"
+      },
+      "IC1": {
+        "value": "RP2040_QFN56",
+        "previous_mpn": "",
+        "MPN": "RP2040",
+        "Manufacturer": "Raspberry Pi",
+        "Datasheet": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf"
+      },
+      "U3": {
+        "value": "MCP73831T-2ACI/OT",
+        "previous_mpn": "",
+        "MPN": "MCP73831T-2ACI/OT",
+        "Manufacturer": "Microchip Technology",
+        "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP73831-Family-Data-Sheet-DS20001984H.pdf"
+      },
+      "U4": {
+        "value": "MAX98357A",
+        "previous_mpn": "",
+        "MPN": "MAX98357AETE+T",
+        "Manufacturer": "Analog Devices / Maxim Integrated",
+        "Datasheet": "https://cdn-shop.adafruit.com/product-files/3006/MAX98357A-MAX98357B.pdf"
+      },
+      "D4": {
+        "value": "PMEG2020AEA",
+        "previous_mpn": "",
+        "MPN": "PMEG2020AEA,115",
+        "Manufacturer": "Nexperia",
+        "Datasheet": "https://assets.nexperia.com/documents/data-sheet/PMEG2020AEA.pdf"
+      },
+      "IC4": {
+        "value": "LSM6DSOXTR",
+        "previous_mpn": "",
+        "MPN": "LSM6DSOXTR",
+        "Manufacturer": "STMicroelectronics",
+        "Datasheet": "https://datasheet.lcsc.com/datasheet/pdf/fa6a99ef5791a87a2f52fed9abb2f6b1.pdf?productCode=C481766"
+      },
+      "L1": {
+        "value": "1uH (MPN pending)",
+        "previous_mpn": "",
+        "MPN": "VLS5045EX-1R0N",
+        "Manufacturer": "TDK",
+        "Datasheet": "https://product.tdk.com/en/search/inductor/inductor/smd/info?part_no=VLS5045EX-1R0N",
+        "Value": "1uH"
+      },
+      "C26": {
+        "value": "22uF",
+        "previous_mpn": "",
+        "MPN": "GRM21BR61C226ME44L",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C226ME44-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170906"
+      },
+      "C27": {
+        "value": "22uF",
+        "previous_mpn": "",
+        "MPN": "GRM21BR61C226ME44L",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C226ME44-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170906"
+      },
+      "C28": {
+        "value": "22uF",
+        "previous_mpn": "",
+        "MPN": "GRM21BR61C226ME44L",
+        "Manufacturer": "Murata",
+        "Datasheet": "https://pim.murata.com/asset/pim4/ceramicCapacitorSMD/GRM21BR61C226ME44-01A-EN_PDF_CERAMICCAPACITORSMD?lastModifiedDatetime=20260730170906"
+      }
+    }
+  },
+  "nominal_value_label_clarifications": {
+    "L1": "1uH",
+    "Q2": "AO3400A"
+  },
+  "unchanged_outside_declared_identity_properties": true,
+  "all_83_fitted_mpn_fields_match_native_and_manifest": true,
+  "mpn_coverage": {
+    "fitted": 83,
+    "identified": 83,
+    "blank": 0
+  },
+  "reused_geometry_evidence": {
+    "pcb_sha256": "060bab15944bcd8be8b6de61f05d242e2d975501fc900a21a379cd2b8d413ff5",
+    "report": "reports/usb-geometry.json",
+    "native_drc": "reports/usb-drc.json",
+    "scope": "Unchanged copper, pads, nets, poses, fill, rules and physical geometry. Not new powered or supplier evidence."
+  },
+  "remaining": "Part-specific land/paste and conservative-envelope corrections, existing-part audit, full routing, CAD rebind, assembly/supplier and powered qualification remain open. Identity completeness is not BOM/quotation release.",
+  "reproduction_same_native_and_manifest_bytes": true,
+  "erc_violations": 0,
+  "exports_sha256": {
+    "identities-erc.json": "50e03c315a077f44e5bf04107c9602a32128bc598e1020c69a1c3d1b8a84df17",
+    "identified-schematic.pdf": "eb6dd76fa11b9f5dafcb560872be5efc0192609ea32510933f82daa573cc9a63"
+  }
+}

@@ -742,8 +742,8 @@
     "C29"
   ],
   "status": "CLOCK_CLUSTER_ROUTED_GLOBAL_GATES_OPEN",
-  "generated_pcb_sha256": "060bab15944bcd8be8b6de61f05d242e2d975501fc900a21a379cd2b8d413ff5",
-  "schematic_sha256": "98b5e71e17c4dd8fcdf841be9b816bac600f2fa8ee6ee14058fc887bdb4e1654",
+  "generated_pcb_sha256": "7f2abd76c716364b77356bb251e889ea2dfcc1efe9eaa3e33e55b59a7cd8ba16",
+  "schematic_sha256": "1665a28740ff47bcb37d447880e89910904452e5123aa5488deecac2a0f744a7",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
   "source_baseline": "hardware\\handbell\\iterations\\printed-bell-power-rework",
@@ -1455,7 +1455,7 @@
     {
       "reference": "C26",
       "value": "22uF",
-      "mpn": "",
+      "mpn": "GRM21BR61C226ME44L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
       "x_mm": -9.499999761413408,
       "y_mm": 10.900000183389635,
@@ -1474,12 +1474,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "boost"
+      "cluster": "boost",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C27",
       "value": "22uF",
-      "mpn": "",
+      "mpn": "GRM21BR61C226ME44L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
       "x_mm": 0.10000002627108931,
       "y_mm": 15.199999739373407,
@@ -1498,12 +1499,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "boost"
+      "cluster": "boost",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C28",
       "value": "22uF",
-      "mpn": "",
+      "mpn": "GRM21BR61C226ME44L",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
       "x_mm": 2.199999776611482,
       "y_mm": 15.199999987601311,
@@ -1522,7 +1524,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "boost"
+      "cluster": "boost",
+      "manufacturer": "Murata"
     },
     {
       "reference": "C30",
@@ -1552,7 +1555,7 @@
     {
       "reference": "CHG0",
       "value": "ORANGE",
-      "mpn": "",
+      "mpn": "APT1608LSECK/J4-PRV",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:CHIPLED_0603_NOOUTLINE",
       "x_mm": 7.249566814770555,
       "y_mm": -17.898013331131953,
@@ -1571,12 +1574,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "charger"
+      "cluster": "charger",
+      "manufacturer": "Kingbright"
     },
     {
       "reference": "D3",
       "value": "1N4148",
-      "mpn": "",
+      "mpn": "1N4148WS-7-F",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323_MINI",
       "x_mm": 8.55300018014978,
       "y_mm": -6.166060728169011,
@@ -1595,12 +1599,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Diodes Incorporated"
     },
     {
       "reference": "D4",
       "value": "PMEG2020AEA",
-      "mpn": "",
+      "mpn": "PMEG2020AEA,115",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323F",
       "x_mm": -2.0008592935727547,
       "y_mm": -8.498967934042835,
@@ -1619,12 +1624,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "source-selection"
+      "cluster": "source-selection",
+      "manufacturer": "Nexperia"
     },
     {
       "reference": "FB1",
       "value": "Ferrite",
-      "mpn": "",
+      "mpn": "BLM18SG121TN1D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0603-NO",
       "x_mm": 14.513146171558054,
       "y_mm": -9.989708250063103,
@@ -1643,12 +1649,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Murata"
     },
     {
       "reference": "FB2",
       "value": "Ferrite",
-      "mpn": "",
+      "mpn": "BLM18SG121TN1D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0603-NO",
       "x_mm": 14.513529304489706,
       "y_mm": -12.074351769059556,
@@ -1667,12 +1674,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Murata"
     },
     {
       "reference": "IC1",
       "value": "RP2040_QFN56",
-      "mpn": "",
+      "mpn": "RP2040",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:QFN56_7MM_REDUCEDEPAD",
       "x_mm": 0.036737499999999874,
       "y_mm": -0.03673749999999986,
@@ -1691,12 +1699,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "core"
+      "cluster": "core",
+      "manufacturer": "Raspberry Pi"
     },
     {
       "reference": "IC4",
       "value": "LSM6DSOXTR",
-      "mpn": "",
+      "mpn": "LSM6DSOXTR",
       "footprint": "Adafruit_LSM6DSOX-import-fps:LGA-14L",
       "x_mm": -10.50019358167378,
       "y_mm": -6.007288935525312,
@@ -1715,7 +1724,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "imu"
+      "cluster": "imu",
+      "manufacturer": "STMicroelectronics"
     },
     {
       "reference": "J1",
@@ -1768,7 +1778,7 @@
     {
       "reference": "L0",
       "value": "RED",
-      "mpn": "",
+      "mpn": "APT1608LSECK/J3-PRV",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:CHIPLED_0603_NOOUTLINE",
       "x_mm": -2.0000003191205735,
       "y_mm": -11.229999922277537,
@@ -1787,12 +1797,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": null
+      "cluster": null,
+      "manufacturer": "Kingbright"
     },
     {
       "reference": "L1",
-      "value": "1uH (MPN pending)",
-      "mpn": "",
+      "value": "1uH",
+      "mpn": "VLS5045EX-1R0N",
       "footprint": "Adafruit TPS61023-import-fps:INDUCTOR_5X5MM_TDK_VLC5045",
       "x_mm": -7.000000165595688,
       "y_mm": 14.799999935370037,
@@ -1811,12 +1822,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "boost"
+      "cluster": "boost",
+      "manufacturer": "TDK"
     },
     {
       "reference": "Q1",
       "value": "AO3401",
-      "mpn": "",
+      "mpn": "AO3401",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
       "x_mm": -6.400000003211728,
       "y_mm": 8.000000305574876,
@@ -1835,12 +1847,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "audio-switch"
+      "cluster": "audio-switch",
+      "manufacturer": "Alpha & Omega Semiconductor"
     },
     {
       "reference": "Q2",
-      "value": "C20917",
-      "mpn": "",
+      "value": "AO3400A",
+      "mpn": "AO3400A",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
       "x_mm": -13.02755516384002,
       "y_mm": 1.3151773801900877,
@@ -1859,7 +1872,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "audio-switch"
+      "cluster": "audio-switch",
+      "manufacturer": "Alpha & Omega Semiconductor"
     },
     {
       "reference": "Q3",
@@ -2660,7 +2674,7 @@
     {
       "reference": "U2",
       "value": "RT9080-3.3",
-      "mpn": "",
+      "mpn": "RT9080-33GJ5",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-5",
       "x_mm": -15.936760123830465,
       "y_mm": -6.0077998450341275,
@@ -2679,12 +2693,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "logic-power"
+      "cluster": "logic-power",
+      "manufacturer": "Richtek"
     },
     {
       "reference": "U3",
       "value": "MCP73831T-2ACI/OT",
-      "mpn": "",
+      "mpn": "MCP73831T-2ACI/OT",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-5",
       "x_mm": 1.6952696315854219,
       "y_mm": -15.311836810331569,
@@ -2703,12 +2718,13 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "charger"
+      "cluster": "charger",
+      "manufacturer": "Microchip Technology"
     },
     {
       "reference": "U4",
       "value": "MAX98357A",
-      "mpn": "",
+      "mpn": "MAX98357AETE+T",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:QFN16_3MM",
       "x_mm": 10.554614391812152,
       "y_mm": -10.087789081503768,
@@ -2727,7 +2743,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "amplifier"
+      "cluster": "amplifier",
+      "manufacturer": "Analog Devices / Maxim Integrated"
     },
     {
       "reference": "U5",
@@ -3404,5 +3421,5 @@
       }
     ]
   },
-  "current_stage_report": "reports/usb-geometry.json"
+  "current_stage_report": "reports/remaining-identities.json"
 }
