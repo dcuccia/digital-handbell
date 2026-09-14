@@ -2,6 +2,13 @@
 
 ## September 14 cost-aware closure direction
 
+The first closure pass accepts the saved recorded-settings ground fill:
+**57 opens**, C25's previous ground connectivity restored without a move,
+and unchanged physical findings. The
+[current draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md#recorded-settings-ground-fill-accepted)
+contains source-bound evidence and a reproducible refill recipe. Geometry
+decisions and the required USB correction are next, not unrestricted routing.
+
 The owner approves the [closure plan](pcb-closure-plan.md): one active
 candidate, a finite repair/disposition list, geometry decisions before final
 routing, and complete checks at coherent milestones. The plan's current

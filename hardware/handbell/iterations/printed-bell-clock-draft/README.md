@@ -8,8 +8,42 @@ output hashes are in `reports/clock-definition.json`. The recovered
 The definition-only stage is preserved in commit `702f53b`, the first local
 connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
-by `reports/clock-approaches.json`; **the latest identity stage is bound
-by `reports/capacitor-identities.json` and the placement manifest.**
+by `reports/clock-approaches.json`; the latest identity stage is bound
+by `reports/capacitor-identities.json`. **The current filled board is bound
+by `reports/front-ground-acceptance.json` and the placement manifest.**
+
+## Recorded-settings ground fill accepted
+
+The preserved replay restores C25.2 to all 21 previous ground peers, without
+moving C25 or adding a trace. Both previous connected-group baselines survive;
+the filled-area, private-pickoff, exclusion and foreign-net guards pass.
+Native and independent connectivity agree on **57 remaining opens**.
+The four existing USB hole-clearance errors and other physical findings are
+unchanged. This is a filled routing checkpoint, not a quote-ready board.
+
+Only filled-polygon caches changed; component poses, all other PCB declarations,
+schematic, project rules and circuit identities remain intact. The exact PCB
+SHA-256 is `307122d6838df5dda24331091c463930889a2185fb01b57ae95cab107337c408`.
+The saved replay's full check completed in about 64 seconds; graph construction
+dominated, while connected-component comparison was negligible. Do not attribute
+the earlier timeout to pair enumeration or infer which individual fill setting
+caused the C25 difference.
+
+`tools/refill_front_ground.py` reproduces those exact bytes from the unfilled
+starting board using KiCad 10.0.6. It reads the adjacent project, applies the
+recorded conservative in-memory limits, and splices only fill caches into a
+**new working file**. It refuses overwrite, custom-rule files and an unexpected
+zone plan. It neither changes project rules nor certifies its output. Example
+from the repository root, with a finite native-process deadline:
+
+```powershell
+python -c "import subprocess; subprocess.run(['python', r'tools\refill_front_ground.py', r'hardware\handbell\iterations\printed-bell-clock-draft\handbell.kicad_pcb', r'YOUR_EXISTING_WORK_DIRECTORY\filled.kicad_pcb'], check=True, timeout=60)"
+```
+
+Use the exercised isolated KiCad configuration for subsequent CLI DRC; private
+configuration is not a release input. Refill after geometry changes and repeat
+the relevant gates. The [closure plan](../../../../docs/pcb-closure-plan.md)
+puts necessary USB/power footprint corrections before final signal routing.
 
 ## Non-boost capacitor identities applied
 
@@ -28,21 +62,20 @@ effective-capacitance, clock-drive, assembly, full mechanical and supplier gates
 Identity coverage is not manufacturing approval. Physical findings and the
 82 unfilled opens are unchanged.
 
-## Ground-fill investigation: not applied
+## Earlier ground-fill investigation (superseded by acceptance above)
 
 The [isolated refill investigation](reports/front-ground-refill-investigation.json)
-preserves the existing one-F-zone/ten-exclusion plan and does not modify this
-accepted PCB. A generic refill produced 58 opens, but comparison with the
+preserved the existing one-F-zone/ten-exclusion plan without modifying the
+then-accepted PCB. A generic refill produced 58 opens, but comparison with the
 recovered filled baseline exposed loss of C25's previous ground connectivity.
 The private-pickoff and exclusion guards passed; the connectivity regression
 still makes that proposal unacceptable.
 
 Replaying the earlier fill's explicit in-memory settings produced a different
-working copy. Its full independent validation reached a 60-second process
-limit, so no complete result or C25 recovery is claimed. Both attempts remain
-unapplied. The next focused item must establish that continuity and complete
-the independent proof before accepting a ground fill; the current board still
-has the documented 82 unfilled opens.
+working copy. Its first full independent check reached a 60-second process
+limit. That historical report remains unchanged; the focused continuation
+above subsequently established continuity and accepted the replay, not the
+generic trial. The former 82-open figure describes the unfilled starting board.
 
 ## Ordinary resistor identities applied
 

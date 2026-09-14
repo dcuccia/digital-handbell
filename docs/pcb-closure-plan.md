@@ -29,6 +29,14 @@ than discarding the whole fill. Preserve the filter and correct return.
 
 ## Sequence and milestone gates
 
+**First closure result:** the recorded-settings replay now restores C25
+without a move and preserves both prior connectivity baselines and the
+protected returns. Its [accepted report](../hardware/handbell/iterations/printed-bell-clock-draft/reports/front-ground-acceptance.json)
+binds the current filled board: **57 opens**, with unchanged physical findings.
+The starting facts and rejected trial above remain historical evidence.
+The standalone refill recipe reproduces the accepted cache from the unfilled
+source; geometry changes still require a new refill and review.
+
 1. **Geometry decisions, then necessary corrections.** Dispose of remaining
    package/land/paste/envelope questions once, using existing source evidence.
    Correct actual terminal, pin-map, clearance and assembly problems before
