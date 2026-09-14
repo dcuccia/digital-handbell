@@ -17,11 +17,17 @@ The earlier `development` directory is explicitly a frozen mixed-face
 checkpoint, **not the current assembly**. Open the root native below.
 Final mode never automatically falls back to that old electronic population.
 
-**Parent visual-review finding:** the three shell-fastener nut pockets reach
-the cosmetic exterior in this checkpoint. Their inward loading and static
-clearance checks did not establish a closed exterior wall. They are being
-recessed/relocated before the final print handoff, without changing the PCB,
-USB or contact interfaces. This checkpoint is not the final cosmetic print.
+**Parent visual-review finding corrected:** the former R29.5 shell-fastener
+pockets broke through the cosmetic exterior. Static nonintersection alone
+had not established a closed skin. The three printed shell/carrier joints
+are now at **R26.5, angles90/210/330 degrees**, with radial hex flats,
+inside-only nut entry and positively verified **at least1 mm geometric
+exterior stock**. The actual shell retains every original revolved cosmetic
+side face except the intentional USB channel; measured missing face area
+in the BRep check is **0 mm2**. PCB, USB, speaker, cell and contact datums
+did not change. The earlier rendered checkpoint remains preserved at
+commit `6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a`; a new parent rendering
+should use the corrected root native, not those earlier images.
 
 ## Released mechanical interface for routing
 
@@ -76,14 +82,14 @@ Current nominal solid volumes (not slicer consumption or measured mass):
 
 | Printed part | BRep volume |
 |---|---:|
-| One-piece shell | 21.682 cm3 |
+| One-piece shell | 22.413 cm3 |
 | Black handle | 19.883 cm3 |
-| Flush carrier/bezel | 9.594 cm3 |
+| Flush carrier/bezel | 9.656 cm3 |
 | Retained yoke | 2.117 cm3 |
 | Retained cradle | 2.112 cm3 |
 | Service-relieved cover | 1.597 cm3 |
 
-The carrier is approximately 57.7% lower volume than the preserved T8 body;
+The carrier is approximately 57.4% lower volume than the preserved T8 body;
 this comparison does not imply equal stiffness or printing time.
 The actual **all-front** minimum component-to-speaker gap is **0.400 mm
 (D3)**; the minimum component-to-yoke gap is **0.700 mm (L1)**. L1 retains its
@@ -143,13 +149,48 @@ from protected GND remain gates.
 
 There is a 15 mm wide **mouth-open** -Y shell channel, filled by a 14.4 mm
 color-matched bezel integral with the cartridge. Installed cosmetic continuity
-does not rely on a broad exterior band. The modest front nose opening is
-9.2 x 3.1 mm; the source receptacle body retains its original envelope and an
-open-top loading path. The ledge is 0.2 mm below the nominal source body.
+does not rely on a broad exterior band.
+
+**Second parent visual finding corrected:** the original rearward loading
+cuts removed the curved bezel above/around the connector, so the nominal
+9.2 x3.1 cutter did **not** define the whole effective opening and a blue
+PCB-edge strip remained exposed. The carrier now includes a real,
+same-color **locally raised flat front skin**, not a visibility/rendering fix:
+
+| Actual port feature | Authored dimensions |
+|---|---|
+| Skin width / height / thickness |14.4 /7.0 /1.0 mm |
+| Front / rear planes |y-29.1 /-28.1 |
+| Skin bottom / top |z20.0 /27.0 |
+| Effective aperture |x-4.6..+4.6, z21.7..24.8: **9.2 x3.1 mm** |
+| Material beside / below / above aperture |2.6 /1.7 /2.2 mm |
+| Skin-to-source USB separation |0.200 mm |
+| Skin-to-actual PCB separation |1.250 mm |
+| Skin-to-shell separation |approximately1.055 mm |
+
+The skin lies wholly ahead of the rear loading cuts beginning at y-28.0.
+It joins the existing carrier rails with real material. The actual cut
+front-face opening is **28.52 mm2**, exactly the intended aperture:
+both additional opening area and blocked intended area are **0 mm2**.
+The complete1 mm thick frame is contained in the released carrier.
+
+The entire actual PCB tongue-front projection (x±5.75, z25.0..26.6) has
+real1 mm material in front of it. The upper lip therefore conceals that
+edge in the horizontal -Y front view; arbitrary oblique sightlines are not
+claimed. This does not hide or move a PCB object in the native model.
+The whole PCBA remains at least0.2 mm behind the skin rear plane for
+**every pure Z loading translation**, and the complete assembly-path checks
+still pass. The original receptacle/PCB datums and source envelopes are
+unchanged, and the under-body ledge remains0.2 mm below the nominal USB body.
+All carrier material remains within the existing D70 ceiling; shell
+D70/H55.8 is unchanged.
 
 An explicitly **unselected** 8.8 x 8 x 2.6 mm male-nose screen approaches
-the source mouth without intersecting shell/bezel. It does not prove mating
-depth, overmold fit, a complete cable or actual insertion force. Source
+the source mouth without intersecting shell/bezel. In addition to pose
+checks, the **exact continuous straight swept union** of that8 mm nose
+over12 mm approach travel, spanning y-47.9..-27.9, has zero shell/carrier
+intersection. This does not prove actual mating depth, overmold fit, a
+complete cable or insertion force. Source
 through-board anchor XY reservations are retained as hidden planning
 projections, not invented tail-height solids.
 
@@ -158,6 +199,67 @@ cartridge withdraws straight mouthward through the open channel; a closed
 side hole would trap its protruding connector. The carrier ledge/rails,
 front screws and shell are the intended handling-load path, not unsupported
 solder anchors. Their physical force/deflection performance is unqualified.
+
+### Closed-skin shell/cartridge fasteners
+
+Only the three **printed shell-to-cartridge** joints moved. They are not the
+two PCB mounting holes. Their common XY centers are (0,26.5),
+(-22.949673,-13.25) and (+22.949673,-13.25). Rotating the pattern away from
+the retained lower yoke posts/nuts and the USB channel permits inward
+placement without colliding during whole-cartridge withdrawal.
+
+Each M2 nut enters radially **from inside the empty shell**, through its
+inward-opening slot. Nut/pocket hex flats face radially. The seated nut
+occupies z7.0..8.6, inside a z7.0..8.9 pocket. The M2x8 screw head remains
+recessed in the front carrier: under-head z2.3, tip z10.3, complete1.6 mm
+nut-body coverage and1.7 mm beyond the nut. The nut bears on a witnessed
+**3.7 mm actual shell floor**, with a **2.6 mm captive roof** above the pocket.
+Neither nut fit nor nominal screw coverage is a qualified preload/thread,
+torque, loose-part retention or printed-strength rating.
+
+`shell_cartridge_joints` in the fit report records:
+
+- **All nine actual void primitives**—three hex pockets, three inward
+  loading slots and three screw bores—positively offset by1 mm and wholly
+  contained within the unchanged outer solid, clear of the USB opening.
+- The original lower cavity positively offset by1 mm and contained within
+  that outer solid across the complete affected z band.
+- Actual floor/roof annulus material contained in the released shell.
+- Zero missing original cosmetic-side surface area except the deliberately
+  mouth-open USB channel.
+
+These constructive checks establish exterior stock without unsupported
+nested-shell distance extrema or a rendering/transparency trick. Interior
+nut entry and front screw access are intentionally open; there are **no
+additional cosmetic side openings**. Exact static checks, inward nut
+loading, front screw insertion/removal and driver paths, and cartridge
+withdrawal with the shell nuts left installed all pass. D70/H55.8 and the
+one-solid shell are unchanged.
+
+### Rear polarity-label visibility
+
+The proposed `+POS` at(+11,10.5) and `-NEG` at(-11,10.5) are **obscured by
+the retained cradle**, even with the cover removed. The negative position
+also projects beneath its retained cover-joint nut. No PCB was edited and
+the active routing source was not read.
+
+The following existing-PCB locations pass complete rectangular sight-column
+checks with the cartridge outside the shell, cover and its screws removed,
+and cell/contact metal still installed:
+
+| B.SilkS text | Recommended common XY | Maximum screened text rectangle |
+|---|---|---|
+| `+POS` | **(+15.7,+11.0)** |4.4 x1.4 mm |
+| `-NEG` | **(-15.7,+11.0)** |4.4 x1.4 mm |
+| `T8 BUTTON END >` | **(0,+10.5), unchanged** |12.0 x1.4 mm |
+
+The full rectangles lie on the exact existing PCB and have zero projected
+capture/cell/contact/hardware obstruction. They are **mechanical reservations,
+not inspected KiCad glyph bounds**: the electrical owner must keep actual
+mirrored B.SilkS strokes within these envelopes and run native silk checks.
+Hidden native reservation boxes and `back_silk_visibility` record both the
+rejected initial locations and tested alternatives. These label moves do not
+change the mechanical PCB freeze.
 
 ## Handle and shell load path
 
@@ -235,7 +337,7 @@ are not exhaustive continuous-motion or deformable-contact proofs.
 
 Print the **shell mouth-down/handle-up** and the **grille separately
 face-down** for a smooth cosmetic exterior. The upper internal crown slopes,
-nut-pocket roofs and handle side tunnel need explicit slicer support/
+nut-pocket roofs, locally raised USB surround/aperture roof and handle side tunnel need explicit slicer support/
 bridging review. The wide mouth gives internal support-removal access
 **before assembly**. No universal support-free claim is made. STLs retain
 assembly coordinates: import millimetres at 100%, translate/reorient, never

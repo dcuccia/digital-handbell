@@ -73,7 +73,29 @@ def main():
         assert case["screw_to_cell"]["distance_mm"] > 0 and case["screw_to_cover"]["distance_mm"] > 0
         assert all(max(p["overlaps_mm3"].values()) < 1e-5 for p in case["insertion_empty_shell"])
     assert report["contact_retention"]["all_six_half_mm_displacements_meet_plastic"]
+    shell_joints = report["shell_cartridge_joints"]
+    assert shell_joints["exterior_stock_lower_bound_mm"] >= 1
+    assert shell_joints["missing_authored_cosmetic_side_skin_except_usb_mm2"] < 1e-4
+    assert max(shell_joints["roof_witness_missing_mm3"]) < 1e-5
+    assert max(shell_joints["bearing_floor_witness_missing_mm3"]) < 1e-5
+    assert shell_joints["expanded_lower_cavity_outside_outer_envelope_mm3"] < 1e-5
+    assert all(p["positive_offset_mm"] >= 1 and
+               p["expanded_void_outside_outer_envelope_mm3"] < 1e-5 and
+               p["expanded_void_intersection_intentional_usb_opening_mm3"] < 1e-5
+               for p in shell_joints["primitive_positive_offset_containment"])
+    assert all(v["recommended"] is not None and v["recommended"]["clear_with_cover_removed_cell_installed"]
+               for v in report["back_silk_visibility"]["assessments"].values()), "No unobstructed B-silk recommendation for at least one label"
     assert report["pcba_stl_scope"]["omitted_only_from_inert_stl"] == ["BT1", "BT2"]
+    skin = report["usb"]["front_skin"]
+    assert skin["full_frame_witness_missing_mm3"] < 1e-5, "USB front frame material missing"
+    assert skin["extra_effective_opening_area_mm2"] < 1e-5, "USB actual opening exceeds declared aperture"
+    assert skin["blocked_intended_opening_area_mm2"] < 1e-5, "USB intended aperture obstructed"
+    assert abs(skin["actual_front_face_open_area_mm2"]-9.2*3.1) < 1e-5
+    assert skin["pcb_edge_front_mask_missing_mm3"] < 1e-5, "PCB edge not physically concealed"
+    assert skin["all_pcba_pure_z_loading_plane_separation_mm"] >= .2-1e-5
+    assert skin["whole_carrier_outside_D70_mm3"] < 1e-5
+    for name in ("skin_to_actual_pcb", "skin_to_source_usb", "skin_to_shell"):
+        assert skin[name]["intersection_mm3"] < 1e-5 and skin[name]["distance_mm"] > 0, name
     assert not report["material_intersections"], json.dumps(report["material_intersections"], indent=2)
     paths = report["assembly_paths"]
     for name in ("cartridge_withdrawal_minus_z", "unselected_usb_plug_approach",
@@ -85,6 +107,10 @@ def main():
     assert all(p["overlap_mm3"] < 1e-5 for group in paths["shell_nut_radial_insertion_before_cartridge"] for p in group)
     assert all(p["body_overlap_mm3"] < 1e-5 for p in paths["speaker_load_before_yoke"])
     assert all(max(v.values()) < 1e-5 for v in paths["retained_m2_straight_tool_access"].values())
+    assert all(max(p["overlaps_mm3"].values()) < 1e-5
+               for samples in paths["front_shell_screw_installation"].values() for p in samples)
+    assert all(max(v.values()) < 1e-5 for v in paths["front_shell_screw_tool_access"].values())
+    assert max(paths["unselected_usb_nose_continuous_straight_sweep"]["overlaps_mm3"].values()) < 1e-5
     if not args.development:
         assert report["routing_interface"]["mechanical_freeze_recommended"]
     print(json.dumps({"artifact_integrity": "PASS", "exact_current_input_binding": "PASS",

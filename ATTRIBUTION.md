@@ -45,6 +45,12 @@ exports retain the separate electronics' CC BY-SA 3.0 context and notices;
 do not label a mixed assembly as entirely MIT or mistake the original contact
 approximations for manufacturer-approved CAD.
 
+The [September 13 printed bell](mechanical/studies/2026-09-13-printed-bell/README.md)
+and its rendered views use original procedural shell/handle curves and retain
+the separately attributed electronics inside. The user-supplied reference
+images are neither traced nor redistributed; no logos or depicted artwork
+are imported. CAD display colours are not photographs of an ERYONE print.
+
 The original packaging-screen SVG, calculation script and factual measurement
 records use the project's MIT documentation/software terms. The owner's retail
 speaker image and vendor photos are **not redistributed**. The PowerBoost and

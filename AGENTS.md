@@ -88,6 +88,12 @@
   stable PCB mounts, USB/service and contact interfaces; this is not fabrication
   approval. Silk-PLA appearance is not strength/thermal qualification. Do not
   trace or redistribute the supplied reference photographs.
+- The printed-bell front placement achieves D43 with 81F electronic parts and
+  two B SMT contacts. Preserve its immutable stage-1 checkpoint when routing
+  a separate candidate, then rebind mechanical inputs exactly. The D70/H55.8
+  shell has an 80 mm keyed M4x16 handle and three internal front-retention
+  joints; preserve their closed exterior skin and real USB front lip. A
+  nose-approach screen is not actual USB mating or sealing qualification.
 - Track design changes, decisions, dependencies, and supporting artifacts in
   linked epic issues. A rule-check pass is not functional or safety signoff.
 - Do not purchase parts, place fabrication orders, or distribute a child-use

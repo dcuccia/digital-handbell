@@ -320,6 +320,47 @@ silently changing released component heights or support/USB interfaces.
 Positive nominal CAD gaps do not qualify cell dimensions, contact force,
 wrapper abrasion, reverse insertion, thermal behavior or physical retention.
 
+## 2026-09-13: original printed shell and front-face electronics
+
+The owner reports that the prior inert pieces fit/work well and now approves
+a single-piece printed cosmetic shell, removable flush grille/cartridge and
+separate black handle, with a wooden option later and no broad handguard.
+The [dated input contract](design-inputs/2026-09-13-printed-bell.json) records
+that authorization and the supplied images' limited role as generic visual
+inspiration, not traced geometry or licensed assets for redistribution.
+
+The [new native electrical floorplan](../hardware/handbell/iterations/printed-bell-front/README.md)
+fits 81 electronic parts on F plus two B-side contacts without increasing the
+43 mm PCB body. The original M2 mounts and USB/contact datums remain intact.
+Rear SMT contacts still require assembly operations, and the old IMU tier
+restriction is not erased by changing component faces.
+
+The [new mechanical model](../mechanical/studies/2026-09-13-printed-bell/README.md)
+uses an original D70/H55.8 shell and 80 mm handle. It preserves the successful
+cartridge architecture but eliminates the broad exterior skirt. Three
+front-accessible M2x8 joints secure the cartridge; an internal-keyed M4x16
+screw/washer/metal-nut joint secures the handle. This is the working compact
+metric choice, not a qualified wood joint or interchangeable 8-32/1/4-20
+hardware. Shell nut pockets retain closed exterior skin; the modest USB
+front opening is supported by a real lip/skin and a removable channel filler.
+
+The owner authorizes unattended critical routing once coordinated engineering
+review establishes stable PCB interfaces. The exact all-front assembly now
+supports that release without waiting for another viewing turn. Preserve the
+stage-1 checkpoint and rebind the mechanical model after copper-only changes.
+This is not an electrical-rule waiver, complete routing, fabrication order,
+qualified silk-PLA structure or live-cell release.
+
+The [material/fastener source review](printed-bell-material-and-handle.md)
+records the manufacturer's actual silk-PLA ranges and unexercised fine-layer
+starting settings. Contact height and the under-cell insulation are retained;
+removing a floor is not a demonstrated 1-2 mm height saving. Polarity and
+rechargeable-chemistry guidance remain necessary, including within a plastic
+outer shell.
+
+Affected decisions: D07/D09/D11/D12/D16; owning epics E04/#4, E05/#5, E07/#7,
+E08/#8 for eventual supplier/process comparison and E10/#10 for qualification.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |

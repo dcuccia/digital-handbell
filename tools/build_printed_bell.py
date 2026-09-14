@@ -292,21 +292,55 @@ def build(args):
     lugs = []
     shell_nuts = []
     shell_screws = []
-    for index, angle in enumerate((0, 120, 240), 1):
-        x, y = 29.5*math.cos(math.radians(angle)), 29.5*math.sin(math.radians(angle))
+    shell_pocket_tools = []
+    shell_joint_roofs = []
+    shell_joint_floors = []
+    for index, angle in enumerate((90, 210, 330), 1):
+        x, y = 26.5*math.cos(math.radians(angle)), 26.5*math.sin(math.radians(angle))
         joints.append((x, y, angle))
-        lug = rotate(box(7.8, 7, 8.2, x=31.4, z=3.3), angle).common(exterior)
+        lug = rotate(box(9.6, 7.2, 8.2, x=28, z=3.3), angle).common(exterior)
         lugs.append(lug)
-        nut = hexagon(4, 1.6, x, y, 7.15).cut(cyl(1, 1.6, x, y, 7.15))
+        nut = moved(rotate(hexagon(4, 1.6, z=7), angle+30), x, y)
+        nut = nut.cut(cyl(1, 1.6, x, y, 7))
+        pocket = moved(rotate(hexagon(4.2, 1.9, z=7), angle+30), x, y)
+        loading = rotate(box(7, 4.9, 1.9, x=23, z=7), angle)
+        bore = cyl(1.1, 9, x, y, 3.2)
+        shell_pocket_tools += [(f"Joint{index}NutPocket", pocket),
+                               (f"Joint{index}InwardLoadingSlot", loading),
+                               (f"Joint{index}ScrewBore", bore)]
+        roof = cyl(2.0, 2.6, x, y, 8.9).cut(cyl(1.1, 2.6, x, y, 8.9))
+        shell_joint_roofs.append(roof)
+        floor = cyl(2.0, 3.7, x, y, 3.3).cut(cyl(1.1, 3.7, x, y, 3.3))
+        shell_joint_floors.append(floor)
         screw = cyl(1, 8, x, y, 2.3).fuse(cyl(1.9, 2, x, y, .3))
         shell_nuts.append(feature(f"ShellCaptiveM2Nut_{index}", nut, group="ShellHardware"))
         shell_screws.append(feature(f"FrontM2x8Screw_{index}", screw, group="ShellHardware"))
     shell = union([shell]+lugs)
-    for x, y, angle in joints:
-        shell = shell.cut(cyl(1.1, 9, x, y, 3.2))
-        shell = shell.cut(hexagon(4.2, 1.9, x, y, 7.0))
-        shell = shell.cut(rotate(box(8, 4.5, 1.9, x=27.3, z=7.0), angle))
+    for _, tool_shape in shell_pocket_tools:
+        shell = shell.cut(tool_shape)
     shell = shell.removeSplitter()
+    joint_wall_proofs = []
+    for name, tool_shape in shell_pocket_tools:
+        expanded = tool_shape.makeOffsetShape(1.0, .001, fill=False, join=0)
+        base.shape_stats(expanded)
+        outside = max(0, expanded.cut(exterior).Volume)
+        usb_overlap = max(0, expanded.common(channel).Volume)
+        joint_wall_proofs.append({"primitive": name, "positive_offset_mm": 1.0,
+                                 "expanded_void_outside_outer_envelope_mm3": outside,
+                                 "expanded_void_intersection_intentional_usb_opening_mm3": usb_overlap})
+        if outside > EPS or usb_overlap > EPS:
+            raise RuntimeError("Shell joint breaks the protected exterior stock: " + name)
+    expanded_cavity = cavity.makeOffsetShape(1.0, .001, fill=False, join=0)
+    base.shape_stats(expanded_cavity)
+    lower_cavity_witness = expanded_cavity.common(cyl(100, 11.1, z=2.2))
+    cavity_outside = max(0, lower_cavity_witness.cut(exterior).Volume)
+    roof_missing = [max(0, roof.cut(shell).Volume) for roof in shell_joint_roofs]
+    floor_missing = [max(0, floor.cut(shell).Volume) for floor in shell_joint_floors]
+    cosmetic_faces = Part.makeCompound([f for f in exterior.Faces if f.BoundBox.ZLength > EPS])
+    missing_cosmetic_skin = cosmetic_faces.cut(channel).cut(shell).Area
+    if cavity_outside > EPS or max(roof_missing+floor_missing) > EPS or missing_cosmetic_skin > 1e-4:
+        raise RuntimeError(f"Actual exterior skin/roof failed: cavity={cavity_outside}, "
+                           f"roof={roof_missing}, floor={floor_missing}, missing skin={missing_cosmetic_skin}")
     shell_obj = feature("OnePiecePrintedBellShell", shell, (.72, .52, .19), group="ShellAndHandle", transparency=65)
     handle = revolved(HANDLE).fuse(box(12, 10, 2, z=53.8)).removeSplitter()
     handle = handle.cut(cyl(2.15, 14.3, z=53.7))
@@ -350,18 +384,33 @@ def build(args):
         support = support.cut(rotate(box(5, 4.7, 1.9, x=25.5, z=9.15), angle))
         body_parts.append(support)
     bezel = shell_stock.common(box(14.4, 45, 27.0, y=-32.5))
-    # Thin cosmetic port wall and two supported vertical rails; no load claim
-    # about unmeasured through-board solder tails.
-    body_parts += [bezel, box(14.4, 5, 1.2, y=-24.3, z=20.1)]
+    # Keep a real front skin wholly ahead of the rearward loading cuts.
+    # The original curved wall disappeared there and exposed the PCB edge.
+    usb_skin_stock = box(14.4, 1.0, 7.0, y=-28.6, z=20.0)
+    nose_aperture_tool = box(9.2, 20, 3.1, y=-38, z=21.7)
+    body_parts += [bezel, usb_skin_stock, box(14.4, 5, 1.2, y=-24.3, z=20.1)]
     for sign in (-1, 1):
         body_parts.append(box(1.8, 5, 23.7, x=sign*6.3, y=-26, z=3.3))
     body = union(body_parts)
     body = body.cut(box(10.2, 8.4, 50, y=-23.8, z=21.3))
     body = body.cut(box(12.1, 8.4, 50, y=-23.8, z=24.9))
-    body = body.cut(box(9.2, 20, 3.1, y=-38, z=21.7))
+    body = body.cut(nose_aperture_tool)
     for x, y, _ in joints:
         body = body.cut(cyl(1.1, 4, x, y, z=-.1)).cut(cyl(2.15, 2.4, x, y, z=-.1))
     body = body.removeSplitter()
+    usb_skin_frame = usb_skin_stock.cut(nose_aperture_tool)
+    usb_skin_missing = max(0, usb_skin_frame.cut(body).Volume)
+    skin_front_points = [V(-7.2, -29.1, 20), V(7.2, -29.1, 20),
+                         V(7.2, -29.1, 27), V(-7.2, -29.1, 27)]
+    skin_front_face = Part.Face(Part.makePolygon(skin_front_points+[skin_front_points[0]]))
+    effective_opening = skin_front_face.cut(body)
+    intended_opening = skin_front_face.common(nose_aperture_tool)
+    extra_opening = effective_opening.cut(intended_opening).Area
+    blocked_opening = intended_opening.cut(effective_opening).Area
+    carrier_outside_D70 = max(0, body.cut(cyl(35, 100)).Volume)
+    if usb_skin_missing > EPS or extra_opening > EPS or blocked_opening > EPS or carrier_outside_D70 > EPS:
+        raise RuntimeError(f"Actual USB front skin failed: missing={usb_skin_missing}, extra opening={extra_opening}, "
+                           f"blocked opening={blocked_opening}, outsideD70={carrier_outside_D70}")
     body_obj = feature("FlushGrilleCarrierAndConcealedPortBezel", body, (.72, .52, .19))
     yoke = inherited("RemovableSpeakerCaptureYoke")
     cradle = inherited("LoadBearingInsulatingBatteryCradle")
@@ -460,9 +509,19 @@ def build(args):
         raise RuntimeError("Actual shell does not contain the declared washer bearing annulus")
 
     def collisions(moving, obstacles):
-        return {name: max(0, moving.common(shape).Volume) for name, shape in obstacles.items()}
+        return {name: max(0, moving.common(shape).Volume) if moving.BoundBox.intersect(shape.BoundBox) else 0
+                for name, shape in obstacles.items()}
 
-    fixed_shell = {"shell": shell, "handle_screw": screw, "handle_washer": washer}
+    pcb_tongue_front = pcb.common(box(15, 1.0, 2.0, y=-26.6, z=24.8))
+    tongue_bb = pcb_tongue_front.BoundBox
+    tongue_mask = box(tongue_bb.XLength, 1.0, tongue_bb.ZLength,
+                      (tongue_bb.XMin+tongue_bb.XMax)/2, -28.6, tongue_bb.ZMin)
+    pcb_mask_missing = max(0, tongue_mask.cut(body).Volume)
+    pcba_z_motion_skin_plane_gap = pcba.BoundBox.YMin-usb_skin_stock.BoundBox.YMax
+    if pcb_mask_missing > EPS or pcba_z_motion_skin_plane_gap < .2-EPS:
+        raise RuntimeError("USB skin fails physical PCB-edge concealment or open-top PCBA loading")
+    fixed_shell = {"shell": shell, "handle_screw": screw, "handle_washer": washer,
+                   **{o.Name: o.Shape for o in shell_nuts}}
     assembly_paths = {}
     tolerance_screen = {}
     for name, (sh, wh, underhead, length) in tolerance_hardware.items():
@@ -486,6 +545,13 @@ def build(args):
     assembly_paths["unselected_usb_plug_approach"] = [
         {"outward_y_mm": dy, "overlaps_mm3": collisions(moved(plug, y=-dy), {"shell": shell, "bezel": body})}
         for dy in (0, 2, 5, 12)]
+    plug_sweep = box(8.8, 20, 2.6, y=-37.9, z=21.95)
+    feature("UNQUALIFIEDUSBMaleNoseContinuousStraightSweep", plug_sweep, (.9, .3, .2),
+            False, "ConstructionReferences", 80)
+    assembly_paths["unselected_usb_nose_continuous_straight_sweep"] = {
+        "motion": "Exact union of the8mm nose translated12mm along+Y; not actual mating travel.",
+        "nose_section_mm": [8.8, 2.6], "swept_y_range_mm": [-47.9, -27.9],
+        "overlaps_mm3": collisions(plug_sweep, {"shell": shell, "carrier": body})}
     tool = cyl(1.9, 48, z=-.8)
     feature("EmptyShellM4StraightDriverAccess", tool, (.9, .3, .2), False, "ConstructionReferences", 80)
     assembly_paths["handle_tool_empty_shell"] = collisions(tool, {"shell": shell, "handle": handle})
@@ -502,6 +568,15 @@ def build(args):
             {"radial_inward_mm": dr, "overlap_mm3": max(0, moved(obj.Shape,
              -dr*math.cos(math.radians(angle)), -dr*math.sin(math.radians(angle))).common(shell).Volume)}
             for dr in (0, 2, 5, 10, 16)])
+    assembly_paths["front_shell_screw_installation"] = {}
+    assembly_paths["front_shell_screw_tool_access"] = {}
+    for (x, y, _), obj in zip(joints, shell_screws):
+        obstacles = {o.Name: o.Shape for o in physical if o.Name != obj.Name}
+        assembly_paths["front_shell_screw_installation"][obj.Name] = [
+            {"mouthward_z_mm": dz, "overlaps_mm3": collisions(moved(obj.Shape, z=-dz), obstacles)}
+            for dz in (0, 1, 3, 6, 12, 20)]
+        driver = cyl(.95, 30, x, y, -29.7)
+        assembly_paths["front_shell_screw_tool_access"][obj.Name] = collisions(driver, obstacles)
     assembly_paths["speaker_load_before_yoke"] = [
         {"handleward_mm": dz, "body_overlap_mm3": max(0, moved(speaker, z=dz).common(body).Volume)}
         for dz in (0, 1, 5, 12, 25, 40)]
@@ -541,6 +616,34 @@ def build(args):
         gap_records[obj.Name] = {name: helpers.pair(obj.Shape, shape)
                                 for name, shape in (("speaker", speaker), ("yoke", yoke), ("body", body),
                                                     ("cradle", cradle), ("cover", cover))}
+    silk_obstacles = {"cradle": cradle, "cell": cell,
+                      **{o.Name: o.Shape for o in contact_objs+retained_hardware
+                         if not o.Name.startswith("CoverM2x6")}}
+    silk_assessments = {}
+    for name, width, proposed, alternatives in (
+        ("+POS", 4.4, (11, 10.5), [(15.7, 11), (15, 11), (15.2, 11.5), (15, -11), (6, 15)]),
+        ("-NEG", 4.4, (-11, 10.5), [(-15.7, 11), (-15, 11), (-15.2, 11.5), (-15, -11), (-6, 15)]),
+        ("T8 BUTTON END >", 12, (0, 10.5), [(0, 12), (0, -11), (0, 18)]),
+    ):
+        records = []
+        for index, (x, y) in enumerate([proposed]+alternatives):
+            footprint = box(width, 1.4, .01, x, y, 26.59)
+            sight_column = box(width, 1.4, 20, x, y, 26.6001)
+            occlusions = collisions(sight_column, silk_obstacles)
+            outside_board = max(0, footprint.cut(pcb).Volume)
+            clear = outside_board < EPS and max(occlusions.values()) < EPS
+            records.append({"center_common_xy_mm": [x, y],
+                            "rectangle_width_height_mm": [width, 1.4],
+                            "outside_actual_pcb_mm3": outside_board,
+                            "sight_column_obstruction_mm3": occlusions,
+                            "clear_with_cover_removed_cell_installed": clear})
+        accepted = next((r for r in records if r["clear_with_cover_removed_cell_installed"]), None)
+        silk_assessments[name] = {"requested": records[0], "screened_alternatives": records[1:],
+                                  "recommended": accepted}
+        if accepted:
+            x, y = accepted["center_common_xy_mm"]
+            feature("SilkReservation_"+name.replace("+", "Plus").replace("-", "Minus").replace(" ", "_").replace(">", "Arrow"),
+                    box(width, 1.4, .01, x, y, 26.61), (.95, .95, .95), False, "ConstructionReferences")
     retention = assembly_paths["cell_capture_outside_shell"]
     report = {
         "status": "DEVELOPMENT_FROZEN_MIXED_FACE_NOT_FINAL" if development else "EXACT_ALL_FRONT_ENGINEERING_REVIEW",
@@ -561,6 +664,30 @@ def build(args):
         "material_intersections": overlaps,
         "assembly_paths": assembly_paths,
         "component_clearances": gap_records,
+        "shell_cartridge_joints": {
+            "previous_defect": "Parent visual review found nut/service pocket exterior breakthrough at R29.5. Static nonintersection alone was insufficient.",
+            "radius_mm": 26.5, "angles_deg": [90, 210, 330],
+            "centers_xy_mm": [[x, y] for x, y, _ in joints],
+            "hex_flat_orientation": "Nut and pocket rotated angle+30 degrees; radial flats keep outer reach bounded.",
+            "nut_z_mm": [7.0, 8.6], "pocket_z_mm": [7.0, 8.9],
+            "screw": "Three M2x8; under-head z2.3, tip z10.3, nut seated on actual pocket floor z7.0, full1.6mm nut-body coverage, tip1.7mm beyond nut.",
+            "roof_thickness_mm": 2.6,
+            "bearing_floor_thickness_mm": 3.7,
+            "actual_roof_annulus_OD_ID_mm": [4, 2.2],
+            "roof_witness_missing_mm3": roof_missing,
+            "bearing_floor_witness_missing_mm3": floor_missing,
+            "exterior_stock_lower_bound_mm": 1.0,
+            "primitive_positive_offset_containment": joint_wall_proofs,
+            "lower_cavity_positive_offset_mm": 1.0,
+            "lower_cavity_witness_z_mm": [2.2, 13.3],
+            "expanded_lower_cavity_outside_outer_envelope_mm3": cavity_outside,
+            "missing_authored_cosmetic_side_skin_except_usb_mm2": missing_cosmetic_skin,
+            "proof_scope": "Each actual nut-pocket, inward slot and screw-bore primitive expanded positively by1mm remains inside the unchanged outer solid and away from USB. Dilation distributes over their union. Expanded original cavity is likewise contained throughout the joint band. The actual shell retains all original revolved cosmetic side faces except the intended USB channel. Interior nut entry/front screw access intentionally open; not print-strength or manufacturing-tolerance qualification."},
+        "back_silk_visibility": {
+            "scope": "Mechanical screen only; no PCB edited and no active routing source read. Proposed text envelopes, not actual font/glyph bounds.",
+            "view": "Cartridge outside shell, cover removed, cell and contact metal still installed; look mouthward along -Z.",
+            "rectangle_basis": "4.4x1.4mm for four-character polarity labels;12x1.4mm for T8 BUTTON END >. Electrical must fit actual mirrored B.SilkS glyph extents within the accepted rectangle.",
+            "assessments": silk_assessments},
         "cross_face_usb_anchor_reservations": anchor_reservations,
         "contact_retention": {
             "geometry": "Unchanged frozen T8 yoke/cradle and actual thin contacts translated +10.75 mm; cover has straight upper-spring service channels with added exterior stock.",
@@ -617,6 +744,26 @@ def build(args):
                 "native_origin_xy_mm": [0, -22.82], "mouth_xy_mm": [0, -27.9],
                 "mouth_open_channel_width_height_mm": [15, 27.3], "color_matched_integral_bezel_width_mm": 14.4,
                 "nominal_nose_opening_width_height_mm": [9.2, 3.1],
+                "front_skin": {
+                    "previous_defect": "The curved original bezel was removed by rear loading cuts, exposing PCB edge; nominal nose cutter did not define the whole effective opening.",
+                    "construction": "Same-color locally flat raised front skin, integral with carrier rails; source USB/PCB unchanged.",
+                    "width_height_thickness_mm": [14.4, 7.0, 1.0],
+                    "front_rear_y_mm": [-29.1, -28.1], "z_range_mm": [20.0, 27.0],
+                    "side_lower_upper_border_mm": [2.6, 1.7, 2.2],
+                    "aperture_x_range_mm": [-4.6, 4.6], "aperture_z_range_mm": [21.7, 24.8],
+                    "actual_front_face_open_area_mm2": effective_opening.Area,
+                    "extra_effective_opening_area_mm2": extra_opening,
+                    "blocked_intended_opening_area_mm2": blocked_opening,
+                    "full_frame_witness_missing_mm3": usb_skin_missing,
+                    "actual_source_pcb_tongue_front_bounds": base.bounds(pcb_tongue_front),
+                    "pcb_edge_front_mask_missing_mm3": pcb_mask_missing,
+                    "pcb_concealment_scope": "Full actual tongue-front X/Z projection has real1mm material ahead of it; horizontal -Y front view, not arbitrary oblique viewpoints.",
+                    "skin_to_actual_pcb": helpers.pair(usb_skin_frame, pcb),
+                    "skin_to_source_usb": helpers.pair(usb_skin_frame, objects["Component_X6"].Shape),
+                    "skin_to_shell": helpers.pair(usb_skin_frame, shell),
+                    "all_pcba_pure_z_loading_plane_separation_mm": pcba_z_motion_skin_plane_gap,
+                    "z_loading_proof": "All actual PCBA material stays at least this distance rearward of the skin's rear plane for every pureZ translation, independently of height.",
+                    "whole_carrier_outside_D70_mm3": carrier_outside_D70},
                 "source_body_to_underledge_nominal_gap_mm": .2,
                 "plug_scope": "Unselected 8.8x8x2.6 male nose only; final pose touches source mouth, not a mating-depth/overmold qualification.",
                 "load_path": "Carrier ledge/rails and keyed bezel react handling loads through carrier/front screws/shell, not a claim of solder-tail load capacity.",
@@ -648,6 +795,10 @@ def build(args):
                      "pcba_lowering_into_open_top_carrier", "cover_removal_with_cell_still_captured_by_cradle")
         for p in assembly_paths[name])
     path_clear &= all(max(v.values()) < EPS for v in assembly_paths["retained_m2_straight_tool_access"].values())
+    path_clear &= all(max(p["overlaps_mm3"].values()) < EPS
+                      for samples in assembly_paths["front_shell_screw_installation"].values() for p in samples)
+    path_clear &= all(max(v.values()) < EPS for v in assembly_paths["front_shell_screw_tool_access"].values())
+    path_clear &= max(assembly_paths["unselected_usb_nose_continuous_straight_sweep"]["overlaps_mm3"].values()) < EPS
     report["routing_interface"]["mechanical_freeze_recommended"] &= path_clear
     for case in tolerance_screen.values():
         if max(case["installed_overlap_mm3"].values()) > EPS:

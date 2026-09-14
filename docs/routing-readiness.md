@@ -1,5 +1,15 @@
 # From fit mock-up to routed PCB
 
+**September 13 authorization:** the owner approves the
+[printed-bell/front-electronics direction](printed-bell-revision.md) and
+permits critical routing after coordinated engineering interface review,
+without another owner viewing turn. The all-front D43 placement and complete
+D70 printed assembly now retain the original PCB M2/USB/contact datums.
+The earlier stage-1 PCB remains an immutable unrouted checkpoint; a separate
+routing candidate and a fresh exact mechanical bind are required.
+This does not close the power, USB land-pattern, actual cell/contact,
+manufacturing or physical qualification gates below.
+
 **September 11 owner-requested checkpoint:** implement and inspect the
 [measured-shell T8 integration](t8-integration-plan.md) before starting copper.
 The owner confirms the previous cartridge fits and has supplied new shell

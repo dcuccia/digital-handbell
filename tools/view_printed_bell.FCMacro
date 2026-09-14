@@ -1,0 +1,106 @@
+# SPDX-License-Identifier: MIT
+"""Render the current complete bell without modifying its generated source."""
+import base64
+import hashlib
+import json
+import os
+from pathlib import Path
+
+import FreeCAD as App
+import FreeCADGui as Gui
+import Part
+
+root = Path(__file__).resolve().parents[1]
+study = root / "mechanical" / "studies" / "2026-09-13-printed-bell"
+output = study / "views"
+source = study / "printed-bell.FCStd"
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+report = json.loads((study / "fit-report.json").read_text(encoding="utf-8"))
+inventory = json.loads((study / "artifact-manifest.json").read_text(encoding="utf-8"))
+completion = json.loads((study / "completion.json").read_text(encoding="utf-8"))
+status = json.loads((study / "review-status.json").read_text(encoding="utf-8"))
+if status["state"] != "EXACT_ALL_FRONT_ENGINEERING_REVIEW" or status["token"] != completion["token"]:
+    raise RuntimeError("The complete all-front model is not ready for review")
+if digest(study / "artifact-manifest.json") != completion["artifact_manifest_sha256"]:
+    raise RuntimeError("Artifact inventory differs from its completed generation")
+native_hash = digest(source)
+if native_hash != inventory["artifacts"][source.name]["sha256"]:
+    raise RuntimeError("Native model differs from its artifact inventory")
+for key, relative in report["input"]["paths"].items():
+    if digest(root / relative) != report["input"]["sha256"][key]:
+        raise RuntimeError("Model input has changed: " + key)
+output.mkdir(exist_ok=True)
+doc = App.openDocument(str(source))
+if hashlib.sha256(base64.b64decode(doc.getObject("Raw_placement").Text)).hexdigest() != report["input"]["sha256"]["placement"]:
+    raise RuntimeError("Native placement differs from the reviewed input")
+doc.Label = "Original printed bell - complete engineering review"
+shell = doc.getObject("OnePiecePrintedBellShell")
+handle = doc.getObject("BlackKeyedHandleCaptiveMetalNut")
+carrier = doc.getObject("FlushGrilleCarrierAndConcealedPortBezel")
+for obj in (shell, handle, carrier):
+    if obj is None:
+        raise RuntimeError("Missing principal printed part")
+    obj.ViewObject.Visibility = True
+    obj.ViewObject.Transparency = 0
+    obj.ViewObject.DisplayMode = "Shaded"
+doc.getObject("ConstructionReferences").ViewObject.Visibility = False
+doc.recompute()
+window = Gui.getMainWindow()
+window.showMaximized()
+window.raise_()
+window.activateWindow()
+view = Gui.activeDocument().activeView()
+
+def image(name, orientation, width=1100, height=1450):
+    orientation()
+    view.fitAll()
+    Gui.updateGui()
+    view.saveImage(str(output / name), width, height, "White")
+
+image("beauty.png", view.viewAxonometric)
+image("profile.png", view.viewFront, 1000)
+image("grille.png", view.viewBottom, 1100, 1100)
+
+# Extra display objects section the near half; original solids remain untouched.
+cutter = Part.makeBox(200, 100, 200, App.Vector(-100, -100, -10))
+sections = []
+for original in (shell, handle):
+    section = doc.addObject("Part::Feature", "VIEW_ONLY_" + original.Name)
+    section.Shape = original.Shape.cut(cutter)
+    section.ViewObject.ShapeColor = original.ViewObject.ShapeColor
+    section.ViewObject.DisplayMode = "Flat Lines"
+    original.ViewObject.Visibility = False
+    sections.append(section)
+for name, transparency in (
+    ("PCBExactSuppliedOutlineAndMounts", 35),
+    ("ConservativeMeasuredSpeakerBody", 50),
+    ("RetainedRemovableCellCover", 50),
+):
+    doc.getObject(name).ViewObject.Transparency = transparency
+image("cutaway.png", view.viewAxonometric)
+for section in sections:
+    section.ViewObject.Visibility = False
+shell.ViewObject.Visibility = True
+shell.ViewObject.Transparency = 80
+handle.ViewObject.Visibility = True
+view.fitAll()
+Gui.updateGui()
+doc.saveAs(str(output / "local-review.FCStd"))
+if digest(source) != native_hash:
+    raise RuntimeError("Viewing unexpectedly changed the generated native file")
+metadata = {
+    "scope": "Original CAD views, not photographs or qualified silk-PLA appearance",
+    "source": str(source.relative_to(root)),
+    "source_sha256": native_hash,
+    "placement_sha256": report["input"]["sha256"]["placement"],
+    "renderer_macro_sha256": digest(Path(__file__)),
+    "freecad_version": list(App.Version()),
+    "images": {name: digest(output / name) for name in ("beauty.png", "profile.png", "grille.png", "cutaway.png")},
+    "source_geometry_unchanged": True,
+    "local_review_copy_excluded_from_release": True,
+}
+(output / "render-source.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
+(output / "view-ready.json").write_text(json.dumps({"pid": os.getpid(), "source_sha256": native_hash}), encoding="utf-8")

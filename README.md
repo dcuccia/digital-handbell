@@ -27,6 +27,13 @@ interfaces, conditional routing authorization and pending mechanical results;
 [material/handle notes](docs/printed-bell-material-and-handle.md) distinguish
 silk-PLA guidance from qualified structural or thermal performance.
 
+The [original printed bell and rendered views](docs/printed-bell-revision.md#printed-shell-cartridge-and-handle)
+now provide a **70 mm diameter, 55.8 mm body with an 80 mm black handle**,
+flush grille and removable complete cartridge. Native FreeCAD/STEP and nine
+inert STL files are available separately from the earlier metal-bell studies.
+The coordinated PCB interfaces support the authorized critical-routing stage;
+this does not approve fabrication or live-cell operation.
+
 **September 11 revision:** the owner confirms the newer print assembly fits,
 supplies [measured shell stations](docs/measurements/2026-09-11-shell-speaker-inputs.json),
 and refines the speaker magnet to **21.70 mm OD**. The

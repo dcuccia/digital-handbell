@@ -92,5 +92,88 @@ unconnected-net findings. No inherited GUI parity approval is transferred.
 Routing waits for the complete mechanical interface review, not merely this
 placement result.
 
+## Printed shell, cartridge and handle
+
+The [complete mechanical package](../mechanical/studies/2026-09-13-printed-bell/README.md)
+now contains the actual all-front placement, an original one-piece bell,
+flush removable grille/cartridge, retained battery capture and separate keyed
+black handle. The PCB-related interface review supports beginning critical
+routing. The initial release evidence is preserved in commit
+`6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a`; subsequent exterior refinements
+do not move the board, its mounting holes, USB or contacts.
+
+![Original printed-bell CAD exterior](../mechanical/studies/2026-09-13-printed-bell/views/beauty.png)
+
+[Profile](../mechanical/studies/2026-09-13-printed-bell/views/profile.png) |
+[Flush grille](../mechanical/studies/2026-09-13-printed-bell/views/grille.png) |
+[Display-only cutaway](../mechanical/studies/2026-09-13-printed-bell/views/cutaway.png)
+
+These are original CAD views, not photos or a prediction of silk-PLA finish.
+The cutaway removes material only in extra view objects; every source solid
+and the released full native remain intact.
+
+| Interface | Current authored dimension |
+|---|---|
+| Maximum body diameter | 70 mm, versus the prior 75.5 mm flange |
+| Body height / handle above crown | 55.8 / 80 mm |
+| Complete height | 135.8 mm, versus the prior complete 141.8 mm envelope |
+| Grille projection | 0 mm; face is flush with the mouth |
+| PCB / original M2 mounts | D43 x1.6; (+10,+15.7), (-10,-15.7), drill2.2 |
+| Handle hardware | M4x16 pan-head machine screw, large washer and captive metal M4 nut |
+| Cartridge attachment | Three recessed front M2x8 screws and internal captive nuts |
+| Retained internal joints | Six M2x6 screws and nuts |
+
+The selected M4x16 is a compact metric alternative to the suggested 8-32
+class, not an interchangeable thread. The keyed shoulder carries orientation
+and lateral location; the recessed washer/screw/nut load path bypasses the
+cell and PCB. The actual supplier-bound head/washer extremes retain 2.370 mm
+to the cell and 1.133 mm to the cover. M4x20 is too long for the current blind
+bore. None of this establishes printed strength or permitted torque.
+
+Parent visual review caught two omissions in the initial static-clearance
+result. The three shell nuts/pockets now sit inside the cosmetic surface
+with a witnessed minimum 1 mm exterior wall rather than exposed side holes.
+The USB bezel now has a real 1 mm front skin and upper lip, with a
+9.2 x3.1 mm front nose aperture instead of relying on a larger loading cut.
+The mouth-open shell channel remains necessary for straight withdrawal and
+is filled by the matching cartridge bezel; assembly seams remain visible.
+The unselected cable-nose screen is not actual mating-depth or overmold
+qualification.
+
+The floor and contact datum are retained: removing the nominal 1.08 mm
+under-cell insulation would not by itself lower the selected contact's
+9.78 mm cell-centre datum. Polarity/chemistry guidance belongs on visible
+PCB/compartment surfaces, not only beneath the installed cell. A plastic
+outer shell still does not prevent a raw-positive contact shorting the
+negative cell can or bypassing the low-side protector.
+
+### Viewing and inert print files
+
+Open `mechanical\studies\2026-09-13-printed-bell\printed-bell.FCStd`.
+The exercised portable view macro produces the four images above, binds
+their hashes to the actual model and leaves a separate ignored local view copy:
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\FreeCAD 1.1\bin\FreeCAD.exe" .\tools\view_printed_bell.FCMacro
+```
+
+Its FreeCAD 1.1.3 GUI run preserves the source model. The assembly can be
+rotated with the shell transparent; the reference photographs are not loaded
+or redistributed by this tool.
+
+The study root has six structural prints: `INERT-shell.stl`,
+`INERT-black-handle.stl`, `INERT-flush-carrier.stl`, `INERT-yoke.stl`,
+`INERT-cell-cradle.stl` and `INERT-cell-cover.stl`. The other three are
+`INERT-pcba-without-contacts.stl`, `INERT-full-cell.stl` and
+`INERT-speaker.stl`. Use the root, **not** the mixed-face `development`
+checkpoint. The PCBA dummy still omits the thin contacts only; full native
+and STEP retain them.
+
+Import millimetres at 100%, arrange separate parts and review supports.
+Shell mouth-down/handle-up and grille face-down protect the visible faces;
+internal crown/nut-pocket supports and the handle tunnel need actual slicer
+review. The [silk-PLA starting settings](printed-bell-material-and-handle.md)
+are sourced/proposed guidance, not an exercised printer job.
+
 Owning epics: E04/#4 electrical, E05/#5 mechanics, E07/#7 placement/routing,
 E10/#10 eventual qualification.

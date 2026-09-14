@@ -68,6 +68,24 @@ The builder performs:
 
 - One-solid validity for all six structural prints, complete placed-part
   material intersections and explicit service poses.
+- Closed cosmetic shell-joint stock:1mm positive offsets of every actual
+  nut pocket, inward slot and screw bore contained in the unchanged outer
+  solid; matching expanded-cavity containment in the affected band;
+  actual3.7mm bearing-floor/2.6mm roof witnesses; zero missing cosmetic
+  side-surface area except USB. Static overlap checks alone do not prove this.
+- Front shell-screw and driver paths, inward nut loading and complete
+  cartridge withdrawal with the shell nuts still installed. The revised
+  three-joint pattern is R26.5 at90/210/330 degrees, not the PCB mount pattern.
+- Actual USB skin/frame containment and front-face opening equality:
+  the14.4x7x1mm locally raised frame at y-29.1..-28.1 retains only the
+  intended9.2x3.1mm aperture. The source PCB tongue's full front projection
+  is covered by real material. Plane separation proves open-top PCBA
+  loading relative to the new skin for every Z position; the full unselected
+  nose's continuous straight approach sweep clears shell and carrier.
+- B-side label sight columns against the retained cradle, installed cell,
+  contacts and remaining hardware with cover/screws removed. These are
+  proposed rectangular text reservations, not actual routed-PCB glyphs;
+  the builder does not read or edit the active routing source.
 - Actual 1.08 mm under-cell section and constructive containment of the
   M4 washer bearing annulus in the real shell.
 - Separate supplier-table M4x16 tolerance BReps: maximum head H3.25 and

@@ -1,8 +1,8 @@
 {
   "input_hashes": {
     "design_input": "e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e",
-    "builder": "e4c5fb50097d76053fd5180b7f46b93ef2742f5387cda6b507c65a26e852ca13",
-    "checker": "f00591d30a76e74cf5340fad5221de0daf35b974929412e307e2ed7d4221b3e4",
+    "builder": "7a30f70dce8409157a4df4b7e0b67db135990a4fb77788275e9fa9e98c063a95",
+    "checker": "fa008efef8f9bc429f021a7e7e0d2e6cbe7a184ed7d3209b3b2f617d44900071",
     "geometry_helper": "c9ef5a33a86cd8f3635f6aa6171c2d84b6d7662f68bcb578d9cd9a43bdfb3aab",
     "export_helper": "22e806153f313685a9a96d12b90070bb1985259b50261011ac6ce0d298a4f04c",
     "frozen_t8_native": "96d1dfb0b2a59c8c19e471dd7e86c22400463677788a20e3fbff4d23152fe3e6",
@@ -49,12 +49,12 @@
   },
   "artifacts": {
     "printed-bell-complete.step": {
-      "sha256": "1434aa2ff83f0f76f77fa6b4535eb6d454a1a40dfb12809da4bb9e031a54f04f",
+      "sha256": "f20c5d9b6f100619d830f13652fc33240e6db4402ab38bed1c918a3b7b9ce9d4",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
         "solid_count": 117,
-        "volume_mm3": 86773.40050432662,
+        "volume_mm3": 87566.25016889292,
         "bounds": {
           "min_mm": [
             -35.0,
@@ -74,22 +74,22 @@
         }
       },
       "maximum_bound_error_mm": 0.0,
-      "volume_delta_mm3": -0.0012116101424908265,
+      "volume_delta_mm3": -0.002336047138669528,
       "maximum_per_solid_symmetric_difference_mm3": 0.0,
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "removable-cartridge.step": {
-      "sha256": "07e0c8b2e4250710806112314160f6b31513b839aff593c822dee6db29e24bbc",
+      "sha256": "00475a0bb6928295fba997577c9827a94f47a59ca9cf7f5a34acbc90b6c95ea6",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
         "solid_count": 106,
-        "volume_mm3": 44462.25866488783,
+        "volume_mm3": 44523.98712321906,
         "bounds": {
           "min_mm": [
             -32.7,
             -35.0,
-            -5.317737958520318e-16
+            -1.7487863404835966e-16
           ],
           "max_mm": [
             32.7,
@@ -104,12 +104,12 @@
         }
       },
       "maximum_bound_error_mm": 7.105427357601002e-15,
-      "volume_delta_mm3": -0.0018168414462707005,
+      "volume_delta_mm3": -0.0033529701468069106,
       "maximum_per_solid_symmetric_difference_mm3": 0.0,
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "full-populated-pcba.step": {
-      "sha256": "2871b5845684ecf0e3d59980300f4ea9690d3e696580d6d1220cebe30da6c16b",
+      "sha256": "0734035681ca2c37f6b95a6d46e246565f501b80b468fe7de750f201109d7a4c",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -139,7 +139,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "INERT-pcba-without-contacts.step": {
-      "sha256": "abb6251d77137c1cb21bb3f537ce659e57f86cea55b7f91a3854cd20d56ce6ac",
+      "sha256": "429fc24f60f74bf9c9ae85af35195e401fa3948dbfba39744345617c259edf73",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -169,12 +169,12 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "shell.step": {
-      "sha256": "d65f160394e2c3d9da6ff65b75ec9297f44f3ccad096bd00e6d37c5d981e6870",
+      "sha256": "e14edb1614fc627e47bb1d41ec3eab83bdfca6593a1c08abf4293e8bbdeb8645",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
         "solid_count": 1,
-        "volume_mm3": 21682.264991986285,
+        "volume_mm3": 22413.385220284894,
         "bounds": {
           "min_mm": [
             -35.0,
@@ -194,12 +194,12 @@
         }
       },
       "maximum_bound_error_mm": 1.5631940186722204e-13,
-      "volume_delta_mm3": 0.0010156257958442438,
+      "volume_delta_mm3": 0.001256280011148192,
       "maximum_per_solid_symmetric_difference_mm3": 0.0,
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "black-handle.step": {
-      "sha256": "76b9114b85c629135c67309b62b42b8d694abee439fd4cfdda7a66a1de7fed59",
+      "sha256": "951e54d1149e3e1b9652be51e8fe16addc3977265bdc6da1b04a32b1af5c3e54",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -229,17 +229,17 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "flush-carrier.step": {
-      "sha256": "f1bb4ffed9189ac519ce1a4302659b49ee4fa29efc2e917853f9f8c29511ac76",
+      "sha256": "a3383ac6d7da443558e90d1d4d5bc047a385ccfa5262a5807a96102c4980b6fe",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
         "solid_count": 1,
-        "volume_mm3": 9593.971554980162,
+        "volume_mm3": 9655.705229766647,
         "bounds": {
           "min_mm": [
             -32.7,
             -35.0,
-            -8.754335913988226e-16
+            -4.908152642368063e-16
           ],
           "max_mm": [
             32.7,
@@ -253,13 +253,13 @@
           ]
         }
       },
-      "maximum_bound_error_mm": 3.552713678800501e-15,
-      "volume_delta_mm3": 0.0021616686190100154,
+      "maximum_bound_error_mm": 7.105427357601002e-15,
+      "volume_delta_mm3": -0.0003596002425183542,
       "maximum_per_solid_symmetric_difference_mm3": 0.0,
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "yoke.step": {
-      "sha256": "596f15021487e4e8add62a616ae0db03041a60463e091a5f4a694a469fcb90dd",
+      "sha256": "32c0e915748447de89dedff7ebe6e912f369871d2b4fa10b3dcf7ccbb3059f04",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -289,7 +289,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "cell-cradle.step": {
-      "sha256": "96f8f40690cf3eff37170faa36ded937034f9127083994969c1b0368276a12ef",
+      "sha256": "d42abe4f52bf6182e604bb685434b5ed1aebbf6a2bc0d5196f1bd8d7e2a42440",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -319,7 +319,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "cell-cover.step": {
-      "sha256": "ea0a7aa2f83289b0ae8659dac4e7ca0300df58b237859c832ab2c1896981394d",
+      "sha256": "e23b59435bc13f30d01d97cfe070b49f5e79a0721a2abc90f40197b10a813596",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -349,7 +349,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "speaker.step": {
-      "sha256": "99b886bdec5f55ecaf51480a99852f79e3593196be21db4e9c8ccfddd9084272",
+      "sha256": "9f82457f3af7efeb8f8bfc32f196ecfe9aa359305a73445852ce8b4d2dcdc92e",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -379,7 +379,7 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "inert-cell.step": {
-      "sha256": "9a91e5b9b7d6927f87a6005d3a574bd2a853f5e59fa3b41f6fa5f771d9fb7fe0",
+      "sha256": "79ede4d5da5abf284f0c5948a87b163f26add1ac68bcd2615648ef92871c87f3",
       "units": "mm (STEP SI_UNIT)",
       "roundtrip": {
         "valid": true,
@@ -409,18 +409,18 @@
       "brep_roundtrip_verified_not_only_bounds": true
     },
     "printed-bell.FCStd": {
-      "sha256": "5c11f0237bf23eb55d5ebaa726b0282038c2c1bce42be34d4eb33dd7a8d01b38",
+      "sha256": "f0dae8f6e5c62fa41f64d16ebe4bbf2f22cd5f65a266f279c2537c6fae2416fc",
       "brep_roundtrip_verified": true,
       "maximum_object_symmetric_difference_mm3": 0
     },
     "INERT-shell.stl": {
-      "sha256": "82c9aef3730523552cfcfe39280480a7f38c7a93880cdd91cdd9d9e78f4a7410",
+      "sha256": "f382e0cffc051279061c3cf55202c567fb47ccb765c72e6c2e4419c6f2f4e2f8",
       "units": "unitless; import mm at 100%",
       "connected_components": 1,
       "closed_manifold": true,
       "self_intersections": false,
       "reconstructed_brep_solid_count": 1,
-      "relative_volume_error": 0.0005696760725243539,
+      "relative_volume_error": 0.0004065642048749557,
       "status": "INERT ONLY"
     },
     "INERT-black-handle.stl": {
@@ -434,13 +434,13 @@
       "status": "INERT ONLY"
     },
     "INERT-flush-carrier.stl": {
-      "sha256": "46016ecf35a5c3bbfeabc8f24989f87a64be519df9f4e986d6c0f88eae4e274e",
+      "sha256": "0a9972b7be315c6281efc24ca3ee1ff59b0479310ac568b5e2855ea7015f798c",
       "units": "unitless; import mm at 100%",
       "connected_components": 1,
       "closed_manifold": true,
       "self_intersections": false,
       "reconstructed_brep_solid_count": 1,
-      "relative_volume_error": 9.656321836809599e-05,
+      "relative_volume_error": 0.0005201017832545455,
       "status": "INERT ONLY"
     },
     "INERT-yoke.stl": {
@@ -504,7 +504,7 @@
       "status": "INERT ONLY"
     },
     "fit-report.json": {
-      "sha256": "0ad6fa4716de3fb19fdab357f1c4215466c97597879e278a57c4f39ed75b9965"
+      "sha256": "f2a8fb6003cdcf2fe7422de25fdc6e68877f106f5639810440d8bc93182541cf"
     },
     "original-profile.svg": {
       "sha256": "af7f7dbd89dc911ecd811c06e300d049e5f5fa2b326698527099ed8683146b65"

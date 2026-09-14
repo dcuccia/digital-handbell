@@ -87,6 +87,16 @@ approval of the increased front projection. The original fixed-stack
 interference evidence and the owner's 0.5/1.0 mm spacing comparison are retained
 separately. E05/E07 remain open for physical fit and placement approval.
 
+**2026-09-13 printed-bell direction:** the owner reports successful inert fit
+and authorizes an original one-piece printed shell, flush removable cartridge,
+black handle and all-front electronic SMT study. The
+[coordinated revision](printed-bell-revision.md) achieves D43 with 81F + two
+B contacts, and a D70/H55.8 shell with an 80 mm handle. Existing PCB mounts,
+USB and contact datums remain fixed. The owner authorizes critical routing
+after coordinated engineering interface review, without requiring another
+viewing turn first. This does not waive E04/E07 electrical or E10 physical/
+thermal/retention gates, and does not authorize fabrication.
+
 <!-- TRACKING:START -->
 **Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
 All twelve epics were initialized as Todo with a Phase field matching their
