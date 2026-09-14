@@ -1,0 +1,232 @@
+{
+  "generated_utc": "2026-09-14T04:29:16.318964+00:00",
+  "kicad_version": "10.0.6",
+  "cli_sha256": "393525236969434e24bc710334efe244fb285ef6596a1aea8e74353ef4db5477",
+  "inputs": {
+    "hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_pcb": "075c7b7cb0a98e302af29f5985bbf020111df5b1be385e5ebfa61be236b04250",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_sch": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\placement-manifest.json": "cc935ef468e8fb8d0fda5d55010e8883eab1f8b578078f2dcc4f77fe456fe69f",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\fp-lib-table": "46b1831b0fa4c724b83411a5d7498f59494c80201cee6fdbb13d20cf504a4d42",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\sym-lib-table": "f4b9862f164896e713c31fc59e7ba2b47954869801ab6f11762a13159f6f4638",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\mechanical-release.json": "1ec81f6dfede4c040a78f164c91c21a3d77a3ec02ce7b7284b89bad5ddb217e5",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\released-mechanical-evidence.json": "3a149eef18bfa71ab8264c599e6eb7b050ba9ca5b965a0605c9bb09e9fcdd8dc",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\routing-data.json": "ba91b88c5780dde7e8f20e9ef9df967f66d3cf3ff06cf0679c56c56e5dfecff2",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\routing-build.json": "f08e5df722eb5b090ff36fabe6592fa933d5044daf9c75c06cac1ec506967015",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\source-evidence.json": "6852a3a6ec685db1992697d0095449eb86b4fb911712eb4d31518728fcc92524",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\screen_service_labels.py": "3b2b57073f56b2b708180a5c106723835eba9614861e54106d6050616be744a4",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\reports\\service-label-review.json": "6194ac04d00b5dfd402c0044329ac3354a74f9572b8d2e366ffc6e798558805e",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0603-NO.kicad_mod": "c14953f81c04418ff86a4479830b5a6ad298e329ebe30604b5fc5a8c254c574a",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0805-NO.kicad_mod": "a563b5eca037b284cb99458f46a5fae7f2595c3b8b690cb55dbeffd8f7e9b615",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\_0402NO.kicad_mod": "ab6815fc1f67f26ca97701d45024b9e6552d3347ae1fcd46c6e131c4acc8621c",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\B1,27.kicad_mod": "249d02d7ead81cef19169ca6534e0ba989cf1116ec85e66a7b24d8e65a4e556f",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CHIPLED_0603_NOOUTLINE.kicad_mod": "e2c56ba7827556e51659afeec3d5af0216f10397104097540c5827072c39ee6f",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CRYSTAL_2.5X2.kicad_mod": "e111e8f7406bdf20253c0db856db2cf7e0813c368268f231f5ad42e4b3d28ff3",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN16_3MM.kicad_mod": "c51a93a5820a8b814bfeb85398e483a57ae51a917c2e199581f17200639c8aa1",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN56_7MM_REDUCEDEPAD.kicad_mod": "ce3e3010817a404fe8608f342bf7d8cbf9c264b24529d443e2ffc856455863da",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323_MINI.kicad_mod": "5d2445ed080542ae06693db292d3107786158f8e8db1f397d321697fe649aa7e",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323F.kicad_mod": "414e7e48868c39d38ebdd994447d6d494dc754eaebe83138efb7b36da53c8715",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-5.kicad_mod": "ccad3823870006c7c8e1850db78746cfe9b95ceb7be29fb78f73cebf96e0a6c5",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-WIDE.kicad_mod": "0ac23f1cbd41e51aeb883399c687329e1348deaaefde9af63bb169826c8c0c73",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\TESTPOINT_ROUND_1.5MM_NO.kicad_mod": "82a990e62680e44faad31f1ea5a149abcb7ac75979a7ed6d39e4bdc408ac05d6",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\USB_C_CUSB31-CFM2AX-01-X.kicad_mod": "6724f8cc8029149b74302eda7e77dbe6b59657c5164539d462a5bf5ec4337efa",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit TPS61023-import-fps.pretty\\INDUCTOR_5X5MM_TDK_VLC5045.kicad_mod": "e44c59b8c3d525b1495d7b304edf832a89f861dd9260adba8672f3d86e98610b",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit TPS61023-import-fps.pretty\\SOT563.kicad_mod": "e542ee16f8bde94e3a1b9e3dfd74674c6de8a688f7187b884dcfd52fe632a1a8",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Adafruit_LSM6DSOX-import-fps.pretty\\LGA-14L.kicad_mod": "8869520c410b861d8e4dfc4665f632c23b1a405cf36b2e986dd7f7bdea886dd3",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Connector_JST.pretty\\JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal.kicad_mod": "eae5fb2dc2cfa27b8fb40061a31f0ad255fc9b8055104f90d1b295b12fd82cc4",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Connector_Molex.pretty\\Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal.kicad_mod": "af5e990006f7b48081c1775f431ed75cc4375dfb1cf5cbcda95e391331e7a3c5",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Handbell.pretty\\DFN2015-3_DrainPad.kicad_mod": "8a61dfef2dc6903db5f7aaf7dbe8a893125222160d1f90abff42329b286849c9",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Jumper.pretty\\SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm.kicad_mod": "9425ee76a0ba3ca7ab18957545f5c484da27ec3dae3344d3a0a58b67f16ba6b4",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Jumper.pretty\\SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm.kicad_mod": "3da90be1bd92445ba8434fcff2806538d9cb621bc52054646e10beb8c53c765d",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\MountingHole.pretty\\MountingHole_2.2mm_M2_Pad.kicad_mod": "bab9811a2bb7e6ce6f6fe69aec3b592f6ee0d216964bcaa0a828b985e0937ca6",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\T8.pretty\\BQ29700_DSE6.kicad_mod": "d872bb3d326e1931a629a89bee77d4693d6c041e00c6e954eedeeec78e46ce58",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\T8.pretty\\CSD83325L_YJE6.kicad_mod": "8a642c2383551e10b64daeb4bfa6393093b0c4f50acea6e544bcad3d425c1e2b",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\T8.pretty\\ERJ6BW_0805.kicad_mod": "da4628fe0e6a278e9b6cf1624aea14db315defc429e4571088f2dbb7b2ecc741",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\T8.pretty\\Keystone_254_RevC.kicad_mod": "64f9e325d8022977226a8dd8c098f47c0102ccbae7ab2087aa26281b779b1d57",
+    "hardware\\handbell\\iterations\\printed-bell-routing\\libraries\\T8.pretty\\Winbond_USON8_UX_2x3.kicad_mod": "eb5000fe59d3c9ad0d3d8dd81d7c956929f6b38995079a9061d471ad926115c7",
+    "tools\\route_printed_bell.py": "3677e7d34047c027ec7b87921374393d08367ecc9de9adc6c906a8d87c1e3722",
+    "tools\\check_printed_bell_routing.py": "6b5669723747c8c41f9c8a100221d76bf96b2b31e3a99ba7bda89cf7ee5e1ab0",
+    "tools\\kicad_sexpr.py": "be6d4647d1dea5186e4d1388ae640b43f8004fdfc94f50ca72b46e90bf0613e9",
+    "hardware\\handbell\\iterations\\printed-bell-front\\handbell.kicad_pcb": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+    "hardware\\handbell\\iterations\\printed-bell-front\\handbell.kicad_sch": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "hardware\\handbell\\iterations\\printed-bell-front\\handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "hardware\\handbell\\iterations\\printed-bell-front\\placement-manifest.json": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+    "hardware\\handbell\\iterations\\printed-bell-front\\battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "hardware\\handbell\\iterations\\printed-bell-front\\reports\\drc.json": "8b2c3a7a033652b3147379a30adc654ce4070870d60ebecc4f5037d21c4bae81",
+    "hardware\\handbell\\iterations\\printed-bell-front\\routing\\prepare.py": "b5b417a31f79fce211b4988d30a05de7f6934e8f7cd6ce0ee558d8b1becf9d72",
+    "hardware\\handbell\\iterations\\printed-bell-front\\routing\\routing-preparation.json": "e18df577f3c05a1411c8d547378c3d8ca440551980fec5238bd7a3076abb8f09",
+    "git:6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a:hardware/handbell/iterations/printed-bell-front/routing/mechanical-release.json": "1ec81f6dfede4c040a78f164c91c21a3d77a3ec02ce7b7284b89bad5ddb217e5",
+    "git:6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a:mechanical/studies/2026-09-13-printed-bell/printed-bell.FCStd": "5c11f0237bf23eb55d5ebaa726b0282038c2c1bce42be34d4eb33dd7a8d01b38",
+    "git:6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a:mechanical/studies/2026-09-13-printed-bell/artifact-manifest.json": "bfd44881fa7df19e3f19803b3c7b0d9ad385991e7764d5ae580eafded79f7899",
+    "git:6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a:mechanical/studies/2026-09-13-printed-bell/fit-report.json": "0ad6fa4716de3fb19fdab357f1c4215466c97597879e278a57c4f39ed75b9965",
+    "git:6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a:mechanical/studies/2026-09-13-printed-bell/completion.json": "4e07a95e80c29f0a6dd8f70b76fa65963119ac271428ae44fc96e22902c23187",
+    "git:6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a:mechanical/studies/2026-09-13-printed-bell/review-status.json": "7ea92b23cc5515289beb9654df2cef3432501f110ccf981ac6d40726bcafe5a3",
+    "git:4bbdcbb0ee1724b450b66f3a03abcaa8c48333d1:mechanical/studies/2026-09-13-printed-bell/printed-bell.FCStd": "f0dae8f6e5c62fa41f64d16ebe4bbf2f22cd5f65a266f279c2537c6fae2416fc"
+  },
+  "reports": {
+    "erc.json": "75ece6363ab3d472b1fab726f8c039d9d9bc1712942181b9c8b6cdd2e5f0e8ee",
+    "drc.json": "73fc5bb6c4d31e73a453a13a6647b4dd588c341fc9164c462a8632a54e9b1c78",
+    "handbell-netlist.xml": "fcc43f97c99c700a1bd1aa3bbb777bafde47393699040037ddf6f1df19ca01ff",
+    "handbell-schematic.pdf": "96b3e6f253e3360ee70d83507159ecfa00004200177be555a4798a93dc8af38f",
+    "front-native.pdf": "c5a471af0054cf2f02e8da25ca50d042026682aea09b3cb612b44ac039f6d366",
+    "rear-native.pdf": "69919466e7b2c6b28274ddca5368586cbfcc75bf1cf4a21f0d514724e487fc76",
+    "front-native.svg": "cf16bdf49412358835384d3660791c014eeaeb2e0441fb921d8ed04ba25c85e8",
+    "rear-native.svg": "a7c3cddd4e58ba6a8432b343ad019f16c4218fc6b87f55185c5ebc373bf9461a",
+    "schematic-svg/handbell.svg": "fbeba0617ac7b769e7b72beb96a86407b991fda44bcca59cef4f9ba836a5de4c"
+  },
+  "commands": [
+    {
+      "command": [
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\erc.json",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to C:/Projects/dcuccia/digital-handbell/hardware/handbell/iterations/printed-bell-routing/reports/.native-run/erc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\handbell-netlist.xml",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--schematic-parity",
+        "--severity-all",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\drc.json",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Found 237 violations\nFound 148 unconnected items\nFound 46 schematic parity issues\nSaved DRC Report to C:/Projects/dcuccia/digital-handbell/hardware/handbell/iterations/printed-bell-routing/reports/.native-run/drc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sch",
+        "export",
+        "pdf",
+        "--exclude-pdf-metadata",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\handbell-schematic.pdf",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\handbell-schematic.pdf'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sch",
+        "export",
+        "svg",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\schematic-svg",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\schematic-svg\\handbell.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pcb",
+        "export",
+        "pdf",
+        "--mode-single",
+        "--layers",
+        "F.Cu,F.Fab,F.SilkS,Edge.Cuts",
+        "--scale",
+        "3",
+        "--exclude-value",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\front-native.pdf",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\front-native.pdf'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pcb",
+        "export",
+        "svg",
+        "--mode-single",
+        "--layers",
+        "F.Cu,F.Fab,F.SilkS,Edge.Cuts",
+        "--fit-page-to-board",
+        "--exclude-drawing-sheet",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\front-native.svg",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\front-native.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pcb",
+        "export",
+        "pdf",
+        "--mode-single",
+        "--layers",
+        "B.Cu,B.Fab,B.SilkS,Edge.Cuts",
+        "--scale",
+        "3",
+        "--exclude-value",
+        "--mirror",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\rear-native.pdf",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\rear-native.pdf'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pcb",
+        "export",
+        "svg",
+        "--mode-single",
+        "--layers",
+        "B.Cu,B.Fab,B.SilkS,Edge.Cuts",
+        "--fit-page-to-board",
+        "--exclude-drawing-sheet",
+        "--mirror",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\rear-native.svg",
+        "C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-routing\\reports\\.native-run\\rear-native.svg'.\nDone.\n",
+      "stderr": ""
+    }
+  ]
+}

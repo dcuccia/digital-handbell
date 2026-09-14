@@ -1,5 +1,15 @@
 # FreeCAD mechanical feasibility
 
+**Current September 13 direction:** use the
+[original printed-bell handoff](printed-bell-revision.md#printed-shell-cartridge-and-handle)
+and [dedicated native/print package](../mechanical/studies/2026-09-13-printed-bell/README.md)
+for new work. It has a D70/H55.8 one-piece shell, flush removable cartridge,
+80 mm keyed black handle and the exact D43 all-front electronics interface.
+The guide includes original exterior/profile/grille/cutaway views and an
+exercised portable FreeCAD view macro. Earlier studies below remain preserved;
+their metal-shell profiles, exterior skirt and mixed-face poses are not the
+new printed-bell geometry.
+
 **September 11 update:** [new shell stations and owner clarifications](measurements/2026-09-11-shell-speaker-inputs.json)
 supersede the old assumed taper for new work. The first concave section ends
 at z14.90; the owner requests a uniform 1.15 mm working wall and now measures

@@ -1,5 +1,11 @@
 # Measured-shell T8 integration and pre-routing review
 
+**Preserved September 11 handoff.** The owner subsequently reported successful
+inert fit and approved a separate [fully printed bell/front-electronics
+revision](printed-bell-revision.md). That is the current direction for new
+mechanical work and conditionally authorized routing; the measurement records
+and artifacts described here are not silently overwritten.
+
 **2026-09-11: owner-requested next revision.** Preserve the September 7 print
 snapshot and September 9 wing/cartridge draft. This revision targets a complete
 placed assembly for review in FreeCAD **before starting routing**, not a

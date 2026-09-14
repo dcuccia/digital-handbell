@@ -1,0 +1,413 @@
+{
+  "scope": "Nominal CAD/glyph service-view screen, not readability, chemistry, reversal or safety qualification",
+  "view": "Cartridge outside shell; cover and its screws removed; cell, cradle, contacts and retained hardware installed; look along -Z",
+  "pcb_sha256": "075c7b7cb0a98e302af29f5985bbf020111df5b1be385e5ebfa61be236b04250",
+  "tool_sha256": "3b2b57073f56b2b708180a5c106723835eba9614861e54106d6050616be744a4",
+  "mechanical_release_commit": "6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a",
+  "mechanical_visibility_commit": "4bbdcbb0ee1724b450b66f3a03abcaa8c48333d1",
+  "mechanical_visibility_git_path": "mechanical/studies/2026-09-13-printed-bell/printed-bell.FCStd",
+  "mechanical_native_sha256": "f0dae8f6e5c62fa41f64d16ebe4bbf2f22cd5f65a266f279c2537c6fae2416fc",
+  "embedded_stage1_inputs_sha256": {
+    "placement": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+    "pcb": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+    "schematic": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "freecad_cli_sha256": "b5551d26050ed64981c5767729bb35900fd4975fa7fd31714c17dd714b6fd44c",
+  "kicad_version": "10.0.6",
+  "glyph_envelope_margin_mm": 0.2,
+  "labels": [
+    {
+      "text": "+ POS",
+      "glyph_bounds_xy_mm": [
+        13.546428000000006,
+        10.433556999999993,
+        17.810714000000004,
+        11.483557000000005
+      ],
+      "screen_bounds_xy_mm": [
+        13.346428000000007,
+        10.233556999999994,
+        18.010714000000004,
+        11.683557000000004
+      ],
+      "mirrored_B": true,
+      "B_copper_clearance_screen_mm": 0.25,
+      "B_copper_conflicts": [],
+      "mount_keepout_margins_mm": [
+        2.0278480019442995,
+        31.694198357770492
+      ],
+      "mechanical_text_reservation": {
+        "center_xy_mm": [
+          15.7,
+          11
+        ],
+        "maximum_width_height_mm": [
+          4.4,
+          1.4
+        ],
+        "actual_glyph_width_height_mm": [
+          4.2642859999999985,
+          1.0500000000000114
+        ],
+        "glyph_to_reservation_edge_margins_mm": [
+          0.04642800000000591,
+          0.1335569999999926,
+          0.0892859999999942,
+          0.2164429999999946
+        ]
+      }
+    },
+    {
+      "text": "- NEG",
+      "glyph_bounds_xy_mm": [
+        -17.832144,
+        10.433556999999993,
+        -13.610714999999999,
+        11.483557000000005
+      ],
+      "screen_bounds_xy_mm": [
+        -18.032144,
+        10.233556999999994,
+        -13.410715,
+        11.683557000000004
+      ],
+      "mirrored_B": true,
+      "B_copper_clearance_screen_mm": 0.25,
+      "B_copper_conflicts": [],
+      "mount_keepout_margins_mm": [
+        20.5527554440211,
+        22.95687969700273
+      ],
+      "mechanical_text_reservation": {
+        "center_xy_mm": [
+          -15.7,
+          11
+        ],
+        "maximum_width_height_mm": [
+          4.4,
+          1.4
+        ],
+        "actual_glyph_width_height_mm": [
+          4.2214290000000005,
+          1.0500000000000114
+        ],
+        "glyph_to_reservation_edge_margins_mm": [
+          0.06785599999999903,
+          0.1335569999999926,
+          0.11071499999999901,
+          0.2164429999999946
+        ]
+      }
+    },
+    {
+      "text": "1S Li-ion",
+      "glyph_bounds_xy_mm": [
+        -3.575000000000003,
+        -16.220180999999997,
+        3.622618000000003,
+        -15.070181000000005
+      ],
+      "screen_bounds_xy_mm": [
+        -3.775000000000003,
+        -16.420180999999996,
+        3.822618000000003,
+        -14.870181000000006
+      ],
+      "mirrored_B": true,
+      "B_copper_clearance_screen_mm": 0.25,
+      "B_copper_conflicts": [],
+      "mount_keepout_margins_mm": [
+        27.988074880420005,
+        3.024999999999997
+      ],
+      "mechanical_text_reservation": null
+    },
+    {
+      "text": "4.2V ONLY",
+      "glyph_bounds_xy_mm": [
+        -3.860714999999999,
+        -14.6678,
+        3.765474999999995,
+        -13.470180999999997
+      ],
+      "screen_bounds_xy_mm": [
+        -4.060714999999999,
+        -14.867799999999999,
+        3.965474999999995,
+        -13.270180999999997
+      ],
+      "mirrored_B": true,
+      "B_copper_clearance_screen_mm": 0.25,
+      "B_copper_conflicts": [],
+      "mount_keepout_margins_mm": [
+        26.39200701453664,
+        2.7973046571960145
+      ],
+      "mechanical_text_reservation": null
+    },
+    {
+      "text": "< T8 BUTTON END",
+      "glyph_bounds_xy_mm": [
+        -5.4654780000000045,
+        9.987295000000003,
+        5.427379999999999,
+        10.937295000000006
+      ],
+      "screen_bounds_xy_mm": [
+        -5.665478000000005,
+        9.787295000000004,
+        5.62738,
+        11.137295000000005
+      ],
+      "mirrored_B": true,
+      "B_copper_clearance_screen_mm": 0.25,
+      "B_copper_conflicts": [],
+      "mount_keepout_margins_mm": [
+        3.119658422844145,
+        22.65324520027436
+      ],
+      "mechanical_text_reservation": {
+        "center_xy_mm": [
+          0,
+          10.5
+        ],
+        "maximum_width_height_mm": [
+          12,
+          1.4
+        ],
+        "actual_glyph_width_height_mm": [
+          10.892858000000004,
+          0.9500000000000028
+        ],
+        "glyph_to_reservation_edge_margins_mm": [
+          0.5345219999999955,
+          0.18729500000000243,
+          0.5726200000000006,
+          0.2627049999999933
+        ]
+      }
+    },
+    {
+      "text": "CR123A",
+      "glyph_bounds_xy_mm": [
+        -2.8369050000000016,
+        -11.120181000000002,
+        2.741665999999995,
+        -9.970180999999997
+      ],
+      "screen_bounds_xy_mm": [
+        -3.0369050000000017,
+        -11.320181000000002,
+        2.9416659999999952,
+        -9.770180999999997
+      ],
+      "mirrored_B": true,
+      "B_copper_clearance_screen_mm": 0.25,
+      "B_copper_conflicts": [],
+      "mount_keepout_margins_mm": [
+        23.230100246278237,
+        5.026026164059165
+      ],
+      "mechanical_text_reservation": null
+    },
+    {
+      "text": "NO PRIMARY",
+      "glyph_bounds_xy_mm": [
+        -4.575000000000003,
+        -12.720180999999997,
+        4.432141999999999,
+        -11.570181000000005
+      ],
+      "screen_bounds_xy_mm": [
+        -4.775000000000003,
+        -12.920180999999996,
+        4.632141999999999,
+        -11.370181000000006
+      ],
+      "mirrored_B": true,
+      "B_copper_clearance_screen_mm": 0.25,
+      "B_copper_conflicts": [],
+      "mount_keepout_margins_mm": [
+        24.39725708980741,
+        2.718447319420946
+      ],
+      "mechanical_text_reservation": null
+    }
+  ],
+  "mechanical": {
+    "freecad_version": [
+      "1",
+      "1",
+      "3",
+      "20260725 (Git shallow)",
+      "Unknown",
+      "2026/07/25 04:52:02",
+      "grafted,grafted",
+      "145529fe741292ff0b3977a01195bf0247425794"
+    ],
+    "opencascade_version": "7.8.1",
+    "request_sha256": "54b1b0612af2c630493dcf34e7931f2e98f18607950c6d2cf7fbfa590e4a5b52",
+    "labels": [
+      {
+        "text": "+ POS",
+        "outside_actual_pcb_mm3": 0,
+        "sight_column_obstruction_mm3": {
+          "RetainedInsulatingCellCradle": 0,
+          "INERTUnqualifiedFullCellD16p4L34": 0,
+          "ContactMetal_BT1": 0,
+          "ContactMetal_BT2": 0,
+          "YokeM2x6_1": 0,
+          "YokeM2x6_2": 0,
+          "BodyCaptiveM2Nut_1": 0,
+          "BodyCaptiveM2Nut_2": 0,
+          "MH1M2x6": 0,
+          "MH2M2x6": 0,
+          "MH1CaptiveM2Nut": 0,
+          "MH2CaptiveM2Nut": 0,
+          "CoverCaptiveM2Nut_1": 0,
+          "CoverCaptiveM2Nut_3": 0
+        },
+        "clear": true
+      },
+      {
+        "text": "- NEG",
+        "outside_actual_pcb_mm3": 0,
+        "sight_column_obstruction_mm3": {
+          "RetainedInsulatingCellCradle": 0,
+          "INERTUnqualifiedFullCellD16p4L34": 0,
+          "ContactMetal_BT1": 0,
+          "ContactMetal_BT2": 0,
+          "YokeM2x6_1": 0,
+          "YokeM2x6_2": 0,
+          "BodyCaptiveM2Nut_1": 0,
+          "BodyCaptiveM2Nut_2": 0,
+          "MH1M2x6": 0,
+          "MH2M2x6": 0,
+          "MH1CaptiveM2Nut": 0,
+          "MH2CaptiveM2Nut": 0,
+          "CoverCaptiveM2Nut_1": 0,
+          "CoverCaptiveM2Nut_3": 0
+        },
+        "clear": true
+      },
+      {
+        "text": "1S Li-ion",
+        "outside_actual_pcb_mm3": 0,
+        "sight_column_obstruction_mm3": {
+          "RetainedInsulatingCellCradle": 0,
+          "INERTUnqualifiedFullCellD16p4L34": 0,
+          "ContactMetal_BT1": 0,
+          "ContactMetal_BT2": 0,
+          "YokeM2x6_1": 0,
+          "YokeM2x6_2": 0,
+          "BodyCaptiveM2Nut_1": 0,
+          "BodyCaptiveM2Nut_2": 0,
+          "MH1M2x6": 0,
+          "MH2M2x6": 0,
+          "MH1CaptiveM2Nut": 0,
+          "MH2CaptiveM2Nut": 0,
+          "CoverCaptiveM2Nut_1": 0,
+          "CoverCaptiveM2Nut_3": 0
+        },
+        "clear": true
+      },
+      {
+        "text": "4.2V ONLY",
+        "outside_actual_pcb_mm3": 0,
+        "sight_column_obstruction_mm3": {
+          "RetainedInsulatingCellCradle": 0,
+          "INERTUnqualifiedFullCellD16p4L34": 0,
+          "ContactMetal_BT1": 0,
+          "ContactMetal_BT2": 0,
+          "YokeM2x6_1": 0,
+          "YokeM2x6_2": 0,
+          "BodyCaptiveM2Nut_1": 0,
+          "BodyCaptiveM2Nut_2": 0,
+          "MH1M2x6": 0,
+          "MH2M2x6": 0,
+          "MH1CaptiveM2Nut": 0,
+          "MH2CaptiveM2Nut": 0,
+          "CoverCaptiveM2Nut_1": 0,
+          "CoverCaptiveM2Nut_3": 0
+        },
+        "clear": true
+      },
+      {
+        "text": "< T8 BUTTON END",
+        "outside_actual_pcb_mm3": 0,
+        "sight_column_obstruction_mm3": {
+          "RetainedInsulatingCellCradle": 0,
+          "INERTUnqualifiedFullCellD16p4L34": 0,
+          "ContactMetal_BT1": 0,
+          "ContactMetal_BT2": 0,
+          "YokeM2x6_1": 0,
+          "YokeM2x6_2": 0,
+          "BodyCaptiveM2Nut_1": 0,
+          "BodyCaptiveM2Nut_2": 0,
+          "MH1M2x6": 0,
+          "MH2M2x6": 0,
+          "MH1CaptiveM2Nut": 0,
+          "MH2CaptiveM2Nut": 0,
+          "CoverCaptiveM2Nut_1": 0,
+          "CoverCaptiveM2Nut_3": 0
+        },
+        "clear": true
+      },
+      {
+        "text": "CR123A",
+        "outside_actual_pcb_mm3": 0,
+        "sight_column_obstruction_mm3": {
+          "RetainedInsulatingCellCradle": 0,
+          "INERTUnqualifiedFullCellD16p4L34": 0,
+          "ContactMetal_BT1": 0,
+          "ContactMetal_BT2": 0,
+          "YokeM2x6_1": 0,
+          "YokeM2x6_2": 0,
+          "BodyCaptiveM2Nut_1": 0,
+          "BodyCaptiveM2Nut_2": 0,
+          "MH1M2x6": 0,
+          "MH2M2x6": 0,
+          "MH1CaptiveM2Nut": 0,
+          "MH2CaptiveM2Nut": 0,
+          "CoverCaptiveM2Nut_1": 0,
+          "CoverCaptiveM2Nut_3": 0
+        },
+        "clear": true
+      },
+      {
+        "text": "NO PRIMARY",
+        "outside_actual_pcb_mm3": 0,
+        "sight_column_obstruction_mm3": {
+          "RetainedInsulatingCellCradle": 0,
+          "INERTUnqualifiedFullCellD16p4L34": 0,
+          "ContactMetal_BT1": 0,
+          "ContactMetal_BT2": 0,
+          "YokeM2x6_1": 0,
+          "YokeM2x6_2": 0,
+          "BodyCaptiveM2Nut_1": 0,
+          "BodyCaptiveM2Nut_2": 0,
+          "MH1M2x6": 0,
+          "MH2M2x6": 0,
+          "MH1CaptiveM2Nut": 0,
+          "MH2CaptiveM2Nut": 0,
+          "CoverCaptiveM2Nut_1": 0,
+          "CoverCaptiveM2Nut_3": 0
+        },
+        "clear": true
+      }
+    ]
+  },
+  "required_compartment_label": [
+    "1S Li-ion 4.2V ONLY",
+    "NO PRIMARY CR123A"
+  ],
+  "gates": [
+    "Parent must repeat visibility review after rebinding this corrected model to actual routed candidate",
+    "Print legibility and actual service-state visibility require physical review",
+    "Use a visible compartment label if PCB guidance is obscured in any supported insertion workflow",
+    "Charger cannot identify primary-cell chemistry; polarity marks do not prevent wrong-cell charging",
+    "No live-cell, charging, reversal or safety approval"
+  ]
+}

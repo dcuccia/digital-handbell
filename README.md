@@ -14,7 +14,8 @@ and service pads. Feather/RGB/servo/STEMMA extras are removed.
 The [0.2 handoff](docs/electrical-reduction-and-placement.md) and
 [mechanical models](docs/mechanical-feasibility.md) distinguish actual CAD,
 screening assumptions and unresolved fit/power/manufacturing gates.
-No routed PCB or functioning firmware has been released.
+A separate partial-routing checkpoint is now available; no fabrication-ready
+PCB or functioning firmware has been released.
 
 **September 13 printed-bell revision:** the owner reports that the latest
 inert pieces fit and authorizes a single-piece printed bell, flush removable
@@ -33,6 +34,12 @@ flush grille and removable complete cartridge. Native FreeCAD/STEP and nine
 inert STL files are available separately from the earlier metal-bell studies.
 The coordinated PCB interfaces support the authorized critical-routing stage;
 this does not approve fabrication or live-cell operation.
+
+The [first routed candidate](hardware/handbell/iterations/printed-bell-routing/README.md)
+contains real tracks/vias and reduces unconnected items from 222 to 148.
+It remains incomplete and inoperable. An owner-requested high-current review
+is examining widths, necks, vias and supply/return loops before those routes
+are treated as a prototype power-layout baseline.
 
 **September 11 revision:** the owner confirms the newer print assembly fits,
 supplies [measured shell stations](docs/measurements/2026-09-11-shell-speaker-inputs.json),

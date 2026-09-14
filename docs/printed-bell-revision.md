@@ -175,5 +175,40 @@ internal crown/nut-pocket supports and the handle tunnel need actual slicer
 review. The [silk-PLA starting settings](printed-bell-material-and-handle.md)
 are sourced/proposed guidance, not an exercised printer job.
 
+## First routed checkpoint and high-current review
+
+The [separate partial-routing project](../hardware/handbell/iterations/printed-bell-routing/README.md)
+now has actual copper: **921 segments, 38 vias, no zones**, 59 connected
+requested endpoint pairs, 14 complete multi-pad nets and nine partial nets.
+Native unconnected items decreased from 222 to 148. The published stage-1
+placement is preserved, and all footprint poses, local pad geometry, original
+mounts, USB and contact interfaces remain unchanged.
+
+This does **not** make the board operable or fabrication-ready. Feedback,
+returns, power/control/contact connections and signal-route optimization
+remain unfinished. The candidate records real routed lengths rather than
+mistaking the shorter placement distances for completed traces.
+
+Rear-facing polarity and rechargeable-chemistry instructions are now actual
+silkscreen, not a diagram overlay. Their glyphs and service-view visibility
+were checked against the corrected capture with the cartridge outside the
+shell and cover removed. Physical legibility remains unqualified; the charger
+cannot identify a primary cell or prevent reversal merely because labels exist.
+
+The owner specifically requests extra care with high-current routes.
+A separate review covers actual load versus sense/gate branches, widths and
+neck lengths, vias, boost/amp hot loops, return continuity and voltage drop.
+The existing 35 um copper/current examples are explicit planning assumptions,
+not a selected manufacturing process or current rating. A DRC pass alone
+does not establish adequate current capacity, acceptable temperature rise
+or safe short-circuit behaviour. The initial routing checkpoint is being
+committed for review, not declared a finished power layout.
+
+After that review and any necessary corrections, the mechanical package must
+be rebound to the routed candidate's exact bytes and its views refreshed.
+The current mechanical geometry still binds the immutable stage-1 board;
+unchanged footprint positions are not permission to ignore a different
+native PCB hash.
+
 Owning epics: E04/#4 electrical, E05/#5 mechanics, E07/#7 placement/routing,
 E10/#10 eventual qualification.

@@ -1,0 +1,34 @@
+{
+  "source": "Explicit parent-pinned immutable initial routing release; no mutable mechanical-root or HEAD lookup",
+  "git_commit": "6e7ef9ef4dd1f6611695e73227630fdc5c8dae7a",
+  "objects": {
+    "release": {
+      "git_path": "hardware/handbell/iterations/printed-bell-front/routing/mechanical-release.json",
+      "sha256": "1ec81f6dfede4c040a78f164c91c21a3d77a3ec02ce7b7284b89bad5ddb217e5"
+    },
+    "native": {
+      "git_path": "mechanical/studies/2026-09-13-printed-bell/printed-bell.FCStd",
+      "sha256": "5c11f0237bf23eb55d5ebaa726b0282038c2c1bce42be34d4eb33dd7a8d01b38"
+    },
+    "artifact_manifest": {
+      "git_path": "mechanical/studies/2026-09-13-printed-bell/artifact-manifest.json",
+      "sha256": "bfd44881fa7df19e3f19803b3c7b0d9ad385991e7764d5ae580eafded79f7899"
+    },
+    "fit_report": {
+      "git_path": "mechanical/studies/2026-09-13-printed-bell/fit-report.json",
+      "sha256": "0ad6fa4716de3fb19fdab357f1c4215466c97597879e278a57c4f39ed75b9965"
+    },
+    "completion": {
+      "git_path": "mechanical/studies/2026-09-13-printed-bell/completion.json",
+      "sha256": "4e07a95e80c29f0a6dd8f70b76fa65963119ac271428ae44fc96e22902c23187"
+    },
+    "review_status": {
+      "git_path": "mechanical/studies/2026-09-13-printed-bell/review-status.json",
+      "sha256": "7ea92b23cc5515289beb9654df2cef3432501f110ccf981ac6d40726bcafe5a3"
+    }
+  },
+  "stage1_interfaces_verified_exact": true,
+  "mutable_mechanical_root_not_consumed": true,
+  "cosmetic_revision_scope": "Parent reports shell retaining joints/lugs only; PCB M2/USB/contacts/electronic poses remain frozen",
+  "mechanical_rebind_required": true
+}

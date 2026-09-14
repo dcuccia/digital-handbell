@@ -1,0 +1,10 @@
+# Preserve exact native/interface/report bytes across checkout.
+*.json -text
+*.xml -text
+*.csv -text
+*.svg -text
+*.md -text
+*.txt -text
+screen_service_labels.py -text
+fp-lib-table -text
+sym-lib-table -text

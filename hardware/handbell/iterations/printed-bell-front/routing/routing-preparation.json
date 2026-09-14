@@ -1,0 +1,2706 @@
+{
+  "status": "READ-ONLY PREPARATION; parent copper release absent; no candidate/native PCB emitted",
+  "published_stage1_commit": "23cb3fe26707f094ce3eaf365807c322bd2844ed",
+  "published_stage1_hashes": {
+    "placement-manifest.json": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+    "handbell.kicad_pcb": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+    "handbell.kicad_sch": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "source_bindings": {
+    ".gitattributes": "7fa7fa76765ab7f11b18a2b091edde908d3ff037869e92a919e3e6ef5fccd2a6",
+    "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "design-input-snapshot.json": "e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e",
+    "fp-lib-table": "46b1831b0fa4c724b83411a5d7498f59494c80201cee6fdbb13d20cf504a4d42",
+    "front-placement.svg": "455cf247fbb357d679eb686034f190278a9c83c0576652212b38242fe00ca61d",
+    "handbell.kicad_pcb": "17dc83ce5dce2af72a816bc6d5224a874ad6c7fac6eac0bc59d0ced8662adf53",
+    "handbell.kicad_prl": "0c1d11b8514c82dc0e96a312d66c6badd2ec5abecc3d60ae69ac2652558261a5",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "handbell.kicad_sch": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0603-NO.kicad_mod": "c14953f81c04418ff86a4479830b5a6ad298e329ebe30604b5fc5a8c254c574a",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0805-NO.kicad_mod": "a563b5eca037b284cb99458f46a5fae7f2595c3b8b690cb55dbeffd8f7e9b615",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\_0402NO.kicad_mod": "ab6815fc1f67f26ca97701d45024b9e6552d3347ae1fcd46c6e131c4acc8621c",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\B1,27.kicad_mod": "249d02d7ead81cef19169ca6534e0ba989cf1116ec85e66a7b24d8e65a4e556f",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CHIPLED_0603_NOOUTLINE.kicad_mod": "e2c56ba7827556e51659afeec3d5af0216f10397104097540c5827072c39ee6f",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CRYSTAL_2.5X2.kicad_mod": "e111e8f7406bdf20253c0db856db2cf7e0813c368268f231f5ad42e4b3d28ff3",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN16_3MM.kicad_mod": "c51a93a5820a8b814bfeb85398e483a57ae51a917c2e199581f17200639c8aa1",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN56_7MM_REDUCEDEPAD.kicad_mod": "ce3e3010817a404fe8608f342bf7d8cbf9c264b24529d443e2ffc856455863da",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323_MINI.kicad_mod": "5d2445ed080542ae06693db292d3107786158f8e8db1f397d321697fe649aa7e",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323F.kicad_mod": "414e7e48868c39d38ebdd994447d6d494dc754eaebe83138efb7b36da53c8715",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-5.kicad_mod": "ccad3823870006c7c8e1850db78746cfe9b95ceb7be29fb78f73cebf96e0a6c5",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-WIDE.kicad_mod": "0ac23f1cbd41e51aeb883399c687329e1348deaaefde9af63bb169826c8c0c73",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\TESTPOINT_ROUND_1.5MM_NO.kicad_mod": "82a990e62680e44faad31f1ea5a149abcb7ac75979a7ed6d39e4bdc408ac05d6",
+    "libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\USB_C_CUSB31-CFM2AX-01-X.kicad_mod": "6724f8cc8029149b74302eda7e77dbe6b59657c5164539d462a5bf5ec4337efa",
+    "libraries\\Adafruit TPS61023-import-fps.pretty\\INDUCTOR_5X5MM_TDK_VLC5045.kicad_mod": "e44c59b8c3d525b1495d7b304edf832a89f861dd9260adba8672f3d86e98610b",
+    "libraries\\Adafruit TPS61023-import-fps.pretty\\SOT563.kicad_mod": "e542ee16f8bde94e3a1b9e3dfd74674c6de8a688f7187b884dcfd52fe632a1a8",
+    "libraries\\Adafruit_LSM6DSOX-import-fps.pretty\\LGA-14L.kicad_mod": "8869520c410b861d8e4dfc4665f632c23b1a405cf36b2e986dd7f7bdea886dd3",
+    "libraries\\Connector_JST.pretty\\JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal.kicad_mod": "eae5fb2dc2cfa27b8fb40061a31f0ad255fc9b8055104f90d1b295b12fd82cc4",
+    "libraries\\Connector_Molex.pretty\\Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal.kicad_mod": "af5e990006f7b48081c1775f431ed75cc4375dfb1cf5cbcda95e391331e7a3c5",
+    "libraries\\Handbell.pretty\\DFN2015-3_DrainPad.kicad_mod": "8a61dfef2dc6903db5f7aaf7dbe8a893125222160d1f90abff42329b286849c9",
+    "libraries\\Jumper.pretty\\SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm.kicad_mod": "9425ee76a0ba3ca7ab18957545f5c484da27ec3dae3344d3a0a58b67f16ba6b4",
+    "libraries\\Jumper.pretty\\SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm.kicad_mod": "3da90be1bd92445ba8434fcff2806538d9cb621bc52054646e10beb8c53c765d",
+    "libraries\\MountingHole.pretty\\MountingHole_2.2mm_M2_Pad.kicad_mod": "bab9811a2bb7e6ce6f6fe69aec3b592f6ee0d216964bcaa0a828b985e0937ca6",
+    "libraries\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5",
+    "libraries\\T8.pretty\\BQ29700_DSE6.kicad_mod": "d872bb3d326e1931a629a89bee77d4693d6c041e00c6e954eedeeec78e46ce58",
+    "libraries\\T8.pretty\\CSD83325L_YJE6.kicad_mod": "8a642c2383551e10b64daeb4bfa6393093b0c4f50acea6e544bcad3d425c1e2b",
+    "libraries\\T8.pretty\\ERJ6BW_0805.kicad_mod": "da4628fe0e6a278e9b6cf1624aea14db315defc429e4571088f2dbb7b2ecc741",
+    "libraries\\T8.pretty\\Keystone_254_RevC.kicad_mod": "64f9e325d8022977226a8dd8c098f47c0102ccbae7ab2087aa26281b779b1d57",
+    "libraries\\T8.pretty\\Winbond_USON8_UX_2x3.kicad_mod": "eb5000fe59d3c9ad0d3d8dd81d7c956929f6b38995079a9061d471ad926115c7",
+    "LICENSE.txt": "075dad5e5fc96c27014fabc269f4f5732909cffd178a486f546d982b6cf86b74",
+    "notices\\adafruit-4438-README.md": "baeae983e8d6afd022d590fa3b07986c18d62cfbf57a65a75fa80cc6a9fd9f7b",
+    "notices\\adafruit-4654-README.md": "cf32e70ec72cfdcc2999113b5be41a313480211c0a1cf61e9df841a474ed7e0b",
+    "notices\\adafruit-5768-README.md": "4170e40c048c0c33a510486bc43cd7c6fc78aaf5a4617ec748df938e43716c2b",
+    "placement-build-report.json": "3de04baa75f819692e281f6dc54c0dfb50bb8cc31f674de9ff5c57fd5472fff1",
+    "placement-manifest.json": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
+    "README.md": "d7388cf19fa71f6ab3cff16da9a609b56fca3a77cec842717b4e5a0dc7615228",
+    "reports\\back-native.pdf": "4235b5b615926d03dda2d53440a5bea7ae6b6e9bab25abdcf5174d121b3c58ef",
+    "reports\\back-native.svg": "2ec54cd985ab541f3b21de29603968c853bdef5e3aa980fdd2d1fd053027d900",
+    "reports\\bom-draft.csv": "b760b993757a85d4b0bb9b32155a34244e6282fbc9127692afbd5df36a8bd0e0",
+    "reports\\correspondence-review.json": "af4dc1d491d3d2fcabca70742a0a645151554b7689c01edb018de6445a0fd0c4",
+    "reports\\drc.json": "8b2c3a7a033652b3147379a30adc654ce4070870d60ebecc4f5037d21c4bae81",
+    "reports\\erc.json": "de5a17a948ae1a04ef0585ed81b9791e35c3916ba3978407f825bdbb8c193f11",
+    "reports\\footprint-movements.csv": "7a55e027904d530f9925580f95c2839d66151d37d7c0b9aa4bd05b4c530a7beb",
+    "reports\\front-native.pdf": "2530271d8971fe0f9479fc7a2e1caebf6de3fcf3d12e423274b848762106db8d",
+    "reports\\front-native.svg": "8e468d83b2f1de4e4af090ac33eb1a72c67eeb5a3a1837d137a8d3aa54198fd0",
+    "reports\\handbell-netlist.xml": "0c158a324492dacbe77492a71ab1af1b3a1e1b09fd221bfb2d7672ce43c991ff",
+    "reports\\handbell-schematic.pdf": "0f5aecb1b1135d73101bdf7b4fb3c1b05997a7d03db5e9b9e05a8f750de091ee",
+    "reports\\native-input-bindings.json": "f9a9ce08028ef36843020efe608c41985e92dbc1a826791faf843c64d49c140b",
+    "reports\\schematic-svg\\handbell.svg": "2563ccd5088ecabe8f7ed35ccabbdb09e58ba68577dfe7ff3d854fe4bf85476b",
+    "source-evidence.json": "6852a3a6ec685db1992697d0095449eb86b4fb911712eb4d31518728fcc92524",
+    "sym-lib-table": "f4b9862f164896e713c31fc59e7ba2b47954869801ab6f11762a13159f6f4638",
+    "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937"
+  },
+  "preparation_script_sha256": "b5b417a31f79fce211b4988d30a05de7f6934e8f7cd6ce0ee558d8b1becf9d72",
+  "coordinate_frame": "Centered common assembly XY; preserve actual KiCad10 footprint PLUS local pad rotation",
+  "inherited_rules": {
+    "max_error": 0.005,
+    "min_clearance": 0.1778,
+    "min_connection": 0.0,
+    "min_copper_edge_clearance": 0.025,
+    "min_groove_width": 0.0,
+    "min_hole_clearance": 0.25,
+    "min_hole_to_hole": 0.25,
+    "min_microvia_diameter": 0.2,
+    "min_microvia_drill": 0.1,
+    "min_resolved_spokes": 2,
+    "min_silk_clearance": 0.0,
+    "min_text_height": 0.8,
+    "min_text_thickness": 0.08,
+    "min_through_hole_diameter": 0.3,
+    "min_track_width": 0.1778,
+    "min_via_annular_width": 0.1,
+    "min_via_diameter": 0.5,
+    "solder_mask_to_copper_clearance": 0.0,
+    "use_height_for_length_calcs": true
+  },
+  "inherited_netclasses": {
+    "Default": {
+      "bus_width": 12,
+      "clearance": 0.2,
+      "diff_pair_gap": 0.25,
+      "diff_pair_via_gap": 0.25,
+      "diff_pair_width": 0.2,
+      "line_style": 0,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1,
+      "name": "Default",
+      "pcb_color": "rgba(0, 0, 0, 0.000)",
+      "priority": -1,
+      "schematic_color": "rgba(0, 0, 0, 0.000)",
+      "track_width": 0.2,
+      "tuning_profile": "",
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "wire_width": 6
+    },
+    "power": {
+      "bus_width": 12,
+      "clearance": 0.2,
+      "diff_pair_gap": 0.25,
+      "diff_pair_via_gap": 0.25,
+      "diff_pair_width": 0.2,
+      "line_style": 0,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1,
+      "name": "power",
+      "pcb_color": "rgba(0, 0, 0, 0.000)",
+      "priority": -1,
+      "schematic_color": "rgba(0, 0, 0, 0.000)",
+      "track_width": 0.1778,
+      "tuning_profile": "",
+      "via_diameter": 0.604,
+      "via_drill": 0.35,
+      "wire_width": 6
+    },
+    "thickpower": {
+      "bus_width": 12,
+      "clearance": 0.2,
+      "diff_pair_gap": 0.25,
+      "diff_pair_via_gap": 0.25,
+      "diff_pair_width": 0.2,
+      "line_style": 0,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1,
+      "name": "thickpower",
+      "pcb_color": "rgba(0, 0, 0, 0.000)",
+      "priority": -1,
+      "schematic_color": "rgba(0, 0, 0, 0.000)",
+      "track_width": 0.3048,
+      "tuning_profile": "",
+      "via_diameter": 0.754,
+      "via_drill": 0.5,
+      "wire_width": 6
+    }
+  },
+  "width_policy": "Inherited netclass names/widths are provenance, NOT current/thermal qualification. Signal geometry may start at existing0.2mm; high-current copper widths/areas remain explicitly unselected.",
+  "layer_policy": "F.Cu and B.Cu only. No ground-plane continuity assumed across contact exclusions.",
+  "B_raw_contact_pad_geometry": [
+    {
+      "id": "BT1.1#0",
+      "reference": "BT1",
+      "number": "1",
+      "net": "VBAT",
+      "shape": "rect",
+      "center": [
+        3.619999999999999,
+        0.0
+      ],
+      "size": [
+        4.24,
+        5.2
+      ],
+      "angle_deg": 0.0,
+      "layers": [
+        "B.Cu"
+      ],
+      "paste_layers": [
+        "B.Paste"
+      ],
+      "local_pad_rotation_deg": 0,
+      "footprint_rotation_deg": 0.0
+    },
+    {
+      "id": "BT1.1#1",
+      "reference": "BT1",
+      "number": "1",
+      "net": "VBAT",
+      "shape": "rect",
+      "center": [
+        19.630000000000003,
+        0.0
+      ],
+      "size": [
+        4.24,
+        3.3
+      ],
+      "angle_deg": 0.0,
+      "layers": [
+        "B.Cu"
+      ],
+      "paste_layers": [
+        "B.Paste"
+      ],
+      "local_pad_rotation_deg": 0,
+      "footprint_rotation_deg": 0.0
+    },
+    {
+      "id": "BT2.1#0",
+      "reference": "BT2",
+      "number": "1",
+      "net": "/CELL_NEG",
+      "shape": "rect",
+      "center": [
+        -3.619999999999999,
+        9.803297627174564e-16
+      ],
+      "size": [
+        4.24,
+        5.2
+      ],
+      "angle_deg": 180.0,
+      "layers": [
+        "B.Cu"
+      ],
+      "paste_layers": [
+        "B.Paste"
+      ],
+      "local_pad_rotation_deg": 0,
+      "footprint_rotation_deg": 180.0
+    },
+    {
+      "id": "BT2.1#1",
+      "reference": "BT2",
+      "number": "1",
+      "net": "/CELL_NEG",
+      "shape": "rect",
+      "center": [
+        -19.630000000000003,
+        -9.803297627174564e-16
+      ],
+      "size": [
+        4.24,
+        3.3
+      ],
+      "angle_deg": 180.0,
+      "layers": [
+        "B.Cu"
+      ],
+      "paste_layers": [
+        "B.Paste"
+      ],
+      "local_pad_rotation_deg": 0,
+      "footprint_rotation_deg": 180.0
+    }
+  ],
+  "B_contact_base_metal_reservations": [
+    {
+      "id": "BT1.conductive-base-0",
+      "net": "VBAT",
+      "shape": "rect",
+      "angle_deg": 0,
+      "center": [
+        3.6849999999999996,
+        0
+      ],
+      "size": [
+        3.9999999999999996,
+        5.08
+      ],
+      "basis": "Actual retained thin-primitives base metal projection, not a new keepout footprint"
+    },
+    {
+      "id": "BT1.conductive-base-1",
+      "net": "VBAT",
+      "shape": "rect",
+      "angle_deg": 0,
+      "center": [
+        20.125,
+        0
+      ],
+      "size": [
+        2.8800000000000026,
+        3.18
+      ],
+      "basis": "Actual retained thin-primitives base metal projection, not a new keepout footprint"
+    },
+    {
+      "id": "BT1.conductive-base-2",
+      "net": "VBAT",
+      "shape": "rect",
+      "angle_deg": 0,
+      "center": [
+        12.184999999999999,
+        0
+      ],
+      "size": [
+        13.0,
+        11.13
+      ],
+      "basis": "Actual retained thin-primitives base metal projection, not a new keepout footprint"
+    },
+    {
+      "id": "BT2.conductive-base-0",
+      "net": "/CELL_NEG",
+      "shape": "rect",
+      "angle_deg": 0,
+      "center": [
+        -3.6849999999999996,
+        0
+      ],
+      "size": [
+        3.9999999999999996,
+        5.08
+      ],
+      "basis": "Actual retained thin-primitives base metal projection, not a new keepout footprint"
+    },
+    {
+      "id": "BT2.conductive-base-1",
+      "net": "/CELL_NEG",
+      "shape": "rect",
+      "angle_deg": 0,
+      "center": [
+        -20.125,
+        0
+      ],
+      "size": [
+        2.8800000000000026,
+        3.18
+      ],
+      "basis": "Actual retained thin-primitives base metal projection, not a new keepout footprint"
+    },
+    {
+      "id": "BT2.conductive-base-2",
+      "net": "/CELL_NEG",
+      "shape": "rect",
+      "angle_deg": 0,
+      "center": [
+        -12.184999999999999,
+        0
+      ],
+      "size": [
+        13.0,
+        11.13
+      ],
+      "basis": "Actual retained thin-primitives base metal projection, not a new keepout footprint"
+    }
+  ],
+  "B_ground_zone_policy": {
+    "net": "GND",
+    "status": "Planning only; zero zones emitted",
+    "exclude": "Both VBAT and CELL_NEG contact pads plus conductive base projections, expanded by0.2mm; all other different-net pads/tracks, holes and native clearances still apply",
+    "bare_inner_contact_pad_gap_mm": 3.0,
+    "ground_copper_corridor_width_after_clearance_mm": 2.6,
+    "ground_via_center_x_range_in_contact_row_mm": [
+      -0.998,
+      0.998
+    ],
+    "required_checks": [
+      "Keep both raw contact nets and base metal out of GND, not just CELL_NEG",
+      "Fill then inspect actual islands/necks; prove every retained GND pad connected",
+      "Do not use the central neck as an assumed qualified boost/amplifier current return",
+      "Route deliberate high-current F return corridors to R27.2; Kelvin-style R26.2 also ends there",
+      "No stitch via through raw contact pads, metal bases or contact keepouts"
+    ]
+  },
+  "thermal_via_candidates": [
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        -0.8,
+        -0.8
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 0.398,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        -0.8,
+        0.0
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 0.398,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        -0.8,
+        0.8
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 0.398,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        0.0,
+        -0.8
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 1.198,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        0.0,
+        0.0
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 1.198,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        0.0,
+        0.8
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 1.198,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        0.8,
+        -0.8
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 0.398,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        0.8,
+        0.0
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 0.398,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "IC1",
+      "xy_mm": [
+        0.8,
+        0.8
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 0.398,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "U4",
+      "xy_mm": [
+        10.400323,
+        -10.412789
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 8.795158,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "U4",
+      "xy_mm": [
+        10.400323,
+        -9.762789
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 8.243417,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "U4",
+      "xy_mm": [
+        11.050323,
+        -10.412789
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 9.14465,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    },
+    {
+      "reference": "U4",
+      "xy_mm": [
+        11.050323,
+        -9.762789
+      ],
+      "net": "GND",
+      "layers": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_copper_gap_mm": 8.614562,
+      "status": "Geometric candidate only; via-in-pad fill/tent/stencil/thermal qualification unresolved"
+    }
+  ],
+  "ground_via_negative_tests": [
+    {
+      "xy_mm": [
+        0,
+        0
+      ],
+      "accepted": true,
+      "rejections": []
+    },
+    {
+      "xy_mm": [
+        1.3,
+        0
+      ],
+      "accepted": false,
+      "rejections": [
+        "B-contact-base-metal:BT1.conductive-base-0",
+        "copper:BT1.1#0"
+      ]
+    },
+    {
+      "xy_mm": [
+        -1.3,
+        0
+      ],
+      "accepted": false,
+      "rejections": [
+        "B-contact-base-metal:BT2.conductive-base-0",
+        "copper:BT2.1#0"
+      ]
+    },
+    {
+      "xy_mm": [
+        3.62,
+        0
+      ],
+      "accepted": false,
+      "rejections": [
+        "B-contact-base-metal:BT1.conductive-base-0",
+        "copper:BT1.1#0",
+        "copper:IC1.48#47",
+        "copper:IC1.49#48",
+        "copper:IC1.50#49",
+        "copper:IC1.51#50"
+      ]
+    },
+    {
+      "xy_mm": [
+        -3.62,
+        0
+      ],
+      "accepted": false,
+      "rejections": [
+        "B-contact-base-metal:BT2.conductive-base-0",
+        "copper:BT2.1#0",
+        "copper:IC1.20#19",
+        "copper:IC1.21#20",
+        "copper:IC1.22#21",
+        "copper:IC1.23#22"
+      ]
+    },
+    {
+      "xy_mm": [
+        10,
+        0
+      ],
+      "accepted": false,
+      "rejections": [
+        "B-contact-base-metal:BT1.conductive-base-2"
+      ]
+    },
+    {
+      "xy_mm": [
+        -10,
+        0
+      ],
+      "accepted": false,
+      "rejections": [
+        "B-contact-base-metal:BT2.conductive-base-2"
+      ]
+    }
+  ],
+  "Q5_source_fanout_candidates": [
+    {
+      "pad": "Q5.A1#0",
+      "pad_xy_mm": [
+        -15.050824999999998,
+        7.675480000000005
+      ],
+      "via_xy_mm": [
+        -15.750825,
+        7.75048
+      ],
+      "net": "/CELL_NEG",
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "status": "Outside-ball-field candidate, NOT an approved current-carrying via count or width",
+      "F_stub_screen": {
+        "geometric_screen_width_mm": 0.1778,
+        "scope": "Inherited minimum-width feasibility only; NOT a chosen power width"
+      }
+    },
+    {
+      "pad": "Q5.C1#4",
+      "pad_xy_mm": [
+        -13.750824999999997,
+        7.675480000000005
+      ],
+      "via_xy_mm": [
+        -13.050825,
+        7.75048
+      ],
+      "net": "/CELL_NEG",
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "status": "Outside-ball-field candidate, NOT an approved current-carrying via count or width",
+      "F_stub_screen": {
+        "geometric_screen_width_mm": 0.1778,
+        "scope": "Inherited minimum-width feasibility only; NOT a chosen power width"
+      }
+    },
+    {
+      "pad": "Q5.A2#1",
+      "pad_xy_mm": [
+        -15.050824999999998,
+        7.025480000000004
+      ],
+      "via_xy_mm": [
+        -15.750825,
+        6.70048
+      ],
+      "net": "/PROT_FET_RETURN",
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "status": "Outside-ball-field candidate, NOT an approved current-carrying via count or width",
+      "F_stub_screen": {
+        "geometric_screen_width_mm": 0.1778,
+        "scope": "Inherited minimum-width feasibility only; NOT a chosen power width"
+      }
+    },
+    {
+      "pad": "Q5.C2#5",
+      "pad_xy_mm": [
+        -13.750824999999997,
+        7.025480000000004
+      ],
+      "via_xy_mm": [
+        -13.050825,
+        6.70048
+      ],
+      "net": "/PROT_FET_RETURN",
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "status": "Outside-ball-field candidate, NOT an approved current-carrying via count or width",
+      "F_stub_screen": {
+        "geometric_screen_width_mm": 0.1778,
+        "scope": "Inherited minimum-width feasibility only; NOT a chosen power width"
+      }
+    }
+  ],
+  "Q5_source_bus_candidates": [
+    {
+      "net": "/CELL_NEG",
+      "layer": "B.Cu",
+      "candidate_polyline_xy_mm": [
+        [
+          -15.750825,
+          7.75048
+        ],
+        [
+          -13.050825,
+          7.75048
+        ]
+      ],
+      "copper_width_mm": null,
+      "note": "Same SOURCE bus behind F-only gate; no common-drain pad exists",
+      "geometric_screen_width_mm": 0.1778,
+      "current_capacity_qualification": false
+    },
+    {
+      "net": "/PROT_FET_RETURN",
+      "layer": "B.Cu",
+      "candidate_polyline_xy_mm": [
+        [
+          -15.750825,
+          6.70048
+        ],
+        [
+          -13.050825,
+          6.70048
+        ]
+      ],
+      "copper_width_mm": null,
+      "note": "Same SOURCE bus behind F-only gate; no common-drain pad exists",
+      "geometric_screen_width_mm": 0.1778,
+      "current_capacity_qualification": false
+    }
+  ],
+  "critical_obstacle_notes": [
+    "Q5 A1/C1 share SOURCE1 but B1 gate lies between them; A2/C2 share SOURCE2 with B2 between. A straight F source-to-source segment would short a gate. Use outside F fanouts and separate B source buses, or another actually checked escape; do not invent a PCB common-drain pad.",
+    "Q5 adjacent circular-land gap is0.35mm; inherited minimum track0.1778 plus two0.2mm clearances requires0.5778mm. Do not pretend an inner inter-ball channel is routable with these rules.",
+    "C2/C3 oscillator returns have raw-negative/base projections below them, not an uninterrupted GND reference. Plan a local F guard/return to IC1.19/thermal GND, keeping Y1.2/Y1.4 unassigned.",
+    "Right-side MCU supply capacitors cannot indiscriminately receive ground vias: VBAT pad/base metal is directly behind them. Use checked F corner-return geometry toward the central safe GND bank, or safe outside vias with actually routed returns.",
+    "The C10/flash return must not assume GND beneath the positive contact base; avoid unreviewed B QSPI return discontinuities."
+  ],
+  "capacitor_ground_via_candidates": [
+    {
+      "pad": "C1.2#1",
+      "pad_xy_mm": [
+        -4.034774999999996,
+        -14.741182000000006
+      ],
+      "candidate_xy_mm": [
+        -2.834775,
+        -14.741182
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C2.1#0",
+      "pad_xy_mm": [
+        -9.096400000000003,
+        -2.539550000000001
+      ],
+      "candidate_xy_mm": null,
+      "straight_line_stub_mm": null,
+      "status": "No screened off-pad GND via within2mm: design F return to safe bank/thermal corner, do not drill into B contacts"
+    },
+    {
+      "pad": "C3.1#0",
+      "pad_xy_mm": [
+        -9.100819000000001,
+        -1.3086689999999992
+      ],
+      "candidate_xy_mm": null,
+      "straight_line_stub_mm": null,
+      "status": "No screened off-pad GND via within2mm: design F return to safe bank/thermal corner, do not drill into B contacts"
+    },
+    {
+      "pad": "C4.2#1",
+      "pad_xy_mm": [
+        -15.043581000000007,
+        -9.414015000000006
+      ],
+      "candidate_xy_mm": [
+        -13.843581,
+        -9.414015
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C5.2#1",
+      "pad_xy_mm": [
+        -15.228590999999998,
+        -2.5085480000000047
+      ],
+      "candidate_xy_mm": null,
+      "straight_line_stub_mm": null,
+      "status": "No screened off-pad GND via within2mm: design F return to safe bank/thermal corner, do not drill into B contacts"
+    },
+    {
+      "pad": "C6.1#0",
+      "pad_xy_mm": [
+        6.005898000000006,
+        -0.4002559999999988
+      ],
+      "candidate_xy_mm": null,
+      "straight_line_stub_mm": null,
+      "status": "No screened off-pad GND via within2mm: design F return to safe bank/thermal corner, do not drill into B contacts"
+    },
+    {
+      "pad": "C7.1#0",
+      "pad_xy_mm": [
+        8.311336,
+        2.200013999999996
+      ],
+      "candidate_xy_mm": null,
+      "straight_line_stub_mm": null,
+      "status": "No screened off-pad GND via within2mm: design F return to safe bank/thermal corner, do not drill into B contacts"
+    },
+    {
+      "pad": "C8.2#1",
+      "pad_xy_mm": [
+        6.009069000000001,
+        2.2001450000000062
+      ],
+      "candidate_xy_mm": null,
+      "straight_line_stub_mm": null,
+      "status": "No screened off-pad GND via within2mm: design F return to safe bank/thermal corner, do not drill into B contacts"
+    },
+    {
+      "pad": "C9.2#1",
+      "pad_xy_mm": [
+        2.6155339999999967,
+        -5.779327999999997
+      ],
+      "candidate_xy_mm": [
+        3.415534,
+        -5.779328
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C10.2#1",
+      "pad_xy_mm": [
+        5.294511,
+        -6.725731000000001
+      ],
+      "candidate_xy_mm": [
+        6.094511,
+        -6.725731
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C11.2#1",
+      "pad_xy_mm": [
+        -0.9940730000000003,
+        5.703622999999998
+      ],
+      "candidate_xy_mm": [
+        -0.194073,
+        5.703623
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C12.2#1",
+      "pad_xy_mm": [
+        -0.9999499999999983,
+        -5.777923000000006
+      ],
+      "candidate_xy_mm": [
+        -0.19995,
+        -5.777923
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C13.2#1",
+      "pad_xy_mm": [
+        6.010545999999995,
+        3.5005369999999942
+      ],
+      "candidate_xy_mm": [
+        5.162018,
+        4.349065
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C14.2#1",
+      "pad_xy_mm": [
+        -5.703705000000004,
+        2.3045039999999943
+      ],
+      "candidate_xy_mm": [
+        -4.855177,
+        3.153032
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C15.2#1",
+      "pad_xy_mm": [
+        2.589143000000007,
+        5.704168
+      ],
+      "candidate_xy_mm": [
+        3.389143,
+        5.704168
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C16.2#1",
+      "pad_xy_mm": [
+        11.84759,
+        -6.983098999999996
+      ],
+      "candidate_xy_mm": [
+        11.84759,
+        -6.183099
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C17.2#1",
+      "pad_xy_mm": [
+        6.007429000000006,
+        0.8976750000000067
+      ],
+      "candidate_xy_mm": null,
+      "straight_line_stub_mm": null,
+      "status": "No screened off-pad GND via within2mm: design F return to safe bank/thermal corner, do not drill into B contacts"
+    },
+    {
+      "pad": "C18.1#0",
+      "pad_xy_mm": [
+        -5.7043599999999985,
+        1.0034490000000034
+      ],
+      "candidate_xy_mm": null,
+      "straight_line_stub_mm": null,
+      "status": "No screened off-pad GND via within2mm: design F return to safe bank/thermal corner, do not drill into B contacts"
+    },
+    {
+      "pad": "C19.2#1",
+      "pad_xy_mm": [
+        15.168731000000005,
+        -6.937370000000001
+      ],
+      "candidate_xy_mm": [
+        15.168731,
+        -8.13737
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C20.2#1",
+      "pad_xy_mm": [
+        4.846035999999998,
+        -17.233889
+      ],
+      "candidate_xy_mm": [
+        3.646036,
+        -17.233889
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C21.2#1",
+      "pad_xy_mm": [
+        16.752667000000002,
+        -11.713150000000002
+      ],
+      "candidate_xy_mm": [
+        17.491771,
+        -11.407003
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C22.2#1",
+      "pad_xy_mm": [
+        16.951890000000006,
+        -9.596768
+      ],
+      "candidate_xy_mm": [
+        17.75189,
+        -9.596768
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C23.2#1",
+      "pad_xy_mm": [
+        -10.189165,
+        -8.508386000000002
+      ],
+      "candidate_xy_mm": [
+        -9.389165,
+        -8.508386
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C24.2#1",
+      "pad_xy_mm": [
+        -7.995917000000006,
+        -6.508331000000003
+      ],
+      "candidate_xy_mm": [
+        -7.195917,
+        -6.508331
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C25.2#1",
+      "pad_xy_mm": [
+        5.4982390000000025,
+        7.507130000000004
+      ],
+      "candidate_xy_mm": [
+        6.298239,
+        7.50713
+      ],
+      "straight_line_stub_mm": 0.8,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C26.2#1",
+      "pad_xy_mm": [
+        -3.4926509999999977,
+        18.407437
+      ],
+      "candidate_xy_mm": [
+        -2.383996,
+        18.866657
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C27.2#1",
+      "pad_xy_mm": [
+        -7.265563,
+        16.655806999999992
+      ],
+      "candidate_xy_mm": [
+        -6.065563,
+        16.655807
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    },
+    {
+      "pad": "C28.2#1",
+      "pad_xy_mm": [
+        -9.383487000000002,
+        16.752423000000004
+      ],
+      "candidate_xy_mm": [
+        -8.924267,
+        17.861078
+      ],
+      "straight_line_stub_mm": 1.2,
+      "status": "Point screened; F stub path NOT checked"
+    }
+  ],
+  "critical_routing_groups": [
+    {
+      "name": "mcu-local-supplies",
+      "scope": "Local logic geometry only; not a whole-rail current rating",
+      "connections": [
+        {
+          "from": "IC1.1#0",
+          "to": "C9.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            2.6000000000000005,
+            -3.4499999999999997
+          ],
+          "to_xy_mm": [
+            2.6155339999999967,
+            -4.763327999999997
+          ],
+          "straight_line_mm": 1.31342,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.10#9",
+          "to": "C12.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            -0.9999999999999993,
+            -3.45
+          ],
+          "to_xy_mm": [
+            -0.9999499999999983,
+            -4.761923000000006
+          ],
+          "straight_line_mm": 1.311923,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.22#21",
+          "to": "C14.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            -3.45,
+            0.19999999999999937
+          ],
+          "to_xy_mm": [
+            -4.687705000000004,
+            2.3045039999999943
+          ],
+          "straight_line_mm": 2.441485,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.33#32",
+          "to": "C11.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            -1.0000000000000007,
+            3.45
+          ],
+          "to_xy_mm": [
+            -0.9940730000000001,
+            4.687622999999998
+          ],
+          "straight_line_mm": 1.237637,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.42#41",
+          "to": "C15.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            2.5999999999999996,
+            3.4500000000000006
+          ],
+          "to_xy_mm": [
+            2.589143000000007,
+            4.688168
+          ],
+          "straight_line_mm": 1.238216,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.43#42",
+          "to": "C13.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            3.4499999999999997,
+            2.6000000000000005
+          ],
+          "to_xy_mm": [
+            4.994545999999995,
+            3.5005369999999942
+          ],
+          "straight_line_mm": 1.787901,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.44#43",
+          "to": "C17.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            3.4499999999999997,
+            2.2000000000000006
+          ],
+          "to_xy_mm": [
+            4.991429000000006,
+            0.8976750000000067
+          ],
+          "straight_line_mm": 2.017933,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.44#43",
+          "to": "C15.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            3.4499999999999997,
+            2.2000000000000006
+          ],
+          "to_xy_mm": [
+            2.589143000000007,
+            4.688168
+          ],
+          "straight_line_mm": 2.63288,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.48#47",
+          "to": "C17.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            3.45,
+            0.6000000000000006
+          ],
+          "to_xy_mm": [
+            4.991429000000006,
+            0.8976750000000067
+          ],
+          "straight_line_mm": 1.569909,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.49#48",
+          "to": "C17.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            3.45,
+            0.20000000000000065
+          ],
+          "to_xy_mm": [
+            4.991429000000006,
+            0.8976750000000067
+          ],
+          "straight_line_mm": 1.691967,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.45#44",
+          "to": "C8.1#0",
+          "net": "VCORE",
+          "from_xy_mm": [
+            3.4499999999999997,
+            1.8000000000000007
+          ],
+          "to_xy_mm": [
+            4.993069000000001,
+            2.2001450000000062
+          ],
+          "straight_line_mm": 1.594107,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.23#22",
+          "to": "C18.2#1",
+          "net": "VCORE",
+          "from_xy_mm": [
+            -3.45,
+            0.5999999999999993
+          ],
+          "to_xy_mm": [
+            -4.6883599999999985,
+            1.0034490000000034
+          ],
+          "straight_line_mm": 1.302423,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.50#49",
+          "to": "C6.2#1",
+          "net": "VCORE",
+          "from_xy_mm": [
+            3.45,
+            -0.19999999999999937
+          ],
+          "to_xy_mm": [
+            4.989898000000006,
+            -0.4002559999999989
+          ],
+          "straight_line_mm": 1.552865,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "C8.1#0",
+          "to": "C6.2#1",
+          "net": "VCORE",
+          "from_xy_mm": [
+            4.993069000000001,
+            2.2001450000000062
+          ],
+          "to_xy_mm": [
+            4.989898000000006,
+            -0.4002559999999989
+          ],
+          "straight_line_mm": 2.600403,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "C8.1#0",
+          "to": "C18.2#1",
+          "net": "VCORE",
+          "from_xy_mm": [
+            4.993069000000001,
+            2.2001450000000062
+          ],
+          "to_xy_mm": [
+            -4.6883599999999985,
+            1.0034490000000034
+          ],
+          "straight_line_mm": 9.755109,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "C8.1#0",
+          "to": "C7.2#1",
+          "net": "VCORE",
+          "from_xy_mm": [
+            4.993069000000001,
+            2.2001450000000062
+          ],
+          "to_xy_mm": [
+            7.295336000000002,
+            2.200013999999996
+          ],
+          "straight_line_mm": 2.302267,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U1.8#4",
+          "to": "C10.1#0",
+          "net": "+3V3",
+          "from_xy_mm": [
+            5.5514479999999935,
+            -4.609245999999999
+          ],
+          "to_xy_mm": [
+            5.294511,
+            -5.7097310000000006
+          ],
+          "straight_line_mm": 1.130081,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U1.4#3",
+          "to": "C10.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            7.0514479999999935,
+            -2.109245999999999
+          ],
+          "to_xy_mm": [
+            5.294511,
+            -6.725731000000001
+          ],
+          "straight_line_mm": 4.93951,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U1.PAD#8",
+          "to": "U1.4#3",
+          "net": "GND",
+          "from_xy_mm": [
+            6.3014479999999935,
+            -3.359245999999999
+          ],
+          "to_xy_mm": [
+            7.0514479999999935,
+            -2.109245999999999
+          ],
+          "straight_line_mm": 1.457738,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        }
+      ]
+    },
+    {
+      "name": "crystal-and-qspi",
+      "scope": "Signal geometry; no impedance/timing approval",
+      "connections": [
+        {
+          "from": "IC1.20#19",
+          "to": "Y1.3#2",
+          "net": "Net-(IC1-XIN)",
+          "from_xy_mm": [
+            -3.45,
+            -0.6000000000000006
+          ],
+          "to_xy_mm": [
+            -7.550199000000006,
+            -2.8224040000000032
+          ],
+          "straight_line_mm": 4.663766,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Y1.3#2",
+          "to": "C2.2#1",
+          "net": "Net-(IC1-XIN)",
+          "from_xy_mm": [
+            -7.550199000000006,
+            -2.8224040000000032
+          ],
+          "to_xy_mm": [
+            -9.096400000000003,
+            -3.555550000000001
+          ],
+          "straight_line_mm": 1.71121,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.21#20",
+          "to": "R6.2#1",
+          "net": "Net-(IC1-XOUT)",
+          "from_xy_mm": [
+            -3.45,
+            -0.20000000000000065
+          ],
+          "to_xy_mm": [
+            -4.8245859999999965,
+            -1.3020990000000028
+          ],
+          "straight_line_mm": 1.761848,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "R6.1#0",
+          "to": "Y1.1#0",
+          "net": "Net-(C3-Pad2)",
+          "from_xy_mm": [
+            -4.8245859999999965,
+            -0.28609900000000277
+          ],
+          "to_xy_mm": [
+            -6.300199000000006,
+            -1.172404000000003
+          ],
+          "straight_line_mm": 1.721328,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Y1.1#0",
+          "to": "C3.2#1",
+          "net": "Net-(C3-Pad2)",
+          "from_xy_mm": [
+            -6.300199000000006,
+            -1.172404000000003
+          ],
+          "to_xy_mm": [
+            -9.100819000000001,
+            -0.2926689999999992
+          ],
+          "straight_line_mm": 2.935542,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.51#50",
+          "to": "U1.7#5",
+          "net": "QSPI_DATA[3]",
+          "from_xy_mm": [
+            3.45,
+            -0.5999999999999993
+          ],
+          "to_xy_mm": [
+            6.0514479999999935,
+            -4.609245999999999
+          ],
+          "straight_line_mm": 4.779287,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.52#51",
+          "to": "U1.6#6",
+          "net": "QSPI_SCK",
+          "from_xy_mm": [
+            3.45,
+            -0.9999999999999993
+          ],
+          "to_xy_mm": [
+            6.5514479999999935,
+            -4.609245999999999
+          ],
+          "straight_line_mm": 4.758743,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.53#52",
+          "to": "U1.5#7",
+          "net": "QSPI_DATA[0]",
+          "from_xy_mm": [
+            3.4500000000000006,
+            -1.3999999999999992
+          ],
+          "to_xy_mm": [
+            7.0514479999999935,
+            -4.609245999999999
+          ],
+          "straight_line_mm": 4.823866,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.54#53",
+          "to": "U1.3#2",
+          "net": "QSPI_DATA[2]",
+          "from_xy_mm": [
+            3.4500000000000006,
+            -1.7999999999999994
+          ],
+          "to_xy_mm": [
+            6.5514479999999935,
+            -2.109245999999999
+          ],
+          "straight_line_mm": 3.116827,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.55#54",
+          "to": "U1.2#1",
+          "net": "QSPI_DATA[1]",
+          "from_xy_mm": [
+            3.4500000000000006,
+            -2.1999999999999997
+          ],
+          "to_xy_mm": [
+            6.0514479999999935,
+            -2.109245999999999
+          ],
+          "straight_line_mm": 2.603031,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.56#55",
+          "to": "U1.1#0",
+          "net": "QSPI_CS",
+          "from_xy_mm": [
+            3.4500000000000006,
+            -2.5999999999999996
+          ],
+          "to_xy_mm": [
+            5.5514479999999935,
+            -2.109245999999999
+          ],
+          "straight_line_mm": 2.157991,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U1.1#0",
+          "to": "R5.1#0",
+          "net": "QSPI_CS",
+          "from_xy_mm": [
+            5.5514479999999935,
+            -2.109245999999999
+          ],
+          "to_xy_mm": [
+            7.0011810000000025,
+            -5.793463999999996
+          ],
+          "straight_line_mm": 3.95919,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.46#45",
+          "to": "R9.2#1",
+          "net": "D-",
+          "from_xy_mm": [
+            3.4499999999999997,
+            1.4000000000000006
+          ],
+          "to_xy_mm": [
+            7.597371000000005,
+            0.24233399999999955
+          ],
+          "straight_line_mm": 4.305912,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "IC1.47#46",
+          "to": "R10.2#1",
+          "net": "D+",
+          "from_xy_mm": [
+            3.45,
+            1.0000000000000007
+          ],
+          "to_xy_mm": [
+            7.6015650000000035,
+            -0.9591329999999944
+          ],
+          "straight_line_mm": 4.590609,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        }
+      ]
+    },
+    {
+      "name": "boost-power-loop",
+      "scope": "High-current widths/copper areas NOT selected by this preparation",
+      "connections": [
+        {
+          "from": "L1.P$2#1",
+          "to": "U5.5#4",
+          "net": "BOOST_SW",
+          "from_xy_mm": [
+            -1.1213470000000059,
+            15.758567999999997
+          ],
+          "to_xy_mm": [
+            -3.563999000000001,
+            16.001796
+          ],
+          "straight_line_mm": 2.454732,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.3#2",
+          "to": "C26.1#0",
+          "net": "V+",
+          "from_xy_mm": [
+            -4.833999,
+            16.501796
+          ],
+          "to_xy_mm": [
+            -5.392650999999998,
+            18.407437
+          ],
+          "straight_line_mm": 1.98584,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "L1.P$1#0",
+          "to": "C26.1#0",
+          "net": "V+",
+          "from_xy_mm": [
+            2.0786529999999943,
+            15.758567999999997
+          ],
+          "to_xy_mm": [
+            -5.392650999999998,
+            18.407437
+          ],
+          "straight_line_mm": 7.926972,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.4#3",
+          "to": "C26.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            -3.563999000000001,
+            16.501796
+          ],
+          "to_xy_mm": [
+            -3.4926509999999977,
+            18.407437
+          ],
+          "straight_line_mm": 1.906976,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.6#5",
+          "to": "C27.1#0",
+          "net": "VAMP",
+          "from_xy_mm": [
+            -3.563999000000001,
+            15.501795999999999
+          ],
+          "to_xy_mm": [
+            -7.265563,
+            14.755806999999994
+          ],
+          "straight_line_mm": 3.775987,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.6#5",
+          "to": "C28.1#0",
+          "net": "VAMP",
+          "from_xy_mm": [
+            -3.563999000000001,
+            15.501795999999999
+          ],
+          "to_xy_mm": [
+            -9.383487000000002,
+            14.852423000000005
+          ],
+          "straight_line_mm": 5.855606,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.4#3",
+          "to": "C27.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            -3.563999000000001,
+            16.501796
+          ],
+          "to_xy_mm": [
+            -7.265563,
+            16.655806999999992
+          ],
+          "straight_line_mm": 3.704767,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.4#3",
+          "to": "C28.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            -3.563999000000001,
+            16.501796
+          ],
+          "to_xy_mm": [
+            -9.383487000000002,
+            16.752423000000004
+          ],
+          "straight_line_mm": 5.824882,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.1#0",
+          "to": "R23.2#1",
+          "net": "BOOST_FB",
+          "from_xy_mm": [
+            -4.833999,
+            15.501795999999999
+          ],
+          "to_xy_mm": [
+            -4.707078,
+            13.802443999999994
+          ],
+          "straight_line_mm": 1.704085,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.1#0",
+          "to": "R24.1#0",
+          "net": "BOOST_FB",
+          "from_xy_mm": [
+            -4.833999,
+            15.501795999999999
+          ],
+          "to_xy_mm": [
+            -4.705681000000003,
+            12.592618000000002
+          ],
+          "straight_line_mm": 2.912007,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "R23.1#0",
+          "to": "C27.1#0",
+          "net": "VAMP",
+          "from_xy_mm": [
+            -3.691078,
+            13.802443999999994
+          ],
+          "to_xy_mm": [
+            -7.265563,
+            14.755806999999994
+          ],
+          "straight_line_mm": 3.699438,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "R24.2#1",
+          "to": "C27.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            -3.689681000000003,
+            12.592618000000002
+          ],
+          "to_xy_mm": [
+            -7.265563,
+            16.655806999999992
+          ],
+          "straight_line_mm": 5.412618,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        }
+      ]
+    },
+    {
+      "name": "amplifier-power-and-btl",
+      "scope": "Local bypass then thermal return; symmetric outward BTL routing required",
+      "connections": [
+        {
+          "from": "U4.7#6",
+          "to": "U4.8#7",
+          "net": "VAMP",
+          "from_xy_mm": [
+            10.975323000000003,
+            -8.587789
+          ],
+          "to_xy_mm": [
+            11.475323000000003,
+            -8.587789
+          ],
+          "straight_line_mm": 0.5,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U4.7#6",
+          "to": "C16.1#0",
+          "net": "VAMP",
+          "from_xy_mm": [
+            10.975323000000003,
+            -8.587789
+          ],
+          "to_xy_mm": [
+            10.831590000000002,
+            -6.983098999999996
+          ],
+          "straight_line_mm": 1.611114,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U4.8#7",
+          "to": "C19.1#0",
+          "net": "VAMP",
+          "from_xy_mm": [
+            11.475323000000003,
+            -8.587789
+          ],
+          "to_xy_mm": [
+            13.268731000000006,
+            -6.937370000000001
+          ],
+          "straight_line_mm": 2.437252,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U4.THERMAL#16",
+          "to": "U4.3#2",
+          "net": "GND",
+          "from_xy_mm": [
+            10.725323000000003,
+            -10.087789
+          ],
+          "to_xy_mm": [
+            9.225323000000003,
+            -9.837789
+          ],
+          "straight_line_mm": 1.520691,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U4.THERMAL#16",
+          "to": "U4.11#10",
+          "net": "GND",
+          "from_xy_mm": [
+            10.725323000000003,
+            -10.087789
+          ],
+          "to_xy_mm": [
+            12.225323000000003,
+            -10.337789
+          ],
+          "straight_line_mm": 1.520691,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U4.THERMAL#16",
+          "to": "U4.15#14",
+          "net": "GND",
+          "from_xy_mm": [
+            10.725323000000003,
+            -10.087789
+          ],
+          "to_xy_mm": [
+            10.475323000000003,
+            -11.587789
+          ],
+          "straight_line_mm": 1.520691,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "C16.2#1",
+          "to": "U4.THERMAL#16",
+          "net": "GND",
+          "from_xy_mm": [
+            11.84759,
+            -6.983098999999996
+          ],
+          "to_xy_mm": [
+            10.725323000000003,
+            -10.087789
+          ],
+          "straight_line_mm": 3.3013,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "C19.2#1",
+          "to": "U4.THERMAL#16",
+          "net": "GND",
+          "from_xy_mm": [
+            15.168731000000005,
+            -6.937370000000001
+          ],
+          "to_xy_mm": [
+            10.725323000000003,
+            -10.087789
+          ],
+          "straight_line_mm": 5.446927,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U4.9#8",
+          "to": "FB1.1#0",
+          "net": "Net-(FB1-P$1)",
+          "from_xy_mm": [
+            12.225323000000003,
+            -9.337789
+          ],
+          "to_xy_mm": [
+            13.663146000000006,
+            -9.989707999999993
+          ],
+          "straight_line_mm": 1.578713,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U4.10#9",
+          "to": "FB2.1#0",
+          "net": "Net-(FB2-P$1)",
+          "from_xy_mm": [
+            12.225323000000003,
+            -9.837789
+          ],
+          "to_xy_mm": [
+            13.663529000000006,
+            -12.074352000000005
+          ],
+          "straight_line_mm": 2.659069,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "FB1.2#1",
+          "to": "C22.1#0",
+          "net": "VO+",
+          "from_xy_mm": [
+            15.363146000000006,
+            -9.989707999999993
+          ],
+          "to_xy_mm": [
+            16.951890000000006,
+            -8.580768000000003
+          ],
+          "straight_line_mm": 2.123492,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "FB2.2#1",
+          "to": "C21.1#0",
+          "net": "VO-",
+          "from_xy_mm": [
+            15.363529000000005,
+            -12.074352000000005
+          ],
+          "to_xy_mm": [
+            16.752667000000002,
+            -10.697150000000004
+          ],
+          "straight_line_mm": 1.956116,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "FB1.2#1",
+          "to": "J1.1#0",
+          "net": "VO+",
+          "from_xy_mm": [
+            15.363146000000006,
+            -9.989707999999993
+          ],
+          "to_xy_mm": [
+            13.705,
+            -0.2500000000000002
+          ],
+          "straight_line_mm": 9.879846,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "FB2.2#1",
+          "to": "J1.2#1",
+          "net": "VO-",
+          "from_xy_mm": [
+            15.363529000000005,
+            -12.074352000000005
+          ],
+          "to_xy_mm": [
+            13.705,
+            -1.7500000000000002
+          ],
+          "straight_line_mm": 10.456719,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        }
+      ]
+    },
+    {
+      "name": "protection-sense-and-gates",
+      "scope": "Kelvin-style VM/GND and VSS/CELL_NEG sensing; no alternate bypass",
+      "connections": [
+        {
+          "from": "U6.5#3",
+          "to": "C30.1#0",
+          "net": "/PROT_BAT",
+          "from_xy_mm": [
+            -10.902673000000002,
+            7.349061000000006
+          ],
+          "to_xy_mm": [
+            -12.104821000000005,
+            5.551992999999996
+          ],
+          "straight_line_mm": 2.162085,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U6.5#3",
+          "to": "R25.2#1",
+          "net": "/PROT_BAT",
+          "from_xy_mm": [
+            -10.902673000000002,
+            7.349061000000006
+          ],
+          "to_xy_mm": [
+            -11.091531,
+            9.349843000000007
+          ],
+          "straight_line_mm": 2.009676,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U6.4#5",
+          "to": "C30.2#1",
+          "net": "/CELL_NEG",
+          "from_xy_mm": [
+            -10.902673000000002,
+            7.849061000000006
+          ],
+          "to_xy_mm": [
+            -11.088821000000006,
+            5.551992999999996
+          ],
+          "straight_line_mm": 2.304598,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U6.6#1",
+          "to": "R26.1#0",
+          "net": "/PROT_VM",
+          "from_xy_mm": [
+            -10.902673000000002,
+            6.849061000000006
+          ],
+          "to_xy_mm": [
+            -15.110592,
+            5.549142000000003
+          ],
+          "straight_line_mm": 4.404131,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "R26.2#1",
+          "to": "R27.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            -14.094592000000002,
+            5.549142000000003
+          ],
+          "to_xy_mm": [
+            -13.600981000000004,
+            9.500966000000005
+          ],
+          "straight_line_mm": 3.982532,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U6.3#4",
+          "to": "Q5.B1#2",
+          "net": "/PROT_DOUT",
+          "from_xy_mm": [
+            -12.102673000000001,
+            7.849061000000006
+          ],
+          "to_xy_mm": [
+            -14.400824999999998,
+            7.675480000000005
+          ],
+          "straight_line_mm": 2.304698,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U6.2#2",
+          "to": "Q5.B2#3",
+          "net": "/PROT_COUT",
+          "from_xy_mm": [
+            -12.102673000000001,
+            7.349061000000006
+          ],
+          "to_xy_mm": [
+            -14.400824999999998,
+            7.025480000000004
+          ],
+          "straight_line_mm": 2.32082,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q5.B1#2",
+          "to": "R28.1#0",
+          "net": "/PROT_DOUT",
+          "from_xy_mm": [
+            -14.400824999999998,
+            7.675480000000005
+          ],
+          "to_xy_mm": [
+            -17.200715000000002,
+            7.258382000000002
+          ],
+          "straight_line_mm": 2.830787,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q5.A1#0",
+          "to": "R28.2#1",
+          "net": "/CELL_NEG",
+          "from_xy_mm": [
+            -15.050824999999998,
+            7.675480000000005
+          ],
+          "to_xy_mm": [
+            -17.200715000000002,
+            6.242382000000002
+          ],
+          "straight_line_mm": 2.583756,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q5.B2#3",
+          "to": "R29.1#0",
+          "net": "/PROT_COUT",
+          "from_xy_mm": [
+            -14.400824999999998,
+            7.025480000000004
+          ],
+          "to_xy_mm": [
+            -17.200148999999996,
+            9.859077000000003
+          ],
+          "straight_line_mm": 3.98315,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q5.A2#1",
+          "to": "R29.2#1",
+          "net": "/PROT_FET_RETURN",
+          "from_xy_mm": [
+            -15.050824999999998,
+            7.025480000000004
+          ],
+          "to_xy_mm": [
+            -17.200148999999996,
+            8.843077000000005
+          ],
+          "straight_line_mm": 2.814827,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q5.A1#0",
+          "to": "Q5.C1#4",
+          "net": "/CELL_NEG",
+          "from_xy_mm": [
+            -15.050824999999998,
+            7.675480000000005
+          ],
+          "to_xy_mm": [
+            -13.750824999999997,
+            7.675480000000005
+          ],
+          "straight_line_mm": 1.3,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q5.A2#1",
+          "to": "Q5.C2#5",
+          "net": "/PROT_FET_RETURN",
+          "from_xy_mm": [
+            -15.050824999999998,
+            7.025480000000004
+          ],
+          "to_xy_mm": [
+            -13.750824999999997,
+            7.025480000000004
+          ],
+          "straight_line_mm": 1.3,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q5.A2#1",
+          "to": "R27.1#0",
+          "net": "/PROT_FET_RETURN",
+          "from_xy_mm": [
+            -15.050824999999998,
+            7.025480000000004
+          ],
+          "to_xy_mm": [
+            -15.600981000000004,
+            9.500966000000005
+          ],
+          "straight_line_mm": 2.535883,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q5.A1#0",
+          "to": "U6.4#5",
+          "net": "/CELL_NEG",
+          "from_xy_mm": [
+            -15.050824999999998,
+            7.675480000000005
+          ],
+          "to_xy_mm": [
+            -10.902673000000002,
+            7.849061000000006
+          ],
+          "straight_line_mm": 4.151782,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        }
+      ]
+    },
+    {
+      "name": "system-power-topology",
+      "scope": "Physical corridors only: copper sizing/current/thermal/fault review still required",
+      "connections": [
+        {
+          "from": "BT2.1#0",
+          "to": "Q5.A1#0",
+          "net": "/CELL_NEG",
+          "from_xy_mm": [
+            -3.619999999999999,
+            9.803297627174564e-16
+          ],
+          "to_xy_mm": [
+            -15.050824999999998,
+            7.675480000000005
+          ],
+          "straight_line_mm": 13.768687,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "BT1.1#0",
+          "to": "R25.1#0",
+          "net": "VBAT",
+          "from_xy_mm": [
+            3.619999999999999,
+            0.0
+          ],
+          "to_xy_mm": [
+            -12.107530999999998,
+            9.349843000000007
+          ],
+          "straight_line_mm": 18.296852,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "BT1.1#0",
+          "to": "C20.1#0",
+          "net": "VBAT",
+          "from_xy_mm": [
+            3.619999999999999,
+            0.0
+          ],
+          "to_xy_mm": [
+            4.846035999999998,
+            -15.333889000000003
+          ],
+          "straight_line_mm": 15.382825,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "BT1.1#0",
+          "to": "Q3.3#2",
+          "net": "VBAT",
+          "from_xy_mm": [
+            3.619999999999999,
+            0.0
+          ],
+          "to_xy_mm": [
+            -1.9972570000000047,
+            -11.500682999999995
+          ],
+          "straight_line_mm": 12.799191,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.4#3",
+          "to": "R27.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            -3.563999000000001,
+            16.501796
+          ],
+          "to_xy_mm": [
+            -13.600981000000004,
+            9.500966000000005
+          ],
+          "straight_line_mm": 12.237346,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U4.THERMAL#16",
+          "to": "R27.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            10.725323000000003,
+            -10.087789
+          ],
+          "to_xy_mm": [
+            -13.600981000000004,
+            9.500966000000005
+          ],
+          "straight_line_mm": 31.232809,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U3.2#1",
+          "to": "R27.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            2.9953699999999936,
+            -15.311836999999997
+          ],
+          "to_xy_mm": [
+            -13.600981000000004,
+            9.500966000000005
+          ],
+          "straight_line_mm": 29.851534,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U2.2#1",
+          "to": "R27.2#1",
+          "net": "GND",
+          "from_xy_mm": [
+            -15.936760000000007,
+            -7.307900000000004
+          ],
+          "to_xy_mm": [
+            -13.600981000000004,
+            9.500966000000005
+          ],
+          "straight_line_mm": 16.970381,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "Q1.3#2",
+          "to": "L1.P$1#0",
+          "net": "V+",
+          "from_xy_mm": [
+            -18.872664,
+            0.30747399999999914
+          ],
+          "to_xy_mm": [
+            2.0786529999999943,
+            15.758567999999997
+          ],
+          "straight_line_mm": 26.032556,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        },
+        {
+          "from": "U5.6#5",
+          "to": "U4.7#6",
+          "net": "VAMP",
+          "from_xy_mm": [
+            -3.563999000000001,
+            15.501795999999999
+          ],
+          "to_xy_mm": [
+            10.975323000000003,
+            -8.587789
+          ],
+          "straight_line_mm": 28.137164,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Endpoint intent only, not emitted traces or a collision-checked path"
+        }
+      ]
+    },
+    {
+      "name": "battery-physical-land-pairs",
+      "scope": "Same-pin duplicates remain real physical copper lands",
+      "connections": [
+        {
+          "from": "BT1.1#0",
+          "to": "BT1.1#1",
+          "net": "VBAT",
+          "from_xy_mm": [
+            3.619999999999999,
+            0.0
+          ],
+          "to_xy_mm": [
+            19.630000000000003,
+            0.0
+          ],
+          "straight_line_mm": 16.01,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Account for BOTH physical lands; do not silently rely on fitted contact metal as a PCB routing jumper"
+        },
+        {
+          "from": "BT2.1#0",
+          "to": "BT2.1#1",
+          "net": "/CELL_NEG",
+          "from_xy_mm": [
+            -3.619999999999999,
+            9.803297627174564e-16
+          ],
+          "to_xy_mm": [
+            -19.630000000000003,
+            -9.803297627174564e-16
+          ],
+          "straight_line_mm": 16.01,
+          "copper_width_mm": null,
+          "path": null,
+          "note": "Account for BOTH physical lands; do not silently rely on fitted contact metal as a PCB routing jumper"
+        }
+      ]
+    }
+  ],
+  "back_polarity_silkscreen_candidates": [
+    {
+      "text": "+ POS",
+      "center_mm": [
+        11,
+        10.5
+      ],
+      "size_mm": [
+        5,
+        1.2
+      ],
+      "native_angle_deg": 0,
+      "mirror": true,
+      "layer": "B.SilkS",
+      "thickness_mm": 0.15,
+      "role": "Future silk only, no footprint/pad movement",
+      "visibility_gate": "Mechanical consumer must confirm visible in service state; rear-view rendering must confirm readable mirroring"
+    },
+    {
+      "text": "- NEG",
+      "center_mm": [
+        -11,
+        10.5
+      ],
+      "size_mm": [
+        5,
+        1.2
+      ],
+      "native_angle_deg": 0,
+      "mirror": true,
+      "layer": "B.SilkS",
+      "thickness_mm": 0.15,
+      "role": "Future silk only, no footprint/pad movement",
+      "visibility_gate": "Mechanical consumer must confirm visible in service state; rear-view rendering must confirm readable mirroring"
+    },
+    {
+      "text": "T8 BUTTON END >",
+      "center_mm": [
+        0,
+        10.5
+      ],
+      "size_mm": [
+        11,
+        1.0
+      ],
+      "native_angle_deg": 0,
+      "mirror": true,
+      "layer": "B.SilkS",
+      "thickness_mm": 0.15,
+      "role": "Future silk only, no footprint/pad movement",
+      "visibility_gate": "Mechanical consumer must confirm visible in service state; rear-view rendering must confirm readable mirroring"
+    }
+  ],
+  "release_gate": {
+    "released": false,
+    "copper_writer_enabled": false,
+    "required_before_apply": [
+      "Separate explicit parent copper-release instruction",
+      "Mechanical review/report exact path and SHA256 binding this exact stage1 manifest/contact/PCB",
+      "Reviewed mounts, USB insertion/removal, contact insulation/capture and actual service paths",
+      "Deliberate signal and high-current route geometry choices, without declaring qualification",
+      "Gated candidate writer preserving all footprint/pad/net/rule/interface bytes"
+    ],
+    "not_authorization": [
+      "This generated plan",
+      "The published stage1 commit",
+      "Earlier fit feedback",
+      "An arbitrary file named release.json"
+    ]
+  },
+  "unclosed_gates": [
+    "No reverse-cell circuit, temperature charge inhibit or charge safety timer",
+    "Unchanged charge/termination profile is not approved for the supplied T8",
+    "Fault SOA, contact/load current, thermal behavior and complete manufacturing process unqualified",
+    "Four original USB hole-clearance findings and all pad/library transforms must remain unchanged",
+    "No Gerbers, purchase, fabrication or live-cell authorization"
+  ]
+}
