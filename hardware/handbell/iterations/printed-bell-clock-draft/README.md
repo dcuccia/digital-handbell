@@ -9,9 +9,41 @@ The definition-only stage is preserved in commit `702f53b`, the first local
 connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; USB geometry is bound by
-`reports/usb-geometry.json`. **The current complete-identity board is bound
-by `reports/remaining-identities.json` and the placement manifest.**
+`reports/usb-geometry.json`; identities by `reports/remaining-identities.json`.
+**The current power-land board is bound by `reports/power-lands.json` and
+the placement manifest.**
 Figures and hashes in the earlier stage sections below are historical.
+
+## Power land patterns applied; owner pause
+
+The eleven selected L1, C26-C28, C1/C4/C5/C19/C20 and FB1/FB2 land patterns
+are applied through four dedicated libraries. Ferrites have their explicit
+mask/paste windows rather than duplicated automatic apertures. All component
+poses, envelopes, copper primitives and nonselected footprints remain intact.
+The adapted hardware retains CC BY-SA 3.0; no vendor CAD was imported.
+
+Both quiet pickoffs and the all-front boost paths survive the actual smaller
+lands. The [local report](reports/power-local-check.json) remeasures 77 adjacent
+tracks: 31 have increased primitive-only centerline exposure, with unchanged
+drawn widths. This excludes fill and is not an equivalent-resistance or
+current-capacity calculation.
+
+The filled board has **56 opens, zero other native DRC errors and 232
+silkscreen/text warnings**, with empty native ERC and all **83 fitted MPNs**
+retained. Its exact PCB SHA-256 is
+`f6a9d31192c7e59c4b81b7bcb281e23fd06cdc201e8a7a1f180ae7a8f860e3e4`.
+The [public ground report](reports/power-ground-check.json) preserves all
+previous connected groups and protected returns. Its checker and the
+[plan contract](reports/front-ground-plan.json) no longer depend on private
+recovery files; [commands and scope](../../../../docs/pcb-closure-plan.md#reproducible-filled-ground-check)
+are recorded in the closure plan.
+
+**Paused at the owner's September 14 request.** Resume only when requested.
+Remaining device envelopes/land dispositions and existing-part audit precede
+final routing; full CAD/bezel, assembly and powered qualification remain open.
+The identity-stage schematic PDF below is the last circuit-view export; later
+power changes alter footprint IDs, not its visible circuit. All matched release
+exports must be regenerated at the final handoff.
 
 ## All fitted part identities applied
 

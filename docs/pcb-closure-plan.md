@@ -80,7 +80,7 @@ unresolved disposition; it is not permission to fabricate unchanged.
 |---|---|---|
 | Y1/C2/C3/R6; Q3 | Retain accepted clock geometry/copper and corrected Q3 lands. Do not reopen their selections. | Current clock and Q3 reports; final mechanical bind still required. |
 | X6 USB | Native correction applied, including local CC/VBUS repairs. Retain the new lands and datum. | [Source-bound native result](usb-connector-qualification.md#current-native-implementation); supplier process and mechanical acceptance remain open. |
-| L1, C26-C28, C1/C4/C5/C19/C20, FB1/FB2 | Implement the already documented part-specific land/paste treatment as coherent power regions, with local reconnection. Do not silently reclassify these decisions as optional. | [Power selection](power-component-selection.md); remeasure changed loop/neck and private-terminal geometry. |
+| L1, C26-C28, C1/C4/C5/C19/C20, FB1/FB2 | Applied: four dedicated patterns across eleven references; no part moves or copper-primitive changes. | [Power selection](power-component-selection.md); actual connectivity/private pickoffs preserved and adjacent primitive exposure remeasured. Current and supplier qualification remain open. |
 | CHG0/L0, D3/D4, U2, U4 | Review actual terminal coverage, paste/mask and thermal-via feasibility. Manufacturer-example differences require explicit retain/change dispositions, not automatic global replacement. | [Device register](device-component-selection.md), selected drawings and actual native lands; U4 exposed-pad/paste treatment remains open. |
 | D3/D4, Q1/Q2/Q4, U3 | Apply already documented conservative envelope enlargements without shrinking other proxies or losing pose-dependent offsets. | Device register and final full-CAD fit. |
 | U5, R27, remaining connectors/contacts | Complete the existing selected-part audit; retain until a specific correction is established, but do not call this qualified. | Existing-part review, exact pin/package/assembly checks and quotation process notes. |
@@ -111,3 +111,62 @@ Escalate if closure requires changing fixed interfaces, major architecture,
 unresolved protection/assembly conflicts, or repeated passes without measurable
 progress. No remaining-dollar guarantee is made. Report progress as closed
 functional groups and named remaining defects, not just counts or elapsed time.
+
+## Reproducible filled-ground check
+
+`tools/check_front_ground.py` and `tools/zone_graph.py` promote the exercised
+filled-island and private-return checks without importing the private recovery
+directory. `reports/front-ground-plan.json` in the active package contains the
+one-F-zone/ten-exclusion contract and its source-plan hash. The promoted graph
+functions/classes are AST-identical to the exercised implementation apart from
+documentation. Existing island/hole/short checks are retained, with additional
+component-comparison cases for merges, splits and missing pads/copper.
+
+The checker is read-only and requires an already-filled previous baseline,
+an exact candidate/manifest binding, the plan, and a **new** report output.
+It compares connected groups, not every pad pair, and rejects shorts,
+floating copper, changed pad/net identities, private-pickoff bypasses and
+unexpected zone/exclusion plans. It does not run DRC or qualify assembly.
+Use the separate source-preserving refill tool first when geometry changed.
+
+Example from the repository root, reproducing the latest comparison against
+the complete-identity baseline in `84469b7`:
+
+```powershell
+$work = Join-Path $env:TEMP ("handbell-ground-" + [guid]::NewGuid().ToString("N"))
+New-Item -ItemType Directory -Path $work | Out-Null
+python -c "import subprocess; from pathlib import Path; p=Path(r'$work')/'baseline.kicad_pcb'; p.write_bytes(subprocess.run(['git','show','84469b7:hardware/handbell/iterations/printed-bell-clock-draft/handbell.kicad_pcb'], check=True, capture_output=True, timeout=15).stdout)"
+python -c "import subprocess; subprocess.run(['python', r'tools\check_front_ground.py', r'hardware\handbell\iterations\printed-bell-clock-draft\handbell.kicad_pcb', '--baseline', r'$work\baseline.kicad_pcb', '--plan', r'hardware\handbell\iterations\printed-bell-clock-draft\reports\front-ground-plan.json', '--output', r'$work\ground-check.json'], check=True, timeout=360)"
+```
+
+KiCad 10.0.6 and its native Python API were exercised. The completed public run
+used an initialized isolated `KICAD_CONFIG_HOME`; keep such preferences local.
+Native graph runtime varies: two 180-second attempts expired, while the bounded
+360-second run completed in about 165 seconds. Earlier same-purpose runs were
+faster. No configuration or resource-contention cause is established. Stage and
+CPU timings are recorded; do not turn a timeout into an unbounded retry.
+
+## Owner pause and next item
+
+**Paused after the September 14 wrap-up at the owner's explicit request.**
+Do not continue automatically or schedule tomorrow's work; wait for the owner
+to resume. No background engineering agent or routing loop was started.
+
+Current package: `hardware/handbell/iterations/printed-bell-clock-draft`.
+Current PCB SHA-256:
+`f6a9d31192c7e59c4b81b7bcb281e23fd06cdc201e8a7a1f180ae7a8f860e3e4`.
+Current report: `reports/power-lands.json`; public fill proof:
+`reports/power-ground-check.json`. Status: **83/83 fitted MPNs, 56 opens,
+zero other native DRC errors and 232 text/silk warnings**.
+
+Next bounded item: apply the already documented conservative D3/D4,
+Q1/Q2/Q4 and U3 envelope corrections and record resulting fit conflicts, if
+any. Complete the remaining LED/diode/U2/U4 land/paste dispositions and
+existing-part audit before declaring geometry frozen. No new sourcing or
+automatic routing restart. Then follow core/power, constrained signals,
+remaining controls and final ground closure in the sequence above.
+
+The full mechanical bind, 0.15 mm USB bezel adjustment, native CAD camera-state
+handoff, current budgets, supplier processes and matched quotation exports are
+still pending. Preserve earlier prints, models and the recovered candidate.
+No supplier upload/order, functional or child-use approval is implied.

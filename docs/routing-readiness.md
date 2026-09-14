@@ -2,6 +2,13 @@
 
 ## September 14 cost-aware closure direction
 
+**Latest, paused checkpoint:** all 83 fitted MPNs and eleven selected power
+land patterns are applied. The current filled board has **56 opens, zero other
+native DRC errors and 232 text/silk warnings**. Prior groups, quiet pickoffs and
+all-front boost paths are retained. The repo-only fill checker and exact
+[resume handoff](pcb-closure-plan.md#owner-pause-and-next-item) are ready.
+No further routing is authorized during the owner's pause.
+
 The following USB pass implements the authorized slot/land/paste correction
 and one local CC/VBUS repair, keeping all previous connected groups. The
 current filled board has **57 opens and zero native DRC errors**; 234

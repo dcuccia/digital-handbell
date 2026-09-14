@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+  "scope": "Existing F/GND plan and ten pour-only private-return exclusions; no B pour or manufacturing approval.",
+  "source_plan_sha256": "6dc293d7a52e885da3dcd547350e67e2ed90ee3cd0bd9bc0ec33c588bdf2f716",
+  "parameters": {
+    "clearance_mm": 0.2,
+    "edge_clearance_mm": 0.25,
+    "hole_clearance_mm": 0.25,
+    "hole_to_hole_mm": 0.25,
+    "polygon_error_mm": 0.001,
+    "min_thickness_mm": 0.25,
+    "pad_connection": "solid",
+    "thermal_gap_mm": 0.25,
+    "thermal_spoke_width_mm": 0.25,
+    "island_removal": "always",
+    "layer": "F.Cu",
+    "net": "GND",
+    "preserved_front_GND_connection_overrides": [
+      {
+        "pad_uuid": "bc1f09cc-4e90-5325-bc80-08b5f58578c0",
+        "reference": "MH1",
+        "number": "1",
+        "native_override": 2
+      },
+      {
+        "pad_uuid": "3ee74a8d-7103-57b2-9dbd-d3ab3ff8c1a6",
+        "reference": "MH2",
+        "number": "1",
+        "native_override": 2
+      },
+      {
+        "pad_uuid": "0081077e-b098-5f92-8bab-8819553f6981",
+        "reference": "GAIN0",
+        "number": "1",
+        "native_override": 1
+      }
+    ],
+    "rule_basis": "Explicit conservative native settings: max of project netclass/global clearance and .2 mm; edge >=.25 mm. Project bytes unchanged.",
+    "pad_connection_tradeoff": "Solid zone default, preserving all source pad/footprint overrides. Increased assembly heat demand is not solder-process or thermal qualification."
+  },
+  "protection": {
+    "pour_only_F_keepouts": [
+      {
+        "uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+        "name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+        "bounds_absolute_iu": [
+          101199000,
+          115279000,
+          103201000,
+          117021000
+        ],
+        "protected_item_uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520"
+      },
+      {
+        "uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+        "name": "private-R26.2-to-R27.2/3ed47a01-14b9-59e7-bdfe-95561c7f1435",
+        "bounds_absolute_iu": [
+          85849000,
+          110641000,
+          86951000,
+          111743000
+        ],
+        "protected_item_uuid": "3ed47a01-14b9-59e7-bdfe-95561c7f1435"
+      },
+      {
+        "uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+        "name": "private-R24.2-to-C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b",
+        "bounds_absolute_iu": [
+          103149000,
+          116949000,
+          104251000,
+          118051000
+        ],
+        "protected_item_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      },
+      {
+        "uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+        "name": "private-R24.2-to-C28.2/34d001e5-c45d-5645-a43a-6ab95d630ff0",
+        "bounds_absolute_iu": [
+          98068100,
+          111060100,
+          100139900,
+          111739900
+        ],
+        "protected_item_uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0"
+      },
+      {
+        "uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+        "name": "private-R24.2-to-C28.2/a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+        "bounds_absolute_iu": [
+          101860100,
+          115810100,
+          104039900,
+          117839900
+        ],
+        "protected_item_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+        "name": "private-R24.2-to-C28.2/1ba917bc-32e2-5176-954f-c3d06c7f6040",
+        "bounds_absolute_iu": [
+          97857000,
+          110849000,
+          98959000,
+          111951000
+        ],
+        "protected_item_uuid": "1ba917bc-32e2-5176-954f-c3d06c7f6040"
+      },
+      {
+        "uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+        "name": "private-R24.2-to-C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "bounds_absolute_iu": [
+          99649000,
+          111349000,
+          100751000,
+          112451000
+        ],
+        "protected_item_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+        "name": "private-R24.2-to-C28.2/51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+        "bounds_absolute_iu": [
+          99460100,
+          111060100,
+          100539900,
+          112239900
+        ],
+        "protected_item_uuid": "51e3a8d5-1e6b-5f46-a297-c3739ea5de91"
+      },
+      {
+        "uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+        "name": "private-R26.2-to-R27.2/933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+        "bounds_absolute_iu": [
+          85648019,
+          108549966,
+          87150019,
+          110451966
+        ],
+        "protected_item_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826"
+      },
+      {
+        "uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+        "name": "private-R26.2-to-R27.2/d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+        "bounds_absolute_iu": [
+          86059119,
+          109161066,
+          86739900,
+          111531900
+        ],
+        "protected_item_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+      }
+    ]
+  }
+}

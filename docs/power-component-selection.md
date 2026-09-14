@@ -6,10 +6,12 @@ not a purchase, assembly or safety approval. The
 records exact source URLs/hashes, dimensions, native changes and limits.
 The frozen references and power-routing milestone are not edited.
 
-The selected identities are now applied in the continuing
-[clock/integration draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md#all-fitted-part-identities-applied).
-The land/paste changes below remain pending; assigning an MPN did not change
-the inherited copper or qualify its solder joints.
+The selected identities and all eleven land/paste changes below are now applied
+in the continuing
+[clock/integration draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md#power-land-patterns-applied-owner-pause).
+The actual smaller lands retain existing primitive connectivity and quiet
+pickoffs without moving parts or changing tracks. Pad-adjacent exposure is
+remeasured separately; this does not qualify solder joints or current capacity.
 
 | References | Selected exact part | Important source limits |
 |---|---|---|
@@ -100,8 +102,8 @@ filter or proves 3 W of clean audio.
 
 ## Remaining handoff
 
-The new routing candidate owns native implementation, actual mask/paste and
-connectivity evidence, complete routing and updated current-budget work.
+The continuing candidate now owns native land/mask/paste and connectivity
+evidence. Complete routing, current-budget and supplier/process work remain.
 The parent consumes its exact final placement in the complete CAD model.
 The [USB correction](usb-connector-qualification.md), remaining device
 identities and [quotation process](pcba-quotation-plan.md) remain coordinated

@@ -1,0 +1,630 @@
+{
+  "status": "ACCEPTED_POWER_LAND_CHECKPOINT_NOT_QUOTE_READY",
+  "input_pcb_sha256": "7f2abd76c716364b77356bb251e889ea2dfcc1efe9eaa3e33e55b59a7cd8ba16",
+  "register_sha256": "96af2c618a9cc5ca991164b165408b9a01300598574b2e8b6eff0b22d8cc46a7",
+  "generator_sha256": "e632c619df8adb08f7faeeed6fa9e67030277af8f4114234db39c416757daad6",
+  "output_pcb_sha256": "f6a9d31192c7e59c4b81b7bcb281e23fd06cdc201e8a7a1f180ae7a8f860e3e4",
+  "output_schematic_sha256": "7eb00af5195aac090204fd5733e4685cb07d646362075ed968c712dbd6a9a795",
+  "changes": {
+    "C1": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "new_footprint": "Handbell:Murata_GRM21_10uF_Reflow",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "117020e2-d2ac-58b9-b1b7-3ac4f1b6da7c",
+          "old_at": [
+            "-0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "VHI"
+        },
+        {
+          "number": "2",
+          "uuid": "159970f7-4f9c-5322-b770-0a6263c521ba",
+          "old_at": [
+            "0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "GND"
+        }
+      ],
+      "unchanged_native_pose": [
+        "95.965225",
+        "86.208818",
+        "90"
+      ]
+    },
+    "C4": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "new_footprint": "Handbell:Murata_GRM21_10uF_Reflow",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "6d44bd81-2f39-5323-b61b-8d24e1481288",
+          "old_at": [
+            "-0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "+3V3"
+        },
+        {
+          "number": "2",
+          "uuid": "6e3a90df-84d7-5db0-affb-b02746265f31",
+          "old_at": [
+            "0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "GND"
+        }
+      ],
+      "unchanged_native_pose": [
+        "84.006419",
+        "90.585985",
+        "0"
+      ]
+    },
+    "C5": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "new_footprint": "Handbell:Murata_GRM21_10uF_Reflow",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "f4870b8a-a70a-5b0a-8249-bd47aec0a032",
+          "old_at": [
+            "-0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "+3V3"
+        },
+        {
+          "number": "2",
+          "uuid": "7ac18e8b-a014-50bc-a928-c817632692d5",
+          "old_at": [
+            "0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "GND"
+        }
+      ],
+      "unchanged_native_pose": [
+        "83.821409",
+        "97.491452",
+        "0"
+      ]
+    },
+    "C19": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "new_footprint": "Handbell:Murata_GRM21_10uF_Reflow",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "a0958fe5-e507-5e56-94ac-29472c6955ec",
+          "old_at": [
+            "-0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "VAMP"
+        },
+        {
+          "number": "2",
+          "uuid": "b86a6a5b-455a-53be-aec3-b7617c66b81a",
+          "old_at": [
+            "0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "GND"
+        }
+      ],
+      "unchanged_native_pose": [
+        "114.218731",
+        "93.062630",
+        "0"
+      ]
+    },
+    "C20": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "new_footprint": "Handbell:Murata_GRM21_10uF_Reflow",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "28d2f5f3-b985-52b8-a3d0-d1d4597abfa7",
+          "old_at": [
+            "-0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "VBAT"
+        },
+        {
+          "number": "2",
+          "uuid": "6d5f84a7-05d2-5fb5-a7fd-eada5fa1a27d",
+          "old_at": [
+            "0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.9,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.6,
+            1.25
+          ],
+          "net": "GND"
+        }
+      ],
+      "unchanged_native_pose": [
+        "104.846036",
+        "83.716111",
+        "90"
+      ]
+    },
+    "C26": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "new_footprint": "Handbell:Murata_GRM21_22uF_Reflow",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "a6653b11-caa0-5ce1-8726-7bb09dd403a6",
+          "old_at": [
+            "-0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.95,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.7,
+            1.3
+          ],
+          "net": "V+"
+        },
+        {
+          "number": "2",
+          "uuid": "6aae6c1f-a6dc-5df9-989d-027eeadc007d",
+          "old_at": [
+            "0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.95,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.7,
+            1.3
+          ],
+          "net": "GND"
+        }
+      ],
+      "unchanged_native_pose": [
+        "90.500000",
+        "110.900000",
+        "180"
+      ]
+    },
+    "C27": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "new_footprint": "Handbell:Murata_GRM21_22uF_Reflow",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "4a939b86-4ff8-51fc-b5d2-cb3f319e987c",
+          "old_at": [
+            "-0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.95,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.7,
+            1.3
+          ],
+          "net": "VAMP"
+        },
+        {
+          "number": "2",
+          "uuid": "cd1ac9ea-17d7-560e-b79c-380d25d3feda",
+          "old_at": [
+            "0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.95,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.7,
+            1.3
+          ],
+          "net": "GND"
+        }
+      ],
+      "unchanged_native_pose": [
+        "100.100000",
+        "115.200000",
+        "270"
+      ]
+    },
+    "C28": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0805-NO",
+      "new_footprint": "Handbell:Murata_GRM21_22uF_Reflow",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "bf411126-e0c1-5e14-b531-dc4dd157714a",
+          "old_at": [
+            "-0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.95,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.7,
+            1.3
+          ],
+          "net": "VAMP"
+        },
+        {
+          "number": "2",
+          "uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+          "old_at": [
+            "0.95",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.95,
+            0
+          ],
+          "old_size_mm": [
+            1.24,
+            1.5
+          ],
+          "new_size_mm": [
+            0.7,
+            1.3
+          ],
+          "net": "GND"
+        }
+      ],
+      "unchanged_native_pose": [
+        "102.200000",
+        "115.200000",
+        "270"
+      ]
+    },
+    "FB1": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0603-NO",
+      "new_footprint": "Handbell:Murata_BLM18SG121_WideCopper",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "eb6ec6bc-30de-5a83-ab2c-5bd3e1de2bba",
+          "old_at": [
+            "-0.85",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.675,
+            0
+          ],
+          "old_size_mm": [
+            1.075,
+            1.0
+          ],
+          "new_size_mm": [
+            0.65,
+            1.2
+          ],
+          "net": "Net-(FB1-P$1)"
+        },
+        {
+          "number": "2",
+          "uuid": "3cd4bee7-df34-5b01-a4d6-b79b76ce6a35",
+          "old_at": [
+            "0.85",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.675,
+            0
+          ],
+          "old_size_mm": [
+            1.075,
+            1.0
+          ],
+          "new_size_mm": [
+            0.65,
+            1.2
+          ],
+          "net": "VO+"
+        }
+      ],
+      "unchanged_native_pose": [
+        "114.513146",
+        "90.010292",
+        "0"
+      ]
+    },
+    "FB2": {
+      "old_footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:0603-NO",
+      "new_footprint": "Handbell:Murata_BLM18SG121_WideCopper",
+      "pads": [
+        {
+          "number": "1",
+          "uuid": "9dfeefe6-1fda-55a7-84f0-4a8874185d4c",
+          "old_at": [
+            "-0.85",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -0.675,
+            0
+          ],
+          "old_size_mm": [
+            1.075,
+            1.0
+          ],
+          "new_size_mm": [
+            0.65,
+            1.2
+          ],
+          "net": "Net-(FB2-P$1)"
+        },
+        {
+          "number": "2",
+          "uuid": "67fbb9c1-bacf-5f1c-aa0a-650079ef5d4f",
+          "old_at": [
+            "0.85",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            0.675,
+            0
+          ],
+          "old_size_mm": [
+            1.075,
+            1.0
+          ],
+          "new_size_mm": [
+            0.65,
+            1.2
+          ],
+          "net": "VO-"
+        }
+      ],
+      "unchanged_native_pose": [
+        "114.513529",
+        "87.925648",
+        "0"
+      ]
+    },
+    "L1": {
+      "old_footprint": "Adafruit TPS61023-import-fps:INDUCTOR_5X5MM_TDK_VLC5045",
+      "new_footprint": "Handbell:TDK_VLS5045EX_Reflow",
+      "pads": [
+        {
+          "number": "P$1",
+          "uuid": "a517bc1a-e2a0-5e91-8305-79a734d543be",
+          "old_at": [
+            "-1.6",
+            "0",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            -1.8,
+            0
+          ],
+          "old_size_mm": [
+            2.0,
+            5.0
+          ],
+          "new_size_mm": [
+            1.5,
+            4.0
+          ],
+          "net": "V+"
+        },
+        {
+          "number": "P$2",
+          "uuid": "3f334850-1096-5c76-ac45-fa801cdf1bfc",
+          "old_at": [
+            "1.6",
+            "0",
+            "0"
+          ],
+          "new_local_xy_mm": [
+            1.8,
+            0
+          ],
+          "old_size_mm": [
+            2.0,
+            5.0
+          ],
+          "new_size_mm": [
+            1.5,
+            4.0
+          ],
+          "net": "BOOST_SW"
+        }
+      ],
+      "unchanged_native_pose": [
+        "93.000000",
+        "114.800000",
+        "0"
+      ]
+    }
+  },
+  "component_moves": [],
+  "copper_primitive_changes": [],
+  "ground_fill_invalidated": true,
+  "remaining": "56 opens and 232 text/silk warnings; device envelopes and land dispositions, existing-part audit, full power/routing/CAD/assembly and powered qualification remain open.",
+  "input_commit": "84469b7",
+  "unfilled_candidate_sha256": "3e7dbde7a8d84adf39722598e1ab8c15d805db4cef9cb071a9ec7f4c6b5b6c10",
+  "placement_manifest_sha256": "d998251eca0e13b47d1c81a57be5ac04c4b34e1c0f597a6611dbe09fd7500689",
+  "shared_library_helper_sha256": "36e44b729a07f4f4188b232a18ae5c1a5c93b09ddf2555178c586c395435b0eb",
+  "native_errors": 0,
+  "native_warnings": 232,
+  "native_unconnected": 56,
+  "erc_violations": 0,
+  "all_nonselected_geometry_and_copper_primitives_preserved": true,
+  "verification_reports": {
+    "power-drc.json": "cf4a5e2a3bc8ecac386fb366ecfb5b6165f9e36436c8a28b5869f35e80680690",
+    "power-erc.json": "1d6e7bccbd7a2e48f49eb74bf6d6ca182d930711195739d9fb68d971503ecc7b",
+    "power-ground-check.json": "dc850e7da69d53cdd6cff8718a06984c4ce0f448a06e45fa521bf61c70b46841",
+    "power-local-check.json": "11804ae041f7e4ab1ba47ddd6dda1b9d29a26c2d368630f0902b99be6028e082"
+  },
+  "exposure_summary": {
+    "adjacent_tracks_measured": 77,
+    "increased_exposure_tracks": 31,
+    "scope": "Reuse NativeWalk.exposed on actual native tracks touching revised pads. Excludes filled zones and does not run shortest walks or assign current. Centerline coverage, not 2-D resistance, equivalent current path or ampacity."
+  },
+  "public_checker_execution": {
+    "completed_with_deadline_seconds": 360,
+    "completed_elapsed_seconds": {
+      "baseline_graph": 78.73399999999674,
+      "both_graphs": 161.90599999995902,
+      "total": 164.71899999998277,
+      "process_cpu": 40.203125
+    },
+    "prior_180_second_attempts_timed_out": 2,
+    "cause_limit": "Native graph runtime varied; no configuration or resource-contention cause established."
+  }
+}

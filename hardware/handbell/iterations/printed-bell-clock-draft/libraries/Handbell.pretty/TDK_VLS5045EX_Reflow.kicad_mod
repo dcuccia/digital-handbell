@@ -1,0 +1,199 @@
+(footprint "TDK_VLS5045EX_Reflow"
+
+
+		(layer "F.Cu")
+		
+		
+		(descr "Source: http://www.tdk.co.jp/tefe02/e531_vlc5045.pdf")
+		(property "Reference" "REF**"
+			(at -2.946 -2.846 180)
+			(unlocked yes)
+			(layer "F.SilkS")
+			
+			(effects
+				(font
+					(size 0.692831 0.692831)
+					(thickness 0.119969)
+				)
+				(justify right top)
+			)
+		
+(uuid "763ea817-d2d9-55bf-91e3-68193d2dd0e0"))
+		(property "Value" "1uH"
+			(at -1.422 3.492 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			
+			(effects
+				(font
+					(size 0.776224 0.776224)
+					(thickness 0.036576)
+				)
+				(justify right top)
+			)
+		
+(uuid "0ae186df-5234-5198-b589-aafb972d1499"))
+		(property "Datasheet" "https://product.tdk.com/en/search/inductor/inductor/smd/info?part_no=VLS5045EX-1R0N"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		
+(uuid "50b90dcb-e281-56a1-b60f-50a021d14b9c"))
+		(property "Description" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		
+(uuid "97da85ac-4a61-5cc3-9042-eee6ad748a0c"))
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -2.85 2.75)
+			(end -2.85 -2.75)
+			(stroke
+				(width 0.2032)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			
+		
+(uuid "c817d174-1d83-5d24-b488-ef3cd3e03a15"))
+		(fp_line
+			(start 2.85 2.75)
+			(end -2.85 2.75)
+			(stroke
+				(width 0.2032)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			
+		
+(uuid "ca18963e-5657-52b9-841e-ab191c71d34e"))
+		(fp_line
+			(start -2.85 -2.75)
+			(end 2.85 -2.75)
+			(stroke
+				(width 0.2032)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			
+		
+(uuid "efe929ee-4f25-5a65-be12-aa99a999b88b"))
+		(fp_line
+			(start 2.85 -2.75)
+			(end 2.85 2.75)
+			(stroke
+				(width 0.2032)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			
+		
+(uuid "223bfa40-7ffd-51d2-97bb-a18a1b497268"))
+		(fp_line
+			(start -2.5 2.5)
+			(end -2.5 -2.5)
+			(stroke
+				(width 0.127)
+				(type solid)
+			)
+			(layer "F.Fab")
+			
+		
+(uuid "cb8aa8e1-49ad-5a43-b7d3-b7f81cc5c81b"))
+		(fp_line
+			(start 2.5 2.5)
+			(end -2.5 2.5)
+			(stroke
+				(width 0.127)
+				(type solid)
+			)
+			(layer "F.Fab")
+			
+		
+(uuid "75ebea00-ac12-524b-ab37-72e6e8fb86a6"))
+		(fp_line
+			(start -2.5 -2.5)
+			(end 2.5 -2.5)
+			(stroke
+				(width 0.127)
+				(type solid)
+			)
+			(layer "F.Fab")
+			
+		
+(uuid "4aad2b32-64b9-52b5-907a-fbc1dc17c376"))
+		(fp_line
+			(start 2.5 -2.5)
+			(end 2.5 2.5)
+			(stroke
+				(width 0.127)
+				(type solid)
+			)
+			(layer "F.Fab")
+			
+		
+(uuid "727df63b-2a10-523e-9e99-a8944bc53349"))
+		(fp_circle
+			(center 0 0)
+			(end 2.5 0)
+			(stroke
+				(width 0.2032)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			
+		
+(uuid "8b743102-8d74-5c68-a881-e1c208eb8011"))
+		(pad "P$1" smd rect
+			(at -1.8 0)
+			(size 1.5 4.0)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			
+			(solder_mask_margin 0.0508)
+			(solder_paste_margin 0)
+			(thermal_bridge_angle 0)
+			
+		
+(uuid "a517bc1a-e2a0-5e91-8305-79a734d543be")
+
+
+)
+		(pad "P$2" smd rect
+			(at 1.8 0)
+			(size 1.5 4.0)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			
+			(solder_mask_margin 0.0508)
+			(solder_paste_margin 0)
+			(thermal_bridge_angle 0)
+			
+		
+(uuid "3f334850-1096-5c76-ac45-fa801cdf1bfc")
+
+
+)
+		(embedded_fonts no)
+	
+
+
+
+(property "MPN" "VLS5045EX-1R0N" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+(property "Manufacturer" "TDK" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+(attr smd)
+)

@@ -1,6 +1,14 @@
 {
   "schema_version": 1,
-  "status": "Selected prototype quote-candidate parts; native land/paste implementation and supplier/physical qualification pending",
+  "status": "Selected identities and eleven native land/paste patterns applied in printed-bell-clock-draft; supplier/current/physical qualification remains open",
+  "native_application": {
+    "package": "hardware/handbell/iterations/printed-bell-clock-draft",
+    "report": "reports/power-lands.json",
+    "pcb_sha256": "f6a9d31192c7e59c4b81b7bcb281e23fd06cdc201e8a7a1f180ae7a8f860e3e4",
+    "component_moves": 0,
+    "copper_primitive_changes": 0,
+    "remaining": "Full routing/current review, supplier assembly and exact mechanical integration."
+  },
   "source_native_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "source_placement_sha256": "60e394c41bcfd7734b41c7713100360253164381f0217eed325386bd49977799",
   "source_evidence_scope": "Manufacturer data and typical curves, not project measurements. PDFs/images/API records remain local research evidence.",

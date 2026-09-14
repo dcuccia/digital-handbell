@@ -47,7 +47,10 @@ candidates and records their current/bias data and required native land/paste
 changes. It also covers the closely coupled land treatment for the five
 already selected 10 uF capacitors sharing the oversized source pattern.
 No larger body envelope is required for these six parts; keep the conservative
-heights. See [power-component selection](../../../docs/power-component-selection.md).
+heights. The eleven selected land patterns are now applied in the continuing
+draft, with no part moves and preserved quiet pickoffs. This is not supplier or
+current-capacity qualification. See
+[power-component selection](../../../docs/power-component-selection.md).
 
 `device-component-candidates.json` selects thirteen formerly blank device
 identities and confirms Q4, including **DMP2045UFY4-7** for Q3 and the

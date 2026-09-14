@@ -10,6 +10,7 @@ import uuid
 from apply_clock_definition_revision import prop_edits
 from kicad_sexpr import apply_edits, load, loads
 from native_identity_fields import prepare_fields, apply_manifest_fields
+from native_footprint_fields import library_from_instance
 from route_clock_local import PACKAGE, ROOT
 
 OLD = "Adafruit Feather RP2040 Prop-Maker-import-fps:USB_C_CUSB31-CFM2AX-01-X"
@@ -150,14 +151,7 @@ def main():
     pcb_text, repairs = repair_approaches(apply_edits(text, changes))
     new_fp = next(f for f in loads(pcb_text).children("footprint") if f.properties().get("Reference") == "X6")
     assert before_nets == {p.value("uuid"): p.value("net") for p in new_fp.children("pad")}
-    module = pcb_text[new_fp.start:new_fp.end]
-    node = loads(module)
-    edits = [(node.items[1].start, node.items[1].end, json.dumps(NAME))]
-    edits += prop_edits(node, {"Reference": "REF**"})
-    edits += [(n.start, n.end, "") for n in node.children() if n.head in ("at", "uuid", "path")]
-    for pad in node.children("pad"):
-        edits += [(n.start, n.end, "") for n in pad.children() if n.head in ("net", "pintype", "pinfunction")]
-    module = apply_edits(module, edits)
+    module = library_from_instance(pcb_text, new_fp, NAME)
     sch_text, sch = load(PACKAGE / "handbell.kicad_sch")
     sch_text, _ = prepare_fields(sch_text, sch, "symbol", specifications)
     instance = next(s for s in loads(sch_text).children("symbol") if s.properties().get("Reference") == "X6")
