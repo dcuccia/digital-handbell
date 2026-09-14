@@ -391,6 +391,27 @@ larger board was established.
 Affected decisions: D05/D08/D09/D14; owning epics E04/#4, E05/#5 and E07/#7.
 No purchase, fabrication, live-cell or child-use release is authorized.
 
+## 2026-09-14: sourced Q3 replacement and clock-reference direction
+
+Under the existing engineering authorization, select **DMP2045UFY4-7** for
+the new quote candidate instead of manufacturer-NRND DMG3415UFY4-7.
+The [device handoff](device-component-selection.md) records the matched
+package/pin/drain geometry, exact-orderable PCN and electrical differences.
+This does not authorize silently carrying forward the old low-voltage leakage
+guarantee, hotplug behavior or test-board current ratings.
+
+A bounded 2520 crystal search did not establish a preferred lower-ESR exact
+part. Evaluate the RP2040 guide's tested **ABM8-272-T3** 3225 reference and
+15 pF load capacitors within the unchanged D43 board, rather than growing
+the board or inferring impedance from a vendor suffix. Final lands, sourced
+capacitors, height and local fit remain to be reconciled before adoption.
+The earlier 22 pF selection is not silently superseded. Low-cell/LDO-dropout
+startup and drive measurements remain necessary even with this reference.
+
+These are source/implementation decisions, not completed routing, a supplier
+quotation package, procurement approval or powered qualification.
+Affected decisions: D02/D03/D05/D14; epics E04/#4, E07/#7 and E08/#8.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |

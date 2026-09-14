@@ -2,7 +2,7 @@
 
 September 14, 2026. The
 [device register](../hardware/handbell/parts/device-component-candidates.json)
-selects **eleven formerly blank prototype device identities** and confirms
+selects **twelve formerly blank prototype device identities** and confirms
 Q4. It records manufacturer sources, pin/polarity details, local-axis maximum
 dimensions and unresolved manufacturing gates. These identities are not a
 released supplier BOM, approval to purchase, or proof that every inherited
@@ -18,6 +18,7 @@ land/paste pattern is suitable.
 | IC4 | ST LSM6DSOXTR | Correct LGA14, Mode 1 and existing firmware initialization gate retained |
 | Q1 | AOS AO3401 | Manufacturer says Full Production; no AO3401A substitution is needed |
 | Q2, Q4 | AOS AO3400A | C20917 resolves Q2; Q4 has a differently oriented native footprint |
+| Q3 | Diodes DMP2045UFY4-7 | Explicit replacement for NRND DMG3415UFY4-7; corrected DFN drain retained |
 | U2 | Richtek RT9080-33GJ5 | Fixed 3.3 V, non-N variant: pin 4 NC, not SNS |
 | U3 | Microchip MCP73831T-2ACI/OT | Exact existing charger options retained |
 | U4 | MAX98357AETE+T | T1633+4 16-TQFN, not the WLP option |
@@ -25,7 +26,9 @@ land/paste pattern is suitable.
 The researcher preserved original manufacturer documents and actual catalog
 records locally; the parent confirmed all 24 named source hashes and
 inspected the height/flash drawings. Twenty of those source records support
-the presently selected groups. Public records omit personal evidence paths
+the first eleven selected groups. The subsequent Q3 selection adds four
+manufacturer records from a separately hash-bound follow-up; all sixteen
+follow-up source hashes were confirmed before adoption. Public records omit personal evidence paths
 and do not redistribute manufacturer PDFs or images.
 
 ## Conservative package-envelope corrections
@@ -79,18 +82,56 @@ the charging LED and 0.15 mA for the GPIO LED. These are operating-point
 examples, not guaranteed bounds or guaranteed visible brightness. The
 resistors are not changed to force the datasheet's optical test current.
 
-## Two decisions remain open
+## Q3 replacement decision
 
-**Q3:** the exact old ordering identity is DMG3415UFY4-7, which the manufacturer
-marks NRND. The suggested DMP2045UFY4 replacement is under a bounded
-electrical/pin/package comparison; it is not silently selected. The corrected
-DFN drain mapping and source-selection behavior must be preserved.
+Select **DMP2045UFY4-7** instead of the manufacturer-NRND DMG3415UFY4-7.
+The old/new package drawings agree, so keep the corrected DFN lands, explicit
+paste/mask, 2.855 x 1.575 x 1.0 mm proxy and 0.2725 mm centre displacement.
+Pin 1 is gate/VBUS, pin 2 source/VHI and pin 3 the large drain/VBAT.
+The intrinsic diode conducts from VBAT toward VHI during battery startup.
 
-**Y1:** ECS-120-12-36-AGN-TR is a real 12 MHz/12 pF/2520 candidate, but its
-150 ohm ESR is not yet the preferred choice. A lower-ESR near-fit is being
-evaluated. Keep R6 at 1 kohm and C2/C3 at 22 pF pending that decision.
-Their series contribution is 11 pF; actual stray capacitance, oscillator
-startup margin and drive power are not established by the nominal values.
+This is package-compatible, **not electrically identical**. At 25 C the
+maximum resistance increases 39 to 45 milliohm at -4.5 V gate drive and
+52 to 58 milliohm at -2.5 V, under their matching specified currents.
+An illustrative 2 A comparison at the latter limits adds 12 mV/24 mW;
+it does not rate the board. The new 1.8 V resistance test is at only 0.1 A,
+not the old 2 A condition. Drain voltage increases to 20 V; gate maximum
+remains +/-8 V.
+
+Do not retain the old 500 nA gate-leakage guarantee at 5 V: the new datasheet
+only specifies 10 microamp at 8 V. Gate charge, capacitance and internal gate
+resistance also differ; the real VBUS/10 kohm gate network needs startup and
+USB-transition measurements, not an assumed identical switching waveform.
+Neither the body-diode current figure nor the thermal ratings are independent
+of the manufacturer's specified test-board copper.
+
+[PCN-2792-REV1](https://www.diodes.com/assets/PCN-Files/Diodes_PCN_2792_and_Qual_Rpt.pdf),
+dated January 27, 2026 with April 27 implementation, names exact
+DMP2045UFY4-7 in table 4. Its change is Cu-to-PdCu bond wire, not the
+mold-compound changes in other tables. This supports current manufacturing
+continuity, not a stock/lifetime guarantee or an observed Active field.
+No reverse-cell or ideal-diode protection is added.
+
+## Crystal decision still open
+
+The bounded 2520 search did not establish a lower-ESR exact orderable.
+ECS-120-12-36-AGN-TR remains a conditional 12 MHz/12 pF/150 ohm option,
+not the preferred reference. A seemingly lower-ESR Multicomp ordering string
+had contradictory primary tables; its suffix was not accepted as a rating.
+
+The next local-fit candidate is **Abracon ABM8-272-T3**, explicitly recommended
+in Raspberry Pi's RP2040 hardware guide: 12 MHz, 10 pF load, 50 ohm maximum
+ESR and 200 microwatt maximum drive. Its 3.2 x 2.5 mm package is larger than
+the old crystal, but the board must remain D43. Complete the actual land,
+height and fit handoff before native adoption. The current manufacturer PDF
+contains only three sheets and references an absent height table; its
+0.8 mm header is not silently promoted to a tolerance-qualified maximum.
+
+This reference uses 15 pF load capacitors and 1 kohm series resistance for
+3.3 V IOVDD. C2/C3 remain 22 pF in the earlier passive register until an
+explicit sourced update supersedes them. Even the tested reference needs
+startup/drive/load evaluation on this layout, particularly when the battery
+and LDO approach dropout rather than maintaining 3.3 V.
 
 The current Y1 symbol has only pins 1/3, while physical pads 2/4 have no net.
 A selected crystal with grounded metal-case pads needs a corresponding

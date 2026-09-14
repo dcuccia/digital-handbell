@@ -37,9 +37,11 @@ land treatment because they share the oversized source pattern.
 
 These provide candidate identities for seven more formerly blank references.
 The [device register](../hardware/handbell/parts/device-component-candidates.json)
-then selects eleven of the remaining formerly blank identities and confirms
-Q4. Q3 replacement and Y1 crystal selection remain explicitly pending, with
-their circuit/package gates in [the device handoff](device-component-selection.md).
+then selects twelve of the remaining formerly blank identities and confirms
+Q4, including the explicit DMP2045UFY4-7 replacement for NRND Q3. Y1 crystal
+selection remains pending; the tested ABM8-272-T3 reference is being evaluated
+within the unchanged D43 board. Circuit/package gates are in
+[the device handoff](device-component-selection.md).
 The selected parts still need to be applied to the new native candidate and
 matched final supplier BOM; neither this progress nor the existing MPN fields
 establishes complete package/process qualification. The audit tables below

@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
-  "status": "Eleven formerly blank prototype device identities selected, plus Q4 confirmation; not a released supplier BOM or ordering/qualification approval",
+  "status": "Twelve formerly blank prototype device identities selected, plus Q4 confirmation; not a released supplier BOM or ordering/qualification approval",
   "review_date": "2026-09-14",
   "research_register_sha256": "70a21998d23f0ea5cd6c49317b36d505a6af66627b2bbc019e7ac19cd1e1114b",
+  "q3_followup_register_sha256": "1e40755be5059cd936ffb19c9549d229cc27d6b30e9463eaeea7cc589981a665",
   "native_basis": "hardware\\handbell\\iterations\\printed-bell-power-rework",
   "native_basis_sha256": {
     "reports/bom-draft.csv": "b760b993757a85d4b0bb9b32155a34244e6282fbc9127692afbd5df36a8bd0e0",
@@ -21,6 +22,53 @@
     "Manufacturer body, permitted flash, solder standoff, placement tolerance and qualified mounted assembly are distinct quantities."
   ],
   "groups": [
+    {
+      "references": ["Q3"],
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "DMP2045UFY4-7",
+      "replaced_mpn": "DMG3415UFY4-7",
+      "status": "Explicit prototype replacement selected; native implementation and powered qualification remain open",
+      "manufacturer_package": "X2-DFN2015-3",
+      "packing": "3000 pieces/tape-and-reel; exact -7 ordering row",
+      "body_nominal_xyz_mm": [2.0, 1.5, null],
+      "body_maximum_xyz_mm": [2.075, 1.575, 0.4],
+      "dimensions_note": "Local axes E,D,A; A is overall seating-plane height, not a body thickness to which A1 is added. Nominal Z is not specified.",
+      "evidence_ids": ["q3-old", "dmp2045ufy4", "diodes-dfn2015-package", "diodes-pcn2792"],
+      "lifecycle": {
+        "old": "Manufacturer NRND; explicitly recommends DMP2045UFY4.",
+        "new": "PCN-2792-REV1 dated 2026-01-27, implementation 2026-04-27, table 4 on page 5 names exact DMP2045UFY4-7.",
+        "pcn_specific_change": "Cu to PdCu bond wire. Other tables' mold-compound changes are not assigned to this part.",
+        "limits": "Current manufacturing-continuity evidence, not an observed Active field, stock guarantee or lifetime availability assurance."
+      },
+      "pin_map": [
+        {"native_pin": "1", "function": "G", "net": "VBUS"},
+        {"native_pin": "2", "function": "S", "net": "VHI"},
+        {"native_pin": "3", "function": "D including exposed drain and extension", "net": "VBAT"}
+      ],
+      "terminal_and_polarity_facts": [
+        "Body diode anode is drain/VBAT; cathode is source/VHI. It supplies battery-only startup before the channel enhances.",
+        "Preserve Handbell:DFN2015-3_DrainPad, its corrected large pin-3 drain, explicit paste/mask and native-to-proxy displacement.",
+        "Old datasheet page 5, new page 6 and the standalone package drawing agree on contacts, drain and suggested lands. No replacement-driven land change is indicated."
+      ],
+      "retained_proxy_xyz_mm": [2.855, 1.575, 1.0],
+      "retained_native_to_proxy_common_xy_mm": [0.0, 0.2725],
+      "electrical_facts_and_screen": [
+        "VDS absolute maximum changes from -16 to -20 V; VGS remains +/-8 V.",
+        "At 25 C, maximum RDS(on) changes from 39 to 45 milliohm at VGS=-4.5 V/ID=-4 A and from 52 to 58 milliohm at -2.5 V/-3.5 A.",
+        "The new 90 milliohm at -1.8 V is specified at -0.1 A, not the old 65 milliohm at -2 A. New -1.5 V value is 160 milliohm at -0.1 A. These are not matched-current comparisons.",
+        "New IGSS limit is +/-10 microamp at +/-8 V. The old +/-500 nanoamp at +/-5 V guarantee is not specified for the replacement and must not enter its standby budget.",
+        "Typical Qg changes 10 to 6.8 nC at -4.5 V/-10 V/-4 A; Ciss changes 282 to 634 pF at -10 V/0 V/1 MHz; internal Rg changes 250 to 20 ohm. Actual VBUS and 10 kohm R4 do not reproduce a 3 ohm laboratory gate driver.",
+        "The new 1 A continuous body-diode figure assumes FR4, 2 oz copper and a one-inch-square copper plate; it is not an unconditional board current allowance.",
+        "An illustrative 2 A calculation using the 25 C -2.5 V resistance limits adds 12 mV and 24 mW versus the old part. This is not a current or thermal rating.",
+        "Under the declared normal-polarity assumption 0<=VBUS,VHI<=5.5 V, |VGS|<=5.5 V is below 8 V. This does not establish transient clamps or reverse-insertion behavior."
+      ],
+      "remaining_gates": [
+        "Verify the actual new symbol, schematic, library, PCB, manifest and sourced BOM agree; preserve all three nets and the corrected drain.",
+        "Retained proxy narrow axis equals bare-package maximum, not mounted-placement tolerance.",
+        "Measure startup, low-cell voltage drop, USB insertion/removal, temperature and standby current in the actual layout.",
+        "No reverse-cell protection, ideal-diode controller, charging load-sharing qualification, live-cell or child-use approval is added."
+      ]
+    },
     {
       "references": [
         "CHG0"
@@ -923,6 +971,34 @@
     }
   ],
   "sources": {
+    "q3-old": {
+      "sha256": "9e81cde7b1b7d7d53cf9f0bbb070072e1443127ea9ddc47db713cb4c33b05614",
+      "url": "https://www.diodes.com/datasheet/download/DMG3415UFY4.pdf",
+      "inspected_pdf_pages_1_based": [1, 2, 5],
+      "description": "DS31842 Rev7-3 March2018; old NRND identity and comparison only, not selected.",
+      "local_evidence_filename": "dmg3415ufy4.pdf"
+    },
+    "dmp2045ufy4": {
+      "sha256": "ee87a5dc98ff2d701674ef5c290d3ce23762842bb954cd358fd3bab3309f8fb0",
+      "url": "https://www.diodes.com/datasheet/download/DMP2045UFY4.pdf",
+      "inspected_pdf_pages_1_based": [1, 2, 3, 6],
+      "description": "DS40494 Rev2-2 March2018; exact -7 orderable, electrical limits and X2-DFN2015-3 drawing. Historical NEW PRODUCT banner is not lifecycle evidence.",
+      "local_evidence_filename": "dmp2045ufy4.pdf"
+    },
+    "diodes-dfn2015-package": {
+      "sha256": "56930cdc8540ca41f0d6c099a1ad259de3c19e6d2242becb8fecb0c83015f967",
+      "url": "https://www.diodes.com/assets/Package-Files/X2-DFN2015-3.pdf",
+      "inspected_pdf_pages_1_based": [1],
+      "description": "Manufacturer standalone package and suggested-land drawing; agrees with old and replacement datasheets.",
+      "local_evidence_filename": "diodes-dfn2015-package.pdf"
+    },
+    "diodes-pcn2792": {
+      "sha256": "491e0fbd0666ac8e9edd3fd9c0b7939265ec231c7ef3c8bf953497ce23fb1bc8",
+      "url": "https://www.diodes.com/assets/PCN-Files/Diodes_PCN_2792_and_Qual_Rpt.pdf",
+      "inspected_pdf_pages_1_based": [1, 2, 5],
+      "description": "PCN-2792-REV1, 2026-01-27, implementation2026-04-27; table4 names exact DMP2045UFY4-7 for Cu-to-PdCu bond wire.",
+      "local_evidence_filename": "diodes-pcn2792.pdf"
+    },
     "amplifier": {
       "sha256": "abac92d3522a204f093c911257c0e0ffa958d8f8acc1da3103a291d0403e8cd9",
       "url": "https://cdn-shop.adafruit.com/product-files/3006/MAX98357A-MAX98357B.pdf",
@@ -1136,15 +1212,22 @@
     }
   },
   "pending_decisions_not_selected": {
-    "Q3": {
-      "existing_recovered_orderable": "DMG3415UFY4-7",
-      "lifecycle": "Manufacturer NRND",
-      "next_action": "Evaluate manufacturer-suggested DMP2045UFY4 exact orderable, lifecycle, electrical and corrected-drain/package compatibility before choosing it. Do not silently substitute."
-    },
     "Y1": {
       "initial_conditional_candidate": "ECS-120-12-36-AGN-TR",
       "initial_candidate_ESR_max_ohm": 150,
-      "next_action": "Seek an evidenced lower-ESR 12 MHz/12 pF/2520 candidate. Keep R6=1 kohm and C2/C3=22 pF pending evidence; oscillator startup/drive/load remain qualification gates.",
+      "next_action": "Bounded 2520 search did not establish a better exact part. Evaluate the RP2040 guide's tested ABM8-272-T3 3225 reference within unchanged D43, with 15 pF load capacitors and retained 1 kohm R6. Complete land/height/capacitor sourcing and local fit before replacing the current 22 pF selection.",
+      "preferred_reference": {
+        "mpn": "ABM8-272-T3",
+        "frequency_Hz": 12000000,
+        "load_capacitance_pF": 10,
+        "ESR_max_ohm": 50,
+        "drive_max_microwatt": 200,
+        "manufacturer_url": "https://abracon.com/datasheets/ABM8-272-T3.pdf",
+        "manufacturer_pdf_sha256": "aead22b6bd9d6f8ad4472352f70fce3ade633e90b9772ba80fabe8fd0856ae91",
+        "guide_url": "https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf",
+        "guide_sha256": "51c4f430153fcdbf3209d9b3b41662c8527ff0150bc25777e3fcd6f5221a1c19",
+        "limits": "Reference values assume 3.3 V IOVDD; actual battery/LDO dropout, startup, load and drive remain powered gates. The current three-page manufacturer PDF omits the referenced height Table 2 and a recommended land pattern."
+      },
       "case_ground_gate": "Existing symbol has only pins 1/3 and PCB pads 2/4 have no net. A selected grounded-case crystal requires a matching four-terminal symbol/schematic/netlist/PCB, not PCB-only grounds."
     }
   }
