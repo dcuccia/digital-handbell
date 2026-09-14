@@ -33,6 +33,13 @@ already selected 10 uF capacitors sharing the oversized source pattern.
 No larger body envelope is required for these six parts; keep the conservative
 heights. See [power-component selection](../../../docs/power-component-selection.md).
 
+`device-component-candidates.json` selects eleven formerly blank device
+identities and confirms Q4, while keeping Q3 replacement and Y1 crystal
+decisions explicitly pending. It records diode-height and permitted-flash
+screening corrections, correct package/pin variants, and remaining land/
+paste/thermal-via gates. See
+[device-component selection](../../../docs/device-component-selection.md).
+
 ## Direct source evidence
 
 On September 14, 2026, the actual manufacturer product pages, their public

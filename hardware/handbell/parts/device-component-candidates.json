@@ -1,0 +1,1151 @@
+{
+  "schema_version": 1,
+  "status": "Eleven formerly blank prototype device identities selected, plus Q4 confirmation; not a released supplier BOM or ordering/qualification approval",
+  "review_date": "2026-09-14",
+  "research_register_sha256": "70a21998d23f0ea5cd6c49317b36d505a6af66627b2bbc019e7ac19cd1e1114b",
+  "native_basis": "hardware\\handbell\\iterations\\printed-bell-power-rework",
+  "native_basis_sha256": {
+    "reports/bom-draft.csv": "b760b993757a85d4b0bb9b32155a34244e6282fbc9127692afbd5df36a8bd0e0",
+    "handbell.kicad_sch": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "handbell.kicad_pcb": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
+    "placement-manifest.json": "60e394c41bcfd7734b41c7713100360253164381f0217eed325386bd49977799"
+  },
+  "units_and_axes": "mm unless explicitly specified; each group's dimensional notes define local axes",
+  "source_policy": "Manufacturer originals and rendered drawings remain local research evidence; public records contain factual findings, source URLs/pages and hashes only.",
+  "native_change_policy": [
+    "Apply only to the separate quote candidate; preserve frozen native/reference packages.",
+    "No silent manufacturer/family/package substitutions and no automatic proxy shrink.",
+    "Apply the explicitly documented diode and flash-inclusive proxy screening enlargements in the correct local axes.",
+    "Review part-specific terminal/land/paste/mask/thermal-via differences and preserve all actual pin/net/polarity mappings.",
+    "Keep LED resistors, charger programming and IMU Mode 1/CTRL9_XL initialization gate unchanged.",
+    "Manufacturer body, permitted flash, solder standoff, placement tolerance and qualified mounted assembly are distinct quantities."
+  ],
+  "groups": [
+    {
+      "references": [
+        "CHG0"
+      ],
+      "manufacturer": "Kingbright",
+      "manufacturer_package": "0603 / 1608 metric top-emitting LED",
+      "body_nominal_xyz_mm": [
+        0.8,
+        1.6,
+        0.75
+      ],
+      "body_maximum_xyz_mm": [
+        0.9,
+        1.7,
+        0.85
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "led-orange",
+        "charger"
+      ],
+      "terminal_and_polarity_facts": [
+        "Manufacturer pin1=cathode, pin2=anode. Verify underside polarity mark; do not use die location as polarity proof.",
+        "Native footprint uses C and A, not numeric names: assembly mapping must be 1->C, 2->A.",
+        "Body1.6x0.8x0.75mm, general +/-0.1mm gives maxima1.7x0.9x0.85mm. Terminal length0.30+/-0.10mm.",
+        "Local native long axis is Y: therefore local nominalXYZ0.8x1.6x0.75, maximum0.9x1.7x0.85."
+      ],
+      "electrical_facts_and_screen": [
+        "Orange dominant605nm typical, peak611nm; VF1.5/1.8/2.1V min/typ/max at2mA,25C, additional +/-0.1V VF measurement specification.",
+        "CIE127-2007 intensity30mcd minimum /50mcd typical at2mA, +/-15% intensity specification; 120deg half-intensity viewing angle. Do not confuse older-method80/150mcd row.",
+        "Actual path VBUS -> LED A/C -> R2=10kohm -> U3 STAT. R2 is not a1kohm LED resistor.",
+        "Illustrative5.0V supply, VF1.8V and STAT=0..0.4V gives0.28..0.32mA. These are assumed operating-point inputs, not guaranteed bounds: VF is specified at2mA and STAT0.4V typical is tested at4mA.",
+        "At nominal5V and10kohm, even a zero-VF/zero-sink-voltage ceiling is0.5mA; include real resistor/supply tolerances in final bound.30mA absolute maximum is not a target.",
+        "Page3 typical optical-current curve is approximately proportional near its plotted origin; it supports evaluating a low-current candidate, not a guaranteed sub-mA luminous result."
+      ],
+      "footprint_comparison": [
+        "Existing two 0.8x0.8mm pads at local(0,+/-0.75): center spacing1.50, inner gap0.70mm.",
+        "Manufacturer recommended two0.8x0.8mm pads with0.85mm gap: spacing1.65mm; +/-0.1 drawing tolerance. Existing spacing is0.15mm tighter, not identical.",
+        "Existing local proxy0.9x2.3x1.0mm encloses package maximum; preserve it. Narrow axis exactly equals body maximum and is not placement-tolerance clearance."
+      ],
+      "current_proxy": {
+        "CHG0": {
+          "reference": "CHG0",
+          "value": "ORANGE",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:CHIPLED_0603_NOOUTLINE",
+          "x_mm": 7.249566814770555,
+          "y_mm": -17.898013331131953,
+          "width_mm": 0.9,
+          "depth_mm": 2.3,
+          "height_mm": 1.0,
+          "rotation_deg": -90,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            7.249567,
+            -17.898013
+          ],
+          "z_min_mm": 24.0,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "charger"
+        }
+      },
+      "remaining_gates": [
+        "Confirm custom pad overlap/paste and assembly cathode rotation with assembler; do not change resistor to force datasheet optical test current.",
+        "The current circuit is below the2mA optical test point. No guaranteed minimum brightness, visibility, colour perception or human-safety claim at actual current; measure at actual supply, temperature and optical enclosure.",
+        "MSL3 handling, 260C peak for at most10s, maximum2 reflow passes, mechanical stress and solder process remain assembly gates."
+      ],
+      "disposition": "Manufacturer-backed low-current candidate, circuit resistors unchanged.",
+      "packing": "2000pcs/reel in manufacturer datasheet; orderable uses slash J4, filename uses hyphen.",
+      "mpn": "APT1608LSECK/J4-PRV",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "L0"
+      ],
+      "manufacturer": "Kingbright",
+      "manufacturer_package": "0603 / 1608 metric top-emitting LED",
+      "body_nominal_xyz_mm": [
+        0.8,
+        1.6,
+        0.75
+      ],
+      "body_maximum_xyz_mm": [
+        0.9,
+        1.7,
+        0.85
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "led-red",
+        "rp2040"
+      ],
+      "terminal_and_polarity_facts": [
+        "Manufacturer pin1=cathode, pin2=anode. Verify underside polarity mark; do not use die location as polarity proof.",
+        "Native footprint uses C and A, not numeric names: assembly mapping must be 1->C, 2->A.",
+        "Body1.6x0.8x0.75mm, general +/-0.1mm gives maxima1.7x0.9x0.85mm. Terminal length0.30+/-0.10mm.",
+        "Local native long axis is Y: therefore local nominalXYZ0.8x1.6x0.75, maximum0.9x1.7x0.85."
+      ],
+      "electrical_facts_and_screen": [
+        "Hyper red dominant625nm typical, peak640nm; VF1.5/1.8/2.1V min/typ/max at2mA,25C.",
+        "CIE127-2007 intensity20mcd minimum /40mcd typical at2mA, +/-15%; older-method50/100mcd row is not interchangeable.120deg half-intensity viewing angle.",
+        "Actual path RP2040 GPIO13/D13 -> R7=10kohm -> LED A/C -> GND.",
+        "Illustrative GPIO high3.3V and VF1.8V gives0.15mA. Actual VOH, low-current VF, supply and temperature are not measured; nominal zero-VF ceiling0.33mA with nominal10kohm.",
+        "Selected2mA-test low-current device, not a20mA-test LED or unsupported claim of adequate human-visible brightness."
+      ],
+      "footprint_comparison": [
+        "Existing two 0.8x0.8mm pads at local(0,+/-0.75): center spacing1.50, inner gap0.70mm.",
+        "Manufacturer recommended two0.8x0.8mm pads with0.85mm gap: spacing1.65mm; +/-0.1 drawing tolerance. Existing spacing is0.15mm tighter, not identical.",
+        "Existing local proxy0.9x2.3x1.0mm encloses package maximum; preserve it. Narrow axis exactly equals body maximum and is not placement-tolerance clearance."
+      ],
+      "current_proxy": {
+        "L0": {
+          "reference": "L0",
+          "value": "RED",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:CHIPLED_0603_NOOUTLINE",
+          "x_mm": -5.000459922277541,
+          "y_mm": 9.003011319120574,
+          "width_mm": 0.9,
+          "depth_mm": 2.3,
+          "height_mm": 1.0,
+          "rotation_deg": -90,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            -5.00046,
+            9.003011
+          ],
+          "z_min_mm": 24.0,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": null
+        }
+      },
+      "remaining_gates": [
+        "Confirm custom pad overlap/paste and assembly cathode rotation with assembler; do not change resistor to force datasheet optical test current.",
+        "The current circuit is below the2mA optical test point. No guaranteed minimum brightness, visibility, colour perception or human-safety claim at actual current; measure at actual supply, temperature and optical enclosure.",
+        "MSL3 handling, 260C peak for at most10s, maximum2 reflow passes, mechanical stress and solder process remain assembly gates."
+      ],
+      "disposition": "Manufacturer-backed low-current candidate, circuit resistors unchanged.",
+      "packing": "2000pcs/reel; J3 is red, J4 is orange. Both are APT1608LSECK, but suffix is functionally significant.",
+      "mpn": "APT1608LSECK/J3-PRV",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "D3"
+      ],
+      "manufacturer": "Diodes Incorporated",
+      "manufacturer_package": "SOD323",
+      "body_nominal_xyz_mm": [
+        1.7,
+        1.3,
+        1.05
+      ],
+      "body_maximum_xyz_mm": [
+        1.8,
+        1.4,
+        1.1
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "diode-switch"
+      ],
+      "terminal_and_polarity_facts": [
+        "Cathode band -> native C pad -> USBBOOT; anode -> native A pad -> Net-(D3-PadA). Preserve alpha pad identities; communicate standard1=K/2=A convention explicitly in assembly mapping.",
+        "Body E1.60..1.80mm, D1.20..1.40mm. Lead span He2.30..2.70mm, b0.25..0.35, L0.20..0.40.",
+        "Important drawing distinction: A2=body thickness1.00..1.10, A1=body standoff0..0.10. Graphical render d3-height-detail.png shows separate datums. Conservative sum for seating-plane package height=1.20mm (typ1.05+0.05=1.10), not a claimed tested mounted assembly maximum."
+      ],
+      "electrical_facts_and_screen": [
+        "VR75V working/repetitive;100V nonrepetitive. IFM300mA continuous and IO150mA average are separate specified conditions, not150/300mA board qualification.",
+        "trr<=4ns at IF=IR10mA, recovery to0.1IR, RL100ohm; CT<=2pF atVR0,f1MHz; VF<=0.715V at1mA.",
+        "Boot/reset-path threshold, leakage, GPIO interactions and recovery behaviour remain circuit validation gates."
+      ],
+      "footprint_comparison": [
+        "Native SOD-323_MINI pads0.9x0.8mm atx+/-1.07; manufacturer suggested0.59x0.45 pads with outer extent2.7 -> center pitch2.11mm; native pitch2.14mm is near but pads larger.",
+        "Body/lead localXYmaximum2.7x1.4 fits3.04x1.4 proxy; width1.4 has no manufacturing clearance. Height1.1 proxy does not cover conservative A2+A1=1.2."
+      ],
+      "current_proxy": {
+        "D3": {
+          "reference": "D3",
+          "value": "1N4148",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323_MINI",
+          "x_mm": 8.55300018014978,
+          "y_mm": -6.166060728169011,
+          "width_mm": 3.04,
+          "depth_mm": 1.4,
+          "height_mm": 1.1,
+          "rotation_deg": -270,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            8.553,
+            -6.166061
+          ],
+          "z_min_mm": 23.9,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": null
+        }
+      },
+      "remaining_gates": [
+        "Use1.20mm minimum screening height pending package-datum/manufacturer/assembler confirmation; solder lift beyond the package seating plane still requires allowance.",
+        "Reconcile alpha cathode convention with assembler; verify larger native paste area, not axial1N4148, not1N4148W SOD123."
+      ],
+      "disposition": "Candidate with explicit height-screen correction.",
+      "package_overall_maximum_xyz_mm": [
+        2.7,
+        1.4,
+        1.2
+      ],
+      "proposed_proxy_minimum_local_xyz_mm": [
+        3.04,
+        1.4,
+        1.2
+      ],
+      "packing": "Manufacturer explicitly lists -7-F=3000 tape/reel; -13-F=10000 is a different packing option.",
+      "mpn": "1N4148WS-7-F",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "D4"
+      ],
+      "manufacturer": "Nexperia",
+      "manufacturer_package": "SOD323 (SC-76), not SOD323F",
+      "body_nominal_xyz_mm": [
+        1.7,
+        1.25,
+        0.95
+      ],
+      "body_maximum_xyz_mm": [
+        1.8,
+        1.35,
+        1.1
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "schottky",
+        "schottky-catalog"
+      ],
+      "terminal_and_polarity_facts": [
+        "Manufacturer pin1=K/cathode, pin2=A/anode. Native C atlocal(+1,0)->VHI; native A at(-1,0)->VBUS.",
+        "Lead span2.3..2.7mm, terminal width0.25..0.40, body1.6..1.8 x1.15..1.35; package height0.8..1.1mm."
+      ],
+      "electrical_facts_and_screen": [
+        "20V reverse;2A forward rating at solder-point temperature<=55C under documented FR4/footprint conditions. VFtyp450mV,max525mV at2A,pulsed,25C.",
+        "Do not infer2A enclosed-board thermal qualification, audio power or runtime from this rating."
+      ],
+      "footprint_comparison": [
+        "Imported footprint label SOD-323F is not the manufacturer's package name for PMEG2020AEA.",
+        "Existing1.0x0.8mm pads atx+/-1 give1.0mm inner gap,3.0mm outside span. The manufacturer's SOD323 lead-span window2.3..2.7 lies over these pads, but recommended land/paste is different.",
+        "Current3.0x1.3x1.0 proxy misses maximum width by0.05mm and height by0.10mm."
+      ],
+      "current_proxy": {
+        "D4": {
+          "reference": "D4",
+          "value": "PMEG2020AEA",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323F",
+          "x_mm": -2.0008592935727547,
+          "y_mm": -8.498967934042835,
+          "width_mm": 3.0,
+          "depth_mm": 1.3,
+          "height_mm": 1.0,
+          "rotation_deg": 0,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            -2.000859,
+            -8.498968
+          ],
+          "z_min_mm": 24.0,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "source-selection"
+        }
+      },
+      "remaining_gates": [
+        "Enlarge candidate localdepth1.30->1.35 and height1.00->1.10 (or larger approved margin), without shrinking width3.0. At present angle0 this adds0.025mm each side in globalY and0.1mm speakerward height.",
+        "Owner/routing/assembler must approve real SOD323 land and cathode mapping despite F alias.",
+        "Exact comma115 suffix is directly observed in LCSC structured catalog; primary manufacturer PDF gives only base MPN. Manufacturer packing-suffix/reel-count confirmation remains open; no invented manufacturer packing claim."
+      ],
+      "disposition": "Exact catalog-backed orderable plus primary physical/electrical evidence; alias and envelope corrections required.",
+      "package_overall_maximum_xyz_mm": [
+        2.7,
+        1.35,
+        1.1
+      ],
+      "proposed_proxy_minimum_local_xyz_mm": [
+        3.0,
+        1.35,
+        1.1
+      ],
+      "distributor_observation": {
+        "catalog": "LCSC",
+        "code": "C389354",
+        "observed_status": "InStock in retrieved JSON-LD, not reserved or guaranteed",
+        "evidence_id": "schottky-catalog"
+      },
+      "mpn": "PMEG2020AEA,115",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "IC1"
+      ],
+      "manufacturer": "Raspberry Pi",
+      "manufacturer_package": "QFN56 7x7mm, reduced exposed GND pad",
+      "body_nominal_xyz_mm": [
+        7.0,
+        7.0,
+        null
+      ],
+      "body_maximum_xyz_mm": [
+        7.1,
+        7.1,
+        0.9
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "rp2040"
+      ],
+      "terminal_and_polarity_facts": [
+        "56 peripheral pads at0.40mm pitch. Reduced center GND ePad D2/E2=3.0min/3.1nom/3.2max, NOT a generic large QFN56 thermal pad.",
+        "D/E=7 BSC with aaa0.10mm profile-of-surface tolerance on opposite sides.7.10mm overall XY is a derived conservative GD&T envelope, not an explicit D/E MAX table entry.",
+        "Overall A<=0.900mm; A2 body0.650..0.700, A1<=0.050; do not add A1 again to overall A.",
+        "Native pad1IOVDD/+3V3;20XIN;21XOUT;24SWCLK;25SWD;26RUN;44VREG_IN;45VREG_OUT;46USB_DM;47USB_DP;51..56 QSPI; center P$1=GND.",
+        "Manufacturer table pin mapping checked against extracted native PCB. Preserve numeric56 peripheral pins plus alpha P$1 exposed pad; no fictitious56th-pad EP or symbol-name MPN."
+      ],
+      "electrical_facts_and_screen": [
+        "Official ordering table appendixC printed636/PDF637 lists SC0914(7)=7inch reel500 chips and SC0914(13)=13inch reel3400 chips.",
+        "RP2040 is device MPN; SC0914(7) is proposed bulk procurement order code, not RP2040_QFN56 or supplier C2040.",
+        "The official document expects availability to at leastJanuary2041; this is manufacturer intent, not supplier allocation."
+      ],
+      "footprint_comparison": [
+        "Native peripheral copper0.875x0.2mm, pitch0.4; center copper3.2x3.2mm agrees with reduced ePad maximum.",
+        "Existing7.848475x7.848475x1.0 proxy is larger than derived7.10x7.10x0.90. Preserve offset proxy and dimensions; manufacturer body center is native origin, not proxy center."
+      ],
+      "current_proxy": {
+        "IC1": {
+          "reference": "IC1",
+          "value": "RP2040_QFN56",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:QFN56_7MM_REDUCEDEPAD",
+          "x_mm": 0.036737499999999874,
+          "y_mm": -0.03673749999999986,
+          "width_mm": 7.8484750000000005,
+          "depth_mm": 7.8484750000000005,
+          "height_mm": 1.0,
+          "rotation_deg": -270,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            0.0,
+            0.0
+          ],
+          "z_min_mm": 24.0,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "core"
+        }
+      },
+      "remaining_gates": [
+        "Specify silicon/reel traceability and factory programming requirements; preserve USB boot and SWD recovery.",
+        "Pin1 placement, EP paste/voids/thermal vias, actual power, clock, signal integrity and bring-up are not qualified by matching package."
+      ],
+      "disposition": "Recovered manufacturer identity; official reel ordering code recorded.",
+      "manufacturer_order_code": "SC0914(7)",
+      "alternative_manufacturer_order_code": "SC0914(13)",
+      "mpn": "RP2040",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "IC4"
+      ],
+      "manufacturer": "STMicroelectronics",
+      "manufacturer_package": "LGA-14L",
+      "body_nominal_xyz_mm": [
+        3.0,
+        2.5,
+        0.83
+      ],
+      "body_maximum_xyz_mm": [
+        3.1,
+        2.6,
+        0.86
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "imu",
+        "imu-catalog"
+      ],
+      "terminal_and_polarity_facts": [
+        "Manufacturer outline L2.50+/-0.10,W3.00+/-0.10,H0.86MAX;0.83 on cover is typical, not maximum. Native localX corresponds manufacturerW.",
+        "14 contacts0.475+/-0.05 x0.25+/-0.05mm;0.5mm pitch; pin1 indicator and bottom/top view must be distinguished.",
+        "Mode1 native mapping:1SA0=GND,2SDx=GND,3SCx=GND,4INT1=INT,5VDDIO=+3V3,6GND=GND,7GND=GND,8VDD=+3V3,9INT2=/IMU_INT2,10OCS_Aux=NC,11SDO_Aux=NC,12CS=+3V3,13SCL,14SDA.",
+        "ST says unused auxiliary pins remain electrically unconnected BUT soldered to PCB; NC does not mean omit physical lands."
+      ],
+      "electrical_facts_and_screen": [
+        "Order table p1: LSM6DSOX=tray; LSM6DSOXTR=tape/reel;-40..85C.",
+        "Keep approved sensor and both grounds. Main3.3V supply is within VDD1.71..3.6V; no raw1S supply substitution.",
+        "Preserve project CTRL9_XL gate: I3C_DISABLE is bit1; reserved bit0 must remainclear. Correct or verify pinned driver/init before bring-up, not simply setbit1 atop the oldbit0.",
+        "IMU/pose output is not proof of physical chest contact."
+      ],
+      "footprint_comparison": [
+        "Native contacts0.475x0.25mm match nominal terminals, not max terminal tolerance; detailed land/paste review still needed.",
+        "3.1x2.6x0.86 maximum fits existing3.302x2.794x1.0 proxy. Do not shrink."
+      ],
+      "current_proxy": {
+        "IC4": {
+          "reference": "IC4",
+          "value": "LSM6DSOXTR",
+          "mpn": "",
+          "footprint": "Adafruit_LSM6DSOX-import-fps:LGA-14L",
+          "x_mm": -10.50019358167378,
+          "y_mm": -6.007288935525312,
+          "width_mm": 3.302,
+          "depth_mm": 2.794,
+          "height_mm": 1.0,
+          "rotation_deg": -270,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            -10.500194,
+            -6.007289
+          ],
+          "z_min_mm": 24.0,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "imu"
+        }
+      },
+      "remaining_gates": [
+        "Manufacturer PDF retrieved is explicit Rev3 January2019 mirror, not a claim to have fetched latestST revision.",
+        "Assembler LGA/MSL/reflow, sourcing-tier and mechanical stress qualification remain open. Verify correct rotation, decoupling, I2C startup and CTRL9_XL register readback."
+      ],
+      "disposition": "Confirmed exact owner-approved orderable with preserved Mode1 and software gates.",
+      "distributor_observation": {
+        "catalog": "LCSC",
+        "code": "C481766",
+        "observed_status": "InStock in retrieved JSON-LD, no stock/tier guarantee",
+        "evidence_id": "imu-catalog"
+      },
+      "mpn": "LSM6DSOXTR",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "Q1"
+      ],
+      "manufacturer": "Alpha & Omega Semiconductor",
+      "manufacturer_package": "SOT23",
+      "body_nominal_xyz_mm": [
+        2.9,
+        1.6,
+        1.05
+      ],
+      "body_maximum_xyz_mm": [
+        3.1,
+        1.8,
+        1.2
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "ao3401",
+        "ao3401-status",
+        "aos-package",
+        "aos-reel",
+        "ao3401a-comparison"
+      ],
+      "terminal_and_polarity_facts": [
+        "AOS PO-00001N: bodyD2.80/2.90/3.10 and E1=1.40/1.60/1.80 min/nom/max; lead spanE2.60/2.80/3.00; overallA0.85..1.25; bodyA2nom1.05,max1.20; standoffA1<=0.15.",
+        "Manufacturer excludes mold flash/gate burrs from body size; flash at non-lead sides is <5mil each (<0.127mm). Derived full-D flash screen<3.10+2*0.127=3.354mm; no bounded gate-burr dimension is given.",
+        "Shared manufacturer SOT23 top-view functions G,S,D correspond native1,2,3 after correct footprint orientation. Q4 land orientation is rotated relative to Q2; identical absolute rotation numbers are not interchangeable pickup orientations.",
+        "Native1G=~ENABLE,2S=VHI,3D=V+; R16=100kohm pulls gate toVHI, Q2 sinks it. Preserve source/drain orientation."
+      ],
+      "electrical_facts_and_screen": [
+        "Official manufacturer page says Full Production. There is no evidence-backed need to change AO3401 to AO3401A.",
+        "AO3401 and AO3401A inspected sheets both -30V VDS, +/-12V VGS, -4A stated rating; RDSmax50/60/85mohm atVGS-10/-4.5/-2.5V; same SOT23 pin functions.",
+        "AO3401A comparison is not a blanket equivalence/qualification claim; retain AO3401. Actual low-cell gate drive, SOA, startup, dissipation and hot-plug remain gates."
+      ],
+      "footprint_comparison": [
+        "Native SOT23-WIDE pads1,2 atx+/-0.95,y+1;3 at0,-1; each1.0x1.2. Manufacturer recommended0.8x0.8 with row pitch2.4mm; native row pitch2.0 and larger pads are not an alias proof.",
+        "Bare molded/lead maxima fit existing3.3448x3.2x1.5. Strict mold-flash-inclusive length screen3.354 exceeds localwidth by0.0092mm."
+      ],
+      "current_proxy": {
+        "Q1": {
+          "reference": "Q1",
+          "value": "AO3401",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
+          "x_mm": -18.872664305574876,
+          "y_mm": 1.3074739967882716,
+          "width_mm": 3.3448,
+          "depth_mm": 3.2,
+          "height_mm": 1.5,
+          "rotation_deg": 0,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            -18.872664,
+            1.307474
+          ],
+          "z_min_mm": 23.5,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "audio-switch"
+        }
+      },
+      "remaining_gates": [
+        "Retain exact AO3401; an assembler-proposed AO3401A or clone requires explicit separate substitution approval.",
+        "If manufacturer permitted flash is included, raise localwidth to at least3.354mm (or larger manufacturing allowance). Do not shrink depth3.2 orheight1.5.",
+        "Review row-pitch/fillet/paste, supplied leadframe/reel pin1 and gate/source/drain mapping before quoting assembly."
+      ],
+      "disposition": "Retain AO3401; original is manufacturer Full Production, not demonstrated obsolete.",
+      "package_overall_maximum_xyz_mm": [
+        3.1,
+        3.0,
+        1.25
+      ],
+      "proposed_flash_screen_proxy_minimum_local_xyz_mm": [
+        3.354,
+        3.2,
+        1.5
+      ],
+      "packing": "No new suffix invented. SOT23 tape/reel documentation linked from exact AO3401 product page; assembler must quote exact manufacturer MPN.",
+      "mpn": "AO3401",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "Q2",
+        "Q4"
+      ],
+      "manufacturer": "Alpha & Omega Semiconductor",
+      "manufacturer_package": "SOT23",
+      "body_nominal_xyz_mm": [
+        2.9,
+        1.6,
+        1.05
+      ],
+      "body_maximum_xyz_mm": [
+        3.1,
+        1.8,
+        1.2
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "ao3400a",
+        "ao3400a-status",
+        "q2-catalog",
+        "aos-package",
+        "aos-reel"
+      ],
+      "terminal_and_polarity_facts": [
+        "AOS PO-00001N: bodyD2.80/2.90/3.10 and E1=1.40/1.60/1.80 min/nom/max; lead spanE2.60/2.80/3.00; overallA0.85..1.25; bodyA2nom1.05,max1.20; standoffA1<=0.15.",
+        "Manufacturer excludes mold flash/gate burrs from body size; flash at non-lead sides is <5mil each (<0.127mm). Derived full-D flash screen<3.10+2*0.127=3.354mm; no bounded gate-burr dimension is given.",
+        "Shared manufacturer SOT23 top-view functions G,S,D correspond native1,2,3 after correct footprint orientation. Q4 land orientation is rotated relative to Q2; identical absolute rotation numbers are not interchangeable pickup orientations.",
+        "Q2 native1G=POWER,2S=GND,3D=~ENABLE; Q4 native1G=AMP_MUTE,2S=GND,3D=I2S_MOD."
+      ],
+      "electrical_facts_and_screen": [
+        "C20917 directly resolves to AOS AO3400A in observed JLCPCB product metadata. ExistingQ4 exactAO3400A is confirmed, not a new device substitution.",
+        "30V VDS,+/-12V VGS; RDSmax26.5/32/48mohm atVGS10/4.5/2.5V; stated5.7A is datasheet condition dependent, not board-current qualification.",
+        "Q4 implements active-high AMP_MUTE via pulling amplifier SD_MODE down; keep this polarity and GPIO20 mapping."
+      ],
+      "footprint_comparison": [
+        "Q2 SOT23-WIDE same geometry asQ1:1x1.2 pads,1.9mm within-row pitch,2.0mm row pitch.",
+        "Q4 standardSOT23: pads1,2 at(-0.9375,-/+0.95),pad3(+0.9375,0);1.475x0.6 pads. This rotates the device long-axis onto localY, unlike Q2 localX.",
+        "Bare maxima fit Q2proxy3.3448x3.2x1.5 andQ4proxy3.35x3.12x1.5. Manufacturer recommended0.8x0.8/pitch2.4 is not identical to either.",
+        "Full-D permitted-flash screen3.354 requires Q2localwidth+0.0092 and Q4localdepth+0.234mm; don't rotate a wide-footprint centroid blindly onto standardSOT23."
+      ],
+      "current_proxy": {
+        "Q2": {
+          "reference": "Q2",
+          "value": "C20917",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
+          "x_mm": -13.02755516384002,
+          "y_mm": 1.3151773801900877,
+          "width_mm": 3.3448,
+          "depth_mm": 3.2,
+          "height_mm": 1.5,
+          "rotation_deg": 0,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            -13.027555,
+            1.315177
+          ],
+          "z_min_mm": 23.5,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "audio-switch"
+        },
+        "Q4": {
+          "reference": "Q4",
+          "value": "AO3400A",
+          "mpn": "AO3400A",
+          "footprint": "Package_TO_SOT_SMD:SOT-23",
+          "x_mm": 10.633403545004875,
+          "y_mm": -14.05165187116776,
+          "width_mm": 3.35,
+          "depth_mm": 3.12,
+          "height_mm": 1.5,
+          "rotation_deg": 0,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            10.633404,
+            -14.051652
+          ],
+          "z_min_mm": 23.5,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "amplifier"
+        }
+      },
+      "remaining_gates": [
+        "Assembler land/paste/rotation review for each footprint independently; shared device pin mapping does not prove shared land compatibility.",
+        "Preserve conservative height1.5 against overallAmax1.25 and separately qualify solder/placement/flash envelopes.",
+        "No additional Q4 functional redesign or unobserved distributor mapping."
+      ],
+      "disposition": "Resolve Q2 catalog alias and confirm Q4 package, keeping each land orientation explicit.",
+      "package_overall_maximum_xyz_mm_in_q2_axes": [
+        3.1,
+        3.0,
+        1.25
+      ],
+      "package_overall_maximum_xyz_mm_in_q4_axes": [
+        3.0,
+        3.1,
+        1.25
+      ],
+      "proposed_flash_screen_proxy_minimum_by_reference": {
+        "Q2": [
+          3.354,
+          3.2,
+          1.5
+        ],
+        "Q4": [
+          3.35,
+          3.354,
+          1.5
+        ]
+      },
+      "distributor_observation": {
+        "catalog": "JLCPCB",
+        "code": "C20917",
+        "observed_status": "Identity observed; stock and assembly tier not asserted",
+        "evidence_id": "q2-catalog"
+      },
+      "mpn": "AO3400A",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "U2"
+      ],
+      "manufacturer": "Richtek",
+      "manufacturer_package": "TSOT-23-5",
+      "body_nominal_xyz_mm": [
+        null,
+        null,
+        null
+      ],
+      "body_maximum_xyz_mm": [
+        3.099,
+        1.803,
+        1.0
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "ldo",
+        "ldo-catalog"
+      ],
+      "terminal_and_polarity_facts": [
+        "Ordercode33=3.3V;G=Richtek Green;J5=TSOT-23-5. RT9080 withoutN has pin4NC, notSNS/ADJ.",
+        "Native1VIN=VHI,2GND,3EN=EN withR3=10kohm pullup toVHI,4NCexplicitlyunconnected,5VOUT=+3V3. Activehigh enable; no pin rewiring needed.",
+        "OverallheightA0.7..1.0; bodyD2.692..3.099,B1.397..1.803; leadspanC2.591..3.0. Manufacturer table gives limits, not nominalXYZ: do not invent midpoints."
+      ],
+      "electrical_facts_and_screen": [
+        "1.2..5.5V input, up to600mA subject to input and thermal conditions; at600mA,3.3V output dropout0.31typ/0.53max at specifiedconditions.",
+        "Pin4NC may float according to datasheet. RT9080N-08GJ5 hasSNS and would be incompatible with currentNC wiring.",
+        "EN lowbelow0.4V disables; table risingthreshold0.9V; VHI pullup supportsenabledstate, but supply/ramp/dropout shutdown behaviour remains systemtest.",
+        "Output requires>=0.7uF effective capacitance from>=1uF nominal ceramic. Do not treat passive nominal10uF as automatic bias/temp validation."
+      ],
+      "footprint_comparison": [
+        "Imported SOT23-5 pitches0.95mm and row2.6002mm; pads0.55x1.2. Manufacturer suggested0.7x1.0 pads at0.95pitch,row2.6.",
+        "Terminalbmax0.559mm exceeds native padwidth0.55 by0.009mm; explicit fillet/placement review needed, not proof of assembly failure.",
+        "Existing3.3x3.8002x1.5 encloses stated3.099x3.0x1.0 overall package; keep proxy."
+      ],
+      "current_proxy": {
+        "U2": {
+          "reference": "U2",
+          "value": "RT9080-3.3",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-5",
+          "x_mm": -15.936760123830465,
+          "y_mm": -6.0077998450341275,
+          "width_mm": 3.3,
+          "depth_mm": 3.8002000000000002,
+          "height_mm": 1.5,
+          "rotation_deg": -180,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            -15.93676,
+            -6.0078
+          ],
+          "z_min_mm": 23.5,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "logic-power"
+        }
+      },
+      "remaining_gates": [
+        "Quote exact nonNfixed3.3V option; approve terminal/paste widths and pickup orientation.",
+        "Supply-range/dropout at lowcell, effective capacitance, transient stability and enclosed dissipation remain qualification gates."
+      ],
+      "disposition": "Manufacturer-listed exact orderable compatible with current NC pin choice.",
+      "package_overall_maximum_xyz_mm": [
+        3.099,
+        3.0,
+        1.0
+      ],
+      "packing": "Manufacturer p21: TSOT-23-5 3000pcs/7inch reel,8mm tape; no suffix invented.",
+      "mpn": "RT9080-33GJ5",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "U3"
+      ],
+      "manufacturer": "Microchip Technology",
+      "manufacturer_package": "5-lead SOT23 / OT",
+      "body_nominal_xyz_mm": [
+        2.9,
+        1.6,
+        null
+      ],
+      "body_maximum_xyz_mm": [
+        3.1,
+        1.75,
+        1.3
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "charger"
+      ],
+      "terminal_and_polarity_facts": [
+        "Exact orderexample appears manufacturerp26. T=tape/reel,2=4.20V,AC=chargeprofile,I=-40..85C,OT=5leadSOT23.",
+        "AC ratios nominal: precondition10% IREG; preconditionthreshold66.5%VREG; termination7.5%IREG; rechargethreshold96.5%VREG. Do not change toAT/AD/DC.",
+        "Native1STAT,2VSS=GND,3VBAT tocell throughCHG_EN0 jumper,4VDD=VBUS,5PROG throughR8=5.1kohm toGND.",
+        "C04-091-OT RevF: D2.9BSC,E1=1.6BSC,Elead=2.8BSC; Aoverallmax1.45,A2bodymax1.30,A1max0.15; pitch0.95BSC,leadwidth0.20..0.51.",
+        "GD&T onp22 gives Dsurfaceprofile0.20 andE1profile0.15. Derived bare molded maxima3.10x1.75, not explicit plus/minus table limits. Note excludes mold flash/protrusions up to0.25mm EACHside; conservative derived flash-inclusive body3.60x2.25mm. This is a screening bound pending assembler interpretation, not a measured part."
+      ],
+      "electrical_facts_and_screen": [
+        "IREG nominal1000/RPROG(kohm)mA -> about196mA for5.1kohm. Cell/protection/thermal/current suitability remains ownerqualification; no architecture redesign.",
+        "STAT sink-low is0.4Vtyp/1Vmax at4mA; chargeLED'sactualsub-mA point not characterized by thatsingle test."
+      ],
+      "footprint_comparison": [
+        "Native pads0.55x1.2,pitch0.95,row2.6002; pinmapping matchesOT.",
+        "Existing3.3x3.8002x1.5 covers bare body/overallheight, but not conservative3.6mm flash-inclusive longaxis. Localwidth requires+0.30 if using this worst-case screening bound.",
+        "Do not read BSC as guaranteed2.90 maximum. Retain native centers and orientation; normal assembled solderstand/placement needs its own allowance."
+      ],
+      "current_proxy": {
+        "U3": {
+          "reference": "U3",
+          "value": "MCP73831T-2ACI/OT",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-5",
+          "x_mm": 1.6952696315854219,
+          "y_mm": -15.311836810331569,
+          "width_mm": 3.3,
+          "depth_mm": 3.8002000000000002,
+          "height_mm": 1.5,
+          "rotation_deg": -90,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            1.69527,
+            -15.311837
+          ],
+          "z_min_mm": 23.5,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "charger"
+        }
+      },
+      "remaining_gates": [
+        "Parent should mechanically screen localproxywidth>=3.6mm, depthunchanged3.8002,heightunchanged1.5, and obtain GD&T/flash acceptance before finalfreeze.",
+        "Reflow/pickup, real cell profile, no-cell/hotplug, charger dissipation, fault/temperature inhibit and recovery remaingates."
+      ],
+      "disposition": "Exact recovered orderable and AC profile verified; flash-inclusive envelope review required.",
+      "package_overall_height_maximum_mm": 1.45,
+      "proposed_flash_screen_proxy_minimum_local_xyz_mm": [
+        3.6,
+        3.8002,
+        1.5
+      ],
+      "packing": "T means tape-and-reel, explicitly manufacturer p26; reelquantity not independently established here.",
+      "mpn": "MCP73831T-2ACI/OT",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    },
+    {
+      "references": [
+        "U4"
+      ],
+      "manufacturer": "Analog Devices / Maxim Integrated",
+      "manufacturer_package": "16-TQFN T1633+4 (3x3mm)",
+      "body_nominal_xyz_mm": [
+        3.0,
+        3.0,
+        0.75
+      ],
+      "body_maximum_xyz_mm": [
+        3.1,
+        3.1,
+        0.8
+      ],
+      "dimensions_note": "XYZ here follows local unrotated footprint axes where feasible; Z is identified explicitly when body thickness differs from seating-plane height. Null means not specified, not zero.",
+      "evidence_ids": [
+        "amplifier"
+      ],
+      "terminal_and_polarity_facts": [
+        "Exact p34 ordercodeMAX98357AETE+T is16TQFN;-40..85C;+=Pbfree/RoHS;T=tape/reel. MAX98357AEWL+T is9WLP and rejected.",
+        "T1633+4 links21-0136 RevO. D/E2.90/3.00/3.10,A0.70/0.75/0.80,A1<=0.05,0.5pitch,b0.20/0.25/0.30.",
+        "Correct exposed-pad rowT1633-4: D2/E2=0.95/1.10/1.25; peripheralL0.30/0.40/0.50. Don't use T1633-5'sshorter lead row or WLPheight.",
+        "Native1DIN,2GAIN_SLOT,3GND,4SD_MODE,5/6NC,7/8VDD,9OUTP,10OUTN,11GND,12/13NC,14LRCLK,15GND,16BCLK,THERMAL=GND. Pin1mark andEP are distinct."
+      ],
+      "electrical_facts_and_screen": [
+        "Preserve MAX98357A I2S selection; MAX98357B is different digitalformat.",
+        "EPmustsoldertoGND, supplybypass and BTLaudio/clocksequencing remain required; package selection doesnotrate speaker, thermaloutput or power."
+      ],
+      "footprint_comparison": [
+        "Nativepads0.8x0.28,pitch0.5; centerTHERMALcopper1.5x1.5 versus packageEPmax1.25. Existingpastepattern/thermalvias require independentDFM, not automaticequality.",
+        "Proxy4.141418x3.8x1.0 encloses3.1x3.1x0.8; keep0.170709mm native/proxyXoffset and conservative dimensions."
+      ],
+      "current_proxy": {
+        "U4": {
+          "reference": "U4",
+          "value": "MAX98357A",
+          "mpn": "",
+          "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:QFN16_3MM",
+          "x_mm": 10.554614391812152,
+          "y_mm": -10.087789081503768,
+          "width_mm": 4.141418,
+          "depth_mm": 3.8,
+          "height_mm": 1.0,
+          "rotation_deg": 0,
+          "side": "F",
+          "native_origin_common_xy_mm": [
+            10.725323,
+            -10.087789
+          ],
+          "z_min_mm": 24.0,
+          "z_max_mm": 25.0,
+          "height_source": "Unqualified component-height planning proxy",
+          "proxy_kind": "envelope",
+          "geometry_interface": null,
+          "requires_shell_cutout": false,
+          "cluster": "amplifier"
+        }
+      },
+      "remaining_gates": [
+        "Assembler must approveTQFN stencil/EP paste/via treatment, devicebodycenter versusproxycenter andmark1rotation.",
+        "RetrievedmanufacturerPDFRev7 isolderdocumentedmirror; no claim oflatestADIrevision. Validatecurrentlifecycle/supplywithassembler."
+      ],
+      "disposition": "Exact TQFN orderable verified, notWLP.",
+      "mpn": "MAX98357AETE+T",
+      "status": "Selected prototype identity; native/assembly/physical qualification gates remain"
+    }
+  ],
+  "sources": {
+    "amplifier": {
+      "sha256": "abac92d3522a204f093c911257c0e0ffa958d8f8acc1da3103a291d0403e8cd9",
+      "url": "https://cdn-shop.adafruit.com/product-files/3006/MAX98357A-MAX98357B.pdf",
+      "inspected_pdf_pages_1_based": [
+        14,
+        15,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "description": "Maxim 19-6779 Rev7 February2016 manufacturer PDF at Adafruit; includes TQFN ordering AND 21-0136 RevO drawings, unlike WLP-only package summary.",
+      "manufacturer_primary_url": "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX98357A-MAX98357B.pdf",
+      "local_evidence_filename": "max98357.pdf"
+    },
+    "ao3400a": {
+      "sha256": "9c60d0b6c1ddc7609a4b788a91181468d8ffe6c3e9ba425c3d8ffc5ba88c5033",
+      "url": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        2
+      ],
+      "description": "AOS AO3400A Rev3.1 July2023.",
+      "local_evidence_filename": "ao3400a.pdf"
+    },
+    "ao3400a-status": {
+      "sha256": "b46fbca1a8a37cc9773c7ee6820a5d46135c3245d0be4bd3a57e053ed6076c41",
+      "url": "https://www.aosmd.com/products/mosfets/low-voltage-mosfets-12v-30v/ao3400a",
+      "inspected_pdf_pages_1_based": [],
+      "description": "Manufacturer explicitly says Full Production and links exact SOT23 outline/reel documents.",
+      "local_evidence_filename": "aos-ao3400a-product.html"
+    },
+    "ao3401": {
+      "sha256": "a6abd2ad26b7305d45c71b3a7cbc6196410ddbc9124c4316a34b9aac2ca1b89a",
+      "url": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3401.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        2
+      ],
+      "description": "AOS AO3401 Rev6.1 February2024.",
+      "local_evidence_filename": "ao3401.pdf"
+    },
+    "ao3401-status": {
+      "sha256": "bbe3e06967b83b7363e473e6a38afd2f85665f7fcc685cd33b82db9b3bcc97a7",
+      "url": "https://www.aosmd.com/products/mosfets/p-channel-mosfets-8v-60v/ao3401",
+      "inspected_pdf_pages_1_based": [],
+      "description": "Manufacturer explicitly says Full Production; rejects unsupported search-summary claim that AO3401 is discontinued.",
+      "local_evidence_filename": "aos-ao3401-product.html"
+    },
+    "ao3401a-comparison": {
+      "sha256": "0d8e3261ae280e007b5837fff60c55142f2d92af71edc4d02aee6f7a760a785c",
+      "url": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3401A.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        2
+      ],
+      "description": "AOS AO3401A Rev3.1 December2023; comparison only, NOT selected.",
+      "local_evidence_filename": "ao3401a.pdf"
+    },
+    "aos-package": {
+      "sha256": "b6fac64d55f133ce74dd85ddddc618c3d5408e9531cb21e660f6a8ef3d8c5408",
+      "url": "https://www.aosmd.com/sites/default/files/res/package/SOT23.pdf",
+      "inspected_pdf_pages_1_based": [
+        1
+      ],
+      "description": "AOS PO-00001 versionN. Includes manufacturer maximum dimensions, lands and mold-flash exclusion.",
+      "local_evidence_filename": "aos-sot23.pdf"
+    },
+    "aos-reel": {
+      "sha256": "a89d3c7bc3a7a758482914248cc12eb0f16da0aa7c07efba283c71877feb3944",
+      "url": "https://www.aosmd.com/sites/default/files/res/tape_reel/SOT23_0.pdf",
+      "inspected_pdf_pages_1_based": [
+        1
+      ],
+      "description": "Manufacturer SOT23 tape/reel drawing; applies through exact product-page links.",
+      "local_evidence_filename": "aos-sot23-reel.pdf"
+    },
+    "charger": {
+      "sha256": "75297f2a5235599368381adfb63df2652cc22d757f171f388147b2ab3d32776f",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP73831-Family-Data-Sheet-DS20001984H.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        3,
+        4,
+        10,
+        22,
+        23,
+        24,
+        26
+      ],
+      "description": "Microchip DS20001984H, 2020. Exact order example plus C04-091-OT RevF drawing including GD&T and flash note.",
+      "local_evidence_filename": "mcp73831.pdf"
+    },
+    "diode-switch": {
+      "sha256": "9672da2861729979e9c3970c381aa361b55dfc12ab2c166bf96f430f84a077f2",
+      "url": "https://www.diodes.com/datasheet/download/1N4148WS.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        2,
+        4
+      ],
+      "description": "Diodes DS30097 Rev29-2, February2025. Not the separately downloaded rejected DS30086 SOD123 document.",
+      "local_evidence_filename": "1n4148ws-correct.pdf"
+    },
+    "imu": {
+      "sha256": "b9609fb50f6c8eea20c7a0ee88354ecd318f4a0552e93224e7bc69adad1eb957",
+      "url": "https://datasheet.lcsc.com/datasheet/pdf/fa6a99ef5791a87a2f52fed9abb2f6b1.pdf?productCode=C481766",
+      "inspected_pdf_pages_1_based": [
+        1,
+        8,
+        9,
+        65,
+        175,
+        176
+      ],
+      "description": "ST DS12814 Rev3 January2019, manufacturer-authored PDF mirrored by LCSC. Same revision cited in project motion-sensing gate; direct ST retrieval timed out.",
+      "manufacturer_primary_url": "https://www.st.com/resource/en/datasheet/lsm6dsox.pdf",
+      "local_evidence_filename": "lsm6dsox-lcsc.pdf"
+    },
+    "imu-catalog": {
+      "sha256": "73e5ee616294117c62fa30462bca6fdbe6f818fcc444396e496b91cdb1e6ae68",
+      "url": "https://www.lcsc.com/product-detail/C481766.html",
+      "inspected_pdf_pages_1_based": [],
+      "description": "Stable product URL supporting observed MPN LSM6DSOXTR and its manufacturer PDF mirror; InStock snapshot only.",
+      "local_evidence_filename": "lcsc-lsm6dsox.html"
+    },
+    "ldo": {
+      "sha256": "52d09967ef32672003df93d1382bc249715365406f59d110d9ebad6d618017d4",
+      "url": "https://www.richtek.com/assets/product_file/RT9080/DS9080-09.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        4,
+        6,
+        13,
+        17,
+        19,
+        21
+      ],
+      "description": "Richtek DS9080-09 December2024. Non-N fixed output, J5=TSOT-23-5, not SNS variant.",
+      "local_evidence_filename": "rt9080.pdf"
+    },
+    "ldo-catalog": {
+      "sha256": "0d7821d1f8bd3a6f30b7183d21383d329756468feea22efd93935997389b17a4",
+      "url": "https://www.richtek.com/Products/Linear%20Regulator/Single%20Output%20Linear%20Regulator/RT9080",
+      "inspected_pdf_pages_1_based": [],
+      "description": "Manufacturer product page explicitly lists RT9080-33GJ5 and links DS9080-09; dynamic distributor counts not treated as stock guarantee.",
+      "local_evidence_filename": "richtek-product.html"
+    },
+    "led-orange": {
+      "sha256": "1157356deaa02eed92ee10b4375364cf521a7b07bd0e0800448280b34023fc21",
+      "url": "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608LSECK-J4-PRV.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "description": "Kingbright DSAN8388 V.35A, 2021-02-17; actual part is APT1608LSECK/J4-PRV, orange.",
+      "local_evidence_filename": "kingbright-orange-low-j4.pdf"
+    },
+    "led-red": {
+      "sha256": "f97765d59768c15b2156b757a917b95d38c7e099540f9c92df552dea266896ce",
+      "url": "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608LSECK-J3-PRV.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "description": "Kingbright DSAN8387 V.6A, 2021-03-25; actual part is APT1608LSECK/J3-PRV, hyper red.",
+      "local_evidence_filename": "kingbright-red-low-j3.pdf"
+    },
+    "q2-catalog": {
+      "sha256": "9b6351c1df91022520b464991254f33a41e2da96579f30ebc24f112f7fea0d73",
+      "url": "https://jlcpcb.com/partdetail/AO3400A/C20917",
+      "inspected_pdf_pages_1_based": [],
+      "description": "Observed title and structured metadata resolve C20917 to Alpha & Omega Semicon AO3400A, not AO3401A. No stock/tier assertion.",
+      "local_evidence_filename": "jlc-c20917.html"
+    },
+    "rp2040": {
+      "sha256": "be56fbb75ba0ae9e26558a73c93ac3e75c2ad4e6878d3b6703de2a76d886ea8c",
+      "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+      "inspected_pdf_pages_1_based": [
+        12,
+        13,
+        608,
+        637
+      ],
+      "description": "RP2040 official datasheet; pin table, reduced ePad drawing, bulk ordering codes. Printed page numbers are PDF page minus one.",
+      "local_evidence_filename": "rp2040.pdf"
+    },
+    "schottky": {
+      "sha256": "3c5090b1a1f1af6f97dfb69b50004b378bf245de8308336477d96db3b2f52696",
+      "url": "https://assets.nexperia.com/documents/data-sheet/PMEG2020AEA.pdf",
+      "inspected_pdf_pages_1_based": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "description": "Nexperia product datasheet, 2020-09-23. Explicit SOD323 (SC-76), not SOD323F.",
+      "local_evidence_filename": "pmeg2020aea.pdf"
+    },
+    "schottky-catalog": {
+      "sha256": "59d7128bfa5e6aeb374dc05240f221ba6b8648e248f3350b35a91abb556e6d82",
+      "url": "https://www.lcsc.com/product-detail/C389354.html",
+      "inspected_pdf_pages_1_based": [],
+      "description": "Observed catalog JSON-LD: Nexperia; mpn PMEG2020AEA,115; sku C389354; InStock at retrieval, not a guarantee.",
+      "local_evidence_filename": "lcsc-pmeg.html"
+    }
+  },
+  "pending_decisions_not_selected": {
+    "Q3": {
+      "existing_recovered_orderable": "DMG3415UFY4-7",
+      "lifecycle": "Manufacturer NRND",
+      "next_action": "Evaluate manufacturer-suggested DMP2045UFY4 exact orderable, lifecycle, electrical and corrected-drain/package compatibility before choosing it. Do not silently substitute."
+    },
+    "Y1": {
+      "initial_conditional_candidate": "ECS-120-12-36-AGN-TR",
+      "initial_candidate_ESR_max_ohm": 150,
+      "next_action": "Seek an evidenced lower-ESR 12 MHz/12 pF/2520 candidate. Keep R6=1 kohm and C2/C3=22 pF pending evidence; oscillator startup/drive/load remain qualification gates.",
+      "case_ground_gate": "Existing symbol has only pins 1/3 and PCB pads 2/4 have no net. A selected grounded-case crystal requires a matching four-terminal symbol/schematic/netlist/PCB, not PCB-only grounds."
+    }
+  }
+}

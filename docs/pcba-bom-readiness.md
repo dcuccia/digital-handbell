@@ -36,7 +36,10 @@ already selected 10 uF capacitors receive the corresponding part-specific
 land treatment because they share the oversized source pattern.
 
 These provide candidate identities for seven more formerly blank references.
-Thirteen originally blank device identities remain under focused research.
+The [device register](../hardware/handbell/parts/device-component-candidates.json)
+then selects eleven of the remaining formerly blank identities and confirms
+Q4. Q3 replacement and Y1 crystal selection remain explicitly pending, with
+their circuit/package gates in [the device handoff](device-component-selection.md).
 The selected parts still need to be applied to the new native candidate and
 matched final supplier BOM; neither this progress nor the existing MPN fields
 establishes complete package/process qualification. The audit tables below
