@@ -5,13 +5,45 @@ the recovered routing checkpoint under `input-checkpoint`; its exact source and
 output hashes are in `reports/clock-definition.json`. The recovered
 `printed-bell-quote-candidate` and accepted mechanical models were not edited.
 
-The definition-only stage is preserved in commit `702f53b`. The current PCB adds
-the first local copper increment; its current hash and exact added segments are
-in `reports/clock-local-routing.json`. A subsequent metadata-only library
-reconciliation is bound by `reports/clock-library-reconciliation.json`, the
-current stage report. Older reports bind their named stages, not later PCBs.
+The definition-only stage is preserved in commit `702f53b`, the first local
+connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
+reports bind their named stages, not later PCBs. **The current stage is bound
+by `reports/clock-approaches.json` and the placement manifest.**
 
-## Implemented scope
+## Current all-front clock routing
+
+The three oscillator nets and both crystal-case/load-capacitor ground returns
+now have physical F-side connections to the MCU clock pins and exposed ground
+pad. This completes the **local clock network**, not the whole board or a
+functional oscillator qualification.
+
+Thirty new F segments replace thirteen earlier local-clock segments. No vias
+or B-side copper were added. The small placement changes are Y1 left 0.50 mm
+and down 0.20 mm; C2 left 0.30 mm and down 0.10 mm; C3 left 0.25 mm; R6 left
+0.35 mm and turned 180 degrees. Values, pad primitives and pin/net identities
+are unchanged. All other components, existing nonclock copper, outline,
+mounting holes, USB and contact interfaces remain unchanged.
+
+The ground route stays on F because the raw-negative contact **metal base**,
+not merely its solder pads, lies behind this cluster. A copper-only check would
+not qualify ground vias beneath that metal.
+
+Native physical paths confirm all thirteen recorded clock/ground endpoint pairs
+on F without relying on zone fill. Moved pads and new tracks clear foreign
+copper by the conservative 0.20 mm screen. Same-face component envelopes do not
+overlap and remain within D43; these are screening proxies, not qualified
+assembly tolerances. Matching no-refill DRC moves from **86 to 82 unconnected
+items**, with no new physical findings and no clock library mismatches. The
+four inherited USB hole-clearance errors and silkscreen/text findings remain.
+
+![Current all-front clock routing](reports/clock-approaches-front.png)
+
+Full mechanical rebinding, zone refill and the other unfinished electrical/
+manufacturing gates remain open. Clock frequency, startup and drive must be
+evaluated on powered hardware, including low-cell/LDO-dropout operation; the
+reference capacitor values do not measure this layout's stray capacitance.
+
+## Earlier definitions and first local connections
 
 - Y1: Abracon ABM8-272-T3, four-terminal schematic symbol with case pins 2/4
   connected to GND, dedicated 3.2 x 2.5 mm package and manufacturer-example lands.
@@ -31,7 +63,7 @@ This implements the separately recorded [clock selection](../../../../docs/devic
 not a repair of a demonstrated fault in Adafruit's design. Provenance and CC
 BY-SA obligations remain in `LICENSE.txt` and `notices`.
 
-## Evidence and remaining gates
+## Earlier-stage evidence
 
 KiCad 10.0.6 loaded the native board and both dedicated footprints. The exported
 netlist establishes both Y1 case pins on GND and the intended C2/C3/R6 oscillator
@@ -72,10 +104,10 @@ the three library warnings; all other findings persist. The unfilled-zone
 unconnected count remains 86, although the native report selects different
 airwire endpoint witnesses. The exact pad/copper geometry remains unchanged.
 
-The MCU XIN/XOUT approaches, Y1 pin 2 ground and the capacitor/case-ground
-island's connection to protected ground remain unfinished. Those routes need
-joint consideration around the MCU approach corridor and rear contact copper;
-no unreviewed vias through that region were added. Zone refill, complete
+At that checkpoint the MCU XIN/XOUT approaches, Y1 pin 2 ground and the
+capacitor/case-ground island's connection to protected ground were unfinished.
+The current all-front revision above resolves those local paths without vias
+through the rear contact metal. Zone refill, complete
 schematic/PCB parity and full mechanical rebinding remain pending.
 
 The first generation exposed a Windows default-encoding mismatch in inherited
@@ -102,16 +134,27 @@ The exercised before/after DRC commands each had a 30-second process timeout.
 `tools/route_clock_local.py` at the repository root applies only to the pinned
 `702f53b` definition PCB and refuses to rerun over this increment.
 
-Next item: resume the MCU approaches and return paths as a separate bounded
-routing item. USB, other part revisions, mechanical rebinding and vendor exports remain
+The latest route generator is `tools/experiments/route_clock_approaches.py`.
+It requires the exact `1a83d8c` PCB and refuses to overwrite this current stage.
+The old failed revision is preserved in commit `a5c5323`; the revised code
+passes its gates. Reproduce the current native detail with:
+
+```powershell
+python -B tools\render_clock_detail.py --output hardware\handbell\iterations\printed-bell-clock-draft\reports\clock-approaches-front.png
+```
+
+Run that command from the repository root. The owner now permits up to two
+corrective retries per bounded item, still within the 10-15 minute target.
+USB, other part revisions, mechanical rebinding and vendor exports remain
 separate work. No procurement, powered-cell or child-use approval is implied.
 
-## Subsequent all-front approach proposal: blocked, not applied
+## Earlier rejected all-front proposal (historical)
 
 The [blocked-proposal record](reports/clock-approaches-blocked.json) preserves
-the next attempted step. It proposed small Y1/C2/C3/R6 shifts and an R6 rotation
+the rejected step from `a5c5323`. It proposed small Y1/C2/C3/R6 shifts and an R6 rotation
 to route the clock and ground network on F, avoiding the raw-negative contact
-metal behind the cluster. **None of those moves or routes is in this PCB.**
+metal behind the cluster. **That exact proposal was not applied**; the current
+revision above adjusts C3 and the top-ground corridor before routing.
 
 An initial native access violation was avoided by staging the proposed edits
 as text and loading a fresh native board. That single corrective attempt then
@@ -120,8 +163,7 @@ the existing diagonal `+3V3` track, below the configured 0.1778 mm minimum and
 the proposal's conservative 0.20 mm screen. It is not a short, but it is not
 acceptable clearance. Later track/connectivity gates were not reached.
 
-The experiment is under `tools/experiments/route_clock_approaches.py`; its
-input-hash guard and pre-write gates preserve the accepted `1a83d8c` board.
-The next bounded item must revise that C3 proposal before proceeding, without
-waiving clearances or silently editing the unrelated power trace. No background
-routing task remains active.
+The subsequent bounded item reduced the C3 leftward move, gave its signal a
+rightward escape around the power trace, and shifted Y1/C2 slightly downward
+to clear the existing IMU interrupt trace above the ground route. No clearance
+rule was weakened and neither unrelated trace was moved.

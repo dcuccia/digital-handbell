@@ -1,5 +1,21 @@
 # From fit mock-up to routed PCB
 
+## September 14 all-front clock network completed locally
+
+The [current clock revision](../hardware/handbell/iterations/printed-bell-clock-draft/README.md)
+now routes the MCU XIN/XOUT network and both crystal-case/capacitor returns on
+F, with no new vias or rear copper beneath the raw-negative contact base.
+It applies only small Y1/C2/C3/R6 pose changes and replaces the prior local
+clock segments. All nonclock copper and fixed mechanical interfaces remain.
+The exact moves, native front-only paths and current hashes are in
+`reports/clock-approaches.json`; the earlier rejected proposal remains history.
+
+Matching unfilled-zone DRC changes from 86 to 82 opens, without new physical
+findings. This is local routing completion, not powered clock qualification,
+whole-board completion or a fresh full mechanical bind. The owner now permits
+an initial attempt plus up to two corrective retries within each bounded item,
+and sequential continuation after successful checkpoints.
+
 ## September 14 first local clock copper
 
 The [isolated clock draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md)

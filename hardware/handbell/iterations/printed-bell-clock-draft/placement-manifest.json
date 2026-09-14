@@ -738,8 +738,8 @@
   "dnp_footprint_reservations": [
     "C29"
   ],
-  "status": "CLOCK_LOCAL_CONNECTIONS_PARTIAL_NO_ZONE_REFILL",
-  "generated_pcb_sha256": "9472e9887da88826fe8cfa1145ab53afb8adba2a0a5fbf20d6fc45d90f85acc6",
+  "status": "CLOCK_CLUSTER_ROUTED_GLOBAL_GATES_OPEN",
+  "generated_pcb_sha256": "19459cd32d8a8f58f0ff790e55a61294bbd580a0680c723f6f7a5695faee014c",
   "schematic_sha256": "51fec9d33a95ea712f26df13689ce1321f0c6084110fef97cd927fdc0ea4f865",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
@@ -853,16 +853,16 @@
       "value": "15pF",
       "mpn": "GRM1555C1H150JA01D",
       "footprint": "Clock:GRM1555C1H150JA01D",
-      "x_mm": -9.096400478754708,
-      "y_mm": -3.047549796592771,
+      "x_mm": -9.396400478754705,
+      "y_mm": -2.9475497965927766,
       "width_mm": 1.616,
       "depth_mm": 0.6,
       "height_mm": 0.65,
       "rotation_deg": -90,
       "side": "F",
       "native_origin_common_xy_mm": [
-        -9.0964,
-        -3.04755
+        -9.3964,
+        -2.9475500000000068
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -877,7 +877,7 @@
       "value": "15pF",
       "mpn": "GRM1555C1H150JA01D",
       "footprint": "Clock:GRM1555C1H150JA01D",
-      "x_mm": -9.100819474453994,
+      "x_mm": -9.350819474453994,
       "y_mm": -0.8006690071179561,
       "width_mm": 1.616,
       "depth_mm": 0.6,
@@ -885,8 +885,8 @@
       "rotation_deg": -270,
       "side": "F",
       "native_origin_common_xy_mm": [
-        -9.100819,
-        -0.800669
+        -9.350819000000001,
+        -0.8006689999999992
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -2029,16 +2029,16 @@
       "value": "1K",
       "mpn": "",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
-      "x_mm": -4.824586378386804,
-      "y_mm": -0.794099350638795,
+      "x_mm": -5.174585621613198,
+      "y_mm": -0.7940986493612106,
       "width_mm": 1.616,
       "depth_mm": 0.6,
       "height_mm": 0.65,
-      "rotation_deg": -90,
+      "rotation_deg": -270,
       "side": "F",
       "native_origin_common_xy_mm": [
-        -4.824586,
-        -0.794099
+        -5.174586000000005,
+        -0.7940990000000028
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -2749,16 +2749,16 @@
       "value": "12MHz/CL10pF",
       "mpn": "ABM8-272-T3",
       "footprint": "Clock:ABM8_272_T3",
-      "x_mm": -6.925199011587686,
-      "y_mm": -1.9974037954075268,
+      "x_mm": -7.425199011587686,
+      "y_mm": -1.797403795407524,
       "width_mm": 3.6,
       "depth_mm": 2.8,
       "height_mm": 1.0,
       "rotation_deg": -90,
       "side": "F",
       "native_origin_common_xy_mm": [
-        -6.925199,
-        -1.997404
+        -7.425199000000006,
+        -1.7974040000000002
       ],
       "z_min_mm": 24.0,
       "z_max_mm": 25.0,
@@ -2897,24 +2897,24 @@
         270
       ],
       "Y1": [
-        -6.925199,
-        -1.997404,
+        -7.425199000000006,
+        -1.7974040000000002,
         90
       ],
       "C2": [
-        -9.0964,
-        -3.04755,
+        -9.3964,
+        -2.9475500000000068,
         90
       ],
       "C3": [
-        -9.100819,
-        -0.800669,
+        -9.350819000000001,
+        -0.8006689999999992,
         270
       ],
       "R6": [
-        -4.824586,
-        -0.794099,
-        90
+        -5.174586000000005,
+        -0.7940990000000028,
+        270
       ],
       "C14": [
         -5.195705,
@@ -3346,5 +3346,5 @@
       }
     ]
   },
-  "current_stage_report": "reports/clock-library-reconciliation.json"
+  "current_stage_report": "reports/clock-approaches.json"
 }

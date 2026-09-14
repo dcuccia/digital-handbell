@@ -16,7 +16,8 @@
   after publishing a successful checkpoint, announce and start the next ready
   item without waiting for another prompt. Keep the per-item budget and retry
   limit; a blocker or pause request still stops the affected work promptly.
-- Allow at most one corrective retry within that budget. Do not turn a failed
+- The owner permits at most two corrective retries within that budget (an
+  initial attempt plus up to two corrections). Do not turn a failed
   attempt into an open-ended search, optimization, routing or check/fix loop.
   Return a concrete blocker and preserve the usable work when the budget ends.
 - Prefer direct tools for small items. Do not launch background engineering
