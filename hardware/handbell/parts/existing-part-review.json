@@ -1,0 +1,492 @@
+{
+  "scope": "Nine fitted references, eight identity groups; seven F parts and two B contacts. Read-only comparison to printed-bell-power-rework, not the active quote candidate.",
+  "frozen_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
+  "frozen_manifest_sha256": "60e394c41bcfd7734b41c7713100360253164381f0217eed325386bd49977799",
+  "dimensions_convention": "Local width/depth/height in mm. Package drawing maxima are not a guarantee of soldered PCBA height. Null means unsupported, not zero.",
+  "packing_convention": "Manufacturer standard reel quantities are not owner order quantities or distributor minimum orders.",
+  "inventory_or_assembler_acceptance_asserted": false,
+  "parts": [
+    {
+      "references": [
+        "J1"
+      ],
+      "quantity": 1,
+      "side": "F",
+      "manufacturer": "Molex",
+      "quote_mpn": "5040500291",
+      "existing_alias": "504050-0291",
+      "selection_status": "Retain selected physical part; normalize manufacturer order-code spelling.",
+      "packing": "Embossed tape and reel, 2700 per reel, 24 mm tape, 12 mm pocket pitch.",
+      "finish": "Terminal nickel underplate >=1.0 um; mating gold >=0.1 um; solder-tail gold thickness not specified in drawing. Hold-down nails tin >=1.0 um over nickel >=1.0 um.",
+      "electrical": "150 V AC rms/DC; two-circuit allowable current 3.5 A/contact at AWG24, 3.0 A AWG26, 2.5 A AWG28/30, 2.0 A AWG32 under specification conditions. Initial contact resistance <=20 milliohm. -40 to +105 C includes current heating; rated-current basis <=30 C rise.",
+      "body_nominal_mm": [
+        6.75,
+        6.1,
+        2.0
+      ],
+      "body_dimension_max_mm": [
+        6.95,
+        6.3,
+        2.15
+      ],
+      "complete_metal_max_envelope_mm": null,
+      "envelope_notes": "A and 6.1 use drawing general +/-0.2 mm; height explicitly 2.0 +/-0.15. Nail overhang 0.4 each side and rear tail extension 0.34 are reference dimensions, not toleranced full-envelope maxima.",
+      "frozen_proxy_mm": [
+        7.96,
+        6.72,
+        3.1
+      ],
+      "required_proxy_delta": "No enlargement demonstrated from toleranced body dimensions. Retain conservative height; do not claim a guaranteed full metal/mated envelope or soldered maximum.",
+      "land_disposition": "Nominal sizes/locations match PDF p5 after 180-degree in-plane rotation: signal 0.6x1.0 at x+/-0.75,y-2.795; hold-downs 1.25x1.8 at x+/-3.355,y2.395. Frozen rounded corners differ from rectangular drawing example.",
+      "paste_process": "Manufacturer example: 0.10 mm stencil, 100% aperture. Solder both signal tails and both fitting nails. Reflow example 250 C peak, two cycles; board-specific profile required.",
+      "pickup": "Manufacturer pickup region is rear A x 2.4 mm reference strip. Frozen F.Fab mapping gives approximate local y=-2.785..-0.385, candidate zone center (0,-1.585); this is a calculated zone center, not an approved machine datum.",
+      "orientation": "Map drawing pin-1 triangle and p6 tape orientation to native pin1 VO+, pin2 VO-. Do not use proxy offset +0.065 board X as pickup center.",
+      "supplier_operation_gates": [
+        "Nozzle/zone and rotation mapping",
+        "All four joints including hold-downs",
+        "Common stencil/profile and board-specific lift",
+        "Latest lot/PCN applicability and mated harness strain relief"
+      ],
+      "source_ids": [
+        "molex-5040500291-drawing.pdf",
+        "molex-504050-packaging.pdf",
+        "molex-504051-product.pdf",
+        "molex-504051-application.pdf"
+      ],
+      "manufacturer_product_url": "https://www.molex.com/en-us/products/part-detail/5040500291",
+      "distributor_reference_url": "https://www.digikey.com/en/products/detail/molex/5040500291/9954115"
+    },
+    {
+      "references": [
+        "J2"
+      ],
+      "quantity": 1,
+      "side": "F",
+      "manufacturer": "JST",
+      "quote_mpn": "SM02B-SRSS-TB(LF)(SN)",
+      "existing_alias": "SM02B-SRSS-TB",
+      "selection_status": "Complete the selected side-entry header's manufacturer label suffix; do not substitute BM02B top entry.",
+      "packing": "Embossed tape and reel, 3000 per reel. Manufacturer brochure explicitly says label carries (LF)(SN).",
+      "finish": "Tin-plated copper-alloy base contacts and reinforcements; heat-resistant PA natural/ivory housing. Gold versions are not implicit equivalents.",
+      "electrical": "1 A AC/DC with AWG28; 50 V AC/DC; -25 to +85 C including temperature rise; contact resistance <=20 milliohm initial and <=40 milliohm after environmental tests.",
+      "body_nominal_mm": [
+        4.0,
+        4.25,
+        2.9
+      ],
+      "mounted_height_reference_mm": 2.95,
+      "mated_depth_reference_mm": 6.25,
+      "complete_max_envelope_mm": null,
+      "frozen_proxy_mm": [
+        4.8,
+        6.25,
+        3.1
+      ],
+      "required_proxy_delta": "No defensible maximum-based delta established. Brochure explicitly labels layout dimensions reference values; retain proxy as provisional, not qualified maximum.",
+      "land_disposition": "Nominal side-entry layout agrees: signal 0.6x1.55 at x+/-0.5,y-2.0; reinforcement 1.2x1.8 at x+/-1.8,y1.875; 5.55 overall pad span in local Y.",
+      "paste_process": "Both contacts and both reinforcement lands need solder. Frozen full-pad paste and corner rounding require assembler acceptance; no JST exact stencil aperture/thickness established here.",
+      "pickup": "No manufacturer pickup datum established. F.Fab nominal body center local y+0.45 and manifest proxy center y+0.35 are different and neither proves a pickup center.",
+      "orientation": "JST p1 is viewed from connector mounting surface; pin1 is native local x-0.5 BUTTON_EXT, pin2 GND. Map tape/nozzle/rotation explicitly.",
+      "supplier_operation_gates": [
+        "Toleranced exact drawing or accepted conservative envelope before mechanical closure",
+        "Pickup and reel orientation",
+        "Reinforcement joints, stencil and common reflow profile"
+      ],
+      "source_ids": [
+        "jst-sh.pdf"
+      ],
+      "distributor_reference_url": "https://www.mouser.com/en/ProductDetail/JST-Commercial/SM02B-SRSS-TBLFSN?qs=cdbOS8ANM9BWPfwllEYjZw%3D%3D",
+      "distributor_reference_status": "Public identity reference; current direct retrieval timed out. No inventory claim."
+    },
+    {
+      "references": [
+        "BT1",
+        "BT2"
+      ],
+      "quantity": 2,
+      "side": "B",
+      "manufacturer": "Keystone Electronics",
+      "quote_mpn": "254",
+      "selection_status": "Retain selected Rev C physical contact. Bulk packing selected by existing MPN; 254TR is a documented packing-only option requiring explicit factory/owner disposition.",
+      "packing": "254 bulk; 254TR tape and reel. Do not relabel 254 as tape/reel or assume automated placement acceptance.",
+      "packing_only_option": "254TR",
+      "finish": "Tin-nickel plate on 0.30 mm spring steel; not a silently substituted matte-tin variant.",
+      "electrical": "Numerical current/contact-resistance/force/travel qualification not established. Catalog temperature -45 to +85 C is not a current rating.",
+      "drawing_height_nominal_mm": 16.59,
+      "drawing_height_tolerance_mm": 0.38,
+      "drawing_height_upper_mm": 16.97,
+      "base_length_max_from_general_tolerance_mm": 20.13,
+      "base_width_max_from_general_tolerance_mm": 11.38,
+      "unloaded_transverse_reference_mm": 16.61,
+      "loaded_max_envelope_mm": null,
+      "frozen_proxy_mm": [
+        20.25,
+        17.0,
+        16.59
+      ],
+      "required_proxy_delta": "Add explicit +0.38 mm upper-height tolerance envelope in coordinated mechanical study; nominal primitives may remain as nominal geometry. Transverse REF and loaded shape remain unbounded.",
+      "land_disposition": "Each part has two same-number-1 split lands: x+/-8.005; 4.24x5.20 inner and 4.24x3.30 outer; total span20.25. Matches drawing metric minimum provision; no land enlargement established.",
+      "paste_process": "Two real assembled components and four solder joints. Bulk/manual or reel/automated operation, stencil volume, tall-part support, fixture insulation and double-sided sequence require supplier agreement.",
+      "orientation": "BT1 VBAT and BT2 raw CELL_NEG, reversed 180 degrees. Preserve raw-negative base/copper exclusion; neither GND bridging nor mask-only insulation is acceptable.",
+      "supplier_operation_gates": [
+        "Supplied revision C after PCN23-025, not old legs under same MPN",
+        "Bulk versus 254TR and process acceptance",
+        "Fixture/nozzle/tall-part clearance",
+        "Loaded geometry, force and electrical testing remain separate qualification gates"
+      ],
+      "source_ids": [
+        "keystone-254-revc.pdf",
+        "keystone-254-pcn.pdf",
+        "keystone-k75-battery.pdf",
+        "keystone-k75-layout.pdf"
+      ],
+      "distributor_reference_url": "https://www.digikey.com/en/products/detail/keystone-electronics/254/9646025",
+      "packing_option_distributor_url": "https://www.digikey.com/en/products/detail/keystone-electronics/254TR/9646026"
+    },
+    {
+      "references": [
+        "U1"
+      ],
+      "quantity": 1,
+      "side": "F",
+      "manufacturer": "Winbond",
+      "quote_mpn": "W25Q16JVUXIQ TR",
+      "selection_status": "Retain established exact UX industrial Q-option tape/reel identity, not XG or a different QE option.",
+      "packing": "TR; reel quantity, supplied finish and moisture-handling details require lot/packing evidence rather than assumption.",
+      "electrical": "16 Mbit; 2.7-3.6 V; industrial -40 to +85 C; Q option has QE=1 fixed.",
+      "package_max_mm": [
+        3.1,
+        2.1,
+        0.6
+      ],
+      "frozen_proxy_mm": [
+        3.1,
+        2.1,
+        0.6
+      ],
+      "required_proxy_delta": "None. Retain parent-authorized 2.1 mm local depth.",
+      "land_disposition": "Original package-informed 0.60x0.30 terminal lands, pitch0.5; narrow central GND strip0.20x1.60. Not a vendor-approved land pattern.",
+      "paste_process": "Separate center-strip aperture0.15x1.20 =56.25% nominal copper coverage. Resolve terminal overlap, strip tolerances, aperture release and voiding with assembler; keep exposed vias away from strip.",
+      "supplier_operation_gates": [
+        "Correct UX/Q label",
+        "Fine strip stencil and inspection capability",
+        "Lot moisture/finish handling"
+      ],
+      "source_ids": [
+        "winbond-w25q16jv.pdf"
+      ],
+      "distributor_reference_url": "https://www.digikey.com/en/products/detail/winbond-electronics/W25Q16JVUXIQ-TR/15182307"
+    },
+    {
+      "references": [
+        "U5"
+      ],
+      "quantity": 1,
+      "side": "F",
+      "manufacturer": "Texas Instruments",
+      "quote_mpn": "TPS61023DRLR",
+      "selection_status": "Retain exact device; coordinate footprint/envelope correction before final layout freeze.",
+      "packing": "4000 per reel, 8 mm tape, 4 mm pocket pitch, pin1 quadrantQ3. MSL1/260 C/unlimited per appendix; malformed finish field 'Call TISN' is not resolved here.",
+      "package_body_max_excluding_flash_mm": [
+        1.3,
+        1.7,
+        0.6
+      ],
+      "maximum_terminal_span_mm": 1.7,
+      "local_depth_upper_including_permitted_flash_mm": 2.0,
+      "frozen_proxy_mm": [
+        1.92,
+        1.6,
+        0.65
+      ],
+      "required_proxy_delta": "Local depth +0.10 to cover1.70 package dimension, or +0.40 to2.00 for the stated maximum0.15 flash/protrusion allowance per end. Retain height0.65 as conservative package screen, not guaranteed soldered height.",
+      "native_lands": {
+        "size_mm": [
+          0.65,
+          0.275
+        ],
+        "column_centers_x_mm": [
+          -0.635,
+          0.635
+        ],
+        "row_pitch_mm": 0.5,
+        "mask_expansion_mm": 0.0508
+      },
+      "manufacturer_example_lands": {
+        "size_mm": [
+          0.67,
+          0.3
+        ],
+        "column_centers_x_mm": [
+          -0.74,
+          0.74
+        ],
+        "row_pitch_mm": 0.5,
+        "corner_radius_mm": 0.05,
+        "nsmd_expansion_max_mm": 0.05
+      },
+      "land_disposition": "Native column spacing1.27 versus example1.48: each column0.105 too far inward relative to TI example. Recommended coordinated disposition: use factual TI land/paste example or document an assembly-approved alternate; do not silently claim imported SOT563 equivalent.",
+      "paste_process": "TI example uses matching0.67x0.30 R0.05 apertures and0.10 mm stencil. Review adjacent routing and thermal geometry when changing lands; preserve all six pin/net identities.",
+      "supplier_operation_gates": [
+        "Land/mask/paste discrepancy",
+        "Maximum-envelope correction",
+        "RotationQ3 mapping and supplied finish confirmation"
+      ],
+      "source_ids": [
+        "ti-tps61023.pdf"
+      ],
+      "manufacturer_product_url": "https://www.ti.com/product/TPS61023/part-details/TPS61023DRLR"
+    },
+    {
+      "references": [
+        "U6"
+      ],
+      "quantity": 1,
+      "side": "F",
+      "manufacturer": "Texas Instruments",
+      "quote_mpn": "BQ29700DSER",
+      "selection_status": "Retain exact protection variant and large-reel orderable; do not substitute family variants.",
+      "packing": "3000 large tape/reel, 8 mm tape, 4 mm pitch, pin1Q2; NiPdAu; MSL1/260 C/unlimited.",
+      "package_max_mm": [
+        1.55,
+        1.55,
+        0.8
+      ],
+      "frozen_proxy_mm": [
+        1.9,
+        1.55,
+        0.8
+      ],
+      "required_proxy_delta": "None. Retain parent-authorized local depth1.55.",
+      "land_disposition": "Retain documented all-NSMD adaptation with0.05 mask expansion, pin1 0.80x0.25 and remaining0.70x0.25. Do not restore TI left-side SMD copper expansion that violated retained0.20 clearance.",
+      "paste_process": "Explicit assembler acceptance of all-NSMD adaptation, registration and six-pad soldering remains open. No exposed center pad; pin1 NC is still a physical solder joint.",
+      "orientation": "TI tape pin1Q2; native pin4 rawCELL_NEG remains isolated.",
+      "supplier_operation_gates": [
+        "All-NSMD/paste acceptance",
+        "Correct BQ29700 thresholds/label",
+        "Pin1 orientation"
+      ],
+      "source_ids": [
+        "ti-bq2970.pdf"
+      ],
+      "manufacturer_product_url": "https://www.ti.com/product/BQ2970/part-details/BQ29700DSER"
+    },
+    {
+      "references": [
+        "Q5"
+      ],
+      "quantity": 1,
+      "side": "F",
+      "manufacturer": "Texas Instruments",
+      "quote_mpn": "CSD83325L",
+      "selection_status": "Retain exact orderable. Base L code already specifies3000 reel; do not invent suffix.",
+      "packing": "3000 large tape/reel, 8 mm tape, 4 mm pitch, pin1Q1; NiAu; MSL1/260 C/unlimited.",
+      "package_max_mm": [
+        1.15,
+        2.2,
+        0.22
+      ],
+      "frozen_proxy_mm": [
+        1.15,
+        2.2,
+        0.22
+      ],
+      "required_proxy_delta": "None established.",
+      "land_disposition": "Six0.30 circular NSMD lands on0.65 grid, mask expansion0.05, agree with TI preferred metal-land example. Preserve corrected gate-between-source pin identities and outside source escapes.",
+      "paste_process": "Native paste follows0.30 circles. TI example uses0.30 square apertures withR0.05 corners on0.10 stencil. Circle area0.07069 versus rounded-square0.08785 mm2, about19.5% less; supplier must approve or coordinate paste-only adjustment.",
+      "supplier_operation_gates": [
+        "0.22 mm PicoStar handling/nozzle capability",
+        "Stencil shape/release",
+        "Inspect correct orientation and solder quality"
+      ],
+      "source_ids": [
+        "ti-csd83325l.pdf"
+      ],
+      "manufacturer_product_url": "https://www.ti.com/product/CSD83325L/part-details/CSD83325L"
+    },
+    {
+      "references": [
+        "R27"
+      ],
+      "quantity": 1,
+      "side": "F",
+      "manufacturer": "Panasonic",
+      "quote_mpn": "ERJ-6BWFR033V",
+      "manufacturer_catalog_alias": "ERJ6BWFR033V",
+      "selection_status": "Retain exact33 milliohm part; coordinate land/envelope correction before final layout freeze.",
+      "packing": "V: punched paper carrier tape, 4 mm pitch, 5000 per standard reel.",
+      "electrical": "33 milliohm +/-1%; 0.5 W at70 C with derating above70 C to zero at155 C; TCR0..+200 ppm/K; double-sided resistive-element thick-film construction, not a wide-terminal substitute.",
+      "package_max_mm": [
+        2.2,
+        1.45,
+        0.75
+      ],
+      "terminal_length_mm": {
+        "nominal": 0.55,
+        "tolerance": 0.2
+      },
+      "frozen_proxy_mm": [
+        3.0,
+        1.4,
+        0.7
+      ],
+      "required_proxy_delta": "Retain width3.0 for physical body; local depth +0.05 to1.45 and height +0.05 to0.75. If proxy must include revised land extent, width becomes at least3.2.",
+      "native_lands": {
+        "size_mm": [
+          1.0,
+          1.4
+        ],
+        "centers_x_mm": [
+          -1.0,
+          1.0
+        ],
+        "gap_mm": 1.0,
+        "overall_span_mm": 3.0
+      },
+      "manufacturer_example": {
+        "gap_a_mm": 0.9,
+        "overall_span_b_range_mm": [
+          3.2,
+          3.8
+        ],
+        "width_c_range_mm": [
+          1.1,
+          1.4
+        ]
+      },
+      "proposed_minimum_span_lands": {
+        "size_mm": [
+          1.15,
+          1.4
+        ],
+        "centers_x_mm": [
+          -1.025,
+          1.025
+        ],
+        "gap_mm": 0.9,
+        "overall_span_mm": 3.2
+      },
+      "land_disposition": "Frozen overall span0.20 below example's smallest span, gap0.10 above specific ERJ6BW example. Coordinate proposed lands or explicit manufacturer/assembler-approved alternate; preserve sense takeoff and net identities.",
+      "paste_process": "Resolve stencil and documented under-body return transition with assembler; it is not an in-land via. Do not allow a solder or fixture bypass of the shunt or raw-cell isolation.",
+      "qualification_gate": "Nominal I^2R is0.132 W at2 A and0.297 W at3 A; neither proves hot-board/pulse/protection survival.",
+      "source_ids": [
+        "panasonic-erj-bw.pdf",
+        "panasonic-lands.pdf",
+        "panasonic-packaging.pdf",
+        "panasonic-erj6bwfr033v-page.txt"
+      ],
+      "distributor_reference_url": "https://www.digikey.com/en/products/detail/panasonic-industry/ERJ-6BWFR033V/1466366"
+    }
+  ],
+  "schema_version": 1,
+  "review_date": "2026-09-14",
+  "status": "Stopped audit handoff; recommendations and unresolved gates, not a released supplier BOM",
+  "native_changes_applied_by_this_audit": false,
+  "active_quote_candidate_inspected": false,
+  "research_register_sha256": "fa570674f67599157522d8c7a7ed77ca13e3f0dd80a920d151aa1f0f736ec626",
+  "source_index": {
+    "molex-5040500291-drawing.pdf": {
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/504/504050/5040500291_sd.pdf",
+      "sha256": "ce0f9952c7f2c3fe9be0b92d6e7ca09bd24c8cdb167ad54a1271ef159d09168e",
+      "bytes": 440175,
+      "description": "5040500000-SD PSD001 revision B, 2020-07-07; exact two-circuit sheets are PDF pages 4-6"
+    },
+    "molex-504050-packaging.pdf": {
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/packagingspecificationpdf/504/504050/SPK-504050-001-001.pdf",
+      "sha256": "31508d797d0611d5401bbcb3c6cd9ba9bf602f454005d6eb50eb2145742f93a1",
+      "bytes": 284860,
+      "description": "Manufacturer packaging specification"
+    },
+    "molex-504051-product.pdf": {
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/504/504051/PS-504051-001-001.pdf",
+      "sha256": "0e5f35c41d71209744ffbcf99d1c62d28e253ee842d100b39f1d5573724eb0b3",
+      "bytes": 708791,
+      "description": "PS-504051-001 revision K; ratings p2, resistance p3, reflow p12, assembly notes pp15-16"
+    },
+    "molex-504051-application.pdf": {
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/ja-jp/applicationspecificationspdf/504/504051/AS-504051-001-001.pdf",
+      "sha256": "806071d9da619bff7bfc9653806d619dc9b450d4d5190089404ce0a77df221b7",
+      "bytes": 1953666,
+      "description": "Manufacturer application instructions, Japanese and English; 50 pages"
+    },
+    "jst-sh.pdf": {
+      "url": "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf",
+      "sha256": "ea3071ca5ee5a6069eba534fa39a10f34c9fb742ee42135a69ab4156bfa0f5de",
+      "bytes": 84427,
+      "description": "SH manufacturer brochure; side-entry PCB guidance p1, two-position identity/finish/package p3"
+    },
+    "keystone-254-revc.pdf": {
+      "url": "https://ken.keyeuro.eu/pdf/254.pdf",
+      "sha256": "8a14bc6e870c39fd1c7b3cc26381bc9a17d1ce8f0eb4ff2f34358a5a13da69d6",
+      "bytes": 131352,
+      "description": "Keystone drawing 254 revision C, 2023-09-14"
+    },
+    "keystone-254-pcn.pdf": {
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/5555/PCN23-025.pdf",
+      "sha256": "889e1f5218edb158f836baf570fd4b8f7bb0447cab9273dcc39766361dcd37fd",
+      "bytes": 1334970,
+      "description": "Keystone PCN23-025, 2023-09-15; distributor-hosted manufacturer document"
+    },
+    "keystone-k75-battery.pdf": {
+      "url": "https://www.keystone-europe.com/wp-content/uploads/2025/08/battery-clips-contacts-holders.pdf",
+      "sha256": "8ebb6892c716168f3e043537fca5a5704d0a3255ae9fe44c41b49963e591f6b1",
+      "bytes": 21225053,
+      "description": "K75 catalog p13: 254 bulk, 254TR tape/reel, tin-nickel plate"
+    },
+    "keystone-k75-layout.pdf": {
+      "url": "https://www.keystone-europe.com/wp-content/uploads/2025/08/battery-clips-contacts-layout-mounting-details.pdf",
+      "sha256": "1567f45da147a72a975d2af18c85279d0d8278d25fe0d81c0fb2472c974ff76b",
+      "bytes": 1884060,
+      "description": "K75 mounting layouts; printed p39, PDF p1; not a T8 loaded-fit qualification"
+    },
+    "winbond-w25q16jv.pdf": {
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/6661/W25Q16JV.pdf",
+      "sha256": "a1e966f4a80bfb3786a3f781cfeff28c774b824ec92e10090038f9dec823e5f3",
+      "bytes": 2644583,
+      "description": "Winbond revision I, 2024-12-24; UX drawing PDF p68/printed p67; ordering PDF p73"
+    },
+    "ti-tps61023.pdf": {
+      "url": "https://www.ti.com/lit/ds/symlink/tps61023.pdf",
+      "sha256": "24f398c42259d5c3dc2ed3237cf7a5c2cb52cbd91234bd3057bffb96124815cc",
+      "bytes": 2392725,
+      "description": "SLVSF14B August 2020 with DRL0006A 4223266/F November 2024 drawing, PDF pp25-27"
+    },
+    "ti-bq2970.pdf": {
+      "url": "https://www.ti.com/lit/ds/symlink/bq2970.pdf",
+      "sha256": "33ecbecf2eca2276a7afa6cf41aa6f8016ef4a71572a52d6941dfba8f3def126",
+      "bytes": 1500238,
+      "description": "SLUSBU9I August 2024; DSE0006A 4220552/B January 2024; PDF pp32-34"
+    },
+    "ti-csd83325l.pdf": {
+      "url": "https://www.ti.com/lit/ds/symlink/csd83325l.pdf",
+      "sha256": "0ab1b3586d7fe6b47616eb4ce68e8258ec69bef35d1bbc44cf4ce6588937c819",
+      "bytes": 1208699,
+      "description": "SLPS494C November 2023; YJE0006A 4221674/C July 2023; PDF pp11-13"
+    },
+    "panasonic-erj-bw.pdf": {
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDN0000/AOA0000C313.pdf",
+      "sha256": "23c51630ddf252c55a87f0388a65fee9e9a27b6188fb93b2afbbebc5b48a942e",
+      "bytes": 939384,
+      "description": "2023-09-29 family specification; ERJ6BW ratings p2, derating p4, dimensions p5"
+    },
+    "panasonic-lands.pdf": {
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/DMM0000COL17.pdf",
+      "sha256": "fc707b230cce91d464bc3aaf1ed614fa5b412f40cbe7df7cab1541d2c164a882",
+      "bytes": 309419,
+      "description": "2025-12-24 land-pattern examples; ERJ6BW-specific row on p1"
+    },
+    "panasonic-packaging.pdf": {
+      "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/DMM0000COL26.pdf",
+      "sha256": "2f9dadece46f54d40343dda99bde4ddf16cfd5d5cded51ce49f37c1b9f30cf4e",
+      "bytes": 459426,
+      "description": "Manufacturer packaging specifications"
+    },
+    "panasonic-erj6bwfr033v-page.txt": {
+      "url": "https://industrial.panasonic.com/ww/products/pt/current-sensing-chip-resistors/models/ERJ6BWFR033V",
+      "sha256": "8fb437b1f5c39339255d9ffe74858253751a223a93d232ddfcbd08b5c5cd1de5",
+      "bytes": 2256,
+      "description": "Extracted public product-page text, not original HTML; exact resistance/tolerance/TCR/packing"
+    }
+  },
+  "source_policy": "Manufacturer documents/images remain local evidence; only factual findings, URLs and hashes are published."
+}

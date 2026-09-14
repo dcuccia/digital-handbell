@@ -49,6 +49,37 @@ matched final supplier BOM; neither this progress nor the existing MPN fields
 establishes complete package/process qualification. The audit tables below
 retain the original draft's definitions rather than rewriting its history.
 
+## Stopped final audit: remaining assembly inputs
+
+At the owner's request to wrap up the long-running work, the final
+nine-reference audit has stopped and handed back its findings. The
+[structured audit](../hardware/handbell/parts/existing-part-review.json)
+preserves eight identity groups, source URLs/hashes and unresolved operations.
+It inspected the frozen power-rework package, **not the active quote
+candidate**, and applied no native changes.
+
+| References | Finding requiring disposition before freezing |
+|---|---|
+| J1 | Retain Molex 5040500291, alias 504050-0291. Manufacturer nominal lands agree; body height is 2.00 +/-0.15 mm. Preserve the larger proxy and map the specified pickup region rather than using its proxy centre. |
+| J2 | Complete identity is SM02B-SRSS-TB(LF)(SN). Nominal side-entry lands agree; toleranced maximum geometry and actual pickup datum remain unresolved. |
+| U5 | TI's example uses 0.67 x 0.30 mm pads at X +/-0.74, versus frozen 0.65 x 0.275 at +/-0.635. Local depth needs 1.70 mm for the body, or 2.00 including the documented protrusion allowance. |
+| R27 | Panasonic's part-specific example permits 1.15 x 1.40 mm pads at X +/-1.025. Maximum package is 2.20 x 1.45 x 0.75 mm; frozen depth and height each underbound it by 0.05 mm. Preserve the independent sense connections when reconciling lands. |
+| BT1/BT2 | Keystone 254 is bulk; 254TR is the reel option, not an automatic substitution. Confirm Rev C and account for its 16.97 mm upper drawing height separately from nominal/loaded contact geometry. Both contacts require assembly. |
+| U1/U6/Q5 | Retain the existing exact identities and documented flash/protector geometry corrections. Fine-package stencil/handling remains a supplier disposition; Q5's native circular paste is about 19.5% smaller in area than TI's rounded-square example. |
+
+These differences are **not demonstrated solder failures**, and they are not
+silently waived or patched during wrap-up. Contact-height tolerance requires
+coordinated mechanical work, not simply changing a number in a released model.
+Pickup/rotation, connector hold-down joints, the common stencil/reflow profile,
+thermal-pad vias and the distinct under-R27 transition still need an explicit
+manufacturing disposition. Do not infer a complete board's reflow profile from
+one semiconductor's MSL/260 C classification.
+
+The current source-selection records and this stopped audit are durable
+inputs to the next deliberate revision. They do not establish completed
+routing, a matched final mechanical assembly or upload-ready quotation files.
+No further research or implementation is authorized by this audit handoff.
+
 ## Capacitors: 29 fitted
 
 | Group | Count | Existing definition and required action |

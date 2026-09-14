@@ -54,6 +54,14 @@ low-cell oscillator behavior remain open.
 
 ## Direct source evidence
 
+`existing-part-review.json` preserves the **stopped final audit of nine
+already-identified references** against the frozen power-rework package.
+It records connector suffix/pickup evidence, U5/R27 land and envelope
+dispositions, contact packing/height and fine-package assembly gates.
+No changes were applied by that audit; it did not inspect the active routing
+candidate. It is not a second selected BOM or authority to rewrite native
+geometry. See [the wrap-up findings](../../../docs/pcba-bom-readiness.md#stopped-final-audit-remaining-assembly-inputs).
+
 On September 14, 2026, the actual manufacturer product pages, their public
 catalog responses and linked specifications were read. The JSON records
 response/document SHA-256 values. Raw responses and manufacturer PDFs were
