@@ -739,8 +739,8 @@
     "C29"
   ],
   "status": "CLOCK_CLUSTER_ROUTED_GLOBAL_GATES_OPEN",
-  "generated_pcb_sha256": "19459cd32d8a8f58f0ff790e55a61294bbd580a0680c723f6f7a5695faee014c",
-  "schematic_sha256": "51fec9d33a95ea712f26df13689ce1321f0c6084110fef97cd927fdc0ea4f865",
+  "generated_pcb_sha256": "26ce1155ef09f6636787e6f29603dc8b969798f6f6bf1c517439f6a902fe69c1",
+  "schematic_sha256": "fb12238e75cfdabb488d1e77ccbe6a1ca4b66e23fbf9a95c8c74e74619e6a454",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
   "source_baseline": "hardware\\handbell\\iterations\\printed-bell-power-rework",
@@ -1834,8 +1834,8 @@
     },
     {
       "reference": "Q3",
-      "value": "DMG3415UFY",
-      "mpn": "",
+      "value": "DMP2045UFY4",
+      "mpn": "DMP2045UFY4-7",
       "footprint": "Handbell:DFN2015-3_DrainPad",
       "x_mm": -2.7725000640022035,
       "y_mm": 7.450000038310257,
@@ -1854,7 +1854,8 @@
       "proxy_kind": "envelope",
       "geometry_interface": null,
       "requires_shell_cutout": false,
-      "cluster": "source-selection"
+      "cluster": "source-selection",
+      "manufacturer": "Diodes Incorporated"
     },
     {
       "reference": "Q4",
@@ -3346,5 +3347,5 @@
       }
     ]
   },
-  "current_stage_report": "reports/clock-approaches.json"
+  "current_stage_report": "reports/q3-native-identity.json"
 }

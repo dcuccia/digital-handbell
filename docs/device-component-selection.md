@@ -113,6 +113,17 @@ mold-compound changes in other tables. This supports current manufacturing
 continuity, not a stock/lifetime guarantee or an observed Active field.
 No reverse-cell or ideal-diode protection is added.
 
+**Native application:** the continuing
+[clock/integration draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md)
+now identifies Q3 as DMP2045UFY4 with exact MPN **DMP2045UFY4-7**, manufacturer
+and datasheet fields in its schematic and PCB, plus the placement manifest.
+It retains the generic P-channel symbol and corrected DFN footprint rather
+than inventing a different circuit symbol or changing copper. All three nets,
+pad primitives, placement and the actual pose-dependent proxy offset are
+unchanged. The scoped report is `reports/q3-native-identity.json`; the updated
+schematic is `reports/q3-schematic.pdf`. Earlier native variants remain intact.
+This implements the identity choice, not its remaining powered or supplier gates.
+
 ## Selected clock-reference revision
 
 The bounded 2520 search did not establish a lower-ESR exact orderable.

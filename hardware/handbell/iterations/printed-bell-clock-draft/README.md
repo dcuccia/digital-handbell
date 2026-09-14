@@ -7,8 +7,24 @@ output hashes are in `reports/clock-definition.json`. The recovered
 
 The definition-only stage is preserved in commit `702f53b`, the first local
 connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
-reports bind their named stages, not later PCBs. **The current stage is bound
-by `reports/clock-approaches.json` and the placement manifest.**
+reports bind their named stages, not later PCBs. The clock geometry is bound
+by `reports/clock-approaches.json`; **the latest metadata-only Q3 stage is bound
+by `reports/q3-native-identity.json` and the placement manifest.**
+
+## Q3 source-selection identity applied
+
+Q3 now uses the selected **Diodes Incorporated DMP2045UFY4-7** orderable in the
+schematic, PCB and placement manifest. The visible value is DMP2045UFY4, with
+the exact packing suffix in the MPN field. The generic P-channel symbol,
+corrected DFN drain/paste/mask, actual proxy displacement, all pin/net mappings,
+component placements and every copper item are unchanged.
+
+The [updated schematic PDF](reports/q3-schematic.pdf) and scoped native report
+record the change. All 306 exported reference/pin net assignments match the
+previous circuit; ERC remains empty, physical findings and the 82 unfilled
+opens are unchanged. This is not an electrically identical substitute:
+startup, USB transitions, low-cell drop, temperature and standby leakage still
+require evaluation. The old gate-leakage guarantee is not carried forward.
 
 ## Current all-front clock routing
 

@@ -11348,7 +11348,7 @@
 		)
 	
 (uuid "87e634ec-4b2d-5d7b-a907-ac0a0d16949b"))
-	(property "Value" "DMG3415UFY"
+	(property "Value" "DMP2045UFY4"
 		(at -1 4 0)
 		(layer "F.Fab")
 		
@@ -11361,7 +11361,7 @@
 		)
 	
 (uuid "adbd2202-d548-549e-b5b5-5c76a5be56c2"))
-	(property "Datasheet" ""
+	(property "Datasheet" "https://www.diodes.com/datasheet/download/DMP2045UFY4.pdf"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -11373,7 +11373,7 @@
 		)
 	
 (uuid "003f3bef-6260-5399-bf8d-9c642bd2d414"))
-	(property "Description" ""
+	(property "Description" "P-channel MOSFET; X2-DFN2015-3; G=1, S=2, D=3. Selected replacement, not electrically identical."
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -11614,7 +11614,9 @@
 
 (at 97.500000 107.450000 0)
 (uuid "143acc25-c81d-55fa-bc1a-9da404c93843")
-(path "/85874120-e238-4c38-82e5-c93e2e8375b3/315f8bf3-a244-4505-83f8-c5e6045c500a"))
+(path "/85874120-e238-4c38-82e5-c93e2e8375b3/315f8bf3-a244-4505-83f8-c5e6045c500a")
+(property "MPN" "DMP2045UFY4-7" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+(property "Manufacturer" "Diodes Incorporated" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1)))))
 
 
 (footprint "Package_TO_SOT_SMD:SOT-23"

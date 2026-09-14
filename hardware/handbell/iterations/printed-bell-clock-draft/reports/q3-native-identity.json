@@ -1,0 +1,79 @@
+{
+  "input_commit": "db9d867",
+  "input_sha256": {
+    "handbell.kicad_pcb": "19459cd32d8a8f58f0ff790e55a61294bbd580a0680c723f6f7a5695faee014c",
+    "handbell.kicad_sch": "51fec9d33a95ea712f26df13689ce1321f0c6084110fef97cd927fdc0ea4f865"
+  },
+  "output_pcb_sha256": "26ce1155ef09f6636787e6f29603dc8b969798f6f6bf1c517439f6a902fe69c1",
+  "output_schematic_sha256": "fb12238e75cfdabb488d1e77ccbe6a1ca4b66e23fbf9a95c8c74e74619e6a454",
+  "placement_manifest_sha256": "6915c3be784aedc104f5fb1530f7aefa31481c9a708966acb451bd5e5c98a054",
+  "generator_sha256": "c4d767d892c7885b9ed1871b664c2a997f1c849d337bfc081287d7b5fb205291",
+  "selection_register_sha256": "36ed46c5a6bfe839319575ac8289c305075ce0c61a2eb3765897d4e3211555cc",
+  "reference": "Q3",
+  "old_value": "DMG3415UFY",
+  "selected_mpn": "DMP2045UFY4-7",
+  "retained_generic_symbol": "Handbell:MOSFET-P_DFN2015",
+  "pin_map": [
+    {
+      "native_pin": "1",
+      "function": "G",
+      "net": "VBUS"
+    },
+    {
+      "native_pin": "2",
+      "function": "S",
+      "net": "VHI"
+    },
+    {
+      "native_pin": "3",
+      "function": "D including exposed drain and extension",
+      "net": "VBAT"
+    }
+  ],
+  "retained_geometry": {
+    "reference": "Q3",
+    "footprint": "Handbell:DFN2015-3_DrainPad",
+    "x_mm": -2.7725000640022035,
+    "y_mm": 7.450000038310257,
+    "width_mm": 2.8550000000000004,
+    "depth_mm": 1.575,
+    "height_mm": 1.0,
+    "rotation_deg": 0,
+    "side": "F",
+    "native_origin_common_xy_mm": [
+      -2.5,
+      7.45
+    ],
+    "z_min_mm": 24.0,
+    "z_max_mm": 25.0,
+    "height_source": "Unqualified component-height planning proxy",
+    "proxy_kind": "envelope",
+    "geometry_interface": null,
+    "requires_shell_cutout": false,
+    "cluster": "source-selection"
+  },
+  "scope": "Value, manufacturer, MPN, datasheet and instance description only; no pad, net, library, pose or copper changes.",
+  "limits": [
+    "Verify the actual new symbol, schematic, library, PCB, manifest and sourced BOM agree; preserve all three nets and the corrected drain.",
+    "Retained proxy narrow axis equals bare-package maximum, not mounted-placement tolerance.",
+    "Measure startup, low-cell voltage drop, USB insertion/removal, temperature and standby current in the actual layout.",
+    "No reverse-cell protection, ideal-diode controller, charging load-sharing qualification, live-cell or child-use approval is added.",
+    "Source-transition, standby leakage, voltage-drop and thermal qualification remain open.",
+    "No reverse-cell protection, supplier stock guarantee or fabrication/child-use approval."
+  ],
+  "native_evidence": {
+    "kicad_version": "10.0.6",
+    "erc_findings": 0,
+    "all_exported_ref_pin_to_net_assignments_unchanged": true,
+    "export_format_note": "KiCad S-expression encodes the slash in four unconnected ADC pin names as {slash}; XML uses /. Normalized only that encoding before comparison.",
+    "pcb_geometry_and_copper_unchanged": true,
+    "physical_finding_multiset_unchanged": true,
+    "unfilled_unconnected_items": 82,
+    "artifact_sha256": {
+      "q3-erc.json": "1359cc162596e18c56d8060ae5b277fbc7c3d2d52b0790075722350ffbe37fcb",
+      "q3-drc.json": "ec4bb4c49dbd5874da0e8c9f6d9001173aad1a37320675f52aca9a035ff1451c",
+      "q3-netlist.xml": "8cefe390c6921f1246a7a3a9fa297008de789c3cd9a57cc783fc5af290639a07",
+      "q3-schematic.pdf": "3de1c6cb0f7b1931dc2a70ddca1b2d0e5e01171a127e583d67a535d97304fc2d"
+    }
+  }
+}
