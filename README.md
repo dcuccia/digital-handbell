@@ -37,9 +37,10 @@ this does not approve fabrication or live-cell operation.
 
 The [first routed candidate](hardware/handbell/iterations/printed-bell-routing/README.md)
 contains real tracks/vias and reduces unconnected items from 222 to 148.
-It remains incomplete and inoperable. An owner-requested high-current review
-is examining widths, necks, vias and supply/return loops before those routes
-are treated as a prototype power-layout baseline.
+It remains incomplete and inoperable. The owner-requested
+[high-current review](hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
+identified boost output-capacitor loop and protector-sense pickoff corrections.
+Those are being reworked separately before freezing the power-layout baseline.
 
 **September 11 revision:** the owner confirms the newer print assembly fits,
 supplies [measured shell stations](docs/measurements/2026-09-11-shell-speaker-inputs.json),

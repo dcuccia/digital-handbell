@@ -195,16 +195,22 @@ were checked against the corrected capture with the cartridge outside the
 shell and cover removed. Physical legibility remains unqualified; the charger
 cannot identify a primary cell or prevent reversal merely because labels exist.
 
-The owner specifically requests extra care with high-current routes.
-A separate review covers actual load versus sense/gate branches, widths and
-neck lengths, vias, boost/amp hot loops, return continuity and voltage drop.
+The owner specifically requests extra care with high-current routes. The
+[completed independent review](../hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
+covers actual load versus sense/gate branches, widths and neck lengths,
+vias, boost/amp hot loops, return continuity and voltage drop. It requires
+reworking the boost's F-B-F output-capacitor loop and separating the R26
+protector-sense pickoff from shared load-return copper. Local boost/sense
+placement changes are authorized in a separate candidate, preserving the
+old packages and all PCB mount/USB/contact interfaces; their new mechanical
+fit must be established rather than inherited from the old placement.
 The existing 35 um copper/current examples are explicit planning assumptions,
 not a selected manufacturing process or current rating. A DRC pass alone
 does not establish adequate current capacity, acceptable temperature rise
-or safe short-circuit behaviour. The initial routing checkpoint is being
-committed for review, not declared a finished power layout.
+or safe short-circuit behaviour. The initial routing checkpoint is published
+as review evidence, not declared a finished power layout.
 
-After that review and any necessary corrections, the mechanical package must
+After the required corrections, the mechanical package must
 be rebound to the routed candidate's exact bytes and its views refreshed.
 The current mechanical geometry still binds the immutable stage-1 board;
 unchanged footprint positions are not permission to ignore a different

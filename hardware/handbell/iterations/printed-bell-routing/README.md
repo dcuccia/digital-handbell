@@ -11,12 +11,13 @@ two copper layers. Native connectivity proves **59 requested endpoint pairs**,
 Unconnected items decreased from **222 to148**. Unrouted circuitry still
 prevents operation; this is a useful beginning of layout, not a finished circuit.
 
-**Owner-requested high-current review is in progress.** This incremental
-checkpoint does not approve the present power-route widths, necks, vias or
-switching/return loops. Those sections are receiving a separate engineering
-review beyond native DRC, including explicit current/copper assumptions and
-voltage-drop/thermal/process limits. Preserve this checkpoint as review
-evidence; it is not a board to power or fabricate.
+**The owner-requested high-current review requires rework.** The
+[independent review](reports/power-routing-review.md) identifies the boost
+output-capacitor hot loop and shared protector-sense routing as corrections
+needed before freezing the power layout. It also distinguishes actual load
+paths from sense/capacitor branches and avoids treating overlapped traces as
+isolated bottlenecks. Preserve this checkpoint as review evidence; it is not
+a board to power or fabricate.
 
 ## Native review artifacts
 

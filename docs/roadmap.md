@@ -97,6 +97,12 @@ after coordinated engineering interface review, without requiring another
 viewing turn first. This does not waive E04/E07 electrical or E10 physical/
 thermal/retention gates, and does not authorize fabrication.
 
+The first copper checkpoint is now published separately. An owner-requested
+[power-routing review](../hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
+identified boost-loop and protector-sense corrections. E07 is reworking those
+before further signal optimization; E05 must consume the exact resulting
+placement rather than transfer the old fit approval to moved parts.
+
 <!-- TRACKING:START -->
 **Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
 All twelve epics were initialized as Todo with a Phase field matching their

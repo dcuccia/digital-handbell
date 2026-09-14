@@ -10,6 +10,18 @@ routing candidate and a fresh exact mechanical bind are required.
 This does not close the power, USB land-pattern, actual cell/contact,
 manufacturing or physical qualification gates below.
 
+**September 13 power-review result:** the first separate routing checkpoint
+has real copper but is incomplete. Its
+[independent power review](../hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
+requires a short, broad F-side boost output-capacitor loop and an intentional
+protector-sense pickoff that is not shared with load-return routing. These
+corrections take priority over preserving the initial local placement or
+adding more signal routes. A separate candidate may change the local
+boost/protection-sense poses while retaining the D43, face, mount, USB and
+contact interfaces; it needs a fresh exact mechanical bind before acceptance.
+The review records provisional current/drop/copper assumptions, not a
+thermal or manufacturing approval.
+
 **September 11 owner-requested checkpoint:** implement and inspect the
 [measured-shell T8 integration](t8-integration-plan.md) before starting copper.
 The owner confirms the previous cartridge fits and has supplied new shell
@@ -32,7 +44,7 @@ and [native wing placement](../hardware/handbell/iterations/wing-draft/README.md
 record the separate 62F/11B candidate, mounting interfaces and current gates.
 The earlier 0.2 print checkpoint below remains preserved, not overwritten.
 
-**Current stopping point: print-fit and electrical floorplanning, not Gerbers.**
+**Historical 0.2 stopping point: print-fit and floorplanning, not Gerbers.**
 The 0.2 PCB contains real footprints and correct pin/net assignments, but no
 tracks, vias or ground planes. Its ratsnest lines show required connections;
 they are not copper and do not demonstrate a usable current-return path.

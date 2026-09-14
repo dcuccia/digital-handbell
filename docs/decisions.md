@@ -361,6 +361,36 @@ outer shell.
 Affected decisions: D07/D09/D11/D12/D16; owning epics E04/#4, E05/#5, E07/#7,
 E08/#8 for eventual supplier/process comparison and E10/#10 for qualification.
 
+## 2026-09-13: routing-led power corrections
+
+The owner requests incremental commit/push checkpoints and particular care
+with high-current routes. The initial routed candidate is preserved as
+`b63a121b1ca990a64b00f231a85dd715126319af`; its
+[independent review](../hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
+requires correcting the boost output-capacitor hot loop and shared protector
+sense pickup before freezing the power layout. No trace-overheating failure
+was demonstrated, and nominal neck records are not equivalent to isolated
+full-current bottlenecks where broad copper overlaps them.
+
+Proceed with a separate power-first candidate under the existing unattended
+engineering authorization. Local boost and protection-sense poses may change
+for these corrections; preserve D43, all-front electronics, the actual
+mount/USB/contact interfaces, circuit/net/pad identities, L1's full height
+and the older packages. A new placement must receive its own exact mechanical
+rebind. Wider remote traces/vias alone are not a substitute for fixing the
+boost's fast-edge loop topology.
+
+The review's 2 A cell/1 A 5 V screens, copper-only drop budgets and nominal
+35 um copper are provisional engineering targets, not qualified current
+ratings. Temperature-rise, minimum finished copper/plating, component/fault
+limits and assembly processes still require evidence. Prefer paired supply/
+return paths and local spreading before consuming area with more signal
+routing. Two layers remain the next attempt; no need for four layers or a
+larger board was established.
+
+Affected decisions: D05/D08/D09/D14; owning epics E04/#4, E05/#5 and E07/#7.
+No purchase, fabrication, live-cell or child-use release is authorized.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |
