@@ -1,0 +1,120 @@
+(footprint "ABM8_272_T3"
+	
+	
+	
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -1.532 -1.528 0)
+		(layer "F.SilkS")
+		
+		(effects
+			(font
+				(size 0.666496 0.666496)
+				(thickness 0.146304)
+			)
+			(justify left bottom)
+		)
+	
+(uuid "646ac0dc-2d78-5ba0-a740-b1c36111a1ef"))
+	(property "Value" "12MHz/CL10pF"
+		(at -1.405 1.909 0)
+		(layer "F.Fab")
+		
+		(effects
+			(font
+				(size 0.36576 0.36576)
+				(thickness 0.04064)
+			)
+			(justify left bottom)
+		)
+	
+(uuid "e94e816a-d438-54d9-9aa2-5ada35d26fca"))
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	
+(uuid "57b54eb1-cf52-5ff8-ba5f-8da7617571ca"))
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	
+(uuid "61ea5b39-0e6a-52a3-9e08-b56d094c2e1d"))
+	(duplicate_pad_numbers_are_jumpers no)
+	
+	
+	
+	
+	
+	
+	
+	
+	(pad "1" smd rect
+		(at -1.15 0.875)
+		(size 1.3 1.05)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "085afc04-022a-58de-93ab-acc22eda2458")
+
+
+)
+	(pad "2" smd rect
+		(at 1.15 0.875)
+		(size 1.3 1.05)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "9e5b0f52-2dd4-5ffb-8f41-6103868a8ccb")
+  )
+	(pad "3" smd rect
+		(at 1.15 -0.875)
+		(size 1.3 1.05)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "3347d9ed-ccd1-55bb-aa09-8fbca29c0b20")
+
+
+)
+	(pad "4" smd rect
+		(at -1.15 -0.875)
+		(size 1.3 1.05)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "13b108c4-fe4f-5cbd-bfd4-02900da7433f")
+  )
+	(embedded_fonts no)
+
+
+
+
+(fp_rect (start -1.6 -1.25) (end 1.6 1.25) (stroke (width .1) (type solid)) (fill none) (layer "F.Fab"))
+(property "MPN" "ABM8-272-T3" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+(property "Manufacturer" "Abracon" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1)))))

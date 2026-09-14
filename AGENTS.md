@@ -1,5 +1,45 @@
 # Project guidance
 
+## Bounded engineering work
+
+- Divide potentially long work (schematics, sourcing, placement, PCB routing,
+  CAD, exports and validation) into bite-sized, independently reviewable items.
+  Name the exact references, nets, files or mechanical interface, expected
+  output and stopping condition before starting. "Finish the board" is not
+  a bounded item.
+- Default to one foreground item per turn. Target 10-15 minutes total,
+  including reasoning, research, generation and validation. Use explicit
+  process timeouts; a tool's initial output wait is not a termination timeout.
+  If the work will exceed the budget, checkpoint and split it rather than
+  silently extending the task.
+- Allow at most one corrective retry within that budget. Do not turn a failed
+  attempt into an open-ended search, optimization, routing or check/fix loop.
+  Return a concrete blocker and preserve the usable work when the budget ends.
+- Prefer direct tools for small items. Do not launch background engineering
+  agents by default. If delegation is explicitly appropriate, give one small
+  deliverable and the same budget/stop rules; do not queue additional scope
+  onto an already-running agent. Its next job starts only after its current
+  result has been reviewed.
+- Separate source selection, native definitions/local placement, routing and
+  whole-assembly integration when they cannot fit one bounded item. Reuse
+  already-reviewed evidence; do not reopen sourcing without a specific new
+  conflict. Distinguish required connectivity/clearance corrections from
+  optional manufacturer-example footprint refinements.
+- End each item with an honest status, changed artifacts, remaining work and
+  a durable checkpoint. Commit/push accepted coherent changes under the
+  owner's standing authorization; preserve incomplete experiments separately.
+  Do not fabricate a successful result to meet the time budget.
+- A request to pause, relocate or stop suspends further engineering work.
+  Preserve saved files, report partial/stale state and return promptly; do
+  not first try to finish routing or get a clean report. A queued message is
+  not confirmation that a running agent paused. State that limitation and
+  use the available task-cancellation controls when a forced stop is needed.
+- Keep the handoff sufficient for a fresh session to resume: exact starting
+  artifact, relevant decision, applied/unapplied changes and one next item.
+  Do not automatically roll through the entire backlog after a checkpoint.
+
+## Design and provenance
+
 - This is a public educational digital-handbell project in an early planning
   phase. Read `README.md`, `docs/roadmap.md`, and the relevant decision entries
   before implementing.

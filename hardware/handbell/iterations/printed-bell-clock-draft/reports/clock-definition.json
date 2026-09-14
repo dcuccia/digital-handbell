@@ -1,0 +1,317 @@
+{
+  "status": "CLOCK_DEFINITIONS_ONLY_ROUTING_AND_ZONE_REFILL_PENDING",
+  "input_sha256": {
+    "handbell.kicad_pcb": "2d88301f48ad05dc01384b90111f16615f176a7f4704eab82a1e3560ef5c8bc0",
+    "handbell.kicad_sch": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
+    "placement-manifest.json": "404a8c53dc0ce28f8769ec4a1926452564cbd3cd5f8c27d95b7ac2ebee1b55de"
+  },
+  "output_pcb_sha256": "6b26bcc4a43f4af0e1a5c507c8dfc987c025bd45b4dec51748df75bb5bc99192",
+  "output_schematic_sha256": "51fec9d33a95ea712f26df13689ce1321f0c6084110fef97cd927fdc0ea4f865",
+  "changed_references": [
+    "Y1",
+    "C2",
+    "C3"
+  ],
+  "moved_references": [],
+  "new_tracks": 0,
+  "removed_clock_copper": [
+    {
+      "kind": "segment",
+      "uuid": "0a106183-3b21-5bf2-b196-162a44c8a44e",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "f72d1daf-5936-504e-a8f3-f645f1840f4e",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "af4b4af2-cabd-598d-b10c-9f39d1055c2e",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "f6f118f5-f943-53b9-ba5e-27081c8ba56f",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "376997cb-f2e1-581d-9588-61b57d17d281",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "b95573dc-5dab-570d-9378-7abdf4b945d9",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "104bfea7-dc1c-54de-8115-2d111a7c7c7f",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "5586040d-ecf4-50e7-b572-16aaaeda1b02",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "f744c0e2-b2bb-5981-9a79-9b6e4b5569e5",
+      "net": "Net-(IC1-XOUT)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "8ce076df-822a-5ab2-a604-cf39bb51507e",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "7dd1731e-f4c3-5d0e-956c-2abfd218d1c9",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "55666ef6-a3b4-5d94-aacb-c98ff04695ec",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "a0e6aa5a-9cb8-5753-9013-19a7a241e90f",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "030c1bce-60fc-562b-9f2d-bdf3d52fa2d4",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "96480ccb-4f91-555a-8f29-db33bcd0612d",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "1b2610f8-4af9-5bed-9fa2-b70d81ee1efc",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "e2c661cc-6811-529d-ac60-9241e367d270",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "1a33d2aa-ae83-5511-94e0-f113cc2c59d8",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "625449b7-f10d-5aa9-9985-4e8c8432dfc1",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "399a8dfd-3bc3-5049-b077-de00cd966a36",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "f7615044-eb2c-5fd3-bb5b-94151c0c863e",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "021d1625-1420-547a-84a0-38c1a4054d06",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "e067e140-e737-5c7d-8204-b75f29c42698",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "b713a0f9-4bdd-51b9-afc6-2e01cca94e2a",
+      "net": "Net-(C3-Pad2)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "1463b8fd-a4da-577d-bfb1-e14c7790dd77",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "f19c5a3c-c32a-53d8-8121-941be6f0335a",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "cd3b4291-9a70-5441-9709-894d180a0632",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "7780bbc4-943e-5652-9995-65e416c0e5e1",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "2f1c1df9-f56c-5b32-a4de-64b58deecb31",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "7319a97e-cb88-5b8f-bacb-f10e9fb0d813",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "0dabc40b-4253-56eb-9fbc-b84e42fb21cd",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "bcbfbc88-27c4-5e8f-a1ea-2824c53a9509",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "d3cf9be7-a163-556b-9c7b-f61b3c082152",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "f63175b8-53a2-561e-9bbf-513725c24047",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "89c63f2f-d9fb-5d44-b601-19156c87bc72",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "ec6d48ca-e3ae-5ad4-81ed-2258cb7aae45",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "c0ff198f-2b5e-5d3f-989c-a096086a9aee",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "6404829a-6afa-50a5-943c-9fa29133e24b",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "6371b083-ea1b-5692-af9f-6400945f6291",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "cb908e5b-da70-5204-87c9-0e27ef76d871",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "b65e055e-5f0f-5479-9656-9e9a29f51ec5",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "f06395db-1d64-5c29-8de8-fc796e191c80",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "7c449914-77e1-5ba4-af45-d269cdfedfe9",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "adcd84e0-cd66-5958-aaa3-665843ff59da",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "85b4061d-f024-58cb-828b-59ac353a402b",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "95bec3ad-4fa7-5486-a43c-b109e12e836d",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "dcbac7f7-51fb-5d59-b9dd-10669b4d7d2d",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "feb8c853-7735-5020-936e-bc39034f580c",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "978a41e6-e05e-5d07-a9db-8a75213a2932",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "b0a5a14e-484b-5062-a520-a4b8e94033ae",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "24d35d7f-0be4-5206-9b5c-d878daa02b12",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "segment",
+      "uuid": "67c34aa7-a48a-50b4-a9bd-433f45e44256",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "via",
+      "uuid": "d19b30a5-388b-5aae-ae2b-2be0a28cc6f2",
+      "net": "Net-(IC1-XIN)"
+    },
+    {
+      "kind": "via",
+      "uuid": "a89ec6e2-3b6b-5409-b574-5d814cf4e6a4",
+      "net": "Net-(IC1-XIN)"
+    }
+  ],
+  "cached_zone_fills_cleared": true,
+  "nearest_screen_gaps": [
+    {
+      "reference": "R6",
+      "screen_gap_mm": 0.4006126332008826
+    },
+    {
+      "reference": "C2",
+      "screen_gap_mm": 0.47120146716702216
+    },
+    {
+      "reference": "C3",
+      "screen_gap_mm": 0.4756204628663081
+    },
+    {
+      "reference": "C18",
+      "screen_gap_mm": 0.9008525202771869
+    },
+    {
+      "reference": "IC4",
+      "screen_gap_mm": 0.9579290949375765
+    },
+    {
+      "reference": "C24",
+      "screen_gap_mm": 1.3949272194572204
+    }
+  ],
+  "scope": "Nominal 2D proxy screen only, not full mechanical/assembly qualification"
+}
