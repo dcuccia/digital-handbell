@@ -131,13 +131,13 @@ unexpected zone/exclusion plans. It does not run DRC or qualify assembly.
 Use the separate source-preserving refill tool first when geometry changed.
 
 Example from the repository root, reproducing the latest comparison against
-the pre-U5/R27 baseline in `a548769`:
+the pre-core-link baseline in `1452462`:
 
 ```powershell
 $work = Join-Path $env:TEMP ("handbell-ground-" + [guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory -Path $work | Out-Null
-python -c "import subprocess; from pathlib import Path; p=Path(r'$work')/'baseline.kicad_pcb'; p.write_bytes(subprocess.run(['git','show','a548769:hardware/handbell/iterations/printed-bell-clock-draft/handbell.kicad_pcb'], check=True, capture_output=True, timeout=15).stdout)"
-python -c "import subprocess; subprocess.run(['python', r'tools\check_front_ground.py', r'hardware\handbell\iterations\printed-bell-clock-draft\handbell.kicad_pcb', '--baseline', r'$work\baseline.kicad_pcb', '--plan', r'hardware\handbell\iterations\printed-bell-clock-draft\reports\front-ground-plan.json', '--output', r'$work\ground-check.json'], check=True, timeout=360)"
+python -c "import subprocess; from pathlib import Path; p=Path(r'$work')/'baseline.kicad_pcb'; p.write_bytes(subprocess.run(['git','show','1452462:hardware/handbell/iterations/printed-bell-clock-draft/handbell.kicad_pcb'], check=True, capture_output=True, timeout=15).stdout)"
+python -c "import subprocess; subprocess.run(['python', r'tools\check_front_ground.py', r'hardware\handbell\iterations\printed-bell-clock-draft\handbell.kicad_pcb', '--baseline', r'$work\baseline.kicad_pcb', '--plan', r'hardware\handbell\iterations\printed-bell-clock-draft\reports\front-ground-plan.json', '--require-connection', 'IC1.23', 'C18.2', '--output', r'$work\ground-check.json'], check=True, timeout=360)"
 ```
 
 KiCad 10.0.6 and its native Python API were exercised. The completed public run
@@ -166,10 +166,10 @@ agent or routing loop was started.
 
 Current package: `hardware/handbell/iterations/printed-bell-clock-draft`.
 Current PCB SHA-256:
-`7be92d3e7b42049e6dcc60d6e58bfb3a1bf7f141f5e11592e9cfad6f8cbf680c`.
-Current native report: `reports/power-device-lands.json`; prior six-envelope
+`05889a98ea3b52861394930ebb34c306046f52fd88f9f100d5751a3dacce3be3`.
+Current native report: `reports/core-supply-local.json`; prior six-envelope
 revision: `reports/device-envelopes.json`; current public fill proof:
-`reports/power-device-ground-check.json`. Status: **83/83 fitted MPNs, 56 opens,
+`reports/core-supply-ground-check.json`. Status: **83/83 fitted MPNs, 55 opens,
 zero other native DRC errors and 232 text/silk warnings**.
 
 The six initial envelope corrections and subsequent U5/R27 corrections are
@@ -177,9 +177,15 @@ applied with no new screen conflicts or component moves. Twelve U5 segment
 endpoints changed, with widths retained; R27's sense-return exclusion grew
 with its land. Remaining copper dispositions are recorded as retained for
 routing; the quote baseline names U4 filled/capped vias explicitly, without
-claiming supplier acceptance or cost. Next bounded item: core/power
-connections, using the current remaining-net inventory. No new sourcing by
-default. Then follow constrained signals,
+claiming supplier acceptance or cost. The first core-decoupling link,
+IC1.23 to C18.2, is now complete with one 0.15 mm 3V3 bend correction.
+
+Next bounded item: the two right-side core approaches. IC1.50/C6.2 meets an
+existing QSPI_DATA[3] escape; IC1.45/C8.1 meets existing 3V3 routing. Use the
+exact blocker UUIDs in `reports/core-supply-local.json` for local rearrangement
+rather than repeating direct routes or broad search. Four VCORE opens remain,
+along with other power, signals and ground islands. No new sourcing by default.
+Then follow constrained signals,
 remaining controls and final ground closure in the sequence above.
 
 The full mechanical bind, 0.15 mm USB bezel adjustment, native CAD camera-state

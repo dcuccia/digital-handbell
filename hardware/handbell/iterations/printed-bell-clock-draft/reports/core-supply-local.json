@@ -1,0 +1,140 @@
+{
+  "status": "ACCEPTED_LEFT_CORE_DECOUPLING_LINK_NOT_QUOTE_READY",
+  "input_commit": "1452462",
+  "input_pcb_sha256": "7be92d3e7b42049e6dcc60d6e58bfb3a1bf7f141f5e11592e9cfad6f8cbf680c",
+  "output_pcb_sha256": "05889a98ea3b52861394930ebb34c306046f52fd88f9f100d5751a3dacce3be3",
+  "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+  "generator_sha256": "97344f477c9f1b0d70982091eca3012915a7079667b6bbbfaed5eba63b58ca96",
+  "added_tracks": [
+    {
+      "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+      "start_mm": [
+        96.55,
+        100.6
+      ],
+      "end_mm": [
+        95.9,
+        100.6
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "VCORE"
+    },
+    {
+      "uuid": "e6d0009c-ca45-5808-9638-211872e52f67",
+      "start_mm": [
+        95.9,
+        100.6
+      ],
+      "end_mm": [
+        95.496551,
+        101.003449
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "VCORE"
+    },
+    {
+      "uuid": "f55cd55c-14f3-505e-9269-710007ab070c",
+      "start_mm": [
+        95.496551,
+        101.003449
+      ],
+      "end_mm": [
+        95.31164,
+        101.003449
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "VCORE"
+    }
+  ],
+  "changed_tracks": [
+    {
+      "uuid": "9784174c-99b0-5da3-9eb8-64c3cbabd240",
+      "endpoint": "start",
+      "old_mm": [
+        95.8,
+        100.35
+      ],
+      "new_mm": [
+        95.8,
+        100.2
+      ],
+      "net": "+3V3",
+      "width_mm_unchanged": 0.1778
+    },
+    {
+      "uuid": "da55c48b-836c-5961-a238-29783736cd88",
+      "endpoint": "end",
+      "old_mm": [
+        95.8,
+        100.35
+      ],
+      "new_mm": [
+        95.8,
+        100.2
+      ],
+      "net": "+3V3",
+      "width_mm_unchanged": 0.1778
+    }
+  ],
+  "component_moves": [],
+  "new_vias": [],
+  "target_connection": [
+    "IC1.23",
+    "C18.2"
+  ],
+  "ground_fill_invalidated": true,
+  "remaining": "55 opens, including four VCORE opens and two blocked right-side core approaches. Remaining power/signals/grounds, full CAD, supplier process and quote assets stay open.",
+  "unfilled_candidate_sha256": "301c6c8ef5f3b7a1bca596b6b8d36db3a34cbcaf6bf4ea423230ac48ee9eaf55",
+  "output_manifest_sha256": "5269bf61a93c64f7effd2318f8d190a205f00964b45c2fe789b631651971f876",
+  "native_unconnected": 55,
+  "native_errors": 0,
+  "native_warnings": 232,
+  "unchanged_components_vias_schematic_and_plan": true,
+  "verification_reports": {
+    "core-supply-drc.json": "15fd5af069a41e1e3470db46ba38201faa34486ff414ec7aa49e7629e18bd0dc",
+    "core-supply-ground-check.json": "d66834afc7a52c4fdd384d0e309928a31de1e461e2f36d7e3f80dcec4842881a"
+  },
+  "erc_reused": {
+    "report": "reports/power-device-erc.json",
+    "report_sha256": "101a50e8475de35ff501fcbf2093789f56f388abf861110e6b304097d48105ed",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "schematic_bytes_unchanged": true
+  },
+  "bounded_attempts": [
+    "Three direct VCORE approaches screened; existing QSPI/3V3 copper blocks them.",
+    "First left-side correction at 0.05 mm remained blocked.",
+    "Second left-side correction moves one existing 3V3 bend 0.15 mm; accepted. Other two approaches not applied."
+  ],
+  "remaining_core_targets": [
+    {
+      "pair": [
+        "IC1.50",
+        "C6.2"
+      ],
+      "direct_approach_blockers": [
+        "5d8ee764-fc16-570b-bb11-c5fe22ef5e4c",
+        "4b83724d-1dab-5713-8037-94114a8745ff"
+      ],
+      "net": "QSPI_DATA[3]"
+    },
+    {
+      "pair": [
+        "IC1.45",
+        "C8.1"
+      ],
+      "direct_approach_blockers": [
+        "dfa8490e-8000-5249-b0a8-1cf320355dc8",
+        "5f6e624a-350b-5d4e-b7a6-cd0d9d14c783",
+        "8571d067-fffb-5cbc-924f-b908f7a41fc9",
+        "1c0a79bc-d976-5533-bc9b-b86583e647aa",
+        "f6b1afb9-58ce-5e2d-af3e-cdc94c95662b",
+        "ace8c05b-519e-5823-aef0-da67149a6b3e",
+        "1e8b18db-09da-595b-adc8-261f93ec17ea"
+      ],
+      "net": "+3V3"
+    }
+  ]
+}

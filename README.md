@@ -29,8 +29,9 @@ engineering checkpoint, not a complete or qualified board.
 **September 15:** work has resumed. Six documented device-envelope corrections
 are applied without moving parts. The selected U5 boost and R27 current-sense
 land patterns are now applied too, with local U5 escape corrections and a
-matching enlargement of R27's protected ground exclusion. The board still has
-56 opens. Remaining native lands are retained for routing with explicit
+matching enlargement of R27's protected ground exclusion. The first local
+core-supply link, IC1.23 to C18.2, is now routed; **55 opens remain**.
+Remaining native lands are retained for routing with explicit
 supplier-process questions, including filled/capped amplifier thermal vias;
 two-layer supplier availability and price are not yet confirmed.
 The closure plan contains the

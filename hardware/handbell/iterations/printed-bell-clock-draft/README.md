@@ -10,8 +10,29 @@ connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; USB geometry is bound by
 `reports/usb-geometry.json`; identities by `reports/remaining-identities.json`.
-**The current board and manifest are bound by `reports/power-device-lands.json`.**
+**The current board and manifest are bound by `reports/core-supply-local.json`.**
 Figures and hashes in the earlier stage sections below are historical.
+
+## September 15 first core-decoupling connection
+
+IC1.23 now connects to C18.2 through three 0.20 mm F-side VCORE segments.
+One existing 3V3 bend moved 0.15 mm, preserving its two 0.1778 mm track widths.
+No component, via, schematic or exclusion-plan change was needed.
+
+The filled board has **55 opens**, zero other native DRC errors and 232
+text/silk warnings. The public checker explicitly requires the new
+`IC1.23` / `C18.2` connection as well as preserving all previous groups and
+private returns. ERC is reused against the unchanged schematic.
+
+The other direct approaches, IC1.50 to C6.2 and IC1.45 to C8.1, remain blocked
+by existing QSPI_DATA[3] and 3V3 routing respectively. Their exact blocking
+track UUIDs are recorded in `reports/core-supply-local.json` for the next
+bounded local-escape item. No broad routing search was started.
+
+Reproduce the unfilled candidate from `1452462` with
+`tools/route_core_supply_local.py OUTPUT`; refill and run the public checker
+with `--require-connection IC1.23 C18.2` before acceptance. This is a partial
+routing checkpoint, not a powered or quote-ready board.
 
 ## September 15 U5/R27 land closure
 

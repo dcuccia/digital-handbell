@@ -24388,8 +24388,8 @@
 (segment (start 93.850000 100.400000) (end 93.800000 100.450000) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "d96390c3-1bc4-5243-910b-0a4b532736fb"))
 (segment (start 95.000000 100.400000) (end 93.850000 100.400000) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "1eb44858-291e-5711-a31c-bd67c8dbd261"))
 (segment (start 95.050000 100.350000) (end 95.000000 100.400000) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "6c1c5e96-fa82-51d0-a6d8-b08e97d53df0"))
-(segment (start 95.800000 100.350000) (end 95.050000 100.350000) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "9784174c-99b0-5da3-9eb8-64c3cbabd240"))
-(segment (start 95.950000 100.200000) (end 95.800000 100.350000) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "da55c48b-836c-5961-a238-29783736cd88"))
+(segment (start 95.8 100.2) (end 95.050000 100.350000) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "9784174c-99b0-5da3-9eb8-64c3cbabd240"))
+(segment (start 95.950000 100.200000) (end 95.8 100.2) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "da55c48b-836c-5961-a238-29783736cd88"))
 (segment (start 96.550000 100.200000) (end 95.950000 100.200000) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "28848021-214a-5112-87e2-81a84e9b0b17"))
 (segment (start 95.300000 102.300000) (end 95.312100 102.304900) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "36dc1208-6558-5574-98a0-93c517c7db41"))
 (segment (start 94.900000 101.900000) (end 95.300000 102.300000) (width 0.1778) (layer "F.Cu") (net "+3V3") (uuid "20895a67-1952-5c73-a18d-63bad41a9ac0"))
@@ -25314,6 +25314,29 @@
 		
 		
 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -28527,4 +28550,7 @@
 (segment (start 102.25 78.58) (end 101.9 78.23) (width 0.1778) (layer "F.Cu") (net "VBUS") (uuid "b503f1ee-d1f3-50c8-82b1-e6ca8b495a85"))
 (segment (start 101.9 77.4368) (end 101.9 78.23) (width 0.1778) (layer "B.Cu") (net "VBUS") (uuid "13a9f11a-ebef-5764-84cd-30e0dd7eb0e2"))
 (segment (start 98.25 80.4426) (end 98.35 80.5426) (width 0.1778) (layer "F.Cu") (net "CC2") (uuid "89d93280-69b7-5ec9-bf3e-a196a4495408"))
-)
+
+(segment (start 96.55 100.6) (end 95.9 100.6) (width 0.2) (layer "F.Cu") (net "VCORE") (uuid "1a7d010e-b3b3-51b0-b596-1c9e6257c066"))
+(segment (start 95.9 100.6) (end 95.496551 101.003449) (width 0.2) (layer "F.Cu") (net "VCORE") (uuid "e6d0009c-ca45-5808-9638-211872e52f67"))
+(segment (start 95.496551 101.003449) (end 95.31164 101.003449) (width 0.2) (layer "F.Cu") (net "VCORE") (uuid "f55cd55c-14f3-505e-9269-710007ab070c")))

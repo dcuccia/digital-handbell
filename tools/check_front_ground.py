@@ -171,6 +171,8 @@ def main():
     parser.add_argument("--plan", type=Path, required=True)
     parser.add_argument("--manifest", type=Path)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--require-connection", nargs=2, action="append", default=[],
+                        metavar=("REF.PAD", "REF.PAD"))
     args = parser.parse_args()
     manifest_path = args.manifest or args.candidate.parent / "placement-manifest.json"
     sources = {"candidate": args.candidate, "baseline": args.baseline,
@@ -201,6 +203,15 @@ def main():
     print("Candidate graph complete", round(graphs_seconds, 2), "s", flush=True)
     validate_filled_graph(after, plan, manifest)
     group_count = compare_components(before, after)
+    required_connections = []
+    for start, end in args.require_connection:
+        a, b = start.rsplit(".", 1), end.rsplit(".", 1)
+        require(len(a) == len(b) == 2 and all(a + b), "Connections require REF.PAD endpoints")
+        auid, buid = after.pad_uuid(*a), after.pad_uuid(*b)
+        net = after.pads[auid].GetNetname()
+        require(net and net == after.pads[buid].GetNetname(), "Requested endpoints have different/empty nets")
+        require(after.connected(auid, buid), "Requested connection is still open: " + start + "/" + end)
+        required_connections.append({"from": start, "to": end, "net": net, "connected": True})
     after.board.BuildConnectivity()
     native_opens = int(after.board.GetConnectivity().GetUnconnectedCount(False))
     nets = after.nets()
@@ -219,6 +230,7 @@ def main():
         "synthetic_geometry_checks": synthetic, "previous_connected_groups_preserved": group_count,
         "component_comparison_checks": component_tests,
         "split_previously_connected_groups": [],
+        "required_connections": required_connections,
         "native_unconnected": native_opens, "independent_graph_unconnected": graph_opens,
         "private_pickoffs": [after.pickoff(a, "2", b, "2") for a, b in PAIRS],
         "filled_islands": after.zone_islands, "shorts": after.shorts, "floating_copper": after.floating_copper(),
