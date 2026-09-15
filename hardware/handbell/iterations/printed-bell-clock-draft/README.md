@@ -13,6 +13,14 @@ by `reports/clock-approaches.json`; USB geometry is bound by
 **The current board and manifest are bound by `reports/core-power-corridor.json`.**
 Figures and hashes in the earlier stage sections below are historical.
 
+The subsequent bounded VCORE search changed no copper. Its
+[`attempt`](reports/core-distribution-attempt.json) and
+[`diagnostic`](reports/core-distribution-diagnostic.json) identify a
+fixed-endpoint/grid limitation, not a proven layout defect: C7 is already
+connected to C8 and offers a reachable terminal for C6's group. See the
+[tooling handoff](../../../../docs/routing-tooling.md#subsequent-vcore-grid-attempt)
+before another attempt. Both VCORE distribution connections remain open.
+
 ## September 15 VHI corridor and C8 regulator-output closure
 
 IC1.45 now connects directly to the existing C8 VCORE branch. A replacement

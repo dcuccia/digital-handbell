@@ -73,6 +73,9 @@ in the linked closure plan.
   [tooling lessons](docs/routing-tooling.md) before repeating autorouter trials.
   Include a no-routing exchange control; requested scope/settings are not
   qualified until demonstrated. Never count exchange-only changes as routing.
+- Generate connections between existing connected copper groups. A fixed-pad
+  grid failure can miss another reachable terminal on the same group; inspect
+  those terminals before moving parts, refining the grid or expanding search.
 - Make each bounded item a coherent closure pass, not a single field edit.
   Keep reports concise and source-bound; regenerate large exports only when
   needed for review or milestone handoff.

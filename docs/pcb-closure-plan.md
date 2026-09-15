@@ -219,6 +219,14 @@ the settings and exchange limitations. Any further automation investment
 must demonstrate one useful constrained proposal before widening scope;
 it does not replace or reset the outstanding VCORE work.
 
+A subsequent fixed-pad grid attempt also stopped at its retry limit, without
+changing copper. Its [diagnosis](routing-tooling.md#subsequent-vcore-grid-attempt)
+identifies an endpoint-selection limitation: C7.2 is already connected to
+C8.1 and is reachable from C6's grid region. **Next: use C7.2 as the target
+for the C6 group, then join C18 to the merged group.** Do not infer a need to
+move parts or modify 3V3 from the failed C8-only search. Exact route acceptance
+is still outstanding.
+
 The full mechanical bind, 0.15 mm USB bezel adjustment, native CAD camera-state
 handoff, current budgets, supplier processes and matched quotation exports are
 still pending. Preserve earlier prints, models and the recovered candidate.

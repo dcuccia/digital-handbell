@@ -1,0 +1,44 @@
+{
+  "status": "DIAGNOSTIC_ONLY_NO_BOARD_CHANGE",
+  "input_pcb_sha256": "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f",
+  "tool_sha256": "30d669cd4880b1fafc2fb470ac20189c184835abf38807d5af8a9626798db41f",
+  "mask_tool_sha256": "f0df7e8402103b7e9b3902f39ff78963b78e0f52b7e369bb3a55777f423cd1d3",
+  "search_tool_sha256": "3677e7d34047c027ec7b87921374393d08367ecc9de9adc6c906a8d87c1e3722",
+  "grid_mm": 0.05,
+  "trace_width_mm": 0.2,
+  "search_margin_mm": 4,
+  "components": {
+    "C6.2": {
+      "reachable_F_nodes": 5521,
+      "bounds_native_mm": [
+        100.95,
+        97.3,
+        108.8,
+        105.85
+      ],
+      "legal_B_transition_grid_nodes": 17,
+      "touches_search_boundary": true,
+      "VCORE_pad_centers_on_reachable_grid": [
+        "C6.2",
+        "C7.2",
+        "IC1.50"
+      ]
+    },
+    "C8.1": {
+      "reachable_F_nodes": 485,
+      "bounds_native_mm": [
+        103.1,
+        101.1,
+        105.6,
+        103.1
+      ],
+      "legal_B_transition_grid_nodes": 0,
+      "touches_search_boundary": false,
+      "VCORE_pad_centers_on_reachable_grid": [
+        "C8.1",
+        "IC1.45"
+      ]
+    }
+  },
+  "qualification": "Grid reachability is not a native-clear route or proof of impossibility. Existing connected copper must be treated as a target group, not re-routed at the new trace width/grid."
+}

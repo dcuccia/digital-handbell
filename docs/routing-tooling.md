@@ -29,6 +29,7 @@ with 52 opens. **No routing proposal from this pilot was promoted.**
 | Read actual courtyards before moving parts | The C6 proxy-envelope screen passed while native courtyards overlapped. Proxy envelopes, native courtyards and physical qualification are different constraints. |
 | Reuse source-bound native and independent checks | `check_front_ground.py` preserves previous groups and private returns and can require named new connections. Refill only staged candidates; retain the original source text outside accepted edits. |
 | Compare against a no-routing control | It separates exchange-induced coordinate/segmentation changes from actual routing work. Do not count those changes as progress. |
+| Route between existing connected groups, not only nominated pads | The VCORE grid could reach C7 from C6, but not C8. Native geometry confirms C7 is already connected to C8; demanding a new path all the way to C8 unnecessarily retraces a narrow existing branch. |
 | Stop processes with explicit deadlines | The external 60-second deadlines terminated unfinished engine runs. Pass limits alone are not wall-clock limits. |
 
 ## Freerouting pilot
@@ -136,3 +137,34 @@ custom exclusions, and reject proposals that alter other nets or violate the
 native/filled checks. Demonstrate one useful proposal within a fresh bounded
 item before expanding scope. No savings or routing-completion guarantee is
 claimed yet.
+
+## Subsequent VCORE grid attempt
+
+The existing `route_printed_bell.Router.search` was reused with native-shape
+obstacle masks, a 0.05 mm grid, 0.20 mm traces, retained contact-metal
+reservations and an 80,000-expansion cap per connection. A native numeric-type
+correction and one clearance-screen correction exhausted the retry allowance.
+Neither routing search produced a C6.2/C8.1 candidate. C18 was not attempted.
+The board remains unchanged; this is not evidence that its layout is impossible.
+
+The read-only [diagnostic](../hardware/handbell/iterations/printed-bell-clock-draft/reports/core-distribution-diagnostic.json)
+shows C7.2 in C6.2's reachable F grid component. The
+[attempt record](../hardware/handbell/iterations/printed-bell-clock-draft/reports/core-distribution-attempt.json)
+confirms native connected groups: C6/IC1.50; C7/C8/IC1.45; C18/IC1.23.
+The chosen endpoint therefore made the search needlessly traverse an already
+connected narrow branch. Sampled reachability still requires exact segment
+and filled-board review before any route is accepted.
+
+Next: connect C6's group at **C7.2**, then connect C18 to the merged group.
+Do not move parts, alter 3V3 or shrink the grid merely because this fixed-pad
+search failed. The experimental staging branch has not produced an accepted
+board and is not a manufacturing flow.
+
+Reproduce only the read-only diagnosis from the repository root:
+
+```powershell
+python -c "import subprocess; subprocess.run(['python', r'tools\experiments\diagnose_core_distribution.py', r'C:\pilot-output\core-diagnostic.json'], check=True, timeout=90)"
+```
+
+Use an existing output parent and a new report filename. Both experiments
+require the exact accepted `57ae2c0b...` board.

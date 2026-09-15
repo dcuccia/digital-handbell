@@ -1,0 +1,41 @@
+{
+  "status": "BOUNDED_ATTEMPT_STOPPED_NO_BOARD_CHANGE",
+  "input_pcb_sha256": "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f",
+  "attempts": [
+    {
+      "attempt": 0,
+      "result": "Native FromMM rejected numpy.float64 before search; corrected to Python float."
+    },
+    {
+      "attempt": 1,
+      "result": "No C6.2/C8.1 path with half-grid-diagonal inflation."
+    },
+    {
+      "attempt": 2,
+      "result": "No C6.2/C8.1 path at the exact clearance floor. Retry budget exhausted."
+    }
+  ],
+  "C18_connection_attempted": false,
+  "native_VCORE_pad_groups": [
+    [
+      "C6.2",
+      "IC1.50"
+    ],
+    [
+      "C7.2",
+      "C8.1",
+      "IC1.45"
+    ],
+    [
+      "C18.2",
+      "IC1.23"
+    ]
+  ],
+  "native_group_method": "Pairwise native F effective-shape collision at zero clearance, followed by connected components; asserted all VCORE primitives F-only and no VCORE zone. Not a whole-board acceptance check.",
+  "grid_report": "core-distribution-diagnostic.json",
+  "grid_report_sha256": "41ab96fde1183c5601f6a87dd98193488b7a8d732dfc55574132c2c26cf3b097",
+  "finding": "C7.2 belongs to the existing C8.1/IC1.45 group and lies in the C6.2 reachable grid component. The chosen C8-only target creates a false routing dead end for the group task.",
+  "next_bounded_scope": "Use C7.2 as an existing connected-group terminal for the C6 group, then connect C18 to the merged group. Preserve existing narrow branch; do not infer that parts or 3V3 must move.",
+  "accepted_native_opens_unchanged": 52,
+  "limits": "Grid reachability is not a proven native-clear route. No added copper, no rerun of full-board acceptance, no fabrication or functional approval."
+}
