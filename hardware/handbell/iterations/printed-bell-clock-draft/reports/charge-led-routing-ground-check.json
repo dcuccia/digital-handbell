@@ -1,0 +1,410 @@
+{
+  "status": "GROUND_CHECK_PASSED_WITH_REMAINING_OPENS",
+  "scope": "Filled-ground connectivity and protection only. Does not run or replace DRC, complete CAD, assembly or powered qualification.",
+  "input_sha256": {
+    "candidate": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+    "baseline": "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f",
+    "plan": "151e3a66517d8b501c9354d519d6214b197e2decbde626ab082f3f0fca0e861d",
+    "manifest": "2b9ea13a6ae85d0f8d2ae09c74161e3122349e4ecb56c9aa760823cd88d9bb55"
+  },
+  "kicad_version": "10.0.6",
+  "tool_sha256": {
+    "check_front_ground.py": "cae59aa82073cf4b2563d34072373a3731d69cb4324cbbd35fe58c83ec805d77",
+    "zone_graph.py": "28e45ae1d101bf54137e541a5626053b731d2a1847bab0fa691dd99d4172faa3",
+    "check_printed_bell_power_rework.py": "41c99713f2a451d50c3b4b431ace1b69ac77b7850fa52c5959037bbb2470d6c7"
+  },
+  "synthetic_geometry_checks": {
+    "disjoint_islands": 2,
+    "preserved_holes": 1,
+    "unfilled_zone_rejected": true,
+    "actual_graph_pad_islands": 3,
+    "zone_path_witness_checked": true,
+    "CELL_NEG_zone_short_detected": true,
+    "candidate_loaded_or_written": false
+  },
+  "previous_connected_groups_preserved": 138,
+  "component_comparison_checks": {
+    "merge_allowed": true,
+    "split_rejected": true,
+    "missing_pad_rejected": true,
+    "missing_copper_rejected": true
+  },
+  "split_previously_connected_groups": [],
+  "required_connections": [
+    {
+      "from": "R2.1",
+      "to": "CHG0.C",
+      "net": "Net-(CHG0-PadC)",
+      "connected": true
+    }
+  ],
+  "native_unconnected": 51,
+  "independent_graph_unconnected": 51,
+  "private_pickoffs": [
+    {
+      "from": "R26.2",
+      "to": "R27.2",
+      "connected": true,
+      "independent_until_terminal": true,
+      "other_pad_connections_before_terminal": [],
+      "branch_copper_uuids": [
+        "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+      ],
+      "joins_cut_wholly_inside_terminal": [
+        {
+          "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+          "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+          "layer": "F.Cu"
+        }
+      ],
+      "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+      "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+    },
+    {
+      "from": "R24.2",
+      "to": "C28.2",
+      "connected": true,
+      "independent_until_terminal": true,
+      "other_pad_connections_before_terminal": [],
+      "branch_copper_uuids": [
+        "1212a327-4ed4-50da-a0bb-71afc8145254",
+        "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+        "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+        "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+        "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+        "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+        "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      ],
+      "joins_cut_wholly_inside_terminal": [
+        {
+          "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+          "layer": "F.Cu"
+        },
+        {
+          "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+          "layer": "F.Cu"
+        }
+      ],
+      "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+      "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+    }
+  ],
+  "filled_islands": [
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 0,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 327.6913558419955
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 1,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 10.7320398420335
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 2,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 22.6139026667585
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 3,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 47.7901736367165
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 4,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 34.968111866532
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 5,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 13.8149005945805
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 6,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 30.638682987854
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 7,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 28.7188107845685
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 8,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 0.4981551361435
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 9,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 14.322137237258
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 10,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 11.4098293575525
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 11,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 4.8142302977025
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 12,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 2.353169160356
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 13,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 1.3292024501975
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 14,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 30.666248755266
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 15,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 0.5419145993005
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 16,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 10.0581491707595
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:17",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 17,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 1.102468320838
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:18",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 18,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 97.526914723908
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:19",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 19,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 2.566318880689
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:20",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 20,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 8.997277257128
+    },
+    {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:21",
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "layer": "F.Cu",
+      "island_index": 21,
+      "explicit_native_holes": 0,
+      "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+      "filled_area_mm2": 43.1964308518085
+    }
+  ],
+  "shorts": [],
+  "floating_copper": [],
+  "remaining_nets": [
+    {
+      "net": "+3V3",
+      "opens": 1
+    },
+    {
+      "net": "AMP_MUTE",
+      "opens": 2
+    },
+    {
+      "net": "BUTTON",
+      "opens": 1
+    },
+    {
+      "net": "D+",
+      "opens": 1
+    },
+    {
+      "net": "D-",
+      "opens": 1
+    },
+    {
+      "net": "D13",
+      "opens": 1
+    },
+    {
+      "net": "GAIN",
+      "opens": 1
+    },
+    {
+      "net": "GND",
+      "opens": 18
+    },
+    {
+      "net": "I2S_BCLK",
+      "opens": 2
+    },
+    {
+      "net": "I2S_DIN",
+      "opens": 2
+    },
+    {
+      "net": "I2S_LRCLK",
+      "opens": 2
+    },
+    {
+      "net": "INT",
+      "opens": 1
+    },
+    {
+      "net": "Net-(FB2-P$1)",
+      "opens": 1
+    },
+    {
+      "net": "POWER",
+      "opens": 2
+    },
+    {
+      "net": "SCL",
+      "opens": 1
+    },
+    {
+      "net": "SWCLK",
+      "opens": 1
+    },
+    {
+      "net": "SWDIO",
+      "opens": 1
+    },
+    {
+      "net": "USB_D+",
+      "opens": 1
+    },
+    {
+      "net": "USB_D-",
+      "opens": 1
+    },
+    {
+      "net": "VAMP",
+      "opens": 1
+    },
+    {
+      "net": "VBAT",
+      "opens": 1
+    },
+    {
+      "net": "VBUS",
+      "opens": 2
+    },
+    {
+      "net": "VCORE",
+      "opens": 2
+    },
+    {
+      "net": "VHI",
+      "opens": 1
+    },
+    {
+      "net": "VO+",
+      "opens": 1
+    },
+    {
+      "net": "~{RESET}",
+      "opens": 2
+    }
+  ],
+  "elapsed_seconds": {
+    "baseline_graph": 28.64000000001397,
+    "both_graphs": 51.875,
+    "total": 53.73399999999674,
+    "process_cpu": 46.671875
+  },
+  "design_files_written": false,
+  "private_recovery_dependency": false
+}

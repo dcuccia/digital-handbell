@@ -204,3 +204,13 @@ The existing search now distinguishes missing endpoints, expansion-limit
 exhaustion and no path in its sampled domain. That diagnostic distinction is
 not a proof of continuous geometric impossibility. Stop GAIN retries pending
 local escape/topology review; retain the accepted 52-open board.
+
+### Accepted short-branch result
+
+The independent R2.1/CHG0.C branch generated in **2.0 seconds** using the
+same native-mask search. Seven 0.20 mm F segments were accepted after filled
+connectivity preserved all previous groups/private returns; no part, via or
+existing-track changes were needed. The board now has **51 opens**.
+See [`charge-led-routing.json`](../hardware/handbell/iterations/printed-bell-clock-draft/reports/charge-led-routing.json).
+This is demonstrated usefulness on one short branch, not qualification of
+the router for arbitrary nets or evidence of a total completion cost.

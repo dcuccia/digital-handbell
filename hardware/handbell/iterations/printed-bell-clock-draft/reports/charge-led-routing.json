@@ -1,0 +1,152 @@
+{
+  "status": "ACCEPTED_LOCAL_ROUTING_NOT_QUOTE_READY",
+  "input_commit": "4163f28",
+  "input_pcb_sha256": "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f",
+  "output_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+  "generator_sha256": "01288b0bbd724a5ac3794c7c43c023de1db7a3670e4c47c08a98344d05904810",
+  "entrypoint_sha256": "fecb6affbe64547ecde957de029fe4584a58828ddfd47b6ea5874978668154d9",
+  "search_tool_sha256": "caaa829a7a3af12371b9d62cc5af7bb10eb04fc37b2fb6cd5005d012bdd161ed",
+  "component_moves": [],
+  "added_tracks": [
+    {
+      "uuid": "6afad1db-6040-55ef-9518-a94eb5ff758c",
+      "start_mm": [
+        104.00705,
+        81.295629
+      ],
+      "end_mm": [
+        104.0,
+        81.3
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "Net-(CHG0-PadC)"
+    },
+    {
+      "uuid": "e781c438-a9d9-5233-a644-b259e3fccc7b",
+      "start_mm": [
+        104.0,
+        81.3
+      ],
+      "end_mm": [
+        104.4,
+        81.7
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "Net-(CHG0-PadC)"
+    },
+    {
+      "uuid": "f8278029-4a0b-5c79-a291-135f8c5acdff",
+      "start_mm": [
+        104.4,
+        81.7
+      ],
+      "end_mm": [
+        104.4,
+        81.75
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "Net-(CHG0-PadC)"
+    },
+    {
+      "uuid": "e3e414f6-0551-5e24-b5a8-bbba9308a920",
+      "start_mm": [
+        104.4,
+        81.75
+      ],
+      "end_mm": [
+        104.55,
+        81.9
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "Net-(CHG0-PadC)"
+    },
+    {
+      "uuid": "eba1a8ca-8b42-5ca4-a7f2-0bb8fbfd07c1",
+      "start_mm": [
+        104.55,
+        81.9
+      ],
+      "end_mm": [
+        106.3,
+        81.9
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "Net-(CHG0-PadC)"
+    },
+    {
+      "uuid": "ec078a14-90ba-557d-9d94-59596b866649",
+      "start_mm": [
+        106.3,
+        81.9
+      ],
+      "end_mm": [
+        106.5,
+        82.1
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "Net-(CHG0-PadC)"
+    },
+    {
+      "uuid": "04d501bf-7a2d-5b7a-8f1a-5ba8a17a6ecb",
+      "start_mm": [
+        106.5,
+        82.1
+      ],
+      "end_mm": [
+        106.499567,
+        82.101987
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "Net-(CHG0-PadC)"
+    }
+  ],
+  "changed_tracks": [],
+  "removed_tracks": [],
+  "changed_vias": [],
+  "new_vias": [],
+  "required_connections": [
+    [
+      "R2.1",
+      "CHG0.C"
+    ]
+  ],
+  "search_seconds": 2.0,
+  "ground_group_routed_first": false,
+  "grid_mm": 0.05,
+  "expansion_limit_per_connection": 80000,
+  "search_margin_mm": 4,
+  "routing_bounds_common_mm": [
+    -20.5,
+    -20.5,
+    20.5,
+    20.5
+  ],
+  "outline_setback_mm": 0.55,
+  "contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+  "ground_fill_invalidated": true,
+  "remaining": "Remaining core/power/signals/ground, exact mechanical rebind and supplier quotation assets. Not functional or manufacturing approval.",
+  "unfilled_candidate_sha256": "eae679f8cde1d7c0acff1b522ae546ba2e87af4c4b9ea2fed5f54852ea0e7d53",
+  "output_manifest_sha256": "2b9ea13a6ae85d0f8d2ae09c74161e3122349e4ecb56c9aa760823cd88d9bb55",
+  "native_unconnected": 51,
+  "native_errors": 0,
+  "native_warnings": 233,
+  "verification_reports": {
+    "charge-led-routing-drc.json": "44bb5e317e4c3c6bd346da09f856b23245a18f15d0f9de170401a006dd6198fe",
+    "charge-led-routing-ground-check.json": "3da40077a3efd5baab41a21708ee67b4bd724afd4d0ec80f4b08066fdf4aa898"
+  },
+  "schematic_and_plan_unchanged": true,
+  "nonselected_geometry_preserved": true,
+  "via_inventory_and_diameters_drills_preserved": true,
+  "erc_reused": {
+    "report": "reports/power-device-erc.json",
+    "sha256": "101a50e8475de35ff501fcbf2093789f56f388abf861110e6b304097d48105ed",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e"
+  }
+}

@@ -10,7 +10,7 @@ connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; USB geometry is bound by
 `reports/usb-geometry.json`; identities by `reports/remaining-identities.json`.
-**The current board and manifest are bound by `reports/core-power-corridor.json`.**
+**The current board and manifest are bound by `reports/charge-led-routing.json`.**
 Figures and hashes in the earlier stage sections below are historical.
 
 The subsequent bounded VCORE search changed no copper. Its
@@ -24,6 +24,20 @@ The [C6/C7 follow-up](reports/core-distribution-right-attempt.json) generated
 signal copper but split the capacitor-ground group after refill. It and two
 ground-first corrections were not accepted. The current PCB remains unchanged;
 core distribution needs a coordinated supply/return repair.
+
+## September 15 charge-indicator connection
+
+R2.1 now connects to CHG0.C through seven 0.20 mm F track segments, generated
+in 2.0 seconds by the bounded native-mask search. No components, existing
+tracks, vias, schematic or footprint definitions changed. The accepted
+filled board has **51 opens**, zero other native DRC errors and 233 warnings;
+the existing connected groups and private returns are preserved.
+
+`tools/route_charge_led.py OUTPUT` reproduces the staged, unfilled candidate
+from the `4163f28` board in an isolated baseline worktree. Refill and require
+`R2.1/CHG0.C` with the public ground checker before acceptance. The stage,
+native and filled reports use the `charge-led-routing` prefix. This is not
+functional qualification or a complete quotation package.
 
 ## September 15 VHI corridor and C8 regulator-output closure
 

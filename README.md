@@ -45,6 +45,9 @@ current handoff and repo-only fill-check commands.
 The [routing-tooling study](docs/routing-tooling.md) records exercised native
 API strategies and the bounded offline Freerouting pilot. No external-router
 proposal was accepted; routing automation remains experimental.
+Subsequent native-mask routing has connected the R2/CHG0 charge-indicator
+branch without moving parts or changing existing copper: **51 opens remain**.
+Core supply/return and amplifier GAIN attempts were preserved but not accepted.
 
 **September 13 printed-bell revision:** the owner reports that the latest
 inert pieces fit and authorizes a single-piece printed bell, flush removable

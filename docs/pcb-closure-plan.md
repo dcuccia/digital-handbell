@@ -172,10 +172,10 @@ agent or routing loop was started.
 
 Current package: `hardware/handbell/iterations/printed-bell-clock-draft`.
 Current PCB SHA-256:
-`57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f`.
-Current native report: `reports/core-power-corridor.json`; prior six-envelope
+`a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff`.
+Current native report: `reports/charge-led-routing.json`; prior six-envelope
 revision: `reports/device-envelopes.json`; current public fill proof:
-`reports/core-power-corridor-ground-check.json`. Status: **83/83 fitted MPNs, 52 opens,
+`reports/charge-led-routing-ground-check.json`. Status: **83/83 fitted MPNs, 51 opens,
 zero other native DRC errors and 233 text/silk warnings**.
 
 The six initial envelope corrections and subsequent U5/R27 corrections are
@@ -238,6 +238,11 @@ also stopped at its correction limit without changing the board. Its sampled
 component exhausted after 147 expansions, so do not respond with a larger
 unfocused search budget. Prioritize short independent connections while
 preserving these concrete local-layout blockers.
+
+**Accepted independent progress:** R2.1/CHG0.C is connected with seven
+0.20 mm F segments, no part moves or existing-copper changes, and preserved
+filled groups/private returns. This closes one charge-indicator branch;
+it does not resolve the core/Gain blockers or qualify powered behavior.
 
 The full mechanical bind, 0.15 mm USB bezel adjustment, native CAD camera-state
 handoff, current budgets, supplier processes and matched quotation exports are
