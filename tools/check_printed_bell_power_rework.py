@@ -636,9 +636,10 @@ def service_and_contact_screen(route, graph, errors):
             "scope": "Native copper/glyph and retained base-metal projections only, not assembled visibility or insulation qualification"}
 
 
-def placement_proxy_screen(route, changed, errors):
-    baseline = read_json(SOURCE / "placement-manifest.json")
-    manifest = read_json(OUTPUT / "placement-manifest.json")
+def placement_proxy_screen(route, changed, errors, *, baseline=None, manifest=None, resized=None):
+    baseline = read_json(SOURCE / "placement-manifest.json") if baseline is None else baseline
+    manifest = read_json(OUTPUT / "placement-manifest.json") if manifest is None else manifest
+    resized = set(AUTHORIZED_PROXY_DEPTHS) if resized is None else set(resized)
 
     def corners(component):
         angle = math.radians(component["rotation_deg"])
@@ -671,7 +672,7 @@ def placement_proxy_screen(route, changed, errors):
 
     old, new = overlaps(baseline["components"]), overlaps(manifest["components"])
     introduced = sorted(new-old)
-    affected = set(changed) | set(AUTHORIZED_PROXY_DEPTHS)
+    affected = set(changed) | resized
     outside = [c["reference"] for c in manifest["components"] if c["reference"] in affected
                and any(route.prep.polygon_distance(p, manifest["board"]["outline_common_xy_mm"]) > TOL
                        for p in corners(c))]
@@ -698,11 +699,11 @@ def placement_proxy_screen(route, changed, errors):
     require(inductor["height_mm"] == 5 and yoke_gap >= .7-TOL, "Full-height L1/yoke clearance changed")
     return {"new_proxy_overlap_pairs": introduced, "inherited_proxy_overlap_pairs": sorted(new & old),
             "moved_proxy_corners_outside_outline": [ref for ref in outside if ref in changed],
-            "resized_proxy_corners_outside_outline": [ref for ref in outside if ref in AUTHORIZED_PROXY_DEPTHS],
+            "resized_proxy_corners_outside_outline": [ref for ref in outside if ref in resized],
             "resized_proxy_bounds_xy_mm": {
                 c["reference"]: [min(p[0] for p in corners(c)), min(p[1] for p in corners(c)),
                                  max(p[0] for p in corners(c)), max(p[1] for p in corners(c))]
-                for c in manifest["components"] if c["reference"] in AUTHORIZED_PROXY_DEPTHS},
+                for c in manifest["components"] if c["reference"] in resized},
             "conservative_speaker_clearances": speaker_clearances, "L1_yoke_axial_gap_mm": yoke_gap,
             "scope": "Unqualified component-envelope SAT/intersection screen only; not actual part or mechanical-fit approval",
             "numerical_comparison_epsilon_mm": TOL}

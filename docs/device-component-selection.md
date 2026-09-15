@@ -10,8 +10,9 @@ land/paste pattern is suitable.
 
 All selected device identities are now applied in the continuing
 [clock/integration draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md#all-fitted-part-identities-applied).
-Its final identity batch preserves geometry. Except for the separately completed
-clock/Q3 work, the envelope and land/paste dispositions below remain open.
+Its final identity batch preserves geometry. The separately completed clock/Q3
+work and September 15 six-device envelope revision are applied. Remaining
+land/paste dispositions and full mechanical qualification stay open.
 
 | Reference | Selected identity | Principal distinction |
 |---|---|---|
@@ -41,6 +42,11 @@ and do not redistribute manufacturer PDFs or images.
 
 These changes belong only in the new quote candidate and its next complete
 CAD bind. No archived board, placement or print is overwritten.
+
+**Applied September 15** to the continuing manifest, retaining actual current
+poses and offsets. The source-bound `reports/device-envelopes.json` records
+no new overlap/outline/speaker screen conflicts. Native PCB/schematic files
+are unchanged; this is not a fresh full-CAD or physical-fit approval.
 
 | Reference | New local X x Y x Z screening envelope, mm | Reason |
 |---|---|---|

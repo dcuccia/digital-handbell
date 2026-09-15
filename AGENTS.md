@@ -2,10 +2,9 @@
 
 ## Bounded engineering work
 
-- **Owner pause after the September 14 closure checkpoint:** do not start the
-  next engineering item until the owner resumes. The exact artifacts and next
-  scope are in `docs/pcb-closure-plan.md#owner-pause-and-next-item`. This pause
-  overrides the standing sequential-continuation permission below.
+- **September 15 owner resume:** continue from the September 14 checkpoint
+  using the bounded sequential policy below. The exact artifacts and next
+  scope are in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - Apply the [cost-aware closure plan](docs/pcb-closure-plan.md). Optimize for
   closing a stable candidate, not the number of microtasks or reports produced.
   Keep one active candidate and preserve older work as evidence.

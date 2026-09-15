@@ -1,0 +1,501 @@
+{
+  "input_commit": "f4c260b",
+  "pcb_sha256": "f6a9d31192c7e59c4b81b7bcb281e23fd06cdc201e8a7a1f180ae7a8f860e3e4",
+  "input_manifest_sha256": "d998251eca0e13b47d1c81a57be5ac04c4b34e1c0f597a6611dbe09fd7500689",
+  "register_sha256": "36019582d37c0af6abf418ea04ca4ca79a8ca9e95826f73ceb8db6da8a4b77b4",
+  "generator_sha256": "b5584d90fe5df431d53fc7830622f4e1cb8bd418e8406b1edee2c86361b59e1e",
+  "screen_helper_sha256": "41c99713f2a451d50c3b4b431ace1b69ac77b7850fa52c5959037bbb2470d6c7",
+  "changes": {
+    "D3": {
+      "before": {
+        "reference": "D3",
+        "value": "1N4148",
+        "mpn": "1N4148WS-7-F",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323_MINI",
+        "x_mm": 8.55300018014978,
+        "y_mm": -6.166060728169011,
+        "width_mm": 3.04,
+        "depth_mm": 1.4,
+        "height_mm": 1.1,
+        "rotation_deg": -270,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          8.553,
+          -6.166061
+        ],
+        "z_min_mm": 23.9,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": null,
+        "manufacturer": "Diodes Incorporated"
+      },
+      "after": {
+        "reference": "D3",
+        "value": "1N4148",
+        "mpn": "1N4148WS-7-F",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323_MINI",
+        "x_mm": 8.55300018014978,
+        "y_mm": -6.166060728169011,
+        "width_mm": 3.04,
+        "depth_mm": 1.4,
+        "height_mm": 1.2,
+        "rotation_deg": -270,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          8.553,
+          -6.166061
+        ],
+        "z_min_mm": 23.8,
+        "z_max_mm": 25.0,
+        "height_source": "Documented conservative manufacturer-based screen; not a measured mounted height. See reports/device-envelopes.json.",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": null,
+        "manufacturer": "Diodes Incorporated"
+      },
+      "evidence_ids": [
+        "diode-switch"
+      ]
+    },
+    "D4": {
+      "before": {
+        "reference": "D4",
+        "value": "PMEG2020AEA",
+        "mpn": "PMEG2020AEA,115",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323F",
+        "x_mm": -2.0008592935727547,
+        "y_mm": -8.498967934042835,
+        "width_mm": 3.0,
+        "depth_mm": 1.3,
+        "height_mm": 1.0,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          -2.000859,
+          -8.498968
+        ],
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "source-selection",
+        "manufacturer": "Nexperia"
+      },
+      "after": {
+        "reference": "D4",
+        "value": "PMEG2020AEA",
+        "mpn": "PMEG2020AEA,115",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOD-323F",
+        "x_mm": -2.0008592935727547,
+        "y_mm": -8.498967934042835,
+        "width_mm": 3.0,
+        "depth_mm": 1.35,
+        "height_mm": 1.1,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          -2.000859,
+          -8.498968
+        ],
+        "z_min_mm": 23.9,
+        "z_max_mm": 25.0,
+        "height_source": "Documented conservative manufacturer-based screen; not a measured mounted height. See reports/device-envelopes.json.",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "source-selection",
+        "manufacturer": "Nexperia"
+      },
+      "evidence_ids": [
+        "schottky",
+        "schottky-catalog"
+      ]
+    },
+    "Q1": {
+      "before": {
+        "reference": "Q1",
+        "value": "AO3401",
+        "mpn": "AO3401",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
+        "x_mm": -6.400000003211728,
+        "y_mm": 8.000000305574876,
+        "width_mm": 3.3448,
+        "depth_mm": 3.2,
+        "height_mm": 1.5,
+        "rotation_deg": -90,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          -6.4,
+          8
+        ],
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "audio-switch",
+        "manufacturer": "Alpha & Omega Semiconductor"
+      },
+      "after": {
+        "reference": "Q1",
+        "value": "AO3401",
+        "mpn": "AO3401",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
+        "x_mm": -6.400000003211728,
+        "y_mm": 8.000000305574876,
+        "width_mm": 3.354,
+        "depth_mm": 3.2,
+        "height_mm": 1.5,
+        "rotation_deg": -90,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          -6.4,
+          8
+        ],
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0,
+        "height_source": "Documented conservative manufacturer-based screen; not a measured mounted height. See reports/device-envelopes.json.",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "audio-switch",
+        "manufacturer": "Alpha & Omega Semiconductor"
+      },
+      "evidence_ids": [
+        "ao3401",
+        "ao3401-status",
+        "aos-package",
+        "aos-reel",
+        "ao3401a-comparison"
+      ]
+    },
+    "Q2": {
+      "before": {
+        "reference": "Q2",
+        "value": "AO3400A",
+        "mpn": "AO3400A",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
+        "x_mm": -13.02755516384002,
+        "y_mm": 1.3151773801900877,
+        "width_mm": 3.3448,
+        "depth_mm": 3.2,
+        "height_mm": 1.5,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          -13.027555,
+          1.315177
+        ],
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "audio-switch",
+        "manufacturer": "Alpha & Omega Semiconductor"
+      },
+      "after": {
+        "reference": "Q2",
+        "value": "AO3400A",
+        "mpn": "AO3400A",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-WIDE",
+        "x_mm": -13.02755516384002,
+        "y_mm": 1.3151773801900877,
+        "width_mm": 3.354,
+        "depth_mm": 3.2,
+        "height_mm": 1.5,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          -13.027555,
+          1.315177
+        ],
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0,
+        "height_source": "Documented conservative manufacturer-based screen; not a measured mounted height. See reports/device-envelopes.json.",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "audio-switch",
+        "manufacturer": "Alpha & Omega Semiconductor"
+      },
+      "evidence_ids": [
+        "ao3400a",
+        "ao3400a-status",
+        "q2-catalog",
+        "aos-package",
+        "aos-reel"
+      ]
+    },
+    "Q4": {
+      "before": {
+        "reference": "Q4",
+        "value": "AO3400A",
+        "mpn": "AO3400A",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "x_mm": 10.633403545004875,
+        "y_mm": -14.05165187116776,
+        "width_mm": 3.35,
+        "depth_mm": 3.12,
+        "height_mm": 1.5,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          10.633404,
+          -14.051652
+        ],
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "amplifier"
+      },
+      "after": {
+        "reference": "Q4",
+        "value": "AO3400A",
+        "mpn": "AO3400A",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "x_mm": 10.633403545004875,
+        "y_mm": -14.05165187116776,
+        "width_mm": 3.35,
+        "depth_mm": 3.354,
+        "height_mm": 1.5,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          10.633404,
+          -14.051652
+        ],
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0,
+        "height_source": "Documented conservative manufacturer-based screen; not a measured mounted height. See reports/device-envelopes.json.",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "amplifier"
+      },
+      "evidence_ids": [
+        "ao3400a",
+        "ao3400a-status",
+        "q2-catalog",
+        "aos-package",
+        "aos-reel"
+      ]
+    },
+    "U3": {
+      "before": {
+        "reference": "U3",
+        "value": "MCP73831T-2ACI/OT",
+        "mpn": "MCP73831T-2ACI/OT",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-5",
+        "x_mm": 1.6952696315854219,
+        "y_mm": -15.311836810331569,
+        "width_mm": 3.3,
+        "depth_mm": 3.8002000000000002,
+        "height_mm": 1.5,
+        "rotation_deg": -90,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          1.69527,
+          -15.311837
+        ],
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "charger",
+        "manufacturer": "Microchip Technology"
+      },
+      "after": {
+        "reference": "U3",
+        "value": "MCP73831T-2ACI/OT",
+        "mpn": "MCP73831T-2ACI/OT",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:SOT23-5",
+        "x_mm": 1.6952696315854219,
+        "y_mm": -15.311836810331569,
+        "width_mm": 3.6,
+        "depth_mm": 3.8002000000000002,
+        "height_mm": 1.5,
+        "rotation_deg": -90,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          1.69527,
+          -15.311837
+        ],
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0,
+        "height_source": "Documented conservative manufacturer-based screen; not a measured mounted height. See reports/device-envelopes.json.",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "charger",
+        "manufacturer": "Microchip Technology"
+      },
+      "evidence_ids": [
+        "charger"
+      ]
+    }
+  },
+  "screen": {
+    "new_proxy_overlap_pairs": [],
+    "inherited_proxy_overlap_pairs": [],
+    "moved_proxy_corners_outside_outline": [],
+    "resized_proxy_corners_outside_outline": [],
+    "resized_proxy_bounds_xy_mm": {
+      "D3": [
+        7.85300018014978,
+        -7.686060728169011,
+        9.25300018014978,
+        -4.646060728169012
+      ],
+      "D4": [
+        -3.5008592935727547,
+        -9.173967934042835,
+        -0.5008592935727547,
+        -7.823967934042835
+      ],
+      "Q1": [
+        -8.000000003211728,
+        6.323000305574876,
+        -4.8000000032117285,
+        9.677000305574875
+      ],
+      "Q2": [
+        -14.70455516384002,
+        -0.2848226198099124,
+        -11.35055516384002,
+        2.9151773801900878
+      ],
+      "Q4": [
+        8.958403545004874,
+        -15.72865187116776,
+        12.308403545004875,
+        -12.37465187116776
+      ],
+      "U3": [
+        -0.20483036841457825,
+        -17.111836810331567,
+        3.595369631585422,
+        -13.511836810331568
+      ]
+    },
+    "conservative_speaker_clearances": [
+      {
+        "reference": "C1",
+        "radial_clearance_mm": 1.8049210188053397,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C4",
+        "radial_clearance_mm": 5.97571981141513,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C5",
+        "radial_clearance_mm": 3.864055378635694,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C19",
+        "radial_clearance_mm": 3.230977704112714,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C20",
+        "radial_clearance_mm": 4.423376736704066,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C26",
+        "radial_clearance_mm": 2.03050464612417,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C27",
+        "radial_clearance_mm": 2.779999739373407,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C28",
+        "radial_clearance_mm": 2.856910629831402,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "J1",
+        "radial_clearance_mm": 2.355000000000002,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "J2",
+        "radial_clearance_mm": 1.8724457161349282,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "L1",
+        "radial_clearance_mm": 1.8946066952598475,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "X6",
+        "radial_clearance_mm": 9.120000000000003,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      }
+    ],
+    "L1_yoke_axial_gap_mm": 0.6999999999999993,
+    "scope": "Unqualified component-envelope SAT/intersection screen only; not actual part or mechanical-fit approval",
+    "numerical_comparison_epsilon_mm": 2e-06
+  },
+  "component_moves": [],
+  "native_design_files_changed": false,
+  "scope": "Six conservative envelope enlargements only; retain current centers, rotations and native-to-proxy offsets, including the already moved Q1.",
+  "remaining": "Remaining land/paste dispositions, complete CAD/bezel rebind and physical/supplier qualification. Conservative boxes are not qualified parts.",
+  "output_manifest_sha256": "bd874487e65c5818221e80478570a8f74a6eb4e2b20ef61f38f0cb267165301d"
+}

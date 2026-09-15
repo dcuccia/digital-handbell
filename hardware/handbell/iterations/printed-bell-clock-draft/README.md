@@ -10,9 +10,23 @@ connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; USB geometry is bound by
 `reports/usb-geometry.json`; identities by `reports/remaining-identities.json`.
-**The current power-land board is bound by `reports/power-lands.json` and
-the placement manifest.**
+**The current power-land board is bound by `reports/power-lands.json`; the
+latest manifest-only revision is bound by `reports/device-envelopes.json`.**
 Figures and hashes in the earlier stage sections below are historical.
+
+## September 15 device envelopes and resume
+
+The owner has resumed bounded work. D3/D4, Q1/Q2/Q4 and U3 now carry the
+already documented conservative package-envelope enlargements. Current
+centers, rotations and native-to-proxy offsets are preserved, including Q1's
+earlier routing move. No component moves or native PCB/schematic changes occur.
+The reused overlap/outline/speaker screen introduces no conflicts.
+
+These are conservative screens, not measured mounted dimensions or complete
+CAD approval. Full mechanical rebinding remains required. The native board
+retains 56 opens and all 83 MPNs; no electrical rerun is claimed for this
+manifest-only change. The older ground report still binds its earlier manifest
+and exact unchanged PCB, not this enlarged-envelope manifest.
 
 ## Power land patterns applied; owner pause
 
@@ -38,7 +52,7 @@ previous connected groups and protected returns. Its checker and the
 recovery files; [commands and scope](../../../../docs/pcb-closure-plan.md#reproducible-filled-ground-check)
 are recorded in the closure plan.
 
-**Paused at the owner's September 14 request.** Resume only when requested.
+**Historical September 14 pause; resumed September 15 above.**
 Remaining device envelopes/land dispositions and existing-part audit precede
 final routing; full CAD/bezel, assembly and powered qualification remain open.
 The identity-stage schematic PDF below is the last circuit-view export; later
