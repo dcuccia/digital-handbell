@@ -10,8 +10,42 @@ connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; USB geometry is bound by
 `reports/usb-geometry.json`; identities by `reports/remaining-identities.json`.
-**The current board and manifest are bound by `reports/core-c6.json`.**
+**The current board and manifest are bound by `reports/core-power-corridor.json`.**
 Figures and hashes in the earlier stage sections below are historical.
+
+## September 15 VHI corridor and C8 regulator-output closure
+
+IC1.45 now connects directly to the existing C8 VCORE branch. A replacement
+3V3 bridge uses 0.20 mm pad escapes and a 0.25 mm inner spine; the remaining
+obstructing 3V3 stubs are removed. Component poses, pads, footprint libraries,
+schematic, fixed interfaces and the front-ground exclusion plan are unchanged.
+
+The 0.80 mm VHI feed now uses the central B corridor between its existing
+vias instead of the F-side detour around the MCU exposed pad. All nine MCU
+ground vias remain at their original 0.604 mm diameter / 0.35 mm drill, in
+two staggered columns inside the original exposed pad. Twelve 0.60 mm B
+ground-grid segments follow the new positions. No vias were added or deleted,
+and the changed B geometry clears the retained conductive contact-base
+reservations. This is not permission to route underneath those bases.
+
+Three numerical via-layout candidates were screened before staging this
+candidate; the selected layout has 0.62 mm same-column pitch. The native
+result has **52 opens, zero other native DRC errors and 233 text/silk
+warnings**. The filled graph preserves previous connected groups, both private
+returns and the required C8/3V3 connections. There are two VCORE opens left:
+the local decoupling groups still need distribution connections.
+
+Retained via count and copper widths do not establish thermal equivalence.
+The MCU exposed-pad mask and four paste shapes remain unchanged, but the
+relocated vias and changed B spreading require current-position stencil/via
+and thermal review. Full CAD rebinding and matched quotation assets remain
+open.
+
+`tools/route_core_power_corridor.py OUTPUT` uses the pinned `70bfab3` input
+package and reuses the recorded C8 experiment as an intermediate. Use the
+corresponding baseline package with the current tools in an isolated
+worktree to reproduce it. Staging is not acceptance: refill and run native
+DRC and the public filled check, requiring `IC1.45/C8.1` and `IC1.49/IC1.44`.
 
 ## September 15 C6 core-supply and QSPI closure
 
@@ -37,7 +71,10 @@ The report's required connections include the new C6 link and retained QSPI
 link; the ground proof additionally requires the C8/C7 VCORE bridge.
 The next core target is IC1.45/C8.1, still separated by existing 3V3 routing.
 
-### Unaccepted C8 corridor experiment
+### Historical unaccepted C8 corridor experiment
+
+The corridor revision above resolves these findings. The original failed
+candidate remains preserved as evidence, not as the current design.
 
 `reports/core-c8-attempt.json` preserves the next trial and its finite repair
 list. It is **not the active board**. An attempted inner 3V3 bridge intersects

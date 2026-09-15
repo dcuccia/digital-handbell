@@ -131,13 +131,13 @@ unexpected zone/exclusion plans. It does not run DRC or qualify assembly.
 Use the separate source-preserving refill tool first when geometry changed.
 
 Example from the repository root, reproducing the latest comparison against
-the pre-C6 baseline in `fe3d2a7`:
+the pre-corridor baseline in `70bfab3`:
 
 ```powershell
 $work = Join-Path $env:TEMP ("handbell-ground-" + [guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory -Path $work | Out-Null
-python -c "import subprocess; from pathlib import Path; p=Path(r'$work')/'baseline.kicad_pcb'; p.write_bytes(subprocess.run(['git','show','fe3d2a7:hardware/handbell/iterations/printed-bell-clock-draft/handbell.kicad_pcb'], check=True, capture_output=True, timeout=15).stdout)"
-python -c "import subprocess; subprocess.run(['python', r'tools\check_front_ground.py', r'hardware\handbell\iterations\printed-bell-clock-draft\handbell.kicad_pcb', '--baseline', r'$work\baseline.kicad_pcb', '--plan', r'hardware\handbell\iterations\printed-bell-clock-draft\reports\front-ground-plan.json', '--require-connection', 'IC1.50', 'C6.2', '--require-connection', 'IC1.51', 'U1.7', '--require-connection', 'C8.1', 'C7.2', '--output', r'$work\ground-check.json'], check=True, timeout=360)"
+python -c "import subprocess; from pathlib import Path; p=Path(r'$work')/'baseline.kicad_pcb'; p.write_bytes(subprocess.run(['git','show','70bfab3:hardware/handbell/iterations/printed-bell-clock-draft/handbell.kicad_pcb'], check=True, capture_output=True, timeout=15).stdout)"
+python -c "import subprocess; subprocess.run(['python', r'tools\check_front_ground.py', r'hardware\handbell\iterations\printed-bell-clock-draft\handbell.kicad_pcb', '--baseline', r'$work\baseline.kicad_pcb', '--plan', r'hardware\handbell\iterations\printed-bell-clock-draft\reports\front-ground-plan.json', '--require-connection', 'IC1.45', 'C8.1', '--require-connection', 'IC1.49', 'IC1.44', '--output', r'$work\ground-check.json'], check=True, timeout=360)"
 ```
 
 KiCad 10.0.6 and its native Python API were exercised. The completed public run
@@ -166,11 +166,11 @@ agent or routing loop was started.
 
 Current package: `hardware/handbell/iterations/printed-bell-clock-draft`.
 Current PCB SHA-256:
-`f2c1fa15129ce8d2042492ff73c8d945222f3fe638e59096a4411ef2e13767f0`.
-Current native report: `reports/core-c6.json`; prior six-envelope
+`57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f`.
+Current native report: `reports/core-power-corridor.json`; prior six-envelope
 revision: `reports/device-envelopes.json`; current public fill proof:
-`reports/core-c6-ground-check.json`. Status: **83/83 fitted MPNs, 53 opens,
-zero other native DRC errors and 231 text/silk warnings**.
+`reports/core-power-corridor-ground-check.json`. Status: **83/83 fitted MPNs, 52 opens,
+zero other native DRC errors and 233 text/silk warnings**.
 
 The six initial envelope corrections and subsequent U5/R27 corrections are
 applied with no new screen conflicts or component moves. Twelve U5 segment
@@ -191,11 +191,18 @@ the reproducible failed candidate and the two root defects. The considered
 backside via location is inside the retained conductive BT1 base projection
 and was not implemented.
 
-Next bounded item: review the actual VHI corridor and core escapes together,
-preserving feed width, existing connectivity and raw-contact exclusions.
-Select a local rearrangement or record the structural limit before another
-trial. Do not repeat the failed inner bridge or the blocked backside hop.
-No layer-count change has been selected. Three VCORE opens remain,
+**Corridor resolved:** the unchanged-width 0.80 mm VHI feed now uses the
+central B neck, not the blocked contact-base area. All nine original MCU
+ground vias and their drill/diameter are retained in a compact staggered
+array; the 0.60 mm ground grid follows them. This frees the inner 3V3 bridge
+and direct C8 regulator-output connection. Exact API geometry, three numerical
+array screens and the existing native/independent gates supported the change;
+no visual estimate or global autorouter supplied acceptance.
+
+The moved via array needs stencil/via and thermal review; unchanged via count
+does not prove unchanged thermal performance. No stackup change was made.
+Next bounded item: the two remaining VCORE distribution connections between
+the now-routed local decoupling groups. Two VCORE opens remain,
 along with other power, signals and ground islands. No new sourcing by default.
 Then follow constrained signals,
 remaining controls and final ground closure in the sequence above.

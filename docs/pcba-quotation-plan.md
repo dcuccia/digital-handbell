@@ -85,6 +85,13 @@ diodes and all connector/anchor operations; this is not an approved common
 reflow profile. Any accepted stencil revision must be reflected in matched,
 versioned exports before manufacture.
 
+The subsequent VHI/core corridor revision relocates the nine MCU ground vias
+while retaining their count, drill/diameter and existing exposed-pad mask/paste.
+Use the coordinates in `reports/core-power-corridor.json` for MCU
+stencil/via-treatment review; do not reuse an old thermal-via map or infer
+thermal/process equivalence from the unchanged count. This is separate from
+the four explicitly specified U4 filled/capped vias.
+
 1. Correct the boost hot loop and protector sense routing, then complete the
    remaining signal, control, USB, power/return and BTL connections.
 2. Resolve actual part identities and relevant electrical/package/height
