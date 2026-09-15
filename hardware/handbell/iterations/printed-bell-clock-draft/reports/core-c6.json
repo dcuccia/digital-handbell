@@ -1,0 +1,628 @@
+{
+  "status": "ACCEPTED_LOCAL_ROUTING_NOT_QUOTE_READY",
+  "input_commit": "fe3d2a7",
+  "input_pcb_sha256": "05889a98ea3b52861394930ebb34c306046f52fd88f9f100d5751a3dacce3be3",
+  "output_pcb_sha256": "f2c1fa15129ce8d2042492ff73c8d945222f3fe638e59096a4411ef2e13767f0",
+  "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+  "generator_sha256": "9d3a0fb6410c1ba892227a391ed512e67db3c0362c867a5bb756d0a808ea68b8",
+  "component_moves": [
+    {
+      "reference": "C6",
+      "delta_mm": [
+        0,
+        0.4
+      ],
+      "before": {
+        "reference": "C6",
+        "value": "0.1uF",
+        "mpn": "GRM155R71C104KA88D",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+        "x_mm": 5.497898178906023,
+        "y_mm": -0.400256220811345,
+        "width_mm": 1.616,
+        "depth_mm": 0.6,
+        "height_mm": 0.65,
+        "rotation_deg": -180,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          5.497898,
+          -0.400256
+        ],
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "core",
+        "manufacturer": "Murata"
+      },
+      "after": {
+        "reference": "C6",
+        "value": "0.1uF",
+        "mpn": "GRM155R71C104KA88D",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+        "x_mm": 5.497898178906023,
+        "y_mm": -0.0002562208113449649,
+        "width_mm": 1.616,
+        "depth_mm": 0.6,
+        "height_mm": 0.65,
+        "rotation_deg": -180,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          5.497898,
+          -0.00025599999999997847
+        ],
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "core",
+        "manufacturer": "Murata"
+      }
+    },
+    {
+      "reference": "C17",
+      "delta_mm": [
+        0,
+        0.32
+      ],
+      "before": {
+        "reference": "C17",
+        "value": "1uF/25V",
+        "mpn": "GRM155R61E105KA12D",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+        "x_mm": 5.499429397569307,
+        "y_mm": 0.8976751175629059,
+        "width_mm": 1.616,
+        "depth_mm": 0.6,
+        "height_mm": 0.65,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          5.499429,
+          0.897675
+        ],
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "core",
+        "manufacturer": "Murata"
+      },
+      "after": {
+        "reference": "C17",
+        "value": "1uF/25V",
+        "mpn": "GRM155R61E105KA12D",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+        "x_mm": 5.499429397569307,
+        "y_mm": 1.217675117562906,
+        "width_mm": 1.616,
+        "depth_mm": 0.6,
+        "height_mm": 0.65,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          5.499429,
+          1.217675
+        ],
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "core",
+        "manufacturer": "Murata"
+      }
+    },
+    {
+      "reference": "C8",
+      "delta_mm": [
+        0,
+        0.23
+      ],
+      "before": {
+        "reference": "C8",
+        "value": "1uF/25V",
+        "mpn": "GRM155R61E105KA12D",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+        "x_mm": 5.501068995683033,
+        "y_mm": 2.2001454707590473,
+        "width_mm": 1.616,
+        "depth_mm": 0.6,
+        "height_mm": 0.65,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          5.501069,
+          2.200145
+        ],
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "core",
+        "manufacturer": "Murata"
+      },
+      "after": {
+        "reference": "C8",
+        "value": "1uF/25V",
+        "mpn": "GRM155R61E105KA12D",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+        "x_mm": 5.501068995683033,
+        "y_mm": 2.4301454707590473,
+        "width_mm": 1.616,
+        "depth_mm": 0.6,
+        "height_mm": 0.65,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          5.501069,
+          2.430145
+        ],
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "core",
+        "manufacturer": "Murata"
+      }
+    },
+    {
+      "reference": "C13",
+      "delta_mm": [
+        0,
+        0.14
+      ],
+      "before": {
+        "reference": "C13",
+        "value": "0.1uF",
+        "mpn": "GRM155R71C104KA88D",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+        "x_mm": 5.502545755654523,
+        "y_mm": 3.5005374879615547,
+        "width_mm": 1.616,
+        "depth_mm": 0.6,
+        "height_mm": 0.65,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          5.502546,
+          3.500537
+        ],
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "core",
+        "manufacturer": "Murata"
+      },
+      "after": {
+        "reference": "C13",
+        "value": "0.1uF",
+        "mpn": "GRM155R71C104KA88D",
+        "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
+        "x_mm": 5.502545755654523,
+        "y_mm": 3.640537487961555,
+        "width_mm": 1.616,
+        "depth_mm": 0.6,
+        "height_mm": 0.65,
+        "rotation_deg": 0,
+        "side": "F",
+        "native_origin_common_xy_mm": [
+          5.502546,
+          3.640537
+        ],
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0,
+        "height_source": "Unqualified component-height planning proxy",
+        "proxy_kind": "envelope",
+        "geometry_interface": null,
+        "requires_shell_cutout": false,
+        "cluster": "core",
+        "manufacturer": "Murata"
+      }
+    }
+  ],
+  "screen": {
+    "new_proxy_overlap_pairs": [],
+    "inherited_proxy_overlap_pairs": [],
+    "moved_proxy_corners_outside_outline": [],
+    "resized_proxy_corners_outside_outline": [],
+    "resized_proxy_bounds_xy_mm": {},
+    "conservative_speaker_clearances": [
+      {
+        "reference": "C1",
+        "radial_clearance_mm": 1.8049210188053397,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C4",
+        "radial_clearance_mm": 5.97571981141513,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C5",
+        "radial_clearance_mm": 3.864055378635694,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C19",
+        "radial_clearance_mm": 3.230977704112714,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C20",
+        "radial_clearance_mm": 4.423376736704066,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C26",
+        "radial_clearance_mm": 2.03050464612417,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C27",
+        "radial_clearance_mm": 2.779999739373407,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "C28",
+        "radial_clearance_mm": 2.856910629831402,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "J1",
+        "radial_clearance_mm": 2.355000000000002,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "J2",
+        "radial_clearance_mm": 1.8724457161349282,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "L1",
+        "radial_clearance_mm": 1.8946066952598475,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      },
+      {
+        "reference": "X6",
+        "radial_clearance_mm": 9.120000000000003,
+        "speaker_band_z_mm": [
+          16.5,
+          23.5
+        ]
+      }
+    ],
+    "L1_yoke_axial_gap_mm": 0.6999999999999993,
+    "scope": "Unqualified component-envelope SAT/intersection screen only; not actual part or mechanical-fit approval",
+    "numerical_comparison_epsilon_mm": 2e-06
+  },
+  "added_tracks": [
+    {
+      "uuid": "2926377e-4800-5eca-9dcb-c369f23eef18",
+      "start_mm": [
+        103.45,
+        99.8
+      ],
+      "end_mm": [
+        104.1,
+        99.8
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "VCORE"
+    },
+    {
+      "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+      "start_mm": [
+        104.1,
+        99.8
+      ],
+      "end_mm": [
+        104.299744,
+        99.999744
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "VCORE"
+    },
+    {
+      "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+      "start_mm": [
+        104.299744,
+        99.999744
+      ],
+      "end_mm": [
+        104.989898,
+        99.999744
+      ],
+      "width_mm": 0.2,
+      "layer": "F.Cu",
+      "net": "VCORE"
+    }
+  ],
+  "changed_tracks": [
+    {
+      "uuid": "5d8ee764-fc16-570b-bb11-c5fe22ef5e4c",
+      "old": {
+        "start": [
+          103.45,
+          99.4
+        ],
+        "end": [
+          104.2,
+          99.4
+        ]
+      },
+      "new": {
+        "start": [
+          103.45,
+          99.4
+        ],
+        "end": [
+          106.95,
+          99.4
+        ]
+      },
+      "net": "QSPI_DATA[3]",
+      "width_mm_unchanged": 0.1778
+    },
+    {
+      "uuid": "8cfb8500-6d1c-58c7-98cb-563715142538",
+      "old": {
+        "start": [
+          106.95,
+          100.205
+        ],
+        "end": [
+          106.95,
+          98.75
+        ]
+      },
+      "new": {
+        "start": [
+          106.95,
+          99.4
+        ],
+        "end": [
+          106.95,
+          98.75
+        ]
+      },
+      "net": "QSPI_DATA[3]",
+      "width_mm_unchanged": 0.1778
+    },
+    {
+      "uuid": "e70cc137-e76b-5564-b300-9fc4582c0bfb",
+      "old": {
+        "start": [
+          106.7047,
+          101.8309
+        ],
+        "end": [
+          106.7047,
+          102.2
+        ]
+      },
+      "new": {
+        "start": [
+          106.7047,
+          102.102
+        ],
+        "end": [
+          106.7047,
+          102.2
+        ]
+      },
+      "net": "VCORE",
+      "width_mm_unchanged": 0.1778
+    },
+    {
+      "uuid": "50ee0fe3-be40-5757-b167-5e4537bba4cf",
+      "old": {
+        "start": [
+          106.4227,
+          101.5489
+        ],
+        "end": [
+          106.7047,
+          101.8309
+        ]
+      },
+      "new": {
+        "start": [
+          106.4227,
+          101.82
+        ],
+        "end": [
+          106.7047,
+          102.102
+        ]
+      },
+      "net": "VCORE",
+      "width_mm_unchanged": 0.1778
+    },
+    {
+      "uuid": "f466a216-ec52-563c-a64b-ada283d749fe",
+      "old": {
+        "start": [
+          105.0537,
+          101.5489
+        ],
+        "end": [
+          106.4227,
+          101.5489
+        ]
+      },
+      "new": {
+        "start": [
+          105.0537,
+          101.82
+        ],
+        "end": [
+          106.4227,
+          101.82
+        ]
+      },
+      "net": "VCORE",
+      "width_mm_unchanged": 0.1778
+    },
+    {
+      "uuid": "f5cfecfa-ba37-5c71-b382-3d66e24e0eda",
+      "old": {
+        "start": [
+          104.9931,
+          101.6095
+        ],
+        "end": [
+          105.0537,
+          101.5489
+        ]
+      },
+      "new": {
+        "start": [
+          104.9931,
+          101.8806
+        ],
+        "end": [
+          105.0537,
+          101.82
+        ]
+      },
+      "net": "VCORE",
+      "width_mm_unchanged": 0.1778
+    },
+    {
+      "uuid": "75b4f4dd-4137-57a3-9222-82ffe72ea4b6",
+      "old": {
+        "start": [
+          104.9931,
+          102.2001
+        ],
+        "end": [
+          104.9931,
+          101.6095
+        ]
+      },
+      "new": {
+        "start": [
+          104.9931,
+          102.4301
+        ],
+        "end": [
+          104.9931,
+          101.8806
+        ]
+      },
+      "net": "VCORE",
+      "width_mm_unchanged": 0.1778
+    }
+  ],
+  "removed_tracks": [
+    {
+      "uuid": "4b83724d-1dab-5713-8037-94114a8745ff",
+      "old": {
+        "start": [
+          104.2,
+          99.4
+        ],
+        "end": [
+          104.2,
+          100.205
+        ]
+      },
+      "net": "QSPI_DATA[3]",
+      "width_mm": 0.1778
+    },
+    {
+      "uuid": "8149354a-fbd8-52cd-a5c8-eb324b57082e",
+      "old": {
+        "start": [
+          104.2,
+          100.205
+        ],
+        "end": [
+          106.95,
+          100.205
+        ]
+      },
+      "net": "QSPI_DATA[3]",
+      "width_mm": 0.1778
+    }
+  ],
+  "new_vias": [],
+  "ground_fill_invalidated": true,
+  "required_connections": [
+    [
+      "IC1.50",
+      "C6.2"
+    ],
+    [
+      "IC1.51",
+      "U1.7"
+    ]
+  ],
+  "remaining": "Remaining core/power/signals/ground, exact mechanical rebind and supplier quotation assets. Not functional or manufacturing approval.",
+  "unfilled_candidate_sha256": "47ac4d4ae5f98ceadb44cfa3ca8d849c25274c2d1e7230a326544f5c584cbf18",
+  "output_manifest_sha256": "3ea13284cc6c527ff7933244a0f183651d0f66a7c56592841dcc271a75ee1f7f",
+  "native_unconnected": 53,
+  "native_errors": 0,
+  "native_warnings": 231,
+  "verification_reports": {
+    "core-c6-drc.json": "33a273160b1233d6c5868b67bae906a741e6f2eeb22f7d94432975078aac466c",
+    "core-c6-ground-check.json": "f5027e1f6a513f4ad00b8bfad3d7a1b7043e18b898e1fa352c59451f6e5ac19e"
+  },
+  "schematic_and_plan_unchanged": true,
+  "nonselected_geometry_preserved": true,
+  "erc_reused": {
+    "report": "reports/power-device-erc.json",
+    "sha256": "101a50e8475de35ff501fcbf2093789f56f388abf861110e6b304097d48105ed",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e"
+  }
+}

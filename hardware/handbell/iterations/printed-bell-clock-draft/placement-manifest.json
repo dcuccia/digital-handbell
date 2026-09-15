@@ -742,7 +742,7 @@
     "C29"
   ],
   "status": "CLOCK_CLUSTER_ROUTED_GLOBAL_GATES_OPEN",
-  "generated_pcb_sha256": "05889a98ea3b52861394930ebb34c306046f52fd88f9f100d5751a3dacce3be3",
+  "generated_pcb_sha256": "f2c1fa15129ce8d2042492ff73c8d945222f3fe638e59096a4411ef2e13767f0",
   "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
@@ -958,7 +958,7 @@
       "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.497898178906023,
-      "y_mm": -0.400256220811345,
+      "y_mm": -0.0002562208113449649,
       "width_mm": 1.616,
       "depth_mm": 0.6,
       "height_mm": 0.65,
@@ -966,7 +966,7 @@
       "side": "F",
       "native_origin_common_xy_mm": [
         5.497898,
-        -0.400256
+        -0.00025599999999997847
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -1008,7 +1008,7 @@
       "mpn": "GRM155R61E105KA12D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.501068995683033,
-      "y_mm": 2.2001454707590473,
+      "y_mm": 2.4301454707590473,
       "width_mm": 1.616,
       "depth_mm": 0.6,
       "height_mm": 0.65,
@@ -1016,7 +1016,7 @@
       "side": "F",
       "native_origin_common_xy_mm": [
         5.501069,
-        2.200145
+        2.430145
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -1133,7 +1133,7 @@
       "mpn": "GRM155R71C104KA88D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.502545755654523,
-      "y_mm": 3.5005374879615547,
+      "y_mm": 3.640537487961555,
       "width_mm": 1.616,
       "depth_mm": 0.6,
       "height_mm": 0.65,
@@ -1141,7 +1141,7 @@
       "side": "F",
       "native_origin_common_xy_mm": [
         5.502546,
-        3.500537
+        3.640537
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -1233,7 +1233,7 @@
       "mpn": "GRM155R61E105KA12D",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": 5.499429397569307,
-      "y_mm": 0.8976751175629059,
+      "y_mm": 1.217675117562906,
       "width_mm": 1.616,
       "depth_mm": 0.6,
       "height_mm": 0.65,
@@ -1241,7 +1241,7 @@
       "side": "F",
       "native_origin_common_xy_mm": [
         5.499429,
-        0.897675
+        1.217675
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -3421,5 +3421,5 @@
       }
     ]
   },
-  "current_stage_report": "reports/core-supply-local.json"
+  "current_stage_report": "reports/core-c6.json"
 }

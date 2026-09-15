@@ -30,7 +30,9 @@ engineering checkpoint, not a complete or qualified board.
 are applied without moving parts. The selected U5 boost and R27 current-sense
 land patterns are now applied too, with local U5 escape corrections and a
 matching enlargement of R27's protected ground exclusion. The first local
-core-supply link, IC1.23 to C18.2, is now routed; **55 opens remain**.
+core-supply links to C18 and C6 are now routed; **53 opens remain**.
+C6's QSPI obstruction was resolved by a shorter QSPI escape and small
+capacitor-column moves, retaining the existing courtyard geometry.
 Remaining native lands are retained for routing with explicit
 supplier-process questions, including filled/capped amplifier thermal vias;
 two-layer supplier availability and price are not yet confirmed.

@@ -10,8 +10,32 @@ connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; USB geometry is bound by
 `reports/usb-geometry.json`; identities by `reports/remaining-identities.json`.
-**The current board and manifest are bound by `reports/core-supply-local.json`.**
+**The current board and manifest are bound by `reports/core-c6.json`.**
 Figures and hashes in the earlier stage sections below are historical.
+
+## September 15 C6 core-supply and QSPI closure
+
+IC1.50 now connects to C6.2 through three 0.20 mm front tracks. The blocking
+QSPI_DATA[3] detour is shortened, preserving its 0.1778 mm width and the
+IC1.51/U1.7 connection. No vias or layers were added.
+
+One initial pass and two bounded corrections resolved the actual courtyard
+conflict without shrinking courtyards: C6 moves +0.40 mm in native Y, C17
++0.32 mm, C8 +0.23 mm and C13 +0.14 mm. Five existing VCORE bridge segments
+follow the changed capacitor spacing with their widths retained. Other parts,
+the schematic, fixed interfaces and ground-exclusion plan are unchanged.
+
+The resulting filled board has **53 opens, zero other native DRC errors and
+231 text/silk warnings**. VCORE falls from four opens to three, and GND from
+19 to 18; prior connected groups and both private returns are preserved.
+The moved envelopes pass the existing proxy screen; complete CAD rebinding
+and physical-fit qualification remain open.
+
+Reproduce the unfilled candidate from `fe3d2a7` with
+`tools/route_core_c6.py OUTPUT --clear-c17-courtyard --spread-core-column`.
+The report's required connections include the new C6 link and retained QSPI
+link; the ground proof additionally requires the C8/C7 VCORE bridge.
+The next core target is IC1.45/C8.1, still separated by existing 3V3 routing.
 
 ## September 15 first core-decoupling connection
 
