@@ -275,6 +275,7 @@ class Router:
         return masks, via_mask
 
     def search(self, a, b, net, width, allow_vias=False, margin=3, expansion_limit=220000, endpoint_layers=(0, 0)):
+        self.last_search_statistics = {"status": "building_masks", "expanded": 0, "limit": expansion_limit}
         xmin, ymin, xs, ys = self.local_grid(a, b, margin)
         masks, via_mask = self.masks(net, width, xs, ys, allow_vias)
         ny, nx = masks.shape[1:]
@@ -285,6 +286,8 @@ class Router:
             return min(options, key=lambda q: math.dist([xs[q[0]], ys[q[1]]], p)) if options else None
         start, goal = closest(a, endpoint_layers[0]), closest(b, endpoint_layers[1])
         if start is None or goal is None:
+            self.last_search_statistics.update(status="endpoint_unavailable", start_available=start is not None,
+                                               goal_available=goal is not None)
             return None
         def encode(x, y, layer):
             return (layer*ny+y)*nx+x
@@ -305,6 +308,7 @@ class Router:
             if current in closed:
                 continue
             if current == target:
+                self.last_search_statistics.update(status="found", expanded=count)
                 nodes = [current]
                 while current != initial:
                     current = previous[current]
@@ -314,6 +318,7 @@ class Router:
             closed.add(current)
             count += 1
             if count > expansion_limit:
+                self.last_search_statistics.update(status="expansion_limit", expanded=count)
                 return None
             x, y, layer = decode(current)
             neighbors = []
@@ -335,6 +340,7 @@ class Router:
                     dx, dy = abs(goal[0]-xx), abs(goal[1]-yy)
                     heuristic = max(dx, dy)+.414214*min(dx, dy)+(80 if ll != endpoint_layers[1] else 0)
                     heapq.heappush(heap, (score+heuristic, node))
+        self.last_search_statistics.update(status="no_path_in_masked_domain", expanded=count)
         return None
 
     def add_path(self, path, net, width, group):

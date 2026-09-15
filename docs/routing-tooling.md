@@ -188,3 +188,19 @@ has 52 opens. C18 was not attempted.
 needed before another attempt here. Neither faster search nor a connected
 signal compensates for losing its return. This does not prove the two-layer
 board impossible; the fixed-layout, sampled search cannot resolve it yet.
+
+### GAIN follow-up: report why search stopped
+
+An independent GAIN attempt also stopped without accepted copper.
+A 3V3 via/two-endpoint shift near U4 was screened as a local escape correction,
+but did not produce a route. The final 8 mm-margin, 160,000-expansion-budget
+attempt exhausted its masked component after **147 expansions**. This is not
+a timeout or evidence that a larger computation budget will fix it.
+The [attempt record](../hardware/handbell/iterations/printed-bell-clock-draft/reports/gain-routing-attempt.json)
+preserves all cases and the unapplied correction. Twelve nearby gain-jumper
+positions also failed the copper screen; none was moved.
+
+The existing search now distinguishes missing endpoints, expansion-limit
+exhaustion and no path in its sampled domain. That diagnostic distinction is
+not a proof of continuous geometric impossibility. Stop GAIN retries pending
+local escape/topology review; retain the accepted 52-open board.

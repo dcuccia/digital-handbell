@@ -1,0 +1,79 @@
+{
+  "status": "BOUNDED_GAIN_ATTEMPT_STOPPED_NO_BOARD_CHANGE",
+  "input_pcb_sha256": "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f",
+  "cases": [
+    {
+      "case": "gain-routing",
+      "status": "NO_BOUNDED_PAD_PAIR_PATH_NOT_PROOF_OF_IMPOSSIBILITY",
+      "input_pcb_sha256": "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f",
+      "from": "U4.2",
+      "to": "GAIN0.2",
+      "tool_sha256": "d7c0d6badd1ef9c2b16057d0b82a7d6626e64c589d73fa3b8a02bd9897c1e252",
+      "source_modified": false,
+      "completed_pairs": 0,
+      "planned_tracks": [],
+      "planned_vias": [],
+      "elapsed_seconds": 5.030999999959022,
+      "note": "Inspect existing connected-group terminals before changing layout or widening search."
+    },
+    {
+      "case": "gain-routing-r1",
+      "status": "NO_BOUNDED_PAD_PAIR_PATH_NOT_PROOF_OF_IMPOSSIBILITY",
+      "input_pcb_sha256": "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f",
+      "from": "U4.2",
+      "to": "GAIN0.2",
+      "tool_sha256": "676e92b8b84aa4ddb7aabfb5acb9323093e951ce84becb7906ee3cbdf4655da3",
+      "source_modified": false,
+      "completed_pairs": 0,
+      "planned_tracks": [],
+      "planned_vias": [],
+      "elapsed_seconds": 5.375,
+      "note": "Inspect existing connected-group terminals before changing layout or widening search."
+    },
+    {
+      "case": "gain-routing-r2",
+      "status": "NO_BOUNDED_PAD_PAIR_PATH_NOT_PROOF_OF_IMPOSSIBILITY",
+      "input_pcb_sha256": "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f",
+      "from": "U4.2",
+      "to": "GAIN0.2",
+      "tool_sha256": "01288b0bbd724a5ac3794c7c43c023de1db7a3670e4c47c08a98344d05904810",
+      "source_modified": false,
+      "completed_pairs": 0,
+      "planned_tracks": [],
+      "planned_vias": [],
+      "search_statistics": {
+        "status": "no_path_in_masked_domain",
+        "expanded": 147,
+        "limit": 160000
+      },
+      "elapsed_seconds": 9.547000000020489,
+      "note": "Inspect existing connected-group terminals before changing layout or widening search."
+    }
+  ],
+  "unapplied_escape_correction": {
+    "via_uuid": "b86f2ac1-88d2-59d4-863c-429ca8108ae3",
+    "net": "+3V3",
+    "old_mm": [
+      108.3,
+      89.8
+    ],
+    "new_mm": [
+      107.9,
+      89.4
+    ],
+    "diameter_mm": 0.6,
+    "drill_mm": 0.3,
+    "incident_track_uuids": [
+      "9a956178-8111-529e-9a8e-751c4638af6e",
+      "66f2c2c9-98fa-5aa7-aadd-fc70574ee365"
+    ],
+    "width_mm_retained": 0.25,
+    "primitive_screen": "No foreign-net copper collision at 0.2 mm in the screened shifted via/two-track geometry; no acceptance implied."
+  },
+  "final_search_margin_mm": 8,
+  "final_search_limit": 160000,
+  "finding": "Final corrected-source search exhausts its masked component after 147 expansions, not a timeout/expansion limit. Local GAIN escape/topology needs review; more whole-board search is not justified.",
+  "jumper_placement_screen": "Twelve nearby candidate centers rejected by native pad/copper clearance screen; no jumper moved.",
+  "accepted_native_opens_unchanged": 52,
+  "remaining": "Retain all accepted copper. Do not promote the unused 3V3 move or continue unchanged-layout GAIN trials."
+}

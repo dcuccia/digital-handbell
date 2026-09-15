@@ -233,6 +233,11 @@ find VCORE paths. The [preserved supply/return attempt](routing-tooling.md#group
 is not accepted copper. This core-distribution item now needs a coordinated
 corridor repair, not another unchanged-layout retry. Other independent
 routing items may proceed under the owner's continued-work authorization.
+The independent [GAIN attempt](routing-tooling.md#gain-follow-up-report-why-search-stopped)
+also stopped at its correction limit without changing the board. Its sampled
+component exhausted after 147 expansions, so do not respond with a larger
+unfocused search budget. Prioritize short independent connections while
+preserving these concrete local-layout blockers.
 
 The full mechanical bind, 0.15 mm USB bezel adjustment, native CAD camera-state
 handoff, current budgets, supplier processes and matched quotation exports are
