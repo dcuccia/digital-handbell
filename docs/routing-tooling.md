@@ -168,3 +168,23 @@ python -c "import subprocess; subprocess.run(['python', r'tools\experiments\diag
 
 Use an existing output parent and a new report filename. Both experiments
 require the exact accepted `57ae2c0b...` board.
+
+### Group-terminal follow-up: preserve supply and return together
+
+The C6.2/C7.2 candidate generated in 2.094 seconds, with thirteen 0.20 mm
+F tracks and no new vias or moved parts. It was **rejected**, not promoted:
+refilling split the original capacitor-ground group into C6 alone, C17 alone,
+and C7/C8/C13 together. The candidate had 53 opens despite joining the VCORE
+groups and having no other native DRC errors.
+
+Two corrections reserved explicit F ground connections before searching
+for VCORE, first on the 0.05 mm grid and then at 0.025 mm. Neither found a
+VCORE path within the fixed budget. The
+[preserved attempt](../hardware/handbell/iterations/printed-bell-clock-draft/reports/core-distribution-right-attempt.json)
+records the initial copper and failed corrections. The original board still
+has 52 opens. C18 was not attempted.
+
+**Affected item stopped:** a coordinated supply/return corridor repair is
+needed before another attempt here. Neither faster search nor a connected
+signal compensates for losing its return. This does not prove the two-layer
+board impossible; the fixed-layout, sampled search cannot resolve it yet.

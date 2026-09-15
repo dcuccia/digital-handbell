@@ -227,6 +227,13 @@ for the C6 group, then join C18 to the merged group.** Do not infer a need to
 move parts or modify 3V3 from the failed C8-only search. Exact route acceptance
 is still outstanding.
 
+**C6/C7 follow-up stopped:** a generated F route split the local capacitor
+ground group after refill. Both bounded ground-first corrections failed to
+find VCORE paths. The [preserved supply/return attempt](routing-tooling.md#group-terminal-follow-up-preserve-supply-and-return-together)
+is not accepted copper. This core-distribution item now needs a coordinated
+corridor repair, not another unchanged-layout retry. Other independent
+routing items may proceed under the owner's continued-work authorization.
+
 The full mechanical bind, 0.15 mm USB bezel adjustment, native CAD camera-state
 handoff, current budgets, supplier processes and matched quotation exports are
 still pending. Preserve earlier prints, models and the recovered candidate.

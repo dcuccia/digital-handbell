@@ -19,7 +19,8 @@ from route_clock_local import PACKAGE, sha
 from route_printed_bell import GRID, Router
 
 BASE = "57ae2c0b54e1313fb175ccdecdee07ebda07abed5151e776c9767511135d440f"
-PAIRS = (("C6.2", "C8.1"), ("C18.2", "C8.1"))
+PAIRS = (("C6.2", "C7.2"),)
+STAGE = "core-distribution-right"
 
 
 class NativeRouter(Router):
@@ -89,9 +90,16 @@ class NativeRouter(Router):
 
 
 def main():
+    global GRID
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--reserve-ground", action="store_true",
+                        help="Route the affected ground group first, then route VCORE around it")
+    parser.add_argument("--fine-grid", action="store_true", help="One bounded 0.025 mm sampling correction")
     args = parser.parse_args()
+    if args.fine_grid:
+        import route_printed_bell
+        route_printed_bell.GRID = GRID = .025
     out = args.output.resolve()
     if out.exists() or sha(PACKAGE / "handbell.kicad_pcb") != BASE:
         raise ValueError("Require pinned corridor board and a new output directory")
@@ -105,21 +113,36 @@ def main():
     pads = {f.GetReference()+"."+p.GetNumber(): p for f in board.GetFootprints() for p in f.Pads()}
     router = NativeRouter(board, pcb)
     started = time.monotonic()
-    for a, b in PAIRS:
-        assert pads[a].GetNetname() == pads[b].GetNetname() == "VCORE"
+    pairs = list(PAIRS)
+    if args.reserve_ground:
+        pairs = [("C6.1", "C7.1"), ("C17.2", "C7.1"), ("C7.1", "C8.2"), ("C8.2", "C13.2")] + pairs
+    for a, b in pairs:
+        net = pads[a].GetNetname()
+        assert net == pads[b].GetNetname() and net in ("VCORE", "GND")
         points = [[pcb.ToMM(v)-100 for v in pads[n].GetPosition()] for n in (a, b)]
-        path = router.search(*points, "VCORE", .2, True, 4, expansion_limit=80000)
+        path = router.search(*points, net, .2, net != "GND", 4, expansion_limit=80000)
         if path is None:
             out.mkdir(parents=True)
             failure = {"status": "NO_BOUNDED_PAD_PAIR_PATH_NOT_PROOF_OF_IMPOSSIBILITY",
                        "input_pcb_sha256": BASE, "from": a, "to": b,
                        "tool_sha256": sha(Path(__file__)), "source_modified": False,
                        "completed_pairs": len(router.results),
+                       "planned_tracks": router.tracks, "planned_vias": router.vias,
                        "elapsed_seconds": time.monotonic()-started,
                        "note": "Inspect existing connected-group terminals before changing layout or widening search."}
             (out / "failure.json").write_bytes((json.dumps(failure, indent=2)+"\n").encode("utf-8"))
             raise RuntimeError(f"No bounded native-mask path: {a}/{b}")
-        router.add_path(path, "VCORE", .2, a+" to "+b)
+        first = len(router.tracks)
+        router.add_path(path, net, .2, a+" to "+b)
+        for track in router.tracks[first:]:
+            item = pcb.PCB_TRACK(board)
+            item.SetLayer(pcb.F_Cu if track["layer"] == "F.Cu" else pcb.B_Cu)
+            item.SetWidth(pcb.FromMM(track["width"]))
+            item.SetNetCode(pads[a].GetNetCode())
+            item.SetStart(pcb.VECTOR2I(*(pcb.FromMM(v+100) for v in track["a"])))
+            item.SetEnd(pcb.VECTOR2I(*(pcb.FromMM(v+100) for v in track["b"])))
+            board.Add(item)
+            router.obstacles.append(item)
         router.results.append({"from": a, "to": b, "path": path})
     for track in router.tracks:
         layer = pcb.F_Cu if track["layer"] == "F.Cu" else pcb.B_Cu
@@ -130,7 +153,7 @@ def main():
         item.SetEnd(pcb.VECTOR2I(*(pcb.FromMM(v+100) for v in track["b"])))
         shape = item.GetEffectiveShape(layer)
         for obstacle in router.obstacles:
-            if obstacle.IsOnLayer(layer) and obstacle.GetNetname() != "VCORE":
+            if obstacle.IsOnLayer(layer) and obstacle.GetNetname() != track["net"]:
                 if shape.Collide(obstacle.GetEffectiveShape(layer), pcb.FromMM(.2)-1):
                     raise ValueError("Exact candidate edge clearance: "+obstacle.m_Uuid.AsString())
         if layer == pcb.B_Cu:
@@ -140,14 +163,14 @@ def main():
     additions, tracks, vias = [], [], []
     for i, t in enumerate(router.tracks):
         a, b = [[round(v+100, 6) for v in t[k]] for k in ("a", "b")]
-        uid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"digital-handbell/core-distribution/track/{i}"))
+        uid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"digital-handbell/{STAGE}/track/{i}"))
         additions.append(f'\n(segment (start {a[0]} {a[1]}) (end {b[0]} {b[1]}) '
-                         f'(width {t["width"]}) (layer "{t["layer"]}") (net "VCORE") (uuid "{uid}"))')
+                         f'(width {t["width"]}) (layer "{t["layer"]}") (net "{t["net"]}") (uuid "{uid}"))')
         tracks.append({"uuid": uid, "start_mm": a, "end_mm": b, "width_mm": t["width"],
-                       "layer": t["layer"], "net": "VCORE"})
+                       "layer": t["layer"], "net": t["net"]})
     for i, v in enumerate(router.vias):
         at = [round(x+100, 6) for x in v["xy"]]
-        uid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"digital-handbell/core-distribution/via/{i}"))
+        uid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"digital-handbell/{STAGE}/via/{i}"))
         additions.append(f'\n(via (at {at[0]} {at[1]}) (size 0.6) (drill 0.3) '
                          f'(layers "F.Cu" "B.Cu") (net "VCORE") (uuid "{uid}"))')
         vias.append({"uuid": uid, "at_mm": at, "diameter_mm": .6, "drill_mm": .3, "net": "VCORE"})
@@ -157,20 +180,21 @@ def main():
     (out / "handbell.kicad_pcb").write_bytes(apply_edits(text, edits).encode("utf-8"))
     manifest = json.loads((PACKAGE / "placement-manifest.json").read_text(encoding="utf-8"))
     manifest.update(generated_pcb_sha256=sha(out / "handbell.kicad_pcb"),
-                    current_stage_report="reports/core-distribution.json")
+                    current_stage_report=f"reports/{STAGE}.json")
     (out / "placement-manifest.json").write_bytes((json.dumps(manifest, indent=2)+"\n").encode("utf-8"))
     (out / "reports").mkdir()
     shutil.copyfile(PACKAGE / "reports" / "front-ground-plan.json", out / "reports" / "front-ground-plan.json")
-    report = {"status": "STAGED_NOT_ACCEPTED", "input_commit": "0d2f726", "input_pcb_sha256": BASE,
+    report = {"status": "STAGED_NOT_ACCEPTED", "input_commit": "60db9b4", "input_pcb_sha256": BASE,
               "output_pcb_sha256": sha(out / "handbell.kicad_pcb"), "generator_sha256": sha(Path(__file__)),
               "search_tool_sha256": sha(Path(__file__).parents[1] / "route_printed_bell.py"),
               "component_moves": [], "added_tracks": tracks, "changed_tracks": [], "removed_tracks": [],
-              "new_vias": vias, "required_connections": PAIRS, "search_seconds": time.monotonic()-started,
+              "new_vias": vias, "required_connections": pairs, "search_seconds": time.monotonic()-started,
+              "ground_group_routed_first": args.reserve_ground,
               "grid_mm": GRID, "expansion_limit_per_connection": 80000, "search_margin_mm": 4,
               "contact_interface_sha256": sha(PACKAGE / "battery-contact-interface.json"),
               "ground_fill_invalidated": True,
               "remaining": "Exact edge/via DRC, filled independent continuity and unchanged-source gates required."}
-    (out / "reports" / "core-distribution.json").write_bytes((json.dumps(report, indent=2)+"\n").encode("utf-8"))
+    (out / "reports" / f"{STAGE}.json").write_bytes((json.dumps(report, indent=2)+"\n").encode("utf-8"))
     print(json.dumps(report))
 
 

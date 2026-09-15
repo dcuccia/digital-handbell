@@ -20,6 +20,10 @@ fixed-endpoint/grid limitation, not a proven layout defect: C7 is already
 connected to C8 and offers a reachable terminal for C6's group. See the
 [tooling handoff](../../../../docs/routing-tooling.md#subsequent-vcore-grid-attempt)
 before another attempt. Both VCORE distribution connections remain open.
+The [C6/C7 follow-up](reports/core-distribution-right-attempt.json) generated
+signal copper but split the capacitor-ground group after refill. It and two
+ground-first corrections were not accepted. The current PCB remains unchanged;
+core distribution needs a coordinated supply/return repair.
 
 ## September 15 VHI corridor and C8 regulator-output closure
 
