@@ -1,0 +1,140 @@
+{
+  "status": "UNACCEPTED_BLOCKED_C8_EXPERIMENT",
+  "accepted_pcb_sha256": "f2c1fa15129ce8d2042492ff73c8d945222f3fe638e59096a4411ef2e13767f0",
+  "candidate_unfilled_sha256": "89c73cdaf63bec0d05e265beb59353fc98f6f7edcb2e533dfae03b002207ec3f",
+  "generator": "tools/experiments/route_core_c8.py",
+  "generator_sha256": "5a27128262b25e83dac64bfb4ee8379c709f26789d301c859b7a885b0abdda3e",
+  "reproduced_initial_candidate_bytes": true,
+  "native_drc_report": "reports/core-c8-attempt-drc.json",
+  "native_drc_sha256": "94ff6923d2a95eafe35765c7f7b0359740718f84987d9bb539540c3d4fe0ade0",
+  "native_errors": [
+    {
+      "description": "Items shorting two nets (nets +3V3 and VHI)",
+      "items": [
+        {
+          "description": "Track [+3V3] on F.Cu, length 2.0000 mm",
+          "pos": {
+            "x": 102.65,
+            "y": 100.2
+          },
+          "uuid": "1229622c-426c-5dc6-bb13-5a5d826f90bf"
+        },
+        {
+          "description": "Track [VHI] on F.Cu, length 4.6000 mm",
+          "pos": {
+            "x": 102.3,
+            "y": 97.7
+          },
+          "uuid": "f65734e6-a23d-5b8f-9f86-b9c463595aa2"
+        }
+      ],
+      "severity": "error",
+      "type": "shorting_items"
+    },
+    {
+      "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1119 mm)",
+      "items": [
+        {
+          "description": "Track [VCORE] on F.Cu, length 0.7931 mm",
+          "pos": {
+            "x": 104.2,
+            "y": 101.9
+          },
+          "uuid": "862e4270-8a93-5fd0-aed6-9befc7c3ea9b"
+        },
+        {
+          "description": "Track [+3V3] on F.Cu, length 0.1281 mm",
+          "pos": {
+            "x": 104.05,
+            "y": 102.2
+          },
+          "uuid": "d4c4be10-c85c-53ad-9480-b98a602ff455"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Clearance violation ( clearance 0.2000 mm; actual 0.1119 mm)",
+      "items": [
+        {
+          "description": "Track [+3V3] on F.Cu, length 0.2501 mm",
+          "pos": {
+            "x": 104.1781,
+            "y": 102.4501
+          },
+          "uuid": "2af66fa2-da42-56a5-b76a-3da8c97042ed"
+        },
+        {
+          "description": "Track [VCORE] on F.Cu, length 0.7931 mm",
+          "pos": {
+            "x": 104.2,
+            "y": 101.9
+          },
+          "uuid": "862e4270-8a93-5fd0-aed6-9befc7c3ea9b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    },
+    {
+      "description": "Items shorting two nets (nets +3V3 and VHI)",
+      "items": [
+        {
+          "description": "Track [+3V3] on F.Cu, length 2.0000 mm",
+          "pos": {
+            "x": 102.65,
+            "y": 100.2
+          },
+          "uuid": "1229622c-426c-5dc6-bb13-5a5d826f90bf"
+        },
+        {
+          "description": "Track [VHI] on F.Cu, length 2.3000 mm",
+          "pos": {
+            "x": 102.3,
+            "y": 102.3
+          },
+          "uuid": "44c981e1-c131-5c74-89b2-361ded83799d"
+        }
+      ],
+      "severity": "error",
+      "type": "shorting_items"
+    }
+  ],
+  "native_report_reused_only_after_identical_board_bytes": true,
+  "root_defects": [
+    {
+      "issue": "Proposed inner 3V3 bridge intersects existing VHI feed",
+      "existing_track_uuids": [
+        "f65734e6-a23d-5b8f-9f86-b9c463595aa2",
+        "44c981e1-c131-5c74-89b2-361ded83799d"
+      ]
+    },
+    {
+      "issue": "Two retained lower 3V3 stubs approach the proposed VCORE link",
+      "existing_track_uuids": [
+        "d4c4be10-c85c-53ad-9480-b98a602ff455",
+        "2af66fa2-da42-56a5-b76a-3da8c97042ed"
+      ]
+    }
+  ],
+  "backside_shortcut_not_implemented": {
+    "screened_native_xy_mm": [
+      106.815,
+      100.1
+    ],
+    "inside_retained_BT1_under_cell_base": true,
+    "contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "source_primitive": {
+      "x_min": 5.685,
+      "x_max": 18.685,
+      "y_width": 11.13,
+      "z_min": 26.6,
+      "thickness": 0.3
+    },
+    "limitation": "Retained conservative contact-metal reservation, not measured loaded geometry. This location is not available for a foreign-net via; do not rely on solder mask for isolation."
+  },
+  "next_scope": "Review the actual VHI power corridor and constrained core escapes together. Preserve feed width/protection and raw-contact exclusions. Do not repeat this inner bridge or use the blocked backside shortcut. No layer-count change selected.",
+  "active_design_changed_by_experiment": false,
+  "remaining_accepted_opens": 53
+}

@@ -184,9 +184,18 @@ IC1.50/C6.2 is now connected after shortening QSPI_DATA[3] and moving the
 C6/C17/C8/C13 column by +0.40/+0.32/+0.23/+0.14 mm in native Y. Courtyards,
 trace widths, fixed interfaces and via inventory are preserved.
 
-Next bounded item: IC1.45/C8.1 still meets existing 3V3 routing. Use that
-pair's exact blocker UUIDs in `reports/core-supply-local.json` for local
-rearrangement, not its now-obsolete C6 blocker list. Three VCORE opens remain,
+The next IC1.45/C8.1 trial was **not accepted**. Its proposed inner 3V3 bridge
+intersects the existing VHI feed, and two residual lower 3V3 stubs approach
+the proposed VCORE link. `reports/core-c8-attempt.json` records exact UUIDs,
+the reproducible failed candidate and the two root defects. The considered
+backside via location is inside the retained conductive BT1 base projection
+and was not implemented.
+
+Next bounded item: review the actual VHI corridor and core escapes together,
+preserving feed width, existing connectivity and raw-contact exclusions.
+Select a local rearrangement or record the structural limit before another
+trial. Do not repeat the failed inner bridge or the blocked backside hop.
+No layer-count change has been selected. Three VCORE opens remain,
 along with other power, signals and ground islands. No new sourcing by default.
 Then follow constrained signals,
 remaining controls and final ground closure in the sequence above.

@@ -37,6 +37,26 @@ The report's required connections include the new C6 link and retained QSPI
 link; the ground proof additionally requires the C8/C7 VCORE bridge.
 The next core target is IC1.45/C8.1, still separated by existing 3V3 routing.
 
+### Unaccepted C8 corridor experiment
+
+`reports/core-c8-attempt.json` preserves the next trial and its finite repair
+list. It is **not the active board**. An attempted inner 3V3 bridge intersects
+the existing VHI power feed; two remaining lower 3V3 stubs also approach the
+proposed VCORE link. Four native findings represent these two root problems.
+
+The considered backside hop at native (106.815, 100.1) lies inside the retained
+BT1 conductive under-cell-base projection. It was not added; solder mask is
+not a substitute for that metal exclusion. This is a conservative model
+constraint, not a new measurement of the loaded contact.
+
+Reproduce only for investigation using
+`tools/experiments/route_core_c8.py OUTPUT` from `58a8990`. Its emitted board
+matches the recorded failed candidate byte-for-byte. No failed copper,
+component movement or stackup change was promoted. The accepted board remains
+at 53 opens. Next review the VHI corridor and core escapes together before
+another routing attempt, retaining feed width, protection and contact
+exclusions rather than broadening an automatic search.
+
 ## September 15 first core-decoupling connection
 
 IC1.23 now connects to C18.2 through three 0.20 mm F-side VCORE segments.
