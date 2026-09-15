@@ -10,9 +10,36 @@ connections in `54a40d7`, and library metadata alignment in `1a83d8c`. Older
 reports bind their named stages, not later PCBs. The clock geometry is bound
 by `reports/clock-approaches.json`; USB geometry is bound by
 `reports/usb-geometry.json`; identities by `reports/remaining-identities.json`.
-**The current power-land board is bound by `reports/power-lands.json`; the
-latest manifest-only revision is bound by `reports/device-envelopes.json`.**
+**The current board and manifest are bound by `reports/power-device-lands.json`.**
 Figures and hashes in the earlier stage sections below are historical.
+
+## September 15 U5/R27 land closure
+
+The already selected TPS61023 and Panasonic ERJ-6BW shunt now use their
+recorded manufacturer land examples. U5 has 0.67 x 0.30 mm R0.05 lands at
+X +/-0.74, with 0.05 mm mask expansion and matching paste. R27 has
+1.15 x 1.40 mm lands at X +/-1.025. Their conservative envelopes are now
+2.15 x 2.00 x 0.65 and 3.20 x 1.45 x 0.75 mm respectively; no part moved.
+
+Two bounded corrections followed the initial land pass: 12 existing U5
+segment endpoint edits clear the enlarged lands without reducing widths;
+R27.2's existing pour-only exclusion grows with its pad, retaining the
+0.251 mm bounding margin and the independent sense pickup. No vias were
+added or moved, and no other component geometry changed.
+
+The filled board retains **56 opens, zero other native DRC errors and
+232 text/silk warnings**; ERC is empty. Eighteen relevant tracks were
+remeasured: three increased primitive-only exposed centerline length,
+by at most 0.095 mm. This is not resistance, current or thermal qualification.
+The second correction reused unchanged non-zone evidence and schematic ERC;
+the final filled board has its own native and public ground reports.
+
+Reproduce the unfilled stages from `a548769` using
+`tools/apply_power_device_lands.py OUTPUT`, adding `--repair-u5-escapes`
+for the first correction and `--expand-r27-exclusion` for the second.
+Use the source-preserving refill and public ground checker afterward; staged
+output is never automatically accepted. Other device/process dispositions,
+56 connections, full CAD and matched quotation assets remain open.
 
 ## September 15 device envelopes and resume
 

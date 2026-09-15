@@ -1,0 +1,547 @@
+{
+  "status": "LOCAL_PRIMITIVE_CHECK_PASSED",
+  "baseline_sha256": "f6a9d31192c7e59c4b81b7bcb281e23fd06cdc201e8a7a1f180ae7a8f860e3e4",
+  "candidate_sha256": "91364164189aa2c5b31abd2ee92455ad78b4bbae332b87db6cb3c02f6d27a701",
+  "tool_sha256": "a08b089699902f6bdbb1ee736c1d325de032ab517e86459032ca418d9d5456e7",
+  "helper_sha256": "41c99713f2a451d50c3b4b431ace1b69ac77b7850fa52c5959037bbb2470d6c7",
+  "continuity": 168,
+  "component_poses_unchanged": true,
+  "changed_footprint_library_matches": [
+    "R27",
+    "U5"
+  ],
+  "unchanged_primitive_inventory_and_widths": true,
+  "changed_tracks": [
+    "088bee53-2413-5430-8acc-32a9f7f281d8",
+    "1882384a-8437-51aa-84e0-67f4c472cc46",
+    "24231eab-ec5d-52e1-a01c-10bb12a1db85",
+    "40ebf67d-4eef-5e66-9e9c-baf5cef87305",
+    "47285eb4-b602-55dd-92e4-01c622054d09",
+    "5f740232-0ad1-5df6-a1d0-daa1b956e7bf",
+    "65d4fb9f-c79e-5bdb-96a9-94febf71ebbf",
+    "70b2d1e0-eca8-52fc-bb62-caede28fc13b",
+    "745fcd9e-40cc-5272-833c-e3bc67e2894e",
+    "777c69a3-6d88-54c4-b0c4-f5a0ae8bfdcf",
+    "7bce90b0-8c1e-5e58-a24c-60bfac93897d",
+    "96b369f0-8c8f-57ec-a828-7f759b9a8469"
+  ],
+  "power_topology": {
+    "output_capacitor_all_front_paths": [
+      {
+        "from": "U5.6",
+        "to": "C27.1",
+        "net": "VAMP",
+        "before_all_F": true,
+        "after_all_F": true,
+        "before_path": [
+          {
+            "uuid": "c66ad0bd-62c4-5a50-9e68-a42840d0c6ee",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "745fcd9e-40cc-5272-833c-e3bc67e2894e",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "5f740232-0ad1-5df6-a1d0-daa1b956e7bf",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "4a939b86-4ff8-51fc-b5d2-cb3f319e987c",
+            "layer": "F.Cu"
+          }
+        ],
+        "after_path": [
+          {
+            "uuid": "c66ad0bd-62c4-5a50-9e68-a42840d0c6ee",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "745fcd9e-40cc-5272-833c-e3bc67e2894e",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "5f740232-0ad1-5df6-a1d0-daa1b956e7bf",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "4a939b86-4ff8-51fc-b5d2-cb3f319e987c",
+            "layer": "F.Cu"
+          }
+        ]
+      },
+      {
+        "from": "U5.4",
+        "to": "C27.2",
+        "net": "GND",
+        "before_all_F": true,
+        "after_all_F": true,
+        "before_path": [
+          {
+            "uuid": "14766bad-5835-5068-8b5a-caa25bc52580",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "088bee53-2413-5430-8acc-32a9f7f281d8",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "1882384a-8437-51aa-84e0-67f4c472cc46",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "cd1ac9ea-17d7-560e-b79c-380d25d3feda",
+            "layer": "F.Cu"
+          }
+        ],
+        "after_path": [
+          {
+            "uuid": "14766bad-5835-5068-8b5a-caa25bc52580",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "088bee53-2413-5430-8acc-32a9f7f281d8",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "1882384a-8437-51aa-84e0-67f4c472cc46",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "cd1ac9ea-17d7-560e-b79c-380d25d3feda",
+            "layer": "F.Cu"
+          }
+        ]
+      },
+      {
+        "from": "U5.6",
+        "to": "C28.1",
+        "net": "VAMP",
+        "before_all_F": true,
+        "after_all_F": true,
+        "before_path": [
+          {
+            "uuid": "c66ad0bd-62c4-5a50-9e68-a42840d0c6ee",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "745fcd9e-40cc-5272-833c-e3bc67e2894e",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "5f740232-0ad1-5df6-a1d0-daa1b956e7bf",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "9514feb0-676d-5df0-a552-7e33caccbfec",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "bf411126-e0c1-5e14-b531-dc4dd157714a",
+            "layer": "F.Cu"
+          }
+        ],
+        "after_path": [
+          {
+            "uuid": "c66ad0bd-62c4-5a50-9e68-a42840d0c6ee",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "745fcd9e-40cc-5272-833c-e3bc67e2894e",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "5f740232-0ad1-5df6-a1d0-daa1b956e7bf",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "9514feb0-676d-5df0-a552-7e33caccbfec",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "bf411126-e0c1-5e14-b531-dc4dd157714a",
+            "layer": "F.Cu"
+          }
+        ]
+      },
+      {
+        "from": "U5.4",
+        "to": "C28.2",
+        "net": "GND",
+        "before_all_F": true,
+        "after_all_F": true,
+        "before_path": [
+          {
+            "uuid": "14766bad-5835-5068-8b5a-caa25bc52580",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "088bee53-2413-5430-8acc-32a9f7f281d8",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "1882384a-8437-51aa-84e0-67f4c472cc46",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+            "layer": "F.Cu"
+          }
+        ],
+        "after_path": [
+          {
+            "uuid": "14766bad-5835-5068-8b5a-caa25bc52580",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "088bee53-2413-5430-8acc-32a9f7f281d8",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "1882384a-8437-51aa-84e0-67f4c472cc46",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    ],
+    "protector_pickoff_before": {
+      "from": "R26.2",
+      "to": "R27.2",
+      "connected": true,
+      "independent_until_terminal": true,
+      "other_pad_connections_before_terminal": [],
+      "branch_copper_uuids": [
+        "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+      ],
+      "joins_cut_wholly_inside_terminal": [
+        {
+          "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+          "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+          "layer": "F.Cu"
+        }
+      ],
+      "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+      "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+    },
+    "protector_pickoff_after": {
+      "from": "R26.2",
+      "to": "R27.2",
+      "connected": true,
+      "independent_until_terminal": true,
+      "other_pad_connections_before_terminal": [],
+      "branch_copper_uuids": [
+        "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+      ],
+      "joins_cut_wholly_inside_terminal": [
+        {
+          "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+          "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+          "layer": "F.Cu"
+        }
+      ],
+      "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+      "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+    },
+    "feedback_ground_capacitor_pickoff": {
+      "from": "R24.2",
+      "to": "C28.2",
+      "connected": true,
+      "independent_until_terminal": true,
+      "other_pad_connections_before_terminal": [],
+      "branch_copper_uuids": [
+        "1212a327-4ed4-50da-a0bb-71afc8145254",
+        "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+        "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+        "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+        "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+        "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+        "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      ],
+      "joins_cut_wholly_inside_terminal": [
+        {
+          "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+          "layer": "F.Cu"
+        },
+        {
+          "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+          "layer": "F.Cu"
+        }
+      ],
+      "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+      "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+    },
+    "amplifier_bypass_returns": [
+      {
+        "from": "C16.2",
+        "to": "U4.THERMAL",
+        "before_connected": true,
+        "after_connected": true,
+        "path": [
+          {
+            "uuid": "0792666c-f410-525f-877d-0cd43d6531cc",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "5596d51b-304a-5e81-aebb-439c9d2869d8",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "05c5bad3-b221-5ae2-b9d6-d42345b2566d",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "05c5bad3-b221-5ae2-b9d6-d42345b2566d",
+            "layer": "B.Cu"
+          },
+          {
+            "uuid": "05766298-91b9-5cc1-a638-72c1d31f7536",
+            "layer": "B.Cu"
+          },
+          {
+            "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+            "layer": "B.Cu"
+          },
+          {
+            "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "ea865408-5c17-54c2-b891-9bfc852537d4",
+            "layer": "F.Cu"
+          }
+        ]
+      },
+      {
+        "from": "C19.2",
+        "to": "U4.THERMAL",
+        "before_connected": true,
+        "after_connected": true,
+        "path": [
+          {
+            "uuid": "b86a6a5b-455a-53be-aec3-b7617c66b81a",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "257dc457-8195-58ae-9265-26bd0f27075d",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "3b9946b1-c325-568f-b6b0-84414afb15d9",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "3b9946b1-c325-568f-b6b0-84414afb15d9",
+            "layer": "B.Cu"
+          },
+          {
+            "uuid": "7fbc1c40-b30a-5714-aeae-a5e2f775f413",
+            "layer": "B.Cu"
+          },
+          {
+            "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+            "layer": "B.Cu"
+          },
+          {
+            "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+            "layer": "F.Cu"
+          },
+          {
+            "uuid": "ea865408-5c17-54c2-b891-9bfc852537d4",
+            "layer": "F.Cu"
+          }
+        ]
+      }
+    ],
+    "switch_to_inductor_front_path": [
+      {
+        "uuid": "6880469f-e4d2-53ec-a4b5-8d000ec1cf1e",
+        "layer": "F.Cu"
+      },
+      {
+        "uuid": "538119a3-e187-576d-9270-9e694af7a8c3",
+        "layer": "F.Cu"
+      },
+      {
+        "uuid": "2490c92c-982e-5830-b3df-3897734e1b09",
+        "layer": "F.Cu"
+      },
+      {
+        "uuid": "6278f69b-4344-5d61-8e83-5333e8450cc6",
+        "layer": "F.Cu"
+      },
+      {
+        "uuid": "3f334850-1096-5c76-ac45-fa801cdf1bfc",
+        "layer": "F.Cu"
+      }
+    ],
+    "remaining_engineering_review": [
+      "All-F connectivity alone does not prove compact loops, low inductance or adequate exposed widths",
+      "Inspect native boost details for SW escape under U5 toward the inductor and bounded switch-node area",
+      "R24 independent capacitor-ground pickoff is topological evidence, not qualified noise performance",
+      "Unfinished source-switch feed and other routing remain explicit; connected amplifier paths still need electrical review",
+      "No current/thermal/charge/fault/functional/fabrication or mechanical-fit approval"
+    ]
+  },
+  "primitive_only_exposure": [
+    {
+      "uuid": "088bee53-2413-5430-8acc-32a9f7f281d8",
+      "net": "GND",
+      "width_mm": 0.3,
+      "before_uncovered_mm": 0.09000059093451765,
+      "after_uncovered_mm": 0.12500056694677716,
+      "increase_mm": 0.034999976012259515
+    },
+    {
+      "uuid": "1882384a-8437-51aa-84e0-67f4c472cc46",
+      "net": "GND",
+      "width_mm": 0.8,
+      "before_uncovered_mm": 0.7905694150421011,
+      "after_uncovered_mm": 0.6726812023536874,
+      "increase_mm": -0.11788821268841365
+    },
+    {
+      "uuid": "24231eab-ec5d-52e1-a01c-10bb12a1db85",
+      "net": "V+",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 0.04999999999999716,
+      "after_uncovered_mm": 0.04999999999999716,
+      "increase_mm": 0.0
+    },
+    {
+      "uuid": "40ebf67d-4eef-5e66-9e9c-baf5cef87305",
+      "net": "V+",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 2.3000000000000114,
+      "after_uncovered_mm": 2.3000000000000114,
+      "increase_mm": 0.0
+    },
+    {
+      "uuid": "47285eb4-b602-55dd-92e4-01c622054d09",
+      "net": "V+",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 0.07071067811865073,
+      "after_uncovered_mm": 0.07071067811866077,
+      "increase_mm": 1.0047518372857667e-14
+    },
+    {
+      "uuid": "538119a3-e187-576d-9270-9e694af7a8c3",
+      "net": "BOOST_SW",
+      "width_mm": 0.2,
+      "before_uncovered_mm": 0.3100000000000023,
+      "after_uncovered_mm": 0.40500000000000114,
+      "increase_mm": 0.09499999999999886
+    },
+    {
+      "uuid": "5f740232-0ad1-5df6-a1d0-daa1b956e7bf",
+      "net": "VAMP",
+      "width_mm": 0.8,
+      "before_uncovered_mm": 0.7905694150421011,
+      "after_uncovered_mm": 0.6726812023536874,
+      "increase_mm": -0.11788821268841365
+    },
+    {
+      "uuid": "65d4fb9f-c79e-5bdb-96a9-94febf71ebbf",
+      "net": "V+",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 0.07071067811865073,
+      "after_uncovered_mm": 0.07071067811865073,
+      "increase_mm": 0.0
+    },
+    {
+      "uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+      "net": "GND",
+      "width_mm": 0.8,
+      "before_uncovered_mm": 1.0009810000000101,
+      "after_uncovered_mm": 0.9009810000000017,
+      "increase_mm": -0.10000000000000842
+    },
+    {
+      "uuid": "70b2d1e0-eca8-52fc-bb62-caede28fc13b",
+      "net": "V+",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 0.14142135623730145,
+      "after_uncovered_mm": 0.1414213562373115,
+      "increase_mm": 1.0047518372857667e-14
+    },
+    {
+      "uuid": "745fcd9e-40cc-5272-833c-e3bc67e2894e",
+      "net": "VAMP",
+      "width_mm": 0.3,
+      "before_uncovered_mm": 0.09000059093451765,
+      "after_uncovered_mm": 0.12500056694677716,
+      "increase_mm": 0.034999976012259515
+    },
+    {
+      "uuid": "777c69a3-6d88-54c4-b0c4-f5a0ae8bfdcf",
+      "net": "V+",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 0.05000000000001137,
+      "after_uncovered_mm": 0.04999999999999716,
+      "increase_mm": -1.4210854715202004e-14
+    },
+    {
+      "uuid": "7bce90b0-8c1e-5e58-a24c-60bfac93897d",
+      "net": "V+",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 0.0900000000000034,
+      "after_uncovered_mm": 0.07499999999998862,
+      "increase_mm": -0.01500000000001478
+    },
+    {
+      "uuid": "96b369f0-8c8f-57ec-a828-7f759b9a8469",
+      "net": "V+",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 0.1414213562373115,
+      "after_uncovered_mm": 0.14142135623732155,
+      "increase_mm": 1.0047518372857667e-14
+    },
+    {
+      "uuid": "a8d75f8f-58d0-590e-b14e-84534d170fe3",
+      "net": "BOOST_FB",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 1.8624999999999972,
+      "after_uncovered_mm": 1.8499999999999943,
+      "increase_mm": -0.012500000000002842
+    },
+    {
+      "uuid": "c6eed133-86f5-5ca3-bf27-0efb32ced197",
+      "net": "/PROT_FET_RETURN",
+      "width_mm": 0.6,
+      "before_uncovered_mm": 0.5609348711481594,
+      "after_uncovered_mm": 0.5609348711481594,
+      "increase_mm": 0.0
+    },
+    {
+      "uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+      "net": "GND",
+      "width_mm": 0.1778,
+      "before_uncovered_mm": 0.691034116279385,
+      "after_uncovered_mm": 0.691034116279385,
+      "increase_mm": 0.0
+    },
+    {
+      "uuid": "f1fdc94e-47b9-5af8-ba05-427a080f8e54",
+      "net": "/PROT_FET_RETURN",
+      "width_mm": 0.6,
+      "before_uncovered_mm": 0.7064074649175305,
+      "after_uncovered_mm": 0.5648482327204589,
+      "increase_mm": -0.14155923219707156
+    }
+  ],
+  "exposure_method_sha256": "c48f73a438e5bc9a81d5e26437a3ce9f5f0ce4b61e82e17ddf6480bbaa4da6cf",
+  "scope": "Existing primitive connectivity/power guards plus actual before/after centerline exposure. Excludes zones; not resistance, ampacity, full DRC or functional approval."
+}

@@ -23896,7 +23896,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Adafruit TPS61023-import-fps:SOT563"
+		(property "Footprint" "Handbell:TPS61023_DRL_TI_Example"
 			(at 335.28 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -25827,7 +25827,7 @@
 (label "PROT_FET_RETURN"  (at 261.62 350.52 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "76a789aa-36ac-5355-b2a9-e73a411c3e7f"))
 (wire (pts (xy 256.54 342.9) (xy 261.62 342.9)) (stroke (width 0) (type default)) (uuid "619a7f25-8ba4-5e1d-b3c7-976beee0cffd"))
 (label "PROT_COUT"  (at 261.62 342.9 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "bb7b8a17-e37b-50eb-a1b2-699d282bd6c6"))
-(symbol (lib_id "T8:R") (at 317.5 350.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2a057c48-5d1e-542b-a6af-50aefb147472") (property "Reference" "R27" (at 317.5 346.71 0)  (effects (font (size 1.016 1.016)))) (property "Value" "33m 1% 0.5W" (at 317.5 354.33 0)  (effects (font (size 1.016 1.016)))) (property "Footprint" "T8:ERJ6BW_0805" (at 317.5 350.52 0) (hide yes) (effects (font (size 1.016 1.016)))) (property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/thick-film-chip-resistors" (at 317.5 350.52 0) (hide yes) (effects (font (size 1.016 1.016)))) (property "MPN" "ERJ-6BWFR033V" (at 317.5 350.52 0) (hide yes) (effects (font (size 1.016 1.016)))) (pin "1" (uuid "53a56b01-2b57-5643-bd9c-238616455457"))(pin "2" (uuid "d885eea0-1791-5371-a73c-929ef49a0082")) (instances (project "handbell" (path "/85874120-e238-4c38-82e5-c93e2e8375b3" (reference "R27") (unit 1)))))
+(symbol (lib_id "T8:R") (at 317.5 350.52 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2a057c48-5d1e-542b-a6af-50aefb147472") (property "Reference" "R27" (at 317.5 346.71 0)  (effects (font (size 1.016 1.016)))) (property "Value" "33m 1% 0.5W" (at 317.5 354.33 0)  (effects (font (size 1.016 1.016)))) (property "Footprint" "Handbell:ERJ6BW_0805_Panasonic_Example" (at 317.5 350.52 0) (hide yes) (effects (font (size 1.016 1.016)))) (property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/thick-film-chip-resistors" (at 317.5 350.52 0) (hide yes) (effects (font (size 1.016 1.016)))) (property "MPN" "ERJ-6BWFR033V" (at 317.5 350.52 0) (hide yes) (effects (font (size 1.016 1.016)))) (pin "1" (uuid "53a56b01-2b57-5643-bd9c-238616455457"))(pin "2" (uuid "d885eea0-1791-5371-a73c-929ef49a0082")) (instances (project "handbell" (path "/85874120-e238-4c38-82e5-c93e2e8375b3" (reference "R27") (unit 1)))))
 (wire (pts (xy 312.42 350.52) (xy 307.34 350.52)) (stroke (width 0) (type default)) (uuid "84b8c02d-3bd0-5794-b26d-08e8d7d4b2aa"))
 (label "PROT_FET_RETURN"  (at 307.34 350.52 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "cdb96220-2767-538d-b524-5b9e8ce100a1"))
 (wire (pts (xy 322.58 350.52) (xy 327.66 350.52)) (stroke (width 0) (type default)) (uuid "9f15ea17-e6cd-54a5-8721-a8919c46ceb6"))

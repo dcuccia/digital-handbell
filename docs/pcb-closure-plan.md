@@ -83,7 +83,8 @@ unresolved disposition; it is not permission to fabricate unchanged.
 | L1, C26-C28, C1/C4/C5/C19/C20, FB1/FB2 | Applied: four dedicated patterns across eleven references; no part moves or copper-primitive changes. | [Power selection](power-component-selection.md); actual connectivity/private pickoffs preserved and adjacent primitive exposure remeasured. Current and supplier qualification remain open. |
 | CHG0/L0, D3/D4, U2, U4 | Review actual terminal coverage, paste/mask and thermal-via feasibility. Manufacturer-example differences require explicit retain/change dispositions, not automatic global replacement. | [Device register](device-component-selection.md), selected drawings and actual native lands; U4 exposed-pad/paste treatment remains open. |
 | D3/D4, Q1/Q2/Q4, U3 | Applied September 15; current centers, rotations and native-to-proxy offsets preserved. No new proxy overlaps or outline/speaker screen conflicts. | `reports/device-envelopes.json`; full-CAD and physical fit remain open. |
-| U5, R27, remaining connectors/contacts | Complete the existing selected-part audit; retain until a specific correction is established, but do not call this qualified. | Existing-part review, exact pin/package/assembly checks and quotation process notes. |
+| U5, R27 | Applied the recorded TI/Panasonic examples and conservative envelopes. One U5 escape correction and one matching R27.2 exclusion enlargement; no part moves or trace-width reductions. | `reports/power-device-lands.json`; preserved primitive/filled connectivity and private returns. Assembly/current qualification remains open. |
+| Remaining connectors/contacts, U1/U6/Q5 | Consume the existing audit for explicit retain/process dispositions; contact upper-height tolerance needs coordinated mechanical work. | Existing-part review and quotation process notes; no demonstrated additional land correction selected here. |
 | USB bezel | Carry the selected front bound and documented 0.15 mm outward bezel adjustment into the coordinated CAD revision. | Exact PCB/manifest bind; nominal clearance is not mating qualification. |
 | Optional debug branches | Review for inline placement or deferral only if they reduce real routing work. No removals selected yet. | Explicit schematic/PCB agreement; preserve boot/reset/SWD, protection and necessary diagnostics. |
 | Reference text | One late cleanup; polarity, chemistry and recovery labels are not optional. | Final manufacturing views and process limits. |
@@ -130,12 +131,12 @@ unexpected zone/exclusion plans. It does not run DRC or qualify assembly.
 Use the separate source-preserving refill tool first when geometry changed.
 
 Example from the repository root, reproducing the latest comparison against
-the complete-identity baseline in `84469b7`:
+the pre-U5/R27 baseline in `a548769`:
 
 ```powershell
 $work = Join-Path $env:TEMP ("handbell-ground-" + [guid]::NewGuid().ToString("N"))
 New-Item -ItemType Directory -Path $work | Out-Null
-python -c "import subprocess; from pathlib import Path; p=Path(r'$work')/'baseline.kicad_pcb'; p.write_bytes(subprocess.run(['git','show','84469b7:hardware/handbell/iterations/printed-bell-clock-draft/handbell.kicad_pcb'], check=True, capture_output=True, timeout=15).stdout)"
+python -c "import subprocess; from pathlib import Path; p=Path(r'$work')/'baseline.kicad_pcb'; p.write_bytes(subprocess.run(['git','show','a548769:hardware/handbell/iterations/printed-bell-clock-draft/handbell.kicad_pcb'], check=True, capture_output=True, timeout=15).stdout)"
 python -c "import subprocess; subprocess.run(['python', r'tools\check_front_ground.py', r'hardware\handbell\iterations\printed-bell-clock-draft\handbell.kicad_pcb', '--baseline', r'$work\baseline.kicad_pcb', '--plan', r'hardware\handbell\iterations\printed-bell-clock-draft\reports\front-ground-plan.json', '--output', r'$work\ground-check.json'], check=True, timeout=360)"
 ```
 
@@ -145,6 +146,17 @@ Native graph runtime varies: two 180-second attempts expired, while the bounded
 360-second run completed in about 165 seconds. Earlier same-purpose runs were
 faster. No configuration or resource-contention cause is established. Stage and
 CPU timings are recorded; do not turn a timeout into an unbounded retry.
+The September 15 U5/R27 filled check completed in about 80 seconds with the
+same 360-second deadline. Its plan enlarges only the existing R27.2 exclusion
+to follow the larger land; it retains the 0.251 mm bounding margin and all ten
+exclusions. Older reports remain bound to the older plan.
+
+`tools/check_power_land_change.py` reuses the primitive graph, power-topology
+and centerline-exposure methods for declared land/escape changes. It also
+checks actual library agreement and unchanged component poses, via inventory
+and track widths. The R27 exclusion-only correction reused the earlier
+primitive proof and ERC after byte comparisons, rather than rerunning them;
+`reports/power-device-local-reuse.json` records that limited reuse explicitly.
 
 ## Owner pause and next item
 
@@ -154,14 +166,16 @@ agent or routing loop was started.
 
 Current package: `hardware/handbell/iterations/printed-bell-clock-draft`.
 Current PCB SHA-256:
-`f6a9d31192c7e59c4b81b7bcb281e23fd06cdc201e8a7a1f180ae7a8f860e3e4`.
-Current native report: `reports/power-lands.json`; manifest-only envelope
-revision: `reports/device-envelopes.json`; public fill proof:
-`reports/power-ground-check.json`. Status: **83/83 fitted MPNs, 56 opens,
+`7be92d3e7b42049e6dcc60d6e58bfb3a1bf7f141f5e11592e9cfad6f8cbf680c`.
+Current native report: `reports/power-device-lands.json`; prior six-envelope
+revision: `reports/device-envelopes.json`; current public fill proof:
+`reports/power-device-ground-check.json`. Status: **83/83 fitted MPNs, 56 opens,
 zero other native DRC errors and 232 text/silk warnings**.
 
-The six conservative envelope corrections are applied with no new screen
-conflicts, component moves or native design changes. Next bounded item:
+The six initial envelope corrections and subsequent U5/R27 corrections are
+applied with no new screen conflicts or component moves. Twelve U5 segment
+endpoints changed, with widths retained; R27's sense-return exclusion grew
+with its land. Next bounded item:
 complete the remaining LED/diode/U2/U4 land/paste dispositions and
 existing-part audit before declaring geometry frozen. No new sourcing by
 default. Then follow core/power, constrained signals,

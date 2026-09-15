@@ -133,9 +133,9 @@
         "uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
         "name": "private-R26.2-to-R27.2/933e95b2-4ef8-5095-ab3d-4759e7fa0826",
         "bounds_absolute_iu": [
-          85648019,
+          85598019,
           108549966,
-          87150019,
+          87250019,
           110451966
         ],
         "protected_item_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826"
@@ -150,6 +150,27 @@
           111531900
         ],
         "protected_item_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+      }
+    ]
+  },
+  "revision": {
+    "input_plan_sha256": "56b83f6283d90f91dd8f907755888c62772a5d8c2e6322b1930be1014fc35a5e",
+    "changes": [
+      {
+        "uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+        "before_bounds_iu": [
+          85648019,
+          108549966,
+          87150019,
+          110451966
+        ],
+        "after_bounds_iu": [
+          85598019,
+          108549966,
+          87250019,
+          110451966
+        ],
+        "reason": "Follow R27.2 land growth, retaining the original 0.251 mm bounding margin; do not weaken the 0.25 mm private-copper guard."
       }
     ]
   }

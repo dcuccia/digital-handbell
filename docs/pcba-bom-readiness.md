@@ -80,6 +80,14 @@ inputs to the next deliberate revision. They do not establish completed
 routing, a matched final mechanical assembly or upload-ready quotation files.
 No further research or implementation is authorized by this audit handoff.
 
+**Subsequent owner-authorized September 15 application:** U5 and R27's recorded
+land examples and conservative envelopes are now applied in the continuing
+clock draft. The [source-bound result](../hardware/handbell/iterations/printed-bell-clock-draft/reports/power-device-lands.json)
+includes local U5 escape corrections and a matching R27.2 pour-exclusion
+enlargement, preserving the private sense connection. The historical audit
+above is unchanged; remaining contacts, fine-package stencil/handling and
+thermal-pad processes still need disposition.
+
 ## Capacitors: 29 fitted
 
 | Group | Count | Existing definition and required action |

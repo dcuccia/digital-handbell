@@ -1,0 +1,21 @@
+(footprint "ERJ6BW_0805_Panasonic_Example"   (layer "F.Cu") (attr smd) (property "Reference" "REF**" (at 0 0) (layer "F.Fab") (effects (font (size .8 .8) (thickness .12)))
+(uuid "af136c2f-1b52-599a-8210-1f4451a2d59c")) (property "Value" "33m 1% 0.5W" (at 0 1.625) (layer "F.Fab") (hide yes) (effects (font (size .8 .8) (thickness .12)))
+(uuid "3939c012-6511-5c4c-a07b-079ce536b45b")) (fp_rect (start -1 -0.625) (end 1 0.625) (stroke (width .05) (type solid)) (fill none) (layer "F.Fab")
+(uuid "efffbcd2-4f72-54f7-8879-c06eb75fad0b")) (fp_rect (start -1.75 -0.95) (end 1.75 0.95) (stroke (width .05) (type solid)) (fill none) (layer "F.CrtYd")
+(uuid "11b797ec-e8c3-5c93-8b81-170a28bb48c3")) (pad "1" smd rect (at -1.025 0.0) (size 1.15 1.4) (layers "F.Cu" "F.Paste" "F.Mask") 
+(uuid "a833b65c-14c4-56cc-a57e-706271bd2f20")
+
+
+)
+(pad "2" smd rect (at 1.025 0.0) (size 1.15 1.4) (layers "F.Cu" "F.Paste" "F.Mask") 
+(uuid "933e95b2-4ef8-5095-ab3d-4759e7fa0826")
+
+
+)
+
+
+
+
+(property "Datasheet" "https://industrial.panasonic.com/ww/products/pt/thick-film-chip-resistors" (at 0 0) (layer "F.Fab") (hide yes) (uuid "36228974-4738-584b-b90f-6f4cb888d4f0") (effects (font (size 1 1) (thickness 0.15))))
+(property "MPN" "ERJ-6BWFR033V" (at 0 0) (layer "F.Fab") (hide yes) (uuid "efb34379-bb93-5f85-939c-b14806168b51") (effects (font (size 1 1) (thickness 0.15))))
+(property "Description" "" (at 0 0) (layer "F.Fab") (hide yes) (uuid "5b3ec9e3-ade7-5f5a-adda-254ff58299d7") (effects (font (size 1 1) (thickness 0.15)))))

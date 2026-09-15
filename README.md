@@ -27,8 +27,11 @@ The [cost-aware closure plan](docs/pcb-closure-plan.md) tracks remaining
 geometry, routing and matched PCB+PCBA quotation inputs. This is still an
 engineering checkpoint, not a complete or qualified board.
 **September 15:** work has resumed. Six documented device-envelope corrections
-are applied without moving parts or changing copper; remaining device land and
-assembly dispositions precede further routing. The closure plan contains the
+are applied without moving parts. The selected U5 boost and R27 current-sense
+land patterns are now applied too, with local U5 escape corrections and a
+matching enlargement of R27's protected ground exclusion. The board still has
+56 opens; remaining device and assembly dispositions precede further routing.
+The closure plan contains the
 current handoff and repo-only fill-check commands.
 
 **September 13 printed-bell revision:** the owner reports that the latest
