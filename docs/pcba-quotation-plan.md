@@ -74,6 +74,17 @@ workflow.
 
 ## Readiness and dependencies
 
+The [September 15 land/process dispositions](device-component-selection.md#september-15-remaining-land-and-assembly-dispositions)
+retain the remaining native copper for routing and distinguish supplier
+questions from PCB changes. The quotation baseline must explicitly include
+resin-filled/copper-capped treatment of U4's four named thermal vias on the
+current two-layer board, subject to supplier availability and price.
+Ordinary tenting is not a silent substitute. Ask for review of the existing
+paste data against a proposed 0.10 mm stencil, including U1, U4, Q5, both
+diodes and all connector/anchor operations; this is not an approved common
+reflow profile. Any accepted stencil revision must be reflected in matched,
+versioned exports before manufacture.
+
 1. Correct the boost hot loop and protector sense routing, then complete the
    remaining signal, control, USB, power/return and BTL connections.
 2. Resolve actual part identities and relevant electrical/package/height

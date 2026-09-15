@@ -450,6 +450,24 @@ attribution. The target is a consistent engineering-prototype quotation
 package, not functional/safety signoff or authorization to upload/order.
 Owning epics: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## 2026-09-15: land closure and quotation-process boundary
+
+The continuing candidate now applies the six conservative device envelopes
+and the selected U5/R27 land examples. Bounded local escape/exclusion repairs
+preserve fixed poses, trace widths and private returns. The remaining
+[native land choices are retained for routing](device-component-selection.md#september-15-remaining-land-and-assembly-dispositions),
+with supplier questions recorded separately rather than treating every
+example-footprint difference as a routing blocker.
+
+For quotation, retain U4's current copper/vias and specify resin fill,
+planarization and copper capping on its four thermal-pad vias. This is an
+engineering quote baseline under the owner's standing development direction,
+not owner approval of a fabrication cost or a verified two-layer service.
+No stackup change, ordinary-tenting substitution or supplier request is
+authorized by this decision. Stencil/assembly acceptance and coordinated
+contact-height/CAD work remain open; no functional or child-use qualification
+is implied.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |

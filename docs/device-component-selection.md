@@ -12,7 +12,8 @@ All selected device identities are now applied in the continuing
 [clock/integration draft](../hardware/handbell/iterations/printed-bell-clock-draft/README.md#all-fitted-part-identities-applied).
 Its final identity batch preserves geometry. The separately completed clock/Q3
 work and September 15 six-device envelope revision are applied. Remaining
-land/paste dispositions and full mechanical qualification stay open.
+copper-retention decisions are recorded below; supplier paste/process acceptance
+and full mechanical qualification stay open.
 
 | Reference | Selected identity | Principal distinction |
 |---|---|---|
@@ -93,6 +94,73 @@ uses **10 kohm R2/R7**. Illustrative currents are about 0.28-0.32 mA for
 the charging LED and 0.15 mA for the GPIO LED. These are operating-point
 examples, not guaranteed bounds or guaranteed visible brightness. The
 resistors are not changed to force the datasheet's optical test current.
+
+## September 15 remaining land and assembly dispositions
+
+The current native land choices are retained for continued routing unless
+listed as changed below. This closes a copper-design decision, **not** supplier
+process acceptance. Example-pattern differences alone are not evidence that
+the adopted Adafruit design failed.
+
+| References | Routing disposition | Explicit quotation/assembly condition |
+|---|---|---|
+| CHG0/L0 | Retain 0.8 x 0.8 mm lands at 1.50 mm pitch. The manufacturer example uses the same land size at 1.65 mm pitch; retain the mapped C/A polarity and source layout rather than moving parts solely to copy the example. | Confirm paste, placement and joints for the exact selected LEDs. Do not change the 10 kohm resistors to match an optical-test current. |
+| D3 | Retain 0.9 x 0.8 mm lands at 2.14 mm pitch. The selected SOD323 lead-span/terminal bounds fit the centered land region; C remains USBBOOT. | Full-pad paste is larger than the manufacturer's 0.59 x 0.45 mm land example. Assembler must review solder volume; this is not a manufacturer-prescribed stencil or a demonstrated solder failure. |
+| D4 | Retain 1.0 x 0.8 mm lands at 2.00 mm pitch for the selected actual SOD323 package, not the stale SOD323F alias. A remains VBUS, C remains VHI. | Confirm exact suffix/packing and stencil volume. The corrected maximum envelope is already applied. |
+| U2 | Retain 0.55 x 1.20 mm lands, 0.95 mm pitch and 2.6002 mm row spacing. Nominal pin layout agrees; the 0.559 mm maximum lead width exceeds the land by 0.009 mm overall. This small width difference alone does not establish a failed joint. Pin 4 stays NC. | Obtain placement/joint acceptance rather than silently claiming the Richtek 0.7 x 1.0 mm example was applied. |
+| U4 | Retain the imported copper, peripheral openings and four thermal vias. The actual center paste is one **1.143 x 1.143 mm square**, not full 1.5 x 1.5 mm pad paste. Retain it as the quotation stencil baseline. | Specify filled-and-copper-capped treatment for those four vias in the quote-only process notes below. Stencil volume/voiding and the 16 explicit peripheral mask openings require assembler review; do not add duplicate automatic mask openings. |
+
+For U4, the center paste area is 1.306449 mm2, about 58.1% of the 2.25 mm2
+copper land. Comparing only that percentage is not a solder-process approval:
+the selected package's exposed pad is nominally 1.10 mm square and its
+placement, paste release and finished voiding still matter.
+
+The retained-part audit is likewise split into copper and process decisions:
+J1/J2 keep their agreeing nominal connector patterns and all reinforcement
+joints; BT1/BT2 keep their split lands and fixed datums; U1 keeps the previously
+corrected terminal/center-strip geometry; U6 keeps the documented all-NSMD
+adaptation; Q5 keeps its manufacturer-matching circular copper lands and
+current circular paste. U5/R27's selected corrections are now applied in
+`reports/power-device-lands.json`. No further native land change is selected
+by this pass.
+
+J2's toleranced maximum, connector pickup mapping, U1's 0.15 x 1.20 mm
+center-strip aperture, U6's all-NSMD assembly and Q5's paste-area difference
+remain explicit supplier questions, not hidden waivers. BT1/BT2's 16.97 mm
+upper drawing height must be screened in the coordinated mechanical model;
+do not stretch the nominal contact primitives or invent loaded geometry.
+
+### U4 quote-only via treatment
+
+For the matched quotation assets, specify **nonconductive resin fill,
+planarization and copper capping** on U4's four existing 0.35 mm nominal-drill
+thermal vias. Keep the two-layer board and current copper as the baseline.
+Their native PCB centers in mm are:
+
+| X | Y | Via UUID |
+|---|---|---|
+| 110.400323 | 89.587211 | `eb628663-2af6-5175-bd63-91e9eecb0258` |
+| 110.400323 | 90.237211 | `d9dcd570-3f7d-5000-b8d1-12b9b39f93b5` |
+| 111.050323 | 89.587211 | `545fee40-3fbd-59ae-bd8d-30ffe16436ec` |
+| 111.050323 | 90.237211 | `c63c289d-af32-592b-9732-d17507fbf476` |
+
+Transform these coordinates with the final fabrication datum; do not mistake
+this native-coordinate table for a finished vendor drawing. Ordinary tenting
+is not an equivalent process: the vias sit inside the thermal land's mask
+opening and can draw solder away without controlled treatment.
+
+This is a **quotation requirement, not a verified service or cost** at either
+vendor. Supplier confirmation of two-layer availability, cap finish/flatness
+and stencil is required before manufacture. If unavailable, report the
+constraint or separately priced alternative; do not silently change the
+stackup, relocate vias or replace capping with ordinary tenting.
+
+The [official JLCPCB via-treatment guide](https://jlcpcb.com/help/article/pcb-via-covering),
+read September 15, distinguishes resin-filled/capped vias from ink plugging
+and tenting, and specifically excludes via-in-pad from ordinary ink plugging.
+Its statement that resin filling is free at six layers and above does **not**
+establish a two-layer prohibition. Neither vendor's two-layer availability or
+price was established here, and no quote was requested.
 
 ## Q3 replacement decision
 

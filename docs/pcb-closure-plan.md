@@ -81,10 +81,10 @@ unresolved disposition; it is not permission to fabricate unchanged.
 | Y1/C2/C3/R6; Q3 | Retain accepted clock geometry/copper and corrected Q3 lands. Do not reopen their selections. | Current clock and Q3 reports; final mechanical bind still required. |
 | X6 USB | Native correction applied, including local CC/VBUS repairs. Retain the new lands and datum. | [Source-bound native result](usb-connector-qualification.md#current-native-implementation); supplier process and mechanical acceptance remain open. |
 | L1, C26-C28, C1/C4/C5/C19/C20, FB1/FB2 | Applied: four dedicated patterns across eleven references; no part moves or copper-primitive changes. | [Power selection](power-component-selection.md); actual connectivity/private pickoffs preserved and adjacent primitive exposure remeasured. Current and supplier qualification remain open. |
-| CHG0/L0, D3/D4, U2, U4 | Review actual terminal coverage, paste/mask and thermal-via feasibility. Manufacturer-example differences require explicit retain/change dispositions, not automatic global replacement. | [Device register](device-component-selection.md), selected drawings and actual native lands; U4 exposed-pad/paste treatment remains open. |
+| CHG0/L0, D3/D4, U2, U4 | Retain current native copper for routing; preserve polarity/pin maps. U4 quotation baseline specifies filled/capped thermal vias, not ordinary tenting. | [Explicit retain/process dispositions](device-component-selection.md#september-15-remaining-land-and-assembly-dispositions); supplier two-layer capability, price and stencil acceptance remain open. |
 | D3/D4, Q1/Q2/Q4, U3 | Applied September 15; current centers, rotations and native-to-proxy offsets preserved. No new proxy overlaps or outline/speaker screen conflicts. | `reports/device-envelopes.json`; full-CAD and physical fit remain open. |
 | U5, R27 | Applied the recorded TI/Panasonic examples and conservative envelopes. One U5 escape correction and one matching R27.2 exclusion enlargement; no part moves or trace-width reductions. | `reports/power-device-lands.json`; preserved primitive/filled connectivity and private returns. Assembly/current qualification remains open. |
-| Remaining connectors/contacts, U1/U6/Q5 | Consume the existing audit for explicit retain/process dispositions; contact upper-height tolerance needs coordinated mechanical work. | Existing-part review and quotation process notes; no demonstrated additional land correction selected here. |
+| Remaining connectors/contacts, U1/U6/Q5 | Retain documented current lands and fixed datums for routing; record fine-package/connector process questions. Contact upper-height tolerance needs coordinated mechanical work. | [Retain/process dispositions](device-component-selection.md#september-15-remaining-land-and-assembly-dispositions); no additional native land correction selected. |
 | USB bezel | Carry the selected front bound and documented 0.15 mm outward bezel adjustment into the coordinated CAD revision. | Exact PCB/manifest bind; nominal clearance is not mating qualification. |
 | Optional debug branches | Review for inline placement or deferral only if they reduce real routing work. No removals selected yet. | Explicit schematic/PCB agreement; preserve boot/reset/SWD, protection and necessary diagnostics. |
 | Reference text | One late cleanup; polarity, chemistry and recovery labels are not optional. | Final manufacturing views and process limits. |
@@ -175,10 +175,11 @@ zero other native DRC errors and 232 text/silk warnings**.
 The six initial envelope corrections and subsequent U5/R27 corrections are
 applied with no new screen conflicts or component moves. Twelve U5 segment
 endpoints changed, with widths retained; R27's sense-return exclusion grew
-with its land. Next bounded item:
-complete the remaining LED/diode/U2/U4 land/paste dispositions and
-existing-part audit before declaring geometry frozen. No new sourcing by
-default. Then follow core/power, constrained signals,
+with its land. Remaining copper dispositions are recorded as retained for
+routing; the quote baseline names U4 filled/capped vias explicitly, without
+claiming supplier acceptance or cost. Next bounded item: core/power
+connections, using the current remaining-net inventory. No new sourcing by
+default. Then follow constrained signals,
 remaining controls and final ground closure in the sequence above.
 
 The full mechanical bind, 0.15 mm USB bezel adjustment, native CAD camera-state

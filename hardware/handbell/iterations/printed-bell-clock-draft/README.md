@@ -38,8 +38,11 @@ Reproduce the unfilled stages from `a548769` using
 `tools/apply_power_device_lands.py OUTPUT`, adding `--repair-u5-escapes`
 for the first correction and `--expand-r27-exclusion` for the second.
 Use the source-preserving refill and public ground checker afterward; staged
-output is never automatically accepted. Other device/process dispositions,
-56 connections, full CAD and matched quotation assets remain open.
+output is never automatically accepted. Other native lands are
+[retained for routing with explicit process conditions](../../../../docs/device-component-selection.md#september-15-remaining-land-and-assembly-dispositions).
+The quotation baseline names U4 filled/capped thermal vias without claiming
+supplier availability or cost. The 56 connections, supplier process acceptance,
+full CAD and matched quotation assets remain open.
 
 ## September 15 device envelopes and resume
 
