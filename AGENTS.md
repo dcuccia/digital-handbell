@@ -68,6 +68,11 @@ in the linked closure plan.
 - Prefer existing deterministic tools to repeated model reasoning or new
   one-off frameworks. Time slow stages once before optimizing; a timeout
   indicates incomplete evidence, not necessarily a defective design.
+- For routing, query complete relevant nets and obstacles through the native
+  API, then screen a bounded numerical candidate batch. Read the exercised
+  [tooling lessons](docs/routing-tooling.md) before repeating autorouter trials.
+  Include a no-routing exchange control; requested scope/settings are not
+  qualified until demonstrated. Never count exchange-only changes as routing.
 - Make each bounded item a coherent closure pass, not a single field edit.
   Keep reports concise and source-bound; regenerate large exports only when
   needed for review or milestone handoff.

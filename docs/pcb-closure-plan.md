@@ -108,6 +108,12 @@ Record stage timings when a check stalls, retain finite process deadlines, and
 distinguish incomplete evidence from a design defect. Do not repeatedly run the
 same failing whole-board check without a focused hypothesis.
 
+The [September 15 routing-tool pilot](routing-tooling.md) records native-API
+and numerical-screening lessons, pinned external tools and bounded failed
+autorouting attempts. Freerouting is still experimental: no routed proposal
+was promoted, and the accepted board remains unchanged. Do not repeat the
+whole-board trials without a materially different, bounded hypothesis.
+
 Escalate if closure requires changing fixed interfaces, major architecture,
 unresolved protection/assembly conflicts, or repeated passes without measurable
 progress. No remaining-dollar guarantee is made. Report progress as closed
@@ -206,6 +212,12 @@ the now-routed local decoupling groups. Two VCORE opens remain,
 along with other power, signals and ground islands. No new sourcing by default.
 Then follow constrained signals,
 remaining controls and final ground closure in the sequence above.
+
+The owner subsequently authorized a bounded automation pilot. It completed
+without a usable routed result; [tooling lessons](routing-tooling.md) preserve
+the settings and exchange limitations. Any further automation investment
+must demonstrate one useful constrained proposal before widening scope;
+it does not replace or reset the outstanding VCORE work.
 
 The full mechanical bind, 0.15 mm USB bezel adjustment, native CAD camera-state
 handoff, current budgets, supplier processes and matched quotation exports are

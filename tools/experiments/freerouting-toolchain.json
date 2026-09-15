@@ -1,0 +1,35 @@
+{
+  "scope": "Offline experimental toolchain, not an approved PCB routing or fabrication flow",
+  "freerouting": {
+    "version": "2.4.1",
+    "source_revision": "ae3d377740b6ffa744bed1bab26625fe0278fa90",
+    "release_url": "https://github.com/freerouting/freerouting/releases/tag/v2.4.1",
+    "artifact_url": "https://github.com/freerouting/freerouting/releases/download/v2.4.1/freerouting-2.4.1.jar",
+    "artifact_sha256": "251101c3eeac22d7e7dfcf6796603279e5d1000283eb82d8f093780f7afc6aa9",
+    "license_url": "https://github.com/freerouting/freerouting/blob/ae3d377740b6ffa744bed1bab26625fe0278fa90/LICENSE",
+    "license": "GPL-3.0",
+    "binaries_vendored": false
+  },
+  "java": {
+    "distribution": "Eclipse Temurin",
+    "observed_version": "25.0.4.1+1-LTS",
+    "platform": "Windows x64",
+    "artifact_url": "https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%2B1/OpenJDK25U-jre_x64_windows_hotspot_25.0.4.1_1.zip",
+    "artifact_sha256": "4c95451cea98556def2c54f7782933f52a26d4a36bd85e1d59f0364464828b07",
+    "installation": "Portable session-local extraction; no system-wide installation or PATH change",
+    "license_notices": "Distribution legal notices retained in the extracted runtime",
+    "binaries_vendored": false
+  },
+  "kicad": {
+    "version": "10.0.6",
+    "interface": "Bundled pcbnew Python API: ExportSpecctraDSN and ImportSpecctraSES"
+  },
+  "network_policy": {
+    "analytics_disabled": true,
+    "rest_server_enabled": false,
+    "mcp_server_enabled": false,
+    "public_routing_api_used": false,
+    "supplier_upload_or_quote_request": false,
+    "qualification": "Local CLI with explicit analytics/server settings; not a packet-capture or air-gap certification"
+  }
+}

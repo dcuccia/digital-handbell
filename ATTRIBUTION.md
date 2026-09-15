@@ -61,6 +61,14 @@ are not copied manufacturer STEP models.
 
 ## License boundaries
 
+The [local routing pilot](docs/routing-tooling.md) uses **Freerouting 2.4.1**
+as an external GPL-3.0 tool and a portable Eclipse Temurin runtime with its
+distribution notices retained locally. The
+[toolchain manifest](tools/experiments/freerouting-toolchain.json) records
+the upstream revision, license link, artifact URLs and verified digests.
+Neither tool binaries nor upstream source are vendored. The original MIT
+pilot harness does not relabel either tool or the CC BY-SA hardware.
+
 | Material | Policy |
 |---|---|
 | Original project software and documentation | Existing MIT license, except explicitly marked material |

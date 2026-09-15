@@ -42,6 +42,9 @@ supplier-process questions, including filled/capped amplifier thermal vias;
 two-layer supplier availability and price are not yet confirmed.
 The closure plan contains the
 current handoff and repo-only fill-check commands.
+The [routing-tooling study](docs/routing-tooling.md) records exercised native
+API strategies and the bounded offline Freerouting pilot. No external-router
+proposal was accepted; routing automation remains experimental.
 
 **September 13 printed-bell revision:** the owner reports that the latest
 inert pieces fit and authorizes a single-piece printed bell, flush removable
