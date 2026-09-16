@@ -1,0 +1,377 @@
+{
+  "saved": {
+    "pour_only_F_keepouts": [
+      {
+        "uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+        "name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+        "bounds_absolute_iu": [
+          101199000,
+          115279000,
+          103201000,
+          117021000
+        ],
+        "protected_item_uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520"
+      },
+      {
+        "uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+        "name": "private-R26.2-to-R27.2/3ed47a01-14b9-59e7-bdfe-95561c7f1435",
+        "bounds_absolute_iu": [
+          85849000,
+          110641000,
+          86951000,
+          111743000
+        ],
+        "protected_item_uuid": "3ed47a01-14b9-59e7-bdfe-95561c7f1435"
+      },
+      {
+        "uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+        "name": "private-R24.2-to-C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b",
+        "bounds_absolute_iu": [
+          103149000,
+          116949000,
+          104251000,
+          118051000
+        ],
+        "protected_item_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      },
+      {
+        "uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+        "name": "private-R24.2-to-C28.2/34d001e5-c45d-5645-a43a-6ab95d630ff0",
+        "bounds_absolute_iu": [
+          98068100,
+          111060100,
+          100139900,
+          111739900
+        ],
+        "protected_item_uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0"
+      },
+      {
+        "uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+        "name": "private-R24.2-to-C28.2/a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+        "bounds_absolute_iu": [
+          101860100,
+          115810100,
+          104039900,
+          117839900
+        ],
+        "protected_item_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+        "name": "private-R24.2-to-C28.2/1ba917bc-32e2-5176-954f-c3d06c7f6040",
+        "bounds_absolute_iu": [
+          97857000,
+          110849000,
+          98959000,
+          111951000
+        ],
+        "protected_item_uuid": "1ba917bc-32e2-5176-954f-c3d06c7f6040"
+      },
+      {
+        "uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+        "name": "private-R24.2-to-C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "bounds_absolute_iu": [
+          99649000,
+          111349000,
+          100751000,
+          112451000
+        ],
+        "protected_item_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+        "name": "private-R24.2-to-C28.2/51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+        "bounds_absolute_iu": [
+          99460100,
+          111060100,
+          100539900,
+          112239900
+        ],
+        "protected_item_uuid": "51e3a8d5-1e6b-5f46-a297-c3739ea5de91"
+      },
+      {
+        "uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+        "name": "private-R26.2-to-R27.2/933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+        "bounds_absolute_iu": [
+          85648019,
+          108549966,
+          87150019,
+          110451966
+        ],
+        "protected_item_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826"
+      },
+      {
+        "uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+        "name": "private-R26.2-to-R27.2/d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+        "bounds_absolute_iu": [
+          86059119,
+          109161066,
+          86739900,
+          111531900
+        ],
+        "protected_item_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+      }
+    ],
+    "private_pickoffs_before": [
+      {
+        "from": "R26.2",
+        "to": "R27.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+            "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification",
+        "quiet_path_native_track_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "excluded_terminal_neighbourhood": "933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+        "F_annuli_included": []
+      },
+      {
+        "from": "R24.2",
+        "to": "C28.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          },
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification",
+        "quiet_path_native_track_uuids": [
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+        ],
+        "excluded_terminal_neighbourhood": "bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+        "F_annuli_included": [
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ]
+      }
+    ],
+    "private_copper_gap_mm": 0.25,
+    "bbox_extra_polygon_error_mm": 0.001,
+    "raw_contact_projection_excluded_on_F": false,
+    "contact_scope": "Foreign B copper and through vias remain excluded; F ground is separated by FR4 and no new vias are added"
+  },
+  "expected": {
+    "pour_only_F_keepouts": [
+      {
+        "uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+        "name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+        "bounds_absolute_iu": [
+          101199000,
+          115279000,
+          103201000,
+          117021000
+        ],
+        "protected_item_uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520"
+      },
+      {
+        "uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+        "name": "private-R26.2-to-R27.2/3ed47a01-14b9-59e7-bdfe-95561c7f1435",
+        "bounds_absolute_iu": [
+          85849000,
+          110641000,
+          86951000,
+          111743000
+        ],
+        "protected_item_uuid": "3ed47a01-14b9-59e7-bdfe-95561c7f1435"
+      },
+      {
+        "uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+        "name": "private-R24.2-to-C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b",
+        "bounds_absolute_iu": [
+          103149000,
+          116949000,
+          104251000,
+          118051000
+        ],
+        "protected_item_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      },
+      {
+        "uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+        "name": "private-R24.2-to-C28.2/34d001e5-c45d-5645-a43a-6ab95d630ff0",
+        "bounds_absolute_iu": [
+          98068100,
+          111060100,
+          100139900,
+          111739900
+        ],
+        "protected_item_uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0"
+      },
+      {
+        "uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+        "name": "private-R24.2-to-C28.2/a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+        "bounds_absolute_iu": [
+          101860100,
+          115810100,
+          104039900,
+          117839900
+        ],
+        "protected_item_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+        "name": "private-R24.2-to-C28.2/1ba917bc-32e2-5176-954f-c3d06c7f6040",
+        "bounds_absolute_iu": [
+          97857000,
+          110849000,
+          98959000,
+          111951000
+        ],
+        "protected_item_uuid": "1ba917bc-32e2-5176-954f-c3d06c7f6040"
+      },
+      {
+        "uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+        "name": "private-R24.2-to-C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "bounds_absolute_iu": [
+          99649000,
+          111349000,
+          100751000,
+          112451000
+        ],
+        "protected_item_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+        "name": "private-R24.2-to-C28.2/51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+        "bounds_absolute_iu": [
+          99460100,
+          111060100,
+          100539900,
+          112239900
+        ],
+        "protected_item_uuid": "51e3a8d5-1e6b-5f46-a297-c3739ea5de91"
+      },
+      {
+        "uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+        "name": "private-R26.2-to-R27.2/933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+        "bounds_absolute_iu": [
+          85648019,
+          108549966,
+          87150019,
+          110451966
+        ],
+        "protected_item_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826"
+      },
+      {
+        "uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+        "name": "private-R26.2-to-R27.2/d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+        "bounds_absolute_iu": [
+          86059119,
+          109161066,
+          86739900,
+          111531900
+        ],
+        "protected_item_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+      }
+    ],
+    "private_pickoffs_before": [
+      {
+        "from": "R26.2",
+        "to": "R27.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+            "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification",
+        "quiet_path_native_track_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "excluded_terminal_neighbourhood": "933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+        "F_annuli_included": []
+      },
+      {
+        "from": "R24.2",
+        "to": "C28.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+            "layer": "F.Cu"
+          },
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification",
+        "quiet_path_native_track_uuids": [
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+        ],
+        "excluded_terminal_neighbourhood": "bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+        "F_annuli_included": [
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ]
+      }
+    ],
+    "private_copper_gap_mm": 0.25,
+    "bbox_extra_polygon_error_mm": 0.001,
+    "raw_contact_projection_excluded_on_F": false,
+    "contact_scope": "Foreign B copper and through vias remain excluded; F ground is separated by FR4 and no new vias are added"
+  },
+  "differing_fields": [
+    "private_pickoffs_before"
+  ]
+}

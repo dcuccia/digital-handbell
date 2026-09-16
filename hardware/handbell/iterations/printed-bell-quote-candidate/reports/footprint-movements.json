@@ -1,0 +1,184 @@
+[
+  {
+    "reference": "C10",
+    "old_native_pose": [
+      5.294511,
+      -6.217731000000001,
+      90.0
+    ],
+    "new_native_pose": [
+      8.6,
+      -2.2,
+      0
+    ],
+    "rationale": "Keep flash VCC bypass beside the reoriented VCC land rather than across the signal fanout."
+  },
+  {
+    "reference": "C30",
+    "old_native_pose": [
+      -11.596821000000006,
+      5.551992999999996,
+      0.0
+    ],
+    "new_native_pose": [
+      -8.9,
+      7.1,
+      270
+    ],
+    "rationale": "Face the adjacent U6 supply/VSS pins with vertical local decoupling, leaving VM's upper escape unobstructed."
+  },
+  {
+    "reference": "L0",
+    "old_native_pose": [
+      -5.000460000000004,
+      9.003011,
+      90.0
+    ],
+    "new_native_pose": [
+      -2,
+      -11.23,
+      0
+    ],
+    "rationale": "Move the indicator into the vacated selector envelope; clear compact power and local protector decoupling."
+  },
+  {
+    "reference": "Q1",
+    "old_native_pose": [
+      -18.872664,
+      1.3074739999999991,
+      0.0
+    ],
+    "new_native_pose": [
+      -6.4,
+      8,
+      90
+    ],
+    "rationale": "Colocate with the cell selector and boost; source faces Q3 and drain faces C26, avoiding a board-perimeter 2A detour."
+  },
+  {
+    "reference": "Q3",
+    "old_native_pose": [
+      -1.9972570000000047,
+      -11.500682999999995,
+      90.0
+    ],
+    "new_native_pose": [
+      -2.5,
+      7.45,
+      0
+    ],
+    "rationale": "Bring the corrected selector drain close to the positive-contact upper exit; preserve every custom land and shorten VBAT/VHI."
+  },
+  {
+    "reference": "R5",
+    "old_native_pose": [
+      7.0011810000000025,
+      -6.301463999999996,
+      90.0
+    ],
+    "new_native_pose": [
+      6.901181,
+      -6.701464,
+      90
+    ],
+    "rationale": "Clear the outer CS lane while retaining the actual CS pullup beside the flash."
+  },
+  {
+    "reference": "R7",
+    "old_native_pose": [
+      -2.998763999999994,
+      8.006720999999999,
+      90.0
+    ],
+    "new_native_pose": [
+      -3,
+      10,
+      0
+    ],
+    "rationale": "Clear the source-selector body and retain this control resistor beside the relocated switch."
+  },
+  {
+    "reference": "R9",
+    "old_native_pose": [
+      8.105371000000005,
+      0.2423339999999996,
+      180.0
+    ],
+    "new_native_pose": [
+      8.105371,
+      0.642334,
+      180
+    ],
+    "rationale": "Shift the USB series pair together to clear the rotated flash courtyard without changing pair spacing or values."
+  },
+  {
+    "reference": "R10",
+    "old_native_pose": [
+      8.109565000000003,
+      -0.9591329999999942,
+      180.0
+    ],
+    "new_native_pose": [
+      8.109565,
+      -0.559133,
+      180
+    ],
+    "rationale": "Shift the USB series pair together to clear the rotated flash courtyard without changing pair spacing or values."
+  },
+  {
+    "reference": "R25",
+    "old_native_pose": [
+      -9.200000000000003,
+      8.299999999999997,
+      0.0
+    ],
+    "new_native_pose": [
+      -7.5,
+      5.3,
+      0
+    ],
+    "rationale": "Keep the protector input filter above its local capacitor instead of blocking the capacitor or switched-power corridor."
+  },
+  {
+    "reference": "R28",
+    "old_native_pose": [
+      -17.200715000000002,
+      6.750382000000002,
+      90.0
+    ],
+    "new_native_pose": [
+      -11.6,
+      8.55,
+      0
+    ],
+    "rationale": "Move the bias-only gate discharge resistor beside U6 so DOUT need not cross the outside Q5 source vias."
+  },
+  {
+    "reference": "U1",
+    "old_native_pose": [
+      6.3014479999999935,
+      -3.359245999999999,
+      90.0
+    ],
+    "new_native_pose": [
+      6.301448,
+      -3.159246,
+      270
+    ],
+    "rationale": "Reverse the flash banks and shift 0.2mm to make all six QSPI signals planar on F despite the B contact lands; retain the maximum UX envelope."
+  },
+  {
+    "reference": "U6",
+    "old_native_pose": [
+      -11.502673000000001,
+      7.349061000000006,
+      0.0
+    ],
+    "new_native_pose": [
+      -10.8,
+      6.6,
+      0
+    ],
+    "rationale": "Move right/up to expose COUT beyond the outside Q5 source-via barrier without narrowing source copper or entering NC copper."
+  }
+]

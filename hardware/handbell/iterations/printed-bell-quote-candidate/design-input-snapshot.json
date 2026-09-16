@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-13",
+  "status": "Owner-authorized new engineering iteration; not fabrication or live-cell approval",
+  "preserved_reference_commit": "fefa8bce4e02f1c6c216f7053fb5d7abb16f3d44",
+  "owner_inputs": {
+    "printed_fit_feedback": "These pieces all seem to fit and work well.",
+    "outer_architecture": "Single-piece printed cosmetic bell shell with removable flush/recessed front cartridge/grille and separate handle",
+    "style": "Original elegant flared handbell silhouette, gently concave sides and rounded crown; black printed handle first, wooden handle option later; no broad handguard disk",
+    "reference_images": "Two user-supplied images are visual inspiration only. No tracing, redistribution, logos or copied artwork are authorized.",
+    "filament_candidate": "ERYONE silk PLA, ASIN B082XTFB7T",
+    "filament_url": "https://www.amazon.com/dp/B082XTFB7T",
+    "print_finish": "Owner willing to print slowly with short layers for exterior finish; temperature/speed are to be grounded in the actual material and printer, not assumed qualified",
+    "usb": "Utilitarian access is acceptable. Prefer a thin wall near the receptacle and a modest opening for the plug metal nose; demonstrate both plug access and cartridge removal.",
+    "handle_attachment": "One central recessed screw from inside the bell, with a broad bearing area; printed handle first and predrilled wooden option later",
+    "battery": "Prefer an open/lightweight capture with visible PCB polarity markings; do not lower the cell without reconciling the actual contact geometry",
+    "electrical_assembly": "Investigate every fitted electronic component on F, with only the battery contacts on B; distinguish this from a genuinely single-operation assembly process",
+    "routing_authorization": "Begin layout when existing PCB through-hole mounts and the coordinated mechanical interfaces give reasonable confidence; no fabrication order authorized",
+    "size": "Do not enlarge unnecessarily. Preserve the successful internals wherever practical."
+  },
+  "coordinate_frame": {
+    "units": "mm",
+    "origin": "Grille exterior/front mouth plane at z0",
+    "positive_z": "Toward handle",
+    "pcb_front_face": "Speaker-facing F",
+    "speaker_front_z_mm": 4.5,
+    "speaker_basket_rear_z_mm": 16.5,
+    "speaker_magnet_rear_z_mm": 23.5,
+    "pcb_front_z_mm": 25.0,
+    "pcb_back_z_mm": 26.6,
+    "cell_center_z_mm": 36.38,
+    "cell_z_basis": "PCB B + selected contact's nominal 9.78 mm dimple height; loaded spring/cell geometry remains unqualified",
+    "speaker_dimensions_source": "docs/measurements/2026-09-11-shell-speaker-inputs.json"
+  },
+  "initial_interface_targets": {
+    "pcb_diameter_mm": 43.0,
+    "pcb_thickness_mm": 1.6,
+    "pcb_growth_policy": "Compare 43 mm first; 46 mm and then 48 mm may be justified if coherent all-front electrical placement cannot fit. Report actual results, not an assumed packing win.",
+    "mounting_holes": [
+      {"x_mm": 10.0, "y_mm": 15.7, "drill_mm": 2.2},
+      {"x_mm": -10.0, "y_mm": -15.7, "drill_mm": 2.2}
+    ],
+    "initial_usb_native_origin_xy_mm": [0.0, -22.82],
+    "initial_usb_mouth_xy_mm": [0.0, -27.90],
+    "usb_policy": "Do not move the interface after coordinated release without a new mechanical bind. A closed port may not trap the cartridge.",
+    "outer_diameter_comparison_ceiling_mm": 75.5,
+    "outer_body_height_comparison_mm": 56.3,
+    "height_basis": "Previous 45.55 mm bell body plus 10.75 mm exterior grille projection; not a target to increase",
+    "handle_height_comparison_mm": 85.5,
+    "contact_mpn": "Keystone 254 revision C",
+    "contact_interface_source": "hardware/handbell/iterations/t8-protected-draft/battery-contact-interface.json",
+    "contact_change_policy": "Preserve the actual lands and spring/ear datums unless a documented alternative is qualified. B-side SMT contacts remain real assembly operations.",
+    "handle_working_selection": "M4 machine screw, broad washer and captive metal nut in keyed printed handle; near the size class of 8-32, not interchangeable threads. Final dimensions and engagement require the new mechanical model."
+  },
+  "gates": [
+    "Preserve all previous native models, scripts and print snapshots.",
+    "Match actual PCB, schematic, source libraries and placement/contact manifest bytes.",
+    "Keep component heights, F/B transforms and raw CELL_NEG versus protected GND explicit.",
+    "Positive contact metal beneath the cell still needs insulation and abrasion control even inside a plastic bell.",
+    "Handle and USB insertion loads must not be carried by the cell, IMU or unsupported solder joints.",
+    "Retain cell containment while the complete cartridge is outside the shell.",
+    "Do not treat silk PLA appearance as evidence of impact, creep, temperature or electrical suitability.",
+    "Native rule passes and inert print feedback are not functional, acoustic, live-cell or child-use qualification.",
+    "No purchased parts, live-cell experiments, manufacturing submissions or fabrication orders are authorized."
+  ]
+}

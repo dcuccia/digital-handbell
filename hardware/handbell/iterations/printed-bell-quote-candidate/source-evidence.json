@@ -1,0 +1,55 @@
+{
+  "review_date": "2026-09-13",
+  "scope": "Separate all-front electronic floorplan; unchanged T8 electrical circuit and physical lands. Manufacturer guidance informs placement but is not project thermal, EMI, charging or assembly qualification.",
+  "preserved_reference_commit": "fefa8bce4e02f1c6c216f7053fb5d7abb16f3d44",
+  "inherited_electrical_source_evidence": "../t8-protected-draft/source-evidence.json",
+  "inherited_evidence_binding": "reports/native-input-bindings.json includes the exact T8 source-evidence, native CAD, netlist, manifest and contact bytes",
+  "manufacturer_material_redistributed": false,
+  "newly_inspected_documents": [
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/tps61023.pdf",
+      "revision": "TI SLVSF14B, September 2019, revised August 2020",
+      "sha256_of_inspected_pdf": "24f398c42259d5c3dc2ed3237cf7a5c2cb52cbd91234bd3057bffb96124815cc",
+      "review_scope": "Printed page 18, sections 10.1/10.2: minimize SW length/area; VIN capacitor must be close to both VIN and GND; output-capacitor rectifier/switch/ground loop is critical; ground plane and copper spreading remain routing requirements."
+    },
+    {
+      "url": "https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf",
+      "revision": "Release 2; build date 20/08/2026; build version 0444806419d7",
+      "sha256_of_inspected_pdf": "51c4f430153fcdbf3209d9b3b41662c8527ff0150bc25777e3fcd6f5221a1c19",
+      "review_scope": "Sections 2.1.2/2.1.3/2.2/2.3: local power-pin decoupling, explicit 1uF on VREG_IN and VREG_OUT, short coherent QSPI and crystal placement. The source permits the example's pins48/49 to share a capacitor; this derivative retains its original capacitor values and verifies every power pin's actual nearest capacitor.",
+      "license_scope": "Source is CC BY-ND 4.0; reference only, no source prose, illustrations, PDF or modified document redistributed."
+    },
+    {
+      "url": "https://cdn-shop.adafruit.com/product-files/3006/MAX98357A-MAX98357B.pdf",
+      "primary_url": "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX98357A-MAX98357B.pdf",
+      "revision": "Maxim 19-6779 Rev7, February 2016, inspected Adafruit-hosted manufacturer PDF",
+      "sha256_of_inspected_pdf": "abac92d3522a204f093c911257c0e0ffa958d8f8acc1da3103a291d0403e8cd9",
+      "review_scope": "Page33 supply bypassing and Layout and Grounding: 0.1uF plus10uF bypass, wide low-resistance output/supply/ground traces and ground fills. Existing MAX98357A thermal land and two filtered BTL nets retained.",
+      "retrieval_limit": "Direct Analog Devices fetch stalled and was stopped; the older explicit Rev7 mirror is inspected evidence, not a claim to have reviewed the latest revision."
+    }
+  ],
+  "upstream_adaptations": [
+    {
+      "product": "5768",
+      "commit": "408fa9a40c0a01a3a65497ef42a29e0b08fe711e",
+      "author": "Limor Fried/Ladyada for Adafruit Industries",
+      "notice": "notices/adafruit-5768-README.md"
+    },
+    {
+      "product": "4438",
+      "commit": "c05abef4675b0380fbf3d23171615a2f1ac0b130",
+      "author": "Bryan Siepert for Adafruit Industries",
+      "notice": "notices/adafruit-4438-README.md"
+    },
+    {
+      "product": "4654",
+      "commit": "82b5a33a1900a5c13849029bc84e7856a44086e0",
+      "author": "Limor Fried/Ladyada for Adafruit Industries",
+      "notice": "notices/adafruit-4654-README.md"
+    }
+  ],
+  "library_reuse": "Exact retained used footprint files copied to package-local libraries, plus exact Handbell/T8 symbol libraries; no vendor CAD imported. KiCad standard library design exception applies to standard design material.",
+  "hardware_license": "CC BY-SA 3.0 Unported; complete LICENSE.txt and notices retained. Root MIT does not relicense adapted hardware.",
+  "software_documentation_license": "Original generation/checking code and new project explanations use root MIT.",
+  "qualification_limits": "No new fuel gauge, protection topology, flash ordering code, charger profile, cell or power-component qualification. Cell-temperature charge inhibit, reverse-cell behavior, short-circuit SOA, assembled quotation and populated measurements remain gates."
+}

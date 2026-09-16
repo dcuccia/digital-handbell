@@ -1,5 +1,10 @@
 # Digital Handbell
 
+**Work paused September 16, 2026.** The accepted layout remains at 51 open
+connections. Saved SCL experiments and the older routing-recovery archive
+are preserved separately; neither is accepted replacement copper. See the
+[pause handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
+
 An open-source, motion-triggered electronic handbell for affordable educational
 music-making. Replace the clapper in a children's play handbell with a speaker,
 rechargeable battery, and compact electronics. A natural ringing gesture should

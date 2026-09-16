@@ -1,0 +1,218 @@
+{
+  "tool": {
+    "executable": "kicad-cli.exe",
+    "binary_sha256": "393525236969434e24bc710334efe244fb285ef6596a1aea8e74353ef4db5477",
+    "version": "10.0.6",
+    "standard_power_symbol_library_sha256": "9f49ee941555a5194f330db1363f24f339b88272a2a60c6e15da8ba11ec6d114",
+    "version_sha256": "ac5ff3fc5163c6b869ef5ab88f08d384d39eb52c5382c5f2ef4ecf3aacb9f341"
+  },
+  "commands": [
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\erc.json",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to hardware/handbell/iterations/printed-bell-quote-candidate/reports/.native-check-work/erc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--schematic-parity",
+        "--severity-all",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\drc.json",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Found 243 violations\nFound 59 unconnected items\nFound 46 schematic parity issues\nSaved DRC Report to hardware/handbell/iterations/printed-bell-quote-candidate/reports/.native-check-work/drc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\handbell-netlist.xml",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\source-erc.json",
+        "hardware\\handbell\\iterations\\printed-bell-power-rework\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "Found 0 violations\nSaved ERC Report to hardware/handbell/iterations/printed-bell-quote-candidate/reports/.native-check-work/source-erc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--schematic-parity",
+        "--severity-all",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\source-drc.json",
+        "hardware\\handbell\\iterations\\printed-bell-power-rework\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Found 235 violations\nFound 155 unconnected items\nFound 46 schematic parity issues\nSaved DRC Report to hardware/handbell/iterations/printed-bell-quote-candidate/reports/.native-check-work/source-drc.json\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\source-netlist.xml",
+        "hardware\\handbell\\iterations\\printed-bell-power-rework\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "pdf",
+        "--exclude-pdf-metadata",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\handbell-schematic.pdf",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\handbell-schematic.pdf'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "sch",
+        "export",
+        "svg",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\schematic-svg",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_sch"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'C:\\Projects\\dcuccia\\digital-handbell\\hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\schematic-svg\\handbell.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "pcb",
+        "export",
+        "pdf",
+        "--mode-single",
+        "--layers",
+        "F.Cu,F.Fab,F.SilkS,Edge.Cuts",
+        "--scale",
+        "3",
+        "--exclude-value",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\front-native.pdf",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\front-native.pdf'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "pcb",
+        "export",
+        "svg",
+        "--mode-single",
+        "--layers",
+        "F.Cu,F.Fab,F.SilkS,Edge.Cuts",
+        "--fit-page-to-board",
+        "--exclude-drawing-sheet",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\front-native.svg",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\front-native.svg'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "pcb",
+        "export",
+        "pdf",
+        "--mode-single",
+        "--layers",
+        "B.Cu,B.Fab,B.SilkS,Edge.Cuts",
+        "--scale",
+        "3",
+        "--exclude-value",
+        "--mirror",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\rear-native.pdf",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\rear-native.pdf'.\nDone.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "kicad-cli.exe",
+        "pcb",
+        "export",
+        "svg",
+        "--mode-single",
+        "--layers",
+        "B.Cu,B.Fab,B.SilkS,Edge.Cuts",
+        "--fit-page-to-board",
+        "--exclude-drawing-sheet",
+        "--mirror",
+        "--output",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\rear-native.svg",
+        "hardware\\handbell\\iterations\\printed-bell-quote-candidate\\handbell.kicad_pcb"
+      ],
+      "exit": 0,
+      "stdout": "Plotted to 'hardware\\handbell\\iterations\\printed-bell-quote-candidate\\reports\\.native-check-work\\rear-native.svg'.\nDone.\n",
+      "stderr": ""
+    }
+  ]
+}

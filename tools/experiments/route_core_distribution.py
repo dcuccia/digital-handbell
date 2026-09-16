@@ -25,6 +25,7 @@ INPUT_COMMIT = "60db9b4"
 ROUTING_BOUNDS = (-12, -10, 12, 10)
 SEARCH_MARGIN = 4
 SEARCH_LIMIT = 80000
+TARGET_ANCHORS = {}
 
 
 class NativeRouter(Router):
@@ -152,6 +153,14 @@ def main():
         net = pads[a].GetNetname()
         assert net and net == pads[b].GetNetname()
         points = [[pcb.ToMM(v)-100 for v in pads[n].GetPosition()] for n in (a, b)]
+        for i, name in enumerate((a, b)):
+            if name in TARGET_ANCHORS:
+                at = TARGET_ANCHORS[name]
+                point = pcb.SHAPE_CIRCLE(pcb.VECTOR2I(*(pcb.FromMM(v) for v in at)), 0)
+                assert any(t.GetNetname() == net and t.IsOnLayer(pcb.F_Cu)
+                           and t.GetEffectiveShape(pcb.F_Cu).Collide(point, 0)
+                           for t in board.GetTracks()), "Anchor must lie on existing same-net F copper"
+                points[i] = [v-100 for v in at]
         path = router.search(*points, net, .2, net != "GND", SEARCH_MARGIN, expansion_limit=SEARCH_LIMIT)
         if path is None:
             out.mkdir(parents=True)
@@ -235,6 +244,7 @@ def main():
               "ground_group_routed_first": args.reserve_ground,
               "grid_mm": GRID, "expansion_limit_per_connection": SEARCH_LIMIT, "search_margin_mm": SEARCH_MARGIN,
               "routing_bounds_common_mm": ROUTING_BOUNDS, "outline_setback_mm": .55,
+              "target_anchors_native_mm": TARGET_ANCHORS,
               "contact_interface_sha256": sha(PACKAGE / "battery-contact-interface.json"),
               "ground_fill_invalidated": True,
               "remaining": "Exact edge/via DRC, filled independent continuity and unchanged-source gates required."}

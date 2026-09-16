@@ -1,0 +1,32 @@
+[
+  {
+    "net": "/PROT_COUT",
+    "old_via_xy": [
+      -12.3,
+      6.2
+    ],
+    "new_via_xy": [
+      -12.5,
+      6.08
+    ],
+    "reason": "Clear the existing broad raw-negative feed and retain both contact-base/source-via clearances"
+  },
+  {
+    "net": "/PROT_VM",
+    "replaced_track": {
+      "a": [
+        -8.15,
+        6.1
+      ],
+      "b": [
+        -11.45,
+        9.4
+      ],
+      "net": "/PROT_VM",
+      "layer": "B.Cu",
+      "width": 0.1778,
+      "group": "protector VM input"
+    },
+    "reason": "Route the quiet VM input around the full raw-VSS via annulus, not just its entering track"
+  }
+]

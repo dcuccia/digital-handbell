@@ -166,6 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Paused September 16 at the owner's request.** Save and publish only;
+do not continue engineering until explicitly resumed. The accepted board
+remains the 51-open charge-indicator checkpoint `b2203c8`, with the hash
+below. No SCL candidate was accepted and no supply branch was removed.
+
+The unfinished `tools/route_scl_pullup.py` and existing-copper anchor support
+are preserved as work in progress. Two bounded searches failed: R14.2 to
+IC4.13, then to the existing SCL trunk at native (91.69, 92.7368). Both
+exhausted the sampled component after 2,769 expansions, not the 80,000 cap.
+The suspected enclosing 3V3 branches near R14 were inspected, but their
+redundancy was **not established**. Do not remove them on that assumption.
+See `reports/scl-pullup-attempt.json` in the active package.
+
+The previously untracked `printed-bell-quote-candidate` is now preserved as
+a historical recovery archive, not a replacement for the active board.
+Machine-local KiCad preferences, locks and caches remain excluded.
+
 **Resumed September 15 at the owner's explicit request**, following the
 September 14 pause. Continue bounded sequential items; no background engineering
 agent or routing loop was started.

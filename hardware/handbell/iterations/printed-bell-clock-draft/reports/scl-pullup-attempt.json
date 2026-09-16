@@ -1,0 +1,29 @@
+{
+  "status": "OWNER_PAUSED_NO_CANDIDATE_ACCEPTED",
+  "date": "2026-09-16",
+  "input_commit": "b2203c8",
+  "input_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+  "accepted_native_opens": 51,
+  "source_modified": false,
+  "attempts": [
+    {
+      "from": "R14.2",
+      "to": "IC4.13",
+      "result": "no_path_in_masked_domain",
+      "expanded": 2769,
+      "limit": 80000,
+      "elapsed_seconds": 1.187
+    },
+    {
+      "from": "R14.2",
+      "target_same_net_trunk_native_mm": [91.69, 92.7368],
+      "result": "no_path_in_masked_domain",
+      "expanded": 2769,
+      "limit": 80000,
+      "elapsed_seconds": 1.328
+    }
+  ],
+  "unresolved": "Nearby 3V3 copper encloses the R14 escape. Redundancy of those branches was not established; none was removed or moved.",
+  "resumption_gate": "Explicit owner resume required. Preserve retry history; no automatic routing continuation.",
+  "qualification": "Preserved unfinished tooling and diagnostic evidence, not a routed or fabrication-ready candidate."
+}

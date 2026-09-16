@@ -2,8 +2,9 @@
 
 ## Bounded engineering work
 
-- **September 15 owner resume:** continue from the September 14 checkpoint
-  using the bounded sequential policy below. The exact artifacts and next
+- **September 16 owner pause:** commit/push the saved work only. Do not
+  resume routing, CAD or other engineering until the owner explicitly resumes.
+  This supersedes the earlier sequential-continuation authorization. The exact artifacts and next
   scope are in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - Apply the [cost-aware closure plan](docs/pcb-closure-plan.md). Optimize for
   closing a stable candidate, not the number of microtasks or reports produced.
