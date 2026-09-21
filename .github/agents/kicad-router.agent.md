@@ -58,6 +58,10 @@ Keep output compact; do not dump whole manifests, connectivity graphs or logs.
   A time checkpoint is not permission to reset retries or broaden scope.
 - Stop promptly on owner pause. Fix straightforward violations you introduced
   only within the established policy and remaining correction budget.
+- A correction limited to implementation errors does not authorize changing
+  the target terminal, geometry strategy or search domain. Record native
+  search stop reason, expansions and elapsed time before raising a failure.
+  Do not describe a missing path as exhausted space without those statistics.
 
 # Stop and escalate
 

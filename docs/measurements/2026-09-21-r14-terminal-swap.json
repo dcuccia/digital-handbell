@@ -1,0 +1,145 @@
+{
+  "status": "NO_STAGED_CANDIDATE",
+  "date": "2026-09-21",
+  "input_package": "hardware/handbell/iterations/printed-bell-clock-draft",
+  "input_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+  "input_manifest_sha256": "2b9ea13a6ae85d0f8d2ae09c74161e3122349e4ecb56c9aa760823cd88d9bb55",
+  "experiment": "tools/experiments/route_r14_terminal_swap.py",
+  "experiment_sha256": "3680a434faf481d2744595b12f680789873c37ffc3b7e652f7d791e4f557f592",
+  "last_attempt_executed_script_sha256": "2589dee218ca4fa11d8c0569cd0ad65d9c01e4adb205a1bab550f220770c11c2",
+  "script_provenance": "The script was converted to a read-only diagnostic after the historical attempts and is not the exact byte sequence that executed them. It preserves the second target and supply-first native-obstacle setup, but has not been rerun; the first recorded target is not reproduced by the current bytes. Only syntax and source-hash checks were performed after conversion.",
+  "runtime_dispatch": {
+    "inventory_first_dispatched_model": "gpt-5.6-sol",
+    "terminal_swap_first_dispatched_model": "gpt-5.6-sol",
+    "reasoning_effort_explicitly_requested": "medium",
+    "selection_source": "explicit_override"
+  },
+  "local_geometry_basis": {
+    "R14_original_courtyard_bounds_mm": [86.423269, 93.64683, 87.765669, 95.78923],
+    "IC4_SCL_pad_mm": [90.412306, 93.992711],
+    "IC4_VDD_pad_mm": [88.749806, 95.155211],
+    "IC4_VDDIO_pad_mm": [88.587306, 93.492711],
+    "IC4_native_courtyard_polygon": "empty; not qualified by footprint graphics bounding box",
+    "existing_supply_via_copper_to_BT2_metal_mm": 0.535,
+    "source_SCL_routed_group": "F-only IC4.13 to IC1.5; no existing SCL via/B segment",
+    "local_filled_GND": "Distinct reported islands for IC4.1/2/3, IC4.6/7, C23.2 and C24.2; not evidence of a continuous return plane.",
+    "old_R14_SCL_pocket": "Empty of filled GND within 0.45 mm radial probes; fill appears at 0.7 mm west/northwest/southwest. Source pad-to-nearest-fill gap 0.2005 mm."
+  },
+  "native_tool": {
+    "kicad_version": "10.0.6",
+    "grid_mm": 0.05,
+    "clearance_mm": 0.2,
+    "track_width_mm": 0.2,
+    "front_only": true,
+    "search_bounds_native_mm": [
+      85.5,
+      91.0,
+      93.5,
+      98.0
+    ],
+    "expansion_limit_per_connection": 80000
+  },
+  "authorized_transform_proposed_but_not_written": {
+    "reference": "R14",
+    "center_mm": [
+      87.094469,
+      94.71803
+    ],
+    "rotation_from_deg": 90,
+    "rotation_to_deg": 270,
+    "native_verified_pad_positions_before_route_search": {
+      "R14.1_+3V3_mm": [
+        87.094469,
+        94.21003
+      ],
+      "R14.2_SCL_mm": [
+        87.094469,
+        95.22603
+      ]
+    },
+    "body_and_height_expectation_from_symmetric_footprint_rotation": "Expected unchanged; this was not measured CAD or courtyard proof.",
+    "center_and_exact_native_pad_transform_verified": true
+  },
+  "authorized_removals_proposed_but_not_written": [
+    {
+      "uuid": "548c8552-ff4c-56b3-83d9-9d0a5389e3e2",
+      "net": "+3V3",
+      "start_mm": [
+        87.8697,
+        93.4927
+      ],
+      "end_mm": [
+        87.8697,
+        94.9461
+      ],
+      "width_mm": 0.1778
+    },
+    {
+      "uuid": "76a37864-74d8-5963-bcc4-18eb043accfd",
+      "net": "+3V3",
+      "start_mm": [
+        87.8697,
+        94.9461
+      ],
+      "end_mm": [
+        87.5898,
+        95.226
+      ],
+      "width_mm": 0.1778
+    },
+    {
+      "uuid": "8b67bfa8-9f2d-5d11-b459-76494e6f41ef",
+      "net": "+3V3",
+      "start_mm": [
+        87.0945,
+        95.226
+      ],
+      "end_mm": [
+        87.5898,
+        95.226
+      ],
+      "width_mm": 0.1778,
+      "classification": "old R14.1 immediate spur"
+    }
+  ],
+  "preserved_supply_structure": {
+    "via_uuid": "1c15a7a2-2065-55a0-bfec-88da501cad88",
+    "via_mm": [
+      87.9,
+      93.6
+    ],
+    "existing_0p25mm_delivery_chain_unchanged": true,
+    "no_via_relocation_or_new_via": true
+  },
+  "attempts": [
+    {
+      "target": "existing SCL trunk anchor",
+      "target_mm": [
+        91.69,
+        92.7368
+      ],
+      "result": "SEARCH_RETURNED_NO_PATH",
+      "expansions": "not_recorded",
+      "timing": "not_recorded",
+      "stop_reason": "not_recorded"
+    },
+    {
+      "target": "closer source-bound IC4.13 terminal",
+      "target_mm": [
+        90.412306,
+        93.992711
+      ],
+      "result": "SEARCH_RETURNED_NO_PATH",
+      "classification": "out-of-scope second target search; no accepted edits",
+      "expansions": "not_recorded",
+      "timing": "not_recorded",
+      "stop_reason": "not_recorded"
+    }
+  ],
+  "blocker": "After the in-memory R14 reversal and the three fine +3V3 removals, each recorded bounded native F.Cu search returned no SCL path. Missing search statistics do not establish that either target was unreachable or that the search space was exhausted. The second target search was out of scope, and no edits were accepted or serialized.",
+  "accepted_package_modified": false,
+  "candidate_created": false,
+  "full_board_checks_run": false,
+  "full_board_checks_omitted_reason": "No routed candidate existed.",
+  "next_action": "No further retry. Astra engineering review is required; do not retry the unchanged terminal-swap geometry, widen the search, move components, reduce width/clearance, or disturb other copper."
+}

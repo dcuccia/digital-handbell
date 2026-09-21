@@ -183,6 +183,14 @@ exhausted. The next item is **Astra's joint local IMU/pull-up supply,
 SCL/SDA and return-corridor decision**, not another unconstrained route
 search or removal of the required 0.25 mm supply branch.
 
+The subsequent in-place R14 terminal-reversal screen also returned no
+candidate; its limitations and executor scope deviation are preserved in
+[the outcome](measurements/2026-09-21-r14-terminal-swap.json). No accepted PCB
+or manifest bytes changed. Do not retry either trapped-pad strategy.
+The next bounded engineering item is to evaluate **one R14 location beside
+the existing SCL group**, jointly accounting for its supply connection,
+native courtyard and local ground returns. No move is yet authorized.
+
 **Paused September 16 at the owner's request.** Save and publish only;
 do not continue engineering until explicitly resumed. The accepted board
 remains the 51-open charge-indicator checkpoint `b2203c8`, with the hash

@@ -115,6 +115,36 @@ placement change or B-side crossing is authorized by this checkpoint.
 Other control nets remain unreleased where they compete with reserved
 critical corridors. The accepted state remains 51 opens.
 
+### September 21 in-place R14 reversal screen
+
+Native local analysis found R14's supply pad south of its SCL pad, with
+the existing supply via northeast at (87.9, 93.6). Astra therefore allowed
+a staged 180-degree terminal reversal about the unchanged R14 center,
+removing only the two fine segments above and the immediate old-pad supply
+spur `8b67bfa8-9f2d-5d11-b459-76494e6f41ef`. This would supply the upper pad
+from the existing via and let the lower SCL pad escape south without moving
+the wider supply network. No B routing or other placement change was allowed.
+
+Sol verified the in-memory pad transform but obtained no SCL route.
+The [record](measurements/2026-09-21-r14-terminal-swap.json) preserves the
+negative result and its limits: search statistics were not captured, and
+a second target search exceeded the one-target authorization. Neither was
+accepted as a successful correction. The retained tool is now diagnostic-only,
+with no PCB/manifest serialization, and records failure statistics. Do not
+repeat these searches. The accepted PCB and placement manifest are unchanged.
+
+This screen also found separate local filled-ground groups: IC4.1/2/3,
+IC4.6/7, C23.2 and C24.2 are not a single continuous local return. R14's
+immediate pocket is empty of fill, with nearby fill west of the pad.
+Thus a signal-only geometric success would still require joint return review.
+
+Next engineering item: evaluate **one local R14 relocation adjacent to the
+existing SCL group**, with its short supply connection and ground-return
+space together, rather than disturb the 0.25 mm supply delivery or keep
+testing the trapped pocket. This is an evaluation scope, not approval of a
+position or a fabrication-ready layout. No owner-facing requirement has
+changed; mechanical rebinding is required if a move is eventually accepted.
+
 ## Work and acceptance
 
 Sol executes established constraints, not redesigns. Preserve placement,
