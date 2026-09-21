@@ -1,5 +1,10 @@
 # Digital Handbell
 
+**September 21 end-of-day pause:** saved work is checkpointed; engineering
+requires an explicit owner resume. The accepted board remains at 51 opens.
+A separate 49-open inner-ground-plane candidate and its review evidence are
+preserved, but not promoted. See the [handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
+
 **September 21: four-layer migration approved, with Astra/Sol role separation.**
 The [routing-agent policy](docs/routing-agent-policy.md) retains Astra's
 engineering review and requires pinned Sol for corridor/group routing batches.

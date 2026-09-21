@@ -60,3 +60,13 @@ is rejected: a previously connected GND pad group split despite the native
 open count decreasing to 50. No candidate copper is promoted into this
 package. The saved candidate requires exact regression diagnosis and the
 remaining per-layer acceptance gates before another engineering decision.
+
+**September 21 end-of-day pause:** the subsequent
+[explicit-settings replay](reports/in1-plane-settings-replay.json) preserves
+the original connections and has 49 opens. Its
+[supplementary review evidence](reports/in1-plane-review-supplement.json)
+and [saved candidate archive](reports/staged-in1-settings-replay.zip) are
+preserved separately; the top-level PCB/manifest are still the accepted
+51-open migration baseline. The archive is not a quotation/fabrication
+package and must not be extracted over this package. Root return-path review
+and promotion remain unfinished. Resume only on explicit owner request.

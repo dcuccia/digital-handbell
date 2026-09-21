@@ -1,0 +1,240 @@
+{
+  "status": "READ_ONLY_REVIEW_SUPPLEMENT",
+  "candidate_sha256": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78",
+  "source_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "review_tool_sha256": "6d733b6f3aedfd1c0f98dc300e1ecc8c52cdc238679e7811bcb1c63fad8a7606",
+  "native_svg": {
+    "file": "in1-plane-native.svg",
+    "sha256": "c787c38a7df3021ff7aefd0c1c8c9624e96e79254d4c57d7ce78c7f097b0c89d",
+    "layers": [
+      "In1.Cu",
+      "Edge.Cuts"
+    ],
+    "command": {
+      "status": "complete",
+      "command": [
+        "<kicad-cli>",
+        "pcb",
+        "export",
+        "svg",
+        "--mode-single",
+        "--layers",
+        "In1.Cu,Edge.Cuts",
+        "--fit-page-to-board",
+        "--exclude-drawing-sheet",
+        "--output",
+        "<work>\\in1-plane-native.svg",
+        "<candidate>"
+      ],
+      "exit_code": 0,
+      "seconds": 0.5,
+      "stdout": "native-svg.stdout.txt",
+      "stderr": "native-svg.stderr.txt"
+    }
+  },
+  "detail_png": {
+    "file": "in1-plane-review-details.png",
+    "sha256": "8fd57eb476eff45e8aed1c044ba69b7f99c4b24e82973f960d7227a92c236a06",
+    "windows_mm": [
+      {
+        "name": "Clock detail",
+        "bounds": [
+          88,
+          95,
+          99,
+          103
+        ]
+      },
+      {
+        "name": "Boost detail",
+        "bounds": [
+          93,
+          111,
+          101,
+          119
+        ]
+      }
+    ],
+    "render_source": "Exact native saved In1 filled polygons and native F.Cu primitive shapes; rasterized for review.",
+    "other_power_crossing_track_counts": {
+      "+3V3": 5,
+      "VAMP": 2,
+      "V+": 3
+    }
+  },
+  "actual_fill": {
+    "zone_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b",
+    "islands": [
+      {
+        "uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+        "zone_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b",
+        "layer": "In1.Cu",
+        "island_index": 0,
+        "explicit_native_holes": 0,
+        "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+        "filled_area_mm2": 1371.6173949517135
+      }
+    ],
+    "guide_guards_are_not_fill": true
+  },
+  "supplemental_assertions": {
+    "ten_F_protected_items_checked_against_every_F_island_at_0_25_mm": true,
+    "F_protected_item_island_comparisons": 220,
+    "nine_In1_guard_native_outlines_exact_by_symmetric_difference": [
+      {
+        "name": "in1-private/6623be95-c657-5a8e-bedb-c5a73d42d40b",
+        "bounds_iu": [
+          103149000,
+          116949000,
+          104251000,
+          118051000
+        ],
+        "symmetric_difference_empty": true
+      },
+      {
+        "name": "in1-private/eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "bounds_iu": [
+          99649000,
+          111349000,
+          100751000,
+          112451000
+        ],
+        "symmetric_difference_empty": true
+      },
+      {
+        "name": "in1-boost-sw/3f334850-1096-5c76-ac45-fa801cdf1bfc",
+        "bounds_iu": [
+          93800000,
+          112550000,
+          95800000,
+          117050000
+        ],
+        "symmetric_difference_empty": true
+      },
+      {
+        "name": "in1-boost-sw/6880469f-e4d2-53ec-a4b5-8d000ec1cf1e",
+        "bounds_iu": [
+          97455000,
+          114800000,
+          98625000,
+          115600000
+        ],
+        "symmetric_difference_empty": true
+      },
+      {
+        "name": "in1-boost-sw/046e039e-0810-5599-ac5c-33a1afd3d3dc",
+        "bounds_iu": [
+          93750000,
+          113950000,
+          95450000,
+          117550000
+        ],
+        "symmetric_difference_empty": true
+      },
+      {
+        "name": "in1-boost-sw/2490c92c-982e-5830-b3df-3897734e1b09",
+        "bounds_iu": [
+          96950000,
+          114850000,
+          97650000,
+          117050000
+        ],
+        "symmetric_difference_empty": true
+      },
+      {
+        "name": "in1-boost-sw/538119a3-e187-576d-9270-9e694af7a8c3",
+        "bounds_iu": [
+          96950000,
+          114850000,
+          98285000,
+          115550000
+        ],
+        "symmetric_difference_empty": true
+      },
+      {
+        "name": "in1-boost-sw/6278f69b-4344-5d61-8e83-5333e8450cc6",
+        "bounds_iu": [
+          93750000,
+          115850000,
+          98150000,
+          117550000
+        ],
+        "symmetric_difference_empty": true
+      },
+      {
+        "name": "in1-clock-region",
+        "bounds_iu": [
+          90103600,
+          96152596,
+          97237500,
+          100263901
+        ],
+        "symmetric_difference_empty": true
+      }
+    ],
+    "all_original_top_level_nonzone_nodes_exact_raw_strings": true,
+    "original_nonzone_block_count": 1483,
+    "original_nonzone_blocks_sha256": "3c54f984acf4f01d941f7414b9a6c93a53981974ca96b01e40942837ec7ed601",
+    "all_original_zone_children_except_filled_polygon_exact_raw_strings": true
+  },
+  "boost_local_F_paths": [
+    {
+      "from": "U5.4",
+      "to": "C27.2",
+      "net": "GND",
+      "all_F_Cu": true,
+      "copper_uuids": [
+        "14766bad-5835-5068-8b5a-caa25bc52580",
+        "088bee53-2413-5430-8acc-32a9f7f281d8",
+        "1882384a-8437-51aa-84e0-67f4c472cc46",
+        "cd1ac9ea-17d7-560e-b79c-380d25d3feda"
+      ],
+      "via_uuids": []
+    },
+    {
+      "from": "U5.4",
+      "to": "C28.2",
+      "net": "GND",
+      "all_F_Cu": true,
+      "copper_uuids": [
+        "14766bad-5835-5068-8b5a-caa25bc52580",
+        "088bee53-2413-5430-8acc-32a9f7f281d8",
+        "1882384a-8437-51aa-84e0-67f4c472cc46",
+        "8b095e6c-ce66-5915-a589-2b1a247f9129",
+        "bcb9e722-fe71-5b16-8387-e04b4bcd0520"
+      ],
+      "via_uuids": []
+    },
+    {
+      "from": "U5.6",
+      "to": "C27.1",
+      "net": "VAMP",
+      "all_F_Cu": true,
+      "copper_uuids": [
+        "c66ad0bd-62c4-5a50-9e68-a42840d0c6ee",
+        "745fcd9e-40cc-5272-833c-e3bc67e2894e",
+        "5f740232-0ad1-5df6-a1d0-daa1b956e7bf",
+        "4a939b86-4ff8-51fc-b5d2-cb3f319e987c"
+      ],
+      "via_uuids": []
+    },
+    {
+      "from": "U5.6",
+      "to": "C28.1",
+      "net": "VAMP",
+      "all_F_Cu": true,
+      "copper_uuids": [
+        "c66ad0bd-62c4-5a50-9e68-a42840d0c6ee",
+        "745fcd9e-40cc-5272-833c-e3bc67e2894e",
+        "5f740232-0ad1-5df6-a1d0-daa1b956e7bf",
+        "9514feb0-676d-5df0-a552-7e33caccbfec",
+        "bf411126-e0c1-5e14-b531-dc4dd157714a"
+      ],
+      "via_uuids": []
+    }
+  ],
+  "limits": [
+    "Read-only staged-candidate evidence; no refill or geometry change.",
+    "Connectivity is topological only; no AC impedance, current, thermal, or manufacturing approval."
+  ]
+}

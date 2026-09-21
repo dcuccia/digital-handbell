@@ -2,6 +2,12 @@
 
 ## Bounded engineering work
 
+- **September 21 end-of-day owner pause:** engineering is stopped. Preserve
+  and publish saved artifacts only; do not resume routing, plane review,
+  CAD, or further validation until the owner explicitly resumes. This
+  supersedes the continuation authorization below. The accepted PCB still
+  has 51 opens; the separately archived 49-open In1 candidate is not promoted.
+  Resume from `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **September 21 four-layer migration approved:** preserve the accepted
   two-layer `printed-bell-clock-draft` as evidence and establish one separate
   `printed-bell-four-layer` working candidate. Follow the four-layer batch,

@@ -166,6 +166,40 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 21 end-of-day pause (current):** stop engineering; only saved-work
+preservation and publication are authorized. Sol confirmed it is idle with no
+running subprocess. Do not automatically continue the earlier sequence.
+
+- Accepted package: `printed-bell-four-layer`, PCB SHA-256
+  `d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418`,
+  manifest `ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381`;
+  **51 opens**, no accepted inner copper.
+- Unaccepted staged PCB: `19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`,
+  **49 opens**, one In1 island, both private returns and prior connected
+  groups preserved. It is saved with its matching project/libraries in
+  [`staged-in1-settings-replay.zip`](../hardware/handbell/iterations/printed-bell-four-layer/reports/staged-in1-settings-replay.zip)
+  (SHA-256 `1259ca815cb6a70f44ff5927d12ffc62bba48af98d7ba572faa98103ae3ef388`).
+  Extract separately, never over the accepted package. The archive retains
+  derivative CC BY-SA licensing and omits personal `.kicad_prl` preferences.
+  It has no newly accepted manifest or CAD binding.
+- Completed review evidence:
+  [`in1-plane-settings-replay.json`](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-settings-replay.json),
+  [`in1-plane-review-supplement.json`](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-review-supplement.json),
+  [actual native In1 plot](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-native.svg)
+  and [clock/boost detail](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-review-details.png).
+  Supplemental checks cover all 220 F private-item/island clearances,
+  exact nine In1 guards, 1,483 unchanged non-zone source blocks, and four
+  preserved all-F local boost paths. Root engineering acceptance is unfinished.
+
+**One next item, only after explicit resume:** inspect these already-saved
+actual-copper views and the ten other-power-segment/void witnesses, dispose
+of return-path concerns, and decide whether to promote this exact candidate.
+Do not refill, reroute or regenerate artifacts merely to resume. If accepted,
+bind the exact PCB into the manifest and record acceptance before releasing
+the next routing batch. Otherwise retain this candidate with a finite repair
+list. Physical stackup, parity notices, full CAD rebind and manufacturing
+qualification remain separate open gates.
+
 **September 21 subsequent owner approval:** migrate to four layers and have
 pinned Sol agents execute efficient routing batches. Preserve the two-layer
 source and create a separate `printed-bell-four-layer` baseline with unchanged
@@ -230,6 +264,18 @@ C25 by moving parts or altering existing tracks/exclusions. Keep the failed
 trial separate, require exact guard coordinates and source invariants, and
 stop on any new topology/geometry failure rather than adjusting the plane
 inside the replay.
+The [explicit-settings In1 replay](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-settings-replay.json)
+now passes the implemented scalar gates: 49 opens, unchanged 233 warnings,
+all 137 prior pad groups preserved, both private pickoffs preserved, and one
+In1 island of approximately 1371.62 mm2. It joins three existing GND groups
+without changing placement or routing primitives. **It is still staged,
+not promoted.** Root review found that the first SVG depicted only island
+bounding rectangles, not actual copper; that figure was removed and replaced
+with the native plot and actual-polygon details linked above. Supplementary
+original-F private-guard checks are now complete, but root review remains
+paused. The ten other-net
+trace/void witnesses are five +3V3, two VAMP and three V+ power segments,
+not ten independent signal defects; local return paths still need review.
 Native plane work does not require
 using the still-unqualified F/B-only route search; qualify that engine only
 if it will actually be used for inner routing.

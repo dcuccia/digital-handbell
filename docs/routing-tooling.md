@@ -6,6 +6,17 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**End-of-day September 21:** engineering is paused. The explicit-settings
+production In1 candidate passes the recorded scalar and supplementary
+private-return/source-preservation checks and has 49 opens, but remains
+unaccepted pending root actual-copper/return-path review. The accepted board
+still has 51 opens. The [handoff](pcb-closure-plan.md#owner-pause-and-next-item)
+links the saved candidate archive and actual native views.
+The discarded bounding-box-only SVG was not a copper plot; never use island
+bounding rectangles as evidence of plane continuity. Executed tool hashes
+remain bound to their respective runs, even when later rendering-only
+corrections change the checked-in tool.
+
 **Latest September 21 result: the saved-native graph controls passed.**
 [`check_four_layer_graph.py`](../tools/check_four_layer_graph.py) now extracts
 fixture syntax from the accepted native PCB instead of creating native
