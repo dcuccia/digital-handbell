@@ -124,9 +124,12 @@ placing an order or waive later owner approval.
 
 The owner requested a comparison of two, three and four copper layers for
 **JLCPCB Standard PCBA**, not a stackup change or supplier submission.
+The owner subsequently approved four-layer migration; supplier submission
+and ordering remain unauthorized.
 The [engineering assessment](pcb-closure-plan.md#layer-count-reassessment-requested-september-21)
 recommends evaluating a separate four-layer candidate before further
-two-layer-only repairs. The accepted package remains two-layer and unrouted.
+two-layer-only repairs. The accepted two-layer package is preserved while a
+separate four-layer baseline is established. Neither is quote-ready.
 
 Copper layers and component faces are independent. With the same 83 fitted
 parts, four layers do not turn the job into four-sided assembly or remove

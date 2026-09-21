@@ -1,12 +1,14 @@
 # Digital Handbell
 
-**September 21: conditional routing resume with Astra/Sol role separation.**
+**September 21: four-layer migration approved, with Astra/Sol role separation.**
 The [routing-agent policy](docs/routing-agent-policy.md) retains Astra's
-engineering review and requires pinned Sol for routine execution.
-The accepted layout remains at 51 open
-connections. Saved SCL experiments and the older routing-recovery archive
+engineering review and requires pinned Sol for corridor/group routing batches.
+A separate [four-layer migration baseline](hardware/handbell/iterations/printed-bell-four-layer/README.md)
+is established, preserving placement and existing copper. It still has
+51 open connections; inner-plane and routing-tool qualification are next.
+The two-layer layout is preserved unchanged. Saved SCL experiments and the older routing-recovery archive
 are preserved separately; neither is accepted replacement copper. See the
-[pause handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
+[current handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
 
 An open-source, motion-triggered electronic handbell for affordable educational
 music-making. Replace the clapper in a children's play handbell with a speaker,

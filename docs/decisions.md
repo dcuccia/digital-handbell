@@ -493,6 +493,33 @@ The stackup is unchanged: obtain owner direction before a migration,
 preserve the accepted source, and do not upload, order or claim turnkey
 acceptance. Owning epics E07/#7 and E08/#8.
 
+## 2026-09-21: owner-approved four-layer migration and portable-process policy
+
+The owner explicitly approved four layers, pinned Sol routing in efficient
+batches, and necessary special processes while preferring simpler equivalent
+alternatives for affordability, repeatability and portability across fabs.
+This supersedes the migration-approval gate in the preceding assessment.
+
+Preserve the accepted two-layer package and establish one separate
+`printed-bell-four-layer` candidate. First enable the four native layers
+without changing source geometry, then qualify all-layer routing/checking
+and release the ground/return strategy. The nominal thickness and mechanical
+interfaces remain fixed; actual dielectric/copper stackup is a supplier
+selection gate, not a guessed impedance specification.
+
+The [execution contract](routing-agent-policy.md#four-layer-migration-and-efficient-execution)
+assigns In1 to protected GND and In2 to released distribution/lower-speed
+routing, preserves raw-contact/private-return exclusions, and defines
+connected-group/corridor batches with one writer and engineering escalation.
+Off-pad ordinary through-vias are preferred where equivalent. U4's current
+filled/capped thermal vias remain required pending a bounded alternative
+review; necessary special processes are not prohibited by the cost goal.
+Native DRC alone is never sufficient acceptance.
+
+No fabrication order, supplier upload, functional qualification or child-use
+release is authorized. Owning epics E07/#7, E08/#8 and affected power/mechanical
+reviews E04/#4, E05/#5.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |

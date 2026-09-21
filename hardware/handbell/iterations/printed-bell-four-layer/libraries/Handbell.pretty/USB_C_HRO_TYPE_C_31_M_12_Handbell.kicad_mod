@@ -1,0 +1,448 @@
+(footprint "USB_C_HRO_TYPE_C_31_M_12_Handbell"
+	
+	
+	
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -2.75 4.83 90)
+		(layer "F.SilkS")
+		
+		(effects
+			(font
+				(size 0.666496 0.666496)
+				(thickness 0.146304)
+			)
+			(justify left bottom)
+		)
+	
+(uuid "b37d618c-7a20-57f3-a6fd-237258541970"))
+	(property "Value" "USB Type C"
+		(at -1.5 4.83 90)
+		(layer "F.Fab")
+		
+		(effects
+			(font
+				(size 0.36576 0.36576)
+				(thickness 0.04064)
+			)
+			(justify left bottom)
+		)
+	
+(uuid "3cf7c58d-9179-5e4b-8004-06f979892de8"))
+	(property "Datasheet" "https://jlcpcb.com/partdetail/Korean_HropartsElec-TYPE_C_31_M12/C165948"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	
+(uuid "55732b6a-8638-5930-9700-937235bb1d6b"))
+	(property "Description" "HRO TYPE-C-31-M-12; modified slots/outer lands; secondary solder all four anchors."
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	
+(uuid "6cff4664-ea5d-5d96-a805-eb54de3ea1e8"))
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.47 1.08)
+		(end -4.47 -0.27)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		
+	
+(uuid "a4ff05e9-745d-527e-80aa-3966d2465042"))
+	(fp_line
+		(start -4.47 5.08)
+		(end -4.47 3.73)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		
+	
+(uuid "7e1715c1-3107-58b3-9be8-80c992d24950"))
+	(fp_line
+		(start 4.47 -0.27)
+		(end 4.47 1.08)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		
+	
+(uuid "23c6197f-bb17-5a11-bc63-7f063392bea2"))
+	(fp_line
+		(start 4.47 3.73)
+		(end 4.47 5.08)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		
+	
+(uuid "321328b7-fc1d-575c-a8f9-57127e59a1ec"))
+	(fp_line
+		(start 4.47 5.08)
+		(end -4.47 5.08)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		
+	
+(uuid "49a956e1-9c20-5df9-b4b0-c0becd644f70"))
+	(fp_poly
+		(pts
+			(xy -3.378200 -1.901800) (xy -3.022600 -1.901800) (xy -3.022600 -3.044800) (xy -3.378200 -3.044800)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		
+	
+(uuid "3b7b24bd-6dfe-5328-b2e4-b97662987b12"))
+	(fp_poly
+		(pts
+			(xy -2.590800 -1.901800) (xy -2.209800 -1.901800) (xy -2.209800 -3.044800) (xy -2.590800 -3.044800)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		
+	
+(uuid "6ad8c596-e59f-598c-9512-6535f5190c69"))
+	(fp_poly
+		(pts
+			(xy 2.209800 -1.901800) (xy 2.590800 -1.901800) (xy 2.590800 -3.044800) (xy 2.209800 -3.044800)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		
+	
+(uuid "86d467f3-791f-5289-9c2f-4b0e35047e0a"))
+	(fp_poly
+		(pts
+			(xy 3.022600 -1.901800) (xy 3.378200 -1.901800) (xy 3.378200 -3.044800) (xy 3.022600 -3.044800)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Paste")
+		
+	
+(uuid "dcbea8e7-135d-5e28-bb80-ebbe56eba4a1"))
+	
+	
+	
+	
+	(fp_line
+		(start -4.47 -2.27)
+		(end -3.53 -2.27)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		
+	
+(uuid "43b11f06-646a-56bb-a1fd-eecaff902ca3"))
+	(fp_line
+		(start -4.47 5.08)
+		(end -4.47 -2.27)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		
+	
+(uuid "9074cd25-3173-5a9c-ba2c-423436b763e6"))
+	(fp_line
+		(start 3.53 -2.27)
+		(end 4.47 -2.27)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		
+	
+(uuid "393498fa-bcf8-5126-906f-1062dcab03b7"))
+	(fp_line
+		(start 4.47 -2.27)
+		(end 4.47 5.08)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		
+	
+(uuid "2b8055d2-1262-59d5-944f-07b47ed98389"))
+	(fp_line
+		(start 4.47 5.08)
+		(end -4.47 5.08)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.Fab")
+		
+	
+(uuid "26670e51-62a9-56cb-a1bb-b65b5d59b38b"))
+	(pad "" np_thru_hole circle
+		(at -2.89 -1.2)
+		(size 0.65 0.65)
+		(drill 0.65)
+		(layers "*.Cu" "*.Mask")
+		
+	
+(uuid "3189c891-57a7-5dc7-a5bb-00a7292a0f02"))
+	(pad "" np_thru_hole circle
+		(at 2.89 -1.2)
+		(size 0.65 0.65)
+		(drill 0.65)
+		(layers "*.Cu" "*.Mask")
+		
+	
+(uuid "8e659786-985c-5a3b-8d6a-fd715282132b"))
+	(pad "A1B12" smd rect
+		(at -3.2 -2.475)
+		(size 0.575 1.15)
+		(layers "F.Cu" "F.Mask")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "19520fec-02a8-5f05-8ffd-78dee8ba0d19")
+
+
+)
+	(pad "A4B9" smd rect
+		(at -2.4 -2.475)
+		(size 0.575 1.15)
+		(layers "F.Cu" "F.Mask")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "2d0b0ccc-3bcc-5d6d-b1fe-3b51ed22bfb0")
+
+
+)
+	(pad "A5" smd rect
+		(at -1.25 -2.275)
+		(size 0.275 1.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "f3967828-f41e-59d2-8b65-617190737381")
+
+
+)
+	(pad "A6" smd rect
+		(at -0.25 -2.275)
+		(size 0.275 1.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "4bf2ace6-5a21-5362-be9f-1a0227ee235e")
+
+
+)
+	(pad "A7" smd rect
+		(at 0.25 -2.275)
+		(size 0.275 1.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "cf36fec1-a043-5b56-8429-74b7b5fe45dd")
+
+
+)
+	(pad "A8" smd rect
+		(at 1.25 -2.275)
+		(size 0.275 1.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "4d199b24-d2b8-53db-a139-cb474bd47212")
+
+
+)
+	(pad "B1A12" smd rect
+		(at 3.2 -2.475)
+		(size 0.575 1.15)
+		(layers "F.Cu" "F.Mask")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "947d029b-c916-5a85-9cd4-57786a5e68b0")
+
+
+)
+	(pad "B4A9" smd rect
+		(at 2.4 -2.475)
+		(size 0.575 1.15)
+		(layers "F.Cu" "F.Mask")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "f6710ac6-2049-566a-bd94-4a6a239276cc")
+
+
+)
+	(pad "B5" smd rect
+		(at 1.75 -2.275)
+		(size 0.275 1.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "671a956c-313f-59ba-b4d5-5bac05e1abc9")
+
+
+)
+	(pad "B6" smd rect
+		(at 0.75 -2.275)
+		(size 0.275 1.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "e6874e08-5f9c-5220-9238-fe22528db7b2")
+
+
+)
+	(pad "B7" smd rect
+		(at -0.75 -2.275)
+		(size 0.275 1.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "e78c0c01-88ae-5593-a06b-3a5da159fccf")
+
+
+)
+	(pad "B8" smd rect
+		(at -1.75 -2.275)
+		(size 0.275 1.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "342443f3-8712-5ade-8ff3-c9023eb48c02")
+
+
+)
+	(pad "M1" thru_hole oval
+		(at -4.325 -1.7 90)
+		(size 2.2 1.1)
+		(drill oval 1.7 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "2249eb1a-0b11-552f-95b3-23f088e83abf"))
+	(pad "M2" thru_hole oval
+		(at 4.325 -1.7 90)
+		(size 2.2 1.1)
+		(drill oval 1.7 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "21438c54-3a6d-566d-b47f-4443b5a96225"))
+	(pad "M3" thru_hole oval
+		(at -4.325 2.48 90)
+		(size 1.9 1.1)
+		(drill oval 1.4 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "ec4d64cc-8307-5be1-8378-f92b79b9c838"))
+	(pad "M4" thru_hole oval
+		(at 4.325 2.48 90)
+		(size 1.9 1.1)
+		(drill oval 1.4 0.6)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "82819a8f-eab5-591f-a86e-4d2773fd5728"))
+	(embedded_fonts no)
+
+
+
+
+(property "LCSC" "C165948" (at 0 0) (layer "F.Fab") (hide yes) (uuid "8a448701-5456-5d3f-be84-e65c70b87ca1") (effects (font (size 1 1) (thickness 0.15))))
+(property "MPN" "TYPE-C-31-M-12" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+(property "Manufacturer" "HRO / Korean Hroparts Elec" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+(attr through_hole)
+)

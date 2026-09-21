@@ -132,6 +132,11 @@ do not stretch the nominal contact primitives or invent loaded geometry.
 
 ### U4 quote-only via treatment
 
+September 21 update: the owner approved a separate four-layer migration.
+The treatment below remains required for the retained U4 geometry until a
+specific simpler alternative passes thermal, electrical and stencil review.
+Extra ground-plane access alone does not qualify an off-pad substitute.
+
 For the matched quotation assets, specify **nonconductive resin fill,
 planarization and copper capping** on U4's four existing 0.35 mm nominal-drill
 thermal vias. Keep the two-layer board and current copper as the baseline.

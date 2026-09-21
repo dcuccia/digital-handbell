@@ -39,7 +39,9 @@ Keep output compact; do not dump whole manifests, connectivity graphs or logs.
 - Preserve component placement, footprint definitions, existing good copper,
   stackup, net classes, design rules, zones, differential-pair rules, board
   outline, mounting, USB and battery/contact interfaces. No opportunistic
-  cleanup or critical-structure rip-up.
+  cleanup or critical-structure rip-up. Only a precise Astra release may
+  change those invariants; the owner-approved four-layer baseline migration
+  is not blanket permission for later placement, plane or rule changes.
 - Native KiCad rule evaluation is authoritative for geometric legality.
   Use the installed native API/CLI; an approximate grid is only a proposal
   generator. Do not claim interactive-router enforcement unless actually used.
@@ -62,6 +64,30 @@ Keep output compact; do not dump whole manifests, connectivity graphs or logs.
   the target terminal, geometry strategy or search domain. Record native
   search stop reason, expansions and elapsed time before raising a failure.
   Do not describe a missing path as exhausted space without those statistics.
+
+# Four-layer batches and portable processes
+
+Follow the four-layer section of `docs/routing-agent-policy.md`. Preserve the
+two-layer reference; work only on the current four-layer source hash once
+the migration baseline is accepted. Reserve In1 for protected GND, use In2
+only for released distribution/lower-speed corridors, and retain all B-side
+contact exclusions. Through-vias must clear obstacles on their entire span.
+Do not use an F/B-only router/checker to qualify inner-layer routes.
+
+Batch complete connected groups and shared corridors under one engineering
+release, not a fixed count of nets. Reuse one native board load and spatial
+data, invalidate changed regions, and query all useful group terminals.
+Continue routine execution until the released scope ends, a real engineering
+question arises, or the checkpoint/retry budget ends. Do not request Astra
+approval for each instance of an already-approved via/escape pattern.
+
+Prefer ordinary through-vias and off-pad escapes when equivalent; no blind
+or buried vias, tighter rules or new via-in-pad dependency just for convenience.
+Necessary special processes are allowed, not automatically forbidden by cost.
+Do not remove U4's filled/capped-via requirement, or substitute tenting, without
+an Astra-reviewed thermal/electrical/stencil alternative. Preserve portability
+through explicit process notes and manufacturer identities, not vendor-only
+assumptions. DRC passing is still not engineering or assembly acceptance.
 
 # Stop and escalate
 

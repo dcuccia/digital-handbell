@@ -166,6 +166,32 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 21 subsequent owner approval:** migrate to four layers and have
+pinned Sol agents execute efficient routing batches. Preserve the two-layer
+source and create a separate `printed-bell-four-layer` baseline with unchanged
+placement, interfaces and existing copper. The first gate is native layer
+enablement plus source/geometry invariants; no new inner routing or planes
+are accepted by that baseline alone. Next qualify all-layer tools and
+release the protected-ground/return strategy. See the
+[four-layer execution contract](routing-agent-policy.md#four-layer-migration-and-efficient-execution).
+Prefer ordinary processes where equivalent; keep necessary filled/capped
+vias until a reviewed alternative meets the same requirements. No supplier
+upload, order or fabrication approval is included.
+
+**Migration baseline accepted:** working package
+`hardware/handbell/iterations/printed-bell-four-layer`, PCB SHA-256
+`d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418`.
+Only native layer declarations changed; source bytes outside that node,
+all existing geometry and component poses are preserved. No inner planes
+or routes were added, so 51 opens remain. A serialization-only newline
+correction was verified against raw bytes; the semantically identical
+native report was reused explicitly, not rerun or represented as new routing
+proof. Its newly enabled schematic-parity check reports 46 notices not
+present in the differently configured historical report. Those need
+disposition before release, not concealment inside an "all checks clean" claim.
+Next item: qualify all-layer geometry/connectivity tools with a deterministic
+cross-layer/via/plane control, then release the protected-ground strategy.
+
 **September 21 conditional resume:** the owner requests Astra engineering
 judgment with pinned Sol routine execution. See the
 [routing-agent policy](routing-agent-policy.md) for exercised model gates,
@@ -242,7 +268,9 @@ thickness tolerances, stackup/copper, via antipads and mechanical binding
 still need review. USB geometry, filled/capped thermal vias, front/rear
 assembly and actual part sourcing remain separate gates.
 
-**No stackup migration is authorized or applied by this assessment.**
+**At the time of this assessment no stackup migration was authorized.**
+The subsequent owner approval above now authorizes a separate four-layer
+candidate under the explicit migration gates, not an automatic plane fill.
 Preserve the accepted two-layer package and reusable schematic, footprints,
 MPNs, mechanics and topology reviews. A migration would use one separate
 active candidate, revise native rules and plane/contact exclusions, review
@@ -271,8 +299,8 @@ Machine-local KiCad preferences, locks and caches remain excluded.
 September 14 pause. Continue bounded sequential items; no background engineering
 agent or routing loop was started.
 
-Current package: `hardware/handbell/iterations/printed-bell-clock-draft`.
-Current PCB SHA-256:
+Preserved two-layer package: `hardware/handbell/iterations/printed-bell-clock-draft`.
+Preserved two-layer PCB SHA-256:
 `a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff`.
 Current native report: `reports/charge-led-routing.json`; prior six-envelope
 revision: `reports/device-envelopes.json`; current public fill proof:

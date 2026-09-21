@@ -2,7 +2,14 @@
 
 ## Bounded engineering work
 
-- **September 21 conditional resume:** Astra retains engineering judgment;
+- **September 21 four-layer migration approved:** preserve the accepted
+  two-layer `printed-bell-clock-draft` as evidence and establish one separate
+  `printed-bell-four-layer` working candidate. Follow the four-layer batch,
+  layer-role, all-layer-tooling and portable-process contract in
+  `docs/routing-agent-policy.md`. Necessary special processes are permitted;
+  simpler alternatives require equivalent electrical/thermal/assembly
+  evidence, not silent removal of filled/capped-via requirements.
+  Astra retains engineering judgment;
   routine routing/tool execution goes to explicitly pinned GPT-5.6 Sol at
   medium effort. Follow `docs/routing-agent-policy.md`, including its
   fail-closed invocation and runtime-verification gate. Never substitute Astra

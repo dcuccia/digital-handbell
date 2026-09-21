@@ -1,0 +1,129 @@
+{
+  "status": "LOGICAL_FOUR_LAYER_PARTIAL_MIGRATION_BASELINE_NOT_ROUTED_OR_QUOTE_READY",
+  "source_commit": "9e7d14a775acded838b2f531817b79e1fb41d888",
+  "source_package": "hardware/handbell/iterations/printed-bell-clock-draft",
+  "source_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+  "source_manifest_sha256": "2b9ea13a6ae85d0f8d2ae09c74161e3122349e4ecb56c9aa760823cd88d9bb55",
+  "output_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "output_manifest_sha256": "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381",
+  "migration_tool": "tools/migrate_printed_bell_four_layer.py",
+  "native": {
+    "kicad_version": "10.0.6",
+    "source_copper_layer_count": 2,
+    "output_copper_layer_count": 4,
+    "enabled_copper_native_sequence": [
+      "F.Cu",
+      "B.Cu",
+      "In1.Cu",
+      "In2.Cu"
+    ],
+    "physical_stackup": "pending; only logical layers enabled; nominal total board thickness remains 1.6 mm"
+  },
+  "layer_roles": {
+    "F.Cu": "short critical routes and fitted parts",
+    "In1.Cu": "reserved protected GND plane; no plane drawn",
+    "In2.Cu": "reserved power and released lower-speed routing; no copper drawn",
+    "B.Cu": "battery contacts and constrained routes"
+  },
+  "exact_changed_nodes": [
+    {
+      "path": "kicad_pcb/layers",
+      "change": "added (4 \"In1.Cu\" signal) and (6 \"In2.Cu\" signal)"
+    }
+  ],
+  "unchanged_source_tree": {
+    "all_pcb_text_outside_layers_node_byte_identical": true,
+    "setup_node_byte_identical": true,
+    "nonlayer_setup_definitions_changed": [],
+    "filled_zone_cache_text_byte_identical": true,
+    "all_pcb_raw_bytes_outside_layers_node_identical": true
+  },
+  "native_geometry_invariants": {
+    "footprints": 104,
+    "pads": 325,
+    "tracks_excluding_vias": 1115,
+    "vias": 85,
+    "nets": 87,
+    "zones": 11,
+    "footprint_poses_and_layers_equal": true,
+    "pad_geometry_nets_and_declared_layers_equal": true,
+    "track_geometry_width_layer_net_uuid_equal": true,
+    "via_position_width_drill_net_uuid_equal": true,
+    "net_inventory_equal": true,
+    "zone_uuid_net_layer_name_equal": true,
+    "part_count_equal": true
+  },
+  "via_semantics": {
+    "source_and_output_endpoints": "F.Cu to B.Cu retained for all 85 through vias",
+    "width_check_api": "via.GetWidth(pcb.F_Cu)",
+    "output_native_layer_sets": {
+      "F.Cu,B.Cu,In1.Cu,In2.Cu": 85
+    },
+    "electrical_consequence": "Native *.Cu through-via padstacks now expose annuli on In1.Cu and In2.Cu. No inner-layer filled copper, zones, traces, or planes exist."
+  },
+  "drc": {
+    "report": "reports/four-layer-baseline-drc.json",
+    "sha256": "b2367dc59029878b534bcf636cd605805a6d4eb8ceca6a237fb4af633c9568c1",
+    "isolated_config": true,
+    "external_timeout_seconds": 120,
+    "unconnected_items": 51,
+    "other_errors": 0,
+    "warnings": 233,
+    "source_count_comparison": {
+      "report": "../printed-bell-clock-draft/reports/charge-led-routing-drc.json",
+      "unconnected_change": 0,
+      "other_error_change": 0,
+      "warning_change": 0
+    },
+    "reuse": "Existing native report reused without rerun: corrected PCB is normalized-text identical to the previously checked output, so parsed/native board data are unchanged; only CRLF serialization outside the layers node was removed.",
+    "schematic_parity_comparison": {
+      "baseline_count": 46,
+      "source_charge_led_report_count": 0,
+      "same": false,
+      "reason": "The baseline DRC invocation enabled --schematic-parity; the historical source report did not contain those 46 parity notices."
+    }
+  },
+  "copied_native_bindings": {
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "fp-lib-table": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+    "sym-lib-table": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+    "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+    "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+    "Clock.kicad_sym": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+    "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "local_footprint_libraries": "copied byte-for-byte from source; all fp-lib-table KIPRJMOD references resolve at the same sibling depth"
+  },
+  "mechanical_binding": {
+    "component_poses_envelopes_contacts_z_preserved": true,
+    "cad_status": "Old CAD represents the same unchanged geometry, but its PCB-source hash binding is stale; no full CAD rebind is claimed."
+  },
+  "historical_source_proofs_only": [
+    "../printed-bell-clock-draft/reports/charge-led-routing.json",
+    "../printed-bell-clock-draft/reports/charge-led-routing-drc.json",
+    "../printed-bell-clock-draft/reports/charge-led-routing-ground-check.json"
+  ],
+  "bounded_tool_audit_next_gate": [
+    {
+      "file": "tools/experiments/route_core_distribution.py",
+      "limitation": "NativeRouter.masks allocates exactly two masks and enumerates only F.Cu/B.Cu; via insertion emits F.Cu-B.Cu only."
+    },
+    {
+      "file": "tools/route_printed_bell.py",
+      "limitation": "Router.masks allocates two layers; Router.search encodes the layer as a binary 0/1 state and emits only F.Cu/B.Cu."
+    },
+    {
+      "file": "tools/check_printed_bell_power_rework.py",
+      "limitation": "CopperGraph iterates only F.Cu/B.Cu and its layer-name mapping is binary, so it cannot prove inner-layer geometry or connectivity."
+    },
+    {
+      "file": "tools/zone_graph.py",
+      "limitation": "CopperGraph rejects filled island layers outside F.Cu/B.Cu."
+    },
+    {
+      "file": "tools/check_front_ground.py",
+      "limitation": "Requires the accepted zone and exclusions on F.Cu and treats filled copper as an F-only proof; it is not a four-layer plane qualification."
+    }
+  ],
+  "next_gate": "Before any new routing or fill, generalize and validate all-layer geometry, zone connectivity, and via-span handling. This migration is not new-routing proof."
+}
