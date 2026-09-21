@@ -192,6 +192,16 @@ disposition before release, not concealment inside an "all checks clean" claim.
 Next item: qualify all-layer geometry/connectivity tools with a deterministic
 cross-layer/via/plane control, then release the protected-ground strategy.
 
+**Tooling checkpoint, still blocked:** primitive/zone graph enumeration now
+supports enabled copper layers and plated spans. The bounded native-fill
+control is not accepted: a corrected finite fixture fills In1 successfully,
+but a subsequent different-net crossing appears connected and stops the
+test before filled-plane assertions. No production copper changed.
+Do not release inner routes or repeat the fill loop. The next diagnostic is
+an exact fixture net/UUID/edge comparison across native connectivity build
+and fill, not another board routing attempt. Previous pad-group fingerprints
+are reusable only while both production inputs and graph-code hashes match.
+
 **September 21 conditional resume:** the owner requests Astra engineering
 judgment with pinned Sol routine execution. See the
 [routing-agent policy](routing-agent-policy.md) for exercised model gates,

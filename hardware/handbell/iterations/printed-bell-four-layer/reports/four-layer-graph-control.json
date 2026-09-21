@@ -1,0 +1,59 @@
+{
+  "status": "PARTIAL_GRAPH_GATE_REPAIRED_NATIVE_FILL_CONTROL_NOT_ACCEPTED",
+  "stage": "graph-tool qualification only; no production PCB, manifest, routing, plane, zone, or fill modified",
+  "native_version": "10.0.6",
+  "source_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+  "baseline_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "baseline_manifest_sha256": "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381",
+  "implemented": {
+    "primitive_graph": "Enumerates enabled copper layers in CopperLayerToOrdinal physical order and joins all declared plated pad/via layers while retaining public APIs.",
+    "filled_zone_graph": "Inspects the complete declared layer set and fails unless every declared layer is enabled copper before physical-order sorting; no unsupported layer is silently filtered.",
+    "legacy_checker": "check_front_ground.py remains unchanged and F-only."
+  },
+  "repaired_fixture": {
+    "closed_edge_cuts_rectangle_mm": [0, 0, 24, 14],
+    "zone_layer": "In1.Cu",
+    "explicit_min_clearance_mm": 0.2,
+    "explicit_copper_edge_clearance_mm": 0.25,
+    "explicit_hole_clearance_mm": 0.25,
+    "explicit_hole_to_hole_mm": 0.25,
+    "explicit_max_error_mm": 0.001,
+    "unfilled_separated_ground_witness_disconnected": true,
+    "unfilled_in1_and_in2_witnesses_disconnected": true,
+    "native_zone_filler_returned_success": true,
+    "native_in1_filled_polygons_present": true,
+    "external_deadline_seconds": 45,
+    "fill_timing": "Fill completed before the 45-second process deadline, but exact timing was not emitted because a later assertion stopped the control before report serialization."
+  },
+  "current_blocker": {
+    "failure": "Post-fill primitive control reported the different-net In1 crossing as connected.",
+    "assertion": "Different-net inner crossing was silently connected",
+    "disposition": "The repaired run is not accepted as all-layer qualification. No retry was made because only one native-fill attempt was authorized. Filled-zone positive/negative connectivity assertions were not reached."
+  },
+  "reused_prior_evidence": {
+    "primitive_graph_source_sha256_unchanged": "f9f0ccb985c43a655b07d3a21a55cbbd8cb79cc459dc7b72888ac9630ccbffd3",
+    "source_vs_baseline_pad_group_fingerprint_sha256": "c49025fc1bfa8f6f21a63c1864dfbf9f1a04cff5af9f10b762ff9ba13c712939",
+    "fingerprint_rerun": false
+  },
+  "prior_failed_fixture_history": {
+    "failure": "The first fixture lacked Edge.Cuts and used an already-connected positive GND witness; it timed out after a kimath overflow assertion.",
+    "interpretation": "That result was a fixture failure and is not evidence that real four-layer filling fails."
+  },
+  "executed_tool_sha256": {
+    "tools/check_printed_bell_power_rework.py": "f9f0ccb985c43a655b07d3a21a55cbbd8cb79cc459dc7b72888ac9630ccbffd3",
+    "tools/zone_graph.py": "c6c1cc923c4543fa4728aeccd1804d6b9f2d319aa17af93a7bcf1fb43db0a6f0",
+    "tools/check_four_layer_graph.py": "d4818010f425c1be62cc2697aaa176e3fa00ebd2a604bdf02784c9da56461ae2"
+  },
+  "post_run_safety_guard": {
+    "change": "The control now refuses to reuse the prior pad-group fingerprint unless both production PCB hashes and the primitive-graph source hash match the measured inputs.",
+    "current_control_tool_sha256": "bd2d87c693e043a0b9492443590f3b61e08e8974e927fbdd2db18bf3bd53bce6",
+    "validation": "Syntax checked only after this guard was added; no further native fill or graph-control run."
+  },
+  "remaining_unqualified": [
+    "Post-fill different-net crossing behavior in the deterministic fixture",
+    "Positive and negative filled-In1 connectivity witnesses",
+    "routing masks/search layer state",
+    "production inner-plane fill and continuity",
+    "contact exclusions and private sense/current-path preservation on inner layers"
+  ]
+}

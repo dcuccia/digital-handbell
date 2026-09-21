@@ -6,6 +6,26 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**September 21 four-layer update:** the logical migration baseline is now
+`printed-bell-four-layer`; the two-layer pilot below is historical. Primitive
+and filled-zone graph code now enumerates enabled copper layers in physical
+order rather than assuming F/B. Basic separation, through-via/inner-annulus,
+short-reporting and unchanged production pad-group controls passed in the
+initial experiment, but **the full all-layer graph gate is not qualified**.
+
+The native-fill fixture initially lacked a finite board outline and used a
+positive witness that was already joined by primitive copper. After those
+test defects were corrected, native In1 fill completed, but a post-fill
+different-net-crossing assertion failed before the plane-connectivity
+assertions ran. Do not bypass that assertion or blame the real board.
+The next diagnostic must compare fixture UUID/net identities and graph
+edges before native connectivity build and after fill, identifying the
+state change before any further correction. Preserve the partial
+[control report](../hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-graph-control.json).
+The corrected fixture has not qualified production inner routing/planes.
+Old F/B routing masks and the F-only ground checker remain unreleased for
+that purpose.
+
 **Native KiCad API analysis is established; Freerouting integration remains
 experimental.** Keep using exact geometry and connectivity, with images as
 an explanatory aid. The remaining automation gap is generating constrained

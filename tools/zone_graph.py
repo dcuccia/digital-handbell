@@ -62,9 +62,11 @@ class CopperGraph(PrimitiveGraph):
             if zone.GetIsRuleArea():
                 continue
             require(zone.GetNetname(), "Unassigned copper zone is unsupported")
-            layers = list(zone.GetLayerSet().Seq())
-            require(layers and all(layer in (pcb.F_Cu, pcb.B_Cu) for layer in layers),
-                    "Unsupported filled-zone layer set")
+            declared_layers = list(zone.GetLayerSet().Seq())
+            require(declared_layers and all(
+                pcb.IsCopperLayer(layer) and self.board.IsLayerEnabled(layer)
+                for layer in declared_layers), "Unsupported filled-zone layer set")
+            layers = sorted(declared_layers, key=pcb.CopperLayerToOrdinal)
             for layer in layers:
                 for index, polygon in filled_islands(pcb, zone, layer):
                     uid = f"{zone_uuid}:{self.layer_name(layer)}:island:{index}"

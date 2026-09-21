@@ -359,6 +359,10 @@ class CopperGraph:
     def __init__(self, pcb, path):
         self.pcb = pcb
         self.board = pcb.LoadBoard(str(path))
+        self.copper_layers = sorted(
+            (layer for layer in self.board.GetEnabledLayers().Seq()
+             if pcb.IsCopperLayer(layer)),
+            key=pcb.CopperLayerToOrdinal)
         self.pads = {p.m_Uuid.AsString(): p for f in self.board.GetFootprints() for p in f.Pads()}
         self.items = dict(self.pads)
         self.items.update({t.m_Uuid.AsString(): t for t in self.board.GetTracks()})
@@ -370,7 +374,7 @@ class CopperGraph:
                 self.lookup[(item.GetParentFootprint().GetReference(), item.GetNumber())].append(uid)
             if not item.GetNetname():
                 continue
-            for layer in (pcb.F_Cu, pcb.B_Cu):
+            for layer in self.copper_layers:
                 if not item.IsOnLayer(layer):
                     continue
                 shape = item.GetEffectiveShape(layer)
@@ -383,11 +387,12 @@ class CopperGraph:
                 self.by_uuid[uid].append(key)
                 self.adj[key]
             vertices = self.by_uuid[uid]
-            if len(vertices) == 2:
+            if len(vertices) > 1:
                 plated = isinstance(item, pcb.PCB_VIA) or (uid in self.pads and item.GetAttribute() == pcb.PAD_ATTRIB_PTH)
                 require(plated, "Unplated item cannot electrically join copper layers: " + uid)
-                self.join(*vertices)
-        for layer in (pcb.F_Cu, pcb.B_Cu):
+                for vertex in vertices[1:]:
+                    self.join(vertices[0], vertex)
+        for layer in self.copper_layers:
             nodes = sorted((k for k in self.vertices if k[1] == layer), key=lambda k: self.vertices[k]["bbox"][0])
             for index, a in enumerate(nodes):
                 aa = self.vertices[a]
@@ -414,7 +419,7 @@ class CopperGraph:
         self.adj[b].add(a)
 
     def layer_name(self, layer):
-        return "F.Cu" if layer == self.pcb.F_Cu else "B.Cu"
+        return self.board.GetLayerName(layer)
 
     def pad_uuid(self, ref, number):
         values = self.lookup[(ref, number)]
