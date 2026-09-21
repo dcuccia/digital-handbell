@@ -26,6 +26,8 @@ ROUTING_BOUNDS = (-12, -10, 12, 10)
 SEARCH_MARGIN = 4
 SEARCH_LIMIT = 80000
 TARGET_ANCHORS = {}
+REMOVED_TRACK_UUIDS = ()
+FRONT_ONLY = False
 
 
 class NativeRouter(Router):
@@ -121,7 +123,21 @@ def main():
     if pcb.GetBuildVersion() != "10.0.6":
         raise ValueError("KiCad 10.0.6 required")
     board = pcb.LoadBoard(str(PACKAGE / "handbell.kicad_pcb"))
-    changed_tracks, changed_vias = [], []
+    changed_tracks, changed_vias, removed_tracks = [], [], []
+    if REMOVED_TRACK_UUIDS:
+        by_id = {t.m_Uuid.AsString(): t for t in board.GetTracks()}
+        for uid in REMOVED_TRACK_UUIDS:
+            track = by_id[uid]
+            assert isinstance(track, pcb.PCB_TRACK) and not isinstance(track, pcb.PCB_VIA)
+            removed_tracks.append({
+                "uuid": uid,
+                "start_mm": [pcb.ToMM(v) for v in track.GetStart()],
+                "end_mm": [pcb.ToMM(v) for v in track.GetEnd()],
+                "width_mm": pcb.ToMM(track.GetWidth()),
+                "layer": board.GetLayerName(track.GetLayer()),
+                "net": track.GetNetname(),
+            })
+            board.Remove(track)
     if args.gain_escape:
         assert STAGE == "gain-routing"
         by_id = {t.m_Uuid.AsString(): t for t in board.GetTracks()}
@@ -161,7 +177,8 @@ def main():
                            and t.GetEffectiveShape(pcb.F_Cu).Collide(point, 0)
                            for t in board.GetTracks()), "Anchor must lie on existing same-net F copper"
                 points[i] = [v-100 for v in at]
-        path = router.search(*points, net, .2, net != "GND", SEARCH_MARGIN, expansion_limit=SEARCH_LIMIT)
+        path = router.search(*points, net, .2, net != "GND" and not FRONT_ONLY,
+                             SEARCH_MARGIN, expansion_limit=SEARCH_LIMIT)
         if path is None:
             out.mkdir(parents=True)
             failure = {"status": "NO_BOUNDED_PAD_PAIR_PATH_NOT_PROOF_OF_IMPOSSIBILITY",
@@ -202,6 +219,10 @@ def main():
             assert all(not metal.Collide(shape, pcb.FromMM(.2)-1) for metal, _ in router.metal)
     text, tree = load(PACKAGE / "handbell.kicad_pcb")
     edits = [(p.start, p.end, "") for z in tree.children("zone") for p in z.children("filled_polygon")]
+    segment_nodes = {n.value("uuid"): n for n in tree.children("segment")}
+    for uid in REMOVED_TRACK_UUIDS:
+        node = segment_nodes[uid]
+        edits.append((node.start, node.end, ""))
     for kind, records in (("segment", changed_tracks), ("via", changed_vias)):
         by_id = {n.value("uuid"): n for n in tree.children(kind)}
         for record in records:
@@ -238,13 +259,15 @@ def main():
               "output_pcb_sha256": sha(out / "handbell.kicad_pcb"), "generator_sha256": sha(Path(__file__)),
               "entrypoint_sha256": sha(Path(sys.argv[0])),
               "search_tool_sha256": sha(Path(__file__).parents[1] / "route_printed_bell.py"),
-              "component_moves": [], "added_tracks": tracks, "changed_tracks": changed_tracks, "removed_tracks": [],
+              "component_moves": [], "added_tracks": tracks, "changed_tracks": changed_tracks,
+              "removed_tracks": removed_tracks,
               "changed_vias": changed_vias,
               "new_vias": vias, "required_connections": pairs, "search_seconds": time.monotonic()-started,
               "ground_group_routed_first": args.reserve_ground,
               "grid_mm": GRID, "expansion_limit_per_connection": SEARCH_LIMIT, "search_margin_mm": SEARCH_MARGIN,
               "routing_bounds_common_mm": ROUTING_BOUNDS, "outline_setback_mm": .55,
               "target_anchors_native_mm": TARGET_ANCHORS,
+              "front_only": FRONT_ONLY,
               "contact_interface_sha256": sha(PACKAGE / "battery-contact-interface.json"),
               "ground_fill_invalidated": True,
               "remaining": "Exact edge/via DRC, filled independent continuity and unchanged-source gates required."}

@@ -2,9 +2,12 @@
 
 ## Bounded engineering work
 
-- **September 16 owner pause:** commit/push the saved work only. Do not
-  resume routing, CAD or other engineering until the owner explicitly resumes.
-  This supersedes the earlier sequential-continuation authorization. The exact artifacts and next
+- **September 21 conditional resume:** Astra retains engineering judgment;
+  routine routing/tool execution goes to explicitly pinned GPT-5.6 Sol at
+  medium effort. Follow `docs/routing-agent-policy.md`, including its
+  fail-closed invocation and runtime-verification gate. Never substitute Astra
+  for an unavailable Sol executor. This supersedes the September 16 pause.
+  The exact artifacts and next
   scope are in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - Apply the [cost-aware closure plan](docs/pcb-closure-plan.md). Optimize for
   closing a stable candidate, not the number of microtasks or reports produced.
@@ -27,7 +30,9 @@
   initial attempt plus up to two corrections). Do not turn a failed
   attempt into an open-ended search, optimization, routing or check/fix loop.
   Return a concrete blocker and preserve the usable work when the budget ends.
-- Prefer direct tools for small items. Do not launch background engineering
+- For routine PCB execution use the verified Sol executor, even for small
+  mechanical tasks; Astra handles engineering judgment and acceptance.
+  Do not launch background engineering
   agents by default. If delegation is explicitly appropriate, give one small
   deliverable and the same budget/stop rules; do not queue additional scope
   onto an already-running agent. Its next job starts only after its current

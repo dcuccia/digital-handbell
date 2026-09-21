@@ -1,0 +1,178 @@
+{
+  "status": "READ_ONLY_NATIVE_INVENTORY_NO_ROUTE",
+  "date": "2026-09-21",
+  "active_package": "hardware/handbell/iterations/printed-bell-clock-draft",
+  "source_sha256": {
+    "pcb": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "netlist": "ab9c3646369c8b121a6e1ec762a738a1e7cec49e500ac6360c149030c75d531d",
+    "placement_manifest": "2b9ea13a6ae85d0f8d2ae09c74161e3122349e4ecb56c9aa760823cd88d9bb55",
+    "battery_contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "method": {
+    "kicad_version": "10.0.6",
+    "api": "pcbnew LoadBoard/GetConnectivity/GetConnectedItems",
+    "dll_handle_retained": true,
+    "via_width_call": "via.GetWidth(pcb.F_Cu)",
+    "native_unconnected": 51,
+    "board_modified": false,
+    "bulk_filled_graph_check_run": false
+  },
+  "reserved": [
+    "D+",
+    "D-",
+    "USB_D+",
+    "USB_D-",
+    "SWCLK",
+    "SWDIO",
+    "I2S_BCLK",
+    "I2S_LRCLK",
+    "I2S_DIN",
+    "all power/ground/core/boost/audio-output/protection",
+    "clock/QSPI",
+    "GAIN",
+    "SCL"
+  ],
+  "ground_context": {
+    "filled_copper_zone": {
+      "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "name": "quote-native-F-GND-v1",
+      "net": "GND",
+      "layer": "F.Cu"
+    },
+    "back_copper_plane": false,
+    "assessment": "Any B.Cu signal excursion lacks a continuous B.Cu ground plane and needs explicit return-path review. F.Cu routing can cut or narrow the accepted filled ground islands and therefore requires refill/group preservation checks after any later authorized edit."
+  },
+  "contact_base_native_projection_mm": {
+    "basis": "battery-contact-interface common coordinates translated by PCB native +100,+100; conservative conductive metal reservation, not route permission",
+    "BT1_under_cell_base": [105.685, 94.435, 118.685, 105.565],
+    "BT1_full_x_extent": [101.685, 121.565],
+    "BT2_under_cell_base": [81.315, 94.435, 94.315, 105.565],
+    "BT2_full_x_extent": [78.435, 98.315]
+  },
+  "nets": {
+    "AMP_MUTE": {
+      "function_evidence": "GPIO20; Q4 gate; schematic note says HIGH=SHUTDOWN, 4.7K pull-up dominates reset pulldown, and mute HIGH precedes POWER enable.",
+      "groups": [
+        {"pads": [{"id": "IC1.31", "uuid": "f9f2b22a-495d-5177-ab7a-03892a5f7faa", "xy_mm": [98.2, 103.45]}], "copper": []},
+        {
+          "pads": [
+            {"id": "Q4.1", "uuid": "fcd07c3b-913a-53b1-be09-50778287d90c", "xy_mm": [109.695904, 84.998348]},
+            {"id": "R20.2", "uuid": "d37f54be-d5f5-5334-b869-57a4adef63f3", "xy_mm": [107.633897, 86.808257]}
+          ],
+          "copper": [
+            {"uuid": "13961ad7-1a18-5a6b-a500-a9de67736cc8", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [109.6959, 84.9983], "end_mm": [108.2245, 86.4697]},
+            {"uuid": "81b380b8-a61d-5fb1-8c0b-ae2171347fbf", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [108.2245, 86.4697], "end_mm": [108.2245, 86.8083]},
+            {"uuid": "35b8b5d5-4936-5444-a0d8-137bd6649824", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [107.6339, 86.8083], "end_mm": [108.2245, 86.8083]}
+          ]
+        },
+        {"pads": [{"id": "TP15.P$1", "uuid": "82611b88-62f2-596c-8fe3-78008955f048", "xy_mm": [84.049994, 102.103333]}], "copper": []}
+      ],
+      "opens": 2,
+      "competition": "Three separated groups span the central MCU, audio-mute region and a service pad. Straight group chords intersect existing I2S_MOD, USBBOOT, +3V3, GND, POWER, ~{ENABLE} and CELL_NEG centerlines; TP15 is within the BT2 conductive-base x/y envelope.",
+      "independent": false
+    },
+    "BUTTON": {
+      "function_evidence": "GPIO19 filtered external button: J2 through R22 1K to GPIO, R21 10K pull-up and C25 10nF filter; firmware debounce and cable/ESD review remain open.",
+      "groups": [
+        {
+          "pads": [
+            {"id": "C25.1", "uuid": "20ae1c0d-a8d4-5967-ab97-43ab6878b93a", "xy_mm": [104.482239, 107.50713]},
+            {"id": "R21.2", "uuid": "7b6abb74-3539-58ae-bf84-156309158ca4", "xy_mm": [102.999181, 108.027537]},
+            {"id": "R22.1", "uuid": "aee2597a-cc64-5b49-8673-c0f2d4f4d04d", "xy_mm": [107.493343, 107.492733]}
+          ],
+          "copper": [
+            {"uuid": "fe985f79-4aaf-5d9c-9686-88f67ff8aebf", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [104.4822, 107.5071], "end_mm": [104.4822, 107.8024]},
+            {"uuid": "2204c714-4072-59ab-b0c0-a4ad37a13f93", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [104.4822, 107.8024], "end_mm": [103.8149, 107.8024]},
+            {"uuid": "af6f22de-dbcb-5d11-882f-01e359b799e9", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [103.8149, 107.8024], "end_mm": [103.5898, 108.0275]},
+            {"uuid": "3d1ce992-fb66-51d7-b4c5-e8aec205ca33", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [102.9992, 108.0275], "end_mm": [103.5898, 108.0275]},
+            {"uuid": "1e6ec1d8-90ab-54b5-922c-7de734d86f29", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [104.7825, 108.1027], "end_mm": [104.4822, 107.8024]},
+            {"uuid": "f5eab407-cb98-5d40-b4e5-1f1acc386d14", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [106.2927, 108.1027], "end_mm": [104.7825, 108.1027]},
+            {"uuid": "3fa42885-db2e-5188-87ac-3eba3e23a8a0", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [106.9027, 107.4927], "end_mm": [106.2927, 108.1027]},
+            {"uuid": "5f8f8a1f-a785-510f-b5dc-1b631fd46c00", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [107.4933, 107.4927], "end_mm": [106.9027, 107.4927]}
+          ]
+        },
+        {"pads": [{"id": "IC1.30", "uuid": "d88e926d-5c65-5e48-8b55-30b711541edc", "xy_mm": [97.8, 103.45]}], "copper": []}
+      ],
+      "opens": 1,
+      "straight_group_distance_mm": 6.927144,
+      "competition": "The direct IC1-to-local-group chord crosses existing +3V3, VBAT and VHI centerlines and approaches C11.1/+3V3 at 0.132 mm centerline distance. The endpoint is in the central MCU/core corridor.",
+      "independent": false
+    },
+    "D13": {
+      "function_evidence": "GPIO13 to R7.1; R7.2 continues through Net-(L0-PadA) to L0, making this an indicator-control branch rather than a power rail.",
+      "groups": [
+        {"pads": [{"id": "IC1.16", "uuid": "d4dbcbff-4f4b-5b01-8f20-f56d452ccd13", "xy_mm": [96.55, 97.8]}], "copper": []},
+        {"pads": [{"id": "R7.1", "uuid": "2953d954-3c7c-5bc3-a76a-1575c2f62758", "xy_mm": [96.492, 110.0]}], "copper": []}
+      ],
+      "opens": 1,
+      "straight_group_distance_mm": 12.200138,
+      "competition": "The direct chord intersects the existing R7/L0 branch, +3V3, VBAT and VHI centerlines in the core/power corridor.",
+      "independent": false
+    },
+    "INT": {
+      "function_evidence": "LSM6DSOX INT1 output IC4.4 to RP2040 GPIO22 IC1.34; INT2 is a separate TP6-only net.",
+      "groups": [
+        {"pads": [{"id": "IC1.34", "uuid": "a913551a-8fa7-50b1-84ff-76e1f22dea22", "xy_mm": [99.4, 103.45]}], "copper": []},
+        {"pads": [{"id": "IC4.4", "uuid": "2893c147-7fa3-5665-b403-d03ad544d021", "xy_mm": [88.749806, 92.830211]}], "copper": []}
+      ],
+      "opens": 1,
+      "straight_group_distance_mm": 15.040041,
+      "competition": "The direct chord crosses IMU_INT2, +3V3, CELL_NEG and VHI centerlines and traverses the central/contact region.",
+      "independent": false
+    },
+    "~{RESET}": {
+      "function_evidence": "RP2040 /RUN at IC1.26, pull-up R1.2 and recovery test pad TP7; schematic explicitly requires RESET service access.",
+      "groups": [
+        {"pads": [{"id": "IC1.26", "uuid": "52831bb8-0139-5298-a713-8f36ee344093", "xy_mm": [96.55, 101.8]}], "copper": []},
+        {"pads": [{"id": "R1.2", "uuid": "da574b29-68f1-5a47-b807-ba48fa98466b", "xy_mm": [95.996993, 105.005938]}], "copper": []},
+        {"pads": [{"id": "TP7.P$1", "uuid": "527cba27-43d3-5bdb-afcf-bdf2b46e8b9d", "xy_mm": [107.703226, 83.875708]}], "copper": []}
+      ],
+      "opens": 2,
+      "local_subconnection_distance_mm": 3.25329,
+      "service_subconnection_distance_mm": 24.155859,
+      "competition": "IC1.26-to-R1.2 crosses VBAT/VHI centerlines and runs beside IC1 I2S_DIN, I2S_BCLK and SWDIO pads. The long TP7 service branch crosses SCL, SDA, USBBOOT, +3V3 and VBAT centerlines. A local pull-up link is bounded but does not complete the recovery net.",
+      "independent": false
+    },
+    "POWER": {
+      "classification": "power-control, reserved",
+      "function_evidence": "RP2040 GPIO23 IC1.35 drives Q2.1 gate and TPS61023 U5.2 EN; R17 is the default pulldown and TP16 is a service point. Schematic says POWER enables the 5V-class audio boost, input remains behind Q1/Q2, and AMP_MUTE must be driven HIGH before POWER.",
+      "groups": [
+        {"pads": [{"id": "IC1.35", "uuid": "add4e21f-19e4-524e-8a08-8b4337b7acbb", "xy_mm": [99.8, 103.45]}], "copper": []},
+        {
+          "pads": [
+            {"id": "Q2.1", "uuid": "05debe44-82a4-5f4e-8b8d-41d21d198060", "xy_mm": [86.022445, 102.315177]},
+            {"id": "R17.1", "uuid": "d11019b2-75a7-58da-b0c0-95ce910ca7c9", "xy_mm": [86.191495, 98.505288]},
+            {"id": "TP16.P$1", "uuid": "4db473a7-6c37-505a-8d25-ef90f4ba6ad4", "xy_mm": [81.001152, 96.638123]}
+          ],
+          "copper": [
+            {"uuid": "56e293b5-7e3a-5b71-958a-d151d7a93ec4", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [86.1915, 98.5053], "end_mm": [85.8962, 98.5053]},
+            {"uuid": "2b86982e-c422-5642-92c1-7e68b774643f", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [85.8962, 98.5053], "end_mm": [85.8962, 98.5371]},
+            {"uuid": "0d8ed0ae-8c44-5837-9a7e-1bfca9f4cccb", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [85.8962, 98.5371], "end_mm": [85.8962, 101.2984]},
+            {"uuid": "583704f1-b9e4-51dd-a107-b22a281dbfc6", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [85.8962, 101.2984], "end_mm": [86.0224, 101.4246]},
+            {"uuid": "31c3ff78-bb2c-526e-84ad-21762dc77c2c", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [86.0224, 101.8699], "end_mm": [86.0224, 101.4246]},
+            {"uuid": "99fb40e4-8c67-51c1-882a-e6380a0aaef2", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [86.0224, 101.8699], "end_mm": [86.0224, 102.3152]},
+            {"uuid": "56c29ed3-366a-592f-b54a-b1999482487d", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [85.8962, 98.5371], "end_mm": [82.0602, 98.5371]},
+            {"uuid": "a8f0d252-265a-54a0-8b8a-6f4d692054b6", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [82.0602, 98.5371], "end_mm": [81.0012, 97.4781]},
+            {"uuid": "1d7853cf-8de0-53af-bb7e-40326dae5485", "layer": "F.Cu", "width_mm": 0.1778, "start_mm": [81.0012, 97.4781], "end_mm": [81.0012, 96.6381]}
+          ]
+        },
+        {"pads": [{"id": "U5.2", "uuid": "b34f4c60-2420-599e-b73f-cf9e66858599", "xy_mm": [96.56, 115.2]}], "copper": []}
+      ],
+      "opens": 2,
+      "competition": "The left group lies within the BT2 conductive-base projection. IC1-to-left crosses ~{ENABLE}, CELL_NEG and VHI; IC1-to-U5 crosses VAMP, BOOST_FB and VBAT. This net directly controls boost/power switching and is not a routine control.",
+      "independent": false
+    }
+  },
+  "conclusion": {
+    "genuinely_independent_complete_control_net": null,
+    "bounded_local_fragment": "~{RESET} IC1.26 to R1.2 only, but it does not close the net and is adjacent to I2S/SWD and power copper.",
+    "astra_decisions_required": [
+      "Whether any partial local branch should be routed before a complete-net strategy is chosen.",
+      "Which corridor and layer strategy preserves F.Cu ground return for BUTTON/D13/INT and avoids critical central power/core copper.",
+      "Whether AMP_MUTE service-pad topology should be retained as three physical groups before selecting a route.",
+      "Reset recovery topology/noise-immunity and TP7 access strategy.",
+      "POWER boost-enable sequencing, power-loop adjacency and contact-base-safe corridor."
+    ]
+  }
+}

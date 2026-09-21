@@ -1,0 +1,69 @@
+{
+  "status": "NO_PATH_FINAL_CORRECTIVE_RETRY_EXHAUSTED",
+  "input_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+  "accepted_board_unchanged": true,
+  "candidate_pcb_produced": false,
+  "source_modified": false,
+  "kicad_version": "10.0.6",
+  "entrypoint": "tools/experiments/route_scl_final_correction.py",
+  "entrypoint_sha256": "8087bce29db613ea5d618be8b51298544a578eb7b555cd777d043072fbf09b91",
+  "generator": "tools/experiments/route_core_distribution.py",
+  "generator_sha256": "df3943e15b612bcdff79573317e91d92b6cb0a22668754c553ad589192cfc960",
+  "search_tool": "tools/route_printed_bell.py",
+  "search_tool_sha256": "caaa829a7a3af12371b9d62cc5af7bb10eb04fc37b2fb6cd5005d012bdd161ed",
+  "requested_connection": {
+    "from": "R14.2",
+    "to_same_connected_group": "IC4.13",
+    "target_trunk_anchor_native_mm": [91.69, 92.7368],
+    "net": "SCL",
+    "width_mm": 0.2
+  },
+  "removed_in_memory_for_search_only": [
+    {
+      "uuid": "548c8552-ff4c-56b3-83d9-9d0a5389e3e2",
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "width_mm": 0.1778,
+      "start_mm": [87.8697, 93.4927],
+      "end_mm": [87.8697, 94.9461]
+    },
+    {
+      "uuid": "76a37864-74d8-5963-bcc4-18eb043accfd",
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "width_mm": 0.1778,
+      "start_mm": [87.8697, 94.9461],
+      "end_mm": [87.5898, 95.226]
+    }
+  ],
+  "removed_total_length_mm": 1.8492,
+  "preserved_constraints": {
+    "search_layers": ["F.Cu"],
+    "vias_allowed": false,
+    "clearance_mm": 0.2,
+    "grid_mm": 0.05,
+    "search_margin_mm": 4,
+    "routing_bounds_common_mm": [-20.5, -20.5, 20.5, 20.5],
+    "expansion_limit": 80000,
+    "additional_track_removals": 0,
+    "component_moves": 0,
+    "rule_changes": 0,
+    "adjacent_0_25mm_supply_path_changed": false,
+    "supply_via_1c15a7a2_2065_55a0_bfec_88da501cad88_changed": false
+  },
+  "search_result": {
+    "stop_reason": "no_path_in_masked_domain",
+    "expanded": 2793,
+    "runtime_seconds": 0.563,
+    "planned_tracks": 0,
+    "planned_vias": 0,
+    "observed_blocker": "After removing only the authorized fine +3V3 pair, the native F.Cu obstacle mask still leaves no connected search path from R14.2 to the existing SCL trunk anchor."
+  },
+  "checks_not_run": {
+    "native_drc": "No candidate PCB existed.",
+    "refill": "No candidate PCB existed.",
+    "public_front_ground_check": "No candidate PCB existed."
+  },
+  "limitations": "Failure applies to this target anchor and bounded 0.05 mm sampled domain, not every possible continuous-space route or alternative terminal.",
+  "retry_disposition": "No additional retry authorized or attempted."
+}

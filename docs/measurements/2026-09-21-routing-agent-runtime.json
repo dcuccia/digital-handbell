@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-21",
+  "cli_version": "1.0.87",
+  "root_model": "gpt-6-astra",
+  "evidence_basis": "Local runtime event records, not agent self-identification",
+  "explicit_subagent_probe": {
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "model_selection_source": "explicit_override",
+    "first_dispatched_model": "gpt-5.6-sol",
+    "outcome": "completed"
+  },
+  "named_custom_subagent_probe": {
+    "agent": "kicad-router",
+    "model": "gpt-5.6-sol",
+    "task_model_source": "custom_agent_definition",
+    "model_selection_source": "agent_definition_default",
+    "first_dispatched_model": "gpt-5.6-sol",
+    "configured_effort": "low",
+    "parent_effort": "low",
+    "profile_requested_effort": "medium",
+    "outcome": "completed",
+    "effort_disposition": "Pass medium explicitly on routing task dispatch; profile effort alone did not override parent in this probe."
+  },
+  "unavailable_required_model_subagent_probe": {
+    "model_override_supplied": false,
+    "outcome": "task rejected unavailable model before child execution",
+    "fallback_child_executed": false
+  },
+  "direct_agent_selection_negative_control": {
+    "invocation": "copilot --agent unavailable-router",
+    "outcome": "warned and fell back despite profile required policy",
+    "approved_for_routing": false
+  },
+  "read_only_control_inventory_dispatch": {
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "model_selection_source": "explicit_override",
+    "first_dispatched_model": "gpt-5.6-sol",
+    "outcome": "completed",
+    "board_modified": false
+  },
+  "scl_execution_dispatch": {
+    "model_requested": "gpt-5.6-sol",
+    "reasoning_effort_requested": "medium",
+    "completed_model": "gpt-5.6-sol",
+    "first_dispatched_model": "gpt-5.6-sol",
+    "model_selection_source": "explicit_override",
+    "outcome": "completed; no candidate route; accepted board unchanged"
+  },
+  "limitations": "Unavailable-model resolution tested; not a guarantee of provider internals or future CLI behavior. Recheck runtime dispatch after configuration/version changes. Keep logs local."
+}

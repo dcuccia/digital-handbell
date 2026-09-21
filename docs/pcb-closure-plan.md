@@ -166,6 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 21 conditional resume:** the owner requests Astra engineering
+judgment with pinned Sol routine execution. See the
+[routing-agent policy](routing-agent-policy.md) for exercised model gates,
+critical-net reservations, preserved context and escalation rules. The
+September 16 pause below is historical; no old retry budget is reset.
+
+The required-model custom subagent and explicit Sol/medium compatibility
+dispatch were exercised; direct CLI agent selection is not the fail-closed
+path. Sol inventoried control-net conflicts, then performed native +3V3
+branch-cut analysis and the final authorized F-only SCL correction. Removing
+only the redundant fine-track pair in memory still produced no route
+(2,793 expansions, 0.563 s). No accepted copper changed: still **51 opens**.
+See the policy's linked source-bound reports. SCL's retry allowance is now
+exhausted. The next item is **Astra's joint local IMU/pull-up supply,
+SCL/SDA and return-corridor decision**, not another unconstrained route
+search or removal of the required 0.25 mm supply branch.
+
 **Paused September 16 at the owner's request.** Save and publish only;
 do not continue engineering until explicitly resumed. The accepted board
 remains the 51-open charge-indicator checkpoint `b2203c8`, with the hash

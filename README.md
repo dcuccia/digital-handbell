@@ -1,6 +1,9 @@
 # Digital Handbell
 
-**Work paused September 16, 2026.** The accepted layout remains at 51 open
+**September 21: conditional routing resume with Astra/Sol role separation.**
+The [routing-agent policy](docs/routing-agent-policy.md) retains Astra's
+engineering review and requires pinned Sol for routine execution.
+The accepted layout remains at 51 open
 connections. Saved SCL experiments and the older routing-recovery archive
 are preserved separately; neither is accepted replacement copper. See the
 [pause handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
