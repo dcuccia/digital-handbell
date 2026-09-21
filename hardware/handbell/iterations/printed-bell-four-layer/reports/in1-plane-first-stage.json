@@ -1,0 +1,67 @@
+{
+  "status": "PARTIAL_STAGED_IN1_CANDIDATE_REJECTED_BY_GROUP_PRESERVATION_GATE",
+  "input_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "accepted_manifest_sha256": "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381",
+  "accepted_manifest_modified": false,
+  "candidate_pcb_sha256": "c89bbc00e247c40fdb5d8b90710547ae3e9d18e8b242e8f724a81716a8f6c2b5",
+  "workspace": "in1-plane-first-01/correction-1",
+  "source_plan_sha256": "151e3a66517d8b501c9354d519d6214b197e2decbde626ab082f3f0fca0e861d",
+  "inventory_sha256": "88999e7981896a84a096be8c847583b4c3b937c15238526c3bef942dc15e4aee",
+  "tool_sha256": "f645682a982ead3b558ccb8c022f36f263ce92d222da3b80ee073da9041d7ded",
+  "tool_hash_scope": "Executed version before the subsequent fail-closed disable; current script refuses writes and native execution.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "implementation failure before candidate validation",
+      "error": "Root S-expression was closed before new zone insertion."
+    },
+    {
+      "attempt": 2,
+      "result": "native refill and DRC completed, independent filled-graph preservation failed",
+      "failure": "compare_components reported one previously connected GND pad group split",
+      "representative_split_members": [
+        "MH1.1",
+        "C28.2",
+        "R24.2",
+        "R26.2",
+        "R27.2"
+      ],
+      "interpretation": "The staged candidate is rejected. The open count improvement does not compensate for losing an existing filled-ground connection. No exclusion, geometry, or plane parameter was changed after this failure."
+    }
+  ],
+  "zones_requested": {
+    "in1_ground": 1,
+    "private_via_guards": 2,
+    "boost_sw_item_guards": 6,
+    "clock_region_guards": 1
+  },
+  "native_drc": {
+    "unconnected_items": 50,
+    "warning_findings": 233,
+    "other_errors": 0,
+    "acceptance": false
+  },
+  "native_stages": [
+    {
+      "name": "native-refill",
+      "seconds": 3.656,
+      "exit_code": 0,
+      "timeout_seconds": 120
+    },
+    {
+      "name": "candidate-drc",
+      "seconds": 3.312,
+      "exit_code": 0,
+      "timeout_seconds": 120
+    }
+  ],
+  "production_files_modified": false,
+  "promotion": false,
+  "unimplemented_acceptance_gates": [
+    "Exact declared zone UUID, geometry and settings validation on every filled layer",
+    "Per-layer keepout exclusion, private-copper guard, edge and foreign-net clearance checks",
+    "Asserted unchanged source content outside authorized zone additions and filled_polygon caches"
+  ],
+  "subsequent_diagnosis": "in1-plane-regression-diagnosis.json isolates C25.2 and proves the canonical native fill was transplanted exactly; original group representatives above are not separately failed pads.",
+  "remaining": "Determine why the source F filled-pad group changed during the native refill/transplant workflow before considering this geometry again. Full private-pickoff, keepout, clearance, island and engineering acceptance were not completed."
+}

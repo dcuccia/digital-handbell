@@ -5,7 +5,10 @@ The [routing-agent policy](docs/routing-agent-policy.md) retains Astra's
 engineering review and requires pinned Sol for corridor/group routing batches.
 A separate [four-layer migration baseline](hardware/handbell/iterations/printed-bell-four-layer/README.md)
 is established, preserving placement and existing copper. It still has
-51 open connections; inner-plane and routing-tool qualification are next.
+51 open connections. Inner-layer graph controls now pass, but the first
+staged ground plane was rejected because a previously connected ground
+group split during refill. Its smaller airwire count is not acceptance;
+the production board is unchanged.
 The two-layer layout is preserved unchanged. Saved SCL experiments and the older routing-recovery archive
 are preserved separately; neither is accepted replacement copper. See the
 [current handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).

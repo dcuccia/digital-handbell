@@ -1,0 +1,215 @@
+{
+  "status": "READ_ONLY_IN1_PLANE_REGRESSION_DIAGNOSIS",
+  "source_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "candidate_pcb_sha256": "c89bbc00e247c40fdb5d8b90710547ae3e9d18e8b242e8f724a81716a8f6c2b5",
+  "canonical_native_filled_sha256": "dbced3581b7a654ae85303ee92605c6577baf31a5b11a996c204f651c47ef31f",
+  "kicad_version": "10.0.6",
+  "split_groups": [
+    {
+      "partitions": [
+        [
+          "C10.2",
+          "C16.2",
+          "C19.2",
+          "C21.2",
+          "C22.2",
+          "C26.2",
+          "C27.2",
+          "C28.2",
+          "J2.2",
+          "MH1.1",
+          "Q4.2",
+          "R12.1",
+          "R24.2",
+          "R26.2",
+          "R27.2",
+          "TP8.P$1",
+          "U4.11",
+          "U4.15",
+          "U4.3",
+          "U4.THERMAL",
+          "U5.4"
+        ],
+        [
+          "C25.2"
+        ]
+      ],
+      "partition_sizes": [
+        21,
+        1
+      ],
+      "source_witness_pair": [
+        "MH1.1",
+        "C25.2"
+      ],
+      "source_path": [
+        {
+          "uuid": "bc1f09cc-4e90-5325-bc80-08b5f58578c0",
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+          "layer": "F.Cu",
+          "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "filled_island_index": 0
+        },
+        {
+          "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+          "layer": "B.Cu"
+        },
+        {
+          "uuid": "05766298-91b9-5cc1-a638-72c1d31f7536",
+          "layer": "B.Cu"
+        },
+        {
+          "uuid": "05c5bad3-b221-5ae2-b9d6-d42345b2566d",
+          "layer": "B.Cu"
+        },
+        {
+          "uuid": "05c5bad3-b221-5ae2-b9d6-d42345b2566d",
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+          "layer": "F.Cu",
+          "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "filled_island_index": 4
+        },
+        {
+          "uuid": "ad6f625b-9b5e-5d91-af72-e3e1586d3de7",
+          "layer": "F.Cu"
+        }
+      ],
+      "source_f_zone_islands": [
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+          "layer": "F.Cu",
+          "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "filled_island_index": 0
+        },
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+          "layer": "F.Cu",
+          "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "filled_island_index": 4
+        }
+      ],
+      "candidate_f_islands_by_partition": [
+        [
+          "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+          "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+          "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+          "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+          "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:19",
+          "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+          "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8"
+        ],
+        [
+          "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4"
+        ]
+      ]
+    }
+  ],
+  "filled_polygon_comparison": {
+    "source_F": {
+      "count": 22,
+      "ordered_sha256": "d88f9e07ce52b50217e8a370cead2b1846799970dea7b208fbf0c0daf49afc9d",
+      "multiset_sha256": "6ef3c84f4cc95e66d95a1de6b560b389e3274ff65e5169d0ca0b9546f70f9a70"
+    },
+    "canonical_F": {
+      "count": 23,
+      "ordered_sha256": "e958c47e6cd0a9234fc711900447ed041399d5ea9fe7f7ef0e4a9c0fe0b6b3ba",
+      "multiset_sha256": "003a12f7308a70d71caea82c76b8648bfa137d2c8535b03ed0fbb4f0f484cb64"
+    },
+    "candidate_F": {
+      "count": 23,
+      "ordered_sha256": "e958c47e6cd0a9234fc711900447ed041399d5ea9fe7f7ef0e4a9c0fe0b6b3ba",
+      "multiset_sha256": "003a12f7308a70d71caea82c76b8648bfa137d2c8535b03ed0fbb4f0f484cb64"
+    },
+    "canonical_candidate_F_equal": true,
+    "source_canonical_F_equal": false,
+    "canonical_In1": {
+      "count": 1,
+      "ordered_sha256": "13d1e2901e6f922cee55c4e9f2c9cac13264878f0890a0016316cedd3429dc53",
+      "multiset_sha256": "13d1e2901e6f922cee55c4e9f2c9cac13264878f0890a0016316cedd3429dc53"
+    },
+    "candidate_In1": {
+      "count": 1,
+      "ordered_sha256": "13d1e2901e6f922cee55c4e9f2c9cac13264878f0890a0016316cedd3429dc53",
+      "multiset_sha256": "13d1e2901e6f922cee55c4e9f2c9cac13264878f0890a0016316cedd3429dc53"
+    },
+    "canonical_candidate_In1_equal": true
+  },
+  "source_candidate_nonfill_nonnewzone_raw_equal": false,
+  "private_guard_bound_differences": [
+    {
+      "protected_item_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+      "expected_bounds_iu": [
+        103149000,
+        116949000,
+        104251000,
+        118051000
+      ],
+      "saved_bounds_iu": [
+        103149000,
+        116949000,
+        104251000,
+        118051000
+      ],
+      "delta_iu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "protected_item_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+      "expected_bounds_iu": [
+        99649000,
+        111349000,
+        100751000,
+        112451000
+      ],
+      "saved_bounds_iu": [
+        99649000,
+        111349000,
+        100751000,
+        112451000
+      ],
+      "delta_iu": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "proven": {
+    "split_group_count": 1,
+    "transplant_preserved_canonical_fill_blocks": true,
+    "F_fill_changed_during_native_refill": true
+  },
+  "root_cause_candidates_not_proven": [
+    "Native F refill changed island connectivity under the staged zone set/settings.",
+    "The native refill input filename lacked a matching project file, so project-derived settings may not have matched the source package."
+  ],
+  "limits": [
+    "No refill, routing, native save, or candidate modification performed.",
+    "Diagnosis does not approve any geometric correction."
+  ],
+  "source_candidate_nonfill_nonnewzone_whitespace_normalized_equal": true,
+  "source_block_difference": {
+    "first_difference_index": 613140,
+    "source_context": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t)\n(zone\n\t\t(layer \"F.Cu\")\n\t\t(uuid \"43721dda-d6e7-524e-8908-4eace3e7e43b\")\n\t\t(name",
+    "candidate_context": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n)\n(zone\n\t\t(layer \"F.Cu\")\n\t\t(uuid \"43721dda-d6e7-524e-8908",
+    "source_length": 625817,
+    "candidate_length": 625851,
+    "classification": "whitespace/insertion-site formatting only"
+  },
+  "private_guard_precision_result": "Both saved private-via guard bounds exactly match expected IU values; all coordinate deltas are zero, so the reported :g concern did not alter these two guards."
+}

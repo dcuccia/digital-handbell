@@ -126,6 +126,43 @@ manufacturer MPNs and a fab-neutral native/Gerber/drill master; supplier BOM
 and placement conventions remain separate exports. Existing tall-contact,
 USB-anchor, sourcing and full-PCBA gates still apply.
 
+### First protected-ground candidate release
+
+The source-bound `in1-exclusion-inventory.json` resolves all ten inherited
+F-only private-return guards. Only two protected items enter In1: the
+R24.2/C28.2 branch vias `6623be95-c657-5a8e-bedb-c5a73d42d40b` and
+`eafa404c-be47-5f5c-8167-d39a967ba2e5`. The R26.2/R27.2 private branch
+is F-only. This permits a first **staged**, not automatically accepted,
+In1 GND plane with the following explicit strategy:
+
+- Reuse the known native front-zone outline and conservative fill settings
+  on a new In1/GND zone. Preserve the old F zone and all ten F exclusions.
+  Add no vias, tracks, placement changes or other-layer copper.
+- Duplicate only those two via exclusions onto In1, retaining their exact
+  source bounds and 0.25 mm private-copper guard. Do not punch eight more
+  holes merely because F-only pads/traces have projected rectangles.
+  Require both actual private-terminal cut proofs on the full filled graph.
+- Keep added In1 copper out of each of the six actual BOOST_SW item bounding
+  boxes, expanded by 0.25 mm, rather than using a large box contaminated by
+  unrelated clock components. This conservatively limits new capacitive
+  coupling below existing switching copper without changing the local loop.
+- Pending physical-stackup/load-capacitance review, keep added In1 copper
+  outside the recorded crystal/Y1/C2/C3/R6 region expanded by 0.25 mm:
+  native bounds `[90.1036, 96.152596, 97.2375, 100.263901]` mm.
+  These switching/clock exclusions are provisional engineering choices,
+  not universal manufacturer rules or permanent optimization targets.
+
+Internal GND elsewhere may approach ordinary different-net plated copper
+only under the retained native clearance rules. Explicitly check CELL_NEG
+and protector nets; no ground bypass or contact/via permission is inferred.
+In2 remains empty. Do not claim the plane is continuous before inspecting
+its actual islands, narrow regions and all existing connections after fill.
+Required acceptance includes exact nonauthorized-source invariants, no new
+DRC errors, no prior filled-pad group splits, no floating copper/shorts,
+both private-pickoff proofs, and the full per-layer keepout/clearance checks.
+If that fails, stop for review rather than enlarge/delete exclusions or
+move parts inside an ostensibly routine correction.
+
 ### Batches, not one-net conversations
 
 First qualify the tools for four layers: actual enabled-layer enumeration,

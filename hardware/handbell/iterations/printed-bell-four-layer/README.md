@@ -54,3 +54,9 @@ Production plane topology, contact/private-return exclusions and engineering
 acceptance are still required before adding copper. The old F/B routing
 masks/search remain unqualified for inner routes. A native plane operation
 using qualified graph checks does not require that unused search engine.
+
+The [first staged production-plane result](reports/in1-plane-first-stage.json)
+is rejected: a previously connected GND pad group split despite the native
+open count decreasing to 50. No candidate copper is promoted into this
+package. The saved candidate requires exact regression diagnosis and the
+remaining per-layer acceptance gates before another engineering decision.

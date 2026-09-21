@@ -193,10 +193,38 @@ disposition before release, not concealment inside an "all checks clean" claim.
 demonstrate the exact inner-layer short, via/island-only ground connection
 and same-net layer isolation. See
 [`four-layer-graph-saved-native-control.json`](../hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-graph-saved-native-control.json).
-No source PCB changed. Next item: inventory production private-return/plane
-exclusions and release the protected-ground strategy. Native plane work
-does not require using the still-unqualified F/B-only route search; qualify
-that engine only if it will actually be used for inner routing.
+No source PCB changed. Production private-return inventory is now reviewed:
+only two private-branch vias enter In1. Astra released one staged protected
+GND plane with exact guards around those vias, local switching-copper
+exclusions and a provisional clock-region exclusion. See the
+[bounded plane release](routing-agent-policy.md#first-protected-ground-candidate-release).
+The first staged candidate is rejected: native DRC reports 50 opens and no
+other errors, but the filled-graph comparison finds a previously connected
+GND pad group split. The accepted board remains at 51 opens. No plane,
+exclusion change or private-pickoff approval is inferred from the lower
+airwire count. The next item is read-only diagnosis of the exact separated
+pad subset and refill/transplant differences, not another plane trial.
+The staging script is incomplete as an acceptance checker: explicit
+per-layer exclusion/clearance/edge and source-invariant gates remain required
+before any later promotion. See the
+[partial result](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-first-stage.json).
+The [read-only diagnosis](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-regression-diagnosis.json)
+isolates exactly **C25.2**, not the other 21 pads in its original group.
+Canonical CLI output and transplanted F/In1 fill blocks match exactly, so
+the regression occurred during refill, not transplantation. Both private-via
+guard bounds also match exactly. The refill input lacked a same-stem project;
+moreover, the existing accepted refill recipe explicitly tightens project
+settings (including 0.001 mm polygon error versus the project's 0.005 mm).
+Neither omission's individual causal effect has been measured.
+The staging script is now disabled before any write or native process.
+Next: one no-new-copper replay of the already-exercised
+`tools/refill_front_ground.py` recipe against the accepted four-layer source,
+followed by full filled-group/private-return checks. This is a settings/control
+gate, not another plane geometry trial or authorization to reconnect C25 by
+changing parts, tracks or exclusions.
+Native plane work does not require
+using the still-unqualified F/B-only route search; qualify that engine only
+if it will actually be used for inner routing.
 
 **Earlier tooling checkpoint, superseded by the saved-native control:** primitive/zone graph enumeration now
 supports enabled copper layers and plated spans. The bounded native-fill

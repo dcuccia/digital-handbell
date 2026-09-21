@@ -30,8 +30,29 @@ No old workspace is reused or relabelled with current tool hashes.
 The source/manifest guards must match; raw fixtures retain the derivative's
 CC BY-SA provenance. No production board was changed.
 
-**Next:** define and screen the production protected-ground exclusions using
-the now-exercised all-layer graph and native CLI. The legacy F/B-only route
+**Production trial:** the first staged In1 plane completed native refill in
+3.656 seconds and DRC in 3.312 seconds, but failed the existing filled-pad
+group preservation gate. Its 50 opens, unchanged 233 warnings and zero other
+native errors do not override that regression. The source remains unchanged
+at 51 opens. Preserve the candidate and identify the separated subset before
+changing geometry: a list of all former group members is not a list of
+independent root faults. The unfinished staging script must not be treated
+as a complete plane acceptance checker.
+
+The read-only diagnosis isolates only **C25.2**. Canonical and transplanted
+F/In1 fill blocks match exactly; neither cache transfer nor either private-via
+guard's serialization explains the change. The CLI refill input had no
+same-stem project, and merely supplying that project would still not replay
+the accepted settings: `refill_front_ground.py` explicitly tightens clearance,
+edge and polygon-error limits in memory. The project's polygon error is
+0.005 mm; the exercised recipe requires 0.001 mm. These are concrete
+workflow differences, not yet proof of the specific causal setting.
+The incomplete staging script is disabled before writes/processes.
+
+**Next:** one no-new-copper replay of the existing explicit-settings recipe
+against the accepted four-layer baseline, preserving all failed evidence.
+Do not use a successful control to waive the still-missing production-plane
+acceptance checks. The legacy F/B-only route
 search/masks remain unqualified for inner routing. They need not be rebuilt
 before a native plane operation that does not use them; qualify only the
 tools actually used by the next bounded operation. Keep the failed paths

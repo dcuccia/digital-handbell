@@ -1,0 +1,688 @@
+{
+  "status": "READ_ONLY_IN1_EXCLUSION_INVENTORY",
+  "source_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "manifest_sha256": "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381",
+  "kicad_version": "10.0.6",
+  "source_bindings": {
+    "front_ground_plan_sha256": "151e3a66517d8b501c9354d519d6214b197e2decbde626ab082f3f0fca0e861d",
+    "accepted_ground_proof_sha256": "3da40077a3efd5baab41a21708ee67b4bd724afd4d0ec80f4b08066fdf4aa898",
+    "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "primitive_graph_sha256": "f9f0ccb985c43a655b07d3a21a55cbbd8cb79cc459dc7b72888ac9630ccbffd3"
+  },
+  "existing_pour_only_exclusions": [
+    {
+      "exclusion_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+      "name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+      "classification": "private-R24.2-to-C28.2",
+      "bounds_absolute_iu": [
+        101199000,
+        115279000,
+        103201000,
+        117021000
+      ],
+      "protected_item_uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+      "item_kind": "smd_pad",
+      "ref_pin": "C28.2",
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": false,
+      "in1_direct_touch_note": "No existing In1 plated annulus/barrel on this protected item; projected F-only guarding is an engineering-policy choice."
+    },
+    {
+      "exclusion_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+      "name": "private-R26.2-to-R27.2/3ed47a01-14b9-59e7-bdfe-95561c7f1435",
+      "classification": "private-R26.2-to-R27.2",
+      "bounds_absolute_iu": [
+        85849000,
+        110641000,
+        86951000,
+        111743000
+      ],
+      "protected_item_uuid": "3ed47a01-14b9-59e7-bdfe-95561c7f1435",
+      "item_kind": "smd_pad",
+      "ref_pin": "R26.2",
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": false,
+      "in1_direct_touch_note": "No existing In1 plated annulus/barrel on this protected item; projected F-only guarding is an engineering-policy choice."
+    },
+    {
+      "exclusion_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+      "name": "private-R24.2-to-C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b",
+      "classification": "private-R24.2-to-C28.2",
+      "bounds_absolute_iu": [
+        103149000,
+        116949000,
+        104251000,
+        118051000
+      ],
+      "protected_item_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+      "item_kind": "via",
+      "ref_pin": null,
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": true,
+      "in1_direct_touch_note": "An In1 pour can directly touch this existing plated annulus/barrel if not excluded."
+    },
+    {
+      "exclusion_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+      "name": "private-R24.2-to-C28.2/34d001e5-c45d-5645-a43a-6ab95d630ff0",
+      "classification": "private-R24.2-to-C28.2",
+      "bounds_absolute_iu": [
+        98068100,
+        111060100,
+        100139900,
+        111739900
+      ],
+      "protected_item_uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+      "item_kind": "track",
+      "ref_pin": null,
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": false,
+      "in1_direct_touch_note": "No existing In1 plated annulus/barrel on this protected item; projected F-only guarding is an engineering-policy choice."
+    },
+    {
+      "exclusion_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+      "name": "private-R24.2-to-C28.2/a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+      "classification": "private-R24.2-to-C28.2",
+      "bounds_absolute_iu": [
+        101860100,
+        115810100,
+        104039900,
+        117839900
+      ],
+      "protected_item_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+      "item_kind": "track",
+      "ref_pin": null,
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": false,
+      "in1_direct_touch_note": "No existing In1 plated annulus/barrel on this protected item; projected F-only guarding is an engineering-policy choice."
+    },
+    {
+      "exclusion_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+      "name": "private-R24.2-to-C28.2/1ba917bc-32e2-5176-954f-c3d06c7f6040",
+      "classification": "private-R24.2-to-C28.2",
+      "bounds_absolute_iu": [
+        97857000,
+        110849000,
+        98959000,
+        111951000
+      ],
+      "protected_item_uuid": "1ba917bc-32e2-5176-954f-c3d06c7f6040",
+      "item_kind": "smd_pad",
+      "ref_pin": "R24.2",
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": false,
+      "in1_direct_touch_note": "No existing In1 plated annulus/barrel on this protected item; projected F-only guarding is an engineering-policy choice."
+    },
+    {
+      "exclusion_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+      "name": "private-R24.2-to-C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5",
+      "classification": "private-R24.2-to-C28.2",
+      "bounds_absolute_iu": [
+        99649000,
+        111349000,
+        100751000,
+        112451000
+      ],
+      "protected_item_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+      "item_kind": "via",
+      "ref_pin": null,
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": true,
+      "in1_direct_touch_note": "An In1 pour can directly touch this existing plated annulus/barrel if not excluded."
+    },
+    {
+      "exclusion_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+      "name": "private-R24.2-to-C28.2/51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+      "classification": "private-R24.2-to-C28.2",
+      "bounds_absolute_iu": [
+        99460100,
+        111060100,
+        100539900,
+        112239900
+      ],
+      "protected_item_uuid": "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+      "item_kind": "track",
+      "ref_pin": null,
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": false,
+      "in1_direct_touch_note": "No existing In1 plated annulus/barrel on this protected item; projected F-only guarding is an engineering-policy choice."
+    },
+    {
+      "exclusion_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+      "name": "private-R26.2-to-R27.2/933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+      "classification": "private-R26.2-to-R27.2",
+      "bounds_absolute_iu": [
+        85598019,
+        108549966,
+        87250019,
+        110451966
+      ],
+      "protected_item_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+      "item_kind": "smd_pad",
+      "ref_pin": "R27.2",
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": false,
+      "in1_direct_touch_note": "No existing In1 plated annulus/barrel on this protected item; projected F-only guarding is an engineering-policy choice."
+    },
+    {
+      "exclusion_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+      "name": "private-R26.2-to-R27.2/d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+      "classification": "private-R26.2-to-R27.2",
+      "bounds_absolute_iu": [
+        86059119,
+        109161066,
+        86739900,
+        111531900
+      ],
+      "protected_item_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+      "item_kind": "track",
+      "ref_pin": null,
+      "net": "GND",
+      "physical_enabled_layers": [
+        "F.Cu"
+      ],
+      "has_in1_annulus_or_through_barrel": false,
+      "in1_direct_touch_note": "No existing In1 plated annulus/barrel on this protected item; projected F-only guarding is an engineering-policy choice."
+    }
+  ],
+  "private_paths": [
+    {
+      "path": "R26.2->R27.2",
+      "source_bound_branch_copper": [
+        {
+          "uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+          "kind": "track",
+          "net": "GND",
+          "layers": [
+            "F.Cu"
+          ]
+        }
+      ],
+      "endpoint_pads": [
+        "R26.2",
+        "R27.2"
+      ],
+      "via_or_pth_on_exact_source_bound_branch": [],
+      "known_exclusion_count": 3,
+      "via_or_pth_outside_ten_known_bounds": [],
+      "scope_note": "Exact source-bound branch UUIDs and endpoint pads were inventoried; no arbitrary shortest path was substituted. Copper beyond the recorded terminal cut is not claimed private."
+    },
+    {
+      "path": "R24.2->C28.2",
+      "source_bound_branch_copper": [
+        {
+          "uuid": "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "kind": "track",
+          "net": "GND",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+          "kind": "via",
+          "net": "GND",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "kind": "via",
+          "net": "GND",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "kind": "track",
+          "net": "GND",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "kind": "track",
+          "net": "GND",
+          "layers": [
+            "F.Cu"
+          ]
+        },
+        {
+          "uuid": "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "kind": "track",
+          "net": "GND",
+          "layers": [
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "kind": "track",
+          "net": "GND",
+          "layers": [
+            "B.Cu"
+          ]
+        }
+      ],
+      "endpoint_pads": [
+        "R24.2",
+        "C28.2"
+      ],
+      "via_or_pth_on_exact_source_bound_branch": [
+        {
+          "uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+          "ref_pin": null,
+          "kind": "via",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "ref_pin": null,
+          "kind": "via",
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        }
+      ],
+      "known_exclusion_count": 7,
+      "via_or_pth_outside_ten_known_bounds": [],
+      "scope_note": "Exact source-bound branch UUIDs and endpoint pads were inventoried; no arbitrary shortest path was substituted. Copper beyond the recorded terminal cut is not claimed private."
+    }
+  ],
+  "raw_cell_and_protection_nets": [
+    {
+      "net": "/CELL_NEG",
+      "via_or_pth_entering_in1": [
+        {
+          "uuid": "248ce18d-3a6e-50d8-b9ce-c721b99a2c63",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "73f524c2-3597-5233-906e-93443fee9d54",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "14e9c925-5186-5943-8002-513435324c90",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        }
+      ],
+      "representative_pads": [
+        "BT2.1",
+        "BT2.1",
+        "C30.2",
+        "Q5.A1",
+        "Q5.C1",
+        "R28.2",
+        "U6.4"
+      ]
+    },
+    {
+      "net": "/PROT_BAT",
+      "via_or_pth_entering_in1": [],
+      "representative_pads": [
+        "C30.1",
+        "R25.2",
+        "U6.5"
+      ]
+    },
+    {
+      "net": "/PROT_COUT",
+      "via_or_pth_entering_in1": [
+        {
+          "uuid": "cdf78e87-28e5-5e86-9045-600d4f264fa6",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "2f82654e-3978-5993-8e0a-34da29a725b6",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        }
+      ],
+      "representative_pads": [
+        "Q5.B2",
+        "R29.1",
+        "U6.2"
+      ]
+    },
+    {
+      "net": "/PROT_DOUT",
+      "via_or_pth_entering_in1": [],
+      "representative_pads": [
+        "Q5.B1",
+        "R28.1",
+        "U6.3"
+      ]
+    },
+    {
+      "net": "/PROT_FET_RETURN",
+      "via_or_pth_entering_in1": [
+        {
+          "uuid": "800d4ec3-d77e-5045-aaea-e1b064b8e71f",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "1cb9cba6-90b8-5033-9ae1-e912259b9b0a",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "358bf155-f890-5806-b895-ec3c485c3ac2",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "f0eb8165-a384-559b-a075-caa04a27f771",
+          "kind": "via",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        }
+      ],
+      "representative_pads": [
+        "Q5.A2",
+        "Q5.C2",
+        "R27.1",
+        "R29.2"
+      ]
+    },
+    {
+      "net": "/PROT_VM",
+      "via_or_pth_entering_in1": [],
+      "representative_pads": [
+        "R26.1",
+        "U6.6"
+      ]
+    }
+  ],
+  "sensitive_regions": {
+    "BOOST_SW": {
+      "bounds_iu": [
+        94000000,
+        112800000,
+        98375000,
+        117300000
+      ],
+      "bounds_mm": [
+        94.0,
+        112.8,
+        98.375,
+        117.3
+      ],
+      "item_count": 6,
+      "nets": [
+        "BOOST_SW"
+      ],
+      "refs": [
+        "L1",
+        "U5"
+      ],
+      "items": [
+        {
+          "uuid": "3f334850-1096-5c76-ac45-fa801cdf1bfc",
+          "kind": "smd_pad",
+          "ref_pin": "L1.P$2",
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_iu": [
+            94050000,
+            112800000,
+            95550000,
+            116800000
+          ],
+          "bounds_mm": [
+            94.05,
+            112.8,
+            95.55,
+            116.8
+          ]
+        },
+        {
+          "uuid": "6880469f-e4d2-53ec-a4b5-8d000ec1cf1e",
+          "kind": "smd_pad",
+          "ref_pin": "U5.5",
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_iu": [
+            97705000,
+            115050000,
+            98375000,
+            115350000
+          ],
+          "bounds_mm": [
+            97.705,
+            115.05,
+            98.375,
+            115.35
+          ]
+        },
+        {
+          "uuid": "046e039e-0810-5599-ac5c-33a1afd3d3dc",
+          "kind": "track",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_iu": [
+            94000000,
+            114200000,
+            95200000,
+            117300000
+          ],
+          "bounds_mm": [
+            94.0,
+            114.2,
+            95.2,
+            117.3
+          ]
+        },
+        {
+          "uuid": "2490c92c-982e-5830-b3df-3897734e1b09",
+          "kind": "track",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_iu": [
+            97200000,
+            115100000,
+            97400000,
+            116800000
+          ],
+          "bounds_mm": [
+            97.2,
+            115.1,
+            97.4,
+            116.8
+          ]
+        },
+        {
+          "uuid": "538119a3-e187-576d-9270-9e694af7a8c3",
+          "kind": "track",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_iu": [
+            97200000,
+            115100000,
+            98035000,
+            115300000
+          ],
+          "bounds_mm": [
+            97.2,
+            115.1,
+            98.035,
+            115.3
+          ]
+        },
+        {
+          "uuid": "6278f69b-4344-5d61-8e83-5333e8450cc6",
+          "kind": "track",
+          "ref_pin": null,
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_iu": [
+            94000000,
+            116100000,
+            97900000,
+            117300000
+          ],
+          "bounds_mm": [
+            94.0,
+            116.1,
+            97.9,
+            117.3
+          ]
+        }
+      ],
+      "scope": "Only native pads/tracks/vias whose current net name is BOOST_SW; no crystal references included."
+    },
+    "crystal_XIN_XOUT_Y1": {
+      "bounds_iu": [
+        90353600,
+        96402596,
+        96987500,
+        100013901
+      ],
+      "bounds_mm": [
+        90.3536,
+        96.402596,
+        96.9875,
+        100.013901
+      ],
+      "item_count": 20,
+      "nets": [
+        "Net-(IC1-XIN)",
+        "Net-(IC1-XOUT)"
+      ],
+      "refs": [
+        "C2",
+        "C3",
+        "R6",
+        "Y1"
+      ]
+    }
+  },
+  "battery_interface": {
+    "contact_nets": [
+      "VBAT",
+      "CELL_NEG"
+    ],
+    "constraint": "Ordinary native clearance separates different nets, but B-side conductive contact-metal reservation is not an inner-layer keepout. No under-battery via permission is inferred; full-span screening remains required."
+  },
+  "interpretation_limits": [
+    "Inventory only; no In1 plane approval or keepout selection.",
+    "F-only track/pad projected guards are not automatically required electrically on In1, but may be conservatively retained by Astra.",
+    "Net labels alone do not prove private-pickoff preservation after a future plane fill.",
+    "Legacy F ground proof is historical evidence, not four-layer plane qualification."
+  ]
+}
