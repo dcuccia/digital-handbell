@@ -1,0 +1,62 @@
+{
+  "status": "PARTIAL_SAVED_FILE_CONTROL_BLOCKED_BY_NATIVE_PLANE_CREATOR_CRASH",
+  "stage": "graph qualification only; production PCB, manifest, routing, planes, zones, and fills unchanged",
+  "native_version": "10.0.6",
+  "production_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "production_manifest_sha256": "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381",
+  "approach": "Each fixture is created and saved by a dedicated native worker, then CLI DRC/refill and graph checks use fresh processes and fresh file loads. No live BOARD object is shared between phases.",
+  "cli_capability_checked": {
+    "command": "kicad-cli pcb drc --help",
+    "refill_option": "--refill-zones",
+    "save_option": "--save-board",
+    "requirement": "--save-board must be used with --refill-zones"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "result": "short fixture CLI DRC timed out after 60 seconds",
+      "fixture_defect": "The initial serialized fixture used SMD pads declared directly on inner copper and was replaced within the single correction allowance.",
+      "qualification_claimed": false
+    },
+    {
+      "attempt": 2,
+      "short_fixture": "Creator, CLI DRC, and fresh-process graph checker completed before the next stage. Their detailed counts were not promoted because the temporary workspace was cleaned after the later failure.",
+      "plane_fixture_result": "Native creator worker terminated while creating/saving the plane fixture.",
+      "process_exit_code_decimal": 3221226356,
+      "process_exit_code_hex": "0xC0000374",
+      "plane_cli_refill_started": false,
+      "plane_graph_checks_started": false,
+      "qualification_claimed": false
+    }
+  ],
+  "preservation_failure": "The failed isolated TemporaryDirectory was automatically removed during exception unwinding, so an exact failed plane fixture was not retained. No fixture geometry or result is reconstructed or fabricated.",
+  "executed_tool_sha256": {
+    "tools/check_four_layer_graph.py": "85b681ea3152b98bd6b46726e68d2199e14355571605dad4b11829cd1d17e0ab",
+    "tools/check_printed_bell_power_rework.py": "f9f0ccb985c43a655b07d3a21a55cbbd8cb79cc459dc7b72888ac9630ccbffd3",
+    "tools/zone_graph.py": "c6c1cc923c4543fa4728aeccd1804d6b9f2d319aa17af93a7bcf1fb43db0a6f0"
+  },
+  "post_run_review": {
+    "automatic_run_disabled": true,
+    "current_control_tool_sha256": "5a8c3665f51bf81585ea0bd37b5377e56d300f42906dc50e897b2fe2639f7697",
+    "validation_after_disable": "Syntax checked; default invocation exits nonzero before native operations. No native fixture retry.",
+    "additional_harness_defects": [
+      "The unfinished final CLI assertion accepted any clearance finding rather than requiring the intended short finding.",
+      "The plane's In2 CONTROL witness used a different net, confounding layer-isolation evidence with net filtering.",
+      "Automatic temporary-directory cleanup erased stage files on failure."
+    ],
+    "disposition": "No graph or production-routing qualification. Use a known-good saved native plane fixture and repair the evidence controls before any newly authorized attempt."
+  },
+  "reused_regression_guard": {
+    "source_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+    "primitive_graph_sha256": "f9f0ccb985c43a655b07d3a21a55cbbd8cb79cc459dc7b72888ac9630ccbffd3",
+    "pad_group_fingerprint_sha256": "c49025fc1bfa8f6f21a63c1864dfbf9f1a04cff5af9f10b762ff9ba13c712939",
+    "fingerprint_rerun": false
+  },
+  "remaining_unqualified": [
+    "Saved native-filled In1 plane graph control",
+    "Detailed persisted short-fixture DRC and graph evidence",
+    "routing masks/search layer state",
+    "production plane topology, exclusions, contacts, and private sense/current paths"
+  ],
+  "stop_reason": "The one allowed implementation correction was consumed and the corrected approach still encountered a native conceptual/runtime failure."
+}

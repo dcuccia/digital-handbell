@@ -202,6 +202,18 @@ an exact fixture net/UUID/edge comparison across native connectivity build
 and fill, not another board routing attempt. Previous pad-group fingerprints
 are reusable only while both production inputs and graph-code hashes match.
 
+The subsequently authorized saved-file attempt also failed: short-fixture
+creation/CLI/graph stages completed, but the separate plane creator crashed
+before saving (`0xC0000374`); native plane refill was never reached. Its
+temporary-directory cleanup lost the per-stage evidence. No further run
+is authorized by that exhausted item, and automatic invocation of the
+unfinished control is disabled. The next decision is whether to replace
+fixture creation with a known-good saved native example or change checker
+implementation; do not resume routing or treat this as a real PCB failure.
+The source-bound [report](../hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-graph-file-control.json)
+and [tooling lessons](routing-tooling.md#current-conclusion) preserve the
+precise limitations and required harness repairs.
+
 **September 21 conditional resume:** the owner requests Astra engineering
 judgment with pinned Sol routine execution. See the
 [routing-agent policy](routing-agent-policy.md) for exercised model gates,

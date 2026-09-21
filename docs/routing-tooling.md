@@ -26,6 +26,26 @@ The corrected fixture has not qualified production inner routing/planes.
 Old F/B routing masks and the F-only ground checker remain unreleased for
 that purpose.
 
+The owner-approved saved-file alternative also stopped within its attempt
+limit. Its short fixture completed creation, native CLI DRC and a fresh
+graph check, but the separate plane creator crashed with `0xC0000374`
+before saving. The CLI's actual `--refill-zones --save-board` support was
+confirmed; **the plane CLI/refill stage was never reached**. This is not
+evidence against four-layer PCBs or the CLI's ability to fill a valid file.
+Unfortunately the harness's automatic temporary-directory cleanup discarded
+the successful-stage details after the later exception. The
+[saved-file report](../hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-graph-file-control.json)
+states that evidence loss rather than reconstructing measurements.
+
+Automatic runs of the unfinished control are now disabled. Before any
+further attempt, replace the unreliable plane-creation path with a known-good
+saved fixture, retain workspaces/logs on failure, require the actual native
+short finding rather than any clearance finding, and use a **same-net**
+unconnected conductor for the cross-layer-isolation negative control.
+The present different-net CONTROL witness cannot distinguish layer isolation
+from net filtering. These are fixture/harness issues, not permission to
+relax the graph or production-board checks.
+
 **Native KiCad API analysis is established; Freerouting integration remains
 experimental.** Keep using exact geometry and connectivity, with images as
 an explanatory aid. The remaining automation gap is generating constrained
