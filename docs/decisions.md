@@ -468,6 +468,31 @@ authorized by this decision. Stencil/assembly acceptance and coordinated
 contact-height/CAD work remain open; no functional or child-use qualification
 is implied.
 
+## 2026-09-21: layer-count reassessment, not migration approval
+
+The owner requested continued work plus a two/three/four-layer assessment
+for JLCPCB Standard PCBA. The fixed-lattice R14 screen examined 936 poses;
+eight passed preliminary pad/body checks, while the three shortest-distance
+options retain direct-route conflicts. No placement was approved and the
+accepted two-layer PCB/manifest remain unchanged at 51 opens.
+
+Given D43, dense front population, rear battery-metal restrictions and
+fragmented ground returns, Astra now recommends a separate four-layer
+engineering candidate rather than continued two-layer-only local repairs.
+This revisits the earlier low-cost target based on observed conflicts; it
+does not prove two-layer routing impossible or erase prior work.
+JLCPCB manufactures three-layer submissions as four. Its four-layer
+filled/capped via process is explicitly offered at extra cost; two-layer
+eligibility remains unverified. Standard assembly, X-ray for C481766,
+panel handling, tall contacts and secondary USB-anchor soldering remain
+independent costs and acceptance gates.
+
+See the [engineering assessment](pcb-closure-plan.md#layer-count-reassessment-requested-september-21)
+and [current supplier evidence](pcba-quotation-plan.md#current-jlcpcb-evidence).
+The stackup is unchanged: obtain owner direction before a migration,
+preserve the accepted source, and do not upload, order or claim turnkey
+acceptance. Owning epics E07/#7 and E08/#8.
+
 ## Risk register
 
 | Risk | Mitigation / owning epic |

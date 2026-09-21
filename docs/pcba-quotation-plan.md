@@ -120,6 +120,83 @@ Conversely, unfinished routing or an ambiguous population cannot be hidden
 inside a package presented as the completed board. A quote does not authorize
 placing an order or waive later owner approval.
 
+## September 21 layer-count assessment
+
+The owner requested a comparison of two, three and four copper layers for
+**JLCPCB Standard PCBA**, not a stackup change or supplier submission.
+The [engineering assessment](pcb-closure-plan.md#layer-count-reassessment-requested-september-21)
+recommends evaluating a separate four-layer candidate before further
+two-layer-only repairs. The accepted package remains two-layer and unrouted.
+
+Copper layers and component faces are independent. With the same 83 fitted
+parts, four layers do not turn the job into four-sided assembly or remove
+the two rear contacts. The BOM and placement count need not increase, while
+PCB fabrication adds inner-layer imaging, lamination and registration.
+Matched exports would need the new internal copper layers and stackup notes,
+as well as revalidated drill/plane clearances and existing paste/assembly data.
+
+Compare **total delivered assembled-board cost**, not an advertised bare-PCB
+promotion: PCB/panel fabrication, via fill/capping and finish, parts and
+procurement attrition, front/back setup and stencils, placement/X-ray,
+secondary soldering or fixtures, then shipping and tax. At quantity Q, a
+batch-level fabrication/process increase of D adds D/Q per assembled board
+only if panel yield, assembled quantity and all other charges remain equal.
+No exact two-versus-four-layer project price has been obtained.
+
+Standard PCBA must explicitly cover the nominally 16.59 mm tall rear contacts
+and all four USB plated anchors. Extra copper layers do not resolve machine
+height, retention through reflow, fixture access or secondary-solder needs.
+Keep U4's resin-fill/planarization/copper-cap requirement separate from ordinary
+via tenting; also review the changed MCU thermal-via map. Supplier process
+availability and pricing must be confirmed for the selected layer count.
+
+### Current JLCPCB evidence
+
+Public official pages checked September 21, 2026; no files were uploaded,
+no supplier was contacted and no project-specific quote was obtained.
+
+| Topic | Published evidence and project consequence |
+|---|---|
+| Three layers | The [quote-page](https://cart.jlcpcb.com/quote/) tooltip says odd counts such as three are fabricated as the next even count. Compare two versus four, not a cheaper three-layer intermediate. |
+| Four-layer stackup | [Impedance/stackup selections](https://jlcpcb.com/impedance) include nominal 1.6 mm four-layer boards. Select the actual dielectric/copper construction before reviewing USB geometry; nominal layer count alone does not define impedance or return coupling. |
+| Required via treatment | [POFV guidance](https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv) explicitly charges extra for four-layer filling/capping; its free offering begins at six layers. [Via-covering guidance](https://jlcpcb.com/help/article/pcb-via-covering) describes epoxy fill, levelling and copper capping. Two-layer eligibility and the exact four-layer surcharge remain unverified. |
+| Assembly service | [C481766 / LSM6DSOXTR](https://jlcpcb.com/partdetail/Stmicroelectronics-LSM6DSOXTR/C481766) is Standard Only and requires X-ray. Standard remains necessary even if the rear contacts receive a secondary operation rather than a normal second SMT pass. |
+| Handling size | [Standard PCBA capabilities](https://jlcpcb.com/capabilities/pcb-assembly-capabilities) specify a 70 x 70 mm minimum single board/panel and require rails/fiducials. The D43 board therefore needs a compatible carrier/panel; layer count does not fix this. |
+| Circular panel | [PCB capabilities](https://jlcpcb.com/capabilities/pcb-capabilities) allow circular JLC-panelized units from 20 x 20 mm, with mouse-bite connections and tooling strips on four sides. SMT tooling edges are 5 mm. Tab locations, residual edges, USB access and contact clearance require coordinated review. |
+| Contact height | No reliable current official numeric top/bottom component-height limit was verified. The capability table's PCB-thickness "No limit" is not a component-height allowance. The nominal 16.59 mm contacts remain a process/fixture acceptance question. |
+| Secondary operations | [Mechanical-component guidance](https://jlcpcb.com/help/article/introduction-smt-mechanical-assembly-components) provides a secondary-processing request mechanism, not acceptance of these contacts or X6. Specify all four anchor joints and the required outcome explicitly. |
+| Timing | Standard capabilities publish assembly build time of at least four days, not total delivered lead time. Procurement, PCB fabrication, special processes, review, secondary work and shipping remain additional dependencies. |
+
+The [detailed assembly price table](https://jlcpcb.com/help/article/pcb-assembly-price),
+marked updated September 9, 2026, lists these USD amounts with an exchange-rate
+caveat. They are published fee examples, not a quote:
+
+| Standard PCBA item | Single face | Both faces |
+|---|---:|---:|
+| Setup/engineering | $25.56 | $51.12 |
+| Stencil | $8.21 | $16.42 |
+| Setup plus stencil subtotal only | $33.77 | $67.54 |
+
+The same table lists SMT assembly at $0.0016 per solder joint for the
+1-50,000-joint tier, feeder loading at $1.53 for Basic/Extended parts,
+manual assembly at $0.0164 per joint for the 1-10,000-joint tier, and
+hand-soldering labour at $3.58 per order. Parts, X-ray, applicable fixtures,
+packing and other charges are additional. These fees are not multiplied by
+the copper-layer count. The $67.54 double-face subtotal, if charged once
+for a batch, allocates to $6.754 at ten assembled boards or $0.6754 at one
+hundred; those numbers are neither total unit costs nor the four-layer premium.
+If contacts are handled by a different operation, the supplier must quote
+that actual process rather than blindly applying both SMT and manual fees.
+
+Published process tables are not completely consistent. For filled vias,
+the capabilities table lists 0.15-0.55 mm diameters, the covering guide
+warns against holes over 0.5 mm, and the POFV announcement gives 0.2-0.5 mm
+plus hole-separation/annular-ring conditions. U4's 0.35 mm nominal drill
+being within those ranges does not establish the full local-pattern
+acceptance. Do not invent a combined guaranteed rule or claim IPC-4761
+Type VII certification not stated by the vendor. Similarly, prefer the
+current detailed price table to conflicting older FAQ fees.
+
 ## Official file-format sources
 
 Read on September 13, 2026; vendor templates may change before final export.

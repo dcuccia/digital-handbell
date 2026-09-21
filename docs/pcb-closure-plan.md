@@ -191,6 +191,65 @@ The next bounded engineering item is to evaluate **one R14 location beside
 the existing SCL group**, jointly accounting for its supply connection,
 native courtyard and local ground returns. No move is yet authorized.
 
+**September 21 relocation screen:** Sol evaluated 936 fixed-lattice poses
+in one read-only native batch. Eight passed the pad/body screen; the three
+shortest-distance options still cross USBBOOT and/or IMU_INT2 on their direct
+connections. Missing courtyards required body proxies and ground-fill effects
+remain unreviewed. No position is approved and no PCB/manifest changed.
+The [screen](measurements/2026-09-21-r14-relocation-screen.json) is not a
+routability proof. Do not start another placement/search sweep.
+
+### Layer-count reassessment requested September 21
+
+Two layers were a defensible initial low-cost target for this circuit, not
+an electrical requirement. The constraints evolved into D43, 81 front
+electronic parts and two rear conductive battery contacts that reserve much
+of the back routing area. We now have 51 opens, 18 of them ground, and
+repeated local supply/signal conflicts. Earlier supply routing also split
+ground groups. These are reasons to reconsider the architecture, not proof
+that a skilled two-layer layout is impossible.
+
+**Astra recommendation: prefer a four-layer engineering candidate before
+more two-layer-only local repairs.** The principal benefit is a substantially
+continuous protected-GND reference independent of most signal routing, plus
+an internal routing/distribution layer. It is not two extra freely usable
+signal layers. Preserve short local boost/decoupling loops; adding planes
+does not correct bad placement or confer current/thermal qualification.
+
+Three layers are not a useful purchasing compromise here: JLCPCB states
+that it manufactures a three-layer submission as four layers. The
+[Standard PCBA comparison](pcba-quotation-plan.md#september-21-layer-count-assessment)
+records current official sources, fixed assembly fees and remaining
+via-treatment, panel and tall-contact questions. No exact project price
+or guaranteed engineering-time saving is established.
+
+An initial role assignment to review against the supplier's actual stackup
+is F/components and critical signals, In1/protected GND, In2/power and selected
+lower-speed routing, B/remaining routing and contacts. Fast signals should
+stay over an uninterrupted close reference; B routes cannot assume a
+continuous reference if In2 is split. This is a study direction, not the
+approved KiCad stackup.
+
+Keep raw CELL_NEG isolated from protected GND, dedicated sense pickoffs
+intact, and switching-node copper controlled. Buried copper may help cross
+surface congestion, but an ordinary through-via still exposes a pad/barrel
+on B: the battery-metal exclusions and insulation gates do not disappear.
+Start with ordinary through-vias, not blind/buried vias or HDI.
+
+Four layers can retain a single nominal 1.6 mm board and the same external
+interfaces; they do not add assembly faces or mean stacked PCBs. Supplier
+thickness tolerances, stackup/copper, via antipads and mechanical binding
+still need review. USB geometry, filled/capped thermal vias, front/rear
+assembly and actual part sourcing remain separate gates.
+
+**No stackup migration is authorized or applied by this assessment.**
+Preserve the accepted two-layer package and reusable schematic, footprints,
+MPNs, mechanics and topology reviews. A migration would use one separate
+active candidate, revise native rules and plane/contact exclusions, review
+which existing traces to retain, then rerun native connectivity/DRC,
+independent supply/return checks and matched manufacturing/CAD binding.
+Existing two-layer fill proofs would not qualify new internal planes.
+
 **Paused September 16 at the owner's request.** Save and publish only;
 do not continue engineering until explicitly resumed. The accepted board
 remains the 51-open charge-indicator checkpoint `b2203c8`, with the hash

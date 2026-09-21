@@ -1,0 +1,333 @@
+{
+  "status": "READ_ONLY_NUMERICAL_PLACEMENT_SCREEN",
+  "input_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
+  "input_manifest_sha256": "2b9ea13a6ae85d0f8d2ae09c74161e3122349e4ecb56c9aa760823cd88d9bb55",
+  "native_version": "10.0.6",
+  "accepted_board_modified": false,
+  "candidate_pcb_written": false,
+  "screen": {
+    "bounds_native_mm": [
+      90.8,
+      90.8,
+      94.0,
+      95.2
+    ],
+    "lattice_mm": 0.25,
+    "rotations_deg": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "maximum_poses": 1000,
+    "total_scanned": 936,
+    "pad_pass": 8,
+    "body_courtyard_pass": 8,
+    "foreign_copper_clearance_mm": 0.2,
+    "excluded_old_immediate_supply_spur_uuid": "8b67bfa8-9f2d-5d11-b459-76494e6f41ef"
+  },
+  "filters": {
+    "pad": "Native effective F.Cu pad shapes against all non-R14 F.Cu pads/tracks of other or blank nets; same-net copper permitted.",
+    "body": "Existing placement-manifest component-envelope proxy plus native F.Courtyard polygon collision where available; reference/value text excluded.",
+    "ranking": "Sum of Euclidean pad-center distance to nearest centerline/center point of existing same-net F.Cu pad/track/via primitive.",
+    "direct_segment": "0.20 mm F.Cu segment tested at 0.20 mm native effective-shape clearance against other/blank-net pads and tracks; no path search."
+  },
+  "incomplete_evidence": {
+    "body_proxy_screening_only": true,
+    "native_courtyard_missing_for_front_references": [
+      "C1",
+      "C19",
+      "C20",
+      "C26",
+      "C27",
+      "C28",
+      "C4",
+      "C5",
+      "CHG0",
+      "D+1",
+      "D-1",
+      "D3",
+      "D4",
+      "IC1",
+      "IC4",
+      "L0",
+      "L1",
+      "Q1",
+      "Q2",
+      "TP10",
+      "TP11",
+      "TP12",
+      "TP13",
+      "TP14",
+      "TP15",
+      "TP16",
+      "TP3",
+      "TP4",
+      "TP5",
+      "TP6",
+      "TP7",
+      "TP8",
+      "TP9",
+      "U2",
+      "U3",
+      "U4",
+      "U5",
+      "X6",
+      "Y1"
+    ],
+    "filled_zone_GND_implications": "INCOMPLETE: filled-zone shapes were not included; local GND groups must not be assumed continuous.",
+    "qualification": "Pad/body screening only; no placement is approved, usable, routed, or DRC-clean."
+  },
+  "top3": [
+    {
+      "center_mm": [
+        93.3,
+        90.8
+      ],
+      "rotation_deg": 0,
+      "pad_positions_mm": {
+        "R14.1_+3V3": [
+          92.792,
+          90.8
+        ],
+        "R14.2_SCL": [
+          93.808,
+          90.8
+        ]
+      },
+      "rank_sum_raw_distance_mm": 3.4936845028428722,
+      "links": {
+        "SCL": {
+          "candidate_pad": "R14.2",
+          "pad_center_mm": [
+            93.808,
+            90.8
+          ],
+          "nearest_primitive_uuid": "077c9a13-704a-5a1b-9384-b25c486c1608",
+          "nearest_primitive_identity": "077c9a13-704a-5a1b-9384-b25c486c1608",
+          "nearest_point_mm": [
+            93.6315,
+            92.7368
+          ],
+          "raw_centerline_distance_mm": 1.9448255680137543,
+          "direct_f_segment_width_mm": 0.2,
+          "direct_f_segment_other_net_collisions": [
+            {
+              "uuid": "3c10ff22-99b1-5d7b-9434-c9d582ab1f3a",
+              "identity": "3c10ff22-99b1-5d7b-9434-c9d582ab1f3a",
+              "net": "/IMU_INT2"
+            },
+            {
+              "uuid": "f9857619-ecfd-5467-bf9e-f67e60118c32",
+              "identity": "f9857619-ecfd-5467-bf9e-f67e60118c32",
+              "net": "/IMU_INT2"
+            },
+            {
+              "uuid": "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+              "identity": "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+              "net": "/IMU_INT2"
+            }
+          ]
+        },
+        "+3V3": {
+          "candidate_pad": "R14.1",
+          "pad_center_mm": [
+            92.792,
+            90.8
+          ],
+          "nearest_primitive_uuid": "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+          "nearest_primitive_identity": "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+          "nearest_point_mm": [
+            91.95,
+            92.1
+          ],
+          "raw_centerline_distance_mm": 1.5488589348291182,
+          "direct_f_segment_width_mm": 0.2,
+          "direct_f_segment_other_net_collisions": [
+            {
+              "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "identity": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "net": "USBBOOT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "center_mm": [
+        93.55,
+        90.8
+      ],
+      "rotation_deg": 0,
+      "pad_positions_mm": {
+        "R14.1_+3V3": [
+          93.042,
+          90.8
+        ],
+        "R14.2_SCL": [
+          94.058,
+          90.8
+        ]
+      },
+      "rank_sum_raw_distance_mm": 3.6735762520424555,
+      "links": {
+        "SCL": {
+          "candidate_pad": "R14.2",
+          "pad_center_mm": [
+            94.058,
+            90.8
+          ],
+          "nearest_primitive_uuid": "4e5277f0-2e18-56ea-aeec-38e6be6c4936",
+          "nearest_primitive_identity": "4e5277f0-2e18-56ea-aeec-38e6be6c4936",
+          "nearest_point_mm": [
+            94.4486,
+            92.7368
+          ],
+          "raw_centerline_distance_mm": 1.9757941694417498,
+          "direct_f_segment_width_mm": 0.2,
+          "direct_f_segment_other_net_collisions": [
+            {
+              "uuid": "3c10ff22-99b1-5d7b-9434-c9d582ab1f3a",
+              "identity": "3c10ff22-99b1-5d7b-9434-c9d582ab1f3a",
+              "net": "/IMU_INT2"
+            },
+            {
+              "uuid": "f9857619-ecfd-5467-bf9e-f67e60118c32",
+              "identity": "f9857619-ecfd-5467-bf9e-f67e60118c32",
+              "net": "/IMU_INT2"
+            },
+            {
+              "uuid": "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+              "identity": "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+              "net": "/IMU_INT2"
+            }
+          ]
+        },
+        "+3V3": {
+          "candidate_pad": "R14.1",
+          "pad_center_mm": [
+            93.042,
+            90.8
+          ],
+          "nearest_primitive_uuid": "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+          "nearest_primitive_identity": "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+          "nearest_point_mm": [
+            91.95,
+            92.1
+          ],
+          "raw_centerline_distance_mm": 1.6977820826007057,
+          "direct_f_segment_width_mm": 0.2,
+          "direct_f_segment_other_net_collisions": [
+            {
+              "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "identity": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "net": "USBBOOT"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "center_mm": [
+        93.3,
+        90.8
+      ],
+      "rotation_deg": 270,
+      "pad_positions_mm": {
+        "R14.1_+3V3": [
+          93.3,
+          90.292
+        ],
+        "R14.2_SCL": [
+          93.3,
+          91.308
+        ]
+      },
+      "rank_sum_raw_distance_mm": 3.6852051054719626,
+      "links": {
+        "SCL": {
+          "candidate_pad": "R14.2",
+          "pad_center_mm": [
+            93.3,
+            91.308
+          ],
+          "nearest_primitive_uuid": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+          "nearest_primitive_identity": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+          "nearest_point_mm": [
+            93.3,
+            92.7368
+          ],
+          "raw_centerline_distance_mm": 1.4287999999999954,
+          "direct_f_segment_width_mm": 0.2,
+          "direct_f_segment_other_net_collisions": [
+            {
+              "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+              "identity": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+              "net": "USBBOOT"
+            }
+          ]
+        },
+        "+3V3": {
+          "candidate_pad": "R14.1",
+          "pad_center_mm": [
+            93.3,
+            90.292
+          ],
+          "nearest_primitive_uuid": "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+          "nearest_primitive_identity": "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+          "nearest_point_mm": [
+            91.95,
+            92.1
+          ],
+          "raw_centerline_distance_mm": 2.256405105471967,
+          "direct_f_segment_width_mm": 0.2,
+          "direct_f_segment_other_net_collisions": [
+            {
+              "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "identity": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "net": "USBBOOT"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "viable_pose_count": 8,
+  "leading_pad_rejections": [
+    [
+      "R14.1/372abf98-d8c7-5aca-ae86-79442304abb8",
+      185
+    ],
+    [
+      "R14.1/C24.2",
+      159
+    ],
+    [
+      "R14.1/3af9f604-730a-57dc-bda2-07d0adec1b60",
+      73
+    ],
+    [
+      "R14.2/C24.1",
+      54
+    ],
+    [
+      "R14.1/3c10ff22-99b1-5d7b-9434-c9d582ab1f3a",
+      53
+    ],
+    [
+      "R14.2/a869dd24-8003-5303-82af-32d37e552b3a",
+      40
+    ],
+    [
+      "R14.1/IC4.13",
+      33
+    ],
+    [
+      "R14.2/372abf98-d8c7-5aca-ae86-79442304abb8",
+      31
+    ]
+  ],
+  "leading_body_rejections": [],
+  "timing_seconds": 3.281,
+  "tool": "tools/experiments/screen_r14_relocation.py"
+}
