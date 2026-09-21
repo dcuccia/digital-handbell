@@ -49,10 +49,16 @@ edge and polygon-error limits in memory. The project's polygon error is
 workflow differences, not yet proof of the specific causal setting.
 The incomplete staging script is disabled before writes/processes.
 
-**Next:** one no-new-copper replay of the existing explicit-settings recipe
-against the accepted four-layer baseline, preserving all failed evidence.
-Do not use a successful control to waive the still-missing production-plane
-acceptance checks. The legacy F/B-only route
+The [explicit-settings replay](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-refill-settings-control.json)
+passes: all 22 F fill blocks are reproduced, all 137 prior pad groups remain
+connected, C25.2 retains its connection to MH1.1, and both private pickoffs
+remain independent until their terminals. No shorts or floating copper were
+found. No inner plane was present and native DRC was not rerun; this is not
+production-plane acceptance.
+
+**Next:** replay the released In1 geometry using the established settings,
+with all missing per-layer acceptance gates implemented first. Do not
+change geometry to hide a refill regression. The legacy F/B-only route
 search/masks remain unqualified for inner routing. They need not be rebuilt
 before a native plane operation that does not use them; qualify only the
 tools actually used by the next bounded operation. Keep the failed paths

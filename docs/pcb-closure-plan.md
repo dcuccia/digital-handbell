@@ -217,11 +217,19 @@ moreover, the existing accepted refill recipe explicitly tightens project
 settings (including 0.001 mm polygon error versus the project's 0.005 mm).
 Neither omission's individual causal effect has been measured.
 The staging script is now disabled before any write or native process.
-Next: one no-new-copper replay of the already-exercised
-`tools/refill_front_ground.py` recipe against the accepted four-layer source,
-followed by full filled-group/private-return checks. This is a settings/control
-gate, not another plane geometry trial or authorization to reconnect C25 by
-changing parts, tracks or exclusions.
+The [no-new-copper replay](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-refill-settings-control.json)
+now passes: the existing `tools/refill_front_ground.py` recipe reproduces all
+22 F fill blocks, preserves 137 connected pad groups and both private
+pickoffs, and retains MH1.1-to-C25.2 continuity without shorts/floating
+copper. Native DRC was not rerun on that isolated control. This proves a
+working explicit-settings refill path, not which individual setting caused
+the failed trial.
+Next: one staged replay of the same released In1 geometry using that
+explicit-settings path and a complete per-layer checker. Do not reconnect
+C25 by moving parts or altering existing tracks/exclusions. Keep the failed
+trial separate, require exact guard coordinates and source invariants, and
+stop on any new topology/geometry failure rather than adjusting the plane
+inside the replay.
 Native plane work does not require
 using the still-unqualified F/B-only route search; qualify that engine only
 if it will actually be used for inner routing.

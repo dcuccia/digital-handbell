@@ -1,0 +1,107 @@
+{
+  "status": "ESTABLISHED_F_REFILL_SETTINGS_CONTROL_PASSED",
+  "accepted_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "accepted_manifest_sha256": "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381",
+  "output_pcb_sha256": "0f5280d055acbe1a25795b8f7a6f9d8f899f0315fb61b472b1b606b8af4f20d6",
+  "kicad_version": "10.0.6",
+  "recipe_sha256": "da04e8e4c0f6b9797cd0f7b0925d8c5c8cc9468ac6e7f619adce8411475cb425",
+  "graph_tool_hashes": {
+    "zone_graph.py": "c6c1cc923c4543fa4728aeccd1804d6b9f2d319aa17af93a7bcf1fb43db0a6f0",
+    "check_front_ground.py": "cae59aa82073cf4b2563d34072373a3731d69cb4324cbbd35fe58c83ec805d77",
+    "check_printed_bell_power_rework.py": "f9f0ccb985c43a655b07d3a21a55cbbd8cb79cc459dc7b72888ac9630ccbffd3"
+  },
+  "settings_mm": {
+    "m_MinClearance": 0.2,
+    "m_CopperEdgeClearance": 0.25,
+    "m_HoleClearance": 0.25,
+    "m_HoleToHoleMin": 0.25,
+    "m_MaxError": 0.001
+  },
+  "graph": {
+    "existing_pad_groups_preserved": 137,
+    "MH1.1_to_C25.2_connected": true,
+    "private_pickoffs": [
+      {
+        "from": "R26.2",
+        "to": "R27.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+            "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      },
+      {
+        "from": "R24.2",
+        "to": "C28.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+            "layer": "F.Cu"
+          },
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      }
+    ],
+    "shorts": [],
+    "floating_copper": [],
+    "graph_seconds": 35.98400000005495,
+    "source_graph_seconds": 17.875
+  },
+  "zones": {
+    "source_count": 11,
+    "output_count": 11,
+    "source_fill": {
+      "count": 22,
+      "ordered_sha256": "81e45ca9ca015041716d9a5cc141e08757a92dc7e722bac0f4cb3ab01a4eab3d"
+    },
+    "output_fill": {
+      "count": 22,
+      "ordered_sha256": "81e45ca9ca015041716d9a5cc141e08757a92dc7e722bac0f4cb3ab01a4eab3d"
+    },
+    "inner_filled_islands": 0
+  },
+  "source_invariants": {
+    "nonfill_raw_equal": false,
+    "nonfill_whitespace_normalized_equal": true,
+    "no_added_tracks_vias_pads": true
+  },
+  "native_drc": {
+    "run": false,
+    "reason": "Output is an isolated evidence file without a same-stem copied project; DRC was omitted rather than present misleading default-project evidence."
+  },
+  "production_files_modified": false,
+  "accepted_open_count_remains": 51,
+  "limits": [
+    "F-only refill control; no In1 zone or new copper.",
+    "Does not identify which individual setting caused the rejected candidate regression."
+  ]
+}
