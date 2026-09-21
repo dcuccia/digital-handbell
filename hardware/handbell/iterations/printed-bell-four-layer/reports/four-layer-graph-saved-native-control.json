@@ -1,0 +1,265 @@
+{
+  "status": "SAVED_NATIVE_ALL_LAYER_GRAPH_CONTROL_PASSED",
+  "source_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+  "manifest_sha256": "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381",
+  "fixture_hashes": {
+    "short": "a49ef9405379eda5398776e9ff540139ed321b6194e88a006a8265de4499560a",
+    "plane_unfilled": "71a4d9a25b0071df133e66d675ad72ccfd0b0effa2635ae015ddc10cc70e6a6b",
+    "plane_filled": "eaab0e8a8f6f3fa93fec3c11ecf5926dacf87d01a7425ee9a6fadaa66a3efe90"
+  },
+  "short": {
+    "specific_cli_findings": [
+      {
+        "description": "Tracks crossing",
+        "items": [
+          {
+            "description": "Track [GND] on In1.Cu, length 3.5000 mm",
+            "pos": {
+              "x": 90.5,
+              "y": 91.491614
+            },
+            "uuid": "b8a380e6-3a0f-5575-8e2f-59ad37ee611b"
+          },
+          {
+            "description": "Track [+3V3] on In1.Cu, length 3.5000 mm",
+            "pos": {
+              "x": 92.0,
+              "y": 89.5
+            },
+            "uuid": "def2e96b-5c54-5e07-902f-7b94b31eec46"
+          }
+        ],
+        "severity": "error",
+        "type": "tracks_crossing"
+      }
+    ],
+    "graph": {
+      "connected_anchored_groups": false,
+      "shorts": [
+        {
+          "a_uuid": "b8a380e6-3a0f-5575-8e2f-59ad37ee611b",
+          "b_uuid": "def2e96b-5c54-5e07-902f-7b94b31eec46",
+          "layer": "In1.Cu",
+          "nets": [
+            "GND",
+            "+3V3"
+          ]
+        }
+      ],
+      "path_anchored_groups": [],
+      "same_xy_gnd_witnesses_disconnected": true,
+      "native_version": "10.0.6",
+      "current_net_names": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    "drc_unconnected": 4
+  },
+  "plane": {
+    "before": {
+      "c23_c24_connected": false,
+      "in2_control_connected": false,
+      "native_version": "10.0.6",
+      "current_net_names": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    "after": {
+      "c23_c24_connected": true,
+      "primitive_c23_c24_connected": false,
+      "in2_control_connected": false,
+      "zone_islands": [
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:In1.Cu:island:0",
+          "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "layer": "In1.Cu",
+          "island_index": 0,
+          "explicit_native_holes": 0,
+          "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+          "filled_area_mm2": 1449.399182989659
+        }
+      ],
+      "path": [
+        {
+          "uuid": "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "d4e4e560-dc0c-5e94-a05a-880916d9b0c6",
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "c6b23cd9-ca81-58eb-bad2-8a265f4efa31",
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "c6b23cd9-ca81-58eb-bad2-8a265f4efa31",
+          "layer": "In1.Cu"
+        },
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:In1.Cu:island:0",
+          "layer": "In1.Cu",
+          "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "filled_island_index": 0
+        },
+        {
+          "uuid": "bb4ae368-7371-5b67-9d3f-73d67a783699",
+          "layer": "In1.Cu"
+        },
+        {
+          "uuid": "bb4ae368-7371-5b67-9d3f-73d67a783699",
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "1a3a0864-4187-5961-b32a-70df80cac979",
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+          "layer": "F.Cu"
+        }
+      ],
+      "native_version": "10.0.6",
+      "current_net_names": [
+        "+3V3",
+        "GND"
+      ]
+    },
+    "unfilled_sha256": "71a4d9a25b0071df133e66d675ad72ccfd0b0effa2635ae015ddc10cc70e6a6b",
+    "filled_sha256": "eaab0e8a8f6f3fa93fec3c11ecf5926dacf87d01a7425ee9a6fadaa66a3efe90"
+  },
+  "stages": [
+    {
+      "name": "short-drc",
+      "status": "starting",
+      "command": [
+        "<kicad-cli>",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--output",
+        "<work>\\short-drc.json",
+        "<work>\\short.kicad_pcb"
+      ],
+      "timeout_seconds": 60,
+      "started_unix": 1790032183.591161
+    },
+    {
+      "name": "short-drc",
+      "status": "completed",
+      "exit_code": 0,
+      "seconds": 2.375,
+      "stdout": "short-drc.stdout.txt",
+      "stderr": "short-drc.stderr.txt"
+    },
+    {
+      "name": "short-graph",
+      "status": "starting",
+      "command": [
+        "<python>",
+        "<repo>\\tools\\check_four_layer_graph.py",
+        "worker",
+        "short",
+        "<work>\\short.kicad_pcb",
+        "<work>\\short-graph.json"
+      ],
+      "timeout_seconds": 60,
+      "started_unix": 1790032186.2976503
+    },
+    {
+      "name": "short-graph",
+      "status": "completed",
+      "exit_code": 0,
+      "seconds": 0.625,
+      "stdout": "short-graph.stdout.txt",
+      "stderr": "short-graph.stderr.txt"
+    },
+    {
+      "name": "plane-before",
+      "status": "starting",
+      "command": [
+        "<python>",
+        "<repo>\\tools\\check_four_layer_graph.py",
+        "worker",
+        "plane-before",
+        "<work>\\plane-unfilled.kicad_pcb",
+        "<work>\\plane-before.json"
+      ],
+      "timeout_seconds": 60,
+      "started_unix": 1790032187.0680356
+    },
+    {
+      "name": "plane-before",
+      "status": "completed",
+      "exit_code": 0,
+      "seconds": 0.42099999997299165,
+      "stdout": "plane-before.stdout.txt",
+      "stderr": "plane-before.stderr.txt"
+    },
+    {
+      "name": "plane-refill-drc",
+      "status": "starting",
+      "command": [
+        "<kicad-cli>",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--refill-zones",
+        "--save-board",
+        "--output",
+        "<work>\\plane-drc.json",
+        "<work>\\plane-filled.kicad_pcb"
+      ],
+      "timeout_seconds": 60,
+      "started_unix": 1790032187.7135782
+    },
+    {
+      "name": "plane-refill-drc",
+      "status": "completed",
+      "exit_code": 0,
+      "seconds": 2.5,
+      "stdout": "plane-refill-drc.stdout.txt",
+      "stderr": "plane-refill-drc.stderr.txt"
+    },
+    {
+      "name": "plane-filled",
+      "status": "starting",
+      "command": [
+        "<python>",
+        "<repo>\\tools\\check_four_layer_graph.py",
+        "worker",
+        "plane-filled",
+        "<work>\\plane-filled.kicad_pcb",
+        "<work>\\plane-filled.json"
+      ],
+      "timeout_seconds": 60,
+      "started_unix": 1790032190.3631082
+    },
+    {
+      "name": "plane-filled",
+      "status": "completed",
+      "exit_code": 0,
+      "seconds": 0.39099999994505197,
+      "stdout": "plane-filled.stdout.txt",
+      "stderr": "plane-filled.stderr.txt"
+    }
+  ],
+  "private_evidence_workspace": "saved-native-graph-control-02",
+  "tool_hashes": {
+    "tools/check_four_layer_graph.py": "8e55dd0d8c74520b3a928ad90057da38d64b9ab0cd2d5120548fea4ce1dea0bb",
+    "tools/check_printed_bell_power_rework.py": "f9f0ccb985c43a655b07d3a21a55cbbd8cb79cc459dc7b72888ac9630ccbffd3",
+    "tools/zone_graph.py": "c6c1cc923c4543fa4728aeccd1804d6b9f2d319aa17af93a7bcf1fb43db0a6f0"
+  },
+  "provenance": "Fixtures extract native KiCad syntax, C23/C24, Edge.Cuts, setup, and the GND zone from the CC BY-SA package; no fixture is promoted as production.",
+  "remaining_unqualified": [
+    "routing masks/search",
+    "production plane topology/exclusions",
+    "contacts and private sense/current paths"
+  ]
+}

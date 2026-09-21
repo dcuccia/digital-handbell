@@ -189,10 +189,16 @@ native report was reused explicitly, not rerun or represented as new routing
 proof. Its newly enabled schematic-parity check reports 46 notices not
 present in the differently configured historical report. Those need
 disposition before release, not concealment inside an "all checks clean" claim.
-Next item: qualify all-layer geometry/connectivity tools with a deterministic
-cross-layer/via/plane control, then release the protected-ground strategy.
+**Saved-native graph gate subsequently passed:** source-derived fixtures
+demonstrate the exact inner-layer short, via/island-only ground connection
+and same-net layer isolation. See
+[`four-layer-graph-saved-native-control.json`](../hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-graph-saved-native-control.json).
+No source PCB changed. Next item: inventory production private-return/plane
+exclusions and release the protected-ground strategy. Native plane work
+does not require using the still-unqualified F/B-only route search; qualify
+that engine only if it will actually be used for inner routing.
 
-**Tooling checkpoint, still blocked:** primitive/zone graph enumeration now
+**Earlier tooling checkpoint, superseded by the saved-native control:** primitive/zone graph enumeration now
 supports enabled copper layers and plated spans. The bounded native-fill
 control is not accepted: a corrected finite fixture fills In1 successfully,
 but a subsequent different-net crossing appears connected and stops the

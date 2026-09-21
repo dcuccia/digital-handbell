@@ -134,6 +134,23 @@ invariants. The existing F/B-only grid and ground checkers are not qualified
 merely by changing a layer-count setting. Add a small deterministic
 cross-layer/via/plane control before accepting production-board inner routes.
 
+The source-derived saved-native graph control has now passed; its report is
+`printed-bell-four-layer/reports/four-layer-graph-saved-native-control.json`.
+This releases the exercised graph/zone/via-span checks, not the old F/B
+search engine or the actual board's ground topology. Qualify the tool used
+by each operation: an explicitly reviewed native plane-fill operation need
+not wait for an unused multilayer autorouter. Old routing masks/search must
+not be used to claim inner-layer route legality.
+
+Distinguish fixed copper from refillable zone copper in proposal tools.
+A new signal through-via will need antipads in an existing GND plane; treating
+the old fill cache as immutable copper would falsely forbid nearly every
+such transition. Conversely, ignoring the plane is not acceptance: regenerate
+its clearances and verify continuity, necks and return paths after insertion.
+Keep rule-area exclusions and private-return restrictions hard constraints.
+The intended F-to-In2 connection still requires a full F-to-B via clearance
+and contact-metal screen; stopping a route on In2 does not create a blind via.
+
 Then work in dependency order:
 
 1. Establish the protected-ground/return strategy and reserve USB, clock,

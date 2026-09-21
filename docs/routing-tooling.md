@@ -6,6 +6,38 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**Latest September 21 result: the saved-native graph controls passed.**
+[`check_four_layer_graph.py`](../tools/check_four_layer_graph.py) now extracts
+fixture syntax from the accepted native PCB instead of creating native
+objects through Python. In a fresh persistent workspace, KiCad reports the
+exact deliberately crossing GND/+3V3 track UUID pair on In1, and the graph
+reports that short without merging the distinct logical net groups.
+
+The separate plane fixture proves C23/C24 GND disconnected before fill and
+still disconnected in the post-fill primitive graph, but connected through
+an exact native In1 filled island and via annuli in the filled graph.
+A present, still-GND In2-only witness remains disconnected. Same-XY F/In1
+conductors without a via also remain separate. The hardened confirmation's
+CLI refill/save stage took 2.500 seconds. These results qualify the exercised
+graph/filled-island behavior, not production routing or plane topology.
+
+The [accepted control report](../hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-graph-saved-native-control.json)
+binds source, fixtures and executed tools. Reproduce with
+`python tools\check_four_layer_graph.py --work-dir C:\Temp\NEW_GRAPH_CONTROL`;
+the directory must not exist. Native workers have finite timeouts, stage
+logs are retained even on failure, and public reports omit machine paths.
+No old workspace is reused or relabelled with current tool hashes.
+The source/manifest guards must match; raw fixtures retain the derivative's
+CC BY-SA provenance. No production board was changed.
+
+**Next:** define and screen the production protected-ground exclusions using
+the now-exercised all-layer graph and native CLI. The legacy F/B-only route
+search/masks remain unqualified for inner routing. They need not be rebuilt
+before a native plane operation that does not use them; qualify only the
+tools actually used by the next bounded operation. Keep the failed paths
+below as history, not the current graph status. Their native crash causes
+were not established by the successful replacement workflow.
+
 **September 21 four-layer update:** the logical migration baseline is now
 `printed-bell-four-layer`; the two-layer pilot below is historical. Primitive
 and filled-zone graph code now enumerates enabled copper layers in physical

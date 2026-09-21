@@ -45,5 +45,12 @@ four-layer routing proof:
 - `../printed-bell-clock-draft/reports/charge-led-routing-drc.json`
 - `../printed-bell-clock-draft/reports/charge-led-routing-ground-check.json`
 
-Do not route or fill this package until the fixed two-layer assumptions named
-in the baseline report support all enabled copper layers and via spans.
+The [saved-native graph control](reports/four-layer-graph-saved-native-control.json)
+now exercises inner-layer short reporting, through-via annuli, exact filled
+In1 connectivity and same-net In2 isolation. The failed earlier controls
+remain historical evidence, not the current graph result.
+
+Production plane topology, contact/private-return exclusions and engineering
+acceptance are still required before adding copper. The old F/B routing
+masks/search remain unqualified for inner routes. A native plane operation
+using qualified graph checks does not require that unused search engine.

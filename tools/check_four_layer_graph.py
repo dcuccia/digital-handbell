@@ -1,31 +1,24 @@
 # SPDX-License-Identifier: MIT
-"""Preserved, unqualified saved-fixture experiment; automatic reruns are disabled."""
+"""Qualify all-layer graphs with saved fixtures extracted from a known-good PCB."""
 from __future__ import annotations
 
-import argparse
 import hashlib
 import json
 import os
 from pathlib import Path
 import subprocess
 import sys
-import tempfile
 import time
+import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-NATIVE = Path(os.environ["LOCALAPPDATA"]) / "Programs/KiCad/10.0/bin"
-CLI = NATIVE / "kicad-cli.exe"
-REPORT = ROOT / "hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-graph-file-control.json"
-EXPECTED = {
-    "source": ("hardware/handbell/iterations/printed-bell-clock-draft/handbell.kicad_pcb",
-               "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff"),
-    "baseline": ("hardware/handbell/iterations/printed-bell-four-layer/handbell.kicad_pcb",
-                 "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418"),
-    "manifest": ("hardware/handbell/iterations/printed-bell-four-layer/placement-manifest.json",
-                 "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381"),
-    "primitive_graph": ("tools/check_printed_bell_power_rework.py",
-                        "f9f0ccb985c43a655b07d3a21a55cbbd8cb79cc459dc7b72888ac9630ccbffd3"),
-}
+SOURCE = ROOT / "hardware/handbell/iterations/printed-bell-four-layer/handbell.kicad_pcb"
+MANIFEST = ROOT / "hardware/handbell/iterations/printed-bell-four-layer/placement-manifest.json"
+REPORT = ROOT / "hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-graph-saved-native-control.json"
+WORK = None
+CLI = Path(os.environ["LOCALAPPDATA"]) / "Programs/KiCad/10.0/bin/kicad-cli.exe"
+EXPECTED_PCB = "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418"
+EXPECTED_MANIFEST = "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381"
 
 
 def sha(path):
@@ -37,283 +30,249 @@ def require(value, message):
         raise AssertionError(message)
 
 
-def native():
-    handle = os.add_dll_directory(str(NATIVE))
-    sys.path.insert(0, str(NATIVE / "Lib/site-packages"))
-    import pcbnew
-    require(pcbnew.GetBuildVersion() == "10.0.6", "KiCad 10.0.6 required")
-    return pcbnew, handle
+def uid(name):
+    return str(uuid.uuid5(uuid.UUID("9ba12632-f038-4df5-9ac7-a8c2bdbabddd"), name))
 
 
-def configure(pcb, board):
-    board.SetCopperLayerCount(4)
-    settings = board.GetDesignSettings()
-    settings.m_MinClearance = pcb.FromMM(.2)
-    settings.m_CopperEdgeClearance = pcb.FromMM(.25)
-    settings.m_HoleClearance = pcb.FromMM(.25)
-    settings.m_HoleToHoleMin = pcb.FromMM(.25)
-    settings.m_MaxError = pcb.FromMM(.001)
-    for a, b in (((0, 0), (24, 0)), ((24, 0), (24, 16)),
-                 ((24, 16), (0, 16)), ((0, 16), (0, 0))):
-        edge = pcb.PCB_SHAPE(board)
-        edge.SetShape(pcb.SHAPE_T_SEGMENT)
-        edge.SetStart(pcb.VECTOR2I(pcb.FromMM(a[0]), pcb.FromMM(a[1])))
-        edge.SetEnd(pcb.VECTOR2I(pcb.FromMM(b[0]), pcb.FromMM(b[1])))
-        edge.SetWidth(pcb.FromMM(.05))
-        edge.SetLayer(pcb.Edge_Cuts)
-        board.Add(edge)
+def segment(a, b, layer, net, name):
+    return (f'(segment (start {a[0]:.6f} {a[1]:.6f}) (end {b[0]:.6f} {b[1]:.6f}) '
+            f'(width 0.2) (layer "{layer}") (net "{net}") (uuid "{uid(name)}"))')
 
 
-def add_net(pcb, board, name):
-    item = pcb.NETINFO_ITEM(board, name)
-    board.Add(item)
-    return item
+def via(at, net, name):
+    return (f'(via (at {at[0]:.6f} {at[1]:.6f}) (size 0.6) (drill 0.3) '
+            f'(layers "F.Cu" "B.Cu") (net "{net}") (uuid "{uid(name)}"))')
 
 
-def add_pad(pcb, board, ref, number, net, layer, xy):
-    fp = pcb.FOOTPRINT(board)
-    fp.SetReference(ref)
-    fp.SetPosition(pcb.VECTOR2I(pcb.FromMM(xy[0]), pcb.FromMM(xy[1])))
-    board.Add(fp)
-    pad = pcb.PAD(fp)
-    pad.SetNumber(number)
-    pad.SetAttribute(pcb.PAD_ATTRIB_SMD)
-    pad.SetShape(pcb.PAD_SHAPE_RECT)
-    pad.SetSize(pcb.VECTOR2I(pcb.FromMM(1), pcb.FromMM(1)))
-    pad.SetPosition(pcb.VECTOR2I(pcb.FromMM(xy[0]), pcb.FromMM(xy[1])))
-    layers = pcb.LSET()
-    layers.AddLayer(layer)
-    pad.SetLayerSet(layers)
-    pad.SetNetCode(net.GetNetCode())
-    fp.Add(pad)
-    return pad
-
-
-def add_pth(pcb, board, ref, number, net, xy):
-    fp = pcb.FOOTPRINT(board)
-    fp.SetReference(ref)
-    fp.SetPosition(pcb.VECTOR2I(pcb.FromMM(xy[0]), pcb.FromMM(xy[1])))
-    board.Add(fp)
-    pad = pcb.PAD(fp)
-    pad.SetNumber(number)
-    pad.SetAttribute(pcb.PAD_ATTRIB_PTH)
-    pad.SetShape(pcb.PAD_SHAPE_CIRCLE)
-    pad.SetSize(pcb.VECTOR2I(pcb.FromMM(1.2), pcb.FromMM(1.2)))
-    pad.SetDrillSize(pcb.VECTOR2I(pcb.FromMM(.6), pcb.FromMM(.6)))
-    pad.SetPosition(pcb.VECTOR2I(pcb.FromMM(xy[0]), pcb.FromMM(xy[1])))
-    pad.SetLayerSet(pcb.LSET.AllCuMask())
-    pad.SetNetCode(net.GetNetCode())
-    fp.Add(pad)
-    return pad
-
-
-def add_track(pcb, board, net, layer, a, b):
-    item = pcb.PCB_TRACK(board)
-    item.SetStart(pcb.VECTOR2I(pcb.FromMM(a[0]), pcb.FromMM(a[1])))
-    item.SetEnd(pcb.VECTOR2I(pcb.FromMM(b[0]), pcb.FromMM(b[1])))
-    item.SetWidth(pcb.FromMM(.3))
-    item.SetLayer(layer)
-    item.SetNetCode(net.GetNetCode())
-    board.Add(item)
-    return item
-
-
-def add_via(pcb, board, net, xy):
-    item = pcb.PCB_VIA(board)
-    item.SetPosition(pcb.VECTOR2I(pcb.FromMM(xy[0]), pcb.FromMM(xy[1])))
-    item.SetWidth(pcb.FromMM(.8))
-    item.SetDrill(pcb.FromMM(.4))
-    item.SetLayerPair(pcb.F_Cu, pcb.B_Cu)
-    item.SetNetCode(net.GetNetCode())
-    board.Add(item)
-    return item
-
-
-def rectangle(pcb, bounds):
-    polygon = pcb.SHAPE_POLY_SET()
-    index = polygon.NewOutline()
-    xmin, ymin, xmax, ymax = bounds
-    for x, y in ((xmin, ymin), (xmax, ymin), (xmax, ymax), (xmin, ymax)):
-        polygon.Append(pcb.FromMM(x), pcb.FromMM(y), index)
-    return polygon
-
-
-def create(kind, output):
-    pcb, handle = native()
-    board = pcb.BOARD()
-    configure(pcb, board)
-    witnesses = {}
-    if kind == "short":
-        sig, other, iso = (add_net(pcb, board, name) for name in ("SIG", "OTHER", "ISO"))
-        add_pad(pcb, board, "SIG_F", "1", sig, pcb.F_Cu, (3, 5))
-        add_track(pcb, board, sig, pcb.F_Cu, (3, 5), (8, 5))
-        add_via(pcb, board, sig, (8, 5))
-        add_track(pcb, board, sig, pcb.In1_Cu, (8, 5), (12, 5))
-        add_pad(pcb, board, "OTHER_F", "1", other, pcb.F_Cu, (18, 2))
-        add_track(pcb, board, other, pcb.F_Cu, (18, 2), (15, 2))
-        add_via(pcb, board, other, (15, 2))
-        add_track(pcb, board, other, pcb.In1_Cu, (15, 2), (15, 5))
-        add_track(pcb, board, other, pcb.In1_Cu, (15, 5), (6, 5))
-        add_pad(pcb, board, "ISO_F", "1", iso, pcb.F_Cu, (4, 12))
-        witnesses["iso_f"] = add_track(pcb, board, iso, pcb.F_Cu, (4, 12), (7, 12))
-        witnesses["iso_i"] = add_track(pcb, board, iso, pcb.In1_Cu, (4, 12), (7, 12))
-    else:
-        gnd, control = add_net(pcb, board, "GND"), add_net(pcb, board, "CONTROL")
-        add_pad(pcb, board, "GND_F", "1", gnd, pcb.F_Cu, (4, 6))
-        add_track(pcb, board, gnd, pcb.F_Cu, (4, 6), (7, 6))
-        add_via(pcb, board, gnd, (7, 6))
-        add_pth(pcb, board, "GND_I", "1", gnd, (16, 6))
-        add_track(pcb, board, gnd, pcb.In1_Cu, (14, 6), (16, 6))
-        add_pad(pcb, board, "CONTROL_F", "1", control, pcb.F_Cu, (21, 13))
-        witnesses["control_i2"] = add_track(pcb, board, control, pcb.In2_Cu, (12, 9), (15, 9))
-        zone = pcb.ZONE(board)
-        zone.SetLayer(pcb.In1_Cu)
-        zone.SetNetCode(gnd.GetNetCode())
-        zone.SetOutline(rectangle(pcb, [6, 3, 18, 11]))
-        zone.SetMinThickness(pcb.FromMM(.2))
-        zone.SetClearance(pcb.FromMM(.2))
-        zone.SetPadConnection(pcb.ZONE_CONNECTION_FULL)
-        board.Add(zone)
-    require(pcb.SaveBoard(str(output), board), "Could not save fixture")
-    output.with_suffix(".witnesses.json").write_bytes((json.dumps(
-        {name: item.m_Uuid.AsString() for name, item in witnesses.items()}, indent=2) + "\n").encode())
-    print(json.dumps({"stage": "created", "kind": kind, "sha256": sha(output)}, indent=2), flush=True)
-
-
-def item_snapshot(graph, refs):
-    result = {}
-    for ref in refs:
-        uid = graph.pad_uuid(ref, "1")
-        item = graph.items[uid]
-        result[ref] = {"uuid": uid, "net": item.GetNetname(), "code": item.GetNetCode(),
-                       "layers": [graph.layer_name(x[1]) for x in graph.by_uuid[uid]]}
-    return result
-
-
-def check(kind, path, output):
-    pcb, handle = native()
+def build_fixtures():
     sys.path.insert(0, str(ROOT / "tools"))
+    from kicad_sexpr import load, apply_edits
+    text, board = load(SOURCE)
+    header = [board.child(name) for name in
+              ("version", "generator", "generator_version", "general", "paper",
+               "title_block", "layers", "setup")]
+    footprints = [fp for fp in board.children("footprint")
+                  if fp.properties().get("Reference") in {"C23", "C24"}]
+    edges = [node for head in ("gr_line", "gr_arc")
+             for node in board.children(head) if node.value("layer") == "Edge.Cuts"]
+    require(len(footprints) == 2 and edges, "Known-good source extraction failed")
+    base_nodes = header + footprints + edges
+    render = lambda nodes: "(kicad_pcb\n" + "\n".join(text[n.start:n.end] for n in nodes) + "\n)\n"
+
+    short_extra = [
+        segment((89.810835, 91.491614), (90.5, 91.491614), "F.Cu", "GND", "short-gnd-f"),
+        via((90.5, 91.491614), "GND", "short-gnd-via"),
+        segment((90.5, 91.491614), (94, 91.491614), "In1.Cu", "GND", "short-gnd-in1"),
+        segment((88.794835, 91.491614), (92, 89.5), "F.Cu", "+3V3", "short-3v3-f"),
+        via((92, 89.5), "+3V3", "short-3v3-via"),
+        segment((92, 89.5), (92, 93), "In1.Cu", "+3V3", "short-3v3-in1"),
+        segment((95, 96), (97, 96), "F.Cu", "GND", "short-isolation-f"),
+        segment((95, 96), (97, 96), "In1.Cu", "GND", "short-isolation-in1"),
+    ]
+    short_text = render(base_nodes)[:-2] + "\n" + "\n".join(short_extra) + "\n)\n"
+
+    zone = next(z for z in board.children("zone") if z.value("name") == "quote-native-F-GND-v1")
+    edits = []
+    layer = zone.child("layer")
+    edits.append((layer.start, layer.end, '(layer "In1.Cu")'))
+    edits.extend((child.start, child.end, "") for child in zone.children("filled_polygon"))
+    zone_text = apply_edits(text[zone.start:zone.end],
+                            [(a-zone.start, b-zone.start, value) for a, b, value in edits])
+    plane_extra = [
+        segment((89.810835, 91.491614), (90.5, 91.491614), "F.Cu", "GND", "plane-c23-f"),
+        via((90.5, 91.491614), "GND", "plane-c23-via"),
+        segment((92.004083, 93.491669), (94, 93.491669), "F.Cu", "GND", "plane-c24-f"),
+        via((94, 93.491669), "GND", "plane-c24-via"),
+        segment((91, 95), (93, 95), "In2.Cu", "GND", "plane-in2-control"),
+    ]
+    plane_text = render(base_nodes)[:-2] + "\n" + zone_text + "\n" + "\n".join(plane_extra) + "\n)\n"
+    WORK.mkdir(parents=True, exist_ok=False)
+    (WORK / "short.kicad_pcb").write_bytes(short_text.encode("utf-8"))
+    (WORK / "plane-unfilled.kicad_pcb").write_bytes(plane_text.encode("utf-8"))
+    return {"short": sha(WORK / "short.kicad_pcb"),
+            "plane_unfilled": sha(WORK / "plane-unfilled.kicad_pcb")}
+
+
+def native_worker(mode, board_path, output):
+    native = CLI.parent
+    dll_handle = os.add_dll_directory(str(native))
+    sys.path.insert(0, str(native / "Lib/site-packages"))
+    sys.path.insert(0, str(ROOT / "tools"))
+    import pcbnew as pcb
     from check_printed_bell_power_rework import CopperGraph
     from zone_graph import CopperGraph as FilledGraph
-    graph = CopperGraph(pcb, path)
-    witnesses = json.loads(path.with_suffix(".witnesses.json").read_text())
-    if kind == "short":
-        refs = ("SIG_F", "OTHER_F", "ISO_F")
-        pads = item_snapshot(graph, refs)
-        require(pads["SIG_F"]["net"] == "SIG", "SIG pad net changed")
-        require(pads["OTHER_F"]["net"] == "OTHER", "OTHER pad net changed")
-        require(not graph.connected(witnesses["iso_f"], witnesses["iso_i"]),
-                "Same-XY F/In1 no-via groups falsely joined")
-        require(not graph.connected(graph.pad_uuid("SIG_F", "1"), graph.pad_uuid("OTHER_F", "1")),
-                "Distinct anchored SIG/OTHER groups falsely joined")
-        require(any(set(row["nets"]) == {"SIG", "OTHER"} for row in graph.shorts),
-                "Graph omitted deliberate SIG/OTHER short")
-        vias = [item for item in graph.items.values() if isinstance(item, pcb.PCB_VIA)]
-        result = {"pads": pads, "via": [{"uuid": v.m_Uuid.AsString(), "net": v.GetNetname(),
-                                        "code": v.GetNetCode(),
-                                        "layers": [graph.layer_name(x[1]) for x in graph.by_uuid[v.m_Uuid.AsString()]]}
-                                       for v in vias],
-                  "shorts": graph.shorts,
-                  "path_sig_other": graph.path(graph.pad_uuid("SIG_F", "1"),
-                                               graph.pad_uuid("OTHER_F", "1"))}
+    require(pcb.GetBuildVersion() == "10.0.6", "KiCad 10.0.6 required")
+    graph = (FilledGraph if mode == "plane-filled" else CopperGraph)(pcb, board_path)
+    def exact_vertex(uid_value, net, layers):
+        require(uid_value in graph.items, "Missing witness UUID: " + uid_value)
+        require(graph.items[uid_value].GetNetname() == net, "Witness net changed: " + uid_value)
+        actual = {graph.layer_name(vertex[1]) for vertex in graph.by_uuid[uid_value]}
+        require(actual == set(layers), f"Witness layers changed: {uid_value}: {actual}")
+    if mode == "short":
+        c23g, c23p = graph.pad_uuid("C23", "2"), graph.pad_uuid("C23", "1")
+        iso_f, iso_i = uid("short-isolation-f"), uid("short-isolation-in1")
+        exact_vertex(iso_f, "GND", {"F.Cu"})
+        exact_vertex(iso_i, "GND", {"In1.Cu"})
+        require(not graph.connected(iso_f, iso_i), "Same-XY F/In1 GND witnesses joined")
+        require(not graph.connected(c23g, c23p), "Anchored GND/+3V3 groups falsely joined")
+        expected = {uid("short-gnd-in1"), uid("short-3v3-in1")}
+        require(any(set(row["nets"]) == {"GND", "+3V3"} and row["layer"] == "In1.Cu"
+                    and {row["a_uuid"], row["b_uuid"]} == expected
+                    for row in graph.shorts), "Graph omitted deliberate In1 GND/+3V3 short")
+        result = {"connected_anchored_groups": False, "shorts": graph.shorts,
+                  "path_anchored_groups": graph.path(c23g, c23p),
+                  "same_xy_gnd_witnesses_disconnected": True}
+    elif mode == "plane-before":
+        a, b = graph.pad_uuid("C23", "2"), graph.pad_uuid("C24", "2")
+        control = uid("plane-in2-control")
+        exact_vertex(control, "GND", {"In2.Cu"})
+        for via_uid in (uid("plane-c23-via"), uid("plane-c24-via")):
+            require({"F.Cu", "In1.Cu"} <=
+                    {graph.layer_name(vertex[1]) for vertex in graph.by_uuid[via_uid]},
+                    "Plane via lacks F/In1 vertices: " + via_uid)
+        require(not graph.connected(a, b), "GND groups connected before fill")
+        require(not graph.connected(a, control) and not graph.connected(b, control),
+                "In2 same-net control connected before fill")
+        result = {"c23_c24_connected": False, "in2_control_connected": False}
     else:
-        primitive = graph
-        gnd_f, gnd_i = primitive.pad_uuid("GND_F", "1"), primitive.pad_uuid("GND_I", "1")
-        control = witnesses["control_i2"]
-        require(not primitive.connected(gnd_f, gnd_i), "Unfilled GND witnesses already connected")
-        require(not primitive.connected(gnd_i, control), "Unfilled In1/In2 witnesses joined")
-        if kind == "plane-before":
-            result = {"before_fill_disconnected": True, "in1_in2_isolated": True,
-                      "pads": item_snapshot(primitive, ("GND_F", "GND_I", "CONTROL_F"))}
-            Path(output).write_bytes((json.dumps(result, indent=2) + "\n").encode())
-            print(json.dumps({"stage": "checked", "kind": kind, "result": result}, indent=2), flush=True)
-            return
-        filled = FilledGraph(pcb, path)
-        require(filled.connected(gnd_f, gnd_i), "Native In1 fill did not join GND witnesses")
-        require(not filled.connected(gnd_i, control), "Native In1 fill joined In2 control")
-        require(any(row["layer"] == "In1.Cu" for row in filled.zone_islands),
-                "No exact native In1 filled island")
-        result = {"pads": item_snapshot(filled, ("GND_F", "GND_I", "CONTROL_F")),
-                  "before_fill_disconnected": True, "after_fill_ground_connected": True,
-                  "in2_control_isolated": True, "zone_islands": filled.zone_islands}
-    Path(output).write_bytes((json.dumps(result, indent=2) + "\n").encode())
-    print(json.dumps({"stage": "checked", "kind": kind, "result": result}, indent=2), flush=True)
+        primitive = CopperGraph(pcb, board_path)
+        a, b = graph.pad_uuid("C23", "2"), graph.pad_uuid("C24", "2")
+        control = uid("plane-in2-control")
+        exact_vertex(control, "GND", {"In2.Cu"})
+        for via_uid in (uid("plane-c23-via"), uid("plane-c24-via")):
+            require({"F.Cu", "In1.Cu"} <=
+                    {graph.layer_name(vertex[1]) for vertex in graph.by_uuid[via_uid]},
+                    "Plane via lacks F/In1 vertices: " + via_uid)
+        require(not primitive.connected(primitive.pad_uuid("C23", "2"),
+                                        primitive.pad_uuid("C24", "2")),
+                "CLI refill created a primitive-only C23/C24 path")
+        require(graph.connected(a, b), "In1 fill did not connect GND groups")
+        require(not graph.connected(a, control) and not graph.connected(b, control),
+                "In1 fill falsely joined same-net In2-only copper")
+        path = graph.path(a, b)
+        require(any(step.get("filled_island_index") is not None and step["layer"] == "In1.Cu"
+                    for step in path), "Filled path lacks an In1 native-island witness")
+        result = {"c23_c24_connected": True, "primitive_c23_c24_connected": False,
+                  "in2_control_connected": False, "zone_islands": graph.zone_islands,
+                  "path": path}
+    board = graph.board
+    nets = sorted({item.GetNetname() for item in graph.items.values() if item.GetNetname()})
+    result.update(native_version=pcb.GetBuildVersion(), current_net_names=nets)
+    Path(output).write_bytes((json.dumps(result, indent=2) + "\n").encode("utf-8"))
 
 
-def orchestrate():
-    for _, (relative, expected) in EXPECTED.items():
-        require(sha(ROOT / relative) == expected, "Source-bound guard changed: " + relative)
-    with tempfile.TemporaryDirectory(prefix="four-layer-graph-") as directory:
-        work = Path(directory)
-        short, plane = work / "short.kicad_pcb", work / "plane.kicad_pcb"
-        stage = []
-        def run(args, timeout):
-            started = time.monotonic()
-            completed = subprocess.run(args, check=True, timeout=timeout, capture_output=True, text=True)
-            stage.append({"command": [Path(args[0]).name, *args[1:]], "seconds": time.monotonic()-started,
-                          "stdout": completed.stdout.strip(), "stderr": completed.stderr.strip()})
-        run([sys.executable, __file__, "create", "short", str(short)], 45)
-        run([str(CLI), "pcb", "drc", "--format", "json", "--severity-all",
-             "--output", str(work / "short-drc.json"), str(short)], 60)
-        run([sys.executable, __file__, "check", "short", str(short), str(work / "short-check.json")], 45)
-        run([sys.executable, __file__, "create", "plane", str(plane)], 45)
-        run([sys.executable, __file__, "check", "plane-before", str(plane),
-             str(work / "plane-before.json")], 45)
-        run([str(CLI), "pcb", "drc", "--format", "json", "--severity-all", "--refill-zones",
-             "--save-board", "--output", str(work / "plane-drc.json"), str(plane)], 60)
-        run([sys.executable, __file__, "check", "plane", str(plane), str(work / "plane-check.json")], 45)
-        short_drc = json.loads((work / "short-drc.json").read_text())
-        plane_drc = json.loads((work / "plane-drc.json").read_text())
-        short_check = json.loads((work / "short-check.json").read_text())
-        plane_check = json.loads((work / "plane-check.json").read_text())
-        require(any(row["type"] == "clearance" for row in short_drc["violations"]),
-                "CLI DRC omitted deliberate short")
-        report = {
-            "status": "SAVED_FILE_ALL_LAYER_GRAPH_CONTROLS_PASSED",
-            "native_version": "10.0.6",
-            "production_inputs_modified": False,
-            "fixtures": {"short_sha256": sha(short), "plane_filled_sha256": sha(plane)},
-            "short_control": {"drc_violations": len(short_drc["violations"]),
-                              "drc_unconnected": len(short_drc["unconnected_items"]),
-                              "graph": short_check},
-            "plane_control": {"drc_violations": len(plane_drc["violations"]),
-                              "drc_unconnected": len(plane_drc["unconnected_items"]),
-                              "graph": plane_check},
-            "commands": stage,
-            "reused_regression": {
-                "pad_group_fingerprint_sha256": "c49025fc1bfa8f6f21a63c1864dfbf9f1a04cff5af9f10b762ff9ba13c712939",
-                "guards": EXPECTED
-            },
-            "tool_hashes": {
-                "tools/check_four_layer_graph.py": sha(__file__),
-                "tools/check_printed_bell_power_rework.py": sha(ROOT / "tools/check_printed_bell_power_rework.py"),
-                "tools/zone_graph.py": sha(ROOT / "tools/zone_graph.py")
-            },
-            "history": "Prior in-memory fixture assertion and later 0xC0000005 diagnostic remain unresolved; this control replaces that unsupported shared-live-object workflow.",
-            "remaining_unqualified": [
-                "routing masks/search layer state", "production plane topology and exclusions",
-                "contact exclusions and private sense/current-path preservation"
-            ]
-        }
-        REPORT.write_bytes((json.dumps(report, indent=2) + "\n").encode())
-        print(json.dumps(report, indent=2))
+def append_stage(record):
+    path = WORK / "stages.json"
+    stages = json.loads(path.read_text()) if path.exists() else []
+    stages.append(record)
+    path.write_bytes((json.dumps(stages, indent=2) + "\n").encode("utf-8"))
+
+
+def run_stage(name, command, timeout):
+    append_stage({"name": name, "status": "starting", "command": command,
+                  "timeout_seconds": timeout, "started_unix": time.time()})
+    stdout, stderr = WORK / f"{name}.stdout.txt", WORK / f"{name}.stderr.txt"
+    started = time.monotonic()
+    with stdout.open("w") as out, stderr.open("w") as err:
+        try:
+            result = subprocess.run(command, stdout=out, stderr=err, timeout=timeout)
+            code, status = result.returncode, "completed"
+        except subprocess.TimeoutExpired:
+            code, status = None, "timeout"
+    append_stage({"name": name, "status": status, "exit_code": code,
+                  "seconds": time.monotonic()-started, "stdout": str(stdout), "stderr": str(stderr)})
+    require(status == "completed" and code == 0, f"{name} failed: {status}/{code}")
+
+
+def sanitize_stages(stages):
+    cleaned = []
+    for stage in stages:
+        row = dict(stage)
+        if "command" in row:
+            values = []
+            for value in row["command"]:
+                value = str(value).replace(str(CLI), "<kicad-cli>")
+                value = value.replace(sys.executable, "<python>")
+                value = value.replace(str(ROOT), "<repo>")
+                value = value.replace(str(WORK), "<work>")
+                values.append(value)
+            row["command"] = values
+        for key in ("stdout", "stderr"):
+            if key in row:
+                row[key] = Path(row[key]).name
+        cleaned.append(row)
+    return cleaned
+
+
+def controller(work_dir):
+    global WORK
+    WORK = Path(work_dir).resolve()
+    require(not WORK.exists(), "Controller --work-dir must not already exist")
+    require(sha(SOURCE) == EXPECTED_PCB and sha(MANIFEST) == EXPECTED_MANIFEST,
+            "Production source guard changed")
+    short, plane = WORK / "short.kicad_pcb", WORK / "plane-unfilled.kicad_pcb"
+    filled = WORK / "plane-filled.kicad_pcb"
+    fixture_hashes = build_fixtures()
+    if REPORT.exists():
+        (WORK / "previous-public-report.json").write_bytes(REPORT.read_bytes())
+    py = sys.executable
+    run_stage("short-drc", [str(CLI), "pcb", "drc", "--format", "json", "--severity-all",
+              "--output", str(WORK / "short-drc.json"), str(short)], 60)
+    run_stage("short-graph", [py, __file__, "worker", "short", str(short),
+              str(WORK / "short-graph.json")], 60)
+    run_stage("plane-before", [py, __file__, "worker", "plane-before", str(plane),
+              str(WORK / "plane-before.json")], 60)
+    filled.write_bytes(plane.read_bytes())
+    run_stage("plane-refill-drc", [str(CLI), "pcb", "drc", "--format", "json", "--severity-all",
+              "--refill-zones", "--save-board", "--output", str(WORK / "plane-drc.json"),
+              str(filled)], 60)
+    run_stage("plane-filled", [py, __file__, "worker", "plane-filled", str(filled),
+              str(WORK / "plane-filled.json")], 60)
+    required = ("short-drc.json", "short-graph.json", "plane-before.json", "plane-drc.json",
+                "plane-filled.json", "stages.json")
+    require(all((WORK / name).exists() for name in required), "Incomplete persisted stage evidence")
+    fixture_hashes = {"short": sha(short), "plane_unfilled": sha(plane)}
+    before_fill_hash, after_fill_hash = sha(plane), sha(filled)
+    require(after_fill_hash != before_fill_hash, "CLI refill/save did not change the board")
+    short_drc = json.loads((WORK / "short-drc.json").read_text())
+    short_graph = json.loads((WORK / "short-graph.json").read_text())
+    plane_before = json.loads((WORK / "plane-before.json").read_text())
+    plane_after = json.loads((WORK / "plane-filled.json").read_text())
+    short_specific = [row for row in short_drc["violations"]
+                      if row["type"] == "tracks_crossing"
+                      and {item["uuid"] for item in row["items"]}
+                      == {uid("short-gnd-in1"), uid("short-3v3-in1")}
+                      and {net for item in row["items"]
+                           for net in ("GND", "+3V3") if f"[{net}]" in item["description"]}
+                      == {"GND", "+3V3"}]
+    require(short_specific, "CLI DRC omitted the deliberate GND/+3V3 short identity")
+    report = {
+        "status": "SAVED_NATIVE_ALL_LAYER_GRAPH_CONTROL_PASSED",
+        "source_pcb_sha256": sha(SOURCE), "manifest_sha256": sha(MANIFEST),
+        "fixture_hashes": {**fixture_hashes, "plane_filled": after_fill_hash},
+        "short": {"specific_cli_findings": short_specific, "graph": short_graph,
+                  "drc_unconnected": len(short_drc["unconnected_items"])},
+        "plane": {"before": plane_before, "after": plane_after,
+                  "unfilled_sha256": before_fill_hash, "filled_sha256": after_fill_hash},
+        "stages": sanitize_stages(json.loads((WORK / "stages.json").read_text())),
+        "private_evidence_workspace": WORK.name,
+        "tool_hashes": {
+            "tools/check_four_layer_graph.py": sha(__file__),
+            "tools/check_printed_bell_power_rework.py": sha(ROOT / "tools/check_printed_bell_power_rework.py"),
+            "tools/zone_graph.py": sha(ROOT / "tools/zone_graph.py"),
+        },
+        "provenance": "Fixtures extract native KiCad syntax, C23/C24, Edge.Cuts, setup, and the GND zone from the CC BY-SA package; no fixture is promoted as production.",
+        "remaining_unqualified": ["routing masks/search", "production plane topology/exclusions",
+                                  "contacts and private sense/current paths"]
+    }
+    REPORT.write_bytes((json.dumps(report, indent=2) + "\n").encode("utf-8"))
+    print(json.dumps(report, indent=2))
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("operation", nargs="?", default="run", choices=("run", "create", "check"))
-    parser.add_argument("kind", nargs="?")
-    parser.add_argument("path", nargs="?")
-    parser.add_argument("output", nargs="?")
-    args = parser.parse_args()
-    if args.operation == "create":
-        create(args.kind, Path(args.path))
-    elif args.operation == "check":
-        check(args.kind, Path(args.path), Path(args.output))
+    if len(sys.argv) > 1 and sys.argv[1] == "worker":
+        native_worker(sys.argv[2], Path(sys.argv[3]), Path(sys.argv[4]))
     else:
-        raise SystemExit(
-            "Saved-fixture control remains unqualified; automatic reruns are disabled. "
-            "See reports/four-layer-graph-file-control.json in printed-bell-four-layer. "
-            "Review native plane creation, retained failure artifacts, exact short "
-            "detection and the same-net layer-isolation witness before another run."
-        )
+        require(len(sys.argv) == 3 and sys.argv[1] == "--work-dir",
+                "Usage: check_four_layer_graph.py --work-dir NEW_DIRECTORY")
+        controller(sys.argv[2])
