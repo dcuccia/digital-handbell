@@ -166,6 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Remaining-ground finite screen:** the
+[24-site result](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-remaining-batch.json)
+generated no candidate; the accepted PCB stays at 47 opens. These were
+0.65 mm axis-offset samples, not an exhaustive clearance search. No parts
+will be moved on that evidence. Next is the
+[fixed multi-radius follow-up](routing-agent-policy.md#remaining-ground-sampling-follow-up):
+at most 336 sites inside the already released short-escape region, with
+unchanged contact, pad, clearance and private-return constraints. Preserve
+all counts and stop at the fixed set rather than growing an adaptive search.
+
 **Latest September 22 decision:** the isolated validator controls and full
 read-only saved-candidate suite now pass. Astra approves exact ground-stitch
 candidate `453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43`

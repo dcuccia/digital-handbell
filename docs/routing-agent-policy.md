@@ -255,6 +255,24 @@ ground-plane changes outside the local stitches still require review.
 Do not infer current/thermal qualification or complete decoupling from
 the number of airwires removed.
 
+#### Remaining-ground sampling follow-up
+
+The preserved 24-site screen found no feasible site for C4, C11/C15, C12,
+C23, C24 or U2. It sampled 0.65 mm axis offsets (only two offsets per pad
+for the shared C11/C15 group), not the full released 1.5 mm escape region.
+This is not evidence that those groups require a floorplan change.
+
+Authorize one deterministic follow-up with all constraints above unchanged:
+sample 0.80, 1.05 and 1.30 mm radii at 16 directions around each of the seven
+listed pad terminals, at most 336 sites total. Rank feasible escapes by
+length and local return geometry. Reuse exact native obstacle and drill
+checks; pad non-overlap applies even for GND, but legitimate same-net copper
+contact is not a foreign-net violation. Count and persist every site before
+refill/validation. No adaptive grid, additional radii, reduced rules, new
+placement, larger vias, longer stubs or repeated full-board trials.
+The finite follow-up replaces the prior item's site cap only; it does not
+reset the accepted board or authorize rerouting the completed R4 stitch.
+
 First qualify the tools for four layers: actual enabled-layer enumeration,
 via spans, multilayer obstacles, inner-plane fill/connectivity and source
 invariants. The existing F/B-only grid and ground checkers are not qualified
