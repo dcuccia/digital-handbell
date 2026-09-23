@@ -166,6 +166,32 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Coordinated proposal reviewed -- prefer fixed placement, not yet routed.**
+The [four-case comparison](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-coordinated-layout-proposal.json)
+finds no immediate fixed-copper or planning-envelope conflict in case A
+(current placement). The 0.25/0.50 mm north shifts each introduce three
+fixed conflicts; the 0.75 mm shift introduces six. None improves the
+screened INT/SCL/SDA escape directions. Do not implement those translations.
+
+Case A is the preferred next investigation, not a proven routable layout.
+Its return regions assume removal of 69 specifically inventoried local
+trace sections; this is not permission to delete them wholesale. Every
+affected supply, decoupling, pull-up and signal connection and all seven
+protected external ports must survive a completed rework. The IC4.6/7
+candidate region is only 0.001876 mm2 and lies alongside the reserved
+INT escape. Independently clear return and signal screens do not prove
+that both can coexist; mutual clearance must be checked before staging
+any copper.
+
+Recommended next item, pending owner approval: one bounded separate
+fixed-placement local rework trial. First construct a mutually compatible
+return/signal plan and enumerate the minimal affected trace set within
+the proposal's local boundary. Stage only if required reconnections fit;
+never promote a board with broken pre-existing connections. Preserve all
+parts, pads, existing vias, outside routing and mechanical interfaces.
+Stop on a concrete coupled-routing blocker rather than widening the
+placement search. The active board remains **41 opens**, unchanged.
+
 **Owner-authorized coordinated IMU proposal:** the owner selected
 "Review coordinated IMU routing and possible small placement adjustments."
 Release one proposal-only item for IC4, C23, C24, R14 and R15 and their
