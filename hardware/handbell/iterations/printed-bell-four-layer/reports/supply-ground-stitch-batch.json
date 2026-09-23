@@ -1,0 +1,70 @@
+{
+  "status": "REJECTED_PARTIAL_STAGE_GUARD_VALIDATION_FAILED",
+  "input_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+  "manifest_sha256": "cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41",
+  "workspace_name": "supply-ground-stitch-batch-03",
+  "artifacts": {
+    "unfilled_pcb_sha256": "46ac1b754de0a2f029bc832b1cb8c2748105a19f4dbb6160c25b92a356d4ee65",
+    "canonical_native_filled_pcb_sha256": "d4ea6c95d19f9905515e71e5402068b5332f4a8f6c7aed0fc280c85c164453cf",
+    "source_preserving_final_pcb_sha256": "453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43",
+    "saved_candidate_drc_sha256": "701a0355395bcc19feddd4c3797ab7ac7e893042321f74c592748145d2adc839",
+    "fill_worker_report_sha256": "b7a5911d00023de6a3033ae4a793a4427d13d28a91d04a857df538e0ec72a425"
+  },
+  "partial_geometry": {
+    "resolved_group": "C9.2 / R4.1 / R8.2 GND group",
+    "source_terminal": {
+      "reference_pin": "R4.1",
+      "native_xy_mm": [100.201085, 89.00671]
+    },
+    "stub": {
+      "uuid": "d8b2f3e7-cf20-5f17-a1d0-9a3e4ac6e256",
+      "layer": "F.Cu",
+      "net": "GND",
+      "width_mm": 0.3,
+      "start_native_xy_mm": [100.201085, 89.00671],
+      "end_native_xy_mm": [100.851085, 89.00671],
+      "length_mm": 0.65
+    },
+    "via": {
+      "uuid": "444b2c40-c122-5d7f-b56f-37b9a9100a99",
+      "native_xy_mm": [100.851085, 89.00671],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "layers": ["F.Cu", "B.Cu"]
+    },
+    "other_released_groups": "No geometry was retained for acceptance; final batch validation did not complete."
+  },
+  "native_drc_observation": {
+    "opens": 47,
+    "warnings": 233,
+    "acceptance": false,
+    "reason": "DRC counts were produced before the mandatory filled-zone guard gate failed and cannot qualify the candidate."
+  },
+  "failed_gate": {
+    "check": "Every actual refilled F/In1 island must have zero overlap with every recorded F private, In1 private, BOOST_SW and clock guard polygon.",
+    "result": "At least one overlap was detected.",
+    "exact_guard_identity": "Not resolved because the retry budget was exhausted; the worker intentionally stopped at the first failing guard assertion.",
+    "consequence": "No target GND group is accepted as closed and the staged PCB must not be promoted."
+  },
+  "attempt_history": [
+    "Workspace-01 stopped before source generation because the KiCad circle collision overload was called in the unsupported direction.",
+    "Workspace-02 completed finite site selection but stopped before source generation due eager evaluation of a via-mode row's absent direct-link field.",
+    "Workspace-03 generated, explicitly refilled and DRC-checked the partial candidate, then failed the mandatory filled-zone guard overlap gate."
+  ],
+  "mandatory_checks_not_completed_after_failure": [
+    "Full accepted-pad-group comparison and C25 preservation disposition",
+    "Named target groups joined to MAIN GND",
+    "Private pickoff acceptance",
+    "+3V3 and VCORE partition acceptance",
+    "No unintended GND or other-net merges",
+    "Final per-layer guard/clearance acceptance",
+    "Candidate promotion eligibility"
+  ],
+  "source_state": {
+    "active_pcb_modified": false,
+    "active_manifest_modified": false,
+    "active_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+    "active_manifest_sha256": "cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41"
+  },
+  "stop_reason": "Initial attempt plus two authorized implementation corrections were exhausted. No exclusion, fill setting, site, or geometry adjustment was attempted after the guard failure."
+}

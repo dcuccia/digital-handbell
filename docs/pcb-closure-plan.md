@@ -180,6 +180,19 @@ power system. Next released work is the
 [local supply-ground stitch batch](routing-agent-policy.md#september-22-local-supply-ground-stitch-batch).
 No VCORE relocation or wider escape search is authorized by that batch.
 
+**Supply-ground batch outcome:** the bounded staged attempt is rejected,
+not promoted. It added a candidate return at R4.1 in C9's existing GND
+group, but stopped at the refilled-zone guard-overlap gate after two
+implementation corrections. Its observed 47 opens do not supersede the
+accepted 48-open board. The
+[failed-stage record](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-batch.json)
+preserves exact artifact hashes and incomplete acceptance checks.
+Next is read-only identification of the exact island/guard/layer and whether
+the checker applied each guard to its own layer. No further site selection,
+refill, guard relaxation or automatic acceptance is authorized by that
+diagnosis. Remote continuity through R4 does not itself qualify C9's local
+high-frequency return.
+
 **Earlier September 22 plane acceptance:**
 Astra reviewed the saved actual-copper detail and supplementary proofs and
 approved exact candidate `19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`
