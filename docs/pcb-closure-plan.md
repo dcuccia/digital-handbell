@@ -166,7 +166,30 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**September 21 end-of-day pause (current):** stop engineering; only saved-work
+**September 22 owner resume (current):** bounded engineering has resumed.
+Astra reviewed the saved actual-copper detail and supplementary proofs and
+approved exact candidate `19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`
+as the next incremental routing baseline. The existing +3V3/VAMP/V+ crossings
+are retained with their existing F returns; no new fast-signal crossing or
+final SI/PI approval is inferred. See the
+[engineering disposition](routing-agent-policy.md#september-22-first-plane-engineering-disposition).
+Sol completed the byte-exact promotion and manifest-source rebinding,
+without a refill or reroute. The
+[acceptance record](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-acceptance.json)
+binds the new PCB to manifest
+`ce915418d33442f6ab42b155f6a7bc95c05e6c7032574d58044963ca4d066741`.
+Only manifest status and PCB hash changed; all geometry and 47 non-PCB archive
+dependencies are unchanged. **49 opens and 233 warnings remain**; 46 historical
+schematic-parity notices still need disposition. Checks were reused for
+identical source-bound bytes, not represented as fresh native execution.
+The [saved-open inventory](../hardware/handbell/iterations/printed-bell-four-layer/reports/four-layer-remaining-connections.json)
+contains 16 GND and two VCORE opens, among the remaining groups. Its unknown
+track/zone endpoints must be resolved through the native graph rather than
+treated as pad references. Next, review the remaining connected groups and release
+a paired core-supply/return routing batch without consuming USB/clock corridors.
+Physical stackup, parity, whole-CAD rebind and manufacturing remain open.
+
+**September 21 end-of-day pause (historical):** stop engineering; only saved-work
 preservation and publication are authorized. Sol confirmed it is idle with no
 running subprocess. Do not automatically continue the earlier sequence.
 

@@ -1,0 +1,1369 @@
+{
+  "status": "SAVED_DRC_INVENTORY_NO_NEW_NATIVE_CHECK",
+  "candidate_pcb_sha256": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78",
+  "source_filename": "candidate-drc.json",
+  "source_sha256": "945906e41c49a7eb95230316b7643f6b1a58fb6bf7caaa8e0f67b91d6ebcb2bb",
+  "kicad_version": "10.0.6",
+  "open_count": 49,
+  "warning_count": 233,
+  "counts_by_net": [
+    {
+      "net": "+3V3",
+      "open_count": 1,
+      "known_endpoint_refs": [],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "net": "~{RESET}",
+      "open_count": 2,
+      "known_endpoint_refs": [
+        "IC1.26",
+        "R1.2",
+        "TP7.P$1"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "AMP_MUTE",
+      "open_count": 2,
+      "known_endpoint_refs": [
+        "IC1.31",
+        "TP15.P$1"
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "net": "BUTTON",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "IC1.30"
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "net": "D-",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "IC1.46",
+        "R9.2"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "D+",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "IC1.47",
+        "R10.2"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "D13",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "IC1.16",
+        "R7.1"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "GAIN",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "GAIN0.2",
+        "U4.2"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "GND",
+      "open_count": 16,
+      "known_endpoint_refs": [
+        "C18.1",
+        "GAIN0.1"
+      ],
+      "unknown_reference_endpoint_count": 30
+    },
+    {
+      "net": "I2S_BCLK",
+      "open_count": 2,
+      "known_endpoint_refs": [
+        "IC1.28",
+        "TP13.P$1",
+        "U4.16"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "I2S_DIN",
+      "open_count": 2,
+      "known_endpoint_refs": [
+        "IC1.27",
+        "TP12.P$1",
+        "U4.1"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "I2S_LRCLK",
+      "open_count": 2,
+      "known_endpoint_refs": [
+        "IC1.29",
+        "TP14.P$1",
+        "U4.14"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "INT",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "IC1.34",
+        "IC4.4"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "Net-(FB2-P$1)",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "FB2.1",
+        "U4.10"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "POWER",
+      "open_count": 2,
+      "known_endpoint_refs": [
+        "IC1.35",
+        "Q2.1",
+        "U5.2"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "SCL",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "R14.2"
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "net": "SWCLK",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "IC1.24",
+        "TP4.P$1"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "SWDIO",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "IC1.25",
+        "TP5.P$1"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "USB_D-",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "R9.1"
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "net": "USB_D+",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "R10.1",
+        "X6.A6"
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "net": "VAMP",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "R18.2"
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "net": "VBAT",
+      "open_count": 1,
+      "known_endpoint_refs": [],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "net": "VBUS",
+      "open_count": 2,
+      "known_endpoint_refs": [
+        "D4.A",
+        "Q3.1",
+        "X6.B4A9"
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "net": "VCORE",
+      "open_count": 2,
+      "known_endpoint_refs": [],
+      "unknown_reference_endpoint_count": 4
+    },
+    {
+      "net": "VHI",
+      "open_count": 1,
+      "known_endpoint_refs": [],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "net": "VO+",
+      "open_count": 1,
+      "known_endpoint_refs": [
+        "C22.1",
+        "J1.1"
+      ],
+      "unknown_reference_endpoint_count": 0
+    }
+  ],
+  "connections": [
+    {
+      "index": 1,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 2,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 3,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 4,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 5,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 6,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 7,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 8,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "C18",
+          "pin": "1",
+          "net": "GND",
+          "uuid": "7d20a7c4-d0aa-5298-acc2-e271a4c73041",
+          "description": "Pad 1 [GND] of C18 on F.Cu"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "5055b1ce-d219-5fd4-a548-d11478229c2d",
+          "description": "Track [GND] on F.Cu, length 0.7400 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "index": 9,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 10,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 11,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "pad",
+          "reference": "GAIN0",
+          "pin": "1",
+          "net": "GND",
+          "uuid": "0081077e-b098-5f92-8bab-8819553f6981",
+          "description": "Pad 1 [GND] of GAIN0 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "index": 12,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 13,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 14,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 15,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 16,
+      "net": "GND",
+      "endpoints": [
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        },
+        {
+          "kind": "zone",
+          "reference": null,
+          "pin": null,
+          "net": "GND",
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+          "description": "Zone 'quote-native-F-GND-v1' [GND] on F.Cu, priority 0"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 17,
+      "net": "VBAT",
+      "endpoints": [
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VBAT",
+          "uuid": "45e55099-dd98-502b-bb4a-c0159466f22f",
+          "description": "Track [VBAT] on F.Cu, length 0.0166 mm"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VBAT",
+          "uuid": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+          "description": "Track [VBAT] on B.Cu, length 5.4004 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 18,
+      "net": "VHI",
+      "endpoints": [
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VHI",
+          "uuid": "2c13a20c-0acc-5b1d-9910-e6002357a60d",
+          "description": "Track [VHI] on F.Cu, length 1.0406 mm"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VHI",
+          "uuid": "20a2d9d5-efc0-58e6-b7d5-8683f80a6c51",
+          "description": "Track [VHI] on F.Cu, length 1.4141 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 19,
+      "net": "+3V3",
+      "endpoints": [
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "+3V3",
+          "uuid": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+          "description": "Track [+3V3] on F.Cu, length 0.1500 mm"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "+3V3",
+          "uuid": "296d5e92-90fc-5523-8ae0-bcdc0cd49a82",
+          "description": "Track [+3V3] on F.Cu, length 0.0002 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 20,
+      "net": "VCORE",
+      "endpoints": [
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VCORE",
+          "uuid": "2926377e-4800-5eca-9dcb-c369f23eef18",
+          "description": "Track [VCORE] on F.Cu, length 0.6500 mm"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VCORE",
+          "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+          "description": "Track [VCORE] on F.Cu, length 0.6500 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 21,
+      "net": "VCORE",
+      "endpoints": [
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VCORE",
+          "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+          "description": "Track [VCORE] on F.Cu, length 0.6902 mm"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VCORE",
+          "uuid": "e050057b-b095-55ec-b696-fa9120e1d023",
+          "description": "Track [VCORE] on F.Cu, length 0.6500 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 2
+    },
+    {
+      "index": 22,
+      "net": "VAMP",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "R18",
+          "pin": "2",
+          "net": "VAMP",
+          "uuid": "901befb6-4768-57f9-884a-f347c2f9f0bb",
+          "description": "Pad 2 [VAMP] of R18 on F.Cu"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VAMP",
+          "uuid": "5fdeca33-652d-5808-b8f8-85ccff3fedcd",
+          "description": "Track [VAMP] on F.Cu, length 0.5000 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "index": 23,
+      "net": "VO+",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "J1",
+          "pin": "1",
+          "net": "VO+",
+          "uuid": "8b0dcd16-b7aa-578e-b25e-b6fa91814f79",
+          "description": "Pad 1 [VO+] of J1 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "C22",
+          "pin": "1",
+          "net": "VO+",
+          "uuid": "f3e8febf-cf2f-50cd-9ba5-31dad94f6490",
+          "description": "Pad 1 [VO+] of C22 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 24,
+      "net": "BUTTON",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "30",
+          "net": "BUTTON",
+          "uuid": "d88e926d-5c65-5e48-8b55-30b711541edc",
+          "description": "Pad 30 [BUTTON] of IC1 on F.Cu"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "BUTTON",
+          "uuid": "3d1ce992-fb66-51d7-b4c5-e8aec205ca33",
+          "description": "Track [BUTTON] on F.Cu, length 0.5906 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "index": 25,
+      "net": "VBUS",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "Q3",
+          "pin": "1",
+          "net": "VBUS",
+          "uuid": "a37c77c3-4934-5917-a032-407ecd0e62f4",
+          "description": "Pad 1 [VBUS] of Q3 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "D4",
+          "pin": "A",
+          "net": "VBUS",
+          "uuid": "5f8e1978-e1bf-552d-8e95-8606988c2ea1",
+          "description": "Pad A [VBUS] of D4 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 26,
+      "net": "VBUS",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "X6",
+          "pin": "B4A9",
+          "net": "VBUS",
+          "uuid": "f6710ac6-2049-566a-bd94-4a6a239276cc",
+          "description": "Pad B4A9 [VBUS] of X6 on F.Cu"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "VBUS",
+          "uuid": "23eb2cb5-960d-5b6a-b061-e91253b5a44b",
+          "description": "Track [VBUS] on B.Cu, length 0.5550 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "index": 27,
+      "net": "USB_D+",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "R10",
+          "pin": "1",
+          "net": "USB_D+",
+          "uuid": "e9c523bf-4e81-5246-89ef-591adc83e220",
+          "description": "Pad 1 [USB_D+] of R10 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "X6",
+          "pin": "A6",
+          "net": "USB_D+",
+          "uuid": "4bf2ace6-5a21-5362-be9f-1a0227ee235e",
+          "description": "Pad A6 [USB_D+] of X6 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 28,
+      "net": "USB_D-",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "R9",
+          "pin": "1",
+          "net": "USB_D-",
+          "uuid": "5e2c62dd-26ff-56d2-ada2-511e0260d270",
+          "description": "Pad 1 [USB_D-] of R9 on F.Cu"
+        },
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "USB_D-",
+          "uuid": "983510bd-5d09-5597-8257-00b5a38efb1b",
+          "description": "Track [USB_D-] on F.Cu, length 10.5274 mm"
+        }
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "index": 29,
+      "net": "Net-(FB2-P$1)",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "U4",
+          "pin": "10",
+          "net": "Net-(FB2-P$1)",
+          "uuid": "0117bbc9-75d6-560f-ac3f-71405d4eb629",
+          "description": "Pad 10 [Net-(FB2-P$1)] of U4 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "FB2",
+          "pin": "1",
+          "net": "Net-(FB2-P$1)",
+          "uuid": "9dfeefe6-1fda-55a7-84f0-4a8874185d4c",
+          "description": "Pad 1 [Net-(FB2-P$1)] of FB2 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 30,
+      "net": "GAIN",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "GAIN0",
+          "pin": "2",
+          "net": "GAIN",
+          "uuid": "5640d991-676c-528b-aa6e-c60d7859d13a",
+          "description": "Pad 2 [GAIN] of GAIN0 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "U4",
+          "pin": "2",
+          "net": "GAIN",
+          "uuid": "d725c722-cbbe-510d-b880-449646e7667d",
+          "description": "Pad 2 [GAIN] of U4 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 31,
+      "net": "SCL",
+      "endpoints": [
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "SCL",
+          "uuid": "c365ba5a-91fb-5127-9496-34de5c2d6b98",
+          "description": "Track [SCL] on F.Cu, length 0.6135 mm"
+        },
+        {
+          "kind": "pad",
+          "reference": "R14",
+          "pin": "2",
+          "net": "SCL",
+          "uuid": "96c65eb8-1b84-5617-ad78-8fa2fae07f47",
+          "description": "Pad 2 [SCL] of R14 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "index": 32,
+      "net": "D13",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "R7",
+          "pin": "1",
+          "net": "D13",
+          "uuid": "2953d954-3c7c-5bc3-a76a-1575c2f62758",
+          "description": "Pad 1 [D13] of R7 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "16",
+          "net": "D13",
+          "uuid": "d4dbcbff-4f4b-5b01-8f20-f56d452ccd13",
+          "description": "Pad 16 [D13] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 33,
+      "net": "SWCLK",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "TP4",
+          "pin": "P$1",
+          "net": "SWCLK",
+          "uuid": "7845df5f-ed58-5a4f-a3df-4755b4409ec7",
+          "description": "Pad P$1 [SWCLK] of TP4 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "24",
+          "net": "SWCLK",
+          "uuid": "d546fbb6-4e13-5833-996e-7fc885bed474",
+          "description": "Pad 24 [SWCLK] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 34,
+      "net": "SWDIO",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "TP5",
+          "pin": "P$1",
+          "net": "SWDIO",
+          "uuid": "58c18eea-5570-507d-a60f-14015795a13b",
+          "description": "Pad P$1 [SWDIO] of TP5 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "25",
+          "net": "SWDIO",
+          "uuid": "393903e2-ca9b-59e1-a05e-eeee4314ddb5",
+          "description": "Pad 25 [SWDIO] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 35,
+      "net": "~{RESET}",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "26",
+          "net": "~{RESET}",
+          "uuid": "52831bb8-0139-5298-a713-8f36ee344093",
+          "description": "Pad 26 [~{RESET}] of IC1 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "R1",
+          "pin": "2",
+          "net": "~{RESET}",
+          "uuid": "da574b29-68f1-5a47-b807-ba48fa98466b",
+          "description": "Pad 2 [~{RESET}] of R1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 36,
+      "net": "~{RESET}",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "TP7",
+          "pin": "P$1",
+          "net": "~{RESET}",
+          "uuid": "527cba27-43d3-5bdb-afcf-bdf2b46e8b9d",
+          "description": "Pad P$1 [~{RESET}] of TP7 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "26",
+          "net": "~{RESET}",
+          "uuid": "52831bb8-0139-5298-a713-8f36ee344093",
+          "description": "Pad 26 [~{RESET}] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 37,
+      "net": "I2S_DIN",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "27",
+          "net": "I2S_DIN",
+          "uuid": "4085a107-6baf-5b7b-aa8e-d890f67b1103",
+          "description": "Pad 27 [I2S_DIN] of IC1 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "TP12",
+          "pin": "P$1",
+          "net": "I2S_DIN",
+          "uuid": "c6e445f6-863c-5486-b9ed-75b2445a17a1",
+          "description": "Pad P$1 [I2S_DIN] of TP12 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 38,
+      "net": "I2S_DIN",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "U4",
+          "pin": "1",
+          "net": "I2S_DIN",
+          "uuid": "e53377af-c8a3-573c-95a1-7fe4fd406617",
+          "description": "Pad 1 [I2S_DIN] of U4 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "27",
+          "net": "I2S_DIN",
+          "uuid": "4085a107-6baf-5b7b-aa8e-d890f67b1103",
+          "description": "Pad 27 [I2S_DIN] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 39,
+      "net": "I2S_BCLK",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "28",
+          "net": "I2S_BCLK",
+          "uuid": "224d2286-c76b-58ef-bf83-cca890e8535a",
+          "description": "Pad 28 [I2S_BCLK] of IC1 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "TP13",
+          "pin": "P$1",
+          "net": "I2S_BCLK",
+          "uuid": "7b33b157-454d-589d-9bf6-d1b04153d3a8",
+          "description": "Pad P$1 [I2S_BCLK] of TP13 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 40,
+      "net": "I2S_BCLK",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "U4",
+          "pin": "16",
+          "net": "I2S_BCLK",
+          "uuid": "1496a5f9-ec1e-5444-9ace-1801516dde67",
+          "description": "Pad 16 [I2S_BCLK] of U4 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "28",
+          "net": "I2S_BCLK",
+          "uuid": "224d2286-c76b-58ef-bf83-cca890e8535a",
+          "description": "Pad 28 [I2S_BCLK] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 41,
+      "net": "I2S_LRCLK",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "TP14",
+          "pin": "P$1",
+          "net": "I2S_LRCLK",
+          "uuid": "0f05ba08-355a-5d7e-bd08-e5e133db55b1",
+          "description": "Pad P$1 [I2S_LRCLK] of TP14 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "29",
+          "net": "I2S_LRCLK",
+          "uuid": "02edba76-623d-5aec-b491-40e1dc2ab6a5",
+          "description": "Pad 29 [I2S_LRCLK] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 42,
+      "net": "I2S_LRCLK",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "29",
+          "net": "I2S_LRCLK",
+          "uuid": "02edba76-623d-5aec-b491-40e1dc2ab6a5",
+          "description": "Pad 29 [I2S_LRCLK] of IC1 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "U4",
+          "pin": "14",
+          "net": "I2S_LRCLK",
+          "uuid": "74a63c23-f9c2-50b7-a600-8b253b185377",
+          "description": "Pad 14 [I2S_LRCLK] of U4 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 43,
+      "net": "AMP_MUTE",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "TP15",
+          "pin": "P$1",
+          "net": "AMP_MUTE",
+          "uuid": "82611b88-62f2-596c-8fe3-78008955f048",
+          "description": "Pad P$1 [AMP_MUTE] of TP15 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "31",
+          "net": "AMP_MUTE",
+          "uuid": "f9f2b22a-495d-5177-ab7a-03892a5f7faa",
+          "description": "Pad 31 [AMP_MUTE] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 44,
+      "net": "AMP_MUTE",
+      "endpoints": [
+        {
+          "kind": "track",
+          "reference": null,
+          "pin": null,
+          "net": "AMP_MUTE",
+          "uuid": "35b8b5d5-4936-5444-a0d8-137bd6649824",
+          "description": "Track [AMP_MUTE] on F.Cu, length 0.5906 mm"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "31",
+          "net": "AMP_MUTE",
+          "uuid": "f9f2b22a-495d-5177-ab7a-03892a5f7faa",
+          "description": "Pad 31 [AMP_MUTE] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 1
+    },
+    {
+      "index": 45,
+      "net": "INT",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC4",
+          "pin": "4",
+          "net": "INT",
+          "uuid": "2893c147-7fa3-5665-b403-d03ad544d021",
+          "description": "Pad 4 [INT] of IC4 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "34",
+          "net": "INT",
+          "uuid": "a913551a-8fa7-50b1-84ff-76e1f22dea22",
+          "description": "Pad 34 [INT] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 46,
+      "net": "POWER",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "U5",
+          "pin": "2",
+          "net": "POWER",
+          "uuid": "b34f4c60-2420-599e-b73f-cf9e66858599",
+          "description": "Pad 2 [POWER] of U5 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "35",
+          "net": "POWER",
+          "uuid": "add4e21f-19e4-524e-8a08-8b4337b7acbb",
+          "description": "Pad 35 [POWER] of IC1 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 47,
+      "net": "POWER",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "35",
+          "net": "POWER",
+          "uuid": "add4e21f-19e4-524e-8a08-8b4337b7acbb",
+          "description": "Pad 35 [POWER] of IC1 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "Q2",
+          "pin": "1",
+          "net": "POWER",
+          "uuid": "05debe44-82a4-5f4e-8b8d-41d21d198060",
+          "description": "Pad 1 [POWER] of Q2 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 48,
+      "net": "D-",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "46",
+          "net": "D-",
+          "uuid": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+          "description": "Pad 46 [D-] of IC1 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "R9",
+          "pin": "2",
+          "net": "D-",
+          "uuid": "41708ccb-a6d6-5941-93df-8ae68610fbf8",
+          "description": "Pad 2 [D-] of R9 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    },
+    {
+      "index": 49,
+      "net": "D+",
+      "endpoints": [
+        {
+          "kind": "pad",
+          "reference": "IC1",
+          "pin": "47",
+          "net": "D+",
+          "uuid": "714f03ac-3ce4-506f-928e-f09a1a3419d0",
+          "description": "Pad 47 [D+] of IC1 on F.Cu"
+        },
+        {
+          "kind": "pad",
+          "reference": "R10",
+          "pin": "2",
+          "net": "D+",
+          "uuid": "778cf005-4e38-5440-8f16-2e594a15dbbb",
+          "description": "Pad 2 [D+] of R10 on F.Cu"
+        }
+      ],
+      "unknown_reference_endpoint_count": 0
+    }
+  ],
+  "limits": [
+    "Descriptions and endpoint identities are copied from the saved candidate DRC JSON.",
+    "Unknown references remain null for tracks and zones; no reference was inferred.",
+    "This inventory is not a new DRC, routing result, or qualification."
+  ]
+}

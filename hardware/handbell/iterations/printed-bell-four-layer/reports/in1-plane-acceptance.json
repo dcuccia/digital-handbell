@@ -1,0 +1,94 @@
+{
+  "status": "ACCEPTED_INCREMENTAL_ROUTING_BASELINE_NOT_FULLY_QUALIFIED",
+  "accepted_on": "2026-09-22",
+  "decision": {
+    "authority": "Astra root engineering review",
+    "document": "docs\\routing-agent-policy.md",
+    "document_sha256": "79b4efe95e4c6fd65f9ee39c42503ee7eac653bb085675f064c52c319c901748",
+    "section": "September 22 first-plane engineering disposition",
+    "scope": "Accept the exact first protected In1 ground-plane candidate as the next incremental routing baseline.",
+    "excluded_qualifications": [
+      "signal integrity",
+      "power integrity",
+      "current and thermal performance",
+      "physical fabrication stackup",
+      "manufacturing and assembly"
+    ]
+  },
+  "promotion": {
+    "method": "Exact handbell.kicad_pcb byte extraction from the accepted staged archive; no native load, refill, routing, geometry edit or reserialization.",
+    "archive": "reports\\staged-in1-settings-replay.zip",
+    "archive_sha256": "1259ca815cb6a70f44ff5927d12ffc62bba48af98d7ba572faa98103ae3ef388",
+    "previous_active_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+    "promoted_pcb_sha256": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78",
+    "previous_manifest_sha256": "ed64e9c92bd2cc7dc90a00cd98689f511517151c909052e7b23b3840d101f381",
+    "promoted_manifest_sha256": "ce915418d33442f6ab42b155f6a7bc95c05e6c7032574d58044963ca4d066741",
+    "manifest_fields_changed": {
+      "status": {
+        "before": "LOGICAL_FOUR_LAYER_PARTIAL_MIGRATION_BASELINE",
+        "after": "INCREMENTAL_ROUTING_BASELINE_FIRST_IN1_PLANE_ACCEPTED"
+      },
+      "generated_pcb_sha256": {
+        "before": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+        "after": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78"
+      }
+    },
+    "manifest_geometry_and_all_other_parsed_fields_unchanged": true,
+    "preserved_prior_milestones": [
+      "Git checkpoint 0950424",
+      "Git checkpoint e8e69b9",
+      "hardware\\handbell\\iterations\\printed-bell-clock-draft"
+    ]
+  },
+  "archive_dependency_binding": {
+    "all_47_non_pcb_archive_entries_match_active_package_bytes": true,
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "fp_lib_table_sha256": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+    "sym_lib_table_sha256": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+    "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "personal_preferences_or_lockfiles_present": false
+  },
+  "reused_evidence": {
+    "replay_report": {
+      "path": "reports\\in1-plane-settings-replay.json",
+      "sha256": "96b623146eb63bd526a0fcbe25da774e6a6a8a04c1d7e2cbb76d9f35dffefffb",
+      "input_pcb_sha256": "d91837ed9f5cff10d709521e448f6deae3aac3a52abed88c34271ee809e25418",
+      "output_pcb_sha256": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78"
+    },
+    "review_supplement": {
+      "path": "reports\\in1-plane-review-supplement.json",
+      "sha256": "472b514b1b2e27200d0276091fd71997e1fd3a731b10cd6c7797fbd25045548d",
+      "candidate_pcb_sha256": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78"
+    },
+    "saved_native_drc": {
+      "source_filename": "candidate-drc.json",
+      "sha256": "945906e41c49a7eb95230316b7643f6b1a58fb6bf7caaa8e0f67b91d6ebcb2bb",
+      "kicad_version": "10.0.6",
+      "opens": 49,
+      "warnings": 233,
+      "new_non_unconnected_findings": 0,
+      "schematic_parity": "Historical separate gate remains 46 notices; it was not rerun for promotion."
+    },
+    "remaining_connection_inventory": {
+      "path": "reports\\four-layer-remaining-connections.json",
+      "sha256": "bd3160562d460bac422c368fc1740782ee06b1737c7889746a0d9e57a73a4529",
+      "source": "Saved candidate DRC only; no new native check."
+    }
+  },
+  "accepted_engineering_dispositions": {
+    "clock_void": "Retain the five existing +3V3 crossing segments; they are supply copper and do not authorize new fast signals over the void.",
+    "switching_void": "Retain the two VAMP and three V+ edge crossings and the four verified all-F U5-to-C27/C28 paths.",
+    "private_returns": "Retain both private pickoffs and private-via exclusions.",
+    "plane_scope": "One connected In1 GND island is accepted only as an incremental routing baseline."
+  },
+  "historical_evidence_policy": "Existing reports retain their original source and candidate hashes; promotion does not rewrite them to imply new execution.",
+  "cad_binding": "Physical component geometry is unchanged, but the previous CAD source-hash binding is stale and no CAD regeneration is claimed.",
+  "remaining_gates": [
+    "Route the remaining 49 saved open connections in separately reviewed batches.",
+    "Screen actual future return corridors against plane voids and plated antipads.",
+    "Select and qualify the physical four-layer dielectric stackup.",
+    "Rebind and review the complete CAD assembly against the promoted PCB hash.",
+    "Complete SI/PI, current, thermal, fabrication and assembly qualification."
+  ]
+}

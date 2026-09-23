@@ -1,6 +1,18 @@
-# Printed-bell logical four-layer baseline
+# Printed-bell four-layer routing baseline
 
-This package is a **partial migration baseline**, not a routed four-layer
+**September 22 current acceptance:** the first protected In1 ground plane is
+promoted byte-for-byte from the saved candidate. The PCB is
+`19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`;
+manifest `ce915418d33442f6ab42b155f6a7bc95c05e6c7032574d58044963ca4d066741`.
+There are **49 opens**, 233 warnings and 46 historical parity notices still
+to disposition. All existing connected groups and both private returns are
+preserved; component geometry and existing routing primitives are unchanged.
+See [acceptance and exact evidence reuse](reports/in1-plane-acceptance.json).
+Full CAD source binding, physical stackup and final engineering/manufacturing
+qualification remain open. Earlier migration/staging descriptions below are
+historical, not the current inner-copper state.
+
+This package began as a **partial migration baseline**, not a routed four-layer
 design, physical stackup qualification, fabrication release, or quotation
 package. It was created from the exact accepted sibling
 `../printed-bell-clock-draft` PCB

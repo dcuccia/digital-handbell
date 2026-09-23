@@ -6,6 +6,15 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**September 22:** root engineering review accepted the exact saved
+explicit-settings plane candidate as an incremental routing baseline.
+The [promotion record](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-acceptance.json)
+binds the 49-open PCB and updated manifest to identical project/library
+dependencies. No native check or refill was repeated for byte-exact promotion.
+The earlier pause and unaccepted-stage descriptions below are historical.
+The next gate is actual connected-group/return-corridor release, not another
+round of fixture or refill development.
+
 **End-of-day September 21:** engineering is paused. The explicit-settings
 production In1 candidate passes the recorded scalar and supplementary
 private-return/source-preservation checks and has 49 opens, but remains

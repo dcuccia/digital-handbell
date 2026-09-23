@@ -165,6 +165,38 @@ move parts inside an ostensibly routine correction.
 
 ### Batches, not one-net conversations
 
+#### September 22 first-plane engineering disposition
+
+Astra reviewed the saved actual-polygon clock/boost detail and the
+source-bound replay/supplement for PCB
+`19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`.
+Accept this exact candidate as an **incremental routing baseline**, not
+final SI/PI, current, thermal or fabrication approval:
+
+- The five +3V3 segments at the clock void are existing supply copper, not
+  newly routed fast signals. Retain them and the existing F ground/clock
+  structures. Do not assert a continuous In1 reference beneath those
+  segments or route new fast signals through this void.
+- The two VAMP and three V+ witnesses lie at the switching exclusions.
+  Retain the existing local F supply/return topology: the four checked
+  U5.4/U5.6-to-C27/C28 paths remain all-F without via transitions. The added
+  plane does not replace these paths or demonstrate ripple-current sharing,
+  loop impedance or ampacity. No exclusion enlargement/reroute is justified
+  by these projection witnesses alone.
+- One connected In1 island, preserved existing pad groups and exact private
+  guard/cut checks support this limited acceptance. They do not prove uniform
+  return impedance or make the remaining ground connections unnecessary.
+  Keep the private-via holes and CELL_NEG separation; release no new vias
+  under conductive battery-contact metal.
+
+Promotion must retain the exact saved PCB bytes, rebind only the manifest's
+PCB-source metadata, and leave component geometry and the old snapshots
+unchanged. Reuse the recorded checks only after verifying their input/output
+and project bindings. Physical stackup selection and full CAD rebinding stay
+open. Next routing releases must screen their actual return corridors against
+these voids and all plated antipads; In2 is not blanket permission to bypass
+that review.
+
 First qualify the tools for four layers: actual enabled-layer enumeration,
 via spans, multilayer obstacles, inner-plane fill/connectivity and source
 invariants. The existing F/B-only grid and ground checkers are not qualified

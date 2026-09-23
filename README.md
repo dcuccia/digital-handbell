@@ -1,19 +1,21 @@
 # Digital Handbell
 
-**September 21 end-of-day pause:** saved work is checkpointed; engineering
-requires an explicit owner resume. The accepted board remains at 51 opens.
-A separate 49-open inner-ground-plane candidate and its review evidence are
-preserved, but not promoted. See the [handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
+**September 22 resumed: first inner ground plane accepted.** The active
+four-layer PCB now has **49 opens**, with existing connected groups and
+protected sense returns preserved. Component placement and routing primitives
+are unchanged. This is an incremental routing baseline, not a fabrication
+release or final SI/PI qualification. See the
+[acceptance record](hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-acceptance.json)
+and [handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
 
 **September 21: four-layer migration approved, with Astra/Sol role separation.**
 The [routing-agent policy](docs/routing-agent-policy.md) retains Astra's
 engineering review and requires pinned Sol for corridor/group routing batches.
 A separate [four-layer migration baseline](hardware/handbell/iterations/printed-bell-four-layer/README.md)
-is established, preserving placement and existing copper. It still has
-51 open connections. Inner-layer graph controls now pass, but the first
-staged ground plane was rejected because a previously connected ground
-group split during refill. Its smaller airwire count is not acceptance;
-the production board is unchanged.
+was established with 51 open connections, preserving placement and existing
+copper. The first staged ground plane was rejected after a refill regression.
+The explicit-settings replay subsequently preserved the connections and was
+accepted September 22; the rejected trial remains historical evidence.
 The two-layer layout is preserved unchanged. Saved SCL experiments and the older routing-recovery archive
 are preserved separately; neither is accepted replacement copper. See the
 [current handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
