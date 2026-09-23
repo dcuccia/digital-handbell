@@ -1,0 +1,243 @@
+{
+  "status": "FAILED",
+  "scope": "Staged USBBOOT F-to-In2 corridor relief and C23 GND closure; not promoted.",
+  "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+  "manifest_sha256": "a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7",
+  "active_package_modified": false,
+  "design_files_written": false,
+  "stages": [
+    {
+      "name": "native-fill-usb-only",
+      "seconds": 1.3589999999385327,
+      "exit_code": 0
+    },
+    {
+      "name": "native-fill-final",
+      "seconds": 1.125,
+      "exit_code": 0
+    },
+    {
+      "name": "native-drc",
+      "seconds": 120.0,
+      "exit_code": 0
+    }
+  ],
+  "chain_proof": {
+    "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+    "from_via": {
+      "uuid": "6a769f0c-bb2a-5e4f-a23f-f2870ed623cd",
+      "position_native_mm": [
+        87.7,
+        88.95
+      ]
+    },
+    "to_via": {
+      "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+      "position_native_mm": [
+        92.85,
+        92.1
+      ]
+    },
+    "removed_track_UUIDs_in_coordinate_order": [
+      "09e49184-1128-572a-bfb2-6fe4f5ddb616",
+      "5a59d15f-96cb-56d8-9264-1539521f9476",
+      "d21616f0-13e4-5ccc-8ed9-d4155f3d2e84",
+      "f64f7022-043b-568a-8e7d-578bea1e26e9",
+      "372abf98-d8c7-5aca-ae86-79442304abb8"
+    ],
+    "tracks": [
+      {
+        "uuid": "09e49184-1128-572a-bfb2-6fe4f5ddb616",
+        "start_native_mm": [
+          87.7,
+          88.95
+        ],
+        "end_native_mm": [
+          88.6,
+          89.85
+        ],
+        "width_mm": 0.1778,
+        "length_mm": 1.2727922061357857
+      },
+      {
+        "uuid": "5a59d15f-96cb-56d8-9264-1539521f9476",
+        "start_native_mm": [
+          88.6,
+          89.85
+        ],
+        "end_native_mm": [
+          88.65,
+          89.85
+        ],
+        "width_mm": 0.1778,
+        "length_mm": 0.05
+      },
+      {
+        "uuid": "d21616f0-13e4-5ccc-8ed9-d4155f3d2e84",
+        "start_native_mm": [
+          88.65,
+          89.85
+        ],
+        "end_native_mm": [
+          88.9,
+          90.1
+        ],
+        "width_mm": 0.1778,
+        "length_mm": 0.3535533905932738
+      },
+      {
+        "uuid": "f64f7022-043b-568a-8e7d-578bea1e26e9",
+        "start_native_mm": [
+          88.9,
+          90.1
+        ],
+        "end_native_mm": [
+          90.85,
+          90.1
+        ],
+        "width_mm": 0.1778,
+        "length_mm": 1.95
+      },
+      {
+        "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+        "start_native_mm": [
+          90.85,
+          90.1
+        ],
+        "end_native_mm": [
+          92.85,
+          92.1
+        ],
+        "width_mm": 0.1778,
+        "length_mm": 2.8284271247461903
+      }
+    ],
+    "total_length_mm": 6.4547727214752495,
+    "includes_named_blockers": [
+      "372abf98-d8c7-5aca-ae86-79442304abb8",
+      "f64f7022-043b-568a-8e7d-578bea1e26e9"
+    ],
+    "endpoint_continuous": true,
+    "interior_pad_or_via_count": 0,
+    "external_branch_attachment_count": 0,
+    "native_shape_overlap_note": "The 0.05 mm connector touches both adjacent 0.1778 mm tracks; native shape adjacency therefore contains a local triangle, but no copper leaves the ordered coordinate chain.",
+    "USBBOOT_pad_partition_before": [
+      [
+        "D3.C",
+        "IC1.9",
+        "TP3.P$1"
+      ]
+    ],
+    "private_artifact_sha256": "546c3e74b0b89221e26d9a9430ea0bbf1ff392d866a5d3fc8f8ac52d2370024c",
+    "persisted_before_candidate_generation": true
+  },
+  "elapsed_seconds": 188.53099999995902,
+  "screening": {
+    "candidate_limit": 12,
+    "candidate_count": 12,
+    "feasible_count": 4,
+    "selected": {
+      "index": 2,
+      "points_native_mm": [
+        [
+          87.7,
+          88.95
+        ],
+        [
+          89.7,
+          88.95
+        ],
+        [
+          92.85,
+          92.1
+        ]
+      ],
+      "segment_count": 2,
+      "length_mm": 6.454772721475237,
+      "reasons": [],
+      "obstacle_uuids": []
+    },
+    "reject_class_counts": {
+      "In2-fixed-foreign-copper": 8,
+      "missing-In1-return-projection": 8
+    },
+    "full_rows_private_sha256": "6c10e1c3d4f60e0c8914d1f3534ce28e070361535e17889a851272391ec9ddac"
+  },
+  "C23_bridge_screen": {
+    "start_native_mm": [
+      90.678764,
+      90.3894
+    ],
+    "end_native_mm": [
+      90.678764,
+      89.8106
+    ],
+    "width_mm": 0.3,
+    "length_mm": 0.5788000000000011,
+    "obstacle_uuids": [],
+    "passed": true
+  },
+  "failure": {
+    "type": "ValueError",
+    "message": "Remote F fill change"
+  },
+  "artifacts": {
+    "chain-proof.json": "546c3e74b0b89221e26d9a9430ea0bbf1ff392d866a5d3fc8f8ac52d2370024c",
+    "screening.json": "6c10e1c3d4f60e0c8914d1f3534ce28e070361535e17889a851272391ec9ddac",
+    "candidate-drc.json": "567763888a6355c102d2e189aa2c951ea621af1bc477f127731d5fa0e8fb292e",
+    "unfilled-usb\\handbell.kicad_pcb": "6a4fba48dc3b6caf9f43c2924e93d28c1f8f1e5c3ef5cb4e9abbf2ac7a6c9c71",
+    "canonical-usb\\handbell.kicad_pcb": "96cf4ef722522fc3da6163c24f7ba032fa55c62fd8a06da9208472ebdf2a5b57",
+    "unfilled\\handbell.kicad_pcb": "6a4fba48dc3b6caf9f43c2924e93d28c1f8f1e5c3ef5cb4e9abbf2ac7a6c9c71",
+    "canonical\\handbell.kicad_pcb": "94f22fc3ae88a74e94f2c3035f45719b945bf218abadb49a7886f7e45c4ac61d",
+    "final\\handbell.kicad_pcb": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00"
+  },
+  "failure_diagnostics": {
+    "candidate_path": "C:\\Users\\david.cuccia\\.copilot\\session-state\\36e6470e-deaa-424a-8d70-418399f53372\\files\\c23-usbboot-corridor-01\\final\\handbell.kicad_pcb",
+    "candidate_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+    "added_USBBOOT_In2_tracks": [
+      {
+        "uuid": "0b443347-ef7c-558f-a3f7-e0f9190b283e",
+        "start_native_mm": [87.7, 88.95],
+        "end_native_mm": [89.7, 88.95],
+        "width_mm": 0.2,
+        "length_mm": 2.0
+      },
+      {
+        "uuid": "4869e135-8ec7-59a2-a8e2-15a5de2025c3",
+        "start_native_mm": [89.7, 88.95],
+        "end_native_mm": [92.85, 92.1],
+        "width_mm": 0.2,
+        "length_mm": 4.4547727214752495
+      }
+    ],
+    "explicit_C23_GND_track_added": false,
+    "C23_joined_main_GND_by_refill": true,
+    "C24_joined_main_GND": false,
+    "GND_group_count_before": 13,
+    "GND_group_count_candidate": 12,
+    "USBBOOT_pad_partition_candidate": [["D3.C", "IC1.9", "TP3.P$1"]],
+    "native_DRC": {
+      "candidate_opens": 43,
+      "candidate_warnings": 233,
+      "new_non_open_findings": 0,
+      "artifact_sha256": "567763888a6355c102d2e189aa2c951ea621af1bc477f127731d5fa0e8fb292e"
+    },
+    "fill_symmetric_difference": {
+      "F.Cu": {
+        "before_only_area_mm2": 2.386805e-07,
+        "candidate_only_area_mm2": 3.3474301975615,
+        "symmetric_difference_area_mm2": 3.347430436242,
+        "symmetric_difference_bounds_native_mm": [87.860609, 88.783914, 114.733807, 91.790763]
+      },
+      "In1.Cu": {
+        "before_only_area_mm2": 0.0,
+        "candidate_only_area_mm2": 0.0,
+        "symmetric_difference_area_mm2": 0.0,
+        "symmetric_difference_bounds_native_mm": null
+      }
+    },
+    "stop_reason": "F.Cu refill changed copper beyond the released local corridor bound x87..93.5, y88..93 mm, extending to x114.733807 mm. This requires root review and is not auto-accepted.",
+    "candidate_acceptance": false,
+    "no_corrective_retry_performed": true
+  }
+}

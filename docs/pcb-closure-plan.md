@@ -166,11 +166,27 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**C23 trial, not accepted:** the
+[staged corridor report](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-corridor.json)
+records a proven five-track USBBOOT chain replaced by two In2 segments
+between existing vias. Both paths are 6.454773 mm; the replacement is
+0.20 mm wide. Refill connects C23 to main GND without an extra bridge:
+43 opens, 233 warnings, no new non-open findings, unchanged In1 fill,
+and C24 still separate. However, F fill gains 3.347430 mm2 with bounds
+extending to x114.733807, outside the authorized local corridor.
+Candidate `01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00`
+is therefore held, not promoted. The accepted board remains
+`7927882f...` at **44 opens**. Next is a bounded no-routing refill control
+on that exact accepted source, using the candidate's identical recipe,
+to separate baseline refill changes from routing-induced changes and
+identify every remote changed region. No further copper edits or fill
+splicing are authorized by this diagnostic item.
+
 **Current engineering decision:** the
 [exact cut analysis](../hardware/handbell/iterations/printed-bell-four-layer/reports/remaining-ground-cut-review.json)
 shows that deleting the named +3V3 blocker disconnects C12.1/IC1.10.
 Keep that feed. USBBOOT has existing layer transitions on both sides of
-the C23 obstruction; SCL at C24 does not. The next released item is the
+the C23 obstruction; SCL at C24 does not. The staged trial followed the
 [USBBOOT corridor relief](routing-agent-policy.md#usbboot-corridor-relief-for-c23):
 prove and replace only the unbranched F chain between the two specified
 existing vias with In2 copper, then close the measured C23 ground gap.
@@ -185,10 +201,9 @@ new In2 bridge. C23's 0.5788 mm gap crosses two USBBOOT tracks. C24's
 1.391996 mm gap crosses SCL/USBBOOT and two plated vias; contact metal
 also rejected some candidate sites.
 The [source-bound review](../hardware/handbell/iterations/printed-bell-four-layer/reports/remaining-ground-obstacle-review.json)
-does not authorize obstacle removal. Next is one read-only cut analysis
-of the named +3V3 segment and local USBBOOT/SCL transition inventory with
-actual-copper views. Determine redundancy and affected source/load branches
-before any reroute, new via or placement decision. The board stays at 44 opens.
+did not authorize obstacle removal. The subsequent read-only cut analysis
+and local USBBOOT/SCL transition inventory informed the engineering
+decision above. The accepted board stays at 44 opens.
 
 **Latest radial-batch decision:** the
 [336-site follow-up](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-radial-batch.json)
