@@ -2,17 +2,17 @@
 
 ## Bounded engineering work
 
-- **September 23 fixed-placement IMU trial blocked:** all twelve released
-  joint plans failed before candidate generation. The accepted PCB and
-  manifest are unchanged at 41 opens. This rejects the tested plans, not
-  every fixed-placement solution; the cardinal escape screen was not an
-  exhaustive routing proof. Do not repeat nearby-point trials or silently
-  relax the frozen-via/placement policy. Obtain an explicit scope decision
-  for coordinated local re-layout, distinguishing routing-via choices
-  from fixed mechanical interfaces. Follow
-  `docs/pcb-closure-plan.md#owner-pause-and-next-item` and the bottleneck-first
-  sequence in `docs/routing-agent-policy.md`. No new placement, via move,
-  rule change or wholesale 69-track removal is authorized by this result.
+- **September 23 coordinated IMU re-layout approved:** after the blocked
+  twelve-plan fixed-placement trial, the owner explicitly authorized
+  coordinated local re-layout. The bounded release covers IC4, C23/C24,
+  R14/R15, two named local routing vias and necessary internal boundary
+  routing; exact limits are in
+  `docs/pcb-closure-plan.md#owner-pause-and-next-item`. Stage separately,
+  prove both IMU returns and compatible supply/signal escapes together,
+  and preserve all prior connections. No rule reductions, outside-interface
+  changes or wholesale 69-track removal. The accepted 41-open board stays
+  authoritative until electrical and required mechanical reviews pass.
+  Follow the bottleneck-first sequence in `docs/routing-agent-policy.md`.
 - **September 21 four-layer migration approved:** preserve the accepted
   two-layer `printed-bell-clock-draft` as evidence and establish one separate
   `printed-bell-four-layer` working candidate. Follow the four-layer batch,

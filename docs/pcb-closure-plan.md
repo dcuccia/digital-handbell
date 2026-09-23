@@ -166,7 +166,44 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Fixed-placement IMU trial complete and blocked; scope decision required.**
+**Owner approved coordinated local IMU re-layout.** The owner selected
+"Authorize coordinated local IMU re-layout (recommended)" after checkpoint
+`8e41215`. Release one separate staged item to the verified GPT-5.6 Sol
+executor, maximum 15 minutes including validation/reporting, three coherent
+layout plans and at most two corrective retries. This changes the local
+via/placement constraints, not the manufacturing rules or board interfaces.
+
+- IC4, C23/C24 and R14/R15 may move individually by at most 0.75 mm from
+  the accepted positions; preserve rotations, native pad definitions and
+  all other parts. Prefer unchanged parts where the complete plan fits.
+- Release relocation/replacement of SDA via
+  `aa47961d-0754-5f3e-b69c-68e3b7f9079f` and +3V3 via
+  `1c15a7a2-2065-55a0-bfec-88da501cad88`, with complete replacement paths.
+  Other existing vias remain fixed except that C24's mandatory filled/capped
+  via must follow its pad if C24 moves. New ordinary vias retain the
+  0.604/0.35 mm policy and full contact/tab clearance, including B copper.
+- Use only necessary local trace replacements from the 69-track inventory.
+  Internal portions of the seven boundary traces may also be reworked
+  after defining the exact local boundary; preserve their outside geometry
+  and connection duties. The accepted In2 supply bridge, USBBOOT route,
+  C12 feed, clock/USB/protection structures and all outside circuitry remain
+  protected. Keep the 21 zone definitions/guards and both private returns.
+- Require both IMU ground groups and the R14 SCL pull-up to connect while
+  preserving all prior supply, SDA, SCL and IMU_INT2 connectivity. Prove a
+  compatible INT escape/local exit; its outside connection to IC1.34 may
+  remain open. Bent escapes or an ordinary In2 transition are permitted,
+  rather than assuming the earlier straight-west screen is exhaustive.
+  A complete local result would reduce 41 opens to at most 38, not qualify
+  the whole board.
+- Stage source-preserving PCB and matching manifest changes separately.
+  Require the native geometry, refill/DRC, complete connectivity, contact,
+  private-return and source-preservation gates; mark incomplete gates
+  explicitly if the budget expires. Moved-part proxy screening is not
+  full-assembly qualification: exact CAD rebind/mechanical review is
+  required before acceptance. Do not edit the authoritative package or
+  quotation process map based on an unaccepted staged candidate.
+
+**Historical fixed-placement trial -- complete and blocked.**
 The [twelve-plan result](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-fixed-placement-trial.json)
 (SHA-256 `a8e41d199a974a597aea4813f11112d01428e0e2e671d7902e51d6e22f246659`)
 rejects all released combinations before candidate generation. The tested
@@ -190,7 +227,7 @@ The earlier bounded cardinal screen did not establish that every bent or
 different-length INT escape is impossible. Do not restart substantially
 similar trials under a new name.
 
-**Recommended next scope, not yet authorized:** one coordinated IMU
+**Historical recommendation, now authorized within the limits above:** one coordinated IMU
 re-layout item for IC4, C23/C24 and R14/R15, including their local routing
 vias rather than freezing every existing transition. Prefer retaining
 parts where a complete coupled plan permits it; consider small individual
@@ -201,9 +238,9 @@ must fit together, with every prior connection restored. Preserve the
 outline, mounts, USB, contacts, outside circuitry, accepted critical routes,
 CELL_NEG isolation and private returns. Any placement change also requires
 the exact manifest/CAD rebind and mechanical review before acceptance.
-The previous rigid translations remain unapproved; this recommendation
-does not release them or relax clearance/manufacturing rules. Sol is idle
-pending the scope decision.
+The previous rigid translations were not accepted by that comparison;
+the new release requires a complete coupled candidate, not adoption of a
+placement sketch or relaxed clearance/manufacturing rules.
 
 **Historical authorization -- completed with the blocker above:** the owner
 approved the fixed-placement rework trial and also
