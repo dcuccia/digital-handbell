@@ -6,6 +6,21 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**Native local review views:** `tools/render_clock_detail.py` now also accepts
+`--pcb`, `--layer`, `--bounds XMIN YMIN XMAX YMAX` in native millimetres,
+and repeated `--highlight-net` options. The default clock view and its
+1200 x 1020 size remain available. Views carry the actual PCB SHA-256,
+reject disabled layers/invalid bounds, and refuse to save if the input
+changes during rendering. F, B and In2 views were exercised with KiCad
+10.0.6. These are non-mirrored native-coordinate primitive silhouettes:
+zone fills, drill voids and physical contact envelopes are not rendered.
+They aid local engineering review, not clearance, plane or assembly proof.
+
+```powershell
+$pcb = '.\hardware\handbell\iterations\printed-bell-four-layer\handbell.kicad_pcb'
+python .\tools\render_clock_detail.py --pcb $pcb --layer F.Cu --bounds 86.1 90 94.5 96 --highlight-net '+3V3' --output "$env:TEMP\imu-front.png"
+```
+
 **September 23 working fanout method:** a source-preserving private fixture
 now contains actual boundary clipping, obsolete-fanout removal and a new
 three-segment SCL escape. Its primitive graph has no shorts, but the rest

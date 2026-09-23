@@ -1,0 +1,131 @@
+{
+  "report": "imu-vdd-int2-routing",
+  "status": "partial_vdd_cs_int2_restored_vddio_c23_search_timed_out",
+  "classification": "Session-private evolving candidate; unfilled, electrically incomplete, unaccepted and not quoteable.",
+  "inputs": {
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "accepted_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "starting_private_pcb_sha256": "098dc7fd919340176ffb41f177525015b0e27f806abd5783121beecf593ea37b",
+    "qualified_fixture_pcb_sha256": "6df836645cebbd8f2d793822a182dd95db14604f2119820510db107cc4e19087",
+    "qualified_fixture_manifest_sha256": "800321ae0044a199ff506f6b648609e7d6ac44e0413fcbb3afa7b1711f72466a"
+  },
+  "working_artifacts": {
+    "pcb": {
+      "session_relative_path": "files/imu-coupled-routing/handbell-imu-coupled-working.kicad_pcb",
+      "sha256": "206afad547838c26afbf6ca6056af8d0b7073ea00938599598e83792a5bb7f38"
+    },
+    "manifest": {
+      "session_relative_path": "files/imu-coupled-routing/placement-manifest-imu-coupled-working.json",
+      "sha256": "6ae59fbf552d8b9e0541926db8aee2b655a7c5268a566ee0cf1151d1f6e7ceb0",
+      "pcb_binding_matches": true
+    },
+    "route_state": {
+      "session_relative_path": "files/imu-coupled-routing/vdd-int2-state.json"
+    },
+    "successful_route_tool": {
+      "session_relative_path": "files/route_imu_vdd_int2.py",
+      "sha256": "354e3e45ae5dc1ea70c92ee1aa4e6f8159dfe466a4ee455d9626c813ac614f47"
+    },
+    "timed_out_supply_tool": {
+      "session_relative_path": "files/route_imu_vddio_c23.py",
+      "sha256": "cd28dc91f1c480d64c923f257b2089339b487b7361fd8743c91150a9e2248565"
+    }
+  },
+  "actual_saved_routing": {
+    "shared_vdd_cs_tree": {
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "width_mm": 0.25,
+      "track_uuids": [
+        "4119bbb1-82c1-5329-b3a3-2abc5630ee34",
+        "e65581f6-f68d-51e3-9175-23c8a2bc5d7d",
+        "a310a7c2-7ac0-569a-a9db-369483ff2e10",
+        "f8911e5a-83ec-5bea-bf31-ade0e55bbe1d",
+        "51e9b0c0-e123-5ca7-ac71-d990051400d2",
+        "47054686-db20-5efb-9da3-67d4505de706",
+        "7502d8d0-e937-5105-9978-f0068815befc"
+      ],
+      "topology": "IC4.8 -> south-side F branch -> C24.1 -> fixed via ae5186f8; C24.1 -> IC4.12",
+      "connections": {
+        "IC4.8_to_C24.1": true,
+        "IC4.12_to_C24.1": true,
+        "C24.1_to_ae5186f8": true
+      }
+    },
+    "imu_int2": {
+      "width_mm": 0.1778,
+      "transition_via": {
+        "uuid": "0b25a804-80c1-522d-9076-2bf110ac9b32",
+        "at_mm": [89.6195, 93.5809],
+        "size_mm": 0.604,
+        "drill_mm": 0.35
+      },
+      "track_uuids": [
+        "008737c4-65c2-5c74-8cd7-f6517f134def",
+        "3a9033a9-b546-5167-b49f-a07516335fde",
+        "217c843f-8925-505e-8bed-6fec1e8b6974",
+        "1b7d885e-a5f3-53a0-963c-5134782fe353",
+        "dc15d9a3-e0ad-560a-b31d-902030f68961"
+      ],
+      "topology": "IC4.9 F escape -> new full-span transition -> bent In2 route -> existing via 3a4ecc82 -> TP6.P$1",
+      "connections": {
+        "IC4.9_to_3a4ecc82": true,
+        "IC4.9_to_TP6.P$1": true
+      }
+    },
+    "ground_straps_preserved": {
+      "track_uuids": [
+        "5df6a95a-cdd4-5d51-9657-523cf6f4d924",
+        "fcd61952-1ab7-53cb-9e3c-be1764a3d4fd",
+        "4ebea7b5-23ef-5791-80f9-48758194b0e8"
+      ],
+      "each_pad_reaches_saved_return_via": {
+        "IC4.1": true,
+        "IC4.2": true,
+        "IC4.3": true,
+        "IC4.6": true,
+        "IC4.7": true
+      },
+      "MAIN_attachment": "Pending qualified refill."
+    },
+    "primitive_short_count": 0
+  },
+  "vddio_c23_attempt": {
+    "method": "Separate ordinary transition sites selected from the previously native-cleared VDDIO and C23 regions, followed by bounded 0.1 mm-grid native-obstacle-aware In2 path search to fixed via ae5186f8.",
+    "result": "The process produced no output and exceeded the explicit 120-second external deadline. It was terminated without a candidate write.",
+    "candidate_hashes_after_termination_unchanged": true,
+    "new_vddio_or_c23_copper_saved": false,
+    "corrections_used": 0,
+    "finite_blocker": "The current implementation repeatedly performs native collision construction during up to 16000 expansions for each site pair; it did not complete a bounded route selection within the item deadline."
+  },
+  "per_net_status": {
+    "GND_IC4_1_2_3": "All pads primitively joined to the saved local return via; MAIN refill proof pending.",
+    "GND_IC4_6_7": "Both pads primitively joined to the saved local return via; MAIN refill proof pending.",
+    "+3V3_VDD_C24_CS": "Restored to fixed supply bridge with saved actual F.Cu copper.",
+    "+3V3_VDDIO_C23": "Open; no new copper was written by the timed-out search.",
+    "+3V3_pullups_and_exterior_ports": "Open.",
+    "/IMU_INT2": "Restored from IC4.9 through In2 to the existing external group and TP6.P$1.",
+    "SCL": "Tentative IC4.13-to-exterior route retained; R14.2 remains open.",
+    "SDA": "Open.",
+    "INT": "Open."
+  },
+  "validation": {
+    "native_geometry_and_primitive_connectivity_for_saved_vdd_cs_int2_patch": "passed",
+    "full_refill_connectivity_private_return_cell_neg_contact_source_drc_and_open_count": "not run because the local block remains incomplete",
+    "mechanical_cad_rebind": "not run and still required before promotion"
+  },
+  "remaining_obligations": [
+    "Stage separate legal VDDIO/IC4.5 and C23.1 transitions and bounded bent In2 branches to ae5186f8.",
+    "Restore R14.1 and R15.1 pullup supply and all clipped +3V3 exterior duties.",
+    "Restore R14.2 SCL pullup, SDA including R15.2 and B exterior, and a legal INT local exit.",
+    "Run qualified refill and prove both five-pad GND groups attach to MAIN.",
+    "Only after complete local restoration run all-layer connectivity, floating-copper, private-return, CELL_NEG, contact, source, manifest, DRC and CAD gates."
+  ],
+  "acceptance": {
+    "complete_local_routing": false,
+    "promotable": false,
+    "quote_ready": false,
+    "candidate_preserved": true,
+    "no_active_package_edits": true
+  }
+}

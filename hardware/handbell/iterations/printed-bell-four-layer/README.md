@@ -25,11 +25,14 @@ does not qualify full routing, DRC, powered behavior or mechanical fit.
 Continue only through the [current closure handoff](../../../../docs/pcb-closure-plan.md#owner-pause-and-next-item).
 
 The subsequent [working PCB](reports/imu-coupled-working.kicad_pcb) and
-[working manifest](reports/imu-coupled-working-manifest.json) additionally
-preserve two tentative ground-return anchors and local supply rip-up.
-Their [partial report](reports/imu-coupled-routing.json) is not complete
-group/plane connectivity or source/DRC qualification; the handoff records
-the precise evidence limits and remaining replacement duties.
+[working manifest](reports/imu-coupled-working-manifest.json) now preserve
+all five ground straps, the VDD/CS/C24 supply tree and INT2-to-TP6 routing.
+Their [latest partial report](reports/imu-vdd-int2-routing.json) and native
+[front](reports/imu-working-front.png)/[inner](reports/imu-working-inner.png)
+views are source-bound, not complete group/plane or source/DRC qualification.
+VDDIO/C23, pullups, exterior supply duties, SDA and INT remain open.
+Earlier working versions/reports are historical; the handoff records the
+precise current evidence limits and remaining replacement duties.
 
 **Earlier acceptance: paired C12 supply/ground closure.** A shorter feed
 from the existing In2 +3V3 bridge replaces only the upstream F supply

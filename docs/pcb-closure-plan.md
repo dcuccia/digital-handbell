@@ -166,6 +166,40 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest working checkpoint: VDD/CS/C24 and INT2 restored.**
+The [paired-route report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-vdd-int2-routing.json)
+binds recovery PCB `206afad547838c26afbf6ca6056af8d0b7073ea00938599598e83792a5bb7f38`
+and matching manifest `6ae59fbf552d8b9e0541926db8aee2b655a7c5268a566ee0cf1151d1f6e7ceb0`.
+The `imu-coupled-working` recovery files now contain that pair; earlier
+versions remain in Git history. Seven 0.25 mm F segments restore the
+fixed supply bridge-to-C24-to-VDD/CS tree. An ordinary INT2 transition,
+two F segments and three In2 segments reconnect IC4.9 to TP6 through the
+existing external group. All five ground straps survive; zero primitive
+shorts are reported. No refill, full DRC or accepted-board change.
+
+Native [front](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-working-front.png)
+and [inner](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-working-inner.png)
+views bind those exact bytes. Root review confirms the intended separation
+of the south-side F supply branch and northward/inner-layer interrupt
+escape. The inner route stays north of the clock exclusion. These primitive
+views omit filled planes and drill voids, so they do not prove return-plane,
+electrical-performance or mechanical qualification.
+
+**Next item: finish the branched VDDIO/C23 feed without repeating the slow
+search unchanged.** The 0.1 mm-grid implementation repeatedly constructed
+native collision objects across up to 16,000 expansions per site pair,
+exceeded its 120-second deadline and saved no supply copper. This is
+incomplete search evidence, not a demonstrated geometric blockage.
+Reuse the legal access-site lists and current saved candidate. Cache/
+prefilter immutable native obstacles per layer and width, or screen a
+small obstacle-derived bent-path set; retain final exact native checks.
+Use a shared search toward the existing supply group rather than restarting
+the same expensive traversal for every pair. Measure stage/expansion counts,
+invalidate caches after copper changes, and keep finite execution limits.
+The south-of-INT2-via inner corridor is a routing hypothesis, not a clearance
+waiver. Restore pullup/exterior power duties if straightforward within the
+same bounded item; remaining I2C/INT and all acceptance gates stay explicit.
+
 **Latest private result: all five IMU ground pads explicitly strapped.**
 The [branched-supply report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-branched-supply.json)
 records PCB `098dc7fd919340176ffb41f177525015b0e27f806abd5783121beecf593ea37b`:
