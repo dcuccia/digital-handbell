@@ -1,0 +1,170 @@
+{
+  "report": "imu-coupled-routing",
+  "status": "partial_paired_ground_foundation_supply_rebuild_open",
+  "classification": "Session-private evolving candidate; disconnected, unfilled, not accepted, not quoteable and not ready for CAD promotion.",
+  "inputs": {
+    "qualified_fixture_pcb_sha256": "6df836645cebbd8f2d793822a182dd95db14604f2119820510db107cc4e19087",
+    "qualified_fixture_manifest_sha256": "800321ae0044a199ff506f6b648609e7d6ac44e0413fcbb3afa7b1711f72466a",
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "accepted_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "accepted_open_items": 41
+  },
+  "working_artifacts": {
+    "pcb": {
+      "session_relative_path": "files/imu-coupled-routing/handbell-imu-coupled-working.kicad_pcb",
+      "sha256": "00006ee9641dd1dabb266a7bb1129ff6ba8022ae9bdf0c6c231842aab5b21d67"
+    },
+    "manifest": {
+      "session_relative_path": "files/imu-coupled-routing/placement-manifest-imu-coupled-working.json",
+      "sha256": "efb3b31da5dad9dd548f1b250d49e07259c58e3bfc46ca425360f8d250aebbfe"
+    },
+    "state": {
+      "session_relative_path": "files/imu-coupled-routing/routing-state.json",
+      "sha256": "f51ed8337a836a5c6fa7b1d4a4dd0bb4bc7a87d60b1af72bb238fdc1fdd97177"
+    },
+    "tool": {
+      "session_relative_path": "files/route_imu_coupled_foundation.py",
+      "sha256": "24b4b4db784e91153061adf9ee6334232a4467074a3e537388cfbb531abc2355"
+    }
+  },
+  "poses": {
+    "IC4": {
+      "native_mm": [89.499806, 93.492711, 270],
+      "change_from_accepted_mm": [0.0, -0.5],
+      "unchanged_from_qualified_fixture": true
+    },
+    "C23_C24_R14_R15": "unchanged from accepted source"
+  },
+  "actual_copper_changes_from_qualified_fixture": {
+    "supply_ripup": {
+      "removed_count": 53,
+      "scope": "All remaining +3V3 tracks in the known 69-item local inventory plus released vias 1c15a7a2, 6421709a and 6d56c09b.",
+      "purpose": "Clear obsolete local supply fanout for complete replacement; every removed pad and exterior attachment remains an explicit restoration obligation.",
+      "accepted_In2_bridge_preserved": true,
+      "fixed_endpoint_via_ae5186f8_preserved": true,
+      "outside_boundary_exteriors_preserved": true
+    },
+    "added_ground": [
+      {
+        "group": "IC4.6/IC4.7",
+        "via": {
+          "uuid": "102d837c-4d5e-5433-964e-f19081feef15",
+          "native_mm": [87.9, 93.6],
+          "diameter_mm": 0.604,
+          "drill_mm": 0.35,
+          "span": "F.Cu-B.Cu"
+        },
+        "F_stub": {
+          "uuid": "648d9449-df20-5212-b883-1dea5e0b07e3",
+          "start_native_mm": [87.9, 93.6],
+          "end_native_mm": [88.587306, 93.492711],
+          "width_mm": 0.3
+        }
+      },
+      {
+        "group": "IC4.1/IC4.2/IC4.3",
+        "via": {
+          "uuid": "68beef59-fa94-5ad0-823b-73718e9f004c",
+          "native_mm": [90.7, 91.65],
+          "diameter_mm": 0.604,
+          "drill_mm": 0.35,
+          "span": "F.Cu-B.Cu"
+        },
+        "F_stub": {
+          "uuid": "9e025ae3-e252-5840-a9c8-d246f82bebdd",
+          "start_native_mm": [90.7, 91.65],
+          "end_native_mm": [90.249806, 92.330211],
+          "width_mm": 0.3
+        }
+      }
+    ]
+  },
+  "per_net_status": {
+    "GND_IC4_6_7": {
+      "status": "primitive_group_connected_to_new_via_refill_pending",
+      "primitive_connected": true,
+      "MAIN_connection": "Not claimed until qualified refill proves the via annulus joins the protected In1 MAIN island."
+    },
+    "GND_IC4_1_2_3": {
+      "status": "primitive_group_connected_to_new_via_refill_pending",
+      "primitive_connected": true,
+      "MAIN_connection": "Not claimed until qualified refill proves the via annulus joins the protected In1 MAIN island."
+    },
+    "+3V3": {
+      "status": "ripped_up_replacement_not_completed",
+      "restoration_obligations": [
+        "C23.1 -> IC4.5 VDDIO with local decoupling feed",
+        "C24.1 -> IC4.8 VDD with the fixed C24.2 capped return",
+        "IC4.12 CS supply tie",
+        "R14.1 and R15.1 pullup supplies",
+        "all three clipped F.Cu exterior supply ports",
+        "fixed accepted In2 bridge endpoint ae5186f8"
+      ],
+      "tested_VDDIO_C23_transition_sites_native_mm": [
+        [89.05, 92.15],
+        [89.2, 92.05],
+        [88.65, 92.2],
+        [89.35, 92.2]
+      ],
+      "test_result": "No tested ordinary via plus IC4.5/C23.1 F branches and direct 0.40 mm In2 connection to ae5186f8 cleared the simultaneous native obstacle screen."
+    },
+    "SCL": {
+      "status": "tentative_IC4_13_to_exterior_route_retained_R14_2_open",
+      "method_proof_preserved": true
+    },
+    "SDA": {
+      "status": "open",
+      "obligation": "Reconnect IC4.14, R15.2 and the clipped B.Cu exterior using a replacement transition."
+    },
+    "/IMU_INT2": {
+      "status": "open",
+      "obligation": "Reconnect IC4.9 to the clipped F.Cu exterior that continues to TP6."
+    },
+    "INT": {
+      "status": "open_reserved_corridor_only",
+      "reserved_polyline_native_mm": [
+        [88.749806, 92.330211],
+        [88.05, 92.330211],
+        [87.4, 92.55],
+        [86.6, 92.55]
+      ],
+      "qualification": "Reservation only; no INT copper was added."
+    }
+  },
+  "checks_completed": {
+    "native_load": true,
+    "added_ground_native_geometry_screen_before_insertion": "passed",
+    "primitive_short_count": 0,
+    "IC4_6_7_to_new_via": true,
+    "IC4_1_2_3_to_new_via": true,
+    "active_board_and_manifest_unchanged": true,
+    "zone_fill_caches": "remain invalidated from the qualified fixture"
+  },
+  "checks_not_run": [
+    "Qualified tightened refill and proof that either new GND via joins MAIN.",
+    "Full all-layer connected-group preservation and floating-copper checks.",
+    "Both actual private terminal-cut controls and CELL_NEG isolation.",
+    "Contact exclusion recheck after refill.",
+    "Native DRC and open-count comparison.",
+    "Complete source/zone/manifest delta validation for an electrically complete candidate.",
+    "Mechanical proxy and full CAD rebind."
+  ],
+  "bounded_stop": {
+    "reason": "The paired ground foundation was saved, but the first four deterministic VDDIO/C23 supply constructions were blocked. Completing signals before a legal paired supply topology would violate the released priority.",
+    "smallest_engineering_choice_needed": "Select a different complete local +3V3 topology—potentially using more than one ordinary transition, an indirect In2 corridor, or an authorized passive adjustment—while preserving the saved ground foundation and INT/I2C space.",
+    "global_impossibility_claimed": false
+  },
+  "attempts": {
+    "initial": "Saved the complete local +3V3 rip-up and inserted the pre-screened paired GND foundation, then stopped on a Python boolean typo.",
+    "correction_1": "Resumed the exact saved candidate; a self-comparison of the already inserted vias produced false drill witnesses.",
+    "correction_2": "Recognized the persisted ground foundation and completed primitive verification plus the bounded VDDIO/C23 supply screen.",
+    "corrective_retries_used": 2
+  },
+  "acceptance": {
+    "complete_local_target_reached": false,
+    "open_count_claimed": false,
+    "promotable": false,
+    "quote_ready": false,
+    "next_action": "Root review of the saved paired-return foundation and supply-topology choice; no automatic follow-on."
+  }
+}

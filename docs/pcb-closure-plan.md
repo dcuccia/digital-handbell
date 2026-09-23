@@ -166,6 +166,34 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Current private work: two return anchors saved; supply tree still open.**
+The [coupled-routing report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-coupled-routing.json)
+binds private PCB `00006ee9641dd1dabb266a7bb1129ff6ba8022ae9bdf0c6c231842aab5b21d67`
+and manifest `efb3b31da5dad9dd548f1b250d49e07259c58e3bfc46ca425360f8d250aebbfe`.
+Recovery copies are `reports/imu-coupled-working.kicad_pcb` and
+`reports/imu-coupled-working-manifest.json`; these remain incomplete,
+unfilled and unaccepted. The accepted board is still unchanged at 41 opens.
+
+The actual working copy adds GND vias at `(87.9,93.6)` and `(90.7,91.65)`
+with F links, and removes the remaining authorized local +3V3 fanout for
+replacement. Root review narrows the report's group-level wording: its
+primitive checks establish IC4.6 and IC4.1 to their respective vias,
+not individually all five ground pads. IC4.2/3/7 connectivity still needs
+explicit evidence, and neither MAIN-plane attachment is claimed without
+refill. No complete-candidate source, DRC or CAD gate has run.
+
+Four one-transition VDDIO constructions with direct In2 feeds failed.
+Do not repeat that star-layout assumption. **Astra's next topology choice
+is a branched In2 supply distribution with separate ordinary transitions
+where needed for legal short capacitor/device F connections.** Use native
+obstacle-aware bends rather than requiring a straight bridge-to-via segment.
+The tentative INT reservation and private ground/SCL routing may be revised
+to make the whole block fit; none has acquired accepted-board status.
+Keep the same component-movement limits and protected exterior/critical
+geometry, and test every IC4 ground member explicitly. Restore the complete
+prior +3V3 pad group and exterior duties; save actual progress with its
+remaining obligations under the existing 15-minute/two-correction rules.
+
 **Working fanout fixture qualified; accepted board still unchanged.**
 The [method report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-fanout-method.json)
 and [18-gate validation](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-fanout-method-validation.json)

@@ -24,6 +24,13 @@ board or a self-contained fabrication package**. The
 does not qualify full routing, DRC, powered behavior or mechanical fit.
 Continue only through the [current closure handoff](../../../../docs/pcb-closure-plan.md#owner-pause-and-next-item).
 
+The subsequent [working PCB](reports/imu-coupled-working.kicad_pcb) and
+[working manifest](reports/imu-coupled-working-manifest.json) additionally
+preserve two tentative ground-return anchors and local supply rip-up.
+Their [partial report](reports/imu-coupled-routing.json) is not complete
+group/plane connectivity or source/DRC qualification; the handoff records
+the precise evidence limits and remaining replacement duties.
+
 **Earlier acceptance: paired C12 supply/ground closure.** A shorter feed
 from the existing In2 +3V3 bridge replaces only the upstream F supply
 segment, preserving the local capacitor-to-MCU wiring. One ordinary
