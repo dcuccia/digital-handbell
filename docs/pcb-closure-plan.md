@@ -166,6 +166,32 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**IMU feasible-space result:** the
+[native region analysis](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-feasible-space-review.json)
+found no passing connection. IC4.6/7's conservative centre domain is
+empty. IC4.1/2/3 has a 0.000758729344 mm2 region, but all three checked
+straight F stubs collide with the immutable IC4.4 interrupt pad. This
+does not establish global impossibility. No design or fill changed;
+the accepted board remains **41 opens**.
+
+Root disposition: do not widen the point sweep, move the interrupt pad,
+or relax clearances. The next bounded read-only question is whether the
+four named local F +3V3 tracks responsible for part of the exclusion can
+be changed without redesigning placement: `2439bd57...`, `56011162...`,
+`76a37864...`, `8b67bfa8...`. Compare the unchanged source with five
+in-memory cases (each track omitted individually, then all four).
+Keep all pads, drills, contacts, other tracks and protected regions fixed.
+Report newly available centre/connection space and exact +3V3 pad-group
+cut consequences, including C23/C24 and IC4 supply attachments.
+This is not authorization to delete or reroute any track.
+
+The prior region report explicitly used a 0.502 mm contact offset
+(0.302 mm via radius plus 0.20 mm). The new comparison must use the
+released 0.25 mm contact clearance (0.552 mm offset), preserve the old
+report, and state this difference. No proposal was accepted under the
+older construction. Use conservative-domain qualifications throughout;
+stop after the finite comparison for a coupled power/return decision.
+
 **September 23 explicit owner resume.** The owner requested "let's resume."
 The evening pause is superseded. Start only the agreed bounded read-only
 IMU feasible-space analysis; no routing, placement or refill is released

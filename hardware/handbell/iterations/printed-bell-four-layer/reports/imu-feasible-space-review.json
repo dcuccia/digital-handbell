@@ -1,0 +1,621 @@
+{
+  "status": "READ_ONLY_FEASIBLE_SPACE_COMPLETE",
+  "source_bindings": {
+    "pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "prior_blocker_report_sha256": "b939257ebe3cfa38edaf1bc3cdeaaf84b693f51d9a0c94a5a19a6823c86d612f",
+    "routing_inventory_sha256": "bc009760e222e90349742b8c1a74f26d26b2267576147e565ea745df2057ec35"
+  },
+  "method": {
+    "window_native_mm": [
+      87.5,
+      91.0,
+      92.5,
+      95.2
+    ],
+    "via": {
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "copper_radius_mm": 0.302,
+      "drill_radius_mm": 0.175
+    },
+    "construction": [
+      "Window inset 0.302 mm so complete via copper stays inside release window.",
+      "Actual main-In1 filled island deflated 0.302 mm.",
+      "Actual target F island inflated 1.000 mm: conservative straight-stub reach for a 1.05 mm maximum with 0.05 mm robust target overlap.",
+      "Sequential native Boolean subtraction of all-layer foreign copper inflated 0.502 mm, all pads inflated 0.302 mm, drill/slot bounding polygons inflated 0.425 mm, contact metal inflated 0.502 mm, and native rule-area guards inflated 0.302 mm."
+    ],
+    "approximations": {
+      "native_item_polygonization_max_error": "1 IU outward",
+      "inflate_max_error": "1 IU",
+      "main_In1_and_representative_erosion_max_error": "0.001 mm",
+      "drill_slot_region": "Conservative effective-hole bounding rectangle plus 0.425 mm; exact authoritative native drill/slot predicates rerun on representatives.",
+      "interpretation": "Empty conservative region proves only this constructed domain empty. Nonempty region proves centre feasibility only; every reported proposal also receives authoritative via and straight-stub checks."
+    },
+    "qualified_controls": {
+      "disjoint_islands": 2,
+      "preserved_holes": 1,
+      "unfilled_zone_rejected": true,
+      "actual_graph_pad_islands": 3,
+      "zone_path_witness_checked": true,
+      "CELL_NEG_zone_short_detected": true,
+      "candidate_loaded_or_written": false
+    }
+  },
+  "targets": {
+    "IC4.6_IC4.7": {
+      "stable_group_id": "ed74547cf22af402",
+      "pad_refs": [
+        "IC4.6",
+        "IC4.7"
+      ],
+      "verified_F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+      "verified_bounds_native_mm": [
+        88.3255,
+        93.723999,
+        89.997261,
+        94.740166
+      ],
+      "conservative_centre_region": {
+        "component_count": 0,
+        "area_mm2": 0.0,
+        "bounds_native_mm": null,
+        "eliminating_obstacle_classes": [
+          {
+            "class": "all-pad-offpad",
+            "layer": "all",
+            "intersecting_shape_count": 12,
+            "items": [
+              {
+                "uuid": "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "kind": "PAD",
+                "net": "unconnected-(IC4-OCS_AUX-Pad10)",
+                "pad_ref": "IC4.10",
+                "layer": "all"
+              },
+              {
+                "uuid": "26c41cdb-ba59-5589-8686-a07e6f77598d",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "IC4.7",
+                "layer": "all"
+              },
+              {
+                "uuid": "2893c147-7fa3-5665-b403-d03ad544d021",
+                "kind": "PAD",
+                "net": "INT",
+                "pad_ref": "IC4.4",
+                "layer": "all"
+              },
+              {
+                "uuid": "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.12",
+                "layer": "all"
+              },
+              {
+                "uuid": "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "IC4.2",
+                "layer": "all"
+              },
+              {
+                "uuid": "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "kind": "PAD",
+                "net": "/IMU_INT2",
+                "pad_ref": "IC4.9",
+                "layer": "all"
+              },
+              {
+                "uuid": "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "kind": "PAD",
+                "net": "SCL",
+                "pad_ref": "IC4.13",
+                "layer": "all"
+              },
+              {
+                "uuid": "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "kind": "PAD",
+                "net": "unconnected-(IC4-SDO_AUX-Pad11)",
+                "pad_ref": "IC4.11",
+                "layer": "all"
+              },
+              {
+                "uuid": "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "IC4.3",
+                "layer": "all"
+              },
+              {
+                "uuid": "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.8",
+                "layer": "all"
+              },
+              {
+                "uuid": "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "IC4.6",
+                "layer": "all"
+              },
+              {
+                "uuid": "f462428b-f0f4-57aa-88ee-5020d4d3ab65",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.5",
+                "layer": "all"
+              }
+            ]
+          },
+          {
+            "class": "foreign-copper",
+            "layer": "F.Cu",
+            "intersecting_shape_count": 14,
+            "items": [
+              {
+                "uuid": "2439bd57-9197-5202-bf5e-f73ca12e4347",
+                "kind": "PCB_TRACK",
+                "net": "+3V3",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "kind": "PAD",
+                "net": "unconnected-(IC4-OCS_AUX-Pad10)",
+                "pad_ref": "IC4.10",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "2893c147-7fa3-5665-b403-d03ad544d021",
+                "kind": "PAD",
+                "net": "INT",
+                "pad_ref": "IC4.4",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.12",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "56011162-dba7-55b0-8df2-522467c23968",
+                "kind": "PCB_TRACK",
+                "net": "+3V3",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "kind": "PAD",
+                "net": "/IMU_INT2",
+                "pad_ref": "IC4.9",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "R14.1",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "76a37864-74d8-5963-bcc4-18eb043accfd",
+                "kind": "PCB_TRACK",
+                "net": "+3V3",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "kind": "PAD",
+                "net": "SCL",
+                "pad_ref": "IC4.13",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "8b67bfa8-9f2d-5d11-b459-76494e6f41ef",
+                "kind": "PCB_TRACK",
+                "net": "+3V3",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "kind": "PAD",
+                "net": "unconnected-(IC4-SDO_AUX-Pad11)",
+                "pad_ref": "IC4.11",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "96c65eb8-1b84-5617-ad78-8fa2fae07f47",
+                "kind": "PAD",
+                "net": "SCL",
+                "pad_ref": "R14.2",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.8",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "f462428b-f0f4-57aa-88ee-5020d4d3ab65",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.5",
+                "layer": "F.Cu"
+              }
+            ]
+          },
+          {
+            "class": "rear-contact-metal",
+            "layer": "B.Cu",
+            "intersecting_shape_count": 1,
+            "items": [
+              {
+                "uuid": "contact-5",
+                "kind": "reserved-contact-or-guard",
+                "layer": "B.Cu"
+              }
+            ]
+          }
+        ]
+      },
+      "checked_representatives": [],
+      "passing_proposal_count": 0
+    },
+    "IC4.1_IC4.2_IC4.3": {
+      "stable_group_id": "133d76e4bf554dd1",
+      "pad_refs": [
+        "IC4.1",
+        "IC4.2",
+        "IC4.3"
+      ],
+      "verified_F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+      "verified_bounds_native_mm": [
+        89.063935,
+        92.3833,
+        90.651,
+        93.245206
+      ],
+      "conservative_centre_region": {
+        "component_count": 1,
+        "area_mm2": 0.000758729344,
+        "bounds_native_mm": [
+          88.08373,
+          92.6848,
+          88.122806,
+          92.723746
+        ],
+        "eliminating_obstacle_classes": [
+          {
+            "class": "all-pad-offpad",
+            "layer": "all",
+            "intersecting_shape_count": 11,
+            "items": [
+              {
+                "uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "C24.2",
+                "layer": "all"
+              },
+              {
+                "uuid": "2893c147-7fa3-5665-b403-d03ad544d021",
+                "kind": "PAD",
+                "net": "INT",
+                "pad_ref": "IC4.4",
+                "layer": "all"
+              },
+              {
+                "uuid": "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.12",
+                "layer": "all"
+              },
+              {
+                "uuid": "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "IC4.2",
+                "layer": "all"
+              },
+              {
+                "uuid": "6f86a336-b0b4-5607-93a3-4e1bddaa39d0",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "IC4.1",
+                "layer": "all"
+              },
+              {
+                "uuid": "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "kind": "PAD",
+                "net": "SCL",
+                "pad_ref": "IC4.13",
+                "layer": "all"
+              },
+              {
+                "uuid": "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "C23.2",
+                "layer": "all"
+              },
+              {
+                "uuid": "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "IC4.3",
+                "layer": "all"
+              },
+              {
+                "uuid": "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "C23.1",
+                "layer": "all"
+              },
+              {
+                "uuid": "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "kind": "PAD",
+                "net": "GND",
+                "pad_ref": "IC4.6",
+                "layer": "all"
+              },
+              {
+                "uuid": "f462428b-f0f4-57aa-88ee-5020d4d3ab65",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.5",
+                "layer": "all"
+              }
+            ]
+          },
+          {
+            "class": "foreign-copper",
+            "layer": "F.Cu",
+            "intersecting_shape_count": 14,
+            "items": [
+              {
+                "uuid": "2893c147-7fa3-5665-b403-d03ad544d021",
+                "kind": "PAD",
+                "net": "INT",
+                "pad_ref": "IC4.4",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "2fb366c7-81d6-5561-90ad-7e75af1bc64d",
+                "kind": "PCB_TRACK",
+                "net": "+3V3",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.12",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+                "kind": "PCB_TRACK",
+                "net": "SCL",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+                "kind": "PCB_TRACK",
+                "net": "SCL",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+                "kind": "PCB_TRACK",
+                "net": "SCL",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "kind": "PAD",
+                "net": "SCL",
+                "pad_ref": "IC4.13",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "8576418f-415a-52aa-a243-a9314fbe9c98",
+                "kind": "PCB_TRACK",
+                "net": "SDA",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "92388ba0-88cd-5308-aeb5-db89c3201202",
+                "kind": "PAD",
+                "net": "SDA",
+                "pad_ref": "IC4.14",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+                "kind": "PCB_TRACK",
+                "net": "SDA",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "C23.1",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "e81f5631-69e2-50e7-ab00-da0d8782bf54",
+                "kind": "PCB_TRACK",
+                "net": "+3V3",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+                "kind": "PCB_TRACK",
+                "net": "SDA",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "f462428b-f0f4-57aa-88ee-5020d4d3ab65",
+                "kind": "PAD",
+                "net": "+3V3",
+                "pad_ref": "IC4.5",
+                "layer": "F.Cu"
+              }
+            ]
+          },
+          {
+            "class": "rear-contact-metal",
+            "layer": "B.Cu",
+            "intersecting_shape_count": 1,
+            "items": [
+              {
+                "uuid": "contact-5",
+                "kind": "reserved-contact-or-guard",
+                "layer": "B.Cu"
+              }
+            ]
+          }
+        ]
+      },
+      "checked_representatives": [
+        {
+          "centre_native_mm": [
+            88.103268,
+            92.694536
+          ],
+          "connection": "straight-F-stub",
+          "stub": {
+            "start_native_mm": [
+              89.125306,
+              92.694536
+            ],
+            "end_native_mm": [
+              88.103268,
+              92.694536
+            ],
+            "width_mm": 0.3,
+            "length_mm": 1.022037999999995
+          },
+          "passed": false,
+          "reasons": [
+            "stub-foreign"
+          ],
+          "obstacle_uuids": [
+            "2893c147-7fa3-5665-b403-d03ad544d021"
+          ],
+          "obstacle_items": [
+            {
+              "uuid": "2893c147-7fa3-5665-b403-d03ad544d021",
+              "kind": "PAD",
+              "net": "INT",
+              "pad_ref": "IC4.4",
+              "layer": "F.Cu"
+            }
+          ]
+        },
+        {
+          "centre_native_mm": [
+            88.117921,
+            92.689668
+          ],
+          "connection": "straight-F-stub",
+          "stub": {
+            "start_native_mm": [
+              89.125306,
+              92.689668
+            ],
+            "end_native_mm": [
+              88.117921,
+              92.689668
+            ],
+            "width_mm": 0.3,
+            "length_mm": 1.0073849999999993
+          },
+          "passed": false,
+          "reasons": [
+            "stub-foreign"
+          ],
+          "obstacle_uuids": [
+            "2893c147-7fa3-5665-b403-d03ad544d021"
+          ],
+          "obstacle_items": [
+            {
+              "uuid": "2893c147-7fa3-5665-b403-d03ad544d021",
+              "kind": "PAD",
+              "net": "INT",
+              "pad_ref": "IC4.4",
+              "layer": "F.Cu"
+            }
+          ]
+        },
+        {
+          "centre_native_mm": [
+            88.113037,
+            92.704273
+          ],
+          "connection": "straight-F-stub",
+          "stub": {
+            "start_native_mm": [
+              89.125306,
+              92.704273
+            ],
+            "end_native_mm": [
+              88.113037,
+              92.704273
+            ],
+            "width_mm": 0.3,
+            "length_mm": 1.0122689999999892
+          },
+          "passed": false,
+          "reasons": [
+            "stub-foreign"
+          ],
+          "obstacle_uuids": [
+            "2893c147-7fa3-5665-b403-d03ad544d021"
+          ],
+          "obstacle_items": [
+            {
+              "uuid": "2893c147-7fa3-5665-b403-d03ad544d021",
+              "kind": "PAD",
+              "net": "INT",
+              "pad_ref": "IC4.4",
+              "layer": "F.Cu"
+            }
+          ]
+        }
+      ],
+      "passing_proposal_count": 0
+    }
+  },
+  "private_artifact": {
+    "session_relative_path": "files\\imu-feasible-space-01\\region-polygons-and-checks.json",
+    "sha256": "b51fd4062abc5208b419ad3a549525cf0415cf101edb8d31890e5f17765fa2e7",
+    "contains": "Actual region outline coordinates and all checked representatives."
+  },
+  "preservation": {
+    "read_only": true,
+    "source_hashes_unchanged": true,
+    "Mode1_assignments_unchanged": true,
+    "C24_mandatory_capped_via_untouched": true,
+    "board_or_project_written": false,
+    "refill_or_DRC_rerun": false
+  },
+  "execution": {
+    "tool_sha256": "06d5c19cd2bdb301fc7a74e5c6aac2be70132cc242bdddfbc2b3b5b697e6674d",
+    "elapsed_seconds": 19.531,
+    "attempts": 1,
+    "corrections": 1
+  }
+}
