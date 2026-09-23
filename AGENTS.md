@@ -2,16 +2,17 @@
 
 ## Bounded engineering work
 
-- **September 23 fixed-placement IMU trial approved:** the owner approved
-  one bounded separate rework trial after reviewing the placement proposal.
-  Preserve all parts and mechanical interfaces; prove compatible ground and
-  signal escapes before replacing necessary local copper. Do not delete the
-  entire 69-track proposal inventory by default or promote broken prior
-  connections. Follow `docs/pcb-closure-plan.md#owner-pause-and-next-item`
-  and the bottleneck-first sequence in `docs/routing-agent-policy.md`.
-  Extract reusable lessons, but do not turn this into an unbounded tooling
-  or redesign project. The accepted 41-open board remains authoritative
-  until a complete staged candidate passes engineering review.
+- **September 23 fixed-placement IMU trial blocked:** all twelve released
+  joint plans failed before candidate generation. The accepted PCB and
+  manifest are unchanged at 41 opens. This rejects the tested plans, not
+  every fixed-placement solution; the cardinal escape screen was not an
+  exhaustive routing proof. Do not repeat nearby-point trials or silently
+  relax the frozen-via/placement policy. Obtain an explicit scope decision
+  for coordinated local re-layout, distinguishing routing-via choices
+  from fixed mechanical interfaces. Follow
+  `docs/pcb-closure-plan.md#owner-pause-and-next-item` and the bottleneck-first
+  sequence in `docs/routing-agent-policy.md`. No new placement, via move,
+  rule change or wholesale 69-track removal is authorized by this result.
 - **September 21 four-layer migration approved:** preserve the accepted
   two-layer `printed-bell-clock-draft` as evidence and establish one separate
   `printed-bell-four-layer` working candidate. Follow the four-layer batch,

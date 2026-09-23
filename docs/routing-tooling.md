@@ -6,6 +6,26 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**September 23 joint-plan result:** all twelve released fixed-placement
+IMU plans failed before a board candidate was written. The entire proposed
+IC4.6/7 via-centre region conflicts with the tested straight INT-west
+escape; the three tested INT transition positions also conflict with the
+ground vias. Additional fixed-copper hits remain separate constraints.
+Nonempty proposal regions are upper bounds, not legal via/stub proofs.
+The [trial report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-fixed-placement-trial.json)
+records 38.094 seconds of tool execution, no trace removal and no candidate
+refill/DRC. It does not prove that every bent or different-length escape
+fails, nor measure total engineering time.
+
+Apply the joint compatibility gate when selecting a local floorplan, not
+only after choosing separate return and signal routes. Distinguish fixed
+mechanical/critical interfaces from inherited routing choices: an ordinary
+local transition via is not automatically an immutable mounting datum.
+Changing such a constraint still needs explicit engineering release and
+restoration of every affected connection. After repeated no-progress
+screens, decide the coordinated re-layout scope rather than increasing
+sample counts or declaring all fixed-placement routing impossible.
+
 **September 23 IMU domain lesson:** conservative region construction
 distinguishes potential via-centre space from a legal connection: three
 centres survived for IC4.1/2/3, but every tested straight stub hit IC4.4.

@@ -166,7 +166,47 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Owner approved the fixed-placement rework trial.** The owner also
+**Fixed-placement IMU trial complete and blocked; scope decision required.**
+The [twelve-plan result](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-fixed-placement-trial.json)
+(SHA-256 `a8e41d199a974a597aea4813f11112d01428e0e2e671d7902e51d6e22f246659`)
+rejects all released combinations before candidate generation. The tested
+straight west INT escape excludes the entire proposed IC4.6/7 via-centre
+region. The tested INT transition vias are only 0.061-0.369 mm from the
+ground vias, versus the required 0.804 mm centre spacing. Some combinations
+also fail fixed-pad/via constraints. The proposal regions were upper-bound
+geometry, not independently qualified via locations.
+
+No traces were removed, no candidate exists, and no refill or candidate DRC
+was run. The recorded tool execution was 38.094 seconds; this is not the
+total engineering/review time. The accepted PCB remains **41 opens**:
+`c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`;
+manifest:
+`08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667`.
+These bytes are unchanged. Existing acceptance evidence is reused by exact
+hash, not described as freshly rerun.
+
+This rules out the twelve tested plans, not all fixed-placement solutions.
+The earlier bounded cardinal screen did not establish that every bent or
+different-length INT escape is impossible. Do not restart substantially
+similar trials under a new name.
+
+**Recommended next scope, not yet authorized:** one coordinated IMU
+re-layout item for IC4, C23/C24 and R14/R15, including their local routing
+vias rather than freezing every existing transition. Prefer retaining
+parts where a complete coupled plan permits it; consider small individual
+adjustments only for a demonstrated conflict, not another blind rigid-shift
+sweep. Explicitly identify any via moves and affected local/boundary trace
+sections before staging. Ground, supply/decoupling, pull-ups and INT/SCL/SDA
+must fit together, with every prior connection restored. Preserve the
+outline, mounts, USB, contacts, outside circuitry, accepted critical routes,
+CELL_NEG isolation and private returns. Any placement change also requires
+the exact manifest/CAD rebind and mechanical review before acceptance.
+The previous rigid translations remain unapproved; this recommendation
+does not release them or relax clearance/manufacturing rules. Sol is idle
+pending the scope decision.
+
+**Historical authorization -- completed with the blocker above:** the owner
+approved the fixed-placement rework trial and also
 requested a plan to address the most constrained routing groups first
 and apply the lessons to the remaining board. Follow the
 [bottleneck-first sequence](routing-agent-policy.md#bottleneck-first-closure-sequence).
@@ -192,7 +232,7 @@ finds no immediate fixed-copper or planning-envelope conflict in case A
 fixed conflicts; the 0.75 mm shift introduces six. None improves the
 screened INT/SCL/SDA escape directions. Do not implement those translations.
 
-Case A is the preferred next investigation, not a proven routable layout.
+Case A was preferred for that trial, not a proven routable layout.
 Its return regions assume removal of 69 specifically inventoried local
 trace sections; this is not permission to delete them wholesale. Every
 affected supply, decoupling, pull-up and signal connection and all seven
@@ -202,8 +242,8 @@ INT escape. Independently clear return and signal screens do not prove
 that both can coexist; mutual clearance must be checked before staging
 any copper.
 
-Recommended next item, pending owner approval: one bounded separate
-fixed-placement local rework trial. First construct a mutually compatible
+Historical recommendation, subsequently approved and now blocked: one
+bounded separate fixed-placement local rework trial. First construct a mutually compatible
 return/signal plan and enumerate the minimal affected trace set within
 the proposal's local boundary. Stage only if required reconnections fit;
 never promote a board with broken pre-existing connections. Preserve all

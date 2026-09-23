@@ -567,6 +567,15 @@ Efficiency rules learned here:
   constraints that actually limit the final space before a cut analysis.
 - Freeze a compatible local escape plan before expensive full-board work.
   Test simultaneous planned copper, not independent "clear" route sketches.
+- Distinguish hard mechanical/critical interfaces from inherited routing
+  choices when defining a rework boundary. Local transition vias may be
+  candidates for explicit Astra release; Sol must not move them silently.
+  Prove the replacement signal/power and return paths together before
+  treating that freedom as a solution.
+- A bounded cardinal escape screen is not an exhaustive direction proof.
+  Proposal via-centre regions are upper bounds until native via, stub and
+  joint-plan constraints all pass. The failed twelve-plan IMU trial does
+  not rule out every fixed-placement solution.
 - Keep a useful candidate and a finite repair list. Do not reopen settled
   sourcing or move a cluster merely because one local route fails.
 - Run cheap native geometry/topology checks during a batch; run full
