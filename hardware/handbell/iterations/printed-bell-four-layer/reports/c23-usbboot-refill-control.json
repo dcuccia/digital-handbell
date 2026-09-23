@@ -1,0 +1,935 @@
+{
+  "status": "READ_ONLY_REFILL_CONTROL_COMPLETE",
+  "scope": "Read-only no-routing refill control and native fill-cache comparison.",
+  "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+  "manifest_sha256": "a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7",
+  "prior_failed_report_sha256": "9ffb91a07580b1c27d6c9eeecae6bbce2621c9796b2e0db03a2e86000a9d5418",
+  "candidate_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+  "accepted_package_modified": false,
+  "candidate_modified": false,
+  "control": {
+    "input_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+    "canonical_native_output_sha256": "98a0c194d6bf691ab5475239314293389930f2dd40d6b0f635495c9fe4718a93",
+    "source_preserving_control_sha256": "48ed1e5d126eac7d867fc155575e3ba06b689d39d2eacafbe56a0ef27018e141",
+    "fill_worker_report_sha256": "340e073c9710d6ee737fcd0bda539eb33cdb9f8603b78c1cfc07537f0085b20f",
+    "execution": {
+      "seconds": 1.1559999999590218,
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "fill_worker": {
+      "path": "tools\\stage_in1_ground_plane.py",
+      "sha256": "366010750b90194af444300d97cbf69a4a679c98cc21f6bc56da76890a7b4cc3",
+      "report": {
+        "kicad_version": "10.0.6",
+        "settings_mm": {
+          "m_MinClearance": 0.2,
+          "m_CopperEdgeClearance": 0.25,
+          "m_HoleClearance": 0.25,
+          "m_HoleToHoleMin": 0.25,
+          "m_MaxError": 0.001
+        },
+        "fill_seconds": 0.5940000000409782,
+        "output_sha256": "98a0c194d6bf691ab5475239314293389930f2dd40d6b0f635495c9fe4718a93"
+      }
+    },
+    "input_dependency_sha256": {
+      "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "fp-lib-table": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+      "sym-lib-table": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+      "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+      "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+      "Clock.kicad_sym": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+      "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+    },
+    "source_preservation": {
+      "non_zone_top_level_blocks_exact": true,
+      "zone_count": 21,
+      "zone_definitions_except_fill_cache_exact": true,
+      "fill_cache_provenance": {
+        "quote-native-F-GND-v1": {
+          "source_fill_polygon_nodes": 22,
+          "native_control_fill_polygon_nodes": 22,
+          "native_zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3"
+        },
+        "in1-protected-gnd-v1": {
+          "source_fill_polygon_nodes": 1,
+          "native_control_fill_polygon_nodes": 1,
+          "native_zone_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b"
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "source_to_control:F.Cu": {
+      "comparison": "accepted-source versus no-routing refill control",
+      "layer": "F.Cu",
+      "geometry_equal": true,
+      "removed_area_mm2": 0.0,
+      "added_area_mm2": 0.0,
+      "symmetric_difference_area_mm2": 0.0,
+      "component_count": 0,
+      "outside_corridor_area_mm2": 0.0,
+      "components": []
+    },
+    "control_to_candidate:F.Cu": {
+      "comparison": "no-routing refill control versus staged USBBOOT candidate",
+      "layer": "F.Cu",
+      "geometry_equal": false,
+      "removed_area_mm2": 2.386805e-07,
+      "added_area_mm2": 3.3474301975615,
+      "symmetric_difference_area_mm2": 3.347430436242,
+      "component_count": 8,
+      "outside_corridor_area_mm2": 2.4689850000000003e-07,
+      "components": [
+        {
+          "direction": "removed",
+          "area_mm2": 2.37215e-07,
+          "bounds_native_mm": [
+            112.825823,
+            90.058415,
+            113.040646,
+            90.181966
+          ],
+          "inside_released_corridor": false,
+          "outside_corridor_area_mm2": 2.37215e-07,
+          "attachments_within_0_5mm": [
+            {
+              "uuid": "27b4951d-e98d-5d6c-810c-9c3a59a3c073",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "bcc4f647-cbc5-55d2-ae9a-d0b2dba7558f",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "50882428-916c-50b3-87da-5fdd8be0fa0b",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.228515
+            },
+            {
+              "uuid": "855972bc-349c-5545-9f39-eb90b5400dab",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.379882
+            },
+            {
+              "uuid": "1385486f-3819-567c-b608-986ad86eb579",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.380859
+            },
+            {
+              "uuid": "22dff5b6-ccb8-5fae-948c-269eb5c18eed",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.380859
+            },
+            {
+              "uuid": "79d3a936-5acb-5334-a14f-690bbbdb474e",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.39746
+            },
+            {
+              "uuid": "80860fe3-7186-5038-9d1c-a16ca53c3869",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.412109
+            },
+            {
+              "uuid": "cd001cb5-67e5-53be-9004-98feece3ff49",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.471679
+            },
+            {
+              "uuid": "22a9eb51-7309-5366-9e3d-3d8c3e13c147",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.473632
+            }
+          ],
+          "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+        },
+        {
+          "direction": "removed",
+          "area_mm2": 3.3e-11,
+          "bounds_native_mm": [
+            111.630976,
+            89.351836,
+            111.637529,
+            89.374738
+          ],
+          "inside_released_corridor": false,
+          "outside_corridor_area_mm2": 3.3e-11,
+          "attachments_within_0_5mm": [
+            {
+              "uuid": "33b33138-3a75-582d-81ac-5f38b3165e53",
+              "type": "track",
+              "net": "GND",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.137694
+            },
+            {
+              "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+              "type": "via",
+              "net": "GND",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.323241
+            }
+          ],
+          "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+        },
+        {
+          "direction": "removed",
+          "area_mm2": 1.4325e-09,
+          "bounds_native_mm": [
+            88.813254,
+            89.306242,
+            88.817448,
+            89.309114
+          ],
+          "inside_released_corridor": true,
+          "outside_corridor_area_mm2": 0.0,
+          "attachments_within_0_5mm": [
+            {
+              "uuid": "09e49184-1128-572a-bfb2-6fe4f5ddb616",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.447265
+            },
+            {
+              "uuid": "5a59d15f-96cb-56d8-9264-1539521f9476",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.477538
+            },
+            {
+              "uuid": "d21616f0-13e4-5ccc-8ed9-d4155f3d2e84",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.477538
+            }
+          ],
+          "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+        },
+        {
+          "direction": "added",
+          "area_mm2": 3.3474301725915,
+          "bounds_native_mm": [
+            87.860609,
+            88.783914,
+            92.821881,
+            91.790763
+          ],
+          "inside_released_corridor": true,
+          "outside_corridor_area_mm2": 0.0,
+          "attachments_within_0_5mm": [
+            {
+              "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:18",
+              "type": "filled-zone-island",
+              "net": "GND",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": true,
+              "distance_mm_upper_bound": 0.0,
+              "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+              "island_index": 18
+            },
+            {
+              "uuid": "7845df5f-ed58-5a4f-a3df-4755b4409ec7",
+              "type": "pad",
+              "net": "SWCLK",
+              "references": [
+                "TP4.P$1"
+              ],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "d97d35c5-9996-5137-aec1-9d16badd2a9a",
+              "type": "track",
+              "net": "+3V3",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+              "type": "via",
+              "net": "USBBOOT",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "6a769f0c-bb2a-5e4f-a23f-f2870ed623cd",
+              "type": "via",
+              "net": "USBBOOT",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "6d56c09b-2b19-5144-a473-6e1c16d7c430",
+              "type": "via",
+              "net": "+3V3",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "5084ecf1-8111-50aa-860d-9d2f54fecc7d",
+              "type": "track",
+              "net": "+3V3",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.230468
+            },
+            {
+              "uuid": "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+              "type": "track",
+              "net": "+3V3",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.333007
+            }
+          ],
+          "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+        },
+        {
+          "direction": "added",
+          "area_mm2": 5.5265e-09,
+          "bounds_native_mm": [
+            114.717542,
+            91.585945,
+            114.733807,
+            91.608332
+          ],
+          "inside_released_corridor": false,
+          "outside_corridor_area_mm2": 5.5265e-09,
+          "attachments_within_0_5mm": [
+            {
+              "uuid": "257dc457-8195-58ae-9265-26bd0f27075d",
+              "type": "track",
+              "net": "GND",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.168944
+            },
+            {
+              "uuid": "3b9946b1-c325-568f-b6b0-84414afb15d9",
+              "type": "via",
+              "net": "GND",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.168944
+            },
+            {
+              "uuid": "6c4ee44e-fe65-5410-a015-95148b8ac725",
+              "type": "track",
+              "net": "VO-",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "86c651d0-46aa-5813-a087-0fe973463fe3",
+              "type": "track",
+              "net": "VO-",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "8b17cb79-e8c9-5e63-9b88-9bb96a2bbc10",
+              "type": "track",
+              "net": "VO-",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.464843
+            }
+          ],
+          "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+        },
+        {
+          "direction": "added",
+          "area_mm2": 4.091e-09,
+          "bounds_native_mm": [
+            113.040646,
+            90.158151,
+            113.055698,
+            90.161586
+          ],
+          "inside_released_corridor": false,
+          "outside_corridor_area_mm2": 4.091e-09,
+          "attachments_within_0_5mm": [
+            {
+              "uuid": "27b4951d-e98d-5d6c-810c-9c3a59a3c073",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "bcc4f647-cbc5-55d2-ae9a-d0b2dba7558f",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.201171
+            },
+            {
+              "uuid": "50882428-916c-50b3-87da-5fdd8be0fa0b",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.219726
+            },
+            {
+              "uuid": "79d3a936-5acb-5334-a14f-690bbbdb474e",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.389648
+            },
+            {
+              "uuid": "22dff5b6-ccb8-5fae-948c-269eb5c18eed",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.40039
+            },
+            {
+              "uuid": "1385486f-3819-567c-b608-986ad86eb579",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.401366
+            },
+            {
+              "uuid": "855972bc-349c-5545-9f39-eb90b5400dab",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.401366
+            },
+            {
+              "uuid": "80860fe3-7186-5038-9d1c-a16ca53c3869",
+              "type": "track",
+              "net": "Net-(FB1-P$1)",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.412109
+            }
+          ],
+          "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+        },
+        {
+          "direction": "added",
+          "area_mm2": 3.3e-11,
+          "bounds_native_mm": [
+            111.630976,
+            89.351836,
+            111.637529,
+            89.374738
+          ],
+          "inside_released_corridor": false,
+          "outside_corridor_area_mm2": 3.3e-11,
+          "attachments_within_0_5mm": [
+            {
+              "uuid": "33b33138-3a75-582d-81ac-5f38b3165e53",
+              "type": "track",
+              "net": "GND",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.137694
+            },
+            {
+              "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+              "type": "via",
+              "net": "GND",
+              "references": [],
+              "layer": "F.Cu",
+              "intersects": false,
+              "distance_mm_upper_bound": 0.323241
+            }
+          ],
+          "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+        },
+        {
+          "direction": "added",
+          "area_mm2": 1.53195e-08,
+          "bounds_native_mm": [
+            90.17011,
+            88.853936,
+            90.201154,
+            88.924243
+          ],
+          "inside_released_corridor": true,
+          "outside_corridor_area_mm2": 0.0,
+          "attachments_within_0_5mm": [],
+          "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+        }
+      ]
+    },
+    "source_to_control:In1.Cu": {
+      "comparison": "accepted-source versus no-routing refill control",
+      "layer": "In1.Cu",
+      "geometry_equal": true,
+      "removed_area_mm2": 0.0,
+      "added_area_mm2": 0.0,
+      "symmetric_difference_area_mm2": 0.0,
+      "component_count": 0,
+      "outside_corridor_area_mm2": 0.0,
+      "components": []
+    },
+    "control_to_candidate:In1.Cu": {
+      "comparison": "no-routing refill control versus staged USBBOOT candidate",
+      "layer": "In1.Cu",
+      "geometry_equal": true,
+      "removed_area_mm2": 0.0,
+      "added_area_mm2": 0.0,
+      "symmetric_difference_area_mm2": 0.0,
+      "component_count": 0,
+      "outside_corridor_area_mm2": 0.0,
+      "components": []
+    }
+  },
+  "remote_difference_control_result": {
+    "candidate_remote_F_differences_exactly_reproduced_by_unmodified_source_refill": false,
+    "source_control_remote_F_area_mm2": 0.0,
+    "candidate_control_remote_F_area_mm2": 2.4689850000000003e-07,
+    "candidate_control_remote_component_count": 5,
+    "candidate_control_remote_components": [
+      {
+        "direction": "removed",
+        "area_mm2": 2.37215e-07,
+        "bounds_native_mm": [
+          112.825823,
+          90.058415,
+          113.040646,
+          90.181966
+        ],
+        "inside_released_corridor": false,
+        "outside_corridor_area_mm2": 2.37215e-07,
+        "attachments_within_0_5mm": [
+          {
+            "uuid": "27b4951d-e98d-5d6c-810c-9c3a59a3c073",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.201171
+          },
+          {
+            "uuid": "bcc4f647-cbc5-55d2-ae9a-d0b2dba7558f",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.201171
+          },
+          {
+            "uuid": "50882428-916c-50b3-87da-5fdd8be0fa0b",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.228515
+          },
+          {
+            "uuid": "855972bc-349c-5545-9f39-eb90b5400dab",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.379882
+          },
+          {
+            "uuid": "1385486f-3819-567c-b608-986ad86eb579",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.380859
+          },
+          {
+            "uuid": "22dff5b6-ccb8-5fae-948c-269eb5c18eed",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.380859
+          },
+          {
+            "uuid": "79d3a936-5acb-5334-a14f-690bbbdb474e",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.39746
+          },
+          {
+            "uuid": "80860fe3-7186-5038-9d1c-a16ca53c3869",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.412109
+          },
+          {
+            "uuid": "cd001cb5-67e5-53be-9004-98feece3ff49",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.471679
+          },
+          {
+            "uuid": "22a9eb51-7309-5366-9e3d-3d8c3e13c147",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.473632
+          }
+        ],
+        "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+      },
+      {
+        "direction": "removed",
+        "area_mm2": 3.3e-11,
+        "bounds_native_mm": [
+          111.630976,
+          89.351836,
+          111.637529,
+          89.374738
+        ],
+        "inside_released_corridor": false,
+        "outside_corridor_area_mm2": 3.3e-11,
+        "attachments_within_0_5mm": [
+          {
+            "uuid": "33b33138-3a75-582d-81ac-5f38b3165e53",
+            "type": "track",
+            "net": "GND",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.137694
+          },
+          {
+            "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+            "type": "via",
+            "net": "GND",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.323241
+          }
+        ],
+        "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+      },
+      {
+        "direction": "added",
+        "area_mm2": 5.5265e-09,
+        "bounds_native_mm": [
+          114.717542,
+          91.585945,
+          114.733807,
+          91.608332
+        ],
+        "inside_released_corridor": false,
+        "outside_corridor_area_mm2": 5.5265e-09,
+        "attachments_within_0_5mm": [
+          {
+            "uuid": "257dc457-8195-58ae-9265-26bd0f27075d",
+            "type": "track",
+            "net": "GND",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.168944
+          },
+          {
+            "uuid": "3b9946b1-c325-568f-b6b0-84414afb15d9",
+            "type": "via",
+            "net": "GND",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.168944
+          },
+          {
+            "uuid": "6c4ee44e-fe65-5410-a015-95148b8ac725",
+            "type": "track",
+            "net": "VO-",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.201171
+          },
+          {
+            "uuid": "86c651d0-46aa-5813-a087-0fe973463fe3",
+            "type": "track",
+            "net": "VO-",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.201171
+          },
+          {
+            "uuid": "8b17cb79-e8c9-5e63-9b88-9bb96a2bbc10",
+            "type": "track",
+            "net": "VO-",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.464843
+          }
+        ],
+        "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+      },
+      {
+        "direction": "added",
+        "area_mm2": 4.091e-09,
+        "bounds_native_mm": [
+          113.040646,
+          90.158151,
+          113.055698,
+          90.161586
+        ],
+        "inside_released_corridor": false,
+        "outside_corridor_area_mm2": 4.091e-09,
+        "attachments_within_0_5mm": [
+          {
+            "uuid": "27b4951d-e98d-5d6c-810c-9c3a59a3c073",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.201171
+          },
+          {
+            "uuid": "bcc4f647-cbc5-55d2-ae9a-d0b2dba7558f",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.201171
+          },
+          {
+            "uuid": "50882428-916c-50b3-87da-5fdd8be0fa0b",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.219726
+          },
+          {
+            "uuid": "79d3a936-5acb-5334-a14f-690bbbdb474e",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.389648
+          },
+          {
+            "uuid": "22dff5b6-ccb8-5fae-948c-269eb5c18eed",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.40039
+          },
+          {
+            "uuid": "1385486f-3819-567c-b608-986ad86eb579",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.401366
+          },
+          {
+            "uuid": "855972bc-349c-5545-9f39-eb90b5400dab",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.401366
+          },
+          {
+            "uuid": "80860fe3-7186-5038-9d1c-a16ca53c3869",
+            "type": "track",
+            "net": "Net-(FB1-P$1)",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.412109
+          }
+        ],
+        "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+      },
+      {
+        "direction": "added",
+        "area_mm2": 3.3e-11,
+        "bounds_native_mm": [
+          111.630976,
+          89.351836,
+          111.637529,
+          89.374738
+        ],
+        "inside_released_corridor": false,
+        "outside_corridor_area_mm2": 3.3e-11,
+        "attachments_within_0_5mm": [
+          {
+            "uuid": "33b33138-3a75-582d-81ac-5f38b3165e53",
+            "type": "track",
+            "net": "GND",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.137694
+          },
+          {
+            "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+            "type": "via",
+            "net": "GND",
+            "references": [],
+            "layer": "F.Cu",
+            "intersects": false,
+            "distance_mm_upper_bound": 0.323241
+          }
+        ],
+        "corridor_classification_method": "exact native component bounds wholly inside/outside rectangle"
+      }
+    ],
+    "mechanism": {
+      "proven": false,
+      "finding": "The untouched-source control reproduces the accepted source fill exactly, so the remote candidate differences are not a general no-routing refill effect. The five remote components are microscopic boundary changes, have no copper intersection, and lie near fixed foreign-net tracks at approximately the 0.20 mm clearance boundary.",
+      "unproven_question": "The evidence does not establish why changing the distant USBBOOT geometry perturbed these remote clearance-boundary vertices; native fill ordering/rounding is a hypothesis, not a waiver.",
+      "required_review": "Root must decide whether these microscopic non-topological fill-cache differences may be accepted or whether a deterministic fill investigation is required."
+    }
+  },
+  "reused_candidate_checks": {
+    "source_report": "reports\\c23-usbboot-corridor.json",
+    "source_report_sha256": "9ffb91a07580b1c27d6c9eeecae6bbce2621c9796b2e0db03a2e86000a9d5418",
+    "candidate_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+    "candidate_DRC": "43 opens, 233 warnings, zero new non-open findings",
+    "USBBOOT_partition": [
+      "D3.C",
+      "IC1.9",
+      "TP3.P$1"
+    ],
+    "GND_result": "C23.2 joined MAIN; C24.2 remained separate",
+    "In1_fill_delta": "zero",
+    "note": "Reused as completed evidence; no reroute or whole-board acceptance rerun."
+  },
+  "engineering_disposition": {
+    "candidate_accepted": false,
+    "remote_refill_automatically_waived": false,
+    "required_root_decision": "Review the enumerated remote no-routing refill components and decide whether regenerated source fill may replace the accepted cache; no polygon splicing was performed."
+  },
+  "elapsed_seconds": 74.43699999991804,
+  "diagnostic_tool_sha256": "5b39dc6d5f44a465179f454644a2aac5e5d2cb14f100515e0a581372ebea2c20",
+  "classification_correction": {
+    "original_report_sha256": "6933fd8499ca6e20fcf55f764855b26ca108f04a6b6adaa79e6494406f9e0cdd",
+    "reason": "The initial corridor subtraction misclassified some wholly disjoint component polysets. Classification was corrected from their already-recorded exact native bounds and areas; the native refill was not rerun.",
+    "native_refill_rerun": false
+  }
+}

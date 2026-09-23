@@ -166,13 +166,31 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**C23 refill-control review:** the
+[identical-recipe no-routing control](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-refill-control.json)
+reproduces the accepted F/In1 geometry exactly. Candidate remote changes
+are five microscopic boundary components totaling 0.0000002468985 mm2,
+not a substantive remote copper addition. The native cause remains
+unproven. Area alone is insufficient for acceptance: the final saved-board
+review must bound each remote boundary change to at most 0.000010 mm
+(10 native coordinate units), retain actual clearance/private guards,
+and complete any acceptance gates skipped after the original locality
+exception. This bound is only for these five source-bound cache changes;
+it does not relax any design rule or establish a manufacturing tolerance.
+No rerouting, refill, fill splicing or promotion is authorized during
+that review. The accepted board remains at **44 opens**.
+The corridor report now redacts its personal session path and records its
+original execution-report hash; earlier references to that hash remain
+historical evidence, not claims about the redacted file's current bytes.
+
 **C23 trial, not accepted:** the
 [staged corridor report](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-corridor.json)
 records a proven five-track USBBOOT chain replaced by two In2 segments
 between existing vias. Both paths are 6.454773 mm; the replacement is
 0.20 mm wide. Refill connects C23 to main GND without an extra bridge:
 43 opens, 233 warnings, no new non-open findings, unchanged In1 fill,
-and C24 still separate. However, F fill gains 3.347430 mm2 with bounds
+and C24 still separate. However, F fill has a 3.347430 mm2 symmetric
+difference (predominantly local added copper) with bounds
 extending to x114.733807, outside the authorized local corridor.
 Candidate `01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00`
 is therefore held, not promoted. The accepted board remains

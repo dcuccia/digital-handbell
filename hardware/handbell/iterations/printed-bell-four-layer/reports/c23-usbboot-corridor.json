@@ -1,4 +1,9 @@
 {
+  "publication_revision": {
+    "change": "Redacted the personal absolute candidate_path to a session-files-relative path; measured results and candidate bytes are unchanged.",
+    "original_report_sha256": "9ffb91a07580b1c27d6c9eeecae6bbce2621c9796b2e0db03a2e86000a9d5418",
+    "scope_clarification": "Staged design files were written; the accepted design package was not modified."
+  },
   "status": "FAILED",
   "scope": "Staged USBBOOT F-to-In2 corridor relief and C23 GND closure; not promoted.",
   "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
@@ -192,7 +197,7 @@
     "final\\handbell.kicad_pcb": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00"
   },
   "failure_diagnostics": {
-    "candidate_path": "C:\\Users\\david.cuccia\\.copilot\\session-state\\36e6470e-deaa-424a-8d70-418399f53372\\files\\c23-usbboot-corridor-01\\final\\handbell.kicad_pcb",
+    "candidate_path": "session-files\\c23-usbboot-corridor-01\\final\\handbell.kicad_pcb",
     "candidate_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
     "added_USBBOOT_In2_tracks": [
       {
