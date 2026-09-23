@@ -30780,4 +30780,8 @@
         (fill (thermal_gap 0.5) (thermal_bridge_width 0.5) (island_removal_mode 0))
         (polygon (pts (xy 90.103600 96.152596) (xy 97.237500 96.152596) (xy 97.237500 100.263901) (xy 90.103600 100.263901)))
     )
+
+(segment (start 92.850000 93.350000) (end 93.750000 94.250000) (width 0.400000) (layer "In2.Cu") (net "+3V3") (uuid "a8cbe912-8331-5b8c-8007-4757dbf45c33"))
+(segment (start 93.750000 94.250000) (end 100.557500 94.250000) (width 0.400000) (layer "In2.Cu") (net "+3V3") (uuid "a4fd0c01-2bef-5c7a-9688-ef334f5c7fff"))
+(segment (start 100.557500 94.250000) (end 101.802000 93.005500) (width 0.400000) (layer "In2.Cu") (net "+3V3") (uuid "817eaa35-aee1-5280-9420-b5a1b4484c0d"))
 )

@@ -226,6 +226,35 @@ fill; either demonstrate unchanged fill inputs or use the established
 explicit-settings refill and compare its result. No generic router rebuild,
 placement change, USB/clock reroute or VCORE geometry change is authorized.
 
+#### September 22 local supply-ground stitch batch
+
+After the +3V3 bridge checkpoint, release short local returns for the
+existing GND groups containing C4.2, C9.2, C11.2/C15.2, C12.2, C23.2,
+C24.2 and U2.2. These are regulator/digital-decoupling returns, not permission
+to change the private sense paths, charger ground, USB ground or amplifier
+thermal-via process. Preserve all existing group members and local routing.
+
+Prefer a short F link to existing main-GND copper; otherwise allow an
+off-pad ordinary F-to-B GND via, diameter 0.604 mm/drill 0.35 mm, tying
+directly into the accepted In1 island. Use a 0.30 mm F stub no longer than
+1.5 mm from reachable copper in the target group. Require exact all-layer
+clearance and the full battery contact-metal reservation, not just pad DRC.
+Do not use solder mask as insulation, overlap any component pad, place vias
+in clock/switch/private exclusions, or cut an existing In2 route/return.
+Stay within the same source copper group when choosing a different terminal.
+
+Execute the straightforward eligible groups in one bounded batch, not a
+fixed per-net escalation schedule. Limit numerical screening to 28 candidate
+sites total, at most one new via per target group, and no part moves,
+trace deletion, reduced width/clearance, longer detour or new layer role.
+Report blocked groups and their exact obstacles without improvising a
+floorplan repair. Refill F/In1 using the proven explicit settings and retain
+both private-terminal proofs, all prior connected groups, the +3V3 bridge,
+and unchanged VCORE partitions. New ground connections are intentional;
+ground-plane changes outside the local stitches still require review.
+Do not infer current/thermal qualification or complete decoupling from
+the number of airwires removed.
+
 First qualify the tools for four layers: actual enabled-layer enumeration,
 via spans, multilayer obstacles, inner-plane fill/connectivity and source
 invariants. The existing F/B-only grid and ground checkers are not qualified

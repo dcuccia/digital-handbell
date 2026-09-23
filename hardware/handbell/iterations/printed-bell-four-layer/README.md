@@ -1,6 +1,14 @@
 # Printed-bell four-layer routing baseline
 
-**September 22 current acceptance:** the first protected In1 ground plane is
+**September 22 current acceptance:** the +3V3 bridge adds three In2 segments
+between existing vias, without changing placement, prior routes or plane
+fills. PCB `5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8`,
+manifest `cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41`.
+There are **48 opens**, 233 warnings and 46 historical parity notices.
+See the [bridge acceptance](reports/in2-3v3-bridge-acceptance.json).
+Sixteen ground and two VCORE opens remain; this is not a powered-ready board.
+
+**Earlier September 22 plane acceptance:** the first protected In1 ground plane is
 promoted byte-for-byte from the saved candidate. The PCB is
 `19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`;
 manifest `ce915418d33442f6ab42b155f6a7bc95c05e6c7032574d58044963ca4d066741`.

@@ -6,6 +6,16 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**September 22 supply bridge:** native connected-group terminals and a finite
+polyline batch produced an accepted 0.40 mm In2 +3V3 bridge with no new vias.
+Candidate 11 of 11 examined avoided fixed copper and unexplained In1 gaps;
+48 opens remain. Existing F/In1 fill inputs/caches were unchanged, and native
+DRC did not request a refill. This exercised a narrow inner-route construction
+and verification path, not a generic multilayer router. The session-local
+executor and its two implementation corrections are identified in the
+[acceptance record](../hardware/handbell/iterations/printed-bell-four-layer/reports/in2-3v3-bridge-acceptance.json);
+the report and PCB preserve the exact reproducible three-segment geometry.
+
 **September 22:** root engineering review accepted the exact saved
 explicit-settings plane candidate as an incremental routing baseline.
 The [promotion record](../hardware/handbell/iterations/printed-bell-four-layer/reports/in1-plane-acceptance.json)

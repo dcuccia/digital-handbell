@@ -1,0 +1,845 @@
+{
+  "status": "STAGED_IN2_3V3_BRIDGE_COMPLETE_NOT_PROMOTED",
+  "input_pcb_sha256": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78",
+  "output_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+  "manifest_sha256": "ce915418d33442f6ab42b155f6a7bc95c05e6c7032574d58044963ca4d066741",
+  "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+  "tool_sha256": "a8668826d24362380c2497033351f16903c41bf30c6e33b4684cc5ebd0602388",
+  "workspace_name": "in2-3v3-bridge-03",
+  "chosen": {
+    "endpoint_uuids": [
+      "ae5186f8-c14f-543b-83b6-5de362326e62",
+      "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+    ],
+    "endpoint_native_xy_mm": [
+      [
+        92.85,
+        93.35
+      ],
+      [
+        101.802,
+        93.0055
+      ]
+    ],
+    "polyline_native_xy_mm": [
+      [
+        92.85,
+        93.35
+      ],
+      [
+        93.75,
+        94.25
+      ],
+      [
+        100.5575,
+        94.25
+      ],
+      [
+        101.802,
+        93.0055
+      ]
+    ],
+    "layer": "In2.Cu",
+    "width_mm": 0.4,
+    "length_mm": 9.840281,
+    "segment_uuids": [
+      "a8cbe912-8331-5b8c-8007-4757dbf45c33",
+      "a4fd0c01-2bef-5c7a-9688-ef334f5c7fff",
+      "817eaa35-aee1-5280-9420-b5a1b4484c0d"
+    ]
+  },
+  "screen": {
+    "candidate_count": 11,
+    "maximum": 16,
+    "aggregate_rejection_causes": {
+      "foreign-fixed-In2-copper": 10,
+      "unexplained-In1-coverage-gap": 10
+    },
+    "candidates": [
+      {
+        "index": 1,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "direct",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 8.958626,
+        "foreign_collision_uuids": [
+          "4eb92bfd-5490-5caf-b8ce-26395219e064",
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "b5f67f8e-64ef-5209-9c5f-9a49a78d6629"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.754433619,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 2,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "orthogonal-HV",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            101.802,
+            93.35
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.2965,
+        "foreign_collision_uuids": [
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "b5f67f8e-64ef-5209-9c5f-9a49a78d6629"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.758902432,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 3,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "orthogonal-VH",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            92.85,
+            93.0055
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.2965,
+        "foreign_collision_uuids": [
+          "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+          "4eb92bfd-5490-5caf-b8ce-26395219e064",
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "b5f67f8e-64ef-5209-9c5f-9a49a78d6629"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.518429778,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 4,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "45-horizontal-92.5",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            93.69999999999999,
+            92.5
+          ],
+          [
+            101.29650000000001,
+            92.5
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.513466,
+        "foreign_collision_uuids": [
+          "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+          "4eb92bfd-5490-5caf-b8ce-26395219e064"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.743125634,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 5,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "45-horizontal-92.75",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            93.44999999999999,
+            92.75
+          ],
+          [
+            101.54650000000001,
+            92.75
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.30636,
+        "foreign_collision_uuids": [
+          "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+          "4eb92bfd-5490-5caf-b8ce-26395219e064",
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.56173756,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 6,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "45-horizontal-93",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            93.19999999999999,
+            93.0
+          ],
+          [
+            101.79650000000001,
+            93.0
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.099253,
+        "foreign_collision_uuids": [
+          "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+          "4eb92bfd-5490-5caf-b8ce-26395219e064",
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "b5f67f8e-64ef-5209-9c5f-9a49a78d6629"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.514434349,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 7,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "45-horizontal-93.15",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            93.04999999999998,
+            93.15
+          ],
+          [
+            101.6575,
+            93.15
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.094697,
+        "foreign_collision_uuids": [
+          "4eb92bfd-5490-5caf-b8ce-26395219e064",
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "b5f67f8e-64ef-5209-9c5f-9a49a78d6629"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.628390801,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 8,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "45-horizontal-93.5",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            93.0,
+            93.5
+          ],
+          [
+            101.3075,
+            93.5
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.218961,
+        "foreign_collision_uuids": [
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "b5f67f8e-64ef-5209-9c5f-9a49a78d6629"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.754627211,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 9,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "45-horizontal-93.75",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            93.25,
+            93.75
+          ],
+          [
+            101.0575,
+            93.75
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.426067,
+        "foreign_collision_uuids": [
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "b5f67f8e-64ef-5209-9c5f-9a49a78d6629"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.514167803,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 10,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "45-horizontal-94",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            93.5,
+            94.0
+          ],
+          [
+            100.8075,
+            94.0
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.633174,
+        "foreign_collision_uuids": [
+          "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "b5f67f8e-64ef-5209-9c5f-9a49a78d6629"
+        ],
+        "unexplained_In1_uncovered_area_mm2": 0.121412171,
+        "rejections": [
+          "foreign-fixed-In2-copper",
+          "unexplained-In1-coverage-gap"
+        ]
+      },
+      {
+        "index": 11,
+        "endpoint_uuids": [
+          "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+        ],
+        "kind": "45-horizontal-94.25",
+        "points_native_mm": [
+          [
+            92.85,
+            93.35
+          ],
+          [
+            93.75,
+            94.25
+          ],
+          [
+            100.5575,
+            94.25
+          ],
+          [
+            101.802,
+            93.0055
+          ]
+        ],
+        "length_mm": 9.840281,
+        "foreign_collision_uuids": [],
+        "unexplained_In1_uncovered_area_mm2": 0.0,
+        "rejections": []
+      }
+    ]
+  },
+  "In1_projection": {
+    "actual_filled_polygon_used": true,
+    "allowed_existing_endpoint_antipad_radius_mm": 0.65,
+    "selected_unexplained_uncovered_area_mm2": 0.0,
+    "clock_SW_private_guard_crossings": false,
+    "claim": "Coverage exception is limited to the two existing endpoint-via antipad neighborhoods; no total continuity claim at via holes."
+  },
+  "source_invariants": {
+    "all_original_nontrack_top_level_nodes_exact": true,
+    "all_21_zone_definitions_and_filled_caches_exact": true,
+    "all_existing_segment_nodes_exact": true,
+    "added_nodes_only": "+3V3 In2.Cu 0.4 mm segments"
+  },
+  "graph": {
+    "existing_pad_groups_preserved": 135,
+    "partitions": {
+      "+3V3": {
+        "before": [
+          [
+            "C10.1",
+            "C11.1",
+            "C13.1",
+            "C15.1",
+            "C17.1",
+            "C9.1",
+            "IC1.1",
+            "IC1.33",
+            "IC1.42",
+            "IC1.43",
+            "IC1.44",
+            "IC1.48",
+            "IC1.49",
+            "R1.1",
+            "R20.1",
+            "R21.1",
+            "R5.2",
+            "TP9.P$1",
+            "U1.8"
+          ],
+          [
+            "C12.1",
+            "C14.1",
+            "C23.1",
+            "C24.1",
+            "C4.1",
+            "C5.1",
+            "IC1.10",
+            "IC1.22",
+            "IC4.12",
+            "IC4.5",
+            "IC4.8",
+            "R14.1",
+            "R15.1",
+            "U2.5"
+          ]
+        ],
+        "after": [
+          [
+            "C10.1",
+            "C11.1",
+            "C12.1",
+            "C13.1",
+            "C14.1",
+            "C15.1",
+            "C17.1",
+            "C23.1",
+            "C24.1",
+            "C4.1",
+            "C5.1",
+            "C9.1",
+            "IC1.1",
+            "IC1.10",
+            "IC1.22",
+            "IC1.33",
+            "IC1.42",
+            "IC1.43",
+            "IC1.44",
+            "IC1.48",
+            "IC1.49",
+            "IC4.12",
+            "IC4.5",
+            "IC4.8",
+            "R1.1",
+            "R14.1",
+            "R15.1",
+            "R20.1",
+            "R21.1",
+            "R5.2",
+            "TP9.P$1",
+            "U1.8",
+            "U2.5"
+          ]
+        ]
+      },
+      "VCORE": {
+        "before": [
+          [
+            "C18.2",
+            "IC1.23"
+          ],
+          [
+            "C6.2",
+            "IC1.50"
+          ],
+          [
+            "C7.2",
+            "C8.1",
+            "IC1.45"
+          ]
+        ],
+        "after": [
+          [
+            "C18.2",
+            "IC1.23"
+          ],
+          [
+            "C6.2",
+            "IC1.50"
+          ],
+          [
+            "C7.2",
+            "C8.1",
+            "IC1.45"
+          ]
+        ]
+      },
+      "GND": {
+        "before": [
+          [
+            "C1.2",
+            "C10.2",
+            "C16.2",
+            "C19.2",
+            "C2.1",
+            "C21.2",
+            "C22.2",
+            "C25.2",
+            "C26.2",
+            "C27.2",
+            "C28.2",
+            "C3.1",
+            "IC1.19",
+            "IC1.P$1",
+            "J2.2",
+            "L0.C",
+            "MH1.1",
+            "MH2.1",
+            "Q4.2",
+            "R12.1",
+            "R13.1",
+            "R24.2",
+            "R26.2",
+            "R27.2",
+            "TP8.P$1",
+            "U4.11",
+            "U4.15",
+            "U4.3",
+            "U4.THERMAL",
+            "U5.4",
+            "X6.B1A12",
+            "Y1.2",
+            "Y1.4"
+          ],
+          [
+            "C11.2",
+            "C15.2"
+          ],
+          [
+            "C12.2"
+          ],
+          [
+            "C13.2",
+            "C17.2",
+            "C6.1",
+            "C7.1",
+            "C8.2"
+          ],
+          [
+            "C14.2",
+            "C5.2",
+            "Q2.2",
+            "R17.2"
+          ],
+          [
+            "C18.1"
+          ],
+          [
+            "C20.2",
+            "U3.2"
+          ],
+          [
+            "C23.2"
+          ],
+          [
+            "C24.2"
+          ],
+          [
+            "C4.2"
+          ],
+          [
+            "C9.2",
+            "R4.1",
+            "R8.2"
+          ],
+          [
+            "GAIN0.1"
+          ],
+          [
+            "IC4.1",
+            "IC4.2",
+            "IC4.3"
+          ],
+          [
+            "IC4.6",
+            "IC4.7"
+          ],
+          [
+            "U1.4",
+            "U1.PAD"
+          ],
+          [
+            "U2.2"
+          ],
+          [
+            "X6.A1B12"
+          ]
+        ],
+        "after": [
+          [
+            "C1.2",
+            "C10.2",
+            "C16.2",
+            "C19.2",
+            "C2.1",
+            "C21.2",
+            "C22.2",
+            "C25.2",
+            "C26.2",
+            "C27.2",
+            "C28.2",
+            "C3.1",
+            "IC1.19",
+            "IC1.P$1",
+            "J2.2",
+            "L0.C",
+            "MH1.1",
+            "MH2.1",
+            "Q4.2",
+            "R12.1",
+            "R13.1",
+            "R24.2",
+            "R26.2",
+            "R27.2",
+            "TP8.P$1",
+            "U4.11",
+            "U4.15",
+            "U4.3",
+            "U4.THERMAL",
+            "U5.4",
+            "X6.B1A12",
+            "Y1.2",
+            "Y1.4"
+          ],
+          [
+            "C11.2",
+            "C15.2"
+          ],
+          [
+            "C12.2"
+          ],
+          [
+            "C13.2",
+            "C17.2",
+            "C6.1",
+            "C7.1",
+            "C8.2"
+          ],
+          [
+            "C14.2",
+            "C5.2",
+            "Q2.2",
+            "R17.2"
+          ],
+          [
+            "C18.1"
+          ],
+          [
+            "C20.2",
+            "U3.2"
+          ],
+          [
+            "C23.2"
+          ],
+          [
+            "C24.2"
+          ],
+          [
+            "C4.2"
+          ],
+          [
+            "C9.2",
+            "R4.1",
+            "R8.2"
+          ],
+          [
+            "GAIN0.1"
+          ],
+          [
+            "IC4.1",
+            "IC4.2",
+            "IC4.3"
+          ],
+          [
+            "IC4.6",
+            "IC4.7"
+          ],
+          [
+            "U1.4",
+            "U1.PAD"
+          ],
+          [
+            "U2.2"
+          ],
+          [
+            "X6.A1B12"
+          ]
+        ]
+      }
+    },
+    "private_pickoffs": [
+      {
+        "from": "R26.2",
+        "to": "R27.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+            "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      },
+      {
+        "from": "R24.2",
+        "to": "C28.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          },
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      }
+    ],
+    "shorts": [],
+    "floating_copper": []
+  },
+  "native_drc": {
+    "baseline_opens": 49,
+    "candidate_opens": 48,
+    "warnings": 233,
+    "new_non_open_findings": [],
+    "refill_requested": false,
+    "drc_seconds": 3.375,
+    "stdout": "drc.stdout.txt",
+    "stderr": "drc.stderr.txt",
+    "schematic_parity": "Not rerun; historical gate remains 46 notices."
+  },
+  "remaining_gates": [
+    "Astra acceptance and promotion decision",
+    "three VCORE groups remain blocked",
+    "remaining GND and other opens",
+    "physical stackup",
+    "SI/PI/current/thermal/manufacturing qualification"
+  ],
+  "elapsed_seconds": 35.593,
+  "stop_reason": "Stopped after first fully clear released candidate and complete required checks."
+}

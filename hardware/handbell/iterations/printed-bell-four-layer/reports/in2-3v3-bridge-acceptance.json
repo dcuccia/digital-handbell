@@ -1,0 +1,114 @@
+{
+  "status": "ACCEPTED_INCREMENTAL_ROUTING_BASELINE_NOT_FULLY_QUALIFIED",
+  "accepted_on": "2026-09-22",
+  "decision": {
+    "authority": "Astra root engineering review",
+    "scope": "Accept the exact staged In2 +3V3 bridge as the next incremental routing baseline.",
+    "candidate_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+    "limitations": [
+      "The 0.65 mm endpoint coverage exceptions apply only to the two existing through-via antipad neighborhoods and this low-voltage DC branch.",
+      "This is not signal-integrity, power-integrity, current, thermal, stackup, fabrication or assembly qualification.",
+      "No new fast-signal-over-void permission is created."
+    ]
+  },
+  "promotion": {
+    "method": "Exact saved workspace-03 PCB byte copy; no native load, refill, routing calculation, geometry regeneration or reserialization during promotion.",
+    "previous_active_pcb_sha256": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78",
+    "promoted_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+    "previous_manifest_sha256": "ce915418d33442f6ab42b155f6a7bc95c05e6c7032574d58044963ca4d066741",
+    "promoted_manifest_sha256": "cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41",
+    "manifest_fields_changed": {
+      "status": {
+        "before": "INCREMENTAL_ROUTING_BASELINE_FIRST_IN1_PLANE_ACCEPTED",
+        "after": "INCREMENTAL_ROUTING_BASELINE_IN2_3V3_BRIDGE_ACCEPTED"
+      },
+      "generated_pcb_sha256": {
+        "before": "19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78",
+        "after": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8"
+      }
+    },
+    "manifest_geometry_and_all_other_parsed_fields_unchanged": true
+  },
+  "route": {
+    "net": "+3V3",
+    "layer": "In2.Cu",
+    "width_mm": 0.4,
+    "length_mm": 9.840281,
+    "endpoint_via_uuids": [
+      "ae5186f8-c14f-543b-83b6-5de362326e62",
+      "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664"
+    ],
+    "polyline_native_xy_mm": [
+      [92.85, 93.35],
+      [93.75, 94.25],
+      [100.5575, 94.25],
+      [101.802, 93.0055]
+    ],
+    "segment_uuids": [
+      "a8cbe912-8331-5b8c-8007-4757dbf45c33",
+      "a4fd0c01-2bef-5c7a-9688-ef334f5c7fff",
+      "817eaa35-aee1-5280-9420-b5a1b4484c0d"
+    ],
+    "new_vias": 0,
+    "zone_or_fill_cache_changes": 0
+  },
+  "source_proof_reuse": {
+    "staged_report": {
+      "path": "reports\\in2-3v3-bridge.json",
+      "sha256": "fb4efe3f65b8b43a3660334de9d2bc00b5978a266389ccb9def1eb00dac57c96",
+      "status": "STAGED historical evidence; not rewritten as a promotion-time native check."
+    },
+    "saved_native_drc": {
+      "filename": "candidate-drc.json",
+      "sha256": "34037ecab16504d89b3cbdf7148d47a276c3450b9e43f28b6a2e149b11376016",
+      "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "kicad_version": "10.0.6",
+      "opens_before": 49,
+      "opens_after": 48,
+      "warnings": 233,
+      "new_non_open_findings": 0,
+      "schematic_parity": "Historical separate gate remains 46 notices."
+    },
+    "executed_tool": {
+      "filename": "stage_in2_3v3_bridge.py",
+      "location": "session-local; not a repository reproducibility tool",
+      "sha256": "a8668826d24362380c2497033351f16903c41bf30c6e33b4684cc5ebd0602388"
+    },
+    "dependency_binding": {
+      "same_stem_project_and_schematic_match_active_bytes": true,
+      "all_38_local_library_files_match_active_bytes": true,
+      "library_tables_symbols_interface_and_license_match_active_bytes": true
+    }
+  },
+  "verified_effect": {
+    "plus_3v3_remaining_opens": 0,
+    "source_pad_groups_preserved": 135,
+    "plus_3v3_groups": {
+      "before": 2,
+      "after": 1
+    },
+    "VCORE_groups_unchanged": 3,
+    "GND_partition_unchanged": true,
+    "private_pickoffs_independent": true,
+    "shorts": 0,
+    "floating_copper": 0,
+    "all_existing_primitives_and_21_zone_fill_caches_unchanged": true,
+    "remaining_opens": {
+      "total": 48,
+      "GND": 16,
+      "VCORE": 2,
+      "other": 30
+    }
+  },
+  "implementation_history": [
+    "Workspace-01 stopped before candidate creation because the review-only circle projection used an unavailable KiCad Python conversion method.",
+    "Workspace-02 completed the identical candidate and checks but stopped while serializing aggregate rejection counts.",
+    "Workspace-03 reran the unchanged finite candidate set with those two implementation-only corrections and produced the accepted evidence."
+  ],
+  "remaining_gates": [
+    "Route and review the remaining 48 connections in separately authorized batches.",
+    "Keep VCORE blocked pending its separate escape-engineering decision.",
+    "Resolve the remaining 16 GND opens without bypassing private-return policy.",
+    "Qualify physical stackup, SI/PI, current, thermal, fabrication and assembly behavior."
+  ]
+}

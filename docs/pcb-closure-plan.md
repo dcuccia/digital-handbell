@@ -167,6 +167,20 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 ## Owner pause and next item
 
 **September 22 owner resume (current):** bounded engineering has resumed.
+The latest accepted PCB is
+`5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8`,
+manifest `cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41`.
+The [accepted +3V3 bridge](../hardware/handbell/iterations/printed-bell-four-layer/reports/in2-3v3-bridge-acceptance.json)
+joins its two groups with three In2 segments, 0.40 mm wide and 9.840281 mm
+total length, between existing vias. **48 opens remain: 16 GND, two VCORE
+and 30 others**, with 233 warnings. All previous copper, planes, placement
+and private pickoffs are retained; source-bound checks were reused for
+byte-exact promotion. The whole +3V3 net is now connected, not the whole
+power system. Next released work is the
+[local supply-ground stitch batch](routing-agent-policy.md#september-22-local-supply-ground-stitch-batch).
+No VCORE relocation or wider escape search is authorized by that batch.
+
+**Earlier September 22 plane acceptance:**
 Astra reviewed the saved actual-copper detail and supplementary proofs and
 approved exact candidate `19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`
 as the next incremental routing baseline. The existing +3V3/VAMP/V+ crossings
