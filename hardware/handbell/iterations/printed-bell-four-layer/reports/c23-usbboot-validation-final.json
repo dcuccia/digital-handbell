@@ -1,0 +1,190 @@
+{
+  "status": "FAILED",
+  "scope": "Read-only final acceptance gates for exact saved C23 USBBOOT candidate.",
+  "candidate_accepted_or_promoted": false,
+  "gates": [
+    {
+      "name": "input_and_dependency_binding",
+      "passed": true,
+      "detail": {
+        "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+        "manifest_sha256": "a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7",
+        "candidate_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+        "saved_DRC_sha256": "567763888a6355c102d2e189aa2c951ea621af1bc477f127731d5fa0e8fb292e",
+        "refill_control_report_sha256": "a67f1c9a53dd50691faffe702e4f3f484206f4f98a33844f5bbc23e720514734",
+        "validation_controls_report_sha256": "005d2749d0e28fe6ada5e78239fb548bb5b65ec9af1771f0f318b904e1c77ada",
+        "candidate_path": "files\\c23-usbboot-corridor-01\\final\\handbell.kicad_pcb",
+        "dependency_sha256": {
+          "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+          "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+          "fp-lib-table": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+          "sym-lib-table": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+          "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+          "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+          "Clock.kicad_sym": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+          "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+          "LICENSE.txt": "075dad5e5fc96c27014fabc269f4f5732909cffd178a486f546d982b6cf86b74"
+        },
+        "local_library_file_count": 38,
+        "local_library_tree_sha256": "63c7b4ad331bf994fa44433acfe4a14600a7ad5df7fd6559fe62d286a7fd19d0"
+      }
+    },
+    {
+      "name": "native_load",
+      "passed": true,
+      "detail": {
+        "kicad_version": "10.0.6",
+        "IU_per_mm": 1000000,
+        "controls_report_sha256": "005d2749d0e28fe6ada5e78239fb548bb5b65ec9af1771f0f318b904e1c77ada"
+      }
+    },
+    {
+      "name": "source_primitive_and_zone_definition_preservation",
+      "passed": true,
+      "detail": {
+        "non_segment_non_zone_blocks_exact": true,
+        "removed_F_USBBOOT_tracks": [
+          "09e49184-1128-572a-bfb2-6fe4f5ddb616",
+          "372abf98-d8c7-5aca-ae86-79442304abb8",
+          "5a59d15f-96cb-56d8-9264-1539521f9476",
+          "d21616f0-13e4-5ccc-8ed9-d4155f3d2e84",
+          "f64f7022-043b-568a-8e7d-578bea1e26e9"
+        ],
+        "added_In2_USBBOOT_tracks": [
+          {
+            "uuid": "0b443347-ef7c-558f-a3f7-e0f9190b283e",
+            "start_native_mm": [
+              87.7,
+              88.95
+            ],
+            "end_native_mm": [
+              89.7,
+              88.95
+            ],
+            "width_mm": 0.2,
+            "length_mm": 2.0
+          },
+          {
+            "uuid": "4869e135-8ec7-59a2-a8e2-15a5de2025c3",
+            "start_native_mm": [
+              89.7,
+              88.95
+            ],
+            "end_native_mm": [
+              92.85,
+              92.1
+            ],
+            "width_mm": 0.2,
+            "length_mm": 4.45477272147525
+          }
+        ],
+        "retained_tracks_raw_exact": true,
+        "vias_raw_exact": true,
+        "parts_pads_stackup_rules_netclasses_unchanged": true,
+        "zone_definition_count": 21,
+        "zone_definitions_except_fill_cache_exact": true
+      }
+    },
+    {
+      "name": "complete_connectivity",
+      "passed": true,
+      "detail": {
+        "previous_connected_pad_groups_preserved": 130,
+        "GND_groups_before": 13,
+        "GND_groups_candidate": 12,
+        "newly_joined_MAIN_pad_refs": [
+          "C23.2"
+        ],
+        "all_non_GND_partitions_exact": true,
+        "USBBOOT_partition": [
+          [
+            "D3.C",
+            "IC1.9",
+            "TP3.P$1"
+          ]
+        ],
+        "plus3V3_group_count": 1,
+        "VCORE_group_count": 3,
+        "CELL_NEG_partition_exact": true,
+        "private_terminal_cuts": [
+          {
+            "from": "R26.2",
+            "to": "R27.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+                "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          },
+          {
+            "from": "R24.2",
+            "to": "C28.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "1212a327-4ed4-50da-a0bb-71afc8145254",
+              "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+              "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+              "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+              "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+              "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+              "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+                "layer": "F.Cu"
+              },
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          }
+        ],
+        "shorts": [],
+        "floating_copper": []
+      }
+    },
+    {
+      "name": "per_layer_fill_edge_guard_contact_invariants",
+      "passed": true,
+      "detail": {
+        "native_filled_checks": {
+          "islands": 22,
+          "guard_comparisons": 219,
+          "foreign_comparisons": 24684,
+          "F_private_item_comparisons": 210,
+          "In1_private_via_comparisons": 2
+        },
+        "guard_inventory_exact": true,
+        "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+        "contact_metal_polygon_count": 6,
+        "B_Cu_segments_exact": true,
+        "new_B_Cu_or_via_geometry": false,
+        "CELL_NEG_checked_as_foreign_copper": true
+      }
+    }
+  ],
+  "failure": {
+    "type": "ValueError",
+    "message": "Remote added GND polygon lacks an attached GND island"
+  },
+  "elapsed_seconds": 36.54600000008941,
+  "validator_sha256": "229f1189df67fa08193bb0b06da77e6c8fae293acc7fd44a3d28946c960eb2ef"
+}

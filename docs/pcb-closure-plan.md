@@ -166,6 +166,34 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**C23 review stopped again; not promoted:** isolated native API controls
+[passed](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-validation-controls.json).
+The [saved-candidate review](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-validation-final.json)
+now proves source/zone preservation, all 130 previous connected pad groups,
+only the intended C23/main-GND merge, both private-terminal cuts, no graph
+shorts or floating copper, and per-layer clearance/guard/contact invariants.
+It then stops while trying to associate a microscopic Boolean-difference
+fragment with a filled GND island. The complete displacement and final
+DRC-reuse gates are not recorded as passed. The repair retry budget is
+exhausted; further execution requires owner direction.
+
+The exact unaccepted board is now durably archived as
+[`reports/c23-usbboot-staged.kicad_pcb`](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-staged.kicad_pcb),
+SHA-256 `01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00`.
+This is evidence, not a second active design or a standalone project:
+its matching project/libraries are bound in the review report.
+The active PCB remains `7927882f...` at **44 opens**.
+
+Root assessment: a Boolean-difference fragment is a comparison artifact,
+not necessarily a separately representable copper island. Its failed
+intersection must not override or silently replace the full saved-board
+connectivity evidence. The cause of that failed intersection is still
+unproven. Recommended next item, subject to owner approval: use the complete
+native filled-island graph for electrical attachment, retain the independent
+10-IU displacement and actual clearance requirements, and finish only the
+missing gates. Do not reroute, refill, relax clearances or restart a general
+geometry-tool investigation.
+
 **Owner-authorized validator repair:** after the failed final-gate item,
 the owner explicitly selected "Repair validator in isolation, then
 validate the saved candidate." One new bounded validation-only item is

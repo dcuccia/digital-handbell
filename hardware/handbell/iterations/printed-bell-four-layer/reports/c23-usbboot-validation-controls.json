@@ -1,0 +1,68 @@
+{
+  "status": "PASSED",
+  "controls": [
+    {
+      "name": "explicit_saved_DRC_binding",
+      "passed": true,
+      "detail": {
+        "sha256": "567763888a6355c102d2e189aa2c951ea621af1bc477f127731d5fa0e8fb292e",
+        "unconnected_item_count": 43,
+        "violation_count": 233,
+        "resolution": "Exact caller-provided path only; no fallback glob or directory search."
+      }
+    },
+    {
+      "name": "runtime_unit_conversion",
+      "passed": true,
+      "detail": {
+        "FromMM_1_0": 1000000,
+        "ToMM_roundtrip": 1.0,
+        "FromMM_0_000010": 10,
+        "interpretation": "1 IU = 1 nm on this KiCad runtime."
+      }
+    },
+    {
+      "name": "native_offset_and_boolean_containment",
+      "passed": true,
+      "detail": {
+        "positive_10_IU_contained": true,
+        "same_piece_9_IU_not_contained": true,
+        "11_IU_piece_not_contained_at_10_IU": true,
+        "boundary_intersection_area_IU2": 0.0,
+        "boundary_difference_area_IU2": 6000.0,
+        "offset": {
+          "corner_strategy": "CORNER_STRATEGY_ROUND_ALL_CORNERS",
+          "max_error_IU": 1,
+          "simplify": true
+        }
+      }
+    },
+    {
+      "name": "native_clearance_boundary_semantics",
+      "passed": true,
+      "detail": {
+        "foreign_0_20mm_collision_bracket_IU": [
+          200000,
+          200001
+        ],
+        "private_0_25mm_collision_bracket_IU": [
+          250000,
+          250001
+        ],
+        "acceptance_predicate": "No collision at exact required clearance; collision begins one IU inside."
+      }
+    }
+  ],
+  "kicad_version": "10.0.6",
+  "new_native_bindings_exercised": [
+    "pcb.FromMM",
+    "pcb.ToMM",
+    "SHAPE_POLY_SET.Inflate",
+    "SHAPE_POLY_SET.BooleanSubtract",
+    "SHAPE_POLY_SET.BooleanIntersection",
+    "SHAPE_POLY_SET.Collide"
+  ],
+  "untested_new_native_bindings": [],
+  "elapsed_seconds": 0.0779999999795109,
+  "tool_sha256": "9755b00fb7494103084ca6e49ef5ea418b74a960ffe1c6dcf4229e4aa44fa443"
+}
