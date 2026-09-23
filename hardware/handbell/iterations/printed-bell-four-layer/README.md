@@ -1,6 +1,16 @@
 # Printed-bell four-layer routing baseline
 
-**September 22 current acceptance:** the +3V3 bridge adds three In2 segments
+**September 22 current acceptance:** an off-pad GND via and 0.65 mm F stub
+at R4 connect the existing C9/R4/R8 group to main ground. The accepted PCB is
+`453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43`,
+manifest `1bf38f7a9e6f9a1b086844a6309103f8935ecfcb8ef142bed7ccc0acc473ec2a`.
+There are **47 opens**, 233 warnings and 46 historical parity notices.
+F/In1 fill geometry is unchanged, all previous connected groups and private
+pickoffs survive, and the remaining VCORE/ground connections are unfinished.
+See [ground-stitch acceptance](reports/supply-ground-stitch-acceptance.json).
+This is group-level connectivity, not C9 local high-frequency qualification.
+
+**Earlier September 22 supply acceptance:** the +3V3 bridge adds three In2 segments
 between existing vias, without changing placement, prior routes or plane
 fills. PCB `5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8`,
 manifest `cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41`.

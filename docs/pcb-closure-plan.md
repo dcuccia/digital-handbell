@@ -166,8 +166,34 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest September 22 decision:** the isolated validator controls and full
+read-only saved-candidate suite now pass. Astra approves exact ground-stitch
+candidate `453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43`
+for mechanical promotion as a connectivity milestone: **47 opens**,
+233 warnings, and unchanged F/In1 fill geometry. The existing C9/R4/R8
+ground group joins main GND; all prior groups and private pickoffs survive.
+This does not qualify C9's local high-frequency return or establish a
+physical zero-length path through its common filled island.
+See the [full validation](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-validation-final.json)
+and [isolated controls](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-validation-controls.json).
+The earlier failures below remain historical evidence, not the final result.
+Promotion is complete: the active PCB is that exact `453b9f6d...` candidate,
+bound to manifest
+`1bf38f7a9e6f9a1b086844a6309103f8935ecfcb8ef142bed7ccc0acc473ec2a`.
+Only manifest status/PCB hash changed; all component geometry remains intact.
+The [acceptance record](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-acceptance.json)
+binds the controls, final validation and reused native DRC evidence.
+Other released ground-group screening counts and blockers were not persisted;
+do not claim those groups completed or exhaustively screened. VCORE, local
+return performance, physical stackup and manufacturing gates remain open.
+Next bounded work: preserve the accepted stitch and screen the six remaining
+released groups (C4, C11/C15, C12, C23, C24 and U2), with counts and blockers
+saved before validation. Do not repeat the C9/R4 site selection or silently
+extend its exhausted search history. Reuse the now-exercised shape and
+guard-layer checks rather than recreating native API wrappers.
+
 **September 22 owner resume (current):** bounded engineering has resumed.
-The latest accepted PCB is
+The preceding +3V3 checkpoint PCB is
 `5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8`,
 manifest `cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41`.
 The [accepted +3V3 bridge](../hardware/handbell/iterations/printed-bell-four-layer/reports/in2-3v3-bridge-acceptance.json)
@@ -227,6 +253,15 @@ The accepted board stays at 48 opens; the saved 47-open candidate is not
 promoted. Do not start another corrective execution automatically.
 Escalate to the owner for a separately bounded validator-repair decision
 or defer the candidate. The agent is idle; no routing/refill is running.
+
+**Subsequent explicit owner decision:** "Repair validator in isolation, then
+validate the saved candidate." This authorizes one new bounded tooling item:
+prove the exact circle/slot/contact operations with small controls first,
+then run the complete read-only suite on unchanged candidate `453b9f6d...`.
+No routing, refill, geometry generation or promotion is included. Preserve
+both failed validation reports; record controls and the final run separately.
+Stop if the isolated repair budget or final run fails, rather than extending
+another full-board correction loop.
 
 **Earlier September 22 plane acceptance:**
 Astra reviewed the saved actual-copper detail and supplementary proofs and

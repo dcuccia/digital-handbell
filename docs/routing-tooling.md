@@ -6,6 +6,18 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**Latest ground-stitch validation:** isolated circle, slot and contact
+controls pass, followed by the full read-only saved-candidate suite.
+Circular drill clearance uses exact integer squared-distance comparisons;
+slotted holes use native effective-hole shapes, not a circular substitute.
+Boundary controls distinguish exact minimum clearance from one internal unit
+inside/outside. The [final report](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-validation-final.json)
+records unchanged F/In1 filled area, all preserved connections/private returns
+and 47 opens for the saved candidate. Earlier checker failures below remain
+historical. No new routing or refill occurred to obtain this result.
+Graph paths through filled islands establish topology, not a physical trace
+length or high-frequency return quality.
+
 **September 22 ground-stitch checker lesson:** a copied validator assigned
 the ten F-only private exclusions to In1 and reported a false guard failure.
 The same eight intersections occur on the accepted baseline and candidate.

@@ -1,0 +1,49 @@
+{
+  "status": "PASSED",
+  "candidate_sha256": "453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43",
+  "design_files_written": false,
+  "raw_slot_cases": {
+    "overlap": true,
+    "one_IU_inside_required_clearance": true,
+    "one_IU_outside_required_clearance": false
+  },
+  "raw_contact_cases": {
+    "overlap": true,
+    "one_IU_inside_required_clearance": true,
+    "one_IU_outside_required_clearance": false
+  },
+  "kicad_version": "10.0.6",
+  "circle_controls": {
+    "separated": false,
+    "exact_required_clearance": false,
+    "one_IU_inside_required_clearance": true,
+    "overlapping": true
+  },
+  "slot_controls": {
+    "pad_uuid": "2249eb1a-0b11-552f-95b3-23f088e83abf",
+    "reference": "X6",
+    "number": "M1",
+    "drill_size_mm": [
+      1.7,
+      0.6
+    ],
+    "native_shape_class": "SHAPE_SEGMENT",
+    "cases": {
+      "overlap": true,
+      "one_IU_inside_required_clearance": true,
+      "one_IU_outside_required_clearance": false
+    }
+  },
+  "contact_rectangle_controls": {
+    "overlap": true,
+    "one_IU_inside_required_clearance": true,
+    "one_IU_outside_required_clearance": false
+  },
+  "methods": {
+    "circular_holes": "Exact integer squared-center-distance; equality at minimum clearance passes.",
+    "slotted_holes": "Saved-pad GetEffectiveHoleShape().Collide(candidate_circle, clearance-1).",
+    "contact_metal": "Native SHAPE_POLY_SET.Collide(candidate_circle, clearance-1)."
+  },
+  "elapsed_seconds": 0.20300000021234155,
+  "tool_sha256": "7dde7871102de81c62d7957413d1105defce2aead5d0148fcc0d4e60524b4d10"
+}

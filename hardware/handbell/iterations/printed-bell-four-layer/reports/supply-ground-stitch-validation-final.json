@@ -1,0 +1,290 @@
+{
+  "status": "PASSED_READ_ONLY_CONNECTIVITY_MILESTONE_VALIDATION",
+  "scope": "Read-only validation of preserved candidate geometry; no route, refill, board save, or promotion.",
+  "gates": [
+    {
+      "name": "hash_and_project_dependency_binding",
+      "passed": true,
+      "detail": {
+        "source_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+        "candidate_pcb_sha256": "453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43",
+        "manifest_sha256": "cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41",
+        "saved_drc_sha256": "701a0355395bcc19feddd4c3797ab7ac7e893042321f74c592748145d2adc839",
+        "baseline_drc_sha256": "34037ecab16504d89b3cbdf7148d47a276c3450b9e43f28b6a2e149b11376016",
+        "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+        "previous_failed_report_sha256": "298798e03fd646497e5311e66bdfadb5f6562d0ab839fd4f101e0d20ed9f2051",
+        "source_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+        "candidate_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990"
+      }
+    },
+    {
+      "name": "source_preserving_geometry",
+      "passed": true,
+      "detail": {
+        "top_level_nontrack_nonvia_nonzone_blocks_exact": true,
+        "existing_tracks_raw_exact": true,
+        "existing_vias_raw_exact": true,
+        "zone_definition_count": 21,
+        "zone_definitions_except_fill_cache_exact": true,
+        "added_segment_uuid": "d8b2f3e7-cf20-5f17-a1d0-9a3e4ac6e256",
+        "added_via_uuid": "444b2c40-c122-5d7f-b56f-37b9a9100a99",
+        "added_via_declared_span": [
+          "F.Cu",
+          "B.Cu"
+        ]
+      }
+    },
+    {
+      "name": "native_board_loads",
+      "passed": true,
+      "detail": {
+        "kicad_version": "10.0.6"
+      }
+    },
+    {
+      "name": "guard_layer_controls",
+      "passed": true,
+      "detail": {
+        "native_rule_area_counts": {
+          "F.Cu": 10,
+          "In1.Cu": 9
+        },
+        "negative_control_wrong_mapping_baseline_overlap_count": 8,
+        "negative_control_first_overlap": {
+          "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+          "island_layer": "In1.Cu",
+          "guard_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+          "guard_name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+          "native_guard_layer": "F.Cu",
+          "assigned_layer": "In1.Cu",
+          "area_mm2": 3.48374,
+          "bounds_native_mm": [
+            101.199,
+            115.279,
+            103.201,
+            117.021
+          ]
+        },
+        "correct_same_layer_baseline_overlap_count": 0,
+        "correct_same_layer_candidate_overlap_count": 0
+      }
+    },
+    {
+      "name": "actual_F_In1_edge_foreign_guard_private_checks",
+      "passed": true,
+      "detail": {
+        "islands": 23,
+        "guard_comparisons": 229,
+        "foreign_comparisons": 25966,
+        "F_private_item_comparisons": 220,
+        "In1_private_via_comparisons": 2
+      }
+    },
+    {
+      "name": "full_connectivity_and_component_comparison",
+      "passed": true,
+      "detail": {
+        "source_connected_pad_groups_preserved": 134,
+        "GND_group_count_before": 17,
+        "GND_group_count_candidate": 16,
+        "plus3V3_group_count": 1,
+        "VCORE_group_count": 3,
+        "target_group_joined_MAIN": true,
+        "private_pickoffs": [
+          {
+            "from": "R26.2",
+            "to": "R27.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+                "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          },
+          {
+            "from": "R24.2",
+            "to": "C28.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "1212a327-4ed4-50da-a0bb-71afc8145254",
+              "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+              "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+              "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+              "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+              "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+              "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+                "layer": "F.Cu"
+              },
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          }
+        ],
+        "shorts": [],
+        "floating_copper": [],
+        "other_net_partitions_unchanged": true
+      }
+    },
+    {
+      "name": "released_geometry_and_clearance",
+      "passed": true,
+      "detail": {
+        "stub": {
+          "uuid": "d8b2f3e7-cf20-5f17-a1d0-9a3e4ac6e256",
+          "layer": "F.Cu",
+          "width_mm": 0.3,
+          "length_mm": 0.65
+        },
+        "via": {
+          "uuid": "444b2c40-c122-5d7f-b56f-37b9a9100a99",
+          "position_native_mm": [
+            100.851085,
+            89.00671
+          ],
+          "diameter_mm": 0.604,
+          "drill_mm": 0.35,
+          "ordinary_through_via": true,
+          "native_class": "PCB_VIA",
+          "source_declared_end_layers": [
+            "F.Cu",
+            "B.Cu"
+          ],
+          "native_raw_layer_sequence": [
+            "F.Cu",
+            "B.Cu",
+            "In1.Cu",
+            "In2.Cu"
+          ],
+          "native_physical_layer_order": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "span_evidence": "Source explicitly declares F.Cu/B.Cu endpoints and native layer set contains exactly all four enabled copper layers.",
+          "native_type_endpoint_API": "Not called: no repository-verified KiCad 10 Python usage was available; no signature was guessed.",
+          "layer_set_negative_controls": {
+            "shuffled_complete_set_accepted": true,
+            "missing_In2_set_rejected": true
+          },
+          "off_pad": true,
+          "foreign_copper_clearance_mm": 0.2,
+          "drill_clearance_mm": 0.2,
+          "drill_geometry_checks": {
+            "exact_integer_circular_holes": 89,
+            "native_effective_slot_holes": 4,
+            "minimum_clearance_boundary_is_accepted": true
+          },
+          "B_contact_metal_keepout_clearance_mm": 0.2,
+          "contacts_main_In1_island": true
+        },
+        "C9_to_via_path": {
+          "from": "C9.2",
+          "to_added_via_uuid": "444b2c40-c122-5d7f-b56f-37b9a9100a99",
+          "all_F_Cu": true,
+          "copper_uuids": [
+            "cdd48a7a-f0c0-5b95-8b1c-9420d74d6dc9",
+            "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+            "444b2c40-c122-5d7f-b56f-37b9a9100a99"
+          ],
+          "track_lengths_mm": {},
+          "total_track_length_mm": 0,
+          "declared_new_stub_length_mm": null,
+          "interpretation": "Existing reachable-group path length; the 0.65 mm new stub is not a local C9 decoupler-return length."
+        }
+      }
+    },
+    {
+      "name": "actual_fill_symmetric_difference",
+      "passed": true,
+      "detail": {
+        "F.Cu": {
+          "before_only_area_mm2": 0.0,
+          "candidate_only_area_mm2": 0.0,
+          "symmetric_difference_area_mm2": 0.0,
+          "symmetric_difference_bounds_native_mm": null
+        },
+        "In1.Cu": {
+          "before_only_area_mm2": 0.0,
+          "candidate_only_area_mm2": 0.0,
+          "symmetric_difference_area_mm2": 0.0,
+          "symmetric_difference_bounds_native_mm": null
+        }
+      }
+    },
+    {
+      "name": "saved_native_DRC_reuse",
+      "passed": true,
+      "detail": {
+        "reuse_basis": "Candidate, same-stem project, source dependencies and saved DRC bytes hash-bound before reuse; no refill or fresh DRC.",
+        "source_opens": 48,
+        "candidate_opens": 47,
+        "source_warnings": 233,
+        "candidate_warnings": 233,
+        "new_non_open_findings": [],
+        "native_read_only_connectivity_opens": 47,
+        "independent_graph_opens": 47
+      }
+    }
+  ],
+  "missing_history": {
+    "finite_candidate_site_count": "NOT_RECORDED; not re-screened",
+    "remaining_released_group_blockers": "UNKNOWN; not re-screened"
+  },
+  "design_files_written": false,
+  "input_sha256": {
+    "source_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+    "candidate_pcb_sha256": "453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43",
+    "manifest_sha256": "cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41",
+    "saved_drc_sha256": "701a0355395bcc19feddd4c3797ab7ac7e893042321f74c592748145d2adc839",
+    "baseline_drc_sha256": "34037ecab16504d89b3cbdf7148d47a276c3450b9e43f28b6a2e149b11376016",
+    "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "previous_failed_report_sha256": "298798e03fd646497e5311e66bdfadb5f6562d0ab839fd4f101e0d20ed9f2051",
+    "source_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "candidate_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990"
+  },
+  "previous_failed_validation_history": {
+    "file": "supply-ground-stitch-validation-failed-via-order.json",
+    "sha256": "298798e03fd646497e5311e66bdfadb5f6562d0ab839fd4f101e0d20ed9f2051",
+    "status": "Preserved immutable failed history; this result is a separate corrective execution and is not retroactive."
+  },
+  "corrected_validator": {
+    "filename": "validate_supply_ground_stitch.py",
+    "sha256": "d5da80b6c593f41634b9dc8e0da3037136a3e466ad1e1f82246ed8b2a2b3a434",
+    "preserved_failed_checker_sha256": "635803e78df35fc261bd07fb76e300515cc8971b96e229c960dd4b9e74715e5a"
+  },
+  "engineering_disposition": {
+    "candidate_connectivity_milestone_full_gates_passed": true,
+    "C9_local_return_qualified": false,
+    "reason": "The accepted witness uses the remote reachable R4.1 terminal; connectivity does not qualify a local C9 decoupler return.",
+    "remaining_release_gates": [
+      "Astra/root promotion decision",
+      "Remaining released GND groups require separate finite screening history",
+      "VCORE remains open",
+      "Physical stackup, SI/PI, current, thermal and manufacturing qualification remain pending"
+    ]
+  },
+  "elapsed_seconds": 46.109999999869615,
+  "report_tool_sha256": "d5da80b6c593f41634b9dc8e0da3037136a3e466ad1e1f82246ed8b2a2b3a434"
+}

@@ -49,6 +49,13 @@ def layer_name(pcb, layer):
     return pcb.LayerName(layer)
 
 
+def circular_holes_violate_clearance(a, a_radius, b, b_radius, clearance):
+    """Exact integer test: equality at the required clearance is accepted."""
+    dx, dy = a.x - b.x, a.y - b.y
+    limit = a_radius + b_radius + clearance
+    return dx * dx + dy * dy < limit * limit
+
+
 def polygon_delta(pcb, before, after):
     before_only = before.CloneDropTriangulation()
     after_only = after.CloneDropTriangulation()
@@ -287,6 +294,8 @@ def via_checks(pcb, before, after, interface):
     pad_hits = []
     foreign_hits = []
     drill_hits = []
+    circular_drills_checked = 0
+    native_slot_drills_checked = 0
     for uid, item in before.items.items():
         if isinstance(item, IslandItem):
             continue
@@ -301,9 +310,27 @@ def via_checks(pcb, before, after, interface):
                     foreign_hits.append(uid)
                     break
         if isinstance(item, pcb.PCB_VIA):
-            other_hole = pcb.SHAPE_CIRCLE(item.GetPosition(), item.GetDrillValue() // 2)
-            if other_hole.Collide(hole, pcb.FromMM(.2) - 1):
+            circular_drills_checked += 1
+            if circular_holes_violate_clearance(
+                    center, pcb.FromMM(.175), item.GetPosition(),
+                    item.GetDrillValue() // 2, pcb.FromMM(.2)):
                 drill_hits.append(uid)
+        elif isinstance(item, pcb.PAD):
+            drill = item.GetDrillSize()
+            if drill.x <= 0 or drill.y <= 0:
+                continue
+            if drill.x == drill.y:
+                circular_drills_checked += 1
+                if circular_holes_violate_clearance(
+                        center, pcb.FromMM(.175), item.GetPosition(),
+                        drill.x // 2, pcb.FromMM(.2)):
+                    drill_hits.append(uid)
+            else:
+                require(hasattr(item, "GetEffectiveHoleShape"),
+                        "KiCad PAD lacks native effective-hole geometry API")
+                native_slot_drills_checked += 1
+                if item.GetEffectiveHoleShape().Collide(hole, pcb.FromMM(.2) - 1):
+                    drill_hits.append(uid)
     require(not pad_hits, "Added via overlaps a pad")
     require(not foreign_hits, "Added via violates foreign copper clearance")
     require(not drill_hits, "Added via violates existing drill clearance")
@@ -333,6 +360,11 @@ def via_checks(pcb, before, after, interface):
         "off_pad": True,
         "foreign_copper_clearance_mm": .2,
         "drill_clearance_mm": .2,
+        "drill_geometry_checks": {
+            "exact_integer_circular_holes": circular_drills_checked,
+            "native_effective_slot_holes": native_slot_drills_checked,
+            "minimum_clearance_boundary_is_accepted": True,
+        },
         "B_contact_metal_keepout_clearance_mm": .2,
         "contacts_main_In1_island": True,
     }

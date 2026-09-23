@@ -1,12 +1,15 @@
 # Digital Handbell
 
-**September 22 resumed: inner ground plane and +3V3 bridge accepted.** The active
-four-layer PCB now has **48 opens**, with existing connected groups and
+**September 22: inner ground plane, +3V3 bridge and one ground stitch accepted.** The active
+four-layer PCB now has **47 opens**, with existing connected groups and
 protected sense returns preserved. The supply bridge adds three 0.40 mm
 In2 segments between existing vias; component placement is unchanged.
+An off-pad ground via and short R4 stub now join the existing C9/R4/R8
+ground group to main GND without changing the plane fills; C9's local
+high-frequency return remains unqualified.
 This is an incremental routing baseline, not a fabrication
 release or final SI/PI qualification. See the
-[latest acceptance record](hardware/handbell/iterations/printed-bell-four-layer/reports/in2-3v3-bridge-acceptance.json)
+[latest acceptance record](hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-acceptance.json)
 and [handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
 
 **September 21: four-layer migration approved, with Astra/Sol role separation.**
