@@ -1,0 +1,2279 @@
+{
+  "status": "READ_ONLY_OBSTACLE_DRIVEN_REVIEW",
+  "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+  "saved_radial_screen_sha256": "f9495e7393f18f9539f959a075978ccb44dc4ccbcc23c53b2d4c5aeb3f01c03e",
+  "kicad_version": "10.0.6",
+  "native_load_count": 1,
+  "targets": {
+    "C12.2": {
+      "native_group_pad_members": [
+        "C12.2"
+      ],
+      "connected_F_copper": [
+        {
+          "uuid": "44f55bb7-4ad0-547c-a076-ee8bf94ef46e",
+          "type": "pad",
+          "net": "GND",
+          "references": [
+            "C12.2"
+          ],
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_native_mm": [
+            98.70005,
+            93.922077,
+            99.30005,
+            94.522077
+          ]
+        },
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+          "type": "filled-zone-island",
+          "net": "GND",
+          "references": [
+            "C12.2"
+          ],
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_native_mm": [
+            94.26866,
+            93.7894,
+            99.3106,
+            94.757003
+          ]
+        }
+      ],
+      "target_F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+      "main_GND_F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+      "screen_diagnosis": {
+        "site_count": 48,
+        "reason_counts": {
+          "F-fixed-copper": 48,
+          "all-layer-foreign-copper": 48,
+          "via-pad-overlap": 9,
+          "drill-clearance": 9,
+          "does-not-contact-main-In1": 2
+        },
+        "new_In2_3V3_segment_a4fd_occurrences": 22,
+        "dominant_bottleneck": "all-span via/foreign-copper",
+        "least_blocked_saved_rows": [
+          {
+            "pad_target": "C12.2",
+            "group_key": "('42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12', 0)",
+            "mode": "F_stub_plus_through_via",
+            "from_uuid": "44f55bb7-4ad0-547c-a076-ee8bf94ef46e",
+            "from_mm": [
+              99.00005,
+              94.222077
+            ],
+            "via_mm": [
+              98.260946,
+              93.91593
+            ],
+            "length_mm": 0.8,
+            "radius_mm": 0.8,
+            "angle_degrees": 202.5,
+            "site_index": 154,
+            "reasons": [
+              "F-fixed-copper",
+              "all-layer-foreign-copper"
+            ],
+            "obstacle_uuids": [
+              "8f0aa971-d928-53eb-8391-6db5359d932c",
+              "a4fd0c01-2bef-5c7a-9688-ef334f5c7fff"
+            ]
+          },
+          {
+            "pad_target": "C12.2",
+            "group_key": "('42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12', 0)",
+            "mode": "F_stub_plus_through_via",
+            "from_uuid": "44f55bb7-4ad0-547c-a076-ee8bf94ef46e",
+            "from_mm": [
+              99.00005,
+              94.222077
+            ],
+            "via_mm": [
+              98.257588,
+              94.964539
+            ],
+            "length_mm": 1.05,
+            "radius_mm": 1.05,
+            "angle_degrees": 135.0,
+            "site_index": 167,
+            "reasons": [
+              "F-fixed-copper",
+              "all-layer-foreign-copper"
+            ],
+            "obstacle_uuids": [
+              "8b1b53b0-240a-5fc7-b78e-b5ee023450c3",
+              "c95b4b07-ab88-5663-94b8-da9760c93561"
+            ]
+          }
+        ],
+        "top_native_obstacles": [
+          {
+            "uuid": "a4fd0c01-2bef-5c7a-9688-ef334f5c7fff",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "In2.Cu"
+            ],
+            "bounds_native_mm": [
+              93.55,
+              94.05,
+              100.7575,
+              94.45
+            ],
+            "screen_occurrences": 22
+          },
+          {
+            "uuid": "08b2bbf2-3bcc-5b2a-a32f-a3866f99421f",
+            "type": "track",
+            "net": "VHI",
+            "references": [
+              "D4.C",
+              "Q1.2",
+              "Q3.2",
+              "R16.2"
+            ],
+            "layers": [
+              "B.Cu"
+            ],
+            "bounds_native_mm": [
+              99.6,
+              92.1,
+              100.4,
+              98.1
+            ],
+            "screen_occurrences": 21
+          },
+          {
+            "uuid": "35c51e50-2888-5a3b-ae2c-d3a576a1909a",
+            "type": "track",
+            "net": "USBBOOT",
+            "references": [
+              "D3.C",
+              "IC1.9",
+              "TP3.P$1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              99.5111,
+              93.6611,
+              99.6889,
+              95.7889
+            ],
+            "screen_occurrences": 21
+          },
+          {
+            "uuid": "7c93ffe2-a33b-5cea-84f2-1e3cee9abe08",
+            "type": "track",
+            "net": "USBBOOT",
+            "references": [
+              "D3.C",
+              "IC1.9",
+              "TP3.P$1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              99.5211,
+              93.7226,
+              99.6989,
+              95.8042
+            ],
+            "screen_occurrences": 21
+          },
+          {
+            "uuid": "8f0aa971-d928-53eb-8391-6db5359d932c",
+            "type": "track",
+            "net": "USBBOOT",
+            "references": [
+              "D3.C",
+              "IC1.9",
+              "TP3.P$1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              96.3611,
+              93.5111,
+              99.5389,
+              93.6889
+            ],
+            "screen_occurrences": 21
+          },
+          {
+            "uuid": "74a94679-d6b8-5775-ad3c-b8ffb31b85a8",
+            "type": "track",
+            "net": "USBBOOT",
+            "references": [
+              "D3.C",
+              "IC1.9",
+              "TP3.P$1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              99.0445,
+              93.246,
+              99.6989,
+              93.9004
+            ],
+            "screen_occurrences": 17
+          },
+          {
+            "uuid": "8b1b53b0-240a-5fc7-b78e-b5ee023450c3",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              97.7876,
+              94.4188,
+              99.0889,
+              95.7201
+            ],
+            "screen_occurrences": 16
+          },
+          {
+            "uuid": "1cd5fad8-f1ee-54d3-9ed3-8faf003a4987",
+            "type": "track",
+            "net": "SCL",
+            "references": [
+              "IC1.5",
+              "IC4.13"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              99.0595,
+              92.6479,
+              101.0889,
+              94.6773
+            ],
+            "screen_occurrences": 15
+          },
+          {
+            "uuid": "c95b4b07-ab88-5663-94b8-da9760c93561",
+            "type": "pad",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              98.70005,
+              94.938077,
+              99.30005,
+              95.538077
+            ],
+            "screen_occurrences": 15
+          },
+          {
+            "uuid": "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+            "type": "via",
+            "net": "USBBOOT",
+            "references": [
+              "D3.C",
+              "IC1.9",
+              "TP3.P$1"
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ],
+            "bounds_native_mm": [
+              98.6044,
+              93.0349,
+              99.2044,
+              93.6349
+            ],
+            "screen_occurrences": 13
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "direct_F_boundary_stitch",
+          "distance_mm": 0.5788000000000011,
+          "target_group_xy_mm": [
+            95.43347,
+            94.2183
+          ],
+          "main_GND_xy_mm": [
+            95.43347,
+            94.7971
+          ],
+          "width_mm": 0.3,
+          "within_original_1_5mm_limit": true,
+          "foreign_F_obstacles": [
+            {
+              "uuid": "a869dd24-8003-5303-82af-32d37e552b3a",
+              "type": "track",
+              "net": "+3V3",
+              "references": [
+                "C10.1",
+                "C11.1",
+                "C12.1",
+                "C13.1",
+                "C14.1",
+                "C15.1",
+                "C17.1",
+                "C23.1"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                91.9152,
+                94.4188,
+                97.9654,
+                94.5966
+              ]
+            }
+          ],
+          "private_guard_obstacles": [],
+          "formable_without_constraint_change": false,
+          "needed_check_if_executed": "Native exact segment, refill and full graph/DRC acceptance; this review did not route it."
+        },
+        {
+          "type": "specific_obstacle_engineering_decision",
+          "constraint_change_required": true,
+          "exact_question": "Whether the named intersecting F obstacle may be locally rerouted; no placement or route change is authorized by this report.",
+          "affected_obstacles": [
+            {
+              "uuid": "a869dd24-8003-5303-82af-32d37e552b3a",
+              "type": "track",
+              "net": "+3V3",
+              "references": [
+                "C10.1",
+                "C11.1",
+                "C12.1",
+                "C13.1",
+                "C14.1",
+                "C15.1",
+                "C17.1",
+                "C23.1"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                91.9152,
+                94.4188,
+                97.9654,
+                94.5966
+              ]
+            }
+          ]
+        }
+      ],
+      "unanswered_engineering_question": "Whether the named intersecting F obstacle may be locally rerouted; no placement or route change is authorized by this report."
+    },
+    "C23.2": {
+      "native_group_pad_members": [
+        "C23.2"
+      ],
+      "connected_F_copper": [
+        {
+          "uuid": "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+          "type": "pad",
+          "net": "GND",
+          "references": [
+            "C23.2"
+          ],
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_native_mm": [
+            89.510835,
+            91.191614,
+            90.110835,
+            91.791614
+          ]
+        },
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:19",
+          "type": "filled-zone-island",
+          "net": "GND",
+          "references": [
+            "C23.2"
+          ],
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_native_mm": [
+            88.867897,
+            90.3894,
+            91.818953,
+            91.8045
+          ]
+        }
+      ],
+      "target_F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:19",
+      "main_GND_F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:18",
+      "screen_diagnosis": {
+        "site_count": 48,
+        "reason_counts": {
+          "F-fixed-copper": 43,
+          "all-layer-foreign-copper": 48,
+          "does-not-contact-main-In1": 1,
+          "drill-clearance": 9,
+          "via-pad-overlap": 17
+        },
+        "new_In2_3V3_segment_a4fd_occurrences": 0,
+        "dominant_bottleneck": "all-span via/foreign-copper",
+        "least_blocked_saved_rows": [
+          {
+            "pad_target": "C23.2",
+            "group_key": "('42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:19', 0)",
+            "mode": "F_stub_plus_through_via",
+            "from_uuid": "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+            "from_mm": [
+              89.810835,
+              91.491614
+            ],
+            "via_mm": [
+              89.504688,
+              90.75251
+            ],
+            "length_mm": 0.8,
+            "radius_mm": 0.8,
+            "angle_degrees": 247.5,
+            "site_index": 204,
+            "reasons": [
+              "all-layer-foreign-copper"
+            ],
+            "obstacle_uuids": [
+              "4ef0b7ff-2c51-5d9c-a7aa-ecc07333e058"
+            ]
+          },
+          {
+            "pad_target": "C23.2",
+            "group_key": "('42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:19', 0)",
+            "mode": "F_stub_plus_through_via",
+            "from_uuid": "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+            "from_mm": [
+              89.810835,
+              91.491614
+            ],
+            "via_mm": [
+              89.810835,
+              90.691614
+            ],
+            "length_mm": 0.8,
+            "radius_mm": 0.8,
+            "angle_degrees": 270.0,
+            "site_index": 205,
+            "reasons": [
+              "all-layer-foreign-copper"
+            ],
+            "obstacle_uuids": [
+              "4ef0b7ff-2c51-5d9c-a7aa-ecc07333e058"
+            ]
+          }
+        ],
+        "top_native_obstacles": [
+          {
+            "uuid": "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+            "type": "track",
+            "net": "SDA",
+            "references": [
+              "IC1.4",
+              "IC4.14",
+              "R15.2"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              86.9938,
+              92.005,
+              90.3851,
+              92.1828
+            ],
+            "screen_occurrences": 21
+          },
+          {
+            "uuid": "4ef0b7ff-2c51-5d9c-a7aa-ecc07333e058",
+            "type": "track",
+            "net": "Net-(L0-PadA)",
+            "references": [
+              "L0.A",
+              "R7.2"
+            ],
+            "layers": [
+              "B.Cu"
+            ],
+            "bounds_native_mm": [
+              84.4737,
+              90.6317,
+              96.1977,
+              90.8095
+            ],
+            "screen_occurrences": 21
+          },
+          {
+            "uuid": "24e162dc-c62b-5fa7-a676-5b34e7879711",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "B.Cu"
+            ],
+            "bounds_native_mm": [
+              89.275,
+              91.525,
+              90.825,
+              93.075
+            ],
+            "screen_occurrences": 20
+          },
+          {
+            "uuid": "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+            "type": "pad",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              88.494835,
+              91.191614,
+              89.094835,
+              91.791614
+            ],
+            "screen_occurrences": 15
+          },
+          {
+            "uuid": "6421709a-0a8e-5ae6-b17a-69e9ccb61078",
+            "type": "via",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ],
+            "bounds_native_mm": [
+              90.4,
+              91.35,
+              91.0,
+              91.95
+            ],
+            "screen_occurrences": 13
+          },
+          {
+            "uuid": "5084ecf1-8111-50aa-860d-9d2f54fecc7d",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              88.7059,
+              90.8121,
+              88.8837,
+              91.5805
+            ],
+            "screen_occurrences": 12
+          },
+          {
+            "uuid": "f09ac407-e552-5aa8-ad96-27792c31d43a",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              90.575,
+              91.525,
+              91.275,
+              92.225
+            ],
+            "screen_occurrences": 11
+          },
+          {
+            "uuid": "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+            "type": "track",
+            "net": "SDA",
+            "references": [
+              "IC1.4",
+              "IC4.14",
+              "R15.2"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              90.2073,
+              92.005,
+              91.0293,
+              92.827
+            ],
+            "screen_occurrences": 10
+          },
+          {
+            "uuid": "b7e4151f-97ef-5f48-a8db-0f47260a21b3",
+            "type": "track",
+            "net": "SDA",
+            "references": [
+              "IC1.4",
+              "IC4.14",
+              "R15.2"
+            ],
+            "layers": [
+              "B.Cu"
+            ],
+            "bounds_native_mm": [
+              89.5306,
+              91.2882,
+              91.9122,
+              93.6698
+            ],
+            "screen_occurrences": 9
+          },
+          {
+            "uuid": "be86c5d5-325f-550b-9b99-c4e4fd481a0e",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              86.5602,
+              91.4027,
+              88.8837,
+              91.5805
+            ],
+            "screen_occurrences": 9
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "direct_F_boundary_stitch",
+          "distance_mm": 0.5788000000000011,
+          "target_group_xy_mm": [
+            90.678764,
+            90.3894
+          ],
+          "main_GND_xy_mm": [
+            90.678764,
+            89.8106
+          ],
+          "width_mm": 0.3,
+          "within_original_1_5mm_limit": true,
+          "foreign_F_obstacles": [
+            {
+              "uuid": "f64f7022-043b-568a-8e7d-578bea1e26e9",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [
+                "D3.C",
+                "IC1.9",
+                "TP3.P$1"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                88.8111,
+                90.0111,
+                90.9389,
+                90.1889
+              ]
+            },
+            {
+              "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [
+                "D3.C",
+                "IC1.9",
+                "TP3.P$1"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                90.7611,
+                90.0111,
+                92.9389,
+                92.1889
+              ]
+            }
+          ],
+          "private_guard_obstacles": [],
+          "formable_without_constraint_change": false,
+          "needed_check_if_executed": "Native exact segment, refill and full graph/DRC acceptance; this review did not route it."
+        },
+        {
+          "type": "specific_obstacle_engineering_decision",
+          "constraint_change_required": true,
+          "exact_question": "Whether the named intersecting F obstacle may be locally rerouted; no placement or route change is authorized by this report.",
+          "affected_obstacles": [
+            {
+              "uuid": "f64f7022-043b-568a-8e7d-578bea1e26e9",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [
+                "D3.C",
+                "IC1.9",
+                "TP3.P$1"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                88.8111,
+                90.0111,
+                90.9389,
+                90.1889
+              ]
+            },
+            {
+              "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [
+                "D3.C",
+                "IC1.9",
+                "TP3.P$1"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                90.7611,
+                90.0111,
+                92.9389,
+                92.1889
+              ]
+            }
+          ]
+        }
+      ],
+      "unanswered_engineering_question": "Whether the named intersecting F obstacle may be locally rerouted; no placement or route change is authorized by this report."
+    },
+    "C24.2": {
+      "native_group_pad_members": [
+        "C24.2"
+      ],
+      "connected_F_copper": [
+        {
+          "uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+          "type": "pad",
+          "net": "GND",
+          "references": [
+            "C24.2"
+          ],
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_native_mm": [
+            91.704083,
+            93.191669,
+            92.304083,
+            93.791669
+          ]
+        },
+        {
+          "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+          "type": "filled-zone-island",
+          "net": "GND",
+          "references": [
+            "C24.2"
+          ],
+          "layers": [
+            "F.Cu"
+          ],
+          "bounds_native_mm": [
+            91.651681,
+            93.0262,
+            92.382039,
+            93.8245
+          ]
+        }
+      ],
+      "target_F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+      "main_GND_F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:18",
+      "screen_diagnosis": {
+        "site_count": 48,
+        "reason_counts": {
+          "F-fixed-copper": 48,
+          "all-layer-foreign-copper": 48,
+          "does-not-contact-main-In1": 3,
+          "drill-clearance": 15,
+          "B-contact-metal": 17,
+          "via-pad-overlap": 11
+        },
+        "new_In2_3V3_segment_a4fd_occurrences": 1,
+        "dominant_bottleneck": "all-span via/foreign-copper",
+        "least_blocked_saved_rows": [
+          {
+            "pad_target": "C24.2",
+            "group_key": "('0a1605ae-5caf-5a6d-ac08-95ffe731055b', 0)",
+            "mode": "F_stub_plus_through_via",
+            "from_uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+            "from_mm": [
+              92.004083,
+              93.491669
+            ],
+            "via_mm": [
+              92.31023,
+              92.752565
+            ],
+            "length_mm": 0.8,
+            "radius_mm": 0.8,
+            "angle_degrees": 292.5,
+            "site_index": 254,
+            "reasons": [
+              "F-fixed-copper",
+              "all-layer-foreign-copper"
+            ],
+            "obstacle_uuids": [
+              "11c305b9-183d-5a88-a0a1-1d4ff2ba5f65",
+              "3af9f604-730a-57dc-bda2-07d0adec1b60",
+              "6d56c09b-2b19-5144-a473-6e1c16d7c430",
+              "f4b67f0a-c5b8-5ed0-be6c-8e770543ca7c"
+            ]
+          },
+          {
+            "pad_target": "C24.2",
+            "group_key": "('0a1605ae-5caf-5a6d-ac08-95ffe731055b', 0)",
+            "mode": "F_stub_plus_through_via",
+            "from_uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+            "from_mm": [
+              92.004083,
+              93.491669
+            ],
+            "via_mm": [
+              91.438398,
+              92.925984
+            ],
+            "length_mm": 0.8,
+            "radius_mm": 0.8,
+            "angle_degrees": 225.0,
+            "site_index": 251,
+            "reasons": [
+              "F-fixed-copper",
+              "all-layer-foreign-copper"
+            ],
+            "obstacle_uuids": [
+              "3af9f604-730a-57dc-bda2-07d0adec1b60",
+              "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+              "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+              "8576418f-415a-52aa-a243-a9314fbe9c98",
+              "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8"
+            ]
+          }
+        ],
+        "top_native_obstacles": [
+          {
+            "uuid": "3bc0ec37-9ec8-5282-ab10-e71d836c4ea4",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              91.425,
+              94.025,
+              92.575,
+              94.275
+            ],
+            "screen_occurrences": 21
+          },
+          {
+            "uuid": "f4b67f0a-c5b8-5ed0-be6c-8e770543ca7c",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "B.Cu"
+            ],
+            "bounds_native_mm": [
+              91.825,
+              92.325,
+              92.975,
+              93.475
+            ],
+            "screen_occurrences": 20
+          },
+          {
+            "uuid": "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+            "type": "track",
+            "net": "SCL",
+            "references": [
+              "IC1.5",
+              "IC4.13"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              91.2753,
+              92.9737,
+              91.4531,
+              93.7432
+            ],
+            "screen_occurrences": 18
+          },
+          {
+            "uuid": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+            "type": "track",
+            "net": "SCL",
+            "references": [
+              "IC1.5",
+              "IC4.13"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              91.6011,
+              92.6479,
+              93.7204,
+              92.8257
+            ],
+            "screen_occurrences": 18
+          },
+          {
+            "uuid": "contact-5",
+            "type": "battery-contact-metal-reservation",
+            "net": null,
+            "references": [],
+            "layers": [
+              "B.Cu"
+            ],
+            "screen_occurrences": 17
+          },
+          {
+            "uuid": "1a9feeb1-dc75-5127-b787-a8c2c8775e34",
+            "type": "pad",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              91.704083,
+              94.207669,
+              92.304083,
+              94.807669
+            ],
+            "screen_occurrences": 15
+          },
+          {
+            "uuid": "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+            "type": "track",
+            "net": "SCL",
+            "references": [
+              "IC1.5",
+              "IC4.13"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              91.2753,
+              92.6479,
+              91.7789,
+              93.1515
+            ],
+            "screen_occurrences": 15
+          },
+          {
+            "uuid": "09be5c73-f32a-54c9-a47b-bc78b49be280",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              92.575,
+              93.375,
+              92.825,
+              93.875
+            ],
+            "screen_occurrences": 14
+          },
+          {
+            "uuid": "a8cbe912-8331-5b8c-8007-4757dbf45c33",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "In2.Cu"
+            ],
+            "bounds_native_mm": [
+              92.65,
+              93.15,
+              93.95,
+              94.45
+            ],
+            "screen_occurrences": 14
+          },
+          {
+            "uuid": "986e2274-8d21-5c90-9820-f44607819f8c",
+            "type": "track",
+            "net": "+3V3",
+            "references": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1"
+            ],
+            "layers": [
+              "F.Cu"
+            ],
+            "bounds_native_mm": [
+              92.525,
+              93.675,
+              92.775,
+              94.075
+            ],
+            "screen_occurrences": 13
+          }
+        ]
+      },
+      "options": [
+        {
+          "type": "direct_F_boundary_stitch",
+          "distance_mm": 1.3919955476839692,
+          "target_group_xy_mm": [
+            92.343168,
+            93.059808
+          ],
+          "main_GND_xy_mm": [
+            93.376442,
+            92.127072
+          ],
+          "width_mm": 0.3,
+          "within_original_1_5mm_limit": true,
+          "foreign_F_obstacles": [
+            {
+              "uuid": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+              "type": "track",
+              "net": "SCL",
+              "references": [
+                "IC1.5",
+                "IC4.13"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                91.6011,
+                92.6479,
+                93.7204,
+                92.8257
+              ]
+            },
+            {
+              "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [
+                "D3.C",
+                "IC1.9",
+                "TP3.P$1"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                90.7611,
+                90.0111,
+                92.9389,
+                92.1889
+              ]
+            },
+            {
+              "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+              "type": "via",
+              "net": "+3V3",
+              "references": [
+                "C10.1",
+                "C11.1",
+                "C12.1",
+                "C13.1",
+                "C14.1",
+                "C15.1",
+                "C17.1",
+                "C23.1"
+              ],
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "bounds_native_mm": [
+                92.55,
+                93.05,
+                93.15,
+                93.65
+              ]
+            },
+            {
+              "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+              "type": "via",
+              "net": "USBBOOT",
+              "references": [
+                "D3.C",
+                "IC1.9",
+                "TP3.P$1"
+              ],
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "bounds_native_mm": [
+                92.55,
+                91.8,
+                93.15,
+                92.4
+              ]
+            }
+          ],
+          "private_guard_obstacles": [],
+          "formable_without_constraint_change": false,
+          "needed_check_if_executed": "Native exact segment, refill and full graph/DRC acceptance; this review did not route it."
+        },
+        {
+          "type": "specific_obstacle_engineering_decision",
+          "constraint_change_required": true,
+          "exact_question": "Whether the named intersecting F obstacle may be locally rerouted; no placement or route change is authorized by this report.",
+          "affected_obstacles": [
+            {
+              "uuid": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+              "type": "track",
+              "net": "SCL",
+              "references": [
+                "IC1.5",
+                "IC4.13"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                91.6011,
+                92.6479,
+                93.7204,
+                92.8257
+              ]
+            },
+            {
+              "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+              "type": "track",
+              "net": "USBBOOT",
+              "references": [
+                "D3.C",
+                "IC1.9",
+                "TP3.P$1"
+              ],
+              "layers": [
+                "F.Cu"
+              ],
+              "bounds_native_mm": [
+                90.7611,
+                90.0111,
+                92.9389,
+                92.1889
+              ]
+            },
+            {
+              "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+              "type": "via",
+              "net": "+3V3",
+              "references": [
+                "C10.1",
+                "C11.1",
+                "C12.1",
+                "C13.1",
+                "C14.1",
+                "C15.1",
+                "C17.1",
+                "C23.1"
+              ],
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "bounds_native_mm": [
+                92.55,
+                93.05,
+                93.15,
+                93.65
+              ]
+            },
+            {
+              "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+              "type": "via",
+              "net": "USBBOOT",
+              "references": [
+                "D3.C",
+                "IC1.9",
+                "TP3.P$1"
+              ],
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ],
+              "bounds_native_mm": [
+                92.55,
+                91.8,
+                93.15,
+                92.4
+              ]
+            }
+          ]
+        }
+      ],
+      "unanswered_engineering_question": "Whether the named intersecting F obstacle may be locally rerouted; no placement or route change is authorized by this report."
+    }
+  },
+  "reservations": {
+    "private_guards": [
+      {
+        "uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+        "name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          101.199,
+          115.279,
+          103.201,
+          117.021
+        ]
+      },
+      {
+        "uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+        "name": "private-R26.2-to-R27.2/3ed47a01-14b9-59e7-bdfe-95561c7f1435",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          85.849,
+          110.641,
+          86.951,
+          111.743
+        ]
+      },
+      {
+        "uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+        "name": "private-R24.2-to-C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          103.149,
+          116.949,
+          104.251,
+          118.051
+        ]
+      },
+      {
+        "uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+        "name": "private-R24.2-to-C28.2/34d001e5-c45d-5645-a43a-6ab95d630ff0",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          98.0681,
+          111.0601,
+          100.1399,
+          111.7399
+        ]
+      },
+      {
+        "uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+        "name": "private-R24.2-to-C28.2/a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          101.8601,
+          115.8101,
+          104.0399,
+          117.8399
+        ]
+      },
+      {
+        "uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+        "name": "private-R24.2-to-C28.2/1ba917bc-32e2-5176-954f-c3d06c7f6040",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          97.857,
+          110.849,
+          98.959,
+          111.951
+        ]
+      },
+      {
+        "uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+        "name": "private-R24.2-to-C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          99.649,
+          111.349,
+          100.751,
+          112.451
+        ]
+      },
+      {
+        "uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+        "name": "private-R24.2-to-C28.2/51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          99.4601,
+          111.0601,
+          100.5399,
+          112.2399
+        ]
+      },
+      {
+        "uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+        "name": "private-R26.2-to-R27.2/933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          85.598019,
+          108.549966,
+          87.250019,
+          110.451966
+        ]
+      },
+      {
+        "uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+        "name": "private-R26.2-to-R27.2/d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          86.059119,
+          109.161066,
+          86.7399,
+          111.5319
+        ]
+      },
+      {
+        "uuid": "b4bdee5c-b67f-5638-93fb-e85cf1db5608",
+        "name": "in1-private/6623be95-c657-5a8e-bedb-c5a73d42d40b",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          103.149,
+          116.949,
+          104.251,
+          118.051
+        ]
+      },
+      {
+        "uuid": "d84f1cbb-9996-5753-a723-42676ee16cd0",
+        "name": "in1-private/eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          99.649,
+          111.349,
+          100.751,
+          112.451
+        ]
+      },
+      {
+        "uuid": "f45024b2-d4bf-5379-813e-bcad54ff42ce",
+        "name": "in1-boost-sw/3f334850-1096-5c76-ac45-fa801cdf1bfc",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          93.8,
+          112.55,
+          95.8,
+          117.05
+        ]
+      },
+      {
+        "uuid": "c39613f0-be31-5517-adfd-80df3ef1f023",
+        "name": "in1-boost-sw/6880469f-e4d2-53ec-a4b5-8d000ec1cf1e",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          97.455,
+          114.8,
+          98.625,
+          115.6
+        ]
+      },
+      {
+        "uuid": "23ccd641-2f99-5a74-95bd-9f91755c5c0e",
+        "name": "in1-boost-sw/046e039e-0810-5599-ac5c-33a1afd3d3dc",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          93.75,
+          113.95,
+          95.45,
+          117.55
+        ]
+      },
+      {
+        "uuid": "2d3ef692-d3b3-5783-be34-2150cc145c57",
+        "name": "in1-boost-sw/2490c92c-982e-5830-b3df-3897734e1b09",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          96.95,
+          114.85,
+          97.65,
+          117.05
+        ]
+      },
+      {
+        "uuid": "3a35dad2-fccb-59a2-a858-6e1065dc3c6a",
+        "name": "in1-boost-sw/538119a3-e187-576d-9270-9e694af7a8c3",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          96.95,
+          114.85,
+          98.285,
+          115.55
+        ]
+      },
+      {
+        "uuid": "819be28f-9f79-5708-8730-49a77725ea28",
+        "name": "in1-boost-sw/6278f69b-4344-5d61-8e83-5333e8450cc6",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          93.75,
+          115.85,
+          98.15,
+          117.55
+        ]
+      },
+      {
+        "uuid": "ec1cf4dc-a7ac-503d-a7de-eac8212578d7",
+        "name": "in1-clock-region",
+        "layer": "In1.Cu",
+        "bounds_native_mm": [
+          90.1036,
+          96.152596,
+          97.2375,
+          100.263901
+        ]
+      }
+    ],
+    "battery_contact_metal_bounds_native_mm": [
+      [
+        101.685,
+        97.46,
+        105.685,
+        102.54
+      ],
+      [
+        118.685,
+        98.41,
+        121.565,
+        101.59
+      ],
+      [
+        105.685,
+        94.435,
+        118.685,
+        105.565
+      ],
+      [
+        94.315,
+        97.46,
+        98.315,
+        102.54
+      ],
+      [
+        78.435,
+        98.41,
+        81.315,
+        101.59
+      ],
+      [
+        81.315,
+        94.435,
+        94.315,
+        105.565
+      ]
+    ],
+    "C24_rear_contact_permissions_relaxed": false
+  },
+  "checks_performed": [
+    "Actual source-bound filled F islands and native connected components",
+    "Exact polygon-boundary nearest segment calculation",
+    "0.30 mm direct-F witness against native F foreign copper and F private guards",
+    "Saved 48-row blocker frequencies with native net/reference/layer/type attribution"
+  ],
+  "not_performed": [
+    "No new site sampling, routing, refill, board save, DRC, placement or promotion",
+    "No option B is authorized",
+    "No global impossibility conclusion from the fixed radial screen"
+  ],
+  "elapsed_seconds": 27.219000000040978,
+  "tool_sha256": "6e7719ad19d7dd313880eedd1110bf8cebbf5c9e304cec331cf47653a8c81d76",
+  "plus3V3_single_UUID_cut": {
+    "removed_in_memory_only_uuid": "a869dd24-8003-5303-82af-32d37e552b3a",
+    "board_mutated": false,
+    "track": {
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "width_mm": 0.1778,
+      "length_mm": 5.8724,
+      "start_native_mm": [
+        97.8765,
+        94.5077
+      ],
+      "end_native_mm": [
+        92.0041,
+        94.5077
+      ]
+    },
+    "pad_partition_before": [
+      [
+        "C10.1",
+        "C11.1",
+        "C12.1",
+        "C13.1",
+        "C14.1",
+        "C15.1",
+        "C17.1",
+        "C23.1",
+        "C24.1",
+        "C4.1",
+        "C5.1",
+        "C9.1",
+        "IC1.1",
+        "IC1.10",
+        "IC1.22",
+        "IC1.33",
+        "IC1.42",
+        "IC1.43",
+        "IC1.44",
+        "IC1.48",
+        "IC1.49",
+        "IC4.12",
+        "IC4.5",
+        "IC4.8",
+        "R1.1",
+        "R14.1",
+        "R15.1",
+        "R20.1",
+        "R21.1",
+        "R5.2",
+        "TP9.P$1",
+        "U1.8",
+        "U2.5"
+      ]
+    ],
+    "pad_partition_after": [
+      [
+        "C10.1",
+        "C11.1",
+        "C13.1",
+        "C14.1",
+        "C15.1",
+        "C17.1",
+        "C23.1",
+        "C24.1",
+        "C4.1",
+        "C5.1",
+        "C9.1",
+        "IC1.1",
+        "IC1.22",
+        "IC1.33",
+        "IC1.42",
+        "IC1.43",
+        "IC1.44",
+        "IC1.48",
+        "IC1.49",
+        "IC4.12",
+        "IC4.5",
+        "IC4.8",
+        "R1.1",
+        "R14.1",
+        "R15.1",
+        "R20.1",
+        "R21.1",
+        "R5.2",
+        "TP9.P$1",
+        "U1.8",
+        "U2.5"
+      ],
+      [
+        "C12.1",
+        "IC1.10"
+      ]
+    ],
+    "all_original_plus3V3_pad_connections_remain": false,
+    "floating_copper_components_after_cut": [],
+    "cut_leaves_floating_copper": false,
+    "endpoint_neighbor_UUIDs": {
+      "start": [
+        "8b1b53b0-240a-5fc7-b78e-b5ee023450c3"
+      ],
+      "end": [
+        "1a9feeb1-dc75-5127-b787-a8c2c8775e34",
+        "ce3963ea-8df2-51a9-929c-90e8075a087b"
+      ]
+    },
+    "alternate_retained_path": {
+      "exists": false,
+      "items": [],
+      "track_length_mm": 0,
+      "layer_hops_flagged": false,
+      "method": "Shortest native copper adjacency path after deleting only the cut UUID vertices and joins."
+    },
+    "endpoint_component_inventory": {
+      "start": {
+        "pad_refs": [
+          "C12.1",
+          "IC1.10"
+        ],
+        "via_terminals": []
+      },
+      "end": {
+        "pad_refs": [
+          "C10.1",
+          "C11.1",
+          "C13.1",
+          "C14.1",
+          "C15.1",
+          "C17.1",
+          "C23.1",
+          "C24.1",
+          "C4.1",
+          "C5.1",
+          "C9.1",
+          "IC1.1",
+          "IC1.22",
+          "IC1.33",
+          "IC1.42",
+          "IC1.43",
+          "IC1.44",
+          "IC1.48",
+          "IC1.49",
+          "IC4.12",
+          "IC4.5",
+          "IC4.8",
+          "R1.1",
+          "R14.1",
+          "R15.1",
+          "R20.1",
+          "R21.1",
+          "R5.2",
+          "TP9.P$1",
+          "U1.8",
+          "U2.5"
+        ],
+        "via_terminals": [
+          {
+            "uuid": "07f1eabb-16dc-5ed1-b965-90d249b1d24b",
+            "position_native_mm": [
+              93.75,
+              106.1
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "19f6694f-3225-5f57-bf99-192ea41c8542",
+            "position_native_mm": [
+              106.0956,
+              93.0055
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "1c15a7a2-2065-55a0-bfec-88da501cad88",
+            "position_native_mm": [
+              87.9,
+              93.6
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664",
+            "position_native_mm": [
+              101.802,
+              93.0055
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "6421709a-0a8e-5ae6-b17a-69e9ccb61078",
+            "position_native_mm": [
+              90.7,
+              91.65
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "6d56c09b-2b19-5144-a473-6e1c16d7c430",
+            "position_native_mm": [
+              91.95,
+              92.1
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "7204ab6d-22e5-5201-befc-bd26087e560a",
+            "position_native_mm": [
+              98.1,
+              105.45
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "ae1899b4-1cdd-5164-a303-9fc7e9225db4",
+            "position_native_mm": [
+              107.65,
+              88.55
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+            "position_native_mm": [
+              92.85,
+              93.35
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "b86f2ac1-88d2-59d4-863c-429ca8108ae3",
+            "position_native_mm": [
+              108.3,
+              89.8
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "c4d0ed24-aaad-5e2d-a8b8-d805d098ec99",
+            "position_native_mm": [
+              109.45,
+              93.35
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "cd8870dc-c5ee-581e-8e4c-175c950614b0",
+            "position_native_mm": [
+              109.5,
+              92.2
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "cfde0bac-c3d3-5b5d-84e7-0d6d310f63f7",
+            "position_native_mm": [
+              106.4,
+              88.55
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          },
+          {
+            "uuid": "ea33a04a-fd66-55a0-b87b-2b3d1926fefe",
+            "position_native_mm": [
+              116.05,
+              91.6
+            ],
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ]
+          }
+        ]
+      }
+    },
+    "source_feed_and_decap_attachments": [
+      [
+        "C10.1",
+        "C11.1",
+        "C13.1",
+        "C14.1",
+        "C15.1",
+        "C17.1",
+        "C23.1",
+        "C24.1",
+        "C4.1",
+        "C5.1",
+        "C9.1",
+        "IC1.1",
+        "IC1.22",
+        "IC1.33",
+        "IC1.42",
+        "IC1.43",
+        "IC1.44",
+        "IC1.48",
+        "IC1.49",
+        "IC4.12",
+        "IC4.5",
+        "IC4.8",
+        "R1.1",
+        "R14.1",
+        "R15.1",
+        "R20.1",
+        "R21.1",
+        "R5.2",
+        "TP9.P$1",
+        "U1.8",
+        "U2.5"
+      ],
+      [
+        "C12.1",
+        "IC1.10"
+      ]
+    ],
+    "disposition": "Topologically redundant only if all pad connections remain, no floating copper is created, and the retained path exists; current delivery is not qualified by topology."
+  },
+  "native_review_svg": {
+    "path": "reports\\remaining-ground-obstacle-review.svg",
+    "sha256": "b7e97aea8e1feb15f7f4be1b21cb13bafde111ea817507d23d6abd3ccdf25ae6",
+    "layers": [
+      "F.Cu",
+      "In1.Cu",
+      "Edge.Cuts"
+    ],
+    "geometry": "Exact KiCad native plot; labels and coordinates are in this JSON."
+  },
+  "cut_update_tool_sha256": "ff660ea35acd22f54db0e813ae3dc00d03e8d1e1e0fd69cf475d93718e5652c6",
+  "named_control_obstacle_existing_layer_transitions": {
+    "f64f7022-043b-568a-8e7d-578bea1e26e9": {
+      "pad_refs": [
+        "D3.C",
+        "IC1.9",
+        "TP3.P$1"
+      ],
+      "via_terminals": [
+        {
+          "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+          "position_native_mm": [
+            92.85,
+            92.1
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "6a769f0c-bb2a-5e4f-a23f-f2870ed623cd",
+          "position_native_mm": [
+            87.7,
+            88.95
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "6c3b480f-a480-5e47-b1b0-4293404e5f25",
+          "position_native_mm": [
+            108.788,
+            91.7883
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "81af2395-416b-5324-8804-bdd7d7a92106",
+          "position_native_mm": [
+            86.0,
+            88.95
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "position_native_mm": [
+            98.9044,
+            93.3349
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "b5f67f8e-64ef-5209-9c5f-9a49a78d6629",
+          "position_native_mm": [
+            94.2,
+            93.5
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        }
+      ],
+      "track": {
+        "uuid": "f64f7022-043b-568a-8e7d-578bea1e26e9",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "width_mm": 0.1778,
+        "length_mm": 1.95,
+        "start_native_mm": [
+          88.9,
+          90.1
+        ],
+        "end_native_mm": [
+          90.85,
+          90.1
+        ]
+      }
+    },
+    "372abf98-d8c7-5aca-ae86-79442304abb8": {
+      "pad_refs": [
+        "D3.C",
+        "IC1.9",
+        "TP3.P$1"
+      ],
+      "via_terminals": [
+        {
+          "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+          "position_native_mm": [
+            92.85,
+            92.1
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "6a769f0c-bb2a-5e4f-a23f-f2870ed623cd",
+          "position_native_mm": [
+            87.7,
+            88.95
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "6c3b480f-a480-5e47-b1b0-4293404e5f25",
+          "position_native_mm": [
+            108.788,
+            91.7883
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "81af2395-416b-5324-8804-bdd7d7a92106",
+          "position_native_mm": [
+            86.0,
+            88.95
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+          "position_native_mm": [
+            98.9044,
+            93.3349
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        {
+          "uuid": "b5f67f8e-64ef-5209-9c5f-9a49a78d6629",
+          "position_native_mm": [
+            94.2,
+            93.5
+          ],
+          "layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        }
+      ],
+      "track": {
+        "uuid": "372abf98-d8c7-5aca-ae86-79442304abb8",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "width_mm": 0.1778,
+        "length_mm": 2.8284271247461903,
+        "start_native_mm": [
+          90.85,
+          90.1
+        ],
+        "end_native_mm": [
+          92.85,
+          92.1
+        ]
+      }
+    },
+    "3af9f604-730a-57dc-bda2-07d0adec1b60": {
+      "pad_refs": [
+        "IC1.5",
+        "IC4.13"
+      ],
+      "via_terminals": [],
+      "track": {
+        "uuid": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+        "net": "SCL",
+        "layer": "F.Cu",
+        "width_mm": 0.1778,
+        "length_mm": 1.9415,
+        "start_native_mm": [
+          91.69,
+          92.7368
+        ],
+        "end_native_mm": [
+          93.6315,
+          92.7368
+        ]
+      }
+    }
+  }
+}

@@ -166,6 +166,18 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Current engineering decision:** the
+[exact cut analysis](../hardware/handbell/iterations/printed-bell-four-layer/reports/remaining-ground-cut-review.json)
+shows that deleting the named +3V3 blocker disconnects C12.1/IC1.10.
+Keep that feed. USBBOOT has existing layer transitions on both sides of
+the C23 obstruction; SCL at C24 does not. The next released item is the
+[USBBOOT corridor relief](routing-agent-policy.md#usbboot-corridor-relief-for-c23):
+prove and replace only the unbranched F chain between the two specified
+existing vias with In2 copper, then close the measured C23 ground gap.
+No new vias, part moves, C12 supply change, C24 SCL reroute or USB data-pair
+change is authorized. The accepted board remains at 44 opens until the
+complete staged result passes review.
+
 **Remaining-ground obstacle review:** all three groups have native F filled
 islands close to main GND, but their nearest boundary bridges cross fixed
 copper. C12's 0.5788 mm gap crosses F +3V3 track `a869dd24...`, not the

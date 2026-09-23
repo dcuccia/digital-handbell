@@ -273,6 +273,40 @@ placement, larger vias, longer stubs or repeated full-board trials.
 The finite follow-up replaces the prior item's site cap only; it does not
 reset the accepted board or authorize rerouting the completed R4 stitch.
 
+#### USBBOOT corridor relief for C23
+
+The exact +3V3 cut analysis separates C12.1/IC1.10 from their source.
+Retain track `a869dd24-8003-5303-82af-32d37e552b3a`; it is not redundant.
+C24's SCL group has no existing via transition and is not released for
+rerouting by this decision.
+
+Authorize one staged local USBBOOT reroute to free the C23 front-ground
+corridor. USBBOOT is the D3.C/IC1.9/TP3 control net, not D+/D-/USB_D+/USB_D-.
+Use existing through-vias `6a769f0c-bb2a-5e4f-a23f-f2870ed623cd`
+at (87.7,88.95) and `45b3cf7f-e607-5ab4-b380-95baa0095dbd`
+at (92.85,92.1) mm. First prove a unique unbranched F track chain between
+them that includes the two named blocking segments `f64f7022...` and
+`372abf98...`. If any interior pad, via or branch attachment would lose its
+connection, stop rather than expanding the removal scope.
+
+Replace only that proven chain with a 0.20 mm In2 connection between the
+same vias, retaining 0.20 mm clearance and actual In1 return coverage.
+Use at most 12 direct/45-degree/dogleg candidates within native
+x87..93.5, y88..93 mm. Add no vias, change no pads/parts, and preserve all
+other tracks and the +3V3 bridge. Keep D3, the MCU boot input and TP3
+connected; do not treat connectivity through the MCU silicon as PCB copper.
+
+With the F corridor freed, allow one 0.30 mm GND bridge at the measured
+C23 island gap, (90.678764,90.389400) to (90.678764,89.810600) mm,
+only if a native exact screen passes. Extend into the existing endpoint
+islands by at most 0.10 mm if needed for robust contact; no sideways search.
+The established refill may close this gap directly instead, in which case
+do not add unnecessary copper. Require all previous groups/private returns,
+unchanged non-USBBOOT net partitions except the intended C23 GND merge,
+native DRC and exact per-layer protections. Stop on any other new merge or
+remote/unexplained fill change. Acceptance requires actual C23 closure,
+not merely moving a control trace and declaring the corridor improved.
+
 First qualify the tools for four layers: actual enabled-layer enumeration,
 via spans, multilayer obstacles, inner-plane fill/connectivity and source
 invariants. The existing F/B-only grid and ground checkers are not qualified
