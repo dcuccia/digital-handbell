@@ -1,0 +1,142 @@
+{
+  "report": "imu-branched-supply",
+  "status": "partial_ground_group_completion_supply_site_blocked",
+  "classification": "Session-private evolving candidate; unfilled, electrically incomplete, unaccepted and not quoteable.",
+  "inputs": {
+    "starting_private_pcb_sha256": "00006ee9641dd1dabb266a7bb1129ff6ba8022ae9bdf0c6c231842aab5b21d67",
+    "starting_private_manifest_sha256": "efb3b31da5dad9dd548f1b250d49e07259c58e3bfc46ca425360f8d250aebbfe",
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "accepted_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667"
+  },
+  "working_artifacts": {
+    "pcb": {
+      "session_relative_path": "files/imu-coupled-routing/handbell-imu-coupled-working.kicad_pcb",
+      "sha256": "098dc7fd919340176ffb41f177525015b0e27f806abd5783121beecf593ea37b"
+    },
+    "manifest": {
+      "session_relative_path": "files/imu-coupled-routing/placement-manifest-imu-coupled-working.json",
+      "sha256": "efb3b31da5dad9dd548f1b250d49e07259c58e3bfc46ca425360f8d250aebbfe"
+    },
+    "screen_state": {
+      "session_relative_path": "files/imu-coupled-routing/branched-supply-state.json",
+      "sha256": "2d527a5453cad38763754d2dc759967e706cb176cad53593343fdb0e0e780762"
+    },
+    "tool": {
+      "session_relative_path": "files/route_imu_branched_supply.py",
+      "sha256": "b63df23b8b9b94a5e73f0ee93d49b57478a4f86a07149af82ad8b8c1b8e985a9"
+    }
+  },
+  "actual_saved_copper": {
+    "retained_from_prior_candidate": [
+      "GND via 102d837c-4d5e-5433-964e-f19081feef15 at 87.9,93.6 with IC4.6 stub",
+      "GND via 68beef59-fa94-5ad0-823b-73718e9f004c at 90.7,91.65 with IC4.1 stub",
+      "tentative three-segment IC4.13-to-SCL-exterior route"
+    ],
+    "added_this_item": [
+      {
+        "uuid": "5df6a95a-cdd4-5d51-9657-523cf6f4d924",
+        "net": "GND",
+        "layer": "F.Cu",
+        "width_mm": 0.3,
+        "from": "IC4.1",
+        "to": "IC4.2"
+      },
+      {
+        "uuid": "fcd61952-1ab7-53cb-9e3c-be1764a3d4fd",
+        "net": "GND",
+        "layer": "F.Cu",
+        "width_mm": 0.3,
+        "from": "IC4.2",
+        "to": "IC4.3"
+      },
+      {
+        "uuid": "4ebea7b5-23ef-5791-80f9-48758194b0e8",
+        "net": "GND",
+        "layer": "F.Cu",
+        "width_mm": 0.3,
+        "from": "IC4.6",
+        "to": "IC4.7"
+      }
+    ],
+    "new_supply_copper_added": false
+  },
+  "ground_audit": {
+    "primitive_short_count": 0,
+    "each_pad_connected_to_its_saved_return_via": {
+      "IC4.1": true,
+      "IC4.2": true,
+      "IC4.3": true,
+      "IC4.6": true,
+      "IC4.7": true
+    },
+    "MAIN_attachment": "Pending qualified refill; no MAIN-plane connection is claimed."
+  },
+  "transition_site_derivation": {
+    "method": "Finite 0.05 mm native-shape scan of role-specific local access boxes. Every candidate included the full-span .604/.35 via and its actual short F pad connection before any In2 trunk was attempted.",
+    "VDDIO_IC4_5": {
+      "region_native_mm": [87.55, 92.65, 88.25, 93.25],
+      "tested": 195,
+      "legal_sites": 31
+    },
+    "C23_1": {
+      "north_region_native_mm": [88.35, 90.55, 89.25, 91.15],
+      "north_result": "No legal site; the fixed full-width B.Cu clock conductor 4ef0b7ff-2c51-5d9c-a7aa-ecc07333e058 at y=90.7206 blocks the through-barrel corridor.",
+      "west_south_region_native_mm": [87.0, 91.1, 88.15, 91.85],
+      "tested": 384,
+      "legal_sites": 82
+    },
+    "VDD_IC4_8": {
+      "north_region_native_mm": [88.25, 94.95, 89.15, 95.55],
+      "tested": 247,
+      "legal_sites": 0,
+      "root_blocker": "Every ordinary through-via annulus violates the authoritative rear-contact metal clearance.",
+      "additional_witness": "105 candidates also conflict with IC4.9 /IMU_INT2 on F.Cu; three conflict with IC4.10."
+    }
+  },
+  "branched_In2_tree": {
+    "status": "not_started",
+    "reason": "The method requires a legal local transition for each selected duty before routing the longer trunk. VDD/IC4.8 had no legal transition in its derived north-side access region.",
+    "fixed_root": "ae5186f8-c14f-543b-83b6-5de362326e62",
+    "accepted_In2_bridge_unchanged": true
+  },
+  "per_net_status": {
+    "GND_IC4_1_2_3": "All three pads primitively joined to saved return via; refill pending.",
+    "GND_IC4_6_7": "Both pads primitively joined to saved return via; refill pending.",
+    "+3V3": "Still fully open for replacement after the prior authorized local rip-up.",
+    "SCL": "Tentative IC4.13-to-exterior route retained; R14.2 remains open.",
+    "SDA": "Open.",
+    "/IMU_INT2": "Open; verified external transitions remain outside the local replacement scope.",
+    "INT": "Open; no arbitrary reservation promoted."
+  },
+  "finite_repair_obligations": [
+    "Choose a legal IC4.8 VDD access topology outside the contact-excluded north-via assumption.",
+    "Then select the already-demonstrated legal VDDIO and C23 transitions and synthesize the bent In2 tree to ae5186f8.",
+    "Add C24.1 VDD decoupling, IC4.12 CS tie, and R14.1/R15.1 pullup branches.",
+    "Restore all clipped +3V3 exterior duties.",
+    "Complete SCL pullup, SDA, /IMU_INT2 and INT routing.",
+    "Refill and prove both GND returns join MAIN before any open-count claim."
+  ],
+  "smallest_engineering_choice_needed": {
+    "choice": "Provide IC4.8 VDD access using either a legal transition on another side, an authorized small C24/nearby-passive adjustment with paired VDD/return geometry, or a shared transition reached by a legal F branch.",
+    "not_supported": "More samples in the fully contact-excluded north region."
+  },
+  "attempts": {
+    "initial": "Added explicit straps for all five GND pads; C23 north transition region had zero legal sites.",
+    "correction_1": "Tried sharing C23 with the VDDIO west transition; no joint site cleared.",
+    "correction_2": "Separated C23 to a west/south region with 82 legal sites; VDD/IC4.8 north region then proved fully contact-excluded.",
+    "corrective_retries_used": 2
+  },
+  "validation_not_run": [
+    "No refill, filled connectivity, preserved-group, private-return or CELL_NEG gates.",
+    "No native DRC or open-count comparison.",
+    "No complete source/manifest delta qualification.",
+    "No mechanical proxy or CAD rebind."
+  ],
+  "acceptance": {
+    "complete_supply_tree": false,
+    "complete_local_routing": false,
+    "promotable": false,
+    "quote_ready": false,
+    "next_action": "Root review of the VDD access choice; no automatic follow-on."
+  }
+}

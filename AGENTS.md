@@ -7,9 +7,9 @@
   agreed priorities and Astra/Sol split. Continue sequential bounded items,
   not the exhausted shifted-pad-tail method. A real local rip-up fixture
   and replacement SCL escape now pass source-invariant qualification.
-  The evolving private candidate also has two ground-return anchors, not
-  yet complete group/plane proofs. Continue with branched local supply
-  reconstruction rather than the failed single-transition star; exact scope
+  The evolving private candidate now straps all five IMU ground pads;
+  MAIN-plane attachment remains unproved. Continue the explicitly paired
+  F-side VDD and inner-layer INT2 strategy plus branched VDDIO feed; exact scope
   is in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
   A private working copy may be temporarily disconnected during explicitly
   authorized rework; the accepted 41-open package must stay untouched.

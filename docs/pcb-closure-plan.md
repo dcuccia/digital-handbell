@@ -166,6 +166,42 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest private result: all five IMU ground pads explicitly strapped.**
+The [branched-supply report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-branched-supply.json)
+records PCB `098dc7fd919340176ffb41f177525015b0e27f806abd5783121beecf593ea37b`:
+IC4.1/2/3/6/7 each reach their intended return via, with zero primitive
+shorts. MAIN attachment remains pending refill. The private manifest still
+has the preceding PCB binding and must be refreshed before further use;
+the archived `imu-coupled-working` PCB/manifest remain the earlier matched
+pair from `d824251`. No additional supply copper or accepted-board change.
+
+The scan found 31 legal VDDIO and 82 legal C23 access sites, but then
+required another transition near IC4.8. Its reported "north" VDD box,
+y94.95..95.55, is actually south of the moved pad at y94.655211 and entirely
+contact-excluded. That failed box is not a requirement for a VDD via.
+
+**Astra's next coupled topology:** feed IC4.8 and IC4.12 on F from C24.1,
+with C24 supplied from the existing fixed +3V3 bridge via on F. Route VDD
+south of the IMU bottom pad row, keeping the existing capacitor return.
+Move the competing IC4.9/INT2 escape north into the cleared package interior
+and onto In2 instead of forcing both crossing connections onto F.
+The former SDA transition location `(89.6195,93.5809)` is an explicitly
+released candidate INT2 via site, subject to full native checks.
+
+For INT2 only, extend the allowed new-copper corridor on In2 to
+x93.1..94.2, y92.1..92.95, ending at the existing INT2 via
+`3a4ecc82-02d7-5513-8c89-db4de4adc534`, `(94.04,92.3102)`.
+Preserve that via and every outside primitive. Connecting this existing
+external group must restore IC4.9-to-TP6 and the retained clipped F branch;
+it need not recreate the former local F route. The In1 clock exclusion
+begins below this corridor; no clock, USB, contact or bridge relaxation is
+authorized. Native multilayer/return-path checks still apply.
+
+Reuse the legal VDDIO/C23 access evidence for their branched feed rather
+than restarting a placement sweep. Keep the same private candidate and
+15-minute/two-correction limit, refresh the manifest at each save, and
+retain useful routing even if remaining signal duties need another item.
+
 **Current private work: two return anchors saved; supply tree still open.**
 The [coupled-routing report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-coupled-routing.json)
 binds private PCB `00006ee9641dd1dabb266a7bb1129ff6ba8022ae9bdf0c6c231842aab5b21d67`
