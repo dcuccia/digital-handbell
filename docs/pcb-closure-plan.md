@@ -166,6 +166,32 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Local power-track diagnosis complete; IMU work remains blocked:** the
+[five-case comparison](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-power-return-cut-review.json)
+produced no change in either target's conservative centre domain and no
+passing connection. Keep all four tracks: removing `8b67bfa8...` would
+disconnect R14.1 from +3V3, and removing all four would also leave
+`c9710cc0...` floating. The other three are individually graph-redundant,
+but their removal offers no demonstrated return-space benefit.
+The source remains unchanged at **41 opens**.
+
+This rules out the proposed benefit of those four omissions under the
+tested constraints, not every fixed-placement routing solution. Stop the
+local point/cut-screen sequence. Recommended next scope, pending owner
+direction: one coordinated IMU-area escape/layout proposal covering both
+ground groups and preserving the SCL/SDA/INT and supply paths. Consider
+local trace changes and, only as proposals, small component adjustments
+if needed; retain the board outline, mounts, USB and battery/contact
+interfaces. No component move, reroute, smaller via, narrowed trace or
+manufacturing-rule change is authorized by this diagnosis.
+
+Tooling lesson: an aggregate list of items intersecting an initial search
+domain does not identify the constraints that limit the final usable
+region. Here the four named traces are near y94.95..95.68, where the
+rear-contact restriction already excludes the proposed through-via.
+Inspect constraint overlap and actual coordinates before selecting a
+track for further cut or reroute analysis.
+
 **IMU feasible-space result:** the
 [native region analysis](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-feasible-space-review.json)
 found no passing connection. IC4.6/7's conservative centre domain is

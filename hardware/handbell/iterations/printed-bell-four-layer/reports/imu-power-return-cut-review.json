@@ -1,0 +1,1744 @@
+{
+  "status": "READ_ONLY_COUPLED_POWER_RETURN_DIAGNOSIS_COMPLETE",
+  "source_bindings": {
+    "pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "prior_region_report_sha256": "7f6c5afc93f67b3d002cd0fd73895087f9500d57efbe656230b291ad9a2d1ebd"
+  },
+  "allowlisted_tracks": {
+    "2439bd57-9197-5202-bf5e-f73ca12e4347": {
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "start_native_mm": [
+        88.1424,
+        95.6833
+      ],
+      "end_native_mm": [
+        87.6851,
+        95.226
+      ],
+      "width_mm": 0.1778,
+      "length_mm": 0.6467198620732163
+    },
+    "56011162-dba7-55b0-8df2-522467c23968": {
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "start_native_mm": [
+        87.6836,
+        95.226
+      ],
+      "end_native_mm": [
+        87.6851,
+        95.226
+      ],
+      "width_mm": 0.1778,
+      "length_mm": 0.0015
+    },
+    "76a37864-74d8-5963-bcc4-18eb043accfd": {
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "start_native_mm": [
+        87.8697,
+        94.9461
+      ],
+      "end_native_mm": [
+        87.5898,
+        95.226
+      ],
+      "width_mm": 0.1778,
+      "length_mm": 0.39583837610822936
+    },
+    "8b67bfa8-9f2d-5d11-b459-76494e6f41ef": {
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "start_native_mm": [
+        87.0945,
+        95.226
+      ],
+      "end_native_mm": [
+        87.5898,
+        95.226
+      ],
+      "width_mm": 0.1778,
+      "length_mm": 0.4953
+    }
+  },
+  "construction": {
+    "cases": [
+      "baseline",
+      "2439bd57-9197-5202-bf5e-f73ca12e4347",
+      "56011162-dba7-55b0-8df2-522467c23968",
+      "76a37864-74d8-5963-bcc4-18eb043accfd",
+      "8b67bfa8-9f2d-5d11-b459-76494e6f41ef",
+      "all-four"
+    ],
+    "contact_offset_mm": 0.552,
+    "contact_offset_correction": "Previous report used 0.502 mm = via radius 0.302 + 0.20. This review uses released 0.25 mm contact clearance: 0.302 + 0.25 = 0.552 mm in baseline and every counterfactual.",
+    "all_other_offsets_and_approximations": "Same conservative native method as imu-feasible-space-review.json; omitted tracks are masked only from F.Cu foreign-copper centre/stub predicates. Source copper is never changed."
+  },
+  "cases": {
+    "baseline": {
+      "omitted_track_uuids": [],
+      "targets": {
+        "IC4.6_IC4.7": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+          "region": {
+            "area_mm2": 0.0,
+            "component_count": 0,
+            "bounds_native_mm": null,
+            "polygon_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "26c41cdb-ba59-5589-8686-a07e6f77598d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2439bd57-9197-5202-bf5e-f73ca12e4347",
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "56011162-dba7-55b0-8df2-522467c23968",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                "76a37864-74d8-5963-bcc4-18eb043accfd",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8b67bfa8-9f2d-5d11-b459-76494e6f41ef",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "96c65eb8-1b84-5617-ad78-8fa2fae07f47",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        },
+        "IC4.1_IC4.2_IC4.3": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+          "region": {
+            "area_mm2": 0.000758729344,
+            "component_count": 1,
+            "bounds_native_mm": [
+              88.08373,
+              92.6848,
+              88.122806,
+              92.723746
+            ],
+            "polygon_sha256": "c63b4e85d1ad855cd8603e467cb1687f1a72f0233885c97a9a8e059c6701165d"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "6f86a336-b0b4-5607-93a3-4e1bddaa39d0",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "2fb366c7-81d6-5561-90ad-7e75af1bc64d",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "3af9f604-730a-57dc-bda2-07d0adec1b60",
+                "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+                "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8576418f-415a-52aa-a243-a9314fbe9c98",
+                "92388ba0-88cd-5308-aeb5-db89c3201202",
+                "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e81f5631-69e2-50e7-ab00-da0d8782bf54",
+                "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        }
+      },
+      "topology": {
+        "group_count": 1,
+        "partition_sha256": "7f3d3f3045f6a461be5c860f415596bd51a41db2274609cd3ff7dad084c819e0",
+        "same_pad_partition_as_baseline": true,
+        "floating_copper_components": [],
+        "removed_track_endpoint_attachments": {},
+        "required_local_duty_pads": {
+          "C23.1": true,
+          "C24.1": true,
+          "IC4.5": true,
+          "IC4.8": true,
+          "IC4.12": true,
+          "R14.1": true
+        },
+        "baseline_pad_partitions": [
+          [
+            "C10.1",
+            "C11.1",
+            "C12.1",
+            "C13.1",
+            "C14.1",
+            "C15.1",
+            "C17.1",
+            "C23.1",
+            "C24.1",
+            "C4.1",
+            "C5.1",
+            "C9.1",
+            "IC1.1",
+            "IC1.10",
+            "IC1.22",
+            "IC1.33",
+            "IC1.42",
+            "IC1.43",
+            "IC1.44",
+            "IC1.48",
+            "IC1.49",
+            "IC4.12",
+            "IC4.5",
+            "IC4.8",
+            "R1.1",
+            "R14.1",
+            "R15.1",
+            "R20.1",
+            "R21.1",
+            "R5.2",
+            "TP9.P$1",
+            "U1.8",
+            "U2.5"
+          ]
+        ]
+      },
+      "electrical_disposition": "redundant_in_graph"
+    },
+    "2439bd57-9197-5202-bf5e-f73ca12e4347": {
+      "omitted_track_uuids": [
+        "2439bd57-9197-5202-bf5e-f73ca12e4347"
+      ],
+      "targets": {
+        "IC4.6_IC4.7": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+          "region": {
+            "area_mm2": 0.0,
+            "component_count": 0,
+            "bounds_native_mm": null,
+            "polygon_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "26c41cdb-ba59-5589-8686-a07e6f77598d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "56011162-dba7-55b0-8df2-522467c23968",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                "76a37864-74d8-5963-bcc4-18eb043accfd",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8b67bfa8-9f2d-5d11-b459-76494e6f41ef",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "96c65eb8-1b84-5617-ad78-8fa2fae07f47",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        },
+        "IC4.1_IC4.2_IC4.3": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+          "region": {
+            "area_mm2": 0.000758729344,
+            "component_count": 1,
+            "bounds_native_mm": [
+              88.08373,
+              92.6848,
+              88.122806,
+              92.723746
+            ],
+            "polygon_sha256": "c63b4e85d1ad855cd8603e467cb1687f1a72f0233885c97a9a8e059c6701165d"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "6f86a336-b0b4-5607-93a3-4e1bddaa39d0",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "2fb366c7-81d6-5561-90ad-7e75af1bc64d",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "3af9f604-730a-57dc-bda2-07d0adec1b60",
+                "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+                "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8576418f-415a-52aa-a243-a9314fbe9c98",
+                "92388ba0-88cd-5308-aeb5-db89c3201202",
+                "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e81f5631-69e2-50e7-ab00-da0d8782bf54",
+                "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        }
+      },
+      "topology": {
+        "group_count": 1,
+        "partition_sha256": "7f3d3f3045f6a461be5c860f415596bd51a41db2274609cd3ff7dad084c819e0",
+        "same_pad_partition_as_baseline": true,
+        "floating_copper_components": [],
+        "removed_track_endpoint_attachments": {
+          "2439bd57-9197-5202-bf5e-f73ca12e4347": [
+            {
+              "endpoint": "start",
+              "position_native_mm": [
+                88.1424,
+                95.6833
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "ffacb7c0-8b1b-522d-9dc0-e78f45847ba2",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            },
+            {
+              "endpoint": "end",
+              "position_native_mm": [
+                87.6851,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "56011162-dba7-55b0-8df2-522467c23968",
+                  "kind": "PCB_TRACK"
+                },
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                },
+                {
+                  "uuid": "76a37864-74d8-5963-bcc4-18eb043accfd",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            }
+          ]
+        },
+        "required_local_duty_pads": {
+          "C23.1": true,
+          "C24.1": true,
+          "IC4.5": true,
+          "IC4.8": true,
+          "IC4.12": true,
+          "R14.1": true
+        }
+      },
+      "electrical_disposition": "redundant_in_graph"
+    },
+    "56011162-dba7-55b0-8df2-522467c23968": {
+      "omitted_track_uuids": [
+        "56011162-dba7-55b0-8df2-522467c23968"
+      ],
+      "targets": {
+        "IC4.6_IC4.7": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+          "region": {
+            "area_mm2": 0.0,
+            "component_count": 0,
+            "bounds_native_mm": null,
+            "polygon_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "26c41cdb-ba59-5589-8686-a07e6f77598d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2439bd57-9197-5202-bf5e-f73ca12e4347",
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                "76a37864-74d8-5963-bcc4-18eb043accfd",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8b67bfa8-9f2d-5d11-b459-76494e6f41ef",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "96c65eb8-1b84-5617-ad78-8fa2fae07f47",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "c9710cc0-50df-5774-9f36-cc826d52b949",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        },
+        "IC4.1_IC4.2_IC4.3": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+          "region": {
+            "area_mm2": 0.000758729344,
+            "component_count": 1,
+            "bounds_native_mm": [
+              88.08373,
+              92.6848,
+              88.122806,
+              92.723746
+            ],
+            "polygon_sha256": "c63b4e85d1ad855cd8603e467cb1687f1a72f0233885c97a9a8e059c6701165d"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "6f86a336-b0b4-5607-93a3-4e1bddaa39d0",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "2fb366c7-81d6-5561-90ad-7e75af1bc64d",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "3af9f604-730a-57dc-bda2-07d0adec1b60",
+                "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+                "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8576418f-415a-52aa-a243-a9314fbe9c98",
+                "92388ba0-88cd-5308-aeb5-db89c3201202",
+                "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e81f5631-69e2-50e7-ab00-da0d8782bf54",
+                "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        }
+      },
+      "topology": {
+        "group_count": 1,
+        "partition_sha256": "7f3d3f3045f6a461be5c860f415596bd51a41db2274609cd3ff7dad084c819e0",
+        "same_pad_partition_as_baseline": true,
+        "floating_copper_components": [],
+        "removed_track_endpoint_attachments": {
+          "56011162-dba7-55b0-8df2-522467c23968": [
+            {
+              "endpoint": "start",
+              "position_native_mm": [
+                87.6836,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                },
+                {
+                  "uuid": "2439bd57-9197-5202-bf5e-f73ca12e4347",
+                  "kind": "PCB_TRACK"
+                },
+                {
+                  "uuid": "76a37864-74d8-5963-bcc4-18eb043accfd",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            },
+            {
+              "endpoint": "end",
+              "position_native_mm": [
+                87.6851,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                },
+                {
+                  "uuid": "2439bd57-9197-5202-bf5e-f73ca12e4347",
+                  "kind": "PCB_TRACK"
+                },
+                {
+                  "uuid": "76a37864-74d8-5963-bcc4-18eb043accfd",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            }
+          ]
+        },
+        "required_local_duty_pads": {
+          "C23.1": true,
+          "C24.1": true,
+          "IC4.5": true,
+          "IC4.8": true,
+          "IC4.12": true,
+          "R14.1": true
+        }
+      },
+      "electrical_disposition": "redundant_in_graph"
+    },
+    "76a37864-74d8-5963-bcc4-18eb043accfd": {
+      "omitted_track_uuids": [
+        "76a37864-74d8-5963-bcc4-18eb043accfd"
+      ],
+      "targets": {
+        "IC4.6_IC4.7": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+          "region": {
+            "area_mm2": 0.0,
+            "component_count": 0,
+            "bounds_native_mm": null,
+            "polygon_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "26c41cdb-ba59-5589-8686-a07e6f77598d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2439bd57-9197-5202-bf5e-f73ca12e4347",
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "548c8552-ff4c-56b3-83d9-9d0a5389e3e2",
+                "56011162-dba7-55b0-8df2-522467c23968",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8b67bfa8-9f2d-5d11-b459-76494e6f41ef",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "96c65eb8-1b84-5617-ad78-8fa2fae07f47",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        },
+        "IC4.1_IC4.2_IC4.3": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+          "region": {
+            "area_mm2": 0.000758729344,
+            "component_count": 1,
+            "bounds_native_mm": [
+              88.08373,
+              92.6848,
+              88.122806,
+              92.723746
+            ],
+            "polygon_sha256": "c63b4e85d1ad855cd8603e467cb1687f1a72f0233885c97a9a8e059c6701165d"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "6f86a336-b0b4-5607-93a3-4e1bddaa39d0",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "2fb366c7-81d6-5561-90ad-7e75af1bc64d",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "3af9f604-730a-57dc-bda2-07d0adec1b60",
+                "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+                "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8576418f-415a-52aa-a243-a9314fbe9c98",
+                "92388ba0-88cd-5308-aeb5-db89c3201202",
+                "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e81f5631-69e2-50e7-ab00-da0d8782bf54",
+                "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        }
+      },
+      "topology": {
+        "group_count": 1,
+        "partition_sha256": "7f3d3f3045f6a461be5c860f415596bd51a41db2274609cd3ff7dad084c819e0",
+        "same_pad_partition_as_baseline": true,
+        "floating_copper_components": [],
+        "removed_track_endpoint_attachments": {
+          "76a37864-74d8-5963-bcc4-18eb043accfd": [
+            {
+              "endpoint": "start",
+              "position_native_mm": [
+                87.8697,
+                94.9461
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "548c8552-ff4c-56b3-83d9-9d0a5389e3e2",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            },
+            {
+              "endpoint": "end",
+              "position_native_mm": [
+                87.5898,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "8b67bfa8-9f2d-5d11-b459-76494e6f41ef",
+                  "kind": "PCB_TRACK"
+                },
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            }
+          ]
+        },
+        "required_local_duty_pads": {
+          "C23.1": true,
+          "C24.1": true,
+          "IC4.5": true,
+          "IC4.8": true,
+          "IC4.12": true,
+          "R14.1": true
+        }
+      },
+      "electrical_disposition": "redundant_in_graph"
+    },
+    "8b67bfa8-9f2d-5d11-b459-76494e6f41ef": {
+      "omitted_track_uuids": [
+        "8b67bfa8-9f2d-5d11-b459-76494e6f41ef"
+      ],
+      "targets": {
+        "IC4.6_IC4.7": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+          "region": {
+            "area_mm2": 0.0,
+            "component_count": 0,
+            "bounds_native_mm": null,
+            "polygon_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "26c41cdb-ba59-5589-8686-a07e6f77598d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2439bd57-9197-5202-bf5e-f73ca12e4347",
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "56011162-dba7-55b0-8df2-522467c23968",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                "76a37864-74d8-5963-bcc4-18eb043accfd",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "96c65eb8-1b84-5617-ad78-8fa2fae07f47",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        },
+        "IC4.1_IC4.2_IC4.3": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+          "region": {
+            "area_mm2": 0.000758729344,
+            "component_count": 1,
+            "bounds_native_mm": [
+              88.08373,
+              92.6848,
+              88.122806,
+              92.723746
+            ],
+            "polygon_sha256": "c63b4e85d1ad855cd8603e467cb1687f1a72f0233885c97a9a8e059c6701165d"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "6f86a336-b0b4-5607-93a3-4e1bddaa39d0",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "2fb366c7-81d6-5561-90ad-7e75af1bc64d",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "3af9f604-730a-57dc-bda2-07d0adec1b60",
+                "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+                "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8576418f-415a-52aa-a243-a9314fbe9c98",
+                "92388ba0-88cd-5308-aeb5-db89c3201202",
+                "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e81f5631-69e2-50e7-ab00-da0d8782bf54",
+                "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        }
+      },
+      "topology": {
+        "group_count": 2,
+        "partition_sha256": "29618556f4f317cb07c524eb68cdbc6406b2810b48a3c2668e85164f0f46f4e0",
+        "same_pad_partition_as_baseline": false,
+        "floating_copper_components": [],
+        "removed_track_endpoint_attachments": {
+          "8b67bfa8-9f2d-5d11-b459-76494e6f41ef": [
+            {
+              "endpoint": "start",
+              "position_native_mm": [
+                87.0945,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                  "kind": "PAD",
+                  "pad_ref": "R14.1"
+                }
+              ]
+            },
+            {
+              "endpoint": "end",
+              "position_native_mm": [
+                87.5898,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                },
+                {
+                  "uuid": "76a37864-74d8-5963-bcc4-18eb043accfd",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            }
+          ]
+        },
+        "required_local_duty_pads": {
+          "C23.1": true,
+          "C24.1": true,
+          "IC4.5": true,
+          "IC4.8": true,
+          "IC4.12": true,
+          "R14.1": true
+        },
+        "changed_pad_partitions": [
+          {
+            "pad_refs": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1",
+              "C24.1",
+              "C4.1",
+              "C5.1",
+              "C9.1",
+              "IC1.1",
+              "IC1.10",
+              "IC1.22",
+              "IC1.33",
+              "IC1.42",
+              "IC1.43",
+              "IC1.44",
+              "IC1.48",
+              "IC1.49",
+              "IC4.12",
+              "IC4.5",
+              "IC4.8",
+              "R1.1",
+              "R15.1",
+              "R20.1",
+              "R21.1",
+              "R5.2",
+              "TP9.P$1",
+              "U1.8",
+              "U2.5"
+            ],
+            "existing_plated_via_terminals": [
+              {
+                "uuid": "07f1eabb-16dc-5ed1-b965-90d249b1d24b",
+                "position_native_mm": [
+                  93.75,
+                  106.1
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "19f6694f-3225-5f57-bf99-192ea41c8542",
+                "position_native_mm": [
+                  106.0956,
+                  93.0055
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "1c15a7a2-2065-55a0-bfec-88da501cad88",
+                "position_native_mm": [
+                  87.9,
+                  93.6
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664",
+                "position_native_mm": [
+                  101.802,
+                  93.0055
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "6421709a-0a8e-5ae6-b17a-69e9ccb61078",
+                "position_native_mm": [
+                  90.7,
+                  91.65
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "6d56c09b-2b19-5144-a473-6e1c16d7c430",
+                "position_native_mm": [
+                  91.95,
+                  92.1
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "7204ab6d-22e5-5201-befc-bd26087e560a",
+                "position_native_mm": [
+                  98.1,
+                  105.45
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "ae1899b4-1cdd-5164-a303-9fc7e9225db4",
+                "position_native_mm": [
+                  107.65,
+                  88.55
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "ae3faebf-50bf-5831-beed-c373f97cb24c",
+                "position_native_mm": [
+                  97.8765,
+                  94.7577
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+                "position_native_mm": [
+                  92.85,
+                  93.35
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "b86f2ac1-88d2-59d4-863c-429ca8108ae3",
+                "position_native_mm": [
+                  108.3,
+                  89.8
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "c4d0ed24-aaad-5e2d-a8b8-d805d098ec99",
+                "position_native_mm": [
+                  109.45,
+                  93.35
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "cd8870dc-c5ee-581e-8e4c-175c950614b0",
+                "position_native_mm": [
+                  109.5,
+                  92.2
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "cfde0bac-c3d3-5b5d-84e7-0d6d310f63f7",
+                "position_native_mm": [
+                  106.4,
+                  88.55
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "ea33a04a-fd66-55a0-b87b-2b3d1926fefe",
+                "position_native_mm": [
+                  116.05,
+                  91.6
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              }
+            ]
+          },
+          {
+            "pad_refs": [
+              "R14.1"
+            ],
+            "existing_plated_via_terminals": []
+          }
+        ]
+      },
+      "electrical_disposition": "necessary_or_leaves_floating_copper"
+    },
+    "all-four": {
+      "omitted_track_uuids": [
+        "2439bd57-9197-5202-bf5e-f73ca12e4347",
+        "56011162-dba7-55b0-8df2-522467c23968",
+        "76a37864-74d8-5963-bcc4-18eb043accfd",
+        "8b67bfa8-9f2d-5d11-b459-76494e6f41ef"
+      ],
+      "targets": {
+        "IC4.6_IC4.7": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+          "region": {
+            "area_mm2": 0.0,
+            "component_count": 0,
+            "bounds_native_mm": null,
+            "polygon_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "26c41cdb-ba59-5589-8686-a07e6f77598d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "247a9677-b72d-541d-ba2e-13802227fb9d",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "548c8552-ff4c-56b3-83d9-9d0a5389e3e2",
+                "5efcecca-8254-5e62-be88-e2ce3344ec65",
+                "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "92d0ebe8-42ee-5f88-ab8d-b45b4526276e",
+                "96c65eb8-1b84-5617-ad78-8fa2fae07f47",
+                "b083c4bb-6875-5af1-a6ef-47fb918b875f",
+                "c9710cc0-50df-5774-9f36-cc826d52b949",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        },
+        "IC4.1_IC4.2_IC4.3": {
+          "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+          "region": {
+            "area_mm2": 0.000758729344,
+            "component_count": 1,
+            "bounds_native_mm": [
+              88.08373,
+              92.6848,
+              88.122806,
+              92.723746
+            ],
+            "polygon_sha256": "c63b4e85d1ad855cd8603e467cb1687f1a72f0233885c97a9a8e059c6701165d"
+          },
+          "checked_representatives": [],
+          "blockers": [
+            {
+              "class": "all-pad-offpad",
+              "layer": "all",
+              "item_uuids": [
+                "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "5ecd1099-6e4f-5a14-bbb7-7e9f9cb55f2a",
+                "6f86a336-b0b4-5607-93a3-4e1bddaa39d0",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8bfa2efa-b05f-5261-a145-f9112442ce7b",
+                "9e85cbf9-d114-56ef-98cd-37e300ee262d",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e7e10aaf-3927-50fb-b145-a51384260be3",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "foreign-copper",
+              "layer": "F.Cu",
+              "item_uuids": [
+                "2893c147-7fa3-5665-b403-d03ad544d021",
+                "2fb366c7-81d6-5561-90ad-7e75af1bc64d",
+                "3a60a9c2-e7c3-5c44-acfd-2989379e82a2",
+                "3af9f604-730a-57dc-bda2-07d0adec1b60",
+                "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+                "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+                "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+                "8576418f-415a-52aa-a243-a9314fbe9c98",
+                "92388ba0-88cd-5308-aeb5-db89c3201202",
+                "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+                "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+                "e81f5631-69e2-50e7-ab00-da0d8782bf54",
+                "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+                "f462428b-f0f4-57aa-88ee-5020d4d3ab65"
+              ]
+            },
+            {
+              "class": "rear-contact-metal",
+              "layer": "B.Cu",
+              "item_uuids": [
+                "contact-5"
+              ]
+            }
+          ]
+        }
+      },
+      "topology": {
+        "group_count": 2,
+        "partition_sha256": "29618556f4f317cb07c524eb68cdbc6406b2810b48a3c2668e85164f0f46f4e0",
+        "same_pad_partition_as_baseline": false,
+        "floating_copper_components": [
+          [
+            "c9710cc0-50df-5774-9f36-cc826d52b949"
+          ]
+        ],
+        "removed_track_endpoint_attachments": {
+          "56011162-dba7-55b0-8df2-522467c23968": [
+            {
+              "endpoint": "start",
+              "position_native_mm": [
+                87.6836,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            },
+            {
+              "endpoint": "end",
+              "position_native_mm": [
+                87.6851,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            }
+          ],
+          "8b67bfa8-9f2d-5d11-b459-76494e6f41ef": [
+            {
+              "endpoint": "start",
+              "position_native_mm": [
+                87.0945,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "6921d1eb-0e50-52c5-90c3-acc843d1f215",
+                  "kind": "PAD",
+                  "pad_ref": "R14.1"
+                }
+              ]
+            },
+            {
+              "endpoint": "end",
+              "position_native_mm": [
+                87.5898,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            }
+          ],
+          "76a37864-74d8-5963-bcc4-18eb043accfd": [
+            {
+              "endpoint": "start",
+              "position_native_mm": [
+                87.8697,
+                94.9461
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "548c8552-ff4c-56b3-83d9-9d0a5389e3e2",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            },
+            {
+              "endpoint": "end",
+              "position_native_mm": [
+                87.5898,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            }
+          ],
+          "2439bd57-9197-5202-bf5e-f73ca12e4347": [
+            {
+              "endpoint": "start",
+              "position_native_mm": [
+                88.1424,
+                95.6833
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "ffacb7c0-8b1b-522d-9dc0-e78f45847ba2",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            },
+            {
+              "endpoint": "end",
+              "position_native_mm": [
+                87.6851,
+                95.226
+              ],
+              "remaining_attachments": [
+                {
+                  "uuid": "c9710cc0-50df-5774-9f36-cc826d52b949",
+                  "kind": "PCB_TRACK"
+                }
+              ]
+            }
+          ]
+        },
+        "required_local_duty_pads": {
+          "C23.1": true,
+          "C24.1": true,
+          "IC4.5": true,
+          "IC4.8": true,
+          "IC4.12": true,
+          "R14.1": true
+        },
+        "changed_pad_partitions": [
+          {
+            "pad_refs": [
+              "C10.1",
+              "C11.1",
+              "C12.1",
+              "C13.1",
+              "C14.1",
+              "C15.1",
+              "C17.1",
+              "C23.1",
+              "C24.1",
+              "C4.1",
+              "C5.1",
+              "C9.1",
+              "IC1.1",
+              "IC1.10",
+              "IC1.22",
+              "IC1.33",
+              "IC1.42",
+              "IC1.43",
+              "IC1.44",
+              "IC1.48",
+              "IC1.49",
+              "IC4.12",
+              "IC4.5",
+              "IC4.8",
+              "R1.1",
+              "R15.1",
+              "R20.1",
+              "R21.1",
+              "R5.2",
+              "TP9.P$1",
+              "U1.8",
+              "U2.5"
+            ],
+            "existing_plated_via_terminals": [
+              {
+                "uuid": "07f1eabb-16dc-5ed1-b965-90d249b1d24b",
+                "position_native_mm": [
+                  93.75,
+                  106.1
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "19f6694f-3225-5f57-bf99-192ea41c8542",
+                "position_native_mm": [
+                  106.0956,
+                  93.0055
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "1c15a7a2-2065-55a0-bfec-88da501cad88",
+                "position_native_mm": [
+                  87.9,
+                  93.6
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "5c7f6b5c-57bd-57d0-9c05-6028b3b9e664",
+                "position_native_mm": [
+                  101.802,
+                  93.0055
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "6421709a-0a8e-5ae6-b17a-69e9ccb61078",
+                "position_native_mm": [
+                  90.7,
+                  91.65
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "6d56c09b-2b19-5144-a473-6e1c16d7c430",
+                "position_native_mm": [
+                  91.95,
+                  92.1
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "7204ab6d-22e5-5201-befc-bd26087e560a",
+                "position_native_mm": [
+                  98.1,
+                  105.45
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "ae1899b4-1cdd-5164-a303-9fc7e9225db4",
+                "position_native_mm": [
+                  107.65,
+                  88.55
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "ae3faebf-50bf-5831-beed-c373f97cb24c",
+                "position_native_mm": [
+                  97.8765,
+                  94.7577
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+                "position_native_mm": [
+                  92.85,
+                  93.35
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "b86f2ac1-88d2-59d4-863c-429ca8108ae3",
+                "position_native_mm": [
+                  108.3,
+                  89.8
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "c4d0ed24-aaad-5e2d-a8b8-d805d098ec99",
+                "position_native_mm": [
+                  109.45,
+                  93.35
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "cd8870dc-c5ee-581e-8e4c-175c950614b0",
+                "position_native_mm": [
+                  109.5,
+                  92.2
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "cfde0bac-c3d3-5b5d-84e7-0d6d310f63f7",
+                "position_native_mm": [
+                  106.4,
+                  88.55
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              },
+              {
+                "uuid": "ea33a04a-fd66-55a0-b87b-2b3d1926fefe",
+                "position_native_mm": [
+                  116.05,
+                  91.6
+                ],
+                "layers": [
+                  "F.Cu",
+                  "In1.Cu",
+                  "In2.Cu",
+                  "B.Cu"
+                ]
+              }
+            ]
+          },
+          {
+            "pad_refs": [
+              "R14.1"
+            ],
+            "existing_plated_via_terminals": []
+          }
+        ]
+      },
+      "electrical_disposition": "necessary_or_leaves_floating_copper"
+    }
+  },
+  "decision_support": {
+    "geometry_result": "Every single-track omission and the all-four omission leave both targets' region areas, bounds, component counts and representative outcomes identical to the corrected-contact baseline.",
+    "topology_result": "2439bd57, 56011162 and 76a37864 are graph-redundant individually but provide no return-space benefit. Removing 8b67bfa8 isolates R14.1 from +3V3. Removing all four also leaves track c9710cc0-50df-5774-9f36-cc826d52b949 as floating copper.",
+    "root_decision": "The allowlisted local F.Cu +3V3 tracks are not preventing an ordinary IMU return connection. A minimal supply-layer transfer based only on removing these tracks is unsupported; treat the present result as an immutable-layout limitation requiring a different explicitly engineered approach.",
+    "interpretation": [
+      "Graph redundancy alone does not approve removal; decoupling, chip-select tie, current path and return interaction remain dependencies.",
+      "Empty conservative domains are not global impossibility."
+    ]
+  },
+  "private_artifact": {
+    "session_relative_path": "files\\imu-power-return-cut-01\\five-case-polygons-topology.json",
+    "sha256": "32c3955b3649773e42da8f086c8eeaed45ceae960cde9b4c083ff970eb6c52f7"
+  },
+  "qualified_controls": {
+    "disjoint_islands": 2,
+    "preserved_holes": 1,
+    "unfilled_zone_rejected": true,
+    "actual_graph_pad_islands": 3,
+    "zone_path_witness_checked": true,
+    "CELL_NEG_zone_short_detected": true,
+    "candidate_loaded_or_written": false
+  },
+  "preservation": {
+    "read_only": true,
+    "board_unchanged": true,
+    "manifest_unchanged": true,
+    "no_candidate_or_refill_or_DRC": true
+  },
+  "execution": {
+    "tool_sha256": "df9aea083f76d9e9d779734e53800165e4cbe6bc039bd10f6cac8e714349b310",
+    "elapsed_seconds": 30.188,
+    "attempts": 1,
+    "corrections": 1
+  }
+}

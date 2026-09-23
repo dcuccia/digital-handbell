@@ -6,6 +6,17 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**September 23 IMU domain lesson:** conservative region construction
+distinguishes potential via-centre space from a legal connection: three
+centres survived for IC4.1/2/3, but every tested straight stub hit IC4.4.
+Also distinguish initial-domain obstacle witnesses from active constraints
+on the final space. Omitting four local +3V3 tracks had no geometric
+benefit because rear-contact restrictions already excluded their region;
+one omission would break R14's supply. Inspect coordinates and overlapping
+constraint masks before commissioning a cut analysis. Preserve the stated
+approximation/clearance assumptions, and do not turn an empty conservative
+domain into a global impossibility claim.
+
 **C23 closure and validator lesson:** native controls and complete saved-board
 checks now support the accepted 43-open checkpoint. A no-routing refill
 control reproduced the source exactly. Five remote comparison components
