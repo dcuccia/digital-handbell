@@ -8,9 +8,9 @@
   not the exhausted shifted-pad-tail method. A real local rip-up fixture
   and replacement SCL escape now pass source-invariant qualification.
   The evolving private candidate now straps all five IMU ground pads and
-  restores VDD/CS/C24 plus INT2-to-TP6. MAIN-plane attachment remains
-  unproved. Finish the branched VDDIO feed without repeating the timed-out
-  per-site native search unchanged; exact scope
+  restores all local supply duties plus INT2-to-TP6. The held ordinary via
+  has been repaired; MAIN-plane attachment remains unproved. Complete
+  SCL/SDA/INT using the explicit coupled signal seed plan; exact scope
   is in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
   A private working copy may be temporarily disconnected during explicitly
   authorized rework; the accepted 41-open package must stay untouched.

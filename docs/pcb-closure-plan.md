@@ -166,7 +166,41 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Supply connectivity constructed, but one ordinary via is held for repair.**
+**Ordinary VDDIO repair passed; complete local supply connectivity retained.**
+The [four-item repair](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-vddio-via-repair.json)
+moves the held via to `(87.85,92.7)` without a via-in-pad dependency.
+All supply pads/exterior groups, earlier signal paths and five ground straps
+remain connected primitively, with zero shorts. Working PCB
+`3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243`
+and matching manifest
+`a1278051b8513645b56089464ce2a9f2d4ea970a6ee913a33ca003dcfe5e6e5b`
+replace the prior recovery pair. They remain unfilled and unaccepted.
+
+**Next: coupled SCL/SDA/INT completion using the explicit
+[engineering seed plan](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-signal-closure-plan.json).**
+It keeps IC4/C23/C24/R14 fixed at their working poses, moves only R15 north
+0.50 mm, and reallocates tentative local transitions to make room for all
+three signal duties together. No coordinates are clearance waivers.
+
+Two new transition sites are proposed above the retained upper B conductor.
+Native source inspection identifies that conductor (`4ef0b7ff...`) as
+`Net-(L0-PadA)`, the LED branch, not a clock as the earlier site report said.
+Its physical obstruction remains real and its copper stays fixed. Release
+new copper only in the additional upper corridor x86.6..93.1, y89.2..90.5;
+no unrelated routing or components there may change. A named clipped +3V3
+dead-end stub may be removed only after an actual cut proof establishes no
+lost pad-group connectivity, allowing the R15 move without pretending a
+temporary clipping point is a permanent functional interface.
+
+The Mode-1 GND straps may return through an explicit F link to C23.2,
+freeing their tentative via site for SDA. MAIN attachment must then be
+reproved by refill, not assumed from the original C23 acceptance. The plan
+preserves the restored VDD/CS/INT2 paths, power trunk, ordinary-via process
+rules and all other outside geometry. Run a simultaneous native screen and
+save the actual evolving candidate with matching manifest. One 15-minute
+item and at most two local corrections; full acceptance/CAD gates remain.
+
+**Earlier supply candidate -- held pending the now-completed via repair.**
 The [supply-tree report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-supply-tree.json)
 binds private PCB `329a5d56c6fa0723095e97debc296c0b9c459fef698caf3fef6b8336817f17ca`
 and manifest `bb2fcfbd5f37bd0831f92a586c314d788717099476486c2f8b3bb4e7e6985980`.

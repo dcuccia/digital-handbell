@@ -26,11 +26,13 @@ Continue only through the [current closure handoff](../../../../docs/pcb-closure
 
 The subsequent [working PCB](reports/imu-coupled-working.kicad_pcb) and
 [working manifest](reports/imu-coupled-working-manifest.json) now preserve
-all five ground straps, the VDD/CS/C24 supply tree and INT2-to-TP6 routing.
-Their [latest partial report](reports/imu-vdd-int2-routing.json) and native
+all five ground straps, all local supply duties and INT2-to-TP6 routing.
+The [ordinary-via repair](reports/imu-vddio-via-repair.json) closes the
+same-net pad-overlap process finding without adding a via-in-pad dependency.
+Their native
 [front](reports/imu-working-front.png)/[inner](reports/imu-working-inner.png)
 views are source-bound, not complete group/plane or source/DRC qualification.
-VDDIO/C23, pullups, exterior supply duties, SDA and INT remain open.
+SCL pullup, SDA and INT routing remain open, as do refill and acceptance gates.
 Earlier working versions/reports are historical; the handoff records the
 precise current evidence limits and remaining replacement duties.
 

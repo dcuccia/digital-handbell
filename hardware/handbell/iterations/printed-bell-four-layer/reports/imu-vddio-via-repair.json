@@ -1,0 +1,146 @@
+{
+  "report": "imu-vddio-via-repair",
+  "status": "local_vddio_via_repair_passed",
+  "classification": "Session-private evolving candidate; unfilled, incomplete, unaccepted and not quoteable.",
+  "immutable_recovery_pair": {
+    "pcb": {
+      "session_relative_path": "files/imu-coupled-routing/handbell-imu-supply-held-329a5d56.kicad_pcb",
+      "sha256": "329a5d56c6fa0723095e97debc296c0b9c459fef698caf3fef6b8336817f17ca"
+    },
+    "manifest": {
+      "session_relative_path": "files/imu-coupled-routing/placement-manifest-imu-supply-held-bb2fcfbd.json",
+      "sha256": "bb2fcfbd5f37bd0831f92a586c314d788717099476486c2f8b3bb4e7e6985980"
+    }
+  },
+  "working_artifacts": {
+    "before_pcb_sha256": "329a5d56c6fa0723095e97debc296c0b9c459fef698caf3fef6b8336817f17ca",
+    "before_manifest_sha256": "bb2fcfbd5f37bd0831f92a586c314d788717099476486c2f8b3bb4e7e6985980",
+    "after_pcb": {
+      "session_relative_path": "files/imu-coupled-routing/handbell-imu-coupled-working.kicad_pcb",
+      "sha256": "3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243"
+    },
+    "after_manifest": {
+      "session_relative_path": "files/imu-coupled-routing/placement-manifest-imu-coupled-working.json",
+      "sha256": "a1278051b8513645b56089464ce2a9f2d4ea970a6ee913a33ca003dcfe5e6e5b",
+      "pcb_binding_matches": true
+    },
+    "state": {
+      "session_relative_path": "files/imu-coupled-routing/vddio-via-repair-state.json",
+      "sha256": "777c5a608caed8211ccad143b1d51fdf92c213b03e359064e6faa693181947d9"
+    },
+    "tool": {
+      "session_relative_path": "files/repair_imu_vddio_via.py",
+      "sha256": "3e05bbc305d49f564f4315c89e9fa4b51ef8b48830c517dee7ebc52a060e39af"
+    }
+  },
+  "exact_pcb_deltas": [
+    {
+      "role": "VDDIO ordinary via",
+      "uuid_before": "8172b557-052b-5662-a082-56a27b776202",
+      "uuid_after": "8172b557-052b-5662-a082-56a27b776202",
+      "before_at_mm": [88.2, 92.85],
+      "after_at_mm": [87.85, 92.7],
+      "size_mm": 0.604,
+      "drill_mm": 0.35,
+      "layers": ["F.Cu", "B.Cu"]
+    },
+    {
+      "role": "IC4.5 VDDIO F stub",
+      "uuid_before": "b0ac27c1-f68c-5cb7-b842-cbb4c5615e2b",
+      "uuid_after": "b0ac27c1-f68c-5cb7-b842-cbb4c5615e2b",
+      "before_mm": [[88.587306, 92.992711], [88.2, 92.85]],
+      "after_mm": [[88.587306, 92.992711], [87.85, 92.7]],
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    {
+      "role": "R15.1 supply F branch",
+      "uuid_before": "201d1e62-9b3d-5ec0-b9e9-b44f42ecbb76",
+      "uuid_after": "201d1e62-9b3d-5ec0-b9e9-b44f42ecbb76",
+      "before_mm": [[87.082668, 93.109941], [88.2, 92.85]],
+      "after_mm": [[87.082668, 93.109941], [87.85, 92.7]],
+      "layer": "F.Cu",
+      "width_mm": 0.1778
+    },
+    {
+      "role": "VDDIO In2 entry",
+      "uuid_before": "27e24e13-3217-5275-b814-b0c21ea531a0",
+      "uuid_after": "27e24e13-3217-5275-b814-b0c21ea531a0",
+      "before_mm": [[88.2, 92.85], [88.2, 92.9]],
+      "after_mm": [[87.85, 92.7], [88.2, 92.9]],
+      "layer": "In2.Cu",
+      "width_mm": 0.4
+    }
+  ],
+  "preservation": {
+    "pcb_edit_method": "Exact replacement of the four one-line UUID nodes listed above.",
+    "all_non_target_pcb_lines_byte_identical": true,
+    "component_poses_changed": false,
+    "C23_transition_changed": false,
+    "shared_In2_trunk_changed": false,
+    "other_supply_branches_changed": false,
+    "ground_straps_changed": false,
+    "VDD_CS_INT2_SCL_routes_changed": false,
+    "rules_zones_fill_or_process_changed": false
+  },
+  "native_geometry_gates": {
+    "foreign_copper_clearance_hits": [],
+    "plated_hole_clearance_hits": [],
+    "rear_contact_metal_hits": [],
+    "ordinary_via_drill_clearance_hits": [],
+    "positive_area_F_or_B_SMD_land_overlaps_including_same_net": [],
+    "mutual_topology": "The moved via remains the common endpoint of the IC4.5 F stub, R15.1 F branch and In2 entry; the In2 entry terminates at unchanged shared junction 88.2,92.9.",
+    "passed": true
+  },
+  "off_pad_controls": {
+    "source_same_net_on_pad_negative": {
+      "source": "IC4.5 pad center",
+      "expected": "reject",
+      "passed": true
+    },
+    "source_genuinely_off_pad_positive": {
+      "source": "fixed ordinary supply via ae5186f8",
+      "expected": "accept",
+      "passed": true
+    }
+  },
+  "native_connectivity": {
+    "primitive_short_count": 0,
+    "supply_to_fixed_bridge": {
+      "IC4.5_VDDIO": true,
+      "C23.1": true,
+      "R14.1": true,
+      "R15.1": true,
+      "IC4.8_VDD": true,
+      "IC4.12_CS": true,
+      "left_middle_exterior": true,
+      "left_lower_exterior": true,
+      "top_exterior": true
+    },
+    "preserved_paths": {
+      "IC4.9_to_TP6": true,
+      "IC4.13_to_SCL_exterior": true
+    },
+    "all_ground_pads_to_saved_return_vias": {
+      "IC4.1": true,
+      "IC4.2": true,
+      "IC4.3": true,
+      "IC4.6": true,
+      "IC4.7": true
+    }
+  },
+  "validation_not_run": [
+    "No refill or MAIN-plane ground proof.",
+    "No full native DRC, open-count, private-return, CELL_NEG, contact or source acceptance gate.",
+    "No CAD rebind."
+  ],
+  "acceptance": {
+    "local_repair_passed": true,
+    "ordinary_via_off_pad_gate": true,
+    "complete_local_block": false,
+    "promotable": false,
+    "quote_ready": false,
+    "no_active_package_edits": true,
+    "no_commit_or_push": true
+  }
+}

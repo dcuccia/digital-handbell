@@ -1,0 +1,141 @@
+{
+  "status": "ASTRA_ENGINEERING_SEEDS_REQUIRE_NATIVE_QUALIFICATION",
+  "source_private_pcb_sha256": "3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243",
+  "source_private_manifest_sha256": "a1278051b8513645b56089464ce2a9f2d4ea970a6ee913a33ca003dcfe5e6e5b",
+  "purpose": "Close the coupled SCL pullup, SDA and INT escapes without losing restored supply, INT2 or ground duties.",
+  "budget": {
+    "minutes": 15,
+    "corrective_retries": 2,
+    "one_evolving_private_candidate": true,
+    "active_board_promotion": false
+  },
+  "units": "native PCB millimetres",
+  "additional_release": {
+    "new_copper_only_upper_corridor": [86.6, 89.2, 93.1, 90.5],
+    "preserve_all_existing_copper_in_upper_corridor": true,
+    "upper_B_conductor": {
+      "uuid": "4ef0b7ff-2c51-5d9c-a7aa-ecc07333e058",
+      "actual_net": "Net-(L0-PadA)",
+      "width_mm": 0.1778,
+      "y_mm": 90.7206,
+      "disposition": "Preserve. It is the LED branch, not a clock as labelled in the earlier site report."
+    },
+    "conditional_stub_removal": {
+      "uuid": "a25f792f-6604-572a-ac90-6f2b39901f78",
+      "reason": "The clipped +3V3 dead-end spur obstructs the moved R15 SDA land.",
+      "gate": "Before any other change, prove removing only this spur preserves all primitive pad groups and supply duties. Preserve the further outside connection at 86.4021,91.7386 and all other outside primitives."
+    },
+    "mechanical_interfaces_rules_and_accepted_critical_routes_unchanged": true
+  },
+  "component_move": {
+    "reference": "R15",
+    "translation_from_accepted_mm": [0.0, -0.5],
+    "new_native_origin_mm": [87.082668, 92.101941],
+    "rotation_unchanged": true,
+    "update_every_manifest_pose_representation": true,
+    "check_native_neighbours_and_mechanical_proxies": true
+  },
+  "existing_via_changes": [
+    {
+      "uuid": "102d837c-4d5e-5433-964e-f19081feef15",
+      "net": "GND",
+      "at_mm": [87.9, 93.8],
+      "repair": "Update the F link to IC4.6; retain the IC4.6/7 strap."
+    },
+    {
+      "uuid": "8172b557-052b-5662-a082-56a27b776202",
+      "net": "+3V3",
+      "at_mm": [87.95, 92.55],
+      "repair": "Update IC4.5 and moved R15.1 F branches and In2 entry to 88.2,92.9."
+    },
+    {
+      "uuid": "6e5a234c-cb91-54fb-a6d1-b830e4b5b602",
+      "net": "+3V3",
+      "at_mm": [88.794835, 90.05],
+      "repair": "Replace the C23.1 F stub and its In2 entry with the power route below; preserve the shared trunk."
+    }
+  ],
+  "ground_mode_return": {
+    "remove_tentative_via": "68beef59-fa94-5ad0-823b-73718e9f004c",
+    "remove_tentative_stub": "9e025ae3-e252-5840-a9c8-d246f82bebdd",
+    "retain_IC4_1_2_3_straps": true,
+    "new_F_link": {
+      "net": "GND",
+      "width_mm": 0.3,
+      "points_mm": [[89.749806, 92.330211], [89.810835, 91.491614]]
+    },
+    "primitive_target": "C23.2",
+    "MAIN_connection": "Must be proved after refill; the prior C23 MAIN connection is not assumed to survive."
+  },
+  "new_ordinary_transitions": [
+    {"label": "SCL_R14", "net": "SCL", "at_mm": [87.094469, 93.55]},
+    {"label": "SCL_IC4", "net": "SCL", "at_mm": [91.02, 93.492711]},
+    {"label": "SDA_R15", "net": "SDA", "at_mm": [87.0, 90.05]},
+    {"label": "SDA_IC4", "net": "SDA", "at_mm": [90.7, 91.65]},
+    {"label": "INT_IC4", "net": "INT", "at_mm": [87.97, 91.72]}
+  ],
+  "ordinary_via_contract": {
+    "diameter_mm": 0.604,
+    "drill_mm": 0.35,
+    "full_span": "F.Cu-B.Cu",
+    "positive_area_overlap_with_any_SMD_land": "forbidden, including same net",
+    "foreign_clearance_mm": 0.2,
+    "contact_clearance_mm": 0.25,
+    "no_new_via_in_pad_dependency": true,
+    "existing_mandatory_C24_and_U4_processes_unchanged": true
+  },
+  "route_seeds": [
+    {
+      "net": "+3V3", "layer": "In2.Cu", "width_mm": 0.4,
+      "replace": "C23 transition entry only",
+      "points_mm": [[88.794835, 90.05], [88.794835, 92.0], [88.2, 92.9]]
+    },
+    {
+      "net": "SCL", "layer": "F.Cu", "width_mm": 0.1778,
+      "points_mm": [[87.094469, 94.21003], [87.094469, 93.55]]
+    },
+    {
+      "net": "SCL", "layer": "B.Cu", "width_mm": 0.1778,
+      "points_mm": [[87.094469, 93.55], [87.1, 93.17], [88.7, 93.17], [89.0, 92.95], [90.4, 92.95], [91.02, 93.492711]]
+    },
+    {
+      "net": "SDA", "layer": "F.Cu", "width_mm": 0.1778,
+      "points_mm": [[87.082668, 91.593941], [87.0, 90.05]]
+    },
+    {
+      "net": "SDA", "layer": "F.Cu", "width_mm": 0.1778,
+      "points_mm": [[90.412306, 92.992711], [90.7, 92.992711], [90.7, 91.65]]
+    },
+    {
+      "net": "SDA", "layer": "In2.Cu", "width_mm": 0.1778,
+      "points_mm": [[87.0, 90.05], [87.0, 89.57], [88.4, 89.57], [88.55, 89.42], [89.5, 89.42], [89.5, 91.65], [90.7, 91.65]]
+    },
+    {
+      "net": "SDA", "layer": "B.Cu", "width_mm": 0.1778,
+      "points_mm": [[90.7, 91.65], [93.1, 91.3771]]
+    },
+    {
+      "net": "INT", "layer": "F.Cu", "width_mm": 0.1778,
+      "points_mm": [[88.749806, 92.330211], [88.3, 92.03], [87.97, 91.72]]
+    },
+    {
+      "net": "INT", "layer": "B.Cu", "width_mm": 0.1778,
+      "points_mm": [[87.97, 91.72], [89.0, 92.1], [90.0, 92.5], [91.8, 92.5], [92.3, 92.725], [93.1, 92.725]]
+    }
+  ],
+  "retained_paths": [
+    "VDD/CS/C24 F supply and fixed ae5186f8 bridge",
+    "IC4.9 to TP6 including the saved INT2 In2 path",
+    "IC4.13 SCL F escape; new SCL_IC4 via must actually join it",
+    "Shared 0.40 mm In2 supply trunk",
+    "All source pad-group duties and mandatory C24/U4 process requirements"
+  ],
+  "review_limits": [
+    "All coordinates are seeds, not clearance waivers. Test full simultaneous geometry before insertion, including same-net via/land and new-new drill checks.",
+    "If a seed fails, use at most two local corrections within the declared region and budget; no broader placement sweep.",
+    "Preserve the working candidate if a later check stops; refresh its manifest at every save.",
+    "INT ends at a local B-side exit, not at IC1.34. No full INT closure is claimed.",
+    "B interrupt/I2C paths and their short interlayer adjacency still require final return-plane/stackup review.",
+    "Full refill, all prior pad groups, both private cuts, CELL_NEG, contact, native DRC, source invariants and mechanical rebind are required before promotion."
+  ]
+}

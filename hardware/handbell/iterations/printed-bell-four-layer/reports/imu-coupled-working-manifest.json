@@ -741,8 +741,8 @@
   "dnp_footprint_reservations": [
     "C29"
   ],
-  "status": "session-private incomplete VDD/CS/INT2 routed candidate; unfilled and not quoteable",
-  "generated_pcb_sha256": "206afad547838c26afbf6ca6056af8d0b7073ea00938599598e83792a5bb7f38",
+  "status": "session-private incomplete repaired IMU supply candidate; unfilled and not quoteable",
+  "generated_pcb_sha256": "3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243",
   "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
@@ -3421,7 +3421,7 @@
       }
     ]
   },
-  "current_stage_report": "reports/imu-vdd-int2-routing.json",
+  "current_stage_report": "reports/imu-vddio-via-repair.json",
   "source_two_layer_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
   "logical_copper_layers": [
     "F.Cu",
