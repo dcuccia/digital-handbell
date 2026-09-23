@@ -1,0 +1,38 @@
+{
+  "status": "FAILED",
+  "scope": "Read-only final acceptance gates for exact saved C23 USBBOOT candidate.",
+  "candidate_accepted_or_promoted": false,
+  "gates": [
+    {
+      "name": "input_and_dependency_binding",
+      "passed": true,
+      "detail": {
+        "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+        "manifest_sha256": "a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7",
+        "candidate_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+        "saved_DRC_sha256": "567763888a6355c102d2e189aa2c951ea621af1bc477f127731d5fa0e8fb292e",
+        "refill_control_report_sha256": "a67f1c9a53dd50691faffe702e4f3f484206f4f98a33844f5bbc23e720514734",
+        "candidate_path": "files\\c23-usbboot-corridor-01\\final\\handbell.kicad_pcb",
+        "dependency_sha256": {
+          "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+          "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+          "fp-lib-table": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+          "sym-lib-table": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+          "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+          "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+          "Clock.kicad_sym": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+          "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+          "LICENSE.txt": "075dad5e5fc96c27014fabc269f4f5732909cffd178a486f546d982b6cf86b74"
+        },
+        "local_library_file_count": 38,
+        "local_library_tree_sha256": "63c7b4ad331bf994fa44433acfe4a14600a7ad5df7fd6559fe62d286a7fd19d0"
+      }
+    }
+  ],
+  "failure": {
+    "type": "AttributeError",
+    "message": "module 'pcbnew' has no attribute 'IU_PER_MM'"
+  },
+  "elapsed_seconds": 36.92200000002049,
+  "validator_sha256": "ccdff01ea83c601ecb4becf532db9db4acd2d38f9d162ca201d0cd0a66c5a074"
+}

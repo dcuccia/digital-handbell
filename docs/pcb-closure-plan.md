@@ -166,6 +166,21 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Stopped pending owner direction:** the
+[final-gate attempt](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-final-gates.json)
+completed only input/dependency binding. A saved-DRC path error consumed
+the allowed correction; the corrected validator then called
+`pcbnew.IU_PER_MM`, which KiCad 10's Python module does not expose.
+The displacement, clearance, full connectivity, private-return and
+source-preservation gates in this item did not run. This is an incomplete
+validator, not evidence of another board defect. No copper, fill, manifest
+or candidate bytes changed. Accepted PCB `7927882f...` remains at
+**44 opens**; staged `01a943c7...` remains unaccepted at its previously
+recorded 43 opens. Do not continue the correction loop automatically.
+Proposed next item, requiring owner authorization: repair and exercise
+the validator's unit conversion and native geometry calls in isolation,
+then validate the exact saved candidate without rerouting or refilling.
+
 **C23 refill-control review:** the
 [identical-recipe no-routing control](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-refill-control.json)
 reproduces the accepted F/In1 geometry exactly. Candidate remote changes
