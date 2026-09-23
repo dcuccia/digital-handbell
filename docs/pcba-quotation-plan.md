@@ -153,6 +153,19 @@ Keep U4's resin-fill/planarization/copper-cap requirement separate from ordinary
 via tenting; also review the changed MCU thermal-via map. Supplier process
 availability and pricing must be confirmed for the selected layer count.
 
+**C24 staged via-in-pad review:** a 0.60/0.30 mm ordinary through-via at
+C24.2's centre is geometrically feasible within its unchanged 0.60 mm
+square land, 0.7016 mm mask opening and 0.60 mm paste aperture.
+The [routing release](routing-agent-policy.md#c24-centered-filledcapped-ground-via-trial)
+permits one staged trial, not fabrication or supplier acceptance.
+If promoted, its exact UUID and coordinates must join the mandatory
+resin-fill/planarization/copper-cap treatment map alongside U4's four vias.
+Obtain explicit review of drill registration, finished cap flatness,
+stencil suitability and cost; do not assume U4's process disposition
+automatically covers this small passive land. Preserve the existing land
+and aperture definitions, and do not substitute tenting or imply that
+ordinary Gerber/drill data alone communicates the required treatment.
+
 ### Current JLCPCB evidence
 
 Public official pages checked September 21, 2026; no files were uploaded,

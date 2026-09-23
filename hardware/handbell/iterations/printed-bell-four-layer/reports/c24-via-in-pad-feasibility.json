@@ -1,0 +1,194 @@
+{
+  "status": "READ_ONLY_C24_VIA_IN_PAD_FEASIBILITY_COMPLETE",
+  "source_pcb_sha256": "834086079bc792165adcf642d41f3fd52c65446a355904934fcdf39b289227eb",
+  "manifest_sha256": "054f203553f7051e12f098acac9683539488e77e4a42266439b48c519dbf39dd",
+  "scope": "Read-only two-definition C24.2 centered filled/capped through-via feasibility.",
+  "attempts": {
+    "initial": {
+      "completed_candidate_screen": false,
+      "failure": "Optional GetLocalClearance returned None during report serialization."
+    },
+    "corrections_used": 1,
+    "corrected_execution": "Passed"
+  },
+  "design_files_written": false,
+  "kicad_version": "10.0.6",
+  "pad": {
+    "uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+    "net": "GND",
+    "position_native_mm": [
+      92.004083,
+      93.491669
+    ],
+    "shape": "rectangle",
+    "size_mm": [
+      0.6,
+      0.6
+    ],
+    "rotation_degrees": 90.0,
+    "layers": [
+      "F.Cu",
+      "F.Mask",
+      "F.Paste"
+    ],
+    "attribute": "1",
+    "property": "0",
+    "local_clearance_mm": null,
+    "solder_mask_expansion_mm": 0.0508,
+    "solder_paste_margin_mm": [
+      0.0,
+      0.0
+    ],
+    "local_solder_mask_margin": "50800",
+    "local_solder_paste_margin": null,
+    "local_solder_paste_margin_ratio": null,
+    "effective_layers": {
+      "F.Cu": {
+        "bounds_native_mm": [
+          91.704083,
+          93.191669,
+          92.304083,
+          93.791669
+        ],
+        "area_mm2": 0.36
+      },
+      "F.Mask": {
+        "bounds_native_mm": [
+          91.704083,
+          93.191669,
+          92.304083,
+          93.791669
+        ],
+        "area_mm2": 0.36
+      },
+      "F.Paste": {
+        "bounds_native_mm": [
+          91.704083,
+          93.191669,
+          92.304083,
+          93.791669
+        ],
+        "area_mm2": 0.36
+      }
+    },
+    "serialized_definition": {
+      "pad_type": "smd",
+      "shape": "rect",
+      "size_mm": [
+        0.6,
+        0.6
+      ],
+      "layers": [
+        "F.Cu",
+        "F.Mask",
+        "F.Paste"
+      ],
+      "solder_mask_margin_mm": 0.0508,
+      "solder_paste_margin_mm": 0.0
+    },
+    "assembly_surface_geometry": {
+      "F_copper_land_bounds_native_mm": [
+        91.704083,
+        93.191669,
+        92.30408299999999,
+        93.791669
+      ],
+      "F_mask_opening_bounds_native_mm": [
+        91.65328299999999,
+        93.140869,
+        92.354883,
+        93.84246900000001
+      ],
+      "F_mask_opening_size_mm": [
+        0.7016,
+        0.7016
+      ],
+      "F_paste_aperture_bounds_native_mm": [
+        91.704083,
+        93.191669,
+        92.30408299999999,
+        93.791669
+      ],
+      "F_paste_aperture_size_mm": [
+        0.6,
+        0.6
+      ],
+      "via_study_changes_land_mask_or_paste": false,
+      "note": "KiCad GetEffectivePolygon(F.Mask/F.Paste) returned the copper pad polygon; the actual mask/paste openings above are derived from the source-native serialized pad size and explicit margin fields."
+    }
+  },
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "definition": "preferred-existing-pattern",
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "annular_ring_mm": 0.127,
+      "project_minimums_pass": {
+        "through_drill_gte_0_30": true,
+        "via_diameter_gte_0_50": true,
+        "annulus_gte_0_10": true
+      },
+      "F_pad_containment": {
+        "native_conservative_polygon_contained": false,
+        "exact_radial_margin_IU": -2000,
+        "exact_radial_margin_mm": -0.002,
+        "method": "Centered circle radius versus native rectangular pad half-width, plus ERROR_OUTSIDE circle minus ERROR_INSIDE pad polygon."
+      },
+      "main_In1_contains_center": true,
+      "reasons": [
+        "annulus-exceeds-original-F-pad-copper"
+      ],
+      "obstacle_uuids": [],
+      "foreign_hits": [],
+      "drill_hits": [],
+      "other_pad_hits": [],
+      "guard_hits": [],
+      "contact_hits": []
+    },
+    {
+      "definition": "Default-class",
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "annular_ring_mm": 0.15,
+      "project_minimums_pass": {
+        "through_drill_gte_0_30": true,
+        "via_diameter_gte_0_50": true,
+        "annulus_gte_0_10": true
+      },
+      "F_pad_containment": {
+        "native_conservative_polygon_contained": true,
+        "exact_radial_margin_IU": 0,
+        "exact_radial_margin_mm": 0.0,
+        "method": "Centered circle radius versus native rectangular pad half-width, plus ERROR_OUTSIDE circle minus ERROR_INSIDE pad polygon."
+      },
+      "main_In1_contains_center": true,
+      "reasons": [],
+      "obstacle_uuids": [],
+      "foreign_hits": [],
+      "drill_hits": [],
+      "other_pad_hits": [],
+      "guard_hits": [],
+      "contact_hits": []
+    }
+  ],
+  "blocking_track_cut_reviews": [],
+  "process_context": {
+    "existing_quoted_process": "U4 requires four nonconductive resin-filled, planarized, copper-capped thermal vias in the quotation baseline.",
+    "C24_positive_geometry_requirement": "Would require explicit resin-fill, planarization and copper-cap review with unchanged C24 land/mask/paste geometry; ordinary tenting is not acceptable.",
+    "not_established": [
+      "Supplier acceptance for C24 via-in-pad",
+      "Incremental cost",
+      "Assembly yield/stencil suitability",
+      "Fabrication approval"
+    ]
+  },
+  "conclusion": {
+    "geometrically_feasible_count": 1,
+    "scope": "Two exact pad-centred ordinary through-via definitions only; no global impossibility claim.",
+    "routing_or_board_change_performed": false
+  },
+  "elapsed_seconds": 18.281000000191852,
+  "tool_sha256": "2b4a552398421a8dd350402860e441c86fa36d6342746f6831fbbb227d48dd07",
+  "report_finalizer_sha256": "d872f5eea12053bbde3d041eb337cdfac238b657db586ed799f5131bd659d5be"
+}

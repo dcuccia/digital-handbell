@@ -166,6 +166,21 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**C24 centered via feasible; one staged trial released:** the
+[native feasibility report](../hardware/handbell/iterations/printed-bell-four-layer/reports/c24-via-in-pad-feasibility.json)
+finds that the existing Default-class 0.60/0.30 mm through-via fits C24.2's
+0.60 mm square copper exactly and passes all-layer clearance, drill,
+contact and main-In1 screens. Its nominal drill annulus is 0.15 mm.
+The 0.604/0.35 mm option exceeds the land by 0.002 mm radially and is
+rejected. No board changes occurred during the study.
+
+Astra releases one [centered filled/capped GND-via trial](routing-agent-policy.md#c24-centered-filledcapped-ground-via-trial),
+with no part, track, pad, mask or paste changes. This via requires explicitly
+named resin-fill/planarization/copper-cap treatment; tenting is insufficient.
+Supplier registration, capping/flatness, stencil, yield and cost remain
+unqualified. Full saved-candidate evidence and root review are still needed
+before promotion. The accepted board remains **42 opens**.
+
 **C24 ordinary local attempt blocked:** the
 [bounded closure screen](../hardware/handbell/iterations/printed-bell-four-layer/reports/c24-ground-closure.json)
 found no passing proposal among four F bridges and 48 whole-island

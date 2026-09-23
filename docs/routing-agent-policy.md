@@ -273,6 +273,34 @@ placement, larger vias, longer stubs or repeated full-board trials.
 The finite follow-up replaces the prior item's site cap only; it does not
 reset the accepted board or authorize rerouting the completed R4 stitch.
 
+#### C24 centered filled/capped ground-via trial
+
+The read-only feasibility review passed the Default-class 0.60/0.30 mm
+ordinary through-via at C24.2's exact centre (92.004083,93.491669) mm.
+Astra releases one staged instance of that geometry, no other position,
+size, new track or existing-copper edit. The 0.604/0.35 mm alternative
+remains rejected because its annulus exceeds the original pad copper.
+
+Preserve the native 0.600 mm square land, its explicit +0.0508 mm mask
+margin and unchanged 0.600 mm square paste aperture. The circular annulus
+fits the land exactly; its nominal drill annulus is 0.150 mm. This nominal
+geometry is not a supplier registration, flatness or assembly-yield approval.
+The new via must be explicitly identified by UUID and coordinates as
+requiring nonconductive resin fill, planarization and copper capping.
+Ordinary tenting is not a substitute. Use native treatment metadata only
+if supported and exercised; otherwise preserve ordinary native geometry
+and bind the mandatory process in the source-bound report/quotation notes.
+Do not invent file syntax or claim Gerbers encode the required treatment.
+
+The only permitted pad-overlap exception is the original C24.2 land.
+Retain every existing track, via, part, pad, zone definition, rule,
+private return and contact reservation. Require full native geometric
+checks and only the C24/main-GND merge (42 to 41 opens). Reuse the
+established refill/actual-island proof, independent remote displacement
+bounds and actual clearances. Stop on any other topology or substantive
+plane change. Promotion, manufacturing treatment acceptance and fabrication
+are separate decisions; no supplier upload or order is authorized.
+
 #### C24 filled/capped through-via feasibility review
 
 The local C24 attempt found no passing proposal among four F bridges and
