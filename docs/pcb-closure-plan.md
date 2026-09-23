@@ -166,6 +166,30 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Owner evening pause -- engineering suspended.** The owner is shutting
+down the device and will return to IMU feasible-space analysis on a future
+explicit resume. This pause supersedes all sequential continuation and
+earlier releases. Do not start that analysis, routing, CAD or refill now.
+
+Resume from `hardware/handbell/iterations/printed-bell-four-layer`:
+PCB SHA-256
+`c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`;
+manifest SHA-256
+`08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667`.
+The accepted board has **41 opens**, 233 warnings and 46 historical
+parity notices. C12/C23/C24 ground closures are accepted; C24's explicit
+filled/capped treatment requirement remains mandatory and unqualified
+for supplier/assembly use. Latest blocked IMU evidence was pushed in
+`dc2784c`; there is no unaccepted IMU PCB candidate to recover.
+
+On resume, one bounded read-only feasible-via-centre analysis should
+address IC4.6/7 and IC4.1/2/3 in the previously released local region,
+using actual native copper, pads, drills, contacts and plane constraints.
+Include interior space; do not repeat the exhausted bridge/point screens.
+Return feasible regions plus exact checked connection proposals, or
+source-bound blockers and approximation limits, before any routing change.
+Retain the Astra engineering / explicitly pinned Sol execution split.
+
 **IMU return batch blocked; accepted board unchanged:** the
 [bounded batch report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-ground-batch.json)
 records no passing proposal: IC4.6/7 had 0/4 F bridges and 0/27 via

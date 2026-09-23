@@ -2,11 +2,13 @@
 
 ## Bounded engineering work
 
-- **September 22 explicit owner resume:** resume bounded engineering under
-  the Astra/pinned-Sol framework. This supersedes the September 21 pause.
-  Start from the saved candidate and current acceptance handoff in
-  `docs/pcb-closure-plan.md#owner-pause-and-next-item`; do not replay failed
-  trials or infer fabrication approval from a routing checkpoint.
+- **Latest owner evening pause:** stop all engineering until an explicit
+  owner resume. This supersedes the September 22 resume and sequential
+  continuation authorization. Saved accepted four-layer board has 41 opens;
+  the next intended item is read-only IMU feasible-space analysis, not
+  another point sweep or automatic routing. Use the exact source hashes and
+  blocker evidence in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
+  Preserve saved work; no routing, CAD, refill or analysis during the pause.
 - **September 21 four-layer migration approved:** preserve the accepted
   two-layer `printed-bell-clock-draft` as evidence and establish one separate
   `printed-bell-four-layer` working candidate. Follow the four-layer batch,
