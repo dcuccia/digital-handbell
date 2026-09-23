@@ -1,0 +1,192 @@
+{
+  "report": "imu-coordinated-relayout-trial",
+  "status": "blocked_no_candidate",
+  "scope": {
+    "authorized_components": ["IC4", "C23", "C24", "R14", "R15"],
+    "maximum_component_displacement_mm": 0.75,
+    "plans_screened": 3,
+    "candidate_generated": false,
+    "staged_manifest_generated": false,
+    "active_board_modified": false,
+    "active_manifest_modified": false
+  },
+  "inputs": {
+    "pcb": {
+      "path": "../handbell.kicad_pcb",
+      "sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+      "native_open_items": 41,
+      "native_drc_warnings": 233
+    },
+    "manifest": {
+      "path": "../placement-manifest.json",
+      "sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667"
+    },
+    "coordinated_layout_proposal": {
+      "path": "imu-coordinated-layout-proposal.json",
+      "sha256": "35e1fa2a264f7b8e28478ddfa7b44b4fa937f6eca8548b490e917c97ca363e54"
+    },
+    "fixed_placement_trial": {
+      "path": "imu-fixed-placement-trial.json",
+      "sha256": "a8e41d199a974a597aea4813f11112d01428e0e2e671d7902e51d6e22f246659"
+    }
+  },
+  "method": {
+    "description": "Three coherent in-memory layouts were screened with native KiCad pad geometry, full-span through-via annuli, fixed copper, drill and corrected 0.25 mm rear-contact clearance. Moved signal and supply pads were provisionally reconnected to their existing local terminals; both IMU ground returns and a bent local INT exit were reserved simultaneously.",
+    "layers": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"],
+    "ordinary_via_mm": {"diameter": 0.604, "drill": 0.35},
+    "contact_centre_offset_mm": 0.552,
+    "signal_width_mm": 0.1778,
+    "ground_width_mm": 0.3,
+    "power_widths_not_reduced": true,
+    "In1_signal_routing": false,
+    "attempts": {
+      "initial": 1,
+      "corrective_retries": 2,
+      "retry_1": "Moved the proposed lower GND return away from fixed +3V3 via 6421709a-0a8e-5ae6-b17a-69e9ccb61078, separated the proposed +3V3 transition from the INT corridor, and removed meaningless NC-pad tails.",
+      "retry_2": "Retained the existing +3V3 transition at 87.9,93.6 after the eastern replacement site entered the rear-contact exclusion; moved GND67 into space opened by IC4 and placed GND123 between the two known fixed +3V3 vias."
+    }
+  },
+  "required_joint_duties": [
+    "Connect IC4.6/IC4.7 to MAIN GND.",
+    "Connect IC4.1/IC4.2/IC4.3 to MAIN GND.",
+    "Preserve +3V3 service to IC4.5, IC4.8 and IC4.12 with C23/C24 local decoupling and the R14.1 pullup feed.",
+    "Preserve SCL from IC4.13 through R14.2 and the existing external continuation.",
+    "Preserve SDA from IC4.14 through R15.2 and the existing external continuation.",
+    "Preserve /IMU_INT2 from IC4.9 to its existing external path.",
+    "Provide a legal local INT exit without claiming the later IC1.34 connection.",
+    "Preserve all outside copper, both terminal-cut private returns, CELL_NEG isolation, the In2 +3V3 bridge, C12 feed, USBBOOT route and all 21 zone definitions."
+  ],
+  "plans": [
+    {
+      "name": "P1_IC4_N050",
+      "moves_mm": {"IC4": [0.0, -0.5]},
+      "trial_transitions_mm": {
+        "+3V3": [87.9, 93.6],
+        "GND_IC4_6_7": [89.35, 93.99],
+        "GND_IC4_1_2_3": [91.3, 92.5]
+      },
+      "result": "blocked",
+      "root_blockers": [
+        "The GND67 ordinary-via annulus at 89.35,93.99 enters the authoritative rear-contact exclusion.",
+        "The GND123 via/stub conflicts with protected SCL continuation 3af9f604-730a-57dc-bda2-07d0adec1b60 and fixed +3V3 via 6d56c09b-2b19-5144-a473-6e1c16d7c430 at 91.95,92.10; the four layer hits are one physical through-via obstruction.",
+        "Straight moved-pad reconnections create F.Cu +3V3-to-SCL and SCL-to-SDA mutual-clearance conflicts."
+      ],
+      "implicated_replaceable_local_trace_uuids": [
+        "225cf9fa-f4af-5f4c-8a34-c27fd8d88c60",
+        "362c0c5e-e64b-5b41-a895-e8840a1e919e",
+        "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+        "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+        "838d2f6e-1cc4-5c60-bb3c-bacf6aa0ad94",
+        "8576418f-415a-52aa-a243-a9314fbe9c98",
+        "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+        "a97d4d76-7283-5c25-b6ff-d6e5e9419e65",
+        "aa1f9877-9b3f-5aca-aaa0-a3b884bbf96c",
+        "b34fd4f1-daca-52e9-8b68-96ccf17c6869",
+        "b7e4151f-97ef-5f48-a8db-0f47260a21b3",
+        "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+        "c365ba5a-91fb-5127-9496-34de5c2d6b98",
+        "dcc36281-5cdb-538c-a5ba-a234299fc5fd",
+        "e28f7dde-2c69-549d-85fc-405c59f26ae9",
+        "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+        "f09ac407-e552-5aa8-ad96-27792c31d43a",
+        "f8e85b05-9a7b-57a0-b3e8-991f1811083d"
+      ]
+    },
+    {
+      "name": "P2_decaps_open",
+      "moves_mm": {
+        "IC4": [0.0, -0.5],
+        "C23": [0.0, -0.25],
+        "R15": [0.0, -0.25]
+      },
+      "trial_transitions_mm": {
+        "+3V3": [87.9, 93.6],
+        "GND_IC4_6_7": [89.35, 93.99],
+        "GND_IC4_1_2_3": [91.3, 92.5]
+      },
+      "result": "blocked",
+      "root_blockers": [
+        "All P1 blockers remain.",
+        "Moved R15.2 conflicts with protected +3V3 boundary trace 2fe17ed1-3ec0-5d72-87a4-f13f47809ab1."
+      ],
+      "additional_implicated_replaceable_local_trace_uuid": "be86c5d5-325f-550b-9b99-c4e4fd481a0e"
+    },
+    {
+      "name": "P3_pullups_split",
+      "moves_mm": {
+        "IC4": [0.0, -0.65],
+        "C23": [0.0, -0.25],
+        "R14": [0.0, 0.25],
+        "R15": [0.0, -0.35]
+      },
+      "trial_transitions_mm": {
+        "+3V3": [87.9, 93.6],
+        "GND_IC4_6_7": [89.35, 93.84],
+        "GND_IC4_1_2_3": [91.3, 92.4]
+      },
+      "result": "blocked",
+      "root_blockers": [
+        "Moved IC4.1 conflicts with fixed +3V3 via 6421709a-0a8e-5ae6-b17a-69e9ccb61078 at 90.7,91.65.",
+        "Moved R15.2 conflicts with protected +3V3 boundary trace 2fe17ed1-3ec0-5d72-87a4-f13f47809ab1.",
+        "The GND123 return remains obstructed by protected SCL continuation 3af9f604-730a-57dc-bda2-07d0adec1b60 and fixed +3V3 via 6d56c09b-2b19-5144-a473-6e1c16d7c430.",
+        "Straight moved-pad reconnections create F.Cu +3V3/SCL/SDA mutual-clearance conflicts, and the GND67 stub conflicts with a +3V3 reconnection."
+      ],
+      "implicated_replaceable_local_trace_count": 18
+    }
+  ],
+  "disposition": {
+    "supported_conclusion": "None of the three bounded coherent constructions provides simultaneous legal returns, supply/decoupling, I2C, /IMU_INT2 and INT escape. The result does not prove that every coordinated re-layout is impossible; it proves that these three constructions cannot be promoted without changing held geometry or introducing a materially different local routing topology.",
+    "specific_blocking_constraints": [
+      "The apparent lower-return corridor is bounded by two fixed +3V3 through-vias and the protected SCL continuation.",
+      "The space opened near IC4.6/7 projects into the authoritative B-contact exclusion for an ordinary full-span via.",
+      "The tested short-tail strategy cannot preserve +3V3, SCL and SDA clearances simultaneously after the component shifts.",
+      "The larger P3 IC4 shift directly violates fixed-via clearance before complete routing is considered."
+    ],
+    "not_authorized_or_not_attempted": [
+      "No fourth placement plan or coordinate sweep.",
+      "No movement of fixed vias 6421709a-0a8e-5ae6-b17a-69e9ccb61078 or 6d56c09b-2b19-5144-a473-6e1c16d7c430.",
+      "No change to protected boundary trace 2fe17ed1-3ec0-5d72-87a4-f13f47809ab1 or outside SCL continuation 3af9f604-730a-57dc-bda2-07d0adec1b60.",
+      "No reduced clearance, smaller via, blind/microvia, new via-in-pad process, contact-envelope waiver or In1 signal route."
+    ]
+  },
+  "validation": {
+    "completed": [
+      "Exact input hash verification.",
+      "Native moved-pad and through-via all-layer geometry screening.",
+      "Fixed copper, drill and rear-contact exclusion screening.",
+      "Mutual proposed-copper clearance screening.",
+      "Component displacement limit check.",
+      "Bounded eligible-trace intersection inventory."
+    ],
+    "not_run_because_no_plan_passed_preliminary_geometry": [
+      "Candidate serialization and staged-manifest pose update.",
+      "Tightened zone refill.",
+      "Native DRC.",
+      "All-layer connectivity, floating-copper and preserved-pad-group proof.",
+      "Terminal-cut private-return and CELL_NEG isolation proof.",
+      "21-zone definition/cache invariants.",
+      "Outside-source byte/geometry invariants.",
+      "Mechanical-proxy screening and whole-assembly CAD/source rebind."
+    ]
+  },
+  "private_evidence": {
+    "screen": {
+      "session_relative_path": "files/imu-relayout-01/three-plan-screen.json",
+      "sha256": "279f5c1e55c746f96ec058e3db6ab061d4fa543cf5c13ceb0e4285fff7cd813f"
+    },
+    "tool": {
+      "session_relative_path": "files/screen_imu_relayout_plans.py",
+      "sha256": "893e6bd1f2b4e34d9d22d131ada70980827fb730418adb71d541b8ee9055dd31"
+    }
+  },
+  "execution": {
+    "artifact_interval_seconds": 330.6,
+    "attempt_count": 3,
+    "correction_count": 2,
+    "lessons": [
+      "The native three-plan screen completed each pass in under the 120 second subprocess limit; grouping a through-via's four layer hits prevents over-counting one physical obstruction.",
+      "Checking fixed vias and contact exclusions before topology substitution eliminated invalid return sites before candidate serialization, refill or DRC.",
+      "Moved-pad-to-old-terminal tails are a bounded preservation strategy, but their two recurring F.Cu mutual conflicts show that a future authorized attempt needs a jointly synthesized local I2C/supply topology rather than more placement points."
+    ]
+  }
+}

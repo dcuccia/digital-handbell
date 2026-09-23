@@ -6,6 +6,24 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**September 23 re-layout execution limitation:** the subsequent
+[three-construction screen](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-coordinated-relayout-trial.json)
+did not implement the authorized complete local re-layout. The executor
+confirmed that it neither replaced the SDA transition nor clipped/reworked
+the permitted internal boundary traces. It tested moved-pad tails to old
+terminals instead of replacement I2C/supply fanout. Preserve those rejected
+constructions, but do not infer that the broader authorized scope failed.
+
+For a fine-pitch package, an old terminal can become a different-net pad
+after a move: a 0.50 mm north shift puts IC4.13 SCL exactly at IC4.14's old
+SDA centre. Reconnecting to every old terminal is therefore not a general
+placement-preservation strategy. Identify legitimate retained connection
+points outside the affected fanout and synthesize the substitute paths.
+Omitting a movable via from an obstacle mask does not supply its replacement
+connection. Likewise, permission to reroute inside a boundary is not exercised
+by continuing to treat whole crossing tracks as fixed. Distinguish authorized,
+actually attempted and completed freedoms explicitly in reports.
+
 **September 23 joint-plan result:** all twelve released fixed-placement
 IMU plans failed before a board candidate was written. The entire proposed
 IC4.6/7 via-centre region conflicts with the tested straight INT-west

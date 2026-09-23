@@ -166,12 +166,50 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Owner approved coordinated local IMU re-layout.** The owner selected
+**Latest result: execution incomplete, not a failed complete re-layout.**
+The [three-construction report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-coordinated-relayout-trial.json)
+(SHA-256 `81bd4b3b371dc102cc41222107f124cdf608182fd404b92508a03d8b7b3901cf`)
+contains rejected preliminary geometry only. No candidate, staged manifest,
+refill, DRC or mechanical review was produced. The accepted PCB/manifest
+remain exactly `c7b6b6fd...` / `08bf866d...`, with **41 opens**.
+
+Root requested an evidence-only clarification, with no further routing.
+The executor confirmed that SDA via `aa47961d...` was omitted from its
+fixed-obstacle mask but never given a replacement transition/topology.
+It did not implement boundary clipping and kept the relevant crossing
+tracks wholly fixed, despite permission to replace their internal portions.
+It used straight moved-pad-to-old-terminal tails, not a complete replacement
+I2C/supply layout. P1/P2 also reused the same contact-excluded GND67 site.
+These are limitations of the exercised method, not evidence that the
+owner-authorized re-layout freedoms are exhausted.
+
+A concrete pin-fanout hazard is visible in the recorded native coordinates:
+after IC4 moves north by 0.50 mm, its new SCL pad IC4.13 is at
+`(90.412306,93.492711)`, exactly the old SDA pad IC4.14 centre. Retaining
+that former SDA terminal and adding a tail cannot preserve separation.
+The affected fanout must be replaced back to appropriate retained external
+connections, rather than treating old pad centres as fixed interfaces.
+This coordinate consequence is not a new routed-candidate DRC result.
+
+**Disposition:** preserve the report unchanged, but do not accept it as
+completion or exhaustion of the coordinated re-layout. The three-plan/
+two-correction trial has ended; Sol is idle. Do not launch another placement
+or short-tail sweep. The next engineering item must establish an actual
+replacement-fanout method, including declared internal boundary cuts and
+complete replacement connections, within the existing release below.
+No additional owner permission to use those already-released freedoms is
+needed. Escalate a tooling/method limitation honestly rather than asking
+for increasingly relaxed board constraints. CAD review remains blocked
+until an electrical candidate exists.
+
+**Owner-approved scope retained for method redesign.** The owner selected
 "Authorize coordinated local IMU re-layout (recommended)" after checkpoint
-`8e41215`. Release one separate staged item to the verified GPT-5.6 Sol
-executor, maximum 15 minutes including validation/reporting, three coherent
-layout plans and at most two corrective retries. This changes the local
-via/placement constraints, not the manufacturing rules or board interfaces.
+`8e41215`. The completed item released one separate staged trial to the
+verified GPT-5.6 Sol executor, maximum 15 minutes including validation/reporting,
+three coherent layout plans and at most two corrective retries. That trial
+and its retry allowance have ended; the permissions below do not restart it.
+They change local via/placement constraints, not manufacturing rules or
+board interfaces.
 
 - IC4, C23/C24 and R14/R15 may move individually by at most 0.75 mm from
   the accepted positions; preserve rotations, native pad definitions and

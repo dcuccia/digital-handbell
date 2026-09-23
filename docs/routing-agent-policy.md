@@ -576,6 +576,14 @@ Efficiency rules learned here:
   Proposal via-centre regions are upper bounds until native via, stub and
   joint-plan constraints all pass. The failed twelve-plan IMU trial does
   not rule out every fixed-placement solution.
+- After a fine-pitch part moves, identify retained terminals outside its
+  affected fanout. An old pad centre can coincide with a different-net
+  moved pad; straight tails back to every old terminal are not a general
+  re-layout method. Replace the implicated fanout, not the board rules.
+- Reports must distinguish authorized freedoms from those actually
+  exercised. An omitted via obstacle needs a complete replacement path;
+  an allowed internal boundary reroute needs explicit clipping and preserved
+  outside copper. Do not call an unimplemented topology an exhausted scope.
 - Keep a useful candidate and a finite repair list. Do not reopen settled
   sourcing or move a cluster merely because one local route fails.
 - Run cheap native geometry/topology checks during a batch; run full
