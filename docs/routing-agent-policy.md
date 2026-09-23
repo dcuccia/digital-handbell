@@ -273,6 +273,33 @@ placement, larger vias, longer stubs or repeated full-board trials.
 The finite follow-up replaces the prior item's site cap only; it does not
 reset the accepted board or authorize rerouting the completed R4 stitch.
 
+#### C24 local ground closure
+
+After the accepted C12 paired-feed change, release one bounded C24.2
+ground-closure item on the exact 42-open source. Prefer a short F bridge
+between its existing filled island and main GND: screen at most four
+geometry-derived boundary-pair proposals, width 0.30 mm and length at
+most 2 mm, with robust endpoint overlap. If none passes, screen at most
+48 geometry-derived ordinary-via proposals from the whole C24 island,
+not a repeat of the old pad-centred radial grid.
+
+Via proposals use diameter/drill 0.604/0.35 mm and a straight 0.30 mm F
+stub of at most 1.05 mm. Keep geometry within native
+x90.5..94.5, y91.5..95.1 mm. Preserve every existing track, via, pad,
+part, supply feed, rule, zone definition, contact reservation and private
+return. Apply full-span copper/drill/slot/contact screens for any via;
+no via-in-pad, masked contact-metal workaround or special via process.
+If an ordinary local connection cannot pass, stop with exact blockers.
+
+Stage at most one passing proposal and use the established native refill
+and complete acceptance gates. Require only C24.2 to join main GND
+(42 to 41 opens), preservation of all other partitions and private cuts,
+no shorts/floating copper or new non-open DRC findings, and no substantive
+In1 plane change. Enumerate any remote cache differences and retain the
+independent 10-IU containment and actual clearance requirements. Root
+review remains mandatory before promotion; do not reroute SCL, USBBOOT,
+VCORE or power to make this ordinary ground connection fit.
+
 #### C12 paired supply-feed and ground-closure trial
 
 The C12 whole-island review found no ordinary GND-via site in its bounded

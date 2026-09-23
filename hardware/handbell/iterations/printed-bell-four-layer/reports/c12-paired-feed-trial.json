@@ -1,0 +1,716 @@
+{
+  "status": "STAGED_C12_PAIRED_FEED_VALIDATED_NOT_PROMOTED",
+  "scope": "Staged paired C12 +3V3 feed replacement and GND closure; not promoted.",
+  "source_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+  "manifest_sha256": "d69d1ae6267eafe5976e528fd47d30cbed81ff01df058dbceca9d9c6cdc49b8c",
+  "active_files_modified": false,
+  "attempts": {
+    "implementation": 1,
+    "corrections": 0
+  },
+  "stages": [
+    {
+      "name": "native-fill-feed",
+      "seconds": 1.25,
+      "exit_code": 0
+    },
+    {
+      "name": "native-fill-final",
+      "seconds": 1.3130000000819564,
+      "exit_code": 0
+    },
+    {
+      "name": "native-drc",
+      "seconds": 31.266000000061467,
+      "exit_code": 0
+    }
+  ],
+  "completed_gates": [
+    {
+      "name": "necessary_feed_cut_proof",
+      "detail": {
+        "removed_uuid": "a869dd24-8003-5303-82af-32d37e552b3a",
+        "track": {
+          "start": [
+            97.8765,
+            94.5077
+          ],
+          "end": [
+            92.0041,
+            94.5077
+          ],
+          "width_mm": 0.1778,
+          "length_mm": 5.8724
+        },
+        "retained_branch_uuid": "8b1b53b0-240a-5fc7-b78e-b5ee023450c3",
+        "retained_endpoint_native_mm": [
+          97.8765,
+          94.5077
+        ],
+        "partition_before": [
+          [
+            "C10.1",
+            "C11.1",
+            "C12.1",
+            "C13.1",
+            "C14.1",
+            "C15.1",
+            "C17.1",
+            "C23.1",
+            "C24.1",
+            "C4.1",
+            "C5.1",
+            "C9.1",
+            "IC1.1",
+            "IC1.10",
+            "IC1.22",
+            "IC1.33",
+            "IC1.42",
+            "IC1.43",
+            "IC1.44",
+            "IC1.48",
+            "IC1.49",
+            "IC4.12",
+            "IC4.5",
+            "IC4.8",
+            "R1.1",
+            "R14.1",
+            "R15.1",
+            "R20.1",
+            "R21.1",
+            "R5.2",
+            "TP9.P$1",
+            "U1.8",
+            "U2.5"
+          ]
+        ],
+        "partition_after_in_memory_cut": [
+          [
+            "C10.1",
+            "C11.1",
+            "C13.1",
+            "C14.1",
+            "C15.1",
+            "C17.1",
+            "C23.1",
+            "C24.1",
+            "C4.1",
+            "C5.1",
+            "C9.1",
+            "IC1.1",
+            "IC1.22",
+            "IC1.33",
+            "IC1.42",
+            "IC1.43",
+            "IC1.44",
+            "IC1.48",
+            "IC1.49",
+            "IC4.12",
+            "IC4.5",
+            "IC4.8",
+            "R1.1",
+            "R14.1",
+            "R15.1",
+            "R20.1",
+            "R21.1",
+            "R5.2",
+            "TP9.P$1",
+            "U1.8",
+            "U2.5"
+          ],
+          [
+            "C12.1",
+            "IC1.10"
+          ]
+        ],
+        "isolated_exact_pair": [
+          "C12.1",
+          "IC1.10"
+        ]
+      }
+    },
+    {
+      "name": "native_graph_and_filled_checks",
+      "detail": {
+        "previous_groups_preserved": 129,
+        "GND_groups": [
+          12,
+          11
+        ],
+        "new_MAIN_members": [
+          "C12.2"
+        ],
+        "+3V3_groups": 1,
+        "VCORE_groups": 3,
+        "private_pickoffs": [
+          {
+            "from": "R26.2",
+            "to": "R27.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+                "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          },
+          {
+            "from": "R24.2",
+            "to": "C28.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "1212a327-4ed4-50da-a0bb-71afc8145254",
+              "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+              "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+              "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+              "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+              "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+              "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+                "layer": "F.Cu"
+              },
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          }
+        ],
+        "shorts": [],
+        "floating": [],
+        "filled_checks": {
+          "islands": 21,
+          "guard_comparisons": 209,
+          "foreign_comparisons": 23533,
+          "F_private_item_comparisons": 200,
+          "In1_private_via_comparisons": 2
+        }
+      }
+    },
+    {
+      "name": "source_preservation",
+      "detail": {
+        "removed_track": "a869dd24-8003-5303-82af-32d37e552b3a",
+        "added_tracks": [
+          "5b1146e5-be33-5c83-aa6c-de134de7e18b",
+          "629b2f98-12f7-5372-9be3-8ea69edfe8b9"
+        ],
+        "added_via": "ae3faebf-50bf-5831-beed-c373f97cb24c",
+        "retained_tracks_exact": true,
+        "existing_vias_exact": true,
+        "other_blocks_exact": true,
+        "zone_definitions": 21
+      }
+    },
+    {
+      "name": "new_geometry",
+      "detail": {
+        "via": {
+          "uuid": "ae3faebf-50bf-5831-beed-c373f97cb24c",
+          "position_native_mm": [
+            97.8765,
+            94.7577
+          ],
+          "diameter_mm": 0.604,
+          "drill_mm": 0.35,
+          "raw_layers": [
+            "F.Cu",
+            "B.Cu",
+            "In1.Cu",
+            "In2.Cu"
+          ],
+          "physical_layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ]
+        },
+        "F_stub_uuid": "5b1146e5-be33-5c83-aa6c-de134de7e18b",
+        "In2_stub_uuid": "629b2f98-12f7-5372-9be3-8ea69edfe8b9",
+        "explicit_GND_bridge_uuid": null,
+        "auto_GND_closure": true
+      }
+    },
+    {
+      "name": "fill_deltas",
+      "detail": {
+        "F.Cu": {
+          "removed_area_mm2": 0.234761883461,
+          "added_area_mm2": 5.5558139205555,
+          "components": [
+            {
+              "direction": "removed",
+              "area_mm2": 0.2221771210925,
+              "bounds_native_mm": [
+                97.375259,
+                94.7971,
+                98.207656,
+                95.2602
+              ],
+              "remote": false,
+              "minimum_opposite_fill_inflation_IU": null
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 1.1047e-08,
+              "bounds_native_mm": [
+                85.432687,
+                94.552174,
+                85.456515,
+                94.581397
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 0.0125847255745,
+              "bounds_native_mm": [
+                97.79474,
+                94.2072,
+                98.354808,
+                94.576734
+              ],
+              "remote": false,
+              "minimum_opposite_fill_inflation_IU": null
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 1.3365e-09,
+              "bounds_native_mm": [
+                116.52602,
+                94.312045,
+                116.538372,
+                94.320506
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 2.2665e-09,
+              "bounds_native_mm": [
+                89.987358,
+                94.288702,
+                89.989349,
+                94.293977
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 4.63e-09,
+              "bounds_native_mm": [
+                89.336182,
+                93.993982,
+                89.365525,
+                94.012419
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 1.7514e-08,
+              "bounds_native_mm": [
+                94.358803,
+                93.963131,
+                94.391835,
+                93.974689
+              ],
+              "remote": false,
+              "minimum_opposite_fill_inflation_IU": null
+            },
+            {
+              "direction": "added",
+              "area_mm2": 5.5558139168615,
+              "bounds_native_mm": [
+                90.575306,
+                93.0262,
+                97.79474,
+                95.3939
+              ],
+              "remote": false,
+              "minimum_opposite_fill_inflation_IU": null
+            },
+            {
+              "direction": "added",
+              "area_mm2": 9.055e-10,
+              "bounds_native_mm": [
+                95.325761,
+                94.996138,
+                95.333407,
+                95.029637
+              ],
+              "remote": false,
+              "minimum_opposite_fill_inflation_IU": null
+            },
+            {
+              "direction": "added",
+              "area_mm2": 2.7885e-09,
+              "bounds_native_mm": [
+                89.980711,
+                94.293977,
+                89.987358,
+                94.317203
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            }
+          ],
+          "remote_components": [
+            {
+              "direction": "removed",
+              "area_mm2": 1.1047e-08,
+              "bounds_native_mm": [
+                85.432687,
+                94.552174,
+                85.456515,
+                94.581397
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 1.3365e-09,
+              "bounds_native_mm": [
+                116.52602,
+                94.312045,
+                116.538372,
+                94.320506
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 2.2665e-09,
+              "bounds_native_mm": [
+                89.987358,
+                94.288702,
+                89.989349,
+                94.293977
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 4.63e-09,
+              "bounds_native_mm": [
+                89.336182,
+                93.993982,
+                89.365525,
+                94.012419
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            },
+            {
+              "direction": "added",
+              "area_mm2": 2.7885e-09,
+              "bounds_native_mm": [
+                89.980711,
+                94.293977,
+                89.987358,
+                94.317203
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            }
+          ]
+        },
+        "In1.Cu": {
+          "removed_area_mm2": 0.794106903408,
+          "added_area_mm2": 1.3564e-08,
+          "components": [
+            {
+              "direction": "removed",
+              "area_mm2": 0.7941068682955,
+              "bounds_native_mm": [
+                97.374,
+                94.2552,
+                98.379,
+                95.2602
+              ],
+              "remote": false,
+              "minimum_opposite_fill_inflation_IU": null
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 1.64275e-08,
+              "bounds_native_mm": [
+                95.231922,
+                94.803317,
+                95.27794,
+                94.871117
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 9.3425e-09,
+              "bounds_native_mm": [
+                104.722592,
+                94.292719,
+                104.760825,
+                94.306097
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 9.3425e-09,
+              "bounds_native_mm": [
+                108.375992,
+                94.292719,
+                108.414225,
+                94.306097
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            },
+            {
+              "direction": "added",
+              "area_mm2": 2.062e-09,
+              "bounds_native_mm": [
+                95.259645,
+                94.842,
+                95.27794,
+                94.871117
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            },
+            {
+              "direction": "added",
+              "area_mm2": 1.1502e-08,
+              "bounds_native_mm": [
+                95.212982,
+                94.779568,
+                95.231922,
+                94.803317
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            }
+          ],
+          "remote_components": [
+            {
+              "direction": "removed",
+              "area_mm2": 1.64275e-08,
+              "bounds_native_mm": [
+                95.231922,
+                94.803317,
+                95.27794,
+                94.871117
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 9.3425e-09,
+              "bounds_native_mm": [
+                104.722592,
+                94.292719,
+                104.760825,
+                94.306097
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            },
+            {
+              "direction": "removed",
+              "area_mm2": 9.3425e-09,
+              "bounds_native_mm": [
+                108.375992,
+                94.292719,
+                108.414225,
+                94.306097
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            },
+            {
+              "direction": "added",
+              "area_mm2": 2.062e-09,
+              "bounds_native_mm": [
+                95.259645,
+                94.842,
+                95.27794,
+                94.871117
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 0
+            },
+            {
+              "direction": "added",
+              "area_mm2": 1.1502e-08,
+              "bounds_native_mm": [
+                95.212982,
+                94.779568,
+                95.231922,
+                94.803317
+              ],
+              "remote": true,
+              "minimum_opposite_fill_inflation_IU": 1
+            }
+          ]
+        },
+        "In1_expected_antipad_bounds_native_mm": [
+          97.3265,
+          94.2077,
+          98.42649999999999,
+          95.3077
+        ],
+        "In1_GND_island_count": 1,
+        "remote_bound": "Each remote component contained by opposite fill inflated <=10 IU."
+      }
+    },
+    {
+      "name": "native_DRC",
+      "detail": {
+        "baseline_opens": 43,
+        "candidate_opens": 42,
+        "warnings": 233,
+        "new_non_open_findings": [],
+        "native_opens": 42,
+        "graph_opens": 42,
+        "baseline_DRC_sha256": "567763888a6355c102d2e189aa2c951ea621af1bc477f127731d5fa0e8fb292e"
+      }
+    }
+  ],
+  "elapsed_seconds": 114.57799999997951,
+  "finite_screen": {
+    "site_count": 9,
+    "feasible_count": 9,
+    "selected": {
+      "index": 4,
+      "via_native_mm": [
+        97.8765,
+        94.7577
+      ],
+      "F_stub": {
+        "start": [
+          97.8765,
+          94.5077
+        ],
+        "end": [
+          97.8765,
+          94.7577
+        ],
+        "width_mm": 0.2,
+        "length_mm": 0.25
+      },
+      "In2_stub": {
+        "start": [
+          97.8765,
+          94.7577
+        ],
+        "end": [
+          97.8765,
+          94.25
+        ],
+        "width_mm": 0.4,
+        "length_mm": 0.5076999999999998
+      },
+      "reasons": [],
+      "obstacle_uuids": []
+    },
+    "private_rows_sha256": "ae8081522cc7f8d4a82d8e4d9b5014ad97b7ea99409ab04d1cfd0f7df7488a67",
+    "persisted_before_generation": true
+  },
+  "design_files_written": true,
+  "candidate_path": "files\\c12-paired-feed-01\\final\\handbell.kicad_pcb",
+  "candidate_sha256": "834086079bc792165adcf642d41f3fd52c65446a355904934fcdf39b289227eb",
+  "selected_site": {
+    "index": 4,
+    "via_native_mm": [
+      97.8765,
+      94.7577
+    ],
+    "F_stub": {
+      "start": [
+        97.8765,
+        94.5077
+      ],
+      "end": [
+        97.8765,
+        94.7577
+      ],
+      "width_mm": 0.2,
+      "length_mm": 0.25
+    },
+    "In2_stub": {
+      "start": [
+        97.8765,
+        94.7577
+      ],
+      "end": [
+        97.8765,
+        94.25
+      ],
+      "width_mm": 0.4,
+      "length_mm": 0.5076999999999998
+    },
+    "reasons": [],
+    "obstacle_uuids": []
+  },
+  "generated": {
+    "removed_track": "a869dd24-8003-5303-82af-32d37e552b3a",
+    "F_stub_uuid": "5b1146e5-be33-5c83-aa6c-de134de7e18b",
+    "via_uuid": "ae3faebf-50bf-5831-beed-c373f97cb24c",
+    "In2_stub_uuid": "629b2f98-12f7-5372-9be3-8ea69edfe8b9",
+    "GND_bridge_uuid": null
+  },
+  "proof_bindings": {
+    "tool_sha256": "107b9e323c6f801dbc96a96ac99c6fb987115045a95e7a49a35d8e39b47c70ce",
+    "screening_sha256": "ae8081522cc7f8d4a82d8e4d9b5014ad97b7ea99409ab04d1cfd0f7df7488a67",
+    "candidate_DRC_sha256": "109badc79872161f7d0c2f7ff583ccff967fa8b4ca8178590414572231a33d95"
+  },
+  "limits": [
+    "Not promoted",
+    "No current/thermal/PI/manufacturing qualification",
+    "C24 and VCORE unchanged and unresolved"
+  ],
+  "dependency_binding": {
+    "project_and_table_files_sha256": {
+      "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "fp-lib-table": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+      "sym-lib-table": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+      "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+      "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+      "Clock.kicad_sym": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+      "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+      "LICENSE.txt": "075dad5e5fc96c27014fabc269f4f5732909cffd178a486f546d982b6cf86b74"
+    },
+    "local_library_file_count": 38,
+    "local_library_tree_sha256": "63c7b4ad331bf994fa44433acfe4a14600a7ad5df7fd6559fe62d286a7fd19d0",
+    "all_candidate_dependencies_exact": true
+  },
+  "report_finalizer_sha256": "fd2056ac0fe0fd444da3d36804fa5ac46e4db4f46c2a75d8b9711a0cb3571cc1"
+}

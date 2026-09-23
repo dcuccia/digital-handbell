@@ -166,6 +166,25 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Current accepted checkpoint: 42 opens.** Astra accepts exact PCB
+`834086079bc792165adcf642d41f3fd52c65446a355904934fcdf39b289227eb`,
+manifest `054f203553f7051e12f098acac9683539488e77e4a42266439b48c519dbf39dd`.
+The [paired C12 acceptance](../hardware/handbell/iterations/printed-bell-four-layer/reports/c12-paired-feed-acceptance.json)
+replaces only the upstream F supply feed with a 0.25 mm F stub, one
+ordinary +3V3 via and a 0.5077 mm In2 connection. The local capacitor/MCU
+branch is unchanged. Refill joins C12 ground; all prior connections and
+private pickoffs remain intact. In1 stays connected around the reviewed
+local antipad, and remote cache differences are bounded to at most 1 IU.
+
+Next is the [bounded C24 ground closure](routing-agent-policy.md#c24-local-ground-closure):
+screen short F island bridges first, then at most 48 geometry-derived
+ordinary-via sites using the updated board. Stage only a legal local
+connection; do not move parts or reroute any existing net. Stop on
+meaningful obstacles rather than widening the search. C24 is the remaining
+unresolved group from the local supply-ground batch, not the last board
+ground connection. VCORE/other routing, stackup, CAD binding, parity and
+manufacturing gates remain open. Older entries below are historical.
+
 **C12 access review complete; next paired trial:** the
 [whole-island screen](../hardware/handbell/iterations/printed-bell-four-layer/reports/c12-island-access-review.json)
 found no passing site among 38 geometry-derived ordinary-via proposals.

@@ -1,6 +1,19 @@
 # Printed-bell four-layer routing baseline
 
-**Current acceptance: C23 ground closure.** Five local USBBOOT F segments
+**Current acceptance: paired C12 supply/ground closure.** A shorter feed
+from the existing In2 +3V3 bridge replaces only the upstream F supply
+segment, preserving the local capacitor-to-MCU wiring. One ordinary
+through-via is added; native refill connects C12 ground.
+PCB `834086079bc792165adcf642d41f3fd52c65446a355904934fcdf39b289227eb`,
+manifest `054f203553f7051e12f098acac9683539488e77e4a42266439b48c519dbf39dd`.
+**42 opens**, 233 warnings and 46 historical parity notices remain.
+The protected In1 plane remains connected with the reviewed local
+power-via antipad. No components moved; C24 remains unresolved.
+See [acceptance and evidence reuse](reports/c12-paired-feed-acceptance.json).
+Full electrical, thermal, mechanical and manufacturing qualification
+remain open. Descriptions below are preserved historical checkpoints.
+
+**Earlier acceptance: C23 ground closure.** Five local USBBOOT F segments
 are replaced by two 0.20 mm In2 segments between existing vias, freeing
 the front ground fill to connect C23. No parts moved or vias were added.
 PCB `01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00`,
