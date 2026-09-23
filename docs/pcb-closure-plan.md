@@ -166,6 +166,18 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Remaining-ground obstacle review:** all three groups have native F filled
+islands close to main GND, but their nearest boundary bridges cross fixed
+copper. C12's 0.5788 mm gap crosses F +3V3 track `a869dd24...`, not the
+new In2 bridge. C23's 0.5788 mm gap crosses two USBBOOT tracks. C24's
+1.391996 mm gap crosses SCL/USBBOOT and two plated vias; contact metal
+also rejected some candidate sites.
+The [source-bound review](../hardware/handbell/iterations/printed-bell-four-layer/reports/remaining-ground-obstacle-review.json)
+does not authorize obstacle removal. Next is one read-only cut analysis
+of the named +3V3 segment and local USBBOOT/SCL transition inventory with
+actual-copper views. Determine redundancy and affected source/load branches
+before any reroute, new via or placement decision. The board stays at 44 opens.
+
 **Latest radial-batch decision:** the
 [336-site follow-up](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-radial-batch.json)
 produced a validated candidate closing C4, shared C11/C15 and U2 ground
