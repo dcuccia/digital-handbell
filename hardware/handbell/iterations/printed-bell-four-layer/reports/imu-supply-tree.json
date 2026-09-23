@@ -1,0 +1,236 @@
+{
+  "report": "imu-supply-tree",
+  "status": "candidate_held_vddio_via_fails_off_pad_process_gate",
+  "classification": "Session-private evolving candidate; unfilled, electrically incomplete, unaccepted and not quoteable.",
+  "inputs": {
+    "reviewed_private_pcb_sha256": "206afad547838c26afbf6ca6056af8d0b7073ea00938599598e83792a5bb7f38",
+    "reviewed_private_manifest_sha256": "6ae59fbf552d8b9e0541926db8aee2b655a7c5268a566ee0cf1151d1f6e7ceb0",
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "accepted_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667"
+  },
+  "working_artifacts": {
+    "pcb": {
+      "session_relative_path": "files/imu-coupled-routing/handbell-imu-coupled-working.kicad_pcb",
+      "sha256": "329a5d56c6fa0723095e97debc296c0b9c459fef698caf3fef6b8336817f17ca"
+    },
+    "manifest": {
+      "session_relative_path": "files/imu-coupled-routing/placement-manifest-imu-coupled-working.json",
+      "sha256": "bb2fcfbd5f37bd0831f92a586c314d788717099476486c2f8b3bb4e7e6985980",
+      "pcb_binding_matches": true
+    },
+    "state": {
+      "session_relative_path": "files/imu-coupled-routing/supply-tree-state.json",
+      "sha256": "daa021530753ef1c573663abfd682a6a6a5bcd5a57250ae93bbce2c23c7ee54d"
+    },
+    "off_pad_validation": {
+      "session_relative_path": "files/imu-coupled-routing/off-pad-via-validation.json",
+      "sha256": "43609c8feb797381f30407688f5cd305c2186295398deade99271e91e40b699c"
+    },
+    "tools": [
+      {
+        "session_relative_path": "files/route_imu_supply_tree.py",
+        "sha256": "1e60e9bb6f426e3054796884faf7a06043628d536a513c81dcd13449f3bb1846"
+      },
+      {
+        "session_relative_path": "files/smooth_imu_supply_tree.py",
+        "sha256": "cfa5e525fd2a210cb2b47ce093204c5141c459b2193256a09bd7294d9720fc04"
+      },
+      {
+        "session_relative_path": "files/validate_imu_off_pad_vias.py",
+        "sha256": "637acc7011a67e441577aace9e0adc57ecbf5a0d6e96e3121e4fdc1c93e8e76b"
+      }
+    ]
+  },
+  "method": {
+    "access_recheck": {
+      "VDDIO_tested": 195,
+      "VDDIO_foreign_clearance_survivors_after_escape_filter": 2,
+      "C23_tested": 384,
+      "C23_foreign_clearance_survivors": 82,
+      "qualification_limit": "These counts did not include the required same-net SMD-land off-pad test and are not qualified ordinary-via site counts."
+    },
+    "shared_search": {
+      "grid_mm": 0.1,
+      "expansions": 2392,
+      "exact_edge_checks": 4877,
+      "edge_cache_hits": 4588,
+      "reachable_VDDIO_sites": 2,
+      "reachable_C23_sites": 82,
+      "elapsed_seconds_before_smoothing": 1.5
+    },
+    "corrections": [
+      "Corrected the KiCad BOX2I copy call used by bbox prefiltering.",
+      "Replaced the electrically valid but duplicated staircase output with one exact-collision-screened shared bent trunk."
+    ]
+  },
+  "transitions": {
+    "VDDIO": {
+      "via_uuid": "8172b557-052b-5662-a082-56a27b776202",
+      "at_mm": [88.2, 92.85],
+      "size_mm": 0.604,
+      "drill_mm": 0.35,
+      "F_stub_uuid": "b0ac27c1-f68c-5cb7-b842-cbb4c5615e2b",
+      "F_stub_width_mm": 0.25,
+      "terminal": "IC4.5",
+      "off_pad_process_gate": {
+        "passed": false,
+        "overlapping_land": "IC4.5",
+        "same_net": true,
+        "layer": "F.Cu",
+        "positive_overlap_area_native_iu2": 25628396290.5,
+        "disposition": "No via-in-pad dependency is authorized; candidate held."
+      }
+    },
+    "C23": {
+      "via_uuid": "6e5a234c-cb91-54fb-a6d1-b830e4b5b602",
+      "at_mm": [88.15, 91.8],
+      "size_mm": 0.604,
+      "drill_mm": 0.35,
+      "F_stub_uuid": "88b98a15-3196-56a9-8b2f-f654fc19a1c9",
+      "F_stub_width_mm": 0.1778,
+      "terminal": "C23.1",
+      "off_pad_process_gate": {
+        "passed": true,
+        "positive_area_SMD_land_overlaps": []
+      }
+    }
+  },
+  "In2_supply_tree": {
+    "width_mm": 0.4,
+    "VDDIO_entry": [
+      [88.2, 92.85],
+      [88.2, 92.9]
+    ],
+    "C23_entry": [
+      [88.15, 91.8],
+      [88.2, 92.9]
+    ],
+    "shared_trunk": [
+      [88.2, 92.9],
+      [88.6, 93.2],
+      [88.7, 94.3],
+      [90.0, 94.3],
+      [92.4, 94.2],
+      [92.8, 93.6],
+      [92.85, 93.35]
+    ],
+    "track_uuids": [
+      "27e24e13-3217-5275-b814-b0c21ea531a0",
+      "1b2384a3-5e5d-5a77-a774-a7763f243c9a",
+      "dcc9b6b3-01cc-5d04-b165-e35a8d72f3c7",
+      "e20dfa90-25ee-50f3-afaf-93c6663c5965",
+      "3c25b4a0-905e-5c0d-b9ef-34460cf54c3c",
+      "cb6ba847-f937-575c-98f2-6dd0139255b9",
+      "c44ad36f-5496-5ffb-a130-6e274dc2b8f7",
+      "9b07ad18-0ffc-5140-9184-bb8cf8dc4b07"
+    ],
+    "fixed_target": {
+      "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+      "at_mm": [92.85, 93.35]
+    }
+  },
+  "F_supply_branches": [
+    {
+      "duty": "R14.1 pullup",
+      "width_mm": 0.1778,
+      "points_mm": [[87.094469, 95.22603], [88.0, 95.22603], [88.749806, 95.25]],
+      "track_uuids": [
+        "5ec25a58-be2e-51bd-a25d-8bccd6bdd40d",
+        "f8fbccbb-06f3-51e2-921a-d8056e9ba316"
+      ]
+    },
+    {
+      "duty": "R15.1 pullup to VDDIO transition",
+      "width_mm": 0.1778,
+      "points_mm": [[87.082668, 93.109941], [88.2, 92.85]],
+      "track_uuids": ["201d1e62-9b3d-5ec0-b9e9-b44f42ecbb76"]
+    },
+    {
+      "duty": "left-middle clipped exterior",
+      "width_mm": 0.1778,
+      "points_mm": [[86.6, 93.1099], [87.082668, 93.109941]],
+      "track_uuids": ["3fa17f1f-fba5-54e1-b587-47a11c71698c"]
+    },
+    {
+      "duty": "top clipped exterior",
+      "width_mm": 0.1778,
+      "points_mm": [[88.3938, 90.5], [88.794835, 91.491614]],
+      "track_uuids": ["2fd08eaf-59f8-54dc-881d-4b8c7a5c95fe"]
+    }
+  ],
+  "third_exterior_disposition": {
+    "interface_uuid": "a25f792f-6604-572a-ac90-6f2b39901f78",
+    "port_mm": [86.6, 91.5407],
+    "new_direct_branch": "not added because both screened direct F variants were blocked",
+    "restoration": "Native primitive graph proves this preserved exterior interface already reaches fixed supply group ae5186f8 through unchanged external +3V3 copper plus the restored C23 supply attachment."
+  },
+  "native_results": {
+    "four_copper_layers_loaded": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"],
+    "primitive_short_count": 0,
+    "supply_to_fixed_bridge": {
+      "IC4.5_VDDIO": true,
+      "C23.1": true,
+      "R14.1": true,
+      "R15.1": true,
+      "IC4.8_VDD": true,
+      "IC4.12_CS": true,
+      "left_middle_exterior": true,
+      "left_lower_exterior": true,
+      "top_exterior": true
+    },
+    "preserved_paths": {
+      "IC4.9_to_TP6": true,
+      "IC4.13_to_SCL_exterior": true
+    },
+    "all_ground_pads_to_saved_return_vias": {
+      "IC4.1": true,
+      "IC4.2": true,
+      "IC4.3": true,
+      "IC4.6": true,
+      "IC4.7": true
+    },
+    "MAIN_ground_attachment": "Pending qualified refill."
+  },
+  "ordinary_via_off_pad_gate": {
+    "rule": "Reject positive-area intersection between the .604 mm ordinary-via outer disk and every F.Cu/B.Cu SMD land, including same-net lands. Same-net connecting traces remain permitted.",
+    "controls": {
+      "source_same_net_on_pad_negative": {
+        "source": "IC4.5 pad center",
+        "passed": true,
+        "result": "Rejected with positive-area overlap to source IC4.5."
+      },
+      "source_genuinely_off_pad_positive": {
+        "source": "fixed ordinary supply via ae5186f8",
+        "passed": true,
+        "result": "No F.Cu or B.Cu SMD-land overlap."
+      }
+    },
+    "saved_anchor_results": {
+      "GND67_102d837c": true,
+      "GND123_68beef59": true,
+      "INT2_0b25a804": true,
+      "C23_6e5a234c": true,
+      "VDDIO_8172b557": false
+    },
+    "passed": false
+  },
+  "remaining_duties": [
+    "Replace the held VDDIO transition with a genuinely off-pad ordinary-via location and locally repair its F/In2 entry; the current VDDIO copper is connectivity evidence only.",
+    "Reconnect R14.2 to the retained SCL route.",
+    "Route SDA from IC4.14 through R15.2 to the retained B.Cu exterior interface.",
+    "Create a legal IC4.4 INT local exit/reservation.",
+    "Run qualified refill and prove both IC4 ground groups attach to MAIN.",
+    "After complete local signal restoration, run all-layer connectivity, floating-copper, private-return, CELL_NEG, contact, source, manifest, native DRC and CAD-rebind gates."
+  ],
+  "acceptance": {
+    "supply_connectivity_constructed": true,
+    "supply_duties_restored": false,
+    "ordinary_via_off_pad_gate": false,
+    "candidate_held": true,
+    "complete_local_block": false,
+    "promotable": false,
+    "quote_ready": false,
+    "no_active_package_edits": true,
+    "no_commit_or_push": true
+  }
+}

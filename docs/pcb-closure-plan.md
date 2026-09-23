@@ -166,6 +166,34 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Supply connectivity constructed, but one ordinary via is held for repair.**
+The [supply-tree report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-supply-tree.json)
+binds private PCB `329a5d56c6fa0723095e97debc296c0b9c459fef698caf3fef6b8336817f17ca`
+and manifest `bb2fcfbd5f37bd0831f92a586c314d788717099476486c2f8b3bb4e7e6985980`.
+All local supply pads and three exterior supply groups reach the fixed
+bridge, with the earlier signals/ground straps preserved. Cached/shared
+search took 2,392 expansions and 4,877 exact edge checks, about 1.5 seconds
+before smoothing, rather than timing out on repeated per-site searches.
+
+The missing same-net SMD non-overlap gate then correctly rejected VDDIO
+via `8172b557...` at `(88.2,92.85)`: it overlaps IC4.5 and would introduce
+an unauthorized via-in-pad dependency. C23 and the three saved ordinary
+ground/INT2 anchors passed. Both on-pad negative and off-pad positive
+controls passed. Hold the candidate; electrical connectivity is not process
+acceptance. The public working recovery pair remains the earlier `206afad5...`
+checkpoint until a repaired pair is reviewed.
+
+**Next item: surgical ordinary-via repair, not another supply-tree search.**
+Move only the held VDDIO via and its IC4.5/R15.1 F connections and In2
+entry, retaining the shared trunk and every established connection.
+Remove the script's unqualified `y >= 92.85` escape filter; it is not a
+design rule or a demonstrated signal reservation. A native-screened
+off-pad location near `(87.85,92.7)` is a starting hypothesis, with the
+In2 entry rejoining `(88.2,92.9)`. Require the complete ordinary-via
+process/foreign/hole/contact gates and actual preserved connectivity,
+not just same-net clearance exemption. Limit this repair to six minutes
+and two local corrections; no new via process, rule reduction or part move.
+
 **Latest working checkpoint: VDD/CS/C24 and INT2 restored.**
 The [paired-route report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-vdd-int2-routing.json)
 binds recovery PCB `206afad547838c26afbf6ca6056af8d0b7073ea00938599598e83792a5bb7f38`
