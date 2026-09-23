@@ -14,6 +14,16 @@ into quotation/fabrication notes. Supplier, stencil, yield and cost
 qualification remain open. This is not fabrication or powered approval.
 Earlier checkpoints below are historical.
 
+**Separate incomplete IMU working fixture:** the
+[archived PCB](reports/imu-fanout-method-staged.kicad_pcb) and
+[manifest](reports/imu-fanout-method-staged-manifest.json) preserve an
+unfilled, deliberately disconnected local rework with IC4 moved north
+0.50 mm and one replacement SCL escape. They are **not the current accepted
+board or a self-contained fabrication package**. The
+[source-invariant qualification](reports/imu-fanout-method-validation.json)
+does not qualify full routing, DRC, powered behavior or mechanical fit.
+Continue only through the [current closure handoff](../../../../docs/pcb-closure-plan.md#owner-pause-and-next-item).
+
 **Earlier acceptance: paired C12 supply/ground closure.** A shorter feed
 from the existing In2 +3V3 bridge replaces only the upstream F supply
 segment, preserving the local capacitor-to-MCU wiring. One ordinary

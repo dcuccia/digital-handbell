@@ -166,6 +166,44 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Working fanout fixture qualified; accepted board still unchanged.**
+The [method report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-fanout-method.json)
+and [18-gate validation](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-fanout-method-validation.json)
+now establish a real clipped/ripped-up working copy and replacement SCL
+escape, not moved-pad tails. The archived incomplete PCB is
+`reports/imu-fanout-method-staged.kicad_pcb`, SHA-256
+`6df836645cebbd8f2d793822a182dd95db14604f2119820510db107cc4e19087`;
+its staged manifest is `800321ae0044a199ff506f6b648609e7d6ac44e0413fcbb3afa7b1711f72466a`.
+These are recovery inputs, not a self-contained package or accepted routing.
+All zone definitions, non-IC4 footprints and protected/exterior geometry
+survive; caches alone were invalidated. Mutation controls reject actual
+rule, footprint and boundary changes. The active package remains at 41 opens.
+
+**Next item: complete coupled IMU routing on that one private candidate.**
+Prioritize paired supply/return geometry and reserve or route the interrupt
+and I2C escapes together. Preserve the tentative SCL route where useful,
+but do not freeze it against a better complete local topology. Both 100 nF
+capacitors remain: allocate C23 to IC4.5 VDDIO and C24 to IC4.8 VDD, with
+explicit local supply/return paths; IC4.12 is the required CS supply tie.
+`/IMU_INT2` reaches TP6 in the accepted design and must not be discarded as
+an unused single-pad net.
+
+Astra additionally releases local +3V3 transition vias `6421709a...` and
+`6d56c09b...` for necessary relocation/replacement within the same rectangle.
+They are routing choices, not mechanical datums. This extends the previously
+released `1c15a7a2...` and SDA `aa47961d...` scope; it does not release the
+accepted In2 bridge or its `ae5186f8...` endpoint. Restore all supply pads
+and boundary duties with preserved width/current-path requirements. Keep
+IC4 at its staged pose for this item; the four local passives retain their
+previously released individual 0.75 mm translation limit and unchanged
+rotations. C24's capped via must follow its pad if moved.
+
+One 15-minute item, at most two corrective retries: modify the actual
+private copper, not only proposal masks. Save each useful state and its
+remaining obligations before expensive checks. A partial power/return
+foundation is not promotion; only the full coupled block, required
+electrical gates and mechanical rebind can change the authoritative board.
+
 **September 23, 14:48 owner authorization: continue while the owner is away.**
 The owner explicitly requested continued iteration over the next couple of
 hours, aligned with the agreed priorities and strategies. Retain the bounded

@@ -5,8 +5,9 @@
 - **September 23 unattended continuation authorized:** the owner asked for
   continued iteration while away for the next couple of hours, using the
   agreed priorities and Astra/Sol split. Continue sequential bounded items,
-  not the exhausted shifted-pad-tail method. The first item is an actual
-  source-bound local rip-up fixture and replacement SCL escape; exact scope
+  not the exhausted shifted-pad-tail method. A real local rip-up fixture
+  and replacement SCL escape now pass source-invariant qualification.
+  Continue coupled IMU routing on that single private candidate; exact scope
   is in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
   A private working copy may be temporarily disconnected during explicitly
   authorized rework; the accepted 41-open package must stay untouched.

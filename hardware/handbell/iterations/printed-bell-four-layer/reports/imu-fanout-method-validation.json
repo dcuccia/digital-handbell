@@ -1,0 +1,125 @@
+{
+  "report": "imu-fanout-method-validation",
+  "status": "passed_validation_only",
+  "scope": "Qualify the immutable saved IMU fanout fixture; no routing, placement, fill or source-board changes.",
+  "inputs": {
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "accepted_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "private_fixture_pcb_sha256": "6df836645cebbd8f2d793822a182dd95db14604f2119820510db107cc4e19087",
+    "private_fixture_manifest_sha256": "800321ae0044a199ff506f6b648609e7d6ac44e0413fcbb3afa7b1711f72466a",
+    "original_method_report_sha256": "0e664aace4ba785da377c6e0a318d2217be495731150fc0c4f59ce688f21287f"
+  },
+  "evidence": {
+    "validator": {
+      "session_relative_path": "files/validate_imu_fanout_fixture.py",
+      "sha256": "6aed5d7f1aa7d680adf58936763d8a1852b07669222beab459f452e6758fe3a6"
+    },
+    "results": {
+      "session_relative_path": "files/imu-fanout-method/validation-results.json",
+      "sha256": "ed13f995e399338fcf416199c87d7756966ffd0b9969ac546c316323e2218c5e"
+    },
+    "gate_count": 18,
+    "elapsed_seconds": 1.968
+  },
+  "zone_validation": {
+    "zone_count": 21,
+    "fixture_filled_polygon_count": 0,
+    "definitions_equal_after_removing_only_filled_polygon_children": true,
+    "preserved": [
+      "zone identities",
+      "layers and nets",
+      "outlines",
+      "clearance and minimum-thickness settings",
+      "connect-pad settings",
+      "priorities",
+      "rule-area and guard definitions"
+    ]
+  },
+  "source_derived_controls": {
+    "cache_removal_control": "passed",
+    "one_IU_zone_clearance_change": "correctly rejected",
+    "one_IU_non_IC4_footprint_position_change": "correctly rejected",
+    "one_IU_boundary_split_endpoint_change": "correctly rejected"
+  },
+  "source_invariants": {
+    "non_IC4_footprints_raw_byte_equal": true,
+    "non_IC4_footprints_compared": 103,
+    "IC4_only_change": "native Y translation -500000 IU",
+    "IC4_rotation_deg": 270,
+    "IC4_library_identity_pad_shapes_pin_ids_and_local_angles_equal": true,
+    "ordinary_immutable_top_level_UUID_nodes_raw_byte_equal": true,
+    "ordinary_immutable_nodes_compared": 1458,
+    "fixed_and_critical_primitives_raw_byte_equal": [
+      "a8cbe912-8331-5b8c-8007-4757dbf45c33",
+      "ae5186f8-c14f-543b-83b6-5de362326e62",
+      "6421709a-0a8e-5ae6-b17a-69e9ccb61078",
+      "6d56c09b-2b19-5144-a473-6e1c16d7c430",
+      "1c15a7a2-2065-55a0-bfec-88da501cad88",
+      "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+    ]
+  },
+  "authorized_deltas": {
+    "removed_source_UUID_count": 26,
+    "composition": {
+      "local_removed_items": 20,
+      "boundary_source_segments_replaced_by_clipped_exteriors": 6
+    },
+    "exact_allowlist_match": true,
+    "boundary_exteriors": {
+      "count": 6,
+      "native_geometry_net_layer_width_match": true,
+      "split_rejoin_collinearity": true,
+      "source_to_exterior_UUIDs": {
+        "2fe17ed1-3ec0-5d72-87a4-f13f47809ab1": "a25f792f-6604-572a-ac90-6f2b39901f78",
+        "3af9f604-730a-57dc-bda2-07d0adec1b60": "0c5b3d5c-8349-5c91-abc8-1fda34085e92",
+        "528e6222-56ef-51c3-8f39-3275cfc8109b": "ca326628-e943-5adf-9c27-da2bc0468a49",
+        "d93f93c7-81b9-5ed4-8e7b-d4c279620a08": "a387e3b2-33a0-54a4-a97e-46576e484ef7",
+        "d97d35c5-9996-5137-aec1-9d16badd2a9a": "90308c98-4c67-52bb-af96-f5d0e7359093",
+        "f33229d0-c245-5a52-bec8-a308d1b14a7f": "671f9ab4-62c4-5fa8-abe7-91dc2f785b00"
+      }
+    }
+  },
+  "manifest_validation": {
+    "only_allowed_delta_paths": true,
+    "delta_paths": [
+      "components[37].native_origin_common_xy_mm[1]",
+      "components[37].y_mm",
+      "current_stage_report",
+      "electrical_landmarks.imu.IC4[1]",
+      "generated_pcb_sha256",
+      "status"
+    ],
+    "all_three_IC4_pose_records_match_minus_0_50_mm_Y": true,
+    "generated_pcb_sha256_matches_fixture": true
+  },
+  "reused_method_result": {
+    "primitive_short_count": 0,
+    "IC4_13_connected_to_retained_SCL_exterior": true,
+    "refill_or_DRC_rerun": false
+  },
+  "durable_archives": {
+    "pcb": {
+      "path": "imu-fanout-method-staged.kicad_pcb",
+      "sha256": "6df836645cebbd8f2d793822a182dd95db14604f2119820510db107cc4e19087",
+      "byte_identical_to_private_fixture": true
+    },
+    "manifest": {
+      "path": "imu-fanout-method-staged-manifest.json",
+      "sha256": "800321ae0044a199ff506f6b648609e7d6ac44e0413fcbb3afa7b1711f72466a",
+      "byte_identical_to_private_fixture": true
+    },
+    "classification": "Archived incomplete and unfilled recovery inputs; not the authoritative board, not self-contained fabrication outputs and not quote-ready."
+  },
+  "remaining_acceptance_gates": [
+    "Complete coupled GND, +3V3/decoupling, SDA, /IMU_INT2, INT and R14.2 replacement routing.",
+    "Refill using the qualified settings and verify all-layer connectivity, preserved groups, private terminal cuts and CELL_NEG isolation.",
+    "Run native DRC and compare opens and non-open findings.",
+    "Review return paths, plane continuity, local SI/PI implications and contact exclusions after complete routing.",
+    "Rebind moved IC4 geometry into the full mechanical CAD assembly."
+  ],
+  "attempts": {
+    "initial": "Persisted gates through the negative zone-control failure; mutation did not match the source numeric spelling.",
+    "single_correction": "Made the source-derived zone mutation syntax-independent and strengthened the one-IU boundary endpoint rejection.",
+    "implementation_corrections": 1
+  }
+}

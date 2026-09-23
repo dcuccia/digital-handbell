@@ -6,6 +6,19 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**September 23 working fanout method:** a source-preserving private fixture
+now contains actual boundary clipping, obsolete-fanout removal and a new
+three-segment SCL escape. Its primitive graph has no shorts, but the rest
+of the IMU block remains incomplete. The
+[saved-fixture validation](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-fanout-method-validation.json)
+passes all 18 gates, including deliberate one-IU rule, footprint and boundary
+mutations. Compare zone definitions separately from intentionally removed
+`filled_polygon` caches; do not either reject cache invalidation as a rule
+change or ignore a genuine zone-parameter change. Validate the saved artifact
+without regenerating it, and distinguish reused geometry results from a
+fresh DRC/refill. An explicitly incomplete working copy permits genuine
+replacement routing; retaining every obsolete local terminal does not.
+
 **September 23 re-layout execution limitation:** the subsequent
 [three-construction screen](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-coordinated-relayout-trial.json)
 did not implement the authorized complete local re-layout. The executor

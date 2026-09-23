@@ -1,0 +1,229 @@
+{
+  "report": "imu-fanout-method",
+  "status": "private_incomplete_fixture_method_proved_validation_incomplete",
+  "source": {
+    "pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "native_open_items": 41
+  },
+  "fixture": {
+    "pcb": {
+      "session_relative_path": "files/imu-fanout-method/handbell-imu-fanout-fixture.kicad_pcb",
+      "sha256": "6df836645cebbd8f2d793822a182dd95db14604f2119820510db107cc4e19087"
+    },
+    "manifest": {
+      "session_relative_path": "files/imu-fanout-method/placement-manifest-imu-fanout-fixture.json",
+      "sha256": "800321ae0044a199ff506f6b648609e7d6ac44e0413fcbb3afa7b1711f72466a"
+    },
+    "tool": {
+      "session_relative_path": "files/build_imu_fanout_fixture.py",
+      "sha256": "24750ce7230f54761e7cb0ca5ee7edee12f2035453e3863007f1d2bcc64914a5"
+    },
+    "classification": "Session-private evolving fixture; electrically incomplete, unfilled, not accepted, not quoteable and not a CAD-qualified placement.",
+    "rework_rectangle_native_mm": {
+      "x": [86.6, 93.1],
+      "y": [90.5, 95.9]
+    },
+    "IC4_pose": {
+      "old_native_mm": [89.499806, 93.992711, 270],
+      "new_native_mm": [89.499806, 93.492711, 270],
+      "translation_mm": [0.0, -0.5],
+      "footprint_and_pad_definitions_changed": false
+    },
+    "manifest_pose_records_updated": [
+      "components[reference=IC4].y_mm",
+      "components[reference=IC4].native_origin_common_xy_mm[1]",
+      "electrical_landmarks.imu.IC4[1]"
+    ],
+    "cached_filled_polygons_removed": 21,
+    "zone_refill_pending": true
+  },
+  "boundary_splits": [
+    {
+      "source_uuid": "2fe17ed1-3ec0-5d72-87a4-f13f47809ab1",
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "new_exterior_uuid": "a25f792f-6604-572a-ac90-6f2b39901f78",
+      "port_native_nm": [86600000, 91540700],
+      "outside_endpoint_native_nm": [86402100, 91738600]
+    },
+    {
+      "source_uuid": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+      "net": "SCL",
+      "layer": "F.Cu",
+      "new_exterior_uuid": "0c5b3d5c-8349-5c91-abc8-1fda34085e92",
+      "port_native_nm": [93100000, 92736800],
+      "outside_endpoint_native_nm": [93631500, 92736800]
+    },
+    {
+      "source_uuid": "528e6222-56ef-51c3-8f39-3275cfc8109b",
+      "net": "/IMU_INT2",
+      "layer": "F.Cu",
+      "new_exterior_uuid": "ca326628-e943-5adf-9c27-da2bc0468a49",
+      "port_native_nm": [93100000, 95683300],
+      "outside_endpoint_native_nm": [94269500, 95683300]
+    },
+    {
+      "source_uuid": "d93f93c7-81b9-5ed4-8e7b-d4c279620a08",
+      "net": "SDA",
+      "layer": "B.Cu",
+      "new_exterior_uuid": "a387e3b2-33a0-54a4-a97e-46576e484ef7",
+      "port_native_nm": [93100000, 91377100],
+      "outside_endpoint_native_nm": [100753100, 91377100]
+    },
+    {
+      "source_uuid": "d97d35c5-9996-5137-aec1-9d16badd2a9a",
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "new_exterior_uuid": "90308c98-4c67-52bb-af96-f5d0e7359093",
+      "port_native_nm": [88393800, 90500000],
+      "outside_endpoint_native_nm": [85434200, 87540400]
+    },
+    {
+      "source_uuid": "f33229d0-c245-5a52-bec8-a308d1b14a7f",
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "new_exterior_uuid": "671f9ab4-62c4-5fa8-abe7-91dc2f785b00",
+      "port_native_nm": [86600000, 93109900],
+      "outside_endpoint_native_nm": [86492100, 93109900]
+    }
+  ],
+  "boundary_control": {
+    "result": "passed",
+    "method": "Each source segment was split at its exact rectangle intersection. The retained exterior segment and recorded interior obligation reproduce the source centreline, net, layer and width when rejoined.",
+    "integer_native_coordinates_recorded": true,
+    "protected_unsplit_In2_bridge_uuid": "a8cbe912-8331-5b8c-8007-4757dbf45c33"
+  },
+  "removed_local_items": {
+    "count": 20,
+    "uuids": [
+      "225cf9fa-f4af-5f4c-8a34-c27fd8d88c60",
+      "362c0c5e-e64b-5b41-a895-e8840a1e919e",
+      "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+      "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+      "838d2f6e-1cc4-5c60-bb3c-bacf6aa0ad94",
+      "8576418f-415a-52aa-a243-a9314fbe9c98",
+      "965f7f62-36cb-5a61-b8a3-fd8069528d3a",
+      "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+      "a113fa1a-d424-5763-ad47-542f610af539",
+      "a97d4d76-7283-5c25-b6ff-d6e5e9419e65",
+      "aa1f9877-9b3f-5aca-aaa0-a3b884bbf96c",
+      "aa47961d-0754-5f3e-b69c-68e3b7f9079f",
+      "b2447eb8-fa9a-5ba7-8b15-950e33070ce0",
+      "b34fd4f1-daca-52e9-8b68-96ccf17c6869",
+      "b7e4151f-97ef-5f48-a8db-0f47260a21b3",
+      "c365ba5a-91fb-5127-9496-34de5c2d6b98",
+      "dcc36281-5cdb-538c-a5ba-a234299fc5fd",
+      "e28f7dde-2c69-549d-85fc-405c59f26ae9",
+      "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+      "f8e85b05-9a7b-57a0-b3e8-991f1811083d"
+    ],
+    "authorization_check": "All removed tracks belong to the known 69-track inventory. SDA via aa47961d-0754-5f3e-b69c-68e3b7f9079f was separately released.",
+    "reason": "Remove the obsolete SCL and SDA fanout, direct old-pad /IMU_INT2 and +3V3 stubs, and three additional +3V3 traces that shorted against the shifted IC4 NC pad in the first native validation."
+  },
+  "retained_items": {
+    "fixed_vias": [
+      "6421709a-0a8e-5ae6-b17a-69e9ccb61078",
+      "6d56c09b-2b19-5144-a473-6e1c16d7c430"
+    ],
+    "retained_local_3V3_via": "1c15a7a2-2065-55a0-bfec-88da501cad88",
+    "C24_capped_via": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+    "complete_In2_3V3_bridge": [
+      "a8cbe912-8331-5b8c-8007-4757dbf45c33",
+      "ae5186f8-c14f-543b-83b6-5de362326e62"
+    ]
+  },
+  "SCL_method_proof": {
+    "result": "passed_native_primitive_geometry_and_connectivity",
+    "net": "SCL",
+    "layer": "F.Cu",
+    "width_mm": 0.1778,
+    "start": "moved IC4.13",
+    "end": "retained SCL exterior port at 93.1,92.7368",
+    "segments": [
+      {
+        "uuid": "ef0ead37-e7c4-5932-81f6-a26d0ab59532",
+        "start_native_nm": [90412306, 93492711],
+        "end_native_nm": [90950000, 93492711]
+      },
+      {
+        "uuid": "f0fb7a56-7aee-5388-8808-d0c069cce8a3",
+        "start_native_nm": [90950000, 93492711],
+        "end_native_nm": [91350000, 92800000]
+      },
+      {
+        "uuid": "57537a3e-bec2-5683-aca6-d77ba45cd2c8",
+        "start_native_nm": [91350000, 92800000],
+        "end_native_nm": [93100000, 92736800]
+      }
+    ],
+    "deterministic_paths_screened": 4,
+    "selected_path_fixed_obstacle_conflicts": 0,
+    "primitive_graph_connected_IC4_13_to_exterior": true,
+    "primitive_graph_short_count": 0,
+    "R14_2_pullup_connected_to_exterior": false,
+    "qualification_limit": "Tentative method proof only. R14.2 and the coupled return, supply, SDA and interrupt duties remain open and may require changing this path."
+  },
+  "cut_partitions_and_replacement_obligations": {
+    "SCL": {
+      "connected_now": ["IC4.13", "retained exterior port 93.1,92.7368"],
+      "separated": ["R14.2"],
+      "obligation": "Reconnect R14.2 to the synthesized SCL group."
+    },
+    "SDA": {
+      "connected_now": [],
+      "separated": ["IC4.14", "R15.2", "retained B.Cu exterior port 93.1,91.3771"],
+      "obligation": "Create replacement local SDA fanout and transition; the released aa47961d via is absent."
+    },
+    "/IMU_INT2": {
+      "connected_now": [],
+      "separated": ["IC4.9", "retained F.Cu exterior port 93.1,95.6833"],
+      "obligation": "Reconnect moved IC4.9 to the retained exterior port."
+    },
+    "+3V3": {
+      "connected_now_reused_primitive_result": ["C23.1 to west clipped port"],
+      "known_separated_in_fixture": ["IC4.5", "IC4.8", "IC4.12", "C24.1", "R14.1", "R15.1", "south clipped port", "left clipped port"],
+      "obligation": "Synthesize the local supply and decoupling network while preserving the complete accepted In2 bridge and fixed vias."
+    },
+    "INT": {
+      "separated": ["IC4.4"],
+      "obligation": "Create a legal local exit; later MCU continuation remains outside this fixture."
+    },
+    "GND": {
+      "separated": ["IC4.1/2/3", "IC4.6/7"],
+      "obligation": "Connect both groups to MAIN without entering the rear-contact exclusion."
+    }
+  },
+  "checks": {
+    "passed": [
+      "Accepted PCB and manifest hashes matched before construction.",
+      "Candidate loaded through native KiCad 10 Python bindings.",
+      "IC4 native pose reloaded at 89.499806,93.492711 with unchanged rotation.",
+      "All six boundary split/rejoin centreline controls passed.",
+      "All 21 cached filled_polygon nodes were removed; candidate contains zero cached filled_polygon nodes.",
+      "Selected SCL route passed native F.Cu foreign-track, pad and hole clearance screening.",
+      "Primitive graph connects moved IC4.13 to the retained SCL exterior segment.",
+      "Primitive graph reports zero shorts after the second correction.",
+      "Staged manifest PCB hash and all three IC4 pose representations match the candidate."
+    ],
+    "incomplete": [
+      "The source-preservation validator stopped because it compared a deliberately fill-invalidated zone as an unauthorized top-level byte change. UUID 42e3abc5-2c92-5943-8944-bee0da8523c3 is the F.Cu GND zone, not an unexpected copper or footprint edit.",
+      "The subsequent per-zone definition-only comparison and non-IC4 footprint byte checks were therefore not reached.",
+      "No refill, DRC, filled-copper connectivity, private-cut, CELL_NEG, full outside-geometry, mechanical-proxy or CAD-rebind acceptance gate was run."
+    ]
+  },
+  "attempts": {
+    "initial_build": "Produced the clipped fixture and SCL route.",
+    "correction_1": "Updated the second manifest IC4 pose record and added native connectivity/source-preservation controls; native graph exposed three shifted-NC-pad/+3V3 shorts.",
+    "correction_2": "Removed the three authorized local +3V3 traces causing those shorts; native SCL connectivity and zero-short checks passed, then the validator stopped on expected zone-cache byte differences.",
+    "implementation_corrections_used": 2,
+    "subprocess_timeout_seconds": 120,
+    "longest_observed_process_seconds": 2.2
+  },
+  "acceptance": {
+    "promotable": false,
+    "quote_ready": false,
+    "routing_complete": false,
+    "next_action": "Root engineering review of the fixture method and open replacement obligations; no automatic follow-on."
+  }
+}
