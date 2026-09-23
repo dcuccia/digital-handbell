@@ -166,6 +166,31 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Owner-authorized coordinated IMU proposal:** the owner selected
+"Review coordinated IMU routing and possible small placement adjustments."
+Release one proposal-only item for IC4, C23, C24, R14 and R15 and their
+local power/ground/SCL/SDA/INT escapes. Compare a fixed-placement local
+routing rework with three simple rigid cluster shifts north by 0.25,
+0.50 and 0.75 mm (negative native y). These are comparison cases, not
+approved moves. C24's centered capped via must follow its pad in any
+shifted proposal and retain its process requirement.
+
+Keep the board outline, mounts, USB, battery/contact interfaces, existing
+In2 +3V3 bridge, accepted USBBOOT route, C12 feed and all outside circuitry
+fixed. Identify exactly which local track sections a future rework would
+replace and its external connection points; do not assume a common net
+name proves that a cut is harmless. Reuse current native geometry and
+placement envelopes to screen the alternatives against fixed neighbours,
+contact/via exclusions and potential ground/signal escape corridors.
+Keep actual measured geometry separate from planning proxies.
+
+Return a compact comparison with original/proposed coordinates, conflicts,
+external connection duties, and geometry-supported options for root
+review. An unrouted placement sketch is not routing or CAD qualification.
+No native design, manifest, route, footprint, rule, process or mechanical
+interface is to change in this item. Limit work to ten minutes and at
+most two corrective retries; do not expand the placement search.
+
 **Local power-track diagnosis complete; IMU work remains blocked:** the
 [five-case comparison](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-power-return-cut-review.json)
 produced no change in either target's conservative centre domain and no

@@ -2,13 +2,14 @@
 
 ## Bounded engineering work
 
-- **September 23 explicit owner resume:** resume under the Astra/pinned-Sol
-  framework, beginning with bounded read-only IMU feasible-space analysis.
-  This supersedes the evening pause; it does not reopen the exhausted
-  point screens or authorize automatic IMU routing. The accepted four-layer
-  board has 41 opens. Use the exact source hashes, analysis scope and blocker
-  evidence in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
-  Any resulting copper change requires a separate root engineering release.
+- **September 23 owner-authorized IMU proposal:** the owner resumed and
+  selected a coordinated IMU routing review with possible small placement
+  adjustments. Prepare a bounded proposal only; do not change the accepted
+  41-open PCB or repeat exhausted point/cut screens. Preserve board outline,
+  mounts, USB and battery/contact interfaces. Use the exact scope and source
+  hashes in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
+  Any actual placement or copper change requires a separate engineering
+  release and the applicable mechanical/source-rebinding gates.
 - **September 21 four-layer migration approved:** preserve the accepted
   two-layer `printed-bell-clock-draft` as evidence and establish one separate
   `printed-bell-four-layer` working candidate. Follow the four-layer batch,
