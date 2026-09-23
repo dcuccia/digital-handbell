@@ -166,6 +166,24 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest radial-batch decision:** the
+[336-site follow-up](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-radial-batch.json)
+produced a validated candidate closing C4, shared C11/C15 and U2 ground
+groups. Astra approves exact PCB
+`7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7`
+for promotion: **44 opens**, 233 warnings, unchanged F/In1 fill geometry
+and preserved prior connected groups/private pickoffs. It adds three
+off-pad 0.604/0.35 mm through-vias and 0.30 mm F stubs of 0.80, 0.80
+and 1.05 mm. This is not local high-frequency or manufacturing qualification.
+C12, C23 and C24 had no feasible site in their fixed 48-site sets.
+Next: review their exact obstacles and possible existing-copper access,
+not another unguided sample sweep or automatic component move.
+Promotion is complete with manifest
+`a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7`;
+the [acceptance record](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-radial-acceptance.json)
+binds exact saved bytes and reused evidence. This supersedes the older
+47-open and 48-open states below; those remain historical checkpoints.
+
 **Remaining-ground finite screen:** the
 [24-site result](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-remaining-batch.json)
 generated no candidate; the accepted PCB stays at 47 opens. These were

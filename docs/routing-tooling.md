@@ -6,6 +6,15 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**Latest radial screen:** replacing four axis samples with a fixed
+three-radius/sixteen-direction set found usable sites for three of six
+ground groups (C4, C11/C15 and U2). All 336 rows were persisted before
+validation; the compact report retains counts, selected geometry and blocker
+identities. The staged result has 44 opens and unchanged F/In1 fill geometry.
+This demonstrates that the earlier four-site failures were not proof of
+geometric exhaustion. C12/C23/C24 still need obstacle-based engineering
+review rather than another unconstrained search.
+
 **Latest ground-stitch validation:** isolated circle, slot and contact
 controls pass, followed by the full read-only saved-candidate suite.
 Circular drill clearance uses exact integer squared-distance comparisons;

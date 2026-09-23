@@ -25521,6 +25521,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (filled_polygon
 			(layer "F.Cu")
 			(pts
@@ -29029,6 +29051,7 @@
 
 
 	
+
 (filled_polygon
 			(layer "In1.Cu")
 			(pts
@@ -30810,4 +30833,11 @@
 
 (segment (start 100.201085 89.006710) (end 100.851085 89.006710) (width 0.300000) (layer "F.Cu") (net "GND") (uuid "d8b2f3e7-cf20-5f17-a1d0-9a3e4ac6e256"))
 (via (at 100.851085 89.006710) (size 0.604000) (drill 0.350000) (layers "F.Cu" "B.Cu") (net "GND") (uuid "444b2c40-c122-5d7f-b56f-37b9a9100a99"))
+
+(segment (start 84.906419 90.585985) (end 84.167315 90.279838) (width 0.300000) (layer "F.Cu") (net "GND") (uuid "eaf8141b-3b2b-57f3-b759-95b87b6412d0"))
+(via (at 84.167315 90.279838) (size 0.604000) (drill 0.350000) (layers "F.Cu" "B.Cu") (net "GND") (uuid "0bbb62fd-0f45-5338-b49a-dc8f49f1c3d8"))
+(segment (start 99.005927 105.703623) (end 99.745031 105.397476) (width 0.300000) (layer "F.Cu") (net "GND") (uuid "a25cfed4-cbcf-57eb-bb70-ede576f95045"))
+(via (at 99.745031 105.397476) (size 0.604000) (drill 0.350000) (layers "F.Cu" "B.Cu") (net "GND") (uuid "2cbfef8f-0e3f-5b6a-a52f-97fbc198bc67"))
+(segment (start 84.063240 92.692100) (end 84.063240 93.742100) (width 0.300000) (layer "F.Cu") (net "GND") (uuid "0fc7f4e7-93d3-5057-98be-eb289f73920e"))
+(via (at 84.063240 93.742100) (size 0.604000) (drill 0.350000) (layers "F.Cu" "B.Cu") (net "GND") (uuid "98ad5f58-9f62-52b6-8b6d-24fbdf2dbae5"))
 )

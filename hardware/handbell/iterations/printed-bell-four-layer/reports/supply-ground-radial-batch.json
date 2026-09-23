@@ -1,0 +1,523 @@
+{
+  "status": "STAGED_REMAINING_GROUND_BATCH_VALIDATED_NOT_PROMOTED",
+  "source_pcb_sha256": "453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43",
+  "manifest_sha256": "1bf38f7a9e6f9a1b086844a6309103f8935ecfcb8ef142bed7ccc0acc473ec2a",
+  "targets": [
+    "C4.2",
+    "C11.2/C15.2",
+    "C12.2",
+    "C23.2",
+    "C24.2",
+    "U2.2"
+  ],
+  "physical_pad_targets": [
+    "C4.2",
+    "C11.2",
+    "C15.2",
+    "C12.2",
+    "C23.2",
+    "C24.2",
+    "U2.2"
+  ],
+  "site_limit_total": 336,
+  "site_count_per_pad": 48,
+  "radii_mm": [
+    0.8,
+    1.05,
+    1.3
+  ],
+  "angles_degrees": [
+    0.0,
+    22.5,
+    45.0,
+    67.5,
+    90.0,
+    112.5,
+    135.0,
+    157.5,
+    180.0,
+    202.5,
+    225.0,
+    247.5,
+    270.0,
+    292.5,
+    315.0,
+    337.5
+  ],
+  "stages": [
+    {
+      "name": "native-fill",
+      "seconds": 1.4840000001713634,
+      "exit_code": 0
+    },
+    {
+      "name": "native-drc",
+      "seconds": 50.82799999997951,
+      "exit_code": 0
+    }
+  ],
+  "design_files_written": false,
+  "active_package_modified": false,
+  "pad_screening": {
+    "C4.2": {
+      "site_count": 48,
+      "feasible_count": 8
+    },
+    "C11.2": {
+      "site_count": 48,
+      "feasible_count": 1
+    },
+    "C15.2": {
+      "site_count": 48,
+      "feasible_count": 0
+    },
+    "C12.2": {
+      "site_count": 48,
+      "feasible_count": 0
+    },
+    "C23.2": {
+      "site_count": 48,
+      "feasible_count": 0
+    },
+    "C24.2": {
+      "site_count": 48,
+      "feasible_count": 0
+    },
+    "U2.2": {
+      "site_count": 48,
+      "feasible_count": 2
+    }
+  },
+  "screening": {
+    "site_count": 336,
+    "full_rows_private_sha256": "f9495e7393f18f9539f959a075978ccb44dc4ccbcc23c53b2d4c5aeb3f01c03e",
+    "per_pad": {
+      "C4.2": {
+        "site_count": 48,
+        "feasible_count": 8,
+        "reject_class_counts": {
+          "F-fixed-copper": 16,
+          "all-layer-foreign-copper": 36,
+          "via-pad-overlap": 18
+        },
+        "representative_obstacle_uuids": [
+          "4ef0b7ff-2c51-5d9c-a7aa-ecc07333e058",
+          "9281f54d-efe4-5ced-afb8-c58582c0d778",
+          "6e3a90df-84d7-5db0-affb-b02746265f31",
+          "a1a27f27-98fe-5f53-bbbf-a589b7925d6f",
+          "14a9f507-a45a-5422-a68b-df57811d3f09",
+          "41bfcf42-76ea-572e-bfc9-27920520ac0d",
+          "8f0c307f-ba0c-5a0e-88ef-0db69a7533c0",
+          "2488f96d-2050-5be2-b6a8-0373f0c3d551"
+        ]
+      },
+      "C11.2": {
+        "site_count": 48,
+        "feasible_count": 1,
+        "reject_class_counts": {
+          "F-fixed-copper": 30,
+          "all-layer-foreign-copper": 47,
+          "does-not-contact-main-In1": 2,
+          "drill-clearance": 9,
+          "via-pad-overlap": 10
+        },
+        "representative_obstacle_uuids": [
+          "2f49a8db-9ea0-5b01-b543-35c160616851",
+          "86456cfa-4dc7-5197-adcb-d823e2845702",
+          "0f41a5e8-99b0-5c2e-989e-20eba63fe157",
+          "8e8b1fa4-7b68-5d31-a697-dc16a2c891b3",
+          "7204ab6d-22e5-5201-befc-bd26087e560a",
+          "e888f6af-4451-50aa-b400-6a27dc2a8fff",
+          "02477a35-1c8d-578a-a752-21fa9219f1e2",
+          "867bbf3f-ad39-5c8f-b727-4bfd819df14d"
+        ]
+      },
+      "C15.2": {
+        "site_count": 48,
+        "feasible_count": 0,
+        "reject_class_counts": {
+          "F-fixed-copper": 32,
+          "all-layer-foreign-copper": 48,
+          "via-pad-overlap": 17
+        },
+        "representative_obstacle_uuids": [
+          "2f49a8db-9ea0-5b01-b543-35c160616851",
+          "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+          "5b4ed1c3-392d-5ec6-b6ae-af58f911f956",
+          "18162d7f-7f10-535d-b71e-1a37248c05fa",
+          "8e8b1fa4-7b68-5d31-a697-dc16a2c891b3",
+          "26d4cd1b-c45f-5b0a-8263-3368d938a9ac",
+          "ab74d899-3aad-5f9d-91c1-bdc5b7826a3d",
+          "0c6d634d-f2b0-5144-a255-b55493b9f9e0"
+        ]
+      },
+      "C12.2": {
+        "site_count": 48,
+        "feasible_count": 0,
+        "reject_class_counts": {
+          "F-fixed-copper": 48,
+          "all-layer-foreign-copper": 48,
+          "does-not-contact-main-In1": 2,
+          "drill-clearance": 9,
+          "via-pad-overlap": 9
+        },
+        "representative_obstacle_uuids": [
+          "a4fd0c01-2bef-5c7a-9688-ef334f5c7fff",
+          "08b2bbf2-3bcc-5b2a-a32f-a3866f99421f",
+          "35c51e50-2888-5a3b-ae2c-d3a576a1909a",
+          "7c93ffe2-a33b-5cea-84f2-1e3cee9abe08",
+          "8f0aa971-d928-53eb-8391-6db5359d932c",
+          "74a94679-d6b8-5775-ad3c-b8ffb31b85a8",
+          "8b1b53b0-240a-5fc7-b78e-b5ee023450c3",
+          "1cd5fad8-f1ee-54d3-9ed3-8faf003a4987"
+        ]
+      },
+      "C23.2": {
+        "site_count": 48,
+        "feasible_count": 0,
+        "reject_class_counts": {
+          "F-fixed-copper": 43,
+          "all-layer-foreign-copper": 48,
+          "does-not-contact-main-In1": 1,
+          "drill-clearance": 9,
+          "via-pad-overlap": 17
+        },
+        "representative_obstacle_uuids": [
+          "4ef0b7ff-2c51-5d9c-a7aa-ecc07333e058",
+          "9bc8cc5c-484d-534b-adfe-08279c69bd84",
+          "24e162dc-c62b-5fa7-a676-5b34e7879711",
+          "c74394f3-9c9e-500e-a1d4-6a8da0ab1a3b",
+          "6421709a-0a8e-5ae6-b17a-69e9ccb61078",
+          "5084ecf1-8111-50aa-860d-9d2f54fecc7d",
+          "f09ac407-e552-5aa8-ad96-27792c31d43a",
+          "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8"
+        ]
+      },
+      "C24.2": {
+        "site_count": 48,
+        "feasible_count": 0,
+        "reject_class_counts": {
+          "B-contact-metal": 17,
+          "F-fixed-copper": 48,
+          "all-layer-foreign-copper": 48,
+          "does-not-contact-main-In1": 3,
+          "drill-clearance": 15,
+          "via-pad-overlap": 11
+        },
+        "representative_obstacle_uuids": [
+          "3bc0ec37-9ec8-5282-ab10-e71d836c4ea4",
+          "f4b67f0a-c5b8-5ed0-be6c-8e770543ca7c",
+          "3af9f604-730a-57dc-bda2-07d0adec1b60",
+          "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+          "contact-5",
+          "1a9feeb1-dc75-5127-b787-a8c2c8775e34",
+          "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+          "09be5c73-f32a-54c9-a47b-bc78b49be280"
+        ]
+      },
+      "U2.2": {
+        "site_count": 48,
+        "feasible_count": 2,
+        "reject_class_counts": {
+          "B-contact-metal": 1,
+          "F-fixed-copper": 39,
+          "all-layer-foreign-copper": 44,
+          "via-pad-overlap": 33
+        },
+        "representative_obstacle_uuids": [
+          "9281f54d-efe4-5ced-afb8-c58582c0d778",
+          "2488f96d-2050-5be2-b6a8-0373f0c3d551",
+          "ce7d9961-988a-5abc-851b-2b7e05c867af",
+          "a1a27f27-98fe-5f53-bbbf-a589b7925d6f",
+          "7c618612-5597-54c6-8341-424b52c21d93",
+          "1235814c-15b9-5c47-b7c1-f13f3ec63285",
+          "41bfcf42-76ea-572e-bfc9-27920520ac0d",
+          "abde68e5-77ca-5e1a-a9ec-a10eb57c02ac"
+        ]
+      }
+    }
+  },
+  "selected": [
+    {
+      "pad_target": "C4.2",
+      "group_key": "('42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16', 0)",
+      "mode": "F_stub_plus_through_via",
+      "from_uuid": "6e3a90df-84d7-5db0-affb-b02746265f31",
+      "from_mm": [
+        84.906419,
+        90.585985
+      ],
+      "via_mm": [
+        84.167315,
+        90.279838
+      ],
+      "length_mm": 0.8,
+      "radius_mm": 0.8,
+      "angle_degrees": 202.5,
+      "site_index": 10,
+      "reasons": [],
+      "obstacle_uuids": [],
+      "target": "C4.2",
+      "track_uuid": "eaf8141b-3b2b-57f3-b759-95b87b6412d0",
+      "via_uuid": "0bbb62fd-0f45-5338-b49a-dc8f49f1c3d8"
+    },
+    {
+      "pad_target": "C11.2",
+      "group_key": "('42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2', 0)",
+      "mode": "F_stub_plus_through_via",
+      "from_uuid": "f6f2be7c-9a7e-5f95-b45e-6ac0f0deefbf",
+      "from_mm": [
+        99.005927,
+        105.703623
+      ],
+      "via_mm": [
+        99.745031,
+        105.397476
+      ],
+      "length_mm": 0.8,
+      "radius_mm": 0.8,
+      "angle_degrees": 337.5,
+      "site_index": 64,
+      "reasons": [],
+      "obstacle_uuids": [],
+      "target": "C11.2/C15.2",
+      "track_uuid": "a25cfed4-cbcf-57eb-bb70-ede576f95045",
+      "via_uuid": "2cbfef8f-0e3f-5b6a-a52f-97fbc198bc67"
+    },
+    {
+      "pad_target": "U2.2",
+      "group_key": "('42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3', 0)",
+      "mode": "F_stub_plus_through_via",
+      "from_uuid": "abde68e5-77ca-5e1a-a9ec-a10eb57c02ac",
+      "from_mm": [
+        84.06324,
+        92.6921
+      ],
+      "via_mm": [
+        84.06324,
+        93.7421
+      ],
+      "length_mm": 1.05,
+      "radius_mm": 1.05,
+      "angle_degrees": 90.0,
+      "site_index": 309,
+      "reasons": [],
+      "obstacle_uuids": [],
+      "target": "U2.2",
+      "track_uuid": "0fc7f4e7-93d3-5057-98be-eb289f73920e",
+      "via_uuid": "98ad5f58-9f62-52b6-8b6d-24fbdf2dbae5"
+    }
+  ],
+  "blocked": [
+    {
+      "target": "C12.2",
+      "feasible_independent_sites": 0,
+      "interaction_rejects": [],
+      "stop_reason": "No feasible fixed radial site remained after proposed-geometry interactions."
+    },
+    {
+      "target": "C23.2",
+      "feasible_independent_sites": 0,
+      "interaction_rejects": [],
+      "stop_reason": "No feasible fixed radial site remained after proposed-geometry interactions."
+    },
+    {
+      "target": "C24.2",
+      "feasible_independent_sites": 0,
+      "interaction_rejects": [],
+      "stop_reason": "No feasible fixed radial site remained after proposed-geometry interactions."
+    }
+  ],
+  "elapsed_seconds": 102.65599999995902,
+  "output_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+  "workspace": "supply-ground-radial-01",
+  "closed_groups": [
+    "C4.2",
+    "C11.2/C15.2",
+    "U2.2"
+  ],
+  "source_invariants": {
+    "connected_pad_groups_preserved": 133,
+    "existing_primitives_exact": true,
+    "zone_definitions_unchanged": 21,
+    "C25_preserved": true,
+    "interface_dependencies_unchanged": true
+  },
+  "graph": {
+    "GND_groups_before": 16,
+    "GND_groups_after": 13,
+    "plus3V3_groups": 1,
+    "VCORE_groups": 3,
+    "private_pickoffs": [
+      {
+        "from": "R26.2",
+        "to": "R27.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+            "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      },
+      {
+        "from": "R24.2",
+        "to": "C28.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          },
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      }
+    ],
+    "other_net_partitions_unchanged": true,
+    "shorts": [],
+    "floating_copper": []
+  },
+  "geometry": {
+    "vias": [
+      {
+        "uuid": "0bbb62fd-0f45-5338-b49a-dc8f49f1c3d8",
+        "position_mm": [
+          84.167315,
+          90.279838
+        ],
+        "native_raw_layers": [
+          "F.Cu",
+          "B.Cu",
+          "In1.Cu",
+          "In2.Cu"
+        ],
+        "native_physical_layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "off_pad": true
+      },
+      {
+        "uuid": "2cbfef8f-0e3f-5b6a-a52f-97fbc198bc67",
+        "position_mm": [
+          99.745031,
+          105.397476
+        ],
+        "native_raw_layers": [
+          "F.Cu",
+          "B.Cu",
+          "In1.Cu",
+          "In2.Cu"
+        ],
+        "native_physical_layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "off_pad": true
+      },
+      {
+        "uuid": "98ad5f58-9f62-52b6-8b6d-24fbdf2dbae5",
+        "position_mm": [
+          84.06324,
+          93.7421
+        ],
+        "native_raw_layers": [
+          "F.Cu",
+          "B.Cu",
+          "In1.Cu",
+          "In2.Cu"
+        ],
+        "native_physical_layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "off_pad": true
+      }
+    ],
+    "fill_delta": {
+      "F.Cu": {
+        "before_only_area_mm2": 0.0,
+        "candidate_only_area_mm2": 0.0,
+        "symmetric_difference_area_mm2": 0.0,
+        "symmetric_difference_bounds_native_mm": null
+      },
+      "In1.Cu": {
+        "before_only_area_mm2": 0.0,
+        "candidate_only_area_mm2": 0.0,
+        "symmetric_difference_area_mm2": 0.0,
+        "symmetric_difference_bounds_native_mm": null
+      }
+    },
+    "local_change_bounds_mm": [
+      83.06324,
+      89.279838,
+      100.745031,
+      106.703623
+    ],
+    "fill_checks": {
+      "islands": 23,
+      "guard_comparisons": 229,
+      "foreign_comparisons": 25966,
+      "F_private_item_comparisons": 220,
+      "In1_private_via_comparisons": 2
+    }
+  },
+  "native_drc": {
+    "baseline_opens": 47,
+    "candidate_opens": 44,
+    "warnings": 233,
+    "new_non_open_findings": [],
+    "native_connectivity_opens": 44,
+    "independent_graph_opens": 44,
+    "schematic_parity": "Historical 46 notices; not rerun."
+  },
+  "proof_bindings": {
+    "controls_report_sha256": "0b2275ad726f663b46436e50708c3f848e20d24c2460bd19dbf0166607dd7cad",
+    "validator_sha256": "d5da80b6c593f41634b9dc8e0da3037136a3e466ad1e1f82246ed8b2a2b3a434",
+    "stage_tool_sha256": "f5b1c896df0ce8e4b2281fcd524e49aaefd04405b3a6928529470baa8d62cc71",
+    "baseline_drc_sha256": "701a0355395bcc19feddd4c3797ab7ac7e893042321f74c592748145d2adc839"
+  },
+  "pending": [
+    "Astra review and promotion decision",
+    "No local-HF-return qualification from group closure",
+    "Physical stackup/SI/PI/current/thermal/manufacturing qualification pending"
+  ]
+}

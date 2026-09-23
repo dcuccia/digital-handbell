@@ -1,6 +1,16 @@
 # Printed-bell four-layer routing baseline
 
-**September 22 current acceptance:** an off-pad GND via and 0.65 mm F stub
+**September 22 current acceptance:** the radial ground batch adds three
+off-pad through-vias and short F stubs, joining C4, shared C11/C15 and U2.
+PCB `7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7`,
+manifest `a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7`.
+**44 opens** and 233 warnings remain, with 46 historical parity notices.
+Plane fills and prior copper are unchanged; local high-frequency, current,
+thermal and manufacturing qualification remain open. C12, C23 and C24
+remain unresolved within the finite screen.
+See [radial-batch acceptance](reports/supply-ground-radial-acceptance.json).
+
+**Earlier September 22 stitch acceptance:** an off-pad GND via and 0.65 mm F stub
 at R4 connect the existing C9/R4/R8 group to main ground. The accepted PCB is
 `453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43`,
 manifest `1bf38f7a9e6f9a1b086844a6309103f8935ecfcb8ef142bed7ccc0acc473ec2a`.
