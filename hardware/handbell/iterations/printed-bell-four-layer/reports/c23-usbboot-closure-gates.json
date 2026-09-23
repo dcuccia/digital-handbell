@@ -1,0 +1,473 @@
+{
+  "status": "PASSED_READ_ONLY_CLOSURE_GATES",
+  "scope": "Read-only final acceptance gates for exact saved C23 USBBOOT candidate.",
+  "candidate_accepted_or_promoted": false,
+  "gates": [
+    {
+      "name": "input_and_dependency_binding",
+      "passed": true,
+      "detail": {
+        "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+        "manifest_sha256": "a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7",
+        "candidate_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+        "saved_DRC_sha256": "567763888a6355c102d2e189aa2c951ea621af1bc477f127731d5fa0e8fb292e",
+        "source_44_open_DRC_sha256": "4b47efc8d708f8c88985cfa70dd6d5e9a40f4dcadeaa7add3ea3c2aaef8b22d1",
+        "refill_control_report_sha256": "a67f1c9a53dd50691faffe702e4f3f484206f4f98a33844f5bbc23e720514734",
+        "validation_controls_report_sha256": "005d2749d0e28fe6ada5e78239fb548bb5b65ec9af1771f0f318b904e1c77ada",
+        "partial_validation_report_sha256": "fbf02a6127eb77dca1f8f89c764a7674b177c5a575c03eb159707b75389240ca",
+        "candidate_path": "reports\\c23-usbboot-staged.kicad_pcb",
+        "dependency_sha256": {
+          "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+          "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+          "fp-lib-table": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+          "sym-lib-table": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+          "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+          "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+          "Clock.kicad_sym": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+          "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+          "LICENSE.txt": "075dad5e5fc96c27014fabc269f4f5732909cffd178a486f546d982b6cf86b74"
+        },
+        "local_library_file_count": 38,
+        "local_library_tree_sha256": "63c7b4ad331bf994fa44433acfe4a14600a7ad5df7fd6559fe62d286a7fd19d0"
+      }
+    },
+    {
+      "name": "native_load",
+      "passed": true,
+      "detail": {
+        "kicad_version": "10.0.6",
+        "IU_per_mm": 1000000,
+        "controls_report_sha256": "005d2749d0e28fe6ada5e78239fb548bb5b65ec9af1771f0f318b904e1c77ada"
+      }
+    },
+    {
+      "name": "source_primitive_and_zone_definition_preservation",
+      "passed": true,
+      "detail": {
+        "non_segment_non_zone_blocks_exact": true,
+        "removed_F_USBBOOT_tracks": [
+          "09e49184-1128-572a-bfb2-6fe4f5ddb616",
+          "372abf98-d8c7-5aca-ae86-79442304abb8",
+          "5a59d15f-96cb-56d8-9264-1539521f9476",
+          "d21616f0-13e4-5ccc-8ed9-d4155f3d2e84",
+          "f64f7022-043b-568a-8e7d-578bea1e26e9"
+        ],
+        "added_In2_USBBOOT_tracks": [
+          {
+            "uuid": "0b443347-ef7c-558f-a3f7-e0f9190b283e",
+            "start_native_mm": [
+              87.7,
+              88.95
+            ],
+            "end_native_mm": [
+              89.7,
+              88.95
+            ],
+            "width_mm": 0.2,
+            "length_mm": 2.0
+          },
+          {
+            "uuid": "4869e135-8ec7-59a2-a8e2-15a5de2025c3",
+            "start_native_mm": [
+              89.7,
+              88.95
+            ],
+            "end_native_mm": [
+              92.85,
+              92.1
+            ],
+            "width_mm": 0.2,
+            "length_mm": 4.45477272147525
+          }
+        ],
+        "retained_tracks_raw_exact": true,
+        "vias_raw_exact": true,
+        "parts_pads_stackup_rules_netclasses_unchanged": true,
+        "zone_definition_count": 21,
+        "zone_definitions_except_fill_cache_exact": true
+      }
+    },
+    {
+      "name": "complete_connectivity",
+      "passed": true,
+      "detail": {
+        "previous_connected_pad_groups_preserved": 130,
+        "GND_groups_before": 13,
+        "GND_groups_candidate": 12,
+        "newly_joined_MAIN_pad_refs": [
+          "C23.2"
+        ],
+        "all_non_GND_partitions_exact": true,
+        "USBBOOT_partition": [
+          [
+            "D3.C",
+            "IC1.9",
+            "TP3.P$1"
+          ]
+        ],
+        "plus3V3_group_count": 1,
+        "VCORE_group_count": 3,
+        "CELL_NEG_partition_exact": true,
+        "private_terminal_cuts": [
+          {
+            "from": "R26.2",
+            "to": "R27.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+                "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          },
+          {
+            "from": "R24.2",
+            "to": "C28.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "1212a327-4ed4-50da-a0bb-71afc8145254",
+              "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+              "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+              "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+              "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+              "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+              "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+                "layer": "F.Cu"
+              },
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          }
+        ],
+        "shorts": [],
+        "floating_copper": []
+      }
+    },
+    {
+      "name": "per_layer_fill_edge_guard_contact_invariants",
+      "passed": true,
+      "detail": {
+        "native_filled_checks": {
+          "islands": 22,
+          "guard_comparisons": 219,
+          "foreign_comparisons": 24684,
+          "F_private_item_comparisons": 210,
+          "In1_private_via_comparisons": 2
+        },
+        "guard_inventory_exact": true,
+        "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+        "contact_metal_polygon_count": 6,
+        "B_Cu_segments_exact": true,
+        "new_B_Cu_or_via_geometry": false,
+        "CELL_NEG_checked_as_foreign_copper": true
+      }
+    },
+    {
+      "name": "remote_F_fill_displacement_and_clearance",
+      "passed": true,
+      "detail": {
+        "method": "Each connected native BooleanSubtract component was tested for containment in the opposite full F-fill polygon after integer SHAPE_POLY_SET.Inflate offsets from 0 through 10 IU, ROUND_ALL_CORNERS, 1-IU offset approximation error. The first containing integer offset is reported; no area, bounding-box, or sampled-point proxy establishes the bound.",
+        "precision": "1 KiCad IU = 1 nm = 0.000001 mm; acceptance ceiling 10 IU.",
+        "component_count": 5,
+        "components": [
+          {
+            "direction": "removed",
+            "area_mm2": 2.37215e-07,
+            "bounds_native_mm": [
+              112.825823,
+              90.058415,
+              113.040646,
+              90.181966
+            ],
+            "containment_reference": "candidate F fill expanded by N IU",
+            "minimum_integer_inflation_IU": 2,
+            "maximum_proven_normal_displacement_mm": 2e-06
+          },
+          {
+            "direction": "removed",
+            "area_mm2": 3.3e-11,
+            "bounds_native_mm": [
+              111.630976,
+              89.351836,
+              111.637529,
+              89.374738
+            ],
+            "containment_reference": "candidate F fill expanded by N IU",
+            "minimum_integer_inflation_IU": 0,
+            "maximum_proven_normal_displacement_mm": 0.0
+          },
+          {
+            "direction": "added",
+            "area_mm2": 5.5265e-09,
+            "bounds_native_mm": [
+              114.717542,
+              91.585945,
+              114.733807,
+              91.608332
+            ],
+            "containment_reference": "accepted-source F fill expanded by N IU",
+            "minimum_integer_inflation_IU": 0,
+            "maximum_proven_normal_displacement_mm": 0.0,
+            "foreign_copper_within_0_5mm": [
+              {
+                "uuid": "6c4ee44e-fe65-5410-a015-95148b8ac725",
+                "type": "track",
+                "net": "VO-",
+                "reference": null,
+                "distance_bracket_IU": [
+                  200499,
+                  200500
+                ],
+                "distance_bracket_mm": [
+                  0.200499,
+                  0.2005
+                ]
+              },
+              {
+                "uuid": "86c651d0-46aa-5813-a087-0fe973463fe3",
+                "type": "track",
+                "net": "VO-",
+                "reference": null,
+                "distance_bracket_IU": [
+                  200499,
+                  200500
+                ],
+                "distance_bracket_mm": [
+                  0.200499,
+                  0.2005
+                ]
+              },
+              {
+                "uuid": "8b17cb79-e8c9-5e63-9b88-9bb96a2bbc10",
+                "type": "track",
+                "net": "VO-",
+                "reference": null,
+                "distance_bracket_IU": [
+                  464577,
+                  464578
+                ],
+                "distance_bracket_mm": [
+                  0.464577,
+                  0.464578
+                ]
+              }
+            ],
+            "minimum_required_foreign_clearance_IU": 200000,
+            "original_F_exclusion_overlaps": [],
+            "private_0_25mm_clearance_violations": [],
+            "electrical_attachment_basis": "Actual saved-candidate CopperGraph: no floating copper, no shorts, 13-to-12 GND groups, and only C23.2 newly joins MAIN."
+          },
+          {
+            "direction": "added",
+            "area_mm2": 4.091e-09,
+            "bounds_native_mm": [
+              113.040646,
+              90.158151,
+              113.055698,
+              90.161586
+            ],
+            "containment_reference": "accepted-source F fill expanded by N IU",
+            "minimum_integer_inflation_IU": 1,
+            "maximum_proven_normal_displacement_mm": 1e-06,
+            "foreign_copper_within_0_5mm": [
+              {
+                "uuid": "27b4951d-e98d-5d6c-810c-9c3a59a3c073",
+                "type": "track",
+                "net": "Net-(FB1-P$1)",
+                "reference": null,
+                "distance_bracket_IU": [
+                  200506,
+                  200507
+                ],
+                "distance_bracket_mm": [
+                  0.200506,
+                  0.200507
+                ]
+              },
+              {
+                "uuid": "bcc4f647-cbc5-55d2-ae9a-d0b2dba7558f",
+                "type": "track",
+                "net": "Net-(FB1-P$1)",
+                "reference": null,
+                "distance_bracket_IU": [
+                  200506,
+                  200507
+                ],
+                "distance_bracket_mm": [
+                  0.200506,
+                  0.200507
+                ]
+              },
+              {
+                "uuid": "50882428-916c-50b3-87da-5fdd8be0fa0b",
+                "type": "track",
+                "net": "Net-(FB1-P$1)",
+                "reference": null,
+                "distance_bracket_IU": [
+                  219505,
+                  219506
+                ],
+                "distance_bracket_mm": [
+                  0.219505,
+                  0.219506
+                ]
+              },
+              {
+                "uuid": "79d3a936-5acb-5334-a14f-690bbbdb474e",
+                "type": "track",
+                "net": "Net-(FB1-P$1)",
+                "reference": null,
+                "distance_bracket_IU": [
+                  388701,
+                  388702
+                ],
+                "distance_bracket_mm": [
+                  0.388701,
+                  0.388702
+                ]
+              },
+              {
+                "uuid": "22dff5b6-ccb8-5fae-948c-269eb5c18eed",
+                "type": "track",
+                "net": "Net-(FB1-P$1)",
+                "reference": null,
+                "distance_bracket_IU": [
+                  399514,
+                  399515
+                ],
+                "distance_bracket_mm": [
+                  0.399514,
+                  0.399515
+                ]
+              },
+              {
+                "uuid": "1385486f-3819-567c-b608-986ad86eb579",
+                "type": "track",
+                "net": "Net-(FB1-P$1)",
+                "reference": null,
+                "distance_bracket_IU": [
+                  401202,
+                  401203
+                ],
+                "distance_bracket_mm": [
+                  0.401202,
+                  0.401203
+                ]
+              },
+              {
+                "uuid": "855972bc-349c-5545-9f39-eb90b5400dab",
+                "type": "track",
+                "net": "Net-(FB1-P$1)",
+                "reference": null,
+                "distance_bracket_IU": [
+                  401202,
+                  401203
+                ],
+                "distance_bracket_mm": [
+                  0.401202,
+                  0.401203
+                ]
+              },
+              {
+                "uuid": "80860fe3-7186-5038-9d1c-a16ca53c3869",
+                "type": "track",
+                "net": "Net-(FB1-P$1)",
+                "reference": null,
+                "distance_bracket_IU": [
+                  411606,
+                  411607
+                ],
+                "distance_bracket_mm": [
+                  0.411606,
+                  0.411607
+                ]
+              }
+            ],
+            "minimum_required_foreign_clearance_IU": 200000,
+            "original_F_exclusion_overlaps": [],
+            "private_0_25mm_clearance_violations": [],
+            "electrical_attachment_basis": "Actual saved-candidate CopperGraph: no floating copper, no shorts, 13-to-12 GND groups, and only C23.2 newly joins MAIN."
+          },
+          {
+            "direction": "added",
+            "area_mm2": 3.3e-11,
+            "bounds_native_mm": [
+              111.630976,
+              89.351836,
+              111.637529,
+              89.374738
+            ],
+            "containment_reference": "accepted-source F fill expanded by N IU",
+            "minimum_integer_inflation_IU": 0,
+            "maximum_proven_normal_displacement_mm": 0.0,
+            "foreign_copper_within_0_5mm": [],
+            "minimum_required_foreign_clearance_IU": 200000,
+            "original_F_exclusion_overlaps": [],
+            "private_0_25mm_clearance_violations": [],
+            "electrical_attachment_basis": "Actual saved-candidate CopperGraph: no floating copper, no shorts, 13-to-12 GND groups, and only C23.2 newly joins MAIN."
+          }
+        ],
+        "all_within_10_IU": true,
+        "remote_added_foreign_clearance_native": "Passed at 0.20 mm using exact native collision predicates.",
+        "remote_added_private_and_original_exclusions": "Passed.",
+        "remote_floating_fragments": [],
+        "replaced_proxy": {
+          "removed_requirement": "BooleanSubtract diagnostic slivers individually intersect a candidate IslandItem polygon.",
+          "replacement": "Qualified CopperGraph connectivity of the actual saved candidate filled islands and primitives: no floating copper/shorts and exactly the intended C23 MAIN-GND merge.",
+          "reason": "Difference slivers are diagnostics, not separately instantiated physical copper islands. The cause of the prior native polygon-intersection failure remains unknown.",
+          "reused_partial_validation_sha256": "fbf02a6127eb77dca1f8f89c764a7674b177c5a575c03eb159707b75389240ca"
+        },
+        "mechanism_inference": "None; this gate bounds geometry and clearance only."
+      }
+    },
+    {
+      "name": "saved_DRC_and_native_connectivity",
+      "passed": true,
+      "detail": {
+        "reuse_basis": "Exact candidate PCB, same-stem project, all copied dependencies, and saved DRC are hash-bound in this execution; no refill or DRC rerun.",
+        "saved_DRC_sha256": "567763888a6355c102d2e189aa2c951ea621af1bc477f127731d5fa0e8fb292e",
+        "baseline_opens": 44,
+        "candidate_opens": 43,
+        "warnings": 233,
+        "new_non_open_findings": [],
+        "native_connectivity_opens": 43,
+        "independent_graph_opens": 43
+      }
+    }
+  ],
+  "candidate_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+  "staged_manifest": {
+    "path": "reports\\c23-usbboot-staged-placement-manifest.json",
+    "sha256": "7655ceab58c25e9565491eaa5a379d345c79834ac0754f3f7c179f09cf5409da",
+    "status": "STAGED_C23_USBBOOT_CORRIDOR_43_OPENS_VALIDATED_NOT_PROMOTED",
+    "generated_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+    "all_other_parsed_fields_exact": true
+  },
+  "decision_boundary": "All requested validation gates passed for the exact saved candidate. This report does not promote or accept it; root retains that decision.",
+  "historical_report_binding": {
+    "original_executed_corridor_report_sha256": "9ffb91a07580b1c27d6c9eeecae6bbce2621c9796b2e0db03a2e86000a9d5418",
+    "note": "Historical report may be redacted in-tree; this validation does not require its current hash."
+  },
+  "elapsed_seconds": 36.781999999890104,
+  "validator_sha256": "2b1f9bb4c6af00c17bd7b5fda0c74a0550c31e942118b16a99468ab44fc2a2ed"
+}

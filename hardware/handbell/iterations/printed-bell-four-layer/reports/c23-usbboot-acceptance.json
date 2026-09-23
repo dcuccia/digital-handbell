@@ -1,0 +1,41 @@
+{
+  "status": "ACCEPTED_INCREMENTAL_CONNECTIVITY_CHECKPOINT",
+  "decision": "Astra accepts the exact reviewed USBBOOT corridor replacement and C23 ground closure.",
+  "source_pcb_sha256": "7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7",
+  "accepted_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+  "source_manifest_sha256": "a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7",
+  "accepted_manifest_sha256": "d69d1ae6267eafe5976e528fd47d30cbed81ff01df058dbceca9d9c6cdc49b8c",
+  "promotion": {
+    "pcb_copied_byte_for_byte_from": "reports/c23-usbboot-staged.kicad_pcb",
+    "manifest_changed_fields_only": ["status", "generated_pcb_sha256"],
+    "native_refill_or_DRC_rerun_during_promotion": false,
+    "evidence_reuse": "Exact candidate bytes and matching project/dependencies were rebound before promotion; completed checks are reused, not claimed as fresh executions."
+  },
+  "closure_report": {
+    "path": "reports/c23-usbboot-closure-gates.json",
+    "sha256": "049101e269dd459d32f60b99a0db37465ad5b53cf2e31f8aee2e68dbf482190e"
+  },
+  "engineering_disposition": {
+    "route": "Five unbranched F USBBOOT segments replaced by two 0.20 mm In2 segments between existing vias; old and new path length 6.454773 mm.",
+    "return": "Released low-speed control corridor passes the actual In1 coverage screen; In1 fill is unchanged. This is USBBOOT, not a USB differential data pair.",
+    "ground": "Freed F corridor connects C23.2 to main GND by native fill; no explicit GND bridge or new via.",
+    "remote_F_cache_changes": "Five comparison components require native opposite-fill inflation of 2, 0, 0, 1 and 0 IU, below the released 10-IU bound. Actual foreign/private clearance predicates pass.",
+    "attachment": "Owner-approved qualified graph of actual saved filled islands and primitives; diagnostic difference slivers are not treated as independent physical islands.",
+    "unknown": "Cause of the earlier microscopic Boolean-intersection failure remains unproven; no fill-mechanism claim or design-rule waiver.",
+    "preservation": "All 130 previous connected pad groups, both private pickoffs, other net partitions, component placement, existing vias, rules, and 21 zone definitions preserved."
+  },
+  "result": {
+    "opens_before": 44,
+    "opens_after": 43,
+    "warnings": 233,
+    "new_non_open_findings": 0,
+    "GND_groups": 12,
+    "new_main_GND_pad_refs": ["C23.2"],
+    "plus3V3_groups": 1,
+    "VCORE_groups": 3,
+    "C24_remains_separate": true,
+    "shorts_or_floating_copper": false
+  },
+  "remaining": "C12/C24 and other routing; physical stackup, SI/PI/current/thermal review, 46 historical parity notices, CAD source rebind and manufacturing/quotation gates.",
+  "not_authorized": "Fabrication, supplier upload, purchase, powered or child-use qualification."
+}

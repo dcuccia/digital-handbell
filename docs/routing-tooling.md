@@ -6,6 +6,22 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**C23 closure and validator lesson:** native controls and complete saved-board
+checks now support the accepted 43-open checkpoint. A no-routing refill
+control reproduced the source exactly. Five remote comparison components
+required at most 2 IU of opposite-fill inflation and passed actual
+clearances; their Boolean-intersection failure mechanism remains unknown.
+Use the qualified graph of actual filled islands for electrical attachment,
+not a requirement that each derived difference sliver be a separately
+representable copper island. Keep displacement and clearance proofs
+independent: tiny area or a distant bounding-box extent is not either proof.
+Exercise actual Python bindings and boundary semantics before full-board
+validation; `pcb.FromMM(1.0)` is exercised, `pcbnew.IU_PER_MM` is unavailable.
+Persist passed gates before subsequent assertions can fail, preserve
+failed evidence, and distinguish reused DRC from a fresh execution.
+See [closure gates](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-closure-gates.json)
+and `tools/check_c23_usbboot_validation_controls.py`.
+
 **Latest radial screen:** replacing four axis samples with a fixed
 three-radius/sixteen-direction set found usable sites for three of six
 ground groups (C4, C11/C15 and U2). All 336 rows were persisted before

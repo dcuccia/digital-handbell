@@ -1,6 +1,20 @@
 # Printed-bell four-layer routing baseline
 
-**September 22 current acceptance:** the radial ground batch adds three
+**Current acceptance: C23 ground closure.** Five local USBBOOT F segments
+are replaced by two 0.20 mm In2 segments between existing vias, freeing
+the front ground fill to connect C23. No parts moved or vias were added.
+PCB `01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00`,
+manifest `d69d1ae6267eafe5976e528fd47d30cbed81ff01df058dbceca9d9c6cdc49b8c`.
+**43 opens**, 233 warnings and 46 historical parity notices remain.
+The In1 plane is unchanged; the five remote F comparison components pass
+the reviewed native displacement and clearance bounds. The actual board
+graph preserves prior connections and private pickoffs without shorts or
+floating copper. C12 and C24 remain unresolved.
+See [acceptance and evidence reuse](reports/c23-usbboot-acceptance.json).
+This is not full electrical, thermal, mechanical or manufacturing approval.
+Descriptions below are preserved historical checkpoints.
+
+**Earlier September 22 radial acceptance:** the radial ground batch adds three
 off-pad through-vias and short F stubs, joining C4, shared C11/C15 and U2.
 PCB `7927882fa05f05411c6bf9e12782326f55572aa0b450cc2e26e9ea534ab3add7`,
 manifest `a7a04cc74f0b487beda240c9b868dec54afbe32cd60fa003ec9e6578bc8717e7`.

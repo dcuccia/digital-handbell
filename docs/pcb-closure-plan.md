@@ -166,6 +166,27 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Current accepted checkpoint: 43 opens.** Astra accepts and promotes exact
+PCB `01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00`,
+manifest `d69d1ae6267eafe5976e528fd47d30cbed81ff01df058dbceca9d9c6cdc49b8c`.
+The [C23 acceptance record](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-acceptance.json)
+binds the complete saved-candidate evidence. The local USBBOOT move to In2
+connects C23 ground without new vias or component moves; path length is
+unchanged. All previous groups/private returns survive. Remote F comparison
+components require at most 2 IU of native opposite-fill inflation, within
+the 10-IU limit, and preserve actual clearances. In1 is unchanged.
+The earlier failed fragment-intersection mechanism remains unknown;
+electrical attachment is established from actual board-island connectivity.
+
+Next bounded item: read-only C12 ground-island access review. Inspect the
+whole existing connected F island rather than repeating the exhausted
+pad-centred radial screen. Identify a short ordinary-via access proposal
+or its exact blockers while preserving the necessary +3V3 branch, accepted
+In2 bridge, contacts and all existing routing. No C12 copper change,
+placement move or renewed general search is authorized by that review.
+C24 and remaining VCORE/routing, stackup, CAD binding, parity and
+manufacturing gates remain open. Earlier entries below are historical.
+
 **Owner-authorized completion of missing C23 gates:** the owner selected
 "Finish missing gates using actual board-island connectivity." Electrical
 attachment is to be proved by the qualified graph of actual saved filled
