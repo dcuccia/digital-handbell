@@ -1,0 +1,49 @@
+{
+  "status": "ACCEPTED_INCREMENTAL_CONNECTIVITY_CHECKPOINT_WITH_REQUIRED_VIA_TREATMENT",
+  "decision": "Astra accepts the single centered C24 ground through-via as a routing checkpoint, not manufacturing or assembly qualification.",
+  "source_pcb_sha256": "834086079bc792165adcf642d41f3fd52c65446a355904934fcdf39b289227eb",
+  "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+  "source_manifest_sha256": "054f203553f7051e12f098acac9683539488e77e4a42266439b48c519dbf39dd",
+  "accepted_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+  "evidence": {
+    "trial_report": "reports/c24-filled-via-trial.json",
+    "trial_report_sha256": "21ef1a36e6c7183603ec5621572f8a138d644033c2a25eef9797fd7fa0d2138f",
+    "candidate_DRC_sha256": "e17314dfdbc5f523ea9c7463bfec838e3f785aa2a1c28a96a46bb3e5b6d3deac",
+    "promotion": "Exact candidate PCB bytes copied. Only manifest status and generated_pcb_sha256 changed. Completed checks reused with matching source/dependency hashes; no DRC rerun claimed."
+  },
+  "required_via_treatment": {
+    "via_uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+    "pad_reference": "C24.2",
+    "pad_uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+    "position_native_mm": [92.004083, 93.491669],
+    "diameter_mm": 0.6,
+    "drill_mm": 0.3,
+    "nominal_annulus_mm": 0.15,
+    "span": "ordinary F.Cu-to-B.Cu through-via",
+    "mandatory_process": ["nonconductive resin fill", "planarization", "copper capping"],
+    "tenting_alone_acceptable": false,
+    "in_addition_to": "Existing four U4 filled/capped thermal vias; their requirement is unchanged.",
+    "native_treatment_flags_added": false,
+    "delivery_requirement": "Carry this exact UUID/coordinate treatment instruction into fabrication and PCBA quotation notes; Gerber/drill data alone does not establish it.",
+    "unqualified": ["supplier capability and drill registration", "finished cap flatness", "stencil and assembly yield", "incremental cost", "fabrication approval"]
+  },
+  "engineering_disposition": {
+    "land": "Via circle fits the unchanged 0.600 mm square land exactly; nominal zero radial artwork margin is not a fabrication tolerance claim.",
+    "apertures": "Original explicit mask margin 0.0508 mm gives a 0.7016 mm opening; the 0.600 mm square paste aperture is unchanged.",
+    "return": "Via attaches C24.2 directly to the existing connected In1 GND island with no F/In1 filled-polygon changes.",
+    "preservation": "All 128 previous connected pad groups, all existing tracks/vias/parts/pads, both private pickoffs, CELL_NEG isolation, rules, stackup and 21 zone definitions preserved."
+  },
+  "result": {
+    "opens_before": 42,
+    "opens_after": 41,
+    "warnings": 233,
+    "new_non_open_findings": 0,
+    "GND_groups": 10,
+    "new_main_GND_pad_refs": ["C24.2"],
+    "plus3V3_groups": 1,
+    "VCORE_groups": 3,
+    "shorts_or_floating_copper": false
+  },
+  "remaining": "Nine ground and two VCORE connectivity opens, other routing, physical stackup, SI/PI/current/thermal review, 46 historical parity notices, CAD source rebind and quotation/manufacturing gates.",
+  "not_authorized": "Supplier upload, purchase, fabrication, powered or child-use qualification."
+}

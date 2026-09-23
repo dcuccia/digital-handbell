@@ -1,0 +1,240 @@
+{
+  "status": "STAGED_C24_FILLED_CAPPED_VIA_VALIDATED_NOT_PROMOTED",
+  "source_pcb_sha256": "834086079bc792165adcf642d41f3fd52c65446a355904934fcdf39b289227eb",
+  "manifest_sha256": "054f203553f7051e12f098acac9683539488e77e4a42266439b48c519dbf39dd",
+  "active_files_modified": false,
+  "attempts": {
+    "implementation": 1,
+    "corrections": 0
+  },
+  "completed_gates": [
+    {
+      "name": "source_and_pad_binding",
+      "detail": {
+        "pad_uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+        "position_native_mm": [
+          92.004083,
+          93.491669
+        ],
+        "size_mm": [
+          0.6,
+          0.6
+        ],
+        "mask_margin_mm": 0.0508,
+        "mask_opening_mm": [
+          0.7016,
+          0.7016
+        ],
+        "paste_aperture_mm": [
+          0.6,
+          0.6
+        ],
+        "pad_source_sha256": "32bb387af8186b17f2db1c639b16d3a6f945d8d445a81540442b1ce42167cf6b"
+      }
+    },
+    {
+      "name": "new_via_geometry",
+      "detail": {
+        "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+        "position_native_mm": [
+          92.004083,
+          93.491669
+        ],
+        "diameter_mm": 0.6,
+        "drill_mm": 0.3,
+        "annulus_mm": 0.15,
+        "raw_layers": [
+          "F.Cu",
+          "B.Cu",
+          "In1.Cu",
+          "In2.Cu"
+        ],
+        "physical_layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "sole_intentional_pad_overlap": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+        "whole_circle_inside_land": true,
+        "other_pad_hits": [],
+        "foreign_hits": [],
+        "drill_hits": []
+      }
+    },
+    {
+      "name": "native_graph_and_fill",
+      "detail": {
+        "previous_groups_preserved": 128,
+        "GND_groups_before": 11,
+        "GND_groups_after": 10,
+        "new_MAIN_members": [
+          "C24.2"
+        ],
+        "+3V3_groups": 1,
+        "VCORE_groups": 3,
+        "private_cuts": [
+          {
+            "from": "R26.2",
+            "to": "R27.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+                "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          },
+          {
+            "from": "R24.2",
+            "to": "C28.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "1212a327-4ed4-50da-a0bb-71afc8145254",
+              "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+              "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+              "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+              "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+              "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+              "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+                "layer": "F.Cu"
+              },
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          }
+        ],
+        "shorts": [],
+        "floating": [],
+        "filled_checks": {
+          "islands": 21,
+          "guard_comparisons": 209,
+          "foreign_comparisons": 23533,
+          "F_private_item_comparisons": 200,
+          "In1_private_via_comparisons": 2
+        }
+      }
+    },
+    {
+      "name": "source_preservation",
+      "detail": {
+        "existing_vias_exact": true,
+        "added_via_only": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+        "tracks_parts_pads_rules_stackup_netclasses_exact": true,
+        "C24_pad_source_exact": true,
+        "zone_definitions": 21
+      }
+    },
+    {
+      "name": "fill_deltas",
+      "detail": {
+        "layers": {
+          "F.Cu": {
+            "removed_area_mm2": 0.0,
+            "added_area_mm2": 0.0,
+            "components": []
+          },
+          "In1.Cu": {
+            "removed_area_mm2": 0.0,
+            "added_area_mm2": 0.0,
+            "components": []
+          }
+        },
+        "In1_GND_islands": 1,
+        "remote_bound": "All remote components contained by opposite fill inflated <=10 IU."
+      }
+    },
+    {
+      "name": "native_DRC",
+      "detail": {
+        "baseline_opens": 42,
+        "candidate_opens": 41,
+        "warnings": 233,
+        "new_non_open_findings": [],
+        "native_opens": 41,
+        "graph_opens": 41,
+        "baseline_DRC_sha256": "109badc79872161f7d0c2f7ff583ccff967fa8b4ca8178590414572231a33d95",
+        "candidate_DRC_sha256": "e17314dfdbc5f523ea9c7463bfec838e3f785aa2a1c28a96a46bb3e5b6d3deac"
+      }
+    }
+  ],
+  "stages": [
+    {
+      "name": "native-fill",
+      "seconds": 1.625,
+      "exit_code": 0
+    },
+    {
+      "name": "native-drc",
+      "seconds": 4.625,
+      "exit_code": 0
+    }
+  ],
+  "elapsed_seconds": 65.70300000021234,
+  "candidate_path": "files\\c24-filled-via-01\\final\\handbell.kicad_pcb",
+  "candidate_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+  "new_via_uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+  "manufacturing_requirements": {
+    "via_uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+    "position_native_mm": [
+      92.004083,
+      93.491669
+    ],
+    "diameter_mm": 0.6,
+    "drill_mm": 0.3,
+    "mandatory_treatment": [
+      "nonconductive resin fill",
+      "planarization",
+      "copper capping"
+    ],
+    "tenting_alone_acceptable": false,
+    "existing_U4_filled_capped_requirement_replaced": false,
+    "native_machine_readable_treatment_flags_added": false,
+    "process_outside_Gerber_and_drill": [
+      "resin fill material/process",
+      "planarization",
+      "copper cap registration/flatness"
+    ],
+    "unqualified": [
+      "supplier capability",
+      "incremental cost",
+      "stencil/yield",
+      "fabrication approval"
+    ]
+  },
+  "dependency_binding": {
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "fp-lib-table": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+    "sym-lib-table": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+    "Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+    "T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+    "Clock.kicad_sym": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+    "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "LICENSE.txt": "075dad5e5fc96c27014fabc269f4f5732909cffd178a486f546d982b6cf86b74"
+  },
+  "proof_bindings": {
+    "tool_sha256": "b84768911ce27108a1e7206dff31cee65c161cf3140151a48af474581691803c",
+    "candidate_DRC_sha256": "e17314dfdbc5f523ea9c7463bfec838e3f785aa2a1c28a96a46bb3e5b6d3deac"
+  }
+}

@@ -166,6 +166,30 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Current accepted checkpoint: 41 opens.** Astra accepts exact PCB
+`c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`,
+manifest `08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667`.
+The [C24 acceptance and treatment record](../hardware/handbell/iterations/printed-bell-four-layer/reports/c24-filled-via-acceptance.json)
+adds only via `fa83a8ab-a7d3-5826-adce-43ff4f25a03d` at
+(92.004083,93.491669), 0.60/0.30 mm. It connects C24 ground without
+changing the original land/apertures or F/In1 filled geometry.
+All prior groups/private returns remain intact.
+
+This via requires resin fill, planarization and copper capping in addition
+to U4's four vias; the source-bound instruction must accompany quotation
+and fabrication data because no native treatment flags were added.
+Supplier, registration, flatness, stencil, yield and cost are still open.
+The local supply-ground connectivity batch is complete, not all board
+ground or power routing: nine GND and two VCORE opens remain.
+
+Next bounded item is a read-only inventory of all remaining disconnected
+nets and their complete copper groups on this exact source. Reuse existing
+native graphs and historical engineering reservations to propose coherent
+corridor/group batches, not a route-count schedule. Reserve sensitive
+interfaces, power/return topology and protected pickoffs for root decisions.
+No routing, placement, refill or supplier action is authorized by that
+inventory. Earlier entries below are historical.
+
 **C24 centered via feasible; one staged trial released:** the
 [native feasibility report](../hardware/handbell/iterations/printed-bell-four-layer/reports/c24-via-in-pad-feasibility.json)
 finds that the existing Default-class 0.60/0.30 mm through-via fits C24.2's

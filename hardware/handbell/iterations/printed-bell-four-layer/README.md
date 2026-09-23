@@ -1,6 +1,20 @@
 # Printed-bell four-layer routing baseline
 
-**Current acceptance: paired C12 supply/ground closure.** A shorter feed
+**Current acceptance: C24 ground via.** One centered 0.60/0.30 mm
+through-via connects C24.2 to the existing In1 ground plane, without
+changing its land, mask, paste, other copper or F/In1 filled geometry.
+PCB `c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`,
+manifest `08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667`.
+**41 opens**, 233 warnings and 46 historical parity notices remain.
+**Mandatory process:** this C24 via requires nonconductive resin fill,
+planarization and copper capping, in addition to U4's four required vias.
+Tenting is not a substitute; native treatment flags were not added.
+Carry the [exact treatment map and acceptance record](reports/c24-filled-via-acceptance.json)
+into quotation/fabrication notes. Supplier, stencil, yield and cost
+qualification remain open. This is not fabrication or powered approval.
+Earlier checkpoints below are historical.
+
+**Earlier acceptance: paired C12 supply/ground closure.** A shorter feed
 from the existing In2 +3V3 bridge replaces only the upstream F supply
 segment, preserving the local capacitor-to-MCU wiring. One ordinary
 through-via is added; native refill connects C12 ground.
