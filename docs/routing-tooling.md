@@ -6,6 +6,18 @@ authorization for cloud routing, supplier uploads or automatic acceptance.
 
 ## Current conclusion
 
+**September 22 ground-stitch checker lesson:** a copied validator assigned
+the ten F-only private exclusions to In1 and reported a false guard failure.
+The same eight intersections occur on the accepted baseline and candidate.
+Bind each guard to its declared native layer and validate that declaration
+against the released plan; a correct polygon on the wrong layer is still
+an invalid check. Preserve the failed evidence, exercise baseline controls,
+and finish the full saved-candidate suite before any acceptance. The
+[diagnosis](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-diagnosis.json)
+does not establish a valid candidate by itself. Persist finite screening
+counts and blocked-group reasons before later checks can fail; these were
+lost in the initial stitch attempt and must not be invented.
+
 **September 22 supply bridge:** native connected-group terminals and a finite
 polyline batch produced an accepted 0.40 mm In2 +3V3 bridge with no new vias.
 Candidate 11 of 11 examined avoided fixed copper and unexplained In1 gaps;

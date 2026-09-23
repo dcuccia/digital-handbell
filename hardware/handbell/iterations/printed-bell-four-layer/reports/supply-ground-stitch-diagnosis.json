@@ -1,0 +1,90 @@
+{
+  "status": "READ_ONLY_GUARD_FAILURE_DIAGNOSIS",
+  "source_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+  "candidate_pcb_sha256": "453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43",
+  "executed_checker": {
+    "filename": "stage_supply_ground_stitch.py",
+    "sha256": "635803e78df35fc261bd07fb76e300515cc8971b96e229c960dd4b9e74715e5a",
+    "failure_lines": "guard_records construction and same-layer loop at lines 201-212 in the preserved executed script",
+    "predicate": "Ten front-ground inventory exclusions were appended to guard_records with pcb.In1_Cu, then intersected against every In1 island.",
+    "correct_scope": "The ten existing exclusions are F.Cu-only. In1 checks must use only the two released private-via guards, six BOOST_SW guards and one clock guard already present as In1 rule areas."
+  },
+  "classification": "CHECKER_SCOPE_ERROR_NOT_PROVEN_FILL_REGRESSION",
+  "root_cause_count": 1,
+  "first_candidate_failure": {
+    "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+    "island_layer": "In1.Cu",
+    "guard_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+    "guard_name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+    "guard_actual_layer": "F.Cu",
+    "guard_layer_assigned_by_executed_checker": "In1.Cu",
+    "overlap_area_mm2": 3.48374,
+    "overlap_bounds_native_mm": [
+      101.199,
+      115.279,
+      103.201,
+      117.021
+    ],
+    "guard_bounds_native_mm": [
+      101.199,
+      115.279,
+      103.201,
+      117.021
+    ]
+  },
+  "erroneous_predicate_control": {
+    "baseline_intersection_count": 8,
+    "candidate_intersection_count": 8,
+    "same_identity_and_geometry": true,
+    "baseline_first": {
+      "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+      "island_layer": "In1.Cu",
+      "guard_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+      "guard_name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+      "guard_actual_layer": "F.Cu",
+      "guard_layer_assigned_by_executed_checker": "In1.Cu",
+      "overlap_area_mm2": 3.48374,
+      "overlap_bounds_native_mm": [
+        101.199,
+        115.279,
+        103.201,
+        117.021
+      ],
+      "guard_bounds_native_mm": [
+        101.199,
+        115.279,
+        103.201,
+        117.021
+      ]
+    }
+  },
+  "proven": [
+    "The reported guard assertion can fail on the unchanged accepted baseline.",
+    "The first failing record is an F.Cu-only exclusion misassigned to In1 by the executed checker.",
+    "The candidate and baseline have the same erroneous-predicate intersection set.",
+    "This diagnostic performed read-only native board loads; no refill or save."
+  ],
+  "unproven": [
+    "No stitch geometry is accepted.",
+    "The full acceptance suite was not rerun.",
+    "No claim is made that all correct same-layer guard, topology and DRC gates pass."
+  ],
+  "partial_geometry_context": {
+    "selected_group": "C9.2 / R4.1 / R8.2",
+    "selected_terminal": "R4.1 at the remote reachable end of the existing group",
+    "selection_reason": "The executed finite algorithm sorted all reachable group terminals and chose the first site that passed its pre-fill native screens; it did not require the C9 pad itself to be the source terminal.",
+    "known_limitation": "This does not prove the local C9 return is preferable or approve the topology; only the group-level connection was staged."
+  },
+  "finite_screening_history": {
+    "exact_candidate_site_count": "Not persisted before the later guard assertion failed.",
+    "remaining_group_blocker_details": "Not persisted; no re-screen was performed for this diagnosis."
+  },
+  "raw_artifacts": {
+    "unfilled_sha256": "46ac1b754de0a2f029bc832b1cb8c2748105a19f4dbb6160c25b92a356d4ee65",
+    "canonical_sha256": "d4ea6c95d19f9905515e71e5402068b5332f4a8f6c7aed0fc280c85c164453cf",
+    "candidate_sha256": "453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43",
+    "drc_sha256": "701a0355395bcc19feddd4c3797ab7ac7e893042321f74c592748145d2adc839",
+    "fill_report_sha256": "b7a5911d00023de6a3033ae4a793a4427d13d28a91d04a857df538e0ec72a425"
+  },
+  "next_decision": "A future separately authorized acceptance run must correct only the checker layer mapping, then rerun the complete existing suite on preserved geometry or a newly authorized candidate. This diagnostic does not authorize that run."
+}

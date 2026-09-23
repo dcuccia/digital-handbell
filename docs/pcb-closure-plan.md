@@ -193,6 +193,18 @@ refill, guard relaxation or automatic acceptance is authorized by that
 diagnosis. Remote continuity through R4 does not itself qualify C9's local
 high-frequency return.
 
+The [read-only diagnosis](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-diagnosis.json)
+identifies a checker-scope defect: all ten historical F-only exclusions
+were incorrectly assigned to In1. The erroneous predicate produces the same
+eight intersections on the unchanged baseline and candidate; it is not
+evidence of a fill regression. The original failed-run report remains intact.
+A separate validation-only item is authorized on the saved candidate:
+correct the layer mapping, demonstrate baseline controls, and complete all
+previously interrupted acceptance gates without new geometry or refill.
+No copper is accepted by the diagnosis alone. Candidate-site counts and
+other-group blockers were not persisted; do not reconstruct those as facts
+or describe the remainder of the released batch as exhausted.
+
 **Earlier September 22 plane acceptance:**
 Astra reviewed the saved actual-copper detail and supplementary proofs and
 approved exact candidate `19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`
