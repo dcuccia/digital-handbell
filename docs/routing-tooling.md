@@ -18,6 +18,24 @@ does not establish a valid candidate by itself. Persist finite screening
 counts and blocked-group reasons before later checks can fail; these were
 lost in the initial stitch attempt and must not be invented.
 
+The corrected guard validator subsequently passed guard and connectivity
+checks but stopped at a via-span assertion that compared native layer
+enumeration to physical stack order. KiCad's `GetLayerSet().Seq()` is not
+physical stack order: validate membership independently of iteration order
+and check the native via span/type explicitly. Physical ordering requires
+the existing ordinal conversion. This stop does not itself establish an
+incorrect via; the full remaining contact/drill/DRC/fill-delta gates are
+still required. One surgical validation-only correction is authorized;
+no further copper generation or refill is part of it.
+
+That final correction passed the layer membership controls but stopped on
+the circle-to-circle `Collide` overload during drill checking. Do not
+interpret Python binding exceptions as geometric collision results. This
+run remains incomplete; no additional corrective run is authorized by the
+exhausted item. A future repair should first exercise the exact required
+native shape operation in isolation, reusing known working collision
+helpers rather than discovering overload errors late in full-board checks.
+
 **September 22 supply bridge:** native connected-group terminals and a finite
 polyline batch produced an accepted 0.40 mm In2 +3V3 bridge with no new vias.
 Candidate 11 of 11 examined avoided fixed copper and unexplained In1 gaps;

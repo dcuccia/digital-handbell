@@ -1,0 +1,156 @@
+{
+  "status": "FAILED",
+  "scope": "Read-only validation of preserved candidate geometry; no route, refill, board save, or promotion.",
+  "gates": [
+    {
+      "name": "hash_and_project_dependency_binding",
+      "passed": true,
+      "detail": {
+        "source_pcb_sha256": "5dc0ebe6b75a2325826460ece80d3f1b2cb45bc1af8341baa79358d85e3136d8",
+        "candidate_pcb_sha256": "453b9f6da227cc3ce4fe0a664e4d0e05d159a6cbe41b00c72d2b009e1c3ffe43",
+        "manifest_sha256": "cdff8e0501a015039bc10c9b01a8f92dfde1a3edc2b7247914952d971073df41",
+        "saved_drc_sha256": "701a0355395bcc19feddd4c3797ab7ac7e893042321f74c592748145d2adc839",
+        "baseline_drc_sha256": "34037ecab16504d89b3cbdf7148d47a276c3450b9e43f28b6a2e149b11376016",
+        "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+        "source_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+        "candidate_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990"
+      }
+    },
+    {
+      "name": "source_preserving_geometry",
+      "passed": true,
+      "detail": {
+        "top_level_nontrack_nonvia_nonzone_blocks_exact": true,
+        "existing_tracks_raw_exact": true,
+        "existing_vias_raw_exact": true,
+        "zone_definition_count": 21,
+        "zone_definitions_except_fill_cache_exact": true,
+        "added_segment_uuid": "d8b2f3e7-cf20-5f17-a1d0-9a3e4ac6e256",
+        "added_via_uuid": "444b2c40-c122-5d7f-b56f-37b9a9100a99"
+      }
+    },
+    {
+      "name": "native_board_loads",
+      "passed": true,
+      "detail": {
+        "kicad_version": "10.0.6"
+      }
+    },
+    {
+      "name": "guard_layer_controls",
+      "passed": true,
+      "detail": {
+        "native_rule_area_counts": {
+          "F.Cu": 10,
+          "In1.Cu": 9
+        },
+        "negative_control_wrong_mapping_baseline_overlap_count": 8,
+        "negative_control_first_overlap": {
+          "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+          "island_layer": "In1.Cu",
+          "guard_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+          "guard_name": "private-R24.2-to-C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+          "native_guard_layer": "F.Cu",
+          "assigned_layer": "In1.Cu",
+          "area_mm2": 3.48374,
+          "bounds_native_mm": [
+            101.199,
+            115.279,
+            103.201,
+            117.021
+          ]
+        },
+        "correct_same_layer_baseline_overlap_count": 0,
+        "correct_same_layer_candidate_overlap_count": 0
+      }
+    },
+    {
+      "name": "actual_F_In1_edge_foreign_guard_private_checks",
+      "passed": true,
+      "detail": {
+        "islands": 23,
+        "guard_comparisons": 229,
+        "foreign_comparisons": 25966,
+        "F_private_item_comparisons": 220,
+        "In1_private_via_comparisons": 2
+      }
+    },
+    {
+      "name": "full_connectivity_and_component_comparison",
+      "passed": true,
+      "detail": {
+        "source_connected_pad_groups_preserved": 134,
+        "GND_group_count_before": 17,
+        "GND_group_count_candidate": 16,
+        "plus3V3_group_count": 1,
+        "VCORE_group_count": 3,
+        "target_group_joined_MAIN": true,
+        "private_pickoffs": [
+          {
+            "from": "R26.2",
+            "to": "R27.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+                "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          },
+          {
+            "from": "R24.2",
+            "to": "C28.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "1212a327-4ed4-50da-a0bb-71afc8145254",
+              "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+              "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+              "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+              "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+              "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+              "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+                "layer": "F.Cu"
+              },
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          }
+        ],
+        "shorts": [],
+        "floating_copper": [],
+        "other_net_partitions_unchanged": true
+      }
+    }
+  ],
+  "missing_history": {
+    "finite_candidate_site_count": "NOT_RECORDED; not re-screened",
+    "remaining_released_group_blockers": "UNKNOWN; not re-screened"
+  },
+  "design_files_written": false,
+  "failure": {
+    "type": "ValueError",
+    "message": "Added via is not ordinary through-via"
+  },
+  "elapsed_seconds": 51.125,
+  "report_tool_sha256": "160787740fcea3f92a6b48e863c2a571e1e7b0e81edebf0bd8d12e949586c693"
+}

@@ -205,6 +205,29 @@ No copper is accepted by the diagnosis alone. Candidate-site counts and
 other-group blockers were not persisted; do not reconstruct those as facts
 or describe the remainder of the released batch as exhausted.
 
+The corrected guard run passed the layer controls, all filled-layer
+clearances and connectivity preservation, but stopped on an order-sensitive
+via-layer assertion. Root identified that it compared native enumeration
+with physical stack order. One final validation-only correction will compare
+the actual layer set and native span without assuming enumeration order.
+No stitch is accepted until the remaining via/contact/drill, DRC and
+fill-change gates finish. If that run stops, preserve the partial result
+and escalate rather than extend the correction loop.
+
+**Current stop after the final validation correction:** the layer-set
+correction and preceding guard/connectivity gates passed, but native
+`SHAPE_CIRCLE.Collide(SHAPE_CIRCLE, clearance)` selected an incompatible
+overload during drill checking. This is an API invocation failure, not a
+measured clearance violation. The
+[latest failed report](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-validation.json)
+and [prior via-order failure](../hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-stitch-validation-failed-via-order.json)
+remain separate evidence. Drill/contact completion, C9 path-length context,
+fill-change locality and final DRC evidence acceptance are incomplete.
+The accepted board stays at 48 opens; the saved 47-open candidate is not
+promoted. Do not start another corrective execution automatically.
+Escalate to the owner for a separately bounded validator-repair decision
+or defer the candidate. The agent is idle; no routing/refill is running.
+
 **Earlier September 22 plane acceptance:**
 Astra reviewed the saved actual-copper detail and supplementary proofs and
 approved exact candidate `19d3bf9a1ab37dcc7af29f0cc99cc44a98564f878402beee15af3ce0a731ff78`
