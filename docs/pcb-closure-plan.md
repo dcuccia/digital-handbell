@@ -166,10 +166,11 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Owner evening pause -- engineering suspended.** The owner is shutting
-down the device and will return to IMU feasible-space analysis on a future
-explicit resume. This pause supersedes all sequential continuation and
-earlier releases. Do not start that analysis, routing, CAD or refill now.
+**September 23 explicit owner resume.** The owner requested "let's resume."
+The evening pause is superseded. Start only the agreed bounded read-only
+IMU feasible-space analysis; no routing, placement or refill is released
+by this item. The working tree and saved source hashes were verified
+unchanged, and the existing executor still resolves to `gpt-5.6-sol`.
 
 Resume from `hardware/handbell/iterations/printed-bell-four-layer`:
 PCB SHA-256
@@ -182,13 +183,28 @@ filled/capped treatment requirement remains mandatory and unqualified
 for supplier/assembly use. Latest blocked IMU evidence was pushed in
 `dc2784c`; there is no unaccepted IMU PCB candidate to recover.
 
-On resume, one bounded read-only feasible-via-centre analysis should
+The resumed bounded read-only feasible-via-centre analysis will
 address IC4.6/7 and IC4.1/2/3 in the previously released local region,
 using actual native copper, pads, drills, contacts and plane constraints.
 Include interior space; do not repeat the exhausted bridge/point screens.
 Return feasible regions plus exact checked connection proposals, or
 source-bound blockers and approximation limits, before any routing change.
 Retain the Astra engineering / explicitly pinned Sol execution split.
+
+Use native x87.5..92.5, y91.0..95.2 mm and the established ordinary
+0.604/0.35 mm off-pad through-via. Derive candidate-centre regions from
+the complete native geometry, including interior access, rather than
+another grid or outward-offset point set. Account for every enabled
+copper layer, pad/drill/slot, rear-contact and protected-region constraint,
+main-In1 access and a possible 0.30 mm F stub of at most 1.05 mm.
+Record conservative polygon-approximation limits and evaluate any
+representative centres/stubs with the existing exact native predicates.
+Bound the item to eight minutes including at most one corrective retry;
+native subprocesses get explicit timeouts. Return feasible regions and
+at most six checked proposals per target group, or concrete blockers.
+An empty conservative region is not a global impossibility proof.
+No general router, new process, via-in-pad, rule relaxation or source
+change is authorized. Stop for root review when the report is complete.
 
 **IMU return batch blocked; accepted board unchanged:** the
 [bounded batch report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-ground-batch.json)
