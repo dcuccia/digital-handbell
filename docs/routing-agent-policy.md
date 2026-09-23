@@ -273,6 +273,39 @@ placement, larger vias, longer stubs or repeated full-board trials.
 The finite follow-up replaces the prior item's site cap only; it does not
 reset the accepted board or authorize rerouting the completed R4 stitch.
 
+#### IMU local-return closure batch
+
+The source-bound 41-open inventory identifies two disconnected IC4 GND
+groups: IC4.1/2/3 (Mode-1 grounded interface pins) and IC4.6/7 (ground
+pins). Release these together as one local-return batch before the
+dependent IMU control routing. Do not change the established Mode-1
+pin assignments, initialization gate, parts or current SCL/SDA copper.
+
+Work within native x87.5..92.5, y91.0..95.2 mm. For each group, prefer
+up to four short geometry-derived F connections to existing main GND
+(including now-connected C23/C24 copper), width 0.30 mm, length at most
+2 mm, with robust endpoint overlap. If needed, screen at most 48
+geometry-derived off-pad 0.604/0.35 mm ordinary-via sites from the whole
+connected island, using a 0.30 mm F stub of at most 1.05 mm. Reuse
+shared legal copper/returns if that closes both groups without consuming
+signal corridors. Do not repeat failed pad-centred grids or add via-in-pad.
+
+Keep every existing pad, part, track, via, rule, zone definition, contact
+reservation and private return unchanged. Existing through-via spans and
+rear-contact exclusions apply even for a short inner-plane connection.
+Do not reroute SCL/SDA/USBBOOT or power to make a site fit. Preserve
+C24's mandatory capped-via process and both capacitor-ground closures.
+In1 must retain its protected topology; no clock/boost exclusion changes.
+
+Stage one coherent candidate containing whichever intended groups have
+legal connections within the finite batch. Continue through straightforward
+work, but stop rather than guessing if fixed obstacles need engineering.
+Require native DRC and complete graph/private-return/source-preservation
+gates; only the released groups may join main GND. One closed group gives
+40 opens, both give 39. Record unresolved groups and blockers honestly.
+Apply the established independent displacement/clearance checks for remote
+cache differences. Root review is required before promotion.
+
 #### C24 centered filled/capped ground-via trial
 
 The read-only feasibility review passed the Default-class 0.60/0.30 mm

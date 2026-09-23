@@ -166,6 +166,22 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Remaining-routing inventory complete:** the
+[exact native ledger](../hardware/handbell/iterations/printed-bell-four-layer/reports/remaining-routing-inventory.json)
+reconciles 25 disconnected nets to **41 opens**: nine GND, two VCORE,
+and 30 across 23 other nets. It records actual pad groups, coordinates
+and existing layer transitions. Power/return topology, USB, debug, I2S,
+SCL/GAIN and clock/QSPI constraints remain reserved for root decisions;
+low-speed controls are not automatically released into their corridors.
+
+Next is one [IMU local-return batch](routing-agent-policy.md#imu-local-return-closure-batch)
+covering the existing IC4.1/2/3 and IC4.6/7 GND groups together.
+Prefer short F joins to existing main ground; use only screened ordinary
+off-pad vias if needed. Preserve the Mode-1 interface, current signal
+copper, contact exclusions and all other design decisions. Stop on
+obstacles requiring rerouting rather than expanding the scope.
+The accepted board remains **41 opens** until that candidate is reviewed.
+
 **Current accepted checkpoint: 41 opens.** Astra accepts exact PCB
 `c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`,
 manifest `08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667`.
@@ -182,13 +198,8 @@ Supplier, registration, flatness, stencil, yield and cost are still open.
 The local supply-ground connectivity batch is complete, not all board
 ground or power routing: nine GND and two VCORE opens remain.
 
-Next bounded item is a read-only inventory of all remaining disconnected
-nets and their complete copper groups on this exact source. Reuse existing
-native graphs and historical engineering reservations to propose coherent
-corridor/group batches, not a route-count schedule. Reserve sensitive
-interfaces, power/return topology and protected pickoffs for root decisions.
-No routing, placement, refill or supplier action is authorized by that
-inventory. Earlier entries below are historical.
+The subsequent read-only inventory and next released batch are recorded
+above. Earlier entries below are historical.
 
 **C24 centered via feasible; one staged trial released:** the
 [native feasibility report](../hardware/handbell/iterations/printed-bell-four-layer/reports/c24-via-in-pad-feasibility.json)

@@ -1,0 +1,2979 @@
+{
+  "status": "READ_ONLY_INVENTORY_COMPLETE",
+  "source_bindings": {
+    "pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "acceptance_report": "reports/c24-filled-via-acceptance.json",
+    "acceptance_report_sha256": "129af936bb85e8638fcd6ebd6d148970b6d6eafdf5c2017d5e83ce8abc64c97b",
+    "saved_DRC_sha256": "e17314dfdbc5f523ea9c7463bfec838e3f785aa2a1c28a96a46bb3e5b6d3deac",
+    "saved_DRC_opens": 41,
+    "saved_DRC_warnings": 233
+  },
+  "qualified_method": {
+    "graph": "Complete native enabled-copper primitive plus actual filled-island graph.",
+    "control": {
+      "disjoint_islands": 2,
+      "preserved_holes": 1,
+      "unfilled_zone_rejected": true,
+      "actual_graph_pad_islands": 3,
+      "zone_path_witness_checked": true,
+      "CELL_NEG_zone_short_detected": true,
+      "candidate_loaded_or_written": false
+    },
+    "enabled_copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "native_connectivity_opens_read_only": 41
+  },
+  "count_reconciliation": {
+    "disconnected_nets": 25,
+    "sum_group_count_minus_one": 41,
+    "native_connectivity_opens": 41,
+    "saved_DRC_opens": 41,
+    "GND_open_contribution": 9,
+    "VCORE_open_contribution": 2,
+    "all_other_open_contribution": 30
+  },
+  "actual_plane_islands": [
+    {
+      "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "net": "GND",
+      "layer": "F.Cu",
+      "filled_islands": 20,
+      "filled_area_mm2": 755.018906
+    },
+    {
+      "zone_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b",
+      "net": "GND",
+      "layer": "In1.Cu",
+      "filled_islands": 1,
+      "filled_area_mm2": 1370.823288
+    }
+  ],
+  "current_C24_terminal": {
+    "via_uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+    "position_native_mm": [
+      92.004083,
+      93.491669
+    ],
+    "diameter_mm": 0.6,
+    "drill_mm": 0.3,
+    "layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "attached_pad": "C24.2",
+    "mandatory_process_reference": "reports/c24-filled-via-acceptance.json"
+  },
+  "GND_summary": {
+    "group_count": 10,
+    "open_contribution": 9,
+    "MAIN": {
+      "stable_group_id": "66dbd6764a51eb58",
+      "pad_count": 43,
+      "bounds_native_mm": [
+        78.001,
+        73.401,
+        121.999,
+        121.248923
+      ],
+      "copper_layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "existing_through_via_count": 24,
+      "complete_membership_private_ledger_sha256": "3a4f2646c5bf91a0251a3bff8ac872f2439d773ee7876bf183f05884bbfd79cb"
+    },
+    "disconnected_groups": [
+      {
+        "stable_group_id": "a3494d1acaafaddf",
+        "pad_refs": [
+          "GAIN0.1"
+        ],
+        "pad_positions_native_mm": {
+          "GAIN0.1": [
+            100.260031,
+            107.960848
+          ]
+        },
+        "bounds_native_mm": [
+          99.510031,
+          107.460848,
+          101.010031,
+          108.460848
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": false
+      },
+      {
+        "stable_group_id": "4a56aad745ea21dc",
+        "pad_refs": [
+          "X6.A1B12"
+        ],
+        "pad_positions_native_mm": {
+          "X6.A1B12": [
+            103.2,
+            79.655
+          ]
+        },
+        "bounds_native_mm": [
+          94.501,
+          73.401,
+          105.732583,
+          81.581708
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": true
+      },
+      {
+        "stable_group_id": "56477d3e91f6db5a",
+        "pad_refs": [
+          "C20.2",
+          "U3.2"
+        ],
+        "pad_positions_native_mm": {
+          "U3.2": [
+            102.99537,
+            84.688163
+          ],
+          "C20.2": [
+            104.846036,
+            82.816111
+          ]
+        },
+        "bounds_native_mm": [
+          99.794,
+          81.796129,
+          107.16675,
+          85.962389
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": true
+      },
+      {
+        "stable_group_id": "ed74547cf22af402",
+        "pad_refs": [
+          "IC4.6",
+          "IC4.7"
+        ],
+        "pad_positions_native_mm": {
+          "IC4.7": [
+            88.587306,
+            94.492711
+          ],
+          "IC4.6": [
+            88.587306,
+            93.992711
+          ]
+        },
+        "bounds_native_mm": [
+          88.3255,
+          93.723999,
+          89.997261,
+          94.740166
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": true
+      },
+      {
+        "stable_group_id": "abddee34295330a0",
+        "pad_refs": [
+          "C13.2",
+          "C17.2",
+          "C6.1",
+          "C7.1",
+          "C8.2"
+        ],
+        "pad_positions_native_mm": {
+          "C8.2": [
+            106.009069,
+            102.430145
+          ],
+          "C17.2": [
+            106.007429,
+            101.217675
+          ],
+          "C7.1": [
+            108.311336,
+            102.200014
+          ],
+          "C13.2": [
+            106.010546,
+            103.640537
+          ],
+          "C6.1": [
+            106.005898,
+            99.999744
+          ]
+        },
+        "bounds_native_mm": [
+          104.6755,
+          99.689232,
+          108.9188,
+          105.968715
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": true
+      },
+      {
+        "stable_group_id": "3d1e108bb2d0ecb8",
+        "pad_refs": [
+          "C14.2",
+          "C5.2",
+          "Q2.2",
+          "R17.2"
+        ],
+        "pad_positions_native_mm": {
+          "Q2.2": [
+            87.922445,
+            102.315177
+          ],
+          "C5.2": [
+            84.721409,
+            97.491452
+          ],
+          "R17.2": [
+            87.207495,
+            98.505288
+          ],
+          "C14.2": [
+            94.296295,
+            102.304504
+          ]
+        },
+        "bounds_native_mm": [
+          83.421909,
+          96.4723,
+          97.0995,
+          103.9106
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": true
+      },
+      {
+        "stable_group_id": "df3aa662bb9da460",
+        "pad_refs": [
+          "U1.4",
+          "U1.PAD"
+        ],
+        "pad_positions_native_mm": {
+          "U1.PAD": [
+            106.301448,
+            96.840754
+          ],
+          "U1.4": [
+            105.551448,
+            95.590754
+          ]
+        },
+        "bounds_native_mm": [
+          105.2894,
+          95.2394,
+          108.659628,
+          97.605798
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": true
+      },
+      {
+        "stable_group_id": "133d76e4bf554dd1",
+        "pad_refs": [
+          "IC4.1",
+          "IC4.2",
+          "IC4.3"
+        ],
+        "pad_positions_native_mm": {
+          "IC4.2": [
+            89.749806,
+            92.830211
+          ],
+          "IC4.1": [
+            90.249806,
+            92.830211
+          ],
+          "IC4.3": [
+            89.249806,
+            92.830211
+          ]
+        },
+        "bounds_native_mm": [
+          89.063935,
+          92.3833,
+          90.651,
+          93.245206
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": true
+      },
+      {
+        "stable_group_id": "c4713881db55d6b2",
+        "pad_refs": [
+          "C18.1"
+        ],
+        "pad_positions_native_mm": {
+          "C18.1": [
+            94.29564,
+            101.003449
+          ]
+        },
+        "bounds_native_mm": [
+          93.9894,
+          100.6894,
+          94.81114,
+          101.319003
+        ],
+        "copper_layers": [
+          "F.Cu"
+        ],
+        "existing_through_via_terminals": [],
+        "private_endpoint_tags": {},
+        "contains_filled_island": true
+      }
+    ]
+  },
+  "remaining_net_ledger": [
+    {
+      "net": "AMP_MUTE",
+      "engineering_class": "candidate_low_speed_control_not_auto_released",
+      "physical_pad_count": 4,
+      "group_count": 3,
+      "open_contribution": 2,
+      "groups": [
+        {
+          "stable_group_id": "a93b47feeabb770d",
+          "pad_refs": [
+            "Q4.1",
+            "R20.2"
+          ],
+          "pad_positions_native_mm": {
+            "R20.2": [
+              107.633897,
+              86.808257
+            ],
+            "Q4.1": [
+              109.695904,
+              84.998348
+            ]
+          },
+          "bounds_native_mm": [
+            107.333897,
+            84.698348,
+            110.433404,
+            87.108257
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "418935ca89ffba6a",
+          "pad_refs": [
+            "TP15.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "TP15.P$1": [
+              84.049994,
+              102.103333
+            ]
+          },
+          "bounds_native_mm": [
+            83.299994,
+            101.353333,
+            84.799994,
+            102.853333
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "73383d528ce50c16",
+          "pad_refs": [
+            "IC1.31"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.31": [
+              98.2,
+              103.45
+            ]
+          },
+          "bounds_native_mm": [
+            98.1,
+            103.0125,
+            98.3,
+            103.8875
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "BUTTON",
+      "engineering_class": "candidate_low_speed_control_not_auto_released",
+      "physical_pad_count": 4,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "bb7ddf7f266a4bdf",
+          "pad_refs": [
+            "C25.1",
+            "R21.2",
+            "R22.1"
+          ],
+          "pad_positions_native_mm": {
+            "C25.1": [
+              104.482239,
+              107.50713
+            ],
+            "R21.2": [
+              102.999181,
+              108.027537
+            ],
+            "R22.1": [
+              107.493343,
+              107.492733
+            ]
+          },
+          "bounds_native_mm": [
+            102.699181,
+            107.192733,
+            107.793343,
+            108.327537
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "4fe15f29a0d27f7d",
+          "pad_refs": [
+            "IC1.30"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.30": [
+              97.8,
+              103.45
+            ]
+          },
+          "bounds_native_mm": [
+            97.7,
+            103.0125,
+            97.9,
+            103.8875
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "D+",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 2,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "f54d1d6f43ed6773",
+          "pad_refs": [
+            "IC1.47"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.47": [
+              103.45,
+              101.0
+            ]
+          },
+          "bounds_native_mm": [
+            103.0125,
+            100.9,
+            103.8875,
+            101.1
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "6ffb2d9389c868b7",
+          "pad_refs": [
+            "R10.2"
+          ],
+          "pad_positions_native_mm": {
+            "R10.2": [
+              107.601565,
+              99.440867
+            ]
+          },
+          "bounds_native_mm": [
+            107.301565,
+            99.140867,
+            107.901565,
+            99.740867
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "D-",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 2,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "667edcf5fb30e33a",
+          "pad_refs": [
+            "R9.2"
+          ],
+          "pad_positions_native_mm": {
+            "R9.2": [
+              107.597371,
+              100.642334
+            ]
+          },
+          "bounds_native_mm": [
+            107.297371,
+            100.342334,
+            107.897371,
+            100.942334
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "f17e9c41c1113b86",
+          "pad_refs": [
+            "IC1.46"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.46": [
+              103.45,
+              101.4
+            ]
+          },
+          "bounds_native_mm": [
+            103.0125,
+            101.3,
+            103.8875,
+            101.5
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "D13",
+      "engineering_class": "candidate_low_speed_control_not_auto_released",
+      "physical_pad_count": 2,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "a0a4c1e39ca43ca4",
+          "pad_refs": [
+            "R7.1"
+          ],
+          "pad_positions_native_mm": {
+            "R7.1": [
+              96.492,
+              110.0
+            ]
+          },
+          "bounds_native_mm": [
+            96.192,
+            109.7,
+            96.792,
+            110.3
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "e44d9f8e5c7ab753",
+          "pad_refs": [
+            "IC1.16"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.16": [
+              96.55,
+              97.8
+            ]
+          },
+          "bounds_native_mm": [
+            96.1125,
+            97.7,
+            96.9875,
+            97.9
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "GAIN",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 2,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "66b5aa45480ae3c8",
+          "pad_refs": [
+            "GAIN0.2"
+          ],
+          "pad_positions_native_mm": {
+            "GAIN0.2": [
+              100.260031,
+              109.260848
+            ]
+          },
+          "bounds_native_mm": [
+            99.510031,
+            108.760848,
+            101.010031,
+            109.760848
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "d2b407a7a2edfee1",
+          "pad_refs": [
+            "U4.2"
+          ],
+          "pad_positions_native_mm": {
+            "U4.2": [
+              109.225323,
+              89.662211
+            ]
+          },
+          "bounds_native_mm": [
+            108.825323,
+            89.522211,
+            109.625323,
+            89.802211
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "I2S_BCLK",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 3,
+      "group_count": 3,
+      "open_contribution": 2,
+      "groups": [
+        {
+          "stable_group_id": "b99223be9d6cf1e1",
+          "pad_refs": [
+            "U4.16"
+          ],
+          "pad_positions_native_mm": {
+            "U4.16": [
+              109.975323,
+              88.412211
+            ]
+          },
+          "bounds_native_mm": [
+            109.835323,
+            88.012211,
+            110.115323,
+            88.812211
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "6d87e4b7c7f9f977",
+          "pad_refs": [
+            "IC1.28"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.28": [
+              96.55,
+              102.6
+            ]
+          },
+          "bounds_native_mm": [
+            96.1125,
+            102.5,
+            96.9875,
+            102.7
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "2b88007612c5045f",
+          "pad_refs": [
+            "TP13.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "TP13.P$1": [
+              88.616022,
+              114.393995
+            ]
+          },
+          "bounds_native_mm": [
+            87.866022,
+            113.643995,
+            89.366022,
+            115.143995
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "I2S_DIN",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 3,
+      "group_count": 3,
+      "open_contribution": 2,
+      "groups": [
+        {
+          "stable_group_id": "f08f8928290974b4",
+          "pad_refs": [
+            "IC1.27"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.27": [
+              96.55,
+              102.2
+            ]
+          },
+          "bounds_native_mm": [
+            96.1125,
+            102.1,
+            96.9875,
+            102.3
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "28d4768a174ae820",
+          "pad_refs": [
+            "TP12.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "TP12.P$1": [
+              92.736859,
+              118.532942
+            ]
+          },
+          "bounds_native_mm": [
+            91.986859,
+            117.782942,
+            93.486859,
+            119.282942
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "e14350e15c92e37d",
+          "pad_refs": [
+            "U4.1"
+          ],
+          "pad_positions_native_mm": {
+            "U4.1": [
+              109.225323,
+              89.162211
+            ]
+          },
+          "bounds_native_mm": [
+            108.825323,
+            89.022211,
+            109.625323,
+            89.302211
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "I2S_LRCLK",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 3,
+      "group_count": 3,
+      "open_contribution": 2,
+      "groups": [
+        {
+          "stable_group_id": "e42c1dd1296cae03",
+          "pad_refs": [
+            "IC1.29"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.29": [
+              97.4,
+              103.45
+            ]
+          },
+          "bounds_native_mm": [
+            97.3,
+            103.0125,
+            97.5,
+            103.8875
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "8062430f9b26217c",
+          "pad_refs": [
+            "TP14.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "TP14.P$1": [
+              84.806618,
+              111.45178
+            ]
+          },
+          "bounds_native_mm": [
+            84.056618,
+            110.70178,
+            85.556618,
+            112.20178
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "dcb3f614fc965af1",
+          "pad_refs": [
+            "U4.14"
+          ],
+          "pad_positions_native_mm": {
+            "U4.14": [
+              110.975323,
+              88.412211
+            ]
+          },
+          "bounds_native_mm": [
+            110.835323,
+            88.012211,
+            111.115323,
+            88.812211
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "INT",
+      "engineering_class": "candidate_low_speed_control_not_auto_released",
+      "physical_pad_count": 2,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "e67de9a6efce5416",
+          "pad_refs": [
+            "IC4.4"
+          ],
+          "pad_positions_native_mm": {
+            "IC4.4": [
+              88.749806,
+              92.830211
+            ]
+          },
+          "bounds_native_mm": [
+            88.624806,
+            92.592711,
+            88.874806,
+            93.067711
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "9937f6910976dcea",
+          "pad_refs": [
+            "IC1.34"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.34": [
+              99.4,
+              103.45
+            ]
+          },
+          "bounds_native_mm": [
+            99.3,
+            103.0125,
+            99.5,
+            103.8875
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "Net-(FB2-P$1)",
+      "engineering_class": "root_reserved_power_or_return",
+      "physical_pad_count": 2,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "355566ec8c1f1724",
+          "pad_refs": [
+            "U4.10"
+          ],
+          "pad_positions_native_mm": {
+            "U4.10": [
+              112.225323,
+              90.162211
+            ]
+          },
+          "bounds_native_mm": [
+            111.825323,
+            90.022211,
+            112.625323,
+            90.302211
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "5ae4d73cd67e7c56",
+          "pad_refs": [
+            "FB2.1"
+          ],
+          "pad_positions_native_mm": {
+            "FB2.1": [
+              113.838529,
+              87.925648
+            ]
+          },
+          "bounds_native_mm": [
+            113.513529,
+            87.325648,
+            114.163529,
+            88.525648
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "POWER",
+      "engineering_class": "root_reserved_power_or_return",
+      "physical_pad_count": 5,
+      "group_count": 3,
+      "open_contribution": 2,
+      "groups": [
+        {
+          "stable_group_id": "852335ffb6eb37ae",
+          "pad_refs": [
+            "Q2.1",
+            "R17.1",
+            "TP16.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "Q2.1": [
+              86.022445,
+              102.315177
+            ],
+            "TP16.P$1": [
+              81.001152,
+              96.638123
+            ],
+            "R17.1": [
+              86.191495,
+              98.505288
+            ]
+          },
+          "bounds_native_mm": [
+            80.251152,
+            95.888123,
+            86.522445,
+            102.915177
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "afec57a8c2d5bfd4",
+          "pad_refs": [
+            "IC1.35"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.35": [
+              99.8,
+              103.45
+            ]
+          },
+          "bounds_native_mm": [
+            99.7,
+            103.0125,
+            99.9,
+            103.8875
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "e710555c02696a8e",
+          "pad_refs": [
+            "U5.2"
+          ],
+          "pad_positions_native_mm": {
+            "U5.2": [
+              96.56,
+              115.2
+            ]
+          },
+          "bounds_native_mm": [
+            96.225,
+            115.05,
+            96.895,
+            115.35
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "SCL",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 3,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "ce82f100adef2b2b",
+          "pad_refs": [
+            "IC1.5",
+            "IC4.13"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.5": [
+              101.0,
+              96.55
+            ],
+            "IC4.13": [
+              90.412306,
+              93.992711
+            ]
+          },
+          "bounds_native_mm": [
+            90.174806,
+            92.6479,
+            101.1,
+            96.9875
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "fbf73d0ee1ee0e0b",
+          "pad_refs": [
+            "R14.2"
+          ],
+          "pad_positions_native_mm": {
+            "R14.2": [
+              87.094469,
+              94.21003
+            ]
+          },
+          "bounds_native_mm": [
+            86.794469,
+            93.91003,
+            87.394469,
+            94.51003
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "SWCLK",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 2,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "b7bae9f3503d3104",
+          "pad_refs": [
+            "TP4.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "TP4.P$1": [
+              89.318349,
+              88.500116
+            ]
+          },
+          "bounds_native_mm": [
+            88.568349,
+            87.750116,
+            90.068349,
+            89.250116
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "434430ec60a13591",
+          "pad_refs": [
+            "IC1.24"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.24": [
+              96.55,
+              101.0
+            ]
+          },
+          "bounds_native_mm": [
+            96.1125,
+            100.9,
+            96.9875,
+            101.1
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "SWDIO",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 2,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "a6fdfe98376fde2b",
+          "pad_refs": [
+            "IC1.25"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.25": [
+              96.55,
+              101.4
+            ]
+          },
+          "bounds_native_mm": [
+            96.1125,
+            101.3,
+            96.9875,
+            101.5
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "729e42e9d30c7036",
+          "pad_refs": [
+            "TP5.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "TP5.P$1": [
+              95.07368,
+              82.691699
+            ]
+          },
+          "bounds_native_mm": [
+            94.32368,
+            81.941699,
+            95.82368,
+            83.441699
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "USB_D+",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 4,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "41faf3297481b983",
+          "pad_refs": [
+            "D+1.TP",
+            "R10.1"
+          ],
+          "pad_positions_native_mm": {
+            "D+1.TP": [
+              118.050104,
+              104.365071
+            ],
+            "R10.1": [
+              108.617565,
+              99.440867
+            ]
+          },
+          "bounds_native_mm": [
+            105.9547,
+            99.140867,
+            118.8026,
+            107.8008
+          ],
+          "copper_layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "existing_through_via_terminals": [
+            {
+              "uuid": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+              "position_native_mm": [
+                106.2547,
+                106.0941
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "a7d748d6-5230-5428-ab9d-c610fb30f15e",
+              "position_native_mm": [
+                117.1165,
+                107.5008
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            }
+          ],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "87e3d7ba3edaf389",
+          "pad_refs": [
+            "X6.A6",
+            "X6.B6"
+          ],
+          "pad_positions_native_mm": {
+            "X6.A6": [
+              100.25,
+              79.455
+            ],
+            "X6.B6": [
+              99.25,
+              79.455
+            ]
+          },
+          "bounds_native_mm": [
+            99.1125,
+            78.5005,
+            100.3875,
+            80.03
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "USB_D-",
+      "engineering_class": "root_reserved_sensitive_interface",
+      "physical_pad_count": 4,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "d01328085816e163",
+          "pad_refs": [
+            "D-1.TP",
+            "X6.A7",
+            "X6.B7"
+          ],
+          "pad_positions_native_mm": {
+            "D-1.TP": [
+              117.785719,
+              106.543881
+            ],
+            "X6.A7": [
+              99.75,
+              79.455
+            ],
+            "X6.B7": [
+              100.75,
+              79.455
+            ]
+          },
+          "bounds_native_mm": [
+            99.6125,
+            78.88,
+            119.019,
+            107.178881
+          ],
+          "copper_layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "existing_through_via_terminals": [
+            {
+              "uuid": "84225653-51c2-5b16-93d9-3912ead5753b",
+              "position_native_mm": [
+                118.719,
+                92.7879
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "dded91cc-ce2f-51d2-8936-b36a3cc457d6",
+              "position_native_mm": [
+                100.0876,
+                80.8638
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            }
+          ],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "d8843d003ddc1da1",
+          "pad_refs": [
+            "R9.1"
+          ],
+          "pad_positions_native_mm": {
+            "R9.1": [
+              108.613371,
+              100.642334
+            ]
+          },
+          "bounds_native_mm": [
+            108.313371,
+            100.342334,
+            108.913371,
+            100.942334
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "VAMP",
+      "engineering_class": "root_reserved_power_or_return",
+      "physical_pad_count": 12,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "58e802489fd700f8",
+          "pad_refs": [
+            "C16.1",
+            "C19.1",
+            "C27.1",
+            "C28.1",
+            "C29.1",
+            "GAIN0.3",
+            "R23.1",
+            "TP10.P$1",
+            "U4.7",
+            "U4.8",
+            "U5.6"
+          ],
+          "pad_positions_native_mm": {
+            "R23.1": [
+              98.708,
+              112.7
+            ],
+            "C29.1": [
+              93.792,
+              111.0
+            ],
+            "GAIN0.3": [
+              100.260031,
+              110.560848
+            ],
+            "C27.1": [
+              100.1,
+              114.25
+            ],
+            "C16.1": [
+              110.83159,
+              93.016901
+            ],
+            "TP10.P$1": [
+              105.785486,
+              115.976724
+            ],
+            "C19.1": [
+              113.318731,
+              93.06263
+            ],
+            "U4.7": [
+              110.975323,
+              91.412211
+            ],
+            "C28.1": [
+              102.2,
+              114.25
+            ],
+            "U4.8": [
+              111.475323,
+              91.412211
+            ],
+            "U5.6": [
+              98.04,
+              114.7
+            ]
+          },
+          "bounds_native_mm": [
+            93.492,
+            91.012211,
+            113.768731,
+            116.726724
+          ],
+          "copper_layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "existing_through_via_terminals": [
+            {
+              "uuid": "789772e5-dda6-56d1-87e1-ef6bf3b714a4",
+              "position_native_mm": [
+                108.175,
+                109.2947
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "aae7b9c1-5979-5c2e-a412-a5fd91b1d933",
+              "position_native_mm": [
+                105.7855,
+                114.567
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            }
+          ],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "3b34779bf2c42105",
+          "pad_refs": [
+            "R18.2"
+          ],
+          "pad_positions_native_mm": {
+            "R18.2": [
+              107.633456,
+              90.48818
+            ]
+          },
+          "bounds_native_mm": [
+            107.333456,
+            90.18818,
+            107.933456,
+            90.78818
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "VBAT",
+      "engineering_class": "root_reserved_power_or_return",
+      "physical_pad_count": 7,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "c7e2f353dfe62bee",
+          "pad_refs": [
+            "BT1.1",
+            "BT1.1",
+            "Q3.3",
+            "R25.1",
+            "TP11.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "R25.1": [
+              91.992,
+              105.3
+            ],
+            "BT1.1": [
+              119.63,
+              100.0
+            ],
+            "TP11.P$1": [
+              101.703666,
+              119.758703
+            ],
+            "Q3.3": [
+              97.5,
+              107.45
+            ]
+          },
+          "bounds_native_mm": [
+            91.692,
+            97.4,
+            121.75,
+            120.508703
+          ],
+          "copper_layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "existing_through_via_terminals": [
+            {
+              "uuid": "0ba3129d-4c2f-51a5-b83d-47c5c587ae79",
+              "position_native_mm": [
+                98.6,
+                107.45
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "6507ba23-c1ad-52d0-807a-0c91ae783fbb",
+              "position_native_mm": [
+                103.1,
+                111.9
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "7eb2ed3c-7a92-5a74-b0da-6cc00176128f",
+              "position_native_mm": [
+                104.3,
+                116.05
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "bad9068e-b03b-5869-a449-cdb7731eb117",
+              "position_native_mm": [
+                98.6,
+                108.35
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            }
+          ],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "bbc6a82ada267fd5",
+          "pad_refs": [
+            "C20.1",
+            "CHG_EN0.2"
+          ],
+          "pad_positions_native_mm": {
+            "CHG_EN0.2": [
+              102.454949,
+              81.532016
+            ],
+            "C20.1": [
+              104.846036,
+              84.616111
+            ]
+          },
+          "bounds_native_mm": [
+            101.954949,
+            80.782016,
+            106.55,
+            85.066111
+          ],
+          "copper_layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "existing_through_via_terminals": [
+            {
+              "uuid": "62a9f2d3-b088-536f-a6bd-854d36b20797",
+              "position_native_mm": [
+                106.15,
+                83.65
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "74fa2993-770f-553b-af51-5d8ab7cdb881",
+              "position_native_mm": [
+                103.45,
+                82.6
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            }
+          ],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "VBUS",
+      "engineering_class": "root_reserved_power_or_return",
+      "physical_pad_count": 7,
+      "group_count": 3,
+      "open_contribution": 2,
+      "groups": [
+        {
+          "stable_group_id": "d413228d5c9e310e",
+          "pad_refs": [
+            "CHG0.A",
+            "D4.A",
+            "R4.2",
+            "U3.4",
+            "X6.A4B9"
+          ],
+          "pad_positions_native_mm": {
+            "U3.4": [
+              100.39517,
+              83.738163
+            ],
+            "X6.A4B9": [
+              102.4,
+              79.655
+            ],
+            "D4.A": [
+              96.999141,
+              91.501032
+            ],
+            "CHG0.A": [
+              107.999567,
+              82.101987
+            ],
+            "R4.2": [
+              100.201085,
+              87.99071
+            ]
+          },
+          "bounds_native_mm": [
+            96.499141,
+            77.3479,
+            109.2155,
+            91.901032
+          ],
+          "copper_layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "existing_through_via_terminals": [
+            {
+              "uuid": "4747f15c-f1d4-57e2-a918-6a5ba8c942a2",
+              "position_native_mm": [
+                99.9499,
+                82.7885
+              ],
+              "diameter_mm": 0.604,
+              "drill_mm": 0.35,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "5a4c5ee3-8196-5ddd-8efc-d81650e37717",
+              "position_native_mm": [
+                108.9135,
+                81.9063
+              ],
+              "diameter_mm": 0.604,
+              "drill_mm": 0.35,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "e04f0259-574b-56aa-b542-72fdc13d1427",
+              "position_native_mm": [
+                101.9,
+                78.23
+              ],
+              "diameter_mm": 0.604,
+              "drill_mm": 0.35,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            }
+          ],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "abcffd1a266c56c6",
+          "pad_refs": [
+            "Q3.1"
+          ],
+          "pad_positions_native_mm": {
+            "Q3.1": [
+              96.55,
+              106.95
+            ]
+          },
+          "bounds_native_mm": [
+            96.3,
+            106.795,
+            96.8,
+            107.105
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "ef0b809fc77a7118",
+          "pad_refs": [
+            "X6.B4A9"
+          ],
+          "pad_positions_native_mm": {
+            "X6.B4A9": [
+              97.6,
+              79.655
+            ]
+          },
+          "bounds_native_mm": [
+            97.3125,
+            79.08,
+            97.8875,
+            80.23
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "VCORE",
+      "engineering_class": "root_reserved_power_or_return",
+      "physical_pad_count": 7,
+      "group_count": 3,
+      "open_contribution": 2,
+      "groups": [
+        {
+          "stable_group_id": "9be7f0f079b2f357",
+          "pad_refs": [
+            "C6.2",
+            "IC1.50"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.50": [
+              103.45,
+              99.8
+            ],
+            "C6.2": [
+              104.989898,
+              99.999744
+            ]
+          },
+          "bounds_native_mm": [
+            103.0125,
+            99.699744,
+            105.289898,
+            100.299744
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "d8104d7fc554f755",
+          "pad_refs": [
+            "C18.2",
+            "IC1.23"
+          ],
+          "pad_positions_native_mm": {
+            "C18.2": [
+              95.31164,
+              101.003449
+            ],
+            "IC1.23": [
+              96.55,
+              100.6
+            ]
+          },
+          "bounds_native_mm": [
+            95.01164,
+            100.5,
+            96.9875,
+            101.303449
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "6bbf8af1705279bc",
+          "pad_refs": [
+            "C7.2",
+            "C8.1",
+            "IC1.45"
+          ],
+          "pad_positions_native_mm": {
+            "C8.1": [
+              104.993069,
+              102.430145
+            ],
+            "IC1.45": [
+              103.45,
+              101.8
+            ],
+            "C7.2": [
+              107.295336,
+              102.200014
+            ]
+          },
+          "bounds_native_mm": [
+            103.0125,
+            101.7,
+            107.595336,
+            102.730145
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "VHI",
+      "engineering_class": "root_reserved_power_or_return",
+      "physical_pad_count": 7,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "fd7da5a8f63e122a",
+          "pad_refs": [
+            "D4.C",
+            "Q1.2",
+            "Q3.2",
+            "R16.2"
+          ],
+          "pad_positions_native_mm": {
+            "R16.2": [
+              84.007431,
+              103.801519
+            ],
+            "Q3.2": [
+              96.55,
+              107.95
+            ],
+            "D4.C": [
+              98.999141,
+              91.501032
+            ],
+            "Q1.2": [
+              94.6,
+              107.05
+            ]
+          },
+          "bounds_native_mm": [
+            83.707431,
+            91.101032,
+            101.2,
+            108.45
+          ],
+          "copper_layers": [
+            "F.Cu",
+            "In1.Cu",
+            "In2.Cu",
+            "B.Cu"
+          ],
+          "existing_through_via_terminals": [
+            {
+              "uuid": "3449e8e5-9d20-5e38-b0b8-26181ef852af",
+              "position_native_mm": [
+                100.0,
+                102.3
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "4ea910c9-1b77-5fc8-81ec-2286bbfa4727",
+              "position_native_mm": [
+                100.0,
+                97.7
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "4eb92bfd-5490-5caf-b8ce-26395219e064",
+              "position_native_mm": [
+                100.0,
+                92.5
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "93d6b652-262a-5185-bd13-16f6b13f4789",
+              "position_native_mm": [
+                96.75,
+                105.55
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+              "position_native_mm": [
+                95.1,
+                106.0
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            },
+            {
+              "uuid": "f2148815-45ba-5519-b656-60de22e1c38e",
+              "position_native_mm": [
+                94.85,
+                103.6
+              ],
+              "diameter_mm": 0.6,
+              "drill_mm": 0.3,
+              "layers": [
+                "F.Cu",
+                "In1.Cu",
+                "In2.Cu",
+                "B.Cu"
+              ]
+            }
+          ],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "4855b79328907b62",
+          "pad_refs": [
+            "C1.1",
+            "R3.2",
+            "U2.1"
+          ],
+          "pad_positions_native_mm": {
+            "C1.1": [
+              95.965225,
+              87.108818
+            ],
+            "U2.1": [
+              85.01324,
+              92.6921
+            ],
+            "R3.2": [
+              81.562727,
+              93.294243
+            ]
+          },
+          "bounds_native_mm": [
+            81.262727,
+            86.808818,
+            96.590225,
+            93.594243
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "VO+",
+      "engineering_class": "root_reserved_power_or_return",
+      "physical_pad_count": 3,
+      "group_count": 2,
+      "open_contribution": 1,
+      "groups": [
+        {
+          "stable_group_id": "8cceaf632e0f8c84",
+          "pad_refs": [
+            "C22.1",
+            "FB1.2"
+          ],
+          "pad_positions_native_mm": {
+            "FB1.2": [
+              115.188146,
+              90.010292
+            ],
+            "C22.1": [
+              116.95189,
+              91.419232
+            ]
+          },
+          "bounds_native_mm": [
+            114.863146,
+            89.410292,
+            117.25189,
+            91.719232
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "dfc7f3280c0953e0",
+          "pad_refs": [
+            "J1.1"
+          ],
+          "pad_positions_native_mm": {
+            "J1.1": [
+              113.705,
+              99.75
+            ]
+          },
+          "bounds_native_mm": [
+            113.205,
+            99.45,
+            114.205,
+            100.05
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    },
+    {
+      "net": "~{RESET}",
+      "engineering_class": "candidate_low_speed_control_not_auto_released",
+      "physical_pad_count": 3,
+      "group_count": 3,
+      "open_contribution": 2,
+      "groups": [
+        {
+          "stable_group_id": "16455a658e1472ad",
+          "pad_refs": [
+            "TP7.P$1"
+          ],
+          "pad_positions_native_mm": {
+            "TP7.P$1": [
+              107.703226,
+              83.875708
+            ]
+          },
+          "bounds_native_mm": [
+            106.953226,
+            83.125708,
+            108.453226,
+            84.625708
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "e082a0a2ec3df869",
+          "pad_refs": [
+            "IC1.26"
+          ],
+          "pad_positions_native_mm": {
+            "IC1.26": [
+              96.55,
+              101.8
+            ]
+          },
+          "bounds_native_mm": [
+            96.1125,
+            101.7,
+            96.9875,
+            101.9
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        },
+        {
+          "stable_group_id": "26e3a705ee07568e",
+          "pad_refs": [
+            "R1.2"
+          ],
+          "pad_positions_native_mm": {
+            "R1.2": [
+              95.996993,
+              105.005938
+            ]
+          },
+          "bounds_native_mm": [
+            95.696993,
+            104.705938,
+            96.296993,
+            105.305938
+          ],
+          "copper_layers": [
+            "F.Cu"
+          ],
+          "existing_through_via_terminals": [],
+          "private_endpoint_tags": {},
+          "contains_filled_island": false
+        }
+      ]
+    }
+  ],
+  "root_reserved": {
+    "sensitive_interfaces": [
+      {
+        "net": "D+",
+        "group_ids": [
+          "f54d1d6f43ed6773",
+          "6ffb2d9389c868b7"
+        ]
+      },
+      {
+        "net": "D-",
+        "group_ids": [
+          "667edcf5fb30e33a",
+          "f17e9c41c1113b86"
+        ]
+      },
+      {
+        "net": "GAIN",
+        "group_ids": [
+          "66b5aa45480ae3c8",
+          "d2b407a7a2edfee1"
+        ]
+      },
+      {
+        "net": "I2S_BCLK",
+        "group_ids": [
+          "b99223be9d6cf1e1",
+          "6d87e4b7c7f9f977",
+          "2b88007612c5045f"
+        ]
+      },
+      {
+        "net": "I2S_DIN",
+        "group_ids": [
+          "f08f8928290974b4",
+          "28d4768a174ae820",
+          "e14350e15c92e37d"
+        ]
+      },
+      {
+        "net": "I2S_LRCLK",
+        "group_ids": [
+          "e42c1dd1296cae03",
+          "8062430f9b26217c",
+          "dcb3f614fc965af1"
+        ]
+      },
+      {
+        "net": "SCL",
+        "group_ids": [
+          "ce82f100adef2b2b",
+          "fbf73d0ee1ee0e0b"
+        ]
+      },
+      {
+        "net": "SWCLK",
+        "group_ids": [
+          "b7bae9f3503d3104",
+          "434430ec60a13591"
+        ]
+      },
+      {
+        "net": "SWDIO",
+        "group_ids": [
+          "a6fdfe98376fde2b",
+          "729e42e9d30c7036"
+        ]
+      },
+      {
+        "net": "USB_D+",
+        "group_ids": [
+          "41faf3297481b983",
+          "87e3d7ba3edaf389"
+        ]
+      },
+      {
+        "net": "USB_D-",
+        "group_ids": [
+          "d01328085816e163",
+          "d8843d003ddc1da1"
+        ]
+      }
+    ],
+    "clock_structures": [],
+    "QSPI": [],
+    "power_and_return": [
+      {
+        "net": "GND",
+        "group_ids": [
+          "66dbd6764a51eb58",
+          "a3494d1acaafaddf",
+          "4a56aad745ea21dc",
+          "56477d3e91f6db5a",
+          "ed74547cf22af402",
+          "abddee34295330a0",
+          "3d1e108bb2d0ecb8",
+          "df3aa662bb9da460",
+          "133d76e4bf554dd1",
+          "c4713881db55d6b2"
+        ]
+      },
+      {
+        "net": "Net-(FB2-P$1)",
+        "group_ids": [
+          "355566ec8c1f1724",
+          "5ae4d73cd67e7c56"
+        ]
+      },
+      {
+        "net": "POWER",
+        "group_ids": [
+          "852335ffb6eb37ae",
+          "afec57a8c2d5bfd4",
+          "e710555c02696a8e"
+        ]
+      },
+      {
+        "net": "VAMP",
+        "group_ids": [
+          "58e802489fd700f8",
+          "3b34779bf2c42105"
+        ]
+      },
+      {
+        "net": "VBAT",
+        "group_ids": [
+          "c7e2f353dfe62bee",
+          "bbc6a82ada267fd5"
+        ]
+      },
+      {
+        "net": "VBUS",
+        "group_ids": [
+          "d413228d5c9e310e",
+          "abcffd1a266c56c6",
+          "ef0b809fc77a7118"
+        ]
+      },
+      {
+        "net": "VCORE",
+        "group_ids": [
+          "9be7f0f079b2f357",
+          "d8104d7fc554f755",
+          "6bbf8af1705279bc"
+        ]
+      },
+      {
+        "net": "VHI",
+        "group_ids": [
+          "fd7da5a8f63e122a",
+          "4855b79328907b62"
+        ]
+      },
+      {
+        "net": "VO+",
+        "group_ids": [
+          "8cceaf632e0f8c84",
+          "dfc7f3280c0953e0"
+        ]
+      }
+    ],
+    "policy": [
+      "Preserve USB differential/debug, I2S, crystal/QSPI, boost/protection/sense and thermal structures.",
+      "Do not route new fast signals through the clock void or assume continuous In1 beneath it.",
+      "VCORE, power/current, private return and plane decisions remain Astra-reserved.",
+      "SCL/GAIN retain congestion reservations; reset requires recovery/noise review."
+    ]
+  },
+  "candidate_routine_groups": {
+    "low_speed_controls_not_auto_released": [
+      {
+        "net": "AMP_MUTE",
+        "groups": [
+          {
+            "stable_group_id": "a93b47feeabb770d",
+            "pad_refs": [
+              "Q4.1",
+              "R20.2"
+            ]
+          },
+          {
+            "stable_group_id": "418935ca89ffba6a",
+            "pad_refs": [
+              "TP15.P$1"
+            ]
+          },
+          {
+            "stable_group_id": "73383d528ce50c16",
+            "pad_refs": [
+              "IC1.31"
+            ]
+          }
+        ]
+      },
+      {
+        "net": "BUTTON",
+        "groups": [
+          {
+            "stable_group_id": "bb7ddf7f266a4bdf",
+            "pad_refs": [
+              "C25.1",
+              "R21.2",
+              "R22.1"
+            ]
+          },
+          {
+            "stable_group_id": "4fe15f29a0d27f7d",
+            "pad_refs": [
+              "IC1.30"
+            ]
+          }
+        ]
+      },
+      {
+        "net": "D13",
+        "groups": [
+          {
+            "stable_group_id": "a0a4c1e39ca43ca4",
+            "pad_refs": [
+              "R7.1"
+            ]
+          },
+          {
+            "stable_group_id": "e44d9f8e5c7ab753",
+            "pad_refs": [
+              "IC1.16"
+            ]
+          }
+        ]
+      },
+      {
+        "net": "INT",
+        "groups": [
+          {
+            "stable_group_id": "e67de9a6efce5416",
+            "pad_refs": [
+              "IC4.4"
+            ]
+          },
+          {
+            "stable_group_id": "9937f6910976dcea",
+            "pad_refs": [
+              "IC1.34"
+            ]
+          }
+        ]
+      },
+      {
+        "net": "~{RESET}",
+        "groups": [
+          {
+            "stable_group_id": "16455a658e1472ad",
+            "pad_refs": [
+              "TP7.P$1"
+            ]
+          },
+          {
+            "stable_group_id": "e082a0a2ec3df869",
+            "pad_refs": [
+              "IC1.26"
+            ]
+          },
+          {
+            "stable_group_id": "26e3a705ee07568e",
+            "pad_refs": [
+              "R1.2"
+            ]
+          }
+        ]
+      }
+    ],
+    "other_local_or_ordinary_groups_needing_release": []
+  },
+  "proposed_coherent_batches": [
+    {
+      "priority": 1,
+      "name": "Return and local-ground disposition",
+      "exact_scope": [
+        {
+          "net": "GND",
+          "groups": [
+            {
+              "stable_group_id": "a3494d1acaafaddf",
+              "pad_refs": [
+                "GAIN0.1"
+              ]
+            },
+            {
+              "stable_group_id": "4a56aad745ea21dc",
+              "pad_refs": [
+                "X6.A1B12"
+              ]
+            },
+            {
+              "stable_group_id": "56477d3e91f6db5a",
+              "pad_refs": [
+                "C20.2",
+                "U3.2"
+              ]
+            },
+            {
+              "stable_group_id": "ed74547cf22af402",
+              "pad_refs": [
+                "IC4.6",
+                "IC4.7"
+              ]
+            },
+            {
+              "stable_group_id": "abddee34295330a0",
+              "pad_refs": [
+                "C13.2",
+                "C17.2",
+                "C6.1",
+                "C7.1",
+                "C8.2"
+              ]
+            },
+            {
+              "stable_group_id": "3d1e108bb2d0ecb8",
+              "pad_refs": [
+                "C14.2",
+                "C5.2",
+                "Q2.2",
+                "R17.2"
+              ]
+            },
+            {
+              "stable_group_id": "df3aa662bb9da460",
+              "pad_refs": [
+                "U1.4",
+                "U1.PAD"
+              ]
+            },
+            {
+              "stable_group_id": "133d76e4bf554dd1",
+              "pad_refs": [
+                "IC4.1",
+                "IC4.2",
+                "IC4.3"
+              ]
+            },
+            {
+              "stable_group_id": "c4713881db55d6b2",
+              "pad_refs": [
+                "C18.1"
+              ]
+            }
+          ]
+        },
+        {
+          "net": "VCORE",
+          "groups": [
+            {
+              "stable_group_id": "9be7f0f079b2f357",
+              "pad_refs": [
+                "C6.2",
+                "IC1.50"
+              ]
+            },
+            {
+              "stable_group_id": "d8104d7fc554f755",
+              "pad_refs": [
+                "C18.2",
+                "IC1.23"
+              ]
+            },
+            {
+              "stable_group_id": "6bbf8af1705279bc",
+              "pad_refs": [
+                "C7.2",
+                "C8.1",
+                "IC1.45"
+              ]
+            }
+          ]
+        }
+      ],
+      "constraints": [
+        "Astra engineering release required.",
+        "Resolve return/plane access before signals that depend on these local references.",
+        "Preserve both private pickoffs, protected In1, contact reservations, clock/boost exclusions and C24 filled/capped process binding."
+      ]
+    },
+    {
+      "priority": 2,
+      "name": "Peripheral low-speed controls by shared physical corridor",
+      "exact_scope": [
+        {
+          "net": "AMP_MUTE",
+          "groups": [
+            {
+              "stable_group_id": "a93b47feeabb770d",
+              "pad_refs": [
+                "Q4.1",
+                "R20.2"
+              ]
+            },
+            {
+              "stable_group_id": "418935ca89ffba6a",
+              "pad_refs": [
+                "TP15.P$1"
+              ]
+            },
+            {
+              "stable_group_id": "73383d528ce50c16",
+              "pad_refs": [
+                "IC1.31"
+              ]
+            }
+          ]
+        },
+        {
+          "net": "BUTTON",
+          "groups": [
+            {
+              "stable_group_id": "bb7ddf7f266a4bdf",
+              "pad_refs": [
+                "C25.1",
+                "R21.2",
+                "R22.1"
+              ]
+            },
+            {
+              "stable_group_id": "4fe15f29a0d27f7d",
+              "pad_refs": [
+                "IC1.30"
+              ]
+            }
+          ]
+        },
+        {
+          "net": "D13",
+          "groups": [
+            {
+              "stable_group_id": "a0a4c1e39ca43ca4",
+              "pad_refs": [
+                "R7.1"
+              ]
+            },
+            {
+              "stable_group_id": "e44d9f8e5c7ab753",
+              "pad_refs": [
+                "IC1.16"
+              ]
+            }
+          ]
+        },
+        {
+          "net": "INT",
+          "groups": [
+            {
+              "stable_group_id": "e67de9a6efce5416",
+              "pad_refs": [
+                "IC4.4"
+              ]
+            },
+            {
+              "stable_group_id": "9937f6910976dcea",
+              "pad_refs": [
+                "IC1.34"
+              ]
+            }
+          ]
+        },
+        {
+          "net": "~{RESET}",
+          "groups": [
+            {
+              "stable_group_id": "16455a658e1472ad",
+              "pad_refs": [
+                "TP7.P$1"
+              ]
+            },
+            {
+              "stable_group_id": "e082a0a2ec3df869",
+              "pad_refs": [
+                "IC1.26"
+              ]
+            },
+            {
+              "stable_group_id": "26e3a705ee07568e",
+              "pad_refs": [
+                "R1.2"
+              ]
+            }
+          ]
+        }
+      ],
+      "constraints": [
+        "Not automatically released; exclude central MCU/core/USB and boost/audio power corridors.",
+        "Keep reset recovery access and noise immunity.",
+        "Batch only groups whose recorded bounds support a shared corridor after return disposition."
+      ]
+    }
+  ],
+  "private_complete_ledger": {
+    "session_relative_path": "files\\remaining-routing-full-ledger.json",
+    "sha256": "3a4f2646c5bf91a0251a3bff8ac872f2439d773ee7876bf183f05884bbfd79cb",
+    "contents": "All nets, all pad groups, exact pad UUIDs/positions, bounds, layer access, and existing through-via terminals."
+  },
+  "limitations": [
+    "Read-only connectivity inventory; no route geometry, candidate search, refill, or DRC rerun.",
+    "Batch proposals are release groupings, not route approval or SI/PI/manufacturing qualification."
+  ],
+  "execution": {
+    "tool_sha256": "a43a5b949a77b0ed4d727850c097bab6e34c9f16f75874c62035e0e00ca4869a",
+    "elapsed_seconds": 26.375,
+    "attempts": 1,
+    "corrections": 1
+  }
+}
