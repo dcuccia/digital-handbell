@@ -166,6 +166,27 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**IMU return batch blocked; accepted board unchanged:** the
+[bounded batch report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-ground-batch.json)
+records no passing proposal: IC4.6/7 had 0/4 F bridges and 0/27 via
+sites; IC4.1/2/3 had 0/4 bridges and 0/48 via sites. Fixed signal/power
+copper, pads, drills and rear-contact exclusions blocked the tested
+geometry. No candidate, routing, refill or new DRC run occurred.
+The active PCB/manifest remain `c7b6b6fd...` / `08bf866d...`, **41 opens**.
+The item used its two corrective retries; do not extend the same screen.
+
+Recommended next item, pending owner direction: one bounded native
+feasible-via-centre analysis of this local IMU region, including interior
+and edge access rather than another point sweep. Subtract the full-span
+copper, pad, drill, contact and protected-region constraints from the
+allowed region, then screen any resulting representative centre and its
+short F connection against the actual native shapes. This would determine
+whether the finite samples missed usable space before authorizing local
+trace changes. It is not permission to build a general router, relax
+rules, move parts or claim global impossibility from an empty conservative
+approximation. Alternatively, park the IMU item and select an independent
+batch under its own engineering release.
+
 **Remaining-routing inventory complete:** the
 [exact native ledger](../hardware/handbell/iterations/printed-bell-four-layer/reports/remaining-routing-inventory.json)
 reconciles 25 disconnected nets to **41 opens**: nine GND, two VCORE,
@@ -174,13 +195,13 @@ and existing layer transitions. Power/return topology, USB, debug, I2S,
 SCL/GAIN and clock/QSPI constraints remain reserved for root decisions;
 low-speed controls are not automatically released into their corridors.
 
-Next is one [IMU local-return batch](routing-agent-policy.md#imu-local-return-closure-batch)
-covering the existing IC4.1/2/3 and IC4.6/7 GND groups together.
+The subsequent [IMU local-return batch](routing-agent-policy.md#imu-local-return-closure-batch)
+covered the existing IC4.1/2/3 and IC4.6/7 GND groups together.
 Prefer short F joins to existing main ground; use only screened ordinary
 off-pad vias if needed. Preserve the Mode-1 interface, current signal
 copper, contact exclusions and all other design decisions. Stop on
 obstacles requiring rerouting rather than expanding the scope.
-The accepted board remains **41 opens** until that candidate is reviewed.
+Its blocked outcome is recorded above; the accepted board remains **41 opens**.
 
 **Current accepted checkpoint: 41 opens.** Astra accepts exact PCB
 `c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`,
