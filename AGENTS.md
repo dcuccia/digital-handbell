@@ -2,18 +2,17 @@
 
 ## Bounded engineering work
 
-- **September 23 IMU re-layout execution incomplete:** the owner authorized
-  coordinated re-layout, but the executor only screened three moved-pad
-  tail constructions. It did not construct a replacement I2C/supply
-  topology, relocate SDA or exercise authorized internal boundary rerouting.
-  The 41-open source remains unchanged; no candidate exists. Stop this
-  exhausted trial method, not the owner's broader authorization. Before
-  further execution, Astra must establish an actual replacement-fanout
-  method under the existing bounded release in
-  `docs/pcb-closure-plan.md#owner-pause-and-next-item`. Do not treat former
-  pad centres as immutable anchors after moving a fine-pitch package or
-  claim that unexercised freedoms have failed. Preserve all outside
-  interfaces, critical routes and manufacturing rules.
+- **September 23 unattended continuation authorized:** the owner asked for
+  continued iteration while away for the next couple of hours, using the
+  agreed priorities and Astra/Sol split. Continue sequential bounded items,
+  not the exhausted shifted-pad-tail method. The first item is an actual
+  source-bound local rip-up fixture and replacement SCL escape; exact scope
+  is in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
+  A private working copy may be temporarily disconnected during explicitly
+  authorized rework; the accepted 41-open package must stay untouched.
+  Require complete restoration and coupled engineering review before
+  promotion. Preserve outside interfaces, critical routes and manufacturing
+  rules; retain finite retry limits and stop on a genuine scope blocker.
 - **September 21 four-layer migration approved:** preserve the accepted
   two-layer `printed-bell-clock-draft` as evidence and establish one separate
   `printed-bell-four-layer` working candidate. Follow the four-layer batch,

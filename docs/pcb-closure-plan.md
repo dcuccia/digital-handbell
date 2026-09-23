@@ -166,6 +166,46 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 23, 14:48 owner authorization: continue while the owner is away.**
+The owner explicitly requested continued iteration over the next couple of
+hours, aligned with the agreed priorities and strategies. Retain the bounded
+item/retry/checkpoint rules and pinned Sol execution; no fabrication,
+supplier upload or purchasing authority is added.
+
+**Current item: real rip-up and replacement-fanout method.** Build one
+private, explicitly incomplete working PCB/manifest from the unchanged
+41-open accepted source. A disconnected intermediate is permitted during
+authorized rework; complete restoration is an acceptance gate, not a
+requirement to retain every obsolete local connection while editing.
+
+The native rework rectangle is x86.6..93.1, y90.5..95.9 mm. Start with
+IC4 alone moved north 0.50 mm, preserving all rotations and other parts.
+Cut the justified affected branches from the 69-track inventory and clip
+the internal portions of six declared boundary tracks to that rectangle.
+The seventh, `a8cbe912...`, belongs to the accepted In2 supply bridge and
+remains wholly protected, along with its endpoint via and all other
+accepted critical routes. Preserve exterior geometry and declare actual
+retained terminals, rather than old IC4 pad centres. The two previously
+released local vias may be removed in the incomplete fixture, with their
+replacement obligations recorded; this is not completed connectivity.
+
+Require native loading, source/exterior invariants and a real split/rejoin
+control. Invalidate stale filled caches without changing zone definitions.
+Then demonstrate an actual native-screened SCL path from moved IC4.13 to
+the retained boundary port `(93.1,92.7368)`, using existing routing helpers,
+not straight tails to obsolete pad terminals. Limit this preparatory item
+to 12 minutes and two implementation corrections. Preserve one working
+artifact and a concise terminal/cut ledger, even if later routing is
+incomplete; do not start a generic router/tooling project.
+
+The SCL path is tentative method evidence, not accepted routing that may
+consume the remaining ground/power/INT corridors. After reviewing this
+artifact, the next dependent items are complete coupled IMU replacement
+routing, electrical acceptance gates, then required mechanical rebinding.
+Those milestones must preserve every prior connection and close the two
+IMU ground groups and SCL pull-up before promotion. Reuse useful staged
+work with a finite repair list instead of repeatedly starting new layouts.
+
 **Latest result: execution incomplete, not a failed complete re-layout.**
 The [three-construction report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-coordinated-relayout-trial.json)
 (SHA-256 `81bd4b3b371dc102cc41222107f124cdf608182fd404b92508a03d8b7b3901cf`)

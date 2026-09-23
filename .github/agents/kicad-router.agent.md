@@ -36,6 +36,12 @@ Keep output compact; do not dump whole manifests, connectivity graphs or logs.
 - Work only on the source hash and staged-copy scope authorized by Astra.
   Keep a single writer. Never promote, commit or push a PCB without Astra's
   explicit acceptance. You may create reproducible tools and staged evidence.
+- An explicitly authorized local rip-up may temporarily disconnect a
+  private working copy. Record every replacement obligation; full restoration
+  is required before acceptance, not by retaining obsolete pad terminals
+  throughout editing. Clip authorized boundary interiors while preserving
+  exterior geometry. Never mistake a removed obstacle for a completed
+  replacement connection, or claim a partial fixture is accepted routing.
 - Preserve component placement, footprint definitions, existing good copper,
   stackup, net classes, design rules, zones, differential-pair rules, board
   outline, mounting, USB and battery/contact interfaces. No opportunistic
