@@ -1,0 +1,1589 @@
+{
+  "status": "READ_ONLY_C12_ISLAND_ACCESS_REVIEW_COMPLETE",
+  "scope": "Read-only finite C12-connected F-island off-pad GND-via access review.",
+  "source_pcb_sha256": "01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00",
+  "manifest_sha256": "d69d1ae6267eafe5976e528fd47d30cbed81ff01df058dbceca9d9c6cdc49b8c",
+  "active_design_files_written": false,
+  "kicad_version": "10.0.6",
+  "actual_C12_connected_F_geometry": {
+    "pad_members": [
+      "C12.2"
+    ],
+    "F_island_count": 1,
+    "F_islands": [
+      {
+        "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+        "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+        "island_index": 12,
+        "bounds_native_mm": [
+          94.26866,
+          93.7894,
+          99.3106,
+          94.757003
+        ],
+        "outline_count": 1,
+        "area_mm2": 2.353169160356
+      }
+    ],
+    "screened_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12"
+  },
+  "finite_candidate_set": {
+    "generation_method": {
+      "method": "Longest actual native C12-island boundary edges, their midpoints and vertices; outward normals selected by native polygon containment.",
+      "anchor_count": 16,
+      "offsets_mm": [
+        0.45,
+        0.7,
+        0.95
+      ],
+      "window_native_mm": [
+        94.8,
+        92.4,
+        100.1,
+        95.5
+      ],
+      "maximum_sites": 48
+    },
+    "persisted_before_screening": true,
+    "private_candidate_centres_sha256": "611498d54fb62a2696b47a826017258b3a62853333c2796b4462389af6d3fcab",
+    "generated_site_count": 38,
+    "screened_site_count": 38,
+    "prior_pad_centered_48_site_screen_repeated": false
+  },
+  "screening": {
+    "via": {
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "ordinary_through_span": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ]
+    },
+    "stub": {
+      "layer": "F.Cu",
+      "width_mm": 0.3,
+      "maximum_length_mm": 1.05
+    },
+    "feasible_count": 0,
+    "viable_choices": [],
+    "reject_class_counts": {
+      "does-not-contact-main-In1": 3,
+      "drill-clearance": 3,
+      "foreign-copper-clearance": 38,
+      "via-pad-overlap": 2
+    },
+    "grouped_blockers": [
+      {
+        "uuid": "8b1b53b0-240a-5fc7-b78e-b5ee023450c3",
+        "net": "+3V3",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 14,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            97.899276,
+            94.2183,
+            98.937509,
+            94.737577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            4,
+            5,
+            6,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            37,
+            38
+          ]
+        }
+      },
+      {
+        "uuid": "8f0aa971-d928-53eb-8391-6db5359d932c",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 14,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.179025,
+            93.7894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            20,
+            21,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "a4fd0c01-2bef-5c7a-9688-ef334f5c7fff",
+        "net": "+3V3",
+        "layer": "In2.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 13,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.145846,
+            94.0134,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            1,
+            2,
+            4,
+            5,
+            22,
+            28,
+            29,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "a869dd24-8003-5303-82af-32d37e552b3a",
+        "net": "+3V3",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 12,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.145846,
+            94.2183,
+            98.281916,
+            94.503842
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            22,
+            23,
+            24,
+            28,
+            29,
+            30
+          ]
+        }
+      },
+      {
+        "uuid": "8b1b53b0-240a-5fc7-b78e-b5ee023450c3",
+        "net": "+3V3",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 11,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            97.899276,
+            94.2183,
+            98.937509,
+            94.737577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            4,
+            5,
+            6,
+            22,
+            23,
+            25,
+            26,
+            28,
+            29,
+            37,
+            38
+          ]
+        }
+      },
+      {
+        "uuid": "4e5277f0-2e18-56ea-aeec-38e6be6c4936",
+        "net": "SCL",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 10,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            95.424058,
+            93.7894,
+            99.1866,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            8,
+            9,
+            11,
+            12,
+            14,
+            15,
+            17,
+            18,
+            20,
+            21
+          ]
+        }
+      },
+      {
+        "uuid": "08b2bbf2-3bcc-5b2a-a32f-a3866f99421f",
+        "net": "VHI",
+        "layer": "B.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "35c51e50-2888-5a3b-ae2c-d3a576a1909a",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "7ba94114-dde7-5fd0-b960-e67e2aafbf13",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            95.424058,
+            93.7894,
+            96.427224,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        }
+      },
+      {
+        "uuid": "7c93ffe2-a33b-5cea-84f2-1e3cee9abe08",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "8f0aa971-d928-53eb-8391-6db5359d932c",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.179025,
+            93.7894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            7,
+            8,
+            10,
+            11,
+            13,
+            14,
+            19,
+            20,
+            33
+          ]
+        }
+      },
+      {
+        "uuid": "a869dd24-8003-5303-82af-32d37e552b3a",
+        "net": "+3V3",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.145846,
+            94.2183,
+            98.281916,
+            94.503842
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            1,
+            2,
+            4,
+            5,
+            22,
+            23,
+            28,
+            29,
+            30
+          ]
+        }
+      },
+      {
+        "uuid": "35c51e50-2888-5a3b-ae2c-d3a576a1909a",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 7,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "4e5277f0-2e18-56ea-aeec-38e6be6c4936",
+        "net": "SCL",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 7,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            95.424058,
+            93.7894,
+            99.1866,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            9,
+            12,
+            15,
+            17,
+            18,
+            20,
+            21
+          ]
+        }
+      },
+      {
+        "uuid": "7ba94114-dde7-5fd0-b960-e67e2aafbf13",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 7,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            95.424058,
+            93.7894,
+            96.427224,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            10,
+            11,
+            12,
+            16,
+            17,
+            19,
+            20
+          ]
+        }
+      },
+      {
+        "uuid": "7c93ffe2-a33b-5cea-84f2-1e3cee9abe08",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 7,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "c95b4b07-ab88-5663-94b8-da9760c93561",
+        "net": "+3V3",
+        "layer": "F.Cu",
+        "type": "PAD",
+        "affected_geometry": "stub",
+        "site_count": 7,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            98.498804,
+            94.613577,
+            99.3106,
+            94.737577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            25,
+            26,
+            27,
+            35,
+            36,
+            37,
+            38
+          ]
+        }
+      },
+      {
+        "uuid": "1cd5fad8-f1ee-54d3-9ed3-8faf003a4987",
+        "net": "SCL",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 6,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.313489
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            32,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "74a94679-d6b8-5775-ad3c-b8ffb31b85a8",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 6,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.313489
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            31,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "e044c152-8e84-5a06-926e-d95f31c507a9",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 6,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.179025,
+            93.7894,
+            96.427224,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            10,
+            11,
+            12,
+            19,
+            20,
+            21
+          ]
+        }
+      },
+      {
+        "uuid": "74a94679-d6b8-5775-ad3c-b8ffb31b85a8",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "7f154b17-25df-5e8a-9fc0-1bbc1fca0ae4",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "c455367b-57eb-5f7f-b56e-e8ac4c4ab4c2",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "cd80c4c7-fb8c-5fe6-9049-8b13243caf61",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "d9f94f80-255e-5f9f-8cb6-3d616b2f122f",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "e044c152-8e84-5a06-926e-d95f31c507a9",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.179025,
+            93.7894,
+            96.427224,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            10,
+            11,
+            12,
+            19,
+            20
+          ]
+        }
+      },
+      {
+        "uuid": "e6da54ae-1afc-5930-b843-9d3df3386150",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "ea4701f0-a0dc-5e0b-b29a-1f5fdb3441aa",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "c455367b-57eb-5f7f-b56e-e8ac4c4ab4c2",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 4,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.313489
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            31,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "1cd5fad8-f1ee-54d3-9ed3-8faf003a4987",
+        "net": "SCL",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 3,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            14,
+            15,
+            34
+          ]
+        }
+      }
+    ],
+    "full_screening_rows_private_sha256": "5ae44917b3332843b03bac3052d8cb9b010d98deebc6423abb7c830fa7c85384"
+  },
+  "USBBOOT_existing_layer_transition_relevance": {
+    "existing_released_transition_vias": [
+      {
+        "uuid": "6a769f0c-bb2a-5e4f-a23f-f2870ed623cd",
+        "position_native_mm": [
+          87.7,
+          88.95
+        ],
+        "relation": "Outside the C12 screening window."
+      },
+      {
+        "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+        "position_native_mm": [
+          92.85,
+          92.1
+        ],
+        "relation": "Outside the C12 screening window."
+      },
+      {
+        "uuid": "8eb62f67-ac3f-5df3-bb5c-ca43015e2e5e",
+        "position_native_mm": [
+          98.9044,
+          93.3349
+        ],
+        "relation": "Within the C12 region and itself blocks three proposed through-via sites across all copper layers and drill clearance."
+      }
+    ],
+    "USBBOOT_blockers_in_public_inventory": [
+      {
+        "uuid": "8f0aa971-d928-53eb-8391-6db5359d932c",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 14,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.179025,
+            93.7894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            19,
+            20,
+            21,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "35c51e50-2888-5a3b-ae2c-d3a576a1909a",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "7ba94114-dde7-5fd0-b960-e67e2aafbf13",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            95.424058,
+            93.7894,
+            96.427224,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ]
+        }
+      },
+      {
+        "uuid": "7c93ffe2-a33b-5cea-84f2-1e3cee9abe08",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "8f0aa971-d928-53eb-8391-6db5359d932c",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 9,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.179025,
+            93.7894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            7,
+            8,
+            10,
+            11,
+            13,
+            14,
+            19,
+            20,
+            33
+          ]
+        }
+      },
+      {
+        "uuid": "35c51e50-2888-5a3b-ae2c-d3a576a1909a",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 7,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "7ba94114-dde7-5fd0-b960-e67e2aafbf13",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 7,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            95.424058,
+            93.7894,
+            96.427224,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            10,
+            11,
+            12,
+            16,
+            17,
+            19,
+            20
+          ]
+        }
+      },
+      {
+        "uuid": "7c93ffe2-a33b-5cea-84f2-1e3cee9abe08",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 7,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.613577
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "uuid": "74a94679-d6b8-5775-ad3c-b8ffb31b85a8",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 6,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.313489
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            31,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "e044c152-8e84-5a06-926e-d95f31c507a9",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 6,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.179025,
+            93.7894,
+            96.427224,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            10,
+            11,
+            12,
+            19,
+            20,
+            21
+          ]
+        }
+      },
+      {
+        "uuid": "74a94679-d6b8-5775-ad3c-b8ffb31b85a8",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "7f154b17-25df-5e8a-9fc0-1bbc1fca0ae4",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "c455367b-57eb-5f7f-b56e-e8ac4c4ab4c2",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "cd80c4c7-fb8c-5fe6-9049-8b13243caf61",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "d9f94f80-255e-5f9f-8cb6-3d616b2f122f",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "e044c152-8e84-5a06-926e-d95f31c507a9",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            96.179025,
+            93.7894,
+            96.427224,
+            93.8894
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            10,
+            11,
+            12,
+            19,
+            20
+          ]
+        }
+      },
+      {
+        "uuid": "e6da54ae-1afc-5930-b843-9d3df3386150",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "ea4701f0-a0dc-5e0b-b29a-1f5fdb3441aa",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "stub",
+        "site_count": 5,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.0134
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex"
+          ],
+          "site_indices": [
+            13,
+            14,
+            15,
+            33,
+            34
+          ]
+        }
+      },
+      {
+        "uuid": "c455367b-57eb-5f7f-b56e-e8ac4c4ab4c2",
+        "net": "USBBOOT",
+        "layer": "F.Cu",
+        "type": "track",
+        "affected_geometry": "via",
+        "site_count": 4,
+        "source_island_access_region": {
+          "boundary_bounds_native_mm": [
+            99.1866,
+            93.8894,
+            99.3106,
+            94.313489
+          ],
+          "anchor_kinds": [
+            "edge-end-vertex",
+            "edge-start-vertex",
+            "long-edge-midpoint"
+          ],
+          "site_indices": [
+            13,
+            31,
+            33,
+            34
+          ]
+        }
+      }
+    ],
+    "bounded_conclusion": "USBBOOT F tracks obstruct several C12 island-edge accesses, so a separately authorized existing-via layer transfer could remove named F blockers. This screen does not prove that such a change would create a viable GND-via site because the retained through-via and other +3V3/SCL/VHI obstacles also block the region.",
+    "routing_or_transition_design_performed": false
+  },
+  "limits": [
+    "Finite geometry-derived island-edge screen only; no global impossibility claim.",
+    "No PCB, manifest, project, rule, route, placement, refill, or DRC operation.",
+    "C12 +3V3 feed a869dd24 and accepted In2 +3V3 bridge remain untouched.",
+    "No C24 or VCORE work."
+  ],
+  "elapsed_seconds": 23.358999999938533,
+  "tool_sha256": "d2599eecb5392996cc354d1811628dc81c5c99db2013c9f2b0f7acfd3cf158d2",
+  "report_finalization": {
+    "private_rows_sha256": "5ae44917b3332843b03bac3052d8cb9b010d98deebc6423abb7c830fa7c85384",
+    "operation": "Added blocker-to-boundary-region aggregation only; no native board reload or geometry change."
+  },
+  "finalizer_sha256": "8dc67bccd34d60d350c14bed2d052a54e99687da5f757a7fe48bf42ac0df99ea"
+}

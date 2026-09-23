@@ -166,6 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**C12 access review complete; next paired trial:** the
+[whole-island screen](../hardware/handbell/iterations/printed-bell-four-layer/reports/c12-island-access-review.json)
+found no passing site among 38 geometry-derived ordinary-via proposals.
+The 2.353169 mm2 C12 F island is constrained by multiple power, USBBOOT,
+SCL and VHI items. This is not global impossibility, nor proof that
+another USBBOOT move would be sufficient.
+
+Astra's next [bounded paired trial](routing-agent-policy.md#c12-paired-supply-feed-and-ground-closure-trial)
+replaces the necessary long upstream F +3V3 feed with a short connection
+to the existing In2 supply bridge, while preserving the local capacitor/
+MCU branch. It tests nine specific ordinary +3V3-via sites, not another
+GND-via sweep. That may free the measured C12 ground bridge. No deletion
+is acceptable without restored supply and actual C12 ground closure.
+The new power via's local plane antipad must be reviewed; all existing
+private returns, contacts, components and other routing stay protected.
+The accepted board remains **43 opens** pending the staged result.
+
 **Current accepted checkpoint: 43 opens.** Astra accepts and promotes exact
 PCB `01a943c795ba97246c9681ad64088dfeb68ca94008cc9f08081d4c4f90789b00`,
 manifest `d69d1ae6267eafe5976e528fd47d30cbed81ff01df058dbceca9d9c6cdc49b8c`.
@@ -178,14 +195,10 @@ the 10-IU limit, and preserve actual clearances. In1 is unchanged.
 The earlier failed fragment-intersection mechanism remains unknown;
 electrical attachment is established from actual board-island connectivity.
 
-Next bounded item: read-only C12 ground-island access review. Inspect the
-whole existing connected F island rather than repeating the exhausted
-pad-centred radial screen. Identify a short ordinary-via access proposal
-or its exact blockers while preserving the necessary +3V3 branch, accepted
-In2 bridge, contacts and all existing routing. No C12 copper change,
-placement move or renewed general search is authorized by that review.
-C24 and remaining VCORE/routing, stackup, CAD binding, parity and
-manufacturing gates remain open. Earlier entries below are historical.
+The subsequent read-only C12 ground-island review is complete; its result
+and the next specifically released scope are above. C24 and remaining
+VCORE/routing, stackup, CAD binding, parity and manufacturing gates remain
+open. Earlier entries below are historical.
 
 **Owner-authorized completion of missing C23 gates:** the owner selected
 "Finish missing gates using actual board-island connectivity." Electrical

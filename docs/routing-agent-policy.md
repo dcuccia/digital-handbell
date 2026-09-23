@@ -273,6 +273,47 @@ placement, larger vias, longer stubs or repeated full-board trials.
 The finite follow-up replaces the prior item's site cap only; it does not
 reset the accepted board or authorize rerouting the completed R4 stitch.
 
+#### C12 paired supply-feed and ground-closure trial
+
+The C12 whole-island review found no ordinary GND-via site in its bounded
+38-site set. Do not repeat that screen or assume that moving USBBOOT alone
+would resolve the other power, SCL and VHI obstacles.
+
+Astra releases one separate staged paired replacement, not simple deletion
+of the necessary +3V3 feed. Retain the entire existing C12.1-to-IC1.10
+branch, including `8b1b53b0-240a-5fc7-b78e-b5ee023450c3`. Replace only
+`a869dd24-8003-5303-82af-32d37e552b3a` with a short F feed to one new
+ordinary +3V3 via and a short In2 connection to the existing +3V3 bridge.
+The original F feed remains authoritative unless that complete replacement
+and C12 ground closure pass review together.
+
+Use exactly nine candidate via centres: x97.6765/97.8765/98.0765 crossed
+with y94.7577/94.9077/95.0577 mm. Each uses diameter/drill 0.604/0.35 mm,
+a straight 0.20 mm F stub from the retained branch endpoint
+(97.8765,94.5077), and a 0.40 mm In2 connection to (via-x,94.25).
+Do not alter the existing bridge, pads, parts, vias, rules or other tracks.
+Screen all fixed foreign copper, pads, drills, slots, rear-contact metal
+and exclusions with existing native helpers. No via-in-pad or new special
+process is released. The paired feed replaces a longer 0.1778 mm branch;
+this is not a current-capacity or power-integrity qualification.
+
+Unlike a GND via, the proposed +3V3 via requires local F ground clearance
+and an In1 antipad. Authorize the established native refill for that
+specific purpose; do not treat permission to refill as permission to
+disconnect existing groups or change private returns. In1 change must
+remain confined to the new via's clearance neighborhood and preserve
+plane continuity and the existing clock/boost exclusions.
+
+After replacing the feed, close the measured C12/main-GND gap at
+x95.433470, y94.218300..94.797100 mm by refill, or by one 0.30 mm F
+bridge with at most 0.10 mm endpoint extension if needed. Retain the
+local capacitor-to-MCU copper and require all +3V3 pads to stay connected.
+Accept only the intended C12 GND merge (43 to 42 opens); any other merge,
+split, clearance finding, remote substantive refill change or unresolved
+return-path consequence stops for root review. Apply qualified actual
+filled-island connectivity, not the rejected difference-fragment proxy.
+No retries beyond the finite nine-site set or expansion to other nets.
+
 #### USBBOOT corridor relief for C23
 
 The exact +3V3 cut analysis separates C12.1/IC1.10 from their source.
