@@ -166,6 +166,22 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**C24 ordinary local attempt blocked:** the
+[bounded closure screen](../hardware/handbell/iterations/printed-bell-four-layer/reports/c24-ground-closure.json)
+found no passing proposal among four F bridges and 48 whole-island
+ordinary-via sites. The nearest main-ground gap is now 0.675778 mm,
+but its bridges cross local +3V3 copper; vias are constrained by SCL,
+SDA, power copper, drills and rear-contact metal. No candidate, refill
+or design change occurred; the accepted board remains **42 opens**.
+
+Next is a [read-only filled/capped through-via feasibility review](routing-agent-policy.md#c24-filledcapped-through-via-feasibility-review)
+at C24.2's exact pad centre, using only the established 0.604/0.35 mm
+and Default-class 0.60/0.30 mm definitions. Check native pad containment
+and all-layer obstructions before considering that process; do not assume
+via-in-pad solves a back-layer collision. Existing U4 process requirements
+are not proof of C24 supplier acceptance or unchanged cost. No routing,
+pad/paste changes, blind vias, rule reduction or fabrication is released.
+
 **Current accepted checkpoint: 42 opens.** Astra accepts exact PCB
 `834086079bc792165adcf642d41f3fd52c65446a355904934fcdf39b289227eb`,
 manifest `054f203553f7051e12f098acac9683539488e77e4a42266439b48c519dbf39dd`.
@@ -176,11 +192,8 @@ branch is unchanged. Refill joins C12 ground; all prior connections and
 private pickoffs remain intact. In1 stays connected around the reviewed
 local antipad, and remote cache differences are bounded to at most 1 IU.
 
-Next is the [bounded C24 ground closure](routing-agent-policy.md#c24-local-ground-closure):
-screen short F island bridges first, then at most 48 geometry-derived
-ordinary-via sites using the updated board. Stage only a legal local
-connection; do not move parts or reroute any existing net. Stop on
-meaningful obstacles rather than widening the search. C24 is the remaining
+The subsequent [bounded C24 ground closure](routing-agent-policy.md#c24-local-ground-closure)
+attempt is recorded above. C24 is the remaining
 unresolved group from the local supply-ground batch, not the last board
 ground connection. VCORE/other routing, stackup, CAD binding, parity and
 manufacturing gates remain open. Older entries below are historical.

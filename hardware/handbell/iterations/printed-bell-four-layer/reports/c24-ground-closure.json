@@ -1,0 +1,1038 @@
+{
+  "status": "SCREEN_ONLY_NO_FEASIBLE_C24_CLOSURE",
+  "source_pcb_sha256": "834086079bc792165adcf642d41f3fd52c65446a355904934fcdf39b289227eb",
+  "manifest_sha256": "054f203553f7051e12f098acac9683539488e77e4a42266439b48c519dbf39dd",
+  "kicad_version": "10.0.6",
+  "attempts": {
+    "implementation": 1,
+    "corrections": 0
+  },
+  "actual_C24_connected_F_geometry": {
+    "pad_members": [
+      "C24.2"
+    ],
+    "F_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+    "bounds_native_mm": [
+      91.651681,
+      93.0262,
+      92.382039,
+      93.8245
+    ],
+    "area_mm2": 0.5419145993005
+  },
+  "finite_screen": {
+    "persisted_before_screening": true,
+    "private_rows_sha256": "55344da06cb92c38f48123a47d3e5d3e44eea51ab5a1050a659c45d6f6541e9a",
+    "bridge": {
+      "method": "Four shortest native target/main F-island boundary pairs with 0.05 mm overlap into each island.",
+      "count": 4,
+      "feasible_count": 0,
+      "proposals": [
+        {
+          "index": 1,
+          "target_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+          "main_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+          "boundary_gap_mm": 0.6757778347844864,
+          "start_native_mm": [
+            92.314519,
+            93.631783
+          ],
+          "end_native_mm": [
+            93.035484,
+            93.91821
+          ],
+          "length_mm": 0.7757776469801068,
+          "width_mm": 0.3,
+          "reasons": [
+            "foreign-F"
+          ],
+          "obstacle_uuids": [
+            "09be5c73-f32a-54c9-a47b-bc78b49be280",
+            "3bc0ec37-9ec8-5282-ab10-e71d836c4ea4",
+            "40d6e443-9305-5f68-989e-569fb4e676e6",
+            "5f45c0a3-06d0-51eb-b81a-0bfc589ddfd6",
+            "637b83d2-960b-5ec2-a0aa-708a5ce6c903",
+            "853dbfd8-0ecb-58ee-a38a-3c7bba556e19",
+            "986e2274-8d21-5c90-9820-f44607819f8c",
+            "ae5186f8-c14f-543b-83b6-5de362326e62",
+            "ec2c41a7-6c1a-5a5f-9643-36d45c570927",
+            "ed8aa65a-5e4f-5f03-892b-6c6d06141ff3",
+            "ee0b6bbd-c428-5dd8-8837-42473d875cc5"
+          ]
+        },
+        {
+          "index": 2,
+          "target_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+          "main_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+          "boundary_gap_mm": 0.6761007722144682,
+          "start_native_mm": [
+            92.312888,
+            93.635038
+          ],
+          "end_native_mm": [
+            93.035576,
+            93.917977
+          ],
+          "length_mm": 0.7761007815129468,
+          "width_mm": 0.3,
+          "reasons": [
+            "foreign-F"
+          ],
+          "obstacle_uuids": [
+            "09be5c73-f32a-54c9-a47b-bc78b49be280",
+            "3bc0ec37-9ec8-5282-ab10-e71d836c4ea4",
+            "40d6e443-9305-5f68-989e-569fb4e676e6",
+            "5f45c0a3-06d0-51eb-b81a-0bfc589ddfd6",
+            "637b83d2-960b-5ec2-a0aa-708a5ce6c903",
+            "853dbfd8-0ecb-58ee-a38a-3c7bba556e19",
+            "986e2274-8d21-5c90-9820-f44607819f8c",
+            "ae5186f8-c14f-543b-83b6-5de362326e62",
+            "ec2c41a7-6c1a-5a5f-9643-36d45c570927",
+            "ed8aa65a-5e4f-5f03-892b-6c6d06141ff3",
+            "ee0b6bbd-c428-5dd8-8837-42473d875cc5"
+          ]
+        },
+        {
+          "index": 3,
+          "target_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+          "main_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+          "boundary_gap_mm": 0.6767839687322711,
+          "start_native_mm": [
+            92.324916,
+            93.604477
+          ],
+          "end_native_mm": [
+            93.034705,
+            93.920063
+          ],
+          "length_mm": 0.776785007525891,
+          "width_mm": 0.3,
+          "reasons": [
+            "foreign-F"
+          ],
+          "obstacle_uuids": [
+            "09be5c73-f32a-54c9-a47b-bc78b49be280",
+            "3bc0ec37-9ec8-5282-ab10-e71d836c4ea4",
+            "40d6e443-9305-5f68-989e-569fb4e676e6",
+            "5f45c0a3-06d0-51eb-b81a-0bfc589ddfd6",
+            "637b83d2-960b-5ec2-a0aa-708a5ce6c903",
+            "853dbfd8-0ecb-58ee-a38a-3c7bba556e19",
+            "986e2274-8d21-5c90-9820-f44607819f8c",
+            "ae5186f8-c14f-543b-83b6-5de362326e62",
+            "ec2c41a7-6c1a-5a5f-9643-36d45c570927",
+            "ed8aa65a-5e4f-5f03-892b-6c6d06141ff3",
+            "ee0b6bbd-c428-5dd8-8837-42473d875cc5"
+          ]
+        },
+        {
+          "index": 4,
+          "target_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+          "main_island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+          "boundary_gap_mm": 0.6767841726060169,
+          "start_native_mm": [
+            92.315299,
+            93.62993
+          ],
+          "end_native_mm": [
+            93.025084,
+            93.945521
+          ],
+          "length_mm": 0.7767833839018532,
+          "width_mm": 0.3,
+          "reasons": [
+            "foreign-F"
+          ],
+          "obstacle_uuids": [
+            "09be5c73-f32a-54c9-a47b-bc78b49be280",
+            "3bc0ec37-9ec8-5282-ab10-e71d836c4ea4",
+            "40d6e443-9305-5f68-989e-569fb4e676e6",
+            "5f45c0a3-06d0-51eb-b81a-0bfc589ddfd6",
+            "637b83d2-960b-5ec2-a0aa-708a5ce6c903",
+            "853dbfd8-0ecb-58ee-a38a-3c7bba556e19",
+            "986e2274-8d21-5c90-9820-f44607819f8c",
+            "ae5186f8-c14f-543b-83b6-5de362326e62",
+            "ec2c41a7-6c1a-5a5f-9643-36d45c570927",
+            "ed8aa65a-5e4f-5f03-892b-6c6d06141ff3",
+            "ee0b6bbd-c428-5dd8-8837-42473d875cc5"
+          ]
+        }
+      ],
+      "summary": {
+        "reason_counts": {
+          "foreign-F": 4
+        },
+        "blockers": [
+          {
+            "uuid": "09be5c73-f32a-54c9-a47b-bc78b49be280",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "3bc0ec37-9ec8-5282-ab10-e71d836c4ea4",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "40d6e443-9305-5f68-989e-569fb4e676e6",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "5f45c0a3-06d0-51eb-b81a-0bfc589ddfd6",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "637b83d2-960b-5ec2-a0aa-708a5ce6c903",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "853dbfd8-0ecb-58ee-a38a-3c7bba556e19",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "986e2274-8d21-5c90-9820-f44607819f8c",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+            "type": "via",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "ec2c41a7-6c1a-5a5f-9643-36d45c570927",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "ed8aa65a-5e4f-5f03-892b-6c6d06141ff3",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          },
+          {
+            "uuid": "ee0b6bbd-c428-5dd8-8837-42473d875cc5",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.312888,
+              93.604477,
+              92.324916,
+              93.635038
+            ]
+          }
+        ]
+      }
+    },
+    "ordinary_via": {
+      "method": "Whole-island longest-edge midpoints/vertices with deterministic 0.45/0.70/0.95 mm outward offsets.",
+      "count": 48,
+      "feasible_count": 0,
+      "summary": {
+        "reason_counts": {
+          "contact": 9,
+          "pad-overlap": 12,
+          "stub-foreign": 48,
+          "via-foreign": 48,
+          "drill": 21,
+          "not-main-In1": 17
+        },
+        "blockers": [
+          {
+            "uuid": "65bc009d-921d-5e72-b1c3-aa568b4a30de",
+            "type": "track",
+            "net": "SCL",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 23,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.0262,
+              92.258284,
+              93.627108
+            ]
+          },
+          {
+            "uuid": "f4b67f0a-c5b8-5ed0-be6c-8e770543ca7c",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "B.Cu"
+            ],
+            "references": [],
+            "site_count": 22,
+            "source_island_access_region_native_mm": [
+              91.773554,
+              93.0262,
+              92.3745,
+              93.593953
+            ]
+          },
+          {
+            "uuid": "5edf71bf-287f-5e79-a8aa-b2ab9abec6d5",
+            "type": "track",
+            "net": "SCL",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 21,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.062519,
+              91.775436,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "3af9f604-730a-57dc-bda2-07d0adec1b60",
+            "type": "track",
+            "net": "SCL",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 18,
+            "source_island_access_region_native_mm": [
+              91.689919,
+              93.0262,
+              92.258284,
+              93.146154
+            ]
+          },
+          {
+            "uuid": "8576418f-415a-52aa-a243-a9314fbe9c98",
+            "type": "track",
+            "net": "SDA",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 18,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.062519,
+              91.773554,
+              93.627108
+            ]
+          },
+          {
+            "uuid": "5f45c0a3-06d0-51eb-b81a-0bfc589ddfd6",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 15,
+            "source_island_access_region_native_mm": [
+              92.210655,
+              93.349999,
+              92.3745,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "986e2274-8d21-5c90-9820-f44607819f8c",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 15,
+            "source_island_access_region_native_mm": [
+              92.210655,
+              93.349999,
+              92.3745,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "ba8e7207-fbf0-50ab-b5d0-7f748e681888",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 15,
+            "source_island_access_region_native_mm": [
+              91.689919,
+              93.0262,
+              92.258284,
+              93.146154
+            ]
+          },
+          {
+            "uuid": "ee0b6bbd-c428-5dd8-8837-42473d875cc5",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 13,
+            "source_island_access_region_native_mm": [
+              92.210655,
+              93.349999,
+              92.3745,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "637b83d2-960b-5ec2-a0aa-708a5ce6c903",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 12,
+            "source_island_access_region_native_mm": [
+              92.210655,
+              93.527554,
+              92.3745,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "a113fa1a-d424-5763-ad47-542f610af539",
+            "type": "track",
+            "net": "SCL",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 12,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.233835,
+              91.775436,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "ef61ea0b-52bf-53ee-92fd-2d8c3a8b60e8",
+            "type": "track",
+            "net": "SDA",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 12,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.062519,
+              91.773554,
+              93.233835
+            ]
+          },
+          {
+            "uuid": "09be5c73-f32a-54c9-a47b-bc78b49be280",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 12,
+            "source_island_access_region_native_mm": [
+              92.3495,
+              93.349999,
+              92.3745,
+              93.593953
+            ]
+          },
+          {
+            "uuid": "a8cbe912-8331-5b8c-8007-4757dbf45c33",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "In2.Cu"
+            ],
+            "references": [],
+            "site_count": 12,
+            "source_island_access_region_native_mm": [
+              92.3495,
+              93.349999,
+              92.3745,
+              93.593953
+            ]
+          },
+          {
+            "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+            "type": "via",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ],
+            "references": [],
+            "site_count": 12,
+            "source_island_access_region_native_mm": [
+              92.3495,
+              93.349999,
+              92.3745,
+              93.593953
+            ]
+          },
+          {
+            "uuid": "ec2c41a7-6c1a-5a5f-9643-36d45c570927",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 12,
+            "source_island_access_region_native_mm": [
+              92.3495,
+              93.349999,
+              92.3745,
+              93.593953
+            ]
+          },
+          {
+            "uuid": "11c305b9-183d-5a88-a0a1-1d4ff2ba5f65",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "B.Cu"
+            ],
+            "references": [],
+            "site_count": 10,
+            "source_island_access_region_native_mm": [
+              91.773554,
+              93.0262,
+              92.258284,
+              93.062519
+            ]
+          },
+          {
+            "uuid": "1a9feeb1-dc75-5127-b787-a8c2c8775e34",
+            "type": "pad",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [
+              "C24.1"
+            ],
+            "site_count": 9,
+            "source_island_access_region_native_mm": [
+              91.775436,
+              93.8245,
+              92.210655,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "3bc0ec37-9ec8-5282-ab10-e71d836c4ea4",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 9,
+            "source_island_access_region_native_mm": [
+              91.775436,
+              93.8245,
+              92.210655,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "853dbfd8-0ecb-58ee-a38a-3c7bba556e19",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 9,
+            "source_island_access_region_native_mm": [
+              91.993045,
+              93.527554,
+              92.3745,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "ce3963ea-8df2-51a9-929c-90e8075a087b",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 9,
+            "source_island_access_region_native_mm": [
+              91.775436,
+              93.8245,
+              92.210655,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "6d56c09b-2b19-5144-a473-6e1c16d7c430",
+            "type": "via",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ],
+            "references": [],
+            "site_count": 9,
+            "source_island_access_region_native_mm": [
+              91.861235,
+              93.0262,
+              92.258284,
+              93.0262
+            ]
+          },
+          {
+            "uuid": "a97d4d76-7283-5c25-b6ff-d6e5e9419e65",
+            "type": "track",
+            "net": "SDA",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 9,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.233835,
+              91.6536,
+              93.627108
+            ]
+          },
+          {
+            "uuid": "b7e4151f-97ef-5f48-a8db-0f47260a21b3",
+            "type": "track",
+            "net": "SDA",
+            "layers": [
+              "B.Cu"
+            ],
+            "references": [],
+            "site_count": 8,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.0262,
+              91.861235,
+              93.233835
+            ]
+          },
+          {
+            "uuid": "40d6e443-9305-5f68-989e-569fb4e676e6",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 7,
+            "source_island_access_region_native_mm": [
+              91.993045,
+              93.593953,
+              92.3745,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "7f27fc09-3031-52c6-8918-0dc89c75594c",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 6,
+            "source_island_access_region_native_mm": [
+              91.775436,
+              93.8245,
+              91.993045,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "ed8aa65a-5e4f-5f03-892b-6c6d06141ff3",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 6,
+            "source_island_access_region_native_mm": [
+              91.993045,
+              93.560754,
+              92.3745,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "c365ba5a-91fb-5127-9496-34de5c2d6b98",
+            "type": "track",
+            "net": "SCL",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 6,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.430472,
+              91.6536,
+              93.627108
+            ]
+          },
+          {
+            "uuid": "92388ba0-88cd-5308-aeb5-db89c3201202",
+            "type": "pad",
+            "net": "SDA",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [
+              "IC4.14"
+            ],
+            "site_count": 6,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.233835,
+              91.6536,
+              93.627108
+            ]
+          },
+          {
+            "uuid": "aa1f9877-9b3f-5aca-aaa0-a3b884bbf96c",
+            "type": "track",
+            "net": "SDA",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 6,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.233835,
+              91.6536,
+              93.627108
+            ]
+          },
+          {
+            "uuid": "f09ac407-e552-5aa8-ad96-27792c31d43a",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 6,
+            "source_island_access_region_native_mm": [
+              91.689919,
+              93.062519,
+              91.773554,
+              93.146154
+            ]
+          },
+          {
+            "uuid": "f8e85b05-9a7b-57a0-b3e8-991f1811083d",
+            "type": "track",
+            "net": "SDA",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 5,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.233835,
+              91.6536,
+              93.627108
+            ]
+          },
+          {
+            "uuid": "45b3cf7f-e607-5ab4-b380-95baa0095dbd",
+            "type": "via",
+            "net": "USBBOOT",
+            "layers": [
+              "F.Cu",
+              "In1.Cu",
+              "In2.Cu",
+              "B.Cu"
+            ],
+            "references": [],
+            "site_count": 4,
+            "source_island_access_region_native_mm": [
+              92.059759,
+              93.0262,
+              92.258284,
+              93.0262
+            ]
+          },
+          {
+            "uuid": "01960aca-f4b9-53d8-89e7-215823c614c9",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 3,
+            "source_island_access_region_native_mm": [
+              91.775436,
+              93.8245,
+              91.775436,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "4869e135-8ec7-59a2-a8e2-15a5de2025c3",
+            "type": "track",
+            "net": "USBBOOT",
+            "layers": [
+              "In2.Cu"
+            ],
+            "references": [],
+            "site_count": 3,
+            "source_island_access_region_native_mm": [
+              92.059759,
+              93.0262,
+              92.258284,
+              93.0262
+            ]
+          },
+          {
+            "uuid": "7cfacdc7-dce4-5c41-a1bd-e29e9f30e6e7",
+            "type": "pad",
+            "net": "SCL",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [
+              "IC4.13"
+            ],
+            "site_count": 3,
+            "source_island_access_region_native_mm": [
+              91.6536,
+              93.430472,
+              91.6536,
+              93.627108
+            ]
+          },
+          {
+            "uuid": "0cb1a632-21a1-5c46-a560-d4edab0d0a68",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 2,
+            "source_island_access_region_native_mm": [
+              91.775436,
+              93.8245,
+              91.775436,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "62fce658-00c1-540f-ae99-23c3bf43d204",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 2,
+            "source_island_access_region_native_mm": [
+              91.775436,
+              93.8245,
+              91.775436,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "95d1f903-e5c0-5ad6-a0a2-44495495f8bd",
+            "type": "track",
+            "net": "+3V3",
+            "layers": [
+              "F.Cu"
+            ],
+            "references": [],
+            "site_count": 2,
+            "source_island_access_region_native_mm": [
+              91.775436,
+              93.8245,
+              91.775436,
+              93.8245
+            ]
+          },
+          {
+            "uuid": "111733be-aadc-5fca-b2d3-89bc13913f19",
+            "type": "track",
+            "net": "USBBOOT",
+            "layers": [
+              "B.Cu"
+            ],
+            "references": [],
+            "site_count": 1,
+            "source_island_access_region_native_mm": [
+              92.3495,
+              93.349999,
+              92.3495,
+              93.349999
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "result": {
+    "candidate_generated": false,
+    "refill_performed": false,
+    "DRC_performed": false,
+    "stop_reason": "All four direct F bridges and all 48 geometry-derived ordinary-via sites failed fixed constraints.",
+    "scope_limit": "Finite-screen failure only; not a global impossibility result."
+  },
+  "preservation": {
+    "active_PCB_unchanged": true,
+    "manifest_unchanged": true,
+    "no_routes_vias_parts_rules_zones_or_fill_written": true,
+    "C12_feed_untouched": true,
+    "C23_USBBOOT_untouched": true,
+    "C24_only": true
+  },
+  "elapsed_seconds": 18.484000000171363,
+  "screen_tool_sha256": "8c2e56240f2d2ef19a724ee3fe1e7dc5a39061a4b058585cf4c89478538fa999",
+  "report_tool_sha256": "bd9c961114f15b2da82226591e9164930bd38ee4a6d2b013335f9ff1f1992ca9"
+}

@@ -273,6 +273,32 @@ placement, larger vias, longer stubs or repeated full-board trials.
 The finite follow-up replaces the prior item's site cap only; it does not
 reset the accepted board or authorize rerouting the completed R4 stitch.
 
+#### C24 filled/capped through-via feasibility review
+
+The local C24 attempt found no passing proposal among four F bridges and
+48 whole-island ordinary-via sites. Do not repeat or expand those screens.
+Use the owner's existing permission to consider necessary filled/capped
+vias for a read-only feasibility item, not automatic acceptance of a new
+process. The quotation baseline already requires this treatment at U4;
+that does not establish incremental cost or supplier acceptance for C24.
+
+Inspect the exact C24.2 native copper, mask and paste shapes. At its exact
+pad centre, screen only two ordinary through-via definitions:
+0.604/0.35 mm and the existing Default-class 0.60/0.30 mm. Do not shrink
+existing vias, lower rules, introduce microvias/blind vias, move parts,
+or edit copper. A positive proposal must fit the original pad copper,
+meet full-span foreign-copper/drill/contact/edge/private constraints,
+and reach the actual In1 main plane. Pad overlap is intentional only for
+this feasibility screen; it would require filled, planarized, copper-capped
+treatment and subsequent explicit land/paste/process review, not tenting.
+
+If back-layer copper blocks both choices, identify its exact items,
+endpoints, existing layer transitions and pad-attachment/cut consequences.
+Do not reroute or remove it. Return the combined feasibility evidence
+before deciding whether a local existing-via layer transfer or another
+engineering approach is appropriate. This review authorizes no candidate
+generation, supplier upload, quotation claim or fabrication.
+
 #### C24 local ground closure
 
 After the accepted C12 paired-feed change, release one bounded C24.2
