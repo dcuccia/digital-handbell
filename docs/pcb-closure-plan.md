@@ -166,7 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Stopped pending owner direction:** the
+**Owner-authorized validator repair:** after the failed final-gate item,
+the owner explicitly selected "Repair validator in isolation, then
+validate the saved candidate." One new bounded validation-only item is
+released: exercise unit conversion, artifact binding and new native
+geometry operations on positive/negative controls first, then run the
+complete saved-candidate gates. Limit the item to ten minutes and at most
+two corrective retries. No rerouting, refill, rule changes or promotion
+is authorized. The board remains at **44 accepted opens** until the
+43-open staged candidate completes review.
+
+**Preserved failed final-gate attempt:** the
 [final-gate attempt](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-final-gates.json)
 completed only input/dependency binding. A saved-DRC path error consumed
 the allowed correction; the corrected validator then called
@@ -174,12 +184,10 @@ the allowed correction; the corrected validator then called
 The displacement, clearance, full connectivity, private-return and
 source-preservation gates in this item did not run. This is an incomplete
 validator, not evidence of another board defect. No copper, fill, manifest
-or candidate bytes changed. Accepted PCB `7927882f...` remains at
-**44 opens**; staged `01a943c7...` remains unaccepted at its previously
-recorded 43 opens. Do not continue the correction loop automatically.
-Proposed next item, requiring owner authorization: repair and exercise
-the validator's unit conversion and native geometry calls in isolation,
-then validate the exact saved candidate without rerouting or refilling.
+or candidate bytes changed. Accepted PCB `7927882f...` remained at
+**44 opens**; staged `01a943c7...` remained unaccepted at its previously
+recorded 43 opens. The correction loop stopped for owner direction;
+the separately authorized next item is recorded above.
 
 **C23 refill-control review:** the
 [identical-recipe no-routing control](../hardware/handbell/iterations/printed-bell-four-layer/reports/c23-usbboot-refill-control.json)
