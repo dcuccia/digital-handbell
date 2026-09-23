@@ -528,6 +528,65 @@ agents where available, give each a bounded deliverable, and do not launch
 a separate agent for every trivial segment. Every executor remains
 explicitly Sol/medium, fail-closed; Astra accepts engineering milestones.
 
+## Bottleneck-first closure sequence
+
+September 23 owner request: use the IMU exercise to improve placement and
+remaining routing efficiency. The lesson is not simply "route the IMU
+first." Establish viable escape and return geometry for every highly
+constrained functional group before freezing surrounding routing.
+Footprint/envelope fit alone cannot establish that its pins are routable.
+
+The relevant IMU group is IC4, C23/C24, R14/R15, both ground groups,
+Mode-1 supply ties, and INT/SCL/SDA escapes, including full-span via
+restrictions from the rear contacts. These concerns must coexist.
+Ground-via space and a signal escape cannot each be counted as available
+if they occupy the same corridor. Keep local capacitor-to-device current
+paths explicit instead of treating a common supply/ground name as proof
+of adequate return geometry.
+
+For the remaining accepted board, use this dependency order:
+
+| Priority | Coupled concern | Gate before releasing dependent routine work |
+|---|---|---|
+| 1 | IMU local returns, decoupling, pull-ups and signal escapes | Mutually compatible local routes, preserved existing connections and external ports; no movement assumed from the failed rigid-shift cases. |
+| 2 | MCU VCORE distribution and its capacitor-ground cluster, USB/ESD/series-resistor pair corridors, and remaining charger/power-selection returns | Review these as distinct constrained groups and reserve their competing corridors together before ordinary GPIO fanout. USB physical stackup/return assumptions must be explicit; a layer count is not impedance qualification. |
+| 3 | Remaining audio/output-current paths, amplifier return/mute/gain duties and I2S clocks/data including test-point branches | Preserve switching/private-sense topology and quiet returns; review loop areas and fast-edge/test-stub choices before completing adjacent controls. Existing accepted boost/protector work is retained unless a concrete conflict is found. |
+| 4 | Low-speed controls and debug/recovery connections | Use the remaining released corridors; retain reset/boot/test access and escalate debug fast-edge or sensitive adjacency questions. Lower routing priority never makes recovery optional. |
+| 5 | Whole-board electrical/mechanical/process closure | Complete native connectivity/DRC and parity dispositions, actual stackup/return/current review, CAD source rebind, mandatory via-treatment map and matched quotation exports. None is replaced by local passes. |
+
+Within priorities 2 and 3, order competing groups by their actual free
+space, dependency and replacement cost, not by net count. Do not start a
+new broad inventory for every route: reuse the source-bound net ledger and
+refresh only changed groups/corridors. Protection, raw-cell isolation and
+mechanical contact exclusions remain invariant at every priority.
+
+Efficiency rules learned here:
+
+- Use whole connected copper groups and feasible regions, not only pad
+  centres or repeated sparse grids. Classify clearance witnesses by the
+  constraints that actually limit the final space before a cut analysis.
+- Freeze a compatible local escape plan before expensive full-board work.
+  Test simultaneous planned copper, not independent "clear" route sketches.
+- Keep a useful candidate and a finite repair list. Do not reopen settled
+  sourcing or move a cluster merely because one local route fails.
+- Run cheap native geometry/topology checks during a batch; run full
+  refill/DRC/private-return/source gates once a coherent candidate exists.
+  Save intermediate successes and failures so a checker error does not
+  erase completed evidence.
+- Reuse exercised unit/shape APIs and actual filled-island connectivity.
+  Keep approximation/displacement and physical-clearance tests separate.
+  A diagnostic polygon sliver is not an independent physical copper island.
+- Escalate repeated no-progress probes to one coordinated engineering
+  decision rather than restarting similar searches under new task names.
+  Sol executes the finite geometry work; Astra owns the coupled constraints
+  and acceptance.
+
+This sequence is a closure plan, not a claim that the board was previously
+optimized or that the remaining work has a predictable duration or cost.
+The historical two-layer routing, later four-layer approval and evolving
+contact/interface evidence explain changing opportunities; they do not
+excuse treating placement fit as routing feasibility.
+
 ## Preserved two-layer baseline and engineering reservations
 
 Preserved package: `hardware/handbell/iterations/printed-bell-clock-draft`.

@@ -2,14 +2,16 @@
 
 ## Bounded engineering work
 
-- **September 23 owner-authorized IMU proposal:** the owner resumed and
-  selected a coordinated IMU routing review with possible small placement
-  adjustments. Prepare a bounded proposal only; do not change the accepted
-  41-open PCB or repeat exhausted point/cut screens. Preserve board outline,
-  mounts, USB and battery/contact interfaces. Use the exact scope and source
-  hashes in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
-  Any actual placement or copper change requires a separate engineering
-  release and the applicable mechanical/source-rebinding gates.
+- **September 23 fixed-placement IMU trial approved:** the owner approved
+  one bounded separate rework trial after reviewing the placement proposal.
+  Preserve all parts and mechanical interfaces; prove compatible ground and
+  signal escapes before replacing necessary local copper. Do not delete the
+  entire 69-track proposal inventory by default or promote broken prior
+  connections. Follow `docs/pcb-closure-plan.md#owner-pause-and-next-item`
+  and the bottleneck-first sequence in `docs/routing-agent-policy.md`.
+  Extract reusable lessons, but do not turn this into an unbounded tooling
+  or redesign project. The accepted 41-open board remains authoritative
+  until a complete staged candidate passes engineering review.
 - **September 21 four-layer migration approved:** preserve the accepted
   two-layer `printed-bell-clock-draft` as evidence and establish one separate
   `printed-bell-four-layer` working candidate. Follow the four-layer batch,

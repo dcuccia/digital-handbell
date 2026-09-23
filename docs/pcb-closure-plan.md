@@ -166,6 +166,25 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Owner approved the fixed-placement rework trial.** The owner also
+requested a plan to address the most constrained routing groups first
+and apply the lessons to the remaining board. Follow the
+[bottleneck-first sequence](routing-agent-policy.md#bottleneck-first-closure-sequence).
+One ten-minute separate trial is released for the case-A local boundary,
+with at most two corrective retries and no part/via moves or rule changes.
+First verify that proposed ground, INT, SCL and SDA escapes coexist with
+the necessary supply/decoupling connections. Then replace only the
+necessary named local traces, preserving the seven external ports and
+all pre-existing connected pad groups. The 69-track list is a maximum
+boundary of analysis, not a blanket removal instruction.
+
+If a mutually compatible plan cannot be constructed within the item,
+stop with the exact conflicting geometry and saved partial evidence;
+do not route easier signals through unresolved critical corridors.
+No acceptance is possible without restoration of every disturbed
+connection and closure of at least one intended IMU ground group.
+The active board remains **41 opens** until that review.
+
 **Coordinated proposal reviewed -- prefer fixed placement, not yet routed.**
 The [four-case comparison](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-coordinated-layout-proposal.json)
 finds no immediate fixed-copper or planning-envelope conflict in case A
