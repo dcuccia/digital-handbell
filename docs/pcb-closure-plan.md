@@ -189,6 +189,16 @@ treated as pad references. Next, review the remaining connected groups and relea
 a paired core-supply/return routing batch without consuming USB/clock corridors.
 Physical stackup, parity, whole-CAD rebind and manufacturing remain open.
 
+The [finite core screen](../hardware/handbell/iterations/printed-bell-four-layer/reports/core-supply-return-release-screen.json)
+resolves three VCORE groups and two +3V3 groups. Its 24 sampled new-via
+escapes do not release a complete VCORE route; rear-contact and fixed-copper
+constraints remain. This is not an exhaustive impossibility result.
+Next released execution is the
+[existing-via +3V3 In2 bridge](routing-agent-policy.md#september-22-supply-bridge-release)
+in the upper corridor, without new vias, component moves or a narrower trunk.
+VCORE escape geometry and associated ground completion remain deferred,
+not silently dropped.
+
 **September 21 end-of-day pause (historical):** stop engineering; only saved-work
 preservation and publication are authorized. Sol confirmed it is idle with no
 running subprocess. Do not automatically continue the earlier sequence.

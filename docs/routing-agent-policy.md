@@ -197,6 +197,35 @@ open. Next routing releases must screen their actual return corridors against
 these voids and all plated antipads; In2 is not blanket permission to bypass
 that review.
 
+#### September 22 supply-bridge release
+
+The bounded core-supply screen resolves three VCORE groups but does not
+release their proposed new-via escapes: rear contact metal and fixed copper
+block the sampled positions. Do not infer that all VCORE escapes are
+impossible or move the floorplan on that evidence. Preserve those groups
+for a separate engineering decision.
+
+Release a separate staged +3V3 bridge between existing through-vias in its
+two native connected groups. Prefer the upper terminal banks near
+`(92.85, 93.35)` and `(101.802, 93.0055)` mm, considering other existing
+terminals within native corridor x90..103, y90..95 mm. Use In2 only, a
+0.40 mm trunk, retained 0.20 mm clearance, no new vias or F/B changes.
+Screen at most 16 direct/45-degree/dogleg candidates and stop if none pass;
+do not narrow the trunk or enlarge the corridor inside a corrective retry.
+The entire corridor is above the clock exclusion. Verify actual In1
+coverage along the selected path, distinguishing the existing endpoint
+antipads from unintended plane gaps. Retain all existing plane exclusions.
+
+This avoids treating the first UUID-sorted via pair as the only reachable
+terminals and avoids new holes or rear-contact exposure. It closes one
+supply connection, not the remaining decoupler grounds or power-system
+qualification. Preserve existing regulator/decoupling topology and require
+complete group-preservation/private-return checks and native DRC before
+acceptance. In2 insertion alone must not silently trigger a changed F/In1
+fill; either demonstrate unchanged fill inputs or use the established
+explicit-settings refill and compare its result. No generic router rebuild,
+placement change, USB/clock reroute or VCORE geometry change is authorized.
+
 First qualify the tools for four layers: actual enabled-layer enumeration,
 via spans, multilayer obstacles, inner-plane fill/connectivity and source
 invariants. The existing F/B-only grid and ground checkers are not qualified
