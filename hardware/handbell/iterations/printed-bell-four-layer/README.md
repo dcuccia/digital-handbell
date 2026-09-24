@@ -33,6 +33,9 @@ Their native
 [front](reports/imu-working-front.png)/[inner](reports/imu-working-inner.png)
 views are source-bound, not complete group/plane or source/DRC qualification.
 SCL pullup, SDA and INT routing remain open, as do refill and acceptance gates.
+The [final signal screen](reports/imu-signal-closure.json) did not pass;
+its proposed R15 move and signal copper were not written. Engineering is
+paused at the [exact stopping handoff](../../../../docs/pcb-closure-plan.md#owner-pause-and-next-item).
 Earlier working versions/reports are historical; the handoff records the
 precise current evidence limits and remaining replacement duties.
 

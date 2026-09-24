@@ -166,6 +166,52 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 23 stopping checkpoint -- engineering paused.** The owner
+requested a logical stop within 20-30 minutes at 17:02. The current
+signal-closure item has ended after its initial attempt and two local
+corrections; Sol confirmed idle and no subsequent routing, refill, DRC or
+CAD work. Finish the checkpoint rather than start a late redesign.
+The earlier unattended continuation is suspended until explicit resumption.
+
+The authoritative package remains PCB
+`c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`,
+manifest `08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667`,
+with the previously recorded **41 opens**. No fresh accepted-board DRC
+or fabrication qualification is claimed.
+
+**Exact next-session starting artifact:** the archived, matching
+`reports/imu-coupled-working.kicad_pcb`
+(`3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243`)
+and `reports/imu-coupled-working-manifest.json`
+(`a1278051b8513645b56089464ce2a9f2d4ea970a6ee913a33ca003dcfe5e6e5b`).
+This preserves the actual local supply tree, repaired ordinary VDDIO via,
+INT2-to-TP6 connection, tentative SCL escape and five ground straps.
+Only IC4 has moved north 0.50 mm in this working copy; R15 is still at its
+accepted position. It remains incomplete, unfilled and unaccepted.
+
+The [signal-closure result](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-signal-closure.json)
+and [exact final screen state](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-signal-closure-state.json)
+preserve the failed simultaneous plan. The source plan, cut control,
+proposed R15 neighbour/proxy checks and eight proposed ordinary-via
+process/contact/drill checks passed, but the complete trace geometry did
+not. **None** of that proposal's R15 move, GND123 reroute, via reallocations,
+stub deletion or new SCL/SDA/INT copper was written.
+
+| Remaining engineering decision | Exact last-tested geometry, not an approved route |
+|---|---|
+| SCL transition and CS branch must coexist | SCL transition `(91.02,93.492711)` competes with the saved CS branch. The final 0.25 mm F CS detour `(91.45,94.2) -> (90.8,94.5) -> IC4.12 (90.412306,93.992711)` hits IC4.11's NC land. A prior SCL-via shift instead hit INT2 on In2 and proposed SDA on F. |
+| INT exit must avoid the fixed vias and other signals | Final 0.1778 mm B points were `(87.97,91.72) -> (89,92.1) -> (90,92.5) -> (91.8,92.5) -> (92.2,93) -> (93.1,93)`. The last two segments hit C24's fixed GND via `fa83a8ab...` and/or the fixed supply via `ae5186f8...`; earlier attempts hit the fixed USBBOOT branch/via. |
+
+**One next item after resumption:** Astra reviews these two coupled
+geometry decisions against the complete native obstacles, then releases a
+specific local correction or explicit additional layer transition to Sol.
+Retain the repaired supply candidate and the already-passed source-bound
+evidence. Do not count repeated witnesses as additional defects, repeat the
+exhausted three screens, or silently widen the region/rules. Full signal
+restoration, MAIN-ground refill proof, preserved groups/no floating copper,
+private returns/CELL_NEG/contact/source/manifest/native DRC and exact
+mechanical rebinding remain gates. No quotation release or ordering.
+
 **Ordinary VDDIO repair passed; complete local supply connectivity retained.**
 The [four-item repair](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-vddio-via-repair.json)
 moves the held via to `(87.85,92.7)` without a via-in-pad dependency.

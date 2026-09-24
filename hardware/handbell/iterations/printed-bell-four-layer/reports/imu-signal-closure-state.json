@@ -1,0 +1,100 @@
+{
+  "status": "simultaneous_geometry_blocked_no_write",
+  "source_pcb_sha256": "3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243",
+  "screen": {
+    "cut_control": {
+      "removed_uuid": "a25f792f-6604-572a-ac90-6f2b39901f78",
+      "preserved_outside_uuid": "a672a427-0ece-5ca1-86f4-4e6ebe0488e5",
+      "checks": {
+        "IC4.5": true,
+        "C23.1": true,
+        "R14.1": true,
+        "R15.1": true,
+        "VDD": true,
+        "CS": true,
+        "outside_junction": true,
+        "left_middle_exterior": true,
+        "top_exterior": true
+      },
+      "short_count": 0,
+      "passed": true
+    },
+    "foreign_hits": [
+      {
+        "new": "cs-correction-1",
+        "kind": "pad",
+        "pad": "IC4.11",
+        "net": "unconnected-(IC4-SDO_AUX-Pad11)",
+        "layer": "F.Cu"
+      },
+      {
+        "new": "int-b-3",
+        "kind": "track",
+        "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+        "net": "GND",
+        "layer": "B.Cu"
+      },
+      {
+        "new": "int-b-4",
+        "kind": "track",
+        "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+        "net": "+3V3",
+        "layer": "B.Cu"
+      },
+      {
+        "new": "int-b-4",
+        "kind": "track",
+        "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+        "net": "GND",
+        "layer": "B.Cu"
+      }
+    ],
+    "hole_hits": [],
+    "new_new_hits": [],
+    "via_results": {
+      "GND67-via": {
+        "off_pad_hits": [],
+        "contact_hits": [],
+        "drill_hits": []
+      },
+      "VDDIO-via": {
+        "off_pad_hits": [],
+        "contact_hits": [],
+        "drill_hits": []
+      },
+      "C23-via": {
+        "off_pad_hits": [],
+        "contact_hits": [],
+        "drill_hits": []
+      },
+      "SCL_R14-via": {
+        "off_pad_hits": [],
+        "contact_hits": [],
+        "drill_hits": []
+      },
+      "SCL_IC4-via": {
+        "off_pad_hits": [],
+        "contact_hits": [],
+        "drill_hits": []
+      },
+      "SDA_R15-via": {
+        "off_pad_hits": [],
+        "contact_hits": [],
+        "drill_hits": []
+      },
+      "SDA_IC4-via": {
+        "off_pad_hits": [],
+        "contact_hits": [],
+        "drill_hits": []
+      },
+      "INT_IC4-via": {
+        "off_pad_hits": [],
+        "contact_hits": [],
+        "drill_hits": []
+      }
+    },
+    "moved_R15_pad_hits": [],
+    "moved_R15_proxy_hits": [],
+    "passed": false
+  }
+}

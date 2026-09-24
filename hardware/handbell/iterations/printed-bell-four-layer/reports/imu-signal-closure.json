@@ -1,0 +1,159 @@
+{
+  "report": "imu-signal-closure",
+  "status": "simultaneous_signal_geometry_blocked_candidate_unchanged",
+  "classification": "Exercised native geometry screen; no PCB or manifest edits were accepted. The private candidate remains unfilled, incomplete, unaccepted and not quoteable.",
+  "inputs": {
+    "engineering_plan": {
+      "path": "reports/imu-signal-closure-plan.json",
+      "sha256": "a40d4837110ea4fe0c5b77223963dfeb23861184271d34984bdc866ab8c5529f"
+    },
+    "source_private_pcb_sha256": "3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243",
+    "source_private_manifest_sha256": "a1278051b8513645b56089464ce2a9f2d4ea970a6ee913a33ca003dcfe5e6e5b"
+  },
+  "immutable_recovery_pair": {
+    "pcb": {
+      "session_relative_path": "files/imu-coupled-routing/handbell-imu-vddio-repaired-3c7006c1.kicad_pcb",
+      "sha256": "3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243"
+    },
+    "manifest": {
+      "session_relative_path": "files/imu-coupled-routing/placement-manifest-imu-vddio-repaired-a1278051.json",
+      "sha256": "a1278051b8513645b56089464ce2a9f2d4ea970a6ee913a33ca003dcfe5e6e5b"
+    }
+  },
+  "working_artifacts": {
+    "pcb": {
+      "session_relative_path": "files/imu-coupled-routing/handbell-imu-coupled-working.kicad_pcb",
+      "sha256": "3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243",
+      "unchanged": true
+    },
+    "manifest": {
+      "session_relative_path": "files/imu-coupled-routing/placement-manifest-imu-coupled-working.json",
+      "sha256": "a1278051b8513645b56089464ce2a9f2d4ea970a6ee913a33ca003dcfe5e6e5b",
+      "unchanged": true
+    },
+    "state": {
+      "session_relative_path": "files/imu-coupled-routing/signal-closure-state.json",
+      "sha256": "a21fd2988453ccbbbbdae7ce693c7d5b4e3cb7ced60eab67cea0cb1a80cb918a"
+    },
+    "tool": {
+      "session_relative_path": "files/route_imu_signal_closure.py",
+      "sha256": "7f54ef7cfe168c397375d608a8f100081d2f04acca65b2ec8e113fc3eca4258e"
+    }
+  },
+  "passed_gates": {
+    "conditional_supply_stub_cut_control": {
+      "removed_in_memory_uuid": "a25f792f-6604-572a-ac90-6f2b39901f78",
+      "preserved_outside_uuid": "a672a427-0ece-5ca1-86f4-4e6ebe0488e5",
+      "all_supply_pad_groups_and_external_duties_preserved": true,
+      "primitive_short_count": 0
+    },
+    "R15_north_0_50mm": {
+      "native_pad_neighbour_clearance": true,
+      "manifest_proxy_envelope_overlap": [],
+      "rotation_unchanged_in_proposal": true
+    },
+    "ordinary_vias": {
+      "tested": [
+        "relocated GND67",
+        "relocated VDDIO",
+        "relocated C23",
+        "new SCL_R14",
+        "new SCL_IC4",
+        "new SDA_R15",
+        "new SDA_IC4",
+        "new INT_IC4"
+      ],
+      "same_net_inclusive_positive_area_off_pad_gate": true,
+      "foreign_copper_clearance_gate": true,
+      "contact_clearance_gate": true,
+      "existing_and_new_drill_clearance_gate": true,
+      "new_via_in_pad_process_required": false
+    },
+    "holes": {
+      "planned_track_or_via_hits": []
+    },
+    "conditional_existing_copper": {
+      "LED_branch_4ef0b7ff_preserved": true,
+      "upper_corridor_existing_copper_preserved": true
+    }
+  },
+  "attempts": [
+    {
+      "attempt": "initial_plan_seeds",
+      "result": "blocked",
+      "blockers": [
+        "SCL_R14 via versus restored +3V3 left-middle branch 3fa17f1f on F.Cu.",
+        "SCL_IC4 via at 91.02,93.492711 versus saved CS branch 7502d8d0 on F.Cu.",
+        "Final INT B segment versus fixed USBBOOT branch 111733be."
+      ]
+    },
+    {
+      "attempt": "local_correction_1",
+      "changes_screened": [
+        "Retargeted 3fa17f1f to moved R15.1.",
+        "Moved SCL_IC4 transition along the existing SCL F group to 91.25,92.973178.",
+        "Moved the INT exit below the first USBBOOT conflict."
+      ],
+      "result": "blocked",
+      "blockers": [
+        "Full-span SCL transition intersected the preserved INT2 In2 route.",
+        "SCL transition conflicted with proposed SDA F geometry.",
+        "INT B route conflicted with SCL/SDA and the fixed USBBOOT via/branch."
+      ]
+    },
+    {
+      "attempt": "local_correction_2",
+      "changes_screened": [
+        "Returned SCL_IC4 transition to the plan seed on the existing SCL F group.",
+        "Screened a two-segment local CS detour around that transition.",
+        "Moved the final INT approach below the USBBOOT diagonal."
+      ],
+      "result": "blocked",
+      "final_blockers": [
+        {
+          "new_item": "cs-correction-1",
+          "conflict": "IC4.11 SDO_AUX SMD land",
+          "layer": "F.Cu"
+        },
+        {
+          "new_item": "int-b-3",
+          "conflict_uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+          "conflict": "fixed C24 capped GND via",
+          "layer": "B.Cu"
+        },
+        {
+          "new_item": "int-b-4",
+          "conflict_uuid": "ae5186f8-c14f-543b-83b6-5de362326e62",
+          "conflict": "fixed accepted +3V3 bridge via",
+          "layer": "B.Cu"
+        },
+        {
+          "new_item": "int-b-4",
+          "conflict_uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+          "conflict": "fixed C24 capped GND via",
+          "layer": "B.Cu"
+        }
+      ]
+    }
+  ],
+  "finite_repair_list": [
+    "Choose a local SCL transition/CS combination that avoids both the preserved INT2 In2 corridor and IC4.11; this requires an explicit coupled SCL-plus-CS geometry decision rather than another unchecked via shift.",
+    "Choose an INT B exit corridor that avoids both fixed vias fa83a8ab and ae5186f8 while remaining separated from SDA, SCL and USBBOOT. If no one-layer B corridor exists, an explicit additional interlayer transition decision is required.",
+    "After a simultaneous geometry passes, apply the already-passed R15 move, conditional a25f792f cut, GND123-to-C23.2 link, via relocations and signal routes as one source-preserving stage.",
+    "Then verify supply duties, INT2, SCL, SDA, INT exit, GND67 and GND123-to-C23.2 with zero shorts before any refill."
+  ],
+  "completion_gates_not_run": [
+    "No board or manifest save occurred, so no qualified refill was attempted.",
+    "No full pad-group, no-floating, private-cut, CELL_NEG, contact, source, zone, manifest, native DRC or CAD gate was run."
+  ],
+  "stackup_limit": "The screened B-side I2C/interrupt adjacency has no physical dielectric or impedance qualification; this remains a logical four-layer candidate only.",
+  "acceptance": {
+    "signal_closure_staged": false,
+    "candidate_preserved": true,
+    "corrective_retries_used": 2,
+    "promotable": false,
+    "quote_ready": false,
+    "no_active_package_edits": true,
+    "no_commit_or_push": true
+  }
+}

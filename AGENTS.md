@@ -2,21 +2,17 @@
 
 ## Bounded engineering work
 
-- **September 23 unattended continuation authorized:** the owner asked for
-  continued iteration while away for the next couple of hours, using the
-  agreed priorities and Astra/Sol split. Continue sequential bounded items,
-  not the exhausted shifted-pad-tail method. A real local rip-up fixture
-  and replacement SCL escape now pass source-invariant qualification.
-  The evolving private candidate now straps all five IMU ground pads and
-  restores all local supply duties plus INT2-to-TP6. The held ordinary via
-  has been repaired; MAIN-plane attachment remains unproved. Complete
-  SCL/SDA/INT using the explicit coupled signal seed plan; exact scope
-  is in `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
-  A private working copy may be temporarily disconnected during explicitly
-  authorized rework; the accepted 41-open package must stay untouched.
-  Require complete restoration and coupled engineering review before
-  promotion. Preserve outside interfaces, critical routes and manufacturing
-  rules; retain finite retry limits and stop on a genuine scope blocker.
+- **September 23 stopping checkpoint:** after the owner's request for a
+  stopping point within 20-30 minutes, the current IMU signal item finished
+  with two unresolved geometry decisions and exhausted its corrections.
+  Engineering is paused; Sol is idle. Do not resume automatically from the
+  earlier unattended authorization. Preserve the accepted 41-open board
+  and the separately archived repaired-supply candidate `3c7006c1...` /
+  `a1278051...`. The proposed R15 move and final signal plan were NOT applied.
+  On explicit continuation, use the exact artifacts, final failed geometry
+  and one next item in
+  `docs/pcb-closure-plan.md#owner-pause-and-next-item`; do not restart the
+  entire placement/supply search or promote the unfilled working copy.
 - **September 21 four-layer migration approved:** preserve the accepted
   two-layer `printed-bell-clock-draft` as evidence and establish one separate
   `printed-bell-four-layer` working candidate. Follow the four-layer batch,
