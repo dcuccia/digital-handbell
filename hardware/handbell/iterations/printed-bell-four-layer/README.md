@@ -28,19 +28,36 @@ The subsequent [working PCB](reports/imu-coupled-working.kicad_pcb) and
 [working manifest](reports/imu-coupled-working-manifest.json) now contain
 the [complete local primitive block](reports/imu-signal-layer-correction.json):
 local supply, SCL, SDA, INT2-to-TP6 and an INT local exit are connected.
-Ground straps reach C23.2/local via, not yet proven MAIN-plane attachment.
+At that primitive checkpoint, ground straps reached C23.2/local via but
+MAIN-plane attachment had not yet been proved.
 IC4 and R15 are each shifted north 0.50 mm in this working candidate.
 Ordinary-via off-pad checks pass without a new via-in-pad dependency.
 Their native
 [front](reports/imu-working-front.png)/[inner](reports/imu-working-inner.png)
 views are source-bound, not complete group/plane or source/DRC qualification.
-Refill, full electrical and mechanical acceptance gates remain open, along
-with the external INT-to-MCU connection. The earlier
+Full electrical and mechanical acceptance gates remain open, along with
+the external INT-to-MCU connection. The earlier
 [failed signal screen](reports/imu-signal-closure.json) is historical;
 the corrected plan was applied after explicit September 24 resumption.
 Follow the [current handoff](../../../../docs/pcb-closure-plan.md#owner-pause-and-next-item).
 Earlier working versions/reports are historical; the handoff records the
 precise current evidence limits and remaining replacement duties.
+
+**Separate filled recovery candidate, not promoted:** the
+[filled PCB](reports/imu-electrical-filled.kicad_pcb) (`79a1dee3...`) and
+[matching manifest](reports/imu-electrical-filled-manifest.json)
+(`eb37d87f...`) have **38 opens**, 236 warnings, no non-open DRC errors,
+and unchanged 46 parity notices. Existing connected pad groups and both
+private protection-sense paths are preserved. The
+[corrected ground review](reports/imu-ground-anchor-review.json) proves
+all five IC4 ground pads and C23.2 reach the actual In1 GND island;
+`/CELL_NEG` remains isolated. The earlier diagnostic failure used +3V3
+IC1.49 as a ground reference and is superseded, not a repair obligation.
+The three new dangling warnings are the intentional INT exit and two
+preserved exterior stubs; none has been suppressed or trimmed.
+Exact cumulative source, process and geometry checks, return-path review
+and matched CAD remain pending. These recovery files are not quotation
+or fabrication assets.
 
 **Earlier acceptance: paired C12 supply/ground closure.** A shorter feed
 from the existing In2 +3V3 bridge replaces only the upstream F supply

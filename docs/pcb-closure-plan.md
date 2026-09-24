@@ -193,6 +193,18 @@ promote the candidate. Persist completed gates separately if the bounded
 item cannot finish. CAD and actual layout/return-path engineering review
 remain required after these checks.
 
+Root's first look at the source-bound F/In2 primitive views supports keeping
+this candidate, not reopening placement. Those images omit filled planes
+and drill voids and therefore cannot sign off return paths. The subsequent
+engineering review must inspect the actual In1 apertures/local necks and
+trace both decoupling loops to IC4.6/7: C23-to-VDDIO includes the B-side
+feed and two supply transitions, whereas C24-to-VDD uses the local F
+tree and its capped ground via. Measure those paths and their reference
+plane continuity rather than inferring high-frequency decoupling quality
+from all-net connectivity or total plane area. Review SCL/SDA/interrupt
+layer transitions and adjacency too; physical dielectric stackup and
+powered behavior remain separate qualifications.
+
 **Saved-board diagnostics measure 38 opens, but the MAIN-ground failure
 claim used the wrong net.** The
 [diagnostic report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-electrical-diagnostics.json)
