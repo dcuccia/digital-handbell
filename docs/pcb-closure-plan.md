@@ -200,6 +200,44 @@ Complete exact source/pose/process/contact/off-pad qualification and CAD
 remain separate gates; neither a reduced count nor a UUID inventory passes
 them.
 
+**Cumulative source-review contract prepared while ground review runs.**
+Root compared the accepted and filled S-expressions: the only changed
+shared UUID nodes are IC4 and R15. Excluding only each footprint's
+top-level `at`, their complete definitions match; all other shared nodes
+match apart from zone-fill caches. Non-UUID top-level definitions match.
+The two exact origins are `(89.499806,93.492711,270)` and
+`(87.082668,92.101941,90)`, each a 0.50 mm northward translation.
+
+The 75 removed segments comprise exactly the 69 source F/B segments on
+`+3V3`, SCL, SDA and `/IMU_INT2` wholly inside the original rework rectangle,
+plus the six explicitly recorded boundary splits in
+`imu-fanout-method.json`. No other net/layer qualifies for that removal
+policy. Four removed source vias are `aa47961d...`, `6421709a...`,
+`6d56c09b...` and `1c15a7a2...`, covered by the later signal/supply releases.
+Five exterior replacements must retain their exact original
+outside-endpoint-to-port geometry, layer, width and net. The sixth,
+`a25f792f...`, has its separate conditional spur-cut authorization and
+connectivity proof; do not generalize it to other outside tracks.
+Added copper is 66 segments and ten ordinary vias, exclusively on the
+released IMU nets. This is an inventory, not a geometry acceptance:
+verify the released local/new-only upper/INT2-only extension boundaries,
+allowed layers, exact via roles and dimensions, and preserved fixed
+bridge/USBBOOT/critical structures. Explicit interface endpoints on a
+rectangle edge include their normal end caps, not permission to extend
+routes arbitrarily outside it.
+
+Manifest differences are limited to the bound PCB hash, private status,
+stage-report path, and the three pose representations of each moved part.
+IC4 and native/common origins use the exact recorded translations.
+R15 `y_mm` is `-7.898059`: it was quantized to the native 1 nm grid,
+0.394640284 nm from subtracting 0.50 mm from the old floating-point proxy.
+Require that specific value and unchanged X/rotation/other fields, not an
+arbitrary coordinate tolerance or broad pose-field exemption. The future
+validator must mutate retained source geometry and a moved footprint's
+local pad/text geometry in negative controls; dropping every nested `at`
+would incorrectly hide those changes. Still pending are full authorized
+delta validation, geometry/process/contact checks and mechanical rebind.
+
 **Electrical qualification held at a validator interface error, not a
 measured board failure.** The
 [initial qualification report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-electrical-qualification.json)

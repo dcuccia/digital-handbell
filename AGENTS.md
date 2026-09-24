@@ -6,8 +6,12 @@
   the repaired supply candidate and the two recorded signal conflicts,
   retaining the Astra/Sol split and bounded retries. The local CS detour
   and INT layer transition now pass; the complete local primitive block
-  is saved as `e954884c...` with matching manifest. Next is validation-only
-  refill/full electrical qualification, not more routing or promotion. See
+  is saved as `e954884c...` with matching manifest. Its filled recovery
+  `79a1dee3...` measures 38 opens versus the accepted board's 41.
+  Electrical/source/process qualification remains pending. IC1.49 is
+  **+3V3, not MAIN GND**; never repair a ground based on that invalid anchor.
+  Next is a net-qualified ground review of the saved bytes, not another
+  refill, more routing or promotion. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished
