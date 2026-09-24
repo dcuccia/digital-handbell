@@ -166,6 +166,38 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Both obsolete branches are removed in a held cleanup candidate; fresh
+connectivity/DRC remain pending.** Native topology confirmed the +3V3
+segment ends at a retained multi-segment junction, and the five-item
+INT2 branch is padless through its retired via to the retained live via.
+The [cleanup report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-obsolete-branch-cleanup.json)
+records those exact six removals and completed refill (17 F polygons,
+one In1 polygon). Recovery PCB `d2a098b0...` and manifest `62ea87d6...`
+are preserved separately; `79a1dee3...` and the accepted board are unchanged.
+
+The executor stopped on 18 extra newline bytes in its raw, cache-stripped
+comparison. Root then compared the **complete ordered parsed
+S-expressions**, excluding only the six authorized top-level nodes and
+each zone's `filled_polygon` children. Every remaining atom, including
+whitespace inside quoted strings, matches. There are no new nodes, and
+the removal set is exact. Manifest differences are only the PCB hash,
+private held status and stage-report path. This resolves the source
+interpretation; do not alter or regenerate the board to fix harmless
+inter-node whitespace. Do not replace this with a global whitespace
+regular expression that would hide changes inside quoted properties.
+
+**Next item: finish saved-board cleanup validation on `d2a098b0...`,
+without another edit or refill.** Apply the inspected parser-aware source
+contract, then independently persist graph/ground/CELL_NEG/private-pickoff
+checks and fresh native DRC/warning identities. Verify changed fill's
+clearance/contact effects rather than reusing old fill evidence. No claim
+that the two warnings disappeared is made until native DRC completes.
+One focused harness correction is permitted; another interface mismatch
+must be reported without another all-in-one rebuild. CAD remains blocked
+on that result. The original report with local traceback paths is retained
+privately as `files/imu-obsolete-branch-cleanup-agent-original.json`
+(`4724e7d7...`); its public copy only redacts those personal paths.
+
 **Astra local-layout review: retain this candidate for prototype
 continuation; no further IMU placement reset is justified by the present
 evidence.** The [filled views and conductor records](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-engineering-review-inputs.json)

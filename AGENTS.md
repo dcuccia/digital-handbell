@@ -14,11 +14,12 @@
   `/CELL_NEG` remains isolated. Exact source/manifest and U4/C24 process
   preservation and the released-region/all-ten-via geometry gate now pass.
   Astra's local review retains the candidate for prototype continuation
-  with explicit decoupling/stackup/powered limits. Next is only the two
-  specifically released obsolete terminal branches, with topology proof
-  before removal and fresh refill/graph/DRC on a separate cleanup candidate.
-  Preserve the filled recovery and functional routes; CAD rebind follows
-  separately, with no automatic promotion. See
+  with explicit decoupling/stackup/powered limits. Both specifically
+  released obsolete branches are removed/refilled in held `d2a098b0...`.
+  Root's exact parsed-source comparison resolves a newline-only audit
+  mismatch; next is saved-board graph/DRC/fill-effects validation, without
+  another edit or refill. Preserve earlier recovery and functional routes;
+  CAD rebind follows separately, with no automatic promotion. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished

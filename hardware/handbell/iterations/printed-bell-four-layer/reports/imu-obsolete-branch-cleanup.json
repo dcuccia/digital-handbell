@@ -1,0 +1,336 @@
+{
+  "schema_version": 1,
+  "status": "HELD_PARTIAL_SOURCE_AUDIT_BLOCKER",
+  "scope": "Source-preserving removal of the released obsolete +3V3 leaf and complete /IMU_INT2 terminal branch, followed by the exercised four-layer refill, saved-board graph checks, and native DRC. Held for root/CAD review.",
+  "started_unix": 1790278861.4375405,
+  "inputs": {
+    "filled_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled.kicad_pcb",
+      "sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78"
+    },
+    "filled_manifest": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled-manifest.json",
+      "sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e"
+    },
+    "accepted_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+      "sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7"
+    }
+  },
+  "stages": [
+    {
+      "name": "input_bindings",
+      "status": "passed",
+      "details": {
+        "filled_pcb": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled.kicad_pcb",
+          "sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78"
+        },
+        "filled_manifest": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled-manifest.json",
+          "sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e"
+        },
+        "accepted_pcb": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+          "sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7"
+        }
+      },
+      "unix": 1790278861.4470587
+    },
+    {
+      "name": "pre_cut_topology",
+      "status": "passed",
+      "details": {
+        "A": {
+          "released_uuid_chain": [
+            "a672a427-0ece-5ca1-86f4-4e6ebe0488e5"
+          ],
+          "free_endpoint_mm": [
+            86.4021,
+            91.7386
+          ],
+          "retained_junction_endpoint_mm": [
+            86.4021,
+            93.0184
+          ],
+          "outside_attachment_uuids": [
+            "1065ce3b-f2e8-5b82-b02b-b34a4ee18e91",
+            "46ec06ab-1aa8-5e45-89e1-9aef38fb97f7",
+            "671f9ab4-62c4-5fa8-abe7-91dc2f785b00",
+            "9e068a2e-dbe9-5f89-8ae2-a8e3398c1a58",
+            "f5dd2753-0240-5abd-8ca9-f4efd4a86abc"
+          ],
+          "free_endpoint_retained_copper_touches": [],
+          "attached_end_is_retained_multi_segment_junction": true
+        },
+        "B": {
+          "released_uuid_chain_free_to_retained": [
+            "ca326628-e943-5adf-9c27-da2bc0468a49",
+            "1559c517-4991-518b-8aa5-28dda0467aa2",
+            "cd251294-41e9-523f-958c-e73cc84fd87d",
+            "2b001d25-c8c9-513a-bb23-4ea9218b54e5",
+            "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29"
+          ],
+          "free_endpoint_mm": [
+            93.1,
+            95.6833
+          ],
+          "retained_via_endpoint_mm": [
+            94.04,
+            92.3102
+          ],
+          "outside_attachment_uuids": [
+            "3a4ecc82-02d7-5513-8c89-db4de4adc534"
+          ],
+          "bounds_mm": {
+            "x": [
+              93.1,
+              95.2
+            ],
+            "y": [
+              92.1,
+              95.9
+            ]
+          },
+          "padless_and_junction_free_until_retained_via": true
+        },
+        "items": {
+          "a672a427-0ece-5ca1-86f4-4e6ebe0488e5": {
+            "uuid": "a672a427-0ece-5ca1-86f4-4e6ebe0488e5",
+            "kind": "segment",
+            "net": "+3V3",
+            "start_mm": [
+              86.4021,
+              93.0184
+            ],
+            "end_mm": [
+              86.4021,
+              91.7386
+            ],
+            "width_mm": 0.1778,
+            "layer": "F.Cu",
+            "graph_neighbor_uuids": [
+              "1065ce3b-f2e8-5b82-b02b-b34a4ee18e91",
+              "46ec06ab-1aa8-5e45-89e1-9aef38fb97f7",
+              "671f9ab4-62c4-5fa8-abe7-91dc2f785b00",
+              "9e068a2e-dbe9-5f89-8ae2-a8e3398c1a58",
+              "f5dd2753-0240-5abd-8ca9-f4efd4a86abc"
+            ]
+          },
+          "ca326628-e943-5adf-9c27-da2bc0468a49": {
+            "uuid": "ca326628-e943-5adf-9c27-da2bc0468a49",
+            "kind": "segment",
+            "net": "/IMU_INT2",
+            "start_mm": [
+              93.1,
+              95.6833
+            ],
+            "end_mm": [
+              94.2695,
+              95.6833
+            ],
+            "width_mm": 0.1778,
+            "layer": "F.Cu",
+            "graph_neighbor_uuids": [
+              "1559c517-4991-518b-8aa5-28dda0467aa2"
+            ]
+          },
+          "1559c517-4991-518b-8aa5-28dda0467aa2": {
+            "uuid": "1559c517-4991-518b-8aa5-28dda0467aa2",
+            "kind": "segment",
+            "net": "/IMU_INT2",
+            "start_mm": [
+              94.2695,
+              95.6833
+            ],
+            "end_mm": [
+              94.8392,
+              95.1136
+            ],
+            "width_mm": 0.1778,
+            "layer": "F.Cu",
+            "graph_neighbor_uuids": [
+              "ca326628-e943-5adf-9c27-da2bc0468a49",
+              "cd251294-41e9-523f-958c-e73cc84fd87d"
+            ]
+          },
+          "cd251294-41e9-523f-958c-e73cc84fd87d": {
+            "uuid": "cd251294-41e9-523f-958c-e73cc84fd87d",
+            "kind": "via",
+            "net": "/IMU_INT2",
+            "at_mm": [
+              94.8392,
+              95.1136
+            ],
+            "diameter_mm": 0.6,
+            "drill_mm": 0.3,
+            "layers": [
+              "F.Cu",
+              "B.Cu",
+              "In1.Cu",
+              "In2.Cu"
+            ],
+            "graph_neighbor_uuids": [
+              "1559c517-4991-518b-8aa5-28dda0467aa2",
+              "2b001d25-c8c9-513a-bb23-4ea9218b54e5"
+            ]
+          },
+          "2b001d25-c8c9-513a-bb23-4ea9218b54e5": {
+            "uuid": "2b001d25-c8c9-513a-bb23-4ea9218b54e5",
+            "kind": "segment",
+            "net": "/IMU_INT2",
+            "start_mm": [
+              94.8392,
+              93.1094
+            ],
+            "end_mm": [
+              94.8392,
+              95.1136
+            ],
+            "width_mm": 0.1778,
+            "layer": "B.Cu",
+            "graph_neighbor_uuids": [
+              "cd251294-41e9-523f-958c-e73cc84fd87d",
+              "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29"
+            ]
+          },
+          "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29": {
+            "uuid": "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29",
+            "kind": "segment",
+            "net": "/IMU_INT2",
+            "start_mm": [
+              94.04,
+              92.3102
+            ],
+            "end_mm": [
+              94.8392,
+              93.1094
+            ],
+            "width_mm": 0.1778,
+            "layer": "B.Cu",
+            "graph_neighbor_uuids": [
+              "2b001d25-c8c9-513a-bb23-4ea9218b54e5",
+              "3a4ecc82-02d7-5513-8c89-db4de4adc534"
+            ]
+          },
+          "3a4ecc82-02d7-5513-8c89-db4de4adc534": {
+            "uuid": "3a4ecc82-02d7-5513-8c89-db4de4adc534",
+            "kind": "via",
+            "net": "/IMU_INT2",
+            "at_mm": [
+              94.04,
+              92.3102
+            ],
+            "diameter_mm": 0.6,
+            "drill_mm": 0.3,
+            "layers": [
+              "F.Cu",
+              "B.Cu",
+              "In1.Cu",
+              "In2.Cu"
+            ],
+            "graph_neighbor_uuids": [
+              "3c10ff22-99b1-5d7b-9434-c9d582ab1f3a",
+              "dc15d9a3-e0ad-560a-b31d-902030f68961",
+              "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29"
+            ]
+          }
+        }
+      },
+      "unix": 1790278897.3856258
+    },
+    {
+      "name": "source_preserving_write_and_refill",
+      "status": "passed",
+      "details": {
+        "deleted_uuids": [
+          "a672a427-0ece-5ca1-86f4-4e6ebe0488e5",
+          "ca326628-e943-5adf-9c27-da2bc0468a49",
+          "1559c517-4991-518b-8aa5-28dda0467aa2",
+          "cd251294-41e9-523f-958c-e73cc84fd87d",
+          "2b001d25-c8c9-513a-bb23-4ea9218b54e5",
+          "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29"
+        ],
+        "deleted_source_fragments": {
+          "2b001d25-c8c9-513a-bb23-4ea9218b54e5": "(segment (start 94.839200 93.109400) (end 94.839200 95.113600) (width 0.1778) (layer \"B.Cu\") (net \"/IMU_INT2\") (uuid \"2b001d25-c8c9-513a-bb23-4ea9218b54e5\"))",
+          "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29": "(segment (start 94.040000 92.310200) (end 94.839200 93.109400) (width 0.1778) (layer \"B.Cu\") (net \"/IMU_INT2\") (uuid \"dd747bbd-12dc-5f3a-accc-c1cdbf89ad29\"))",
+          "1559c517-4991-518b-8aa5-28dda0467aa2": "(segment (start 94.269500 95.683300) (end 94.839200 95.113600) (width 0.1778) (layer \"F.Cu\") (net \"/IMU_INT2\") (uuid \"1559c517-4991-518b-8aa5-28dda0467aa2\"))",
+          "ca326628-e943-5adf-9c27-da2bc0468a49": "(segment (start 93.100000 95.683300) (end 94.269500 95.683300) (width 0.1778) (layer \"F.Cu\") (net \"/IMU_INT2\") (uuid \"ca326628-e943-5adf-9c27-da2bc0468a49\"))",
+          "a672a427-0ece-5ca1-86f4-4e6ebe0488e5": "(segment (start 86.402100 93.018400) (end 86.402100 91.738600) (width 0.1778) (layer \"F.Cu\") (net \"+3V3\") (uuid \"a672a427-0ece-5ca1-86f4-4e6ebe0488e5\"))",
+          "cd251294-41e9-523f-958c-e73cc84fd87d": "(via (at 94.839200 95.113600) (size 0.6) (drill 0.3) (layers \"F.Cu\" \"B.Cu\") (net \"/IMU_INT2\") (uuid \"cd251294-41e9-523f-958c-e73cc84fd87d\"))"
+        },
+        "candidate_pcb_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+        "candidate_manifest_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef",
+        "refill": {
+          "status": "FOUR_LAYER_FILL_CACHE_TRANSPLANTED_REQUIRES_QUALIFICATION",
+          "native_version": "10.0.6",
+          "source_sha256": "1e173f8d911cafabff02c551a36eb559ed04dd6fb681eaa2ae52067342d84912",
+          "output_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+          "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+          "in_memory_settings_mm": {
+            "m_MinClearance": 0.2,
+            "m_CopperEdgeClearance": 0.25,
+            "m_HoleClearance": 0.25,
+            "m_HoleToHoleMin": 0.25,
+            "m_MaxError": 0.001
+          },
+          "zones": {
+            "42e3abc5-2c92-5943-8944-bee0da8523c3": {
+              "layer": "F.Cu",
+              "filled_polygon_count": 17
+            },
+            "332d3ba8-ed46-550f-912f-bb402cd2a16b": {
+              "layer": "In1.Cu",
+              "filled_polygon_count": 1
+            }
+          }
+        }
+      },
+      "unix": 1790278903.5526838
+    }
+  ],
+  "correction": "The initial topology harness assumed a single outside neighbor at the +3V3 attachment. Native geometry showed an exact retained multi-segment junction; the corrected assertion binds that complete junction set.",
+  "attempts": {
+    "initial": 1,
+    "implementation_corrections": 2,
+    "correction_cap_exhausted": true
+  },
+  "held_outputs": {
+    "staged_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged.kicad_pcb",
+      "sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711"
+    },
+    "staged_manifest": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged-manifest.json",
+      "sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef",
+      "binds_staged_pcb": true
+    }
+  },
+  "blocker": {
+    "gate": "strict source-preservation audit",
+    "exact_comparison_passed": false,
+    "nonwhitespace_comparison_passed": true,
+    "normalized_length_delta_bytes": 18,
+    "first_difference": "Additional newline-only text immediately before the first rule-area zone after removing released nodes and all filled_polygon caches.",
+    "effect": "Graph and native DRC validation were not run, so the staged pair is recovery evidence only and is not a validated cleanup candidate."
+  },
+  "completed_stages": [
+    "immutable input binding",
+    "read-only exact branch topology",
+    "six-node source-preserving deletion",
+    "qualified four-layer refill",
+    "staged manifest binding"
+  ],
+  "pending_stages": [
+    "exact source audit after resolving the newline-only normalization mismatch",
+    "full saved-board graph validation",
+    "fresh native DRC and warning-identity comparison"
+  ],
+  "error": {
+    "type": "ValueError",
+    "message": "Candidate differs outside released branch nodes and zone fill caches",
+    "traceback": "Traceback (most recent call last):\n  File \"files\\cleanup_imu_obsolete_branches.py\", line 335, in <module>\n    require(source_without == candidate_without,\n  File \"files\\cleanup_imu_obsolete_branches.py\", line 75, in require\n    raise ValueError(message)\nValueError: Candidate differs outside released branch nodes and zone fill caches\n"
+  },
+  "completed_unix": 1790278906.689336,
+  "elapsed_seconds": 45.251795530319214
+}
