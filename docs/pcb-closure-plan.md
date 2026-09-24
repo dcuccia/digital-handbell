@@ -166,6 +166,25 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**The remaining copper geometry gate passed.** The
+[geometry report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-geometry-qualification.json)
+(`3050b132...`) covers all 61 new local segments and ten ordinary vias,
+including actual filled-island geometry, same-net-inclusive SMD land
+overlap, drill/USB-slot and contact/base/tab checks. The five retained
+exteriors retain their separate exact-source contract. No new In1 signal
+traces or unauthorized centreline excursions were found. Input PCB
+`79a1dee3...` and manifest `eb37d87f...` remain unchanged and unpromoted.
+
+**Next item is engineering review, not another general validation pass.**
+Sol may extract source-bound native filled-plane/layer views and the
+actual C23/VDDIO and C24/VDD route/stitch geometry for Astra's review.
+Show filled holes, coordinates and local returns; primitive-only pictures
+or a single connected-plane component are insufficient. Report route
+length definitions and limitations, not inferred impedance/inductance or
+manufacturing qualification. Preserve copper and all completed evidence.
+Astra then decides the return-path/decoupling/adjacency disposition before
+the separate exact CAD rebind and any explicitly authorized stub trims.
+
 **Exact source/manifest/process preservation passed; geometry is still
 pending.** The [source/process report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-source-process-qualification.json)
 (`a4a75996...`) checks the explicit removal sets, five retained exterior

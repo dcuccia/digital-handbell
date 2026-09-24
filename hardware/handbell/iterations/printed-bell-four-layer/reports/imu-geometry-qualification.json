@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "status": "GEOMETRY_QUALIFICATION_PASSED",
+  "classification": "Read-only qualification of the immutable filled candidate's 61 new local segments, five separately contracted exterior replacements, and ten ordinary vias. No copper, fill, placement, manifest, CAD, active package, or historical report was changed.",
+  "inputs": {
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "filled_pcb_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+    "filled_manifest_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+    "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "native_version": "KiCad 10.0.6"
+  },
+  "delta_inventory": {
+    "added_segment_count": 66,
+    "separately_contracted_retained_exterior_count": 5,
+    "new_local_segment_count": 61,
+    "ordinary_via_count": 10,
+    "exact_counts_passed": true
+  },
+  "segment_region_and_layer_gate": {
+    "status": "passed",
+    "checked_local_segments": 61,
+    "full_centreline_failures": [],
+    "released_net_layer_failures": [],
+    "In1_signal_segments": [],
+    "method": "Exact parametric interval coverage of each complete segment centreline by the union of the original local box x86.6..93.1,y90.5..95.9, upper corridor x86.6..93.1,y89.2..90.5, and only for /IMU_INT2 on In2 the extension x93.1..94.2,y92.1..92.95.",
+    "interface_endcaps": "Centreline endpoints on declared boundaries are accepted; this does not authorize arbitrary centreline extension outside the released regions.",
+    "retained_exteriors": {
+      "excluded_from_local_region_test": true,
+      "exact_geometry_net_layer_width_contract_reused_from_report_sha256": "a4a75996cced9e3cd4cc5aad37a6a9f0227248be51c9d8ac4add86d0284d82af"
+    }
+  },
+  "ordinary_via_gate": {
+    "status": "passed",
+    "prescribed_diameter_mm": 0.604,
+    "prescribed_drill_mm": 0.35,
+    "span": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"],
+    "project_min_via_annular_width_mm": 0.1,
+    "prescribed_nominal_annulus_mm": 0.127,
+    "annulus_interpretation": "0.127 mm is the nominal result of the prescribed dimensions. It is not the project minimum and is not a manufacturing-tolerance qualification.",
+    "vias": {
+      "074256f0-3d19-59f4-b81b-084e8d3d9e55": {"net": "INT", "position_mm": [91.8, 92.14]},
+      "0b25a804-80c1-522d-9076-2bf110ac9b32": {"net": "/IMU_INT2", "position_mm": [89.6195, 93.5809]},
+      "102d837c-4d5e-5433-964e-f19081feef15": {"net": "GND", "position_mm": [87.9, 93.8]},
+      "58527c16-637b-5f8e-a517-9db65c8d641f": {"net": "INT", "position_mm": [87.97, 91.72]},
+      "6e5a234c-cb91-54fb-a6d1-b830e4b5b602": {"net": "+3V3", "position_mm": [88.794835, 90.05]},
+      "797f5c8d-fea4-563d-a8e3-ba26733cbf55": {"net": "SDA", "position_mm": [90.7, 91.65]},
+      "8172b557-052b-5662-a082-56a27b776202": {"net": "+3V3", "position_mm": [87.95, 92.55]},
+      "c23febc8-84dd-5013-a6b7-cc472dfbc610": {"net": "SDA", "position_mm": [87.0, 90.05]},
+      "c9df651a-3f63-5fc1-84db-a26e944f6157": {"net": "SCL", "position_mm": [91.02, 93.492711]},
+      "f0ac0b29-117f-510d-95b6-916ba13ba667": {"net": "SCL", "position_mm": [87.094469, 93.55]}
+    },
+    "all_exact_dimensions_and_full_spans": true,
+    "same_net_inclusive_positive_area_F_B_SMD_land_overlaps": [],
+    "foreign_copper_0_20mm_hits": [],
+    "drill_0_25mm_hits": [],
+    "contact_base_tab_0_25mm_hits": [],
+    "minimum_via_to_via_drill_clearance_margin_mm": 0.23024092888751277,
+    "minimum_via_to_via_drill_witness": [
+      "58527c16-637b-5f8e-a517-9db65c8d641f",
+      "8172b557-052b-5662-a082-56a27b776202"
+    ],
+    "methods": {
+      "off_pad": "Native F/B SMD effective polygons intersected with a 0.302 mm annulus polygon generated using 1 IU ERROR_OUTSIDE; positive area is forbidden including same-net lands.",
+      "foreign_copper": "Native primitive shapes and actual filled-island polygons, preserving island holes, tested at 0.20 mm minus 1 IU.",
+      "circular_drills": "Exact integer centre-distance clearance using actual drill radii.",
+      "pad_and_USB_slot_drills": "Saved PAD GetEffectiveHoleShape().Collide(candidate hole circle, 0.25 mm minus 1 IU); no round-slot substitution.",
+      "contacts": "Authoritative mirrored base-tab and under-cell polygons tested against the exposed B/full-span annulus at 0.302+0.25=0.552 mm centre exclusion."
+    }
+  },
+  "added_segment_clearance_gate": {
+    "status": "passed",
+    "checked_segments": 61,
+    "foreign_copper_clearance_mm": 0.2,
+    "foreign_copper_hits": [],
+    "B_contact_base_tab_clearance_mm": 0.25,
+    "B_contact_hits": [],
+    "filled_island_shapes_and_holes_included": true,
+    "layer_policy": "Only B.Cu segments were treated as exposed contact-side copper. F.Cu traces beneath B contacts were not incorrectly rejected as B copper.",
+    "minimum_margin_limit": "The exercised native collision API establishes the required pass thresholds but does not expose a repository-qualified exact polygon-to-polygon distance result; no optimistic additional margin was inferred."
+  },
+  "controls": {
+    "reused_successful_geometry_controls_sha256": "0b2275ad726f663b46436e50708c3f848e20d24c2460bd19dbf0166607dd7cad",
+    "covered": [
+      "circular overlap and exact-boundary controls",
+      "native USB slot overlap/inside/outside controls",
+      "contact rectangle overlap/inside/outside controls",
+      "native slot GetEffectiveHoleShape signature",
+      "contact polygon collision signature"
+    ],
+    "new_candidate_written": false
+  },
+  "reused_completed_gates": {
+    "source_manifest_process_report_sha256": "a4a75996cced9e3cd4cc5aad37a6a9f0227248be51c9d8ac4add86d0284d82af",
+    "graph_diagnostics_sha256": "92ca918db86ace174eef0638d96879238505bc09941e6da695076bae464c7ae7",
+    "drc_comparison_sha256": "09239f42b05acb030437c1e9f95efa951f668a0d942b85300bb7bd6352f3aa43",
+    "ground_anchor_report_sha256": "19328537d2fcc59285190b11bdf6c62764d80bddb1cddfba304fbe813d55283a",
+    "private_pickoffs": "Both measured independent until their declared terminals.",
+    "fresh_DRC_non_open_errors": 0
+  },
+  "evidence": {
+    "path": "files/imu-electrical-qualification/evidence/geometry-qualification.json",
+    "sha256": "2a5c78d8132fc601ee09c2f4fdd4b4a258dc845aa96034a61e3f60013a73db1b",
+    "validator_sha256": "6a0dd37162e597fa0a3b80b80934b3370154d3026e43966e00a5e0ea2a715b01"
+  },
+  "fresh_stages": [
+    "exact delta inventory",
+    "full segment containment and released net/layer gate",
+    "all-ten ordinary-via dimensions, span, off-pad, foreign-copper, drill and contact gate",
+    "all 61 local-segment foreign-copper and B-contact clearance gate"
+  ],
+  "pending_after_geometry": [
+    "Actual return-path, decoupling-loop and B/In2 adjacency engineering review",
+    "Engineering disposition of exterior dangling stubs a672a427 and ca326628; no trim is performed here",
+    "CAD mechanical rebind and review",
+    "External INT continuation from the declared local exit to IC1.34",
+    "Physical stackup and manufacturing qualification"
+  ],
+  "no_actions": {
+    "routing": true,
+    "refill": true,
+    "stub_trim": true,
+    "placement": true,
+    "CAD": true,
+    "promotion": true,
+    "root_docs": true,
+    "commit_or_push": true,
+    "next_item_started": false
+  }
+}

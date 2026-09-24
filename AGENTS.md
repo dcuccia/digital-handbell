@@ -12,8 +12,10 @@
   **+3V3, not MAIN GND**; never repair a ground based on that invalid anchor.
   The corrected review proves all five IMU grounds reach In1 GND and
   `/CELL_NEG` remains isolated. Exact source/manifest and U4/C24 process
-  preservation now pass. Next is the released-region/all-ten-via geometry
-  gate on the saved bytes, not another refill, more routing or promotion. See
+  preservation and the released-region/all-ten-via geometry gate now pass.
+  Next is Astra's return-path/decoupling/adjacency review using actual filled
+  views and extracted route geometry, followed by the separate CAD rebind;
+  no automatic refill, routing, stub trims or promotion. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished
