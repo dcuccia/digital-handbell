@@ -11,9 +11,9 @@
   Electrical/source/process qualification remains pending. IC1.49 is
   **+3V3, not MAIN GND**; never repair a ground based on that invalid anchor.
   The corrected review proves all five IMU grounds reach In1 GND and
-  `/CELL_NEG` remains isolated. Next is exact source/process/geometry
-  qualification of the saved bytes, not another refill, more routing
-  or promotion. See
+  `/CELL_NEG` remains isolated. Exact source/manifest and U4/C24 process
+  preservation now pass. Next is the released-region/all-ten-via geometry
+  gate on the saved bytes, not another refill, more routing or promotion. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished

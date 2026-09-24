@@ -166,6 +166,27 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Exact source/manifest/process preservation passed; geometry is still
+pending.** The [source/process report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-source-process-qualification.json)
+(`a4a75996...`) checks the explicit removal sets, five retained exterior
+pieces, unchanged critical copper/zone definitions, and exact IC4/R15
+poses. Source-derived negative controls reject unauthorized retained
+geometry, local pad/text, manifest and removal changes. U4's four thermal
+vias and complete footprint, plus C24's via/land/paste/mask, are preserved;
+the five filled/planarized/capped-via requirements remain mandatory.
+
+**Next bounded item: complete the released-region and all-ten-via geometry
+gate on unchanged `79a1dee3...` / `eb37d87f...`.** Check all 61 new local
+segments plus five exact retained exterior pieces, all ten new ordinary
+vias, and actual filled geometry. Enforce the released net/layer/region
+contract, 0.20 mm foreign clearance, same-net-inclusive off-pad rule,
+actual hole shapes/new-new drills, and 0.25 mm contact/base/tab clearance.
+The current project minimum annulus is 0.10 mm; the prescribed new
+0.604/0.35 mm pattern has a nominal 0.127 mm annulus. Report both rather
+than inventing a stricter project setting or claiming fabrication yield.
+Reuse unchanged completed gates; no routing, refill, trims, CAD or promotion.
+Return explicit residual gates if the bounded pass cannot finish.
+
 **Corrected ground proof passes; no ground repair is needed.**
 The [anchor review](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-ground-anchor-review.json)
 (`19328537...`) confirms C24.2 belongs to the actual In1 GND island in

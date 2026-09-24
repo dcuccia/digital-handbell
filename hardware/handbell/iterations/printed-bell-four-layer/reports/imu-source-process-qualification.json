@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "status": "SOURCE_MANIFEST_PROCESS_PASSED_GEOMETRY_HELD",
+  "classification": "Validation-only evidence for the immutable filled candidate. Exact cumulative source, manifest, and mandatory-process gates passed. The complete all-ten-ordinary-via engineering geometry gate remains pending; no promotion or full electrical qualification is claimed.",
+  "inputs": {
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "accepted_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "filled_pcb_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+    "filled_manifest_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+    "candidate_bytes_modified": false
+  },
+  "cumulative_source_review": {
+    "status": "passed",
+    "changed_shared_raw_UUID_nodes": [
+      "bab6e5bd-92f4-5a4d-a1bb-25bdd700d7dd",
+      "a7aa5962-f396-566a-ac9d-9f041e02f3d7",
+      "42e3abc5-2c92-5943-8944-bee0da8523c3",
+      "332d3ba8-ed46-550f-912f-bb402cd2a16b"
+    ],
+    "shared_UUID_differences_after_removing_only_zone_fill_caches_and_each_moved_footprint_direct_top_at": [],
+    "non_UUID_top_definitions_identical": true,
+    "moved_footprints": {
+      "IC4": {
+        "uuid": "bab6e5bd-92f4-5a4d-a1bb-25bdd700d7dd",
+        "native_at": [89.499806, 93.492711, 270],
+        "complete_definition_except_direct_top_at_identical": true
+      },
+      "R15": {
+        "uuid": "a7aa5962-f396-566a-ac9d-9f041e02f3d7",
+        "native_at": [87.082668, 92.101941, 90],
+        "complete_definition_except_direct_top_at_identical": true
+      }
+    },
+    "removed_segments": {
+      "count": 75,
+      "derived_local_count": 69,
+      "policy": "Exactly the accepted F/B +3V3, SCL, SDA and /IMU_INT2 segments wholly inside x86.6..93.1,y90.5..95.9 plus the six structured boundary_splits source UUIDs.",
+      "exact_set_match": true
+    },
+    "removed_vias": {
+      "exact_set_match": true,
+      "uuids": [
+        "aa47961d-0754-5f3e-b69c-68e3b7f9079f",
+        "6421709a-0a8e-5ae6-b17a-69e9ccb61078",
+        "6d56c09b-2b19-5144-a473-6e1c16d7c430",
+        "1c15a7a2-2065-55a0-bfec-88da501cad88"
+      ]
+    },
+    "added_inventory": {
+      "segments": 66,
+      "ordinary_vias": 10
+    },
+    "boundary_replacements": {
+      "five_retained_exteriors_exact_outside_endpoint_port_net_layer_width": true,
+      "conditional_a25f792f_absent": true,
+      "conditional_cut_not_generalized": true
+    },
+    "fixed_critical_raw_exact": {
+      "a8cbe912-8331-5b8c-8007-4757dbf45c33": true,
+      "ae5186f8-c14f-543b-83b6-5de362326e62": true,
+      "111733be-aadc-5fca-b2d3-89bc13913f19": true
+    },
+    "authorization_basis": "docs/pcb-closure-plan.md cumulative source-review contract plus structured reports/imu-fanout-method.json boundary_splits; no UUID-in-arbitrary-report-text acceptance was used."
+  },
+  "manifest_review": {
+    "status": "passed",
+    "only_difference_paths": [
+      "components[37].native_origin_common_xy_mm[1]",
+      "components[37].y_mm",
+      "components[61].native_origin_common_xy_mm[1]",
+      "components[61].y_mm",
+      "current_stage_report",
+      "electrical_landmarks.imu.IC4[1]",
+      "electrical_landmarks.imu.R15[1]",
+      "generated_pcb_sha256",
+      "status"
+    ],
+    "exact_values": {
+      "generated_pcb_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+      "status": "private filled IMU electrical qualification candidate; not promoted or quoteable",
+      "current_stage_report": "reports/imu-electrical-qualification.json",
+      "IC4_y_mm": -6.507288935525312,
+      "IC4_native_y_mm": -6.507289,
+      "IC4_landmark_y_mm": -6.507289,
+      "R15_y_mm": -7.898059,
+      "R15_native_y_mm": -7.898059,
+      "R15_landmark_y_mm": -7.898059
+    },
+    "R15_quantized_value_is_specific_not_tolerance": true,
+    "component_order_inventory_and_all_other_fields_unchanged": true
+  },
+  "source_derived_controls": {
+    "status": "passed",
+    "candidate_written": false,
+    "retained_source_geometry_mutation_rejected": true,
+    "moved_footprint_local_pad_at_mutation_rejected": true,
+    "moved_footprint_local_text_at_mutation_rejected": true,
+    "unrelated_manifest_field_mutation_rejected": true,
+    "unauthorized_removed_item_rejected": true
+  },
+  "mandatory_process_preservation": {
+    "status": "passed",
+    "U4": {
+      "complete_footprint_pad_paste_mask_definition_raw_exact": true,
+      "thermal_via_count": 4,
+      "thermal_vias_raw_exact": true,
+      "thermal_via_uuids": [
+        "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+        "c63c289d-af32-592b-9732-d17507fbf476",
+        "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5",
+        "eb628663-2af6-5175-bd63-91e9eecb0258"
+      ]
+    },
+    "C24": {
+      "complete_footprint_land_paste_mask_definition_raw_exact": true,
+      "via_uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+      "via_raw_exact": true,
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    "mandatory_fabrication_notes": [
+      "nonconductive resin fill",
+      "planarization",
+      "copper capping"
+    ],
+    "tenting_alone_acceptable": false,
+    "native_treatment_flags_claimed": false,
+    "supplier_qualification_claimed": false
+  },
+  "reused_exact_hash_evidence": {
+    "graph_diagnostics_sha256": "92ca918db86ace174eef0638d96879238505bc09941e6da695076bae464c7ae7",
+    "drc_comparison_sha256": "09239f42b05acb030437c1e9f95efa951f668a0d942b85300bb7bd6352f3aa43",
+    "ground_anchor_review_report_sha256": "19328537d2fcc59285190b11bdf6c62764d80bddb1cddfba304fbe813d55283a",
+    "facts": [
+      "38 native and independent graph opens",
+      "zero accepted connected-padgroup regressions",
+      "zero shorts and zero floating copper",
+      "all five IC4 GND pads reach the C24.2-qualified In1 GND component",
+      "/CELL_NEG remains isolated",
+      "both private pickoffs remain independent until their terminals",
+      "fresh DRC has zero non-open errors"
+    ]
+  },
+  "completed_stages": [
+    "immutable input bindings",
+    "exact cumulative source ledger",
+    "exact manifest delta and poses",
+    "source-derived in-memory negative controls",
+    "U4 and C24 mandatory-process primitive preservation"
+  ],
+  "pending_geometry_gate": {
+    "status": "not_completed_within_bounded_item",
+    "finite_scope": [
+      "Inventory all ten added/changed ordinary vias, including retained INT2 anchor 0b25a804-80c1-522d-9076-2bf110ac9b32, as exact 0.604/0.35 mm F.Cu-B.Cu vias",
+      "Same-net-inclusive positive-area non-overlap against every F/B SMD land",
+      "0.20 mm foreign-copper clearance including actual filled-island geometry",
+      "Actual pad-hole-shape checks including USB slots, plus all new-new drill clearances",
+      "0.25 mm contact-base and tab/mask interface clearance using battery-contact-interface.json",
+      "Explicit source-policy annulus check without inferring a rule from nominal dimensions",
+      "Added-segment and via allowed-layer/released-net checks",
+      "Complete centreline containment in the local, upper, and INT2-only extension regions with only declared interface-endcap allowance"
+    ],
+    "not_substituted_by": [
+      "fresh native DRC",
+      "the earlier nine-via off-pad screen",
+      "segment and via inventory counts"
+    ]
+  },
+  "evidence": {
+    "source_process_results": {
+      "path": "files/imu-electrical-qualification/evidence/source-process-qualification.json",
+      "sha256": "f74dbacfafcbd7ea88e3dc3f882e67b741f6e9afd10c3b420f1a3a77a337c444"
+    },
+    "negative_controls": {
+      "path": "files/imu-electrical-qualification/evidence/source-negative-controls.json",
+      "sha256": "014ec0882b7b24712e45cb57c40307e48e45313ec2707937454698ae230b6ede"
+    },
+    "validator_sha256": "cf56c62049f8f958f9844a883f427f2c8c72c3509d60808e85f3505f268832ba",
+    "control_tool_sha256": "3bc56071cd61de0f4eed73a7bceafe63a6c82d0284f27537be303114a6639d22"
+  },
+  "corrections": [
+    "Resolved IC4's actual saved-board footprint UUID from native reference IC4.",
+    "Resolved the exact preserved USBBOOT diagonal UUID 111733be-aadc-5fca-b2d3-89bc13913f19."
+  ],
+  "remaining_non_geometry_gates": [
+    "CAD mechanical rebind and review",
+    "Return-path, decoupling-loop, B/In2 adjacency and physical-stackup qualification",
+    "External INT connection from the declared local exit to IC1.34",
+    "Engineering disposition of the two read-only dangling-stub trim candidates"
+  ],
+  "no_actions": {
+    "refill": true,
+    "copper_edit": true,
+    "stub_trim": true,
+    "placement_edit": true,
+    "CAD_edit": true,
+    "active_package_edit": true,
+    "commit_or_push": true,
+    "next_item_started": false
+  }
+}
