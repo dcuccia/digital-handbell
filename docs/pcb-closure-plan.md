@@ -166,6 +166,33 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Corrected ground proof passes; no ground repair is needed.**
+The [anchor review](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-ground-anchor-review.json)
+(`19328537...`) confirms C24.2 belongs to the actual In1 GND island in
+both accepted and filled boards. C23.2 and all five IC4 GND pads reach
+that island in the filled candidate. The negative control rejects
+IC1.49 because it is +3V3. All seven `/CELL_NEG` pads and its 55 copper
+items remain in one component isolated from GND; the actual slash-prefixed
+net is checked, not an empty `CELL_NEG` lookup. This supersedes only the
+false ground-failure interpretation, not the other pending gates.
+
+Read-only cut proofs show that `a672a427...` (+3V3) and `ca326628...`
+(/IMU_INT2) can each be removed without losing their current connected
+pad groups. They remain preserved for now. The INT local exit is
+intentionally unfinished and must remain. Silk findings stay in the
+late manufacturing cleanup, not a copper-clearance waiver.
+
+**Next bounded item: exact source/process/geometry qualification of the
+unchanged filled pair `79a1dee3...` / `eb37d87f...`.** Apply the cumulative
+source contract below, reject unauthorized node/field changes with
+negative controls, and check all ten new ordinary vias against same-net
+lands, drill/barrel/contact constraints. Preserve U4/C24 mandatory
+filled/capped treatment and original lands. Reuse hash-bound graph/DRC,
+ground and pickoff evidence; do not refill, trim stubs, move parts or
+promote the candidate. Persist completed gates separately if the bounded
+item cannot finish. CAD and actual layout/return-path engineering review
+remain required after these checks.
+
 **Saved-board diagnostics measure 38 opens, but the MAIN-ground failure
 claim used the wrong net.** The
 [diagnostic report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-electrical-diagnostics.json)

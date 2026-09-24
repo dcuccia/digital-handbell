@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "status": "GROUND_ANCHOR_REVIEW_PASSED",
+  "scope": "Read-only correction of the saved-board GND anchor, CELL_NEG isolation target, and three fresh dangling-track warning dispositions. No board, manifest, refill, route, placement, active package, or prior report was changed.",
+  "immutable_inputs": {
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "filled_pcb_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+    "filled_manifest_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+    "prior_graph_evidence_sha256": "92ca918db86ace174eef0638d96879238505bc09941e6da695076bae464c7ae7",
+    "prior_drc_comparison_sha256": "09239f42b05acb030437c1e9f95efa951f668a0d942b85300bb7bd6352f3aa43"
+  },
+  "anchor_controls": {
+    "negative": {
+      "reference": "IC1",
+      "pad": "49",
+      "uuid": "bf3014f1-84e2-52af-aac5-7bcc596611f0",
+      "actual_net": "+3V3",
+      "qualified_as_GND_anchor": false,
+      "result": "Rejected before connectivity assertions because the actual pad net is not GND."
+    },
+    "positive": {
+      "reference": "C24",
+      "pad": "2",
+      "uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+      "actual_net": "GND",
+      "qualified_as_GND_anchor": true,
+      "accepted_component_pad_count": 43,
+      "accepted_actual_plane_binding": {
+        "synthetic_island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+        "zone_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b",
+        "layer": "In1.Cu",
+        "net": "GND",
+        "island_index": 0,
+        "filled_area_mm2": 1370.8232880650594
+      },
+      "result": "Accepted C24.2 is in the component containing the actual native In1.Cu GND filled island; this is not a net-name-only or arbitrary component-ID assertion."
+    }
+  },
+  "filled_ground_component": {
+    "anchor": "C24.2",
+    "anchor_uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+    "component_pad_count": 48,
+    "actual_plane_binding": {
+      "synthetic_island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+      "zone_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b",
+      "layer": "In1.Cu",
+      "net": "GND",
+      "island_index": 0,
+      "filled_area_mm2": 1366.8029247939635
+    },
+    "proofs": {
+      "accepted_C23.2_to_C24.2": true,
+      "filled_C23.2_to_C24.2": true,
+      "filled_C24.2_to_actual_In1_GND_island": true,
+      "filled_IC4.1_to_C24.2": true,
+      "filled_IC4.2_to_C24.2": true,
+      "filled_IC4.3_to_C24.2": true,
+      "filled_IC4.6_to_C24.2": true,
+      "filled_IC4.7_to_C24.2": true
+    },
+    "conclusion": "All five IC4 GND pads reach the accepted MAIN GND component and actual In1.Cu GND island. The prior IC1.49-based failure was an invalid +3V3 anchor assertion, not a board ground defect.",
+    "detailed_component_members": {
+      "evidence_path": "files/imu-electrical-qualification/evidence/ground-anchor-review.json",
+      "evidence_sha256": "aece137f118911c36b38d51641b13c3f4ce26336d8304d15de5da99c99d96a32",
+      "contents": "Full accepted and filled component pad membership, UUIDs, pad nets, synthetic island identities, zone UUIDs, layers, island indices, and filled areas."
+    }
+  },
+  "CELL_NEG_isolation": {
+    "actual_net": "/CELL_NEG",
+    "GND_anchor": "C24.2",
+    "pad_count": 7,
+    "copper_item_count": 55,
+    "component_count": 1,
+    "all_CELL_NEG_components_disjoint_from_C24.2_GND_component": true,
+    "all_CELL_NEG_pads_disconnected_from_C24.2": true,
+    "result": "passed",
+    "note": "The corrected target uses the actual slash-prefixed /CELL_NEG net and every copper component, not the previous empty CELL_NEG pad-only lookup."
+  },
+  "reused_saved_board_evidence": {
+    "38_native_and_independent_graph_opens": true,
+    "accepted_connected_padgroup_regressions": [],
+    "shorts": [],
+    "floating_copper": [],
+    "private_pickoffs": {
+      "R26.2_to_R27.2_independent_until_terminal": true,
+      "R24.2_to_C28.2_independent_until_terminal": true
+    },
+    "fresh_native_DRC": {
+      "accepted_open_count": 41,
+      "filled_open_count": 38,
+      "accepted_non_open_warning_count": 233,
+      "filled_non_open_warning_count": 236,
+      "non_open_errors": 0,
+      "schematic_parity_unchanged_count": 46
+    }
+  },
+  "dangling_warning_review": {
+    "73a10f55-d7f1-5181-ab16-4104e8617d3a": {
+      "net": "INT",
+      "layer": "F.Cu",
+      "endpoints_mm": [
+        [92.0, 91.4],
+        [93.1, 91.4]
+      ],
+      "DRC_dangling_endpoint_mm": [92.0, 91.4],
+      "disposition": "Deliberate unfinished external INT interface. Retain while the declared local exit is required; external INT to IC1.34 remains pending."
+    },
+    "a672a427-0ece-5ca1-86f4-4e6ebe0488e5": {
+      "net": "+3V3",
+      "layer": "F.Cu",
+      "endpoints_mm": [
+        [86.4021, 93.0184],
+        [86.4021, 91.7386]
+      ],
+      "DRC_dangling_endpoint_mm": [86.4021, 93.0184],
+      "virtual_cut_component_pad_count": 33,
+      "virtual_cut_pad_partitions_after_removal": 1,
+      "preserves_all_existing_component_pad_connections": true,
+      "disposition": "Smallest possible trim candidate is this single track. Read-only cut proof preserves all 33 currently connected +3V3 pads, but deletion of preserved outside copper is not authorized here."
+    },
+    "ca326628-e943-5adf-9c27-da2bc0468a49": {
+      "net": "/IMU_INT2",
+      "layer": "F.Cu",
+      "endpoints_mm": [
+        [93.1, 95.6833],
+        [94.2695, 95.6833]
+      ],
+      "DRC_dangling_endpoint_mm": [93.1, 95.6833],
+      "virtual_cut_component_pad_count": 2,
+      "virtual_cut_pad_partitions_after_removal": 1,
+      "preserves_IC4.9_to_TP6": true,
+      "disposition": "Smallest possible trim candidate is this single track. Read-only cut proof preserves IC4.9-to-TP6 connectivity, but deletion of preserved outside copper is not authorized here."
+    }
+  },
+  "silkscreen_findings": {
+    "classification": "The changed silk identities are warning-only silkscreen overlap or silkscreen-clipped-by-solder-mask findings.",
+    "copper_clearance_errors": 0,
+    "electrical_short_evidence": false
+  },
+  "validator": {
+    "tool_sha256": "99ff0fb684c68377c2cdb13d746fc0a4cc5360e5765f66ad460bcc75a89d2463",
+    "allowed_correction_used": "Changed the CELL_NEG lookup from nonexistent CELL_NEG pads to the actual /CELL_NEG net and checked all of its copper components against C24.2.",
+    "native_version": "KiCad 10.0.6"
+  },
+  "pending_gates": [
+    "Full same-net-inclusive off-pad, drill, contact-metal, barrel and clearance validation on the exact filled candidate",
+    "Exact cumulative authorized source-node and geometry delta comparison; UUID inventory in prior report text is not source acceptance",
+    "Exact IC4 and R15 required 0.50 mm pose validation",
+    "U4 thermal-land, thermal-via and mandatory-process preservation",
+    "C24 mandatory-process verification beyond its electrical GND anchor role",
+    "Exact zone guards, contacts and unchanged source primitive validation beyond the reused graph evidence",
+    "Disposition and, if authorized, source-preserving trim of the two redundant exterior dangling stubs followed by fresh DRC",
+    "CAD rebind and mechanical review",
+    "Return-path, decoupling-loop, B/In2 adjacency and physical-stackup qualification",
+    "External INT connection from the declared local F exit to IC1.34"
+  ],
+  "limitations": [
+    "This corrects the ground-anchor diagnosis but is not full electrical qualification or promotion.",
+    "No dangling warning was suppressed and no copper was deleted.",
+    "The prior reports/imu-electrical-diagnostics.json remains preserved unchanged as historical evidence with a superseded anchor interpretation."
+  ]
+}
