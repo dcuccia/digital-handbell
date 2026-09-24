@@ -1,0 +1,695 @@
+{
+  "schema_version": 1,
+  "status": "SAVED_CLEANUP_VALIDATION_INCOMPLETE_OR_FAILED",
+  "scope": "Read-only saved-board qualification of the immutable obsolete-branch cleanup. No PCB, manifest, refill, route, placement, CAD, or promotion operation.",
+  "started_unix": 1790279314.9281971,
+  "inputs": {
+    "source_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled.kicad_pcb",
+      "expected_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+      "actual_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78"
+    },
+    "source_manifest": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled-manifest.json",
+      "expected_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+      "actual_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e"
+    },
+    "candidate_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged.kicad_pcb",
+      "expected_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+      "actual_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711"
+    },
+    "candidate_manifest": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged-manifest.json",
+      "expected_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef",
+      "actual_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef"
+    },
+    "accepted_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+      "expected_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+      "actual_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7"
+    }
+  },
+  "stages": [
+    {
+      "name": "immutable_bindings",
+      "status": "passed",
+      "details": {
+        "source_pcb": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled.kicad_pcb",
+          "expected_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+          "actual_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78"
+        },
+        "source_manifest": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled-manifest.json",
+          "expected_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+          "actual_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e"
+        },
+        "candidate_pcb": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged.kicad_pcb",
+          "expected_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+          "actual_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711"
+        },
+        "candidate_manifest": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged-manifest.json",
+          "expected_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef",
+          "actual_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef"
+        },
+        "accepted_pcb": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+          "expected_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+          "actual_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7"
+        }
+      },
+      "unix": 1790279314.9344845
+    },
+    {
+      "name": "parser_aware_source_and_manifest",
+      "status": "passed",
+      "details": {
+        "ordered_AST_equal_after_exact_exclusions": true,
+        "excluded_top_level_UUIDs": [
+          "1559c517-4991-518b-8aa5-28dda0467aa2",
+          "2b001d25-c8c9-513a-bb23-4ea9218b54e5",
+          "a672a427-0ece-5ca1-86f4-4e6ebe0488e5",
+          "ca326628-e943-5adf-9c27-da2bc0468a49",
+          "cd251294-41e9-523f-958c-e73cc84fd87d",
+          "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29"
+        ],
+        "excluded_zone_children": "filled_polygon only",
+        "source_UUID_set_minus_candidate": [
+          "1559c517-4991-518b-8aa5-28dda0467aa2",
+          "2b001d25-c8c9-513a-bb23-4ea9218b54e5",
+          "a672a427-0ece-5ca1-86f4-4e6ebe0488e5",
+          "ca326628-e943-5adf-9c27-da2bc0468a49",
+          "cd251294-41e9-523f-958c-e73cc84fd87d",
+          "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29"
+        ],
+        "candidate_UUID_set_minus_source": [],
+        "manifest_changed_top_level_fields": [
+          "current_stage_report",
+          "generated_pcb_sha256",
+          "status"
+        ],
+        "candidate_manifest_binds_candidate_pcb": true,
+        "controls": {
+          "inter_node_newline_ignored": true,
+          "changed_numeric_atom_rejected": true,
+          "changed_quoted_text_rejected": true
+        },
+        "comparison_note": "Parser values preserve atom order and quoted-string payload, while source inter-node formatting is intentionally outside the AST contract."
+      },
+      "unix": 1790279316.4251087
+    },
+    {
+      "name": "saved_board_graph_and_fill_effects",
+      "status": "execution_error",
+      "details": {
+        "type": "KeyError",
+        "message": "zone-island dictionary has no direct 'net' key",
+        "focused_harness_correction_used": true,
+        "correction_attempt": "Changed zone-island attribute access to the exercised dictionary schema without rerunning DRC.",
+        "observed_zone_island_keys": [
+          "uuid",
+          "zone_uuid",
+          "layer",
+          "island_index",
+          "explicit_native_holes",
+          "boundary_representation",
+          "filled_area_mm2"
+        ],
+        "pending_resolution": "Resolve island net through the corresponding graph vertex, then complete the already-constructed source/candidate/accepted graph assertions. No board defect is claimed from this harness error."
+      },
+      "unix": 1790279423.557949
+    },
+    {
+      "name": "fresh_matching_project_native_DRC",
+      "status": "passed",
+      "details": {
+        "seconds": 2.297000000020489,
+        "native_version": "10.0.6",
+        "process_exit_code": 0,
+        "counts": {
+          "violations": 234,
+          "unconnected_items": 38,
+          "schematic_parity": 0
+        },
+        "source_counts": {
+          "violations": 236,
+          "unconnected_items": 38,
+          "schematic_parity": 46
+        },
+        "non_open_errors": [],
+        "dangling_item_uuids": [
+          "3449e8e5-9d20-5e38-b0b8-26181ef852af",
+          "4ea910c9-1b77-5fc8-81ec-2286bbfa4727",
+          "73a10f55-d7f1-5181-ab16-4104e8617d3a"
+        ],
+        "new_dangling_item_uuids": [],
+        "obsolete_branch_dangling_item_uuids_still_present": [],
+        "intentional_INT_warning_retained": true,
+        "identity_changes": {
+          "violations": {
+            "unchanged_count": 234,
+            "removed": [
+              {
+                "type": "track_dangling",
+                "severity": "warning",
+                "description": "Track has unconnected end",
+                "items": [
+                  "a672a427-0ece-5ca1-86f4-4e6ebe0488e5"
+                ],
+                "identity_sha256": "354b0ec19cfe52f2d4c8742e72190cdc0ad79092708fe0069858dc6382f64523"
+              },
+              {
+                "type": "track_dangling",
+                "severity": "warning",
+                "description": "Track has unconnected end",
+                "items": [
+                  "ca326628-e943-5adf-9c27-da2bc0468a49"
+                ],
+                "identity_sha256": "f5e959c63a634fc59394a54c70d9ba56fb65c26d5177f952bd78a43d0dd51b7d"
+              }
+            ],
+            "new": []
+          },
+          "unconnected_items": {
+            "unchanged_count": 31,
+            "removed": [
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "59cee69c-bc2f-5874-b555-19ae2235b109",
+                  "f6710ac6-2049-566a-bd94-4a6a239276cc"
+                ],
+                "identity_sha256": "071432c23c24903e4838aef08a86df9b88f6792f3d70ec6a46bc0eaccc74c9b9"
+              },
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "45e55099-dd98-502b-bb4a-c0159466f22f",
+                  "dbfe8896-a663-5d4f-bb1f-57e566bf1537"
+                ],
+                "identity_sha256": "6522b1b0c70532d75fda634de7b3067a410c27a0da37c543a77b80f19d710eb9"
+              },
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "63a6f798-8c1e-5889-9313-882bb3332b1d",
+                  "e050057b-b095-55ec-b696-fa9120e1d023"
+                ],
+                "identity_sha256": "a364354e46407dc190cc7dec3075dac1ea4d7766dda9b21a30c2a317d0659fe4"
+              }
+            ],
+            "new": [
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "45e55099-dd98-502b-bb4a-c0159466f22f",
+                  "c2af96d9-1246-51a5-a97c-ca696ec0eb98"
+                ],
+                "identity_sha256": "111aae4e6d6d9339d6c7714762103be68728e78e381d711f1279f7ab2d03fdc2"
+              },
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "e050057b-b095-55ec-b696-fa9120e1d023",
+                  "ee2b9954-fc72-570c-8508-f1685fef2428"
+                ],
+                "identity_sha256": "62d67a5cb801aa341b9e89c02466d00c5f7fece2cabe0fb81d0d9245fa0cf75c"
+              },
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "23eb2cb5-960d-5b6a-b061-e91253b5a44b",
+                  "f6710ac6-2049-566a-bd94-4a6a239276cc"
+                ],
+                "identity_sha256": "d200c8ebcaa51e31d1f6c54295ede628bfc39553866b2765d6b68ccae5b5c028"
+              }
+            ]
+          },
+          "schematic_parity": {
+            "unchanged_count": 0,
+            "removed": [
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "6523f42d-fcb0-5991-99db-e6a3ea19847a"
+                ],
+                "identity_sha256": "00be175b78cd803a9b3f8d7783360625975041465fad11d751b8d94e8a6a0711"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "c7e28d22-5974-51ec-9462-3b7510afe948"
+                ],
+                "identity_sha256": "017d67d825a495c4918b677d08ec75c07c8093e13160b67ac393531dd6b8977e"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "4ce3dd0b-9c98-5d83-bf26-30a419f9dbbf"
+                ],
+                "identity_sha256": "04a8b81b6c4c93a8cf188bd4ed67e474478bc84df88ec71d852333251c2ebba7"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "085afc04-022a-58de-93ab-acc22eda2458"
+                ],
+                "identity_sha256": "082e50e9f42bb9224f8186097a70713a855baee3c0bf8732a5b38d55d4fd0131"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "ddfc112b-de9a-5c2a-b2e2-9e067f31893f"
+                ],
+                "identity_sha256": "0e5f68f0aa6a4da77353c51ccfcf9baa7ad15ffa7fd7279c0c858da1e7893db0"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "9dfeefe6-1fda-55a7-84f0-4a8874185d4c"
+                ],
+                "identity_sha256": "17cb423ac4ba22092b8a55cb7a21cd7d03f6d7f8b65d3e912d15bb114b1e6ad6"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "ce4c945a-c214-57b4-96c1-a09cc3049897"
+                ],
+                "identity_sha256": "18d989168342f22d16be4fdaf194be50e1aeda689f888b0b1e06768226929eaa"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "eab3ee7f-1d45-51a6-ae9f-1e11e60a3c36"
+                ],
+                "identity_sha256": "1910c55c953e841d3ffafecd2bc2d48cbd2e66ab9cfcaeabc947f975dc3d2d01"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "95be5c5d-e016-51db-ac8d-61e62c7103a4"
+                ],
+                "identity_sha256": "1fe523282ec1ca362375e8648cd726ec56aa8ad5f38f65b01fdd45c305c9b838"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "9f7468fe-499a-59ba-852f-72d17e22dbf1"
+                ],
+                "identity_sha256": "22dc1eab3f9ebf6ab9309664bf1f360bb34080264df810020ddc3e26037ce0fc"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "2c8c4690-43f4-53b6-a0bf-8854de61cd07"
+                ],
+                "identity_sha256": "2cfb520b041be78f008705ebc0738b83c4c0d159cdb3fdaa1670585350c6f2f4"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "206aa929-8fa3-5ce9-8e03-015d2cd47569"
+                ],
+                "identity_sha256": "2ea5a6ff8b766fe1af1fe9e7b3ebce0bf51622bf4fae507d64af259001ed6115"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "aedfef76-ee0f-5619-ad79-679f603c2919"
+                ],
+                "identity_sha256": "2fd9ded2cf0284344c38c562659b81cec45e303d6e0ebd16f1aa38c57dc522b5"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "d2944bb7-abc4-55f8-a059-2009aee9a88c"
+                ],
+                "identity_sha256": "35ee8f8ca2e5d5995884e1dd37b72892c9417c594a3829a96b6f10a84ca6e135"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "bf3c3636-fbbb-51a0-aa14-b731b7aa51b1"
+                ],
+                "identity_sha256": "3dcad6aeec73032f974aebfc4e6e1ca121b2593320dfc2394e6012db51d01db8"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "b36f27ee-f879-5001-8589-d8d54127ffd0"
+                ],
+                "identity_sha256": "3e13bd57539b1de2783550cafde246f8132d1dc514d9d4961380bfdbdd1bb67e"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "e2953a16-60fa-5007-ab41-07d9575fa3a9"
+                ],
+                "identity_sha256": "54f8b55c6bb95be2f209fd05843a4d00e0a34e0a1a28e5b4a20f21e125a4c5f4"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "60b4499e-dfad-5cda-b484-da883de287a6"
+                ],
+                "identity_sha256": "5634b49277ecc6643dcda62fc5a52d5ce49ae5db4a2978d3422d954e434ab6c6"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "3347d9ed-ccd1-55bb-aa09-8fbca29c0b20"
+                ],
+                "identity_sha256": "602f8ed806a6bd85192137aef1167ef0164730d89e7d5ae9e69fc10a19f23aeb"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "76d20377-1f54-5f3f-b36f-414cd9a65248"
+                ],
+                "identity_sha256": "6513c51f0b2300bd272d4ba226f9c247b91e277d8718dea724114239484f2fb6"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "68d23af6-f0a2-5b9f-b085-f616713d1faa"
+                ],
+                "identity_sha256": "668c1f7f984cdd818f2dd0a013750126cf3a66d5e413493b7735fa27b0e6e264"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "95c3859a-dfba-5f55-92f8-ec270c6fcdad"
+                ],
+                "identity_sha256": "6697d167825808ad2ebc1611aa779e938cf527bcf2c9c7c04c2a0176aae47938"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "04ea026e-cc5b-5c6d-8dd8-c8f360170431"
+                ],
+                "identity_sha256": "6ceed6331b86715e6081466fddb9cccca1c11cd4a09728ce37728cddb3bb122b"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "03010797-e462-59ab-8642-9ff44e6d0209"
+                ],
+                "identity_sha256": "72de6636c8659ce51916b96a4e496f4e054ae7df7be64aaa81f167525ee9e920"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "a565bf2c-827e-53a9-bc57-f17824131813"
+                ],
+                "identity_sha256": "805036ab8e08e5644e26ea84dc0ecbab1b3ca38ffd8ea1a9b37d4c5d240a23d8"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "1b88695d-b747-5b37-94f6-0c7f5934c0a8"
+                ],
+                "identity_sha256": "81b23569b62a9237a9e654c5854012505eb62348be1728c457874c9c1e225f91"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "a4c3bf6e-6ec3-5f7a-afef-2c35be91d0c6"
+                ],
+                "identity_sha256": "8363ae147cddd35080e2610d740732e9449f7fd66eb4ae55bd25062aceeef072"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "80278b66-81f4-57ac-b415-187cabf34880"
+                ],
+                "identity_sha256": "8c5d9a62c9edf783ed4ceb2c6987321cad8206b72838118a2dbf0f279e37c0e8"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "0117bbc9-75d6-560f-ac3f-71405d4eb629"
+                ],
+                "identity_sha256": "98476c551bfafa2749a5aae49028085c311fda95dd1eda396e0cd7c0076172a5"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "eb6ec6bc-30de-5a83-ab2c-5bd3e1de2bba"
+                ],
+                "identity_sha256": "98bf8955fbb4a56f43a80c7c2826e6c8c6f8e54a306f7d0fce505dfbcae3a8e8"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "6458fb54-af20-50bc-91d6-6b39629d78db"
+                ],
+                "identity_sha256": "9f2e5c32281e984d48d078a8d2d2eec47cee837ffa7dfe3ea20760d8cf8bcf26"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "342443f3-8712-5ade-8ff3-c9023eb48c02"
+                ],
+                "identity_sha256": "a07858f6141b7216aaa761e2b40ec587c35dad5137ff9c286fa72677a532988f"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "916f17c2-5225-5677-873d-97cd3916b288"
+                ],
+                "identity_sha256": "a3f94c2c09fc9db4d297bb294d6a04dd2b4c889b624270a3df8132686be26508"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "e888cbd8-a144-589d-8d42-00b69316f4e6"
+                ],
+                "identity_sha256": "aa608601f1ace6a4c227a930a032da5715da6f51b80c51625f7c0287f9b477ea"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "8dd409b8-9867-5a54-bd8d-d8c077f83899"
+                ],
+                "identity_sha256": "aaf57dacf7ac7d512c871707862308c23cdb2d545f7a7a3e4469ffc06fcccfa7"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "5b926990-7fca-5662-ad6d-c6434c13bc03"
+                ],
+                "identity_sha256": "b0e5bddeccd319976fffc0131fad7404b14fe0b0256e453df23f1934ab5cbd96"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "8f415043-fd8b-5704-8431-fcf7d8592dca"
+                ],
+                "identity_sha256": "b414434c3ef686a1508a18cc910550281f01d5753b90d57544b65f813d80623c"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "29164d2f-a3a8-5dde-8e75-d5403a80f2ba"
+                ],
+                "identity_sha256": "bdc46de6219ae14a0ebbc43418f6c3236cf94b4de57c4d219b9b32e736c8b05c"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "222b2330-3667-5cd3-9935-7962e1ff299e"
+                ],
+                "identity_sha256": "bee8e556d60b87f058a49860e23d5f78dde13fe5c7c47561cc6994389bdee5ff"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "cede6b43-4c4d-5b32-909c-4bc8b284902a"
+                ],
+                "identity_sha256": "cf0098fa0c578fdb9716fa3e236030cffcbcb2f18d6899f7290ed2e6dc5a7bd2"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "9543297a-129f-54ea-bc5f-931451c80bc7"
+                ],
+                "identity_sha256": "d490b19e67ac689b41793dfcf1b2c151d97ac9eb9eb3a609c41d148ded404f7b"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "17534d38-529e-578a-a72d-41c93486ce2f"
+                ],
+                "identity_sha256": "e188e1088f79c359cf1845a99bcd8519edeff1b772ff4da1d7bdd8dd94d3aea4"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "4d199b24-d2b8-53db-a139-cb474bd47212"
+                ],
+                "identity_sha256": "e6833abcf5c81d8e41e6637d58b89a3790c766fc6cbb9218ab563931a05d1ca6"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "2fe2ec4c-5215-511b-98c8-d5556e7eeb80"
+                ],
+                "identity_sha256": "f45c37ec533d5bac3df527a41282f54787ff129022dd882643cddb59a8376ede"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "a1815908-37ae-5e15-823e-6b516c55a0e7"
+                ],
+                "identity_sha256": "faa364840f13d73cbc9a541d38d3fedba3b3a8480bc27138131f634dacf69818"
+              },
+              {
+                "type": "net_conflict",
+                "severity": "warning",
+                "description": "No corresponding pin found in schematic",
+                "items": [
+                  "6b79bfcd-2fe5-5e49-ab40-2d13523a6f0a"
+                ],
+                "identity_sha256": "ff912338a4cccd95aee3e29b2006f46b43945fa4a7ebad79bb1ab9186632ce27"
+              }
+            ],
+            "new": []
+          }
+        },
+        "silk_identity_changes": {
+          "removed": [],
+          "new": []
+        }
+      },
+      "unix": 1790279426.6096554
+    }
+  ],
+  "gate_status": {
+    "fresh": [
+      "immutable bindings",
+      "parser-aware source/manifest contract",
+      "saved-board graph and actual refill effects",
+      "fresh matching-project native DRC"
+    ],
+    "reused": [
+      "Unchanged retained primitive-pair geometry and all ten ordinary-via screens, because ordered AST equality proves those primitives byte-semantically unchanged.",
+      "Mandatory U4/C24 process requirements remain in force because their exact nodes and identifiers are unchanged."
+    ],
+    "pending": [
+      "Root engineering disposition and CAD rebind/review",
+      "Powered and physical-stackup qualification",
+      "External INT continuation from the retained local exit to IC1.34"
+    ]
+  },
+  "limitations": [
+    "Passing this report does not promote the candidate or make it quote-ready.",
+    "No powered, impedance, physical dielectric, or fabrication-process capability test was performed."
+  ],
+  "completed_unix": 1790279426.616194,
+  "elapsed_seconds": 111.68799686431885
+}

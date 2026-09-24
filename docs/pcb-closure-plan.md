@@ -166,6 +166,35 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Cleanup DRC confirms 38 opens and 234 warnings; graph/fill validation
+is still incomplete.** The [saved-board validation report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-cleanup-validation.json)
+records removal of both obsolete dangling warnings, no new dangling
+findings, no non-open errors and unchanged silk identities. Its source
+and manifest checks pass. The board remains `d2a098b0...`.
+
+**The reported zero schematic-parity count is not a clearance of that
+gate.** Root inspected the command: it omitted `--schematic-parity`.
+The empty output array is not comparable to the earlier enabled check's
+46 notices; the report's derived "removed" parity identities are invalid.
+Keep those 46 unresolved until a matching enabled comparison is run.
+
+The graph harness first treated island records as objects, then expected
+a nonexistent dictionary `net` key. Root inspected `zone_graph.py`:
+`zone_islands` holds metadata, while
+`graph.items[island["uuid"]].GetNetname()` and the corresponding
+`graph.vertices[node]["net"]` supply the actual net. This is an interface
+error, not an established board defect. Also, zero shorts does not prove
+the required 0.20 mm foreign-fill clearance.
+
+**Final targeted tooling repair before escalation:** use the inspected
+API, persist graph assertions before subsequent fill checks, check actual
+filled polygons against foreign copper and applicable layer-specific
+guards, and run DRC with schematic parity explicitly enabled. Preserve
+all previous reports and immutable board bytes. No new general validator,
+refill or copper work is authorized. If this focused completion fails,
+stop the affected workflow with its concrete blocker rather than starting
+another renamed repair cycle. CAD is still blocked.
+
 **Both obsolete branches are removed in a held cleanup candidate; fresh
 connectivity/DRC remain pending.** Native topology confirmed the +3V3
 segment ends at a retained multi-segment junction, and the five-item

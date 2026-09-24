@@ -17,9 +17,11 @@
   with explicit decoupling/stackup/powered limits. Both specifically
   released obsolete branches are removed/refilled in held `d2a098b0...`.
   Root's exact parsed-source comparison resolves a newline-only audit
-  mismatch; next is saved-board graph/DRC/fill-effects validation, without
-  another edit or refill. Preserve earlier recovery and functional routes;
-  CAD rebind follows separately, with no automatic promotion. See
+  mismatch. Fresh DRC measures 38 opens/234 warnings, but graph/fill checks
+  still need the final inspected API correction. A zero parity array from
+  DRC without `--schematic-parity` is not a pass. Complete only the targeted
+  saved-board checks; stop and escalate another tooling failure. No board
+  edit/refill or CAD/promotion is authorized yet. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished
