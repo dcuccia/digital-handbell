@@ -166,12 +166,45 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**September 23 stopping checkpoint -- engineering paused.** The owner
+**September 24, 10:59 explicit resumption.** Resume from the matched
+`3c7006c1...` / `a1278051...` repaired supply candidate, not the failed
+in-memory signal proposal. The accepted 41-open board remains unchanged.
+The prior stop is historical; preserve its evidence and retry accounting.
+
+**One next bounded item: targeted CS detour and INT layer change.**
+Keep the already-screened simultaneous signal plan and replace only the
+two failed geometric assumptions. For CS, replace the offending waypoint
+`(90.8,94.5)` with a shallower `(90.7,94.2)` between `(91.45,94.2)` and
+IC4.12. This keeps the feed north of the IC4.11 NC land, subject to native
+clearance against the SCL transition and every other proposed item.
+
+For INT, do not squeeze the B exit between the fixed C24/supply vias and
+USBBOOT diagonal. Retain its initial B route and use one additional
+ordinary 0.604/0.35 mm through-via, starting near `(91.8,92.14)`, to exit
+on F. Starting B approach:
+`(87.97,91.72) -> (89,92.1) -> (90,92.5) -> (91,92.5) -> (91.8,92.14)`.
+Starting F continuation:
+`(91.8,92.14) -> (92,91.4) -> (93.1,91.4)`.
+This avoids crossing the retained USBBOOT trace on B; it is not a proof
+of full-span via legality or a connection to IC1.34. All coordinates are
+seeds, not rule waivers. Check the particularly constrained distance to
+the proposed SDA B route, SCL F route and INT2 In2 route simultaneously.
+
+Retain the previous R15-only move, conditional clipped-stub cut proof,
+GND123-to-C23.2 target, off-pad controls and protected outside geometry.
+One 15-minute item with at most two local corrections; save actual coupled
+copper and a matching manifest only when its native geometry is legal.
+If primitively restored, qualified refill and full electrical gates follow
+within the budget or as the next coherent item. Mechanical rebinding and
+full return-path/stackup review still gate promotion.
+
+**Historical September 23 stopping checkpoint.** The owner
 requested a logical stop within 20-30 minutes at 17:02. The current
 signal-closure item has ended after its initial attempt and two local
 corrections; Sol confirmed idle and no subsequent routing, refill, DRC or
 CAD work. Finish the checkpoint rather than start a late redesign.
-The earlier unattended continuation is suspended until explicit resumption.
+The earlier unattended continuation was suspended until the explicit
+September 24 resumption above.
 
 The authoritative package remains PCB
 `c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`,

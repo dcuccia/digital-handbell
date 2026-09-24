@@ -2,10 +2,16 @@
 
 ## Bounded engineering work
 
-- **September 23 stopping checkpoint:** after the owner's request for a
+- **September 24 resumed:** the owner explicitly resumed work. Start from
+  the repaired supply candidate and the two recorded signal conflicts,
+  retaining the Astra/Sol split and bounded retries. The next release
+  adjusts the local CS detour and permits one ordinary INT transition
+  from B to F; native simultaneous checks remain authoritative. See
+  `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
+- **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished
   with two unresolved geometry decisions and exhausted its corrections.
-  Engineering is paused; Sol is idle. Do not resume automatically from the
+  Engineering was paused; Sol was idle. Do not resume automatically from the
   earlier unattended authorization. Preserve the accepted 41-open board
   and the separately archived repaired-supply candidate `3c7006c1...` /
   `a1278051...`. The proposed R15 move and final signal plan were NOT applied.
