@@ -166,6 +166,36 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Electrical qualification held at a validator interface error, not a
+measured board failure.** The
+[initial qualification report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-electrical-qualification.json)
+preserves filled PCB `79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78`
+and matching manifest
+`eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e`.
+Refill retained all 21 zone definitions, with 17 F polygons and one In1
+polygon. The subsequent harness wrongly required `None` from
+`component_comparison_self_test()`, whose documented implementation returns
+a dictionary of four successful merge/split/missing-item controls.
+The run ended at its correction cap before graph comparisons or fresh DRC.
+Preserve the report and exact filled pair; do not repeat the refill.
+
+**Next: narrowly repair control-result handling and measure the saved board.**
+Use the actual control schemas and record their returned details. Run full
+connected-group/short/floating/IMU-return comparisons and matching-project
+native DRC as separate persisted diagnostic stages so one failure does not
+erase or prevent collecting the other useful evidence. No routing changes.
+One 15-minute item, one control-harness correction; stop additional
+validator interface errors with explicit pending gates, not another chain
+of speculative fixes.
+
+Root also identified that membership of a UUID anywhere in a historical
+report is not authorization for arbitrary changes to that item. The current
+validator's UUID-text membership screen is an inventory aid only, not full
+cumulative source preservation. Exact permitted fields/geometry, complete
+manifest deltas and all mandatory process primitives need separate evidence
+before electrical acceptance. Do not label a graph/DRC diagnostic pass as
+completion of those pending gates.
+
 **September 24: complete local primitive block staged; acceptance pending.**
 The [layer-correction result](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-signal-layer-correction.json)
 records working PCB

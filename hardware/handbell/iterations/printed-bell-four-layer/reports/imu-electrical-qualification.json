@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "held_incomplete",
+  "candidate_disposition": "Private filled candidate preserved; not accepted or promoted.",
+  "inputs": {
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "accepted_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667",
+    "unfilled_pcb_sha256": "e954884c4a7369d2c6363ba825a50d6189be9d7127a415288b107f7832382b8a",
+    "unfilled_manifest_sha256": "b55d8dc21d4430e2da7e9c2e0e0166ea335f0a2c70b0113d748194f69d6341a5",
+    "filled_pcb_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+    "filled_manifest_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+    "qualification_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990"
+  },
+  "tools": {
+    "refill_imu_four_layer.py_sha256": "a2791b2a196a9654a10d23aad107c5f247a8d9bce8d225a0a372c8c2440721e8",
+    "qualify_imu_electrical.py_sha256": "a6a5eb810cd993340591842ec56757cee18fca5f0ee30808cbc4d53a16224c9e",
+    "native_version": "KiCad 10.0.6"
+  },
+  "refill": {
+    "method": "Native refill in an isolated matching package followed by source-preserving filled_polygon cache transplant.",
+    "settings_mm": {
+      "foreign_clearance": 0.2,
+      "copper_edge_clearance": 0.25,
+      "hole_clearance": 0.25,
+      "hole_to_hole_clearance": 0.25,
+      "maximum_polygon_error": 0.001,
+      "zone_minimum": 0.25
+    },
+    "pad_connection": "solid",
+    "island_removal": "always",
+    "zone_definition_count": 21,
+    "filled_polygon_counts": {
+      "42e3abc5-2c92-5943-8944-bee0da8523c3": 17,
+      "332d3ba8-ed46-550f-912f-bb402cd2a16b": 1
+    },
+    "zone_definitions_unchanged_semantically": true
+  },
+  "completed_gates": {
+    "accepted_hashes_unchanged": true,
+    "unfilled_source_hash_unchanged": true,
+    "filled_hash_and_manifest_binding": true,
+    "matching_project_copied": true,
+    "zone_definitions_and_native_caches": true
+  },
+  "blocked_gate": {
+    "name": "validator_controls",
+    "result": "harness_false_negative",
+    "evidence": {
+      "all_layer_zone_graph_control": "passed",
+      "component_merge_split_missing_controls": "passed"
+    },
+    "cause": "component_comparison_self_test returns a success dictionary, but the new harness incorrectly required a None return.",
+    "action": "Stopped after the permitted validator-correction limit; no electrical conclusion inferred from the failed harness boolean."
+  },
+  "pending_gates": [
+    "accepted and filled all-layer graph construction",
+    "all accepted connected pad groups preserved",
+    "zero shorts and zero floating copper",
+    "both IMU ground groups attached to MAIN",
+    "SCL, SDA, INT2, INT local exit, VDD and CS connectivity",
+    "R26.2 to R27.2 and R24.2 to C28.2 private terminal cuts",
+    "CELL_NEG isolation",
+    "contact metal, barrel, drill and clearance checks",
+    "same-net-inclusive off-pad checks for all changed ordinary vias and the retained INT2 anchor",
+    "C24 and U4 mandatory-process preservation",
+    "complete cumulative accepted-source delta validation",
+    "fresh accepted-versus-filled native DRC and diagnostic identity comparison",
+    "CAD and return-path review"
+  ],
+  "drc": {
+    "run": false,
+    "accepted_known_open_count": 41,
+    "candidate_open_count": null,
+    "reason": "The prerequisite saved-board graph qualification did not complete within the validator-only correction cap."
+  },
+  "evidence": {
+    "session_state_relative_root": "files/imu-electrical-qualification",
+    "source_package": "source",
+    "filled_package": "filled",
+    "persisted_stages": "evidence/qualification-stages.json",
+    "validator_stdout": "evidence/qualification.stdout.txt",
+    "validator_stderr": "evidence/qualification.stderr.txt"
+  },
+  "limitations": [
+    "This is not an electrical qualification pass, promotion, routing acceptance, CAD rebind or quotation-ready result.",
+    "Physical stackup, return-path quality, decoupling-loop performance and B/In2 adjacency remain unqualified.",
+    "The local INT route still terminates at the declared F exit and does not reach IC1.34."
+  ]
+}
