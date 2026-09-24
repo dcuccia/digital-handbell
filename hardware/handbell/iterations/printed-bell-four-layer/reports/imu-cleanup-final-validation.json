@@ -1,0 +1,2593 @@
+{
+  "schema_version": 1,
+  "status": "FINAL_SAVED_CLEANUP_VALIDATION_PASSED_HELD_FOR_ROOT_CAD_REVIEW",
+  "scope": "Final read-only saved-board tooling completion for the immutable obsolete-branch cleanup: reused parser-aware source proof, one graph construction set, explicit filled-island clearance/guard checks, and fresh parity-enabled native DRC.",
+  "started_unix": 1790280058.8023748,
+  "inputs": {
+    "source_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled.kicad_pcb",
+      "expected_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+      "actual_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78"
+    },
+    "source_manifest": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled-manifest.json",
+      "expected_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+      "actual_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e"
+    },
+    "candidate_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged.kicad_pcb",
+      "expected_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+      "actual_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711"
+    },
+    "candidate_manifest": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged-manifest.json",
+      "expected_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef",
+      "actual_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef"
+    },
+    "accepted_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+      "expected_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+      "actual_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7"
+    },
+    "prior_validation": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-validation.json",
+      "expected_sha256": "5875b23cc6a0d42801bb928a6024952a00aac244338b2aee2d6cc498d174f636",
+      "actual_sha256": "5875b23cc6a0d42801bb928a6024952a00aac244338b2aee2d6cc498d174f636"
+    }
+  },
+  "stages": [
+    {
+      "name": "immutable_bindings",
+      "status": "passed",
+      "details": {
+        "source_pcb": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled.kicad_pcb",
+          "expected_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+          "actual_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78"
+        },
+        "source_manifest": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-electrical-filled-manifest.json",
+          "expected_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+          "actual_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e"
+        },
+        "candidate_pcb": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged.kicad_pcb",
+          "expected_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+          "actual_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711"
+        },
+        "candidate_manifest": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged-manifest.json",
+          "expected_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef",
+          "actual_sha256": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef"
+        },
+        "accepted_pcb": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+          "expected_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+          "actual_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7"
+        },
+        "prior_validation": {
+          "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-validation.json",
+          "expected_sha256": "5875b23cc6a0d42801bb928a6024952a00aac244338b2aee2d6cc498d174f636",
+          "actual_sha256": "5875b23cc6a0d42801bb928a6024952a00aac244338b2aee2d6cc498d174f636"
+        }
+      },
+      "unix": 1790280058.8102274
+    },
+    {
+      "name": "parser_aware_source_manifest_reuse",
+      "status": "passed",
+      "details": {
+        "source_report": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-validation.json",
+        "source_report_sha256": "5875b23cc6a0d42801bb928a6024952a00aac244338b2aee2d6cc498d174f636",
+        "reused_stage": {
+          "ordered_AST_equal_after_exact_exclusions": true,
+          "excluded_top_level_UUIDs": [
+            "1559c517-4991-518b-8aa5-28dda0467aa2",
+            "2b001d25-c8c9-513a-bb23-4ea9218b54e5",
+            "a672a427-0ece-5ca1-86f4-4e6ebe0488e5",
+            "ca326628-e943-5adf-9c27-da2bc0468a49",
+            "cd251294-41e9-523f-958c-e73cc84fd87d",
+            "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29"
+          ],
+          "excluded_zone_children": "filled_polygon only",
+          "source_UUID_set_minus_candidate": [
+            "1559c517-4991-518b-8aa5-28dda0467aa2",
+            "2b001d25-c8c9-513a-bb23-4ea9218b54e5",
+            "a672a427-0ece-5ca1-86f4-4e6ebe0488e5",
+            "ca326628-e943-5adf-9c27-da2bc0468a49",
+            "cd251294-41e9-523f-958c-e73cc84fd87d",
+            "dd747bbd-12dc-5f3a-accc-c1cdbf89ad29"
+          ],
+          "candidate_UUID_set_minus_source": [],
+          "manifest_changed_top_level_fields": [
+            "current_stage_report",
+            "generated_pcb_sha256",
+            "status"
+          ],
+          "candidate_manifest_binds_candidate_pcb": true,
+          "controls": {
+            "inter_node_newline_ignored": true,
+            "changed_numeric_atom_rejected": true,
+            "changed_quoted_text_rejected": true
+          },
+          "comparison_note": "Parser values preserve atom order and quoted-string payload, while source inter-node formatting is intentionally outside the AST contract."
+        },
+        "reuse_reason": "All exact board and manifest input hashes remain unchanged."
+      },
+      "unix": 1790280058.811229
+    },
+    {
+      "name": "graph_core_saved_first",
+      "status": "passed",
+      "details": {
+        "seconds": 166.51599999982864,
+        "source_connected_pad_groups_preserved": 124,
+        "accepted_connected_pad_groups_preserved": 127,
+        "source_pad_count": 325,
+        "candidate_pad_count": 325,
+        "native_open_count": 38,
+        "independent_graph_open_count": 38,
+        "shorts": [],
+        "floating_copper": [],
+        "zone_island_count": 18
+      },
+      "unix": 1790280225.450627
+    },
+    {
+      "name": "graph_required_connections",
+      "status": "passed",
+      "details": {
+        "qualified_anchor": {
+          "pad": "C24.2",
+          "uuid": "0a1605ae-5caf-5a6d-ac08-95ffe731055b",
+          "actual_net": "GND",
+          "actual_In1_GND_islands_in_component": [
+            {
+              "uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "zone_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b",
+              "layer": "In1.Cu",
+              "island_index": 0,
+              "explicit_native_holes": 0,
+              "boundary_representation": "Exact native filled boundary; linked-hole cuts are not normalized or counted as explicit holes",
+              "filled_area_mm2": 1367.5907042005974
+            }
+          ]
+        },
+        "GND_proofs": {
+          "C23.2_to_C24.2": true,
+          "IC4.1_to_C24.2": true,
+          "IC4.2_to_C24.2": true,
+          "IC4.3_to_C24.2": true,
+          "IC4.6_to_C24.2": true,
+          "IC4.7_to_C24.2": true
+        },
+        "CELL_NEG": {
+          "actual_net": "/CELL_NEG",
+          "pad_count": 7,
+          "copper_item_count": 55,
+          "component_count": 1,
+          "isolated_from_C24.2_GND": true
+        },
+        "private_pickoffs": {
+          "R26.2_R27.2": {
+            "from": "R26.2",
+            "to": "R27.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+                "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          },
+          "R24.2_C28.2": {
+            "from": "R24.2",
+            "to": "C28.2",
+            "connected": true,
+            "independent_until_terminal": true,
+            "other_pad_connections_before_terminal": [],
+            "branch_copper_uuids": [
+              "1212a327-4ed4-50da-a0bb-71afc8145254",
+              "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+              "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+              "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+              "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+              "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+              "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+            ],
+            "joins_cut_wholly_inside_terminal": [
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+                "layer": "F.Cu"
+              },
+              {
+                "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+                "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+                "layer": "F.Cu"
+              }
+            ],
+            "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+            "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+          }
+        },
+        "functional_connections": {
+          "IC4.9_to_TP6": true,
+          "IC4.4_to_INT_local_exit": true
+        }
+      },
+      "unix": 1790280225.503146
+    },
+    {
+      "name": "filled_island_clearance_and_guards",
+      "status": "passed",
+      "details": {
+        "candidate": {
+          "filled_layers": [
+            "F.Cu",
+            "In1.Cu"
+          ],
+          "island_count": 18,
+          "foreign_pair_checks": 19491,
+          "foreign_clearance_mm": 0.2,
+          "foreign_clearance_hits": [],
+          "pour_exclusion_checks": [
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "b4bdee5c-b67f-5638-93fb-e85cf1db5608",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "d84f1cbb-9996-5753-a723-42676ee16cd0",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f45024b2-d4bf-5379-813e-bcad54ff42ce",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "c39613f0-be31-5517-adfd-80df3ef1f023",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "23ccd641-2f99-5a74-95bd-9f91755c5c0e",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2d3ef692-d3b3-5783-be34-2150cc145c57",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3a35dad2-fccb-59a2-a858-6e1065dc3c6a",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "819be28f-9f79-5708-8730-49a77725ea28",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ec1cf4dc-a7ac-503d-a7de-eac8212578d7",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            }
+          ],
+          "pour_exclusion_hits": []
+        },
+        "prior_79a1dee3": {
+          "filled_layers": [
+            "F.Cu",
+            "In1.Cu"
+          ],
+          "island_count": 18,
+          "foreign_pair_checks": 19560,
+          "foreign_clearance_mm": 0.2,
+          "foreign_clearance_hits": [],
+          "pour_exclusion_checks": [
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2dc315f7-a2fe-50d1-b602-b446d39218f9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3b1d5d3d-c153-57cf-8a47-71a5630d3b20",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "42913f7c-fc6b-516f-acaf-761e453626aa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "43721dda-d6e7-524e-8908-4eace3e7e43b",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "5a248834-0a96-584d-9278-530abaf7986c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "753379d1-5544-5e26-a287-1ef0a204264c",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "76d9b828-1bbb-52a0-9aa0-db278ee0ca2e",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ae51190e-a394-58cd-87f1-6f83677d0de9",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f3661a20-0fd3-5f50-ab1e-e8bef7117484",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:0",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:1",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:2",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:3",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:4",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:6",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:7",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:9",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:10",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:12",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:14",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:15",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f889e3e1-1268-5b69-8d4c-752ffa214caa",
+              "island_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:16",
+              "layer": "F.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "b4bdee5c-b67f-5638-93fb-e85cf1db5608",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "d84f1cbb-9996-5753-a723-42676ee16cd0",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "f45024b2-d4bf-5379-813e-bcad54ff42ce",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "c39613f0-be31-5517-adfd-80df3ef1f023",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "23ccd641-2f99-5a74-95bd-9f91755c5c0e",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "2d3ef692-d3b3-5783-be34-2150cc145c57",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "3a35dad2-fccb-59a2-a858-6e1065dc3c6a",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "819be28f-9f79-5708-8730-49a77725ea28",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            },
+            {
+              "rule_area_uuid": "ec1cf4dc-a7ac-503d-a7de-eac8212578d7",
+              "island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+              "layer": "In1.Cu",
+              "overlap_area_mm2": 0.0
+            }
+          ],
+          "pour_exclusion_hits": []
+        },
+        "contact_dependency": {
+          "candidate_has_B_Cu_fill": false,
+          "candidate_has_only_F_and_In1_fill": true,
+          "basis": "B copper, retained barrels, contact pads, contact interface, rule-area definitions and guards are unchanged; released copper was deletion-only. F copper beneath B contacts is not exposed B contact metal. Fresh graph and DRC cover cross-net pad/barrel contact; no unmeasured margin is claimed."
+        },
+        "geometry_reuse": "All retained primitive-pair and ten ordinary-via geometry screens are reused from unchanged ordered AST nodes. This stage freshly checks every actual saved F/In1 filled island, including holes, against same-layer foreign copper at 0.20 mm."
+      },
+      "unix": 1790280231.3818703
+    },
+    {
+      "name": "fresh_parity_enabled_native_DRC",
+      "status": "passed",
+      "details": {
+        "seconds": 2.047000000020489,
+        "native_version": "10.0.6",
+        "argv": [
+          "kicad-cli.exe",
+          "pcb",
+          "drc",
+          "--format",
+          "json",
+          "--schematic-parity",
+          "--severity-all",
+          "--output",
+          "candidate-parity-drc.json",
+          "handbell.kicad_pcb"
+        ],
+        "matching_package_hashes": {
+          "pcb": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+          "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+          "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+          "manifest": "62ea87d6a84ec5393756fea3552a5a9c81e0de0b3742aa3cace4125d8c4abcef"
+        },
+        "process_exit_code": 0,
+        "counts": {
+          "violations": 234,
+          "unconnected_items": 38,
+          "schematic_parity": 46
+        },
+        "prior_enabled_parity_counts": {
+          "violations": 236,
+          "unconnected_items": 38,
+          "schematic_parity": 46
+        },
+        "non_open_errors": [],
+        "dangling_item_uuids": [
+          "3449e8e5-9d20-5e38-b0b8-26181ef852af",
+          "4ea910c9-1b77-5fc8-81ec-2286bbfa4727",
+          "73a10f55-d7f1-5181-ab16-4104e8617d3a"
+        ],
+        "new_dangling_item_uuids": [],
+        "obsolete_warning_roots_present": [],
+        "intentional_INT_warning_retained": true,
+        "identity_changes": {
+          "violations": {
+            "unchanged_count": 234,
+            "removed": [
+              {
+                "type": "track_dangling",
+                "severity": "warning",
+                "description": "Track has unconnected end",
+                "items": [
+                  "a672a427-0ece-5ca1-86f4-4e6ebe0488e5"
+                ],
+                "identity_sha256": "354b0ec19cfe52f2d4c8742e72190cdc0ad79092708fe0069858dc6382f64523"
+              },
+              {
+                "type": "track_dangling",
+                "severity": "warning",
+                "description": "Track has unconnected end",
+                "items": [
+                  "ca326628-e943-5adf-9c27-da2bc0468a49"
+                ],
+                "identity_sha256": "f5e959c63a634fc59394a54c70d9ba56fb65c26d5177f952bd78a43d0dd51b7d"
+              }
+            ],
+            "new": []
+          },
+          "unconnected_items": {
+            "unchanged_count": 31,
+            "removed": [
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "59cee69c-bc2f-5874-b555-19ae2235b109",
+                  "f6710ac6-2049-566a-bd94-4a6a239276cc"
+                ],
+                "identity_sha256": "071432c23c24903e4838aef08a86df9b88f6792f3d70ec6a46bc0eaccc74c9b9"
+              },
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "45e55099-dd98-502b-bb4a-c0159466f22f",
+                  "dbfe8896-a663-5d4f-bb1f-57e566bf1537"
+                ],
+                "identity_sha256": "6522b1b0c70532d75fda634de7b3067a410c27a0da37c543a77b80f19d710eb9"
+              },
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "63a6f798-8c1e-5889-9313-882bb3332b1d",
+                  "e050057b-b095-55ec-b696-fa9120e1d023"
+                ],
+                "identity_sha256": "a364354e46407dc190cc7dec3075dac1ea4d7766dda9b21a30c2a317d0659fe4"
+              }
+            ],
+            "new": [
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "45e55099-dd98-502b-bb4a-c0159466f22f",
+                  "c2af96d9-1246-51a5-a97c-ca696ec0eb98"
+                ],
+                "identity_sha256": "111aae4e6d6d9339d6c7714762103be68728e78e381d711f1279f7ab2d03fdc2"
+              },
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "23eb2cb5-960d-5b6a-b061-e91253b5a44b",
+                  "f6710ac6-2049-566a-bd94-4a6a239276cc"
+                ],
+                "identity_sha256": "d200c8ebcaa51e31d1f6c54295ede628bfc39553866b2765d6b68ccae5b5c028"
+              },
+              {
+                "type": "unconnected_items",
+                "severity": "error",
+                "description": "Missing connection between items",
+                "items": [
+                  "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+                  "ee2b9954-fc72-570c-8508-f1685fef2428"
+                ],
+                "identity_sha256": "e026bdc7ecae6a898ae7176d75e19727b1dcfe37820c07ff7d51ab726355959a"
+              }
+            ]
+          },
+          "schematic_parity": {
+            "unchanged_count": 46,
+            "removed": [],
+            "new": []
+          }
+        },
+        "silk_identity_changes": {
+          "removed": [],
+          "new": []
+        },
+        "superseded_claim": "The earlier zero schematic-parity count was produced without --schematic-parity and is not comparable. This stage explicitly enables it."
+      },
+      "unix": 1790280233.7893927
+    }
+  ],
+  "gate_status": {
+    "fresh": [
+      "Immutable input bindings",
+      "Source/candidate/accepted graph core",
+      "Net-qualified GND, CELL_NEG, private pickoff, TP6 and INT connectivity",
+      "Actual saved F/In1 filled-island 0.20 mm foreign-clearance and rule-area checks",
+      "Matching-project parity-enabled native DRC"
+    ],
+    "reused": [
+      "Parser-aware ordered AST and exact manifest proof from unchanged report 5875b23c.",
+      "Unchanged retained primitive-pair and all-ten ordinary-via geometry evidence.",
+      "Mandatory U4/C24 process requirements because their exact nodes remain unchanged."
+    ],
+    "pending": [
+      "Root engineering disposition and CAD rebind/review",
+      "Powered and physical-stackup qualification",
+      "External INT continuation from the retained local exit to IC1.34"
+    ]
+  },
+  "limitations": [
+    "No board, manifest, refill, routing, placement or CAD file was changed.",
+    "No unmeasured clearance margin, powered behavior, impedance, dielectric stack or supplier process capability is claimed.",
+    "Passing validation holds the candidate for root/CAD review; it does not promote it or make it quote-ready."
+  ],
+  "completed_unix": 1790280233.794781,
+  "elapsed_seconds": 174.99240612983704
+}

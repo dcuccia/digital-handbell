@@ -166,6 +166,46 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**The cleaned IMU candidate has completed its saved-board electrical
+checks.** [Final validation](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-cleanup-final-validation.json)
+(`920ad674...`) confirms **38 native/independent opens, 234 warnings,
+46 parity findings with parity explicitly enabled**, and no non-open
+errors. All 325 pads and prior connected groups remain; ground, CELL_NEG,
+both private pickoffs, TP6 and the INT exit pass. Actual filled polygons
+pass the 0.20 mm foreign-copper and layer-specific exclusion checks.
+The two obsolete warnings are gone. The API repair succeeded; no further
+validator repair cycle is needed.
+
+**Next bounded item: exact CAD rebind and the already selected USB skin
+correction.** Keep the active 41-open package unchanged for now. Stage the
+exact cleaned PCB `d2a098b0...` with its schema-2 manifest/companions in
+`reports/imu-cad-inputs` under the four-layer package; this is a source
+snapshot, not another routing candidate. The staging manifest may change
+only `status` to `INCREMENTAL_IMU_LAYOUT_ENGINEERING_REVIEW` and
+`current_stage_report` to `../imu-cleanup-final-validation.json`.
+Every other field, including the PCB hash and all poses, must match
+`62ea87d6...`. Use a separate output under
+`mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review`.
+All public input paths must remain repository-relative; copy only the
+actual schematic, contact file, project, libraries/tables and licence,
+not personal KiCad preferences or entire historical report directories.
+
+Update the builder to accept only the legacy USB geometry or the
+specifically reviewed HRO case: MPN `TYPE-C-31-M-12`, footprint
+`Handbell:USB_C_HRO_TYPE_C_31_M_12_Handbell`, centre `(0,-24.01)`,
+envelope `9.64 x 8.08 x 3.5`, rotation -180 and native datum
+`(0,-22.82)`. Do not broadly exempt USB fields. The new case uses the
+front-skin centre -28.75 and proof face -29.25 described below; legacy
+geometry retains its old positions. Update all linked stock/mask/proof
+coordinates together and retain every skin, loading, assembly and
+contact check. Exercise legacy/new/invalid input controls before native
+generation. Do not modify the frozen T8 helpers or accepted study.
+Use an explicit owned-process-tree deadline within the item budget.
+If CAD reveals another interference or exceeds the budget, preserve the
+partial result and stop; do not lower heights, move parts or waive checks.
+Full CAD review and any display-only camera issue remain distinct from
+electrical acceptance, powered qualification or fabrication approval.
+
 **Cleanup DRC confirms 38 opens and 234 warnings; graph/fill validation
 is still incomplete.** The [saved-board validation report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-cleanup-validation.json)
 records removal of both obsolete dangling warnings, no new dangling
