@@ -166,6 +166,31 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Eastern MCU ground strategy is blocked; no copper was changed.**
+The [bounded screening record](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-east-ground-blocker.json)
+binds the unchanged accepted PCB `d2a098b0...`, manifest `aa68559e...`
+and battery-contact model. All 79 C6 and 102 C8 candidates inside the
+released region failed modeled rear-contact metal clearance. The tested
+via diameter was 0.604 mm with 0.25 mm metal clearance. Other rejection
+classes overlap; their counts must not be added as independent failures.
+C8 is the native 1 uF / 25 V capacitor. No staged PCB was created.
+
+The initial attempt and two implementation corrections are exhausted.
+The previous local-via release below is historical, not permission to
+repeat or expand its search. The modeled BT1 under-cell base covers
+native X 105.685-118.685, Y 94.435-105.565 mm, with adjacent tabs.
+This is the documented screening model, not measured loaded-contact
+geometry or proof that every possible return route is impossible.
+
+**Next proposed item, not yet released:** assess a longer F ground escape
+from the existing shared group to an ordinary via outside the complete
+BT1 metal exclusion, then review the resulting decoupler return paths
+before routing. Keep placement, contacts, protected In1 and supply copper
+fixed. Do not infer that solder mask or filled/capped through-vias permit
+conductive B lands under contact metal. If no acceptable ordinary-via
+return emerges, escalate the topology/mechanical/process choice rather
+than silently relax clearance. Sol is idle; affected routing is blocked.
+
 **Post-IMU triage is complete.** The source-bound
 [connected-group inventory](../hardware/handbell/iterations/printed-bell-four-layer/reports/post-imu-routing-triage.json)
 reconciles 38 opens across 24 disconnected nets. Its suggested nearest

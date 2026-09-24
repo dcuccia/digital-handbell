@@ -25,10 +25,13 @@
   and passed the source-bound checker. IMU closure is now accepted as
   PCB `d2a098b0...` / manifest `aa68559e...`, with the exact three-field
   lifecycle bridge to immutable CAD inputs. Post-IMU triage reconciles
-  38 opens across 24 nets. Next is the specifically released staged local
-  return for the isolated C6/C7/C8/C13/C17 GND group, using ordinary
-  off-pad vias near C6/C8 into In1. Preserve placement and supply routing;
-  no VCORE edge or other routing is released. See the closure-plan top.
+  38 opens across 24 nets. The local ordinary-via return for the isolated
+  C6/C7/C8/C13/C17 GND group is blocked by modeled rear BT1 metal.
+  Its initial attempt and two corrections are exhausted; no PCB changed.
+  Sol is idle. A longer F escape to an off-contact ordinary via requires
+  a new bounded engineering disposition; do not repeat the local screen,
+  relax contact clearance or substitute filled vias. No VCORE edge or
+  other routing is released. See the closure-plan top.
   Future engineering items retain their normal bounded budgets. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a

@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "status": "BOUNDED_MCU_EAST_GROUND_BATCH_BLOCKED_RETRIES_EXHAUSTED",
+  "scope": "Durable evidence from the completed C6.1/C8.2 ordinary-through-via screen only. No new search, PCB edit, refill, DRC, routing or physical redesign was performed for this report.",
+  "source_bindings": {
+    "active_pcb_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+    "active_manifest_sha256": "aa68559eebaf8a43c369f549deed1f025d393bafe2d4323d2098fa4712ef622c",
+    "private_screening_evidence_sha256": "212b2b7230dd421d5eace884f756a43aee04d93ec9680bd1f32ea8a6745d58d8"
+  },
+  "released_strategy": {
+    "net": "GND",
+    "source_group_id": "abddee34295330a0",
+    "source_group_pads": [
+      "C6.1",
+      "C7.1",
+      "C8.2",
+      "C13.2",
+      "C17.2"
+    ],
+    "requested_targets": [
+      "C6.1",
+      "C8.2"
+    ],
+    "native_region_mm": [
+      105.3,
+      99.2,
+      107.0,
+      104.0
+    ],
+    "candidate_via": {
+      "kind": "ordinary F.Cu-to-B.Cu through-via",
+      "copper_diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "contact_clearance_mm": 0.25
+    },
+    "candidate_tracks": {
+      "layer": "F.Cu",
+      "width_mm": 0.25
+    },
+    "C8_native_value": "1uF/25V"
+  },
+  "screen_contract": {
+    "final_bounded_batch_per_target": {
+      "radii_mm": [
+        0.65,
+        0.8,
+        0.95,
+        1.1,
+        1.25,
+        1.4
+      ],
+      "angle_step_degrees": 15,
+      "candidate_count": 144
+    },
+    "contact_test_semantics": "Collision of the complete 0.302 mm-radius via copper annulus against modeled battery-contact metal with 0.25 mm clearance minus one native integer unit. This was not a center-point-only test.",
+    "other_tests": "Candidate rejection classes were non-exclusive. They included released-region bounds, all-layer foreign-copper clearance, F-track foreign-copper clearance and positive-area overlap of the via annulus with any F/B SMD land."
+  },
+  "authoritative_contact_model": {
+    "path": "hardware/handbell/iterations/printed-bell-four-layer/battery-contact-interface.json",
+    "sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "drawing": "Keystone 254 revision C, 2023-09-14",
+    "governing_reference": "BT1 positive/right contact modeled base metal in the screened positive-X region",
+    "screened_primitives_native_xy_mm": [
+      {
+        "name": "BT1 inner base tab",
+        "bounds": [
+          101.685,
+          97.46,
+          105.685,
+          102.54
+        ]
+      },
+      {
+        "name": "BT1 under-cell base",
+        "bounds": [
+          105.685,
+          94.435,
+          118.685,
+          105.565
+        ]
+      },
+      {
+        "name": "BT1 outer base tab",
+        "bounds": [
+          118.685,
+          98.41,
+          121.565,
+          101.59
+        ]
+      }
+    ],
+    "model_limit": "These polygons are the repository's documented original kinematic screening interpretation, not vendor CAD or measured loaded spring geometry. The screen included mirrored BT2 metal globally, but per-candidate contact-polygon identities were not recorded."
+  },
+  "results": {
+    "C6.1": {
+      "pad_uuid": "f818a426-8ffb-52a3-99c0-cf755406426a",
+      "pad_center_native_mm": [
+        106.005898,
+        99.999744
+      ],
+      "tested": 144,
+      "feasible": 0,
+      "inside_released_region": 79,
+      "outside_released_region": 65,
+      "contact_clearance_rejections": 79,
+      "other_nonexclusive_rejections": {
+        "track_foreign_copper_clearance": 37,
+        "via_foreign_copper_clearance": 79,
+        "via_positive_area_SMD_land_overlap": 51
+      }
+    },
+    "C8.2": {
+      "pad_uuid": "3469b12a-6611-59ea-88af-0a940c1ede84",
+      "pad_center_native_mm": [
+        106.009069,
+        102.430145
+      ],
+      "tested": 144,
+      "feasible": 0,
+      "inside_released_region": 102,
+      "outside_released_region": 42,
+      "contact_clearance_rejections": 102,
+      "other_nonexclusive_rejections": {
+        "track_foreign_copper_clearance": 66,
+        "via_foreign_copper_clearance": 77,
+        "via_positive_area_SMD_land_overlap": 81
+      }
+    },
+    "total_candidate_evaluations_final_batch": 288,
+    "nearest_candidate_contact_clearance": {
+      "status": "not_collected",
+      "explanation": "The saved screen records Boolean clearance failure, candidate geometry and rejection classes, but not a signed nearest-metal distance. No new measurement was performed after the stop instruction."
+    }
+  },
+  "attempt_history": [
+    {
+      "kind": "initial_attempt",
+      "purpose": "Screen a smaller local radial candidate set and stage both returns only if viable.",
+      "result": "C6.1 had no feasible candidate; no PCB output was written."
+    },
+    {
+      "kind": "implementation_correction_1",
+      "purpose": "Persist rejection evidence and use the exercised larger radial set inside the same released rectangle.",
+      "classification": "Tool/harness correction only; no physical geometry, target, process or region change.",
+      "result": "C6.1 remained blocked."
+    },
+    {
+      "kind": "implementation_correction_2",
+      "purpose": "Continue the same bounded screen independently for C8.2 and permit preservation of a single valid staged return if one existed.",
+      "classification": "Tool/harness control-flow correction only; no physical redesign or broader search.",
+      "result": "C8.2 also had no feasible candidate; no PCB output was written."
+    }
+  ],
+  "group_terminal_coverage": {
+    "screened": [
+      "C6.1",
+      "C8.2"
+    ],
+    "not_screened": [
+      "C7.1",
+      "C13.2",
+      "C17.2"
+    ],
+    "conclusion": "The collected evidence does not establish that every terminal in the shared GND group lies under contact metal. It establishes only that every candidate in the final bounded C6.1 and C8.2 batches that remained inside the released rectangle failed the modeled contact-metal clearance test. Feasibility around the three unscreened group terminals is unknown."
+  },
+  "conclusion": "The authorized bounded C6.1/C8.2 candidate batch fails the modeled battery-contact clearance requirement. This is not proof that all possible placements, other terminals, different regions or different processes are impossible. Retries for this item are exhausted and further engineering requires a new Astra disposition.",
+  "design_files_written": false,
+  "active_pcb_or_manifest_modified": false,
+  "staged_candidate_created": false
+}
