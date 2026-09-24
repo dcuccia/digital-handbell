@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "status": "EXTENDED_NATIVE_BUILD_AND_CHECK_PASSED_HELD_FOR_ROOT_REVIEW",
+  "owner_authorization": {
+    "authorization": "Authorize one native CAD run with a 30-minute maximum",
+    "single_run_only": true,
+    "native_deadline_seconds": 1800
+  },
+  "invocation": [
+    "python",
+    "tools/build_printed_bell.py",
+    "--placement",
+    "hardware/handbell/iterations/printed-bell-four-layer/reports/imu-cad-inputs/placement-manifest.json",
+    "--output",
+    "mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run",
+    "--launch-timeout-seconds",
+    "1800"
+  ],
+  "native_execution": {
+    "version": "FreeCAD 1.1.3, Libs 1.1.3R20260725",
+    "token": "d1d416fa5c564ca5af2be7131152d496",
+    "directory_created_utc": "2026-09-24T21:30:30.6424939Z",
+    "completion_written_utc": "2026-09-24T21:37:50.7708853Z",
+    "elapsed_seconds": 440.1283914,
+    "deadline_exceeded": false,
+    "completion_marker_present": true,
+    "review_state": "EXACT_ALL_FRONT_ENGINEERING_REVIEW",
+    "nominal_overlap_count": 0
+  },
+  "input_bindings": {
+    "design_input": "e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e",
+    "builder": "dcfae50c8a030af0c00d735107bc55b472a29d3b94d7cddb3d9eccbbfedcab14",
+    "checker": "fa008efef8f9bc429f021a7e7e0d2e6cbe7a184ed7d3209b3b2f617d44900071",
+    "geometry_helper": "c9ef5a33a86cd8f3635f6aa6171c2d84b6d7662f68bcb578d9cd9a43bdfb3aab",
+    "export_helper": "22e806153f313685a9a96d12b90070bb1985259b50261011ac6ce0d298a4f04c",
+    "frozen_t8_native": "96d1dfb0b2a59c8c19e471dd7e86c22400463677788a20e3fbff4d23152fe3e6",
+    "frozen_t8_report": "b3cf4e25de42f3ce09c551ab3580f997bc3ede1af2c594d79ff098bdfdc4289a",
+    "frozen_t8_placement": "4e8e27f7241e76850ef4fb9719a45acf0ab49ccfe9e1d651ef60f278b20da46c",
+    "frozen_t8_contact": "e93d72ef211b7615634f255153a413b826d05c1495fa19d967c64456b647c4a6",
+    "placement": "443fe1b5f5dedd79799dd081b7fdc169caf494d1f01a38df7d1dd48d97d5d2ff",
+    "contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "pcb": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "library_13": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+    "library_14": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+    "library_15": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+    "library_16": "c14953f81c04418ff86a4479830b5a6ad298e329ebe30604b5fc5a8c254c574a",
+    "library_17": "a563b5eca037b284cb99458f46a5fae7f2595c3b8b690cb55dbeffd8f7e9b615",
+    "library_18": "ab6815fc1f67f26ca97701d45024b9e6552d3347ae1fcd46c6e131c4acc8621c",
+    "library_19": "249d02d7ead81cef19169ca6534e0ba989cf1116ec85e66a7b24d8e65a4e556f",
+    "library_20": "e2c56ba7827556e51659afeec3d5af0216f10397104097540c5827072c39ee6f",
+    "library_21": "e111e8f7406bdf20253c0db856db2cf7e0813c368268f231f5ad42e4b3d28ff3",
+    "library_22": "c51a93a5820a8b814bfeb85398e483a57ae51a917c2e199581f17200639c8aa1",
+    "library_23": "ce3e3010817a404fe8608f342bf7d8cbf9c264b24529d443e2ffc856455863da",
+    "library_24": "5d2445ed080542ae06693db292d3107786158f8e8db1f397d321697fe649aa7e",
+    "library_25": "414e7e48868c39d38ebdd994447d6d494dc754eaebe83138efb7b36da53c8715",
+    "library_26": "ccad3823870006c7c8e1850db78746cfe9b95ceb7be29fb78f73cebf96e0a6c5",
+    "library_27": "0ac23f1cbd41e51aeb883399c687329e1348deaaefde9af63bb169826c8c0c73",
+    "library_28": "82a990e62680e44faad31f1ea5a149abcb7ac75979a7ed6d39e4bdc408ac05d6",
+    "library_29": "6724f8cc8029149b74302eda7e77dbe6b59657c5164539d462a5bf5ec4337efa",
+    "library_30": "e44c59b8c3d525b1495d7b304edf832a89f861dd9260adba8672f3d86e98610b",
+    "library_31": "e542ee16f8bde94e3a1b9e3dfd74674c6de8a688f7187b884dcfd52fe632a1a8",
+    "library_32": "8869520c410b861d8e4dfc4665f632c23b1a405cf36b2e986dd7f7bdea886dd3",
+    "library_33": "8380283ecd343d3ae2183feb11958d117bea7d34287ba48fe9b79a712f46eaa1",
+    "library_34": "15976e6c903751f46c6f46635c50b45bf7f2f379b9efb0c67a2d1b8069cb3e5e",
+    "library_35": "eae5fb2dc2cfa27b8fb40061a31f0ad255fc9b8055104f90d1b295b12fd82cc4",
+    "library_36": "af5e990006f7b48081c1775f431ed75cc4375dfb1cf5cbcda95e391331e7a3c5",
+    "library_37": "8a61dfef2dc6903db5f7aaf7dbe8a893125222160d1f90abff42329b286849c9",
+    "library_38": "5b01635e34820c3b6f272d2751e9dab34635714a49d1ca3fa386c6d9c48307e2",
+    "library_39": "acb5cb21552d26c4dd0c9aab90c09cd6de383de017c9de824ff19e71095038fa",
+    "library_40": "826e75f763153b44be8d0fb12a4a42ab48ede3c4b2ec26f46c20d445c4a788be",
+    "library_41": "e06896b29d90047c9298b2fa0232b49e096ee936e9625ec24fe9582e28704327",
+    "library_42": "4c787092400be49f568c8c2f2c4a45dc85f9ff0a2944a2ff9ea74e2714da96f2",
+    "library_43": "fc39ae95b94048cdbd02488c9c721a9ee0933766b3dd9a2e052f3288e7c5d3cc",
+    "library_44": "f8c647b99f57fd8e8b987f1f8b0c9e2cc7a308ee54f9e6a3fb3ea2b7ce0abbf9",
+    "library_45": "9425ee76a0ba3ca7ab18957545f5c484da27ec3dae3344d3a0a58b67f16ba6b4",
+    "library_46": "3da90be1bd92445ba8434fcff2806538d9cb621bc52054646e10beb8c53c765d",
+    "library_47": "bab9811a2bb7e6ce6f6fe69aec3b592f6ee0d216964bcaa0a828b985e0937ca6",
+    "library_48": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5",
+    "library_49": "d872bb3d326e1931a629a89bee77d4693d6c041e00c6e954eedeeec78e46ce58",
+    "library_50": "8a642c2383551e10b64daeb4bfa6393093b0c4f50acea6e544bcad3d425c1e2b",
+    "library_51": "da4628fe0e6a278e9b6cf1624aea14db315defc429e4571088f2dbb7b2ecc741",
+    "library_52": "64f9e325d8022977226a8dd8c098f47c0102ccbae7ab2087aa26281b779b1d57",
+    "library_53": "eb5000fe59d3c9ad0d3d8dd81d7c956929f6b38995079a9061d471ad926115c7",
+    "library_54": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+    "library_55": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937"
+  },
+  "checker": {
+    "invocation": [
+      "python",
+      "tools/check_printed_bell.py",
+      "--output",
+      "mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run"
+    ],
+    "result": "PASS",
+    "artifact_integrity": "PASS",
+    "exact_current_input_binding": "PASS",
+    "nominal_geometry": "PASS",
+    "qualified": false
+  },
+  "artifact_summary": {
+    "output_path": "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run",
+    "file_count": 31,
+    "artifact_manifest_sha256": "63cf25b41b035e3166b93b88afc6f00475b145624b69ddfc636445f4cbb9419f",
+    "step_count": 12,
+    "stl_count": 9,
+    "all_STEP_roundtrips_verified": true,
+    "maximum_STEP_symmetric_difference_mm3": 0.0,
+    "all_STLs_closed_manifold_single_component": true,
+    "files": {
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\artifact-manifest.json": {
+        "sha256": "63cf25b41b035e3166b93b88afc6f00475b145624b69ddfc636445f4cbb9419f",
+        "bytes": 19587
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\black-handle.step": {
+        "sha256": "d2f2bf83691cf5e022dde30f25cbc86a172fde9834075f2b8d1e4751d39f4d0d",
+        "bytes": 28936
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\cell-cover.step": {
+        "sha256": "a6fb87afc30818345992a670116f502c5fa17a4f59a7029bbd8cca321214c526",
+        "bytes": 128910
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\cell-cradle.step": {
+        "sha256": "2e944cfaff84da27069c60c787770f7286b95fde35566cf07f710a99ea1a9cdc",
+        "bytes": 601722
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\completion.json": {
+        "sha256": "02ada0b56699c2dccfb911446b17e99eb4c05768d13e6619aaaaf731a2ceed4b",
+        "bytes": 5162
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\contact_interface-snapshot.json": {
+        "sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+        "bytes": 4472
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\design_input-snapshot.json": {
+        "sha256": "e0006b59412f4a0184744e0aa9cebbab2b7f11e57228aa5997de904f1b48916e",
+        "bytes": 5140
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\fit-report.json": {
+        "sha256": "4ffdfcc7177dbd406b8af0ef0f602343a9fd49d8a4a4b1ada9cd6b76b46055de",
+        "bytes": 202245
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\flush-carrier.step": {
+        "sha256": "a1b9405c4a74dd58d3d7859b2ce03d584d895e74aa261c5a68f21bb4af4ac749",
+        "bytes": 203551
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\freecad-build.log": {
+        "sha256": "6cb357d4845581efef88df480b6d1919781d75b90c9d4b0fa51112e690d7961f",
+        "bytes": 70065
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\full-populated-pcba.step": {
+        "sha256": "a6766b030282fc56ca9326967af815da8ab8c1feed56a9b5f186525160b58a5c",
+        "bytes": 898513
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-black-handle.stl": {
+        "sha256": "825211bc1848ae542a81ae813506efeccd574441394edb57a7a05c16f053a822",
+        "bytes": 308084
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-cell-cover.stl": {
+        "sha256": "e1741c06c76609d7021927a0552369caa8a36b55ac6cc0d1b867b587ebc1a5f6",
+        "bytes": 225884
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-cell-cradle.stl": {
+        "sha256": "1897875e8722a3e5e08e2baf28e9fd70d2db24ec760b93a518fe136a8a409298",
+        "bytes": 2207084
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\inert-cell.step": {
+        "sha256": "846bf5e2875218867a2d33572f95a018e949673bdf2aa0e2d2da77717d588ad2",
+        "bytes": 3526
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-flush-carrier.stl": {
+        "sha256": "968331103136511cb1ec00c44833f7459ac64eb7843eae9d6ae85f7a5ba664e7",
+        "bytes": 362984
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-full-cell.stl": {
+        "sha256": "000bc9acb523f11c727af2991c0b5dcf4588954d2cb1cead34f8704cff41e7eb",
+        "bytes": 20884
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-pcba-without-contacts.step": {
+        "sha256": "9b1480ecb525df2374c158486ea1d0d6a2d29af5781830459421f85418924468",
+        "bytes": 764609
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-pcba-without-contacts.stl": {
+        "sha256": "9ab4ae9332bb5ebe29b92a25c00fed85cca050032b4891c0913a7e8a45155ea6",
+        "bytes": 139884
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-shell.stl": {
+        "sha256": "f382e0cffc051279061c3cf55202c567fb47ccb765c72e6c2e4419c6f2f4e2f8",
+        "bytes": 968884
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-speaker.stl": {
+        "sha256": "862ef965f9f79af6a4719ae998db54f1a17fd7615b6c6f41cc5c4dc713a58459",
+        "bytes": 41884
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\INERT-yoke.stl": {
+        "sha256": "37456816665353928a49d26f501f80e3fa58909bd8365c3271ec206b5825c217",
+        "bytes": 1026084
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\original-profile.svg": {
+        "sha256": "af7f7dbd89dc911ecd811c06e300d049e5f5fa2b326698527099ed8683146b65",
+        "bytes": 3338
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\placement-snapshot.json": {
+        "sha256": "443fe1b5f5dedd79799dd081b7fdc169caf494d1f01a38df7d1dd48d97d5d2ff",
+        "bytes": 91133
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\printed-bell-complete.step": {
+        "sha256": "d89f3876ba5b4689228a3b79e6d15f2a27371d27ea8b1461e150991190a545fd",
+        "bytes": 2410251
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\printed-bell.FCStd": {
+        "sha256": "b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d",
+        "bytes": 1393379
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\removable-cartridge.step": {
+        "sha256": "4c0743459b9957d39d62b378dc1d2794f918e7ff4d55bede1d93e495efb09765",
+        "bytes": 2182805
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\review-status.json": {
+        "sha256": "db23aedd85474db2506b9ebefa66ccdf6ba422fab637fe2e9f5dce6592695ea4",
+        "bytes": 103
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\shell.step": {
+        "sha256": "a794ab4ca3c9e25d3ae943c2e5fa276bfabee11a57fd6bc27da57aa301fde9c6",
+        "bytes": 124330
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\speaker.step": {
+        "sha256": "c14964dca65a0bca151f4c20da4e3ecbae667b4659baea54c551cf3bbacf4dd2",
+        "bytes": 5135
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\yoke.step": {
+        "sha256": "a5f338c96bfd420a65fd67ff0e05095085990ec0269d2bd51081a5ceb2f33d7d",
+        "bytes": 202719
+      }
+    }
+  },
+  "fit_and_assembly": {
+    "status": "EXACT_ALL_FRONT_ENGINEERING_REVIEW",
+    "dimensions": {
+      "maximum_shell_diameter_mm": 70,
+      "body_height_mm": 55.8,
+      "handle_above_crown_mm": 80,
+      "overall_height_mm": 135.8,
+      "comparison_old_diameter_mm": 75.5,
+      "comparison_old_body_height_mm": 56.3,
+      "grille_projection_mm": 0,
+      "pcb_diameter_mm": 43.0
+    },
+    "material_intersection_count": 0,
+    "mechanically_bound_to_final_manifest": true,
+    "mechanical_freeze_recommended": true,
+    "routing_is_not_fabrication_approval": true,
+    "usb": {
+      "approved_profile": "hro_type_c_31_m_12",
+      "source_mpn": "TYPE-C-31-M-12",
+      "source_footprint": "Handbell:USB_C_HRO_TYPE_C_31_M_12_Handbell",
+      "native_origin_xy_mm": [
+        0.0,
+        -22.82
+      ],
+      "nominal_mouth_xy_mm": [
+        0,
+        -27.9
+      ],
+      "conservative_envelope_front_y_mm": -28.05,
+      "skin_center_front_rear_y_mm": [
+        -28.75,
+        -29.25,
+        -28.25
+      ],
+      "connector_to_skin_rear_gap_mm": 0.1999999999999993,
+      "all_pcba_pure_z_loading_plane_separation_mm": 0.19999999999999574,
+      "frame_missing_mm3": 0,
+      "extra_opening_mm2": 0.0,
+      "blocked_opening_mm2": 0.0,
+      "pcb_mask_missing_mm3": 0
+    },
+    "checker_gate_scope": [
+      "Exact native and artifact hash binding",
+      "STEP BREP roundtrip and STL manifold/self-intersection checks",
+      "USB skin, PCB concealment and loading-plane separation",
+      "Contact retention and insulation witnesses",
+      "Shell/cartridge/handle service and insertion paths",
+      "Material intersections and routing-interface freeze recommendation"
+    ]
+  },
+  "process_cleanup": {
+    "owned_run_directories_remaining": 0,
+    "FreeCADCmd_processes_observed_after_completion": [],
+    "PID_specific_termination_used": false,
+    "reason": "The owned native process completed normally before the deadline."
+  },
+  "completed": [
+    "One authorized extended native build",
+    "Completion marker and exact source binding",
+    "Existing checker pass",
+    "Native/STEP/STL, skin, service, contact and intersection gates"
+  ],
+  "pending": [
+    "Root engineering review and explicit acceptance decision",
+    "Powered, physical-stackup, fabrication-process and supplier qualification"
+  ],
+  "limitations": [
+    "This is an engineering-review CAD artifact, not fabrication or child-use approval.",
+    "The checker reports qualified=false despite passing its nominal geometry and artifact gates.",
+    "No PCB, manifest, routing, component pose, height, frozen T8 helper or accepted prior study was modified."
+  ]
+}

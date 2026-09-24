@@ -1,5 +1,25 @@
 # Original printed bell — September 13
 
+**Latest engineering review: four-layer IMU closure, September 24.**
+Open [the completed native assembly](imu-four-layer-review/extended-run/printed-bell.FCStd)
+or [complete STEP](imu-four-layer-review/extended-run/printed-bell-complete.step).
+The separate [fit report](imu-four-layer-review/extended-run/fit-report.json)
+and [artifact manifest](imu-four-layer-review/extended-run/artifact-manifest.json)
+bind PCB `d2a098b0...` and the preserved manifest `443fe1b5...`.
+IC4/R15's 0.50 mm shifts and the approved HRO USB envelope are included.
+The flat USB skin moves 0.15 mm outward while retaining the native
+connector datum, closed frame, loading gap and assembly/service checks.
+
+The authorized run finished in 440.1 seconds with zero nominal material
+intersections and passing native, STEP and inert-STL checks. This is not
+physical tolerance, mating, insulation-material, live-cell, powered,
+supplier or child-use qualification. The parent `imu-four-layer-review`
+files are the incomplete first attempt; use **`extended-run`**, not those
+partial files. Its ignored raw build log is private installation evidence.
+
+**Preserved earlier assembly:** the remainder of this page describes the
+power-rework artifacts at the study root. They have not been overwritten.
+
 **Exact all-front power-rework assembly; an intermediate routing milestone,
 not the final fabrication model.** The native and exports at this
 study root bind the actual `printed-bell-power-rework` PCB, schematic, manifest,
@@ -15,14 +35,14 @@ visibility evidence in the electrical package. The six structural print
 geometries are unchanged. The prior stage-1 assembly remains in commit
 `4bbdcbb0ee1724b450b66f3a03abcaa8c48333d1`.
 
-The current checker passes exact input/output hashes, native/STEP BRep
+The recorded power-rework checker passed exact input/output hashes, native/STEP BRep
 round trips, all nine inert meshes, zero static material overlaps and the
 declared assembly/service poses. This is engineering confidence in the
 **unchanged mechanical interface**, not electrical-rule waivers, physical
 tolerances, a qualified print, live-cell use or fabrication approval.
 
 The earlier `development` directory is explicitly a frozen mixed-face
-checkpoint, **not the current assembly**. Open the root native below.
+checkpoint, **not the current assembly**. Use the latest review linked above.
 Final mode never automatically falls back to that old electronic population.
 
 **Parent visual-review finding corrected:** the former R29.5 shell-fastener

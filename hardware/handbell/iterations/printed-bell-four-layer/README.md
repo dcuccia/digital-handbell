@@ -59,7 +59,7 @@ Exact cumulative source, process and geometry checks, return-path review
 and matched CAD remain pending. These recovery files are not quotation
 or fabrication assets.
 
-**Cleaned IMU candidate, electrical checks complete and CAD pending:** the
+**Cleaned IMU candidate, electrical and CAD checks complete:** the
 [cleanup PCB](reports/imu-cleanup-staged.kicad_pcb) (`d2a098b0...`) and
 [manifest](reports/imu-cleanup-staged-manifest.json) (`62ea87d6...`)
 remove only the two proved obsolete terminal branches. The
@@ -68,8 +68,11 @@ confirms **38 opens, 234 warnings and 46 enabled parity findings**,
 preserved connected groups/protected returns, and cleared fill/geometry
 gates. The intentional unfinished INT exit remains. The earlier API and
 unchecked-parity reports are historical, not remaining repair obligations.
-This is the candidate for the separate full-CAD rebind; it has not replaced
-the accepted package and is not fabrication-ready.
+The [completed CAD run](reports/imu-cad-extended-run.json) includes the
+exact placement and approved USB skin adjustment, with preserved source
+snapshot `443fe1b5...`. It has not yet replaced the accepted electrical
+package; promotion needs the explicit lifecycle-metadata binding record.
+It is not fabrication-ready.
 
 **Earlier acceptance: paired C12 supply/ground closure.** A shorter feed
 from the existing In2 +3V3 bridge replaces only the upstream F supply

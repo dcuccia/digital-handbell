@@ -166,6 +166,38 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**The authorized CAD run completed and passed its checker.** The
+[extended-run record](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-cad-extended-run.json)
+(`4762f642...`) records FreeCAD 1.1.3, 440.1 seconds, zero nominal
+overlaps/material intersections, validated native/12 STEP/9 STL outputs,
+and all existing skin, contact and assembly/service gates. Root reran the
+source-bound checker successfully. The native model is `b2dff347...`,
+artifact manifest `63cf25b4...`, and exact CAD input manifest `443fe1b5...`
+for PCB `d2a098b0...`. The nominal USB mouth stays -27.9; the conservative
+front envelope -28.05 clears the new skin rear plane -28.25 by 0.20 mm.
+This is engineering-prototype integration, not powered, supplier,
+fabrication or child-use qualification.
+
+**Next: promote the qualified IMU checkpoint, without more geometry
+changes or another CAD build.** Copy the exact PCB into the active package.
+Derive the active manifest from the preserved CAD input snapshot, changing
+only lifecycle metadata: `status` to
+`INCREMENTAL_IMU_CLOSURE_ACCEPTED`, `current_stage_report` to
+`reports/imu-closure-acceptance.json`, and
+`mechanical_rebind_required` to `false`. Record and verify this exact
+three-field bridge: CAD remains byte-bound to its immutable snapshot,
+while every geometry, component, source and interface field equals the
+active manifest. Do not claim the two manifest byte hashes are identical.
+The acceptance record must bind both hashes, the unchanged native PCB,
+electrical/CAD evidence, and the prior accepted Git checkpoint.
+Keep all snapshots and models unchanged. Following promotion, the next
+engineering scope is the remaining MCU supply/ground and USB/power-return
+groups, not optional IMU optimization.
+
+The generated native log contains local installation paths and remains
+ignored/private. Its hash is recorded as run evidence, but it is not part
+of the checked CAD artifact manifest or the public model bundle.
+
 **Owner selected one extended CAD run:** after the saved `fa98909`
 checkpoint, the owner explicitly authorized a **30-minute maximum native
 run**, instead of splitting the builder immediately. Use the unchanged

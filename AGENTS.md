@@ -21,11 +21,12 @@
   38 opens, 234 warnings and the same 46 parity notices. The exact CAD
   snapshot and approved USB skin correction are implemented, but the
   540-second native build timed out during exports. Preserve its partial
-  recovery; it is not checker/print-ready. The owner then explicitly
-  authorized one native CAD run with a 30-minute maximum in a separate
-  extended-run output. Preserve all gates; stop on timeout/failure without
-  another retry. This exception does not change future item budgets.
-  No routing or promotion yet. See
+  recovery separately. The owner-authorized extended CAD run completed
+  and passed the source-bound checker. Next is the explicitly released
+  IMU checkpoint promotion with its exact three-field lifecycle-metadata
+  bridge to the immutable CAD manifest. No copper/pose changes or new CAD
+  run. Then review remaining MCU supply/ground and USB/power-return groups.
+  Future engineering items retain their normal bounded budgets. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished
