@@ -4,9 +4,10 @@
 
 - **September 24 resumed:** the owner explicitly resumed work. Start from
   the repaired supply candidate and the two recorded signal conflicts,
-  retaining the Astra/Sol split and bounded retries. The next release
-  adjusts the local CS detour and permits one ordinary INT transition
-  from B to F; native simultaneous checks remain authoritative. See
+  retaining the Astra/Sol split and bounded retries. The local CS detour
+  and INT layer transition now pass; the complete local primitive block
+  is saved as `e954884c...` with matching manifest. Next is validation-only
+  refill/full electrical qualification, not more routing or promotion. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished

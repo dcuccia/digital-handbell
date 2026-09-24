@@ -741,8 +741,8 @@
   "dnp_footprint_reservations": [
     "C29"
   ],
-  "status": "session-private incomplete repaired IMU supply candidate; unfilled and not quoteable",
-  "generated_pcb_sha256": "3c7006c1ec8df011b146a8696e60aeb778ab2760259186169c4bc7328c54c243",
+  "status": "session-private incomplete IMU signal layer-correction candidate; unfilled and not quoteable",
+  "generated_pcb_sha256": "e954884c4a7369d2c6363ba825a50d6189be9d7127a415288b107f7832382b8a",
   "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
@@ -2304,7 +2304,7 @@
       "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -12.917332170352086,
-      "y_mm": -7.398058605359716,
+      "y_mm": -7.898059,
       "width_mm": 1.616,
       "depth_mm": 0.6,
       "height_mm": 0.65,
@@ -2312,7 +2312,7 @@
       "side": "F",
       "native_origin_common_xy_mm": [
         -12.917332,
-        -7.398059
+        -7.898059
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -3184,7 +3184,7 @@
       ],
       "R15": [
         -12.917332,
-        -7.398059,
+        -7.898059,
         90
       ]
     },
@@ -3421,7 +3421,7 @@
       }
     ]
   },
-  "current_stage_report": "reports/imu-vddio-via-repair.json",
+  "current_stage_report": "reports/imu-signal-layer-correction.json",
   "source_two_layer_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
   "logical_copper_layers": [
     "F.Cu",

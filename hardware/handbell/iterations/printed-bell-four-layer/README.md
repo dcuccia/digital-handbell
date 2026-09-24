@@ -25,17 +25,20 @@ does not qualify full routing, DRC, powered behavior or mechanical fit.
 Continue only through the [current closure handoff](../../../../docs/pcb-closure-plan.md#owner-pause-and-next-item).
 
 The subsequent [working PCB](reports/imu-coupled-working.kicad_pcb) and
-[working manifest](reports/imu-coupled-working-manifest.json) now preserve
-all five ground straps, all local supply duties and INT2-to-TP6 routing.
-The [ordinary-via repair](reports/imu-vddio-via-repair.json) closes the
-same-net pad-overlap process finding without adding a via-in-pad dependency.
+[working manifest](reports/imu-coupled-working-manifest.json) now contain
+the [complete local primitive block](reports/imu-signal-layer-correction.json):
+local supply, SCL, SDA, INT2-to-TP6 and an INT local exit are connected.
+Ground straps reach C23.2/local via, not yet proven MAIN-plane attachment.
+IC4 and R15 are each shifted north 0.50 mm in this working candidate.
+Ordinary-via off-pad checks pass without a new via-in-pad dependency.
 Their native
 [front](reports/imu-working-front.png)/[inner](reports/imu-working-inner.png)
 views are source-bound, not complete group/plane or source/DRC qualification.
-SCL pullup, SDA and INT routing remain open, as do refill and acceptance gates.
-The [final signal screen](reports/imu-signal-closure.json) did not pass;
-its proposed R15 move and signal copper were not written. Engineering is
-paused at the [exact stopping handoff](../../../../docs/pcb-closure-plan.md#owner-pause-and-next-item).
+Refill, full electrical and mechanical acceptance gates remain open, along
+with the external INT-to-MCU connection. The earlier
+[failed signal screen](reports/imu-signal-closure.json) is historical;
+the corrected plan was applied after explicit September 24 resumption.
+Follow the [current handoff](../../../../docs/pcb-closure-plan.md#owner-pause-and-next-item).
 Earlier working versions/reports are historical; the handoff records the
 precise current evidence limits and remaining replacement duties.
 

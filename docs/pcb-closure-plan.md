@@ -166,6 +166,49 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 24: complete local primitive block staged; acceptance pending.**
+The [layer-correction result](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-signal-layer-correction.json)
+records working PCB
+`e954884c4a7369d2c6363ba825a50d6189be9d7127a415288b107f7832382b8a`
+and manifest `b55d8dc21d4430e2da7e9c2e0e0166ea335f0a2c70b0113d748194f69d6341a5`.
+The recovery pair `reports/imu-coupled-working.*` now holds those bytes;
+earlier repaired-supply versions remain in Git history.
+
+The shallower CS detour and additional ordinary INT B-to-F transition
+passed simultaneous native geometry. The proposed R15 move, conditional
+spur removal, ground reroute and signal plan are now actually applied.
+All local supply/exterior duties, SCL including R14, SDA including R15,
+INT2-to-TP6 and INT-to-local-F-exit are connected primitively with zero
+shorts. GND1/2/3 reaches C23.2 and GND6/7 reaches the local via.
+All nine changed/new ordinary vias pass same-net-inclusive off-pad checks.
+The 21 zone definitions are unchanged and have no filled caches.
+INT still does not reach IC1.34; that external connection is not claimed.
+
+**Next bounded item: electrical qualification of these exact saved bytes.**
+Preserve an immutable unfilled pair; refill a separate output using the
+exercised settings, with matching project/rules inputs. Persist each gate.
+Compare the full accepted baseline's connected pad groups, not just IMU
+representatives. Require both new returns to MAIN, no lost prior groups,
+cross-net shorts or floating copper, both actual private-terminal cuts,
+CELL_NEG isolation, full contact/drill/clearance and source/manifest/zone
+invariants, then native DRC with an explicit open-count comparison.
+Expected local progress is at least the two GND opens and SCL pullup open;
+do not assert 38 opens before measuring the filled board.
+
+Run one 15-minute qualification item with at most two validator-only
+corrections; no new routing or placement changes. Source-invariant checks
+must include all cumulative rework releases from the accepted source,
+including the proved conditional spur removal and preserved exterior
+geometry. Do not weaken the acceptance criteria to match a failing result.
+If a routing defect appears, retain evidence and return a finite repair
+list instead of modifying copper inside a validation task.
+
+Even electrical qualification does not promote this candidate. The
+actual return-plane continuity, local decoupling supply/return paths,
+B/In2 signal adjacency and via transitions still need engineering review,
+and moved IC4/R15 require exact mechanical rebinding. The authoritative
+board remains the unchanged 41-open checkpoint until all applicable gates.
+
 **September 24, 10:59 explicit resumption.** Resume from the matched
 `3c7006c1...` / `a1278051...` repaired supply candidate, not the failed
 in-memory signal proposal. The accepted 41-open board remains unchanged.
