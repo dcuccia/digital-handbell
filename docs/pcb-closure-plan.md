@@ -166,6 +166,40 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Saved-board diagnostics measure 38 opens, but the MAIN-ground failure
+claim used the wrong net.** The
+[diagnostic report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-electrical-diagnostics.json)
+records fresh graph/DRC agreement: 41 accepted opens versus 38 candidate
+opens, no shorts/floating copper, no lost accepted pad groups, and both
+private pickoffs preserved. The filled recovery pair is unchanged at
+`79a1dee3...` / `eb37d87f...`; it is still unaccepted.
+
+Root checked the alleged MAIN reference against native source:
+**IC1.49 is +3V3, not GND.** Disconnection of the IMU grounds from that pad
+is therefore not evidence of a ground defect. Preserve the diagnostic report
+unchanged as historical evidence, but do not route a "repair" to that pad or
+repeat its failed-ground conclusion. C23.2 already belonged to the accepted
+MAIN ground group, so the preserved-group result and its retained IMU
+connection also require resolving this contradictory harness assertion.
+
+**Next item: anchor-correct saved-board review, no copper/refill changes.**
+Assert each anchor's actual net before connectivity checks. Establish
+C24.2 on the accepted main GND component/In1 island, then test C24.2,
+C23.2 and all five IMU ground pads on the unchanged filled candidate.
+Include a negative control rejecting +3V3 IC1.49 as a GND anchor. Use the
+correct net/component for CELL_NEG isolation. Reuse unchanged diagnostic
+and private-pickoff evidence by exact hash; no automatic routing repair.
+
+The fresh native DRC has no non-open errors, unchanged 46 parity notices,
+and 236 warnings versus 233 accepted. Three new warnings are dangling
+tracks: the intended unfinished INT exit and the preserved +3V3/INT2
+exterior stubs. There are also changed silk witnesses from local rework.
+Classify the intentional exit versus redundant stubs and identify exact
+potential trims with cut proofs, but do not edit them in this review.
+Complete exact source/pose/process/contact/off-pad qualification and CAD
+remain separate gates; neither a reduced count nor a UUID inventory passes
+them.
+
 **Electrical qualification held at a validator interface error, not a
 measured board failure.** The
 [initial qualification report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-electrical-qualification.json)

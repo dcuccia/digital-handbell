@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "status": "DIAGNOSTICS_COMPLETED_CANDIDATE_HELD",
+  "disposition": "The immutable filled candidate is preserved for recovery but is not electrically qualified, accepted, promoted, or quote-ready. Both local IMU ground groups remain open to MAIN after refill.",
+  "immutable_inputs": {
+    "accepted_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "filled_pcb_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+    "filled_manifest_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "accepted_and_candidate_project_match": true,
+    "accepted_and_candidate_schematic_match": true
+  },
+  "recovery_only": {
+    "pcb": "reports/imu-electrical-filled.kicad_pcb",
+    "pcb_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+    "manifest": "reports/imu-electrical-filled-manifest.json",
+    "manifest_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+    "accepted": false
+  },
+  "control_harness": {
+    "status": "passed",
+    "correction": "Compared each self-test return value to its explicit source-defined dictionary contract; did not treat all dictionary values as booleans.",
+    "zone_graph": {
+      "disjoint_islands": 2,
+      "preserved_holes": 1,
+      "unfilled_zone_rejected": true,
+      "actual_graph_pad_islands": 3,
+      "zone_path_witness_checked": true,
+      "CELL_NEG_zone_short_detected": true,
+      "candidate_loaded_or_written": false
+    },
+    "component_comparison": {
+      "merge_allowed": true,
+      "split_rejected": true,
+      "missing_pad_rejected": true,
+      "missing_copper_rejected": true
+    }
+  },
+  "graph_diagnostic": {
+    "execution_status": "completed",
+    "native_version": "KiCad 10.0.6",
+    "accepted": {
+      "native_open_count": 41,
+      "independent_graph_open_count": 41,
+      "short_count": 0,
+      "floating_copper_count": 0,
+      "filled_zone_island_count": 21,
+      "seconds": 43.172
+    },
+    "candidate": {
+      "native_open_count": 38,
+      "independent_graph_open_count": 38,
+      "short_count": 0,
+      "floating_copper_count": 0,
+      "filled_zone_island_count": 18,
+      "seconds": 62.531
+    },
+    "accepted_padgroups": {
+      "accepted_group_count": 127,
+      "accepted_pad_count": 325,
+      "candidate_pad_count": 325,
+      "pad_inventory_equal": true,
+      "net_changes": [],
+      "missing_or_disjoint_pad_copper": [],
+      "regression_padsets": []
+    },
+    "required_connections": {
+      "passed": [
+        "IC4.13 to R14.2 SCL pullup",
+        "IC4.13 to the SCL external group",
+        "IC4.14 to R15.2 SDA pullup",
+        "IC4.14 to the SDA external group",
+        "IC4.9 to TP6.P$1 INT2",
+        "IC4.4 to the declared INT local F exit",
+        "IC4.8 VDD to fixed +3V3 bridge ae5186f8-c14f-543b-83b6-5de362326e62",
+        "IC4.12 CS to fixed +3V3 bridge ae5186f8-c14f-543b-83b6-5de362326e62"
+      ],
+      "local_ground_straps_passed": [
+        "IC4.1 to C23.2",
+        "IC4.2 to C23.2",
+        "IC4.3 to C23.2",
+        "IC4.6 to local return via 102d837c-4d5e-5433-964e-f19081feef15",
+        "IC4.7 to local return via 102d837c-4d5e-5433-964e-f19081feef15"
+      ],
+      "failed": [
+        "C23.2 and therefore IC4.1/2/3 do not reach MAIN IC1.49",
+        "Via 102d837c-4d5e-5433-964e-f19081feef15 and therefore IC4.6/7 do not reach MAIN IC1.49"
+      ]
+    },
+    "private_pickoffs": {
+      "R26.2_to_R27.2": {
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": []
+      },
+      "R24.2_to_C28.2": {
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": []
+      },
+      "contract": "Actual pickoff API result was inspected; connected, independent_until_terminal, and empty other_pad_connections_before_terminal were required."
+    }
+  },
+  "native_drc": {
+    "execution_status": {
+      "accepted": "completed_without_native_execution_error",
+      "candidate": "completed_without_native_execution_error",
+      "isolated_config": true,
+      "reported_violations_are_results_not_subprocess_crashes": true
+    },
+    "accepted": {
+      "open_count": 41,
+      "non_open_violation_count": 233,
+      "non_open_error_count": 0,
+      "warning_types": {
+        "silk_edge_clearance": 5,
+        "silk_over_copper": 105,
+        "silk_overlap": 47,
+        "text_height": 72,
+        "text_thickness": 2,
+        "via_dangling": 2
+      },
+      "schematic_parity_count": 46,
+      "schematic_parity_types": {
+        "net_conflict": 46
+      }
+    },
+    "candidate": {
+      "open_count": 38,
+      "non_open_violation_count": 236,
+      "non_open_error_count": 0,
+      "warning_types": {
+        "silk_edge_clearance": 5,
+        "silk_over_copper": 106,
+        "silk_overlap": 46,
+        "text_height": 72,
+        "text_thickness": 2,
+        "track_dangling": 3,
+        "via_dangling": 2
+      },
+      "schematic_parity_count": 46,
+      "schematic_parity_types": {
+        "net_conflict": 46
+      }
+    },
+    "identity_contract": "SHA-256 of canonical JSON containing type, severity, description, and sorted item UUIDs; positions excluded.",
+    "identity_comparison": {
+      "non_open_violations": {
+        "unchanged": 231,
+        "removed": [
+          "6685bfd6255fc4642666bbd191da35362d9988f704f8a552cc66ade9b4f19af0",
+          "7ae7bc046784dad228f7b3969179207e7226e7516f4172036b86280b9cdf2267"
+        ],
+        "new": [
+          "d83ca1199c420c95816448aedce418250b75af4b2e5265f5a8c033065b10ff9c",
+          "391b98f92ce4b4bd8809d5ccb7dfe8b3c86338d2cc49bae4a599fc9af63b9eec",
+          "e02900e64ddcffd63d368ca0623447108cce7360618f3a1b233bf7cf3622d2fd",
+          "354b0ec19cfe52f2d4c8742e72190cdc0ad79092708fe0069858dc6382f64523",
+          "f5e959c63a634fc59394a54c70d9ba56fb65c26d5177f952bd78a43d0dd51b7d"
+        ],
+        "new_track_dangling_items": [
+          "73a10f55-d7f1-5181-ab16-4104e8617d3a INT local exit",
+          "a672a427-0ece-5ca1-86f4-4e6ebe0488e5 preserved +3V3 exterior track",
+          "ca326628-e943-5adf-9c27-da2bc0468a49 preserved /IMU_INT2 exterior track"
+        ]
+      },
+      "open_diagnostics": {
+        "unchanged": 30,
+        "removed_count": 5,
+        "new_count": 4,
+        "removed_identity_sha256": [
+          "d0cf914d833f220e013b3faa04be6ef37200784f700e2d21ebd7737d747c09b6",
+          "111aae4e6d6d9339d6c7714762103be68728e78e381d711f1279f7ab2d03fdc2",
+          "3eeff9832ca343cafd5a554ba82b797f595337581df1f51598ee3959412db6aa",
+          "b9a59b34f5e52b067319a744b16deaf617432ed44ac26cbb5f264d2f5cf683c9",
+          "62d67a5cb801aa341b9e89c02466d00c5f7fece2cabe0fb81d0d9245fa0cf75c"
+        ],
+        "new_identity_sha256": [
+          "6522b1b0c70532d75fda634de7b3067a410c27a0da37c543a77b80f19d710eb9",
+          "e75c96d0985d7f04c8440e77d3408b41056b6763de286c807d11591851bb01bc",
+          "a364354e46407dc190cc7dec3075dac1ea4d7766dda9b21a30c2a317d0659fe4",
+          "940c11422b1c7f0697fdff80b101eb84d26496750f5ba8c48882ec092b43086a"
+        ],
+        "interpretation": "The candidate has three fewer opens overall. Several UUID-pair identities changed because KiCad selected different witnesses on unchanged accepted groups; the independent complete accepted-padgroup comparison found no split or missing pad group. INT remains open from its declared local exit to IC1.34 as expected."
+      },
+      "schematic_parity": {
+        "unchanged": 46,
+        "removed": 0,
+        "new": 0
+      }
+    }
+  },
+  "evidence": {
+    "session_state_relative_root": "files/imu-electrical-qualification/evidence",
+    "graph_diagnostics": {
+      "path": "graph-diagnostics.json",
+      "sha256": "92ca918db86ace174eef0638d96879238505bc09941e6da695076bae464c7ae7"
+    },
+    "ground_witnesses": {
+      "path": "ground-witnesses.json",
+      "sha256": "8fe3ea8d13dcf55cd8880874f70c4f5b783434060628c2a3aa0caec0b99bbddf"
+    },
+    "accepted_drc": {
+      "path": "accepted-fresh-drc.json",
+      "sha256": "98c428c2cd730f1cd87f5629163352d33aa6021d0517c3e7a77c283c8c4d5aac"
+    },
+    "candidate_drc": {
+      "path": "filled-fresh-drc.json",
+      "sha256": "a39eb2cb2c8466af6b88d8574ec9a93d66a725854722a035dcae08bc5adf75ec"
+    },
+    "drc_comparison": {
+      "path": "drc-comparison.json",
+      "sha256": "09239f42b05acb030437c1e9f95efa951f668a0d942b85300bb7bd6352f3aa43"
+    },
+    "diagnostic_tool_sha256": "02eccd73f33d482acc80312bd13cba2a60415b5cb43295abb60cc8aa5da72335",
+    "ground_witness_tool_sha256": "938237f9e7988376f1f9959f436a3dd2251b0355bf1ef4e20cf0a51a4dd47630"
+  },
+  "gate_status": {
+    "fresh": [
+      "exact control contracts",
+      "accepted and candidate all-layer graph construction",
+      "native-versus-independent open-count agreement",
+      "complete accepted connected-padgroup comparison",
+      "candidate shorts and floating-copper checks",
+      "five IMU ground pads to MAIN",
+      "local IMU ground strap witnesses",
+      "SCL, SDA, INT2, INT local exit, VDD and CS saved-board connectivity",
+      "both private pickoff contracts",
+      "fresh accepted and candidate native DRC",
+      "fresh DRC diagnostic identity comparison"
+    ],
+    "reused_not_reproved_here": [
+      "source-preserving fill-cache transplant and 21-zone-definition comparison from reports/imu-electrical-qualification.json"
+    ],
+    "pending": [
+      "Repair or disposition of both failed MAIN ground-plane attachments; no routing or refill repair was authorized in this item",
+      "Full same-net-inclusive off-pad, drill, contact-metal, barrel and clearance validation on the exact filled candidate",
+      "CELL_NEG isolation on the exact filled graph",
+      "Exact cumulative authorized source-node and geometry delta comparison; UUID occurrence in report text is only an inventory",
+      "Exact IC4 and R15 required 0.50 mm pose validation rather than arbitrary x/y allowance",
+      "U4 thermal-land/via/process preservation; matching FPID and position alone are insufficient",
+      "C24 mandatory process verification",
+      "Exact zone guards, private cuts, contacts and source primitive preservation beyond the fresh graph evidence above",
+      "CAD rebind and mechanical review",
+      "Return-path, decoupling-loop, B/In2 adjacency and physical-stackup qualification",
+      "External INT connection from the declared local F exit to IC1.34"
+    ]
+  }
+}
