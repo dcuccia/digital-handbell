@@ -166,6 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Owner selected one extended CAD run:** after the saved `fa98909`
+checkpoint, the owner explicitly authorized a **30-minute maximum native
+run**, instead of splitting the builder immediately. Use the unchanged
+CAD snapshot and reviewed builder in a new
+`imu-four-layer-review/extended-run` output directory, preserving the
+original partial output. Run with `--launch-timeout-seconds 1800`; retain
+all existing geometry/roundtrip checks and run the checker only after a
+fresh completion. A timeout or new interference stops this attempt with
+its evidence; this is not authorization for another retry or an extension
+of future item budgets. No routing, placement or promotion is released.
+
 **CAD stopped at its time budget; do not repeat the monolithic build
 unchanged.** The [integration handoff](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-cad-integration.json)
 (`2c862a3a...`) records the exact 49-file CAD snapshot, manifest
