@@ -61,6 +61,25 @@ ST datasheets:
 Published sensor currents depend on mode, ODR, and supply; do not substitute
 them for measured whole-instrument runtime.
 
+### Layout-review basis
+
+The September 24 IMU routing review rechecked ST **DS12814 Rev 3,
+January 2019, section 7.1, Figure 24, page 39/199** in the previously cached
+LCSC-distributed datasheet (SHA-256
+`b9609fb50f6c8eea20c7a0ee88354ecd318f4a0552e93224e7bc69adad1eb957`).
+Mode 1 shows one 100 nF ceramic decoupling capacitor for VDD and one for
+VDDIO, with placement near the corresponding supply pin. That section does
+not specify a numerical maximum trace length or loop area.
+
+The working board assigns C24 to VDD (IC4.8) and C23 to VDDIO (IC4.5).
+Review the actual routed supply paths and returns to IC4.6/7, including
+layer transitions and filled-plane apertures; nominal capacitor proximity
+and connected-net checks alone do not establish decoupling performance.
+Short, low-impedance returns are an engineering objective, not evidence of
+a datasheet-mandated dedicated-via count or an invented millimetre limit.
+Do not add an extra capacitance requirement or substitute another LSM6
+variant's application figure without separate source-backed review.
+
 ## Keep the software path simple
 
 Both upgrade candidates use the same MIT-licensed
