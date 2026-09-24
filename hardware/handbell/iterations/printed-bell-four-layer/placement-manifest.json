@@ -741,8 +741,8 @@
   "dnp_footprint_reservations": [
     "C29"
   ],
-  "status": "INCREMENTAL_CONNECTIVITY_BASELINE_C24_FILLED_VIA_ACCEPTED",
-  "generated_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+  "status": "INCREMENTAL_IMU_CLOSURE_ACCEPTED",
+  "generated_pcb_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
   "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
   "baseline_schematic_sha256": "e131a8d093795df7285bcae4a8886ffe01106c6513a19bd588ee7c29c6993b4f",
@@ -1708,7 +1708,7 @@
       "mpn": "LSM6DSOXTR",
       "footprint": "Adafruit_LSM6DSOX-import-fps:LGA-14L",
       "x_mm": -10.50019358167378,
-      "y_mm": -6.007288935525312,
+      "y_mm": -6.507288935525312,
       "width_mm": 3.302,
       "depth_mm": 2.794,
       "height_mm": 1.0,
@@ -1716,7 +1716,7 @@
       "side": "F",
       "native_origin_common_xy_mm": [
         -10.500194,
-        -6.007289
+        -6.507289
       ],
       "z_min_mm": 24.0,
       "z_max_mm": 25.0,
@@ -2304,7 +2304,7 @@
       "mpn": "RC0402FR-0710KL",
       "footprint": "Adafruit Feather RP2040 Prop-Maker-import-fps:_0402NO",
       "x_mm": -12.917332170352086,
-      "y_mm": -7.398058605359716,
+      "y_mm": -7.898059,
       "width_mm": 1.616,
       "depth_mm": 0.6,
       "height_mm": 0.65,
@@ -2312,7 +2312,7 @@
       "side": "F",
       "native_origin_common_xy_mm": [
         -12.917332,
-        -7.398059
+        -7.898059
       ],
       "z_min_mm": 24.35,
       "z_max_mm": 25.0,
@@ -3164,7 +3164,7 @@
     "imu": {
       "IC4": [
         -10.500194,
-        -6.007289,
+        -6.507289,
         270
       ],
       "C23": [
@@ -3184,7 +3184,7 @@
       ],
       "R15": [
         -12.917332,
-        -7.398059,
+        -7.898059,
         90
       ]
     },
@@ -3371,7 +3371,7 @@
   "stage1_manifest_sha256": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
   "routing_report": "reports/clock-local-routing.json",
   "mechanical_release_sha256": "1ec81f6dfede4c040a78f164c91c21a3d77a3ec02ce7b7284b89bad5ddb217e5",
-  "mechanical_rebind_required": true,
+  "mechanical_rebind_required": false,
   "proxy_envelope_adjustments": {
     "authorization": "Parent-authorized conservative U1/U6 body-depth corrections, September14,2026",
     "evidence_scope": "Manufacturer maxima carried forward from the read-only BOM audit and T8 source evidence; no new physical measurement or PDF redistribution",
@@ -3421,7 +3421,7 @@
       }
     ]
   },
-  "current_stage_report": "reports/four-layer-baseline.json",
+  "current_stage_report": "reports/imu-closure-acceptance.json",
   "source_two_layer_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
   "logical_copper_layers": [
     "F.Cu",

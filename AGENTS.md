@@ -22,10 +22,11 @@
   snapshot and approved USB skin correction are implemented, but the
   540-second native build timed out during exports. Preserve its partial
   recovery separately. The owner-authorized extended CAD run completed
-  and passed the source-bound checker. Next is the explicitly released
-  IMU checkpoint promotion with its exact three-field lifecycle-metadata
-  bridge to the immutable CAD manifest. No copper/pose changes or new CAD
-  run. Then review remaining MCU supply/ground and USB/power-return groups.
+  and passed the source-bound checker. IMU closure is now accepted as
+  PCB `d2a098b0...` / manifest `aa68559e...`, with the exact three-field
+  lifecycle bridge to immutable CAD inputs. Next is read-only triage of
+  remaining MCU supply/ground and USB/power-return groups; no new routing
+  or placement change is released until an explicit engineering strategy.
   Future engineering items retain their normal bounded budgets. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a

@@ -1,6 +1,18 @@
 # Printed-bell four-layer routing baseline
 
-**Current acceptance: C24 ground via.** One centered 0.60/0.30 mm
+**Current acceptance: integrated IMU closure.** Active PCB
+`d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711`
+and manifest
+`aa68559eebaf8a43c369f549deed1f025d393bafe2d4323d2098fa4712ef622c`
+have **38 opens, 234 warnings and 46 enabled schematic-parity findings**.
+The [acceptance record](reports/imu-closure-acceptance.json) binds electrical
+evidence and the completed full CAD, with an exact lifecycle-only bridge
+to its immutable input manifest. IC4/R15 are each shifted north 0.50 mm;
+local IMU supply, I2C, ground and INT2-to-TP6 are closed. External
+INT-to-IC1.34 remains open. This is an incremental engineering checkpoint,
+not fabrication, powered or safety approval.
+
+**Earlier acceptance: C24 ground via.** One centered 0.60/0.30 mm
 through-via connects C24.2 to the existing In1 ground plane, without
 changing its land, mask, paste, other copper or F/In1 filled geometry.
 PCB `c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7`,
@@ -55,9 +67,9 @@ all five IC4 ground pads and C23.2 reach the actual In1 GND island;
 IC1.49 as a ground reference and is superseded, not a repair obligation.
 The three new dangling warnings are the intentional INT exit and two
 preserved exterior stubs; none has been suppressed or trimmed.
-Exact cumulative source, process and geometry checks, return-path review
-and matched CAD remain pending. These recovery files are not quotation
-or fabrication assets.
+Later source/process/geometry and CAD evidence supersede that stage's
+pending gates. These historical recovery files are not quotation or
+fabrication assets.
 
 **Cleaned IMU candidate, electrical and CAD checks complete:** the
 [cleanup PCB](reports/imu-cleanup-staged.kicad_pcb) (`d2a098b0...`) and
@@ -70,9 +82,9 @@ gates. The intentional unfinished INT exit remains. The earlier API and
 unchecked-parity reports are historical, not remaining repair obligations.
 The [completed CAD run](reports/imu-cad-extended-run.json) includes the
 exact placement and approved USB skin adjustment, with preserved source
-snapshot `443fe1b5...`. It has not yet replaced the accepted electrical
-package; promotion needs the explicit lifecycle-metadata binding record.
-It is not fabrication-ready.
+snapshot `443fe1b5...`. The exact cleaned PCB now replaces the accepted electrical package through
+the lifecycle-metadata binding record above. The staged manifests remain
+immutable historical evidence. It is not fabrication-ready.
 
 **Earlier acceptance: paired C12 supply/ground closure.** A shorter feed
 from the existing In2 +3V3 bridge replaces only the upstream F supply

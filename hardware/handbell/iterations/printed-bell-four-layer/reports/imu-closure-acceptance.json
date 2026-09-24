@@ -1,0 +1,917 @@
+{
+  "schema_version": 1,
+  "status": "INCREMENTAL_IMU_CLOSURE_ACCEPTED",
+  "scope": "Lifecycle-only promotion of the exact electrically and nominally mechanically reviewed IMU cleanup candidate. No geometry, routing, placement, height, project, schematic, library, contact, CAD, or rule definition was changed.",
+  "prior_checkpoint": {
+    "git_commit": "17e8c3432912eececd534adb5b7ad282001c0a2d",
+    "active_pcb_sha256": "c7b6b6fdb9857f7ea993e3cad37c04e852981eceea5146802cadb35865b2cec7",
+    "active_manifest_sha256": "08bf866d80f74775ff4099e4734da0d445fd359843f61637bf453abf002fe667"
+  },
+  "promotion": {
+    "active_pcb": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+      "sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+      "exact_copy_of": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-staged.kicad_pcb"
+    },
+    "active_manifest": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\placement-manifest.json",
+      "sha256": "aa68559eebaf8a43c369f549deed1f025d393bafe2d4323d2098fa4712ef622c",
+      "derived_from_CAD_snapshot": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\placement-manifest.json",
+      "CAD_snapshot_sha256": "443fe1b5f5dedd79799dd081b7fdc169caf494d1f01a38df7d1dd48d97d5d2ff",
+      "changed_top_level_fields": {
+        "status": {
+          "from": "INCREMENTAL_IMU_LAYOUT_ENGINEERING_REVIEW",
+          "to": "INCREMENTAL_IMU_CLOSURE_ACCEPTED"
+        },
+        "current_stage_report": {
+          "from": "../imu-cleanup-final-validation.json",
+          "to": "reports/imu-closure-acceptance.json"
+        },
+        "mechanical_rebind_required": {
+          "from": true,
+          "to": false
+        }
+      }
+    }
+  },
+  "manifest_bridge": {
+    "comparison": "Full recursive ordered comparison of every field, list item, component pose, height, provenance value and layout input after excluding exactly the three top-level lifecycle fields.",
+    "excluded_top_level_fields": [
+      "current_stage_report",
+      "mechanical_rebind_required",
+      "status"
+    ],
+    "remaining_differences": [],
+    "component_count": 83,
+    "component_pose_records": [
+      {
+        "reference": "BT1",
+        "x_mm": 11.625,
+        "y_mm": 0.0,
+        "rotation_deg": 0,
+        "side": "B",
+        "z_min_mm": 26.6,
+        "z_max_mm": 43.19
+      },
+      {
+        "reference": "BT2",
+        "x_mm": -11.625,
+        "y_mm": 0.0,
+        "rotation_deg": -180,
+        "side": "B",
+        "z_min_mm": 26.6,
+        "z_max_mm": 43.19
+      },
+      {
+        "reference": "C1",
+        "x_mm": -4.03477525138161,
+        "y_mm": -13.791181511626117,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 23.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C2",
+        "x_mm": -9.396400478754705,
+        "y_mm": -2.9475497965927766,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C3",
+        "x_mm": -9.350819474453994,
+        "y_mm": -0.8006690071179561,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C4",
+        "x_mm": -15.993581077462425,
+        "y_mm": -9.414015008881018,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 23.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C5",
+        "x_mm": -16.178591078663505,
+        "y_mm": -2.508548373503283,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 23.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C6",
+        "x_mm": 5.497898178906023,
+        "y_mm": -0.0002562208113449649,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C7",
+        "x_mm": 7.803336067647409,
+        "y_mm": 2.2000142956648623,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C8",
+        "x_mm": 5.501068995683033,
+        "y_mm": 2.4301454707590473,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C9",
+        "x_mm": 2.6155339247877816,
+        "y_mm": -5.271328381255263,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C10",
+        "x_mm": 8.5999998857099,
+        "y_mm": -2.1999998610159537,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C11",
+        "x_mm": -0.9940734332060867,
+        "y_mm": 5.195622995911029,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C12",
+        "x_mm": -0.9999502550049966,
+        "y_mm": -5.269923287865696,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C13",
+        "x_mm": 5.502545755654523,
+        "y_mm": 3.640537487961555,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C14",
+        "x_mm": -5.195705374594452,
+        "y_mm": 2.3045037177294287,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C15",
+        "x_mm": 2.5891427813971433,
+        "y_mm": 5.196168342415729,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C16",
+        "x_mm": 11.339589954670302,
+        "y_mm": -6.983098907906168,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C17",
+        "x_mm": 5.499429397569307,
+        "y_mm": 1.217675117562906,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C18",
+        "x_mm": -5.196360323671945,
+        "y_mm": 1.0034487248696602,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C19",
+        "x_mm": 14.218730538985735,
+        "y_mm": -6.937370108200173,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 23.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C20",
+        "x_mm": 4.846036382495191,
+        "y_mm": -16.283888775390707,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 23.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C21",
+        "x_mm": 16.752667278630856,
+        "y_mm": -11.20515026453107,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C22",
+        "x_mm": 16.951889780280872,
+        "y_mm": -9.08876792023952,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C23",
+        "x_mm": -10.697164663378496,
+        "y_mm": -8.508385740243954,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C24",
+        "x_mm": -7.9959165859080965,
+        "y_mm": -6.000331014864747,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C25",
+        "x_mm": 4.990239308212022,
+        "y_mm": 7.507130336077958,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C26",
+        "x_mm": -9.499999761413408,
+        "y_mm": 10.900000183389635,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 23.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C27",
+        "x_mm": 0.10000002627108931,
+        "y_mm": 15.199999739373407,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 23.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C28",
+        "x_mm": 2.199999776611482,
+        "y_mm": 15.199999987601311,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 23.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "C30",
+        "x_mm": -8.899999710693141,
+        "y_mm": 7.099999914513619,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "CHG0",
+        "x_mm": 7.249566814770555,
+        "y_mm": -17.898013331131953,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "D3",
+        "x_mm": 8.55300018014978,
+        "y_mm": -6.166060728169011,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 23.8,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "D4",
+        "x_mm": -2.0008592935727547,
+        "y_mm": -8.498967934042835,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 23.9,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "FB1",
+        "x_mm": 14.513146171558054,
+        "y_mm": -9.989708250063103,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "FB2",
+        "x_mm": 14.513529304489706,
+        "y_mm": -12.074351769059556,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "IC1",
+        "x_mm": 0.036737499999999874,
+        "y_mm": -0.03673749999999986,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "IC4",
+        "x_mm": -10.50019358167378,
+        "y_mm": -6.507288935525312,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "J1",
+        "x_mm": 16.565,
+        "y_mm": -1.0,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 21.9,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "J2",
+        "x_mm": 14.0,
+        "y_mm": 8.35,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 21.9,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "L0",
+        "x_mm": -2.0000003191205735,
+        "y_mm": -11.229999922277537,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "L1",
+        "x_mm": -7.000000165595688,
+        "y_mm": 14.799999935370037,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 20.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "Q1",
+        "x_mm": -6.400000003211728,
+        "y_mm": 8.000000305574876,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "Q2",
+        "x_mm": -13.02755516384002,
+        "y_mm": 1.3151773801900877,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "Q3",
+        "x_mm": -2.7725000640022035,
+        "y_mm": 7.450000038310257,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "Q4",
+        "x_mm": 10.633403545004875,
+        "y_mm": -14.05165187116776,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "Q5",
+        "x_mm": -14.400825066536289,
+        "y_mm": 7.350480171621423,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.78,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R1",
+        "x_mm": -4.511006976617875,
+        "y_mm": 5.005937639079117,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R2",
+        "x_mm": 4.515049688961151,
+        "y_mm": -18.704370553492698,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R3",
+        "x_mm": -18.43727274494443,
+        "y_mm": -6.197757289613751,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R4",
+        "x_mm": 0.2010854815845955,
+        "y_mm": -11.501289537911736,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R5",
+        "x_mm": 6.901181008808079,
+        "y_mm": -6.701463821982733,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R6",
+        "x_mm": -5.174585621613198,
+        "y_mm": -0.7940986493612106,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R7",
+        "x_mm": -3.000000126523542,
+        "y_mm": 9.999999689850348,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R8",
+        "x_mm": 5.69891114988441,
+        "y_mm": -13.49892215321233,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R9",
+        "x_mm": 8.105370675710938,
+        "y_mm": 0.6423343734330099,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R10",
+        "x_mm": 8.10956458709884,
+        "y_mm": -0.5591332119038975,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R11",
+        "x_mm": 4.9999818739648,
+        "y_mm": -7.997816533579073,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R12",
+        "x_mm": 6.63129218839263,
+        "y_mm": -19.199923894326375,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R13",
+        "x_mm": -5.497377343038181,
+        "y_mm": -19.119706242461852,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R14",
+        "x_mm": -12.905531236768203,
+        "y_mm": -5.28197022386488,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R15",
+        "x_mm": -12.917332170352086,
+        "y_mm": -7.898059,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R16",
+        "x_mm": -16.500568501452406,
+        "y_mm": 3.8015187217910946,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R17",
+        "x_mm": -13.300505251754664,
+        "y_mm": -1.4947124064832704,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R18",
+        "x_mm": 7.633456166028797,
+        "y_mm": -9.003819794486324,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R20",
+        "x_mm": 7.633897248677423,
+        "y_mm": -12.683742620888975,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R21",
+        "x_mm": 2.9991807346254595,
+        "y_mm": 7.519537470032677,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R22",
+        "x_mm": 8.001343090025399,
+        "y_mm": 7.492733164033366,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R23",
+        "x_mm": -1.8000000424905986,
+        "y_mm": 12.700000314165056,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R24",
+        "x_mm": -2.100000312762399,
+        "y_mm": 11.40000012775944,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R25",
+        "x_mm": -7.499999711495981,
+        "y_mm": 5.299999928178239,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R26",
+        "x_mm": -13.599999940951799,
+        "y_mm": 11.699999806769425,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R27",
+        "x_mm": -14.600981278015704,
+        "y_mm": 9.500966364965336,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.25,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R28",
+        "x_mm": -11.599999663963974,
+        "y_mm": 8.55000028394809,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "R29",
+        "x_mm": -17.200149142772993,
+        "y_mm": 9.351077180321528,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "U1",
+        "x_mm": 6.301447512792141,
+        "y_mm": -3.159246170740635,
+        "rotation_deg": -270,
+        "side": "F",
+        "z_min_mm": 24.4,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "U2",
+        "x_mm": -15.936760123830465,
+        "y_mm": -6.0077998450341275,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "U3",
+        "x_mm": 1.6952696315854219,
+        "y_mm": -15.311836810331569,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 23.5,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "U4",
+        "x_mm": 10.554614391812152,
+        "y_mm": -10.087789081503768,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "U5",
+        "x_mm": -2.7000004388604113,
+        "y_mm": 15.199999907384754,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.35,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "U6",
+        "x_mm": -10.799999544413751,
+        "y_mm": 6.6000000551374285,
+        "rotation_deg": 0,
+        "side": "F",
+        "z_min_mm": 24.2,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "X6",
+        "x_mm": 1.3654811810492991e-16,
+        "y_mm": -24.01,
+        "rotation_deg": -180,
+        "side": "F",
+        "z_min_mm": 21.5,
+        "z_max_mm": 25.0
+      },
+      {
+        "reference": "Y1",
+        "x_mm": -7.425199011587686,
+        "y_mm": -1.797403795407524,
+        "rotation_deg": -90,
+        "side": "F",
+        "z_min_mm": 24.0,
+        "z_max_mm": 25.0
+      }
+    ],
+    "component_order_preserved": true,
+    "negative_control": {
+      "mutation": "components[0].x_mm += 0.001",
+      "bridge_rejected": true,
+      "first_failure_path": [
+        "components",
+        0,
+        "x_mm"
+      ]
+    },
+    "CAD_snapshot_and_active_manifest_byte_identical": false,
+    "CAD_binding_justification": "The immutable CAD snapshot remains byte-bound to the same d2a098b0 PCB and completed checked native model. Only lifecycle status/report/rebind fields changed, so clearing mechanical_rebind_required does not alter geometry."
+  },
+  "lineage": {
+    "electrical_final": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cleanup-final-validation.json",
+      "sha256": "920ad674c5e0dd81ac7e07db1aea5561d4a7e68108c7b28b25cf5e6e42ad95bb"
+    },
+    "cad_summary": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-extended-run.json",
+      "sha256": "4762f642da76a25e4ea3e4bc89bbc17eeb499d07c70d88b36501ed0be7ffa7e9"
+    },
+    "cad_native": {
+      "path": "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\printed-bell.FCStd",
+      "sha256": "b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d"
+    },
+    "cad_artifact_manifest": {
+      "path": "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\extended-run\\artifact-manifest.json",
+      "sha256": "63cf25b41b035e3166b93b88afc6f00475b145624b69ddfc636445f4cbb9419f"
+    },
+    "source_process": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-source-process-qualification.json",
+      "sha256": "a4a75996cced9e3cd4cc5aad37a6a9f0227248be51c9d8ac4add86d0284d82af"
+    },
+    "geometry": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-geometry-qualification.json",
+      "sha256": "3050b1326ecb9d8aa864ab52a3ab0a1f3d69b684e35177abd7430a5b1421a13f"
+    },
+    "ground_anchor": {
+      "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-ground-anchor-review.json",
+      "sha256": "19328537d2fcc59285190b11bdf6c62764d80bddb1cddfba304fbe813d55283a"
+    }
+  },
+  "electrical_acceptance": {
+    "native_open_count": 38,
+    "non_open_warning_count": 234,
+    "enabled_schematic_parity_count": 46,
+    "shorts": 0,
+    "floating_copper": 0,
+    "obsolete_terminal_branch_warnings_removed": true,
+    "remaining_INT_local_exit": {
+      "uuid": "73a10f55-d7f1-5181-ab16-4104e8617d3a",
+      "status": "Deliberate unfinished external INT interface to IC1.34"
+    },
+    "remaining_opens": "38 native opens remain and are not fabrication-close claims; see the bound parity-enabled electrical validation for identities."
+  },
+  "mandatory_processes": {
+    "requirements": [
+      "Nonconductive resin fill",
+      "Planarization",
+      "Copper capping"
+    ],
+    "vias": [
+      {
+        "role": "C24 capped via",
+        "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+      },
+      {
+        "role": "U4 thermal via",
+        "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec"
+      },
+      {
+        "role": "U4 thermal via",
+        "uuid": "c63c289d-af32-592b-9732-d17507fbf476"
+      },
+      {
+        "role": "U4 thermal via",
+        "uuid": "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5"
+      },
+      {
+        "role": "U4 thermal via",
+        "uuid": "eb628663-2af6-5175-bd63-91e9eecb0258"
+      }
+    ],
+    "supplier_qualified": false,
+    "tenting_is_not_a_substitute": true
+  },
+  "mechanical_acceptance": {
+    "native_model_sha256": "b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d",
+    "artifact_manifest_sha256": "63cf25b41b035e3166b93b88afc6f00475b145624b69ddfc636445f4cbb9419f",
+    "nominal_connector_to_skin_gap_mm": 0.2,
+    "nominal_material_intersections": 0,
+    "mechanical_freeze_recommended_by_checker": true,
+    "tolerance_or_mating_approval": false
+  },
+  "unchanged_controlled_dependencies": {
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\fp-lib-table": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\sym-lib-table": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\Clock.kicad_sym": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\Handbell.kicad_sym": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\T8.kicad_sym": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937"
+  },
+  "validation_reuse": {
+    "new_DRC_run": false,
+    "reason": "The active PCB is the exact previously parity-enabled, graph, clearance and CAD-checked d2a098b0 bytes; project and schematic hashes are unchanged."
+  },
+  "remaining_gates": [
+    "Powered behavior and decoupling/return performance",
+    "Physical dielectric stackup and impedance",
+    "Supplier capability for filled/capped vias and other mandatory processes",
+    "USB mating/tolerance and sealing",
+    "Fabrication, assembly, thermal, safety and child-use qualification",
+    "External INT continuation to IC1.34 and disposition of the other remaining opens"
+  ],
+  "controlled_files": [
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\placement-manifest.json",
+    "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-closure-acceptance.json"
+  ]
+}

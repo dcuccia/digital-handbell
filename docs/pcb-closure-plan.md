@@ -166,6 +166,28 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**IMU closure is now the accepted incremental checkpoint.** Active PCB
+`d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711`
+and manifest
+`aa68559eebaf8a43c369f549deed1f025d393bafe2d4323d2098fa4712ef622c`
+are bound by [the acceptance record](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-closure-acceptance.json).
+The immutable CAD snapshot remains `443fe1b5...`; its exact three-field
+lifecycle bridge is recorded, not claimed as byte equality. The completed
+native CAD remains `b2dff347...`. **38 opens, 234 warnings and 46 enabled
+parity findings remain.** Both obsolete branches are retired; external
+INT-to-IC1.34 is still unfinished. All five U4/C24 mandatory process-via
+identities were checked against actual native nodes before publication.
+
+**Next bounded scope: read-only MCU/power-return routing triage.** Extract
+the current connected groups and actual pad/net identities for IC1 core
+supplies/grounds, their decouplers and the remaining USB/power returns.
+Reserve sensitive corridors before ordinary controls. Reuse the accepted
+IMU evidence and preserve its placements, routing and five mandatory
+filled/capped vias. No new route or placement move is released until
+Astra selects a concrete next connection strategy from that inventory.
+This closes the IMU integration item, not the whole board or powered,
+supplier, safety or fabrication gates.
+
 **The authorized CAD run completed and passed its checker.** The
 [extended-run record](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-cad-extended-run.json)
 (`4762f642...`) records FreeCAD 1.1.3, 440.1 seconds, zero nominal
