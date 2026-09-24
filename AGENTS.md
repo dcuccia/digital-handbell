@@ -13,9 +13,12 @@
   The corrected review proves all five IMU grounds reach In1 GND and
   `/CELL_NEG` remains isolated. Exact source/manifest and U4/C24 process
   preservation and the released-region/all-ten-via geometry gate now pass.
-  Next is Astra's return-path/decoupling/adjacency review using actual filled
-  views and extracted route geometry, followed by the separate CAD rebind;
-  no automatic refill, routing, stub trims or promotion. See
+  Astra's local review retains the candidate for prototype continuation
+  with explicit decoupling/stackup/powered limits. Next is only the two
+  specifically released obsolete terminal branches, with topology proof
+  before removal and fresh refill/graph/DRC on a separate cleanup candidate.
+  Preserve the filled recovery and functional routes; CAD rebind follows
+  separately, with no automatic promotion. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished

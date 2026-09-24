@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "status": "ENGINEERING_REVIEW_INPUTS_EXTRACTED",
+  "classification": "Read-only, source-bound rendering and conductor/return extraction for Astra engineering review. This is not engineering approval, physical-stackup qualification, CAD rebind, or permission to trim exterior copper.",
+  "inputs": {
+    "filled_pcb_sha256": "79a1dee30ac2fd21db66270067aa0d055ca94828967244d4cb43100700236d78",
+    "filled_manifest_sha256": "eb37d87f2f8d09a2cd74fc432ca66f07531c92680530193024f5e15e0879da6e",
+    "native_version": "KiCad 10.0.6"
+  },
+  "views": {
+    "F_Cu_local": {
+      "path": "reports/imu-review-F.svg",
+      "sha256": "184715f9b79fd18445430208d8da37ca1317df02623907c0920f53c6e01babf6"
+    },
+    "In1_Cu_local": {
+      "path": "reports/imu-review-In1.svg",
+      "sha256": "4ec5aa298e37138aac43c48307b81cf7e735337abb13ce68d136a267073c6e5d"
+    },
+    "In2_Cu_local": {
+      "path": "reports/imu-review-In2.svg",
+      "sha256": "6031c1417d42df99fbf25faac18c5456f116d9cfe61734f2f4fb7003ff55e6b6"
+    },
+    "B_Cu_local": {
+      "path": "reports/imu-review-B.svg",
+      "sha256": "b7900b1998e2c5074edbcf56d87a7ebe7d925fac00d0ce713cba969a85411eb7"
+    },
+    "In1_Cu_whole_board": {
+      "path": "reports/imu-review-In1-whole.svg",
+      "sha256": "edad1aee362a1d9b5ecc336a2942f8b6a365ed892fe132affd6b8fa160a24459"
+    },
+    "contract": {
+      "local_bounds_native_mm": [86.0, 89.0, 95.0, 96.5],
+      "orientation": "Native through-board XY; B.Cu is not mirrored.",
+      "actual_saved_filled_polygons": true,
+      "filled_polygon_holes_preserved": true,
+      "white_fill_voids": "Actual saved holes, antipads, or guard-created voids in the native filled polygons.",
+      "dashed_red": "Native rule-area boundary annotation, not copper.",
+      "component_and_via_text": "Explicit annotation overlay, not copper on the viewed layer.",
+      "source_hash_embedded": true,
+      "physical_dielectric_stack_claimed": false
+    }
+  },
+  "supply_conductors": {
+    "length_contract": "Dijkstra over the native connectivity graph weighted by complete track-primitive length. Intermediate T joins are handled by graph adjacency. Values are conservative full-primitive planar sums because partial traversal within an overlapping primitive is not clipped.",
+    "C23.1_to_IC4.5_VDDIO": {
+      "conservative_planar_length_mm": 5.246407430758782,
+      "sequence": [
+        {"uuid": "88b98a15-3196-56a9-8b2f-f654fc19a1c9", "layer": "F.Cu", "width_mm": 0.1778, "length_mm": 1.441614},
+        {"uuid": "6e5a234c-cb91-54fb-a6d1-b830e4b5b602", "kind": "via", "position_mm": [88.794835, 90.05], "transition": "F.Cu to In2.Cu"},
+        {"uuid": "1b2384a3-5e5d-5a77-a774-a7763f243c9a", "layer": "In2.Cu", "width_mm": 0.4, "length_mm": 1.95},
+        {"uuid": "94702ca9-6cd6-5e42-9bc6-68048f72556c", "layer": "In2.Cu", "width_mm": 0.4, "length_mm": 1.078809},
+        {"uuid": "8172b557-052b-5662-a082-56a27b776202", "kind": "via", "position_mm": [87.95, 92.55], "transition": "In2.Cu to F.Cu"},
+        {"uuid": "b0ac27c1-f68c-5cb7-b842-cbb4c5615e2b", "layer": "F.Cu", "width_mm": 0.25, "length_mm": 0.775985}
+      ]
+    },
+    "C24.1_to_IC4.8_VDD": {
+      "conservative_planar_length_mm": 4.156549567969982,
+      "sequence": [
+        {"uuid": "a310a7c2-7ac0-569a-a9db-369483ff2e10", "layer": "F.Cu", "width_mm": 0.25, "length_mm": 1.049815},
+        {"uuid": "e65581f6-f68d-51e3-9175-23c8a2bc5d7d", "layer": "F.Cu", "width_mm": 0.25, "length_mm": 2.511946},
+        {"uuid": "4119bbb1-82c1-5329-b3a3-2abc5630ee34", "layer": "F.Cu", "width_mm": 0.25, "length_mm": 0.594789}
+      ]
+    },
+    "C24.1_to_IC4.12_CS_context": {
+      "conservative_planar_length_mm": 1.3837729754809682,
+      "sequence": [
+        {"uuid": "47054686-db20-5efb-9da3-67d4505de706", "layer": "F.Cu", "width_mm": 0.25, "length_mm": 0.633773},
+        {"uuid": "7502d8d0-e937-5105-9978-f0068815befc", "layer": "F.Cu", "width_mm": 0.25, "length_mm": 0.75}
+      ]
+    },
+    "limitations": [
+      "Planar lengths exclude vertical barrel length.",
+      "No impedance, inductance, current density, electric/magnetic field, transient, or powered-quality conclusion is made.",
+      "Nominal board thickness is not treated as dielectric separation between layers."
+    ]
+  },
+  "ground_return_geometry": {
+    "F_zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+    "In1_MAIN_zone_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b",
+    "C23_and_IC4_group": {
+      "F_island": {
+        "synthetic_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:11",
+        "filled_area_mm2": 104.954359984665,
+        "explicit_native_holes": 0
+      },
+      "members_reviewed": ["C23.2", "IC4.1", "IC4.2", "IC4.3", "IC4.6", "IC4.7"],
+      "F_to_In1_bridge": {
+        "uuid": "102d837c-4d5e-5433-964e-f19081feef15",
+        "position_mm": [87.9, 93.8],
+        "touches_F_island": true,
+        "touches_actual_In1_MAIN_island": true
+      },
+      "straight_line_pad_to_bridge_mm": {
+        "C23.2": 2.996654,
+        "IC4.1": 2.771618,
+        "IC4.2": 2.362639,
+        "IC4.3": 1.995559,
+        "IC4.6": 0.752872,
+        "IC4.7": 0.713812
+      }
+    },
+    "C24_group": {
+      "F_island": {
+        "synthetic_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:13",
+        "filled_area_mm2": 0.817135276466,
+        "explicit_native_holes": 0
+      },
+      "member_reviewed": "C24.2",
+      "F_to_In1_bridge": {
+        "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+        "position_mm": [92.004083, 93.491669],
+        "touches_F_island": true,
+        "touches_actual_In1_MAIN_island": true,
+        "straight_line_pad_to_bridge_mm": 0.0
+      }
+    },
+    "witness_method": "For each pad, native graph reachability was restricted to F.Cu before identifying its actual filled island and any GND via directly adjacent to both that F island and the actual In1 MAIN island.",
+    "distance_interpretation": "Straight-line pad-to-via values identify the nearest geometric bridge only. Graph witnesses prove copper connectivity; no shortest distance through a two-dimensional filled island, minimum neck, or return quality is inferred.",
+    "decoupling_return_context": "Both IC4.6 and IC4.7 are explicitly included and reach F island 11, then bridge via 102d837c to In1 MAIN. C24.2 uses its separate local F island 13 and capped via fa83a8ab."
+  },
+  "local_transition_context": [
+    {"role": "INT layer", "uuid": "074256f0-3d19-59f4-b81b-084e8d3d9e55", "net": "INT", "position_mm": [91.8, 92.14]},
+    {"role": "INT2 local", "uuid": "0b25a804-80c1-522d-9076-2bf110ac9b32", "net": "/IMU_INT2", "position_mm": [89.6195, 93.5809]},
+    {"role": "GND6/7", "uuid": "102d837c-4d5e-5433-964e-f19081feef15", "net": "GND", "position_mm": [87.9, 93.8]},
+    {"role": "INT IC4", "uuid": "58527c16-637b-5f8e-a517-9db65c8d641f", "net": "INT", "position_mm": [87.97, 91.72]},
+    {"role": "C23 +3V3", "uuid": "6e5a234c-cb91-54fb-a6d1-b830e4b5b602", "net": "+3V3", "position_mm": [88.794835, 90.05]},
+    {"role": "SDA IC4", "uuid": "797f5c8d-fea4-563d-a8e3-ba26733cbf55", "net": "SDA", "position_mm": [90.7, 91.65]},
+    {"role": "VDDIO +3V3", "uuid": "8172b557-052b-5662-a082-56a27b776202", "net": "+3V3", "position_mm": [87.95, 92.55]},
+    {"role": "SDA R15", "uuid": "c23febc8-84dd-5013-a6b7-cc472dfbc610", "net": "SDA", "position_mm": [87.0, 90.05]},
+    {"role": "SCL IC4", "uuid": "c9df651a-3f63-5fc1-84db-a26e944f6157", "net": "SCL", "position_mm": [91.02, 93.492711]},
+    {"role": "SCL R14", "uuid": "f0ac0b29-117f-510d-95b6-916ba13ba667", "net": "SCL", "position_mm": [87.094469, 93.55]},
+    {"role": "C24 capped GND", "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d", "net": "GND", "position_mm": [92.004083, 93.491669]},
+    {"role": "+3V3 bridge", "uuid": "ae5186f8-c14f-543b-83b6-5de362326e62", "net": "+3V3", "position_mm": [92.85, 93.35]}
+  ],
+  "evidence": {
+    "detailed_data_path": "files/imu-electrical-qualification/evidence/engineering-review-inputs.json",
+    "detailed_data_sha256": "51e2f875b9868045981b18698677f8c0cefe92c2256e2e9d298700cacfaa9361",
+    "extractor_sha256": "b2e00cb6a4595a4f353e228266e15e9fdfc9d94c12c7ad8f4914fae0cc316c1e",
+    "all_SVGs_XML_valid": true
+  },
+  "reused_unchanged_evidence": {
+    "source_process_geometry_report_sha256": "3050b1326ecb9d8aa864ab52a3ab0a1f3d69b684e35177abd7430a5b1421a13f",
+    "graph_diagnostics_sha256": "92ca918db86ace174eef0638d96879238505bc09941e6da695076bae464c7ae7",
+    "ground_anchor_report_sha256": "19328537d2fcc59285190b11bdf6c62764d80bddb1cddfba304fbe813d55283a",
+    "DRC_rerun": false
+  },
+  "pending_engineering": [
+    "Astra return-path, decoupling-loop and B/In2 adjacency assessment using these measured views and conductor records",
+    "Physical dielectric stackup and powered performance qualification",
+    "Separate disposition of preserved exterior stubs a672a427 and ca326628",
+    "CAD mechanical rebind and review",
+    "External INT continuation to IC1.34"
+  ],
+  "no_actions": {
+    "copper_or_stub_edit": true,
+    "refill": true,
+    "placement_or_CAD_edit": true,
+    "promotion": true,
+    "commit_or_push": true,
+    "next_item_started": false
+  }
+}

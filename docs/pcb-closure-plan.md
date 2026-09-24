@@ -166,6 +166,54 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Astra local-layout review: retain this candidate for prototype
+continuation; no further IMU placement reset is justified by the present
+evidence.** The [filled views and conductor records](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-engineering-review-inputs.json)
+(`06cc7163...`) bind `79a1dee3...`. Root inspected all four local layers and
+the In1 overview. In1 has local merged antipads but no board-spanning cut
+through the IMU region; the clock exclusion lies south of these local
+routes. This is a qualitative return-path review, not a minimum-neck or
+impedance measurement.
+
+C23/VDDIO uses **F-In2-F**, correcting the earlier B-feed description.
+Its conservative full-primitive planar sum is 5.246407 mm; C24/VDD uses
+4.156550 mm on F. Neither figure includes barrel length or represents an
+exact pin-centre electrical length. C23.2 and all IC4 grounds share F
+island 11, with the power-ground stitch at `(87.9,93.8)`. C24.2 has its
+own small F island and capped via into In1. The supply-side detours are a
+recorded decoupling compromise, not ideal placement. Retain them for this
+prototype rather than introduce another special-process via or move parts
+without a concrete power-integrity conflict. The [verified ST guidance](motion-sensing.md#layout-review-basis)
+does not supply a numeric length waiver: local supply noise, startup and
+sensor operation under audio load still require powered verification.
+
+SCL and INT use local B runs; SDA includes In2 routing and a B external
+continuation, while INT2 uses In2. Sparse In2 routing is not a second
+ground plane. Keep these as the intended I2C/interrupt connections, not
+authorization for a faster SPI/I3C interface. No local crossing of the
+clock-plane exclusion or change to protected switching/clock/USB copper
+was identified. Physical stackup and whole-board interface review remain
+open. Root's private PNG conversion inlined SVG text sizes because MuPDF
+ignored CSS class font sizes; original SVGs were not modified. Fine
+polygon outline seams are not white copper voids.
+
+**Next bounded item: retire the two obsolete terminal branches before
+binding CAD.** Removing one segment can merely move a dangling warning,
+so inspect the complete branch topology first. Release removal of
+`a672a427...` (+3V3) only if it terminates at a retained junction; no
+additional power copper is released. For `/IMU_INT2`, release the obsolete
+branch from the free `ca326628...` end through the old
+`cd251294-41e9-523f-958c-e73cc84fd87d` via at `(94.8392,95.1136)` up to,
+but **not including**, the still-used
+`3a4ecc82-02d7-5513-8c89-db4de4adc534` via at `(94.04,92.3102)`.
+Inventory exact UUIDs and prove this is a padless, junction-free leaf
+branch before deletion; otherwise stop for review. Preserve TP6, its
+functional route, the new In2 feed, INT exit and all other copper.
+Use a separate cleanup candidate, qualified refill and fresh graph/DRC;
+both obsolete warnings must disappear without new dangling warnings or
+lost connections. Preserve `79a1dee3...` and all its evidence. CAD rebind
+is the following separate dependency, not part of this cleanup.
+
 **The remaining copper geometry gate passed.** The
 [geometry report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-geometry-qualification.json)
 (`3050b132...`) covers all 61 new local segments and ten ordinary vias,
