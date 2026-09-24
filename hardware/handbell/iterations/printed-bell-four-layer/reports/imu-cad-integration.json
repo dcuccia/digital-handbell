@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "status": "PARTIAL_CAD_BUILD_TIMED_OUT_NOT_CHECKER_READY",
+  "scope": "Incremental CAD binding of the electrically complete four-layer IMU cleanup candidate. No PCB, component pose, height, route, accepted study, or frozen T8 artifact was changed.",
+  "staged_inputs": {
+    "path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs",
+    "file_count": 49,
+    "manifest_dictionary_diff": [
+      "current_stage_report",
+      "status"
+    ],
+    "manifest_status": "INCREMENTAL_IMU_LAYOUT_ENGINEERING_REVIEW",
+    "manifest_current_stage_report": "../imu-cleanup-final-validation.json",
+    "generated_pcb_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+    "files": {
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\battery-contact-interface.json": {
+        "sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+        "bytes": 4472
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\Clock.kicad_sym": {
+        "sha256": "39dd5f884f16bcb954dc4bf09721b37ef837c09b43ff7aa24a1579635c748c45",
+        "bytes": 3823
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\fp-lib-table": {
+        "sha256": "043325e2dccb1452e4d63829f8e0977caeb03c58b18c7268c6f54f23e7175c83",
+        "bytes": 1702
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\handbell.kicad_pcb": {
+        "sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+        "bytes": 1144490
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\handbell.kicad_pro": {
+        "sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+        "bytes": 18226
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\handbell.kicad_sch": {
+        "sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+        "bytes": 506782
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\Handbell.kicad_sym": {
+        "sha256": "61e1eff3f69ae114ec5460b78179b1518a51a1bfbd242fcad96ee1ab26a3ba3d",
+        "bytes": 153352
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0603-NO.kicad_mod": {
+        "sha256": "c14953f81c04418ff86a4479830b5a6ad298e329ebe30604b5fc5a8c254c574a",
+        "bytes": 3467
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\0805-NO.kicad_mod": {
+        "sha256": "a563b5eca037b284cb99458f46a5fae7f2595c3b8b690cb55dbeffd8f7e9b615",
+        "bytes": 2504
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\_0402NO.kicad_mod": {
+        "sha256": "ab6815fc1f67f26ca97701d45024b9e6552d3347ae1fcd46c6e131c4acc8621c",
+        "bytes": 3426
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\B1,27.kicad_mod": {
+        "sha256": "249d02d7ead81cef19169ca6534e0ba989cf1116ec85e66a7b24d8e65a4e556f",
+        "bytes": 1288
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CHIPLED_0603_NOOUTLINE.kicad_mod": {
+        "sha256": "e2c56ba7827556e51659afeec3d5af0216f10397104097540c5827072c39ee6f",
+        "bytes": 5220
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\CRYSTAL_2.5X2.kicad_mod": {
+        "sha256": "e111e8f7406bdf20253c0db856db2cf7e0813c368268f231f5ad42e4b3d28ff3",
+        "bytes": 3370
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN16_3MM.kicad_mod": {
+        "sha256": "c51a93a5820a8b814bfeb85398e483a57ae51a917c2e199581f17200639c8aa1",
+        "bytes": 11178
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\QFN56_7MM_REDUCEDEPAD.kicad_mod": {
+        "sha256": "ce3e3010817a404fe8608f342bf7d8cbf9c264b24529d443e2ffc856455863da",
+        "bytes": 17860
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323_MINI.kicad_mod": {
+        "sha256": "5d2445ed080542ae06693db292d3107786158f8e8db1f397d321697fe649aa7e",
+        "bytes": 4113
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOD-323F.kicad_mod": {
+        "sha256": "414e7e48868c39d38ebdd994447d6d494dc754eaebe83138efb7b36da53c8715",
+        "bytes": 3736
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-5.kicad_mod": {
+        "sha256": "ccad3823870006c7c8e1850db78746cfe9b95ceb7be29fb78f73cebf96e0a6c5",
+        "bytes": 4624
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\SOT23-WIDE.kicad_mod": {
+        "sha256": "0ac23f1cbd41e51aeb883399c687329e1348deaaefde9af63bb169826c8c0c73",
+        "bytes": 4111
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\TESTPOINT_ROUND_1.5MM_NO.kicad_mod": {
+        "sha256": "82a990e62680e44faad31f1ea5a149abcb7ac75979a7ed6d39e4bdc408ac05d6",
+        "bytes": 1150
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit Feather RP2040 Prop-Maker-import-fps.pretty\\USB_C_CUSB31-CFM2AX-01-X.kicad_mod": {
+        "sha256": "6724f8cc8029149b74302eda7e77dbe6b59657c5164539d462a5bf5ec4337efa",
+        "bytes": 10423
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit TPS61023-import-fps.pretty\\INDUCTOR_5X5MM_TDK_VLC5045.kicad_mod": {
+        "sha256": "e44c59b8c3d525b1495d7b304edf832a89f861dd9260adba8672f3d86e98610b",
+        "bytes": 2702
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit TPS61023-import-fps.pretty\\SOT563.kicad_mod": {
+        "sha256": "e542ee16f8bde94e3a1b9e3dfd74674c6de8a688f7187b884dcfd52fe632a1a8",
+        "bytes": 2808
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Adafruit_LSM6DSOX-import-fps.pretty\\LGA-14L.kicad_mod": {
+        "sha256": "8869520c410b861d8e4dfc4665f632c23b1a405cf36b2e986dd7f7bdea886dd3",
+        "bytes": 6776
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Clock.pretty\\ABM8_272_T3.kicad_mod": {
+        "sha256": "8380283ecd343d3ae2183feb11958d117bea7d34287ba48fe9b79a712f46eaa1",
+        "bytes": 2179
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Clock.pretty\\GRM1555C1H150JA01D.kicad_mod": {
+        "sha256": "15976e6c903751f46c6f46635c50b45bf7f2f379b9efb0c67a2d1b8069cb3e5e",
+        "bytes": 3424
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Connector_JST.pretty\\JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal.kicad_mod": {
+        "sha256": "eae5fb2dc2cfa27b8fb40061a31f0ad255fc9b8055104f90d1b295b12fd82cc4",
+        "bytes": 5307
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Connector_Molex.pretty\\Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal.kicad_mod": {
+        "sha256": "af5e990006f7b48081c1775f431ed75cc4375dfb1cf5cbcda95e391331e7a3c5",
+        "bytes": 6447
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Handbell.pretty\\DFN2015-3_DrainPad.kicad_mod": {
+        "sha256": "8a61dfef2dc6903db5f7aaf7dbe8a893125222160d1f90abff42329b286849c9",
+        "bytes": 5067
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Handbell.pretty\\ERJ6BW_0805_Panasonic_Example.kicad_mod": {
+        "sha256": "5b01635e34820c3b6f272d2751e9dab34635714a49d1ca3fa386c6d9c48307e2",
+        "bytes": 1506
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Handbell.pretty\\Murata_BLM18SG121_WideCopper.kicad_mod": {
+        "sha256": "acb5cb21552d26c4dd0c9aab90c09cd6de383de017c9de824ff19e71095038fa",
+        "bytes": 4173
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Handbell.pretty\\Murata_GRM21_10uF_Reflow.kicad_mod": {
+        "sha256": "826e75f763153b44be8d0fb12a4a42ab48ede3c4b2ec26f46c20d445c4a788be",
+        "bytes": 2704
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Handbell.pretty\\Murata_GRM21_22uF_Reflow.kicad_mod": {
+        "sha256": "e06896b29d90047c9298b2fa0232b49e096ee936e9625ec24fe9582e28704327",
+        "bytes": 2700
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Handbell.pretty\\TDK_VLS5045EX_Reflow.kicad_mod": {
+        "sha256": "4c787092400be49f568c8c2f2c4a45dc85f9ff0a2944a2ff9ea74e2714da96f2",
+        "bytes": 3485
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Handbell.pretty\\TPS61023_DRL_TI_Example.kicad_mod": {
+        "sha256": "fc39ae95b94048cdbd02488c9c721a9ee0933766b3dd9a2e052f3288e7c5d3cc",
+        "bytes": 3738
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Handbell.pretty\\USB_C_HRO_TYPE_C_31_M_12_Handbell.kicad_mod": {
+        "sha256": "f8c647b99f57fd8e8b987f1f8b0c9e2cc7a308ee54f9e6a3fb3ea2b7ce0abbf9",
+        "bytes": 8288
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Jumper.pretty\\SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm.kicad_mod": {
+        "sha256": "9425ee76a0ba3ca7ab18957545f5c484da27ec3dae3344d3a0a58b67f16ba6b4",
+        "bytes": 3383
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Jumper.pretty\\SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm.kicad_mod": {
+        "sha256": "3da90be1bd92445ba8434fcff2806538d9cb621bc52054646e10beb8c53c765d",
+        "bytes": 3737
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\MountingHole.pretty\\MountingHole_2.2mm_M2_Pad.kicad_mod": {
+        "sha256": "bab9811a2bb7e6ce6f6fe69aec3b592f6ee0d216964bcaa0a828b985e0937ca6",
+        "bytes": 1407
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod": {
+        "sha256": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5",
+        "bytes": 4800
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\T8.pretty\\BQ29700_DSE6.kicad_mod": {
+        "sha256": "d872bb3d326e1931a629a89bee77d4693d6c041e00c6e954eedeeec78e46ce58",
+        "bytes": 1346
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\T8.pretty\\CSD83325L_YJE6.kicad_mod": {
+        "sha256": "8a642c2383551e10b64daeb4bfa6393093b0c4f50acea6e544bcad3d425c1e2b",
+        "bytes": 1222
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\T8.pretty\\ERJ6BW_0805.kicad_mod": {
+        "sha256": "da4628fe0e6a278e9b6cf1624aea14db315defc429e4571088f2dbb7b2ecc741",
+        "bytes": 686
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\T8.pretty\\Keystone_254_RevC.kicad_mod": {
+        "sha256": "64f9e325d8022977226a8dd8c098f47c0102ccbae7ab2087aa26281b779b1d57",
+        "bytes": 716
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\libraries\\T8.pretty\\Winbond_USON8_UX_2x3.kicad_mod": {
+        "sha256": "eb5000fe59d3c9ad0d3d8dd81d7c956929f6b38995079a9061d471ad926115c7",
+        "bytes": 1367
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\LICENSE.txt": {
+        "sha256": "075dad5e5fc96c27014fabc269f4f5732909cffd178a486f546d982b6cf86b74",
+        "bytes": 22239
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\placement-manifest.json": {
+        "sha256": "443fe1b5f5dedd79799dd081b7fdc169caf494d1f01a38df7d1dd48d97d5d2ff",
+        "bytes": 91133
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\sym-lib-table": {
+        "sha256": "a49ae2b0be414f8fcbb54911336574728c5b7768b2637aff67a4c712b1165eb2",
+        "bytes": 346
+      },
+      "hardware\\handbell\\iterations\\printed-bell-four-layer\\reports\\imu-cad-inputs\\T8.kicad_sym": {
+        "sha256": "8cd95b0ac3ee9ef4c842e28566f8156dae558f6e4d20f46261c7d4f319a8f937",
+        "bytes": 9946
+      }
+    }
+  },
+  "implementation": {
+    "builder": {
+      "path": "tools/build_printed_bell.py",
+      "sha256": "4a2aa8b21aa1813b9d506ae11ac61d27510f8076ba669ee589705fdf52353286",
+      "changes": [
+        "Accept only the frozen legacy USB geometry or exact reviewed HRO TYPE-C-31-M-12 profile.",
+        "Derive skin center/front/rear proof planes and connector gap from the selected profile.",
+        "Record selected source-bound USB profile and skin coordinates in fit-report output.",
+        "Expose a launch timeout argument while preserving the 2400-second legacy default."
+      ]
+    },
+    "checker": {
+      "path": "tools/check_printed_bell.py",
+      "sha256": "fa008efef8f9bc429f021a7e7e0d2e6cbe7a184ed7d3209b3b2f617d44900071",
+      "changed": false
+    },
+    "approved_HRO_profile": {
+      "mpn": "TYPE-C-31-M-12",
+      "footprint": "Handbell:USB_C_HRO_TYPE_C_31_M_12_Handbell",
+      "x_y_mm": [
+        0.0,
+        -24.01
+      ],
+      "width_depth_height_mm": [
+        9.64,
+        8.08,
+        3.5
+      ],
+      "rotation_deg": -180,
+      "side": "F",
+      "native_origin_common_xy_mm": [
+        0.0,
+        -22.82
+      ],
+      "skin_center_front_rear_y_mm": [
+        -28.75,
+        -29.25,
+        -28.25
+      ],
+      "connector_front_y_mm": -28.05,
+      "nominal_connector_to_skin_rear_gap_mm": 0.2
+    }
+  },
+  "preflight": {
+    "python_compile": "passed",
+    "legacy_profile_accepted": true,
+    "exact_HRO_profile_accepted": true,
+    "negative_controls_rejected": [
+      "wrong new native datum",
+      "unreviewed y",
+      "unreviewed depth",
+      "changed width",
+      "changed rotation"
+    ],
+    "placement_inputs_preflight": "passed"
+  },
+  "build": {
+    "output_path": "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review",
+    "invocation": [
+      "python",
+      "tools/build_printed_bell.py",
+      "--placement",
+      "hardware/handbell/iterations/printed-bell-four-layer/reports/imu-cad-inputs/placement-manifest.json",
+      "--output",
+      "mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review",
+      "--launch-timeout-seconds",
+      "540"
+    ],
+    "timeout_seconds": 540,
+    "result": "FreeCADCmd exceeded the bounded timeout and was terminated by subprocess timeout handling.",
+    "owned_run_directory_remaining": false,
+    "owned_FreeCADCmd_process_observed_after_timeout": false,
+    "partial_artifacts": {
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\printed-bell-complete.step": {
+        "sha256": "7cf0ba970a4a25d56696376bf1aa28be1bbc729fbd1c91cacb442ee824240aa2",
+        "bytes": 2410251
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\printed-bell.FCStd": {
+        "sha256": "7eb5fa9f39d8590c4ed54a95f15b58c905a3181ed6ab561e4aaefc5831af6350",
+        "bytes": 1393061
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\removable-cartridge.step": {
+        "sha256": "83d4a9fdd0a13216ddb550fa5d3ddccdd3f7ff3208f44a46c39b98b0b0783366",
+        "bytes": 2182805
+      },
+      "mechanical\\studies\\2026-09-13-printed-bell\\imu-four-layer-review\\review-status.json": {
+        "sha256": "783e9e396e769d63567f7207c333ca76a07624d4b317c60ad4113158fe6e7638",
+        "bytes": 86
+      }
+    },
+    "review_status_at_timeout": {
+      "state": "BUILD_IN_PROGRESS",
+      "token": "6ff89dbcc5ca4d179ebbca1d5311fbe4"
+    }
+  },
+  "completed": [
+    "Exact repository-local CAD input snapshot and hash binding",
+    "Exact legacy/HRO USB profile implementation",
+    "Profile negative controls and Python compilation",
+    "Pure placement input preflight",
+    "Partial native FCStd and STEP generation before timeout"
+  ],
+  "pending": [
+    "A fresh completed native build producing completion.json, artifact-manifest.json, fit-report.json and all required exports",
+    "tools/check_printed_bell.py --output mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review",
+    "Root review before any CAD acceptance or promotion"
+  ],
+  "limitations": [
+    "Partial FCStd/STEP files are recovery evidence only; no native/STEP/STL roundtrip or intersection result is claimed.",
+    "The generated review-status remains BUILD_IN_PROGRESS because completion was not reached.",
+    "The known nonfatal GUI camera-restoration limitation was not investigated or modified.",
+    "No new geometry decision was made after the timeout and no retry was started."
+  ]
+}

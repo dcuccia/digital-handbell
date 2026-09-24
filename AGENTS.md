@@ -18,11 +18,12 @@
   released obsolete branches are removed/refilled in held `d2a098b0...`.
   Root's exact parsed-source comparison resolves a newline-only audit
   mismatch. Final graph/fill and explicitly parity-enabled DRC now pass:
-  38 opens, 234 warnings and the same 46 parity notices. Next is the exact
-  CAD rebind in a separate review output with the specifically approved
-  HRO USB envelope and coordinated 0.15 mm skin correction. Preserve old
-  mechanical studies, the T8 helpers and active board; no height reduction,
-  new placement/routing or automatic promotion. See
+  38 opens, 234 warnings and the same 46 parity notices. The exact CAD
+  snapshot and approved USB skin correction are implemented, but the
+  540-second native build timed out during exports. Preserve its partial
+  recovery; it is not checker/print-ready. CAD is stopped at a decision
+  boundary: bounded generation/export stages or an explicitly authorized
+  longer run, not another unchanged retry. No routing or promotion yet. See
   `docs/pcb-closure-plan.md#owner-pause-and-next-item`.
 - **Historical September 23 stopping checkpoint:** after the owner's request for a
   stopping point within 20-30 minutes, the current IMU signal item finished

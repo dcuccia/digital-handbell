@@ -13,7 +13,9 @@ silkscreen/text warnings, with zero native DRC errors and empty ERC.
 `reports/usb-geometry.json` binds the native geometry, unchanged pin mapping,
 four exported slot commands, local repair inventory and exact source/output
 hashes. The conservative body/reservation bound is implemented in the manifest;
-the bezel adjustment and complete mechanical rebind remain pending.
+the bezel adjustment is now implemented in the separate IMU CAD review,
+but its native build timed out before full export/roundtrip checks.
+Complete mechanical acceptance remains pending.
 This is an engineering footprint, not supplier or physical qualification.
 The dated investigation below remains the source/decision history.
 
@@ -178,7 +180,11 @@ leaves only 0.05 mm to the current bezel rear plane. The next mechanical
 revision must restore useful clearance without hiding the component bound;
 moving only the printed bezel 0.15 mm outward would recover the earlier
 0.20 mm screening gap without changing PCB/mouth datums or wall thickness.
-That adjustment and the new exact full-CAD bind are not yet implemented.
+The September 24 builder now implements that adjustment for the exact
+reviewed HRO profile, retaining the legacy geometry separately. Its
+source-bound IMU review snapshot has only partial native/STEP output after
+a bounded timeout; it is not a completed or accepted CAD package.
+The -28.05 envelope bound does not relocate the nominal -27.9 mouth datum.
 
 Preserve the frozen reference and routed checkpoints. Component/PCB/placement
 tolerances, actual part fit, supplier assembly operation, cable mating and

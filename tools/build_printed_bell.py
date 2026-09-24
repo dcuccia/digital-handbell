@@ -33,6 +33,28 @@ INPUT = ROOT / "docs" / "design-inputs" / "2026-09-13-printed-bell.json"
 SHIFT = 10.75
 EPS = 1e-5
 BODY_H = 55.8
+USB_PROFILES = {
+    "legacy_cusb31": {
+        "geometry": {
+            "x_mm": 0.0, "y_mm": -23.935, "width_mm": 9.64,
+            "depth_mm": 7.93, "height_mm": 3.5, "rotation_deg": -180.0,
+        },
+        "native_origin_common_xy_mm": [0.0, -22.82],
+        "skin_center_y_mm": -28.6,
+        "connector_front_y_mm": -27.9,
+    },
+    "hro_type_c_31_m_12": {
+        "mpn": "TYPE-C-31-M-12",
+        "footprint": "Handbell:USB_C_HRO_TYPE_C_31_M_12_Handbell",
+        "geometry": {
+            "x_mm": 0.0, "y_mm": -24.01, "width_mm": 9.64,
+            "depth_mm": 8.08, "height_mm": 3.5, "rotation_deg": -180.0,
+        },
+        "native_origin_common_xy_mm": [0.0, -22.82],
+        "skin_center_y_mm": -28.75,
+        "connector_front_y_mm": -28.05,
+    },
+}
 OUTER = [
     [(35, 0), (31.5, 5), (28.7, 14), (27.0, 27)],
     [(27.0, 27), (26.25, 33), (24.9, 38), (23.9, 42)],
@@ -65,11 +87,15 @@ def args_parser():
     p.add_argument("--output", type=Path)
     p.add_argument("--freecad-cmd", type=Path, default=Path(os.environ.get("LOCALAPPDATA", "")) /
                    "Programs" / "FreeCAD 1.1" / "bin" / "FreeCADCmd.exe")
+    p.add_argument("--launch-timeout-seconds", type=int, default=2400)
     p.add_argument("--inside-freecad", action="store_true", help=argparse.SUPPRESS)
     p.add_argument("--token", help=argparse.SUPPRESS)
     p.add_argument("--expected", help=argparse.SUPPRESS)
     p.add_argument("--marker", type=Path, help=argparse.SUPPRESS)
-    return p.parse_args()
+    args = p.parse_args()
+    if args.launch_timeout_seconds <= 0:
+        p.error("--launch-timeout-seconds must be positive")
+    return args
 
 
 def translated_contact(source):
@@ -99,6 +125,36 @@ def numeric_contract(value):
     if isinstance(value, (float, int)):
         return round(value, 7)
     return value
+
+
+def approved_usb_profile(manifest):
+    usb = next(c for c in manifest["components"] if c["reference"] == "X6")
+    for name, profile in USB_PROFILES.items():
+        geometry_matches = all(
+            abs(usb[key]-expected) <= EPS
+            for key, expected in profile["geometry"].items()
+        )
+        if not geometry_matches or usb["side"] != "F":
+            continue
+        if name == "hro_type_c_31_m_12" and (
+            usb.get("mpn") != profile["mpn"]
+            or usb.get("footprint") != profile["footprint"]
+            or len(usb.get("native_origin_common_xy_mm", [])) != 2
+            or not all(abs(actual-expected) <= EPS for actual, expected in zip(
+                usb["native_origin_common_xy_mm"],
+                profile["native_origin_common_xy_mm"],
+            ))
+        ):
+            continue
+        selected = copy.deepcopy(profile)
+        selected["name"] = name
+        selected["skin_front_y_mm"] = selected["skin_center_y_mm"]-.5
+        selected["skin_rear_y_mm"] = selected["skin_center_y_mm"]+.5
+        selected["connector_to_skin_rear_gap_mm"] = (
+            selected["connector_front_y_mm"]-selected["skin_rear_y_mm"]
+        )
+        return selected
+    raise ValueError("USB profile is neither the frozen legacy geometry nor the exact reviewed HRO variant")
 
 
 def inputs(args):
@@ -160,11 +216,7 @@ def inputs(args):
     holes = sorted(manifest["mounting_holes"], key=lambda h: h["reference"])
     if [(h["x_mm"], h["y_mm"], h["drill_mm"]) for h in holes] != expected_holes:
         raise ValueError("Mount-hole interface changed")
-    usb = next(c for c in manifest["components"] if c["reference"] == "X6")
-    old_usb = next(c for c in source["components"] if c["reference"] == "X6")
-    for key in ("x_mm", "y_mm", "width_mm", "depth_mm", "height_mm", "rotation_deg"):
-        if abs(usb[key]-old_usb[key]) > EPS:
-            raise ValueError("USB source envelope/XY changed: " + key)
+    approved_usb_profile(manifest)
     for c in manifest["components"]:
         lo, hi = (25-c["height_mm"], 25) if c["side"] == "F" else (26.6, 26.6+c["height_mm"])
         if abs(c["z_min_mm"]-lo) > EPS or abs(c["z_max_mm"]-hi) > EPS:
@@ -196,7 +248,8 @@ def launch(args):
         command = [str(args.freecad_cmd), "--user-cfg", str(run / "user.cfg"),
                    "--system-cfg", str(run / "system.cfg")]
         result = subprocess.run(command, input=bootstrap, text=True, stdout=subprocess.PIPE,
-                                stderr=subprocess.STDOUT, encoding="utf-8", errors="replace", timeout=2400)
+                                stderr=subprocess.STDOUT, encoding="utf-8", errors="replace",
+                                timeout=args.launch_timeout_seconds)
         (out / "freecad-build.log").write_text(result.stdout, encoding="utf-8")
         if result.returncode or not marker.exists():
             print(result.stdout, file=sys.stderr)
@@ -205,6 +258,16 @@ def launch(args):
         if completed["token"] != token or completed["input_hashes"] != hashes:
             raise RuntimeError("Completion binding changed")
         print(json.dumps(completed, indent=2))
+    except subprocess.TimeoutExpired as exc:
+        output = exc.stdout or ""
+        if isinstance(output, bytes):
+            output = output.decode("utf-8", errors="replace")
+        (out / "freecad-build.log").write_text(output, encoding="utf-8")
+        write(out / "review-status.json", {
+            "state": "BUILD_TIMED_OUT_NOT_CHECKER_READY", "token": token,
+            "timeout_seconds": args.launch_timeout_seconds,
+        })
+        raise RuntimeError("FreeCAD timed out; partial output is in freecad-build.log") from exc
     finally:
         shutil.rmtree(run)
 
@@ -216,6 +279,7 @@ def build(args):
     import MeshPart
     V = App.Vector
     paths, hashes, manifest, contact = inputs(args)
+    usb_profile = approved_usb_profile(manifest)
     if hashes != json.loads(args.expected):
         raise RuntimeError("Inputs changed during launch")
     out = args.output.resolve()
@@ -386,7 +450,7 @@ def build(args):
     bezel = shell_stock.common(box(14.4, 45, 27.0, y=-32.5))
     # Keep a real front skin wholly ahead of the rearward loading cuts.
     # The original curved wall disappeared there and exposed the PCB edge.
-    usb_skin_stock = box(14.4, 1.0, 7.0, y=-28.6, z=20.0)
+    usb_skin_stock = box(14.4, 1.0, 7.0, y=usb_profile["skin_center_y_mm"], z=20.0)
     nose_aperture_tool = box(9.2, 20, 3.1, y=-38, z=21.7)
     body_parts += [bezel, usb_skin_stock, box(14.4, 5, 1.2, y=-24.3, z=20.1)]
     for sign in (-1, 1):
@@ -400,8 +464,10 @@ def build(args):
     body = body.removeSplitter()
     usb_skin_frame = usb_skin_stock.cut(nose_aperture_tool)
     usb_skin_missing = max(0, usb_skin_frame.cut(body).Volume)
-    skin_front_points = [V(-7.2, -29.1, 20), V(7.2, -29.1, 20),
-                         V(7.2, -29.1, 27), V(-7.2, -29.1, 27)]
+    skin_front_points = [V(-7.2, usb_profile["skin_front_y_mm"], 20),
+                         V(7.2, usb_profile["skin_front_y_mm"], 20),
+                         V(7.2, usb_profile["skin_front_y_mm"], 27),
+                         V(-7.2, usb_profile["skin_front_y_mm"], 27)]
     skin_front_face = Part.Face(Part.makePolygon(skin_front_points+[skin_front_points[0]]))
     effective_opening = skin_front_face.cut(body)
     intended_opening = skin_front_face.common(nose_aperture_tool)
@@ -515,7 +581,8 @@ def build(args):
     pcb_tongue_front = pcb.common(box(15, 1.0, 2.0, y=-26.6, z=24.8))
     tongue_bb = pcb_tongue_front.BoundBox
     tongue_mask = box(tongue_bb.XLength, 1.0, tongue_bb.ZLength,
-                      (tongue_bb.XMin+tongue_bb.XMax)/2, -28.6, tongue_bb.ZMin)
+                      (tongue_bb.XMin+tongue_bb.XMax)/2,
+                      usb_profile["skin_center_y_mm"], tongue_bb.ZMin)
     pcb_mask_missing = max(0, tongue_mask.cut(body).Volume)
     pcba_z_motion_skin_plane_gap = pcba.BoundBox.YMin-usb_skin_stock.BoundBox.YMax
     if pcb_mask_missing > EPS or pcba_z_motion_skin_plane_gap < .2-EPS:
@@ -741,14 +808,23 @@ def build(args):
                          "load_path": "Handle nut -> metal screw/washer -> integral shell crown; keyed shoulder resists rotation. Cartridge not a structural tie.",
                          "wood_option": "Same original external turning silhouette; metal cross-dowel/insert and keyed interface require separate design. No wood pilot or plastic thread qualified."},
         "usb": {"actual_source_reference": "X6", "source_proxy_bounds": base.bounds(objects["Component_X6"].Shape),
-                "native_origin_xy_mm": [0, -22.82], "mouth_xy_mm": [0, -27.9],
+                "approved_profile": usb_profile["name"],
+                "source_mpn": next(c for c in manifest["components"] if c["reference"] == "X6").get("mpn", ""),
+                "source_footprint": next(c for c in manifest["components"] if c["reference"] == "X6").get("footprint", ""),
+                "native_origin_xy_mm": usb_profile["native_origin_common_xy_mm"],
+                "mouth_xy_mm": [0, -27.9],
+                "source_front_envelope_bound_xy_mm": [0, usb_profile["connector_front_y_mm"]],
                 "mouth_open_channel_width_height_mm": [15, 27.3], "color_matched_integral_bezel_width_mm": 14.4,
                 "nominal_nose_opening_width_height_mm": [9.2, 3.1],
                 "front_skin": {
                     "previous_defect": "The curved original bezel was removed by rear loading cuts, exposing PCB edge; nominal nose cutter did not define the whole effective opening.",
                     "construction": "Same-color locally flat raised front skin, integral with carrier rails; source USB/PCB unchanged.",
                     "width_height_thickness_mm": [14.4, 7.0, 1.0],
-                    "front_rear_y_mm": [-29.1, -28.1], "z_range_mm": [20.0, 27.0],
+                    "center_y_mm": usb_profile["skin_center_y_mm"],
+                    "front_rear_y_mm": [usb_profile["skin_front_y_mm"], usb_profile["skin_rear_y_mm"]],
+                    "connector_front_y_mm": usb_profile["connector_front_y_mm"],
+                    "connector_to_skin_rear_gap_mm": usb_profile["connector_to_skin_rear_gap_mm"],
+                    "z_range_mm": [20.0, 27.0],
                     "side_lower_upper_border_mm": [2.6, 1.7, 2.2],
                     "aperture_x_range_mm": [-4.6, 4.6], "aperture_z_range_mm": [21.7, 24.8],
                     "actual_front_face_open_area_mm2": effective_opening.Area,
