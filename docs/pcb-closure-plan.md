@@ -166,6 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Post-IMU triage is complete.** The source-bound
+[connected-group inventory](../hardware/handbell/iterations/printed-bell-four-layer/reports/post-imu-routing-triage.json)
+reconciles 38 opens across 24 disconnected nets. Its suggested nearest
+VCORE edge is not yet released: C6.1, C7.1, C8.2, C13.2 and C17.2 form
+one isolated GND group. Restore that group's local return before extending
+VCORE distribution. The next bounded staged candidate may add short F GND
+escapes and ordinary off-pad through-vias near C6 and C8 into actual In1
+MAIN GND. Preserve all existing copper and placement; do not change VCORE,
+USB, clock, zones, rules or the five mandatory filled/capped vias.
+Screen complete native obstacles, all-layer via clearance, same-net SMD
+overlap and battery-contact exclusions. If local ordinary vias cannot
+satisfy those gates, return the measured blocker rather than move parts or
+substitute filled vias. Candidate acceptance requires all five grounds
+to reach MAIN, preserved prior groups/private returns and fresh saved-fill
+clearance/connectivity evidence. Active accepted PCB remains `d2a098b0...`
+until review; this release is not automatic promotion.
+
 **IMU closure is now the accepted incremental checkpoint.** Active PCB
 `d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711`
 and manifest
