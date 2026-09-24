@@ -214,6 +214,17 @@ both obsolete warnings must disappear without new dangling warnings or
 lost connections. Preserve `79a1dee3...` and all its evidence. CAD rebind
 is the following separate dependency, not part of this cleanup.
 
+CAD preflight was rechecked without edits: `build_printed_bell.py` still
+compares X6 to the old T8 envelope at lines 163-167. The documented
+0.15 mm outward front-skin correction must coordinate
+`usb_skin_stock` (current centre Y -28.6), its front-face proof plane
+(Y -29.1), and `tongue_mask` (centre Y -28.6), not merely relax the input
+guard. For the specifically qualified X6 front bound -28.05, the
+corresponding proposed values are -28.75, -29.25 and -28.75, restoring
+the 0.20 mm nominal rear-plane gap. Preserve the legacy/development case,
+native USB datum, skin continuity, enclosure and service-path checks.
+These values are a pending CAD implementation contract, not a proved fit.
+
 **The remaining copper geometry gate passed.** The
 [geometry report](../hardware/handbell/iterations/printed-bell-four-layer/reports/imu-geometry-qualification.json)
 (`3050b132...`) covers all 61 new local segments and ten ordinary vias,
