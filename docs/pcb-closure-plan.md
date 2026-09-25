@@ -166,6 +166,37 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**VCORE fixed-route preparation found no released path; scope decision
+required.** The [source-bound inventory](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-vcore-strategy-inventory.json)
+records three VCORE groups: IC1.45/C7/C8 (regulator output),
+IC1.50/C6 (east DVDD), and IC1.23/C18 (west DVDD). The tested 18 F forms
+for each supply connection failed; ten local ordinary-via positions per
+VCORE group and eight near C18 GND also failed. These bounded witnesses
+are not exhaustive routing or placement-impossibility proofs.
+
+Astra resolved the two universal east-link blocker UUIDs against native
+source: `d269dfaa-bef6-5f59-b918-0cefd4b841f2` and
+`fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c` are actual F +3V3 segments,
+not cached ground fill. Rear VBAT copper and BT1/BT2 metal also constrain
+through-via access. In1 GND may receive refill-generated antipads only
+with subsequent continuity review; it is not a signal-routing layer.
+C18.1 remains a separate GND island, so a supply-only west-load fix
+would not complete its decoupling circuit.
+
+**Recommended next scope, pending owner choice:** one bounded coordinated
+MCU supply/return study that may propose local +3V3/VCORE/GND rerouting
+and, only where necessary, moves of C6/C7/C8/C17/C18. Keep IC1, contacts,
+outline, mounts, USB, clock, IMU and the accepted C13 stitch fixed.
+Return one proposed topology with supply/return paths, transition access,
+explicit changed primitives/poses and mechanical implications before any
+implementation. No new part sourcing, advanced via process, clearance
+waiver, active-board edits or CAD rebuild is authorized by this proposal.
+If the bounded study cannot identify a credible topology, stop and report
+the structural conflict rather than expand the search.
+
+Accepted PCB/manifest remain `adc262b3...` / `b849b5de...`, with 37 opens.
+Sol is idle; no VCORE route or placement change is released.
+
 **September 25 eastern MCU ground accepted: 37 opens.** Astra reviewed
 the exact two-node delta and saved filled F/In1 views, accepting PCB
 `adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314`

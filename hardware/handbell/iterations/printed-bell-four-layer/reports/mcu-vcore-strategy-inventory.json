@@ -1,0 +1,2112 @@
+{
+  "schema_version": 1,
+  "status": "READ_ONLY_MCU_VCORE_STRATEGY_INVENTORY_COMPLETE",
+  "scope": "Current three-group VCORE topology, local F interleaving, bounded ordinary-via access and C18.1 return context. No PCB, manifest, fill, CAD, placement or rule write.",
+  "source_bindings": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "contact_model_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "ground_acceptance_sha256": "ecd198c434de7894f35ba13501e821cb0b9dcdc3bf9731a00f204edfb0541933",
+    "prior_complete_triage_sha256": "93bf1685ba80d8ce580df450e46f5b5ae27a32df7d3cd80747a20ae0dfc9dadb"
+  },
+  "native_version": "10.0.6",
+  "VCORE_groups": {
+    "source": {
+      "pads": [
+        {
+          "name": "IC1.45",
+          "uuid": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+          "net": "VCORE",
+          "pin_function": "VREG_VOUT_45",
+          "pin_type": "power_out",
+          "xy_native_mm": [
+            103.45,
+            101.8
+          ],
+          "footprint_value": "RP2040_QFN56",
+          "side": "F"
+        },
+        {
+          "name": "C7.2",
+          "uuid": "b862d9a3-1b09-5fea-9268-6b0256983e4f",
+          "net": "VCORE",
+          "pin_function": "2_2",
+          "pin_type": "passive",
+          "xy_native_mm": [
+            107.295336,
+            102.200014
+          ],
+          "footprint_value": "0.1uF",
+          "side": "F"
+        },
+        {
+          "name": "C8.1",
+          "uuid": "2563a195-c1cf-5a3d-9f3c-392fd7b1dc59",
+          "net": "VCORE",
+          "pin_function": "1_1",
+          "pin_type": "passive",
+          "xy_native_mm": [
+            104.993069,
+            102.430145
+          ],
+          "footprint_value": "1uF/25V",
+          "side": "F"
+        }
+      ],
+      "complete_existing_copper": [
+        {
+          "uuid": "b862d9a3-1b09-5fea-9268-6b0256983e4f",
+          "kind": "PAD",
+          "net": "VCORE",
+          "pad": "C7.2",
+          "pin_function": "2_2",
+          "xy_native_mm": [
+            107.295336,
+            102.200014
+          ]
+        },
+        {
+          "uuid": "2563a195-c1cf-5a3d-9f3c-392fd7b1dc59",
+          "kind": "PAD",
+          "net": "VCORE",
+          "pad": "C8.1",
+          "pin_function": "1_1",
+          "xy_native_mm": [
+            104.993069,
+            102.430145
+          ]
+        },
+        {
+          "uuid": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+          "kind": "PAD",
+          "net": "VCORE",
+          "pad": "IC1.45",
+          "pin_function": "VREG_VOUT_45",
+          "xy_native_mm": [
+            103.45,
+            101.8
+          ]
+        },
+        {
+          "uuid": "e70cc137-e76b-5564-b300-9fc4582c0bfb",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            106.7047,
+            102.102
+          ],
+          "end_native_mm": [
+            106.7047,
+            102.2
+          ],
+          "width_mm": 0.1778,
+          "length_mm": 0.098,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "50ee0fe3-be40-5757-b167-5e4537bba4cf",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            106.4227,
+            101.82
+          ],
+          "end_native_mm": [
+            106.7047,
+            102.102
+          ],
+          "width_mm": 0.1778,
+          "length_mm": 0.39880822458921283,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "f466a216-ec52-563c-a64b-ada283d749fe",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            105.0537,
+            101.82
+          ],
+          "end_native_mm": [
+            106.4227,
+            101.82
+          ],
+          "width_mm": 0.1778,
+          "length_mm": 1.369,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "f5cfecfa-ba37-5c71-b382-3d66e24e0eda",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            104.9931,
+            101.8806
+          ],
+          "end_native_mm": [
+            105.0537,
+            101.82
+          ],
+          "width_mm": 0.1778,
+          "length_mm": 0.08570134187980957,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "75b4f4dd-4137-57a3-9222-82ffe72ea4b6",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            104.9931,
+            102.4301
+          ],
+          "end_native_mm": [
+            104.9931,
+            101.8806
+          ],
+          "width_mm": 0.1778,
+          "length_mm": 0.5495,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "79aeda89-5eca-5e6a-ba9b-5cf9dbe00b8b",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            107.2953,
+            102.2
+          ],
+          "end_native_mm": [
+            106.7047,
+            102.2
+          ],
+          "width_mm": 0.1778,
+          "length_mm": 0.5906,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "e050057b-b095-55ec-b696-fa9120e1d023",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            103.45,
+            101.8
+          ],
+          "end_native_mm": [
+            104.1,
+            101.8
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.65,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            104.1,
+            101.8
+          ],
+          "end_native_mm": [
+            104.2,
+            101.9
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.14142135623730953,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "862e4270-8a93-5fd0-aed6-9befc7c3ea9b",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            104.2,
+            101.9
+          ],
+          "end_native_mm": [
+            104.9931,
+            101.9
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.7931,
+          "layer": "F.Cu"
+        }
+      ],
+      "usable_existing_terminals": [
+        {
+          "uuid": "b862d9a3-1b09-5fea-9268-6b0256983e4f",
+          "kind": "pad_center",
+          "xy": [
+            107.295336,
+            102.200014
+          ]
+        },
+        {
+          "uuid": "2563a195-c1cf-5a3d-9f3c-392fd7b1dc59",
+          "kind": "pad_center",
+          "xy": [
+            104.993069,
+            102.430145
+          ]
+        },
+        {
+          "uuid": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+          "kind": "pad_center",
+          "xy": [
+            103.45,
+            101.8
+          ]
+        },
+        {
+          "uuid": "e70cc137-e76b-5564-b300-9fc4582c0bfb",
+          "kind": "track_start",
+          "xy": [
+            106.7047,
+            102.102
+          ]
+        },
+        {
+          "uuid": "e70cc137-e76b-5564-b300-9fc4582c0bfb",
+          "kind": "track_end",
+          "xy": [
+            106.7047,
+            102.2
+          ]
+        },
+        {
+          "uuid": "50ee0fe3-be40-5757-b167-5e4537bba4cf",
+          "kind": "track_start",
+          "xy": [
+            106.4227,
+            101.82
+          ]
+        },
+        {
+          "uuid": "50ee0fe3-be40-5757-b167-5e4537bba4cf",
+          "kind": "track_end",
+          "xy": [
+            106.7047,
+            102.102
+          ]
+        },
+        {
+          "uuid": "f466a216-ec52-563c-a64b-ada283d749fe",
+          "kind": "track_start",
+          "xy": [
+            105.0537,
+            101.82
+          ]
+        },
+        {
+          "uuid": "f466a216-ec52-563c-a64b-ada283d749fe",
+          "kind": "track_end",
+          "xy": [
+            106.4227,
+            101.82
+          ]
+        },
+        {
+          "uuid": "f5cfecfa-ba37-5c71-b382-3d66e24e0eda",
+          "kind": "track_start",
+          "xy": [
+            104.9931,
+            101.8806
+          ]
+        },
+        {
+          "uuid": "f5cfecfa-ba37-5c71-b382-3d66e24e0eda",
+          "kind": "track_end",
+          "xy": [
+            105.0537,
+            101.82
+          ]
+        },
+        {
+          "uuid": "75b4f4dd-4137-57a3-9222-82ffe72ea4b6",
+          "kind": "track_start",
+          "xy": [
+            104.9931,
+            102.4301
+          ]
+        },
+        {
+          "uuid": "75b4f4dd-4137-57a3-9222-82ffe72ea4b6",
+          "kind": "track_end",
+          "xy": [
+            104.9931,
+            101.8806
+          ]
+        },
+        {
+          "uuid": "79aeda89-5eca-5e6a-ba9b-5cf9dbe00b8b",
+          "kind": "track_start",
+          "xy": [
+            107.2953,
+            102.2
+          ]
+        },
+        {
+          "uuid": "79aeda89-5eca-5e6a-ba9b-5cf9dbe00b8b",
+          "kind": "track_end",
+          "xy": [
+            106.7047,
+            102.2
+          ]
+        },
+        {
+          "uuid": "e050057b-b095-55ec-b696-fa9120e1d023",
+          "kind": "track_start",
+          "xy": [
+            103.45,
+            101.8
+          ]
+        },
+        {
+          "uuid": "e050057b-b095-55ec-b696-fa9120e1d023",
+          "kind": "track_end",
+          "xy": [
+            104.1,
+            101.8
+          ]
+        },
+        {
+          "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+          "kind": "track_start",
+          "xy": [
+            104.1,
+            101.8
+          ]
+        },
+        {
+          "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+          "kind": "track_end",
+          "xy": [
+            104.2,
+            101.9
+          ]
+        },
+        {
+          "uuid": "862e4270-8a93-5fd0-aed6-9befc7c3ea9b",
+          "kind": "track_start",
+          "xy": [
+            104.2,
+            101.9
+          ]
+        },
+        {
+          "uuid": "862e4270-8a93-5fd0-aed6-9befc7c3ea9b",
+          "kind": "track_end",
+          "xy": [
+            104.9931,
+            101.9
+          ]
+        }
+      ],
+      "observed_track_widths_mm": [
+        0.1778,
+        0.2
+      ]
+    },
+    "east_load": {
+      "pads": [
+        {
+          "name": "IC1.50",
+          "uuid": "0e2e8444-80b8-5e84-aae6-f7c788f2566b",
+          "net": "VCORE",
+          "pin_function": "DVDD_50",
+          "pin_type": "power_in",
+          "xy_native_mm": [
+            103.45,
+            99.8
+          ],
+          "footprint_value": "RP2040_QFN56",
+          "side": "F"
+        },
+        {
+          "name": "C6.2",
+          "uuid": "c44d1502-08ca-5dce-ac3c-ece42574f0af",
+          "net": "VCORE",
+          "pin_function": "2_2",
+          "pin_type": "passive",
+          "xy_native_mm": [
+            104.989898,
+            99.999744
+          ],
+          "footprint_value": "0.1uF",
+          "side": "F"
+        }
+      ],
+      "complete_existing_copper": [
+        {
+          "uuid": "c44d1502-08ca-5dce-ac3c-ece42574f0af",
+          "kind": "PAD",
+          "net": "VCORE",
+          "pad": "C6.2",
+          "pin_function": "2_2",
+          "xy_native_mm": [
+            104.989898,
+            99.999744
+          ]
+        },
+        {
+          "uuid": "0e2e8444-80b8-5e84-aae6-f7c788f2566b",
+          "kind": "PAD",
+          "net": "VCORE",
+          "pad": "IC1.50",
+          "pin_function": "DVDD_50",
+          "xy_native_mm": [
+            103.45,
+            99.8
+          ]
+        },
+        {
+          "uuid": "2926377e-4800-5eca-9dcb-c369f23eef18",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            103.45,
+            99.8
+          ],
+          "end_native_mm": [
+            104.1,
+            99.8
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.65,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            104.1,
+            99.8
+          ],
+          "end_native_mm": [
+            104.299744,
+            99.999744
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.2824806738026515,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            104.299744,
+            99.999744
+          ],
+          "end_native_mm": [
+            104.989898,
+            99.999744
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.690154,
+          "layer": "F.Cu"
+        }
+      ],
+      "usable_existing_terminals": [
+        {
+          "uuid": "c44d1502-08ca-5dce-ac3c-ece42574f0af",
+          "kind": "pad_center",
+          "xy": [
+            104.989898,
+            99.999744
+          ]
+        },
+        {
+          "uuid": "0e2e8444-80b8-5e84-aae6-f7c788f2566b",
+          "kind": "pad_center",
+          "xy": [
+            103.45,
+            99.8
+          ]
+        },
+        {
+          "uuid": "2926377e-4800-5eca-9dcb-c369f23eef18",
+          "kind": "track_start",
+          "xy": [
+            103.45,
+            99.8
+          ]
+        },
+        {
+          "uuid": "2926377e-4800-5eca-9dcb-c369f23eef18",
+          "kind": "track_end",
+          "xy": [
+            104.1,
+            99.8
+          ]
+        },
+        {
+          "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+          "kind": "track_start",
+          "xy": [
+            104.1,
+            99.8
+          ]
+        },
+        {
+          "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+          "kind": "track_end",
+          "xy": [
+            104.299744,
+            99.999744
+          ]
+        },
+        {
+          "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+          "kind": "track_start",
+          "xy": [
+            104.299744,
+            99.999744
+          ]
+        },
+        {
+          "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+          "kind": "track_end",
+          "xy": [
+            104.989898,
+            99.999744
+          ]
+        }
+      ],
+      "observed_track_widths_mm": [
+        0.2
+      ]
+    },
+    "west_load": {
+      "pads": [
+        {
+          "name": "IC1.23",
+          "uuid": "bd056f57-82b2-5fcd-a1b5-214fee59c901",
+          "net": "VCORE",
+          "pin_function": "DVDD_23",
+          "pin_type": "power_in",
+          "xy_native_mm": [
+            96.55,
+            100.6
+          ],
+          "footprint_value": "RP2040_QFN56",
+          "side": "F"
+        },
+        {
+          "name": "C18.2",
+          "uuid": "962b494d-4fe2-500b-b5aa-91d63ebd447e",
+          "net": "VCORE",
+          "pin_function": "2_2",
+          "pin_type": "passive",
+          "xy_native_mm": [
+            95.31164,
+            101.003449
+          ],
+          "footprint_value": "0.1uF",
+          "side": "F"
+        }
+      ],
+      "complete_existing_copper": [
+        {
+          "uuid": "962b494d-4fe2-500b-b5aa-91d63ebd447e",
+          "kind": "PAD",
+          "net": "VCORE",
+          "pad": "C18.2",
+          "pin_function": "2_2",
+          "xy_native_mm": [
+            95.31164,
+            101.003449
+          ]
+        },
+        {
+          "uuid": "bd056f57-82b2-5fcd-a1b5-214fee59c901",
+          "kind": "PAD",
+          "net": "VCORE",
+          "pad": "IC1.23",
+          "pin_function": "DVDD_23",
+          "xy_native_mm": [
+            96.55,
+            100.6
+          ]
+        },
+        {
+          "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            96.55,
+            100.6
+          ],
+          "end_native_mm": [
+            95.9,
+            100.6
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.65,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "e6d0009c-ca45-5808-9638-211872e52f67",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            95.9,
+            100.6
+          ],
+          "end_native_mm": [
+            95.496551,
+            101.003449
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.5705630475258628,
+          "layer": "F.Cu"
+        },
+        {
+          "uuid": "f55cd55c-14f3-505e-9269-710007ab070c",
+          "kind": "PCB_TRACK",
+          "net": "VCORE",
+          "start_native_mm": [
+            95.496551,
+            101.003449
+          ],
+          "end_native_mm": [
+            95.31164,
+            101.003449
+          ],
+          "width_mm": 0.2,
+          "length_mm": 0.184911,
+          "layer": "F.Cu"
+        }
+      ],
+      "usable_existing_terminals": [
+        {
+          "uuid": "962b494d-4fe2-500b-b5aa-91d63ebd447e",
+          "kind": "pad_center",
+          "xy": [
+            95.31164,
+            101.003449
+          ]
+        },
+        {
+          "uuid": "bd056f57-82b2-5fcd-a1b5-214fee59c901",
+          "kind": "pad_center",
+          "xy": [
+            96.55,
+            100.6
+          ]
+        },
+        {
+          "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+          "kind": "track_start",
+          "xy": [
+            96.55,
+            100.6
+          ]
+        },
+        {
+          "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+          "kind": "track_end",
+          "xy": [
+            95.9,
+            100.6
+          ]
+        },
+        {
+          "uuid": "e6d0009c-ca45-5808-9638-211872e52f67",
+          "kind": "track_start",
+          "xy": [
+            95.9,
+            100.6
+          ]
+        },
+        {
+          "uuid": "e6d0009c-ca45-5808-9638-211872e52f67",
+          "kind": "track_end",
+          "xy": [
+            95.496551,
+            101.003449
+          ]
+        },
+        {
+          "uuid": "f55cd55c-14f3-505e-9269-710007ab070c",
+          "kind": "track_start",
+          "xy": [
+            95.496551,
+            101.003449
+          ]
+        },
+        {
+          "uuid": "f55cd55c-14f3-505e-9269-710007ab070c",
+          "kind": "track_end",
+          "xy": [
+            95.31164,
+            101.003449
+          ]
+        }
+      ],
+      "observed_track_widths_mm": [
+        0.2
+      ]
+    }
+  },
+  "capacitor_values": {
+    "C6": "0.1uF",
+    "C7": "0.1uF",
+    "C8": "1uF/25V",
+    "C18": "0.1uF"
+  },
+  "geometric_interleaving": {
+    "source_to_east_F": {
+      "candidate_count": 18,
+      "feasible_count": 0,
+      "representative_feasible": [],
+      "top_obstacle_uuids": [
+        {
+          "uuid": "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+          "count": 18
+        },
+        {
+          "uuid": "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c",
+          "count": 18
+        },
+        {
+          "uuid": "21695f06-862b-5b2d-b19b-ca18a4a35588",
+          "count": 12
+        },
+        {
+          "uuid": "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+          "count": 12
+        },
+        {
+          "uuid": "b1809387-16c0-58ba-9fec-329d0b8784f8",
+          "count": 12
+        },
+        {
+          "uuid": "c685356b-9e03-52f8-a18d-dc715fd43105",
+          "count": 12
+        },
+        {
+          "uuid": "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+          "count": 12
+        },
+        {
+          "uuid": "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+          "count": 12
+        },
+        {
+          "uuid": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+          "count": 8
+        },
+        {
+          "uuid": "714f03ac-3ce4-506f-928e-f09a1a3419d0",
+          "count": 8
+        },
+        {
+          "uuid": "285807bb-29bc-5ab2-be71-6e26371cc4a2",
+          "count": 6
+        },
+        {
+          "uuid": "3cf869f6-b5ad-53c7-ab3d-1d6df72627af",
+          "count": 6
+        }
+      ],
+      "negative_witnesses": [
+        {
+          "mode": "dogleg_source_y",
+          "from_terminal": {
+            "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+            "kind": "track_start",
+            "xy": [
+              104.1,
+              101.8
+            ]
+          },
+          "to_terminal": {
+            "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+            "kind": "track_start",
+            "xy": [
+              104.299744,
+              99.999744
+            ]
+          },
+          "polyline_native_mm": [
+            [
+              104.1,
+              101.8
+            ],
+            [
+              104.299744,
+              101.8
+            ],
+            [
+              104.299744,
+              99.999744
+            ]
+          ],
+          "length_mm": 2.0,
+          "obstacle_uuids": [
+            "21695f06-862b-5b2d-b19b-ca18a4a35588",
+            "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+            "b1809387-16c0-58ba-9fec-329d0b8784f8",
+            "c685356b-9e03-52f8-a18d-dc715fd43105",
+            "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+            "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+            "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+            "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+          ],
+          "passes": false
+        },
+        {
+          "mode": "dogleg_source_y",
+          "from_terminal": {
+            "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+            "kind": "track_start",
+            "xy": [
+              104.1,
+              101.8
+            ]
+          },
+          "to_terminal": {
+            "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+            "kind": "track_end",
+            "xy": [
+              104.299744,
+              99.999744
+            ]
+          },
+          "polyline_native_mm": [
+            [
+              104.1,
+              101.8
+            ],
+            [
+              104.299744,
+              101.8
+            ],
+            [
+              104.299744,
+              99.999744
+            ]
+          ],
+          "length_mm": 2.0,
+          "obstacle_uuids": [
+            "21695f06-862b-5b2d-b19b-ca18a4a35588",
+            "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+            "b1809387-16c0-58ba-9fec-329d0b8784f8",
+            "c685356b-9e03-52f8-a18d-dc715fd43105",
+            "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+            "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+            "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+            "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+          ],
+          "passes": false
+        },
+        {
+          "mode": "dogleg_source_y",
+          "from_terminal": {
+            "uuid": "e050057b-b095-55ec-b696-fa9120e1d023",
+            "kind": "track_end",
+            "xy": [
+              104.1,
+              101.8
+            ]
+          },
+          "to_terminal": {
+            "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+            "kind": "track_start",
+            "xy": [
+              104.299744,
+              99.999744
+            ]
+          },
+          "polyline_native_mm": [
+            [
+              104.1,
+              101.8
+            ],
+            [
+              104.299744,
+              101.8
+            ],
+            [
+              104.299744,
+              99.999744
+            ]
+          ],
+          "length_mm": 2.0,
+          "obstacle_uuids": [
+            "21695f06-862b-5b2d-b19b-ca18a4a35588",
+            "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+            "b1809387-16c0-58ba-9fec-329d0b8784f8",
+            "c685356b-9e03-52f8-a18d-dc715fd43105",
+            "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+            "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+            "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+            "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+          ],
+          "passes": false
+        },
+        {
+          "mode": "dogleg_source_y",
+          "from_terminal": {
+            "uuid": "e050057b-b095-55ec-b696-fa9120e1d023",
+            "kind": "track_end",
+            "xy": [
+              104.1,
+              101.8
+            ]
+          },
+          "to_terminal": {
+            "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+            "kind": "track_end",
+            "xy": [
+              104.299744,
+              99.999744
+            ]
+          },
+          "polyline_native_mm": [
+            [
+              104.1,
+              101.8
+            ],
+            [
+              104.299744,
+              101.8
+            ],
+            [
+              104.299744,
+              99.999744
+            ]
+          ],
+          "length_mm": 2.0,
+          "obstacle_uuids": [
+            "21695f06-862b-5b2d-b19b-ca18a4a35588",
+            "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+            "b1809387-16c0-58ba-9fec-329d0b8784f8",
+            "c685356b-9e03-52f8-a18d-dc715fd43105",
+            "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+            "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+            "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+            "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+          ],
+          "passes": false
+        }
+      ]
+    },
+    "source_to_west_F": {
+      "candidate_count": 18,
+      "feasible_count": 0,
+      "representative_feasible": [],
+      "top_obstacle_uuids": [
+        {
+          "uuid": "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+          "count": 18
+        },
+        {
+          "uuid": "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+          "count": 18
+        },
+        {
+          "uuid": "28848021-214a-5112-87e2-81a84e9b0b17",
+          "count": 18
+        },
+        {
+          "uuid": "364c92a3-1532-58f7-9200-0ade1d3798c6",
+          "count": 18
+        },
+        {
+          "uuid": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+          "count": 18
+        },
+        {
+          "uuid": "d546fbb6-4e13-5833-996e-7fc885bed474",
+          "count": 18
+        },
+        {
+          "uuid": "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+          "count": 14
+        },
+        {
+          "uuid": "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+          "count": 14
+        },
+        {
+          "uuid": "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+          "count": 14
+        },
+        {
+          "uuid": "e9eb0e93-97d9-52fa-b29a-61ef232b2894",
+          "count": 14
+        },
+        {
+          "uuid": "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+          "count": 12
+        },
+        {
+          "uuid": "785194bb-de7d-556e-ad94-86c0bed8924b",
+          "count": 12
+        }
+      ],
+      "negative_witnesses": [
+        {
+          "mode": "direct",
+          "from_terminal": {
+            "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+            "kind": "track_start",
+            "xy": [
+              104.1,
+              101.8
+            ]
+          },
+          "to_terminal": {
+            "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+            "kind": "track_start",
+            "xy": [
+              96.55,
+              100.6
+            ]
+          },
+          "polyline_native_mm": [
+            [
+              104.1,
+              101.8
+            ],
+            [
+              96.55,
+              100.6
+            ]
+          ],
+          "length_mm": 7.644769,
+          "obstacle_uuids": [
+            "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+            "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+            "28848021-214a-5112-87e2-81a84e9b0b17",
+            "364c92a3-1532-58f7-9200-0ade1d3798c6",
+            "4346b415-d1c3-59cd-aae5-3a541578a29d",
+            "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+            "785194bb-de7d-556e-ad94-86c0bed8924b",
+            "9d519ef3-961c-5125-be24-7ca8c3bda532",
+            "d546fbb6-4e13-5833-996e-7fc885bed474"
+          ],
+          "passes": false
+        },
+        {
+          "mode": "direct",
+          "from_terminal": {
+            "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+            "kind": "track_start",
+            "xy": [
+              104.1,
+              101.8
+            ]
+          },
+          "to_terminal": {
+            "uuid": "bd056f57-82b2-5fcd-a1b5-214fee59c901",
+            "kind": "pad_center",
+            "xy": [
+              96.55,
+              100.6
+            ]
+          },
+          "polyline_native_mm": [
+            [
+              104.1,
+              101.8
+            ],
+            [
+              96.55,
+              100.6
+            ]
+          ],
+          "length_mm": 7.644769,
+          "obstacle_uuids": [
+            "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+            "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+            "28848021-214a-5112-87e2-81a84e9b0b17",
+            "364c92a3-1532-58f7-9200-0ade1d3798c6",
+            "4346b415-d1c3-59cd-aae5-3a541578a29d",
+            "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+            "785194bb-de7d-556e-ad94-86c0bed8924b",
+            "9d519ef3-961c-5125-be24-7ca8c3bda532",
+            "d546fbb6-4e13-5833-996e-7fc885bed474"
+          ],
+          "passes": false
+        },
+        {
+          "mode": "direct",
+          "from_terminal": {
+            "uuid": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+            "kind": "pad_center",
+            "xy": [
+              103.45,
+              101.8
+            ]
+          },
+          "to_terminal": {
+            "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+            "kind": "track_start",
+            "xy": [
+              96.55,
+              100.6
+            ]
+          },
+          "polyline_native_mm": [
+            [
+              103.45,
+              101.8
+            ],
+            [
+              96.55,
+              100.6
+            ]
+          ],
+          "length_mm": 7.003571,
+          "obstacle_uuids": [
+            "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+            "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+            "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+            "28848021-214a-5112-87e2-81a84e9b0b17",
+            "364c92a3-1532-58f7-9200-0ade1d3798c6",
+            "4346b415-d1c3-59cd-aae5-3a541578a29d",
+            "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+            "785194bb-de7d-556e-ad94-86c0bed8924b",
+            "9d519ef3-961c-5125-be24-7ca8c3bda532",
+            "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+            "d546fbb6-4e13-5833-996e-7fc885bed474",
+            "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+            "e9eb0e93-97d9-52fa-b29a-61ef232b2894"
+          ],
+          "passes": false
+        },
+        {
+          "mode": "direct",
+          "from_terminal": {
+            "uuid": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+            "kind": "pad_center",
+            "xy": [
+              103.45,
+              101.8
+            ]
+          },
+          "to_terminal": {
+            "uuid": "bd056f57-82b2-5fcd-a1b5-214fee59c901",
+            "kind": "pad_center",
+            "xy": [
+              96.55,
+              100.6
+            ]
+          },
+          "polyline_native_mm": [
+            [
+              103.45,
+              101.8
+            ],
+            [
+              96.55,
+              100.6
+            ]
+          ],
+          "length_mm": 7.003571,
+          "obstacle_uuids": [
+            "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+            "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+            "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+            "28848021-214a-5112-87e2-81a84e9b0b17",
+            "364c92a3-1532-58f7-9200-0ade1d3798c6",
+            "4346b415-d1c3-59cd-aae5-3a541578a29d",
+            "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+            "785194bb-de7d-556e-ad94-86c0bed8924b",
+            "9d519ef3-961c-5125-be24-7ca8c3bda532",
+            "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+            "d546fbb6-4e13-5833-996e-7fc885bed474",
+            "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+            "e9eb0e93-97d9-52fa-b29a-61ef232b2894"
+          ],
+          "passes": false
+        }
+      ]
+    },
+    "interpretation": "Screens use complete existing VCORE terminal sets, 0.25 mm F candidates and exact current F obstacles. Feasible means an unblocked tested polyline, not a qualified full route."
+  },
+  "ordinary_via_access": {
+    "source": {
+      "position_count": 10,
+      "escape_route_variants_tested": 0,
+      "feasible_position_count": 0,
+      "representative_feasible": [],
+      "top_obstacle_identities": [
+        {
+          "identity": "632683ad-2de5-5a95-8257-45e5afaf3625",
+          "count": 10
+        },
+        {
+          "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+          "count": 10
+        },
+        {
+          "identity": "contact-0",
+          "count": 10
+        },
+        {
+          "identity": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+          "count": 7
+        },
+        {
+          "identity": "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+          "count": 6
+        },
+        {
+          "identity": "e9eb0e93-97d9-52fa-b29a-61ef232b2894",
+          "count": 6
+        },
+        {
+          "identity": "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+          "count": 5
+        },
+        {
+          "identity": "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+          "count": 5
+        },
+        {
+          "identity": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+          "count": 4
+        },
+        {
+          "identity": "714f03ac-3ce4-506f-928e-f09a1a3419d0",
+          "count": 4
+        }
+      ]
+    },
+    "east_load": {
+      "position_count": 10,
+      "escape_route_variants_tested": 0,
+      "feasible_position_count": 0,
+      "representative_feasible": [],
+      "top_obstacle_identities": [
+        {
+          "identity": "632683ad-2de5-5a95-8257-45e5afaf3625",
+          "count": 10
+        },
+        {
+          "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+          "count": 10
+        },
+        {
+          "identity": "contact-0",
+          "count": 10
+        },
+        {
+          "identity": "dbfe8896-a663-5d4f-bb1f-57e566bf1537",
+          "count": 10
+        },
+        {
+          "identity": "6a3c1f05-b5d1-56b9-9434-fecbcd951ae4",
+          "count": 7
+        },
+        {
+          "identity": "91474799-83e3-591c-921d-a61e294a2d57",
+          "count": 6
+        },
+        {
+          "identity": "bf3014f1-84e2-52af-aac5-7bcc596611f0",
+          "count": 6
+        },
+        {
+          "identity": "5d8ee764-fc16-570b-bb11-c5fe22ef5e4c",
+          "count": 5
+        },
+        {
+          "identity": "dd7238e0-d1af-50ce-916c-f31659475919",
+          "count": 5
+        },
+        {
+          "identity": "0e2e8444-80b8-5e84-aae6-f7c788f2566b",
+          "count": 4
+        }
+      ]
+    },
+    "west_load": {
+      "position_count": 10,
+      "escape_route_variants_tested": 0,
+      "feasible_position_count": 0,
+      "representative_feasible": [],
+      "top_obstacle_identities": [
+        {
+          "identity": "458beb15-9839-5a06-a637-cfac6cd3dfdb",
+          "count": 10
+        },
+        {
+          "identity": "4dd660ac-86bc-58a4-a070-bf26f874d680",
+          "count": 10
+        },
+        {
+          "identity": "contact-3",
+          "count": 10
+        },
+        {
+          "identity": "0a99f757-0108-51c9-a4ed-c61984f3c688",
+          "count": 7
+        },
+        {
+          "identity": "7d20a7c4-d0aa-5298-acc2-e271a4c73041",
+          "count": 6
+        },
+        {
+          "identity": "962b494d-4fe2-500b-b5aa-91d63ebd447e",
+          "count": 6
+        },
+        {
+          "identity": "1eb44858-291e-5711-a31c-bd67c8dbd261",
+          "count": 5
+        },
+        {
+          "identity": "6c1c5e96-fa82-51d0-a6d8-b08e97d53df0",
+          "count": 5
+        },
+        {
+          "identity": "9784174c-99b0-5da3-9eb8-64c3cbabd240",
+          "count": 5
+        },
+        {
+          "identity": "a7324a03-5212-53e5-bf3c-ade45863473f",
+          "count": 5
+        }
+      ]
+    }
+  },
+  "C18_ground_context": {
+    "pad": {
+      "name": "C18.1",
+      "uuid": "7d20a7c4-d0aa-5298-acc2-e271a4c73041",
+      "net": "GND",
+      "pin_function": "1_1",
+      "pin_type": "passive",
+      "xy_native_mm": [
+        94.29564,
+        101.003449
+      ],
+      "footprint_value": "0.1uF",
+      "side": "F"
+    },
+    "complete_existing_group": [
+      {
+        "uuid": "7d20a7c4-d0aa-5298-acc2-e271a4c73041",
+        "kind": "PAD",
+        "net": "GND",
+        "pad": "C18.1",
+        "pin_function": "1_1",
+        "xy_native_mm": [
+          94.29564,
+          101.003449
+        ]
+      },
+      {
+        "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:8",
+        "kind": "filled_island",
+        "net": "GND",
+        "layer": "F.Cu",
+        "bounds_native_mm": [
+          93.9894,
+          100.6894,
+          94.81114,
+          101.319003
+        ],
+        "filled_area_mm2": 0.4981551361435
+      }
+    ],
+    "connected_to_MAIN": false,
+    "existing_through_vias": [],
+    "bounded_nearby_via_positions_tested": 8,
+    "bounded_feasible_ordinary_vias": [],
+    "disposition": "C18.1 remains an isolated GND terminal with no existing through-via. Its local return should be dispositioned before accepting a west-load VCORE feed, to avoid repeating supply-before-return closure."
+  },
+  "candidate_screen": {
+    "total_candidate_escapes": 44,
+    "limit": 150,
+    "F_width_mm": 0.25,
+    "ordinary_via_diameter_drill_mm": [
+      0.604,
+      0.35
+    ],
+    "foreign_copper_clearance_mm": 0.2,
+    "hole_and_contact_clearance_mm": 0.25,
+    "same_net_inclusive_F_B_SMD_offpad": true,
+    "In1_note": "A VCORE through-via inside actual MAIN In1 requires a refill-generated antipad; current GND fill overlap is not treated as fixed copper, but plane continuity remains a later acceptance gate."
+  },
+  "candidate_topologies_for_Astra": [
+    {
+      "name": "local_F_source_to_east_then_separate_west_strategy",
+      "status": "blocked_in_bounded_screen",
+      "evidence": {
+        "east_F_screen": {
+          "candidate_count": 18,
+          "feasible_count": 0,
+          "representative_feasible": [],
+          "top_obstacle_uuids": [
+            {
+              "uuid": "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+              "count": 18
+            },
+            {
+              "uuid": "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c",
+              "count": 18
+            },
+            {
+              "uuid": "21695f06-862b-5b2d-b19b-ca18a4a35588",
+              "count": 12
+            },
+            {
+              "uuid": "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+              "count": 12
+            },
+            {
+              "uuid": "b1809387-16c0-58ba-9fec-329d0b8784f8",
+              "count": 12
+            },
+            {
+              "uuid": "c685356b-9e03-52f8-a18d-dc715fd43105",
+              "count": 12
+            },
+            {
+              "uuid": "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+              "count": 12
+            },
+            {
+              "uuid": "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+              "count": 12
+            },
+            {
+              "uuid": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+              "count": 8
+            },
+            {
+              "uuid": "714f03ac-3ce4-506f-928e-f09a1a3419d0",
+              "count": 8
+            },
+            {
+              "uuid": "285807bb-29bc-5ab2-be71-6e26371cc4a2",
+              "count": 6
+            },
+            {
+              "uuid": "3cf869f6-b5ad-53c7-ab3d-1d6df72627af",
+              "count": 6
+            }
+          ],
+          "negative_witnesses": [
+            {
+              "mode": "dogleg_source_y",
+              "from_terminal": {
+                "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+                "kind": "track_start",
+                "xy": [
+                  104.1,
+                  101.8
+                ]
+              },
+              "to_terminal": {
+                "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+                "kind": "track_start",
+                "xy": [
+                  104.299744,
+                  99.999744
+                ]
+              },
+              "polyline_native_mm": [
+                [
+                  104.1,
+                  101.8
+                ],
+                [
+                  104.299744,
+                  101.8
+                ],
+                [
+                  104.299744,
+                  99.999744
+                ]
+              ],
+              "length_mm": 2.0,
+              "obstacle_uuids": [
+                "21695f06-862b-5b2d-b19b-ca18a4a35588",
+                "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+                "b1809387-16c0-58ba-9fec-329d0b8784f8",
+                "c685356b-9e03-52f8-a18d-dc715fd43105",
+                "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+                "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+                "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+                "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+              ],
+              "passes": false
+            },
+            {
+              "mode": "dogleg_source_y",
+              "from_terminal": {
+                "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+                "kind": "track_start",
+                "xy": [
+                  104.1,
+                  101.8
+                ]
+              },
+              "to_terminal": {
+                "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+                "kind": "track_end",
+                "xy": [
+                  104.299744,
+                  99.999744
+                ]
+              },
+              "polyline_native_mm": [
+                [
+                  104.1,
+                  101.8
+                ],
+                [
+                  104.299744,
+                  101.8
+                ],
+                [
+                  104.299744,
+                  99.999744
+                ]
+              ],
+              "length_mm": 2.0,
+              "obstacle_uuids": [
+                "21695f06-862b-5b2d-b19b-ca18a4a35588",
+                "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+                "b1809387-16c0-58ba-9fec-329d0b8784f8",
+                "c685356b-9e03-52f8-a18d-dc715fd43105",
+                "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+                "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+                "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+                "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+              ],
+              "passes": false
+            },
+            {
+              "mode": "dogleg_source_y",
+              "from_terminal": {
+                "uuid": "e050057b-b095-55ec-b696-fa9120e1d023",
+                "kind": "track_end",
+                "xy": [
+                  104.1,
+                  101.8
+                ]
+              },
+              "to_terminal": {
+                "uuid": "63a6f798-8c1e-5889-9313-882bb3332b1d",
+                "kind": "track_start",
+                "xy": [
+                  104.299744,
+                  99.999744
+                ]
+              },
+              "polyline_native_mm": [
+                [
+                  104.1,
+                  101.8
+                ],
+                [
+                  104.299744,
+                  101.8
+                ],
+                [
+                  104.299744,
+                  99.999744
+                ]
+              ],
+              "length_mm": 2.0,
+              "obstacle_uuids": [
+                "21695f06-862b-5b2d-b19b-ca18a4a35588",
+                "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+                "b1809387-16c0-58ba-9fec-329d0b8784f8",
+                "c685356b-9e03-52f8-a18d-dc715fd43105",
+                "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+                "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+                "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+                "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+              ],
+              "passes": false
+            },
+            {
+              "mode": "dogleg_source_y",
+              "from_terminal": {
+                "uuid": "e050057b-b095-55ec-b696-fa9120e1d023",
+                "kind": "track_end",
+                "xy": [
+                  104.1,
+                  101.8
+                ]
+              },
+              "to_terminal": {
+                "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+                "kind": "track_end",
+                "xy": [
+                  104.299744,
+                  99.999744
+                ]
+              },
+              "polyline_native_mm": [
+                [
+                  104.1,
+                  101.8
+                ],
+                [
+                  104.299744,
+                  101.8
+                ],
+                [
+                  104.299744,
+                  99.999744
+                ]
+              ],
+              "length_mm": 2.0,
+              "obstacle_uuids": [
+                "21695f06-862b-5b2d-b19b-ca18a4a35588",
+                "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+                "b1809387-16c0-58ba-9fec-329d0b8784f8",
+                "c685356b-9e03-52f8-a18d-dc715fd43105",
+                "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+                "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+                "fc8c98b5-c39c-5699-b89a-c1a5d44b0fa6",
+                "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+              ],
+              "passes": false
+            }
+          ]
+        },
+        "west_F_screen": {
+          "candidate_count": 18,
+          "feasible_count": 0,
+          "representative_feasible": [],
+          "top_obstacle_uuids": [
+            {
+              "uuid": "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+              "count": 18
+            },
+            {
+              "uuid": "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+              "count": 18
+            },
+            {
+              "uuid": "28848021-214a-5112-87e2-81a84e9b0b17",
+              "count": 18
+            },
+            {
+              "uuid": "364c92a3-1532-58f7-9200-0ade1d3798c6",
+              "count": 18
+            },
+            {
+              "uuid": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+              "count": 18
+            },
+            {
+              "uuid": "d546fbb6-4e13-5833-996e-7fc885bed474",
+              "count": 18
+            },
+            {
+              "uuid": "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+              "count": 14
+            },
+            {
+              "uuid": "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+              "count": 14
+            },
+            {
+              "uuid": "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+              "count": 14
+            },
+            {
+              "uuid": "e9eb0e93-97d9-52fa-b29a-61ef232b2894",
+              "count": 14
+            },
+            {
+              "uuid": "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+              "count": 12
+            },
+            {
+              "uuid": "785194bb-de7d-556e-ad94-86c0bed8924b",
+              "count": 12
+            }
+          ],
+          "negative_witnesses": [
+            {
+              "mode": "direct",
+              "from_terminal": {
+                "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+                "kind": "track_start",
+                "xy": [
+                  104.1,
+                  101.8
+                ]
+              },
+              "to_terminal": {
+                "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+                "kind": "track_start",
+                "xy": [
+                  96.55,
+                  100.6
+                ]
+              },
+              "polyline_native_mm": [
+                [
+                  104.1,
+                  101.8
+                ],
+                [
+                  96.55,
+                  100.6
+                ]
+              ],
+              "length_mm": 7.644769,
+              "obstacle_uuids": [
+                "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+                "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+                "28848021-214a-5112-87e2-81a84e9b0b17",
+                "364c92a3-1532-58f7-9200-0ade1d3798c6",
+                "4346b415-d1c3-59cd-aae5-3a541578a29d",
+                "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+                "785194bb-de7d-556e-ad94-86c0bed8924b",
+                "9d519ef3-961c-5125-be24-7ca8c3bda532",
+                "d546fbb6-4e13-5833-996e-7fc885bed474"
+              ],
+              "passes": false
+            },
+            {
+              "mode": "direct",
+              "from_terminal": {
+                "uuid": "2bc78fc7-cafc-5808-a1d2-eba740b8c931",
+                "kind": "track_start",
+                "xy": [
+                  104.1,
+                  101.8
+                ]
+              },
+              "to_terminal": {
+                "uuid": "bd056f57-82b2-5fcd-a1b5-214fee59c901",
+                "kind": "pad_center",
+                "xy": [
+                  96.55,
+                  100.6
+                ]
+              },
+              "polyline_native_mm": [
+                [
+                  104.1,
+                  101.8
+                ],
+                [
+                  96.55,
+                  100.6
+                ]
+              ],
+              "length_mm": 7.644769,
+              "obstacle_uuids": [
+                "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+                "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+                "28848021-214a-5112-87e2-81a84e9b0b17",
+                "364c92a3-1532-58f7-9200-0ade1d3798c6",
+                "4346b415-d1c3-59cd-aae5-3a541578a29d",
+                "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+                "785194bb-de7d-556e-ad94-86c0bed8924b",
+                "9d519ef3-961c-5125-be24-7ca8c3bda532",
+                "d546fbb6-4e13-5833-996e-7fc885bed474"
+              ],
+              "passes": false
+            },
+            {
+              "mode": "direct",
+              "from_terminal": {
+                "uuid": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+                "kind": "pad_center",
+                "xy": [
+                  103.45,
+                  101.8
+                ]
+              },
+              "to_terminal": {
+                "uuid": "1a7d010e-b3b3-51b0-b596-1c9e6257c066",
+                "kind": "track_start",
+                "xy": [
+                  96.55,
+                  100.6
+                ]
+              },
+              "polyline_native_mm": [
+                [
+                  103.45,
+                  101.8
+                ],
+                [
+                  96.55,
+                  100.6
+                ]
+              ],
+              "length_mm": 7.003571,
+              "obstacle_uuids": [
+                "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+                "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+                "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+                "28848021-214a-5112-87e2-81a84e9b0b17",
+                "364c92a3-1532-58f7-9200-0ade1d3798c6",
+                "4346b415-d1c3-59cd-aae5-3a541578a29d",
+                "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+                "785194bb-de7d-556e-ad94-86c0bed8924b",
+                "9d519ef3-961c-5125-be24-7ca8c3bda532",
+                "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+                "d546fbb6-4e13-5833-996e-7fc885bed474",
+                "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+                "e9eb0e93-97d9-52fa-b29a-61ef232b2894"
+              ],
+              "passes": false
+            },
+            {
+              "mode": "direct",
+              "from_terminal": {
+                "uuid": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+                "kind": "pad_center",
+                "xy": [
+                  103.45,
+                  101.8
+                ]
+              },
+              "to_terminal": {
+                "uuid": "bd056f57-82b2-5fcd-a1b5-214fee59c901",
+                "kind": "pad_center",
+                "xy": [
+                  96.55,
+                  100.6
+                ]
+              },
+              "polyline_native_mm": [
+                [
+                  103.45,
+                  101.8
+                ],
+                [
+                  96.55,
+                  100.6
+                ]
+              ],
+              "length_mm": 7.003571,
+              "obstacle_uuids": [
+                "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+                "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+                "1229622c-426c-5dc6-bb13-5a5d826f90bf",
+                "28848021-214a-5112-87e2-81a84e9b0b17",
+                "364c92a3-1532-58f7-9200-0ade1d3798c6",
+                "4346b415-d1c3-59cd-aae5-3a541578a29d",
+                "57d0df55-220f-5b6d-86e6-2b9ee22500df",
+                "785194bb-de7d-556e-ad94-86c0bed8924b",
+                "9d519ef3-961c-5125-be24-7ca8c3bda532",
+                "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+                "d546fbb6-4e13-5833-996e-7fc885bed474",
+                "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+                "e9eb0e93-97d9-52fa-b29a-61ef232b2894"
+              ],
+              "passes": false
+            }
+          ]
+        }
+      },
+      "engineering_question": "Existing F interleaving blocks the bounded local source-to-east forms; a topology or corridor decision is required.",
+      "qualification": "Geometric corridor evidence only; not a complete VCORE route or PI/current qualification."
+    },
+    {
+      "name": "off_contact_F_to_In2_distribution",
+      "status": "incomplete_local_transition_access",
+      "evidence": {
+        "via_access": {
+          "source": {
+            "position_count": 10,
+            "escape_route_variants_tested": 0,
+            "feasible_position_count": 0,
+            "representative_feasible": [],
+            "top_obstacle_identities": [
+              {
+                "identity": "632683ad-2de5-5a95-8257-45e5afaf3625",
+                "count": 10
+              },
+              {
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "count": 10
+              },
+              {
+                "identity": "contact-0",
+                "count": 10
+              },
+              {
+                "identity": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+                "count": 7
+              },
+              {
+                "identity": "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+                "count": 6
+              },
+              {
+                "identity": "e9eb0e93-97d9-52fa-b29a-61ef232b2894",
+                "count": 6
+              },
+              {
+                "identity": "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+                "count": 5
+              },
+              {
+                "identity": "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+                "count": 5
+              },
+              {
+                "identity": "83bb4ad0-93e4-5510-b0b9-cf638b3ba63c",
+                "count": 4
+              },
+              {
+                "identity": "714f03ac-3ce4-506f-928e-f09a1a3419d0",
+                "count": 4
+              }
+            ]
+          },
+          "east_load": {
+            "position_count": 10,
+            "escape_route_variants_tested": 0,
+            "feasible_position_count": 0,
+            "representative_feasible": [],
+            "top_obstacle_identities": [
+              {
+                "identity": "632683ad-2de5-5a95-8257-45e5afaf3625",
+                "count": 10
+              },
+              {
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "count": 10
+              },
+              {
+                "identity": "contact-0",
+                "count": 10
+              },
+              {
+                "identity": "dbfe8896-a663-5d4f-bb1f-57e566bf1537",
+                "count": 10
+              },
+              {
+                "identity": "6a3c1f05-b5d1-56b9-9434-fecbcd951ae4",
+                "count": 7
+              },
+              {
+                "identity": "91474799-83e3-591c-921d-a61e294a2d57",
+                "count": 6
+              },
+              {
+                "identity": "bf3014f1-84e2-52af-aac5-7bcc596611f0",
+                "count": 6
+              },
+              {
+                "identity": "5d8ee764-fc16-570b-bb11-c5fe22ef5e4c",
+                "count": 5
+              },
+              {
+                "identity": "dd7238e0-d1af-50ce-916c-f31659475919",
+                "count": 5
+              },
+              {
+                "identity": "0e2e8444-80b8-5e84-aae6-f7c788f2566b",
+                "count": 4
+              }
+            ]
+          },
+          "west_load": {
+            "position_count": 10,
+            "escape_route_variants_tested": 0,
+            "feasible_position_count": 0,
+            "representative_feasible": [],
+            "top_obstacle_identities": [
+              {
+                "identity": "458beb15-9839-5a06-a637-cfac6cd3dfdb",
+                "count": 10
+              },
+              {
+                "identity": "4dd660ac-86bc-58a4-a070-bf26f874d680",
+                "count": 10
+              },
+              {
+                "identity": "contact-3",
+                "count": 10
+              },
+              {
+                "identity": "0a99f757-0108-51c9-a4ed-c61984f3c688",
+                "count": 7
+              },
+              {
+                "identity": "7d20a7c4-d0aa-5298-acc2-e271a4c73041",
+                "count": 6
+              },
+              {
+                "identity": "962b494d-4fe2-500b-b5aa-91d63ebd447e",
+                "count": 6
+              },
+              {
+                "identity": "1eb44858-291e-5711-a31c-bd67c8dbd261",
+                "count": 5
+              },
+              {
+                "identity": "6c1c5e96-fa82-51d0-a6d8-b08e97d53df0",
+                "count": 5
+              },
+              {
+                "identity": "9784174c-99b0-5da3-9eb8-64c3cbabd240",
+                "count": 5
+              },
+              {
+                "identity": "a7324a03-5212-53e5-bf3c-ade45863473f",
+                "count": 5
+              }
+            ]
+          }
+        }
+      },
+      "engineering_question": "Astra must decide source/east/west transition count, In2 distribution width/topology, antipad/return-plane consequences and whether C18.1 GND is repaired first.",
+      "qualification": "Local ordinary-via access only; no In2 route, plane refill or full-network feasibility is claimed."
+    }
+  ],
+  "current_budget_evidence": {
+    "native_existing_widths_only": {
+      "source": [
+        0.1778,
+        0.2
+      ],
+      "east_load": [
+        0.2
+      ],
+      "west_load": [
+        0.2
+      ]
+    },
+    "qualification_limit": "No accepted report establishes VCORE load, voltage-drop, temperature-rise or transient targets. Width judgment cannot be promoted from geometry alone."
+  },
+  "preserved_dependencies": [
+    "accepted C13 GND stitch and continuous In1 MAIN",
+    "U4/C24 mandatory process vias",
+    "private pickoffs and CELL_NEG isolation",
+    "IMU routing, USB, clock and existing critical routes",
+    "battery-contact metal exclusions"
+  ],
+  "reused_views": {
+    "F": {
+      "path": "reports/mcu-east-ground-staged-F.svg",
+      "sha256": "a65d38ba5ae356d42bb410ffd1a58597f2d0d9db0cec76229a74bf4a75fd0380"
+    },
+    "In1": {
+      "path": "reports/mcu-east-ground-staged-In1.svg",
+      "sha256": "b2eb2b7ea9842819e590015ad558cc8569a8149764bd3ea200af41bfc4e0b5f4"
+    },
+    "applicability": "Exact accepted PCB bytes match the staged view source; views provide local copper context but do not include proposed VCORE geometry."
+  },
+  "authoring_tool_sha256": "1ba892a9194bb35ecc069a2f801b5135df54a2c769c6b374f54e83f1ed08aed4",
+  "elapsed_seconds": 26.531,
+  "design_files_written": false,
+  "limits": [
+    "No route is authorized or saved.",
+    "No full power network, PI, current, thermal, stackup or fabrication qualification.",
+    "A blocked bounded form is not proof that placement or all layer strategies are impossible."
+  ]
+}

@@ -8,8 +8,11 @@
   as PCB `adc262b3...` / manifest `b849b5de...`: 37 opens, 234 non-open
   findings and 46 enabled parity findings. No placement or existing-copper
   changes. Preserve historical IMU CAD; exact mechanical rebinding is
-  required for the new PCB bytes. Next is Astra's VCORE supply strategy,
-  not another ground screen; no VCORE route or move is yet released.
+  required for the new PCB bytes. VCORE preparation found no path in its
+  bounded fixed-route screens; C18 ground also remains isolated. The
+  closure-plan top proposes a coordinated local MCU supply/return study,
+  pending owner scope choice. No VCORE route or move is released; Sol is
+  idle. Do not treat the negative screens as proof of impossibility.
   Exact scope and stopping conditions are at the closure-plan top.
 - **September 24 resumed:** the owner explicitly resumed work. Start from
   the repaired supply candidate and the two recorded signal conflicts,
