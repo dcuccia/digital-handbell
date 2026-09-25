@@ -166,6 +166,20 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 25 owner resumption: assess a different ground escape.**
+The owner resumed from `1ac52ba`. Astra released one eight-minute read-only
+Sol assessment of the existing C6/C7/C8/C13/C17 GND group's complete copper,
+not another local C6/C8 via search. Within native bounds
+`[102.0, 98.5, 109.0, 107.5]` mm, screen an F connection to existing
+MAIN-connected F copper or an ordinary via outside the complete rear-contact
+exclusion. Prefer existing grounded copper when it avoids an extra via.
+The deliverable is at most two numerical route alternatives with actual
+clearances, each capacitor's return path and underlying In1 continuity.
+Preserve all source geometry and constraints. No candidate is authorized
+for PCB insertion until Astra reviews its return-path tradeoff.
+The failed short-via item below remains exhausted; the accepted board
+and matched CAD remain unchanged.
+
 **Eastern MCU ground strategy is blocked; no copper was changed.**
 The [bounded screening record](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-east-ground-blocker.json)
 binds the unchanged accepted PCB `d2a098b0...`, manifest `aa68559e...`

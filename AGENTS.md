@@ -2,6 +2,13 @@
 
 ## Bounded engineering work
 
+- **September 25 resumed:** the owner resumed from `1ac52ba`. One bounded
+  read-only assessment is released for an F ground escape from the full
+  C6/C7/C8/C13/C17 group to existing MAIN copper or an off-contact ordinary
+  via. This does not reopen the exhausted local C6/C8 via screen or authorize
+  PCB edits. Preserve the accepted `d2a098b0...` / `aa68559e...` checkpoint;
+  Astra reviews return-path alternatives before any routing release.
+  Exact scope and stopping conditions are at the closure-plan top.
 - **September 24 resumed:** the owner explicitly resumed work. Start from
   the repaired supply candidate and the two recorded signal conflicts,
   retaining the Astra/Sol split and bounded retries. The local CS detour
