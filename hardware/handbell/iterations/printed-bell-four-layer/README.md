@@ -1,6 +1,19 @@
 # Printed-bell four-layer routing baseline
 
-**Current acceptance: integrated IMU closure.** Active PCB
+**Current acceptance: eastern MCU ground closure.** Active PCB
+`adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314`
+and manifest
+`b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8`
+have **37 opens, 234 non-open findings and 46 enabled parity findings**.
+One ordinary off-contact via and a short F connection restore the shared
+C6/C7/C8/C13/C17 ground island to In1 MAIN, with no placement or existing
+copper changes. The [acceptance record](reports/mcu-east-ground-acceptance.json)
+binds validation and Astra's filled-layer review. Exact CAD rebinding is
+required; the prior completed IMU CAD is preserved, not relabeled as a
+match to the new board. VCORE distribution remains unfinished. This is
+not powered, PI, manufacturing or safety approval.
+
+**Earlier acceptance: integrated IMU closure.** Active PCB at that checkpoint
 `d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711`
 and manifest
 `aa68559eebaf8a43c369f549deed1f025d393bafe2d4323d2098fa4712ef622c`

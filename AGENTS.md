@@ -4,11 +4,12 @@
 
 - **September 25 resumed:** the owner resumed from `1ac52ba`. One bounded
   assessment found an off-contact ordinary-via alternative after the
-  direct F-to-MAIN screen failed. Astra now releases a separate staged
-  C13.2 F escape to via `(105.13,104.627692)`, with no existing-copper or
-  placement changes. Preserve accepted `d2a098b0...` / `aa68559e...`;
-  fresh source/fill/connectivity checks and actual ground-shape review
-  precede promotion. This does not reopen exhausted screens.
+  direct F-to-MAIN screen failed. The exact C13 ground stitch is accepted
+  as PCB `adc262b3...` / manifest `b849b5de...`: 37 opens, 234 non-open
+  findings and 46 enabled parity findings. No placement or existing-copper
+  changes. Preserve historical IMU CAD; exact mechanical rebinding is
+  required for the new PCB bytes. Next is Astra's VCORE supply strategy,
+  not another ground screen; no VCORE route or move is yet released.
   Exact scope and stopping conditions are at the closure-plan top.
 - **September 24 resumed:** the owner explicitly resumed work. Start from
   the repaired supply candidate and the two recorded signal conflicts,

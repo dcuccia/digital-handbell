@@ -741,7 +741,7 @@
   "dnp_footprint_reservations": [
     "C29"
   ],
-  "status": "INCREMENTAL_MCU_EAST_GROUND_ACCEPTED",
+  "status": "MCU_EAST_GROUND_C13_ESCAPE_STAGED_NOT_ACCEPTED",
   "generated_pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
   "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
   "baseline_pcb_sha256": "6132f8d3ec508f8ae023888052cc2a1f8b2c24f2c38d9d12dca3234ba887dcc1",
@@ -3371,7 +3371,7 @@
   "stage1_manifest_sha256": "710717186d5ecc795edaf3da7eec8f6532f34077906645a8fca32318320f23c4",
   "routing_report": "reports/clock-local-routing.json",
   "mechanical_release_sha256": "1ec81f6dfede4c040a78f164c91c21a3d77a3ec02ce7b7284b89bad5ddb217e5",
-  "mechanical_rebind_required": true,
+  "mechanical_rebind_required": false,
   "proxy_envelope_adjustments": {
     "authorization": "Parent-authorized conservative U1/U6 body-depth corrections, September14,2026",
     "evidence_scope": "Manufacturer maxima carried forward from the read-only BOM audit and T8 source evidence; no new physical measurement or PDF redistribution",
@@ -3421,7 +3421,7 @@
       }
     ]
   },
-  "current_stage_report": "reports/mcu-east-ground-acceptance.json",
+  "current_stage_report": "reports/mcu-east-ground-validation.json",
   "source_two_layer_pcb_sha256": "a83cc417c96b05dd15c187e648b9fd2a35ba857c3a66f7d13aaaa42ae3bd9fff",
   "logical_copper_layers": [
     "F.Cu",

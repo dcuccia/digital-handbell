@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "INCREMENTAL_MCU_EAST_GROUND_ACCEPTED",
+  "scope": "Accept the exact staged C13 ground stitch after Astra source and actual filled-layer review. No placement or existing-copper changes.",
+  "prior_accepted": {
+    "pcb_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+    "manifest_sha256": "aa68559eebaf8a43c369f549deed1f025d393bafe2d4323d2098fa4712ef622c"
+  },
+  "accepted": {
+    "pcb": "handbell.kicad_pcb",
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest": "placement-manifest.json",
+    "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "exact_pcb_source": "reports/mcu-east-ground-staged.kicad_pcb",
+    "staged_manifest_sha256": "dd1030c749769f5c635f574d9f60492c0269937b71361283f6b734db16bc54e1",
+    "manifest_changes_from_stage": {
+      "status": "INCREMENTAL_MCU_EAST_GROUND_ACCEPTED",
+      "current_stage_report": "reports/mcu-east-ground-acceptance.json",
+      "mechanical_rebind_required": true
+    }
+  },
+  "validation": {
+    "path": "reports/mcu-east-ground-validation.json",
+    "sha256": "68883f06a41efff1828230cf5b11104b9a097aa90813693e88a9531ed8afd5fb",
+    "native_and_independent_opens": 37,
+    "prior_opens": 38,
+    "non_open_findings": 234,
+    "enabled_schematic_parity_findings": 46,
+    "physical_pads_preserved": 325,
+    "new_non_open_findings": 0
+  },
+  "root_review": {
+    "exact_source_comparison": "After removing exactly the two new top-level nodes and excluding filled_polygon caches, ordered parsed source is identical to the prior accepted PCB. All source/output/view hashes were verified.",
+    "added_segment_uuid": "8962d6a1-67d0-5647-ab62-4035ee08f832",
+    "added_via_uuid": "d5986491-6d78-52f6-99c9-86fbf841afcd",
+    "views": [
+      "reports/mcu-east-ground-staged-F.svg",
+      "reports/mcu-east-ground-staged-In1.svg"
+    ],
+    "visual_disposition": "Retain the shared F ground area and its existing connections to C6.1, C7.1, C8.2, C13.2 and C17.2. The new ordinary via supplies a local connection to continuous In1 MAIN without rerouting adjacent supply or USB copper. Actual F/In1 filled areas are unchanged by refill.",
+    "return_path_limit": "The five capacitor grounds share a two-dimensional F island around existing VCORE copper. The new 1.322814 mm segment is not the full return loop and is not the sole copper width available where it overlaps fill. No exact island path length, minimum bottleneck width, loop inductance or current sharing is claimed.",
+    "acceptance_basis": "Incremental restoration of a previously isolated ground group, supported by preserved topology, local filled-shape review, continuous native-polygon reference coverage and saved-byte clearance/connectivity evidence. Not a completed RP2040 supply-layout or PI qualification.",
+    "contact_limit": "0.253002 mm nominal clearance to the documented BT1 metal model passes the 0.25 mm screening rule; the small surplus is not a manufacturing or loaded-contact tolerance allowance."
+  },
+  "mechanical_provenance": {
+    "mechanical_rebind_required": true,
+    "prior_CAD_input_manifest_sha256": "443fe1b5f5dedd79799dd081b7fdc169caf494d1f01a38df7d1dd48d97d5d2ff",
+    "prior_native_CAD_sha256": "b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d",
+    "disposition": "Preserve the completed IMU CAD as historical evidence. Component poses, heights, outline and contact definitions are unchanged, but its input PCB bytes do not equal the newly accepted routing checkpoint. Exact package rebinding remains open; no CAD regeneration was performed."
+  },
+  "remaining": [
+    "37 open connections, including unfinished VCORE distribution and external IMU INT",
+    "46 schematic-parity findings and 234 other findings",
+    "Power budgets, PI and powered behavior, physical stackup and manufacturing tolerances",
+    "Five existing mandatory filled/capped process vias and supplier qualification remain unchanged",
+    "Exact CAD rebinding and final matched quotation exports",
+    "Battery-contact, USB mating, insulation and safety qualification"
+  ]
+}

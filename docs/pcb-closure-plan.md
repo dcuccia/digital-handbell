@@ -166,6 +166,31 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 25 eastern MCU ground accepted: 37 opens.** Astra reviewed
+the exact two-node delta and saved filled F/In1 views, accepting PCB
+`adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314`
+with manifest
+`b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8`.
+The [acceptance record](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-east-ground-acceptance.json)
+binds the preserved stage and its validation. All five eastern decap
+grounds now reach In1 MAIN and MCU ground. Existing copper, placement,
+private returns and required process vias are preserved; 234 non-open
+findings and 46 enabled parity findings remain.
+
+The new segment lies within the shared filled ground area; its 1.322814 mm
+length is not a complete decoupling loop or a sole-width current path.
+The ground island still wraps around VCORE copper. Retain this incremental
+improvement without claiming exact island bottleneck width or qualified PI.
+The accepted CAD remains a historical exact match to `d2a098b0...`, not
+the new board. `mechanical_rebind_required` is now true even though all
+component poses, heights and mechanical interfaces are unchanged.
+
+**Next item:** return to VCORE distribution between IC1.45/C7/C8 and
+IC1.50/C6, preserving the new ground stitch and the third IC1.23/C18
+group. Astra must select the supply-layer/width/return strategy before
+Sol generates routing. No VCORE route or part move is released by this
+ground acceptance.
+
 **September 25 off-contact via found; one staged candidate is released.**
 The [escape assessment](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-east-ground-escape-assessment.json)
 records the exhausted direct/dogleg F-to-MAIN screen separately from the

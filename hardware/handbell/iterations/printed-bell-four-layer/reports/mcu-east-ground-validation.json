@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "status": "MCU_EAST_GROUND_C13_ESCAPE_STAGED_VALIDATED_NOT_ACCEPTED",
+  "scope": "Exactly one 0.25 mm F GND segment from C13.2 to one ordinary 0.604/0.35 mm through-via into actual MAIN In1. No active package overwrite or unrelated geometry change.",
+  "source_bindings": {
+    "pcb_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+    "manifest_sha256": "aa68559eebaf8a43c369f549deed1f025d393bafe2d4323d2098fa4712ef622c",
+    "contact_model_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "assessment_sha256": "0ba743938f504c99b8bfb5da4b960aeaab4d4f4f4c85a0d8d479645058da4d36",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990"
+  },
+  "output_bindings": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest_sha256": "dd1030c749769f5c635f574d9f60492c0269937b71361283f6b734db16bc54e1"
+  },
+  "native_version": "10.0.6",
+  "added_native_nodes": {
+    "segment": {
+      "uuid": "8962d6a1-67d0-5647-ab62-4035ee08f832",
+      "net": "GND",
+      "layer": "F.Cu",
+      "start_native_mm": [
+        106.010546,
+        103.640537
+      ],
+      "end_native_mm": [
+        105.13,
+        104.627692
+      ],
+      "width_mm": 0.25,
+      "length_mm": 1.322813763211209,
+      "source_join_pad": {
+        "name": "C13.2",
+        "uuid": "eeb14354-646c-561c-9f60-42db853995e2"
+      }
+    },
+    "via": {
+      "uuid": "d5986491-6d78-52f6-99c9-86fbf841afcd",
+      "net": "GND",
+      "position_native_mm": [
+        105.13,
+        104.627692
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "MAIN_In1_island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0"
+    }
+  },
+  "connectivity": {
+    "before_opens": 38,
+    "native_after_opens": 37,
+    "independent_after_opens": 37,
+    "all_five_decap_grounds_reach_MAIN": true,
+    "all_five_decap_grounds": [
+      "C6.1",
+      "C7.1",
+      "C8.2",
+      "C13.2",
+      "C17.2"
+    ],
+    "MCU_exposed_pad": "IC1.P$1",
+    "invalid_anchor_control": "IC1.49 remains +3V3",
+    "previous_connected_groups_preserved": 124,
+    "private_pickoffs": [
+      {
+        "from": "R26.2",
+        "to": "R27.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+            "b_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      },
+      {
+        "from": "R24.2",
+        "to": "C28.2",
+        "connected": true,
+        "independent_until_terminal": true,
+        "other_pad_connections_before_terminal": [],
+        "branch_copper_uuids": [
+          "1212a327-4ed4-50da-a0bb-71afc8145254",
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+        ],
+        "joins_cut_wholly_inside_terminal": [
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+            "layer": "F.Cu"
+          },
+          {
+            "a_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+            "b_uuid": "78dc0310-5f37-5d13-9746-a36aee15afb6",
+            "layer": "F.Cu"
+          }
+        ],
+        "method": "Native copper graph, removing only joins inside actual terminal copper; no route-group assumptions",
+        "scope": "Topological pickoff screen, not current sharing, voltage error or fault qualification"
+      }
+    ],
+    "CELL_NEG_nonempty_and_partition_exact": true,
+    "shorts": [],
+    "floating_copper": []
+  },
+  "geometry": {
+    "new_via_positive_area_F_or_B_SMD_overlap": [],
+    "new_via_foreign_copper_hits": [],
+    "new_via_hole_or_slot_hits": [],
+    "new_via_contact_hits": [],
+    "via_foreign_clearance_mm_by_layer": {
+      "F.Cu": 0.353002,
+      "In1.Cu": 1.246055,
+      "In2.Cu": 1.246055,
+      "B.Cu": 0.402193
+    },
+    "via_contact_clearance_mm": 0.253002,
+    "contact_margin_limit": "0.253002 mm nominal modeled margin in the prior screen; not a manufacturing-tolerance guarantee.",
+    "continuous_reference_proof": {
+      "new_F_track_full_copper_polygon_minus_actual_MAIN_In1_is_empty": true,
+      "new_via_full_0.604mm_ring_polygon_minus_actual_MAIN_In1_is_empty": true,
+      "semantics": "Entire native F track copper footprint and entire 0.604 mm via land projection are contained by the actual saved MAIN In1 filled polygon. This is reference-plane coverage, not PI or impedance qualification."
+    },
+    "filled_checks": {
+      "islands": 18,
+      "guard_comparisons": 179,
+      "foreign_comparisons": 19491,
+      "F_private_item_comparisons": 170,
+      "In1_private_via_comparisons": 2
+    },
+    "fill_delta": {
+      "F.Cu": {
+        "before_only_area_mm2": 0.0,
+        "candidate_only_area_mm2": 0.0,
+        "symmetric_difference_area_mm2": 0.0,
+        "symmetric_difference_bounds_native_mm": null
+      },
+      "In1.Cu": {
+        "before_only_area_mm2": 0.0,
+        "candidate_only_area_mm2": 0.0,
+        "symmetric_difference_area_mm2": 0.0,
+        "symmetric_difference_bounds_native_mm": null
+      }
+    },
+    "zone_settings": {
+      "F.Cu": {
+        "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+        "clearance_mm": 0.2,
+        "minimum_thickness_mm": 0.25,
+        "solid_pad_connection": true,
+        "island_removal_always": true
+      },
+      "In1.Cu": {
+        "uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b",
+        "clearance_mm": 0.2,
+        "minimum_thickness_mm": 0.25,
+        "solid_pad_connection": true,
+        "island_removal_always": true
+      }
+    },
+    "qualified_fill_overrides_mm": {
+      "m_MinClearance": 0.2,
+      "m_CopperEdgeClearance": 0.25,
+      "m_HoleClearance": 0.25,
+      "m_HoleToHoleMin": 0.25,
+      "m_MaxError": 0.001
+    }
+  },
+  "source_invariants": {
+    "allowlist": [
+      "one added top-level F.Cu GND segment",
+      "one added top-level GND through-via",
+      "F.Cu/In1.Cu filled_polygon caches",
+      "staged manifest three binding/lifecycle fields"
+    ],
+    "all_existing_tracks_vias_footprints_pads_rules_raw_exact": true,
+    "zone_definitions_except_fill_cache_exact": true,
+    "mandatory_process_vias_raw_exact": [
+      "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+      "c63c289d-af32-592b-9732-d17507fbf476",
+      "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5",
+      "eb628663-2af6-5175-bd63-91e9eecb0258",
+      "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+    ],
+    "physical_pad_count": 325,
+    "manifest_diff": {
+      "status": {
+        "before": "INCREMENTAL_IMU_CLOSURE_ACCEPTED",
+        "after": "MCU_EAST_GROUND_C13_ESCAPE_STAGED_NOT_ACCEPTED"
+      },
+      "generated_pcb_sha256": {
+        "before": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+        "after": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314"
+      },
+      "current_stage_report": {
+        "before": "reports/imu-closure-acceptance.json",
+        "after": "reports/mcu-east-ground-validation.json"
+      }
+    }
+  },
+  "native_DRC": {
+    "argv": [
+      "kicad-cli.exe",
+      "pcb",
+      "drc",
+      "--format",
+      "json",
+      "--schematic-parity",
+      "--severity-all"
+    ],
+    "process_exit_code": 0,
+    "seconds": 2.516,
+    "prior_counts": {
+      "violations": 234,
+      "unconnected_items": 38,
+      "schematic_parity": 46
+    },
+    "counts": {
+      "violations": 234,
+      "unconnected_items": 37,
+      "schematic_parity": 46
+    },
+    "new_non_open_finding_identities": []
+  },
+  "views": {
+    "F": {
+      "path": "reports/mcu-east-ground-staged-F.svg",
+      "sha256": "a65d38ba5ae356d42bb410ffd1a58597f2d0d9db0cec76229a74bf4a75fd0380"
+    },
+    "In1": {
+      "path": "reports/mcu-east-ground-staged-In1.svg",
+      "sha256": "b2eb2b7ea9842819e590015ad558cc8569a8149764bd3ea200af41bfc4e0b5f4"
+    },
+    "bounds_native_mm": [
+      99.0,
+      98.5,
+      109.5,
+      107.5
+    ],
+    "orientation": "Native through-board XY; B is not mirrored."
+  },
+  "filled_island_path_limit": "The five decap grounds share a 2-D filled F island. No exact centreline length or bottleneck width through that polygon is claimed; actual polygon geometry and holes are preserved in the F/In1 views for Astra review. The 1.322814 mm new segment is not the entire decoupling loop.",
+  "process": {
+    "fill_tool": "tools/stage_in1_ground_plane.py --fill-worker",
+    "fill_seconds": 1.484,
+    "authoring_tool_sha256": "178dc93e8214804fdb4c3648819b4844e0abbd822fd7763dd0828accb831320b",
+    "elapsed_seconds": 65.656
+  },
+  "limits": [
+    "Staged candidate only; Astra/root review is required before promotion.",
+    "PI, filled-island bottleneck, powered, thermal, physical-stackup, supplier-process, fabrication and safety qualification remain open.",
+    "No CAD regeneration was performed."
+  ]
+}
