@@ -1,0 +1,520 @@
+{
+  "schema_version": 1,
+  "status": "FEASIBLE_OFF_CONTACT_ORDINARY_VIA_ALTERNATIVES_FOUND",
+  "scope": "Read-only finite F.Cu assessment from isolated GND group abddee34295330a0 to existing MAIN-connected F GND within native box [102.0,98.5,109.0,107.5]. No PCB, manifest, fill, placement, rule or copper file was changed.",
+  "source_bindings": {
+    "active_pcb_sha256": "d2a098b0dcd198fb790e6dd4341c036814aabba7fa2ef7c278c79a0a2c916711",
+    "active_manifest_sha256": "aa68559eebaf8a43c369f549deed1f025d393bafe2d4323d2098fa4712ef622c",
+    "contact_model_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "blocker_report_sha256": "060e51ba4e3ddec60cbb76bee8ff8e428fc3f0307fbb4ab57401d68e7ccd65f4",
+    "triage_report_sha256": "93bf1685ba80d8ce580df450e46f5b5ae27a32df7d3cd80747a20ae0dfc9dadb"
+  },
+  "native_version": "10.0.6",
+  "anchor_controls": {
+    "MAIN_reference": "MH1.1-connected GND component",
+    "MCU_exposed_pad_reference": "IC1.P$1 GND",
+    "invalid_anchor_control": "IC1.49 is +3V3 and was not used"
+  },
+  "source_group": {
+    "stable_group_id": "abddee34295330a0",
+    "pads": [
+      "C6.1",
+      "C7.1",
+      "C8.2",
+      "C13.2",
+      "C17.2"
+    ],
+    "existing_F_bounds_native_mm": [
+      104.6755,
+      99.689232,
+      108.9188,
+      105.968715
+    ],
+    "C13_mouthward_exit_observation": {
+      "group_max_y_mm": 105.968715,
+      "BT1_under_cell_base_lower_edge_y_mm": 105.565,
+      "extension_beyond_contact_edge_mm": 0.403715,
+      "disposition": "The connected group does extend mouthward beyond the modeled BT1 under-cell base edge, but the bounded F routes from complete group endpoints to MAIN still intersect existing foreign-net F copper at the required clearance."
+    }
+  },
+  "screen": {
+    "assessment_box_native_mm": [
+      102.0,
+      98.5,
+      109.0,
+      107.5
+    ],
+    "candidate_trace": {
+      "layer": "F.Cu",
+      "width_mm": 0.25,
+      "foreign_copper_clearance_mm": 0.2
+    },
+    "source_endpoint_count": 35,
+    "MAIN_endpoint_count": 28,
+    "endpoint_pairs_considered": 941,
+    "polyline_forms": [
+      "direct",
+      "source-X dogleg",
+      "source-Y dogleg",
+      "mid-X dogleg",
+      "mid-Y dogleg"
+    ],
+    "screened_polylines": 4705,
+    "feasible_polylines": 0,
+    "rejection_counts": {
+      "foreign_F_copper_or_existing_F_guard_clearance": 4705
+    },
+    "contact_semantics": "B-side battery-contact projection was not applied to F-only traces. Any future through-via remains subject to full-span 0.302 mm annulus plus 0.25 mm modeled-contact clearance."
+  },
+  "dominant_measured_obstacles": [
+    {
+      "uuid": "b862d9a3-1b09-5fea-9268-6b0256983e4f",
+      "identity": "C7.2 VCORE F.Cu pad",
+      "rejected_polyline_count_nonexclusive": 1298
+    },
+    {
+      "uuid": "42320404-0da1-5cba-851f-f0a7fc7ccf1f",
+      "identity": "USB_D+ F.Cu segment (106.2547,106.0941) to (109.2082,103.1406), width 0.1778 mm",
+      "rejected_polyline_count_nonexclusive": 1158
+    },
+    {
+      "uuid": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+      "identity": "+3V3 F.Cu segment (104.35,102.4) to (104.35,105.15), width 0.25 mm",
+      "rejected_polyline_count_nonexclusive": 1135
+    },
+    {
+      "uuid": "2563a195-c1cf-5a3d-9f3c-392fd7b1dc59",
+      "identity": "C8.1 VCORE F.Cu pad",
+      "rejected_polyline_count_nonexclusive": 1111
+    },
+    {
+      "uuid": "f466a216-ec52-563c-a64b-ada283d749fe",
+      "identity": "VCORE F.Cu segment (105.0537,101.82) to (106.4227,101.82), width 0.1778 mm",
+      "rejected_polyline_count_nonexclusive": 1106
+    },
+    {
+      "uuid": "79aeda89-5eca-5e6a-ba9b-5cf9dbe00b8b",
+      "identity": "VCORE F.Cu segment (107.2953,102.2) to (106.7047,102.2), width 0.1778 mm",
+      "rejected_polyline_count_nonexclusive": 1087
+    },
+    {
+      "uuid": "5b145f62-35aa-53e3-b038-c34df5e915ce",
+      "identity": "+3V3 F.Cu SMD pad",
+      "rejected_polyline_count_nonexclusive": 972
+    },
+    {
+      "uuid": "e70cc137-e76b-5564-b300-9fc4582c0bfb",
+      "identity": "VCORE F.Cu segment (106.7047,102.102) to (106.7047,102.2), width 0.1778 mm",
+      "rejected_polyline_count_nonexclusive": 926
+    },
+    {
+      "uuid": "50ee0fe3-be40-5757-b167-5e4537bba4cf",
+      "identity": "VCORE F.Cu segment (106.4227,101.82) to (106.7047,102.102), width 0.1778 mm",
+      "rejected_polyline_count_nonexclusive": 914
+    }
+  ],
+  "attempt_history": [
+    {
+      "kind": "initial_attempt",
+      "purpose": "Screen finite direct/dogleg routes between complete-group and MAIN F endpoint inventories.",
+      "result": "No feasible route; rejection identities were not persisted."
+    },
+    {
+      "kind": "tool_correction_1",
+      "purpose": "Persist rejection classes and obstacle UUID witnesses for the same candidate forms and box.",
+      "classification": "Harness evidence correction only; no physical search-bound change.",
+      "result": "The initial nearest-pair subset remained fully blocked."
+    },
+    {
+      "kind": "tool_correction_2",
+      "purpose": "Remove the endpoint-pair truncation so all 35 source and 28 MAIN endpoints in the authorized inventory were considered.",
+      "classification": "Harness completeness correction required by the full-connected-group objective; same box, endpoints and route forms.",
+      "result": "All 4705 polylines failed native F foreign-copper or existing-guard clearance."
+    }
+  ],
+  "via_alternative": {
+    "status": "not_screened",
+    "reason": "The initial attempt plus two tool corrections exhausted the authorized execution budget before a distinct ordinary off-contact via batch could be run. This report therefore does not claim that an in-box ordinary-via alternative is impossible."
+  },
+  "path_metrics": {
+    "status": "not_applicable",
+    "reason": "No feasible candidate geometry existed, so no candidate trace length, pad-to-MAIN path, shared-return path, clearance minimum or In1 reference-continuity metric is reported."
+  },
+  "view": {
+    "generated": false,
+    "reason": "No feasible candidate overlay existed and no new rendering framework was created."
+  },
+  "conclusion": "The exhausted all-F screen remains preserved. The distinct bounded off-contact screen found ordinary-via alternatives into actual MAIN In1; Astra must select or reject their return topology before routing.",
+  "design_files_written": false,
+  "active_pcb_or_manifest_modified": false,
+  "candidate_geometry_saved_to_pcb": false,
+  "ordinary_via_screen": {
+    "status": "FEASIBLE_OFF_CONTACT_ORDINARY_VIA_ALTERNATIVES_FOUND",
+    "scope": "Distinct off-contact ordinary through-via screen; the exhausted all-F direct/dogleg screen was not repeated.",
+    "windows_native_mm": {
+      "south": {
+        "box": [
+          102.0,
+          106.12,
+          109.0,
+          107.5
+        ]
+      },
+      "west": {
+        "box": [
+          102.0,
+          103.1,
+          105.13,
+          107.5
+        ]
+      }
+    },
+    "source_anchor_count": 50,
+    "candidate_position_count": 169,
+    "candidate_position_limit": 200,
+    "via_feasible_before_F_escape": 3,
+    "feasible_via_plus_escape_route_count": 1,
+    "via_reject_counts_nonexclusive": {
+      "all_layer_foreign_copper_clearance": 166,
+      "positive_area_F_or_B_SMD_overlap": 43,
+      "hole_or_slot_clearance": 38,
+      "no_actual_MAIN_In1_landing": 5
+    },
+    "top_rejection_obstacles": [
+      {
+        "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+        "count": 87
+      },
+      {
+        "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+        "count": 65
+      },
+      {
+        "identity": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+        "count": 55
+      },
+      {
+        "identity": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+        "count": 54
+      },
+      {
+        "identity": "5b145f62-35aa-53e3-b038-c34df5e915ce",
+        "count": 51
+      },
+      {
+        "identity": "36dbed11-d1cb-5d59-86f0-dceb08aa4bdd",
+        "count": 46
+      },
+      {
+        "identity": "42320404-0da1-5cba-851f-f0a7fc7ccf1f",
+        "count": 41
+      },
+      {
+        "identity": "48f742a2-220d-5a4e-8bee-56d20217e42a",
+        "count": 41
+      },
+      {
+        "identity": "644d7723-64e0-55bb-9fb1-833db9d15a0b",
+        "count": 41
+      },
+      {
+        "identity": "73775a55-01df-53ef-b4f1-0c903c239557",
+        "count": 41
+      },
+      {
+        "identity": "be0c27a9-6fdb-5af9-a6c2-39b9efaec8d3",
+        "count": 41
+      },
+      {
+        "identity": "c6733700-27c2-53ba-a49e-355156b6dc99",
+        "count": 36
+      },
+      {
+        "identity": "5eec22ba-01f9-53c1-9adc-f0d437a427f6",
+        "count": 35
+      },
+      {
+        "identity": "69ea02a8-9236-5527-a832-9ca78630f00a",
+        "count": 35
+      },
+      {
+        "identity": "8aef3b68-286c-5d80-82ed-537f59a4ca6f",
+        "count": 35
+      },
+      {
+        "identity": "afd7ec38-1a8b-569f-a4a9-92f9c872d409",
+        "count": 35
+      },
+      {
+        "identity": "2ef902ca-e1e9-57c6-a483-c13f71cafaa3",
+        "count": 34
+      },
+      {
+        "identity": "a1d29788-1426-5d6b-882b-dc58cee1b7cc",
+        "count": 34
+      },
+      {
+        "identity": "8c4490c4-e07a-53ed-8016-ebb2a92662d0",
+        "count": 33
+      },
+      {
+        "identity": "3c195d9f-490e-5ea7-a421-1dfc4f438ce1",
+        "count": 32
+      }
+    ],
+    "representative_feasible_alternatives": [
+      {
+        "via": {
+          "via_native_mm": [
+            105.13,
+            104.627692
+          ],
+          "projected_from": {
+            "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+            "kind": "filled_island_boundary",
+            "xy": [
+              105.369305,
+              104.127692
+            ]
+          },
+          "projection_distance_mm": 0.554317,
+          "reasons": [],
+          "obstacle_uuids": [],
+          "minimum_foreign_copper_clearance_by_layer": [
+            {
+              "layer": "F.Cu",
+              "clearance_mm": 0.353002
+            },
+            {
+              "layer": "In1.Cu",
+              "clearance_mm": 1.246055
+            },
+            {
+              "layer": "In2.Cu",
+              "clearance_mm": 1.246055
+            },
+            {
+              "layer": "B.Cu",
+              "clearance_mm": 0.402193
+            }
+          ],
+          "minimum_hole_or_slot_clearance_mm": 1.523054,
+          "minimum_contact_clearance_mm": 0.253002,
+          "MAIN_In1_island_uuid": "332d3ba8-ed46-550f-912f-bb402cd2a16b:In1.Cu:island:0",
+          "positive_area_F_or_B_SMD_overlap": []
+        },
+        "mode": "direct",
+        "source_join": {
+          "uuid": "eeb14354-646c-561c-9f60-42db853995e2",
+          "kind": "pad_center",
+          "xy": [
+            106.010546,
+            103.640537
+          ]
+        },
+        "F_polyline_native_mm": [
+          [
+            106.010546,
+            103.640537
+          ],
+          [
+            105.13,
+            104.627692
+          ]
+        ],
+        "new_F_trace_length_mm": 1.322814,
+        "minimum_F_foreign_clearance_mm": 0.209621,
+        "segment_clearances_mm": [
+          0.209621
+        ],
+        "pad_to_via_metrics": {
+          "C6.1": {
+            "BFS_connectivity_witness_nodes": [
+              {
+                "uuid": "f818a426-8ffb-52a3-99c0-cf755406426a",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+                "layer": "F.Cu",
+                "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+                "filled_island_index": 5
+              },
+              {
+                "uuid": "eeb14354-646c-561c-9f60-42db853995e2",
+                "layer": "F.Cu"
+              }
+            ],
+            "existing_track_primitives": [],
+            "existing_track_primitive_sum_mm": 0,
+            "new_F_trace_length_mm": 1.322814,
+            "added_escape_trace_only_mm": 1.322814,
+            "full_pad_to_via_planar_distance_status": "not_resolved_through_filled_island",
+            "metric_limit": "The native graph connects this pad to the C13.2 join through a filled F GND island without a defined centreline. The 1.322814 mm value is only the new escape trace and is not a conservative full pad-to-via distance."
+          },
+          "C7.1": {
+            "BFS_connectivity_witness_nodes": [
+              {
+                "uuid": "c7fdabb0-8a1b-52e9-9c10-46c9666362be",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+                "layer": "F.Cu",
+                "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+                "filled_island_index": 5
+              },
+              {
+                "uuid": "eeb14354-646c-561c-9f60-42db853995e2",
+                "layer": "F.Cu"
+              }
+            ],
+            "existing_track_primitives": [],
+            "existing_track_primitive_sum_mm": 0,
+            "new_F_trace_length_mm": 1.322814,
+            "added_escape_trace_only_mm": 1.322814,
+            "full_pad_to_via_planar_distance_status": "not_resolved_through_filled_island",
+            "metric_limit": "The native graph connects this pad to the C13.2 join through a filled F GND island without a defined centreline. The 1.322814 mm value is only the new escape trace and is not a conservative full pad-to-via distance."
+          },
+          "C8.2": {
+            "BFS_connectivity_witness_nodes": [
+              {
+                "uuid": "3469b12a-6611-59ea-88af-0a940c1ede84",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+                "layer": "F.Cu",
+                "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+                "filled_island_index": 5
+              },
+              {
+                "uuid": "eeb14354-646c-561c-9f60-42db853995e2",
+                "layer": "F.Cu"
+              }
+            ],
+            "existing_track_primitives": [],
+            "existing_track_primitive_sum_mm": 0,
+            "new_F_trace_length_mm": 1.322814,
+            "added_escape_trace_only_mm": 1.322814,
+            "full_pad_to_via_planar_distance_status": "not_resolved_through_filled_island",
+            "metric_limit": "The native graph connects this pad to the C13.2 join through a filled F GND island without a defined centreline. The 1.322814 mm value is only the new escape trace and is not a conservative full pad-to-via distance."
+          },
+          "C13.2": {
+            "BFS_connectivity_witness_nodes": [
+              {
+                "uuid": "eeb14354-646c-561c-9f60-42db853995e2",
+                "layer": "F.Cu"
+              }
+            ],
+            "existing_track_primitives": [],
+            "existing_track_primitive_sum_mm": 0,
+            "new_F_trace_length_mm": 1.322814,
+            "added_escape_trace_only_mm": 1.322814,
+            "full_pad_to_via_planar_distance_status": "not_resolved_through_filled_island",
+            "metric_limit": "The native graph connects this pad to the C13.2 join through a filled F GND island without a defined centreline. The 1.322814 mm value is only the new escape trace and is not a conservative full pad-to-via distance."
+          },
+          "C17.2": {
+            "BFS_connectivity_witness_nodes": [
+              {
+                "uuid": "ae23f9d1-8f1c-5b12-b8ae-b81f9e40c6bc",
+                "layer": "F.Cu"
+              },
+              {
+                "uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3:F.Cu:island:5",
+                "layer": "F.Cu",
+                "zone_uuid": "42e3abc5-2c92-5943-8944-bee0da8523c3",
+                "filled_island_index": 5
+              },
+              {
+                "uuid": "eeb14354-646c-561c-9f60-42db853995e2",
+                "layer": "F.Cu"
+              }
+            ],
+            "existing_track_primitives": [],
+            "existing_track_primitive_sum_mm": 0,
+            "new_F_trace_length_mm": 1.322814,
+            "added_escape_trace_only_mm": 1.322814,
+            "full_pad_to_via_planar_distance_status": "not_resolved_through_filled_island",
+            "metric_limit": "The native graph connects this pad to the C13.2 join through a filled F GND island without a defined centreline. The 1.322814 mm value is only the new escape trace and is not a conservative full pad-to-via distance."
+          }
+        },
+        "shared_existing_return_tracks_all_five_paths": [],
+        "shared_return_geometry_limit": "All five pad witnesses enter the same filled F GND island directly; no shared track centreline primitives are returned by the native graph. Filled-area current-spreading length and width require Astra review and are not represented by the empty track list.",
+        "actual_MAIN_In1_coverage_under_new_F_route": {
+          "sample_pitch_max_mm": 0.1,
+          "sample_count": 15,
+          "covered_count": 15,
+          "coverage_fraction": 1.0,
+          "has_discontinuity": false
+        }
+      }
+    ],
+    "known_supply_return_pairs": {
+      "C6.1": [
+        {
+          "pad": "C6.2",
+          "uuid": "c44d1502-08ca-5dce-ac3c-ece42574f0af",
+          "net": "VCORE",
+          "xy_native_mm": [
+            104.989898,
+            99.999744
+          ]
+        }
+      ],
+      "C7.1": [
+        {
+          "pad": "C7.2",
+          "uuid": "b862d9a3-1b09-5fea-9268-6b0256983e4f",
+          "net": "VCORE",
+          "xy_native_mm": [
+            107.295336,
+            102.200014
+          ]
+        }
+      ],
+      "C8.2": [
+        {
+          "pad": "C8.1",
+          "uuid": "2563a195-c1cf-5a3d-9f3c-392fd7b1dc59",
+          "net": "VCORE",
+          "xy_native_mm": [
+            104.993069,
+            102.430145
+          ]
+        }
+      ],
+      "C13.2": [
+        {
+          "pad": "C13.1",
+          "uuid": "5b145f62-35aa-53e3-b038-c34df5e915ce",
+          "net": "+3V3",
+          "xy_native_mm": [
+            104.994546,
+            103.640537
+          ]
+        }
+      ],
+      "C17.2": [
+        {
+          "pad": "C17.1",
+          "uuid": "8d77f32a-791e-5688-abb4-ad75231c4c34",
+          "net": "+3V3",
+          "xy_native_mm": [
+            104.991429,
+            101.217675
+          ]
+        }
+      ]
+    },
+    "C8_native_value": "1uF/25V",
+    "evidence_sha256": "3f882a058a5ed644b0716044a3a2374a873b5d1a7176896d3f464df919d80549",
+    "authoring_tool_sha256": "01e9dde5978c0a7f4b9b08a30d43cf90c8cf6a5cf5e35edabdccac9745ad6189",
+    "elapsed_seconds": 21.594,
+    "limits": [
+      "Candidate geometry is not written to the PCB and requires Astra return-path review.",
+      "Path primitive sums are conservative connectivity witnesses, not exact shortest electrical distances.",
+      "No powered, PI, transient, loop-area, stackup, fabrication or safety qualification."
+    ]
+  }
+}

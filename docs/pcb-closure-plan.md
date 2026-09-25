@@ -166,6 +166,26 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 25 off-contact via found; one staged candidate is released.**
+The [escape assessment](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-east-ground-escape-assessment.json)
+records the exhausted direct/dogleg F-to-MAIN screen separately from the
+subsequent 169-position off-contact via screen. One alternative has both
+a legal via and a short F escape: C13.2 GND at `(106.010546, 103.640537)`
+to `(105.13, 104.627692)`, with a 0.25 mm trace and a 0.604/0.35 mm
+ordinary through-via. The added trace is 1.322814 mm; this is not the
+complete capacitor return-path length. Nominal modeled contact clearance
+is 0.253002 mm, not a manufacturing-tolerance qualification.
+
+Astra releases only those two new copper nodes in a separate staged PCB,
+with qualified two-zone refill, preserved source/private returns and
+fresh connectivity/clearance checks. Expected connectivity is 38 to 37
+opens. All five grounds must reach In1 MAIN and the MCU ground pad.
+Review actual filled F/In1 geometry before acceptance: the shared F island
+has no defined centreline, and the earlier 15-point In1 screen does not
+prove continuous reference coverage. Active PCB `d2a098b0...`, manifest
+`aa68559e...` and the accepted CAD remain unchanged pending review.
+No supply/USB reroute, part move, new search or active promotion is released.
+
 **September 25 owner resumption: assess a different ground escape.**
 The owner resumed from `1ac52ba`. Astra released one eight-minute read-only
 Sol assessment of the existing C6/C7/C8/C13/C17 GND group's complete copper,
