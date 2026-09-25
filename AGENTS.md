@@ -10,9 +10,12 @@
   changes. Preserve historical IMU CAD; exact mechanical rebinding is
   required for the new PCB bytes. VCORE preparation found no path in its
   bounded fixed-route screens; C18 ground also remains isolated. The
-  closure-plan top proposes a coordinated local MCU supply/return study,
-  pending owner scope choice. No VCORE route or move is released; Sol is
-  idle. Do not treat the negative screens as proof of impossibility.
+  owner-approved coordinated study produced a rejected trial and bounded
+  negative port map. Sol is idle pending Astra's blocker/scope disposition;
+  no accepted-PCB routing, movement or broader power-corridor release is
+  authorized. Do not treat those screens as proof of impossibility.
+  Apply the placement/transition-access and process gates consolidated in
+  `docs/routing-agent-policy.md`.
   Exact scope and stopping conditions are at the closure-plan top.
 - **September 24 resumed:** the owner explicitly resumed work. Start from
   the repaired supply candidate and the two recorded signal conflicts,

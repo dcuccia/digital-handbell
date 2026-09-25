@@ -1,0 +1,3799 @@
+{
+  "schema_version": 1,
+  "status": "REJECTED_TRIAL_RETAINED_PORT_ONLY_MAP_COMPLETE",
+  "scope": "Coordinated local MCU VCORE/+3V3/GND relayout study; accepted design bytes unchanged.",
+  "source_bindings": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "inventory_sha256": "1fcc80c3faf6239b4fd16e2a16cf12befc9a9b92abb42f697bcaa7b1fe378397",
+    "contact_model_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "native_version": "10.0.6"
+  },
+  "identity_basis": {
+    "C6": "0.1uF DVDD50 decoupler",
+    "C8": "1uF/25V VREG_VOUT45 output capacitor",
+    "C7": "0.1uF existing VCORE source-group capacitor",
+    "C17": "1uF/25V capacitor between +3V3 and GND. Native connectivity places C17.1 in the broad +3V3 group; this does not prove a dedicated association with any single IC1 supply pin.",
+    "C18": "0.1uF DVDD23 decoupler; pad 1 GND currently isolated"
+  },
+  "evaluated_topology": {
+    "name": "rejected_east_F_spine_plus_dual_transition_In2_backbone",
+    "summary": "One coordinated trial moved only C6/C7/C8/C17/C18, attempted to join DVDD50 and VREG_VOUT45 locally on F after replacing the two proved +3V3 blockers, transition VCORE to In2 south-west of BT1, cross on In2, return to F west of BT2, and give C18 a separate GND via. It failed the fixed-copper screen and is not proposed for implementation.",
+    "old_poses": {
+      "C6": {
+        "footprint_uuid": "55f1465c-044d-5c4f-b229-7257d9a72f18",
+        "value": "0.1uF",
+        "pose_native_mm_deg": [
+          105.497898,
+          99.999744,
+          180.0
+        ],
+        "pads": {
+          "1": {
+            "uuid": "f818a426-8ffb-52a3-99c0-cf755406426a",
+            "net": "GND",
+            "xy_native_mm": [
+              106.005898,
+              99.999744
+            ]
+          },
+          "2": {
+            "uuid": "c44d1502-08ca-5dce-ac3c-ece42574f0af",
+            "net": "VCORE",
+            "xy_native_mm": [
+              104.989898,
+              99.999744
+            ]
+          }
+        }
+      },
+      "C7": {
+        "footprint_uuid": "8ff1b63c-8cb2-5067-9b2b-242bbc8255dd",
+        "value": "0.1uF",
+        "pose_native_mm_deg": [
+          107.803336,
+          102.200014,
+          180.0
+        ],
+        "pads": {
+          "1": {
+            "uuid": "c7fdabb0-8a1b-52e9-9c10-46c9666362be",
+            "net": "GND",
+            "xy_native_mm": [
+              108.311336,
+              102.200014
+            ]
+          },
+          "2": {
+            "uuid": "b862d9a3-1b09-5fea-9268-6b0256983e4f",
+            "net": "VCORE",
+            "xy_native_mm": [
+              107.295336,
+              102.200014
+            ]
+          }
+        }
+      },
+      "C8": {
+        "footprint_uuid": "715c95ff-be01-5b4a-8082-26caed999a3a",
+        "value": "1uF/25V",
+        "pose_native_mm_deg": [
+          105.501069,
+          102.430145,
+          0.0
+        ],
+        "pads": {
+          "1": {
+            "uuid": "2563a195-c1cf-5a3d-9f3c-392fd7b1dc59",
+            "net": "VCORE",
+            "xy_native_mm": [
+              104.993069,
+              102.430145
+            ]
+          },
+          "2": {
+            "uuid": "3469b12a-6611-59ea-88af-0a940c1ede84",
+            "net": "GND",
+            "xy_native_mm": [
+              106.009069,
+              102.430145
+            ]
+          }
+        }
+      },
+      "C17": {
+        "footprint_uuid": "2dc41696-5d01-589c-9078-b2d2221eeea2",
+        "value": "1uF/25V",
+        "pose_native_mm_deg": [
+          105.499429,
+          101.217675,
+          0.0
+        ],
+        "pads": {
+          "1": {
+            "uuid": "8d77f32a-791e-5688-abb4-ad75231c4c34",
+            "net": "+3V3",
+            "xy_native_mm": [
+              104.991429,
+              101.217675
+            ]
+          },
+          "2": {
+            "uuid": "ae23f9d1-8f1c-5b12-b8ae-b81f9e40c6bc",
+            "net": "GND",
+            "xy_native_mm": [
+              106.007429,
+              101.217675
+            ]
+          }
+        }
+      },
+      "C18": {
+        "footprint_uuid": "48f07f00-836a-57e1-9bde-e0f13eae1259",
+        "value": "0.1uF",
+        "pose_native_mm_deg": [
+          94.80364,
+          101.003449,
+          0.0
+        ],
+        "pads": {
+          "1": {
+            "uuid": "7d20a7c4-d0aa-5298-acc2-e271a4c73041",
+            "net": "GND",
+            "xy_native_mm": [
+              94.29564,
+              101.003449
+            ]
+          },
+          "2": {
+            "uuid": "962b494d-4fe2-500b-b5aa-91d63ebd447e",
+            "net": "VCORE",
+            "xy_native_mm": [
+              95.31164,
+              101.003449
+            ]
+          }
+        }
+      }
+    },
+    "proposed_poses": {
+      "C6": [
+        104.308,
+        99.4,
+        180.0
+      ],
+      "C7": [
+        104.308,
+        103.0,
+        180.0
+      ],
+      "C8": [
+        104.308,
+        101.8,
+        0.0
+      ],
+      "C17": [
+        104.8,
+        100.6,
+        90.0
+      ],
+      "C18": [
+        95.55,
+        102.2,
+        0.0
+      ]
+    },
+    "proposed_pad_positions": {
+      "C6": {
+        "1": {
+          "uuid": "f818a426-8ffb-52a3-99c0-cf755406426a",
+          "net": "GND",
+          "xy_native_mm": [
+            104.816,
+            99.4
+          ]
+        },
+        "2": {
+          "uuid": "c44d1502-08ca-5dce-ac3c-ece42574f0af",
+          "net": "VCORE",
+          "xy_native_mm": [
+            103.8,
+            99.4
+          ]
+        }
+      },
+      "C7": {
+        "1": {
+          "uuid": "c7fdabb0-8a1b-52e9-9c10-46c9666362be",
+          "net": "GND",
+          "xy_native_mm": [
+            104.816,
+            103.0
+          ]
+        },
+        "2": {
+          "uuid": "b862d9a3-1b09-5fea-9268-6b0256983e4f",
+          "net": "VCORE",
+          "xy_native_mm": [
+            103.8,
+            103.0
+          ]
+        }
+      },
+      "C8": {
+        "1": {
+          "uuid": "2563a195-c1cf-5a3d-9f3c-392fd7b1dc59",
+          "net": "VCORE",
+          "xy_native_mm": [
+            103.8,
+            101.8
+          ]
+        },
+        "2": {
+          "uuid": "3469b12a-6611-59ea-88af-0a940c1ede84",
+          "net": "GND",
+          "xy_native_mm": [
+            104.816,
+            101.8
+          ]
+        }
+      },
+      "C17": {
+        "1": {
+          "uuid": "8d77f32a-791e-5688-abb4-ad75231c4c34",
+          "net": "+3V3",
+          "xy_native_mm": [
+            104.8,
+            101.108
+          ]
+        },
+        "2": {
+          "uuid": "ae23f9d1-8f1c-5b12-b8ae-b81f9e40c6bc",
+          "net": "GND",
+          "xy_native_mm": [
+            104.8,
+            100.092
+          ]
+        }
+      },
+      "C18": {
+        "1": {
+          "uuid": "7d20a7c4-d0aa-5298-acc2-e271a4c73041",
+          "net": "GND",
+          "xy_native_mm": [
+            95.042,
+            102.2
+          ]
+        },
+        "2": {
+          "uuid": "962b494d-4fe2-500b-b5aa-91d63ebd447e",
+          "net": "VCORE",
+          "xy_native_mm": [
+            96.058,
+            102.2
+          ]
+        }
+      }
+    },
+    "released_replacement_track_uuids": [
+      "285807bb-29bc-5ab2-be71-6e26371cc4a2",
+      "3cf869f6-b5ad-53c7-ab3d-1d6df72627af",
+      "63a6f798-8c1e-5889-9313-882bb3332b1d",
+      "75b4f4dd-4137-57a3-9222-82ffe72ea4b6",
+      "79aeda89-5eca-5e6a-ba9b-5cf9dbe00b8b",
+      "7e1530c2-4c4b-5570-8ab0-0056c13dfc92",
+      "7e2d5441-9c17-519c-b4fc-81d09272b6fb",
+      "8fbeda44-b697-5c49-95da-422888d65ba2",
+      "a53a994b-cd92-5f2b-b51a-302e38ee713a",
+      "a6d01b99-a504-5ae5-b953-c0549204ca6e",
+      "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+      "e6d0009c-ca45-5808-9638-211872e52f67",
+      "f55cd55c-14f3-505e-9269-710007ab070c",
+      "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+    ],
+    "release_semantics": "These were the exact local VCORE/+3V3/GND tracks removed only from the disposable obstacle model. They are not released for implementation. Every pad in their existing connected groups remains a required endpoint.",
+    "F_routes": [
+      {
+        "name": "east_DVDD50_C6",
+        "net": "VCORE",
+        "points": [
+          [
+            103.45,
+            99.8
+          ],
+          [
+            103.8,
+            99.4
+          ]
+        ],
+        "length_mm": 0.531507,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "5d8ee764-fc16-570b-bb11-c5fe22ef5e4c",
+            "net": "QSPI_DATA[3]"
+          },
+          {
+            "uuid": "6a3c1f05-b5d1-56b9-9434-fecbcd951ae4",
+            "net": "QSPI_DATA[3]"
+          },
+          {
+            "uuid": "6b7693ff-0387-56ee-b67a-87adc3ec8398",
+            "net": "QSPI_SCK"
+          },
+          {
+            "uuid": "767f3ac1-df17-581d-b627-97f2efe40e56",
+            "net": "QSPI_SCK"
+          },
+          {
+            "uuid": "91474799-83e3-591c-921d-a61e294a2d57",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "bf3014f1-84e2-52af-aac5-7bcc596611f0",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "dd7238e0-d1af-50ce-916c-f31659475919",
+            "net": "+3V3"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      },
+      {
+        "name": "east_VCORE_spine",
+        "net": "VCORE",
+        "points": [
+          [
+            103.8,
+            99.4
+          ],
+          [
+            103.8,
+            101.8
+          ],
+          [
+            103.8,
+            101.8
+          ]
+        ],
+        "length_mm": 2.4,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "02f804ad-d343-5a69-acb2-8fb3b1737920",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "21695f06-862b-5b2d-b19b-ca18a4a35588",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "2a081967-55f9-5d88-8eab-bba114d4ca7b",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "3261f9d4-b49c-52c9-aeee-43659ff433d9",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+            "net": "D-"
+          },
+          {
+            "uuid": "4d59e9d2-a5f2-5b9e-a3d9-6d2abc5d9406",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "5d8ee764-fc16-570b-bb11-c5fe22ef5e4c",
+            "net": "QSPI_DATA[3]"
+          },
+          {
+            "uuid": "6a3c1f05-b5d1-56b9-9434-fecbcd951ae4",
+            "net": "QSPI_DATA[3]"
+          },
+          {
+            "uuid": "6b7693ff-0387-56ee-b67a-87adc3ec8398",
+            "net": "QSPI_SCK"
+          },
+          {
+            "uuid": "714f03ac-3ce4-506f-928e-f09a1a3419d0",
+            "net": "D+"
+          },
+          {
+            "uuid": "767f3ac1-df17-581d-b627-97f2efe40e56",
+            "net": "QSPI_SCK"
+          },
+          {
+            "uuid": "91474799-83e3-591c-921d-a61e294a2d57",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "9196d192-996b-58da-969a-d15c7a56fb02",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "b1809387-16c0-58ba-9fec-329d0b8784f8",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "bf3014f1-84e2-52af-aac5-7bcc596611f0",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "c685356b-9e03-52f8-a18d-dc715fd43105",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "cc6648ca-6e6c-5ad1-bbb8-c9e407dabbe9",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "cd332e8d-715a-5220-b05b-737ac9751408",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "dd7238e0-d1af-50ce-916c-f31659475919",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "e9eb0e93-97d9-52fa-b29a-61ef232b2894",
+            "net": "+3V3"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      },
+      {
+        "name": "source_VREG45_C8",
+        "net": "VCORE",
+        "points": [
+          [
+            103.45,
+            101.8
+          ],
+          [
+            103.8,
+            101.8
+          ]
+        ],
+        "length_mm": 0.35,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+            "net": "D-"
+          },
+          {
+            "uuid": "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "cd332e8d-715a-5220-b05b-737ac9751408",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "e9eb0e93-97d9-52fa-b29a-61ef232b2894",
+            "net": "+3V3"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      },
+      {
+        "name": "source_C7",
+        "net": "VCORE",
+        "points": [
+          [
+            103.8,
+            101.8
+          ],
+          [
+            103.8,
+            103.0
+          ],
+          [
+            103.8,
+            103.0
+          ]
+        ],
+        "length_mm": 1.2,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "0f1bf3ec-3a1b-50cc-90af-cd0e6596bbcc",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "15a2ee51-7818-5e48-8ba0-02851f49e21e",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "34ff4f24-e509-5e70-a3b1-dbd02fede2bf",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "3e4df99d-6b44-5068-8af3-c8f9656d4979",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "4346b415-d1c3-59cd-aae5-3a541578a29d",
+            "net": "D-"
+          },
+          {
+            "uuid": "66abff9b-a202-51da-b819-e151c24e2c35",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "6ed2d6c9-16e8-5cc0-a568-c0fdfa25d6ad",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "7635c66d-e094-5527-a83d-9d1975220ed1",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "a8c4e662-a3b3-5485-a99c-acd5a5825bcb",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "cb55f8f2-ef3e-5359-9c5d-d3510b66e7b6",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "cd332e8d-715a-5220-b05b-737ac9751408",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "dbe71c48-c528-5320-b57b-54cded700efa",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "ddf9b8e6-ee77-5cc3-bf61-05a803eee582",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "e9eb0e93-97d9-52fa-b29a-61ef232b2894",
+            "net": "+3V3"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      },
+      {
+        "name": "east_transition_escape",
+        "net": "VCORE",
+        "points": [
+          [
+            103.8,
+            103.0
+          ],
+          [
+            103.95,
+            103.55
+          ],
+          [
+            104.3,
+            104.3
+          ]
+        ],
+        "length_mm": 1.397735,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "15a2ee51-7818-5e48-8ba0-02851f49e21e",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "34ff4f24-e509-5e70-a3b1-dbd02fede2bf",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "3e4df99d-6b44-5068-8af3-c8f9656d4979",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "4de747a0-dee8-5b4d-bf01-8005c6384f1a",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "66abff9b-a202-51da-b819-e151c24e2c35",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "6ed2d6c9-16e8-5cc0-a568-c0fdfa25d6ad",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "a8c4e662-a3b3-5485-a99c-acd5a5825bcb",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "dbe71c48-c528-5320-b57b-54cded700efa",
+            "net": "+3V3"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      },
+      {
+        "name": "west_transition_escape",
+        "net": "VCORE",
+        "points": [
+          [
+            94.9,
+            103.3
+          ],
+          [
+            95.35,
+            102.75
+          ],
+          [
+            96.058,
+            102.2
+          ]
+        ],
+        "length_mm": 1.607162,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "18a4682b-cd3f-59a8-88a4-96cb0c399f3c",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "20895a67-1952-5c73-a18d-63bad41a9ac0",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "224d2286-c76b-58ef-bf83-cca890e8535a",
+            "net": "I2S_BCLK"
+          },
+          {
+            "uuid": "296d5e92-90fc-5523-8ae0-bcdc0cd49a82",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "36dc1208-6558-5574-98a0-93c517c7db41",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "4085a107-6baf-5b7b-aa8e-d890f67b1103",
+            "net": "I2S_DIN"
+          },
+          {
+            "uuid": "520b23c9-a9da-5341-968e-d428d9284de0",
+            "net": "VHI"
+          },
+          {
+            "uuid": "52831bb8-0139-5298-a713-8f36ee344093",
+            "net": "~{RESET}"
+          },
+          {
+            "uuid": "a37d0b63-f2ec-54e8-9c94-243fadee6560",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "dfaee85d-b98b-56f4-95af-1817d6ee5510",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      },
+      {
+        "name": "west_DVDD23_C18",
+        "net": "VCORE",
+        "points": [
+          [
+            96.058,
+            102.2
+          ],
+          [
+            96.25,
+            101.4
+          ],
+          [
+            96.55,
+            100.6
+          ]
+        ],
+        "length_mm": 1.677118,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "224d2286-c76b-58ef-bf83-cca890e8535a",
+            "net": "I2S_BCLK"
+          },
+          {
+            "uuid": "28848021-214a-5112-87e2-81a84e9b0b17",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "364c92a3-1532-58f7-9200-0ade1d3798c6",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "393903e2-ca9b-59e1-a05e-eeee4314ddb5",
+            "net": "SWDIO"
+          },
+          {
+            "uuid": "4085a107-6baf-5b7b-aa8e-d890f67b1103",
+            "net": "I2S_DIN"
+          },
+          {
+            "uuid": "52831bb8-0139-5298-a713-8f36ee344093",
+            "net": "~{RESET}"
+          },
+          {
+            "uuid": "d546fbb6-4e13-5833-996e-7fc885bed474",
+            "net": "SWCLK"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      },
+      {
+        "name": "C18_return",
+        "net": "GND",
+        "points": [
+          [
+            95.042,
+            102.2
+          ],
+          [
+            94.9,
+            103.1
+          ],
+          [
+            94.9,
+            104.2
+          ]
+        ],
+        "length_mm": 2.011133,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "18a4682b-cd3f-59a8-88a4-96cb0c399f3c",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "20895a67-1952-5c73-a18d-63bad41a9ac0",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "25f25ec6-2f01-5d5c-8de8-569be11f5ca9",
+            "net": "VHI"
+          },
+          {
+            "uuid": "296d5e92-90fc-5523-8ae0-bcdc0cd49a82",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "36dc1208-6558-5574-98a0-93c517c7db41",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "520b23c9-a9da-5341-968e-d428d9284de0",
+            "net": "VHI"
+          },
+          {
+            "uuid": "864bdadd-6d56-510d-9e10-e0d10d9c63f8",
+            "net": "VBAT"
+          },
+          {
+            "uuid": "a2aa13ef-f0ec-5bfd-a519-8d1e7c9bbf53",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "a37d0b63-f2ec-54e8-9c94-243fadee6560",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "c44d4d23-d846-55d7-a135-a93bf7ffe702",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "dfaee85d-b98b-56f4-95af-1817d6ee5510",
+            "net": "+3V3"
+          },
+          {
+            "uuid": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      },
+      {
+        "name": "C17_3V3_local",
+        "net": "+3V3",
+        "points": [
+          [
+            103.45,
+            100.2
+          ],
+          [
+            104.1,
+            100.2
+          ],
+          [
+            104.8,
+            101.108
+          ]
+        ],
+        "length_mm": 1.796501,
+        "fixed_foreign_hits": [
+          {
+            "uuid": "0e2e8444-80b8-5e84-aae6-f7c788f2566b",
+            "net": "VCORE"
+          },
+          {
+            "uuid": "2926377e-4800-5eca-9dcb-c369f23eef18",
+            "net": "VCORE"
+          },
+          {
+            "uuid": "ee2b9954-fc72-570c-8508-f1685fef2428",
+            "net": "VCORE"
+          }
+        ],
+        "passes_fixed_foreign_screen": false
+      }
+    ],
+    "ordinary_vias": [
+      {
+        "name": "east_VCORE_to_In2",
+        "net": "VCORE",
+        "centre_native_mm": [
+          104.3,
+          104.3
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "full_span": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "passes_fixed_screen": false,
+        "hits": [
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "a8c4e662-a3b3-5485-a99c-acd5a5825bcb",
+            "net": "+3V3",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+            "net": "+3V3",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "B.Cu",
+            "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+            "net": "VBAT",
+            "clearance_mm": 0.0
+          }
+        ],
+        "minimum_fixed_copper_clearance_by_layer_mm": {
+          "F.Cu": 0.0,
+          "In1.Cu": 0.288346,
+          "In2.Cu": 0.288346,
+          "B.Cu": 0.0
+        },
+        "minimum_contact_clearance_mm": 1.083
+      },
+      {
+        "name": "west_VCORE_from_In2",
+        "net": "VCORE",
+        "centre_native_mm": [
+          94.9,
+          103.3
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "full_span": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "passes_fixed_screen": false,
+        "hits": [
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "25f25ec6-2f01-5d5c-8de8-569be11f5ca9",
+            "net": "VHI",
+            "clearance_mm": 0.168116
+          },
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "520b23c9-a9da-5341-968e-d428d9284de0",
+            "net": "VHI",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "In1.Cu",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "In2.Cu",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "B.Cu",
+            "identity": "df4df6f7-9133-5352-90d9-830a2801b743",
+            "net": "VHI",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "B.Cu",
+            "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+            "net": "VHI",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "B.Cu",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "hole",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "clearance_mm": -0.020862
+          }
+        ],
+        "minimum_fixed_copper_clearance_by_layer_mm": {
+          "F.Cu": 0.0,
+          "In1.Cu": 0.0,
+          "In2.Cu": 0.0,
+          "B.Cu": 0.0
+        },
+        "minimum_contact_clearance_mm": 0.283
+      },
+      {
+        "name": "west_C18_return_to_In1",
+        "net": "GND",
+        "centre_native_mm": [
+          94.9,
+          104.2
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "full_span": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "passes_fixed_screen": false,
+        "hits": [
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "864bdadd-6d56-510d-9e10-e0d10d9c63f8",
+            "net": "VBAT",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "25f25ec6-2f01-5d5c-8de8-569be11f5ca9",
+            "net": "VHI",
+            "clearance_mm": 0.080799
+          },
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "520b23c9-a9da-5341-968e-d428d9284de0",
+            "net": "VHI",
+            "clearance_mm": 0.080799
+          },
+          {
+            "kind": "copper",
+            "layer": "F.Cu",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI",
+            "clearance_mm": 7.9e-05
+          },
+          {
+            "kind": "copper",
+            "layer": "In1.Cu",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI",
+            "clearance_mm": 7.9e-05
+          },
+          {
+            "kind": "copper",
+            "layer": "In2.Cu",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI",
+            "clearance_mm": 7.9e-05
+          },
+          {
+            "kind": "copper",
+            "layer": "B.Cu",
+            "identity": "df4df6f7-9133-5352-90d9-830a2801b743",
+            "net": "VHI",
+            "clearance_mm": 0.161368
+          },
+          {
+            "kind": "copper",
+            "layer": "B.Cu",
+            "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+            "net": "VHI",
+            "clearance_mm": 0.0
+          },
+          {
+            "kind": "copper",
+            "layer": "B.Cu",
+            "identity": "f2148815-45ba-5519-b656-60de22e1c38e",
+            "net": "VHI",
+            "clearance_mm": 7.9e-05
+          }
+        ],
+        "minimum_fixed_copper_clearance_by_layer_mm": {
+          "F.Cu": 0.0,
+          "In1.Cu": 7.9e-05,
+          "In2.Cu": 7.9e-05,
+          "B.Cu": 0.0
+        },
+        "minimum_contact_clearance_mm": 0.283
+      }
+    ],
+    "In2_backbone": {
+      "net": "VCORE",
+      "layer": "In2.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          104.3,
+          104.3
+        ],
+        [
+          100.0,
+          104.3
+        ],
+        [
+          94.9,
+          103.3
+        ]
+      ],
+      "length_mm": 9.497115
+    },
+    "GND_return": "The trial intended C6.1/C7.1/C8.2/C17.2 to remain on a refilled east F GND island feeding the accepted C13 stitch 8962d6a1-67d0-5647-ab62-4035ee08f832 / d5986491-6d78-52f6-99c9-86fbf841afcd, and C18.1 to receive a separate In1 via. The C18 via failed against fixed VHI/VBAT copper, so this return was not established.",
+    "plus3V3_restoration": "The trial replaced the local C17 crossing and exact blockers d269dfaa-bef6-5f59-b918-0cefd4b841f2 and fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c in its disposable model, while requiring every existing +3V3 pad to be restored. Even with those removals, the tested F routes still encountered additional fixed +3V3, USB, VHI, VBAT, clock and debug copper."
+  },
+  "prospective_fill_effects": {
+    "F_Cu": "Moved GND lands and new F routes require refill; local islands/clearance carves will change. The accepted C13 stitch and all five east-ground endpoints must remain one group.",
+    "In1_Cu": "Three ordinary via antipads are prospective; both VCORE antipads must preserve MAIN continuity, while the C18 GND via must land in MAIN.",
+    "In2_Cu": "VCORE backbone only; no plane or GND copper proposed."
+  },
+  "screen_result": {
+    "all_vias_pass_fixed_screen": false,
+    "all_F_routes_pass_fixed_foreign_screen": false,
+    "interpretation": "Fixed native pads/tracks/vias and complete modeled contacts were screened. Moved footprints and released replacement tracks were removed from the obstacle set; zone fill was treated as refillable. This is not DRC, fill, PI, current, thermal, stackup or CAD qualification."
+  },
+  "smallest_structural_constraint_requiring_decision": {
+    "constraint": "No paired ordinary off-contact transition was established while preserving all fixed non-capacitor copper. The east trial via at (104.3,104.3) intersects fixed B.Cu VBAT item c2af96d9-1246-51a5-a97c-ca696ec0eb98. The west VCORE and C18-return trial vias at (94.9,103.3)/(94.9,104.2) intersect fixed full-span VHI item f2148815-45ba-5519-b656-60de22e1c38e and associated VHI/B copper; the west return also intersects fixed VBAT item 864bdadd-6d56-510d-9e10-e0d10d9c63f8.",
+    "decision_needed": "No broader release is justified by the rejected trial. Establish transition-access feasibility before selecting capacitor poses or local route geometry.",
+    "bounded_conclusion": "The retained trial proves only that its selected poses, routes and three preselected transition centres fail. It does not establish a need to alter VHI/VBAT or move components outside C6/C7/C8/C17/C18."
+  },
+  "historical_widths_mm": {
+    "VCORE": [
+      0.1778,
+      0.2
+    ],
+    "proposal_screen_width": 0.25
+  },
+  "limits": [
+    "No accepted PCB, manifest, project, library, CAD or zone definition was changed.",
+    "0.25 mm is a geometric screening width, not a current rating.",
+    "Route lengths cover only rejected trial primitives, not complete electrical loop lengths.",
+    "Physical stackup, voltage drop, transients, thermal behavior and manufacturing tolerances remain unqualified."
+  ],
+  "review_overlay": {
+    "path": "reports/mcu-vcore-local-relayout-proposal.svg",
+    "sha256": "20455342f389dc3ae6754e52adddbdace6f65ebd278811af0ad0d187a03ea2bb"
+  },
+  "port_map_appendix": {
+    "status": "PORT_ONLY_GEOMETRIC_ACCESS_SCREEN_COMPLETE",
+    "source_bindings": {
+      "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+      "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+      "contact_model_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+      "native_version": "10.0.6"
+    },
+    "semantics": {
+      "ordinary_via_diameter_drill_mm": [
+        0.604,
+        0.35
+      ],
+      "full_span": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ],
+      "fixed_copper_clearance_mm": 0.2,
+      "hole_contact_clearance_mm": 0.25,
+      "same_net_SMD_offpad_included": true,
+      "zones": "F/In1 filled zone polygons omitted as refillable; prospective antipads/carves require later continuity review.",
+      "strict": "All current native pads/tracks/vias are hard obstacles.",
+      "conditional": "Only five moved-cap pad lands and exact candidate-local F +3V3/VCORE/GND tracks listed below are omitted. All other copper remains fixed."
+    },
+    "conditional_inventory": {
+      "released_footprint_pad_uuids": {
+        "f818a426-8ffb-52a3-99c0-cf755406426a": {
+          "reference": "C6",
+          "pad": "1",
+          "net": "GND"
+        },
+        "c44d1502-08ca-5dce-ac3c-ece42574f0af": {
+          "reference": "C6",
+          "pad": "2",
+          "net": "VCORE"
+        },
+        "c7fdabb0-8a1b-52e9-9c10-46c9666362be": {
+          "reference": "C7",
+          "pad": "1",
+          "net": "GND"
+        },
+        "b862d9a3-1b09-5fea-9268-6b0256983e4f": {
+          "reference": "C7",
+          "pad": "2",
+          "net": "VCORE"
+        },
+        "2563a195-c1cf-5a3d-9f3c-392fd7b1dc59": {
+          "reference": "C8",
+          "pad": "1",
+          "net": "VCORE"
+        },
+        "3469b12a-6611-59ea-88af-0a940c1ede84": {
+          "reference": "C8",
+          "pad": "2",
+          "net": "GND"
+        },
+        "8d77f32a-791e-5688-abb4-ad75231c4c34": {
+          "reference": "C17",
+          "pad": "1",
+          "net": "+3V3"
+        },
+        "ae23f9d1-8f1c-5b12-b8ae-b81f9e40c6bc": {
+          "reference": "C17",
+          "pad": "2",
+          "net": "GND"
+        },
+        "7d20a7c4-d0aa-5298-acc2-e271a4c73041": {
+          "reference": "C18",
+          "pad": "1",
+          "net": "GND"
+        },
+        "962b494d-4fe2-500b-b5aa-91d63ebd447e": {
+          "reference": "C18",
+          "pad": "2",
+          "net": "VCORE"
+        }
+      },
+      "released_candidate_local_track_uuids": [
+        "285807bb-29bc-5ab2-be71-6e26371cc4a2",
+        "3cf869f6-b5ad-53c7-ab3d-1d6df72627af",
+        "63a6f798-8c1e-5889-9313-882bb3332b1d",
+        "75b4f4dd-4137-57a3-9222-82ffe72ea4b6",
+        "79aeda89-5eca-5e6a-ba9b-5cf9dbe00b8b",
+        "7e1530c2-4c4b-5570-8ab0-0056c13dfc92",
+        "7e2d5441-9c17-519c-b4fc-81d09272b6fb",
+        "8fbeda44-b697-5c49-95da-422888d65ba2",
+        "a53a994b-cd92-5f2b-b51a-302e38ee713a",
+        "a6d01b99-a504-5ae5-b953-c0549204ca6e",
+        "d269dfaa-bef6-5f59-b918-0cefd4b841f2",
+        "e6d0009c-ca45-5808-9638-211872e52f67",
+        "f55cd55c-14f3-505e-9269-710007ab070c",
+        "fcbd8a3e-d67e-55bf-bc7c-7f2822b47e3c"
+      ],
+      "restoration_dependencies": [
+        "All currently connected VCORE endpoints must be restored.",
+        "Every pad in the existing +3V3 connected group must remain connected; C17 group membership is not a dedicated-pin assignment.",
+        "C6.1/C7.1/C8.2/C17.2 must remain connected through the accepted C13 stitch.",
+        "C18.1 requires a credible In1 MAIN return before west VCORE acceptance."
+      ]
+    },
+    "candidate_inventory": {
+      "total_unique_positions": 160,
+      "east_window": {
+        "bounds": [
+          104.96,
+          103.1,
+          105.13,
+          106.0
+        ],
+        "positions": [
+          [
+            104.96,
+            103.1
+          ],
+          [
+            105.0025,
+            103.1
+          ],
+          [
+            105.045,
+            103.1
+          ],
+          [
+            105.0875,
+            103.1
+          ],
+          [
+            105.13,
+            103.1
+          ],
+          [
+            104.96,
+            103.293333
+          ],
+          [
+            105.0025,
+            103.293333
+          ],
+          [
+            105.045,
+            103.293333
+          ],
+          [
+            105.0875,
+            103.293333
+          ],
+          [
+            105.13,
+            103.293333
+          ],
+          [
+            104.96,
+            103.486667
+          ],
+          [
+            105.0025,
+            103.486667
+          ],
+          [
+            105.045,
+            103.486667
+          ],
+          [
+            105.0875,
+            103.486667
+          ],
+          [
+            105.13,
+            103.486667
+          ],
+          [
+            104.96,
+            103.68
+          ],
+          [
+            105.0025,
+            103.68
+          ],
+          [
+            105.045,
+            103.68
+          ],
+          [
+            105.0875,
+            103.68
+          ],
+          [
+            105.13,
+            103.68
+          ],
+          [
+            104.96,
+            103.873333
+          ],
+          [
+            105.0025,
+            103.873333
+          ],
+          [
+            105.045,
+            103.873333
+          ],
+          [
+            105.0875,
+            103.873333
+          ],
+          [
+            105.13,
+            103.873333
+          ],
+          [
+            104.96,
+            104.066667
+          ],
+          [
+            105.0025,
+            104.066667
+          ],
+          [
+            105.045,
+            104.066667
+          ],
+          [
+            105.0875,
+            104.066667
+          ],
+          [
+            105.13,
+            104.066667
+          ],
+          [
+            104.96,
+            104.26
+          ],
+          [
+            105.0025,
+            104.26
+          ],
+          [
+            105.045,
+            104.26
+          ],
+          [
+            105.0875,
+            104.26
+          ],
+          [
+            105.13,
+            104.26
+          ],
+          [
+            104.96,
+            104.453333
+          ],
+          [
+            105.0025,
+            104.453333
+          ],
+          [
+            105.045,
+            104.453333
+          ],
+          [
+            105.0875,
+            104.453333
+          ],
+          [
+            105.13,
+            104.453333
+          ],
+          [
+            104.96,
+            104.646667
+          ],
+          [
+            105.0025,
+            104.646667
+          ],
+          [
+            105.045,
+            104.646667
+          ],
+          [
+            105.0875,
+            104.646667
+          ],
+          [
+            105.13,
+            104.646667
+          ],
+          [
+            104.96,
+            104.84
+          ],
+          [
+            105.0025,
+            104.84
+          ],
+          [
+            105.045,
+            104.84
+          ],
+          [
+            105.0875,
+            104.84
+          ],
+          [
+            105.13,
+            104.84
+          ],
+          [
+            104.96,
+            105.033333
+          ],
+          [
+            105.0025,
+            105.033333
+          ],
+          [
+            105.045,
+            105.033333
+          ],
+          [
+            105.0875,
+            105.033333
+          ],
+          [
+            105.13,
+            105.033333
+          ],
+          [
+            104.96,
+            105.226667
+          ],
+          [
+            105.0025,
+            105.226667
+          ],
+          [
+            105.045,
+            105.226667
+          ],
+          [
+            105.0875,
+            105.226667
+          ],
+          [
+            105.13,
+            105.226667
+          ],
+          [
+            104.96,
+            105.42
+          ],
+          [
+            105.0025,
+            105.42
+          ],
+          [
+            105.045,
+            105.42
+          ],
+          [
+            105.0875,
+            105.42
+          ],
+          [
+            105.13,
+            105.42
+          ],
+          [
+            104.96,
+            105.613333
+          ],
+          [
+            105.0025,
+            105.613333
+          ],
+          [
+            105.045,
+            105.613333
+          ],
+          [
+            105.0875,
+            105.613333
+          ],
+          [
+            105.13,
+            105.613333
+          ],
+          [
+            104.96,
+            105.806667
+          ],
+          [
+            105.0025,
+            105.806667
+          ],
+          [
+            105.045,
+            105.806667
+          ],
+          [
+            105.0875,
+            105.806667
+          ],
+          [
+            105.13,
+            105.806667
+          ],
+          [
+            104.96,
+            106.0
+          ],
+          [
+            105.0025,
+            106.0
+          ],
+          [
+            105.045,
+            106.0
+          ],
+          [
+            105.0875,
+            106.0
+          ],
+          [
+            105.13,
+            106.0
+          ]
+        ]
+      },
+      "west_window": {
+        "bounds": [
+          94.87,
+          103.1,
+          95.25,
+          106.0
+        ],
+        "positions": [
+          [
+            94.87,
+            103.1
+          ],
+          [
+            94.965,
+            103.1
+          ],
+          [
+            95.06,
+            103.1
+          ],
+          [
+            95.155,
+            103.1
+          ],
+          [
+            95.25,
+            103.1
+          ],
+          [
+            94.87,
+            103.293333
+          ],
+          [
+            94.965,
+            103.293333
+          ],
+          [
+            95.06,
+            103.293333
+          ],
+          [
+            95.155,
+            103.293333
+          ],
+          [
+            95.25,
+            103.293333
+          ],
+          [
+            94.87,
+            103.486667
+          ],
+          [
+            94.965,
+            103.486667
+          ],
+          [
+            95.06,
+            103.486667
+          ],
+          [
+            95.155,
+            103.486667
+          ],
+          [
+            95.25,
+            103.486667
+          ],
+          [
+            94.87,
+            103.68
+          ],
+          [
+            94.965,
+            103.68
+          ],
+          [
+            95.06,
+            103.68
+          ],
+          [
+            95.155,
+            103.68
+          ],
+          [
+            95.25,
+            103.68
+          ],
+          [
+            94.87,
+            103.873333
+          ],
+          [
+            94.965,
+            103.873333
+          ],
+          [
+            95.06,
+            103.873333
+          ],
+          [
+            95.155,
+            103.873333
+          ],
+          [
+            95.25,
+            103.873333
+          ],
+          [
+            94.87,
+            104.066667
+          ],
+          [
+            94.965,
+            104.066667
+          ],
+          [
+            95.06,
+            104.066667
+          ],
+          [
+            95.155,
+            104.066667
+          ],
+          [
+            95.25,
+            104.066667
+          ],
+          [
+            94.87,
+            104.26
+          ],
+          [
+            94.965,
+            104.26
+          ],
+          [
+            95.06,
+            104.26
+          ],
+          [
+            95.155,
+            104.26
+          ],
+          [
+            95.25,
+            104.26
+          ],
+          [
+            94.87,
+            104.453333
+          ],
+          [
+            94.965,
+            104.453333
+          ],
+          [
+            95.06,
+            104.453333
+          ],
+          [
+            95.155,
+            104.453333
+          ],
+          [
+            95.25,
+            104.453333
+          ],
+          [
+            94.87,
+            104.646667
+          ],
+          [
+            94.965,
+            104.646667
+          ],
+          [
+            95.06,
+            104.646667
+          ],
+          [
+            95.155,
+            104.646667
+          ],
+          [
+            95.25,
+            104.646667
+          ],
+          [
+            94.87,
+            104.84
+          ],
+          [
+            94.965,
+            104.84
+          ],
+          [
+            95.06,
+            104.84
+          ],
+          [
+            95.155,
+            104.84
+          ],
+          [
+            95.25,
+            104.84
+          ],
+          [
+            94.87,
+            105.033333
+          ],
+          [
+            94.965,
+            105.033333
+          ],
+          [
+            95.06,
+            105.033333
+          ],
+          [
+            95.155,
+            105.033333
+          ],
+          [
+            95.25,
+            105.033333
+          ],
+          [
+            94.87,
+            105.226667
+          ],
+          [
+            94.965,
+            105.226667
+          ],
+          [
+            95.06,
+            105.226667
+          ],
+          [
+            95.155,
+            105.226667
+          ],
+          [
+            95.25,
+            105.226667
+          ],
+          [
+            94.87,
+            105.42
+          ],
+          [
+            94.965,
+            105.42
+          ],
+          [
+            95.06,
+            105.42
+          ],
+          [
+            95.155,
+            105.42
+          ],
+          [
+            95.25,
+            105.42
+          ],
+          [
+            94.87,
+            105.613333
+          ],
+          [
+            94.965,
+            105.613333
+          ],
+          [
+            95.06,
+            105.613333
+          ],
+          [
+            95.155,
+            105.613333
+          ],
+          [
+            95.25,
+            105.613333
+          ],
+          [
+            94.87,
+            105.806667
+          ],
+          [
+            94.965,
+            105.806667
+          ],
+          [
+            95.06,
+            105.806667
+          ],
+          [
+            95.155,
+            105.806667
+          ],
+          [
+            95.25,
+            105.806667
+          ],
+          [
+            94.87,
+            106.0
+          ],
+          [
+            94.965,
+            106.0
+          ],
+          [
+            95.06,
+            106.0
+          ],
+          [
+            95.155,
+            106.0
+          ],
+          [
+            95.25,
+            106.0
+          ]
+        ]
+      }
+    },
+    "east_VCORE_port": {
+      "strict_fixed_native": {
+        "tested": 80,
+        "clear_count": 0,
+        "clear_centres": [],
+        "best_blocked": [
+          {
+            "centre_native_mm": [
+              104.96,
+              106.0
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.543488,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.357122,
+                "identity": "2f49a8db-9ea0-5b01-b543-35c160616851",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.357122,
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.619231,
+                "identity": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.696115,
+                "identity": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+                "net": "USB_D+",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              105.0025,
+              106.0
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.50734,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.395689,
+                "identity": "2f49a8db-9ea0-5b01-b543-35c160616851",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.395689,
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.641061,
+                "identity": "be0c27a9-6fdb-5af9-a6c2-39b9efaec8d3",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.65373,
+                "identity": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+                "net": "USB_D+",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              105.045,
+              106.0
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.471837,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.434472,
+                "identity": "2f49a8db-9ea0-5b01-b543-35c160616851",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.434472,
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.607661,
+                "identity": "be0c27a9-6fdb-5af9-a6c2-39b9efaec8d3",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.611354,
+                "identity": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+                "net": "USB_D+",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              104.96,
+              105.806667
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.462217,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.286283,
+                "identity": "2f49a8db-9ea0-5b01-b543-35c160616851",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.286283,
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.469276,
+                "identity": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.587168,
+                "identity": "d5986491-6d78-52f6-99c9-86fbf841afcd",
+                "net": "GND",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          }
+        ]
+      },
+      "conditional_five_caps_local_rework": {
+        "tested": 80,
+        "clear_count": 0,
+        "clear_centres": [],
+        "best_blocked": [
+          {
+            "centre_native_mm": [
+              104.96,
+              106.0
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.543488,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.357122,
+                "identity": "2f49a8db-9ea0-5b01-b543-35c160616851",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.357122,
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.619231,
+                "identity": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.696115,
+                "identity": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+                "net": "USB_D+",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              105.0025,
+              106.0
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.50734,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.395689,
+                "identity": "2f49a8db-9ea0-5b01-b543-35c160616851",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.395689,
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.641061,
+                "identity": "be0c27a9-6fdb-5af9-a6c2-39b9efaec8d3",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.65373,
+                "identity": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+                "net": "USB_D+",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              105.045,
+              106.0
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.471837,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.434472,
+                "identity": "2f49a8db-9ea0-5b01-b543-35c160616851",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.434472,
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.607661,
+                "identity": "be0c27a9-6fdb-5af9-a6c2-39b9efaec8d3",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.611354,
+                "identity": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+                "net": "USB_D+",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              104.96,
+              105.806667
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.462217,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.286283,
+                "identity": "2f49a8db-9ea0-5b01-b543-35c160616851",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.286283,
+                "identity": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+                "net": "VBAT",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.469276,
+                "identity": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.587168,
+                "identity": "d5986491-6d78-52f6-99c9-86fbf841afcd",
+                "net": "GND",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "west_VCORE_port": {
+      "strict_fixed_native": {
+        "tested": 80,
+        "clear_count": 0,
+        "clear_centres": [],
+        "best_blocked": [
+          {
+            "centre_native_mm": [
+              95.06,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.443,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.247831,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.302064,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.558689,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.965,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.348,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.305079,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.369239,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.565829,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.87,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.253,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.362326,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.436414,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.580581,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.87,
+              105.033333
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.253,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.208039,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.391652,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.391652,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          }
+        ],
+        "paired_with_GND_count_from_reported_clear_sets": 0,
+        "representative_pairs": []
+      },
+      "conditional_five_caps_local_rework": {
+        "tested": 80,
+        "clear_count": 0,
+        "clear_centres": [],
+        "best_blocked": [
+          {
+            "centre_native_mm": [
+              95.06,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.443,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.247831,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.302064,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.558689,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.965,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.348,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.305079,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.369239,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.565829,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.87,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.253,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.362326,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.436414,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.580581,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.87,
+              105.033333
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.253,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.208039,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.391652,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.391652,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          }
+        ],
+        "paired_with_GND_count_from_reported_clear_sets": 0,
+        "representative_pairs": []
+      }
+    },
+    "west_GND_port": {
+      "strict_fixed_native": {
+        "tested": 80,
+        "clear_count": 0,
+        "clear_centres": [],
+        "best_blocked": [
+          {
+            "centre_native_mm": [
+              95.06,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.443,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.247831,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.302064,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.558689,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.965,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.348,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.305079,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.369239,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.565829,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.87,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.253,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.362326,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.436414,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.580581,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.87,
+              105.033333
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.253,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.208039,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.391652,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.391652,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          }
+        ]
+      },
+      "conditional_five_caps_local_rework": {
+        "tested": 80,
+        "clear_count": 0,
+        "clear_centres": [],
+        "best_blocked": [
+          {
+            "centre_native_mm": [
+              95.06,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.443,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.247831,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.302064,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.558689,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.965,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.348,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.305079,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.369239,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.565829,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.87,
+              104.84
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.253,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.362326,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.436414,
+                "identity": "74d733c1-8c4a-5b14-b1cd-7d1f01519b05",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.580581,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          },
+          {
+            "centre_native_mm": [
+              94.87,
+              105.033333
+            ],
+            "passes": false,
+            "contact_clearance_mm": 0.253,
+            "In1_MAIN_intersects_via_land": true,
+            "hits": [
+              {
+                "identity": "f6605036-027b-5e3e-ab49-e658654e8a21",
+                "net": "+3V3",
+                "kind": "pad",
+                "label": "R1.1",
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "fd76a6e8-44a5-5dbc-9c4a-a04dd5319b19",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              },
+              {
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu",
+                "clearance_mm": 0.0
+              }
+            ],
+            "nearest_fixed": [
+              {
+                "clearance_mm": 0.0,
+                "identity": "3c589c85-a8ec-5f17-8718-20d9b33af5b9",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.0,
+                "identity": "eac75b94-abd4-50e1-9f19-369bd1fae62d",
+                "net": "+3V3",
+                "kind": "track",
+                "label": null,
+                "layer": "F.Cu"
+              },
+              {
+                "clearance_mm": 0.208039,
+                "identity": "fac4e743-d806-51aa-85b2-8426eed86c6d",
+                "net": "VHI",
+                "kind": "track",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.391652,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "B.Cu"
+              },
+              {
+                "clearance_mm": 0.391652,
+                "identity": "a37ce5ac-9bb2-5318-b30e-8eaf48ec0211",
+                "net": "VHI",
+                "kind": "via",
+                "label": null,
+                "layer": "In1.Cu"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "pair_semantics": "A reported west pair is only two independently clear ordinary-via ports with >=0.20 mm copper-edge and >=0.25 mm drill-edge mutual clearance. It does not prove a C18 route, return loop, refill, DRC or PI result.",
+    "limits": [
+      "No component pose or route was selected from this map.",
+      "No B VBAT/VHI, USB, QSPI, clock, IMU, contact, accepted stitch or other fixed geometry was released.",
+      "In1 MAIN intersection is a landing screen; full via-ring containment and post-refill plane continuity remain implementation checks."
+    ]
+  }
+}

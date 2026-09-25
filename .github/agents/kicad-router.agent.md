@@ -80,6 +80,13 @@ only for released distribution/lower-speed corridors, and retain all B-side
 contact exclusions. Through-vias must clear obstacles on their entire span.
 Do not use an F/B-only router/checker to qualify inner-layer routes.
 
+Apply the placement release gate in `docs/routing-agent-policy.md`: qualify
+ordinary layer-transition access and complete supply/return groups before
+freezing capacitor positions. Include fixed copper and contact obstacles
+in proposal views. Do not infer a necessary structural redesign from one
+colliding trial, or waive USB impedance/fast-edge review because this is
+not a gigabit design.
+
 Batch complete connected groups and shared corridors under one engineering
 release, not a fixed count of nets. Reuse one native board load and spatial
 data, invalidate changed regions, and query all useful group terminals.
@@ -90,7 +97,8 @@ approval for each instance of an already-approved via/escape pattern.
 Prefer ordinary through-vias and off-pad escapes when equivalent; no blind
 or buried vias, tighter rules or new via-in-pad dependency just for convenience.
 Necessary special processes are allowed, not automatically forbidden by cost.
-Do not remove U4's filled/capped-via requirement, or substitute tenting, without
+Do not remove U4's four or C24's one mandatory filled/capped-via requirements,
+or substitute tenting, without
 an Astra-reviewed thermal/electrical/stencil alternative. Preserve portability
 through explicit process notes and manufacturer identities, not vendor-only
 assumptions. DRC passing is still not engineering or assembly acceptance.

@@ -70,6 +70,32 @@ progress, plane completion or stackup qualification.
 
 ### Layer and interface contract
 
+**Placement release gate: establish complete supply/return groups and
+layer-transition access before freezing the local floorplan.** Place the
+IC pins, their capacitors, short F connections, ground returns and ordinary
+via access together. A component-body fit or a clear inner-layer corridor
+does not qualify placement when the required through-vias cannot reach it.
+For this board, screen actual rear-contact metal and fixed B power copper
+before selecting transition sites or arranging capacitors around them.
+
+Reserve switching loops, USB/clock/QSPI corridors and local decoupling
+before routine controls. Separate noisy current paths by functional
+placement and routing, not arbitrary digital/audio ground-plane splits.
+Preserve raw CELL_NEG/protected-GND separation and private pickoffs as
+specific circuit requirements. Review each route's return path, not just
+its destination or airwire count.
+
+For a coordinated re-layout proposal, identify exact old/new component
+poses and replacement primitives, prove usable transition sites, and
+account for every supply and return connection being disturbed. A rejected
+trial with vias on known fixed copper is not evidence that a broader
+mechanical or power-corridor release is necessary. Review overlays must
+show relevant existing copper/contact obstacles, not just proposed boxes.
+Refillable zone caches may be carved by an authorized route, but preserved
+connected groups, private returns and reference continuity must then be
+revalidated; fixed pads/tracks and zone definitions are not interchangeable
+with fill caches.
+
 | Copper layer | Initial role and limits |
 |---|---|
 | F.Cu | Components, short critical signals, local decoupling and switching loops. Preserve reviewed good routing unless Astra releases a specific change. |
@@ -85,6 +111,17 @@ Prefer common stock constructions, ordinary through-vias and existing
 clearance rules over blind/buried vias, microvias, sequential lamination or
 fabricator-minimum geometry. Those advanced processes need a specific
 engineering reason, not just a shorter route.
+
+**Impedance-aware routing is distinct from purchasing a controlled-impedance
+fabrication service.** RP2040 USB is full-speed (12 Mbps), but Raspberry Pi's
+[hardware design guide](https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf)
+section 2.4.1 still targets approximately 90 ohms differential with
+uninterrupted underlying ground. Use the chosen fabricator's actual stock
+stackup to determine geometry; do not transfer the guide's two-layer trace
+dimensions to this four-layer board. Whether a specified impedance
+tolerance and supplier verification are required remains a release
+decision. Do not waive USB, QSPI, clock or fast-edge return-path review
+because the product has no gigabit interface.
 
 Keep fast signals on F over uninterrupted In1 where practical. An In2 route
 is not automatically well referenced through a thick core, and a B signal
@@ -119,6 +156,24 @@ thermal/ground-spreading alternative; they do not prove it equivalent.
 That is a separate bounded Astra decision with manufacturer/thermal/stencil
 evidence. Tenting or ink plugging is not a silent replacement for capping.
 The MCU exposed-pad vias have their own unresolved thermal/stencil review.
+
+C24's accepted ground via adds a fifth explicitly mandatory resin-filled,
+planarized, copper-capped via to the four at U4. Preserve the exact process
+identities in the accepted reports; ordinary ground stitches such as the
+C13 via do not acquire this requirement merely by connecting to In1.
+Via-in-pad location, filling/capping treatment and blind/buried layer span
+are separate properties. A filled/capped through-via remains conductive at
+the back surface and cannot bypass the battery-contact exclusion.
+
+Both [JLCPCB](https://jlcpcb.com/help/article/pcb-via-covering) and
+[PCBWay](https://www.pcbway.com/pcb_prototype/PCB_Via_in_Pad.html) document
+filled/capped via-in-pad processing. Treat it as an explicit fabrication
+requirement, not a universal basic-service default. JLCPCB's
+[POFV notice](https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv),
+checked September 25, states that four-layer POFV incurs a charge.
+Capability, dimensional limits, planarization/capping and quotation must
+be confirmed for the exact package. Do not infer that VIPPO requires HDI,
+or change layer count merely to obtain a promotional process price.
 
 Keep any necessary special process explicit in the generic fabrication
 notes and quotation options, independent of a vendor promotion. Preserve

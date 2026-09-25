@@ -166,6 +166,33 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Coordinated MCU study and bounded port map are preserved, not accepted
+routing.** The [rejected-trial record and port appendix](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-vcore-local-relayout-proposal.json)
+retain the proposed five-capacitor geometry and its conflicts. Astra
+rejected the inference that this trial required changing VHI/VBAT or
+moving additional components. The subsequent 160-centre map found no
+clear tested port in its specified east/west windows under either fixed
+geometry or the exact conditional-removal inventory. That is a bounded
+negative result, not proof that every local rework or ordinary-via
+topology is impossible.
+
+Keep the accepted 37-open `adc262b3...` / `b849b5de...` package unchanged.
+Sol is idle. Before another placement/routing trial, Astra must disposition
+the remaining fixed blockers and the tested conditional-removal scope;
+no broader power-corridor modification, blind-via process or component
+move is released. The layer/placement/return and manufacturing gates are
+now consolidated in `docs/routing-agent-policy.md` and the router profile.
+
+**Owner approved the coordinated MCU study.** After the fixed-route
+inventory below, the owner selected the recommended supply/return study.
+Sol is preparing one concrete proposal within a twelve-minute budget.
+Only proposed local +3V3/VCORE/GND rework and necessary
+C6/C7/C8/C17/C18 moves are in scope; the accepted PCB is not being edited.
+Keep IC1, contacts, outline, mounts, USB, clock, IMU and the C13 stitch
+fixed. Resolve all three VCORE groups, C18 ground and ordinary off-contact
+transition access together. Actual proposal review precedes implementation;
+four copper layers do not override rear-contact or return-path constraints.
+
 **VCORE fixed-route preparation found no released path; scope decision
 required.** The [source-bound inventory](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-vcore-strategy-inventory.json)
 records three VCORE groups: IC1.45/C7/C8 (regulator output),
