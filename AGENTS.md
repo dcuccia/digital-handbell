@@ -6,8 +6,11 @@
   permits a proposal reconsidering C6/C7/C8/C13/C17/C18/R1 and local
   power/ground/USB/QSPI escapes, with the major interfaces and other
   placements fixed. Two conditional ports were found, but the proposed
-  placements are rejected. Next prepare the exact clipped local-fanout
-  fixture: do not treat replaceable intermediate fanout as fixed just
+  placements are rejected. The exact clipped local-fanout fixture is
+  prepared but held: its oscillator audit mistakenly checked C19/C20
+  rather than the native Y1 load capacitors C2/C3. Correct that source-bound
+  protection audit before placement or route search; the bounded fixture
+  review has stopped with this concrete gap. Do not treat replaceable intermediate fanout as fixed just
   because it does not directly touch a moved pad. Preserve real fixed
   obstacles and terminal-restoration obligations. No accepted-board
   changes or critical-route implementation are approved. See closure plan.

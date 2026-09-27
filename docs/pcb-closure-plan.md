@@ -166,6 +166,31 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Fanout fixture prepared, held for an incomplete oscillator audit.**
+The [preparation report](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-fanout-fixture-preparation.json)
+records private fixture `0acc6277...`, 138 removed local F segments and
+six clipped boundary parents with retained exterior terminals. The five
+previously omitted blockers are released; fixed vias, pads and the recorded
+private-pickoff primitives remain. The fixture is intentionally unfilled
+and disconnected, not a PCB candidate.
+
+Root found that the follow-up oscillator audit checked C19/C20
+(VAMP/VBAT capacitors), not C2/C3, the 15 pF capacitors on Y1's actual
+`Net-(IC1-XIN)` / `Net-(C3-Pad2)` nets. Its empty intersection therefore
+does not prove the required oscillator protection. No physical violation
+has yet been established, but the fixture is not released for placement.
+The bounded review is stopped; Sol is idle.
+
+**Next bounded item:** correct only the Y1/C2/C3 oscillator-structure audit,
+including ground-return branches rather than pad intersections alone.
+Compare those exact native structures against the released 144 parent
+segments. Preserve any mistakenly released fragments, or establish that
+none were released. Do not start another placement or routing search.
+The replay tool `tools/replay_mcu_fanout_fixture.py` reconstructs the
+recorded fixture from accepted source and report into a new private file;
+existing outputs, including the active PCB, must not be overwritten.
+Accepted `adc262b3...` / `b849b5de...` remains unchanged at 37 opens.
+
 **Broader fanout study: two conditional ports, no accepted placement.**
 The [partial proposal](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-fanout-coordinated-proposal.json)
 identifies ordinary VCORE sites at `(105.016667,103.627273)` and
@@ -180,7 +205,7 @@ as fixed obstacles in proposed corridors even though coordinated local
 power rework is authorized. Fixed USB resistor lands and VHI/VBAT remain
 real constraints; removing obsolete local fanout does not remove them.
 
-**Next bounded item:** construct one reusable private fanout fixture with
+**Historical fixture-preparation scope (now held above):** construct one reusable private fanout fixture with
 exact eligible local F route fragments removed and all required terminals
 and boundary connections inventoried. Native bounds are
 `[93.5,98.5,110.0,107.2]` mm. Eligible nets are local +3V3/VCORE/GND,
