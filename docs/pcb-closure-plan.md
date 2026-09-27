@@ -166,6 +166,31 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Source-cell candidate rejected: two ground regressions.** Root recovered
+the counts from the saved `319a45f9...` candidate without further routing
+or refill. Native, independent graph and physical-pad-group counts agree:
+37 opens before, 39 after. C8.2 is isolated; C6.1/C7.1/C17.2 form a second
+newly detached ground group. C13.2 remains on MAIN, and the three VCORE
+groups are unchanged. No shorts or floating copper were found, but those
+checks do not compensate for disconnected capacitor returns.
+
+The [corrected diagnostic record](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-vcore-source-cell-proposal.json)
+and explicitly rejected recovery PCB preserve the result. The executor's
+count-reporting error was corrected separately from the physical failure.
+Other source/clearance/DRC/placement gates remain unverified; there is no
+accepted candidate manifest. Do not rerun the exhausted geometry attempt,
+promote the recovery, or treat a connected VCORE via as a completed cell.
+Accepted PCB/manifest remain `adc262b3...` / `b849b5de...`, at 37 opens.
+
+**Escalation:** the proposed supply escape cut the shared ground structure
+that the previous accepted stitch restored. Before another trial, choose
+whether to broaden the coordinated MCU fanout study to include surrounding
+local constraints such as R1/C13 and critical-route access, or reconsider
+the rear copper/contact interface or manufacturing approach. No such scope
+extension is yet authorized. The failure concerns this exact candidate;
+it is not a proof that ordinary four-layer construction is impossible.
+Sol is idle pending that engineering scope decision.
+
 **Eastern port proposal passes; complete the source connection before
 implementing it.** The [exact local proposal](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-east-vcore-port-proposal.json)
 supports the 0.25 mm +3V3 L detour with preserved attachments and ordinary

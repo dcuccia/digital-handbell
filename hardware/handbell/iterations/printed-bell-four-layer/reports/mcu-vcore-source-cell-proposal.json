@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "status": "REJECTED_SOURCE_CELL_GROUND_SPLIT_VALIDATION_INCOMPLETE",
+  "scope": "Exact authorized C8/source-group VCORE candidate. No active PCB, manifest, CAD, project, library or rule change.",
+  "source_bindings": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "contact_model_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "private_candidate": {
+    "pcb_sha256": "319a45f9133e490e7fc356c5d92faad9ee5019deefedb90dd92f23dbad072b76",
+    "bytes": 1177161,
+    "published_as_staged_pcb": false,
+    "published_manifest": false,
+    "rejected_recovery_path": "reports/mcu-vcore-source-cell-rejected.kicad_pcb",
+    "usable_for_acceptance": false
+  },
+  "attempted_authorized_geometry": {
+    "C8_pose_old_native_mm_deg": [
+      105.501069,
+      102.430145,
+      0
+    ],
+    "C8_pose_new_native_mm_deg": [
+      105.501069,
+      102.330145,
+      0
+    ],
+    "removed_segment_uuid": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+    "replacement_3V3_polyline_native_mm": [
+      [
+        104.35,
+        105.15
+      ],
+      [
+        104.35,
+        106.65
+      ],
+      [
+        105.85,
+        106.65
+      ]
+    ],
+    "VCORE_polyline_native_mm": [
+      [
+        104.993069,
+        102.330145
+      ],
+      [
+        104.993069,
+        102.98
+      ],
+      [
+        106.67,
+        102.98
+      ],
+      [
+        106.67,
+        104.8
+      ],
+      [
+        105.045,
+        105.55
+      ]
+    ],
+    "VCORE_trace_width_mm": 0.25,
+    "VCORE_via": {
+      "centre_native_mm": [
+        105.045,
+        105.55
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "layers": [
+        "F.Cu",
+        "In1.Cu",
+        "In2.Cu",
+        "B.Cu"
+      ]
+    }
+  },
+  "completed_before_stop": [
+    "Source hashes verified.",
+    "Source-preserving C8 pose edit, exact +3V3 replacement, four VCORE segments and one VCORE via were generated in a private candidate.",
+    "Qualified two-zone native refill completed and its filled_polygon caches were transplanted onto source-preserved bytes.",
+    "Native and independent graph construction completed.",
+    "No repository staged PCB, staged manifest or review SVG was published."
+  ],
+  "blocker": {
+    "gate": "Expected native and independent open count of 37 did not pass.",
+    "exact_counts": "Root recovered 37 before and 39 after. Native connectivity, independent copper graph and physical-pad-group counts agree on 39.",
+    "classification": "Confirmed two GND group splits after refill. C8.2 becomes isolated; C6.1/C7.1/C17.2 remain joined to each other but lose MAIN. C13.2 remains on MAIN. VCORE group membership is unchanged.",
+    "attempts": [
+      "Initial complete candidate generation/refill/graph attempt stopped at the exact open-count assertion.",
+      "First diagnostic correction failed because the inline Python command was not passed intact by the PowerShell process wrapper.",
+      "Second diagnostic correction constructed the graph but failed while serializing an assumed graph-row field."
+    ],
+    "stopping_condition": "Initial attempt plus two corrections exhausted. Root subsequently recovered diagnostics without changing geometry or refilling. Reject this candidate; no further geometry repair or promotion is authorized."
+  },
+  "root_recovered_diagnostics": {
+    "candidate_sha256": "319a45f9133e490e7fc356c5d92faad9ee5019deefedb90dd92f23dbad072b76",
+    "before_native_opens": 37,
+    "after_native_opens": 39,
+    "after_independent_graph_opens": 39,
+    "after_physical_pad_group_opens": 39,
+    "physical_pads": 325,
+    "pad_uuid_inventory_preserved": true,
+    "shorts": [],
+    "floating_copper": [],
+    "changed_net_partitions": ["GND"],
+    "newly_disconnected_ground_groups": [
+      ["C8.2"],
+      ["C6.1", "C7.1", "C17.2"]
+    ],
+    "C13_ground_remains_MAIN": true,
+    "VCORE_groups": [
+      ["C18.2", "IC1.23"],
+      ["C6.2", "IC1.50"],
+      ["C7.2", "C8.1", "IC1.45"]
+    ],
+    "method": "Loaded the exact saved candidate and accepted source with CopperGraph; printed primitive counts before further serialization and compared physical-pad partitions for every nonempty net. No candidate edit, refill or routing was performed.",
+    "diagnostic_correction": "The earlier reporting command referenced a nonexistent top-level pads field on graph.nets() rows. Recovery used the existing partitions(graph, net) helper instead."
+  },
+  "unverified_gates": [
+    "Exact preservation of the legacy VREG45 copper, beyond recovered source-group connectivity.",
+    "Saved via copper, hole, contact and SMD-land clearances.",
+    "Parity-enabled native DRC.",
+    "Parser-aware source allowlist and mandatory-process-via preservation.",
+    "Candidate manifest and actual filled F/In1 review views."
+  ],
+  "limits": [
+    "The rejected candidate is preserved only as debugging evidence and must not be promoted.",
+    "No routing completion, feasibility, PI, current, drop, thermal, stackup, manufacturing or CAD conclusion is made.",
+    "Active PCB and manifest remain unchanged."
+  ]
+}
