@@ -2,6 +2,12 @@
 
 ## Bounded engineering work
 
+- **Broader MCU study approved after source-cell rejection:** the owner
+  permits a proposal reconsidering C6/C7/C8/C13/C17/C18/R1 and local
+  power/ground/USB/QSPI escapes, with the major interfaces and other
+  placements fixed. Qualify transition access and all capacitor returns
+  together. No accepted-board changes or critical-route implementation
+  are approved. Use the exact new scope at the closure-plan top.
 - **September 27 resumed:** one bounded proposal check may replace the
   exact local F +3V3 diagonal `6c98d6c9...`, preserving all branch joins,
   to test eastern VCORE via access. The subsequent source-cell candidate

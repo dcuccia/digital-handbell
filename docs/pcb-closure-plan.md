@@ -166,6 +166,19 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Owner approved a broader coordinated MCU fanout proposal.** The new
+twelve-minute proposal scope may reconsider C6/C7/C8/C13/C17/C18 and
+R1 positions plus local power/ground and USB/QSPI escape corridors.
+Keep the MCU, contacts, USB connector, other component positions, outline
+and mounts fixed; preserve IMU, oscillator, switching/protection structures
+and the five mandatory process vias. This is not implementation approval.
+Establish ordinary transition access and continuous capacitor-return
+paths before selecting the fanout. Restore all disturbed +3V3, VCORE,
+ground and reset associations. Proposed USB/QSPI changes need explicit
+layer/reference review, not an assumption that all inner layers are free.
+The rejected 39-open source-cell remains evidence, not a starting candidate;
+use accepted `adc262b3...` / `b849b5de...` at 37 opens.
+
 **Source-cell candidate rejected: two ground regressions.** Root recovered
 the counts from the saved `319a45f9...` candidate without further routing
 or refill. Native, independent graph and physical-pad-group counts agree:
