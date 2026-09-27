@@ -1,0 +1,139 @@
+{
+  "status": "completed_width_confound_removed_candidate_rejected",
+  "scope": "Single isolated setup correction: c_sample target width changed from 0.25 mm to the native 0.20 mm. All routing restrictions and source inputs were otherwise unchanged.",
+  "root_cause_qualification": {
+    "identified_confound": "At 0.4 mm MCU pitch with 0.2 mm pads and a required 0.20 mm clearance, a centered 0.25 mm trace leaves only 0.175 mm to an adjacent pad; a centered 0.20 mm trace leaves 0.20 mm.",
+    "correction_applied": "Target-class width changed from 250 um to 200 um in a derivative helper and fresh directories.",
+    "observed_result": "The corrected width did not close any target connection and reproduced the prior native connectivity result.",
+    "conclusion": "The 0.25 mm width was a genuine setup confound and the earlier trial must not be described as a native-width test. It was not the observed root cause of zero closure in this Freerouting configuration because the corrected 0.20 mm run also closed 0 of 7 opens."
+  },
+  "preservation": {
+    "prior_025_report_overwritten": false,
+    "prior_helpers_overwritten": false,
+    "run_bakeoff_py_sha256": "4bc52b67b82a27400ae0d9300fc9f140cb56d5f220dae4bf9b55cf0bec42f897",
+    "analyze_bakeoff_py_sha256": "2c30f5ad99dd5e7b66b454ded3d2aca104eec89ddf8cc7e2e219afc429741c19",
+    "accepted_pcb_sha256_before_and_after": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "accepted_manifest_sha256_before_and_after": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "baseline_copy_sha256_before_and_after": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "freerouting_source_copy_sha256_before_and_after": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314"
+  },
+  "configuration": {
+    "target_nets": ["AMP_MUTE", "BUTTON", "D13", "INT", "~{RESET}"],
+    "expected_open_contribution": 7,
+    "target_width_mm": 0.2,
+    "target_clearance_mm": 0.2,
+    "routable_layers": ["F.Cu"],
+    "disabled_layers": ["In1.Cu", "In2.Cu", "B.Cu"],
+    "new_vias": false,
+    "existing_wires_and_vias": "type protect",
+    "fanout": false,
+    "optimizer": false,
+    "automatic_neckdown": false,
+    "max_passes": 1,
+    "max_threads": 1,
+    "ignored_exported_classes": ["kicad_default", "power", "thickpower"],
+    "prepared_dsn_sha256_control_and_route": "a68e7d30dc5e74a417f69722d666e898819a497cfe65984c5019bd983a7137dd"
+  },
+  "measured_runtime_seconds": {
+    "control_export": 0.016,
+    "control_engine": 4.297,
+    "control_import": 0.063,
+    "route_export": 0.016,
+    "route_engine": 49.578,
+    "route_import": 0.063,
+    "source_graph": 17.609,
+    "control_graph": 17.156,
+    "candidate_graph": 18.125,
+    "source_drc": 1.578,
+    "control_drc": 4.531,
+    "candidate_drc": 1.75,
+    "measured_subprocess_total": 114.782,
+    "qualification": "Completed within the additional five-minute active correction window; engine deadline was 180 seconds."
+  },
+  "control020": {
+    "status": "completed",
+    "native_opens": 37,
+    "source_vs_control_exact_geometry_removed": 356,
+    "source_vs_control_exact_geometry_added": 338,
+    "footprint_translation_count": 78,
+    "maximum_footprint_translation_mm": 0.00005,
+    "orientation_changes": 0,
+    "pad_changes": 0,
+    "assessment": "Reproduced the prior no-routing exchange control."
+  },
+  "route_width020": {
+    "engine_status": "completed",
+    "engine_seconds": 49.578,
+    "engine_passes": 1,
+    "engine_reported_incomplete_connections": 117,
+    "engine_reported_clearance_violations": 190,
+    "native_after_refill": {
+      "native_opens": 37,
+      "independent_graph_opens": 37,
+      "physical_pads": 325,
+      "shorts": 0,
+      "floating_copper": 0,
+      "net_partition_changes_from_source": {},
+      "drc_violations": 234,
+      "drc_unconnected_items": 37,
+      "schematic_parity_findings": 46,
+      "drc_errors": 0
+    },
+    "target_open_contribution_before_and_after": {
+      "AMP_MUTE": [2, 2],
+      "BUTTON": [1, 1],
+      "D13": [1, 1],
+      "INT": [1, 1],
+      "~{RESET}": [2, 2]
+    },
+    "completed_target_opens": 0,
+    "candidate_vs_control": {
+      "exact_geometry_added": 128,
+      "exact_geometry_removed": 0,
+      "new_vias": 0,
+      "target_track_count_delta": {
+        "AMP_MUTE": 1,
+        "BUTTON": 1,
+        "D13": 0,
+        "INT": 0,
+        "~{RESET}": 0
+      },
+      "target_length_delta_mm": {
+        "AMP_MUTE": 0.0001,
+        "BUTTON": 0.000424,
+        "D13": 0.0,
+        "INT": 0.0,
+        "~{RESET}": 0.0
+      }
+    },
+    "assessment": "Rejected. The two microscopic target fragments did not join physical pad groups. No target net improved, and the same broad non-target exchange differences remained."
+  },
+  "comparison_to_width025": {
+    "width025_engine_seconds": 128.86,
+    "width020_engine_seconds": 49.578,
+    "native_opens_both": 37,
+    "independent_opens_both": 37,
+    "completed_target_opens_both": 0,
+    "candidate_vs_control_geometry_added_both": 128,
+    "candidate_vs_control_geometry_removed_both": 0,
+    "target_track_and_length_deltas": "Identical at the recorded precision.",
+    "interpretation": "The corrected width reduced engine runtime but did not change routing leverage or native connectivity."
+  },
+  "recommendation": "Keep both trials as negative evidence. Do not integrate either candidate and do not proceed to the optional breadth sample under this configuration.",
+  "artifacts": {
+    "derivative_run_helper": {
+      "path": "run_bakeoff_width020.py",
+      "sha256": "98f9eb37fcd5c11cae0fbca46af3f3d7ef5ea05abc34d5ece8983645f25472b4"
+    },
+    "derivative_analysis_helper": {
+      "path": "analyze_width020.py",
+      "sha256": "c2859683f09c8285e6661d79c712aaf3f91027ed10afec23cdc6c0556fbb0edf"
+    },
+    "control_prepared_dsn_sha256": "a68e7d30dc5e74a417f69722d666e898819a497cfe65984c5019bd983a7137dd",
+    "control_ses_sha256": "bdb178bc7a67f92b3361a6e05c4ee53dcc55fa8d5d3f6583bb4c350f335471b6",
+    "route_prepared_dsn_sha256": "a68e7d30dc5e74a417f69722d666e898819a497cfe65984c5019bd983a7137dd",
+    "route_ses_sha256": "e96e4f8f4a299a327347f3ec0912169c8a35d39d3008e4a9252b35e6d3033c6b",
+    "refilled_candidate_sha256": "073a4ff74f570d3a7e68edc819a7e872057dbdb4e0e3e2a1d6cd251d2094afaa",
+    "analysis_sha256": "34ce592f8ab2bb305a358bf6712e6dd74a61bb3f8477e6537f1baa9cb3617208"
+  }
+}

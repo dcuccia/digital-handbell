@@ -167,6 +167,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 ## Owner pause and next item
 
 **September 27: manual/LLM routing paused for a purpose-built-router bakeoff.**
+The [assessment report](routing-bakeoff-2026-09-27.md) records the completed
+local tests: Freerouting's native-width F-only sample closed 0/7 opens;
+no multilayer routing claim is made. tscircuit's conversion semantics do
+not meet this board's preservation requirement. Quilter's uploaded
+comprehension and missing preservation controls require vendor assistance;
+the owner has requested a human support handoff. No cloud job is confirmed.
+Accepted PCB/manifest and all experiment-source copies remain unchanged.
+The next gate is that support response, not automatic continuation of
+routing, source corrections or further autorouter trials.
+
 The owner authorizes about 90 minutes of active assessment, normally at most
 30 minutes per approach: establish a source-bound baseline, test stable
 Freerouting conservatively, assess Quilter, and briefly investigate

@@ -3,6 +3,12 @@
 ## Bounded engineering work
 
 - **September 27 routing-tool bakeoff:** manual/LLM-driven routing is paused.
+  The local assessment is complete: corrected-width Freerouting closed
+  0/7 trial opens, tscircuit failed the source-preservation suitability gate,
+  and Quilter upload/comprehension exposed unresolved preservation/import
+  questions now escalated to support. No Quilter routing job is confirmed.
+  See `docs/routing-bakeoff-2026-09-27.md`. Do not restart trials or manual
+  routing automatically; retain the source and isolated evidence.
   Assess purpose-built routers for about 90 minutes active total, normally
   no more than 30 minutes per approach. Use separate disposable copies of
   accepted `adc262b3...` / `b849b5de...`; never import or merge results into

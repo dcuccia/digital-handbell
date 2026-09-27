@@ -1,0 +1,235 @@
+{
+  "status": "completed_no_routing_leverage_candidate_rejected",
+  "scope": "Offline Freerouting bakeoff only; no accepted PCB, manifest, CAD, or repository files modified.",
+  "tooling": {
+    "freerouting_version": "2.4.1",
+    "freerouting_release_status": "Current official stable release observed 2026-09-27",
+    "freerouting_jar_sha256": "251101c3eeac22d7e7dfcf6796603279e5d1000283eb82d8f093780f7afc6aa9",
+    "java": "Eclipse Temurin 25.0.4.1+1-LTS portable runtime",
+    "kicad": "10.0.6",
+    "network_use": "No board upload or routing service; analytics, API server, MCP server, and job saving disabled."
+  },
+  "source_bindings": {
+    "snapshot_commit": "a8dfafe6ae3d95c05fffc6bf011669ff12b7a77f",
+    "accepted_pcb_sha256_before_and_after": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "accepted_manifest_sha256_before_and_after": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "baseline_copy_sha256_before_and_after": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "freerouting_source_copy_sha256_before_and_after": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314"
+  },
+  "baseline": {
+    "physical_pads": 325,
+    "native_opens": 37,
+    "independent_graph_opens": 37,
+    "native_drc": {
+      "violations": 234,
+      "unconnected_items": 37,
+      "schematic_parity": 46,
+      "errors": 0
+    },
+    "enabled_copper_layers": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"],
+    "board_thickness_mm": 1.6,
+    "tracks_by_layer": {"F.Cu": 903, "In2.Cu": 24, "B.Cu": 180},
+    "track_length_mm_by_layer": {
+      "F.Cu": 735.667607,
+      "In2.Cu": 37.797887,
+      "B.Cu": 320.147317
+    },
+    "through_vias": 97,
+    "locked_tracks_or_vias": 0,
+    "native_rule_values_mm": {
+      "minimum_clearance": 0.1778,
+      "minimum_copper_edge_clearance": 0.025,
+      "maximum_polygon_error": 0.005
+    },
+    "engineering_recipe_mm": {
+      "minimum_copper_clearance": 0.2,
+      "minimum_edge_hole_and_hole_to_hole": 0.25,
+      "maximum_polygon_error": 0.001
+    },
+    "inventory_sha256": "d1552c16ea6978af3aee103098b4600d5786056ec1dbe4d272e7d9c5c93b3375"
+  },
+  "baseline_parity_classification": {
+    "native_total": 46,
+    "native_rule_category": {
+      "net_conflict": 46
+    },
+    "native_severity": {
+      "warning": 46,
+      "error": 0
+    },
+    "native_description": {
+      "No corresponding pin found in schematic": 46
+    },
+    "net_name_form": {
+      "explicit_unconnected_pad": 22,
+      "auto_named_net_pad": 24
+    },
+    "references_and_warning_counts": {
+      "C2": 1,
+      "C3": 1,
+      "CHG0": 1,
+      "CHG_EN0": 1,
+      "D3": 1,
+      "FB1": 1,
+      "FB2": 1,
+      "IC1": 21,
+      "L0": 1,
+      "R2": 2,
+      "R6": 2,
+      "R7": 1,
+      "R8": 1,
+      "R11": 1,
+      "U2": 1,
+      "U3": 3,
+      "U4": 2,
+      "U6": 1,
+      "X6": 2,
+      "Y1": 2
+    },
+    "external_parser_16_reference_cross_check": {
+      "reported_references": [
+        "BT1", "BT2", "C30", "J1", "J2", "MH1", "MH2", "Q5",
+        "R25", "R26", "R27", "R28", "R29", "U1", "U6", "Y1"
+      ],
+      "true_board_only_references": ["MH1", "MH2"],
+      "schematic_present_and_board_path_suffix_matches_symbol_uuid": [
+        "BT1", "BT2", "C30", "J1", "J2", "Q5", "R25", "R26",
+        "R27", "R28", "R29", "U1", "U6", "Y1"
+      ],
+      "uuid_path_mismatches": [],
+      "native_parity_references_within_reported_set": {
+        "U6": ["1"],
+        "Y1": ["1", "3"]
+      },
+      "pad_count_explanations": {
+        "BT1": "Two physical pads share pad number 1; schematic has one pin 1.",
+        "BT2": "Two physical pads share pad number 1; schematic has one pin 1.",
+        "J1": "Board has electrical pads 1/2 plus two MP pads; schematic has pins 1/2.",
+        "J2": "Board has electrical pads 1/2 plus two MP pads; schematic has pins 1/2.",
+        "U1": "Board has the nine schematic-numbered pads plus one unnumbered physical pad."
+      },
+      "conclusion": "The external parser's 16-component missing-schematic classification is not supported by the native source. Fourteen are present with exact symbol UUID path linkage; MH1/MH2 are the only true schematic-absent board footprints. The observed extra physical pads explain count differences for BT1, BT2, J1, J2 and U1, not missing component references."
+    }
+  },
+  "prepared_exchange": {
+    "target_nets": ["AMP_MUTE", "BUTTON", "D13", "INT", "~{RESET}"],
+    "expected_target_open_contribution": 7,
+    "target_width_mm": 0.25,
+    "target_clearance_mm": 0.2,
+    "existing_wires_and_vias": "type protect",
+    "outline_planes_removed": 2,
+    "new_routing_layers": ["F.Cu"],
+    "disabled_routing_layers": ["In1.Cu", "In2.Cu", "B.Cu"],
+    "new_vias": "disabled",
+    "fanout": "disabled",
+    "optimizer": "disabled",
+    "automatic_neckdown": "disabled",
+    "max_passes": 1,
+    "max_threads": 1,
+    "ignored_exported_classes": ["kicad_default", "power", "thickpower"],
+    "important_options": [
+      "--router.ignore_net_classes=kicad_default,power,thickpower",
+      "--router.layers.routable=true,false,false,false",
+      "--router.allowed_via_types=false",
+      "--router.optimizer.enabled=false",
+      "--router.fanout.enabled=false",
+      "--router.automatic_neckdown=false"
+    ],
+    "limitation": "DSN omitted actual filled planes; contact-metal constraints and unrestricted through-via safety were not qualified. F-only/no-via was intentionally used."
+  },
+  "no_routing_control": {
+    "engine_seconds": 6.594,
+    "engine_status": "completed",
+    "footprint_translation_count": 78,
+    "maximum_footprint_translation_mm": 0.00005,
+    "orientation_changes": 0,
+    "pad_changes": 0,
+    "source_vs_control_exact_geometry_removed": 356,
+    "source_vs_control_exact_geometry_added": 338,
+    "native_opens": 37,
+    "independent_graph_opens": 37,
+    "native_drc": {
+      "violations": 234,
+      "unconnected_items": 37,
+      "schematic_parity": 46,
+      "errors": 0
+    },
+    "assessment": "Usable only as an exchange-churn comparison baseline; not source-preserving."
+  },
+  "c_sample_route_attempt": {
+    "external_deadline_seconds": 240,
+    "engine_seconds": 128.86,
+    "engine_status": "completed",
+    "engine_passes": 1,
+    "engine_reported_incomplete_connections": 117,
+    "engine_reported_clearance_violations": 190,
+    "native_result_after_qualified_refill": {
+      "native_opens": 37,
+      "independent_graph_opens": 37,
+      "physical_pads": 325,
+      "shorts": 0,
+      "floating_copper": 0,
+      "net_partition_changes_from_source": {},
+      "native_drc": {
+        "violations": 234,
+        "unconnected_items": 37,
+        "schematic_parity": 46,
+        "errors": 0
+      }
+    },
+    "actual_target_completion": {
+      "AMP_MUTE": {"before_open_contribution": 2, "after_open_contribution": 2},
+      "BUTTON": {"before_open_contribution": 1, "after_open_contribution": 1},
+      "D13": {"before_open_contribution": 1, "after_open_contribution": 1},
+      "INT": {"before_open_contribution": 1, "after_open_contribution": 1},
+      "~{RESET}": {"before_open_contribution": 2, "after_open_contribution": 2},
+      "completed_opens": 0
+    },
+    "candidate_vs_control": {
+      "exact_geometry_added": 128,
+      "exact_geometry_removed": 0,
+      "new_vias": 0,
+      "track_count_by_layer_control": {"F.Cu": 887, "In2.Cu": 24, "B.Cu": 178},
+      "track_count_by_layer_candidate": {"F.Cu": 1015, "In2.Cu": 24, "B.Cu": 178},
+      "target_length_delta_mm": {
+        "AMP_MUTE": 0.0001,
+        "BUTTON": 0.000424,
+        "D13": 0.0,
+        "INT": 0.0,
+        "~{RESET}": 0.0
+      },
+      "non_target_example_length_deltas_mm": {
+        "GND_F_Cu": 86.220118,
+        "+3V3_F_Cu": 0.51207,
+        "BOOST_SW_F_Cu": 0.305,
+        "V+_F_Cu": 0.2
+      }
+    },
+    "assessment": "Rejected. Native connectivity did not improve, while the routing-enabled exchange produced substantial non-target F.Cu geometry differences despite protected wiring and ignored net classes. The engine's completion state and internal unrouted count are not evidence of board routing completion."
+  },
+  "engineering_concerns": [
+    "No requested C-net open was closed.",
+    "Routing-enabled exchange was not stable relative to the no-routing control and altered non-target protected-net geometry representation.",
+    "The engine reported 190 internal clearance violations even though native KiCad DRC returned the unchanged accepted finding counts.",
+    "Actual F/In1 filled-ground connectivity remained unchanged only after native refill; DSN plane outlines were deliberately removed and did not prove return continuity.",
+    "Battery-contact metal and safe unrestricted through-via constraints remain outside the qualified DSN model."
+  ],
+  "human_and_automation_burden": {
+    "cli_automation": "Repeatable offline export, DSN normalization, control/run, SES import, native refill, DRC, graph, and SVG generation are scripted.",
+    "manual_burden": "High: the raw result would require identifying and selectively transplanting only legitimate new copper, but this attempt produced no completed target connection and broad non-target churn. Manual trace cleanup was intentionally not attempted."
+  },
+  "recommendation": "Do not stage or integrate this candidate and do not run the optional breadth sample. Freerouting 2.4.1 showed no useful leverage under the conservative F-only/no-via/protected-copper recipe. Any future trial needs a demonstrated class/protection isolation control or a smaller source-derived routing fixture before spending another engine run.",
+  "evidence": {
+    "control_report_sha256": "1fe40e5c621b060522d76c385e9a85a46d467e664f29160a33fbf8cd60a96875",
+    "route_report_sha256": "f221b505b53310e124fef8e6119fdda03218a0d41adcf92e87e803b08b5ed866",
+    "analysis_sha256": "06e5f1956fe02ceba3e2ec20d5044fa60b463f2c5fd6d29d4af99cda736b8bf2",
+    "run_helper_sha256": "4bc52b67b82a27400ae0d9300fc9f140cb56d5f220dae4bf9b55cf0bec42f897",
+    "analysis_helper_sha256": "2c30f5ad99dd5e7b66b454ded3d2aca104eec89ddf8cc7e2e219afc429741c19",
+    "views": {
+      "candidate-F.svg": "86f25037a6033261cf64437a5d43c653ab40a9d98f5db3ce11346b3b936a1a26",
+      "candidate-In1.svg": "b3909ed4fa6010eb3f2ff4fc36c7af4a355b1efca46467b6d1d153164bb1d582",
+      "candidate-In2.svg": "478ce590e87eb5bff41f92a1044a53ebff3f6d3d156b5d5f3b6e8dfbeb5c0634",
+      "candidate-B.svg": "12358c57419571de8c22da49e319cdc01667ecadf1f17d62bc44803fb6a7cd25"
+    }
+  }
+}
