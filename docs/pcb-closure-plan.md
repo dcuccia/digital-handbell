@@ -166,6 +166,24 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 27 resumed: disposition the exact eastern +3V3 blocker.**
+Astra verified that several eastern port-map witnesses fail only against
+F segment `6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7`, which was not included
+in the prior conditional-removal inventory. Release one eight-minute
+proposal-only check replacing its `(104.35,105.15)` to `(105.85,106.65)`
+diagonal with a 0.25 mm F path through `(104.35,106.65)`, retaining every
+same-net branch join as well as the endpoints. Check a reserved ordinary
+VCORE via at `(105.045,106.0)` against both fixed copper and the replacement.
+This is within the authorized local +3V3 study, not a VHI/VBAT release.
+No component move, active-board edit or floating VCORE via is authorized.
+Stop at a qualified local proposal or a concrete blocker within the budget.
+
+The western witnesses also include R1.1, a fixed 10K reset pull-up pad,
+as well as its +3V3 approach tracks. R1 is not in the five-capacitor move
+scope. Eastern port feasibility must not be presented as resolution of
+western access, C18 ground, capacitor placement or the complete VCORE feed.
+Accepted PCB/manifest remain `adc262b3...` / `b849b5de...` with 37 opens.
+
 **Coordinated MCU study and bounded port map are preserved, not accepted
 routing.** The [rejected-trial record and port appendix](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-vcore-local-relayout-proposal.json)
 retain the proposed five-capacitor geometry and its conflicts. Astra
