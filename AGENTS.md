@@ -4,10 +4,11 @@
 
 - **September 27 resumed:** one bounded proposal check may replace the
   exact local F +3V3 diagonal `6c98d6c9...`, preserving all branch joins,
-  to test eastern VCORE via access at `(105.045,106.0)`. No active-board
-  edit, component move or VHI/VBAT reroute is released. R1's fixed reset
-  pull-up land remains a separate western constraint. Use the precise
-  geometry, budget and stopping conditions at the closure-plan top.
+  to test eastern VCORE via access. That proposal passes the fixed-geometry
+  screen. Next is the exact private C8/source-port proposal at the closure-plan
+  top, including a 0.10 mm north C8 move, a higher port alternative and
+  actual refill/return review. No active-board change or VHI/VBAT reroute
+  is released. R1 and the remaining VCORE/ground groups stay unresolved.
 - **September 25 resumed:** the owner resumed from `1ac52ba`. One bounded
   assessment found an off-contact ordinary-via alternative after the
   direct F-to-MAIN screen failed. The exact C13 ground stitch is accepted

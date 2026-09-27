@@ -166,6 +166,32 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Eastern port proposal passes; complete the source connection before
+implementing it.** The [exact local proposal](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-east-vcore-port-proposal.json)
+supports the 0.25 mm +3V3 L detour with preserved attachments and ordinary
+via access at `(105.045,106.0)`. It does not yet qualify refill, VCORE
+feeding or the complete MCU supply network. Root corrected the missing
+proposal overlay and verified its registration against two native vias.
+
+**Next bounded item: private regulator-output source-cell proposal.**
+Test C8 shifted north by 0.10 mm, retaining its 1 uF value and pin association,
+and a 0.25 mm F VCORE path from its new pad 1 centre
+`(104.993069,102.330145)` through `(104.993069,102.98)`,
+`(106.67,102.98)` and `(106.67,104.8)` to an ordinary via at
+`(105.045,105.55)`. Retain the +3V3 L detour and all other placement/copper.
+The higher via position is an explicit alternative intended to leave
+more room for ground below the via; it is not already qualified.
+Check actual fixed geometry, capacitor-pad clearance, full-span contact
+clearance and refill connectivity, especially all five eastern capacitor
+grounds through the unchanged C13 stitch. Preserve every previous connected
+group. The local pin-to-C8 decoupling route must remain intact.
+
+Only a private proposal/candidate and its evidence are released, not an
+active-board edit or acceptance. Stop within twelve minutes at a source
+cell with credible supply/return evidence or a concrete blocker. This
+does not close IC1.50/C6, the western VCORE group, C18 ground or R1 access,
+and an unchanged open count must not be presented as connectivity progress.
+
 **September 27 resumed: disposition the exact eastern +3V3 blocker.**
 Astra verified that several eastern port-map witnesses fail only against
 F segment `6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7`, which was not included

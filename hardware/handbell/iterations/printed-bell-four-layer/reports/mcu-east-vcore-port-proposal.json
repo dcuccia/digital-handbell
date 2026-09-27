@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "status": "EAST_VCORE_PORT_PROPOSAL_COMPLETE_NOT_IMPLEMENTED",
+  "scope": "Replace exactly one local F +3V3 segment in proposal space and reserve one ordinary east VCORE port.",
+  "source_bindings": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "contact_model_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "native_version": "10.0.6"
+  },
+  "original_segment": {
+    "uuid": "6c98d6c9-8ede-5cc4-a70e-ab1fa103ccf7",
+    "net": "+3V3",
+    "layer": "F.Cu",
+    "start_native_mm": [
+      104.35,
+      105.15
+    ],
+    "end_native_mm": [
+      105.85,
+      106.65
+    ],
+    "width_mm": 0.25,
+    "length_mm": 2.12132,
+    "join_summary": "Six same-net track attachments were found through native copper-shape intersection: one at the original start and the continuous five-track chain at/after the original end. No +3V3 pad or via attaches within the old segment interior.",
+    "same_net_join_inventory": [
+      {
+        "uuid": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+        "kind": "track",
+        "net": "+3V3",
+        "start_native_mm": [
+          104.35,
+          102.4
+        ],
+        "end_native_mm": [
+          104.35,
+          105.15
+        ],
+        "width_mm": 0.25
+      },
+      {
+        "uuid": "be0c27a9-6fdb-5af9-a6c2-39b9efaec8d3",
+        "kind": "track",
+        "net": "+3V3",
+        "start_native_mm": [
+          105.85,
+          106.65
+        ],
+        "end_native_mm": [
+          105.9,
+          106.65
+        ],
+        "width_mm": 0.25
+      },
+      {
+        "uuid": "48f742a2-220d-5a4e-8bee-56d20217e42a",
+        "kind": "track",
+        "net": "+3V3",
+        "start_native_mm": [
+          105.9,
+          106.65
+        ],
+        "end_native_mm": [
+          105.95,
+          106.7
+        ],
+        "width_mm": 0.25
+      },
+      {
+        "uuid": "73775a55-01df-53ef-b4f1-0c903c239557",
+        "kind": "track",
+        "net": "+3V3",
+        "start_native_mm": [
+          105.95,
+          106.7
+        ],
+        "end_native_mm": [
+          106.0,
+          106.7
+        ],
+        "width_mm": 0.25
+      },
+      {
+        "uuid": "644d7723-64e0-55bb-9fb1-833db9d15a0b",
+        "kind": "track",
+        "net": "+3V3",
+        "start_native_mm": [
+          106.0,
+          106.7
+        ],
+        "end_native_mm": [
+          106.05,
+          106.75
+        ],
+        "width_mm": 0.25
+      },
+      {
+        "uuid": "c6733700-27c2-53ba-a49e-355156b6dc99",
+        "kind": "track",
+        "net": "+3V3",
+        "start_native_mm": [
+          106.05,
+          106.75
+        ],
+        "end_native_mm": [
+          106.45,
+          106.75
+        ],
+        "width_mm": 0.25
+      }
+    ]
+  },
+  "replacement_trials": [
+    {
+      "polyline_native_mm": [
+        [
+          104.35,
+          105.15
+        ],
+        [
+          104.35,
+          106.65
+        ],
+        [
+          105.85,
+          106.65
+        ]
+      ],
+      "segments": [
+        {
+          "start": [
+            104.35,
+            105.15
+          ],
+          "end": [
+            104.35,
+            106.65
+          ],
+          "length_mm": 1.5,
+          "foreign_hits": [],
+          "minimum_foreign_clearance_mm": 0.43213
+        },
+        {
+          "start": [
+            104.35,
+            106.65
+          ],
+          "end": [
+            105.85,
+            106.65
+          ],
+          "length_mm": 1.5,
+          "foreign_hits": [],
+          "minimum_foreign_clearance_mm": 0.262609
+        }
+      ],
+      "length_mm": 3.0,
+      "length_increase_vs_original_mm": 0.87868,
+      "passes": true
+    },
+    {
+      "polyline_native_mm": [
+        [
+          104.35,
+          105.15
+        ],
+        [
+          104.2,
+          106.65
+        ],
+        [
+          105.85,
+          106.65
+        ]
+      ],
+      "segments": [
+        {
+          "start": [
+            104.35,
+            105.15
+          ],
+          "end": [
+            104.2,
+            106.65
+          ],
+          "length_mm": 1.507481,
+          "foreign_hits": [],
+          "minimum_foreign_clearance_mm": 0.43213
+        },
+        {
+          "start": [
+            104.2,
+            106.65
+          ],
+          "end": [
+            105.85,
+            106.65
+          ],
+          "length_mm": 1.65,
+          "foreign_hits": [],
+          "minimum_foreign_clearance_mm": 0.262609
+        }
+      ],
+      "length_mm": 3.157481,
+      "passes": true
+    },
+    {
+      "polyline_native_mm": [
+        [
+          104.35,
+          105.15
+        ],
+        [
+          104.5,
+          106.65
+        ],
+        [
+          105.85,
+          106.65
+        ]
+      ],
+      "segments": [
+        {
+          "start": [
+            104.35,
+            105.15
+          ],
+          "end": [
+            104.5,
+            106.65
+          ],
+          "length_mm": 1.507481,
+          "foreign_hits": [],
+          "minimum_foreign_clearance_mm": 0.43213
+        },
+        {
+          "start": [
+            104.5,
+            106.65
+          ],
+          "end": [
+            105.85,
+            106.65
+          ],
+          "length_mm": 1.35,
+          "foreign_hits": [],
+          "minimum_foreign_clearance_mm": 0.262609
+        }
+      ],
+      "length_mm": 2.857481,
+      "passes": true
+    }
+  ],
+  "qualified_replacement": {
+    "polyline_native_mm": [
+      [
+        104.35,
+        105.15
+      ],
+      [
+        104.35,
+        106.65
+      ],
+      [
+        105.85,
+        106.65
+      ]
+    ],
+    "segments": [
+      {
+        "start": [
+          104.35,
+          105.15
+        ],
+        "end": [
+          104.35,
+          106.65
+        ],
+        "length_mm": 1.5,
+        "foreign_hits": [],
+        "minimum_foreign_clearance_mm": 0.43213
+      },
+      {
+        "start": [
+          104.35,
+          106.65
+        ],
+        "end": [
+          105.85,
+          106.65
+        ],
+        "length_mm": 1.5,
+        "foreign_hits": [],
+        "minimum_foreign_clearance_mm": 0.262609
+      }
+    ],
+    "length_mm": 3.0,
+    "passes": true
+  },
+  "join_restoration": [
+    {
+      "uuid": "1e8b18db-09da-595b-adc8-261f93ec17ea",
+      "kind": "track",
+      "intersects_replacement": true
+    },
+    {
+      "uuid": "be0c27a9-6fdb-5af9-a6c2-39b9efaec8d3",
+      "kind": "track",
+      "intersects_replacement": true
+    },
+    {
+      "uuid": "48f742a2-220d-5a4e-8bee-56d20217e42a",
+      "kind": "track",
+      "intersects_replacement": true
+    },
+    {
+      "uuid": "73775a55-01df-53ef-b4f1-0c903c239557",
+      "kind": "track",
+      "intersects_replacement": true
+    },
+    {
+      "uuid": "644d7723-64e0-55bb-9fb1-833db9d15a0b",
+      "kind": "track",
+      "intersects_replacement": true
+    },
+    {
+      "uuid": "c6733700-27c2-53ba-a49e-355156b6dc99",
+      "kind": "track",
+      "intersects_replacement": true
+    }
+  ],
+  "reserved_VCORE_via": {
+    "centre_native_mm": [
+      105.045,
+      106.0
+    ],
+    "diameter_mm": 0.604,
+    "drill_mm": 0.35,
+    "full_span": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "inserted": false,
+    "passes_fixed_and_replacement_screen": true,
+    "hits": [],
+    "per_layer": {
+      "F.Cu": {
+        "minimum_fixed_copper_clearance_mm": 0.223,
+        "nearest": [
+          {
+            "clearance_mm": 0.223,
+            "uuid": "proposed-+3V3-L",
+            "net": "+3V3",
+            "kind": "proposed_track",
+            "label": null
+          },
+          {
+            "clearance_mm": 0.268,
+            "uuid": "proposed-+3V3-L",
+            "net": "+3V3",
+            "kind": "proposed_track",
+            "label": null
+          },
+          {
+            "clearance_mm": 0.607661,
+            "uuid": "be0c27a9-6fdb-5af9-a6c2-39b9efaec8d3",
+            "net": "+3V3",
+            "kind": "track",
+            "label": null
+          },
+          {
+            "clearance_mm": 0.611354,
+            "uuid": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+            "net": "USB_D+",
+            "kind": "via",
+            "label": null
+          }
+        ]
+      },
+      "In1.Cu": {
+        "minimum_fixed_copper_clearance_mm": 0.611354,
+        "nearest": [
+          {
+            "clearance_mm": 0.611354,
+            "uuid": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+            "net": "USB_D+",
+            "kind": "via",
+            "label": null
+          },
+          {
+            "clearance_mm": 0.770937,
+            "uuid": "d5986491-6d78-52f6-99c9-86fbf841afcd",
+            "net": "GND",
+            "kind": "via",
+            "label": null
+          },
+          {
+            "clearance_mm": 2.883693,
+            "uuid": "2c1843e9-ffc4-52ff-881b-2d87834788a6",
+            "net": "BUTTON_EXT",
+            "kind": "via",
+            "label": null
+          },
+          {
+            "clearance_mm": 3.942441,
+            "uuid": "789772e5-dda6-56d1-87e1-ef6bf3b714a4",
+            "net": "VAMP",
+            "kind": "via",
+            "label": null
+          }
+        ]
+      },
+      "In2.Cu": {
+        "minimum_fixed_copper_clearance_mm": 0.611354,
+        "nearest": [
+          {
+            "clearance_mm": 0.611354,
+            "uuid": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+            "net": "USB_D+",
+            "kind": "via",
+            "label": null
+          },
+          {
+            "clearance_mm": 0.770937,
+            "uuid": "d5986491-6d78-52f6-99c9-86fbf841afcd",
+            "net": "GND",
+            "kind": "via",
+            "label": null
+          },
+          {
+            "clearance_mm": 2.883693,
+            "uuid": "2c1843e9-ffc4-52ff-881b-2d87834788a6",
+            "net": "BUTTON_EXT",
+            "kind": "via",
+            "label": null
+          },
+          {
+            "clearance_mm": 3.942441,
+            "uuid": "789772e5-dda6-56d1-87e1-ef6bf3b714a4",
+            "net": "VAMP",
+            "kind": "via",
+            "label": null
+          }
+        ]
+      },
+      "B.Cu": {
+        "minimum_fixed_copper_clearance_mm": 0.434472,
+        "nearest": [
+          {
+            "clearance_mm": 0.434472,
+            "uuid": "2f49a8db-9ea0-5b01-b543-35c160616851",
+            "net": "VBAT",
+            "kind": "track",
+            "label": null
+          },
+          {
+            "clearance_mm": 0.434472,
+            "uuid": "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+            "net": "VBAT",
+            "kind": "track",
+            "label": null
+          },
+          {
+            "clearance_mm": 0.611354,
+            "uuid": "3a4f7dda-da1f-5e34-a7d1-3f9cc9dad9ef",
+            "net": "USB_D+",
+            "kind": "via",
+            "label": null
+          },
+          {
+            "clearance_mm": 0.770937,
+            "uuid": "d5986491-6d78-52f6-99c9-86fbf841afcd",
+            "net": "GND",
+            "kind": "via",
+            "label": null
+          }
+        ]
+      }
+    },
+    "minimum_contact_clearance_mm": 0.471837,
+    "minimum_hole_clearance_mm": 0.888354,
+    "current_In1_MAIN_intersects_via_land": true,
+    "prospective_In1_semantics": "VCORE requires a refill-generated antipad in the existing GND MAIN polygon; current intersection confirms location in the plane, not qualified post-refill continuity."
+  },
+  "ground_and_fill_risks": [
+    "Accepted C13 stitch segment 8962d6a1-67d0-5647-ab62-4035ee08f832 and via d5986491-6d78-52f6-99c9-86fbf841afcd remain fixed.",
+    "A future VCORE antipad and local F clearance carve require fresh F/In1 refill and proof that all five east decap grounds remain connected to MAIN.",
+    "No GND, USB, QSPI, clock, VHI, VBAT, contact, pad, footprint or process-via geometry is released."
+  ],
+  "does_not_solve": [
+    "VCORE source/load feed to this port",
+    "capacitor placement or regulator loop",
+    "In2 backbone",
+    "west VCORE port",
+    "C18 ground return",
+    "R1 obstruction",
+    "PI/current/drop/thermal/physical-stackup qualification"
+  ],
+  "limits": [
+    "Proposal only; accepted PCB/manifest/CAD unchanged.",
+    "0.25 mm width is geometric screening, not current approval.",
+    "Added length is only replacement segment length, not full +3V3 path or loop."
+  ],
+  "native_overlay": {
+    "file": "mcu-east-vcore-port-proposal.svg",
+    "sha256": "64bf3bbc9b4d26da280120fe602c3761f8ac1505c5a97cc9e661e402f5550a96",
+    "semantics": "Native accepted F.Cu/B.Cu/Edge.Cuts base plot with root-added proposal-only overlay: cyan replacement +3V3 path, orange reserved VCORE via, magenta old trace and brown modeled BT1 metal outlines. Existing copper/fill shown in the base is not a refilled candidate.",
+    "root_overlay_correction": "The original export omitted the claimed proposal overlay. Root added and reviewed it without changing PCB bytes; native-to-plot translation (-77.75,-73.15) was verified against the accepted C13 GND and USB_D+ via centres."
+  }
+}
