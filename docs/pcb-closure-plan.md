@@ -166,6 +166,32 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Broader fanout study: two conditional ports, no accepted placement.**
+The [partial proposal](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-fanout-coordinated-proposal.json)
+identifies ordinary VCORE sites at `(105.016667,103.627273)` and
+`(94.996667,104.945455)` after its explicit conditional removals. These
+are not implemented ports or proof of complete fanout. The proposed
+C13/C17/C18/R1 poses collide with fixed copper/pads and are rejected.
+
+Root identified a scope-model gap: the 23-track removal inventory omitted
+the local +3V3 blockers `d269dfaa...` / `fcbd8a3e...` and the VCORE
+branch `f466a216...` / `50ee0fe3...` / `e70cc137...`. Those then appeared
+as fixed obstacles in proposed corridors even though coordinated local
+power rework is authorized. Fixed USB resistor lands and VHI/VBAT remain
+real constraints; removing obsolete local fanout does not remove them.
+
+**Next bounded item:** construct one reusable private fanout fixture with
+exact eligible local F route fragments removed and all required terminals
+and boundary connections inventoried. Native bounds are
+`[93.5,98.5,110.0,107.2]` mm. Eligible nets are local +3V3/VCORE/GND,
+reset and the authorized USB/QSPI escapes; preserve fixed component
+lands, through-vias, mechanical interfaces, protection/clock structures
+and all out-of-region copper. Retain MCU exposed-pad ground spokes.
+Do not use stale F fill as current connectivity evidence. This is
+scope/fixture preparation only, not another placement guess or routing
+attempt; stop within eight minutes with a source-bound fixture or error.
+Accepted `adc262b3...` / `b849b5de...` stays unchanged at 37 opens.
+
 **Owner approved a broader coordinated MCU fanout proposal.** The new
 twelve-minute proposal scope may reconsider C6/C7/C8/C13/C17/C18 and
 R1 positions plus local power/ground and USB/QSPI escape corridors.
