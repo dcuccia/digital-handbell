@@ -166,6 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 27: manual/LLM routing paused for a purpose-built-router bakeoff.**
+The owner authorizes about 90 minutes of active assessment, normally at most
+30 minutes per approach: establish a source-bound baseline, test stable
+Freerouting conservatively, assess Quilter, and briefly investigate
+tscircuit's existing-project round trip. Separate disposable copies start
+from accepted `adc262b3...` / `b849b5de...` at commit `92b3af9`;
+the held MCU fixture is not a starting board. No experimental result may
+be imported or merged into the working board. Existing engineering layer,
+return, process and contact constraints still apply.
+
+The owner explicitly authorized uploading a sanitized copy of the public
+design to their Quilter account. Exclude personal preferences, credentials
+and unrelated files; no paid execution, purchase or fabrication is approved.
+The final deliverable is a concise measured comparison and low-LLM routing
+architecture recommendation. Do not resume the oscillator audit or manual
+routing at the end of this assessment.
+
 **Fanout fixture prepared, held for an incomplete oscillator audit.**
 The [preparation report](../hardware/handbell/iterations/printed-bell-four-layer/reports/mcu-fanout-fixture-preparation.json)
 records private fixture `0acc6277...`, 138 removed local F segments and

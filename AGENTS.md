@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **September 27 routing-tool bakeoff:** manual/LLM-driven routing is paused.
+  Assess purpose-built routers for about 90 minutes active total, normally
+  no more than 30 minutes per approach. Use separate disposable copies of
+  accepted `adc262b3...` / `b849b5de...`; never import or merge results into
+  the working board during assessment. Preserve placement, schematic,
+  outline, stackup and rules. In1 remains protected GND, not a signal layer.
+  The owner explicitly permits a sanitized public-design upload to Quilter;
+  no credentials/personal preferences, paid runs, purchases or fabrication
+  are authorized. Finish with a comparison and recommended workflow, not
+  resumed manual routing. The held fanout fixture is not an input board.
 - **Broader MCU study approved after source-cell rejection:** the owner
   permits a proposal reconsidering C6/C7/C8/C13/C17/C18/R1 and local
   power/ground/USB/QSPI escapes, with the major interfaces and other
