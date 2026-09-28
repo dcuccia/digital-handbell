@@ -1,7 +1,19 @@
 # Purpose-built routing bakeoff - September 27, 2026
 
-**Local assessment complete; Quilter execution is blocked pending support.
+**Local assessment complete; Quilter execution awaits preservation/import review.
 No experimental routing is accepted.**
+
+**September 28 support clarification:** human Quilter support identifies the
+preservation control on the **next step, Constraints, table 2: Define Your
+Own Constraints**, with pours added **by net name**. The previous search
+stopped at Circuit Comprehension and therefore did not establish that the
+control was missing from the workflow. That navigation conclusion is
+superseded. Advance the existing draft for inspection, without submitting.
+Both required pours are on `GND`; inspect whether the control preserves both
+F and In1 zones and their exclusions. Do not enter zone names into a net-name
+field or add `/PROT_FET_RETURN` as a general ground pour. Actual UI behavior,
+existing In2 trace preservation under the selected vendor stackup, and the
+reported import/comprehension errors remain unverified.
 Manual/LLM-driven routing is paused. The owner requested approximately
 90 minutes of active investigation, normally at most 30 minutes per approach,
 with no trace-by-trace cleanup and no automatic continuation of manual routing.
@@ -253,7 +265,8 @@ missing input-stackup option, it blocks this preservation-sensitive job.
 Use vendor assistance rather than silently permitting ground regeneration.
 The support chatbot repeated the documentation without locating the missing
 control; the owner requested escalation and was offered a human handoff.
-No claim of vendor confirmation or successful preservation is made.
+This September 27 observation is superseded by the September 28 navigation
+clarification above; successful preservation is still not demonstrated.
 
 Important review gates from official documentation:
 

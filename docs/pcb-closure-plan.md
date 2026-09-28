@@ -166,6 +166,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**September 28 Quilter support response:** preserved pours are configured
+under **Constraints -> table 2, Define Your Own Constraints**, by net name,
+not on the Circuit Comprehension page previously inspected. Next inspect
+that table in the existing draft; both intended zones use `GND`. Confirm
+F/In1 zone/exclusion and existing In2 trace preservation, plus outstanding
+import/inference corrections, before submitting. No PCB edits or routing
+job are authorized by this navigation clarification. See the
+[updated assessment](routing-bakeoff-2026-09-27.md).
+
 **September 27: manual/LLM routing paused for a purpose-built-router bakeoff.**
 The [assessment report](routing-bakeoff-2026-09-27.md) records the completed
 local tests: Freerouting's native-width F-only sample closed 0/7 opens;
