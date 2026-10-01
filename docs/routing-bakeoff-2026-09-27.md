@@ -1,7 +1,39 @@
 # Purpose-built routing bakeoff - September 27, 2026
 
-**Local assessment complete; Quilter execution awaits preservation/import review.
-No experimental routing is accepted.**
+**Local assessment complete; a disposable Quilter diagnostic run may proceed
+without another support round. No experimental routing is accepted.**
+
+**October 1 disposition:** the owner supplied downloaded job inputs and the
+latest four comprehension CSVs, and requested seeing a result rather than
+another support exchange. SHA-256 comparisons establish that downloaded PCB,
+schematic and project files are byte-identical to the uploaded copy, baseline
+and authoritative files. This verifies input identity, not Quilter's internal
+interpretation or the selected job-level stackup/rules.
+
+The latest CSVs still contain the previously identified inference problems:
+100-ohm USB and audio-output pairs, `/PROT_FET_RETURN` as a ground net, seven
+500 mA power entries with pours enabled, and erroneous capacitor values/roles.
+No automatic corrections were made. The September 29 export and final review
+showed both named pours selected for preservation.
+
+**Revised gate:** permit one free, disposable **as-configured diagnostic**
+run to measure actual output behavior. Do not require vendor clarification
+before measuring whether preservation works. This is not endorsement of the
+inferred constraints or a fair test of fully configured routing quality.
+Retain the current input/CSV evidence and both preserved-pour selections;
+do not change the authoritative design, add a dedicated power layer to
+silence a notice, or authorize paid execution. Stop at a payment/upgrade
+request. No job submission is yet confirmed.
+
+Download any resulting native candidate into a new experimental output
+directory. First compare placement, pad nets, existing copper, layer roles,
+zone definitions/exclusions and actual fills; then measure native DRC,
+connected-pad partitions, opens, and private-return/contact constraints.
+Any preservation failure disqualifies the result from integration. A result
+that respects preservation still requires correct engineering constraints
+before further use. No hand cleanup, merge, fabrication or powered use is
+approved. Support becomes necessary only for a concrete observed failure,
+not a prerequisite to this diagnostic run.
 
 **September 28 support clarification:** human Quilter support identifies the
 preservation control on the **next step, Constraints, table 2: Define Your

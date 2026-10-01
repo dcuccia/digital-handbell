@@ -166,6 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 1: proceed to a disposable Quilter diagnostic, not another support
+loop.** Downloaded job inputs match the authoritative PCB/schematic/project
+byte-for-byte. Latest inferred constraints remain incorrect in the previously
+recorded ways. The owner prefers observing tool output; one free as-configured
+run can measure preservation and connectivity, with both existing GND pours
+selected. No job submission is confirmed. This supersedes the support-first
+hold below, not the no-merge/no-fabrication boundary. Evaluate the returned
+native files against the exact baseline before considering any integration.
+See [diagnostic limits](routing-bakeoff-2026-09-27.md).
+
 **September 28 Quilter support response:** preserved pours are configured
 under **Constraints -> table 2, Define Your Own Constraints**, by net name,
 not on the Circuit Comprehension page previously inspected. Next inspect

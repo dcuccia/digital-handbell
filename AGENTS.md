@@ -2,6 +2,13 @@
 
 ## Bounded engineering work
 
+- **October 1 Quilter diagnostic:** the owner prefers a disposable observed
+  result over another support round. Downloaded inputs are byte-identical
+  to the source; known inference errors remain. One free as-configured run
+  may test actual preservation with both GND pours selected. No submission
+  is yet confirmed. This supersedes the support-first hold, not source
+  protection: no paid run, merge, trace cleanup, fabrication or powered use.
+  Assess native returned files; do not claim the inference is approved.
 - **September 27 routing-tool bakeoff:** manual/LLM-driven routing is paused.
   The local assessment is complete: corrected-width Freerouting closed
   0/7 trial opens, tscircuit failed the source-preservation suitability gate,
