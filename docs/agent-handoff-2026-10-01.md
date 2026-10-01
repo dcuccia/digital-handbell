@@ -1,0 +1,417 @@
+# Agent handoff: Quilter result evaluation
+
+## Start here
+
+**October 1, 2026, 16:02 local:** the owner reports that Quilter is working
+and will report back. Treat the cloud job as **running, owner-reported**.
+No returned candidate has been inspected. Do not infer a successful result,
+completion time, or verified live server status.
+
+The next task is to evaluate the returned native KiCad candidate in isolation.
+**Do not resume manual/LLM-driven routing, repeat the autorouter bakeoff,
+rebuild CAD, merge copper, or repair dozens of traces.** The purpose is to
+learn whether a purpose-built tool can reduce geometric LLM work economically.
+
+Read in this order:
+
+1. This handoff.
+2. [Routing assessment and evidence](routing-bakeoff-2026-09-27.md).
+3. [Closure plan: current handoff](pcb-closure-plan.md#owner-pause-and-next-item).
+4. [Routing engineering policy](routing-agent-policy.md), especially layer
+   roles, private returns, contact metal, process requirements and model gates.
+5. [Tooling lessons](routing-tooling.md) only for the operation being attempted.
+
+Root `AGENTS.md` has extensive historical instructions. Newer dated entries
+supersede older "next" items. The ModulimOps/.NET instructions in the old
+session concern a different repository; this project is `dcuccia/digital-handbell`.
+
+## Repository and session identity
+
+- Public repository: <https://github.com/dcuccia/digital-handbell>.
+- Local repository: `C:\Projects\dcuccia\digital-handbell`, branch `main`.
+- Last commit before this handoff: `ce19159514499fedba8c9fd5723d49f1f5881b37`.
+  The handoff is committed after it; use current `git log -1`, not that older
+  hash as the latest status.
+- Original CLI session ID: `36e6470e-deaa-424a-8d70-418399f53372`.
+- CLI version at handoff: 1.0.90-0; parent engineering model GPT-6 Astra.
+- Session state lives under the user's `.copilot\session-state\<session-id>`.
+  Its `checkpoints` directory has seven historical checkpoints; the latest,
+  `007-mcu-ground-and-fanout-constrai.md`, predates this routing-tool assessment.
+  The session's large `files` directory contains older experiments, not a
+  single authoritative candidate.
+- `/resume <session-id>` can reopen available old local history. A fresh
+  session should use this repository handoff rather than depend on old agents.
+
+Old agent handles, for historical traceability only:
+
+| Agent | Handle | Last consumed turn / status |
+|---|---|---|
+| Pinned Sol routing/tool executor | `5d3ebe53-cee3-4465-9158-938c8283882e` | Turn 90; idle, no job queued |
+| Quilter/tscircuit research | `c0c79c90-0438-42e4-9709-8e027258c820` | Turn 1; idle, no job queued |
+
+These are not portable workers for an independent session. If substantial
+routine native PCB execution warrants delegation, follow the repo policy:
+explicit GPT-5.6 Sol, medium effort, runtime verification and bounded scope.
+Do not silently fall back to Astra for an unavailable pinned executor.
+The frontier model owns engineering judgment and disposition.
+
+## Product context
+
+Open-source educational digital handbell, RP2040/CircuitPython, LSM6DSOX IMU,
+MAX98357A I2S class-D amplifier, TPS61023 audio boost, LiPo charging and
+independent low-side cell protection. Derived hardware retains Adafruit
+CC BY-SA attribution; root MIT does not relicense it.
+
+Placement is substantially complete: nominal D43 PCB, 81 fitted front
+electronic parts plus two rear battery contacts. The native PCB has 104
+footprints including test, mechanical and non-fitted items. USB extends
+beyond the circular body, so a rectangular extent is not the D43 diameter.
+The printed shell/cartridge and historical fit studies are preserved.
+No fabrication, live-cell, powered-performance or child-use approval exists.
+
+## Authoritative starting package: do not overwrite
+
+Relative to the repository:
+`hardware\handbell\iterations\printed-bell-four-layer`
+
+| File | SHA-256 |
+|---|---|
+| `handbell.kicad_pcb` | `adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314` |
+| `placement-manifest.json` | `b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8` |
+| `handbell.kicad_sch` | `ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e` |
+
+Project `handbell.kicad_pro`:
+`8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990`.
+On October 1 the downloaded Quilter input PCB/schematic/project matched
+these source files and both local baseline/upload copies byte-for-byte.
+Downloaded inputs establish identity, not Quilter's parsed internal model.
+
+Baseline:
+
+- 325 physical pads, 1,107 segments, 97 through-vias.
+- No In1 signal tracks. Zero native tracks/vias marked locked.
+- **37 native and independent graph opens**.
+- **234 non-open DRC findings**, **46 schematic-parity warnings**.
+  Zero error-level entries in the separate non-open violations array is
+  not equivalent to a clean board.
+- The 46 parity warnings are `net_conflict`: 22 explicit-unconnected-pad
+  names and 24 auto-named nets. They remain disposition items.
+- Last accepted physical change: a C13 ground stitch joined the eastern
+  capacitor-return island to MAIN, reducing 38 to 37 opens.
+- Manifest status `INCREMENTAL_MCU_EAST_GROUND_ACCEPTED`;
+  `mechanical_rebind_required=true`. Historical completed IMU CAD is not an
+  exact match for the later copper bytes; no new CAD work belongs in this task.
+
+## Isolated local evidence
+
+Experimental root:
+`C:\Projects\dcuccia\digital-handbell-routing-bakeoff-20260927`
+
+This is **outside the Git repository**. It is not automatically delivered
+by cloning the repo. Preserve it on this machine; do not delete or overwrite it.
+
+| Relative path within experimental root | Meaning |
+|---|---|
+| `snapshot.json` | Source-bound copy inventory at assessment start |
+| `baseline` | Untouched baseline package |
+| `freerouting` | Untouched input plus controls, rejected results and helpers |
+| `tscircuit` | Untouched copy; no conversion or routing attempted |
+| `quilter` | Original sanitized upload package and human constraint note |
+| `quilter\downloads\input files` | Three downloaded native input files; verified exact source matches |
+| `quilter\downloads\constraints` | Latest four inference CSVs, unchanged from initial inference |
+| `quilter\circuit comprehension` | Original eight CSVs, owner PDF and locally rendered review images |
+| `quilter\outputs` | Recommended NEW result destination; did not exist when handoff began |
+
+The original `quilter\constraints` folder held header-only draft tables;
+verify its current existence before relying on it. The later correct
+`preserved_pours.csv` was supplied separately from the user's Downloads:
+
+```csv
+pour
+in1-protected-gnd-v1
+quote-native-F-GND-v1
+```
+
+Order is irrelevant. The final review screenshot independently showed two
+preserved-pour records. Do not replace those selections with a net name
+`GND`: the actual dropdown selected existing **zone names**.
+
+Public compact evidence is in
+`docs\measurements\2026-09-27-router-bakeoff`, including the Freerouting
+reports and eight original, explicitly unaccepted Quilter inference CSVs.
+Private screenshots may contain account UI; do not publish them unredacted.
+
+## Quilter job and decisions
+
+- Job ID: `6ab98d5ff989cc810b2fc4a1`.
+- Known setup URL:
+  <https://app.quilter.ai/jobs/6ab98d5ff989cc810b2fc4a1/create/circuit-comprehension>.
+  This is a historical setup URL, not proof of the current results route.
+- Owner created/signs into the account and operates its browser.
+  Do not request passwords, copy browser cookies or infer access from a URL.
+  Browser tools in a fresh session may have a different authentication context.
+- Observed UI/API version: **1.39.1**.
+- Uploaded three loose files: PCB, schematic, project. No ZIP, no personal
+  `.kicad_prl`, credentials or unrelated project files.
+- Owner explicitly authorized upload of this public design and one free
+  diagnostic run. No paid jobs, upgrades, purchases or fabrication approved.
+- Final review: **104 components, 0 to place**, 326 Quilter pins and 96
+  pins to route. These pin metrics are not 325 physical pads or 37 native opens.
+  Intended operation is routing completion with fixed placement, not redesign.
+
+### Setup and support chronology: do not repeat the loop
+
+1. Public docs said Preserved Pours was in Circuit Comprehension. It did not
+   appear in that page's complete PDF; the parent initially stopped too early.
+2. Human support clarified the actual location:
+   **Constraints -> table 2, Define Your Own Constraints -> Preserved Pours**.
+3. Support said "by net name", but the actual UI listed the two zone names.
+   The owner selected both and exported the correct CSV.
+4. Final Review and Submit still displayed "Existing pours will be deleted"
+   alongside **two preserved pours**. We do not know whether that is a stale
+   parsing notice or actual behavior under the chosen stackup.
+5. On October 1 the owner explicitly preferred seeing output over another
+   support round. The gate changed: **measure preservation on the disposable
+   output instead of demanding advance vendor assurance**.
+6. Owner now reports the job working. Do not restart the support-first hold.
+
+Quilter's public terms had a performance-benchmarking restriction. The owner
+clarified this is private adoption evaluation. This records intent, not a
+legal conclusion or independently obtained vendor permission.
+
+### Actual stackup versus job setup
+
+Native input enables four copper layers and nominal 1.6 mm thickness but has
+**no detailed physical `stackup` block**. A JLCPCB 4-layer 6/6-mil preset
+was selected in Quilter; the owner was instructed to use layer classes
+**Signal / Ground / Signal / Signal**.
+
+The preset screenshot showed outer copper 1 oz, inner 0.5 oz, about
+0.2104 mm outer dielectric and 1.065 mm central dielectric. These are
+vendor-preset observations, not a qualified source stackup.
+The job may write physical construction into its output; distinguish
+that explicit preset choice from unexpected layer-role/geometry loss.
+Do not silently adopt the preset into the authoritative design.
+
+The user was instructed to set fabrication minima in the job to:
+trace width 0.1778 mm, clearance 0.20 mm, new via diameter/drill 0.604/0.35 mm,
+board margin 0.25 mm. The final collapsed summary still said "6 mil / 6 mil";
+actual saved job values were not independently re-exported/verified.
+Do not claim those UI edits persisted without evidence.
+
+"No power layer" is informational for our mixed-use In2 strategy, not
+permission to convert it to a dedicated power plane.
+
+### Known input interpretation problems: deliberately NOT corrected
+
+The four October 1 CSVs are unchanged from the original inference.
+The run is as-configured diagnostic evidence, not approved constraints.
+
+| Inference | Source/design reality |
+|---|---|
+| 16 components missing from schematic | 14 exist and have matching symbol UUID path suffixes; only MH1/MH2 are board-only |
+| Pin-count mismatch | Some differences arise from duplicate contact pads, connector MP pads and an unnumbered U1 pad; not proven to explain all importer behavior |
+| D+/D- and USB_D+/USB_D- at 100 ohms | Intended USB target approximately 90 ohms; geometry still needs actual stackup review |
+| VO+/VO- at 100 ohms | Class-D speaker outputs, not ordinary digital differential pair |
+| `/PROT_FET_RETURN` listed as ground | Separate node on the FET side of R27 sense resistor; must not become a general reference or bypass R27 |
+| Seven rails all 500 mA, power pours enabled | Generic defaults, not established current/load requirements |
+| Most +3V3 caps assigned to U2.5 | Shared-net connection does not encode local MCU/IMU decoupling role |
+| C6 -> IC1.23, C8 -> IC1.50 | Local intended C6 is DVDD50; C8 belongs to regulator-output IC1.45 group |
+| Many capacitances all 100 nF | Some are 1 uF or 10 uF, e.g. C8 and C5 |
+| C2/C3 treated as bypass caps | Crystal load capacitors, 15 pF |
+| C21/C22 treated as generic bypass | Class-D output filter capacitors |
+| Empty crystal/switching tables | No explicit inferred Y1/R6 or U5/L1 critical-loop comprehension |
+
+The 16 warning references:
+`BT1 BT2 C30 J1 J2 MH1 MH2 Q5 R25 R26 R27 R28 R29 U1 U6 Y1`.
+Do not delete/rebuild these parts to silence the importer.
+
+## Next bounded item: inspect the returned native candidate
+
+Wait for the owner to supply native output (and any job summary/configuration
+export) or authorize access to a results UI. Do not poll a private cloud job
+with guessed APIs. If output is unavailable, say what is pending and stop.
+
+Target the first analysis item at 10-15 minutes with finite subprocess
+timeouts. Stop on an obvious semantic/preservation failure, persist evidence
+and report it; do not quietly spend another 90 minutes.
+
+1. **Capture without mutation.** Save original download/ZIP untouched in a
+   new named output directory. Inventory hashes and extraction paths; reject
+   unsafe archive paths. Keep returned PCB/project/schematic/config together.
+   Never overwrite `baseline`, source package, earlier controls or downloads.
+2. **Input/placement/connectivity semantics first.** Compare references,
+   fitted/DNP status, side, positions/orientations, pad numbers, duplicate
+   numbers, pad shape/layers, nets, holes/slots and component definitions.
+   Different UUIDs require explicit mapping; do not mistake regeneration for
+   component identity proof. Flag unexplained added/removed pads/nets.
+3. **Existing copper and layers.** Compare track/via geometry as multisets,
+   not UUID membership alone. Check existing routes independently of new
+   additions; distinguish segmentation/rounding from actual rerouting.
+   Verify F/In1/In2/B mapping, no new In1 signals, existing In2 tracks, all
+   five process vias, outline, keepouts and native rules. Record rather
+   than waive any job-preset physical-stackup changes.
+4. **Pours and return paths.** Inspect both named zones' net/layer/outline/
+   exclusions/connection rules and actual filled copper, especially MCU
+   decap ground, private returns, crystal and BOOST_SW exclusions. A named
+   row surviving is not proof its geometry or electrically relevant holes
+   survived. Whole-net connectivity cannot prove private-path preservation.
+5. **Native validation on separate copies.** First record raw output DRC
+   and connectivity with its actual returned context. If refill is needed,
+   preserve raw bytes and refill a separately named copy. Run with matched
+   project/schematic/libraries and explicitly enabled schematic parity.
+   Distinguish vendor rules from the baseline engineering recipe; never
+   normalize away a failure before recording it.
+6. **Measure actual benefit.** Compare all physical-pad connected groups,
+   not only their counts. Record removed/new opens by net, lost prior joins,
+   shorts, floating copper, violation categories, track lengths and vias.
+   Native 37-open baseline, not vendor pin count, is the denominator.
+7. **Sample topology, not every trace.** Review MCU escape/return, USB/QSPI,
+   lower switching/protection and audio areas, plus B contact clearances.
+   Estimate cleanup burden. If preserving source or correcting many traces
+   is necessary, reject rather than perform that cleanup.
+8. **Report.** Classify as rejected, useful but unqualified, or preservation-
+   conforming candidate needing engineering review. No automatic promotion,
+   merge, fabrication or powered testing in any category.
+
+Do not modify the schematic/netlist, placement, outline or rules to make
+Quilter succeed. Further corrected-constraint runs require an explicit
+bounded disposition after inspecting this first output.
+
+## Native verification tools and pitfalls
+
+KiCad 10.0.6 was exercised on Windows. CLI location:
+`%LOCALAPPDATA%\Programs\KiCad\10.0\bin\kicad-cli.exe`.
+Python 3.11 and the bundled `pcbnew` bindings were used; no KiCad MCP was
+required. Use `pwsh`, absolute Windows paths and subprocess timeouts.
+
+Repo helpers:
+
+- `tools\kicad_sexpr.py`: source-span parser and ordered semantic/source checks.
+- `tools\zone_graph.py`: native filled-island graph, not zone outlines.
+- `tools\validate_supply_ground_stitch.py`: physical-pad partitions and
+  related verified geometry/private-return helpers; inspect signatures.
+- `tools\check_printed_bell_power_rework.py`: shared primitive graph/geometry.
+- `tools\render_clock_detail.py`: local primitive views; does not render fills.
+- Accepted `reports\mcu-east-ground-validation.json` and
+  `reports\mcu-east-ground-acceptance.json`: source-bound reference gates.
+
+The local Freerouting `analyze_bakeoff.py` demonstrates refill, DRC and
+graph invocation, but **do not execute/import it blindly**: it has hard-coded
+paths and top-level writes. It compares net island COUNTS in a field named
+`net_partition_changes_vs_source`; equal counts do not by themselves prove
+unchanged membership. The next candidate checker must compare actual
+physical-pad group membership and private cuts.
+
+Its `errors` summary counts only `violations` entries, not all DRC arrays;
+report unconnected/parity findings separately. A zero CLI return without
+`--exit-code-violations` is not acceptance.
+
+Typical exercised DRC invocation, on a disposable copy:
+
+```powershell
+& "$env:LOCALAPPDATA\Programs\KiCad\10.0\bin\kicad-cli.exe" pcb drc `
+  --format json --schematic-parity --severity-all `
+  --output "C:\path\to\new-output\drc.json" `
+  "C:\path\to\new-output\candidate.kicad_pcb"
+```
+
+Supply same-stem project/schematic and required libraries deliberately;
+do not overwrite returned context with baseline files before preserving it.
+Inspect `--help` if the installed CLI differs.
+
+Other exercised lessons:
+
+- Keep `os.add_dll_directory()` handle alive when loading native bindings.
+- `pcb.FromMM(1.0)` gives scale; `pcbnew.IU_PER_MM` is unavailable.
+- Copper enum iteration is not physical stack order; use ordinal mapping.
+- `graph.nets()` exposes `islands`, not a top-level `pads` array.
+- Filled-island metadata is not its native polygon; use `IslandItem.polygon`.
+- Preserve source diagnostics before assertions; do not assert an expected
+  open count before distinguishing useful closures from lost connections.
+- Refill recipe: foreign clearance 0.20 mm; edge/hole/hole-to-hole 0.25 mm;
+  polygon error 0.001 mm; zone minimum thickness 0.25 mm, solid pad connection,
+  always remove islands; retain existing overrides. Compare zone settings,
+  not only caches. Original project defaults are weaker.
+- PyMuPDF (`fitz`) and Pillow are installed; Shapely was missing in the
+  current default Python. Do not install tools for optional diagnostics.
+- SVG renderers can mishandle CSS text sizes. Check actual views rather
+  than assuming an overlay exists.
+- Native serialization may produce whitespace churn. Do not normalize
+  verified PCB bytes merely to satisfy `git diff --check`.
+
+## Non-negotiable engineering details
+
+Layer roles: F local/critical; In1 protected GND; In2 power/released low-speed;
+B constrained by contacts. Ordinary via 0.604 mm land / 0.35 mm drill,
+0.20 mm foreign copper clearance, 0.25 mm hole/slot/contact clearance.
+No ordinary via overlap with any F/B SMD land, including same-net lands.
+All-layer through-via geometry matters. No new blind/buried/microvias.
+
+Rear metal geometry is in `battery-contact-interface.json`, not just pads.
+Mask, tenting or resin fill does not insulate a conductive via land from
+battery metal. Preserve `/CELL_NEG` separation and both private pickoffs:
+R26.2 -> R27.2, R24.2 -> C28.2. Also do not make `/PROT_FET_RETURN` a general
+GND reference across the sense resistor.
+
+**IC1.49 is +3V3, not GND. IC1.P$1 is exposed-pad GND.**
+Crystal network is Y1/C2/C3/R6, not C19/C20. Three VCORE groups:
+IC1.45/C7.2/C8.1; IC1.50/C6.2; IC1.23/C18.2. C18 ground is still isolated.
+
+Five mandatory nonconductive-resin-filled, planarized, copper-capped vias:
+
+| Location | UUID |
+|---|---|
+| C24 | `fa83a8ab-a7d3-5826-adce-43ff4f25a03d` |
+| U4 | `545fee40-3fbd-59ae-bd8d-30ffe16436ec` |
+| U4 | `c63c289d-af32-592b-9732-d17507fbf476` |
+| U4 | `d9dcd570-3f7d-5000-b8d1-12b9b39f93b5` |
+| U4 | `eb628663-2af6-5175-bd63-91e9eecb0258` |
+
+Accepted C13 MAIN ground via:
+`d5986491-6d78-52f6-99c9-86fbf841afcd` at `(105.13,104.627692)`.
+Its modeled metal clearance is only approximately 0.253 mm: nominal pass,
+not a manufacturing-tolerance qualification.
+
+## Completed alternatives: do not rerun automatically
+
+Freerouting 2.4.1 local DSN/SES was a **true external autorouter**, not KiCad
+Attempt Finish. Corrected native-width F-only/no-via test completed in
+49.578 seconds, closed 0/7 ordinary opens, and kept 37 native opens.
+No-routing control rounded 78 footprint origins by up to 0.00005 mm and
+changed segmentation records. Routed output added 128 records versus control
+without useful closure. An initial 0.25 mm target-width error was corrected
+to 0.20 mm; neither result qualifies full multilayer capability.
+Multilayer contact/via constraint mapping was not qualified, so no unrestricted
+multilayer run was performed. Do not present this as a universal router verdict.
+
+tscircuit supports real KiCad PCB import, routing phases and export, not
+merely footprint import. The examined converters reconstruct setup/zone
+rules and geometry; unsuitable for a preservation-sensitive round trip here.
+No migration, installation or demo was done. Greenfield remains a possibility.
+
+## Older manual-routing state: preserved, not the next job
+
+The manual routing effort produced useful IMU and ground closure but recurring
+fanout bottlenecks. The latest disconnected private MCU fixture was held
+because its protected-oscillator audit checked the wrong capacitors.
+It is not an input to Quilter, not accepted copper, and not permission to
+resume its audit now. The rejected source-cell candidate had 39 opens versus
+accepted 37 and must never replace the active board.
+
+Mechanical history includes a completed IMU CAD bundle under
+`mechanical\studies\2026-09-13-printed-bell\imu-four-layer-review\extended-run`.
+It is historical exact-input evidence. No rebuild is needed to assess a
+rejected or unaccepted router result.
+
+## Publication and continuation
+
+Owner permits coherent commits/pushes of project work under the repo policy.
+Do not stage unrelated changes; include the Copilot co-author trailer.
+Main electrical epic: <https://github.com/dcuccia/digital-handbell/issues/4>.
+Publish a concise outcome and source-bound report, not raw cloud/account data.
+
+The preferred architecture is frontier-model engineering/constraint review,
+purpose-built bulk geometry, native KiCad verification, then exception review.
+The next session should await the owner's result and execute that architecture,
+not expand this into a fresh design or open-ended routing campaign.

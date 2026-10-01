@@ -166,6 +166,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 1, 16:02 local: Quilter running; transition to a new session.**
+The owner reports the tool working and will supply results. No native
+candidate has been received/reviewed. The canonical fresh-session entry is
+[the detailed handoff](agent-handoff-2026-10-01.md): source hashes, local
+artifact map, actual configured/inferred limitations, session identity and
+the bounded preservation-first evaluation plan. Preserve raw returned files,
+evaluate only in a new experimental directory, and do not resume manual
+routing or merge a candidate automatically.
+
 **October 1: proceed to a disposable Quilter diagnostic, not another support
 loop.** Downloaded job inputs match the authoritative PCB/schematic/project
 byte-for-byte. Latest inferred constraints remain incorrect in the previously

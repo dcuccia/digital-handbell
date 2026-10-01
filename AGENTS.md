@@ -2,18 +2,25 @@
 
 ## Bounded engineering work
 
+- **October 1 session handoff:** owner reports Quilter is running as of
+  16:02 local and will supply results. Start with
+  `docs/agent-handoff-2026-10-01.md`. No returned candidate has been reviewed.
+  Wait for native output, preserve raw downloads and evaluate in isolation.
+  Do not resume manual routing, repeat the bakeoff or import into the
+  authoritative PCB. Older "no submission confirmed" notes are superseded
+  by this owner report, not by independently queried cloud status.
 - **October 1 Quilter diagnostic:** the owner prefers a disposable observed
   result over another support round. Downloaded inputs are byte-identical
   to the source; known inference errors remain. One free as-configured run
-  may test actual preservation with both GND pours selected. No submission
-  is yet confirmed. This supersedes the support-first hold, not source
+  may test actual preservation with both GND pours selected. The owner now
+  reports the run in progress. This supersedes the support-first hold, not source
   protection: no paid run, merge, trace cleanup, fabrication or powered use.
   Assess native returned files; do not claim the inference is approved.
 - **September 27 routing-tool bakeoff:** manual/LLM-driven routing is paused.
   The local assessment is complete: corrected-width Freerouting closed
   0/7 trial opens, tscircuit failed the source-preservation suitability gate,
   and Quilter upload/comprehension exposed unresolved preservation/import
-  questions now escalated to support. No Quilter routing job is confirmed.
+  questions subsequently taken into an owner-approved diagnostic run.
   See `docs/routing-bakeoff-2026-09-27.md`. Do not restart trials or manual
   routing automatically; retain the source and isolated evidence.
   Assess purpose-built routers for about 90 minutes active total, normally

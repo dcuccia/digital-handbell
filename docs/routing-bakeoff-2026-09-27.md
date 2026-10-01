@@ -3,6 +3,12 @@
 **Local assessment complete; a disposable Quilter diagnostic run may proceed
 without another support round. No experimental routing is accepted.**
 
+**October 1, 16:02 local update:** the owner reports the Quilter job working.
+This is owner-reported execution, not an independently queried cloud status.
+No output candidate has been reviewed. Continue via the
+[fresh-session handoff](agent-handoff-2026-10-01.md); prior "no submission
+confirmed" text below describes the earlier checkpoint.
+
 **October 1 disposition:** the owner supplied downloaded job inputs and the
 latest four comprehension CSVs, and requested seeing a result rather than
 another support exchange. SHA-256 comparisons establish that downloaded PCB,
