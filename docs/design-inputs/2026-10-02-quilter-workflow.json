@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "status": "ENGINEERING_BRIEF_DEFINED_NATIVE_ENCODING_PENDING",
+  "owner_authorization": {
+    "time_local": "14:05",
+    "purpose": "Personal learning: efficient owner/agent/dedicated-layout-service workflow, not preservation of sunk cost or aesthetic optimization.",
+    "parallel_items": ["Read-only diagnostic of existing outputs", "Separate flexible functional-group layout preparation"],
+    "later_trials": "Qualified comparable four/six-layer inputs; eight layers only if little additional preparation/review and confirmed free.",
+    "not_authorized": ["Paid jobs or upgrades", "Purchases or fabrication", "Powered use", "Automatic promotion over accepted PCB", "Public redistribution of Quilter native output without license review"]
+  },
+  "source": {
+    "package": "hardware\\handbell\\iterations\\printed-bell-four-layer",
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "references": 104,
+    "fitted_components": 83,
+    "physical_pads": 325,
+    "dnp": ["C29"],
+    "identity_policy": "Preserve complete footprint/pad definitions, duplicate and unnumbered pads, UUIDs, nets, values, MPNs, DNP/assembly flags and schematic. No part substitutions."
+  },
+  "fixed_interfaces": {
+    "references": ["BT1", "BT2", "MH1", "MH2", "X6", "J1", "J2"],
+    "pose_source": "Exact accepted native footprint poses, not older landmarks or proxy centers.",
+    "board_outline": "Exact native Edge.Cuts including contact tabs and USB tongue; nominal D43 is not an outline substitute.",
+    "thickness_target_mm": 1.6,
+    "fitted_front_count": 81,
+    "fitted_back_references": ["BT1", "BT2"],
+    "mechanics": "Retain mounts, USB mating/service paths, connector access, speaker/height and conductive battery-contact envelopes. New placement requires exact mechanical rebind before acceptance."
+  },
+  "initial_process_seeds": {
+    "fixed_references": ["U4", "C24"],
+    "reason": "Preserve mandatory process-via geometry without falsely assuming Quilter can move a footprint and its independent vias as a rigid group.",
+    "via_uuids": [
+      "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+      "c63c289d-af32-592b-9732-d17507fbf476",
+      "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5",
+      "eb628663-2af6-5175-bd63-91e9eecb0258",
+      "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+    ],
+    "treatment": ["nonconductive resin fill", "planarization", "copper capping"],
+    "geometry_source": "Exact current PCB; verify against reports/imu-closure-acceptance.json and reports/c24-filled-via-acceptance.json.",
+    "alternative": "Relocatable seed or ordinary-via substitution requires separate explicit engineering review; do not silently delete these obligations."
+  },
+  "functional_groups": [
+    {"id": "mechanical-contacts", "refs": ["BT1", "BT2", "MH1", "MH2"], "intent": "Fixed mechanical interfaces; raw negative is not system ground."},
+    {"id": "mcu-power-reset", "refs": ["IC1", "C6", "C7", "C8", "C9", "C11", "C12", "C13", "C14", "C15", "C17", "C18", "R1", "TP7", "TP8", "TP9"], "intent": "Movable MCU and complete supply/return cells. Associate capacitors with exact source pins, not all with U2."},
+    {"id": "crystal", "refs": ["Y1", "C2", "C3", "R6"], "intent": "Move with MCU relationship; short crystal paths, actual 15pF load capacitors, keep noisy switching copper away."},
+    {"id": "flash-boot", "refs": ["U1", "C10", "R5", "R11", "D3", "TP3"], "intent": "Local QSPI and flash supply/return, retain boot recovery branch and short test stubs."},
+    {"id": "usb", "refs": ["X6", "R9", "R10", "R12", "R13", "D+1", "D-1"], "intent": "Fixed X6; movable termination/CC parts and probe pads. USB approximately 90ohm differential, referenced to real stackup."},
+    {"id": "imu", "refs": ["IC4", "C23", "C24", "R14", "R15", "TP6"], "intent": "Local dual-supply decoupling; C24 process seed fixed initially. Record any IC4 rotation for sensor-to-bell frame mapping."},
+    {"id": "logic-regulator", "refs": ["U2", "C4", "C5", "R3"], "intent": "Local regulator input/output capacitors with short ground returns."},
+    {"id": "charger", "refs": ["U3", "C20", "R8", "R2", "CHG0", "CHG_EN0"], "intent": "Retain charge program, enable access and indication; near fixed USB/power interfaces without imposing an invented region size."},
+    {"id": "source-selection", "refs": ["Q3", "D4", "C1", "R4"], "intent": "Keep source selection and paired load/return corridors; preserve corrected custom Q3 lands."},
+    {"id": "audio-switch", "refs": ["Q1", "Q2", "R16", "R17", "TP16"], "intent": "Power gating and default-off behavior; coordinate with boost input and source selection."},
+    {"id": "boost", "refs": ["U5", "L1", "C26", "C27", "C28", "C29", "R23", "R24", "TP10"], "intent": "Tight input and output switching loops; C27/C28 local paired returns; quiet R24-to-C28 pickoff; C29 remains DNP."},
+    {"id": "cell-protection", "refs": ["U6", "Q5", "C30", "R25", "R26", "R27", "R28", "R29", "TP11"], "intent": "Preserve separate CELL_NEG, PROT_FET_RETURN and GND; no shunt/FET bypass; independent R26-to-R27 quiet pickup."},
+    {"id": "amplifier-output", "refs": ["U4", "C16", "C19", "FB1", "FB2", "C21", "C22", "Q4", "R18", "R20", "GAIN0", "J1", "TP12", "TP13", "TP14", "TP15"], "intent": "U4 seed/J1 fixed initially; local PVDD return and paired speaker paths. VO+/VO- are class-D outputs, not a 100ohm data pair."},
+    {"id": "button", "refs": ["J2", "C25", "R21", "R22"], "intent": "Fixed connector, movable input filter with local ground."},
+    {"id": "status", "refs": ["L0", "R7"], "intent": "Retain status function; no unqualified external visibility promise."},
+    {"id": "debug", "refs": ["TP4", "TP5"], "intent": "Retain SWD recovery access and usable service-pad placement."}
+  ],
+  "placement_encoding": {
+    "movable_policy": "Every reference not in fixed_interfaces or initial_process_seeds is eligible for XY/rotation changes on F, subject to height, access, footprint, return and electrical constraints.",
+    "staging": "Move eligible footprints outside outline only on isolated input; preservation of source definitions and all pads must be proved after translation.",
+    "front_requirement": "Associate all movable references with actual F.Cu placement regions. A single-sided result filter is not enforcement.",
+    "grouping": "Prefer broad anchored groups and source-pin associations; do not copy the old tightly packed floorplan as restrictive rooms.",
+    "unqualified": "Exact region geometry, height-class keepouts, group association behavior and region intersections need native/import controls before submission."
+  },
+  "copper_policy": {
+    "diagnostic_track": "Do not change or refill raw outputs. Measure actual cached copper.",
+    "fresh_track": "Proposed removal of existing ordinary tracks/vias/pours is confined to new disposable input after fixed/process seed and keepout classification. Preserve five exact process vias and all footprint copper.",
+    "keepouts": "Classify fixed mechanical versus component-relative electrical exclusions. Do not retain obsolete coordinate-bound crystal/private-return holes as if they followed moved parts; do not simply discard the underlying requirements.",
+    "same_net_private_paths": "Whole-net continuity is insufficient for R26/R27 and R24/C28; require native cut/topology proofs or preserve an explicitly reviewed small circuit block if service cannot express the duty.",
+    "source_changes": false
+  },
+  "minimum_geometry_contract": {
+    "foreign_copper_clearance_mm": 0.20,
+    "edge_hole_contact_clearance_mm": 0.25,
+    "new_ordinary_via_copper_drill_mm": [0.604, 0.35],
+    "new_ordinary_via_over_smd_land_allowed": false,
+    "via_under_conductive_contact_metal_allowed": false,
+    "new_blind_buried_microvias_allowed": false,
+    "width_policy": "Preserve engineering net intent; current/path-specific widths and actual stackup impedance govern. No generic 500mA defaults or imported weaker minima as waivers."
+  },
+  "stackup_study": {
+    "primary_layers": [4, 6],
+    "optional_layers": [8],
+    "qualification": "Actual named supplier construction, copper weights, dielectric thickness/properties and layer roles required before impedance-dependent routing. No invented stackup.",
+    "four_layer_starting_roles": ["F components/critical signals", "In1 protected GND", "In2 distribution/constrained signals", "B constrained by contacts"],
+    "more_layers": "Define explicit ground adjacency and paired power/return strategy for each construction; more copper layers do not remove through-via contact restrictions.",
+    "comparison": "Same outline/BOM/requirements/minima. Placement may adapt by stackup; outcomes do not isolate layer count alone."
+  },
+  "submission_gates": [
+    "Native prepared input proves all 104 refs/325 physical pad identities and exact fixed/process seed poses.",
+    "Source-bound height/contact/USB/hole keepouts are encoded and tested; source rules and old exclusion intent are accounted for.",
+    "Exact capacitor-to-pin, crystal, boost, private-return, USB and audio comprehensions are reviewed rather than accepted from prior inference.",
+    "Verify actual parsed F-only/group/keepout behavior; unsupported requirement gets an explicit preserve/check disposition.",
+    "Named actual stackup and saved fabrication minima are recorded.",
+    "Owner account confirms free personal job; stop at any payment or changed terms requiring owner action.",
+    "Submission uses sanitized public design only; no KiCad preferences or credentials."
+  ],
+  "acceptance": [
+    "No automatic integration regardless of vendor completion percentage.",
+    "Fresh layout judged by intended pad/net identity, complete connectivity, mechanical fit, electrical/topology/return behavior and process requirements, not old trace equality.",
+    "Matched-context native DRC/parity plus independent all-layer checks; do not conceal weaker returned rules.",
+    "Record setup/review/correction effort, agent expense if measurable, actual job price and wall time separately.",
+    "Rebind selected exact placement to mechanical assembly before acceptance; no fabrication or powered approval."
+  ]
+}

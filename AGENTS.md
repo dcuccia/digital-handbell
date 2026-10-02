@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 2, 14:05 workflow study approved:** owner confirms fully personal
+  use and approves parallel existing-output connectivity diagnosis and a
+  separate flexible functional-group layout study, then qualified free
+  four/six-layer trials (eight optional). Read
+  `docs/quilter-workflow-study-2026-10-02.md` and its source-bound contract.
+  This releases read-only measurement beyond the preservation stop, not
+  acceptance of the rejected outputs. Preserve the 37-open board, raw
+  downloads and all experiments. Fixed interfaces and five process vias
+  remain protected; fresh input/constraint qualification precedes any new
+  cloud submission. No paid use, repair/merge, manual routing, fabrication
+  or powered use is released.
 - **October 2 Quilter outputs assessed:** v1.1 and v1.2 are rejected for
   integration at the bounded preservation gate, not ranked by native routing
   benefit. Checked placement and 325 native pad records/nets/UUIDs match,

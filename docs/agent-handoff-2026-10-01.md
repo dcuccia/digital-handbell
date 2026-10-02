@@ -2,6 +2,14 @@
 
 ## Start here
 
+**October 2, 14:05: owner approved the personal workflow-learning study.**
+Continue with the [two-track brief](quilter-workflow-study-2026-10-02.md):
+bounded read-only connectivity diagnosis of the rejected outputs in parallel
+with a separate flexible functional-group layout input. Later free layer
+trials depend on native/input constraint qualification. This supersedes the
+no-further-assessment hold below, not rejection for integration or protection
+of source/experiments. No paid jobs, fabrication or powered use is approved.
+
 **October 2, 2026:** the owner supplied two native output packages under
 `quilter\downloads\outputs` in the experimental root below:
 `Quilter_handbell.kicad_pcb_Candidate_1_1` and

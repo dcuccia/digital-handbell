@@ -1,0 +1,133 @@
+# Quilter workflow learning study
+
+Owner approved October 2 at 14:05 local; fully personal project.
+The goal is an economical owner/agent/layout-service workflow, not recovery
+of sunk token cost or human-style trace aesthetics. The two rejected raw
+outputs and the authoritative 37-open board remain immutable evidence.
+Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
+
+## Two parallel, bounded items
+
+1. **Read-only diagnostic:** compare the actual saved copper in v1.1/v1.2
+   against the accepted source. Measure useful joins, lost prior groups,
+   remaining opens and native findings without repair, refill or promotion.
+   This explicitly releases measurement beyond the earlier preservation
+   stop; it does not reverse rejection for integration.
+2. **Fresh-layout brief:** reorganize the same circuit into functional
+   groups, with fixed mechanical interfaces and controlled placement freedom.
+   The [source-bound contract](design-inputs/2026-10-02-quilter-workflow.json)
+   assigns all 104 references, including copper-only features and C29 DNP.
+   Native staging and imported-constraint qualification are separate items.
+
+Native execution remains pinned Sol/medium with a runtime gate. Astra owns
+engineering requirements and acceptance. Target 10-15 minutes per coherent
+item, finite subprocess timeouts and no more than two tooling corrections.
+Preserve partial evidence and stop on a concrete blocker.
+
+## Initial placement strategy
+
+Keep BT1/BT2, MH1/MH2, X6, J1 and J2 at their exact accepted native poses.
+Retain the outline, mounts, contact metal, connector/USB access, component
+height limits and front-electronics/rear-contact split. The nominal D43
+circle is not a replacement for the outline with tabs and USB tongue.
+
+Keep U4 and C24 at their current poses for the first input, with their five
+mandatory filled/planarized/capped vias. This is a deliberate limited seed,
+not a claim that the whole old floorplan must survive. Independent vias
+cannot be assumed to follow a movable component in Quilter. A relocatable
+process block or an ordinary-via alternative would need separate evidence.
+Thus this is a largely fresh layout with two process seeds, not an empty
+board falsely stripped of manufacturing obligations.
+
+The other references may move/rotate on F subject to the contract. Keep
+electrically related groups together without inventing narrow placement
+rectangles: MCU supply/return, crystal, flash/boot, USB, IMU, regulator,
+charger, source selection, audio switch, boost, protection, amplifier/filter,
+button, indication and debug. Associate capacitance with the actual supply
+pin, not merely a shared +3V3 net. Group membership is not by itself a
+decoupling-distance, return-path or switching-loop constraint.
+
+Two important input traps:
+
+- Quilter can flip unplaced components unless tied to a layer-specific
+  placement region. The single-sided candidate filter is not enforcement.
+- Off-board grouping regions do not constrain the side. We must verify
+  actual KiCad region associations and F-only behavior in the imported
+  model before submitting, not rely on how a staging picture looks.
+
+Mechanical envelopes remain screening inputs, not qualified tolerances.
+The manifest contains historical landmark/proxy fields as well as native
+origins; fixed poses must come from the exact accepted PCB, not stale
+descriptive coordinates. Newly moved parts require exact mechanical rebinding.
+IC4 rotation also changes the sensor-to-bell coordinate mapping.
+
+## Preserve engineering intent, not obsolete obstacles
+
+Fresh-layout preparation may replace ordinary old routing on an isolated
+copy after a complete keepout/seed inventory. It must not delete footprint
+copper, corrected USB slots/lands, custom Q3 geometry or the five process
+vias. No old source file is a scratch input.
+
+Fixed rear-contact/USB/mount restrictions remain fixed. Crystal,
+switch-node and private-return exclusions tied to moved components must
+be re-expressed against those components, not copied at stale coordinates.
+Through-vias still expose conductive B lands under battery metal even when
+filled or tented. More copper layers do not solve that access restriction.
+
+Raw CELL_NEG is not protected GND. PROT_FET_RETURN is not a general ground
+plane. Preserve R26/R27 and R24/C28 private pickoffs and short local boost
+output-capacitor supply/return loops. If an essential duty cannot be encoded
+in Quilter, explicitly retain a reviewed local block or use a qualified
+independent topology gate; do not silently let it become a generic signal.
+
+No generic 500mA rail table, 100ohm speaker-output pair, incorrect capacitor
+values or empty clock/switching comprehension is approved for reuse.
+Current budgets and powered behavior remain provisional engineering gates.
+
+## Layer comparison and cost
+
+Prepare comparable real four- and six-layer constructions once the common
+input is qualified. Eight layers is optional if it adds little setup/review
+and remains free. Use actual supplier construction data and explicit return
+references; do not merely increase the enabled-layer count. Let placement
+adapt while holding outline, BOM, electrical and manufacturing requirements
+constant. This compares complete workflows, not layer count in isolation.
+
+Measure native outcomes, defect roots, owner/agent interventions, setup and
+review effort, actual service cost, manufacturing implications and elapsed
+turnaround. Do not invent token costs or internal compute measurements from
+wall time. A visually unusual layout can be useful; electrical/process
+failures cannot be hidden by a completion percentage.
+
+Public pricing checked October 2:
+
+- [Free tier](https://www.quilter.ai/free-ai-pcb-design): personal/academic
+  eligibility, free access, unlimited iterations and product features.
+- [Paid pricing](https://www.quilter.ai/pricing): per project, based on
+  unrouted input pins, with iterations and parallel jobs included and
+  advertised 10% BOM flexibility. No public dollar-per-pin quote found.
+- The prior job's 96 pins-to-route is neither 37 native opens nor 325
+  physical pads. A fresh input can change that count and any paid quote.
+- Confirm this account's actual free terms before submission. Stop at
+  payment/upgrade or a changed agreement needing owner action.
+- Personal use does not itself settle output-redistribution rights.
+  [Terms](https://www.quilter.ai/terms) and third-party hardware attribution
+  remain a gate before publishing Quilter native designs or a kit.
+
+## Next native preparation item
+
+Start from the exact source hashes in the JSON, not the held MCU fanout
+fixture or either Quilter output. In one new private staging directory,
+inventory fixed poses, functional-group pin associations, five process vias,
+fixed/mechanism-relative keepouts and height restrictions. Prove all 104
+references are assigned exactly once and preserve 325 physical pad identities.
+Stop with the explicit constraint map and any unsupported import requirement
+before moving parts or deleting ordinary copper. That separates engineering
+intent from irreversible-looking preparation and avoids another blindly
+configured cloud run.
+
+References: Quilter [placement guide](https://docs.quilter.ai/guides/placement-guide),
+[KiCad regions](https://docs.quilter.ai/design-parameters/placement-regions),
+[single-sided requirement](https://docs.quilter.ai/design-parameters/single-sided-placement),
+[keepouts](https://docs.quilter.ai/design-parameters/keepouts),
+[stackups](https://docs.quilter.ai/design-parameters/stackups).

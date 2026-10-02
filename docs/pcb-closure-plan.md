@@ -166,6 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 2, 14:05: personal workflow study approved.** The owner prioritizes
+learning an efficient agent-plus-service process, not preservation of sunk
+routing effort. Run bounded read-only diagnosis of v1.1/v1.2 and a separate
+flexible functional-group engineering brief in parallel. Then qualify native
+input/constraints before confirmed-free four/six-layer trials (eight optional).
+The [study and exact next item](quilter-workflow-study-2026-10-02.md) preserve
+fixed interfaces, five process vias, accepted sources and all experiments.
+The output-rejection decision remains; no repair/merge, manual routing,
+purchase, fabrication or powered use is released.
+
 **October 2: both Quilter outputs rejected for integration at the preservation
 gate.** Checked placement and all 325 native pad geometry/net records match,
 but the original named In1 GND zone has no exact structural substitute and
