@@ -2,6 +2,15 @@
 
 ## Start here
 
+**Current stopping point: fresh-input inventory blocked.** The bounded native
+tool attempt exhausted its two corrections and produced no inventory.
+The final KiCad via-accessor assertion timed out; root also found
+classification/geometry/counting gaps in the uncompleted script. No new
+native run, placement/copper preparation or cloud job is released.
+All four authoritative package hashes remain unchanged. Read the
+[blocker and exact next item](quilter-workflow-study-2026-10-02.md#native-inventory-blocker-and-stopping-point)
+before acting on the earlier study authorization.
+
 **October 2, 14:05: owner approved the personal workflow-learning study.**
 Continue with the [two-track brief](quilter-workflow-study-2026-10-02.md):
 bounded read-only connectivity diagnosis of the rejected outputs in parallel

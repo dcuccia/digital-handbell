@@ -166,13 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 2 inventory stopping point:** the fresh-track native inventory
+exhausted its initial attempt and two corrections with no inventory output.
+Final failure: a KiCad via-accessor assertion and hard timeout. Root's
+review additionally rejects name-only keepout classification, incomplete
+polygon/fill handling and fitted-count/process-contact shortcuts.
+The four source hashes are unchanged. No automatic retry, prepared input
+or layer trial is released; a newly authorized bounded tooling repair must
+precede further native work. See the [blocker and evidence](quilter-workflow-study-2026-10-02.md#native-inventory-blocker-and-stopping-point).
+
 **October 2 diagnostic checkpoint:** v1.2 improves saved-fill same-net graph
 opens from 37 to 22 without a detected prior pad-group split; v1.1 regresses
 to 38. Native DRC counts are 24/38 respectively, leaving v1.2's discrepancy
 unreconciled. Foreign-net contacts and native shorts preclude acceptance;
 raw counts also include inherited-via/rule mismatches and untested fill
 cache effects. See the [source-bound diagnostic](quilter-workflow-study-2026-10-02.md#existing-output-diagnostic-checkpoint).
-Continue the separate native constraint inventory, not output cleanup.
+The separate native constraint inventory subsequently blocked as recorded
+above; output cleanup remains unreleased.
 
 **October 2, 14:05: personal workflow study approved.** The owner prioritizes
 learning an efficient agent-plus-service process, not preservation of sunk

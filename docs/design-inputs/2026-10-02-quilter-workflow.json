@@ -1,7 +1,18 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "ENGINEERING_BRIEF_DEFINED_NATIVE_ENCODING_PENDING",
+  "status": "ENGINEERING_BRIEF_DEFINED_NATIVE_INVENTORY_BLOCKED",
+  "inventory_checkpoint": {
+    "status": "NO_NATIVE_INVENTORY_RESULT",
+    "evidence_directory": "quilter\\outputs\\inventory-20261002T141349-sol",
+    "blocker_report_sha256": "9e666f06f3e3824fa6900adceae5fe8fd0233e4adb74bbb638f97d3e3fa6deaa",
+    "failed_script_sha256": "e683e036830811daefd3e6f716f663389d04ea919ee9814ee23df1f7d9192ef5",
+    "reason": "KiCad Python API incompatibilities exhausted initial attempt plus two corrections; final no-layer PCB_VIA.GetWidth assertion caused 120-second timeout.",
+    "root_disposition": "Do not rerun after only an accessor change. Failed script also needs source-evidenced keepout classification, complete polygons including holes, explicit fill-read failures, correct fitted-component counting and geometric process-via pad binding.",
+    "source_package_hashes_reverified_by_root": true,
+    "automatic_retry_released": false,
+    "prepared_input_or_cloud_job_created": false
+  },
   "owner_authorization": {
     "time_local": "14:05",
     "purpose": "Personal learning: efficient owner/agent/dedicated-layout-service workflow, not preservation of sunk cost or aesthetic optimization.",

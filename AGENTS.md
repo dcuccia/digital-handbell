@@ -2,6 +2,14 @@
 
 ## Bounded engineering work
 
+- **October 2 fresh-input inventory blocked:** the native tooling item
+  exhausted initial plus two corrective attempts and produced no inventory.
+  The last KiCad via-accessor assertion timed out. Root also found
+  name-only keepout classification, incomplete polygon/fill handling and
+  fitted-count/process-contact gaps in the failed script. Source hashes
+  remain unchanged. No automatic retry, placement/copper preparation or
+  layer trial is released. A new bounded tooling-repair authorization is
+  needed; see `docs/quilter-workflow-study-2026-10-02.md`.
 - **October 2 connectivity diagnostic:** read-only saved-fill graphs reproduce
   source 37 opens, v1.1 38 and v1.2 22; native output DRC gives 38/24.
   The v1.2 discrepancy is unresolved. v1.2 shows useful same-net gains but

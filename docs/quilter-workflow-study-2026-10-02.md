@@ -176,7 +176,51 @@ Public pricing checked October 2:
   [Terms](https://www.quilter.ai/terms) and third-party hardware attribution
   remain a gate before publishing Quilter native designs or a kit.
 
-## Next native preparation item
+## Native inventory blocker and stopping point
+
+The inventory did **not** complete. KiCad 10.0.6 Python compatibility failures
+exhausted the initial attempt plus two corrections: library-ID formatting,
+UTF8 field conversion, then a native assertion from `PCB_VIA.GetWidth()`
+without a layer argument. The last attempt reached its 120-second hard
+timeout and was stopped. No inventory JSON or prepared input was produced.
+This is our tooling failure, not a measured Quilter limitation.
+
+Local evidence under the experimental root:
+`quilter\outputs\inventory-20261002T141349-sol`.
+The blocker report `inventory-run-blocker.json` has SHA-256
+`9e666f06f3e3824fa6900adceae5fe8fd0233e4adb74bbb638f97d3e3fa6deaa`;
+the failed script `native_constraint_inventory.py` has SHA-256
+`e683e036830811daefd3e6f716f663389d04ea919ee9814ee23df1f7d9192ef5`.
+Root independently rechecked all four authoritative package hashes after
+the failure; they still match the contract. No placement, copper, original
+output, or CAD changed, and no cloud job was submitted.
+
+**Root disposition:** do not simply change the via accessor and rerun.
+Review of the failed script also found acceptance-relevant gaps:
+
+- Keepout purpose is classified from names, without the required supporting
+  source/report evidence. Unknown or ambiguous duties must remain unresolved.
+- Polygon extraction omits holes; fill-read exceptions silently become null.
+  A deletion/relocation inventory needs complete geometry and explicit failures.
+- The check labeled "81 electronics" counts all 102 non-contact references,
+  rather than the fitted manifest subset. Via/pad binding tests only equal
+  centers and nets, not actual copper contact for offset process vias.
+
+No values from the uncompleted script qualify the native inventory.
+The earlier source/manifest-backed group brief remains a proposal, not
+proof that placement regions or process seeds have now been inventoried.
+The retry budget is exhausted, so fresh-input preparation and layer trials
+are **blocked**, with no automatic repair or additional native run released.
+
+## Next item, requiring a new bounded authorization
+
+Repair only the isolated inventory tool, reusing exercised KiCad accessors
+and source-bound report/manifest definitions rather than another untested API
+sequence. Address the gaps above before one bounded read-only rerun. Stop
+with either a complete evidence-bearing inventory or a concrete failure;
+do not move parts, delete copper, choose a stackup or submit a job.
+
+The inventory's unchanged engineering objective is:
 
 Start from the exact source hashes in the JSON, not the held MCU fanout
 fixture or either Quilter output. In one new private staging directory,
