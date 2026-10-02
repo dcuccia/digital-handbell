@@ -166,6 +166,19 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 2: both Quilter outputs rejected for integration at the preservation
+gate.** Checked placement and all 325 native pad geometry/net records match,
+but the original named In1 GND zone has no exact structural substitute and
+all 24 original In2 segment records are unmatched (13 +3V3, 2 USBBOOT,
+3 /IMU_INT2, 6 SDA). Four copper layers remain enabled; renamed layer
+displays are not layer loss. Record differences are not lost-connection
+counts, and zone structural differences are not an electrical-equivalence
+proof. Native routing benefit was not measured after this stop.
+The authoritative 37-open package and raw downloads are unchanged.
+See the [corrected evidence, local artifact map and limits](agent-handoff-2026-10-01.md#october-2-bounded-preservation-result).
+No repair, merge, rerun, support loop, manual routing or CAD work is released.
+The October 1 running/waiting state below is historical.
+
 **October 1, 16:02 local: Quilter running; transition to a new session.**
 The owner reports the tool working and will supply results. No native
 candidate has been received/reviewed. The canonical fresh-session entry is

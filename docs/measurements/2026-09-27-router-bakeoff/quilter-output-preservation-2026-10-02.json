@@ -1,0 +1,80 @@
+{
+  "schema": "digital-handbell-quilter-preservation-disposition-v1",
+  "date": "2026-10-02",
+  "disposition": "Both outputs rejected for integration at bounded preservation gate; routing benefit not assessed.",
+  "scope": "Private-adoption interoperability evidence, not a routing-performance benchmark.",
+  "baseline": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "previously_established_native_opens": 37,
+    "unchanged": true
+  },
+  "candidates": [
+    {
+      "label": "v1.1",
+      "folder": "Quilter_handbell.kicad_pcb_Candidate_1_1",
+      "pcb_sha256": "df25ae68fb456c5d342c502500994ce71932659c9652c5b309a07e351fc9b05e"
+    },
+    {
+      "label": "v1.2",
+      "folder": "Quilter_handbell.kicad_pcb_Candidate_1_2",
+      "pcb_sha256": "ae25bb61b5272cda7fd456dca09a38c74c968c9f0f7236f3c2994c91915b3bff"
+    }
+  ],
+  "shared_output_project_sha256": "494b3ecece1dc9e326d329de1e3e73d86290680800ad8f53c37e940d644de455",
+  "raw_downloads_unchanged": true,
+  "returned_schematic_or_job_configuration_supplied": false,
+  "native_tool_version": "KiCad 10.0.6",
+  "executor": {
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "runtime_gate_verified": true
+  },
+  "findings_common_to_both": {
+    "footprint_reference_count": 104,
+    "checked_footprint_placement_value_library_attributes_match": true,
+    "matched_native_physical_pad_records": 325,
+    "checked_pad_geometry_or_net_mismatches": 0,
+    "pad_uuid_matches": 325,
+    "parent_footprint_uuid_matches_over_pad_records": 325,
+    "netless_pad_records_unchanged": 15,
+    "netless_tracks_or_vias": 0,
+    "front_named_ground_zone_structural_and_saved_fill_match_ignoring_uuid": true,
+    "original_named_in1_ground_zone_present": false,
+    "exact_in1_zone_structural_matches_ignoring_name_and_uuid": 0,
+    "all_four_standard_copper_layers_enabled": true,
+    "copper_layer_types_unchanged": true,
+    "copper_layer_display_names_changed": true,
+    "missing_exact_baseline_in2_segment_records": 24,
+    "missing_exact_records_by_net": {
+      "+3V3": 13,
+      "USBBOOT": 2,
+      "/IMU_INT2": 3,
+      "SDA": 6
+    },
+    "identical_endpoint_width_net_substitutes_on_other_layers": 0
+  },
+  "local_evidence_relative_to_experimental_root": "quilter\\outputs\\preservation-assessment-20261002T1244",
+  "evidence": {
+    "preservation-report.json": "80b08dcf6faba07f1044a6c2547baa3e823b8b7957c54ecd28d71ccc9b7f97bd",
+    "assess_preservation.py": "95cee7abf423a2cfdea8ab98549c28fd0c9171c3f8fdf86c5c67a46e752c7489",
+    "preservation-correction-v2.json": "646a9d5849166c80dec5d342dc414eca3fba42312008766e966013e89b1926bf",
+    "assess_preservation_correction_v2.py": "f6cc49b00a440c8675ad4b1bf39c73035d975fb700d2f3ce2a4dd299efe4b72d"
+  },
+  "audit_corrections": [
+    "Original empty track/via net fields and inferred pad-net equality were invalid; corrected native GetNetname results supersede them.",
+    "Layer table difference is display-name change, not loss of copper layers.",
+    "Correction executor prose incorrectly called all 24 missing records +3V3; raw records show the four-net breakdown above.",
+    "Serialized zone-inventory empty net display fields do not prove zones are netless; no such claim is made."
+  ],
+  "limitations": [
+    "Exact record comparison does not establish electrical disconnection or exclude resegmentation/reconstruction.",
+    "Zone comparison includes serialized settings and saved fills; no polygon-Boolean or electrical equivalence proof was performed.",
+    "No full footprint/custom-pad/property/schematic-association, physical-stackup, project-rule, outline, keepout or process-annotation qualification.",
+    "No full private-return, crystal/switching exclusion, plane-continuity or rear-contact clearance qualification.",
+    "No DRC/parity, connectivity graph, refill, repair or native routing-benefit measurement.",
+    "No automatic new run, support loop, manual routing, integration, fabrication or powered use is authorized."
+  ]
+}

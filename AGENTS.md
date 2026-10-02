@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 2 Quilter outputs assessed:** v1.1 and v1.2 are rejected for
+  integration at the bounded preservation gate, not ranked by native routing
+  benefit. Checked placement and 325 native pad records/nets/UUIDs match,
+  but the named In1 GND zone is absent with no exact structural substitute,
+  and all 24 baseline In2 segment records are unmatched. This is not proof
+  of 24 lost electrical connections; resegmentation/connectivity was not
+  assessed. Four copper layers remain enabled; changed display names are
+  not layer loss. Preserve raw outputs and both audit versions; the first
+  audit's empty net fields are invalid. See the corrected evidence and
+  limits in `docs/agent-handoff-2026-10-01.md`. No repair, merge, new run,
+  support loop or manual routing is released.
 - **October 1 session handoff:** owner reports Quilter is running as of
   16:02 local and will supply results. Start with
   `docs/agent-handoff-2026-10-01.md`. No returned candidate has been reviewed.

@@ -2,12 +2,24 @@
 
 ## Start here
 
-**October 1, 2026, 16:02 local:** the owner reports that Quilter is working
-and will report back. Treat the cloud job as **running, owner-reported**.
-No returned candidate has been inspected. Do not infer a successful result,
-completion time, or verified live server status.
+**October 2, 2026:** the owner supplied two native output packages under
+`quilter\downloads\outputs` in the experimental root below:
+`Quilter_handbell.kicad_pcb_Candidate_1_1` and
+`Quilter_handbell.kicad_pcb_Candidate_1_2`. Each contains a PCB and project,
+but no returned schematic or job-configuration export. The supplied email
+reports completion with two layouts, neither reaching 95% vendor routing.
+The owner reports v1.1 at 89% and v1.2 at 91%; these are vendor metrics,
+not native open counts or preservation evidence. No email tracking link
+or private cloud API was accessed.
 
-The next task is to evaluate the returned native KiCad candidate in isolation.
+The October 1, 16:02 owner report of a running job is now historical.
+Preserve the supplied loose files unchanged and evaluate separate copies.
+**Current disposition: both candidates are rejected for integration at the
+bounded preservation gate.** Routing benefit has not been measured.
+See the source-bound [compact assessment](measurements/2026-09-27-router-bakeoff/quilter-output-preservation-2026-10-02.json)
+and the findings below before using any older "next task" instructions.
+
+The returned native KiCad candidates were inspected in isolation.
 **Do not resume manual/LLM-driven routing, repeat the autorouter bakeoff,
 rebuild CAD, merge copper, or repair dozens of traces.** The purpose is to
 learn whether a purpose-built tool can reduce geometric LLM work economically.
@@ -24,6 +36,70 @@ Read in this order:
 Root `AGENTS.md` has extensive historical instructions. Newer dated entries
 supersede older "next" items. The ModulimOps/.NET instructions in the old
 session concern a different repository; this project is `dcuccia/digital-handbell`.
+
+## October 2 bounded preservation result
+
+The original downloads and authoritative four-file package retain their
+recorded hashes. Exact output copies, scripts, reports and the original
+failed audit remain under the experimental root in:
+`quilter\outputs\preservation-assessment-20261002T1244`.
+No schematic, PCB, project, manifest, old experiment or CAD artifact was
+modified. The assessment used native KiCad 10.0.6 with the runtime-verified
+GPT-5.6 Sol / medium executor; root performed disposition.
+
+| Check | v1.1 | v1.2 |
+|---|---|---|
+| References and checked footprint placement/value/library/attributes | 104 retained; checked fields match | Same |
+| Physical pad geometry and native net names | 325 matched records; no mismatch | Same |
+| Pad/parent-footprint UUIDs across matched pad records | 325/325 match | Same |
+| Original front GND zone | Parsed definition and saved fill match, ignoring UUID | Same |
+| Original named In1 GND zone | Absent; no exact structural substitute ignoring name/UUID | Same |
+| Baseline In2 segment records | All 24 unmatched | Same |
+| Four copper layers | Retained; display names changed | Same |
+
+The unmatched In2 records are **13 +3V3, 2 USBBOOT, 3 /IMU_INT2 and
+6 SDA segments**, not all +3V3. The first three +3V3 bridge witnesses
+are 0.400 mm wide, joining `(92.850, 93.350)` to `(93.750, 94.250)` to
+`(100.5575, 94.250)` to `(101.802, 93.0055)` mm. None of the 24 records
+has an identical endpoint/width/net match on another layer. This does
+**not** prove 24 lost connections or exclude resegmentation/reconstruction.
+No physical-pad connectivity comparison was attempted after this gate.
+
+All four standard copper-layer IDs remain enabled and signal-typed.
+Their output display names are Top Layer, Ground Layer 1, Ground Layer 2
+and Bottom Layer. Names alone do not establish electrical layer roles.
+The zone comparison is a parsed structural comparison including settings
+and saved fill, not a polygon-Boolean or electrical-equivalence proof.
+It establishes no exact preserved substitute for `in1-protected-gnd-v1`;
+it does not establish that all inner ground copper disappeared.
+
+**Audit correction:** `preservation-report.json` incorrectly reported
+empty track/via nets and did not establish pad-net identity. Preserve it
+as historical evidence, not the net-identity result. The additive
+`preservation-correction-v2.json` uses native `GetNetname()` and supersedes
+those fields. It confirms IC1.49 is +3V3, C2/C3 retain their crystal-net
+assignments, 15 intentionally netless pad records remain in each board,
+and no source/candidate track or via is netless. Its serialized zone
+inventory still has empty `net` display fields; those are not a finding
+that the zones lack net assignments. The returned report's raw records,
+not its executor's mistaken all-+3V3 prose summary, determine the net
+breakdown above.
+
+Unchecked: complete footprint graphics/custom pad primitives and properties,
+schematic-path association, physical stackup and project-rule equivalence,
+full zone/exclusion geometry and plane continuity, process annotations for
+the five required filled/capped vias, private returns, contact-metal
+clearances, outline/keepout equivalence, shorts and preserved connected
+groups. No DRC/parity, refill, routing-benefit measurement or trace cleanup
+was run. The 89%/91% vendor metrics do not establish an improvement over
+the native 37-open baseline.
+
+**Stop here.** Retain both outputs as unaccepted diagnostic evidence.
+Neither candidate is an incremental replacement for the authoritative
+board on the evidence collected. No repair, merge, rerun, support loop,
+manual routing or fabrication is automatically authorized. Any further
+work needs one explicit bounded disposition; do not silently continue
+the historical evaluation checklist below.
 
 ## Repository and session identity
 
@@ -226,7 +302,10 @@ The 16 warning references:
 `BT1 BT2 C30 J1 J2 MH1 MH2 Q5 R25 R26 R27 R28 R29 U1 U6 Y1`.
 Do not delete/rebuild these parts to silence the importer.
 
-## Next bounded item: inspect the returned native candidate
+## Historical evaluation checklist and stopping rule
+
+This was the October 1 plan, exercised only through the preservation stop
+on October 2. It is retained for traceability, not an active work queue.
 
 Wait for the owner to supply native output (and any job summary/configuration
 export) or authorize access to a results UI. Do not poll a private cloud job
