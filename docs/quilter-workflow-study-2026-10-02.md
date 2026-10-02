@@ -6,6 +6,18 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+**Current checkpoint:** raw native inventory recovered and accepted for
+planning; input preparation remains gated. Native work stopped at 14:30:57,
+before the owner's 15:00 deadline. No further inventory rerun is needed.
+No placement/copper change or new cloud submission occurred.
+
+**14:22 owner update:** a few bounded reruns are authorized, with work
+finished before 15:00 local. First recover the read-only inventory in one
+ten-minute item, at most three native executions with 90-second subprocess
+limits, stopping by 14:34. Stop starting new items by 14:50 and reserve
+checkpoint time. This supersedes the no-retry hold below, not source,
+input-qualification, payment, process or acceptance gates.
+
 ## Two parallel, bounded items
 
 1. **Read-only diagnostic:** compare the actual saved copper in v1.1/v1.2
@@ -123,6 +135,35 @@ origins; fixed poses must come from the exact accepted PCB, not stale
 descriptive coordinates. Newly moved parts require exact mechanical rebinding.
 IC4 rotation also changes the sensor-to-bell coordinate mapping.
 
+### Documentation findings that change input preparation
+
+The [placement guide](https://docs.quilter.ai/guides/placement-guide) says
+multiple regions assigned to one component form a **union**, not an
+intersection. Assigning a broad F region plus a smaller height/group region
+would therefore enlarge the allowed space, not enforce both constraints.
+First intersect that component's F-side, height, access and electrical
+requirements into its final allowed domain; encode multiple polygons only
+to represent allowed patches of that domain. Do not add an off-board
+grouping region and assume it preserves the on-board F restriction.
+These semantics are documented, not yet verified on our imported input.
+
+The [KiCad region instructions](https://docs.quilter.ai/design-parameters/placement-regions)
+explicitly require reviewing/manual assignment of component references.
+Their generic upload step also mentions automatic association; use the
+stricter review requirement rather than assuming either association behavior.
+Keep real safety keepouts separate from restriction-free placement regions.
+
+[Bypass comprehension](https://docs.quilter.ai/physics-constraints/bypass-capacitors)
+supports explicit capacitor/component/pin/value assignments; this is a
+useful service capability we have not yet exercised correctly. Schematic
+wire proximity is a heuristic, not a substitute for the reviewed pin map.
+[Switching-converter comprehension](https://docs.quilter.ai/physics-constraints/switching-converters)
+documents an output-inductor configuration and may choose one of multiple
+capacitors arbitrarily. That does not establish support for our TPS61023
+boost's exact input-inductor/output-capacitor/quiet-pickoff topology.
+Do not relabel its parts to force a match. It needs a reviewed local-block
+or independent topology-check disposition before unrestricted placement.
+
 ## Preserve engineering intent, not obsolete obstacles
 
 Fresh-layout preparation may replace ordinary old routing on an isolated
@@ -176,7 +217,84 @@ Public pricing checked October 2:
   [Terms](https://www.quilter.ai/terms) and third-party hardware attribution
   remain a gate before publishing Quilter native designs or a kit.
 
-## Native inventory blocker and stopping point
+**Manufacturing trade worth testing:** JLCPCB's
+[published POFV policy](https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv)
+states that, for its international market, resin-filled/copper-capped
+via-in-pad is included on 6-20-layer boards while four-layer POFV is charged.
+The [via-covering guide](https://jlcpcb.com/help/article/pcb-via-covering)
+separately defines nonconductive epoxy fill plus copper cap, distinct from
+ink plugging or tenting. Our five mandatory process vias make this a real
+cost variable: six layers must not be dismissed as automatically more
+expensive overall. This is published vendor policy, not a quote, eligibility
+confirmation or qualification of our exact geometry. The POFV article also
+specifies via-hole and hole-spacing conditions; do not replace the project's
+clearances or assume its sample dimensions apply to our five vias.
+
+The [official impedance listing](https://jlcpcb.com/impedance) identifies
+`JLC04161H-3313` and `JLC06161H-3313` as possible four-/six-layer comparison
+constructions. These are only a shortlist: full material/copper/dielectric
+dimensions, layer roles, actual Quilter preset identity and process
+eligibility still need an exact binding. No stackup was selected or ordered.
+
+## Recovered native inventory and preparation gate
+
+The final pass reused the repository's exercised `tools/kicad_sexpr.py`
+parser, matched native pads by UUID and parent reference rather than
+ordinal position, and used the explicit-layer via accessor. It completed
+in two native executions; the final inventory script took 0.687 seconds,
+not counting setup/review. The earlier failures were extraction/tooling
+errors, not evidence of missing source pads or expensive PCB computation.
+
+| Inventory | Accepted raw evidence |
+|---|---|
+| Identity | 104 footprints, 325 physical pads; all group references assigned once; native and serialized UUID/parent associations |
+| Placement | Nine fixed native poses, 95 eligible movers; all 83 fitted manifest sides agree with native data: 81 F, BT1/BT2 B |
+| Process seeds | Four U4 GND vias at **0.604/0.35 mm**, touching U4.THERMAL; C24 GND via at **0.60/0.30 mm**, touching C24.2 |
+| Zones | 19 component-relative electrical rule areas and two GND zones; exact definitions, layer IDs, outlines, holes and saved fills |
+| Source | All four authoritative package hashes unchanged |
+
+BT1's two physical pads both use number `1` but have distinct UUIDs; they
+must not be collapsed. The via contacts above use native effective-copper
+intersection, not bounding-box overlap. The executor's summary rounded U4
+diameter to 0.60 mm; the native JSON's **0.604 mm** is authoritative.
+C24 retains an explicit accepted-process geometry exception to the new
+ordinary-via minima; this is not permission for new 0.30 mm drill vias.
+
+All 19 rule areas prohibit **copper pours only**: seven F guards for
+R24/C28, three F guards for R26/R27, two In1 private-return exclusions,
+six In1 BOOST_SW exclusions and one In1 crystal-region exclusion.
+They do not prohibit footprints, vias, pads or tracks. Their electrical
+purposes are accounted for, but this is not proof that their old coordinates
+remain suitable after placement/routing changes.
+
+**Disposition:** accept the report as a complete raw inventory, not as a
+placement-ready input. No native fixed-mechanical rule areas encode the
+full battery-contact bodies, mount hardware, USB/service or connector-access
+envelopes. Keeping the existing 19 rule areas would therefore not enforce
+the mechanical constraints. Before a disposable input can move parts or
+discard old copper, map those external envelopes and height limits into
+per-reference allowed domains and define how moved electrical exclusions
+and private paths will be reconstructed or retained. The proposed 95 movable
+references remain eligibility, not a successful-placement claim.
+
+Local evidence under the experimental root:
+`quilter\outputs\inventory-final-recovery-20261002T142910-sol`.
+The complete report `native-constraint-inventory.json` has SHA-256
+`edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba`;
+the script has SHA-256
+`a0760d1633caa10421ffe07034df1ec3d32c88b1cf40ff2fd2c8aab597a2d47e`.
+`source-hashes-after.json` has SHA-256
+`60762a93e3be33842958407336ae3d805966b63ae7236b6a254178ec9a03a9bc`.
+The raw 3.9 MB report remains local rather than duplicating the PCB in Git.
+All failed attempts remain alongside it as evidence.
+
+**One next item:** produce the source-bound mechanical/electrical
+allowed-domain map using this inventory and the existing assembly inputs.
+No further inventory rerun, copper deletion, off-board staging, CAD build
+or cloud trial is released at this checkpoint. Stackup/process and imported
+comprehension qualification remain later gates.
+
+## Historical native inventory blocker
 
 The inventory did **not** complete. KiCad 10.0.6 Python compatibility failures
 exhausted the initial attempt plus two corrections: library-ID formatting,
@@ -212,13 +330,24 @@ proof that placement regions or process seeds have now been inventoried.
 The retry budget is exhausted, so fresh-input preparation and layer trials
 are **blocked**, with no automatic repair or additional native run released.
 
-## Next item, requiring a new bounded authorization
+## Completed bounded recovery scope
 
 Repair only the isolated inventory tool, reusing exercised KiCad accessors
 and source-bound report/manifest definitions rather than another untested API
 sequence. Address the gaps above before one bounded read-only rerun. Stop
 with either a complete evidence-bearing inventory or a concrete failure;
 do not move parts, delete copper, choose a stackup or submit a job.
+The owner's 14:22 update supplies this bounded authorization.
+
+The first recovery pass used three native executions and stopped with a
+serialized/native pad-association failure at BT1; it produced no complete
+inventory. Root then identified the already exercised `tools/kicad_sexpr.py`
+tree parser and explicit-layer via accessor in the successful preservation
+audit. A **second and final** corrected-method pass is released under the
+same owner authorization: at most two native executions in ten minutes,
+stop by 14:40. No regex/nested-UUID or ordinal association shortcut is
+allowed. Persist each completed stage, distinguish raw data from unproved
+engineering gates, and stop after this pass regardless of outcome.
 
 The inventory's unchanged engineering objective is:
 

@@ -166,6 +166,22 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 2 recovered checkpoint:** the final bounded pass completed the
+raw native inventory: 104 footprints, 325 pads, nine fixed poses, 95 eligible
+movers, 81 F/two B fitted parts and five bound process vias. All four source
+hashes remain unchanged. The 19 native rule areas prohibit pours only;
+external mechanical/height/access allowed domains and relocated electrical
+duties must be mapped before staging. No more inventory reruns, copper
+removal, placement preparation or cloud jobs are released at this checkpoint.
+Native work ended at 14:30:57, before the owner's 15:00 deadline.
+See the [accepted raw evidence and next gate](quilter-workflow-study-2026-10-02.md#recovered-native-inventory-and-preparation-gate).
+
+**October 2, 14:22 owner resumption:** a few bounded reruns are approved,
+with work finished before 15:00 local. Recover the inventory first, with
+at most three native executions in ten minutes and a 14:34 stop.
+Stop starting new items by 14:50. No source changes or qualification-gate
+waivers follow from this deadline extension. See the [completed recovery scope](quilter-workflow-study-2026-10-02.md#completed-bounded-recovery-scope).
+
 **October 2 inventory stopping point:** the fresh-track native inventory
 exhausted its initial attempt and two corrections with no inventory output.
 Final failure: a KiCad via-accessor assertion and hard timeout. Root's
@@ -173,7 +189,7 @@ review additionally rejects name-only keepout classification, incomplete
 polygon/fill handling and fitted-count/process-contact shortcuts.
 The four source hashes are unchanged. No automatic retry, prepared input
 or layer trial is released; a newly authorized bounded tooling repair must
-precede further native work. See the [blocker and evidence](quilter-workflow-study-2026-10-02.md#native-inventory-blocker-and-stopping-point).
+precede further native work. See the [historical blocker](quilter-workflow-study-2026-10-02.md#historical-native-inventory-blocker).
 
 **October 2 diagnostic checkpoint:** v1.2 improves saved-fill same-net graph
 opens from 37 to 22 without a detected prior pad-group split; v1.1 regresses

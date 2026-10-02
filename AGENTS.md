@@ -2,6 +2,21 @@
 
 ## Bounded engineering work
 
+- **October 2 raw inventory recovered:** accepted raw evidence covers
+  104 footprints/325 pads, nine fixed poses, 95 eligible movers, 81 F/two B
+  fitted components and five process vias. Source hashes are unchanged.
+  All 19 native rule areas exclude pours only; full mechanical/height/access
+  domains still need encoding before staging. Quilter combines assigned
+  regions by UNION, not intersection. Native work stopped at 14:30:57.
+  No further inventory retry, PCB preparation or cloud job is released at
+  this checkpoint; the next item is the source-bound allowed-domain map.
+  See `docs/quilter-workflow-study-2026-10-02.md`.
+- **October 2, 14:22 bounded recovery approved:** owner permits a few bounded
+  reruns provided work finishes before 15:00 local. Recover the inventory
+  first in ten minutes, at most three native executions with 90-second
+  subprocess limits, stopping by 14:34. Stop new items by 14:50 for the
+  final checkpoint. This supersedes the no-retry hold below; it does not
+  waive source protection, engineering/input gates or payment restrictions.
 - **October 2 fresh-input inventory blocked:** the native tooling item
   exhausted initial plus two corrective attempts and produced no inventory.
   The last KiCad via-accessor assertion timed out. Root also found

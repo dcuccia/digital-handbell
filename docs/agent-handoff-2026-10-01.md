@@ -2,13 +2,29 @@
 
 ## Start here
 
-**Current stopping point: fresh-input inventory blocked.** The bounded native
+**Current checkpoint: raw native inventory recovered.** The final pass
+confirmed 104 footprints/325 pads, nine fixed poses, 95 eligible movers,
+81 F/two B fitted parts and all five process vias; the source package is
+unchanged. All 19 native rule areas exclude pours only, not placement or
+via access. Full contact/mount/USB/height restrictions still require a
+source-bound allowed-domain map before staging. Native work stopped at
+14:30:57; no new cloud job was submitted. Read the
+[recovered inventory and next gate](quilter-workflow-study-2026-10-02.md#recovered-native-inventory-and-preparation-gate).
+No further inventory rerun or PCB preparation is released at this checkpoint.
+
+**14:22 owner resumption:** a few bounded inventory-tool reruns are approved,
+with all work finished before 15:00 local. The first ten-minute recovery
+must stop by 14:34; stop new items by 14:50 for the final checkpoint.
+This supersedes the no-retry hold immediately below, not source protection
+or input/engineering gates. Follow the [completed recovery scope](quilter-workflow-study-2026-10-02.md#completed-bounded-recovery-scope).
+
+**Earlier stopping point: fresh-input inventory blocked.** The bounded native
 tool attempt exhausted its two corrections and produced no inventory.
 The final KiCad via-accessor assertion timed out; root also found
 classification/geometry/counting gaps in the uncompleted script. No new
 native run, placement/copper preparation or cloud job is released.
 All four authoritative package hashes remain unchanged. Read the
-[blocker and exact next item](quilter-workflow-study-2026-10-02.md#native-inventory-blocker-and-stopping-point)
+[historical blocker](quilter-workflow-study-2026-10-02.md#historical-native-inventory-blocker)
 before acting on the earlier study authorization.
 
 **October 2, 14:05: owner approved the personal workflow-learning study.**
