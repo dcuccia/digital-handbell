@@ -2,6 +2,14 @@
 
 ## Bounded engineering work
 
+- **October 2 connectivity diagnostic:** read-only saved-fill graphs reproduce
+  source 37 opens, v1.1 38 and v1.2 22; native output DRC gives 38/24.
+  The v1.2 discrepancy is unresolved. v1.2 shows useful same-net gains but
+  foreign-net contacts/native shorts prevent acceptance. Counts include
+  inherited-via/rule mismatches and possible saved-fill effects, not unique
+  repair counts. No refill, repair or integration occurred. Continue the
+  separate fresh-input constraint study in
+  `docs/quilter-workflow-study-2026-10-02.md`; keep all source/raw evidence.
 - **October 2, 14:05 workflow study approved:** owner confirms fully personal
   use and approves parallel existing-output connectivity diagnosis and a
   separate flexible functional-group layout study, then qualified free

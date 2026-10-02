@@ -10,6 +10,14 @@ trials depend on native/input constraint qualification. This supersedes the
 no-further-assessment hold below, not rejection for integration or protection
 of source/experiments. No paid jobs, fabrication or powered use is approved.
 
+The [read-only diagnostic](quilter-workflow-study-2026-10-02.md#existing-output-diagnostic-checkpoint)
+now reproduces 37 source graph opens, versus v1.1 38 and v1.2 22.
+Native outputs report 38/24 unconnected items respectively; the v1.2
+count discrepancy remains unresolved. v1.2 gains same-net connectivity
+without a detected prior-group split, but foreign-net contacts and native
+short findings prevent acceptance. This supersedes the historical
+"routing benefit not measured" status below, not preservation rejection.
+
 **October 2, 2026:** the owner supplied two native output packages under
 `quilter\downloads\outputs` in the experimental root below:
 `Quilter_handbell.kicad_pcb_Candidate_1_1` and
@@ -23,7 +31,8 @@ or private cloud API was accessed.
 The October 1, 16:02 owner report of a running job is now historical.
 Preserve the supplied loose files unchanged and evaluate separate copies.
 **Current disposition: both candidates are rejected for integration at the
-bounded preservation gate.** Routing benefit has not been measured.
+bounded preservation gate.** Routing benefit was not measured at that gate;
+the later diagnostic above now supplies limited same-net connectivity evidence.
 See the source-bound [compact assessment](measurements/2026-09-27-router-bakeoff/quilter-output-preservation-2026-10-02.json)
 and the findings below before using any older "next task" instructions.
 

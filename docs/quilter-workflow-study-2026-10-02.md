@@ -24,6 +24,68 @@ engineering requirements and acceptance. Target 10-15 minutes per coherent
 item, finite subprocess timeouts and no more than two tooling corrections.
 Preserve partial evidence and stop on a concrete blocker.
 
+## Existing-output diagnostic checkpoint
+
+The read-only saved-fill diagnostic reproduced the source's 37 graph opens.
+Neither raw output was changed or refilled. KiCad 10.0.6 DRC used each
+returned project and a separately copied source schematic/library context;
+the schematic was not supplied by Quilter.
+
+| Artifact | Same-net graph opens | Native unconnected items | Other native errors / warnings | Parity warnings |
+|---|---:|---:|---:|---:|
+| Accepted source | 37 | 37, reused source-bound baseline | 234 non-open findings, reused baseline | 46, reused baseline |
+| v1.1 | 38 | 38 | 257 / 201 | 46 |
+| v1.2 | 22 | 24 | 640 / 211 | 46 |
+
+v1.1 closes VBAT but splits the previously complete USBBOOT and SDA groups.
+v1.2 has 15 fewer same-net graph opens with no prior pad-group split found:
+I2S_BCLK, I2S_LRCLK, USB_D+, USB_D-, VBAT, VBUS, VHI, VO+ and
+`Net-(FB2-P$1)` become complete in that graph. AMP_MUTE, POWER and GND
+each improve by one open. The previously unmatched In2 records therefore
+did not all translate into lost electrical joins: +3V3 and /IMU_INT2 are
+complete in both outputs, and USBBOOT/SDA are complete in v1.2.
+
+These are **same-net routing gains, not 15 accepted electrical repairs**.
+The graph reports foreign-net contacts in both outputs; v1.2 also has 21
+native `shorting_items` findings, including a RESET via contacting the
+MCU GND exposed pad. The graph does not join different-net objects through
+these contacts, so the reported gains do not rely on shorts. The graph's
+22 versus native 24 unconnected count
+for v1.2 remains unreconciled; do not invent a cause or hide the discrepancy.
+
+Do not equate hundreds of witnesses with hundreds of independent fixes.
+Each candidate has 65 drill-minimum and 65 via-diameter findings against
+returned 0.35/0.604 mm project minima; the example preserved CC2 via is
+0.30/0.60 mm. These expose an inherited-via/rule mismatch, not 130 new
+routing operations. All 11 v1.1 graph contact witnesses involve cached
+zones (two zone UUIDs). Of 187 v1.2 witnesses, 157 involve cached zones
+(eight zone UUIDs), while 30 do not. Native v1.2 short findings comprise
+seven pad/via, four pad/track, five track/track and five track/via witnesses,
+plus a separate crossing. These categories overlap the graph evidence,
+not additional independent defect totals. Refill sensitivity was not tested;
+the non-zone contacts cannot be attributed solely to the zone-fill cache.
+No correction effort has been measured.
+
+**Learning disposition:** v1.2 demonstrates real additional same-net routing,
+but neither candidate demonstrates an integration-ready or economical
+completion workflow. Continue the fresh-input/constraint track rather than
+hand-cleaning these outputs or repeating their setup unchanged.
+The original preservation rejection remains in effect.
+
+Local evidence under the experimental root:
+`quilter\outputs\useful-connectivity-diagnostic-20261002T1408`.
+`report.json` SHA-256:
+`0e15cc01e608197aee1b0f4547f2cfdf20f090b9583ba2ff471d676863dad493`.
+It binds the diagnostic script, graph helpers, original/copy PCB hashes,
+per-net partitions and native execution context. Native DRC reports are
+`v1.1-drc.json` and `v1.2-drc.json`. Script elapsed time was 150.03 seconds,
+not total engineering time or platform compute time. Authoritative source
+and both original output PCB hashes remained unchanged.
+The saved-evidence supplement `short-evidence-clarification.json` has SHA-256
+`0b1110a3821815da4432387e2b804d4924d55001e19b84b1685aefe5ad8259fd`;
+it groups witnesses and records the graph-union and rule-context limits
+without another native run.
+
 ## Initial placement strategy
 
 Keep BT1/BT2, MH1/MH2, X6, J1 and J2 at their exact accepted native poses.

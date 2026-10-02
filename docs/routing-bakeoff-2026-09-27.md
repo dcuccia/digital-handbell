@@ -1,5 +1,14 @@
 # Purpose-built routing bakeoff - September 27, 2026
 
+**October 2 learning follow-up:** owner approved a personal two-track study.
+A read-only diagnostic finds 37 source graph opens, 38 in v1.1 and 22 in
+v1.2 (native DRC: 38/24 for the outputs). v1.2 demonstrates same-net gains
+but raw foreign-net contacts/native short findings remain; no candidate is
+accepted and the 22/24 discrepancy is unresolved. Read the
+[workflow-study checkpoint](quilter-workflow-study-2026-10-02.md#existing-output-diagnostic-checkpoint)
+for context, rule-mismatch limits and the separate flexible-layout brief.
+No refill, repair, merge or new cloud submission occurred in this follow-up.
+
 **October 2: the disposable Quilter diagnostic returned two candidates;
 both are rejected for integration at the bounded preservation gate.**
 Checked placement and all 325 native physical-pad geometry/net records

@@ -166,6 +166,14 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 2 diagnostic checkpoint:** v1.2 improves saved-fill same-net graph
+opens from 37 to 22 without a detected prior pad-group split; v1.1 regresses
+to 38. Native DRC counts are 24/38 respectively, leaving v1.2's discrepancy
+unreconciled. Foreign-net contacts and native shorts preclude acceptance;
+raw counts also include inherited-via/rule mismatches and untested fill
+cache effects. See the [source-bound diagnostic](quilter-workflow-study-2026-10-02.md#existing-output-diagnostic-checkpoint).
+Continue the separate native constraint inventory, not output cleanup.
+
 **October 2, 14:05: personal workflow study approved.** The owner prioritizes
 learning an efficient agent-plus-service process, not preservation of sunk
 routing effort. Run bounded read-only diagnosis of v1.1/v1.2 and a separate
