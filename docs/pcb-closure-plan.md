@@ -166,6 +166,14 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest: read-only Quilter readiness check complete.** Authentication
+works; no login needed. Public personal free use is reconfirmed, not an
+account-specific price. No new cloud object, upload or submission exists.
+Next proposed scope is a locally qualified contact-feed fixture and a
+separate diagnostic draft/import preview, pending owner approval. Keep
+that separate from actual routing-enforcement proof and the full-board
+layer trials. See the [bounded scope](quilter-workflow-study-2026-10-02.md#1635-quilter-diagnostic-readiness).
+
 **Latest: hybrid contact-feed candidate identified, representation gated.**
 The read-only [feed selection](quilter-workflow-study-2026-10-02.md#existing-contact-feed-retention-candidate)
 contains 30 B segments and five ordinary transition vias, not a new board.

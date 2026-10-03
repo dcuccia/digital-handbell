@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 3, 16:35 Quilter readiness:** browser login remains valid.
+  Read-only account/project/details inspection and public free-tier
+  eligibility checks are complete; actual account pricing remains
+  unconfirmed. A tiny contact fixture needs a separate project under the
+  published 10% same-design rule. Proposed next scope is a locally qualified
+  contact-feed fixture and separate draft import preview, pending owner
+  approval; no project/job/upload was created. Import recognition is not
+  routing-enforcement proof. Do not submit the old zero-work fixture,
+  duplicate the existing job, accept payment/terms or stage the full board.
+  See the workflow study's 16:35 readiness checkpoint.
 - **October 3 retained-feed candidate identified:** read-only selection
   finds four VBAT and 26 CELL_NEG B segments plus five existing ordinary
   transition vias clear of the nominal contact guards (minimum spare

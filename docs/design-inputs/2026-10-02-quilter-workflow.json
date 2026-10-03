@@ -2,6 +2,33 @@
   "schema_version": 1,
   "date": "2026-10-02",
   "status": "CONTACT_FEED_CANDIDATE_IDENTIFIED_REPRESENTATION_GATED",
+  "cloud_diagnostic_readiness_checkpoint": {
+    "date": "2026-10-03",
+    "owner_continuation_time_local": "16:35",
+    "status": "READ_ONLY_CHECK_COMPLETE_IMPORT_SCOPE_PENDING_OWNER_APPROVAL",
+    "authenticated_browser_session": true,
+    "new_login_needed": false,
+    "public_free_personal_eligibility_reconfirmed": true,
+    "account_specific_free_entitlement_confirmed": false,
+    "observed_ui_version": "1.40.0",
+    "observed_api_version": "1.40.1",
+    "saved_job_built_api_version": "1.39.1",
+    "saved_floorplan": {
+      "sides": "Single-sided and double-sided layouts",
+      "minimum_component_clearance_mm": 0.127,
+      "movable_F_only_behavior_exercised": false
+    },
+    "separate_diagnostic_project_required": true,
+    "reason": "Published same-project similarity requirement is within 10% of baseline pins, components, footprints and BOM; a small contact fixture is not the full handbell design.",
+    "projects_created": 0,
+    "jobs_created_or_submitted": 0,
+    "uploads": 0,
+    "support_messages_sent": 0,
+    "proposed_scope": "After owner approval and bounded local qualification, create one separate diagnostic draft and upload a contact-feed board/project only to parsed preview. Preserve source and earlier fixtures; no full-board upload, new routing, compilation/submission, payment, upgrade or agreement acceptance.",
+    "fixture_selection": "Two source contacts, 30 selected B segments, five candidate ordinary vias, five process seeds and eight guard areas; omit the old fixture's three synthetic tracks, three synthetic vias and foreign pour.",
+    "owner_import_approval_received": false,
+    "import_preview_is_routing_enforcement_proof": false
+  },
   "retained_feed_checkpoint": {
     "date": "2026-10-03",
     "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-feed-candidate-2026-10-03.json",

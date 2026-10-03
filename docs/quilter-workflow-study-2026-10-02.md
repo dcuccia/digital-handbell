@@ -646,6 +646,65 @@ submitting the full board. Actual retained geometry, inherited-via rules,
 independent pour clipping and the remaining electrical/access gates must
 be resolved before a comparable four-/six-layer input is released.
 
+### 16:35 Quilter diagnostic readiness
+
+The owner's new continuation request prompted a bounded read-only browser
+check. **The existing session is authenticated; no login is needed.**
+The account menu offers only sign-out. The project list, an empty
+New Project dialog and saved job details did not expose a plan, balance
+or price. The empty dialog was cancelled; no project/job was created,
+duplicated, uploaded, submitted or changed, and no support message was sent.
+Raw browser/account evidence remains local and ignored; do not publish it.
+
+The current UI reports 1.40.0 and API 1.40.1; the saved job details say
+they were built on API 1.39.1. Do not treat that old job as an exercise of
+every current importer behavior. Its saved floorplan permits both single-
+and double-sided layouts, with 0.127 mm component clearance. With zero
+components to place, it did not demonstrate the required movable-F-only
+constraint. No fixed-feed/keepout precedence control was found in the
+inspected saved-details interface; this is not proof none exists elsewhere.
+
+The live [Free Version page](https://www.quilter.ai/free-ai-pcb-design)
+still advertises free personal/academic use, unlimited iterations and all
+product features. It also describes use of input files/board metadata for
+training puzzles. Only the already-authorized sanitized public-design
+data is in scope; no preferences, account data or credentials. Published
+personal eligibility is established, but an account-specific entitlement
+or zero-price submission confirmation is **not**.
+
+The [project documentation](https://docs.quilter.ai/using-quilter/start-a-project.md)
+requires subsequent jobs to remain within 10% of the original pin count,
+component count, footprints and BOM. A two-contact fixture therefore belongs
+in a **separate diagnostic project**, not the existing 104-reference
+handbell project. Do not create a known-dissimilar job just to exercise
+the rejection or duplicate the old job and inherit its constraints.
+
+**Proposed next scope, pending owner approval:** prepare one disposable
+contact-feed import fixture, then create a separate diagnostic draft and
+upload only that fixture's board/project to reach its parsed preview.
+Reuse the qualified builder/parser and the exact 30-segment/five-ordinary-
+via ledger, the two contacts and five process seeds. Remove the prior
+fixture's deliberately failing synthetic tracks/vias and foreign-pour
+control from this import-only variant; preserve the old fixture unchanged.
+Keep all eight explicit guard definitions. No new product routing,
+resizing, source edits or full-board staging is allowed.
+
+Before uploading, qualify the new fixture's identity/coordinate round trip
+in one separately bounded local item. Report the intentional inherited-
+feed/keepout contradiction and inherited via sizing explicitly; do not
+label this a DRC-clean product. A schematic is not required for this
+geometric import control and no circuit-comprehension approval is sought.
+Record the parsed populations, nets, visible guards, warnings and any
+cost/entitlement information exposed by the setup workflow. Stop before
+compilation/submission, payment, upgrade or agreement acceptance.
+
+An import preview can demonstrate recognition or rejection, **not actual
+routing enforcement or preservation in generated output**. A later free
+run would require separate scope approval and suitable unrouted test
+terminals/positive and negative controls. Do not submit a zero-work fixture
+and call it a successful routing experiment. The current full-board,
+electrical, manufacturing and enclosure gates remain in force.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

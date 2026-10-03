@@ -2,6 +2,16 @@
 
 ## Start here
 
+**Latest: Quilter browser ready; isolated import scope pending approval.**
+No login is needed. Public personal-use eligibility is reconfirmed, but
+the account UI exposes no price/plan confirmation. No project, job or
+upload was created. The [16:35 readiness scope](quilter-workflow-study-2026-10-02.md#1635-quilter-diagnostic-readiness)
+proposes one locally qualified contact-feed fixture and a separate draft
+import preview, not a compilation or full-board upload. A tiny fixture
+does not meet the existing project's documented 10% similarity rule.
+Do not reuse the old deliberately failing fixture as-is or mistake a
+parsed preview for generated-routing preservation. Owner approval is pending.
+
 **Latest: existing contact feeds mapped as a retention candidate.**
 The [feed ledger and disposition](quilter-workflow-study-2026-10-02.md#existing-contact-feed-retention-candidate)
 bind 30 B segments and five ordinary transition vias; all five clear the
