@@ -2,6 +2,14 @@
 
 ## Bounded engineering work
 
+- **October 3 native fixture control passed:** the generated isolated
+  fixture now loads, fills, saves and reloads in KiCad 10.0.6. All six
+  expected rule controls match and all five protected vias avoid the
+  keepouts. Limited rectangular-pad/zero-angle/layer-order normalization
+  resolves the first comparison without another native run. This is not
+  a DRC-clean product board or a legal contact-feed solution. Source is
+  unchanged. Next is read-only BT1/BT2 B.Cu feed inspection for a retained
+  block; no new routing, input staging or cloud job is released.
 - **October 3, 15:46 static qualification:** owner resumed. The repaired
   reusable fixture builder now passes seven static tests and emits a
   source-bound text fixture, with no native loads. Derive identities from

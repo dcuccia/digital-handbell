@@ -538,6 +538,56 @@ a reviewed retained-feed or net-aware strategy; do not simply clear the
 track flags, add surrogate copper, relax isolation or move the five seeds.
 No full-board staging or cloud submission follows from static qualification.
 
+### Native fixture control now established
+
+The [native control report](measurements/2026-09-27-router-bakeoff/quilter-contact-native-control-2026-10-03.json)
+qualifies the isolated fixture's KiCad 10.0.6 load/fill/save/reload and
+rule-specific behavior. **All six expected controls match**, and all five
+protected source vias have zero `items_not_allowed` findings. Two contact
+footprints/four pads, five source vias, eight named areas with all five
+flags, their native coordinates and all four copper layers are preserved.
+The saved and reloaded fixture files are byte-identical.
+
+The initial combined comparison stopped on serialization differences,
+not a demonstrated shape change: an omitted zero footprint angle, reordered
+paste/mask layer entries and explicit 180-degree angles on rectangular
+contact pads. Root inspected every difference and the raw DRC. A separate
+read-only postprocessor permits only those specific equivalences, rejects
+duplicate layer entries and unsupported pad shapes/angles, and checks the
+other geometry/identity fields unchanged. This is not a general pad-angle
+waiver. No native rerun was needed to correct the comparison.
+
+The native result rejects both foreign and same-net tracks crossing the
+blanket guard, and the inside/just-inside vias; the outside track/via controls
+remain clear of this rule. The fixture is intentionally **not DRC-clean**:
+width, dangling, isolated-copper, hole-spacing, library and open findings
+remain in the raw evidence. They are not product-board defect counts.
+Two foreign-pour filled polygons are saved, but a complete independent
+clipping proof is not claimed. Native stdout/stderr/return code were not
+retained before the assertion; the report says unavailable rather than
+inventing them.
+
+There were two Python API fixture loads and one CLI DRC invocation, with
+zero native source-board loads. Postprocessing added none. The authoritative
+PCB, schematic, project, manifest and contact interface remain unchanged.
+Keep generated `.kicad_prl` files local and out of any upload or public copy.
+Full-board staging, Quilter import and legitimate contact feeds remain
+unqualified. The next useful item is a read-only review of the existing
+BT1/BT2 B.Cu feed copper to define a possible retained block; no new routing
+or blanket clearance waiver is released.
+
+Evidence: `quilter\outputs\contact-native-qualified-20261003T1558`.
+Report SHA-256:
+`9e2e133ba9a0a15fb5d92c2604de7777e27edb5276a5830fa7387fb142e66a46`;
+saved/reloaded board:
+`7a411643b957105909174255f9b17222a8b077278099c94ffccf8786e7a6b205`;
+raw DRC:
+`1ba7abf7380db609be2d290128e00811c6f6a7f31411e7e3313223d04ca92a30`;
+postprocessor:
+`c15865aac79559f268749bde3536f5cd93cfcedeae02fb68a28d533dfa7f501c`.
+The earlier assertion-failing runner is preserved separately; reuse the
+reviewed normalization, not its raw-list equality check.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

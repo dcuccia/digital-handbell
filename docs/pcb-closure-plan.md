@@ -166,6 +166,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest: native contact-fixture controls established.** Six rule
+expectations and all five process-via keepout checks pass on the isolated
+fixture, with limited serialization normalization and no source change.
+The next engineering item is a read-only inspection of existing BT1/BT2
+B.Cu feeds for a retained-block strategy; the blanket track guard remains
+incompatible with an unqualified fresh contact feed. No actual-board
+staging or cloud release. See the
+[native evidence limits](quilter-workflow-study-2026-10-02.md#native-fixture-control-now-established).
+
 **October 3, 15:46 static tooling recovery:** the repaired builder and seven
 tests now produce a source-bound isolated text fixture without native loads.
 The next allowed native scope is only that fixture's load/save and explicit

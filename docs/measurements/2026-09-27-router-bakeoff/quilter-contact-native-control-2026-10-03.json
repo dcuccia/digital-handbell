@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "status": "LIMITED_NATIVE_FIXTURE_CONTROL_NOT_FULL_BOARD_ACCEPTANCE",
+  "workflow_contract_snapshot": "static checkpoint 656c2bb; root-authorized read-only postprocessing correction 2026-10-03T16:02-07:00",
+  "source_hashes_before_after": {
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "source_unchanged": true,
+  "source_native_loads": 0,
+  "prior_fixture_activity": {
+    "python_api_fixture_loads": 2,
+    "cli_drc_invocations": 1,
+    "additional_native_loads_for_postprocessing": 0,
+    "native_version": "10.0.6",
+    "native_stdout": "unavailable_not_persisted",
+    "native_stderr": "unavailable_not_persisted",
+    "native_returncode": "unavailable_not_persisted"
+  },
+  "exact_artifact_sha256": {
+    "static_fixture": "a54f71f8db307cabe0f88d7964e20533e64ce374d0e072c1ab24b51a3cf1a892",
+    "saved_fixture": "7a411643b957105909174255f9b17222a8b077278099c94ffccf8786e7a6b205",
+    "reloaded_fixture": "7a411643b957105909174255f9b17222a8b077278099c94ffccf8786e7a6b205",
+    "raw_drc": "1ba7abf7380db609be2d290128e00811c6f6a7f31411e7e3313223d04ca92a30",
+    "static_report": "b1f27b92b38db9e7c26f10bab85c85c799ca54092e85c99bce79227b5b65e170",
+    "failed_runner": "fb568e29fd9d6d9fd18cf11a39bfddc09fd663196081c3fff0a38e1841e9bf02",
+    "postprocessor": "c15865aac79559f268749bde3536f5cd93cfcedeae02fb68a28d533dfa7f501c"
+  },
+  "preservation": {
+    "four_enabled_copper_layers": [
+      [
+        0,
+        "F.Cu"
+      ],
+      [
+        4,
+        "In1.Cu"
+      ],
+      [
+        6,
+        "In2.Cu"
+      ],
+      [
+        2,
+        "B.Cu"
+      ]
+    ],
+    "two_footprints_four_rectangular_pads": true,
+    "five_exact_reviewed_vias": true,
+    "eight_named_full_flag_areas": {
+      "CONTACT_METAL_GUARD_BT1.base.1": {
+        "uuid": "d8b69b53-f19d-5fa3-92fc-90170b63bbe7",
+        "layer_ok": true,
+        "all_five_flags_ok": true,
+        "plus_100_coordinates_ok": true
+      },
+      "CONTACT_METAL_GUARD_BT1.base.2": {
+        "uuid": "abebfa1e-a945-52fc-8cd5-667c340a8979",
+        "layer_ok": true,
+        "all_five_flags_ok": true,
+        "plus_100_coordinates_ok": true
+      },
+      "CONTACT_METAL_GUARD_BT1.base.3": {
+        "uuid": "e9b45dee-e8f5-51ad-9376-b72b69e0c283",
+        "layer_ok": true,
+        "all_five_flags_ok": true,
+        "plus_100_coordinates_ok": true
+      },
+      "CONTACT_METAL_GUARD_BT2.base.1": {
+        "uuid": "28a733e9-7c0e-5c42-b434-9a70cdb11377",
+        "layer_ok": true,
+        "all_five_flags_ok": true,
+        "plus_100_coordinates_ok": true
+      },
+      "CONTACT_METAL_GUARD_BT2.base.2": {
+        "uuid": "f00a004d-096a-5ba7-9d0a-23639daec34d",
+        "layer_ok": true,
+        "all_five_flags_ok": true,
+        "plus_100_coordinates_ok": true
+      },
+      "CONTACT_METAL_GUARD_BT2.base.3": {
+        "uuid": "9ca7d70c-9dcc-59d9-bb77-b58bf397fe3e",
+        "layer_ok": true,
+        "all_five_flags_ok": true,
+        "plus_100_coordinates_ok": true
+      },
+      "CONTACT_METAL_GUARD_BT1.spring_wall": {
+        "uuid": "e16a5c29-81df-59f3-a536-921fc718d556",
+        "layer_ok": true,
+        "all_five_flags_ok": true,
+        "plus_100_coordinates_ok": true
+      },
+      "CONTACT_METAL_GUARD_BT2.spring_wall": {
+        "uuid": "552730a8-c99a-5d36-a488-dc6208ce304f",
+        "layer_ok": true,
+        "all_five_flags_ok": true,
+        "plus_100_coordinates_ok": true
+      }
+    },
+    "normalized_core_raw_saved_reloaded_equal": true
+  },
+  "explicit_serialization_normalizations": {
+    "raw": [
+      {
+        "item_uuid": "632683ad-2de5-5a95-8257-45e5afaf3625",
+        "field": "pad_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "f25afe58-9d01-5d44-8b1a-4edb06bd4100",
+        "field": "pad_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "4dd660ac-86bc-58a4-a070-bf26f874d680",
+        "field": "pad_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "5b1d1490-a8e3-5d64-b249-21593de78fe5",
+        "field": "pad_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      }
+    ],
+    "saved": [
+      {
+        "item_uuid": "632683ad-2de5-5a95-8257-45e5afaf3625",
+        "field": "pad_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "f25afe58-9d01-5d44-8b1a-4edb06bd4100",
+        "field": "pad_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "86fb7da9-ff75-51df-9e6c-cc38539769d8",
+        "field": "footprint_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "KiCad omitted explicit zero"
+      },
+      {
+        "item_uuid": "4dd660ac-86bc-58a4-a070-bf26f874d680",
+        "field": "pad_at_angle",
+        "observed": 180.0,
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "5b1d1490-a8e3-5d64-b249-21593de78fe5",
+        "field": "pad_at_angle",
+        "observed": 180.0,
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      }
+    ],
+    "reloaded": [
+      {
+        "item_uuid": "632683ad-2de5-5a95-8257-45e5afaf3625",
+        "field": "pad_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "f25afe58-9d01-5d44-8b1a-4edb06bd4100",
+        "field": "pad_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "86fb7da9-ff75-51df-9e6c-cc38539769d8",
+        "field": "footprint_at_angle",
+        "observed": "absent",
+        "canonical": 0.0,
+        "basis": "KiCad omitted explicit zero"
+      },
+      {
+        "item_uuid": "4dd660ac-86bc-58a4-a070-bf26f874d680",
+        "field": "pad_at_angle",
+        "observed": 180.0,
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      },
+      {
+        "item_uuid": "5b1d1490-a8e3-5d64-b249-21593de78fe5",
+        "field": "pad_at_angle",
+        "observed": 180.0,
+        "canonical": 0.0,
+        "basis": "rectangular pad invariant under 180 degrees"
+      }
+    ],
+    "limits": "Only absent footprint zero angle, rectangular-pad absent/0/180 modulo-180, signed zero, numeric formatting, and sorted duplicate-free layer lists."
+  },
+  "prior_failed_assertion": {
+    "cause": "unnormalized serialization-only footprint/pad differences",
+    "differences": [
+      "BT1 footprint at omitted explicit zero angle",
+      "pad layer order changed for B.Paste/B.Mask",
+      "BT2 rectangular pad at gained 180-degree angle"
+    ],
+    "geometry_waiver": false
+  },
+  "controls": [
+    {
+      "name": "inside",
+      "uuid": "978b529f-0198-58cc-8ef7-32ec812f77ed",
+      "expected_items_not_allowed": true,
+      "observed_items_not_allowed": true,
+      "matching_count": 1,
+      "matching_descriptions": [
+        "Items not allowed (keepout area 'CONTACT_METAL_GUARD_BT1.base.3')"
+      ]
+    },
+    {
+      "name": "threshold_inside",
+      "uuid": "d051bfb6-2e0d-5c66-b5ae-7aa6ed9ecf4e",
+      "expected_items_not_allowed": true,
+      "observed_items_not_allowed": true,
+      "matching_count": 1,
+      "matching_descriptions": [
+        "Items not allowed (keepout area 'CONTACT_METAL_GUARD_BT1.base.3')"
+      ]
+    },
+    {
+      "name": "threshold_outside",
+      "uuid": "ec79ae0d-f9fb-5772-a56b-f29e673c65f4",
+      "expected_items_not_allowed": false,
+      "observed_items_not_allowed": false,
+      "matching_count": 0,
+      "matching_descriptions": []
+    },
+    {
+      "name": "foreign_cross",
+      "uuid": "7dc1f90c-79ec-55f2-83ac-a978948bb2c2",
+      "expected_items_not_allowed": true,
+      "observed_items_not_allowed": true,
+      "matching_count": 1,
+      "matching_descriptions": [
+        "Items not allowed"
+      ]
+    },
+    {
+      "name": "same_cross",
+      "uuid": "2ef9a07f-a3ae-5172-aa78-5304c01a7ad9",
+      "expected_items_not_allowed": true,
+      "observed_items_not_allowed": true,
+      "matching_count": 2,
+      "matching_descriptions": [
+        "Items not allowed",
+        "Items not allowed"
+      ]
+    },
+    {
+      "name": "outside",
+      "uuid": "3c3b5944-2599-550a-bc50-ca9d556a59f4",
+      "expected_items_not_allowed": false,
+      "observed_items_not_allowed": false,
+      "matching_count": 0,
+      "matching_descriptions": []
+    }
+  ],
+  "all_six_expected_rule_results_match": true,
+  "protected_source_vias": [
+    {
+      "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+      "items_not_allowed_count": 0
+    },
+    {
+      "uuid": "c63c289d-af32-592b-9732-d17507fbf476",
+      "items_not_allowed_count": 0
+    },
+    {
+      "uuid": "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5",
+      "items_not_allowed_count": 0
+    },
+    {
+      "uuid": "eb628663-2af6-5175-bd63-91e9eecb0258",
+      "items_not_allowed_count": 0
+    },
+    {
+      "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+      "items_not_allowed_count": 0
+    }
+  ],
+  "all_five_source_vias_zero_items_not_allowed": true,
+  "drc": {
+    "items_not_allowed_count": 5,
+    "other_finding_counts": {
+      "track_width": 3,
+      "track_dangling": 3,
+      "via_dangling": 6,
+      "isolated_copper": 2,
+      "hole_to_hole": 1,
+      "lib_footprint_issues": 2,
+      "unconnected_items": 9,
+      "schematic_parity": 0
+    },
+    "deliberately_dirty_fixture_full_drc_clean_claimed": false
+  },
+  "foreign_pour_fill": {
+    "raw_filled_polygons": 0,
+    "saved_filled_polygons": 2,
+    "reloaded_filled_polygons": 2,
+    "nonempty_cache_observed": true,
+    "complete_independent_clipping_proof_claimed": false
+  },
+  "legitimate_feed": "BLOCKED_BY_BLANKET_ALL_TRACK_STRATEGY per root-proved pad/guard union and native point geometry; no repair authorized or attempted",
+  "limitations": [
+    "Existing standalone fixture pipeline only; no actual-board acceptance.",
+    "No source native load, routing, geometry change, Quilter import, loaded-contact, manufacturing, or safety qualification."
+  ]
+}

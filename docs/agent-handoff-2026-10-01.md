@@ -2,6 +2,16 @@
 
 ## Start here
 
+**Latest: native fixture controls now pass.** The isolated fixture's
+load/fill/save/reload and six rule expectations are established, with all
+five process vias clear of the guards and source unchanged. The first
+comparison stopped on serialization-only differences, resolved by limited
+read-only normalization without a native retry. The fixture is deliberately
+not DRC-clean, and legitimate contact feeds remain blocked by the blanket
+strategy. Next inspect existing BT1/BT2 B.Cu feeds read-only to define a
+retained block; do not route, stage the full input or submit a job. See the
+[native checkpoint](quilter-workflow-study-2026-10-02.md#native-fixture-control-now-established).
+
 **October 3, 15:46 resumption:** a repaired reusable source-subtree builder
 passes seven static tests and has produced the isolated contact fixture.
 No native call has run on it yet. The source is unchanged. Root has also
