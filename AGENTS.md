@@ -2,6 +2,22 @@
 
 ## Bounded engineering work
 
+- **October 3, 15:33 repair stopped:** the explicitly authorized parser
+  repair also exhausted its three attempts before fixture creation:
+  stale copied via identifiers, incorrect pad-net syntax handling, then
+  Python indentation failure. Zero native source or fixture loads occurred.
+  All source bytes remain unchanged. Neither failed batch demonstrates an
+  electrical/Quilter limitation. Stop native retries and preserve both
+  failed builders; no new fixture, staging, cloud job or acceptance exists.
+  A future tooling item must derive IDs/net syntax from the exact source,
+  pass static preflight and test subtree extraction before native execution.
+- **October 3, 15:29:30 parser repair authorized:** owner explicitly approved
+  one bounded parser-based repair and a ten-minute extension beyond the
+  original hour window. Stop by 15:39:30 local, with executor work ending
+  by 15:36:30 for review. Build the isolated contact fixture from exact
+  source subtrees; zero native source loads, no guessed cloning API.
+  New initial-plus-two allowance applies only to this repair. Preserve all
+  failed evidence; no cloud, actual-board staging or manufacturing release.
 - **October 3, 14:29 surface fixture blocked:** three attempts failed on
   native settings/cloning APIs before saving any fixture. No DRC, reload,
   legitimate-pad escape or rule behavior is established. Three read-only

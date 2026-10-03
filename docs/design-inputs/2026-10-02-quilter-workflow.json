@@ -2,6 +2,30 @@
   "schema_version": 1,
   "date": "2026-10-02",
   "status": "CONTACT_SURFACE_FIXTURE_TOOLING_BLOCKED_NO_NATIVE_INPUT",
+  "parser_repair_authorization": {
+    "owner_explicitly_approved": true,
+    "owner_explicitly_extended_window": true,
+    "start_local": "2026-10-03T15:29:30-07:00",
+    "executor_stop_local": "2026-10-03T15:36:30-07:00",
+    "hard_stop_local": "2026-10-03T15:39:30-07:00",
+    "maximum_new_attempts": 3,
+    "source_native_loads_allowed": 0,
+    "scope": "One parser-based isolated BT1/BT2 fixture repair, exact subtree preservation and rule-specific native round-trip controls; no actual-board staging or cloud operation.",
+    "outcome": "FAILED_NO_FIXTURE_BEFORE_NATIVE_EXECUTION",
+    "attempts_used": 3,
+    "failure_sequence": [
+      "Two stale copied protected-via identifiers",
+      "Incorrect assumption about observed KiCad 10 pad-net syntax",
+      "Introduced Python indentation error"
+    ],
+    "source_native_loads": 0,
+    "fixture_native_loads": 0,
+    "evidence_directory": "quilter\\outputs\\bt-contact-parser-repair-20261003T152930",
+    "failed_report_sha256": "32277e37f33044f7a68ddac3aa92f6a97c8ab11b14bab490d78efce0cf1301bb",
+    "failed_script_sha256": "a6b864e7cd57bbcd702b47bec05afd13bf11b1c56fb3bdcf305b771dfafed9d3",
+    "root_source_hashes_unchanged": true,
+    "further_automatic_retry_released": false
+  },
   "surface_fixture_checkpoint": {
     "date": "2026-10-03",
     "owner_continuation_time_local": "14:29",

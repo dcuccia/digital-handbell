@@ -430,6 +430,51 @@ describes an output-inductor configuration and proximity/path checks; do
 not assume it expresses this boost circuit's complete loop/private-pickoff
 requirements or all parallel capacitors.
 
+### 15:29:30 explicitly authorized parser repair
+
+The owner approved one parser-based tooling repair, then explicitly
+extended the window by ten minutes from the reply because the original
+15:30 stop was approaching. The new hard stop is **15:39:30 local**;
+executor work ends by 15:36:30 for review. This is a new bounded allowance
+for this repair, not an automatic reset or an open-ended hour extension.
+
+The implementation must use the existing span-preserving
+`tools/kicad_sexpr.py` parser to retain exact BT1/BT2 and five-via subtrees,
+and load only the resulting disposable fixture in KiCad. No native source
+load or footprint-cloning API is required. Root also identified two
+unexercised defects in the failed script: its pad-port scan combined
+unrelated bounding boxes, and its DRC interpretation treated any appearance
+of a UUID as an `items_not_allowed` finding. The repair must remove those
+claims or replace them with correct geometric and rule-type-specific
+evidence. A saved fixture is not full contact-feed or Quilter qualification.
+
+**15:33 outcome: repair failed before fixture creation.** The three new
+attempts stopped on two stale copied process-via identifiers, incorrect
+handling of the observed KiCad 10 pad-net form, and then an introduced
+Python indentation error. No fixture file, native load, round trip, fill,
+DRC or contact-feed result was produced. These are defects in the
+automation, not evidence that native keepouts or Quilter cannot meet the
+electrical requirement. The source and previously accepted nominal-mask
+evidence are unchanged; root independently rehashed all four source files.
+
+Preserve the new failed evidence separately under
+`quilter\outputs\bt-contact-parser-repair-20261003T152930`.
+Failed report SHA-256:
+`32277e37f33044f7a68ddac3aa92f6a97c8ab11b14bab490d78efce0cf1301bb`;
+non-executable `build_parser_fixture.py`:
+`a6b864e7cd57bbcd702b47bec05afd13bf11b1c56fb3bdcf305b771dfafed9d3`.
+Its raw report records zero native source loads and zero native fixture loads.
+The repair allowance is exhausted; stop rather than start another retry
+loop inside the remaining extension.
+
+**Next work is tooling qualification, not another layout trial.** Derive
+the protected UUID set from the reviewed mask report instead of copying
+identifiers, preserve actual source net nodes rather than assuming their
+syntax, and perform syntax/static extraction checks before native execution.
+Then establish one saved fixture and rule-specific controls. Neither failed
+builder is replay-qualified, and no automatic retry, input staging, cloud
+submission or source integration is released at this checkpoint.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

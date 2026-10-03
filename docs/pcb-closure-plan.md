@@ -166,6 +166,14 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 3, 15:33 native tooling stop:** both the surface-fixture attempt
+and explicitly authorized parser repair exhausted their separate three-
+attempt budgets without saving a fixture. No new electrical or Quilter
+result is established. Source is unchanged; preserve both failed builders.
+Next requires static/source-extraction qualification before another native
+attempt, not automatic retry or whole-board staging. See the
+[repair outcome](quilter-workflow-study-2026-10-02.md#152930-explicitly-authorized-parser-repair).
+
 **October 3, 14:14 contact result:** nominal base/spring guards clear all
 five protected vias, with three synthetic in-memory native collision
 controls. This resolves the C24 projection conflict, not full input

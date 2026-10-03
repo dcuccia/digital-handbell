@@ -2,6 +2,17 @@
 
 ## Start here
 
+**October 3, 15:33 stopping checkpoint:** the owner explicitly approved a
+parser-based repair and a ten-minute extension to 15:39:30. That repair
+exhausted three attempts before generating a fixture: stale copied via
+UUIDs, incorrect pad-net syntax handling and a Python indentation defect.
+Zero native source/fixture loads occurred in the repair. No rule behavior
+or electrical impossibility is established; all source bytes remain
+unchanged. Preserve both failed builders and stop native retries.
+Next must be static qualification of a source-derived fixture builder,
+not another broad native/layout attempt. Exact evidence and limits are in
+the [repair checkpoint](quilter-workflow-study-2026-10-02.md#152930-explicitly-authorized-parser-repair).
+
 **October 3, 14:29 fixture tooling blocked:** initial plus two corrections
 failed before saving the native BT1/BT2 surface fixture. No rule behavior
 or geometric impossibility was established. Source is unchanged; three
