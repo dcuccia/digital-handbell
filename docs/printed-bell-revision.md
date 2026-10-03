@@ -26,6 +26,19 @@ fastener dimensions.
 
 ## Shared mechanical/electrical interface
 
+**October 3 flexible-layout study update:** the owner now permits a nominal
+PCB body diameter of 43-45 mm and up to 2 mm more PCB-to-speaker spacing,
+with corresponding modest changes to the printed enclosure while keeping
+the general shape. These are confirmed study limits, not selected final
+dimensions. The complete shell/cartridge/yoke/cradle/bezel update can wait
+until a worthwhile layout is selected. Existing plastic supports are
+therefore redesignable, not permanent routing obstacles. Real component
+sizes, contact/cell datums, hardware fits, insulation, structural load paths
+and assembly/service access remain requirements. Do not uniformly scale
+parts, native footprints or the complete board outline. The source assembly
+and PCB remain preserved. See the
+[current Quilter packaging contract](quilter-workflow-study-2026-10-02.md#october-3-flexible-packaging-study).
+
 The new z0 is the external grille/mouth plane. Initially keep the existing
 speaker-relative stack: speaker front z4.5, magnet rear z23.5, PCB F z25.0
 and PCB B z26.6. The cell centre remains z36.38, reflecting the nominal
@@ -57,6 +70,13 @@ thread-compatible. Use a keyed locating shoulder and a shell load path clear
 of the battery. A wood-screw option is not qualified by a printed nut pocket.
 
 ## Completion sequence
+
+The sequence below describes the original September implementation.
+For the October Quilter learning study, source-bound physical/access
+reservations and an explicit enclosure-adaptation ledger precede the
+disposable layout trial; full coordinated CAD rebinding follows layout
+selection and still precedes acceptance/fabrication. This does not waive
+electrical or manufacturing qualification.
 
 1. Produce a separate native front-electronics placement and exact interface.
 2. Bind a new FreeCAD shell, cartridge and handle to that interface, including

@@ -40,6 +40,10 @@ directly, still explicitly supplying Sol and medium effort.
 
 Before granting writes, run a read-only dispatch and inspect runtime
 `subagent.started`, `subagent.configured` and `subagent.completed` metadata.
+Use a background handle for this probe when the execution brief will be
+sent with `write_agent`: the October 3 runtime rejected continuation of a
+sync-mode probe even though its metadata said `multiTurn: true`. A verified
+sync probe does not authorize writes by a different, unverified executor.
 Reject an unexpected model or effort; self-reported identity is not proof.
 Never omit the model override on the compatibility path, use Auto/inherit,
 or retry an unavailable Sol task as Astra. If this path cannot be enforced,
@@ -69,6 +73,16 @@ to several competing boards. Logical layer enablement alone is not routing
 progress, plane completion or stackup qualification.
 
 ### Layer and interface contract
+
+**October 3 Quilter-study exception:** the owner confirmed nominal main-board
+D43-45 mm and 0-2 mm additional PCB-to-speaker spacing for disposable layout
+studies. Printed supports and the enclosure may adapt after selecting a
+worthwhile layout; do not impose their old exact shapes as immutable
+obstacles or rebuild CAD every iteration. Keep real-part geometry, physical
+access, insulation/load-path requirements and the electrical/process rules
+below. No uniform scaling or change to the authoritative source is released.
+See the [source-bound packaging contract](quilter-workflow-study-2026-10-02.md#october-3-flexible-packaging-study);
+historical migration/interface freezes below describe their original scope.
 
 **Placement release gate: establish complete supply/return groups and
 layer-transition access before freezing the local floorplan.** Place the

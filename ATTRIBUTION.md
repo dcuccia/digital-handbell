@@ -62,7 +62,8 @@ are not copied manufacturer STEP models.
 ## License boundaries
 
 The [October 3 Quilter-input mechanical screen](docs/quilter-workflow-study-2026-10-02.md#october-3-allowed-domain-engineering-disposition)
-is generated from the project's accepted hardware and original mechanical
+and [packaging sensitivity report](docs/quilter-workflow-study-2026-10-02.md#size-sensitivity-and-engineering-choice)
+are generated from the project's accepted hardware and original mechanical
 planning data, not Quilter's returned designs. Its source-derived hardware
 JSON/SVG exports retain the adapted hardware's CC BY-SA 3.0 context and
 upstream notices linked above; they are not blanket relicensed under root MIT.

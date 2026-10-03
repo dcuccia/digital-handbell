@@ -166,6 +166,22 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 3, 13:20 resumed with packaging flexibility:** confirmed study
+bounds are main PCB D43-45 mm and 0-2 mm additional board/speaker spacing.
+The owner permits adapting all printed enclosure pieces after selecting a
+worthwhile layout while retaining the general bell shape. Existing plastic
+supports need not constrain every placement iteration. Real component,
+contact/cell, hardware, insulation/load-path and mating/service requirements
+remain; do not uniformly scale the board or physical parts. The next study
+has completed four cheap endpoint calculations: D45 gives 9.52% more
+nominal disk area and +2 mm leaves L1 as the only eligible fitted F part
+without positive nominal magnet clearance. D45/+2 is the provisional
+target for exact trial-domain qualification, not accepted geometry.
+Use one shared qualified packaging envelope for four/six layers, not a
+cloud-job matrix. Preserve accepted
+source and all previous CAD; no manual routing or automatic integration.
+See the [updated workflow](quilter-workflow-study-2026-10-02.md#october-3-flexible-packaging-study).
+
 **October 3 mapping checkpoint:** authenticated browser observation works,
 but no new cloud input/job was created. The saved partial mechanical
 screen binds 104 references, nine fixed poses, five process vias and

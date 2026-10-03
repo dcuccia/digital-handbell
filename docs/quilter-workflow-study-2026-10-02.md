@@ -6,22 +6,153 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
-**October 3:** authenticated read-only browser access is established.
-The existing job remains unchanged; the allowed-domain map and imported
-model qualification still precede a new job. See the
-[browser checkpoint](#october-3-authenticated-browser-checkpoint).
+**October 3, 13:20 owner update:** continue the study with modest packaging
+flexibility. The owner explicitly confirmed a nominal **D43-45 mm main PCB
+body and 0-2 mm additional PCB-to-speaker spacing**, retaining the general
+bell shape. The coordinated enclosure update may wait until a worthwhile
+layout is selected. See the [current flexible-packaging scope](#october-3-flexible-packaging-study).
+This supersedes treating all existing plastic supports as immutable
+obstacles, not real-part/access/electrical requirements or source protection.
 
-**Current checkpoint:** raw native inventory recovered and accepted for
-planning; input preparation remains gated. Native work stopped at 14:30:57,
-before the owner's 15:00 deadline. No further inventory rerun is needed.
-No placement/copper change or new cloud submission occurred.
+**Morning checkpoint:** authenticated read-only browser access and a partial
+mechanical screen are established. The existing job and authoritative source
+remain unchanged; qualified trial domains and imported-model checks still
+precede a new job. No further inventory rerun is needed.
 
-**14:22 owner update:** a few bounded reruns are authorized, with work
+**Historical October 2, 14:22 owner update:** a few bounded reruns were authorized, with work
 finished before 15:00 local. First recover the read-only inventory in one
 ten-minute item, at most three native executions with 90-second subprocess
 limits, stopping by 14:34. Stop starting new items by 14:50 and reserve
 checkpoint time. This supersedes the no-retry hold below, not source,
 input-qualification, payment, process or acceptance gates.
+
+## October 3 flexible packaging study
+
+The owner wants a practical layout-service workflow, not a PCB forced to
+fit an enclosure designed around the earlier manual floorplan. Keep the
+general bell shape and do not repeatedly regenerate CAD. The confirmed
+limits are **study bounds**, not a chosen final board/enclosure size:
+main PCB diameter 43-45 mm, nominal 1.6 mm board thickness, and up to
+2 mm more axial separation between PCB and speaker.
+
+The diameter allowance is **2 mm total, or 1 mm per radial side**. It is
+not permission to scale every board coordinate, shrink real components or
+stretch the battery contacts. The true outline includes tabs and a USB
+tongue; a disk-area calculation cannot qualify its reconstruction. Likewise,
+moving the board towards the handle moves its contacts, cell and associated
+rear packaging together. It does not create free rear volume or allow
+compression of the contact/cell stack.
+
+| Keep as a physical/electrical requirement | Permit adaptation instead of freezing old geometry |
+|---|---|
+| Actual speaker, components, contact/cell datums and unscaled footprints | Board main-body envelope within the study bounds; corresponding modest shell changes |
+| Five mandatory process vias, contact-metal clearance, protected/raw-negative isolation | Printed yoke legs, support webs, cartridge and cradle/cover geometry |
+| Real holes/fasteners, engagement, insulating/structural material and tool access | Shape and location of printed supports, subject to those same load/access duties |
+| USB and J1/J2 mating, cable/latch access and recovery-pad service | Bezel, connector access channel and wire routing when the selected layout is rebound |
+| Component-relative decoupling, clock/boost/private-return constraints | Former coordinate-bound floorplan and obsolete pour-exclusion coordinates, after explicit re-expression |
+
+Keep the nine current fixed XY poses and five process vias for the first
+comparison as a **variable-control choice**, not a claim that every mount
+or connector can never move. Any later XY change needs its exact associated
+interface disposition; do not independently stretch contact pairs or detach
+process vias from their protected pads.
+
+**Changed next-step strategy:** do not spend the next item deriving a
+mandatory placement mask from every old plastic support. Use saved CAD as
+reference evidence where it describes real hardware and access, carry an
+explicit adaptation ledger for redesignable plastic, and construct
+conservative trial reservations for the selected packaging envelope.
+Unknown loaded-contact motion, real mating paths and minimum structural or
+insulation requirements are not silently made acceptable by deferring CAD.
+An unsupported constraint must be reserved, retained as a reviewed block,
+or escalated before it is relied on.
+
+The cheap size sensitivity uses only four endpoint combinations
+(`D43/D45` times `+0/+2 mm`), **not four cloud jobs**. Select one packaging
+envelope shared by the four/six-layer comparison so the experiment does not
+confound layer count with a different board size. Eight layers remains
+optional, not a default extra branch.
+
+Full coordinated native enclosure/assembly rebinding remains required
+before accepting a selected layout, fabrication or powered use. It is no
+longer required at every disposable placement iteration.
+
+### Size sensitivity and engineering choice
+
+The [source-bound numerical report](measurements/2026-09-27-router-bakeoff/quilter-packaging-sensitivity-2026-10-03.json)
+is accepted for arithmetic/requirement planning only. Root independently
+checked all 81 F rows in every case, strict sign classifications, 104-reference
+accounting, formulas and unchanged PCB/schematic/project/manifest hashes.
+No native CAD/PCB tool ran; no component, outline, copper or assembly was
+changed.
+
+The endpoint calculation shows that the small allowance is useful:
+
+| Nominal main body | Extra speaker spacing | Disk-area proxy | F bodies below / equal to / above nominal magnet gap |
+|---|---|---|---|
+| D43 | 0 mm | 1,452.20 mm2 | 64 / 5 / 12 |
+| D45 | 0 mm | 1,590.43 mm2 | 64 / 5 / 12 |
+| D43 | 2 mm | 1,452.20 mm2 | 79 / 1 / 1 |
+| D45 | 2 mm | 1,590.43 mm2 | 79 / 1 / 1 |
+
+D45 provides a **9.52% larger nominal disk area**, not a demonstrated
+9.52% increase in usable routing space. The 2 mm axial allowance increases
+the nominal magnet gap from 1.5 to 3.5 mm. Among the **76 eligible fitted
+F parts**, those not strictly below that gap fall from 14 to **one: L1**.
+The other zero-gap part at +2 mm is the fixed X6 USB connector, which
+remains peripheral; zero gap is not accepted clearance or a relocation
+proposal. The two rear contacts are not included in this front-face test.
+
+**Astra's provisional choice for input qualification is D45 with +2 mm
+spacing**, shared by the first four/six-layer comparison. This uses the
+owner's modest allowance to remove avoidable placement restrictions before
+spending cloud/review effort. It is not a final-size or mechanical-fit
+acceptance. Do not run all four geometries in the cloud or begin a shrink
+optimization; revisit dimensions only for a concrete result or conflict.
+
+At +2 mm, the PCB faces would be z27/z28.6, cell centre z38.38 and nominal
+contact top z45.19 rather than z43.19. Those are rigid-translation study
+stations, not newly authored CAD. The contact drawing's 0.38 mm height
+tolerance is additional dimensional information, not a complete loaded
+motion envelope. Shell taper, crown/handle hardware and service paths
+still require coordinated adaptation; raising the board alone does not
+prove the rear assembly fits.
+
+**Next bounded item:** qualify one exact D45/+2 trial envelope and its
+physical reservations, without regenerating the whole enclosure. Preserve
+the tab/USB-tongue interfaces explicitly, keep the nine initial fixed poses
+and five process seeds, reserve whole-body peripheral space for L1, and
+account for contact metal, hardware and connector/service access. Record
+each plastic adaptation separately from real occupied/access volumes.
+Only after that result should the disposable PCB be staged and imported
+for placer/association/rule qualification. No routing or cloud job is
+released merely by the arithmetic result.
+
+The reproducible standard-library calculation and exact input-contract
+snapshot remain under experimental
+`quilter\outputs\packaging-sensitivity-20261003T1328-sol`.
+Final report SHA-256:
+`85368ffc33fd1dd0cea22a9de8ac3510f39821953d939bf8f0a83d6d1d315b8c`;
+`calculate_packaging_sensitivity.py`:
+`3186fb654af4eae0e4ed772027aa5b05f7ed6a700a2bbf6ccfb7400a4e264142`;
+`workflow-contract-input-snapshot.json`:
+`f9412acd0a552a7986811b5f8a07a4dd549e7251876a2818861d954e6d46cde7`.
+That snapshot is the calculation-time contract; this live workflow later
+adds the report digest and lead's provisional decision. Replay using the
+recorded input bytes in a disposable context, not by replacing live files.
+One corrective pass fixed a mislabeled PCB-front station key; reported
+area/count results did not change.
+
+The public [placement guide](https://docs.quilter.ai/guides/placement-guide)
+and [KiCad region instructions](https://docs.quilter.ai/design-parameters/placement-regions)
+were rechecked during this item. On-board components are treated as
+preplaced, and retained vias block placement. Therefore merely enlarging
+the old board or unlocking footprints would still not exercise the placer:
+an eventual disposable input must stage intended movers outside its
+**new** outline, retain only explicitly required copper/process geometry,
+and verify the imported movable population. KiCad region membership must
+be reviewed manually; F-only restrictions and the union semantics still
+apply. None of those preparation operations was performed in this item.
 
 ## October 3 authenticated browser checkpoint
 
@@ -79,7 +210,7 @@ as displayed, not a verified supplier material construction. This is not
 the newly shortlisted JLC04161H-3313 stackup, and neither is selected for
 the next trial.
 
-**Next bounded item:** construct the source-bound allowed-domain map using
+**Morning next item (revised by the afternoon scope above):** construct the source-bound allowed-domain map using
 the recovered inventory and existing mechanical inputs. Carry the known
 parser/comprehension issues as explicit import checks. Do not re-inventory,
 alter the historical job, or submit before those gates pass.
@@ -156,7 +287,7 @@ This CAD is bound to the immutable IMU PCB `d2a098b0...`, not the current
 mechanical interfaces and current component envelopes explicitly; do not
 silently treat the old fit pass as acceptance of moved components.
 
-**One remaining mapping item:** read the saved BRep without rebuilding it,
+**Morning remaining mapping item (superseded where plastic is redesignable):** read the saved BRep without rebuilding it,
 extract height-indexed support/hardware and required service reservations,
 and combine them with the current native footprint/body/rotation mapping.
 Stop with a source-bound allowed-domain result or exact unsupported

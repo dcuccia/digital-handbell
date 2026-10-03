@@ -2,6 +2,21 @@
 
 ## Bounded engineering work
 
+- **October 3, 13:20 packaging flexibility:** owner resumed the Quilter study
+  and explicitly confirmed nominal PCB D43-45 mm and 0-2 mm additional
+  PCB-to-speaker spacing as study limits, not selected final dimensions.
+  Retain the general bell shape; printed supports, cartridge and enclosure
+  can adapt after selecting a worthwhile layout. Do not rebuild CAD at each
+  iteration or freeze every old plastic support as a mandatory obstacle.
+  Real parts, contact/cell datums, electrical isolation, five process vias,
+  hardware fit, structural/insulation and connector/service duties remain.
+  Four endpoint calculations are complete: D45 adds 9.52% nominal disk
+  area; +2 mm reduces eligible fitted F parts without positive nominal
+  magnet clearance from 14 to L1 alone. Astra selects D45/+2 provisionally
+  for the next exact trial-domain qualification, not as final fit approval.
+  No global scaling or accepted-source changes. Use one shared qualified
+  envelope for four/six layers, not a geometry cloud-job matrix. See
+  `docs/quilter-workflow-study-2026-10-02.md` and its updated contract.
 - **October 3 partial mechanical map:** the JSON/SVG screen now accounts for
   all 104 references, nine fixed poses and five process vias, with unchanged
   authoritative source hashes. It is not an allowed-placement map. The 81 F

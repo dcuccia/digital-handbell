@@ -2,6 +2,25 @@
 
 ## Start here
 
+**October 3, 13:20 resumption and scope change:** owner confirmed nominal
+PCB D43-45 mm and 0-2 mm more PCB-to-speaker spacing as study limits.
+Preserve the general bell shape, but adapt printed supports/enclosure after
+selecting a worthwhile layout rather than rebuilding CAD at every step.
+The old support solids are reference geometry, not immutable obstacles.
+Real component/contact/cell/hardware/access/electrical duties remain.
+See the [flexible packaging contract](quilter-workflow-study-2026-10-02.md#october-3-flexible-packaging-study).
+The morning proposal to project all old plastic supports is superseded
+where those supports can be redesigned; preserve historical artifacts.
+
+**Afternoon result:** the four endpoint calculations are complete and
+source hashes unchanged. D45 adds 9.52% nominal disk area; +2 mm spacing
+leaves only L1 among eligible fitted F parts without a positive nominal
+magnet gap. Fixed X6 has zero nominal central gap and remains peripheral.
+Astra provisionally selects D45/+2 for **trial-domain qualification**, not
+final fit. Next: one exact outline/contact/hardware/service reservation
+pass with nine initial fixed poses and five process seeds preserved.
+No native input was staged and no cloud job was submitted.
+
 **October 3 mapping checkpoint:** a
 [source-bound partial mechanical screen](quilter-workflow-study-2026-10-02.md#october-3-allowed-domain-engineering-disposition)
 is saved as JSON and an illustrative SVG. It covers all 104 references,
@@ -9,7 +28,7 @@ nine fixed poses, five process vias, fitted heights and modeled contact bases.
 It is **not** complete allowed-placement geometry. Root independently
 rechecked the numerical mapping and all four authoritative source hashes.
 No native CAD load, source edit or cloud submission occurred.
-The next bounded item is to project support/hardware geometry from the
+The morning next item was to project support/hardware geometry from the
 existing saved CAD and explicitly dispose of missing service/loaded-contact
 envelopes. Do not rebuild the whole assembly or stage a fresh PCB yet.
 
