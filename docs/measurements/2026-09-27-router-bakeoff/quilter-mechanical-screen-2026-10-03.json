@@ -1,0 +1,2003 @@
+{
+  "classification": "SOURCE_BOUND_PARTIAL_MECHANICAL_SCREEN",
+  "coordinate_convention": "Common assembly XY, +Y up. Native inventory XY converted by subtracting 100 mm; manifest rotation = -native. Both panels use identical non-mirrored XY.",
+  "counts": {
+    "all_refs": 104,
+    "copper_features": 18,
+    "dnp": 1,
+    "eligible": 95,
+    "fitted": 83,
+    "fitted_B": 2,
+    "fitted_F": 81,
+    "fixed": 9,
+    "mount_holes": 2,
+    "process_vias": 5
+  },
+  "fitted_height_membership": [
+    {
+      "fixed": true,
+      "height_class": "above_1_5_mm",
+      "height_mm": 16.59,
+      "movable": false,
+      "reference": "BT1",
+      "side": "B"
+    },
+    {
+      "fixed": true,
+      "height_class": "above_1_5_mm",
+      "height_mm": 16.59,
+      "movable": false,
+      "reference": "BT2",
+      "side": "B"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 2.0,
+      "movable": true,
+      "reference": "C1",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C10",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C11",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C12",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C13",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C14",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C15",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C16",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C17",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C18",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 2.0,
+      "movable": true,
+      "reference": "C19",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C2",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 2.0,
+      "movable": true,
+      "reference": "C20",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C21",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C22",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C23",
+      "side": "F"
+    },
+    {
+      "fixed": true,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": false,
+      "reference": "C24",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C25",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 2.0,
+      "movable": true,
+      "reference": "C26",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 2.0,
+      "movable": true,
+      "reference": "C27",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 2.0,
+      "movable": true,
+      "reference": "C28",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C3",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C30",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 2.0,
+      "movable": true,
+      "reference": "C4",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 2.0,
+      "movable": true,
+      "reference": "C5",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C6",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C7",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C8",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "C9",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": true,
+      "reference": "CHG0",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.2,
+      "movable": true,
+      "reference": "D3",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.1,
+      "movable": true,
+      "reference": "D4",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": true,
+      "reference": "FB1",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": true,
+      "reference": "FB2",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": true,
+      "reference": "IC1",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": true,
+      "reference": "IC4",
+      "side": "F"
+    },
+    {
+      "fixed": true,
+      "height_class": "above_1_5_mm",
+      "height_mm": 3.1,
+      "movable": false,
+      "reference": "J1",
+      "side": "F"
+    },
+    {
+      "fixed": true,
+      "height_class": "above_1_5_mm",
+      "height_mm": 3.1,
+      "movable": false,
+      "reference": "J2",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": true,
+      "reference": "L0",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "above_1_5_mm",
+      "height_mm": 5.0,
+      "movable": true,
+      "reference": "L1",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "equal_1_5_mm",
+      "height_mm": 1.5,
+      "movable": true,
+      "reference": "Q1",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "equal_1_5_mm",
+      "height_mm": 1.5,
+      "movable": true,
+      "reference": "Q2",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": true,
+      "reference": "Q3",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "equal_1_5_mm",
+      "height_mm": 1.5,
+      "movable": true,
+      "reference": "Q4",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.22,
+      "movable": true,
+      "reference": "Q5",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R1",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R10",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R11",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R12",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R13",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R14",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R15",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R16",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R17",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R18",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R2",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R20",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R21",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R22",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R23",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R24",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R25",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R26",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.75,
+      "movable": true,
+      "reference": "R27",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R28",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R29",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R3",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R4",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R5",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R6",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R7",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R8",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "R9",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.6,
+      "movable": true,
+      "reference": "U1",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "equal_1_5_mm",
+      "height_mm": 1.5,
+      "movable": true,
+      "reference": "U2",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "equal_1_5_mm",
+      "height_mm": 1.5,
+      "movable": true,
+      "reference": "U3",
+      "side": "F"
+    },
+    {
+      "fixed": true,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": false,
+      "reference": "U4",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.65,
+      "movable": true,
+      "reference": "U5",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 0.8,
+      "movable": true,
+      "reference": "U6",
+      "side": "F"
+    },
+    {
+      "fixed": true,
+      "height_class": "above_1_5_mm",
+      "height_mm": 3.5,
+      "movable": false,
+      "reference": "X6",
+      "side": "F"
+    },
+    {
+      "fixed": false,
+      "height_class": "below_1_5_mm",
+      "height_mm": 1.0,
+      "movable": true,
+      "reference": "Y1",
+      "side": "F"
+    }
+  ],
+  "fixed_native_poses": [
+    {
+      "common_xy_mm": [
+        11.625,
+        0.0
+      ],
+      "reference": "BT1",
+      "rotation_common_deg": -0.0,
+      "side": "B",
+      "uuid": "86fb7da9-ff75-51df-9e6c-cc38539769d8"
+    },
+    {
+      "common_xy_mm": [
+        -11.625,
+        0.0
+      ],
+      "reference": "BT2",
+      "rotation_common_deg": -180.0,
+      "side": "B",
+      "uuid": "95ea164f-4069-5001-884e-22c0eeedede0"
+    },
+    {
+      "common_xy_mm": [
+        -7.995917000000006,
+        -6.000331000000003
+      ],
+      "reference": "C24",
+      "rotation_common_deg": -90.0,
+      "side": "F",
+      "uuid": "537837c2-b8b1-5099-bc2b-156dfb15d443"
+    },
+    {
+      "common_xy_mm": [
+        16.5,
+        -1.0
+      ],
+      "reference": "J1",
+      "rotation_common_deg": -90.0,
+      "side": "F",
+      "uuid": "465ac1da-7069-5727-8b08-ca885dca266c"
+    },
+    {
+      "common_xy_mm": [
+        14.0,
+        8.0
+      ],
+      "reference": "J2",
+      "rotation_common_deg": -0.0,
+      "side": "F",
+      "uuid": "5f6be387-01e3-56e4-96a4-84b7cceb80c9"
+    },
+    {
+      "common_xy_mm": [
+        10.0,
+        15.700000000000003
+      ],
+      "reference": "MH1",
+      "rotation_common_deg": -0.0,
+      "side": "F",
+      "uuid": "b848ddca-12ae-54cf-a729-460ef8fc3bc8"
+    },
+    {
+      "common_xy_mm": [
+        -10.0,
+        -15.700000000000003
+      ],
+      "reference": "MH2",
+      "rotation_common_deg": -0.0,
+      "side": "F",
+      "uuid": "d075ff2e-c009-5e49-8ade-589c77157c20"
+    },
+    {
+      "common_xy_mm": [
+        10.725323000000003,
+        -10.087789
+      ],
+      "reference": "U4",
+      "rotation_common_deg": -0.0,
+      "side": "F",
+      "uuid": "253226d3-d090-57cf-ac23-1a87f998e6da"
+    },
+    {
+      "common_xy_mm": [
+        0.0,
+        -22.819999999999993
+      ],
+      "reference": "X6",
+      "rotation_common_deg": -180.0,
+      "side": "F",
+      "uuid": "0a84e2b7-40a4-5ce7-854e-efeda073d776"
+    }
+  ],
+  "front_stations_mm": {
+    "L1_lowest_z": 20.0,
+    "L1_nominal_yoke_gap": 0.7,
+    "board_back_z": 26.6,
+    "board_front_z": 25.0,
+    "central_nominal_gap": 1.5,
+    "magnet_projected_radius": 10.85,
+    "manifest_quoted_local_yoke_planning_station_z": 19.3,
+    "screen_radius": 11.1,
+    "source_radial_planning_margin": 0.25,
+    "speaker_D21_70_rear_z": 23.5,
+    "speaker_D40_rear_z": 16.5
+  },
+  "height_classes": {
+    "above_1_5_mm": {
+      "count": 14,
+      "fixed": [
+        "BT1",
+        "BT2",
+        "J1",
+        "J2",
+        "X6"
+      ],
+      "movable": [
+        "C1",
+        "C19",
+        "C20",
+        "C26",
+        "C27",
+        "C28",
+        "C4",
+        "C5",
+        "L1"
+      ],
+      "references": [
+        "BT1",
+        "BT2",
+        "C1",
+        "C19",
+        "C20",
+        "C26",
+        "C27",
+        "C28",
+        "C4",
+        "C5",
+        "J1",
+        "J2",
+        "L1",
+        "X6"
+      ]
+    },
+    "below_1_5_mm": {
+      "count": 64,
+      "fixed": [
+        "C24",
+        "U4"
+      ],
+      "movable": [
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C2",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C3",
+        "C30",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "CHG0",
+        "D3",
+        "D4",
+        "FB1",
+        "FB2",
+        "IC1",
+        "IC4",
+        "L0",
+        "Q3",
+        "Q5",
+        "R1",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R2",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "U1",
+        "U5",
+        "U6",
+        "Y1"
+      ],
+      "references": [
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C2",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C3",
+        "C30",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "CHG0",
+        "D3",
+        "D4",
+        "FB1",
+        "FB2",
+        "IC1",
+        "IC4",
+        "L0",
+        "Q3",
+        "Q5",
+        "R1",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R2",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "U1",
+        "U4",
+        "U5",
+        "U6",
+        "Y1"
+      ]
+    },
+    "equal_1_5_mm": {
+      "count": 5,
+      "fixed": [],
+      "movable": [
+        "Q1",
+        "Q2",
+        "Q4",
+        "U2",
+        "U3"
+      ],
+      "references": [
+        "Q1",
+        "Q2",
+        "Q4",
+        "U2",
+        "U3"
+      ]
+    }
+  },
+  "incomplete_constraints": [
+    "Informational XY/height screen only; not complete allowed domains or placement/routing authorization.",
+    "Loaded contact spring/ear motion, preload, metal/service envelope, and exact samples are not fully encoded.",
+    "Mount screw-head, washer, tool and service envelopes remain pending; circles show holes only.",
+    "USB rectangle is a planning reservation, not physical occupied tail geometry; plug/service access remains pending.",
+    "For height below 1.5 mm, the center region is only a nominal vertical speaker-screen pass, not globally allowed.",
+    "The 1.5 mm class has zero nominal axial gap. No axial tolerance margin is invented.",
+    "The 0.7 mm L1 difference is only to the manifest's quoted local planning station, not a universal yoke clearance or safety claim.",
+    "Independent assembly review records RetainedSpeakerCaptureYoke BRep Zmax 25.0 mm and carrier reaching z=27 mm; exact yoke/support projections remain pending.",
+    "Saved single-pose clearances and overall AABBs cannot supply complete height-dependent allowed domains; full saved BRep slices/supports/service envelopes remain a gate.",
+    "Native rotation-dependent courtyards, thermal/tolerance/mount constraints and source electrical constraints remain gates.",
+    "Contact rectangles are partial board-adjacent conductive footprints. Via-center exclusion additionally requires 0.25 mm clearance plus 0.302 mm copper radius.",
+    "Bounding allowed domains were not computed."
+  ],
+  "independent_assembly_caution": {
+    "RetainedSpeakerCaptureYoke_brep_zmax_mm": 25.0,
+    "carrier_reaches_z_mm": 27.0,
+    "fit_report_sha256": "4ffdfcc7177dbd406b8af0ef0f602343a9fd49d8a4a4b1ada9cd6b76b46055de",
+    "interpretation": "The manifest 19.3 mm station and BRep Zmax 25.0 mm describe different parts/features. The 0.7 mm difference is only a quoted local planning station, never universal L1-to-yoke clearance."
+  },
+  "modeled_board_adjacent_contact_base_rectangles": [
+    {
+      "physical_conductive_base": true,
+      "primitive": "under_cell_base",
+      "reference": "BT1",
+      "x_max_mm": 18.685,
+      "x_min_mm": 5.685,
+      "y_max_mm": 5.565,
+      "y_min_mm": -5.565
+    },
+    {
+      "physical_conductive_base": true,
+      "primitive": "under_cell_base",
+      "reference": "BT2",
+      "x_max_mm": -5.685,
+      "x_min_mm": -18.685,
+      "y_max_mm": 5.565,
+      "y_min_mm": -5.565
+    },
+    {
+      "physical_conductive_base": true,
+      "primitive": "base_tab_1",
+      "reference": "BT1",
+      "x_max_mm": 5.685,
+      "x_min_mm": 1.685,
+      "y_max_mm": 2.54,
+      "y_min_mm": -2.54
+    },
+    {
+      "physical_conductive_base": true,
+      "primitive": "base_tab_1",
+      "reference": "BT2",
+      "x_max_mm": -1.685,
+      "x_min_mm": -5.685,
+      "y_max_mm": 2.54,
+      "y_min_mm": -2.54
+    },
+    {
+      "physical_conductive_base": true,
+      "primitive": "base_tab_2",
+      "reference": "BT1",
+      "x_max_mm": 21.565,
+      "x_min_mm": 18.685,
+      "y_max_mm": 1.59,
+      "y_min_mm": -1.59
+    },
+    {
+      "physical_conductive_base": true,
+      "primitive": "base_tab_2",
+      "reference": "BT2",
+      "x_max_mm": -18.685,
+      "x_min_mm": -21.565,
+      "y_max_mm": 1.59,
+      "y_min_mm": -1.59
+    }
+  ],
+  "mount_hole_points": [
+    {
+      "drill_mm": 2.2,
+      "reference": "MH1",
+      "x_mm": 10.0,
+      "y_mm": 15.7
+    },
+    {
+      "drill_mm": 2.2,
+      "reference": "MH2",
+      "x_mm": -10.0,
+      "y_mm": -15.7
+    }
+  ],
+  "native_source_hashes_after": {
+    "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8"
+  },
+  "native_source_hashes_before": {
+    "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8"
+  },
+  "native_source_hashes_note": "Inventory contract records all four unchanged; this renderer does not load or edit native sources.",
+  "outputs_sha256": {
+    "svg": "6048599f321a2b3a33a7ad9a7c20a845a5ccf2300b9e219ac2b01920d9184d1b"
+  },
+  "process_via_geometry": [
+    {
+      "common_xy_mm": [
+        10.400323,
+        -10.412789000000004
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "intentional_process_exception": true,
+      "net": "GND",
+      "role": "U4 thermal via",
+      "uuid": "eb628663-2af6-5175-bd63-91e9eecb0258"
+    },
+    {
+      "common_xy_mm": [
+        10.400323,
+        -9.762788999999998
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "intentional_process_exception": true,
+      "net": "GND",
+      "role": "U4 thermal via",
+      "uuid": "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5"
+    },
+    {
+      "common_xy_mm": [
+        11.050323000000006,
+        -10.412789000000004
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "intentional_process_exception": true,
+      "net": "GND",
+      "role": "U4 thermal via",
+      "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec"
+    },
+    {
+      "common_xy_mm": [
+        11.050323000000006,
+        -9.762788999999998
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "intentional_process_exception": true,
+      "net": "GND",
+      "role": "U4 thermal via",
+      "uuid": "c63c289d-af32-592b-9732-d17507fbf476"
+    },
+    {
+      "common_xy_mm": [
+        -7.995917000000006,
+        -6.508330999999998
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "intentional_process_exception": true,
+      "net": "GND",
+      "role": "C24 capped via",
+      "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+    }
+  ],
+  "reference_classification": [
+    {
+      "available_height_mm": 16.59,
+      "category": "fitted",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "fitted_component_height",
+      "reference": "BT1"
+    },
+    {
+      "available_height_mm": 16.59,
+      "category": "fitted",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "fitted_component_height",
+      "reference": "BT2"
+    },
+    {
+      "available_height_mm": 2.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C1"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C10"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C11"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C12"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C13"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C14"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C15"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C16"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C17"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C18"
+    },
+    {
+      "available_height_mm": 2.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C19"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C2"
+    },
+    {
+      "available_height_mm": 2.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C20"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C21"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C22"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C23"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "fitted_component_height",
+      "reference": "C24"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C25"
+    },
+    {
+      "available_height_mm": 2.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C26"
+    },
+    {
+      "available_height_mm": 2.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C27"
+    },
+    {
+      "available_height_mm": 2.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C28"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_dnp",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "C29"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C3"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C30"
+    },
+    {
+      "available_height_mm": 2.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C4"
+    },
+    {
+      "available_height_mm": 2.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C5"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C6"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C7"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C8"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "C9"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "CHG0"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "CHG_EN0"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "D+1"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "D-1"
+    },
+    {
+      "available_height_mm": 1.2,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "D3"
+    },
+    {
+      "available_height_mm": 1.1,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "D4"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "FB1"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "FB2"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "GAIN0"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "IC1"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "IC4"
+    },
+    {
+      "available_height_mm": 3.1,
+      "category": "fitted",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "fitted_component_height",
+      "reference": "J1"
+    },
+    {
+      "available_height_mm": 3.1,
+      "category": "fitted",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "fitted_component_height",
+      "reference": "J2"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "L0"
+    },
+    {
+      "available_height_mm": 5.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "L1"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_mount_hole",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "not-applicable",
+      "reference": "MH1"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_mount_hole",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "not-applicable",
+      "reference": "MH2"
+    },
+    {
+      "available_height_mm": 1.5,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "Q1"
+    },
+    {
+      "available_height_mm": 1.5,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "Q2"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "Q3"
+    },
+    {
+      "available_height_mm": 1.5,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "Q4"
+    },
+    {
+      "available_height_mm": 0.22,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "Q5"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R1"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R10"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R11"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R12"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R13"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R14"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R15"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R16"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R17"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R18"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R2"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R20"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R21"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R22"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R23"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R24"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R25"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R26"
+    },
+    {
+      "available_height_mm": 0.75,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R27"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R28"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R29"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R3"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R4"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R5"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R6"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R7"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R8"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "R9"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP10"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP11"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP12"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP13"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP14"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP15"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP16"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP3"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP4"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP5"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP6"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP7"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP8"
+    },
+    {
+      "available_height_mm": null,
+      "category": "nonfitted_copper_feature",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "not-applicable",
+      "reference": "TP9"
+    },
+    {
+      "available_height_mm": 0.6,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "U1"
+    },
+    {
+      "available_height_mm": 1.5,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "U2"
+    },
+    {
+      "available_height_mm": 1.5,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "U3"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "fitted_component_height",
+      "reference": "U4"
+    },
+    {
+      "available_height_mm": 0.65,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "U5"
+    },
+    {
+      "available_height_mm": 0.8,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "U6"
+    },
+    {
+      "available_height_mm": 3.5,
+      "category": "fitted",
+      "eligible": false,
+      "fixed": true,
+      "height_applicability": "fitted_component_height",
+      "reference": "X6"
+    },
+    {
+      "available_height_mm": 1.0,
+      "category": "fitted",
+      "eligible": true,
+      "fixed": false,
+      "height_applicability": "fitted_component_height",
+      "reference": "Y1"
+    }
+  ],
+  "schema_version": 1,
+  "source_hashes_sha256": {
+    "battery_contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "native_constraint_inventory": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba",
+    "render_script": "3440071db151cb4c9995d1bd4397f8aa8c134d32ccb66fe73af92c9ff95596ed"
+  },
+  "usb_cross_face_planning_reservation": {
+    "angle": 0.0,
+    "plan_h": 9.08,
+    "plan_w": 10.64,
+    "side": "B",
+    "x": 0.0,
+    "y": -24.01
+  },
+  "via_center_exclusion_rule_mm": {
+    "new_via_copper_radius": 0.302,
+    "project_clearance": 0.25,
+    "total_outward_from_physical_base": 0.552
+  }
+}

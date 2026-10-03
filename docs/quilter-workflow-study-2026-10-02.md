@@ -84,6 +84,85 @@ the recovered inventory and existing mechanical inputs. Carry the known
 parser/comprehension issues as explicit import checks. Do not re-inventory,
 alter the historical job, or submit before those gates pass.
 
+## October 3 allowed-domain engineering disposition
+
+The saved map is a **partial mechanical screen**, not a ready-to-import set
+of placement regions. Reusing the accepted JSON can establish the speaker
+height restriction and modeled board-adjacent contact metal without another
+native board load. It cannot establish the complete component/service space
+from the old placement's individual clearance measurements.
+
+Evidence: [numerical report](measurements/2026-09-27-router-bakeoff/quilter-mechanical-screen-2026-10-03.json)
+and [illustrative two-panel SVG](measurements/2026-09-27-router-bakeoff/quilter-mechanical-screen-2026-10-03.svg).
+Both panels use the same non-mirrored common XY coordinates. The SVG retains
+crowded USB caption placement and is not a geometry import; use the reviewed
+JSON for exact values. No moving component bodies or complete allowed
+domains are plotted.
+
+The **81 fitted F components** comprise 64 below 1.5 mm, five equal to
+1.5 mm (`Q1/Q2/Q4/U2/U3`) and 12 above it. The latter are
+`C1/C4/C5/C19/C20/C26/C27/C28/L1/J1/J2/X6`; J1/J2/X6 remain fixed.
+The report's all-fitted total of 14 above 1.5 mm additionally includes the
+two B contacts; do not apply the front speaker-height test to those contacts.
+All 104 references, nine fixed poses and five process-via points are
+accounted for, including separate non-fitted classifications for C29,
+18 copper features and two mounts.
+
+Root independently checked the report against the current manifest/contact
+data and accepted inventory, and rehashed the PCB/manifest/schematic/project:
+all four authoritative source hashes remain unchanged. The renderer's
+before/after hash fields repeat inherited inventory evidence, not fresh
+measurements; the independent root check establishes current preservation.
+No native CAD tool was loaded and no source geometry was changed.
+
+The reproducible renderer and raw artifacts remain in experimental
+`quilter\outputs\mechanical-map-screen-20261003T111238-sol`.
+Final SHA-256 values are JSON
+`2d26b2a73d72d5864976cd9945b073c25e1b77dab624d22eefe57590c0a0975c`,
+SVG `6048599f321a2b3a33a7ad9a7c20a845a5ccf2300b9e219ac2b01920d9184d1b`,
+and `render_map.py`
+`3440071db151cb4c9995d1bd4397f8aa8c134d32ccb66fe73af92c9ff95596ed`.
+These are source-derived project screening exports, not Quilter output or
+browser account data; retain the hardware's
+[attribution/license context](../ATTRIBUTION.md).
+
+| Obligation | Source-backed encoding approach | Remaining gate |
+|---|---|---|
+| F component height versus speaker | Use F z25 and magnet rear z23.5: 1.5 mm nominal axial gap over the D21.70 magnet. Evaluate the entire rotated component body, not its origin. | Below 1.5 mm is only a nominal speaker clearance; equal height has zero gap. Tolerance, supports and other obstacles still apply. |
+| Through-via access versus rear metal | Start with both contact base/tab primitives and native pad copper. For a new 0.604 mm via, a center exclusion needs 0.302 mm copper radius plus the 0.25 mm contact clearance. | Complete loaded-contact/spring/ear and service restrictions remain separate; a drawing of base metal alone is not the whole allowed-via map. |
+| Mounts, yoke and carrier | Project actual occupied solid slices over each component's z interval, preserving support and tool-access volumes. | Drill circles and entire-object bounding boxes are not adequate substitutions. |
+| X6 and J1/J2 | Preserve exact native poses, current body offsets and documented USB rear planning reservation. | Plug, latch, wire and service paths require their own envelope; a connector body alone is insufficient. |
+| Copper-only features and C29 DNP | Preserve source footprint/pad geometry and recovery access; classify separately from fitted bodies. | Do not invent a zero fitted height or omit their copper/assembly-space obligations. |
+| Clock, boost and private returns | Re-express the 19 pour-only exclusions against retained or relocated actual circuit geometry. Explicitly check capacitor parent pins and private-terminal topology. | Regions/proximity alone cannot establish return-current, quiet-pickoff or layer-reference behavior. Unsupported duties need a reviewed retained block or demonstrated independent check. |
+| Quilter region geometry | Intersect the full requirements locally before assigning regions, because assigned regions combine by union. | Establish actual whole-footprint versus origin semantics and supported rotation behavior before choosing offsets/erosions; do not double-apply or omit body clearance. |
+
+An important source distinction emerged: the placement manifest's
+`speaker_screen.yoke_top_z_mm = 19.3` is a local planning station, **not the
+whole yoke's maximum height**. The existing assembly's `fit-report.json`
+records `RetainedSpeakerCaptureYoke` reaching z25, and the carrier reaching
+z27. Thus the nominal L1-bottom z20 minus local station z19.3 = 0.7 mm
+cannot qualify an arbitrary new L1 position. The individual BRep contains
+supports/features not represented by a uniform horizontal yoke ceiling.
+
+Reuse the immutable saved geometry under
+`mechanical\studies\2026-09-13-printed-bell\imu-four-layer-review\extended-run`
+for the next projection item rather than regenerating the whole assembly:
+`printed-bell.FCStd` SHA-256
+`b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d`,
+and `fit-report.json` SHA-256
+`4ffdfcc7177dbd406b8af0ef0f602343a9fd49d8a4a4b1ada9cd6b76b46055de`.
+This CAD is bound to the immutable IMU PCB `d2a098b0...`, not the current
+`adc262b3...` bytes. A new projection must establish unchanged fixed
+mechanical interfaces and current component envelopes explicitly; do not
+silently treat the old fit pass as acceptance of moved components.
+
+**One remaining mapping item:** read the saved BRep without rebuilding it,
+extract height-indexed support/hardware and required service reservations,
+and combine them with the current native footprint/body/rotation mapping.
+Stop with a source-bound allowed-domain result or exact unsupported
+envelopes. No off-board staging, copper removal, upload or cloud submission
+is released by the partial screen.
+
 ## Two parallel, bounded items
 
 1. **Read-only diagnostic:** compare the actual saved copper in v1.1/v1.2

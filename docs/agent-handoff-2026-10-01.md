@@ -2,6 +2,17 @@
 
 ## Start here
 
+**October 3 mapping checkpoint:** a
+[source-bound partial mechanical screen](quilter-workflow-study-2026-10-02.md#october-3-allowed-domain-engineering-disposition)
+is saved as JSON and an illustrative SVG. It covers all 104 references,
+nine fixed poses, five process vias, fitted heights and modeled contact bases.
+It is **not** complete allowed-placement geometry. Root independently
+rechecked the numerical mapping and all four authoritative source hashes.
+No native CAD load, source edit or cloud submission occurred.
+The next bounded item is to project support/hardware geometry from the
+existing saved CAD and explicitly dispose of missing service/loaded-contact
+envelopes. Do not rebuild the whole assembly or stage a fresh PCB yet.
+
 **October 3 browser checkpoint:** owner signed into the Playwright-controlled
 browser and approved continuation. Read-only project/job/details access is
 working; no cloud input, job or constraint was changed. The saved job
@@ -12,7 +23,7 @@ unqualified. See the [browser evidence and limits](quilter-workflow-study-2026-1
 Next remains the allowed-domain map plus explicit imported-model checks,
 not another as-configured run.
 
-**Current checkpoint: raw native inventory recovered.** The final pass
+**October 2 checkpoint: raw native inventory recovered.** The final pass
 confirmed 104 footprints/325 pads, nine fixed poses, 95 eligible movers,
 81 F/two B fitted parts and all five process vias; the source package is
 unchanged. All 19 native rule areas exclude pours only, not placement or

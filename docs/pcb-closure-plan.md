@@ -166,6 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 3 mapping checkpoint:** authenticated browser observation works,
+but no new cloud input/job was created. The saved partial mechanical
+screen binds 104 references, nine fixed poses, five process vias and
+current height/contact data; source hashes remain unchanged. Full
+height-dependent support, hardware, loaded-contact and service envelopes
+are still required before PCB staging. The next bounded item is a
+read-only projection of the existing saved CAD, not an assembly rebuild
+or another inventory. The local yoke planning station z19.3 must not be
+confused with the complete yoke, whose saved geometry reaches z25.
+See the [screen, limits and exact next input](quilter-workflow-study-2026-10-02.md#october-3-allowed-domain-engineering-disposition).
+
 **October 2 recovered checkpoint:** the final bounded pass completed the
 raw native inventory: 104 footprints, 325 pads, nine fixed poses, 95 eligible
 movers, 81 F/two B fitted parts and five bound process vias. All four source

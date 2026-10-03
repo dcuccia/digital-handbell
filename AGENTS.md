@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 3 partial mechanical map:** the JSON/SVG screen now accounts for
+  all 104 references, nine fixed poses and five process vias, with unchanged
+  authoritative source hashes. It is not an allowed-placement map. The 81 F
+  bodies divide into 64 below, five equal to and 12 above the nominal 1.5 mm
+  magnet gap; whole-body/rotation clearance still applies. Contact bases
+  alone do not encode loaded metal, mounts or service access. The quoted
+  yoke z19.3 is not its full height: saved CAD has support features to z25.
+  Next is a bounded read-only projection of existing saved CAD, not a rebuild,
+  followed by explicit remaining-envelope disposition. No PCB staging,
+  copper removal or cloud job is released by this partial result. See
+  `docs/quilter-workflow-study-2026-10-02.md`.
 - **October 3 authenticated browser inspection:** owner signed into the
   Playwright browser and approved continuation. Read-only project/job/details
   access works; no upload, duplicate, edit or submission occurred. The saved
