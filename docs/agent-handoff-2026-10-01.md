@@ -2,6 +2,15 @@
 
 ## Start here
 
+**October 3, 14:29 fixture tooling blocked:** initial plus two corrections
+failed before saving the native BT1/BT2 surface fixture. No rule behavior
+or geometric impossibility was established. Source is unchanged; three
+read-only loads exceeded the requested one. Preserve the failed artifacts.
+The owner permits work until conservatively 15:30, but native retry limits
+remain: obtain explicit bounded authorization for a source-subtree-based
+fixture repair instead of guessing another cloning API. See the
+[failure checkpoint](quilter-workflow-study-2026-10-02.md#1429-surface-fixture-attempt-native-tooling-blocked).
+
 **October 3, 14:14 bounded result:** the
 [contact/access disposition](quilter-workflow-study-2026-10-02.md#october-3-contact-and-access-disposition)
 resolves the nominal C24 projection conflict. Five process vias clear

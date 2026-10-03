@@ -6,6 +6,14 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+**October 3, approximately 14:30 owner continuation:** keep advancing for
+the next hour. Use **15:30 local as the conservative stop**, stop starting
+new items by 15:20 and leave time for the final checkpoint. Work remains
+sequential and bounded to 10-15 minute items with at most two corrections.
+Start with the BT1/BT2 surface-rule fixture below; continue only through
+qualified dependencies. This is not permission to waive a blocker, alter
+the source, pay, fabricate, power hardware or submit unqualified input.
+
 **October 3, 13:20 owner update:** continue the study with modest packaging
 flexibility. The owner explicitly confirmed a nominal **D43-45 mm main PCB
 body and 0-2 mm additional PCB-to-speaker spacing**, retaining the general
@@ -376,6 +384,51 @@ recorded separately. Root rehashed the current PCB, schematic, project and
 manifest against the reported source hashes. All are unchanged. No source
 board load, actual-board staging, routing, refill, CAD rebuild or cloud
 operation occurred.
+
+### 14:29 surface-fixture attempt: native tooling blocked
+
+No fixture was saved. The initial attempt and two corrections failed on
+KiCad Python API calls: unavailable `BOARD_DESIGN_SETTINGS.SetTrackWidth`,
+the required argument to `FOOTPRINT.Duplicate`, then its generic
+`BOARD_ITEM` return without `Pads`. No DRC, refill, reload, pad-edge result
+or contact-rule behavior was established. These are tooling failures, not
+evidence that a legitimate contact escape is impossible.
+
+The executor loaded the source read-only three times, exceeding the
+requested one load; this is recorded as a scope deviation, not hidden as a
+successful retry. Root rechecked all four authoritative source hashes;
+none changed. Preserve external evidence under
+`quilter\outputs\bt-contact-native-surface-rule-20261003T1431`:
+`build_fixture.py`
+`97e7f3f9ffaf050dc1b2726a972d813c15d04abf4a95434bfc9222351ff3b0f7`,
+and failed `fixture-report.json`
+`0b57c6820df94b6c72811100cc650d5075c131a9ebe140de89886809ea215624`.
+
+Native continuation is held at the exhausted retry limit. The proposed
+repair is to construct the small fixture from exact source S-expression
+subtrees using the existing parser, avoiding guessed cloning APIs, then
+run a bounded save/reload/control pass. This needs a new explicit bounded
+tooling-repair authorization; the one-hour allowance does not silently
+reset failed-attempt limits.
+
+A useful, still untested alternative is to determine whether the existing
+contact pads already cover the base metal sufficiently for ordinary
+foreign-net pad clearance to protect it. That could allow legitimate
+same-net feeds without a blanket track prohibition. Do not assume such
+coverage, create surrogate copper, shrink metal or lower the 0.25 mm duty.
+
+Primary documentation was also checked directly:
+[uploads](https://docs.quilter.ai/using-quilter/upload-your-design-files.md)
+describe PCB, schematic and optional project files, but do not establish
+`.kicad_dru` support. The
+[pre-routed trace rule](https://docs.quilter.ai/design-parameters/pre-routed-traces.md)
+does not require a lock flag: in-outline traces/vias are considered
+pre-placed, while internal copper may be deleted when the input stackup is
+not preserved. Neither statement proves actual returned preservation.
+The [switching-converter model](https://docs.quilter.ai/physics-constraints/switching-converters.md)
+describes an output-inductor configuration and proximity/path checks; do
+not assume it expresses this boost circuit's complete loop/private-pickoff
+requirements or all parallel capacitors.
 
 ## October 3 authenticated browser checkpoint
 

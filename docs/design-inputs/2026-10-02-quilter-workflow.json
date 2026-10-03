@@ -1,7 +1,24 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "NOMINAL_CONTACT_VIA_GUARD_SCREENED_FULL_INPUT_ENCODING_GATED",
+  "status": "CONTACT_SURFACE_FIXTURE_TOOLING_BLOCKED_NO_NATIVE_INPUT",
+  "surface_fixture_checkpoint": {
+    "date": "2026-10-03",
+    "owner_continuation_time_local": "14:29",
+    "status": "FAILED_NO_SAVED_NATIVE_FIXTURE",
+    "evidence_directory": "quilter\\outputs\\bt-contact-native-surface-rule-20261003T1431",
+    "failed_report_sha256": "0b57c6820df94b6c72811100cc650d5075c131a9ebe140de89886809ea215624",
+    "failed_script_sha256": "97e7f3f9ffaf050dc1b2726a972d813c15d04abf4a95434bfc9222351ff3b0f7",
+    "attempts_used": 3,
+    "native_source_loads": 3,
+    "load_scope_deviation": "Three read-only source loads exceeded the requested one; no source save or modification.",
+    "native_behavior_established": false,
+    "source_hashes_reverified_unchanged_by_root": true,
+    "automatic_native_retry_released": false,
+    "proposed_repair": "Use exact source S-expression subtrees and the existing parser instead of guessed native cloning APIs; requires new explicit bounded authorization.",
+    "owner_hour_stop_local": "2026-10-03T15:30:00-07:00",
+    "stop_new_items_local": "2026-10-03T15:20:00-07:00"
+  },
   "contact_access_checkpoint": {
     "date": "2026-10-03",
     "owner_continuation_time_local": "14:14",

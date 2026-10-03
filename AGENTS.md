@@ -2,6 +2,19 @@
 
 ## Bounded engineering work
 
+- **October 3, 14:29 surface fixture blocked:** three attempts failed on
+  native settings/cloning APIs before saving any fixture. No DRC, reload,
+  legitimate-pad escape or rule behavior is established. Three read-only
+  source loads exceeded the requested one; all source hashes are unchanged.
+  Hold native retries. A proposed source-subtree fixture repair needs new
+  explicit bounded authorization; the one-hour allowance does not reset
+  the failed-attempt limit. See the workflow study for exact failed evidence.
+- **October 3, approximately 14:30 one-hour continuation:** owner authorizes
+  continued bounded work for the next hour. Conservatively stop by 15:30
+  local, starting no new item after 15:20. Begin with one isolated BT1/BT2
+  surface-rule fixture; continue through qualified dependencies, not
+  exhausted retry loops. Preserve all source and experiments. No paid use,
+  unqualified submission, integration, fabrication or powered use follows.
 - **October 3, 14:14 contact disposition:** the nominal C24 conflict is
   resolved without a hole or moved seed: six base/tab rectangles plus two
   conservative spring projections clear all five process vias at 0.25 mm.
