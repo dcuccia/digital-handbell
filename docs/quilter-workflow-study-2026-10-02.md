@@ -588,6 +588,64 @@ postprocessor:
 The earlier assertion-failing runner is preserved separately; reuse the
 reviewed normalization, not its raw-list equality check.
 
+### Existing contact-feed retention candidate
+
+The read-only [source-bound feed ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-candidate-2026-10-03.json)
+identifies a concrete **hybrid candidate**, not an approved staged input:
+retain existing battery-contact feeds while allowing flexible placement and
+routing elsewhere. Nothing was routed, removed, resized or loaded natively.
+
+| Contact net | Endpoint-connected B.Cu candidate | Existing transition sites, native XY mm |
+|---|---|---|
+| BT1 / VBAT | Four 1.5 mm segments; six other VBAT B segments are outside this selection | (98.6,107.45), (98.6,108.35) |
+| BT2 / CELL_NEG | All 26 B segments: one 1.5 mm bridge, 22 at 1 mm, one at 0.6 mm, two at 0.1778 mm | (84.249175,107.750480), (86.949175,107.750480), (91.1,108.7) |
+
+Selection uses the exact source parser and Decimal endpoint equality,
+starting at one actual contact-pad centre and reaching the other. This
+establishes positive continuous centreline paths, **not a complete copper
+connectivity or isolation audit**. Near-coincident coordinates are not
+silently snapped. The ledger binds all 30 UUIDs, selected-record hashes
+and the unchanged source PCB/mask hashes; no long copied UUID list is
+needed to regenerate the selection.
+
+All five candidate vias are existing **ordinary 0.600/0.300 mm vias**,
+separate from the five mandatory process seeds. Forty full-copper checks
+against the eight nominal contact guards pass. Minimum spare margin is
+**1.635480 mm**, after the existing 0.25 mm expansion and actual 0.300 mm
+copper radius. This does not qualify loaded-contact travel, foreign copper,
+drill clearance or the proposed fabrication rules. In particular, these
+inherited vias are smaller than the proposed new-via 0.604/0.350 mm minima;
+retaining, replacing or resizing them still needs explicit disposition.
+
+The negative feed is not just a high-current bridge. Its two narrow B
+segments feed the (91.1,108.7) transition, whose F branch reaches
+**C30.2, U6.4 and R28.2**. The other two transitions reach **Q5.A1 and
+Q5.C1**. Do not delete the narrow branch as orphaned routing. These
+raw-negative duties must not be confused with the separate R26/R27
+`PROT_FET_RETURN` quiet pickup. No F copper is included in this B-only
+candidate, so complete protection-circuit and private-path preservation
+remains a separate requirement.
+
+**Engineering disposition:** retained feeds are the preferred direction
+to investigate, but do not by themselves solve the constraint conflict.
+The native controls already prove that blanket track guards reject
+same-net copper too. Quilter's
+[pre-routed-trace documentation](https://docs.quilter.ai/design-parameters/pre-routed-traces.md)
+promises fixed in-outline traces/vias and completion of partial routes;
+its [keepout documentation](https://docs.quilter.ai/design-parameters/keepouts.md)
+promises avoidance of CAD keepouts. Neither page, re-read for this item,
+defines precedence when an existing feed overlaps a keepout. Do not infer
+an exemption, assume `.kicad_dru` support, clear flags, cut an unqualified
+hole or suppress a class of DRC findings.
+
+**Next bounded item:** determine a supported preplaced-feed/keepout
+representation using read-only documentation/UI evidence. If this remains
+unanswered, define one isolated import/control experiment for a distinct
+scope disposition instead of repeating local blanket-rule tests or
+submitting the full board. Actual retained geometry, inherited-via rules,
+independent pour clipping and the remaining electrical/access gates must
+be resolved before a comparable four-/six-layer input is released.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

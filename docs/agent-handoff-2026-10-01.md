@@ -2,6 +2,17 @@
 
 ## Start here
 
+**Latest: existing contact feeds mapped as a retention candidate.**
+The [feed ledger and disposition](quilter-workflow-study-2026-10-02.md#existing-contact-feed-retention-candidate)
+bind 30 B segments and five ordinary transition vias; all five clear the
+nominal contact guards, with at least 1.635480 mm spare. The negative
+narrow branch serves C30.2/U6.4/R28.2 and must not be discarded.
+Source remains unchanged. This is not an approved retention set:
+preplaced-feed/keepout precedence and inherited 0.600/0.300 mm via rules
+remain unresolved. Next check supported representation read-only; any
+isolated import/control experiment needs a distinct scope disposition.
+No further blanket-rule rerun, full staging, routing or cloud submission.
+
 **Latest: native fixture controls now pass.** The isolated fixture's
 load/fill/save/reload and six rule expectations are established, with all
 five process vias clear of the guards and source unchanged. The first

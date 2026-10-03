@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 3 retained-feed candidate identified:** read-only selection
+  finds four VBAT and 26 CELL_NEG B segments plus five existing ordinary
+  transition vias clear of the nominal contact guards (minimum spare
+  1.635480 mm). The negative narrow branch serves C30.2/U6.4/R28.2;
+  do not discard it or confuse it with the R26/R27 quiet pickup. The five
+  candidate vias are 0.600/0.300 mm, not the five mandatory process seeds,
+  and need a fabrication-rule disposition. Retention is not approved:
+  public docs do not resolve preplaced-feed versus all-track-keepout
+  precedence. Next determine supported representation read-only, then
+  separately scope any isolated import control. Do not repeat blanket-rule
+  tests, waive isolation, stage a full input or submit a new job.
 - **October 3 native fixture control passed:** the generated isolated
   fixture now loads, fills, saves and reloads in KiCad 10.0.6. All six
   expected rule controls match and all five protected vias avoid the

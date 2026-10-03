@@ -1,7 +1,24 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "NATIVE_CONTACT_FIXTURE_CONTROL_PASSED_FEED_STRATEGY_GATED",
+  "status": "CONTACT_FEED_CANDIDATE_IDENTIFIED_REPRESENTATION_GATED",
+  "retained_feed_checkpoint": {
+    "date": "2026-10-03",
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-feed-candidate-2026-10-03.json",
+    "status": "READ_ONLY_CANDIDATE_NOT_APPROVED_RETENTION_SET",
+    "candidate_B_segments": 30,
+    "candidate_ordinary_vias": 5,
+    "candidate_vias_are_additional_to_process_seeds": true,
+    "minimum_nominal_full_copper_guard_margin_mm": 1.635480,
+    "native_executions": 0,
+    "source_pcb_unchanged": true,
+    "blocking_questions": [
+      "Supported precedence for fixed feeds overlapping all-track keepouts; neither public documentation nor native control proves a Quilter exemption.",
+      "Explicit disposition of inherited 0.600/0.300 mm candidate ordinary vias against proposed new-via 0.604/0.350 mm minima.",
+      "Preserve C30.2/U6.4/R28.2 and Q5.A1/C1 raw-negative branch duties; this B-only set is not a complete protection/private-pickoff block."
+    ],
+    "next_item": "Read-only representation check; if unresolved, define an isolated import/control experiment for a distinct scope disposition. No full-input staging, new routing or cloud submission."
+  },
   "native_fixture_checkpoint": {
     "date": "2026-10-03",
     "status": "LIMITED_NATIVE_FIXTURE_CONTROL_NOT_FULL_BOARD_ACCEPTANCE",

@@ -66,6 +66,7 @@ and its [packaging sensitivity report](docs/quilter-workflow-study-2026-10-02.md
 and [trial-envelope exports](docs/quilter-workflow-study-2026-10-02.md#october-3-trial-envelope-engineering-review)
 and [nominal contact-mask evidence](docs/quilter-workflow-study-2026-10-02.md#october-3-contact-and-access-disposition)
 and the [source-extracted contact control fixture](docs/quilter-workflow-study-2026-10-02.md#1546-resumption-static-builder-qualified)
+and [contact-feed candidate ledger](docs/quilter-workflow-study-2026-10-02.md#existing-contact-feed-retention-candidate)
 are generated from the project's accepted hardware and original mechanical
 planning data, not Quilter's returned designs. Its source-derived hardware
 JSON/SVG exports retain the adapted hardware's CC BY-SA 3.0 context and

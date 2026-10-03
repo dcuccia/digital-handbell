@@ -166,6 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest: hybrid contact-feed candidate identified, representation gated.**
+The read-only [feed selection](quilter-workflow-study-2026-10-02.md#existing-contact-feed-retention-candidate)
+contains 30 B segments and five ordinary transition vias, not a new board.
+All candidate vias clear nominal contact guards; the negative sense/supply
+return branch serves C30.2/U6.4/R28.2. Keep it distinct from the R26/R27
+private pickup. Inherited via sizing and preplaced-feed/all-track-keepout
+precedence remain open. Next determine supported representation read-only
+and separately scope any necessary import control. Preserve source and
+experiments; no blanket-rule rerun, full staging or cloud release.
+
 **Latest: native contact-fixture controls established.** Six rule
 expectations and all five process-via keepout checks pass on the isolated
 fixture, with limited serialization normalization and no source change.
