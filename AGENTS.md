@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 3, 15:46 static qualification:** owner resumed. The repaired
+  reusable fixture builder now passes seven static tests and emits a
+  source-bound text fixture, with no native loads. Derive identities from
+  the reviewed report and preserve name-only KiCad 10 net syntax; do not
+  revive the failed builders. Root also proved all four contact pads are
+  wholly inside the proposed all-track guards, while pad copper does not
+  cover all base metal. Neither blanket track prohibition nor pad clearance
+  alone is a complete contact solution. Next may validate the generated
+  fixture natively; real input still needs reviewed feed/metal treatment.
+  Source is unchanged. See the workflow study and tools/build_contact_rule_fixture.py.
 - **October 3, 15:33 repair stopped:** the explicitly authorized parser
   repair also exhausted its three attempts before fixture creation:
   stale copied via identifiers, incorrect pad-net syntax handling, then

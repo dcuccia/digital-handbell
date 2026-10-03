@@ -166,6 +166,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 3, 15:46 static tooling recovery:** the repaired builder and seven
+tests now produce a source-bound isolated text fixture without native loads.
+The next allowed native scope is only that fixture's load/save and explicit
+rule controls. Complete contact treatment remains unresolved: all four
+pads are inside the blanket track guards, but pad copper does not cover
+all contact metal. Preserve the source and require a reviewed retained-feed
+or net-aware treatment before any complete input staging. See the
+[current static checkpoint](quilter-workflow-study-2026-10-02.md#1546-resumption-static-builder-qualified).
+
 **October 3, 15:33 native tooling stop:** both the surface-fixture attempt
 and explicitly authorized parser repair exhausted their separate three-
 attempt budgets without saving a fixture. No new electrical or Quilter

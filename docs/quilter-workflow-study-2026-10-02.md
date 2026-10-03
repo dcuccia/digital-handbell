@@ -475,6 +475,69 @@ Then establish one saved fixture and rule-specific controls. Neither failed
 builder is replay-qualified, and no automatic retry, input staging, cloud
 submission or source integration is released at this checkpoint.
 
+### 15:46 resumption: static builder qualified
+
+The owner resumed work. Root repaired the software directly after inspecting
+the actual source syntax; the pinned Sol executor only ran the prescribed
+checks and static generation. The reusable
+[`build_contact_rule_fixture.py`](../tools/build_contact_rule_fixture.py)
+does not import KiCad. It derives the five UUIDs from the reviewed mask,
+uses the observed version-20260206 name-only nets (there is no root numeric
+net table), preserves the exact two footprint/five-via source subtrees,
+and refuses changed input hashes or an existing output directory.
+The [seven static tests](../tools/test_contact_rule_fixture.py) pass,
+including independent literal flag expectations, complete seed membership,
+geometry/version rejection, exact subtree preservation and no-overwrite
+behavior. These are static checks, not a native parsing/DRC result.
+
+The saved text fixture is under
+`quilter\outputs\contact-static-qualified-20261003T1546`:
+`contact-rule-fixture.kicad_pcb`
+`a54f71f8db307cabe0f88d7964e20533e64ce374d0e072c1ab24b51a3cf1a892`;
+`static-fixture-report.json`
+`b1f27b92b38db9e7c26f10bab85c85c799ca54092e85c99bce79227b5b65e170`.
+Builder SHA-256:
+`4602625508cc7c9b65bdc92b5b8851bc85e60fc2d5b4a88d5fe1b78ec1798048`;
+strengthened test:
+`2268fece7782a93e0aaf0fc1bb7e15e44d11f52a763eb06da638f725e3bae811`.
+It contains two contacts/four physical pads, five exact source vias plus
+three synthetic vias, eight fully specified named areas and six declared
+expected controls. Native source/fixture loads remain zero. All five
+authoritative package/interface hashes were unchanged.
+
+Reproduce the software checks with
+`python -B -m unittest discover -s tools -p test_contact_rule_fixture.py -v`.
+Static generation uses `python -B tools\build_contact_rule_fixture.py
+--output <NEW_EXTERNAL_DIRECTORY>`. Never use an existing experiment or
+the authoritative package as the output. The fixture deliberately uses a
+rectangular test outline, not the product D45 outline. Its minimal project
+has the same stem as its board; no ambient preferences are copied.
+
+**A concrete geometry limitation is now established separately from the
+tooling failures.** The source has only two rectangular solder pads per
+contact, not copper under the entire metal base:
+
+| Contact land | Native X range (mm) | Native Y range (mm) |
+|---|---|---|
+| BT1 inner | 101.50-105.74 | 97.40-102.60 |
+| BT1 outer | 117.51-121.75 | 98.35-101.65 |
+| BT2 inner | 94.26-98.50 | 97.40-102.60 |
+| BT2 outer | 78.25-82.49 | 98.35-101.65 |
+
+Root's exact-decimal rectangle-partition check shows every entire pad,
+even expanded by 0.05 mm, lies inside the union of the proposed all-track
+guards. Thus this blanket prohibition leaves no unguarded B pad landing;
+a native collision control cannot by itself make that a usable input.
+Conversely, native (110,100) lies on BT1's under-cell metal but outside
+all four pads. Ordinary pad clearance alone therefore does not encode the
+metal exclusion either. Neither result proves the broader layout impossible.
+
+The next native operation may validate only this already-generated fixture's
+load/save and rule-specific controls. A usable contact treatment still needs
+a reviewed retained-feed or net-aware strategy; do not simply clear the
+track flags, add surrogate copper, relax isolation or move the five seeds.
+No full-board staging or cloud submission follows from static qualification.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

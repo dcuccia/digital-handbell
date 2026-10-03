@@ -2,6 +2,16 @@
 
 ## Start here
 
+**October 3, 15:46 resumption:** a repaired reusable source-subtree builder
+passes seven static tests and has produced the isolated contact fixture.
+No native call has run on it yet. The source is unchanged. Root has also
+established why the two simple contact strategies are incomplete: the
+all-track guards cover all four pads, while the pads do not cover the
+whole metal base. Next validate this existing fixture natively, then
+dispose of retained-feed/net-aware treatment; do not repeat failed builders
+or stage the full layout. See the
+[static qualification and exact geometry](quilter-workflow-study-2026-10-02.md#1546-resumption-static-builder-qualified).
+
 **October 3, 15:33 stopping checkpoint:** the owner explicitly approved a
 parser-based repair and a ten-minute extension to 15:39:30. That repair
 exhausted three attempts before generating a fixture: stale copied via
