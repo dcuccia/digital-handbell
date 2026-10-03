@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 3 authenticated browser inspection:** owner signed into the
+  Playwright browser and approved continuation. Read-only project/job/details
+  access works; no upload, duplicate, edit or submission occurred. The saved
+  job reconfirms the known 16-reference importer warning (14 exist in source,
+  only MH1/MH2 board-only), zero components to place and no placement regions.
+  Expanded saved minima show 0.178 mm displayed width, 0.20 clearance,
+  0.604/0.35 via and **0.508 mm board margin**, not the requested 0.25.
+  Account free entitlement is not yet established by the UI. Continue the
+  allowed-domain/input-qualification work; do not repeat the old job or
+  rebuild source symbols to silence warnings. Raw browser evidence stays
+  local and ignored. See `docs/quilter-workflow-study-2026-10-02.md`.
 - **October 2 raw inventory recovered:** accepted raw evidence covers
   104 footprints/325 pads, nine fixed poses, 95 eligible movers, 81 F/two B
   fitted components and five process vias. Source hashes are unchanged.

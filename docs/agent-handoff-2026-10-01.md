@@ -2,6 +2,16 @@
 
 ## Start here
 
+**October 3 browser checkpoint:** owner signed into the Playwright-controlled
+browser and approved continuation. Read-only project/job/details access is
+working; no cloud input, job or constraint was changed. The saved job
+reconfirms known parser warnings and fixed-placement operation. Expanded
+fabrication details now show the saved board margin as **0.508 mm**, not the
+requested 0.25 mm. Free entitlement and editing/upload controls remain
+unqualified. See the [browser evidence and limits](quilter-workflow-study-2026-10-02.md#october-3-authenticated-browser-checkpoint).
+Next remains the allowed-domain map plus explicit imported-model checks,
+not another as-configured run.
+
 **Current checkpoint: raw native inventory recovered.** The final pass
 confirmed 104 footprints/325 pads, nine fixed poses, 95 eligible movers,
 81 F/two B fitted parts and all five process vias; the source package is
@@ -314,8 +324,13 @@ Do not silently adopt the preset into the authoritative design.
 The user was instructed to set fabrication minima in the job to:
 trace width 0.1778 mm, clearance 0.20 mm, new via diameter/drill 0.604/0.35 mm,
 board margin 0.25 mm. The final collapsed summary still said "6 mil / 6 mil";
-actual saved job values were not independently re-exported/verified.
-Do not claim those UI edits persisted without evidence.
+actual saved job values were not independently verified at that checkpoint.
+On October 3, read-only expanded Job Details displays 0.178 mm width
+(display precision, not proof of exact 0.1778 storage), 0.20 mm clearance,
+0.604/0.35 mm via and **0.508 mm board margin**. The collapsed preset label
+is not the actual rule table, and not every requested edit is reflected.
+These are saved UI values, not proof of compiler enforcement or identical
+returned-project rules. No values were edited during that inspection.
 
 "No power layer" is informational for our mixed-use In2 strategy, not
 permission to convert it to a dedicated power plane.

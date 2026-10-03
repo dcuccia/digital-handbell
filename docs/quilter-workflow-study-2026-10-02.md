@@ -6,6 +6,11 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+**October 3:** authenticated read-only browser access is established.
+The existing job remains unchanged; the allowed-domain map and imported
+model qualification still precede a new job. See the
+[browser checkpoint](#october-3-authenticated-browser-checkpoint).
+
 **Current checkpoint:** raw native inventory recovered and accepted for
 planning; input preparation remains gated. Native work stopped at 14:30:57,
 before the owner's 15:00 deadline. No further inventory rerun is needed.
@@ -17,6 +22,67 @@ ten-minute item, at most three native executions with 90-second subprocess
 limits, stopping by 14:34. Stop starting new items by 14:50 and reserve
 checkpoint time. This supersedes the no-retry hold below, not source,
 input-qualification, payment, process or acceptance gates.
+
+## October 3 authenticated browser checkpoint
+
+The owner signed into the Playwright-controlled browser and approved
+continuation at 10:57 local. Project navigation, candidate summaries,
+read-only Job Details, accordion tables and the account menu were exercised
+through the ordinary UI. No undocumented endpoint was called. No upload,
+duplicate, new project/job, constraint edit, rating, support message,
+purchase or submission occurred. Authentication remains browser-local;
+do not export cookies/tokens or commit raw snapshots. `.playwright-mcp/`
+is ignored because snapshots can contain account or login metadata.
+
+**Access limits:** this establishes observation/navigation, not reliable
+automation of editable grids, component associations, file upload or the
+board canvas. The account menu exposed only Sign Out, not a free-tier or
+billing entitlement. Confirm actual free submission terms at the qualified
+new-job review; existing-project access is not proof of free future jobs.
+No public documented API/SDK/CLI was found in the public documentation
+search. The UI footer's API version is not an offer of public API access.
+
+The saved job now reports:
+
+| Observation | Interpretation |
+|---|---|
+| 104 components, zero to place, 326 vendor pins, 96 to route | Still the fixed-placement experiment, not an exercise of the placer; vendor pins are not 325 physical pads |
+| Elapsed 3 h 47 m 44 s | Displayed completed-job turnaround, not active engineering effort or internal compute cost |
+| 16 references reported missing from schematic | Reconfirms the earlier importer warning; existing source audit establishes 14 present with matching UUID suffixes, only MH1/MH2 board-only |
+| No placement-region, crystal, switching-converter, custom-proximity or ECAD-parsed-constraint records | Those capabilities were not configured in this job; empty ECAD records do not by themselves prove keepouts were dropped |
+| Two preserved-pour records | Records alone do not override the separately documented stackup/pour regeneration behavior |
+| Custom Component Proximity section exists, with no records | Potential grouping mechanism worth inspecting on a qualified disposable draft; semantics and editing are not established |
+
+The 16 warning references are
+`BT1 BT2 C30 J1 J2 MH1 MH2 Q5 R25 R26 R27 R28 R29 U1 U6 Y1`.
+For the fresh input, verify their imported pin/parent associations and
+comprehensions explicitly before relying on automatic grouping, especially
+the protector, flash and crystal. Do not reconstruct valid source symbols
+or start another support loop just to clear a warning. Explicit associations
+may be an acceptable remedy only if the imported connectivity and behavior
+can be demonstrated.
+
+Expanded **saved fabrication values** display:
+width 0.178 mm, clearance 0.20 mm, via diameter/drill 0.604/0.35 mm,
+board margin **0.508 mm**. The width is displayed rounded; exact storage
+precision was not queried. The board margin differs from the requested
+0.25 mm, while the collapsed label still says "6 mil / 6 mil".
+Future runs must record expanded values, not infer them from a preset name.
+This does not prove how every rule was enforced during compilation.
+
+Expanded **saved stackup** is labeled JLCPCB 4-Layer and displays
+F/In1/In2/B copper at 0.035/0.015/0.015/0.035 mm, dielectric separations
+0.21/1.065/0.21 mm, and copper classes Signal/Ground/Signal/Signal.
+"Ground Layer 2" is a display name despite its Signal class.
+The table labels the middle FR4-Generic dielectric as prepreg; record that
+as displayed, not a verified supplier material construction. This is not
+the newly shortlisted JLC04161H-3313 stackup, and neither is selected for
+the next trial.
+
+**Next bounded item:** construct the source-bound allowed-domain map using
+the recovered inventory and existing mechanical inputs. Carry the known
+parser/comprehension issues as explicit import checks. Do not re-inventory,
+alter the historical job, or submit before those gates pass.
 
 ## Two parallel, bounded items
 
