@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 3, 13:46 trial-envelope continuation:** a concrete analytic
+  D45-plus-USB-tongue outline and physical-reservation packet are now saved.
+  All 163 source edges are contained; bounds are 45 x49.35 mm, with no
+  scaled parts or changed source. Whole L1 and R3.2 mount screens pass.
+  Full input remains gated: a coarse full-height BT2 shadow covers the
+  mandatory C24 via, but actual-base clearance has 0.393331 mm spare beyond
+  the required 0.25 mm. This is not a short. Resolve height-relevant,
+  process-aware contact encoding and explicit fixed-connector access
+  assumptions; do not delete the via, waive isolation or carve a magic
+  exception hole. J2's proxy already includes its old 0.7 mm mating
+  allowance. No native staging, CAD rebuild or cloud submission occurred.
+  See `docs/quilter-workflow-study-2026-10-02.md`.
 - **October 3, 13:20 packaging flexibility:** owner resumed the Quilter study
   and explicitly confirmed nominal PCB D43-45 mm and 0-2 mm additional
   PCB-to-speaker spacing as study limits, not selected final dimensions.

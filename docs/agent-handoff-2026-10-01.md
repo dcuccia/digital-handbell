@@ -2,6 +2,17 @@
 
 ## Start here
 
+**October 3, 13:46 continuation:** the concrete
+[trial envelope and outline fragment](quilter-workflow-study-2026-10-02.md#october-3-trial-envelope-engineering-review)
+are saved, not applied. The D45/tongue union contains all 163 source
+segments; whole L1 and mount planning screens pass. The next blocker is
+contact/access encoding: a coarse BT2 shadow covers mandatory C24, while
+actual base geometry leaves 0.393331 mm beyond required clearance.
+Do not confuse this projection conflict with a short or remove the seed.
+Resolve a height-relevant, process-aware mask and carry fixed-connector
+access assumptions before staging. All authoritative source bytes remain
+unchanged; no native PCB/CAD build or cloud job was run.
+
 **October 3, 13:20 resumption and scope change:** owner confirmed nominal
 PCB D43-45 mm and 0-2 mm more PCB-to-speaker spacing as study limits.
 Preserve the general bell shape, but adapt printed supports/enclosure after

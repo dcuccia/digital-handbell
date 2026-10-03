@@ -1,0 +1,1929 @@
+{
+  "analytic_outline": {
+    "area_formula": "pi*R^2 + 2*a*26.85 - (a*h + R^2*asin(a/R))",
+    "area_mm2": 1643.3009714646446,
+    "bbox_common_xy_mm": [
+      -22.5,
+      -26.85,
+      22.5,
+      22.5
+    ],
+    "bbox_height_mm": 49.35,
+    "bbox_width_mm": 45.0,
+    "circle_polygon_chord_approximation": "none in analytic records; optional SVG samples arcs and is not authoritative",
+    "definition": "union(disk radius 22.5 at common origin, rectangle x[-5.75,5.75], y[-26.85,0])",
+    "exact_parameters_mm": {
+      "R": 22.5,
+      "a": 5.75,
+      "y_bottom": -26.85
+    },
+    "max_endpoint_or_midpoint_native_quantization_mm": 4.86007067479477e-07,
+    "ordered_closed_clockwise_records": [
+      {
+        "end": [
+          22.5,
+          0.0
+        ],
+        "end_native_xy_mm": [
+          122.5,
+          100.0
+        ],
+        "mid": [
+          0.0,
+          22.5
+        ],
+        "mid_native_xy_mm": [
+          100.0,
+          122.5
+        ],
+        "start": [
+          -22.5,
+          0.0
+        ],
+        "start_native_xy_mm": [
+          77.5,
+          100.0
+        ],
+        "type": "arc"
+      },
+      {
+        "end": [
+          5.75,
+          -21.752873
+        ],
+        "end_native_xy_mm": [
+          105.75,
+          78.247127
+        ],
+        "mid": [
+          17.827296,
+          -13.727254
+        ],
+        "mid_native_xy_mm": [
+          117.827296,
+          86.272746
+        ],
+        "start": [
+          22.5,
+          0.0
+        ],
+        "start_native_xy_mm": [
+          122.5,
+          100.0
+        ],
+        "type": "arc"
+      },
+      {
+        "end": [
+          5.75,
+          -26.85
+        ],
+        "end_native_xy_mm": [
+          105.75,
+          73.15
+        ],
+        "start": [
+          5.75,
+          -21.752873
+        ],
+        "start_native_xy_mm": [
+          105.75,
+          78.247127
+        ],
+        "type": "line"
+      },
+      {
+        "end": [
+          -5.75,
+          -26.85
+        ],
+        "end_native_xy_mm": [
+          94.25,
+          73.15
+        ],
+        "start": [
+          5.75,
+          -26.85
+        ],
+        "start_native_xy_mm": [
+          105.75,
+          73.15
+        ],
+        "type": "line"
+      },
+      {
+        "end": [
+          -5.75,
+          -21.752873
+        ],
+        "end_native_xy_mm": [
+          94.25,
+          78.247127
+        ],
+        "start": [
+          -5.75,
+          -26.85
+        ],
+        "start_native_xy_mm": [
+          94.25,
+          73.15
+        ],
+        "type": "line"
+      },
+      {
+        "end": [
+          -22.5,
+          0.0
+        ],
+        "end_native_xy_mm": [
+          77.5,
+          100.0
+        ],
+        "mid": [
+          -17.827296,
+          -13.727254
+        ],
+        "mid_native_xy_mm": [
+          82.172704,
+          86.272746
+        ],
+        "start": [
+          -5.75,
+          -21.752873
+        ],
+        "start_native_xy_mm": [
+          94.25,
+          78.247127
+        ],
+        "type": "arc"
+      }
+    ],
+    "record_coordinate_status": "six-decimal approximation of the exact parameter-defined analytic contour",
+    "serialized_precision_decimals": 6
+  },
+  "authoritative_hashes_measured_after": {
+    "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8"
+  },
+  "authoritative_hashes_measured_before": {
+    "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8"
+  },
+  "classification": "proposal/evidence only; not an accepted PCB, allowed-domain map, import qualification, or fabrication release",
+  "coordinate_convention": "Common assembly XY; native XY = common XY + (100,100), no Y reflection; mm.",
+  "plastic": "Printed plastic may be redesigned after layout; real parts, access, loading, insulation, and process constraints are not waived.",
+  "remaining_gates": [
+    "USB and connector mating/service/access envelopes",
+    "loaded contact spring/ear motion and exact samples",
+    "mount screw head/washer/tool/engagement/load details",
+    "complete region/body semantics and native courtyard checks",
+    "electrical duties, return paths, thermal/tolerance constraints",
+    "optional reference/adaptation review of speaker/yoke/support BRep slices; printed plastic projections are not immutable",
+    "manufacturer/process qualification and physical assembly validation"
+  ],
+  "reservation_layer": {
+    "battery_contacts": {
+      "actual_board_adjacent_metal_base_masks": [
+        {
+          "physical_conductive_base": true,
+          "primitive": "under_cell_base",
+          "reference": "BT1",
+          "x_max_mm": 18.685,
+          "x_min_mm": 5.685,
+          "y_max_mm": 5.565,
+          "y_min_mm": -5.565
+        },
+        {
+          "physical_conductive_base": true,
+          "primitive": "under_cell_base",
+          "reference": "BT2",
+          "x_max_mm": -5.685,
+          "x_min_mm": -18.685,
+          "y_max_mm": 5.565,
+          "y_min_mm": -5.565
+        },
+        {
+          "physical_conductive_base": true,
+          "primitive": "base_tab_1",
+          "reference": "BT1",
+          "x_max_mm": 5.685,
+          "x_min_mm": 1.685,
+          "y_max_mm": 2.54,
+          "y_min_mm": -2.54
+        },
+        {
+          "physical_conductive_base": true,
+          "primitive": "base_tab_1",
+          "reference": "BT2",
+          "x_max_mm": -1.685,
+          "x_min_mm": -5.685,
+          "y_max_mm": 2.54,
+          "y_min_mm": -2.54
+        },
+        {
+          "physical_conductive_base": true,
+          "primitive": "base_tab_2",
+          "reference": "BT1",
+          "x_max_mm": 21.565,
+          "x_min_mm": 18.685,
+          "y_max_mm": 1.59,
+          "y_min_mm": -1.59
+        },
+        {
+          "physical_conductive_base": true,
+          "primitive": "base_tab_2",
+          "reference": "BT2",
+          "x_max_mm": -18.685,
+          "x_min_mm": -21.565,
+          "y_max_mm": 1.59,
+          "y_min_mm": -1.59
+        }
+      ],
+      "expansion_mm": {
+        "clearance": 0.25,
+        "new_via_copper_radius": 0.302,
+        "total": 0.552
+      },
+      "full_projected_proxy_shadows": [
+        {
+          "bounds_common_xy_mm": [
+            1.5,
+            -8.5,
+            21.75,
+            8.5
+          ],
+          "kind": "axis_aligned_rectangle",
+          "reference": "BT1"
+        },
+        {
+          "bounds_common_xy_mm": [
+            -21.75,
+            -8.5,
+            -1.5,
+            8.5
+          ],
+          "kind": "axis_aligned_rectangle",
+          "reference": "BT2"
+        }
+      ],
+      "loaded_motion_unqualified": true,
+      "new_ordinary_via_center_proposal_masks": [
+        {
+          "bounds_common_xy_mm": [
+            0.948,
+            -9.052,
+            22.302,
+            9.052
+          ],
+          "kind": "axis_aligned_rectangle",
+          "overapproximation": "square/rectangular Minkowski expansion",
+          "reference": "BT1"
+        },
+        {
+          "bounds_common_xy_mm": [
+            -22.302,
+            -9.052,
+            -0.948,
+            9.052
+          ],
+          "kind": "axis_aligned_rectangle",
+          "overapproximation": "square/rectangular Minkowski expansion",
+          "reference": "BT2"
+        }
+      ],
+      "note": "Proxy shadows differ from actual B-adjacent metal; intersection is not a short or contact-touch permission."
+    },
+    "classification_counts": {
+      "all_refs": 104,
+      "copper_features": 18,
+      "dnp": 1,
+      "eligible": 95,
+      "fitted": 83,
+      "fitted_B": 2,
+      "fitted_F": 81,
+      "fixed": 9,
+      "mount_holes": 2,
+      "process_vias": 5
+    },
+    "example_source_L1_terminal_feasibility": {
+      "all_vertices_inside_convex_D45_disk": true,
+      "body_center_common_xy_mm": [
+        -7.000000165595688,
+        14.799999935370037
+      ],
+      "body_polygon_common_xy_mm": [
+        [
+          -9.85,
+          12.05
+        ],
+        [
+          -4.15,
+          12.05
+        ],
+        [
+          -4.15,
+          17.55
+        ],
+        [
+          -9.85,
+          17.55
+        ]
+      ],
+      "clears_magnet_disk_R10_85": true,
+      "clears_mount_R3_2": {
+        "MH1": true,
+        "MH2": true
+      },
+      "clears_planning_disk_R11_1": true,
+      "depth_mm": 5.5,
+      "minimum_distance_to_origin_mm": 12.744606702444765,
+      "mount_test_method": "mount center point-in-rotated-rectangle safeguard, else minimum distance to every body edge",
+      "native_origin_common_xy_mm": [
+        -7,
+        14.8
+      ],
+      "origin_inside_body_polygon_safeguard_used": false,
+      "rotation_common_deg": 0,
+      "scope": "terminal feasibility screen only; no manual placement decision or new board",
+      "source_center_offset_preserved_mm": [
+        -1.655956882729015e-07,
+        -6.462996360312445e-08
+      ],
+      "whole_body_inside_new_outline_by_convex_disk_proof": true,
+      "width_mm": 5.7
+    },
+    "fixed_proxy_bodies_or_domains": [
+      {
+        "body_center_common_xy_mm": [
+          11.625,
+          0.0
+        ],
+        "body_center_minus_native_origin_mm": [
+          0.0,
+          0.0
+        ],
+        "native_origin_common_xy_mm": [
+          11.625,
+          0.0
+        ],
+        "polygon_common_xy_mm": [
+          [
+            1.5,
+            -8.5
+          ],
+          [
+            21.75,
+            -8.5
+          ],
+          [
+            21.75,
+            8.5
+          ],
+          [
+            1.5,
+            8.5
+          ]
+        ],
+        "reference": "BT1",
+        "rotation_common_deg": 0,
+        "semantics": "source planning proxy body; not complete access/motion envelope"
+      },
+      {
+        "body_center_common_xy_mm": [
+          -11.625,
+          0.0
+        ],
+        "body_center_minus_native_origin_mm": [
+          0.0,
+          0.0
+        ],
+        "native_origin_common_xy_mm": [
+          -11.625,
+          0.0
+        ],
+        "polygon_common_xy_mm": [
+          [
+            -1.5,
+            8.5
+          ],
+          [
+            -21.75,
+            8.5
+          ],
+          [
+            -21.75,
+            -8.5
+          ],
+          [
+            -1.5,
+            -8.5
+          ]
+        ],
+        "reference": "BT2",
+        "rotation_common_deg": -180,
+        "semantics": "source planning proxy body; not complete access/motion envelope"
+      },
+      {
+        "body_center_common_xy_mm": [
+          -7.995917,
+          -6.000331
+        ],
+        "body_center_minus_native_origin_mm": [
+          0.0,
+          -0.0
+        ],
+        "native_origin_common_xy_mm": [
+          -7.995917,
+          -6.000331
+        ],
+        "polygon_common_xy_mm": [
+          [
+            -8.295917,
+            -5.192331
+          ],
+          [
+            -8.295917,
+            -6.808331
+          ],
+          [
+            -7.695917,
+            -6.808331
+          ],
+          [
+            -7.695917,
+            -5.192331
+          ]
+        ],
+        "reference": "C24",
+        "rotation_common_deg": -90,
+        "semantics": "source planning proxy body; not complete access/motion envelope"
+      },
+      {
+        "body_center_common_xy_mm": [
+          16.565,
+          -1.0
+        ],
+        "body_center_minus_native_origin_mm": [
+          0.065,
+          0.0
+        ],
+        "native_origin_common_xy_mm": [
+          16.5,
+          -1.0
+        ],
+        "polygon_common_xy_mm": [
+          [
+            13.205,
+            2.98
+          ],
+          [
+            13.205,
+            -4.98
+          ],
+          [
+            19.925,
+            -4.98
+          ],
+          [
+            19.925,
+            2.98
+          ]
+        ],
+        "reference": "J1",
+        "rotation_common_deg": -90,
+        "semantics": "body-only; mating/service/access envelope UNQUALIFIED"
+      },
+      {
+        "body_center_common_xy_mm": [
+          14.0,
+          8.35
+        ],
+        "body_center_minus_native_origin_mm": [
+          0.0,
+          0.35
+        ],
+        "native_origin_common_xy_mm": [
+          14.0,
+          8.0
+        ],
+        "polygon_common_xy_mm": [
+          [
+            11.6,
+            5.225
+          ],
+          [
+            16.4,
+            5.225
+          ],
+          [
+            16.4,
+            11.475
+          ],
+          [
+            11.6,
+            11.475
+          ]
+        ],
+        "reference": "J2",
+        "rotation_common_deg": 0,
+        "semantics": "body plus historical included 0.7 mm front-mating planning allowance; do not add another; not full service, cable-bend, latch, or tool envelope"
+      },
+      {
+        "center_common_xy_mm": [
+          10.0,
+          15.700000000000003
+        ],
+        "radius_mm": 3.2,
+        "reference": "MH1",
+        "semantics": "EXISTING PLANNING body/hardware domain; tool and engagement details pending",
+        "shape": "circle"
+      },
+      {
+        "center_common_xy_mm": [
+          -10.0,
+          -15.700000000000003
+        ],
+        "radius_mm": 3.2,
+        "reference": "MH2",
+        "semantics": "EXISTING PLANNING body/hardware domain; tool and engagement details pending",
+        "shape": "circle"
+      },
+      {
+        "body_center_common_xy_mm": [
+          10.554614,
+          -10.087789
+        ],
+        "body_center_minus_native_origin_mm": [
+          -0.170709,
+          -0.0
+        ],
+        "native_origin_common_xy_mm": [
+          10.725323,
+          -10.087789
+        ],
+        "polygon_common_xy_mm": [
+          [
+            8.483905,
+            -11.987789
+          ],
+          [
+            12.625323,
+            -11.987789
+          ],
+          [
+            12.625323,
+            -8.187789
+          ],
+          [
+            8.483905,
+            -8.187789
+          ]
+        ],
+        "reference": "U4",
+        "rotation_common_deg": 0,
+        "semantics": "source planning proxy body; not complete access/motion envelope"
+      },
+      {
+        "body_center_common_xy_mm": [
+          0.0,
+          -24.01
+        ],
+        "body_center_minus_native_origin_mm": [
+          0.0,
+          -1.19
+        ],
+        "native_origin_common_xy_mm": [
+          0.0,
+          -22.82
+        ],
+        "polygon_common_xy_mm": [
+          [
+            4.82,
+            -19.97
+          ],
+          [
+            -4.82,
+            -19.97
+          ],
+          [
+            -4.82,
+            -28.05
+          ],
+          [
+            4.82,
+            -28.05
+          ]
+        ],
+        "reference": "X6",
+        "rotation_common_deg": -180,
+        "semantics": "source planning proxy body; not complete access/motion envelope"
+      }
+    ],
+    "mounts": {
+      "hardware_nominal_fit_screen": {
+        "all_nominally_within_R3_2_even_plus_0_25": true,
+        "driver_radius_mm": 0.95,
+        "driver_radius_plus_0_25_mm": 1.2,
+        "head_diameter_mm": 3.8,
+        "head_radius_plus_0_25_mm": 2.15,
+        "nut_across_flats_mm": 4.0,
+        "nut_circumradius_mm": 2.3094010767585034,
+        "nut_circumradius_plus_0_25_mm": 2.5594010767585034,
+        "planning_radius_mm": 3.2,
+        "remaining_gates": "supplier/tolerance/engagement/assembly path"
+      },
+      "source_planning_domains": [
+        {
+          "drill_mm": 2.2,
+          "keepout_radius_mm": 3.2,
+          "net": "GND",
+          "pad_diameter_mm": 4.4,
+          "reference": "MH1",
+          "x_mm": 10.0,
+          "y_mm": 15.7
+        },
+        {
+          "drill_mm": 2.2,
+          "keepout_radius_mm": 3.2,
+          "net": "GND",
+          "pad_diameter_mm": 4.4,
+          "reference": "MH2",
+          "x_mm": -10.0,
+          "y_mm": -15.7
+        }
+      ]
+    },
+    "protected_process_vias": [
+      {
+        "actual_base_clearance_violations": [],
+        "actual_base_clearances_all_six": [
+          {
+            "center_to_rectangle_distance_mm": 4.847789000000003,
+            "clearance_margin_after_0_25_mm": 4.295789000000004,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "under_cell_base",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 16.79996054170515,
+            "clearance_margin_after_0_25_mm": 16.24796054170515,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "under_cell_base",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 9.176877335610957,
+            "clearance_margin_after_0_25_mm": 8.624877335610957,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_1",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 14.423447530075814,
+            "clearance_margin_after_0_25_mm": 13.871447530075814,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_1",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 12.10278805618152,
+            "clearance_margin_after_0_25_mm": 11.55078805618152,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_2",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 30.394039214175695,
+            "clearance_margin_after_0_25_mm": 29.842039214175696,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_2",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          }
+        ],
+        "center_inside_coarse_proxy_shadow_mask_expanded_for_new_0_604_via": [],
+        "common_xy_mm": [
+          10.400323,
+          -10.412789000000004
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "intentional_process_exception": true,
+        "net": "GND",
+        "role": "U4 thermal via",
+        "uuid": "eb628663-2af6-5175-bd63-91e9eecb0258"
+      },
+      {
+        "actual_base_clearance_violations": [],
+        "actual_base_clearances_all_six": [
+          {
+            "center_to_rectangle_distance_mm": 4.1977889999999976,
+            "clearance_margin_after_0_25_mm": 3.6457889999999975,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "under_cell_base",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 16.62405030378728,
+            "clearance_margin_after_0_25_mm": 16.07205030378728,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "under_cell_base",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 8.62571457520187,
+            "clearance_margin_after_0_25_mm": 8.07371457520187,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_1",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 14.079194328968189,
+            "clearance_margin_after_0_25_mm": 13.52719432896819,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_1",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 11.63745474890665,
+            "clearance_margin_after_0_25_mm": 11.08545474890665,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_2",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 30.211760856541446,
+            "clearance_margin_after_0_25_mm": 29.659760856541446,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_2",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          }
+        ],
+        "center_inside_coarse_proxy_shadow_mask_expanded_for_new_0_604_via": [],
+        "common_xy_mm": [
+          10.400323,
+          -9.762788999999998
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "intentional_process_exception": true,
+        "net": "GND",
+        "role": "U4 thermal via",
+        "uuid": "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5"
+      },
+      {
+        "actual_base_clearance_violations": [],
+        "actual_base_clearances_all_six": [
+          {
+            "center_to_rectangle_distance_mm": 4.847789000000003,
+            "clearance_margin_after_0_25_mm": 4.295789000000004,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "under_cell_base",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 17.42332040980852,
+            "clearance_margin_after_0_25_mm": 16.871320409808522,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "under_cell_base",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 9.527197779664812,
+            "clearance_margin_after_0_25_mm": 8.975197779664812,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_1",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 14.972283010711834,
+            "clearance_margin_after_0_25_mm": 14.420283010711834,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_1",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 11.66747181838679,
+            "clearance_margin_after_0_25_mm": 11.11547181838679,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_2",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 31.016625213792206,
+            "clearance_margin_after_0_25_mm": 30.464625213792207,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_2",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          }
+        ],
+        "center_inside_coarse_proxy_shadow_mask_expanded_for_new_0_604_via": [],
+        "common_xy_mm": [
+          11.050323000000006,
+          -10.412789000000004
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "intentional_process_exception": true,
+        "net": "GND",
+        "role": "U4 thermal via",
+        "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec"
+      },
+      {
+        "actual_base_clearance_violations": [],
+        "actual_base_clearances_all_six": [
+          {
+            "center_to_rectangle_distance_mm": 4.1977889999999976,
+            "clearance_margin_after_0_25_mm": 3.6457889999999975,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "under_cell_base",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 17.253766788816005,
+            "clearance_margin_after_0_25_mm": 16.701766788816006,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "under_cell_base",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 8.997520315778678,
+            "clearance_margin_after_0_25_mm": 8.445520315778678,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_1",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 14.640940299477016,
+            "clearance_margin_after_0_25_mm": 14.088940299477017,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_1",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 11.184040992988619,
+            "clearance_margin_after_0_25_mm": 10.63204099298862,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_2",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 30.838027076206583,
+            "clearance_margin_after_0_25_mm": 30.286027076206583,
+            "existing_via_copper_radius_mm": 0.302,
+            "primitive": "base_tab_2",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          }
+        ],
+        "center_inside_coarse_proxy_shadow_mask_expanded_for_new_0_604_via": [],
+        "common_xy_mm": [
+          11.050323000000006,
+          -9.762788999999998
+        ],
+        "diameter_mm": 0.604,
+        "drill_mm": 0.35,
+        "intentional_process_exception": true,
+        "net": "GND",
+        "role": "U4 thermal via",
+        "uuid": "c63c289d-af32-592b-9732-d17507fbf476"
+      },
+      {
+        "actual_base_clearance_violations": [],
+        "actual_base_clearances_all_six": [
+          {
+            "center_to_rectangle_distance_mm": 13.713400866905705,
+            "clearance_margin_after_0_25_mm": 13.163400866905704,
+            "existing_via_copper_radius_mm": 0.3,
+            "primitive": "under_cell_base",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 0.9433309999999979,
+            "clearance_margin_after_0_25_mm": 0.3933309999999979,
+            "existing_via_copper_radius_mm": 0.3,
+            "primitive": "under_cell_base",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 10.462686313105737,
+            "clearance_margin_after_0_25_mm": 9.912686313105736,
+            "existing_via_copper_radius_mm": 0.3,
+            "primitive": "base_tab_1",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 4.592165971134974,
+            "clearance_margin_after_0_25_mm": 4.042165971134974,
+            "existing_via_copper_radius_mm": 0.3,
+            "primitive": "base_tab_1",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 27.130449900185035,
+            "clearance_margin_after_0_25_mm": 26.580449900185034,
+            "existing_via_copper_radius_mm": 0.3,
+            "primitive": "base_tab_2",
+            "reference": "BT1",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          },
+          {
+            "center_to_rectangle_distance_mm": 11.766328025618266,
+            "clearance_margin_after_0_25_mm": 11.216328025618266,
+            "existing_via_copper_radius_mm": 0.3,
+            "primitive": "base_tab_2",
+            "reference": "BT2",
+            "violates_actual_base_plus_radius_plus_0_25": false
+          }
+        ],
+        "center_inside_coarse_proxy_shadow_mask_expanded_for_new_0_604_via": [
+          "BT2"
+        ],
+        "common_xy_mm": [
+          -7.995917000000006,
+          -6.508330999999998
+        ],
+        "diameter_mm": 0.6,
+        "drill_mm": 0.3,
+        "intentional_process_exception": true,
+        "net": "GND",
+        "role": "C24 capped via",
+        "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+      }
+    ],
+    "reference_classification_all_104": [
+      {
+        "available_height_mm": 16.59,
+        "category": "fitted",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "fitted_component_height",
+        "reference": "BT1"
+      },
+      {
+        "available_height_mm": 16.59,
+        "category": "fitted",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "fitted_component_height",
+        "reference": "BT2"
+      },
+      {
+        "available_height_mm": 2.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C1"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C10"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C11"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C12"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C13"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C14"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C15"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C16"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C17"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C18"
+      },
+      {
+        "available_height_mm": 2.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C19"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C2"
+      },
+      {
+        "available_height_mm": 2.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C20"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C21"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C22"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C23"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "fitted_component_height",
+        "reference": "C24"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C25"
+      },
+      {
+        "available_height_mm": 2.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C26"
+      },
+      {
+        "available_height_mm": 2.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C27"
+      },
+      {
+        "available_height_mm": 2.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C28"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_dnp",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "C29"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C3"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C30"
+      },
+      {
+        "available_height_mm": 2.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C4"
+      },
+      {
+        "available_height_mm": 2.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C5"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C6"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C7"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C8"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "C9"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "CHG0"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "CHG_EN0"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "D+1"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "D-1"
+      },
+      {
+        "available_height_mm": 1.2,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "D3"
+      },
+      {
+        "available_height_mm": 1.1,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "D4"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "FB1"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "FB2"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "GAIN0"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "IC1"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "IC4"
+      },
+      {
+        "available_height_mm": 3.1,
+        "category": "fitted",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "fitted_component_height",
+        "reference": "J1"
+      },
+      {
+        "available_height_mm": 3.1,
+        "category": "fitted",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "fitted_component_height",
+        "reference": "J2"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "L0"
+      },
+      {
+        "available_height_mm": 5.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "L1"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_mount_hole",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "not-applicable",
+        "reference": "MH1"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_mount_hole",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "not-applicable",
+        "reference": "MH2"
+      },
+      {
+        "available_height_mm": 1.5,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "Q1"
+      },
+      {
+        "available_height_mm": 1.5,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "Q2"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "Q3"
+      },
+      {
+        "available_height_mm": 1.5,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "Q4"
+      },
+      {
+        "available_height_mm": 0.22,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "Q5"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R1"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R10"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R11"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R12"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R13"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R14"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R15"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R16"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R17"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R18"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R2"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R20"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R21"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R22"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R23"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R24"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R25"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R26"
+      },
+      {
+        "available_height_mm": 0.75,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R27"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R28"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R29"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R3"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R4"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R5"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R6"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R7"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R8"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "R9"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP10"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP11"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP12"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP13"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP14"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP15"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP16"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP3"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP4"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP5"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP6"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP7"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP8"
+      },
+      {
+        "available_height_mm": null,
+        "category": "nonfitted_copper_feature",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "not-applicable",
+        "reference": "TP9"
+      },
+      {
+        "available_height_mm": 0.6,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "U1"
+      },
+      {
+        "available_height_mm": 1.5,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "U2"
+      },
+      {
+        "available_height_mm": 1.5,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "U3"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "fitted_component_height",
+        "reference": "U4"
+      },
+      {
+        "available_height_mm": 0.65,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "U5"
+      },
+      {
+        "available_height_mm": 0.8,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "U6"
+      },
+      {
+        "available_height_mm": 3.5,
+        "category": "fitted",
+        "eligible": false,
+        "fixed": true,
+        "height_applicability": "fitted_component_height",
+        "reference": "X6"
+      },
+      {
+        "available_height_mm": 1.0,
+        "category": "fitted",
+        "eligible": true,
+        "fixed": false,
+        "height_applicability": "fitted_component_height",
+        "reference": "Y1"
+      }
+    ],
+    "semantics": "Declarative required constraints and conservative proposal masks; not complete allowed regions or import qualification.",
+    "speaker": {
+      "L1": {
+        "height_mm": 5.0,
+        "must_avoid_whole_magnet_body": true,
+        "occupied_z_mm": [
+          22.0,
+          27.0
+        ]
+      },
+      "X6": {
+        "height_mm": 3.5,
+        "nominal_central_gap_mm": 0.0,
+        "status": "fixed peripheral"
+      },
+      "back_station_z_mm": 28.6,
+      "body_clearance_planning_disk": {
+        "center_common_xy_mm": [
+          0,
+          0
+        ],
+        "radius_mm": 11.1
+      },
+      "eligible_F_other_than_L1_count": 75,
+      "eligible_F_total_count": 76,
+      "front_station_z_mm": 27.0,
+      "magnet_disk": {
+        "center_common_xy_mm": [
+          0,
+          0
+        ],
+        "radius_mm": 10.85
+      },
+      "other_nominal_positive_gap_not_global_allowed": true,
+      "positive_height_F_fitted_count": 79
+    },
+    "usb_B_planning_rectangle": {
+      "angle": 0.0,
+      "plan_h": 9.08,
+      "plan_w": 10.64,
+      "side": "B",
+      "x": 0.0,
+      "y": -24.01
+    }
+  },
+  "schema_version": 1,
+  "source_hashes_sha256": {
+    "battery_contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "mechanical_feasibility": "bd81f3bede2195f01e1686d4637e7d3e243dbdfa01818941bacf5cf13880bec9",
+    "mechanical_screen": "2d26b2a73d72d5864976cd9945b073c25e1b77dab624d22eefe57590c0a0975c",
+    "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "workflow": "a1a950c96caed1401c39cb9acb9f2e4e520714ed705e8873e4ed31bfb3f30b0c"
+  },
+  "source_state": {
+    "accepted_source_modified": false,
+    "inherited_baseline_pcb_opens_not_newly_measured": 37,
+    "native_loads_performed": 0
+  },
+  "verification": {
+    "arc_count": 3,
+    "closure_exact_after_6_decimal_serialization": true,
+    "line_count": 3,
+    "ordered_orientation": "clockwise",
+    "record_count": 6,
+    "source_contact_tab_full_corner_checks": [
+      {
+        "common_xy_mm": [
+          -22.25,
+          -2.3
+        ],
+        "contained_in_analytic_disk": true,
+        "radius_mm": 22.368560525880962
+      },
+      {
+        "common_xy_mm": [
+          -22.25,
+          2.3
+        ],
+        "contained_in_analytic_disk": true,
+        "radius_mm": 22.368560525880962
+      },
+      {
+        "common_xy_mm": [
+          22.25,
+          -2.3
+        ],
+        "contained_in_analytic_disk": true,
+        "radius_mm": 22.368560525880962
+      },
+      {
+        "common_xy_mm": [
+          22.25,
+          2.3
+        ],
+        "contained_in_analytic_disk": true,
+        "radius_mm": 22.368560525880962
+      }
+    ],
+    "source_outline": {
+      "contained": true,
+      "failures": [],
+      "method": "analytic interval partition at rectangle boundaries; linear rectangle test and convex squared-radius endpoint maximum for disk intervals",
+      "minimum_proved_boundary_margin_mm": -1.7763568394002505e-15,
+      "straight_segment_count": 163,
+      "verification_gap": null
+    }
+  }
+}

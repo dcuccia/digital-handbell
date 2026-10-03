@@ -154,6 +154,102 @@ and verify the imported movable population. KiCad region membership must
 be reviewed manually; F-only restrictions and the union semantics still
 apply. None of those preparation operations was performed in this item.
 
+## October 3 trial-envelope engineering review
+
+**Concrete geometry packet complete; full input release remains gated.**
+The [trial-envelope JSON](measurements/2026-09-27-router-bakeoff/quilter-trial-envelope-2026-10-03.json)
+and [Edge.Cuts text fragment](measurements/2026-09-27-router-bakeoff/quilter-d45-edge-cuts-fragment-2026-10-03.txt)
+are accepted as proposal/evidence, not applied to a board. The fragment is
+not a complete KiCad document and has not passed a native round trip.
+
+The afternoon continuation turns the D45/+2 choice into an explicit
+outline proposal and physical-reservation records, not a newly routed or
+staged PCB. The main-body circle may absorb the old contact support tabs;
+their required laminate/pad support must remain, not necessarily their
+former protruding shape. The USB tongue retains its 11.5 mm width and
+common-Y -26.85 mm end. No footprint, contact spacing or pad is scaled.
+
+The analytic union has **1,643.301 mm2 area and 45 x 49.35 mm bounds**,
+including the tongue. Its ordered contour has three arcs and three lines.
+Root independently checked the serialized endpoints/arc points and proved
+that every one of the 163 old outline segments lies wholly in the new
+disk or tongue rectangle. All four outer tab corners are inside the D45
+disk. The exact parameter definition is separate from six-decimal
+coordinate serialization (maximum per-coordinate rounding 0.000000487 mm).
+This establishes containment, not native PCB/fabricator acceptance.
+
+The source L1 whole-body example has 12.7446 mm minimum distance to the
+origin, exceeding the R11.1 magnet-planning exclusion, and clears both
+R3.2 mount reservations while lying wholly in D45. This confirms at least
+one geometric peripheral location; it is not an electrical placement or
+via-access approval. Seven fixed fitted proxies plus two mount domains,
+all 104 classifications and five exact process-via records are carried.
+
+The independent hardware/access review establishes these distinctions:
+
+| Existing evidence | Trial treatment | Still not established |
+|---|---|---|
+| MH1/MH2 each already specify a 3.2 mm planning radius, 2.2 mm drill and 4.4 mm pad | Preserve that radius as a component/hardware reservation, not just a drill circle | Supplier tolerances, screw engagement and the adapted assembly/service path |
+| Modeled M2 head D3.8, nut AF4 and straight driver R0.95 | Head R1.9, hex-nut circumradius 2.3094 and driver all fit nominally within R3.2, including an additional 0.25 mm radial allowance | An XY containment calculation is not a complete tool insertion or strength test |
+| J2 current proxy is 4.8 x 6.25 x 3.1 mm | Preserve its offset and rotation; its depth already includes the historical 0.7 mm front mating planning allowance | Full cable bend, latch/finger access and toleranced mating maximum; do not add the 0.7 mm twice |
+| X6 current body protrudes beyond the tongue and needs a cutout | Preserve its exact native datum and existing B-side planning reservation | Complete plug/overmold/mating and redesigned bezel load path |
+| Contact primitives distinguish board-adjacent bases from elevated spring/ears | Keep actual base geometry separate from a conservative full-height projected shadow | Loaded travel is not bounded by either a nominal proxy or the height tolerance alone |
+
+Source evidence: `tools/build_t8_cartridge.py` SHA-256
+`22e806153f313685a9a96d12b90070bb1985259b50261011ac6ce0d298a4f04c`
+defines the nominal M2 head/nut solids;
+`tools/build_printed_bell.py`
+`dcfae50c8a030af0c00d735107bc55b472a29d3b94d7cddb3d9eccbbfedcab14`
+contains the inherited hardware and straight-driver screen.
+The earlier J2 interpretation is recorded in
+`docs/mechanical-feasibility.md`
+`bd81f3bede2195f01e1686d4637e7d3e243dbdfa01818941bacf5cf13880bec9`.
+These sources are read as evidence, not rerun to rebuild the assembly.
+
+Both complete R3.2 mount reservations fit within the D45 main body with
+0.6858 mm nominal radial room. This is useful additional space compared
+with using only the drill holes as obstacles, but it does not include
+manufacturing allowances beyond the stated planning geometry. The nominal
+hex-nut circumradius plus 0.25 mm leaves 0.6406 mm inside the reservation.
+The existing straight-driver check also did not include every component
+as an obstacle; it cannot be transferred wholesale to arbitrary placement.
+
+**Contact-mask disposition is the concrete next blocker.** A deliberately
+coarse full-height contact shadow, expanded by 0.25 mm clearance plus the
+new-via 0.302 mm radius, covers the existing C24 process-via centre. The
+actual board-adjacent base polygons do not: using C24's actual 0.300 mm
+copper radius leaves **0.393331 mm beyond the required 0.25 mm clearance**.
+All 30 checks (five protected vias against six bases) have positive
+clearance margins. This is a distinction between a projected envelope
+and actual base geometry, **not a detected short**, and not evidence that
+loaded contact travel is qualified.
+
+Do not emit the coarse shadow as an unconditional native keepout that
+contradicts the mandatory C24 seed. Do not fix that by deleting the via,
+waiving contact isolation or carving an unexplained exception hole.
+The next bounded item must resolve a process-aware, height-relevant
+contact reservation and explicitly carry the remaining fixed-connector
+access assumptions. Preserve the existing process qualification; no new
+ordinary-via-under-metal permission follows. Full loaded-state/mating
+qualification remains distinct from a documented disposable-trial
+planning assumption. Unsupported geometry must stay visibly gated.
+
+Final evidence is under experimental
+`quilter\outputs\d45-analytic-reservations-20261003T134856`.
+Report SHA-256
+`4178978d8e52db4d0b498e9e12aafdca5e43f098e43a7d084877ece1ed0da655`;
+fragment
+`d9b47afe0d0003cdab874b49ea1d9bfb845975ff648b059178bfa09dc6169b53`;
+`generate_trial_envelope.py`
+`bd46635a2955443c8e97d8b1684c2e87104536e9011da9bea6b4439d9494e0d2`;
+workflow snapshot
+`a1a950c96caed1401c39cb9acb9f2e4e520714ed705e8873e4ed31bfb3f30b0c`.
+The script remains local; its original worktree binding must be supplied
+appropriately when replaying elsewhere. Root checked the corrected
+whole-body/actual-via-radius calculations and rehashed all four source
+files. Source is unchanged; 37 opens is inherited from that unchanged
+baseline, not a new native measurement. No PCB, CAD or cloud job changed.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

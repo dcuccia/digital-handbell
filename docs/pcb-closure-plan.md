@@ -166,6 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 3, 13:46 concrete geometry result:** the
+[D45/tongue outline fragment and reservation packet](quilter-workflow-study-2026-10-02.md#october-3-trial-envelope-engineering-review)
+are retained as proposals. Source-edge containment and whole L1/mount
+screens pass; no native input was staged. Next resolve the conservative
+BT2 shadow versus protected C24 seed without deleting the via or waiving
+isolation, and explicitly carry connector-access assumptions. Actual
+C24-to-base clearance exceeds the required value by 0.393331 mm; the
+coarse shadow overlap is not a short. Full contact/load/access and native
+import qualification remain distinct gates. Source and cloud are unchanged.
+
 **October 3, 13:20 resumed with packaging flexibility:** confirmed study
 bounds are main PCB D43-45 mm and 0-2 mm additional board/speaker spacing.
 The owner permits adapting all printed enclosure pieces after selecting a
