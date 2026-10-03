@@ -2,6 +2,19 @@
 
 ## Start here
 
+**October 3, 14:14 bounded result:** the
+[contact/access disposition](quilter-workflow-study-2026-10-02.md#october-3-contact-and-access-disposition)
+resolves the nominal C24 projection conflict. Five process vias clear
+eight base/spring guards; three synthetic native collision controls pass.
+The raw fragment is common-origin and not save/reload qualified, and
+via-only rules do not address foreign B tracks/pours or legitimate contact
+feeds. Do not use raw offsets from the old B datum as translated-board
+clearances: all relative rear-contact gaps remain unchanged at +2 mm.
+Initial plus two corrections are exhausted. Preserve the evidence and
+unchanged source. Next proposed item: one BT1/BT2 surface-rule fixture with
+native coordinate/serialization and legitimate-feed/foreign-copper controls.
+No actual-board staging, CAD rebuild or cloud submission is released.
+
 **October 3, 13:46 continuation:** the concrete
 [trial envelope and outline fragment](quilter-workflow-study-2026-10-02.md#october-3-trial-envelope-engineering-review)
 are saved, not applied. The D45/tongue union contains all 163 source

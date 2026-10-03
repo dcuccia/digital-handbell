@@ -1,7 +1,40 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "TRIAL_OUTLINE_AND_RESERVATIONS_RECORDED_CONTACT_ACCESS_ENCODING_GATED",
+  "status": "NOMINAL_CONTACT_VIA_GUARD_SCREENED_FULL_INPUT_ENCODING_GATED",
+  "contact_access_checkpoint": {
+    "date": "2026-10-03",
+    "owner_continuation_time_local": "14:14",
+    "status": "NOMINAL_GEOMETRY_AND_LIMITED_NATIVE_CONTROL_ONLY",
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-via-mask-2026-10-03.json",
+    "report_sha256": "489503349d1f05968ea165237a99bbd01e4381983b1f40273a9ab98fdef17fda",
+    "evidence_directory": "quilter\\outputs\\contact-via-mask-20261003T1418",
+    "script_sha256": "25be5690cc159bddee81064bc2cc4d8c02665ec9b4e2b832dbb7d6d4c69a324f",
+    "raw_common_frame_fragment_sha256": "d8963c662b85723ef70c9b7cf7d5758325e15b0b56bce1b2c94ac08bcdbcca60",
+    "mask_definition": "Six base/tab rectangles plus two conservative spring-wall XY projections, each square-expanded by 0.25 mm; B.Cu via-only areas test full copper shapes. Elevated ears remain a separate 3D assembly obligation.",
+    "root_square_expanded_guard_checks": 40,
+    "root_guard_violations": 0,
+    "minimum_margin_mm": 0.393331,
+    "moving_B_face_gaps_mm_for_both_cases": {
+      "base": 0.0,
+      "spring": 0.3,
+      "ear_full_circle_bound": 1.28,
+      "ear_nominal_sector_bound": 1.4091340993962334
+    },
+    "raw_height_interpretation": "Fields named gap_from_source_pcb_B use the old 26.6 mm datum. They are not clearances to the translated board. Subtract each case's contact_B_plane_mm from feature z; +2 mm changes no relative rear-contact gap.",
+    "native_control": "KiCad 10.0.6 in-memory four-layer BOARD, eight B.Cu via-only rule areas, three synthetic full-shape collision probes: inside and just-inside rejected; just-outside clear. No DRC, saved fixture or reload. Five real seeds were checked analytically; footprint restriction was not explicitly read back.",
+    "fragment_not_drop_in": "Common XY near (0,0), not native source XY near (100,100); no native names, serialization round trip or complete flag control. Do not paste into the source board.",
+    "remaining_gates": [
+      "Net-aware B surface exclusion or reviewed retained contact-feed block; via-only flags do not qualify tracks/pours.",
+      "Explicit native origin conversion, all restriction flags and save/reload controls before treating the fragment as usable input.",
+      "Retained J1/J2/X6, mount and service planning assumptions are not complete mating/loaded envelopes.",
+      "Whole-board placement/electrical/stackup/import/free-entitlement qualification remains required."
+    ],
+    "execution_attempts_exhausted": true,
+    "next_proposed_item": "One isolated BT1/BT2 surface-rule fixture with legitimate-feed and foreign-copper controls; no full-board staging or cloud submission.",
+    "source_hashes_unchanged": true,
+    "actual_board_or_cloud_modified": false
+  },
   "trial_envelope_checkpoint": {
     "date": "2026-10-03",
     "owner_continuation_time_local": "13:46",

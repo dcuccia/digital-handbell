@@ -153,6 +153,14 @@ Internal copper behind intact laminate is distinct from exposed surface
 copper, but ordinary F-to-B vias have B pads/barrels. Sol must screen the
 entire via span, all-layer pads/antipads and conductive contact footprints.
 No ordinary masked copper/via under battery metal is newly authorized.
+For the October 3 disposable Quilter study, distinguish board-adjacent
+base metal, conservative spring-wall projections and elevated-ear assembly
+geometry; do not flatten the entire contact into an unconditional rectangle
+and carve a C24 exception. The [nominal via-guard control](quilter-workflow-study-2026-10-02.md#october-3-contact-and-access-disposition)
+does not qualify loaded metal or B tracks/pours. Intended contact-pad
+feeds and foreign-net exclusion need separate treatment. Common-origin
+fragments and in-memory collision probes are not native round-trip or
+Quilter-import qualification.
 Slots, holes, edge clearances and hardware remain part of every layer's
 obstacle model. Bare laminate is not a complete battery-insulation qualification.
 

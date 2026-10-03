@@ -2,6 +2,19 @@
 
 ## Bounded engineering work
 
+- **October 3, 14:14 contact disposition:** the nominal C24 conflict is
+  resolved without a hole or moved seed: six base/tab rectangles plus two
+  conservative spring projections clear all five process vias at 0.25 mm.
+  Forty square-expanded/full-copper checks pass, minimum spare 0.393331 mm.
+  Three native in-memory via collision controls pass, but the raw fragment
+  is common-origin geometry, unnamed and not save/reload qualified; no
+  full-board input is released. Raw height offsets use the old B datum:
+  translating PCB/contact together creates no extra rear-contact gap.
+  B tracks/pours and legitimate contact-feed access still need separate
+  encoding; fixed connector/service assumptions remain explicit gates.
+  Initial plus two corrections are exhausted. Next proposed item is a
+  bounded BT1/BT2 surface-rule fixture, not another inventory or cloud job.
+  Source is unchanged. See `docs/quilter-workflow-study-2026-10-02.md`.
 - **October 3, 13:46 trial-envelope continuation:** a concrete analytic
   D45-plus-USB-tongue outline and physical-reservation packet are now saved.
   All 163 source edges are contained; bounds are 45 x49.35 mm, with no

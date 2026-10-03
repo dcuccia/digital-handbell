@@ -250,6 +250,133 @@ whole-body/actual-via-radius calculations and rehashed all four source
 files. Source is unchanged; 37 opens is inherited from that unchanged
 baseline, not a new native measurement. No PCB, CAD or cloud job changed.
 
+## October 3 contact and access disposition
+
+**The C24 conflict came from collapsing a three-dimensional contact into a
+full-height rectangle, not from a demonstrated board-plane collision.**
+The earlier rectangular-shadow proposal remains preserved as evidence; it
+must not become an unconditional keepout with a special hole for C24.
+
+Existing `tools/validate_supply_ground_stitch.py` represents contact metal
+with the six base/tab rectangles. Its associated acceptance report concerns
+the **September 22 R4 stitch**, not the current C13 stitch, and its contact
+test uses 0.20 mm. It establishes prior representation only: neither that
+historical source binding nor its weaker clearance proves this study's
+0.25 mm requirement. The source contact builder separately constructs
+elevated spring strips and annular ears. Rigidly translating the PCB and
+contacts by +2 mm does not change their relative clearances.
+
+For a **nominal trial via guard**, use the six physical base/tab rectangles
+and conservatively include both complete spring-wall XY projections. Expand
+each physical rectangle by 0.25 mm and encode it as a B.Cu via-only rule
+area. Native collision must use the full via copper shape. A separate
+point-centre screen adds the via radius: 0.552 mm total for new 0.604 mm
+vias, but 0.550 mm for the retained 0.600 mm C24 via. Do not add the radius
+twice. Keep the elevated-ear geometry and full-height proxy as assembly
+review information rather than pretending every elevated feature touches
+the board. This is not loaded-travel or manufacturing qualification.
+
+**Via-only is intentional and incomplete.** An all-track prohibition
+blanketing a contact's own landing pads can obstruct its intended power
+connection. Conversely, leaving track/pour flags clear does not permit
+foreign-net B copper under conductive contact bases. That requires a
+separate net-aware exclusion or a reviewed retained contact-feed block,
+plus independent returned-copper checks. Quilter's public
+[keepout documentation](https://docs.quilter.ai/design-parameters/keepouts)
+describes ordinary keepouts but does not establish this net-aware behavior.
+Do not infer it from native KiCad success. No new ordinary via or masked
+copper under actual battery metal is accepted by this representation.
+
+The fixed-access planning assumptions are explicit:
+
+| Interface | Carry into the disposable-study requirements | Do not infer |
+|---|---|---|
+| J1 | Exact fixed datum and existing 7.96 x 6.72 x 3.1 mm proxy; retain its larger planning height | A smaller nominal manufacturer body proves cable, latch or tool clearance |
+| J2 | Exact fixed datum and offset 4.8 x 6.25 x 3.1 mm proxy, including its existing 0.7 mm front mating allowance | Another 0.7 mm should be added, or the proxy bounds the complete harness |
+| X6 | Fixed datum, intentional body overhang beyond the tongue and existing B anchor/access reservation | The tongue bounds the plug/overmold or qualifies the rebuilt bezel |
+| MH1/MH2 | Complete R3.2 planning reservations and real unscaled M2 hardware | Nominal radial containment proves screw engagement or a component-free driver path |
+| Recovery pads and rear assembly | Preserve service access, insulated contact/cell separation and an adapted assembly/removal path | Unknown access can be encoded as zero clearance or omitted because plastic is adaptable |
+
+These are retained source planning assumptions, not invented maximum
+mating/loaded envelopes. Full-board staging/submission remains gated on
+their explicit native/import treatment and the remaining electrical and
+surface-copper constraints. Full assembly rebinding still precedes layout
+acceptance; it is not required to rebuild the enclosure for a small
+standalone rule-area control.
+
+### Bounded result and exact limits
+
+The [raw calculation/control report](measurements/2026-09-27-router-bakeoff/quilter-contact-via-mask-2026-10-03.json)
+is retained with its `PROPOSAL_EVIDENCE_ONLY_NOT_ACCEPTED` status. Root
+accepts the nominal mask arithmetic and limited in-memory collision
+evidence, **not a production-ready native fragment or full contact/access
+qualification**.
+
+All five protected vias clear all eight proposed guards. Root separately
+checked the full copper circles against the **square-expanded** rectangles,
+not just Euclidean clearance to the original metal: all 40 checks pass,
+with C24 still limiting at **0.393331 mm spare**. The spring-wall projections
+are x[17,18.985], y[-4.445,4.445] for BT1 and their X mirror for BT2.
+No seed is removed, moved or exempted from a mask.
+
+The contact gaps relative to the **moving PCB B face** are identical in
+both packaging cases:
+
+| Nominal feature minimum | Baseline B = 26.6 mm | Translated B = 28.6 mm |
+|---|---:|---:|
+| Base | 0 mm | 0 mm |
+| Spring | 0.3 mm | 0.3 mm |
+| Ear, conservative complete-circle bound | 1.28 mm | 1.28 mm |
+| Ear, actual nominal angular sectors | 1.409134 mm | 1.409134 mm |
+
+**Report interpretation correction:** the raw `*_gap_from_source_pcb_B_mm`
+fields deliberately subtract the old 26.6 mm datum. Their +2 case values
+are not clearances to the translated board. The executor's summary table
+presented them as gaps under the new datum; that interpretation is rejected.
+Use `feature_z - contact_B_plane_mm`, as checked above. No extra rear-contact
+clearance is created by translating the assembly. Nominal sector geometry
+still does not bound actual spring travel, tolerances or deformation.
+
+KiCad 10.0.6 was exercised on a new four-layer **in-memory microfixture**.
+Eight B.Cu rule areas had via prohibition enabled and track/pad/pour
+prohibition disabled. Three synthetic 0.604 mm via shapes collided as
+expected: inside a base and 0.01 mm inside the clearance threshold were
+rejected; 0.01 mm outside was clear. This was a direct native polygon/shape
+collision check, **not native DRC or a serialized save/reload test**.
+The five real seeds were checked analytically, not instantiated in that
+native control. Footprint prohibition was not explicitly read back.
+
+The raw fragment also uses **common XY centred at (0,0)**, not the source
+PCB's (100,100) origin. It has no native area names and was not reloaded;
+do not paste it into the real-board coordinate frame. A production encoding
+must apply the +100/+100 translation exactly once, name the areas, explicitly
+set/check every restriction and prove save/reload behavior. These limits
+do not invalidate the numerical mask, but prevent treating the fragment
+as a qualified drop-in artifact.
+
+The initial run and two corrections are exhausted; no further execution
+was requested. **Next proposed bounded item:** a disposable BT1/BT2
+surface-rule fixture that preserves legitimate contact-pad feeds while
+rejecting foreign B tracks/pours and forbidden vias, with explicit
+coordinate conversion and native round-trip controls. Do not stage the
+104-reference layout or submit a cloud job merely because the via-only
+screen passed. Connector/service assumptions above remain visible gates.
+
+Raw evidence is under experimental
+`quilter\outputs\contact-via-mask-20261003T1418`:
+report SHA-256
+`489503349d1f05968ea165237a99bbd01e4381983b1f40273a9ab98fdef17fda`;
+script
+`25be5690cc159bddee81064bc2cc4d8c02665ec9b4e2b832dbb7d6d4c69a324f`;
+common-frame fragment
+`d8963c662b85723ef70c9b7cf7d5758325e15b0b56bce1b2c94ac08bcdbcca60`.
+The script reuses the earlier `a1a950c9...` workflow snapshot, not the live
+post-outline contract; exact manifest/contact/trial-report hashes are
+recorded separately. Root rehashed the current PCB, schematic, project and
+manifest against the reported source hashes. All are unchanged. No source
+board load, actual-board staging, routing, refill, CAD rebuild or cloud
+operation occurred.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

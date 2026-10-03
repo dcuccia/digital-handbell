@@ -166,6 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 3, 14:14 contact result:** nominal base/spring guards clear all
+five protected vias, with three synthetic in-memory native collision
+controls. This resolves the C24 projection conflict, not full input
+qualification. The raw fragment still lacks native-origin conversion,
+explicit complete flag controls and a save/reload proof; via-only rules
+do not protect against foreign B tracks/pours or preserve intended contact
+feeds by themselves. Initial plus two corrections are exhausted.
+Next proposed bounded item is a BT1/BT2 surface-rule fixture, not whole-board
+staging. Read the [exact evidence limits and height-datum correction](quilter-workflow-study-2026-10-02.md#bounded-result-and-exact-limits).
+Accepted PCB/manifest and all experiments remain preserved.
+
 **October 3, 13:46 concrete geometry result:** the
 [D45/tongue outline fragment and reservation packet](quilter-workflow-study-2026-10-02.md#october-3-trial-envelope-engineering-review)
 are retained as proposals. Source-edge containment and whole L1/mount
