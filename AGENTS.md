@@ -2,6 +2,23 @@
 
 ## Bounded engineering work
 
+- **October 4 retention tooling recovered:** type-specific serializer
+  preflight passes and one logged native copy load completes in1.842s.
+  All five required boost F paths and both private GND pickoffs pass the
+  stated graph checks. The62-object explicit-duty core is distinct from
+  113 extra all-pairs objects; do not retain that175-object union blindly.
+  Its264 graph boundary edges are not264 independent electrical ports.
+  Exact core-only boundary and private-pour/rule treatment still need review;
+  27-fixed/77-movable remains proposed. Source and old failures unchanged.
+- **October 4, 10:48 tooling recovery authorized:** owner approves one
+  bounded recovery of the stopped retention inventory. Preserve old failures;
+  preflight exact Python/pcbnew ABI and separate via/track serializers before
+  native loading. Same verified Sol/medium executor; native cap90 seconds,
+  at most three analyzer executions. Analysis stops11:00, report11:01,
+  root checkpoint11:03. No assertions suppressed, source changes, native
+  saves/refill/DRC, routing input generation or cloud. Correct reporting must
+  distinguish F-path witnesses, all-layer connectivity and coarse rule-area
+  candidates. Recovery does not itself approve the27/77 partition.
 - **October 4 retention inventory blocked:** the initial attempt plus two
   corrections failed on interpreter ABI, missing-layer via width and
   track/via serializer signatures. The desktop assertion was our private

@@ -7,7 +7,25 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current blocker, October 4:** the critical-block inventory exhausted its
+**Recovery result:** the corrected analyzer completes one private-copy load
+in1.842s, with five explicit boost F-path witnesses and both private GND
+pickoffs passing the stated graph checks. Eight static tests pass; the
+first preflight runner's PID-bookkeeping failure is preserved separately.
+The [recovery report](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-recovery-2026-10-04.json)
+distinguishes62 explicit-duty objects from113 all-pairs extras and264 graph
+boundary edges. Source/failed evidence remain unchanged. Tooling is
+recovered, but the175-object union and27/77 partition are not approved.
+Next review the core-only boundaries and exact private-pour constraints,
+not another API retry or full-board staging.
+
+**10:48 recovery authorization:** owner approved a separate bounded tooling
+repair/preflight and conditional read-only inventory retry. Same verified
+executor; stop analysis11:00, report11:01, root checkpoint11:03, with at most
+three90-second native analyzer runs. Old failures and source remain intact;
+no input generation/cloud or automatic retention approval. See
+`retention_recovery_authorization` in the workflow contract.
+
+**Pre-recovery blocker, October 4:** the critical-block inventory exhausted its
 three attempts on tool binding/serialization errors. The owner's desktop
 alert was our timed-out private KiCad process, not Jenkins running locally.
 All three child PIDs are now absent; source hashes remain unchanged.

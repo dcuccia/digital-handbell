@@ -166,6 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Retention recovery completed:** eight preflight tests and one1.842s
+native private-copy inventory now produce five required boost F paths
+and both private GND pickoff witnesses. The corrected bindings no longer
+block analysis. Root accepts the recovered evidence only:62 explicit-duty
+objects versus113 all-pairs extras,264 graph boundaries, and coarse rule
+touches do not yet establish an approved retained block. Next qualify the
+core-only boundaries/private-pour treatment before27/77 approval or staging.
+See the [recovery report](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-recovery-2026-10-04.json);
+source and all failed evidence remain unchanged.
+
+**10:48 bounded recovery authorized:** owner permits repair/preflight of the
+retention analyzer and a conditional read-only inventory retry, preserving
+old failures. Same verified Sol/medium executor; analysis11:00, report11:01,
+root11:03; at most three90-second native analyzer executions. No source
+changes, save/refill/DRC, staging/cloud or automatic27/77 approval. The
+earlier retry stop below is superseded only for this explicitly scoped item.
+
 **October 4 retention inventory stopped:** three attempts failed on Python/
 pcbnew ABI and type-specific width serialization. The desktop assertion was
 our private child PID14516, terminated by its 90-second timeout; no Jenkins

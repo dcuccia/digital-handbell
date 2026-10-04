@@ -150,6 +150,17 @@ retention/boundary inventory, not a placer trial or an enclosure rebuild.
 
 ### October 4 retained-cell inventory: tooling blocker
 
+**10:48 owner continuation:** a separate bounded tooling recovery is now
+authorized, superseding the no-retry hold for that scope only. Use the same
+verified Sol/medium executor and unchanged analysis copies; preserve the
+failed receipt. Static type-specific serialization and interpreter/API
+preflight precede native loading. At most three90-second analyzer runs;
+analysis stops11:00, report11:01, root checkpoint11:03. Required F-path
+witnesses must be separated from unrestricted connectivity, and coarse
+rule-area candidates from exact geometry. No assertion suppression, source
+edits, save/refill/DRC, generated routing input or cloud action. Successful
+tool execution alone will not approve a retention set or the27/77 partition.
+
 The [inventory receipt](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-2026-10-04.json)
 (`e8c63e82...`) is incomplete after three attempts: Python/pcbnew ABI
 mismatch, a 90-second timeout on a missing via-width layer argument,
@@ -170,6 +181,43 @@ demonstrated electrical or Quilter limitation. Stop the exhausted item:
 27-fixed/77-movable remains a proposal, with no fourth native run or input
 staging. A separately authorized recovery should preflight the exact
 interpreter/module pair and type-specific serialization before native work.
+
+### October 4 recovery result: useful inventory, not a retained-set approval
+
+The [recovery report](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-recovery-2026-10-04.json)
+records successful type-specific width serialization and arc treatment.
+Eight pure-static tests, including two failure controls, pass. The first
+preflight's tests passed but its PowerShell PID-bookkeeping failed; that
+output is preserved and the corrected complete preflight ran in0.978s.
+One logged native analyzer execution/load then completed in1.842s with
+Python3.11.9 and pcbnew10.0.6, without a save, refill, DRC or source change.
+
+All five required boost paths have explicit F.Cu witnesses, separately
+from unrestricted connectivity. Both R26.2/R27.2 and R24.2/C28.2 private
+pickoffs remain connected and independent until their actual terminal
+lands in the pad/track/via graph. Their literal source net is GND; a duty
+label is not authority to rename it. Saved fills are checked separately
+for contacts, not modeled as graph conductors, so the result is not a
+complete filled-return or new-plane protection proof.
+
+The explicit-duty core contains62 copper objects. Collecting all connected
+pad-pair paths adds113 supplemental objects, for175 total and264 graph
+boundary edges. This confirms why all-pairs connectivity is not itself a
+small retained-cell selection: the union reaches outside the18 proposed
+cell refs, with boundary references BT1, BT2, GAIN0 and Q3. The two contacts
+are already fixed; neither GAIN0 nor Q3 becomes fixed by this observation.
+Twenty-one saved-fill/rule-area records are emitted with no unsupported
+geometry or zone API errors, but rule-area touches remain bounding-box
+candidates. Keep that limit, rather than turning a successful run into a
+geometry acceptance claim.
+
+**Root disposition:** accept the tooling recovery and identified graph
+witnesses; do not approve the175-object union, remove113 objects blindly,
+or approve27-fixed/77-movable yet. Next is one bounded core-only boundary
+and private-pour/rule qualification using the repaired binding and existing
+evidence. Group repeated graph edges by actual electrical duty; not every
+historical intermediate join must become a fixed new routing port. Preserve
+real retained branches and the private paths' exact terminal-only joins.
 
 ### Independent public supplier screen
 

@@ -263,6 +263,17 @@ analysis; do not blanket-replace calls or suppress a desktop assertion.
 The [retention inventory](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-2026-10-04.json)
 exhausted three attempts on these binding errors without qualifying a
 retained block. Its incomplete result is not evidence against Quilter.
+The separately authorized [recovery](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-recovery-2026-10-04.json)
+passes the type-specific tests and completes one native load in1.842s.
+Preflight the complete logging runner too, not only helper functions.
+
+**Observed selection trap:** the recovered all-pairs graph added113 objects
+beyond a62-object explicit-duty core. A path between two internal pads can
+wander through the larger board. Retain copper for named electrical duties;
+inspect boundary dependencies without automatically fixing every encountered
+component. Group graph edges by true external connection and distinguish
+layer-specific witnesses from unrestricted connectivity. A successful
+inventory is not an approved retained block.
 
 **Documented cost distinction:** current JLCPCB pages separate via sizing
 from component-PTH annular rules and advertise filled/capped via-in-pad at
