@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 4 local-circuit inventory completed:** six nets have all
+  physical terminals inside the 18 proposed cells and 105 complete source
+  primitives, including all four PROT_FET_RETURN vias/parallel branches.
+  The combined named-duty proposal is 185 objects with 142 boundary edges,
+  not an approved input. Nine per-duty attachment candidates are a coarse
+  topology screen, not nine defects or required retentions; some copper
+  is already selected and multiple UUIDs can denote one physical junction.
+  Source and raw evidence remain unchanged. Next inspect actual local
+  attachment/parallel geometry and terminal boundaries; do not broaden
+  retention to global amplifier feeds or fix additional references.
 - **October 4 core-only review completed:** the 62 copper objects plus
   retained terminal copper preserve five boost F paths, two private GND
   paths and all five CELL_NEG duties. The initial R28 failure incorrectly

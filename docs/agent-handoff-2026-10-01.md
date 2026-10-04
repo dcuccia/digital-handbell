@@ -7,6 +7,18 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Local-circuit inventory:** the [corrected proposal](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json)
+identifies 105 complete copper primitives on six nets whose every physical
+terminal belongs to the 18 proposed retained cells. This includes both
+current-source PROT_FET_RETURN parallel-transition duties. Together with
+the core and named global paths, the proposal has 185 objects and 142
+boundary edges. Nine per-duty attachment records are only a topology
+screen, not nine physical defects; a static correction distinguishes
+already-retained copper and retained versus movable pad dependencies.
+Next inspect actual local attachment geometry before approving the cut.
+No global amplifier-feed retention, additional fixed refs, input generation
+or cloud is released; source remains unchanged.
+
 **Core-only review:** the [corrected boundary report](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json)
 preserves all five boost F paths, both private GND paths and all five
 CELL_NEG duties using 62 copper objects and retained pads. The initial

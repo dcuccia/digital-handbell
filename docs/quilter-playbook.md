@@ -65,6 +65,14 @@ continuity is not equivalent. The handbell's prospective boost/protection
 strategy leaves 77 of 104 references movable, pending its source-cut audit.
 See the [common-input disposition](quilter-workflow-study-2026-10-02.md#common-input-strategy-retain-critical-cells-release-ordinary-layout).
 
+**Observed local-net distinction:** every physical terminal on six
+protector/feedback nets belongs to the proposed retained cells. Retaining
+their complete source primitives preserves parallel branches missed by
+path-only selection. This is justified by the all-terminal inventory,
+not merely the net's name, and does not justify retaining global GND or
+amplifier feeds. Current-sharing and process qualification remain separate.
+See the [local-circuit evidence](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json).
+
 ## 2. Build a source-bound input contract
 
 Keep the authoritative board and raw experiments immutable. Record the
@@ -288,6 +296,14 @@ new same-net tracks/vias. Saved-plane isolation is not future routing
 protection. Rule names and absence of same-layer contacts also cannot
 prove that an inner-layer exclusion covers an outer-layer circuit's XY
 projection; qualify that projection and every relevant new layer explicitly.
+
+**Observed attachment-screen limit:** subtract the actual candidate when
+labeling copper unselected, not one duty's path tree. Distinguish pads
+outside that duty from pads outside the retained footprint set. Two
+attachment UUIDs may represent a pad and track at one physical junction;
+they do not prove a distinct parallel current path. Use such screens to
+direct geometry review, not to manufacture defect counts or freeze whole
+external networks.
 
 **Documented cost distinction:** current JLCPCB pages separate via sizing
 from component-PTH annular rules and advertise filled/capped via-in-pad at

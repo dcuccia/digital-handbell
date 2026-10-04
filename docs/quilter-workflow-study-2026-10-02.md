@@ -259,6 +259,44 @@ with ordinary external/global connections explicitly reroutable. Preserve
 the two private terminal-only joins, all contact feeds and process seeds.
 No source changes, generated input, repair, integration or cloud submission.
 
+### October 4 local-circuit retention disposition
+
+The [corrected local-retention report](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json)
+uses one 2.910-second private-copy load to inventory every physical pad on
+six proposed local nets. All terminals are inside the 18 retained cells:
+PROT_BAT has 14 primitives, PROT_COUT 35, PROT_DOUT 6, PROT_FET_RETURN 14,
+PROT_VM 30 and BOOST_FB 6. Each net is one connected primitive/pad island.
+The complete 105-object local selection includes all four current-source
+PROT_FET_RETURN vias and parallel branches, not just one shortest witness.
+This is complete local-circuit copper preservation, not global-net retention
+or current-sharing/ampacity qualification.
+
+Named V+ input, VAMP divider-supply and C26 GND-return witnesses add 18
+objects beyond these local nets and the original 62, making 185 proposed
+objects and 142 boundary edges. Forty-four additions were absent from the
+old 113-object all-pairs supplement: the old path union was neither a
+minimal selection nor a complete physical inventory. The C26 return walks
+F-to-B-to-F through two vias spanning all four layers; this does not imply
+inner-layer signal traces. Remaining local pad islands group into ordinary
+GND, VAMP and VBAT connection duties rather than 52 independent repairs.
+
+Root corrected a second interpretation trap without another native run:
+the nine attachment records were calculated relative to each duty's tree,
+not the actual 185-object candidate. Two GND records already contain eight
+and one retained objects respectively. Also, two attached UUIDs may be a
+pad and track at one physical junction; this screen does not establish nine
+parallel current paths, defects or required retentions. The static supplement
+classifies membership and pad roles while preserving the original report/raw
+data. Actual local overlap and current-carrying relevance remain unresolved.
+
+**Root disposition:** accept the complete-local-net inventory and corrected
+screen as evidence. Preserve the proposed 185-object set for exact physical
+attachment review; do not approve it as an input or automatically absorb
+the large amplifier-feed/return networks. Next inspect source-local parallel
+copper and actual terminal boundaries. Private-tap/plane protection,
+placement domains, process and import qualification remain separate gates.
+No source changes, native saves/refill/DRC, routing or cloud occurred.
+
 ### Independent public supplier screen
 
 While that executor ran, root inspected public JLCPCB capability tables

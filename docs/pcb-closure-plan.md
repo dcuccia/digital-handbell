@@ -166,6 +166,18 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Local-circuit selection evidence completed:** six source-local nets pass
+the all-physical-pad gate, with 105 complete primitives including four
+PROT_FET_RETURN vias. The [corrected report](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json)
+binds the 185-object combined proposal and 142 boundaries. Named global
+paths are not yet physically retention-qualified. Nine per-duty attachment
+candidates are not nine defects: some copper is already retained, and
+multiple attachment UUIDs can share a physical junction.
+Next inspect exact local parallel/attachment geometry and terminal
+boundaries without widening the fixed set or retaining global amplifier
+feeds blindly. Source, earlier reports and raw outputs stay unchanged;
+no input generation, routing, repair, integration or cloud is released.
+
 **Core-only review completed:** the corrected source-bound
 [report](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json)
 confirms all five boost F paths, two private GND paths and five CELL_NEG
