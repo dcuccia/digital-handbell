@@ -2,6 +2,25 @@
 
 ## Bounded engineering work
 
+- **October 4 native guard control is partial/held:** the exact source
+  subset passes static preflight and its generated four-layer fixture
+  loads/saves, but pad UUID readback is incomplete and CLI DRC times out
+  at30 seconds without a report. Three attempts are exhausted, including
+  repeated Python-module/DLL bootstrap failures. No native rule behavior,
+  six-layer control or fill isolation is qualified. Preserve1fd27e9d and
+  all fixture/log evidence; no retry or dependent input work is released.
+  Analytic guards, selected177 and all source remain unchanged. Independent
+  supplier-stackup preparation may proceed within the current hour.
+- **October 4, 14:20 another hour authorized:** stop15:20 local; start
+  no new item after15:10. First qualify an isolated source-subset native
+  guard control from repaired3ccaf019: four footprints/eight pads, six
+  tracks/two vias, not the full177-object board. Native fixture-only
+  loads/saves and diagnostic fail probes are released, never source-native
+  edits or product routing. Same verified Sol/medium; analysis14:32,
+  report14:33/root14:35, initial plus two90-second attempts. Distinguish
+  actual native behavior from flag readback, conservative rectangle
+  controls from analytic curved guards, and diagnostic layers from real
+  supplier constructions. No full input or new cloud job is released.
 - **October 4 guard checker repaired; analytic definition selected:** all
   four private pad poses/shapes now bind to saved native inventory, with
   independent endpoint and wrong-pose controls. Root selects the corrected

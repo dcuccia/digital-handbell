@@ -7,6 +7,23 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Latest: native guard control partial/held.** The
+[native-control ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
+preserves a loaded/saved four-layer fixture, but UUID pose readback is
+incomplete and30-second CLI DRC produced no report. Three attempts are
+exhausted; no native rule behavior, six-layer control or fill is qualified.
+Do not retry or advance dependent input work. Source/analytic guards/
+selected177 are unchanged. Independent supplier-stackup preparation can
+advance within the current hour without treating this gate as passed.
+
+**14:20 owner continuation:** stop15:20, no new item after15:10.
+First is one isolated native guard control from the repaired definition:
+four source footprints/eight pads, six tracks and two vias, with separately
+identified diagnostic probes. Analyze native roundtrip and restricted-object
+behavior; do not treat expected source intrusions as a clean-board pass.
+Analysis14:32/report14:33/root14:35, at most three90-second attempts.
+No source-native loads/edits, full-board input, product routes or cloud job.
+
 **Current checkpoint: checker repaired, analytic guards selected.** The
 [repair ledger](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-repair-2026-10-04.json)
 binds all four private pad identities/global geometry to saved native
@@ -17,7 +34,7 @@ selected177 and failed evidence are unchanged. Corrected collateral counts
 are broad-phase candidates only; the7.428447 mm GND witness is relative to
 the guard bounds, not a complete legal route.
 
-The current hour ends with this checkpoint; no downstream item starts
+The prior hour ended with this checkpoint; no downstream item started
 after14:09. Next is a bounded isolated native guard-encoding/behavior
 control, not a full-board input or cloud submission. Supplier-stackup and
 movable-domain work remain independent preparation opportunities, but both

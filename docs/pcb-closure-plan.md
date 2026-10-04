@@ -166,6 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Native-control gate held:** [1fd27e9d...](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
+establishes static source-subset preparation and native load/save, not
+complete roundtrip or rule behavior. UUID lookup is incomplete and CLI
+DRC times out at30 seconds. All three attempts are consumed; preserve
+evidence and do not retry. Analytic guards and selected177 remain unchanged.
+The next independent preparation opportunity is exact supplier-stackup
+evidence; it does not release either full input past the held native gate.
+
+**14:20 continuation:** another owner-authorized hour ends15:20, with
+no new item after15:10. First is isolated native guard-encoding/behavior
+qualification of the repaired source subset, not a full-board input.
+Analysis14:32/report14:33/root14:35; three90-second attempts maximum.
+Native fixture-only saves/loads and diagnostic fail probes are allowed;
+authoritative source edits, product routing and cloud jobs are not.
+Native behavior, importer enforcement and selected supplier constructions
+remain distinct gates even if four/six logical fixture layers pass.
+
 **Current checkpoint: analytic private guards selected after repair.** The
 [native-oracle repair](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-repair-2026-10-04.json)
 resolves the pad-transform blocker without another KiCad load. Root selects

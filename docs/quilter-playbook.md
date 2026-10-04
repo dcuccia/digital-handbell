@@ -379,6 +379,15 @@ not a POSIX-style negative signal code; see the
 Compile each changed analyzer revision before launching native work; a
 later caching edit introduced a syntax failure despite the earlier preflight.
 
+**Observed bootstrap recurrence:** the [private native control](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
+again lost module and DLL search paths in fresh children. Reuse the complete
+qualified launcher, not just its Python executable or a prior shell's
+environment. In that same execution environment, preflight a known pad UUID
+and required getters before running the larger control. Missing identity
+readback must stop qualification; successful file I/O and a populated board
+are not a substitute. Preserve bounded DRC timeout evidence and diagnose
+its stage before increasing limits or rerunning the same command.
+
 **Observed selection trap:** the recovered all-pairs graph added113 objects
 beyond a62-object explicit-duty core. A path between two internal pads can
 wander through the larger board. Retain copper for named electrical duties;

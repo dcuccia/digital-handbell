@@ -12,6 +12,55 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 14:20 additional unattended hour
+
+The owner authorizes another hour at14:20:28. Stop15:20 local and start
+no new item after15:10. First is a native guard control on an isolated
+subset: R24/R26/R27/C28 with all eight source pads, six private tracks and
+two vias. No authoritative source-native load or full-board staging occurs.
+Native fixture-only roundtrip and separately identified synthetic fail
+probes are permitted; source and selected177 remain unchanged.
+
+The bounded question is whether saved native rule areas preserve the
+correct source geometry/layers and reject the intended object classes,
+including same-net probes. Separate pad and courtyard-footprint behavior
+where possible; do not infer both from a generic keepout finding. Existing
+fixed-source intrusions remain explicit baseline evidence, not waivers.
+Conservative per-object rectangular supersets may serve this native feature
+control, but do not certify exact curved serialization or product collateral
+clearance. Four-layer18-obligation and, if budget permits, six-layer22-
+obligation profiles are diagnostic mappings, not supplier stackups.
+
+Sol analysis stops14:32, report14:33, root checkpoint14:35, with an initial
+plus two corrective attempts and90-second hard execution limits. Readback
+of pour restrictions is not filled-plane isolation. Native behavior is not
+Quilter enforcement. Continue only through qualified dependencies, without
+using the extra hour to reset an exhausted item's allowance.
+
+### Native control: useful partial evidence, no behavior qualification
+
+The [native-control ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
+binds a statically checked four-footprint/eight-pad, six-track/two-via
+subset. Eighteen conservative rectangular guard supersets and five
+diagnostic regions produce a fixture with8 footprints/12 pads,10 tracks,
+four vias and23 zones. Native KiCad10.0.6 loads and saves that fixture.
+
+However, two attempts failed on missing Python-module and DLL paths.
+The third completed I/O but used the wrong SWIG UUID string lookup,
+leaving required pad pose matches null. Its bounded CLI DRC then timed
+out at30 seconds with no report; PID51264 was killed and confirmed exited.
+No inside/outside rule categories, native flag readback, six-layer profile
+or fill isolation are qualified. Exit0 of the supervising wrapper is
+not DRC success.
+
+Root verifies report `1fd27e9d...`, saved fixture `0caf804f...`, receipts
+and all five unchanged source hashes. Preserve this partial evidence,
+the analytic definition and selected177. The three-attempt native item
+is held: no fourth execution or dependent full-input work. A future repair
+must reuse the complete native launcher, preflight UUID/getter behavior
+and diagnose saved timeout evidence before another native run. Independent
+supplier-stackup preparation can proceed without declaring this gate passed.
+
 ## October 4, 13:19 additional unattended hour
 
 The owner resumed at13:19:11 for one hour. Stop14:19 local and start no
