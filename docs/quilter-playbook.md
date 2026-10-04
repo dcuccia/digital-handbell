@@ -83,6 +83,12 @@ Distinguish an unmet clearance from actual metal overlap, and a real
 flat-edge shortfall from conservative corner-envelope effects. Hold the
 input and assess the affected route's role; neither source fidelity nor
 a small numerical shortfall authorizes a clearance waiver or silent repair.
+The [COUT dependency check](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)
+then proves that simply omitting the conflicting via breaks charge-gate
+control. Prefer a clearly scoped whole-net rerouting obligation over
+accidentally retained dangling copper when partial retention cannot
+preserve the intended function. This remains a proposed workflow choice,
+requiring all-terminal restoration and electrical/physical qualification.
 
 ## 2. Build a source-bound input contract
 
@@ -167,6 +173,10 @@ preferences, credentials, browser state or unrelated reports. Check:
 - **Circuit comprehension:** actual capacitor/pin associations, currents,
   impedances, ground identity and switching topology, not plausible-looking
   inferred labels. Never relabel a boost circuit to fit an unsupported model.
+  Verify AI-generated datasheet summaries against the actual dated primary
+  document too. Our COUT study's search summary invented routing restrictions
+  absent from the cited TI layout section. Conversely, no stated numerical
+  limit does not mean unrestricted routing or replace project insulation rules.
 
 Read expanded values, not profile names. In our control, the display kept
 "6 mil / 6 mil" and rounded width to 0.178 mm while the saved value was

@@ -166,7 +166,20 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**12:10 owner resumed for one hour:** stop13:10 local, no new item after13:00.
+**12:57 stopping checkpoint:** the
+[PROT_COUT source disposition](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)
+proves neither the offending via nor the complete five-object B branch is
+redundant. Either omission disconnects U6.2 from Q5.B2/R29.1 and leaves
+old dangling copper. Root's recommended next study is whole-net routing
+release with every terminal restored; hypothetical retained177 is not an
+approved input or permission to remove copper. COUT is charge-FET control,
+not load-current routing, and R29 is a parallel high-value discharge path.
+Complete212 remains held; source is unchanged and executor idle. No further
+item is released this hour. Next bounded item on continuation: qualify the
+one-net electrical/layer/contact/private-guard and restoration contract,
+without moving contacts, weakening clearance or resuming manual routing.
+
+**Historical12:10 owner hour:** stop13:10 local, no new item after13:00.
 Begin the separately bounded complete-retention/interface-model recovery:
 proposed186 plus five process seeds and retained pads, explicit contact
 controls and the C28.1/VAMP local bank interface. Same verified Sol/medium;

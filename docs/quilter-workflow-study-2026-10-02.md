@@ -147,6 +147,68 @@ electrical role, existing alternatives and dependencies before proposing
 a retention-policy disposition. Do not continue guard/input generation
 past this blocker. Loaded-contact motion and all other gates remain.
 
+### PROT_COUT source-role disposition and stopping checkpoint
+
+The [source-bound comparison](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)
+matches all35 PROT_COUT objects (33 tracks/two vias) and exactly three
+physical terminals: U6.2 COUT output, Q5.B2 charge-FET gate, and R29.1.
+All three belong to the proposed fixed references. R29 is the parallel
+5.1 Mohm gate-discharge branch; the report's phrase "through R29 passive
+terminal" means that shared pad/node, not a series5.1 Mohm gate resistor.
+No load-current source/drain terminal belongs to this net.
+
+Its only B connection is the two vias at `[82.4,106.2]` and
+`[87.5,106.09]`, joined by three0.1778 mm B tracks. No source pad is on
+that B branch. Native induced-subgraph comparisons, including actual
+terminal copper and excluding saved fills, show:
+
+| Analytical membership | Terminal result | Input consequence |
+|---|---|---|
+| Original35 | All three terminals connected | Retained212 has the contact shortfall. |
+| Omit only offending via | U6.2 detached from Q5.B2/R29.1 | Not redundant; old dangling copper remains. |
+| Omit complete five-object B branch | Same U6.2 separation | Not a connectivity-preserving branch removal. |
+| Release all35 COUT primitives | Three separate terminal duties | Hypothetical177 retains no obsolete COUT copper. |
+
+The two partial omissions each leave a three-track single-terminal U6
+group. This is one interrupted control connection, not two repairs merely
+because two terminal-pair queries fail. The whole-net alternative's320
+unchanged non-exempt contact cases have no conflict and minimum expanded
+spare0.393331 mm. This is UUID-filtered reuse of the prior static screen,
+not a generated board, native DRC result or complete physical qualification.
+
+**Primary evidence:** the official [TI BQ297xx PDF](https://www.ti.com/lit/ds/symlink/bq2970.pdf),
+SLUSBU9I/August2024, is retained privately with SHA256
+`33ecbecf2eca2276a7afa6cf41aa6f8016ef4a71572a52d6941dfba8f3def126`.
+Page4/5.1.5 identifies the BAT-supplied charge-FET gate-drive output and
+high-impedance discharge behavior. Page22/9.4.1 recommends FET thermal
+spreading, a close FET interconnection to limit sensing drop, and BAT
+RC placement close to the IC. An AI search summary invented additional
+gate-routing/under-cell prohibitions and cited the wrong layout section;
+direct PDF inspection did not support those claims. The cited section
+also supplies no numeric COUT route-length/width bound. That absence does
+not qualify arbitrary routing, leakage, noise, timing or fault behavior.
+Project contact/insulation requirements still apply independently.
+
+**Root decision,12:57:** recommend separately qualifying whole-net COUT
+release and mandatory restoration of U6.2/Q5.B2/R29.1. Do not treat the
+offending via as disposable, accept disconnected partial copper as a
+repair, or waive the0.25 mm contact requirement. The hypothetical177 is
+the next study option, not a new approved retention/input selection.
+Complete212 remains held, as do guard/input generation and cloud activity.
+Next on continuation is a bounded electrical, layer/transition, guard
+and all-terminal restoration contract for this one control net. Required
+private returns, R29's other connection, five process seeds and27 fixed
+references remain protected. Actual route search belongs to a subsequently
+qualified Quilter task, not manual LLM routing.
+
+One initial compile failure preceded two native loads of private copies,
+3.751 and2.817 seconds, each numeric exit0. The report-only primary-source
+supplement reused immutable raw data; pre-supplement report `3c46f141...`
+is preserved. Root verifies final report `d047754b...`, raw `1f810b7b...`,
+all bound execution artifacts, the PDF and five unchanged source hashes.
+The bounded attempts are consumed. Engineering stops at this decision
+with the executor idle and no further item released in this hour.
+
 ### Next guard-design distinction, read-only preparation only
 
 The existing [layer-role policy](routing-agent-policy.md#first-protected-ground-candidate-release)

@@ -7,7 +7,25 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**12:10 owner continuation:** one further unattended hour is authorized,
+**12:57 final checkpoint: engineering stopped at the input-design gate.**
+The [PROT_COUT disposition](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)
+confirms the conflicting via is not redundant: omitting it or the complete
+two-via/three-B-track branch disconnects U6.2 from Q5.B2 and R29.1.
+This is charge-FET gate control; R29's5.1 Mohm discharge branch is parallel,
+not a series gate resistor. Root recommends next qualifying release of
+the whole35-primitive net for three-terminal rerouting, instead of leaving
+old dangling copper. The hypothetical remainder177 passes the filtered
+nominal contact screen, but is not an approved/generated input or routing
+release. Preserve complete212, all source and all experiments.
+
+Report `d047754b...`, raw `1f810b7b...` and TI PDF `33ecbecf...` are bound
+and verified. One pre-native compile failure and two numeric-exit0 native
+runs used the bounded attempts; the primary-source supplement added no
+execution. Executor is idle and no next item is released for this hour.
+On continuation, begin with a bounded COUT electrical/layer/guard and
+all-three-terminal restoration contract, then revisit the other input gates.
+
+**Historical12:10 owner continuation:** one further unattended hour was authorized,
 ending13:10 local with no new item after13:00. First is a new bounded
 retention/interface-model correction using the complete proposed186 plus
 five process seeds and retained pads. Focus the C28.1/VAMP local interface,

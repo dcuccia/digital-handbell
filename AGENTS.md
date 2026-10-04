@@ -2,6 +2,20 @@
 
 ## Bounded engineering work
 
+- **October 4, 12:57 blocker disposition and stop:** the offending
+  PROT_COUT via is required by the existing route, not redundant. Removing
+  it or the five-object B branch disconnects U6.2 from Q5.B2/R29.1.
+  TI confirms COUT is charge-FET gate drive, not the load-current path;
+  R29 is a parallel gate-discharge resistor, not a series gate resistor.
+  Root recommends next qualifying whole-net PROT_COUT routing release
+  with all three terminals mandatory. That hypothetical selection leaves177
+  retained copper objects and no old COUT stubs; its filtered nominal
+  contact screen clears, but no release/input/route is approved or applied.
+  Complete212 and the authoritative37-open board remain unchanged/held.
+  One compile failure plus two native runs consumed the bounded attempts;
+  the primary-source supplement reused raw data. Executor is idle; no
+  further item is released in this hour. Next is a bounded electrical/
+  layer/guard/restoration contract for that one whole-net alternative.
 - **October 4, 12:45 contact screen blocks complete212:** one static run,
   zero native loads, finds existing `/PROT_COUT` via `2f82654e...` at
   commonXY(-12.5,6.09),0.600/0.300 mm, only0.225 mm from BT2's nominal
