@@ -102,6 +102,13 @@ exact PCB/project/schematic/manifest hashes, reference and physical-pad
 counts, net identities, fixed/movable references, protected copper/vias,
 outline, layer roles, physical stackup and applicable process requirements.
 Use native poses, including footprint rotation, rather than stale proxies.
+Check any local-to-global transform against saved native coordinates and
+known source-track endpoint joins before trusting generated keepouts.
+Include signed90/270-degree cases: a180-degree case alone cannot distinguish
+rotation sign. The [failed private-guard proposal](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-definition-2026-10-04.json)
+put two guards on opposite pads while its self-consistency controls passed.
+Do not count tests sharing the same erroneous geometry as independent proof;
+prefer a previously qualified native-coordinate source over a new transform.
 
 Define each movable part's final allowed area from the intersection of
 its side, height, access and electrical restrictions. Quilter's

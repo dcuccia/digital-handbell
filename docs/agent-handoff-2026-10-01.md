@@ -7,7 +7,20 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**13:19 owner continuation:** work is authorized until14:19 local, with
+**Current stop: private-guard checker failure.** The
+[held guard ledger](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-definition-2026-10-04.json)
+records a wrong-sign footprint rotation, not a demonstrated Quilter or
+electrical failure. Saved native evidence confirms R26.2 at
+`[86.4,111.192]` and C28.2 at `[102.2,116.15]`; the proposed guards used
+the opposite-pad coordinates. Root rejects their coverage/access claims.
+All three attempts are exhausted; the report-only correction adds no run.
+The conditional177 definition remains selected, source is unchanged and
+the executor is idle. No guard, input, route or cloud work may continue
+from this proposal. Next needs a separately authorized checker-only repair
+bound to saved native pad coordinates and source endpoint witnesses,
+including quarter-turn regression cases. Do not restart native inventory.
+
+**Historical13:19 owner continuation:** work was authorized until14:19 local, with
 no new item after14:09. Begin with the exact177-object COUT replacement
 contract: preserve U6.2/Q5.B2/R29.1 and R29's other connection, define
 source-selection and returned-routing gates, and statically qualify the
@@ -24,8 +37,8 @@ replacement; all three COUT pads and R29.2/PROT_FET_RETURN remain mandatory.
 No PCB/input has been generated. The measured0.1778 mm source-width floor
 is not gate-drive acceptance. One static run/zero native loads passes
 eight metadata controls and keeps planned-input versus restored-output
-states distinct. Next is purpose-specific private-tap guard coverage,
-then the remaining physical/process/native/import gates.
+states distinct. Its next dependency, private-tap guard coverage, is now
+held at the checker failure above; physical/process/native/import gates remain.
 
 **Historical12:57 checkpoint: engineering stopped at the input-design gate.**
 The [PROT_COUT disposition](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)

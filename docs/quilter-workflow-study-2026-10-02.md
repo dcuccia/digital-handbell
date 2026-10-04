@@ -73,6 +73,49 @@ private-tap guard coverage, including B-conducting copper and existing
 through-vias on all layers they reach, without unnecessary F-only
 projection holes in inner GND.
 
+### Private-guard checker failure: stop dependent work
+
+The next item was bounded to analysis13:42/report13:43/root13:46, using
+the same verified Sol/medium executor. Three static analyzer executions
+were consumed: a rule-family assertion, a missing pad-kind discriminator,
+then an exit0 result. A report-only pad-type correction did not rerun it.
+No native loads, board generation, routing or cloud operations occurred.
+
+Root rejected the resulting [guard ledger](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-definition-2026-10-04.json)
+on two source-coordinate contradictions:
+
+| Private pad | Invalid proposed center, native mm | Saved native center and adjoining track endpoint, mm |
+|---|---|---|
+| R26.2 | `[86.4,112.208]` | `[86.4,111.192]`, `d400cba9...` |
+| C28.2 | `[102.2,114.25]` | `[102.2,116.15]`, `a2730cca...` |
+
+The parser used the wrong sign for footprint rotation. The C28 coordinate
+actually identifies the opposite VAMP pad; its incorrect guard also lies
+outside the inherited C28.2 guard's Y range. Saved native evidence
+`079b47d1...` confirms both correct coordinates and endpoint connectivity
+without another native run. Root verifies that artifact and all five
+authoritative source hashes. This invalidates pad-derived guards, full
+coverage, collateral counts and the reported6.69809 mm access spare.
+Mutation checks built around the same mistaken pose are not an independent
+geometric oracle.
+
+Preserve original report `52295450...` and raw `4866e636...` byte-for-byte
+in the private batch. The held report `b65be6ec...` records the defect and
+withdraws qualification; it retains the erroneous coordinates as explicitly
+invalid evidence, not corrected geometry. Absolute track/via records and
+literal layer/flag evidence remain useful, but the proposed12-object/
+18-layer coverage is not selected. No source route defect or Quilter
+limitation follows from this tooling failure.
+
+**Root stopping disposition:** retain the conditional177 selection from
+`30d12d2`; stop dependent guard/input/native/cloud work at the exhausted
+attempt limit rather than spend the rest of the hour on another retry.
+Next requires separately authorized checker-only repair using the existing
+native-coordinate oracle, all four private endpoints, signed quarter-turn
+cases and actual source endpoint witnesses. Prefer reusing saved global
+coordinates to introducing another unqualified transform. Full-body,
+process/stackup, native/import and returned-route gates remain.
+
 ## October 4, 12:10 additional unattended hour
 
 The owner explicitly resumed for the next hour at12:10:15. Stop by13:10

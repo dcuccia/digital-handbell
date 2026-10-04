@@ -166,7 +166,18 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**13:19 owner continuation:** stop14:19 local and start no new item after14:09.
+**Current stop: private-guard geometry is invalid.** Root rejects the
+[guard proposal](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-definition-2026-10-04.json)
+after saved native coordinates expose opposite-pad placement for R26.2
+and C28.2. This is our checker failure, not evidence against Quilter.
+Three analyzer attempts are exhausted; no fourth run or corrected guard
+generation is released by the remaining hour. Source and selected177
+are unchanged, and the executor is idle. Next requires a separately
+authorized checker-only repair using saved native coordinates, quarter-turn
+cases and actual private-track endpoint witnesses before any guard coverage
+claim. No native inventory rerun, full input, routing or cloud job.
+
+**Historical13:19 owner continuation:** stop14:19 local and start no new item after14:09.
 First define and statically qualify the COUT replacement/retention contract,
 including R29's parallel discharge duty, the exact177 retained primitives
 and all-three-terminal output restoration. Same verified Sol/medium;
@@ -182,9 +193,9 @@ board generation or returned-route acceptance. Preserve all27 fixed refs,
 five seeds,30 feeds and non-COUT connections; restore U6.2/Q5.B2/R29.1
 and retain R29.2/PROT_FET_RETURN. The measured source floor is0.1778 mm,
 subject to stricter selected fabrication rules and later route review.
-Next is explicit private-tap guard coverage on actual conducting layers;
-no blanket inner-plane copying of F-only exclusions. Full geometry,
-stackup/process and native/import gates remain.
+Its private-tap guard dependency is now held as recorded above. Keep the
+actual-conducting-layer policy; do not copy F-only exclusions blindly into
+inner planes. Full geometry, stackup/process and native/import gates remain.
 
 **Historical12:57 stopping checkpoint:** the
 [PROT_COUT source disposition](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)

@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 4 private-guard qualification held:** root caught a wrong-sign
+  footprint-to-global transform in the new guard checker. Saved native
+  evidence puts R26.2 at (86.4,111.192), not (86.4,112.208), and C28.2 at
+  (102.2,116.15), not the opposite VAMP pad's (102.2,114.25). Reject the
+  proposal's pad guards, complete-coverage and access conclusions; preserve
+  both failed report/raw and the report-only disposition. Three analyzer
+  attempts are exhausted, with zero native loads or PCB changes. The
+  conditional177 selection remains valid, but dependent guard/input/
+  native/Quilter work stops. The remaining hour does not reset retries.
+  Next requires a separately authorized checker-only repair using saved
+  native pad coordinates and independent endpoint/quarter-turn regressions.
 - **October 4, 13:29 retained177 selected conditionally:** the static COUT
   contract audit passes with159 tracks/18 vias, all five process seeds,
   30 feeds,27 fixed refs/97 pads and all104/325 source identities preserved.
