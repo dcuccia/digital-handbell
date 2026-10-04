@@ -12,6 +12,67 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 13:19 additional unattended hour
+
+The owner resumed at13:19:11 for one hour. Stop14:19 local and start no
+new item after14:09. First define and statically qualify the whole-net
+COUT replacement contract, without repeating the stopped native topology
+study. The source-bound177 membership must retain every required seed,
+feed, fixed reference and non-COUT sensitive connection. All three COUT
+terminals and R29's parallel discharge duty remain mandatory; a prepared
+unrouted input must never be mislabeled a restored output.
+
+Root's draft in the [contract](design-inputs/2026-10-02-quilter-workflow.json)
+preserves0.20 mm foreign-copper and0.25 mm edge/hole/contact requirements,
+requires a measured source-width floor and the stricter selected fabrication
+rules, and prohibits COUT routing on In1 or any other declared GND plane.
+F routing is a project preference, not a TI numerical length constraint.
+Exact new-via sizing, supplier construction, private-tap protection and
+returned-route engineering checks remain separate gates. Sol's static
+audit is bounded to analysis13:31/report13:32/root13:34. No source edits,
+manual route repair, generated full input or cloud job follows merely
+from the time allowance.
+
+### Conditional retained177 definition selected
+
+The [static release-contract audit](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-release-contract-2026-10-04.json)
+derives exactly177 identities from212 minus all35 COUT primitives:
+159 tracks and18 vias. It preserves the five process seeds,30 contact
+feeds/five known ordinary feed vias, both VAMP takeoffs, the selected GND
+feeder and all five other closed-local sets. All104 footprints/325 pads
+remain; the27 intended fixed references contain97 pads. Exact source
+subtree hashes bind the selection, not merely net names or counts.
+
+R29.2 is native UUID `1f80163e-227c-5ad6-bfa4-f43754527fa1` on
+`/PROT_FET_RETURN`; its unchanged footprint/value/pose confirms the parallel
+discharge branch. The released COUT source contains30 F tracks totaling
+14.082843 mm, three B tracks totaling5.29 mm and two through-vias.
+Every source trace is0.1778 mm wide. That supplies a conservative prototype
+width floor, not a maximum permitted length or gate-drive performance proof.
+
+Eight deterministic metadata controls pass, including missing-terminal,
+wrong-R29.2, old-stub, missing-seed/feed, altered-source and GND-plane
+assignment failures. They do not test a routed candidate: original35 is
+connected but contact-blocked, partial omissions fail restoration, and
+planned177 has three intentional unrouted terminals. These states remain
+separate from full-input eligibility and returned-output acceptance.
+
+**Root decision,13:29:** select the exact177 retention definition and
+whole-net COUT replacement obligation for subsequent input qualification.
+This advances beyond the held212 proposal without altering the source,
+moving the bad via, weakening clearance or omitting a function. It does
+not authorize board/input generation or a cloud run. Signal-layer roles,
+exact supplier rules/vias, private guards, placement/access and native/
+import checks still precede a full trial. Actual returned COUT routing
+requires its own topology, geometry and engineering acceptance.
+
+One1.144-second static run exits0 with no native import/load. Root verifies
+report `cc23592a...`, raw `639a7f81...`, draft snapshot, execution artifacts
+and all five unchanged source hashes. Next define purpose-specific
+private-tap guard coverage, including B-conducting copper and existing
+through-vias on all layers they reach, without unnecessary F-only
+projection holes in inner GND.
+
 ## October 4, 12:10 additional unattended hour
 
 The owner explicitly resumed for the next hour at12:10:15. Stop by13:10

@@ -2,6 +2,28 @@
 
 ## Bounded engineering work
 
+- **October 4, 13:29 retained177 selected conditionally:** the static COUT
+  contract audit passes with159 tracks/18 vias, all five process seeds,
+  30 feeds,27 fixed refs/97 pads and all104/325 source identities preserved.
+  Only the35 COUT primitives are designated replaceable; U6.2/Q5.B2/R29.1
+  must be restored, and R29.2 remains PROT_FET_RETURN. Measured source
+  width floor is0.1778 mm, not a performance or maximum-length guarantee.
+  Root selects this exact retention definition for subsequent input
+  qualification, not PCB generation, routing, import or acceptance.
+  One static run/zero native loads; source unchanged. Next define and
+  qualify private-tap guard coverage on the actual conducting layers,
+  without blindly projecting every F exclusion onto inner GND planes.
+- **October 4, 13:19 owner resumed for one hour:** stop14:19 local and
+  start no new item after14:09. First qualify the whole-net PROT_COUT
+  replacement contract and exact177-object retention definition, preserving
+  all three gate-control terminals and R29's other connection. This is not
+  permission to drop the function, patch the old via or waive clearance.
+  Root defines engineering conditions; verified Sol/medium performs a
+  bounded static audit, with analysis13:31/report13:32/root13:34.
+  No native rerun of the stopped disposition is needed. Continue only
+  through qualified dependencies, with normal initial-plus-two limits.
+  Source edits, manual routing, unqualified input, paid use and new cloud
+  submissions remain unreleased by the time allowance.
 - **October 4, 12:57 blocker disposition and stop:** the offending
   PROT_COUT via is required by the existing route, not redundant. Removing
   it or the five-object B branch disconnects U6.2 from Q5.B2/R29.1.

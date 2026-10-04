@@ -166,7 +166,27 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**12:57 stopping checkpoint:** the
+**13:19 owner continuation:** stop14:19 local and start no new item after14:09.
+First define and statically qualify the COUT replacement/retention contract,
+including R29's parallel discharge duty, the exact177 retained primitives
+and all-three-terminal output restoration. Same verified Sol/medium;
+analysis13:31/report13:32/root13:34, initial plus two corrective attempts.
+No new native disposition run, source edit, manual repair, generated input
+or cloud submission is released. Proceed only through reviewed dependencies.
+
+**13:29 conditional177 selection:** the
+[static contract audit](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-release-contract-2026-10-04.json)
+qualifies exact membership and restoration semantics. Root selects that
+definition for subsequent input qualification, not actual copper removal,
+board generation or returned-route acceptance. Preserve all27 fixed refs,
+five seeds,30 feeds and non-COUT connections; restore U6.2/Q5.B2/R29.1
+and retain R29.2/PROT_FET_RETURN. The measured source floor is0.1778 mm,
+subject to stricter selected fabrication rules and later route review.
+Next is explicit private-tap guard coverage on actual conducting layers;
+no blanket inner-plane copying of F-only exclusions. Full geometry,
+stackup/process and native/import gates remain.
+
+**Historical12:57 stopping checkpoint:** the
 [PROT_COUT source disposition](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)
 proves neither the offending via nor the complete five-object B branch is
 redundant. Either omission disconnects U6.2 from Q5.B2/R29.1 and leaves

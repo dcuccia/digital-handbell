@@ -7,7 +7,27 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**12:57 final checkpoint: engineering stopped at the input-design gate.**
+**13:19 owner continuation:** work is authorized until14:19 local, with
+no new item after14:09. Begin with the exact177-object COUT replacement
+contract: preserve U6.2/Q5.B2/R29.1 and R29's other connection, define
+source-selection and returned-routing gates, and statically qualify the
+membership without another native disposition run. Analysis13:31,
+report13:32, root13:34; no source/input/routing/cloud release follows merely
+from the new hour. Later items require review of their dependencies.
+
+**13:29 conditional selection:** root selects the exact177 retained-copper
+definition in the [COUT contract audit](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-release-contract-2026-10-04.json)
+for subsequent input qualification. It preserves159 tracks/18 vias,
+five process seeds,30 contact feeds,27 fixed refs/97 pads and the104/325
+whole-source identities. Only the35 COUT primitives are designated for
+replacement; all three COUT pads and R29.2/PROT_FET_RETURN remain mandatory.
+No PCB/input has been generated. The measured0.1778 mm source-width floor
+is not gate-drive acceptance. One static run/zero native loads passes
+eight metadata controls and keeps planned-input versus restored-output
+states distinct. Next is purpose-specific private-tap guard coverage,
+then the remaining physical/process/native/import gates.
+
+**Historical12:57 checkpoint: engineering stopped at the input-design gate.**
 The [PROT_COUT disposition](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)
 confirms the conflicting via is not redundant: omitting it or the complete
 two-via/three-B-track branch disconnects U6.2 from Q5.B2 and R29.1.

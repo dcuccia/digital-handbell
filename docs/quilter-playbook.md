@@ -89,6 +89,11 @@ control. Prefer a clearly scoped whole-net rerouting obligation over
 accidentally retained dangling copper when partial retention cannot
 preserve the intended function. This remains a proposed workflow choice,
 requiring all-terminal restoration and electrical/physical qualification.
+Keep selection validity, complete-input eligibility and returned-routing
+acceptance as distinct states. The [COUT contract controls](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-release-contract-2026-10-04.json)
+accept a deliberate three-terminal unrouted specification without calling
+it a connected output; they also reject the connected but contact-blocked
+old route. Counts or one passing dimension cannot substitute for the others.
 
 ## 2. Build a source-bound input contract
 
