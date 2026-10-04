@@ -16,7 +16,7 @@ native-tool retry, source edit, purchase or fabrication.
 
 | Finding | Evidence and limit | Working guideline |
 |---|---|---|
-| Selected existing routing can survive while Quilter adds useful routes. | Both [contact-control outputs](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json) preserve the checked inventory and connect both test pairs on B without new vias. [Recovered native DRC](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json) reports zero opens but 45 findings each; inner-plane isolation remains pending. | Retain reviewed critical blocks where useful; independently verify preservation and new copper. Do not equate this small control with full-board qualification. |
+| Selected existing routing can survive while Quilter adds useful routes. | Both [contact-control outputs](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json) preserve the checked inventory and connect both test pairs on B without new vias. [Recovered native DRC](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json) reports zero opens but 45 findings each. The [saved-plane supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-plane-isolation-2026-10-04.json) passes all 20 foreign-via isolation and 20 GND attachment cases. | Retain reviewed critical blocks where useful; independently verify preservation and new copper. This diagnostic behavior is qualified, not a clean or accepted product board. |
 | Preservation is not automatic for every input/configuration. | Earlier [full-board outputs](measurements/2026-09-27-router-bakeoff/quilter-output-preservation-2026-10-02.json) lacked the original inner GND zone and exact matches for 24 In2 segments. That did not prove 24 lost electrical connections. | Inspect returned copper and planes before ranking routing improvement. Distinguish record changes from connectivity loss. |
 | Import recognition is weaker than routing evidence. | The [first contact preview](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json) had zero pins to route. The later control had actual unrouted pairs and legal-path witnesses. | Submit a diagnostic only when it can exercise the behavior in question; a parsed preview alone is not that experiment. |
 | A green dashboard has a limited scope. | The contact job's one physics pass was an inferred VBAT 500 mA check; its new-violation lists were empty. Native DRC subsequently completed with inherited, rule-dependent and new isolated-fill findings. | Record which checks ran, their assumptions and whether they cover inherited or new findings. Do not translate "100%" into engineering acceptance. |
@@ -71,6 +71,16 @@ combines assigned regions by **union**, not intersection. A broad F region
 plus a narrow height region can therefore enlarge, rather than restrict,
 the allowed space. Verify assignments and F-only behavior after import;
 a single-sided preference or candidate filter is not proof of enforcement.
+
+**Documented, reconfirmed October 4; movable behavior still untested here:**
+an off-board region is a grouping hint whose size, shape and side are
+ignored. An on-board or edge-overlapping region constrains placement.
+For KiCad, a named top/bottom rule area with every keepout restriction
+cleared represents a placement region; review/manual component assignment
+after import remains necessary. Do not use a true safety keepout as a
+placement room or expect an off-board grouping hint to enforce F-only.
+See [KiCad region setup](https://docs.quilter.ai/design-parameters/placement-regions.md)
+and [single-sided requirements](https://docs.quilter.ai/design-parameters/single-sided-placement.md).
 
 Keep placement regions separate from safety keepouts. Inspect each
 keepout's actual track/via/pour flags and layers; a suggestive name is not
@@ -175,6 +185,18 @@ Assess in this order:
    electrical, process and assembly review. A static trace screen does not
    cover inner-plane isolation or replace these gates.
 
+**Observed diagnostic limit:** a connected GND plane can still be a floating
+network. In this deliberately truncated fixture, each saved inner fill is
+one island attached to all five GND vias, but there are no GND component
+pads. The isolated-copper warnings remain valid and are explained by that
+missing terminal context, not waived or evidence of battery-net shorts.
+Measure actual filled polygons against full foreign-via copper/barrels;
+zone outlines and zero-open counts cannot prove isolation. Our minimum
+saved clearance is 0.206229 mm against 0.20 mm, only 0.006229 mm spare:
+this is a nominal exact-file check, not fabrication tolerance or powered
+protection evidence. A future refill must be qualified separately.
+See the [saved-plane evidence](measurements/2026-09-27-router-bakeoff/quilter-contact-plane-isolation-2026-10-04.json).
+
 Classify results as **retain with a finite gap**, **reject for a demonstrated
 contract violation**, or **accept for a specifically stated scope**. Preserve
 useful candidates while fixing a local validation problem. Do not rerun
@@ -229,7 +251,7 @@ rule, revise that rule and link the counterexample rather than appending
 another conflicting "latest" instruction. Do not invent a new rule when
 the experiment only confirms an existing one.
 
-The current evidence still leaves **inner-plane isolation/disposition,
-movable F-only placement, full-board comprehension and four-/six-layer
+The current evidence still leaves **movable F-only placement, full-board
+placement/access and circuit comprehension, product process rules, and four-/six-layer
 benefit** unresolved. Track their disposition in the closure plan; do not
 promote them to proven capabilities through repetition in progress reports.

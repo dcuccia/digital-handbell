@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-03",
-  "status": "NATIVE_DRC_RECOVERED_EXACT_RETURNED_BYTES_PLANE_REVIEW_PENDING",
+  "status": "DIAGNOSTIC_BEHAVIOR_QUALIFIED_NO_PRODUCT_ACCEPTANCE",
   "license_context": "Source-derived CC BY-SA 3.0 hardware evidence; see ATTRIBUTION.md.",
   "owner_approval_time_local": "17:13",
   "owner_scope": "Prepare one meaningful contact routing diagnostic, submit only if qualified and confirmed free, then inspect native output. No authoritative PCB edits, full-board staging, paid action, new agreement or fabrication.",
@@ -145,7 +145,7 @@
     "uploaded": true,
     "both_files_parsed": true,
     "uploaded_pair": "Exactly the two upload_whitelist files; ignored workspace copies were byte-verified. No PRL, report, script, schematic or account data.",
-    "stage": "Finished with two complete candidates; native DRC recovered October 4, inner-plane qualification pending",
+    "stage": "Finished with two complete candidates; native DRC and saved-plane review complete October 4, diagnostic behavior qualified only",
     "dimensions_mm": [60, 30],
     "components": 6,
     "components_to_place": 0,
@@ -224,11 +224,13 @@
   },
   "returned_results": {
     "owner_requested_evaluation_at_local": "2026-10-03T21:34:08-07:00",
-    "review_status": "NATIVE_DRC_RECOVERED_PLANE_REVIEW_PENDING",
+    "review_status": "DIAGNOSTIC_BEHAVIOR_QUALIFIED_NO_PRODUCT_ACCEPTANCE",
     "review_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-routing-output-review-2026-10-03.json",
     "review_report_sha256": "3b4ffa56448e3c1bd91bfa38f35600fed7a7981da0d74135a520411c79be69a5",
     "native_validation_supplement": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-native-validation-2026-10-04.json",
     "native_validation_supplement_sha256": "efd1932e8096ad84e4392261e5786cbe887b7acd721e31ec84e815dda7ed8c16",
+    "plane_isolation_supplement": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-plane-isolation-2026-10-04.json",
+    "plane_isolation_supplement_sha256": "94610439c8341f3a4b783301e549ac4a525774bd7eae4de350d83add71ce7db9",
     "native_review_executor": {
       "agent_id": "23bdbfc4-1bd7-4ba2-b83f-13ca20d0e7b4",
       "model": "gpt-5.6-sol",
@@ -280,9 +282,14 @@
       "historical_October_3_native_DRC_timeout_seconds_per_candidate": 60,
       "October_4_native_unconnected_items_each": 0,
       "October_4_native_findings_each": 45,
+      "saved_plane_foreign_via_isolation_cases_passed": 20,
+      "saved_plane_GND_seed_attachments_passed": 20,
+      "minimum_saved_plane_clearance_mm": 0.206229,
+      "isolated_fill_disposition": "One nonempty island per plane connects all five GND seed vias but zero component GND pads. Valid warnings from the intentionally truncated fixture, not suppressed or foreign-via shorts.",
+      "diagnostic_behavior_qualified": true,
       "engineering_acceptance": false,
-      "remaining_evidence": "Saved inner-plane isolation from foreign-net through-vias and disposition of two isolated-copper findings. Native findings are now categorized in the October 4 supplement; no old timeout cause is inferred.",
-      "next_item": "Bounded saved inner-plane isolation/disposition; no refill, repeat Quilter job or candidate repair."
+      "remaining_evidence": "No open check in the finite retained-feed/guard diagnostic scope. Product placement/access, loaded contacts, private topology, manufacturing/process rules, physical stackup and movable-region behavior remain separate gates.",
+      "next_item": "Bounded common full-board input-contract disposition; no source change, staging/upload, repeat Quilter job or candidate repair."
     },
     "source_or_cloud_mutations": "No new submission, rating, repair or integration; read-only job/results inspection and inbound complete-board downloads only."
   },

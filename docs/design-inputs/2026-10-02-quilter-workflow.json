@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "CONTACT_ROUTING_NATIVE_DRC_RECOVERED_PLANE_REVIEW_PENDING",
+  "status": "CONTACT_ROUTING_DIAGNOSTIC_QUALIFIED_FULL_INPUT_CONTRACT_NEXT",
   "checkpoint_history_note": "Named checkpoints record their own time and scope. october_4_continuation controls current execution; contact_routing_control_checkpoint records the last assessed diagnostic result.",
   "october_4_continuation": {
     "owner_resumed_at_local": "2026-10-04T09:58:53-07:00",
@@ -25,12 +25,19 @@
     "native_findings_each": 45,
     "native_finding_classes": {"inherited": 39, "returned_rule_annular_width": 4, "new_isolated_GND_fills": 2},
     "prior_timeout_cause_established": false,
-    "next_dependencies": ["Native blocker disposition", "Inner-plane isolation and diagnostic review", "Common full-board input contract"]
+    "plane_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-plane-isolation-2026-10-04.json",
+    "plane_report_sha256": "94610439c8341f3a4b783301e549ac4a525774bd7eae4de350d83add71ce7db9",
+    "plane_isolation_cases_passed": 20,
+    "GND_seed_attachment_cases_passed": 20,
+    "minimum_saved_plane_foreign_via_clearance_mm": 0.206229,
+    "diagnostic_behavior_qualified": true,
+    "diagnostic_disposition": "Retained feeds/guards and both new B routes qualified only for this diagnostic. One island per plane attaches to all five GND seeds but no component GND pad; isolated-copper warnings remain valid. No product, process, powered or DRC-clean acceptance.",
+    "next_dependencies": ["Common full-board input contract"]
   },
   "contact_routing_control_checkpoint": {
     "date": "2026-10-03",
     "owner_approval_time_local": "17:13",
-    "status": "NATIVE_DRC_RECOVERED_PLANE_REVIEW_PENDING",
+    "status": "DIAGNOSTIC_BEHAVIOR_QUALIFIED_NO_PRODUCT_ACCEPTANCE",
     "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-routing-control-2026-10-03.json",
     "control_nets": ["CTRL_CLEAR", "CTRL_GUARD"],
     "expected_control_unrouted_pairs": 2,
@@ -69,8 +76,10 @@
     "native_DRC_timeout_note": "Historical October 3 attempts; exact-byte logged recovery completed October 4.",
     "native_DRC_recovery_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-native-validation-2026-10-04.json",
     "free_tier_UI_confirmed_at_download": true,
+    "saved_plane_isolation_and_seed_attachments_pass": true,
+    "diagnostic_behavior_qualified": true,
     "engineering_acceptance": false,
-    "next_item": "Bounded saved inner-plane/foreign-via isolation and isolated-copper disposition. Preserve promising outputs; no refill, cloud rerun, repair, integration or full-board trial.",
+    "next_item": "Bounded common full-board input-contract disposition using existing source/envelope/group evidence. No source changes, staging/upload, cloud rerun, repair or integration.",
     "submitted": true
   },
   "contact_feed_import_checkpoint": {

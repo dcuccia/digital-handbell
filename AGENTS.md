@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 4 contact diagnostic qualified:** both retained candidates pass
+  all 20 saved-inner-fill/foreign-via isolation cases (minimum 0.206229 mm
+  against 0.20 mm) and all 20 GND seed attachments. Each plane is one
+  nonempty island; isolated-copper warnings reflect the truncated fixture's
+  zero GND component pads, not foreign-via shorts. Root accepts only the
+  demonstrated retained-feed/guard routing behavior. The 45 native findings
+  per candidate remain; no DRC-clean, product/process or loaded-contact
+  acceptance. No refill, repair, source change or cloud rerun. Next is one
+  bounded common full-board input-contract disposition, not staging or
+  submission. See the saved-plane supplement and Quilter playbook.
 - **October 4 native DRC recovered:** persistent-logged runs on exact
   returned PCB/project copies complete in 42.219/3.844 seconds, with
   zero unconnected items and 45 findings each. No refill or source edit.

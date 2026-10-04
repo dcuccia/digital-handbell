@@ -64,6 +64,43 @@ five foreign-net vias, and determine why both planes are flagged isolated.
 The exit code was zero despite the 45 findings; automation must parse the
 report or deliberately use the supported violation-exit option.
 
+### Saved-plane disposition and diagnostic qualification
+
+The [saved-plane supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-plane-isolation-2026-10-04.json),
+SHA-256 `94610439c8341f3a4b783301e549ac4a525774bd7eae4de350d83add71ce7db9`,
+completes the dependent check on unchanged returned bytes. One logged
+native execution completed in 0.594 seconds, with no corrections, refill
+or DRC rerun. All **20 foreign-via/plane cases** pass the required 0.20 mm
+clearance; minimum conservative native effective-shape separation is
+**0.206229 mm**. Drill/barrel interiors were conservatively included in
+the outer via disk, with boundary, hole, overlap and empty-fill controls.
+
+Each saved plane is one nonempty GND island, area 1704.151729 mm2, with
+all five GND seeds attached: **20/20 attachment cases** across both layers
+and candidates. There are no separate inner track segments or unexpected
+inner-net populations. Each candidate still has two isolated-copper
+warnings: this fixture has eight physical pads but no component GND pad,
+so the connected seed/plane network has no component terminal. The
+warnings are valid fixture-context findings, not empty/fragmented fills
+or foreign-via shorts; none was suppressed.
+
+**Root disposition: qualify the finite retained-feed/guard routing
+diagnostic for both candidates.** Quilter preserved the selected contacts,
+feeds, process seeds and guards while adding the two useful B routes;
+its new saved inner planes pass the specified isolation/attachment checks.
+This is meaningful evidence for a retained-critical-block workflow.
+It does not prove arbitrary keepout precedence, useful movable placement,
+full-board routability, low-impedance returns or protection in powered
+hardware. All 45 native findings per candidate remain, including deliberate
+feed/guard conflicts and four returned-rule annular-ring mismatches.
+The 0.006229 mm nominal clearance spare is not a tolerance budget.
+
+Next is one bounded **common full-board input-contract disposition**:
+reuse the 104-reference source, D45/+2 envelope and 16 functional groups
+to separate fixed/retained work from movable work, and identify exact
+remaining region/access, topology and process-rule gates. No source edit,
+full-board staging/upload, repeated diagnostic or integration is released.
+
 ## Earlier continuation scopes
 
 **October 3, approximately 14:30 owner continuation:** keep advancing for

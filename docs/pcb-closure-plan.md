@@ -172,12 +172,19 @@ The first item **recovered native DRC** on unchanged isolated contact-output
 copies: zero opens and 45 findings each. The
 [native supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json)
 separates 39 inherited, four returned-rule annular-ring and two new
-isolated-fill findings. No refill, repair or source change. Next inspect
-saved inner-plane isolation and disposition isolated-fill findings before
-qualifying the contact diagnostic or releasing broader input preparation.
+isolated-fill findings. The subsequent
+[saved-plane supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-plane-isolation-2026-10-04.json)
+passes 20/20 foreign-via isolation cases (minimum 0.206229 mm against
+0.20 mm) and 20/20 GND seed attachments. Each plane is one nonempty island;
+isolated-copper warnings reflect zero component GND terminals in the
+truncated fixture. Root qualifies the retained-feed/guard routing
+diagnostic only, not product/process/loaded-contact suitability or DRC
+cleanliness. No refill, repair or source change. Next is a bounded common
+full-board input-contract disposition; staging/upload/submission remains
+held until its own reviewed qualification.
 See the [continuation contract](quilter-workflow-study-2026-10-02.md#october-4-bounded-autonomous-continuation).
 
-**Latest: returned contact controls retained with a finite validation gap.**
+**Historical October 3: returned controls retained with a validation gap.**
 Both native files preserve the input inventory and connect both test nets
 entirely on B while clearing guards in the static geometry check. The
 [output review](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)

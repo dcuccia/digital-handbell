@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "status": "SAVED_FILL_FOREIGN_VIA_ISOLATION_PASS_ISOLATED_GND_FIXTURE_REMAINS_NO_PRODUCT_ACCEPTANCE",
+  "scope": "Read-only native inspection of actual cached In1/In2 GND filled polygons in both returned Quilter contact-routing candidates. No refill, DRC rerun, board/project edit, routing, repair, cloud action, or authoritative source load.",
+  "runtime_gate": {
+    "same_root_verified_executor": true,
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium"
+  },
+  "inputs": {
+    "candidate_1_1_pcb_sha256": "6999747c7b5fd2c2fe532f5c4c4504e2683dd62022c6122a95c9338502e21b17",
+    "candidate_1_2_pcb_sha256": "8f5e8ce52f0fdf5314d6d79609c08ee74481608b1e9bf4be127cf8ee05873e71",
+    "shared_project_sha256": "27952625ae01bd7dbfa5cd1e6bb105d83a71461741966c6328b8d4ed8d5b1d63",
+    "candidate_1_1_recovered_drc_sha256": "d519a374783035adb16ddece6ee076216f6038af763a28efc815708292de6e4b",
+    "candidate_1_2_recovered_drc_sha256": "21d0cc32b5d5a6d5bade2bc2c144eeb710258b7dc9560b9291cf38f1e647fe1d",
+    "recovery_report_and_logs_unchanged": true
+  },
+  "execution": {
+    "private_evidence_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-native-validation-20261004T1000\\plane-isolation-20261004T1009",
+    "native_api": "KiCad pcbnew 10.0.6",
+    "native_python_path": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\\python.exe",
+    "native_python_sha256": "79826db0c9261339ffe5d410662c8aad2dd210e4211b83ab2f7622da7b34ebcb",
+    "native_executions": 1,
+    "corrective_executions": 0,
+    "hard_timeout_seconds": 90,
+    "pid": 49880,
+    "elapsed_seconds": 0.594,
+    "exit_code": 0,
+    "timed_out": false,
+    "pid_confirmed_exited": true,
+    "analyzer_sha256": "5bdfc439b1bc42627e1eab11184091a3eb2077aeb70f3ca6d121d4d670144a9e",
+    "logged_runner_sha256": "77ce19bb3f6e5d80274743d1ff5adc6cf3207fd0cf73cee91e52ff2df1a2836b",
+    "raw_result_sha256": "4dd140fab771d28c9d6419516bc7ba529a81bf599a603712360a1b26c1afb2c1",
+    "subprocess_metadata_sha256": "cce4b7b06ce89014c8348fe83bfd0940bce80f6f6ebea235c80b756169e24e38",
+    "stdout_sha256": "11b060331c4a464648561612651fa195e3ea879074fce5b5340dab9eb6481f5d",
+    "stderr_sha256": "9da246e12af49bbdccfa59608d51bb93cf2ca3cf9983577119816974e2b17541",
+    "stderr_disposition": "Only KiCad duplicate image-handler initialization notices; no geometry or load error.",
+    "persistent_logging": "Executable, arguments, cwd, timeout and input/tool/helper/runner hashes were flushed and fsynced before child launch. Stdout/stderr were attached directly to files."
+  },
+  "geometry_method": {
+    "fill_source": "ZONE.GetFilledPolysList(layer), cloned without triangulation; zone outlines and bounding boxes were not substituted for fill.",
+    "foreign_via_shape": "PCB_VIA.GetEffectiveShape(layer) on each inner layer. The native 0.600 mm outer copper disk was treated conservatively as occupied through its 0.300 mm drill/barrel interior; no drill void, mask, or tenting credit was taken and no radius was added twice.",
+    "clearance_test": "Native filled-polygon versus native effective-via-shape collision at 0.200 mm minus one internal unit, plus a one-nanometre-resolution monotonic boundary search.",
+    "controls": {
+      "known_0_200_mm_gap_below_boundary_noncollision": true,
+      "known_0_200_mm_gap_above_boundary_collision": true,
+      "shape_hole_not_treated_as_copper": true,
+      "positive_overlap_detected": true,
+      "empty_fill_rejected": true
+    }
+  },
+  "results": {
+    "isolation_cases_total": 20,
+    "isolation_cases_passed": 20,
+    "isolation_cases_intersecting_fill": 0,
+    "required_clearance_mm": 0.2,
+    "per_foreign_via_result_applies_to_both_candidates_and_both_planes": [
+      {
+        "uuid": "0ba3129d-4c2f-51a5-b83d-47c5c587ae79",
+        "net": "VBAT",
+        "position_mm": [98.6, 107.45],
+        "native_diameter_drill_mm": [0.6, 0.3],
+        "clearance_mm_lower_bound_1nm": 0.206229,
+        "case_count": 4,
+        "all_pass": true
+      },
+      {
+        "uuid": "bad9068e-b03b-5869-a449-cdb7731eb117",
+        "net": "VBAT",
+        "position_mm": [98.6, 108.35],
+        "native_diameter_drill_mm": [0.6, 0.3],
+        "clearance_mm_lower_bound_1nm": 0.206232,
+        "case_count": 4,
+        "all_pass": true
+      },
+      {
+        "uuid": "248ce18d-3a6e-50d8-b9ce-c721b99a2c63",
+        "net": "/CELL_NEG",
+        "position_mm": [84.249175, 107.75048],
+        "native_diameter_drill_mm": [0.6, 0.3],
+        "clearance_mm_lower_bound_1nm": 0.206229,
+        "case_count": 4,
+        "all_pass": true
+      },
+      {
+        "uuid": "73f524c2-3597-5233-906e-93443fee9d54",
+        "net": "/CELL_NEG",
+        "position_mm": [86.949175, 107.75048],
+        "native_diameter_drill_mm": [0.6, 0.3],
+        "clearance_mm_lower_bound_1nm": 0.206229,
+        "case_count": 4,
+        "all_pass": true
+      },
+      {
+        "uuid": "14e9c925-5186-5943-8002-513435324c90",
+        "net": "/CELL_NEG",
+        "position_mm": [91.1, 108.7],
+        "native_diameter_drill_mm": [0.6, 0.3],
+        "clearance_mm_lower_bound_1nm": 0.206229,
+        "case_count": 4,
+        "all_pass": true
+      }
+    ],
+    "minimum_observed_clearance_mm_lower_bound_1nm": 0.206229,
+    "minimum_margin_over_required_mm": 0.006229,
+    "via_span": "All five foreign vias natively span F.Cu, In1.Cu, In2.Cu and B.Cu; isolation was checked separately on both actual inner fills."
+  },
+  "saved_fill_and_seed_connectivity": {
+    "common_to_both_candidates": {
+      "In1.Cu": {
+        "zone_name": "GND.LAYER_1",
+        "net": "GND",
+        "saved_fill_nonempty": true,
+        "islands": 1,
+        "filled_area_mm2": 1704.151729,
+        "all_five_GND_seed_vias_attach_to_island_0": true
+      },
+      "In2.Cu": {
+        "zone_name": "GND.LAYER_2",
+        "net": "GND",
+        "saved_fill_nonempty": true,
+        "islands": 1,
+        "filled_area_mm2": 1704.151729,
+        "all_five_GND_seed_vias_attach_to_island_0": true
+      },
+      "GND_seed_attachment_cases": 20,
+      "GND_seed_attachment_cases_passed": 20,
+      "GND_seed_vias": [
+        "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+        "c63c289d-af32-592b-9732-d17507fbf476",
+        "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5",
+        "eb628663-2af6-5175-bd63-91e9eecb0258",
+        "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+      ],
+      "unexpected_inner_track_segments": 0,
+      "inner_copper_population": "Two expected GND saved fills plus the ten expected through-vias: five GND, two VBAT and three /CELL_NEG. No separate In1/In2 track segments were found."
+    },
+    "candidate_1_1_zone_uuids": {
+      "In1.Cu": "68c9ff96-d0e0-4b9f-b4f5-28746f6127f3",
+      "In2.Cu": "e8357a1e-ac6f-410e-a4db-e80e9a5b6752"
+    },
+    "candidate_1_2_zone_uuids": {
+      "In1.Cu": "10db8885-751a-46b1-b8f6-4cd184da3a63",
+      "In2.Cu": "d48cdb66-39a6-453c-aa6d-2f40eb8a0d2b"
+    },
+    "shape_hole_disposition": "The native untriangulated fill reports one connected outline and zero explicit hole rings per plane. Foreign-via voids are nevertheless present in the actual native fill boundary representation: exact-shape collision is false and measured separation exceeds 0.200 mm. They were not inferred from zone outlines. Empty or disconnected fill was not accepted."
+  },
+  "isolated_copper_witnesses": {
+    "candidate_1_1": [
+      {
+        "drc_item_uuid": "88b93ba3-a7c4-4c09-875e-fc17c43fb025",
+        "position_mm": [129.483869, 85.516131],
+        "description": "Zone 'GND.LAYER_1' [GND] on Ground Layer 1, priority 0"
+      },
+      {
+        "drc_item_uuid": "6e2f567f-b344-4536-9dff-82aee73e46d5",
+        "position_mm": [129.483869, 85.516131],
+        "description": "Zone 'GND.LAYER_2' [GND] on Ground Layer 2, priority 0"
+      }
+    ],
+    "candidate_1_2": [
+      {
+        "drc_item_uuid": "44a7c04a-4e42-4b81-b2fe-5de71bbee27d",
+        "position_mm": [129.483869, 85.516131],
+        "description": "Zone 'GND.LAYER_1' [GND] on Ground Layer 1, priority 0"
+      },
+      {
+        "drc_item_uuid": "f0d5df87-6e37-46bc-b69c-37a981b02aa6",
+        "position_mm": [129.483869, 85.516131],
+        "description": "Zone 'GND.LAYER_2' [GND] on Ground Layer 2, priority 0"
+      }
+    ],
+    "explanation": "The witnesses are not absent fills or disconnected fill fragments: each named plane is one nonempty island and attaches to all five GND seed vias. Native inspection verifies eight physical fixture pads and zero GND footprint pads. The warnings therefore describe the intentionally truncated fixture's GND copper network, which reaches seed vias but no component GND terminal; they do not indicate a foreign-via short.",
+    "suppression_or_waiver": false
+  },
+  "source_and_process_bounds": {
+    "authoritative_source_native_loads": 0,
+    "all_five_authoritative_hashes_unchanged": true,
+    "source_hashes": {
+      "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+      "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+      "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+    },
+    "U4_annular_findings": "Unchanged prior disposition only: (0.604-0.350)/2 = 0.127 mm versus returned 0.150 mm rule. No resize, waiver, or process conclusion was made."
+  },
+  "limitations": [
+    "This establishes saved-fill isolation only for the identified five foreign-net through-vias in this retained-feed/guard fixture.",
+    "No refill was performed; no claim is made about a future refill under different rules or geometry.",
+    "One connected geometric island and seed attachment do not prove high-frequency return quality, powered behavior, intended product ground topology, or whole-board protection.",
+    "No manufacturing, supplier, assembly, functional, or child-use acceptance is claimed."
+  ],
+  "acceptance": false,
+  "finite_disposition": "Both candidates pass the requested 20-case saved In1/In2 GND fill isolation check. The two isolated_copper findings per candidate remain valid fixture warnings explained by zero GND footprint pads, not suppressed defects."
+}

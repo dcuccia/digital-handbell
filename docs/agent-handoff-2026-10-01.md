@@ -14,13 +14,20 @@ zero unconnected items, 45 findings each, with no refill. See the
 Thirty-nine inherited findings remain; four annular-width notices follow
 the returned 0.15 mm minimum, and two isolated-copper notices concern the
 new GND fills. Native exit 0 is not a clean-board claim. Prior timeout
-cause remains unknown. Next check saved inner fills versus foreign-net
-vias and disposition isolated-plane findings before broader input work.
+cause remains unknown. The subsequent
+[saved-plane supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-plane-isolation-2026-10-04.json)
+passes 20/20 foreign-via isolation cases (minimum 0.206229 mm against
+0.20 mm) and 20/20 GND seed attachments. Each plane is one nonempty island.
+The isolated-copper warnings reflect the fixture's zero GND component pads;
+they remain valid, not suppressed. Root qualifies only the demonstrated
+retained-feed/guard routing behavior, not a clean or accepted product PCB.
+Next: a bounded common full-board input-contract disposition using the
+existing source/envelope/group evidence, before any staging or submission.
 Read the [continuation scope](quilter-workflow-study-2026-10-02.md#october-4-bounded-autonomous-continuation).
 No source edits, refill, automatic integration or repeat cloud diagnostic.
 
-**Latest: both returned controls pass the static preservation/routing screen;
-native qualification remains incomplete.** The
+**Historical October 3 review: both returned controls passed the static
+screen; native qualification was then incomplete.** The
 [output review](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)
 binds untouched candidates 1.1 (`6999747c...`) and 1.2 (`8f5e8ce5...`).
 Both preserve six footprints/eight pads, 30 feeds, ten vias, eight guards,
