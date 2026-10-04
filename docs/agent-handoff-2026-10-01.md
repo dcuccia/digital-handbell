@@ -7,6 +7,21 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Latest: native evidence recovered; reusable tools still held.** The
+[repair ledger](measurements/2026-09-27-router-bakeoff/quilter-native-tool-repair-2026-10-04.json)
+records one completed native run: eight source pads/four pose witnesses,
+23 rule areas and24.453-second DRC. Five inside controls appeared with
+no outside counterpart. Its60 findings/11 opens use a diagnostic project
+with different rules, not the authoritative project. No product approval.
+
+Root review prompted two corrective passes on DLL lifetime, suspended
+process containment, cleanup, fresh output and error reporting. The final
+revision passes five subprocess controls, but still needs fixture mocks
+for stale output, failed/malformed CLI output and DLL lifetime, then one
+native replay of that exact corrected revision. Do not attribute the first
+run to later code. The executor is idle and this bounded item has stopped;
+no source-native load/edit, full input, six-layer/fill or cloud work occurred.
+
 **Latest independent result: current-coordinate process spacing accepted.**
 The [spacing ledger](measurements/2026-09-27-router-bakeoff/quilter-process-hole-spacing-screen-2026-10-04.json)
 (`3349af15...`) covers all eight source drilled component pads, all fixed,
@@ -19,10 +34,8 @@ remain unchanged. One static run completed; its90-second initial wait was
 not a hard termination limit. Missing PID/supervisor evidence is explicit,
 not reconstructed by rerunning. The executor is idle.
 
-The native guard hold below still blocks dependent inputs. Next requires
-separate bounded authorization to recover the reusable native runner,
-preflight a known UUID and obtain diagnostic DRC evidence. Do not spend the
-remaining hour on an unapproved fourth native attempt or a cloud trial.
+The native guard hold below still blocks dependent inputs. The partial
+tool repair above does not qualify full guards or release a cloud trial.
 
 **Independent progress: supplier constructions bound.** The
 [four/six source screen](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
@@ -34,14 +47,14 @@ Both protected via families pass the published hole/ring ranges only.
 The source-bound process-hole spacing screen is now complete for current
 coordinates only; no stackup selection, quote or full-input release occurred.
 
-**Latest: native guard control partial/held.** The
+**Historical14:20 native guard control partial/held.** The
 [native-control ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
 preserves a loaded/saved four-layer fixture, but UUID pose readback is
 incomplete and30-second CLI DRC produced no report. Three attempts are
 exhausted; no native rule behavior, six-layer control or fill is qualified.
-Do not retry or advance dependent input work. Source/analytic guards/
-selected177 are unchanged. Independent supplier-stackup preparation can
-advance within the current hour without treating this gate as passed.
+Do not advance dependent input work. The separately authorized16:36 repair
+does not change the old attempt record. Source/analytic guards/selected177
+are unchanged; supplier evidence does not substitute for this gate.
 
 **14:20 owner continuation:** stop15:20, no new item after15:10.
 First is one isolated native guard control from the repaired definition:

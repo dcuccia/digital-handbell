@@ -12,6 +12,60 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 16:36 bounded native-tool repair
+
+The owner explicitly authorizes repair of the tools. This releases one
+new bounded item, not a reset or repetition of the exhausted14:20 control.
+Recover the complete native launcher, known-item UUID/global-pose readback
+and useful CLI DRC diagnostics using isolated saved fixtures. Persist
+reusable code and regression coverage rather than another one-off launcher.
+Prior fixtures, logs and failed conclusions remain immutable.
+
+Execution stops16:47, report16:48 and root checkpoint16:51. At most three
+native pipelines with actual90-second hard limits; preflight standalone
+runner success/failure/timeout handling before native work. Root verifies
+Sol/medium dispatch before granting writes. No source-native load/edit,
+full-board input, six-layer/fill expansion, product routing or cloud job
+is released. A repaired runner is not a clean-board or importer approval.
+
+### Native observation recovered; reusable revision reviewed separately
+
+The first repair run recovered eight unique source-pad UUIDs and all four
+private-pad pose witnesses using `m_Uuid.AsString()`. It read23 rule areas
+and completed DRC in24.453 seconds on the exact saved PCB `0caf804f...`.
+The diagnostic report `1523862d...` contains60 violations and11 unconnected
+items. All five inside keepout controls appeared and outside counterparts
+did not;28 source-guard intrusion records remain explicit, not waived.
+
+The copied fixture project `ada159b7...` differs from authoritative
+`82132618...`: minimum track width/clearance are0.2/0mm instead of
+0.1778/0.1778mm. This recovers diagnostic native behavior, not source-rule
+DRC or product acceptance. Changed working directory/project/startup
+conditions mean the former silent timeout's precise cause remains unknown.
+
+Root review found reusable-tool defects despite that successful run:
+discarded DLL-directory handle, a process-tree assignment race and
+incomplete stale-output/error handling. Corrections retain the DLL handle,
+assign a suspended child to the Windows job before resuming, and require
+successful child exits plus fresh parsed output. First-run evidence stays
+bound to its original tools; it cannot qualify a corrected revision.
+The final corrective pass may execute through16:49 for an immediate
+report, retaining the original16:51 overall checkpoint. No broader native
+scope or extra corrective allowance is created.
+
+**Stopping disposition:** two corrective passes leave five passing
+subprocess controls, but no native replay of the final code. Stale-output,
+failed/malformed-CLI and DLL-lifetime fixture mocks remain incomplete.
+Root retains the code as an unqualified tooling candidate and the native
+result as separate diagnostic evidence. Next is those finite regressions
+and one exact-fixture replay, with the same explicit rule-context limits.
+No dependency gate or authoritative board changed.
+The ledger's first-revision preservation claim was corrected during root
+review: original tool hashes are recorded and earlier code exists in the
+session transcript, but standalone original tool/report copies were not
+retained. Native artifacts and receipts remain saved. Future revision
+snapshots must be written before edits, not inferred from a hash alone.
+
 ## October 4, 14:20 additional unattended hour
 
 The owner authorizes another hour at14:20:28. Stop15:20 local and start

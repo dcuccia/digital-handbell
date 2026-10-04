@@ -2,6 +2,23 @@
 
 ## Bounded engineering work
 
+- **October 4 native-tool repair partially recovered:** one isolated run
+  reads all eight source pads/four pose witnesses and23 rule areas; DRC
+  completes in24.453 seconds with the diagnostic project's60 findings/
+  11 opens. That project is not source-rule-equivalent. Root found and
+  corrected runner/DLL/error-handling defects; the final code has five
+  passing subprocess controls but missing fixture mocks and no corrected
+  native replay. Preserve this useful evidence without declaring the
+  reusable tools qualified. The bounded item stops; next is remaining
+  fixture regressions and one supervised exact-fixture replay, not another
+  search or product/cloud work. Source and selected177 remain unchanged.
+- **October 4, 16:36 native-tool repair authorized:** owner releases one
+  new bounded launcher/UUID/DRC recovery, not a continuation of the
+  exhausted control. Reuse isolated saved fixtures and proven runner code;
+  preserve all prior evidence. Verify actual Sol/medium before execution.
+  Final correction stops16:49; root checkpoint remains16:51. At most three
+  native pipelines with90-second hard limits. No source-native load/edit,
+  full-board input, six-layer/fill expansion, routing or cloud job.
 - **October 4 process-hole screen accepted for current coordinates:** the
   five protected process vias clear all eight source drilled component pads
   and, separately, the13 other retained vias under conservative whole-shape

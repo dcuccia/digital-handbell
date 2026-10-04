@@ -166,6 +166,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**16:36 tool repair partial, stopped:** native UUID/pose readback and
+diagnostic DRC now complete on the isolated fixture, but root review
+required two code corrections. Five subprocess controls pass; missing
+fixture mocks and a native replay of the final revision still prevent
+reusable-tool qualification. Next is that finite completion item, not a
+fresh inventory or product run. Preserve all evidence/source; no full
+input, six-layer/fill, routing or cloud release. See the
+[repair scope and result](quilter-workflow-study-2026-10-02.md#october-4-1636-bounded-native-tool-repair).
+
 **Current-coordinate process-hole screen accepted:** the
 [spacing ledger](measurements/2026-09-27-router-bakeoff/quilter-process-hole-spacing-screen-2026-10-04.json)
 binds five required processed vias against eight drilled component pads
@@ -174,8 +183,8 @@ in all40/65 pairs; minima6.907610/13.543012mm. All source hashes remain
 unchanged. This is not cap/planarity, supplier acceptance, future-geometry
 or other-via process qualification. One static run completed, but no hard
 timeout was evidenced; the ledger distinguishes initial wait from a limit.
-Next is a separately authorized bounded native-runner/UUID/DRC recovery.
-No automatic fourth native attempt, input generation or cloud job.
+The separately authorized native-runner/UUID/DRC recovery is now bounded
+above. No input generation or cloud job follows from the spacing result.
 
 **Supplier screen complete, constructions not selected:** the
 [source-bound comparison packet](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
@@ -188,10 +197,10 @@ below is not waived, and no source/input/cloud changes are released.
 **Native-control gate held:** [1fd27e9d...](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
 establishes static source-subset preparation and native load/save, not
 complete roundtrip or rule behavior. UUID lookup is incomplete and CLI
-DRC times out at30 seconds. All three attempts are consumed; preserve
-evidence and do not retry. Analytic guards and selected177 remain unchanged.
-The next independent preparation opportunity is exact supplier-stackup
-evidence; it does not release either full input past the held native gate.
+DRC times out at30 seconds. All three old attempts are consumed; preserve
+evidence. The new16:36 repair has its own bounded authorization, not a reset
+of those attempts. Analytic guards and selected177 remain unchanged.
+Supplier evidence does not release either full input past the native gate.
 
 **14:20 continuation:** another owner-authorized hour ends15:20, with
 no new item after15:10. First is isolated native guard-encoding/behavior

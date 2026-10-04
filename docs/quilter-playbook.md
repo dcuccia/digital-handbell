@@ -415,11 +415,28 @@ later caching edit introduced a syntax failure despite the earlier preflight.
 **Observed bootstrap recurrence:** the [private native control](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
 again lost module and DLL search paths in fresh children. Reuse the complete
 qualified launcher, not just its Python executable or a prior shell's
-environment. In that same execution environment, preflight a known pad UUID
+environment. Keep the object returned by `os.add_dll_directory` alive
+through the native scope, then close it explicitly. In that same execution
+environment, preflight a known pad UUID
 and required getters before running the larger control. Missing identity
 readback must stop qualification; successful file I/O and a populated board
 are not a substitute. Preserve bounded DRC timeout evidence and diagnose
 its stage before increasing limits or rerunning the same command.
+
+Qualify the reusable runner separately from one successful native result.
+Reject reused output locations; require a successful child exit and a fresh,
+parsed report with the expected schema, not merely an existing filename.
+Write each child invocation/PID before waiting so an outer timeout leaves
+useful evidence. Process-tree supervision must contain the child before it
+can spawn descendants. Regression controls must cover these failure paths,
+not just the happy path. Bind every result to the exact executed tool
+revision; later fixes do not retroactively qualify an earlier run.
+The [native-tool repair](measurements/2026-09-27-router-bakeoff/quilter-native-tool-repair-2026-10-04.json)
+recovered UUID and diagnostic DRC observations, but its final corrected
+tools remain an unqualified candidate pending fixture regressions and
+native replay. Invoke the supervisor with absolute executable/script paths
+and separate new receipt/payload locations; relative script paths would
+resolve under its private child working directory.
 
 **Observed selection trap:** the recovered all-pairs graph added113 objects
 beyond a62-object explicit-duty core. A path between two internal pads can
