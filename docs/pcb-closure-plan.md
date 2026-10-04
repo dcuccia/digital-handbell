@@ -166,6 +166,14 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Supplier screen complete, constructions not selected:** the
+[source-bound comparison packet](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
+supplies actual3313 dielectric/copper rows and POFV conditions. Exact hole
+spacing and cap/planarity remain open; published size/ring ranges alone
+do not qualify manufacturing. Next independent item is a conservative
+source-bound process-hole clearance screen. The native guard blocker
+below is not waived, and no source/input/cloud changes are released.
+
 **Native-control gate held:** [1fd27e9d...](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
 establishes static source-subset preparation and native load/save, not
 complete roundtrip or rule behavior. UUID lookup is incomplete and CLI

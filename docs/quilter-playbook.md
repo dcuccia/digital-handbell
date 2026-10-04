@@ -337,6 +337,24 @@ repeated DRC witnesses. Extra layers can alter special-process cost; obtain
 an actual quote rather than assuming either four or six layers is cheaper.
 Do not infer internal compute or token cost from elapsed wall time.
 
+**Observed construction distinction:** the [3313 source screen](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
+binds actual dielectric/copper rows for the shortlisted four/six-layer
+constructions, not just nominal thickness or layer count. Both outer
+dielectrics are0.0994mm; six layers also have a thin central gap between
+two potential routing layers. Choose explicit reference purposes before
+counting useful signal layers. The earlier saved generic Quilter4-layer
+preset has different dielectric dimensions and is not an equivalent model.
+Quilter documents input-defined stackups and ground/power naming hints;
+verify the detected classes, material values and returned stackup rather
+than trusting a supplier label or layer name.
+
+Separate a supplier's dimensional capability, process conditions, order
+eligibility and price. Both protected via families meet the cited POFV
+hole/ring ranges, but that does not settle nearby-hole clearance or cap
+planarity. Preserve ambiguous diagram/quality wording for disposition
+instead of inventing tolerances or converting an advertised maximum into
+a guaranteed minimum.
+
 Keep local items within the [bounded execution policy](routing-agent-policy.md).
 Use hard subprocess termination limits, not just initial output waits.
 Persist executable/arguments, input/tool hashes, stdout/stderr and exit or

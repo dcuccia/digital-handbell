@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 4 supplier construction evidence bound:** the official
+  JLC04161H-3313/JLC06161H-3313 rows are now saved with1.6mm/1oz/0.5oz
+  display settings. Both use0.0994mm outer dielectrics; six layers add
+  a0.1088mm central gap but0.55mm adjacent cores. More layers do not
+  automatically mean more well-referenced signal layers. POFV published
+  hole/ring ranges cover both process-via families, but hole spacing,
+  cap/planarity and exact-package acceptance remain open. Four-layer
+  POFV is documented as charged, not unavailable; no quote is established.
+  Keep both as candidates, not selected stackups. Native guard gate remains
+  held; next independent item may screen the fixed process-hole geometry.
 - **October 4 native guard control is partial/held:** the exact source
   subset passes static preflight and its generated four-layer fixture
   loads/saves, but pad UUID readback is incomplete and CLI DRC times out

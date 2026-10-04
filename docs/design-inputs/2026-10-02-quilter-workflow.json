@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "NATIVE_GUARD_CONTROL_HELD_INDEPENDENT_STACKUP_PREPARATION_AVAILABLE",
+  "status": "SUPPLIER_CONSTRUCTION_ROWS_BOUND_NATIVE_GUARD_GATE_HELD",
   "checkpoint_history_note": "Named checkpoints record their own time and scope. october_4_fourth_continuation controls the new14:20-15:20 window; earlier deadlines remain historical. Exhausted attempts still stop an affected item.",
   "october_4_fourth_continuation": {
     "owner_message_at_local": "2026-10-04T14:20:28-07:00",
@@ -10,6 +10,22 @@
     "no_new_item_after_local": "15:10",
     "first_item": "Isolated native guard roundtrip and object-class behavior control",
     "source_edits_full_input_product_routing_cloud_released": false
+  },
+  "supplier_stackup_source_screen": {
+    "status": "PRIMARY_ROWS_BOUND_CANDIDATES_NOT_SELECTED",
+    "scope": "Independent public-source research14:35-14:47 with root checkpoint14:50, not native guard repair.",
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-four-six-stackup-source-screen-2026-10-04.json",
+    "report_sha256": "ef0a395804060313d207195cb9d19c19323936d9bb92ec2a1897d25f2e8e914e",
+    "candidate_constructions": ["JLC04161H-3313","JLC06161H-3313"],
+    "display_options": {"nominal_thickness_mm":1.6,"outer_copper_oz":1,"inner_copper_oz":0.5},
+    "shared_outer_dielectric_mm": 0.0994,
+    "six_layer_central_dielectric_mm": 0.1088,
+    "protected_via_families_meet_published_hole_and_ring_ranges": true,
+    "PTH_NPTH_spacing_cap_planarity_and_exact_package_qualified": false,
+    "four_layer_POFV_policy": "Documented additional charge; not an exact quote.",
+    "native_guard_gate_waived": false,
+    "actual_stackup_or_layer_roles_selected": false,
+    "next_independent_item": "Conservative source-bound process-hole clearance screen."
   },
   "private_guard_native_control_item": {
     "status": "PARTIAL_HELD_ATTEMPTS_EXHAUSTED",
@@ -1143,6 +1159,7 @@
   },
   "stackup_study": {
     "primary_layers": [4, 6],
+    "candidate_supplier_evidence": "supplier_stackup_source_screen",
     "optional_layers": [8],
     "qualification": "Actual named supplier construction, copper weights, dielectric thickness/properties and layer roles required before impedance-dependent routing. No invented stackup.",
     "four_layer_starting_roles": ["F components/critical signals", "In1 protected GND", "In2 distribution/constrained signals", "B constrained by contacts"],

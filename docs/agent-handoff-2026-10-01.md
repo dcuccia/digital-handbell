@@ -7,6 +7,16 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Independent progress: supplier constructions bound.** The
+[four/six source screen](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
+records the exact shortlisted3313 constructions and process conditions.
+Both have0.0994mm outer dielectrics, unlike the earlier saved generic
+Quilter4-layer preset. Six-layer reference adjacency requires an explicit
+role decision, not an assumption of two additional useful signal layers.
+Both protected via families pass the published hole/ring ranges only.
+Next independent preparation is the source-bound process-hole spacing
+screen; no stackup selection, quote or full-input release has occurred.
+
 **Latest: native guard control partial/held.** The
 [native-control ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
 preserves a loaded/saved four-layer fixture, but UUID pose readback is

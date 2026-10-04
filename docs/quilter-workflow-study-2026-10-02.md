@@ -61,6 +61,46 @@ must reuse the complete native launcher, preflight UUID/getter behavior
 and diagnose saved timeout evidence before another native run. Independent
 supplier-stackup preparation can proceed without declaring this gate passed.
 
+### Independent supplier constructions and process conditions
+
+The [four/six source ledger](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
+binds archived official HTML and diagrams, not an AI summary. Its source
+page has1.6mm/1oz outer/0.5oz inner options selected in both panels.
+The generic Markdown rendering omitted the div-based construction rows;
+root extracted and reviewed the exact named sections in the saved HTML.
+
+| Candidate | Dielectric separations, top to bottom, mm | Copper, top to bottom, mm |
+|---|---|---|
+| JLC04161H-3313 | 0.0994 / 1.265 / 0.0994 | 0.035 / 0.0152 / 0.0152 / 0.035 |
+| JLC06161H-3313 | 0.0994 / 0.55 / 0.1088 / 0.55 / 0.0994 | 0.035 / 0.0152 / 0.0152 / 0.0152 / 0.0152 / 0.035 |
+
+The page supplies3313 Dk4.1,2116 Dk4.16 and core Dk4.6, but not a complete
+frequency-specific Dk/Df/tolerance model. Displayed copper/dielectric sums
+are1.5642 and1.5384mm; do not force either to exactly1.6mm or mistake it
+for qualified finished thickness. Both remain candidate constructions.
+
+Six layers do not automatically add two equally useful signal layers:
+its central thin dielectric lies between L3/L4, while the adjacent cores
+are0.55mm. For example, S/G/S/G/G/S would provide three closely referenced
+signal layers; S/G/S/S/G/S offers four with different inner-reference/
+coupling duties. Neither role map is selected here. The earlier saved
+generic Quilter4-layer preset's0.21/1.065/0.21mm model is not this3313
+construction. Input-defined stackup detection and actual imported layer
+purposes must be demonstrated, including documented ground/gnd naming hints.
+
+The POFV page explicitly lists0.2-0.5mm holes and0.05mm minimum/
+0.075mm preferred rings. Both protected source families meet those
+nominal size/ring conditions; four-layer POFV is documented as charged,
+while the article includes it for6-20 layers. Neither establishes a quote.
+The separate>0.45mm regular-PTH/NPTH condition, its diagram's measurement
+boundary, and cap/planarity acceptance still need disposition. No hole
+geometry was newly measured in this public-source item.
+
+Root retains both candidates and the existing source; no stackup, new via
+size, order or cloud job is selected. Next independent work is a conservative
+source-bound process-hole clearance screen. The native guard behavior
+blocker remains held and is not bypassed by this supplier progress.
+
 ## October 4, 13:19 additional unattended hour
 
 The owner resumed at13:19:11 for one hour. Stop14:19 local and start no
