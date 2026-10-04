@@ -166,7 +166,27 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current stop: private-guard geometry is invalid.** Root rejects the
+**Current checkpoint: analytic private guards selected after repair.** The
+[native-oracle repair](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-repair-2026-10-04.json)
+resolves the pad-transform blocker without another KiCad load. Root selects
+the corrected specification only; source177 retention is unchanged and
+native serialization/behavior and Quilter enforcement are not qualified.
+Two static executions completed; the failed proposal stays preserved.
+Stop at this checkpoint under the existing hour. Next is one bounded
+isolated native guard-encoding/behavior control, with no full-board staging
+or new job. Actual supplier stackups, movable domains and importer
+qualification remain necessary for comparable four/six-layer packages.
+
+**14:07 recovery released:** the owner explicitly asks to continue unblocking
+and preserve reusable staging/gating strategies toward a four/six-layer
+comparison. One checker-only repair uses already-saved native global pad
+geometry, with independent all-endpoint and signed-quarter-turn witnesses.
+Analysis14:14/report14:15/root14:19; three90-second executions maximum,
+zero native loads, no new downstream item after14:09. This does not
+release a full input or job. Both future layer packages require the same
+common requirements and independent native/import/process qualification.
+
+**Historical stop: private-guard geometry is invalid.** Root rejects the
 [guard proposal](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-definition-2026-10-04.json)
 after saved native coordinates expose opposite-pad placement for R26.2
 and C28.2. This is our checker failure, not evidence against Quilter.

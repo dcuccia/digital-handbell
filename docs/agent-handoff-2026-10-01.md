@@ -7,7 +7,32 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current stop: private-guard checker failure.** The
+**Current checkpoint: checker repaired, analytic guards selected.** The
+[repair ledger](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-repair-2026-10-04.json)
+binds all four private pad identities/global geometry to saved native
+inventory and checks their actual source endpoints. Root selects the
+corrected12-object/18-layer analytic specification for later native
+qualification. Two static executions, zero native loads; all source,
+selected177 and failed evidence are unchanged. Corrected collateral counts
+are broad-phase candidates only; the7.428447 mm GND witness is relative to
+the guard bounds, not a complete legal route.
+
+The current hour ends with this checkpoint; no downstream item starts
+after14:09. Next is a bounded isolated native guard-encoding/behavior
+control, not a full-board input or cloud submission. Supplier-stackup and
+movable-domain work remain independent preparation opportunities, but both
+comparison packages still require all applicable release gates.
+
+**14:07 owner-authorized recovery:** one bounded checker-only repair is
+released, using saved native global pad geometry and independent source
+endpoint/quarter-turn witnesses. Sol analysis stops14:14, report14:15,
+root checkpoint14:19; no new downstream item after14:09. Zero native loads,
+source/PCB generation, routes or cloud operations. Preserve all failed
+evidence and the selected177 definition. The owner values this preparation
+as reusable staging/gating practice; the playbook now makes the common
+four/six-layer specification and separate release gates explicit.
+
+**Historical stop: private-guard checker failure.** The
 [held guard ledger](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-definition-2026-10-04.json)
 records a wrong-sign footprint rotation, not a demonstrated Quilter or
 electrical failure. Saved native evidence confirms R26.2 at

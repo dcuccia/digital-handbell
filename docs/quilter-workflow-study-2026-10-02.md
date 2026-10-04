@@ -116,6 +116,76 @@ cases and actual source endpoint witnesses. Prefer reusing saved global
 coordinates to introducing another unqualified transform. Full-body,
 process/stackup, native/import and returned-route gates remain.
 
+### 14:07 owner-directed recovery and reusable staging
+
+At14:06:59 the owner explicitly accepted preparation/checking effort as
+an investment in long-term staging, gating and execution strategies,
+and requested continued unblocking toward four/six-layer comparison.
+This separately releases a checker-only repair of the stopped item:
+consume saved native global geometry instead of trusting the faulty
+transform, verify all four private pad identities/poses/shapes and their
+endpoint witnesses, then regenerate affected proposal evidence.
+
+Same verified Sol/medium; analysis14:14, report14:15, root checkpoint14:19.
+The new item has an initial-plus-two allowance and90-second subprocess
+limits, with zero native loads. Preserve the failed ledger/raw, all source
+and the selected177 definition. Keep the existing14:19 stopping time and
+start no downstream item after14:09; this is not an indefinite extension.
+
+The [playbook](quilter-playbook.md#6-spend-effort-on-discriminating-comparisons)
+now separates common design requirements from legitimate stackup-specific
+choices and distinguishes source facts, derived constraints, native/import
+behavior and returned-output acceptance. Its proposed reusable approach is
+a source-bound native geometry record with independent witnesses, reused
+for static iterations rather than repeatedly extracting or guessing poses.
+This is a practice to qualify, not a new generic CAD framework.
+
+Both comparison packages must share population, retained circuitry,
+interfaces, packaging and process/clearance requirements. Real layer roles,
+placement within qualified domains and impedance geometry may differ.
+Supplier-stackup and mechanical-domain investigations may be bounded
+independently; neither permits package release before all common gates pass.
+The guard repair alone cannot establish full-board readiness or a launch date.
+
+### Repair reviewed: corrected analytic guards selected
+
+The [repair ledger](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-repair-2026-10-04.json)
+uses immutable native inventory `edba323c...` for all four private pad
+global centers, orientations and source-bound shapes/dimensions. The
+production generator no longer calculates their positions with a local
+footprint transform. Saved connectivity `079b47d1...` supplies independent
+endpoint witnesses; all four joins pass and both previously wrong centers
+fail before guard generation. Twelve native-oracle controls are reported
+separately from six guard-membership/layer/flag controls.
+
+The rebuilt definition covers12 source objects with18 current-layer
+obligations:10 F, four B and two on each inner layer. Only the two private
+through-vias need conductive isolation on every additional inner layer.
+Source track capsules, via circles and native-oriented pad rectangles
+carry a0.25 mm halo; these are analytic shapes, not serialized KiCad zones.
+Repair-specific IDs avoid conflating corrected geometry with the rejected
+proposal. Existing source joins remain, with no blanket GND exception.
+
+Recomputed collateral broad-phase results contain14 records/25 unique
+candidate objects, not25 proven intersections. The retained main-GND
+feeder witness at `[109.15,109.75]` is outside the corrected F guard bounds
+with7.428447 mm conservative spare after its half-width. This is only
+guard-relative access; no future route, via placement or final mechanical
+clearance follows from it.
+
+Two numeric-exit0 executions complete in1.356321 and1.169074 seconds.
+The second changes the proposal-ID namespace; neither loads KiCad.
+Root verifies report `3ccaf019...`, raw `f15a7743...`, both native oracles,
+the final analyzer, retained-source evidence and all five source hashes.
+The failed ledger `b65be6ec...` remains unchanged.
+
+**Root decision:** select the corrected analytic guard definition for
+later native qualification. The checker blocker is resolved; the retained177
+selection is unchanged. Stop this hour at the successful checkpoint rather
+than start another item after14:09. Next is a bounded isolated native
+guard-encoding/behavior control. Do not infer native pad/footprint semantics,
+Quilter enforcement or full-input readiness from this static repair.
+
 ## October 4, 12:10 additional unattended hour
 
 The owner explicitly resumed for the next hour at12:10:15. Stop by13:10

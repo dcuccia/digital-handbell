@@ -2,6 +2,27 @@
 
 ## Bounded engineering work
 
+- **October 4 guard checker repaired; analytic definition selected:** all
+  four private pad poses/shapes now bind to saved native inventory, with
+  independent endpoint and wrong-pose controls. Root selects the corrected
+  12-object/18-layer analytic guard definition for later native qualification,
+  not a PCB/input or demonstrated Quilter rule. Two static executions,
+  zero native loads; selected177 and all source remain unchanged. The old
+  failed evidence remains invalid/preserved. Next is a separately bounded
+  isolated native guard-encoding/behavior control; no further item starts
+  in the current hour. Shared four/six-layer requirements and distinct
+  native/import/process gates are now explicit in the playbook/contract.
+- **October 4, 14:07 checker-only repair authorized:** owner accepts
+  preparation effort as an investment in reusable staging/gating practice
+  and explicitly asks to continue unblocking toward four/six layers.
+  One new bounded repair may consume saved native pad geometry and
+  independent endpoint/quarter-turn witnesses, then regenerate guard
+  proposal data. Same verified Sol/medium; analysis14:14/report14:15,
+  root checkpoint14:19, at most three90-second executions and zero native
+  loads. Preserve the failed proposal and selected177 definition. No
+  source/PCB generation, routing or cloud release. Keep the existing14:19
+  stop and start no further item after14:09. Record durable lessons in
+  the playbook; do not equate a repaired checker with comparison readiness.
 - **October 4 private-guard qualification held:** root caught a wrong-sign
   footprint-to-global transform in the new guard checker. Saved native
   evidence puts R26.2 at (86.4,111.192), not (86.4,112.208), and C28.2 at

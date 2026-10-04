@@ -110,6 +110,25 @@ put two guards on opposite pads while its self-consistency controls passed.
 Do not count tests sharing the same erroneous geometry as independent proof;
 prefer a previously qualified native-coordinate source over a new transform.
 
+**Proposed reusable staging practice:** capture a compact native geometry
+record once for a specific source revision: UUID/reference/pad/net identity,
+global pose, dimensions, shape and conductive layers. Bind it to the source
+and extractor versions. Reuse that record for cheap static iterations; a
+source/dependency change requires explicit requalification, not a silent
+fallback. Keep source facts separate from derived guards, encoded ECAD
+rules and observed router behavior. A pass at one stage does not certify
+the next. This is a small evidence pipeline, not a reason to build a new
+general-purpose CAD framework for each project.
+
+**Observed local recovery:** the [private-guard repair](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-repair-2026-10-04.json)
+consumes the saved native pad inventory directly and matches all four
+private endpoints without another native load. It rejects both known bad
+poses before generating guards, separately from membership/flag checks.
+This supports reusing a qualified geometry record for unchanged source;
+it does not qualify new sources, polygon serialization or router enforcement.
+Give evidence both a resolvable artifact location and a hash: a digest alone
+is not enough for the next reviewer to find the geometry record.
+
 Define each movable part's final allowed area from the intersection of
 its side, height, access and electrical restrictions. Quilter's
 [documented region behavior](https://docs.quilter.ai/guides/placement-guide)
@@ -280,6 +299,36 @@ electrical and manufacturing requirements for a four-/six-layer comparison.
 Use real supplier stackups and let approved placement adapt; this compares
 complete workflows, not layer count alone. Add eight layers only for a
 specific unresolved question, not as an automatic factorial experiment.
+
+**Proposed comparison gates, not completed handbell qualifications:**
+
+| Gate | Evidence required before advancing |
+|---|---|
+| Source and retained-circuit definition | Exact common BOM/pad identities, retained copper, fixed interfaces and explicit rerouting/restoration duties. |
+| Geometric truth and constraint definition | Independent native-coordinate witnesses; full-shape placement, contact/access and private-path coverage on applicable layers. A same-net bypass cannot be dismissed as electrically equivalent. |
+| Two manufacturable stackups | Real supplier constructions, explicit signal/reference roles, compatible ordinary and filled/capped vias, and stackup-specific impedance geometry. |
+| Native encoding and importer behavior | Round-trip identities/geometry, expected native rule behavior, imported movable population, region assignments and saved settings. Unsupported duties need a reviewed disposition. |
+| Comparable execution and output review | Individually authorized jobs from qualified packages; identical acceptance criteria, preserved raw outputs and an account of effort, failures and manufacturing implications. |
+
+These are release dependencies, not a ban on parallel bounded investigation:
+supplier-stackup and movable-domain evidence can advance independently.
+Each native input still needs all applicable prerequisites before release.
+
+Share requirements rather than forcing byte-identical layer-dependent
+geometry: use the same packaging envelope, population, retained circuitry,
+functional duties, minimum clearances and process requirements. Allow
+placement, signal-layer assignments, reference adjacency and impedance
+dimensions to adapt to each real stackup, documenting those differences.
+Otherwise a supposedly controlled comparison can accidentally handicap
+one construction or weaken its requirements.
+
+Prepare both packages against the same common specification before
+launching either. Parallel jobs are useful only after both independently
+pass their gates; launching an unqualified second case creates more
+results, not a better comparison. Treat routing completeness, critical
+transitions/returns, root defects and total preparation/review/process cost
+as outcomes, with preservation and safety requirements as acceptance gates.
+Do not promise a comparison date merely because one tooling blocker clears.
 
 Track setup effort, agent/owner interventions, validation effort, time to
 first/final result, actual service charges and manufacturing implications.
