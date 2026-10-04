@@ -12,6 +12,55 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 12:10 additional unattended hour
+
+The owner explicitly resumed for the next hour at12:10:15. Stop by13:10
+local and start no new item after13:00. First is a newly bounded recovery
+of the complete retention/interface model, not a fourth unchanged attempt
+from the stopped morning item. Include proposed186 and all five independent
+process seeds, retained pad copper and explicit tangent/contact controls.
+Then inspect only the C28.1/VAMP bank interface, distinguishing ordinary
+remote endpoints from the protected local bus. Analysis12:22, report12:23,
+root checkpoint12:25; initial plus two corrections and90-second native caps.
+Preserve source, old failures and all reports. Extra time does not release
+unqualified input generation, routing, paid use or a new cloud submission.
+
+### Complete retention basis and VAMP source-feeder disposition
+
+The [interface recovery](measurements/2026-09-27-router-bakeoff/quilter-critical-interface-recovery-2026-10-04.json)
+binds proposed186 plus five disjoint process vias:191 copper primitives,
+with97 actual pads on the27 proposed fixed references. Membership includes
+all105 closed-local primitives, four switch tracks,30 feeds and five ordinary
+feed vias. Edge/corner controls produce zero Boolean area but native contact;
+the recorded1 nm-gap contact and10 um-gap non-contact are local control
+observations, not a general tolerance specification.
+
+Only two source primitives directly touch the protected VAMP bank. The
+0.1778 mm `a68765f3...` track runs from `[102.2,114.25]` to
+`[102.2,113.3394]`. The1.0 mm `731d07eb...` track runs from the same bank
+point to `[107.95,108.5]`, length8.131728 mm. Both overlap the actual bank
+copper beyond the C28.1 land; neither relies on movable pad copper.
+Other retained or movable VAMP destinations are now classified separately
+rather than making the entire network a single-pad containment test.
+
+**Root decision:** provisionally retain both complete existing primitives
+for the first comparison, making193 including process seeds. The8.132 mm
+feeder is a bounded placement/routing constraint with an existing primitive
+boundary, not a reason to retain all55 external objects. This conservative
+selection preserves the bank overlap without new copper or arbitrary
+clipping. It does not preserve downstream connections automatically:
+ordinary VAMP duties may reconnect to the retained feeder at legal
+locations; every old downstream point is not a newly fixed routing port.
+No ampacity, physical-input, process or fabrication acceptance follows.
+
+The first control assumption failed before loading; a second run completed,
+and the third enriched the saved geometry. Three executions/two private
+loads used the full allowance. The final run reports `ok`, has empty stderr
+and exited in1.779 seconds, but the runner lost numeric exit codes. Preserve
+this evidence limit rather than synthesizing exit0 or rerunning the item.
+Next is a distinct remaining GND/V+ interface disposition, with explicit
+zero/nonzero/timeout exit-capture controls before any new native load.
+
 ## October 4 bounded autonomous continuation
 
 At 09:58 the owner resumed with roughly two hours for relatively autonomous

@@ -166,6 +166,25 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**12:10 owner resumed for one hour:** stop13:10 local, no new item after13:00.
+Begin the separately bounded complete-retention/interface-model recovery:
+proposed186 plus five process seeds and retained pads, explicit contact
+controls and the C28.1/VAMP local bank interface. Same verified Sol/medium;
+analysis12:22/report12:23/root12:25, at most three90-second native runs.
+This supersedes the execution hold only for the new reviewed scope.
+Source, physical/input qualification and cloud/payment gates remain intact.
+
+**12:22 recovered VAMP interface:** root provisionally selects the two
+complete source takeoffs identified in the
+[report](measurements/2026-09-27-router-bakeoff/quilter-critical-interface-recovery-2026-10-04.json),
+including the8.132 mm,1.0 mm-wide feeder instead of clipping it or absorbing
+the whole55-object network. Planning basis193 includes five process seeds;
+97 physical pads on27 refs remain separately bound. No source/input change.
+The item exhausted three executions/two loads; numeric exit codes were not
+retained, although final terminal output and artifacts exist. Preserve that
+limit, stop this item's executions and preflight exit capture before the
+next distinct GND/V+ interface disposition.
+
 **October 4 physical-cut stopping point:** the bounded item exhausted
 three attempts and returned partial evidence, not a retained-input approval.
 The [report](measurements/2026-09-27-router-bakeoff/quilter-critical-physical-attachments-2026-10-04.json)

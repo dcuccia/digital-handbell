@@ -274,6 +274,9 @@ retained block. Its incomplete result is not evidence against Quilter.
 The separately authorized [recovery](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-recovery-2026-10-04.json)
 passes the type-specific tests and completes one native load in1.842s.
 Preflight the complete logging runner too, not only helper functions.
+Exercise zero exit, deliberate nonzero exit and timeout capture. A final
+`ok` marker, empty stderr and an exited PID do not establish a numeric exit
+code; keep a missing code explicit rather than synthesizing success.
 Compile each changed analyzer revision before launching native work; a
 later caching edit introduced a syntax failure despite the earlier preflight.
 
@@ -311,6 +314,14 @@ direct geometry review, not to manufacture defect counts or freeze whole
 external networks. Classify each module's interface separately: a global
 feed legitimately reaches several destination terminals. Requiring its
 entire network to touch only one land is not a useful local-cut test.
+
+**Proposed bounded takeoff practice:** if a source feeder overlaps the
+protected local bus, consider retaining that complete existing primitive
+to its next real boundary instead of clipping it or freezing its whole
+downstream network. Make the extent/placement tradeoff explicit and keep
+downstream restoration duties separate from fixed geometric ports. The
+handbell's two VAMP takeoffs are a planning selection only; this input has
+not been exercised in Quilter.
 
 **Observed physical-check limit:** a connectivity witness omitted a
 1.2 mm source BOOST_SW track that contributes real copper beyond the

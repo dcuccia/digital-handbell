@@ -2,6 +2,28 @@
 
 ## Bounded engineering work
 
+- **October 4, 12:22 VAMP disposition:** the recovered basis includes191
+  copper primitives and97 pads on27 proposed fixed refs. Actual edge/corner
+  controls now distinguish Boolean area from native contact. Two existing
+  source tracks directly attach to the VAMP bank: narrow `a68765f3...` and
+  1.0 mm-wide `731d07eb...`, the latter8.132 mm long. Root provisionally
+  retains BOTH complete primitives as a bounded source feeder, making193
+  including the five process seeds; no clipping, new fixed part or55-object
+  network retention. This is a planning selection, not a qualified input.
+  Three executions/two loads are exhausted; numeric child exit codes were
+  not captured, so preserve that limitation and do not rerun this item.
+  Next is remaining local GND/V+ interface disposition with exit-status
+  preflight before any native load. Source and cloud remain unchanged.
+- **October 4, 12:10 owner resumed for one hour:** stop by 13:10 local;
+  start no new item after 13:00. This releases a newly bounded correction
+  of the stopped retention/interface model, not a fourth unchanged attempt.
+  Begin with proposed186 plus all five process seeds and retained pads,
+  explicit contact controls, and the C28.1/VAMP output-bank interface.
+  Executor analysis stops12:22, report12:23, root checkpoint12:25.
+  Keep initial-plus-two corrections and90-second native subprocess caps.
+  Preserve earlier reports/failures and source; no source edit, routing,
+  unqualified full-board input, paid use or new cloud job follows from
+  the extra time. Continue only through reviewed dependencies.
 - **October 4 physical-cut checkpoint: stop this scope.** Three attempts
   are exhausted: polygon-analysis timeout, syntax failure, then partial
   completion. BOOST_SW is a seventh source-local net; preserve the proposed

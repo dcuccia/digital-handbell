@@ -7,7 +7,28 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Stopping checkpoint: physical cut still held.** The
+**12:10 owner continuation:** one further unattended hour is authorized,
+ending13:10 local with no new item after13:00. First is a new bounded
+retention/interface-model correction using the complete proposed186 plus
+five process seeds and retained pads. Focus the C28.1/VAMP local interface,
+not another global single-land screen. Analysis12:22/report12:23/root12:25;
+at most three90-second native executions, preserving all prior failures.
+Source, cloud and full-input qualification gates remain unchanged.
+
+**12:22 VAMP source-feeder disposition:** the
+[interface report](measurements/2026-09-27-router-bakeoff/quilter-critical-interface-recovery-2026-10-04.json)
+recovers the complete191-copper/97-pad basis and actual contact controls.
+Root provisionally selects both complete source takeoffs, `a68765f3...`
+(0.1778 mm wide) and `731d07eb...` (1.0 mm wide,8.132 mm long), making193
+including all five process seeds. Retaining that finite existing feeder
+preserves its bank overlap without clipping or fixing additional parts;
+the other global VAMP connections remain rerouting duties. This is not
+input, ampacity or process approval. Three executions/two loads consumed
+the item; terminal markers and hashes exist, but numeric child exit codes
+were lost and must not be invented. Next disposition remaining GND/V+
+interfaces, preflighting reliable exit capture before new native work.
+
+**Historical morning stopping checkpoint: physical cut then held.** The
 [physical report](measurements/2026-09-27-router-bakeoff/quilter-critical-physical-attachments-2026-10-04.json)
 uses its full three-attempt allowance: timeout, syntax failure, then a
 2.926-second partial result. BOOST_SW passes the complete-local-net gate;
