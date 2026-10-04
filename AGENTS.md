@@ -2,6 +2,14 @@
 
 ## Bounded engineering work
 
+- **October 4 retention inventory blocked:** the initial attempt plus two
+  corrections failed on interpreter ABI, missing-layer via width and
+  track/via serializer signatures. The desktop assertion was our private
+  KiCad child PID14516; its Jenkins path is compiled-in build metadata.
+  All three recorded children have exited and source hashes are unchanged.
+  Partial identities are retained, not a qualified copper/port set; 27/77
+  remains unapproved. Stop retries/staging. A separately authorized recovery
+  must preflight exact interpreter and type-specific helpers first.
 - **October 4 common-input disposition:** prefer retaining the two
   boost/protection cells as well as nine fixed interface/process refs;
   prospective counts are 27 fixed/77 movable, not yet an approved set.

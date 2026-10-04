@@ -148,6 +148,55 @@ No new full board, source mutation, native execution or cloud object was
 created in this contract item. Next is the exact-source critical-block
 retention/boundary inventory, not a placer trial or an enclosure rebuild.
 
+### October 4 retained-cell inventory: tooling blocker
+
+The [inventory receipt](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-2026-10-04.json)
+(`e8c63e82...`) is incomplete after three attempts: Python/pcbnew ABI
+mismatch, a 90-second timeout on a missing via-width layer argument,
+then a track serializer incorrectly using the via-only argument.
+Two private-copy loads completed; no authoritative native load, save,
+refill, DRC or source edit occurred. Root rechecked all five source hashes.
+Partial contact/private-pickoff/process identities remain useful prior
+evidence, not newly qualified boost paths or a complete branch/fill/rule-area
+boundary inventory. The receipt lacks the requested full tool/stream hash
+inventory as well; do not promote it to a complete execution qualification.
+
+The owner's wxWidgets alert matches attempt-2 stderr and PID14516.
+Its hard timeout stopped that child; root confirmed all three recorded
+PIDs absent at10:35:32. `C:\jenkins\workspace\...` is KiCad's compiled-in
+source path, not a Jenkins workflow launched on this machine. No alert
+was suppressed. The repeated known API trap is a tooling failure, not a
+demonstrated electrical or Quilter limitation. Stop the exhausted item:
+27-fixed/77-movable remains a proposal, with no fourth native run or input
+staging. A separately authorized recovery should preflight the exact
+interpreter/module pair and type-specific serialization before native work.
+
+### Independent public supplier screen
+
+While that executor ran, root inspected public JLCPCB capability tables
+and via-covering documentation; no design upload or order action occurred.
+The [contract](design-inputs/2026-10-02-quilter-workflow.json)'s
+`supplier_public_screen` binds the three local browser snapshots.
+
+Current [via guidance](https://jlcpcb.com/capabilities/Capabilities) uses
+diameter minus hole >=0.10 mm, preferably >=0.15 mm. Both retained families
+meet that nominal geometry guidance. The separate multilayer1oz **component
+PTH** ring row specifies recommended0.20/absolute0.15 mm; it is not the via
+row. This does not erase the returned KiCad project's actual0.15 mm via-rule
+conflict or qualify the special process. The [via-covering article](https://jlcpcb.com/help/article/pcb-via-covering)
+distinguishes nonconductive epoxy plus copper cap from mask plugging and
+conductive paste, and limits filled holes to0.50 mm. The capability table's
+ambiguous0.15-0.55 mm "via diameters" and cap/planarity requirements still
+need an exact-process disposition.
+
+The [multilayer page](https://jlcpcb.com/resources/multilayer-pcb) advertises
+free filled/capped via-in-pad for6-32 layers and a starting promotion of
+$2 for five50x50 mm six-layer ENIG boards. D45-plus-tongue nominal bounds
+fit that size envelope, but no price, eligibility, shipping or assembly
+quote is established. Four-layer availability/cost for the same required
+process remains unconfirmed. This is a concrete reason to compare actual
+process-inclusive costs, not assume fewer layers are cheaper.
+
 ## Earlier continuation scopes
 
 **October 3, approximately 14:30 owner continuation:** keep advancing for

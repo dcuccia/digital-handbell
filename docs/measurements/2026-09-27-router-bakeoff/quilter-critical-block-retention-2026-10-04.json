@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "status": "INCOMPLETE_RETRY_BUDGET_EXHAUSTED_NO_PARTITION_APPROVAL",
+  "scope": "Read-only critical-block retention and boundary inventory for the 18 named boost/protection references, existing contact feeds, and five mandatory process seeds.",
+  "source": {
+    "commit": "9231a3447d6c8beb2d04faa04c3e1da4705b2f2b",
+    "pcb": "hardware/handbell/iterations/printed-bell-four-layer/handbell.kicad_pcb",
+    "pcb_sha256_before": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project_sha256_before": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic_sha256_before": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "manifest_sha256_before": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_contact_interface_sha256_before": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "source_native_loads": 0,
+    "private_copy_native_execution_attempts": 3,
+    "private_copy_native_loads_completed": 2,
+    "source_edits_or_saves": false
+  },
+  "reference_partition": {
+    "original_fixed": ["BT1", "BT2", "MH1", "MH2", "X6", "J1", "J2", "U4", "C24"],
+    "additional_candidate_references": ["U5", "L1", "C26", "C27", "C28", "C29", "R23", "R24", "TP10", "U6", "Q5", "C30", "R25", "R26", "R27", "R28", "R29", "TP11"],
+    "C29_identity": "DNP identity remains preserved",
+    "testpad_identities": ["TP10", "TP11"],
+    "prospective_fixed": 27,
+    "prospective_movable": 77,
+    "approved": false
+  },
+  "source_bound_candidate_identities": {
+    "contact_feed_ledger": {
+      "path": "docs/measurements/2026-09-27-router-bakeoff/quilter-contact-feed-candidate-2026-10-03.json",
+      "sha256": "ff166d733bdd06966e7f549e36e232784d11174ef80cbd2370f9ce9b170f675e",
+      "selection": "30 exact B.Cu segment UUIDs and five exact ordinary 0.600/0.300 mm through-via UUIDs, with source geometry bound in the ledger",
+      "ordinary_via_uuids": [
+        "0ba3129d-4c2f-51a5-b83d-47c5c587ae79",
+        "bad9068e-b03b-5869-a449-cdb7731eb117",
+        "248ce18d-3a6e-50d8-b9ce-c721b99a2c63",
+        "73f524c2-3597-5233-906e-93443fee9d54",
+        "14e9c925-5186-5943-8002-513435324c90"
+      ]
+    },
+    "private_pickoffs": {
+      "R26.2_to_R27.2": {
+        "net": "GND",
+        "layer": "F.Cu",
+        "track_uuids": ["d400cba9-bf59-5d9f-b921-dc5efd499b8c"],
+        "duty": "Independent PROT_FET_RETURN pickoff until the actual R27.2 land."
+      },
+      "R24.2_to_C28.2": {
+        "net": "GND",
+        "track_uuids": [
+          "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+          "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+          "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+          "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+          "1212a327-4ed4-50da-a0bb-71afc8145254"
+        ],
+        "through_via_uuids": [
+          "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+          "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+        ],
+        "layers": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"],
+        "duty": "Quiet ground pickoff independent until the actual C28.2 land."
+      },
+      "source_bound_geometry_and_rule_area_evidence": "hardware/handbell/iterations/printed-bell-four-layer/reports/in1-exclusion-inventory.json"
+    },
+    "CELL_NEG_partial_witnesses": {
+      "net": "/CELL_NEG",
+      "Q5_A1_front_segment_uuid": "449a683c-47c2-5b7a-b21a-e23241fcb2a9",
+      "Q5_C1_front_segment_uuid": "e5071d6e-240c-51a2-b3f8-53aaf4376f4e",
+      "layer": "F.Cu",
+      "unresolved": "Complete UUID geometry from via 14e9c925-5186-5943-8002-513435324c90 to C30.2/U6.4/R28.2 was not emitted."
+    }
+  },
+  "mandatory_process_seeds": {
+    "independent_from_contact_feed_vias": true,
+    "U4": {
+      "geometry_each_mm": {"diameter": 0.604, "drill": 0.350, "nominal_ring": 0.127},
+      "via_uuids": [
+        "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+        "c63c289d-af32-592b-9732-d17507fbf476",
+        "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5",
+        "eb628663-2af6-5175-bd63-91e9eecb0258"
+      ]
+    },
+    "C24": {
+      "geometry_mm": {"diameter": 0.600, "drill": 0.300, "nominal_ring": 0.150},
+      "via_uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+    },
+    "mandatory_process": ["nonconductive resin fill", "planarization", "copper capping"],
+    "tenting_is_not_a_substitute": true,
+    "supplier_qualified": false
+  },
+  "required_duties_not_fully_qualified": [
+    "Exact current-source U5.6-to-C27.1/C28.1 VAMP candidate copper",
+    "Exact current-source U5.4-to-C27.2/C28.2 paired return candidate copper",
+    "Exact current-source U5.5-to-L1.P$2 switch-path candidate copper",
+    "Complete protection-cell internal candidate copper beyond the two private pickoffs",
+    "Complete C30.2/U6.4/R28.2 CELL_NEG branch UUID geometry",
+    "Every selected-to-unselected external pad, midspan copper join, saved-fill contact, and component-relative rule area"
+  ],
+  "restoration_obligations": [
+    "Retain or exactly restore every external pad and interior same-net join touched by selected copper; endpoint-only equivalence is insufficient for a midspan join.",
+    "Preserve R26.2-to-R27.2 and R24.2-to-C28.2 independence until their actual terminal lands.",
+    "Preserve paired boost supply/return duties and the U5.5-to-L1.P$2 switch path together.",
+    "Preserve Q5.A1/C1 and C30.2/U6.4/R28.2 CELL_NEG duties separately from PROT_FET_RETURN.",
+    "Do not select whole VBAT/GND nets, the old GND plane, or a rectangular crop to avoid boundary enumeration.",
+    "The source has 37 opens; no external obligation is presumed connected merely from a matching net name."
+  ],
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "pid": 49116,
+      "elapsed_seconds": 3.517414,
+      "exit_code": 1,
+      "run_status": "exited",
+      "stop_reason": "Python 3.13 executable conflicted with pcbnew's Python 3.11 ABI.",
+      "expansions": 0
+    },
+    {
+      "attempt": 2,
+      "pid": 14516,
+      "elapsed_seconds": 90.137688,
+      "exit_code": null,
+      "timed_out": true,
+      "run_status": "hard-timeout handler stopped exact PID 14516; no broader process termination",
+      "stop_reason": "90-second hard limit at PCB_VIA.GetWidth native assertion.",
+      "expansions": 0
+    },
+    {
+      "attempt": 3,
+      "pid": 45884,
+      "elapsed_seconds": 1.645404,
+      "exit_code": 1,
+      "run_status": "exited",
+      "stop_reason": "Boundary serializer supplied the via-only layer argument to PCB_TRACK.GetWidth.",
+      "expansions": 0
+    }
+  ],
+  "modal_attribution": {
+    "attributed_to_this_item": true,
+    "owning_invocation_pid": 14516,
+    "evidence": "Attempt-2 stderr contains the exact pcb_track.cpp(387) PCB_VIA::GetWidth-without-layer assertion shown by the desktop wxWidgets Debug Alert.",
+    "status": "The owning validation child reached its 90-second hard limit and the persisted runner stopped exact PID 14516. Later PID 45884 exited independently. No process interaction was performed after the owner report.",
+    "jenkins_use": false,
+    "jenkins_path_disposition": "C:/jenkins/workspace/build-win-10.0-stable/.build/kicad/... is compiled-in KiCad build-source metadata from the assertion; this item launched no Jenkins workflow or service.",
+    "assert_handling": "The alert was not clicked or suppressed and assertions were not disabled.",
+    "correction_limit": "A valid implementation would pass an explicit native layer at every PCB_VIA.GetWidth call, including helper internals. The correction budget is exhausted, so no further native attempt was made."
+  },
+  "execution": {
+    "private_evidence_root": "C:/Projects/dcuccia/digital-handbell-routing-bakeoff-20260927/quilter/outputs/critical-block-retention-20261004T1024",
+    "native_child_limit_seconds": 90,
+    "native_execution_count": 3,
+    "retry_budget_exhausted": true,
+    "prelaunch_and_stream_logs_persisted": true,
+    "DRC_or_refill_run": false
+  },
+  "limits": [
+    "Candidate identities above are useful retained evidence, not a complete boundary-qualified selection.",
+    "No high-frequency, current, fault, return-path, foreign-isolation, functional, manufacturing, supplier, or safety proof follows from topology.",
+    "No PCB save, refill, settings, copper, pose, outline, routing, cloud, source, or main-checkout action occurred."
+  ],
+  "engineering_disposition": "STOP_INCOMPLETE. Do not approve the prospective 27-fixed/77-movable partition or generate a full input. Exact current-source boost/protection candidate geometry, all boundary joins, saved-fill contacts, and rule-area contacts need a separately released recovery."
+}

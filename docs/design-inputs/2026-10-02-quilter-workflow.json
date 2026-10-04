@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "FULL_INPUT_CONTRACT_DISPOSITION_RECORDED_RETENTION_CUT_PENDING",
+  "status": "RETENTION_INVENTORY_BLOCKED_TOOLING_RETRIES_EXHAUSTED",
   "checkpoint_history_note": "Named checkpoints record their own time and scope. october_4_continuation controls current execution; contact_routing_control_checkpoint records the last assessed diagnostic result.",
   "october_4_continuation": {
     "owner_resumed_at_local": "2026-10-04T09:58:53-07:00",
@@ -32,7 +32,44 @@
     "minimum_saved_plane_foreign_via_clearance_mm": 0.206229,
     "diagnostic_behavior_qualified": true,
     "diagnostic_disposition": "Retained feeds/guards and both new B routes qualified only for this diagnostic. One island per plane attaches to all five GND seeds but no component GND pad; isolated-copper warnings remain valid. No product, process, powered or DRC-clean acceptance.",
-    "next_dependencies": ["Exact critical-block retention and boundary inventory", "Placement-domain and process/stackup qualification", "Native/import input qualification"]
+    "next_dependencies": ["Separately authorized tooling recovery for exact retention inventory", "Placement-domain and process/stackup qualification", "Native/import input qualification"]
+  },
+  "retention_inventory_checkpoint": {
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-critical-block-retention-2026-10-04.json",
+    "report_sha256": "e8c63e82b6f043f8407dee21a879836409939ef6056c015d21a43cc6b6259105",
+    "status": "INCOMPLETE_RETRY_BUDGET_EXHAUSTED",
+    "executor": "49fc7eb8-650b-4542-b3b1-6e64a34f08f6",
+    "root_verified_runtime": "gpt-5.6-sol / medium; started/configured/completed metadata and firstDispatchedModel verified before execution",
+    "native_attempts": 3,
+    "completed_private_copy_loads": 2,
+    "failures": ["Python 3.13 versus pcbnew Python 3.11 ABI", "Missing layer in PCB_VIA.GetWidth; 90-second timeout", "Via-only layer argument incorrectly supplied to PCB_TRACK.GetWidth"],
+    "desktop_alert_attributed_to_attempt_2_pid": 14516,
+    "jenkins_used": false,
+    "jenkins_path": "Compiled-in KiCad build-source path, not a local Jenkins service.",
+    "root_process_check_at_local": "2026-10-04T10:35:32-07:00",
+    "all_three_recorded_child_PIDs_absent": true,
+    "root_reverified_all_five_authoritative_hashes": true,
+    "partition_or_retention_set_approved": false,
+    "raw_report_limit": "Preserved failure/partial-identity receipt, not a new topology proof. Exact boost paths, full boundary/fill/rule-area contacts are missing. The tracked receipt also omits the requested executable/helper/runner/raw-stream hash inventory; private logs are retained.",
+    "next_scope_requires_separate_authorization": "Repair and preflight the exact private analyzer's interpreter/pcbnew binding and type-specific via versus track serialization before any bounded native retry. Preserve all failed artifacts; no source changes, staging or cloud."
+  },
+  "supplier_public_screen": {
+    "date": "2026-10-04",
+    "status": "DOCUMENTED_CAPABILITY_SCREEN_NOT_ORDER_OR_PROCESS_ACCEPTANCE",
+    "scope": "Independent read-only public JLCPCB pages while retention executor ran; no design upload, account action, quote configuration, coupon claim or order.",
+    "sources": [
+      {"url": "https://jlcpcb.com/capabilities/Capabilities", "private_snapshot": ".playwright-mcp\\page-2026-10-04T17-27-54-208Z.yml", "sha256": "710b5709280c1b09baa3d4d58842663df1bec860614eae3dea05dc5fcd10b14b"},
+      {"url": "https://jlcpcb.com/help/article/pcb-via-covering", "private_snapshot": ".playwright-mcp\\page-2026-10-04T17-29-28-845Z.yml", "sha256": "7cddd4a20c6cd0276afe5e0255b95cf7db561ef6f9125a2a864d91a5b3029162"},
+      {"url": "https://jlcpcb.com/resources/multilayer-pcb", "private_snapshot": ".playwright-mcp\\page-2026-10-04T17-28-39-563Z.yml", "sha256": "88aadaa2a917ce4562d8dff73f9f016859e18508d1d3706d45795dca12e6974c"}
+    ],
+    "via_geometry": "Current Drilling table distinguishes via hole/diameter from component PTH pads: via diameter at least hole+0.10 mm, hole+0.15 mm preferred; preferred hole minimum0.20 mm. Both retained via families exceed these nominal dimensional differences. This is not approval of the complete filled/capped process.",
+    "PTH_ring": "Current Traces table separately gives multilayer1oz component PTH ring recommended0.20 mm, absolute minimum0.15 mm. Do not apply this PTH row as an asserted via minimum or use an older Q&A/search summary as current specification.",
+    "fill_process": "Via-covering article explicitly describes nonconductive epoxy followed by copper plating, distinct from soldermask plugging and conductive copper-paste filling. Retain the required resin/planarization/capping duty; no substitution selected.",
+    "process_ambiguity": "Capabilities table says via diameters0.15-0.55 mm without clearly disambiguating hole versus land; detailed article says filled via HOLES <=0.50 mm. The actual0.30/0.35 mm holes meet the latter, but the inconsistency and cap/planarity acceptance must be resolved for a selected process.",
+    "six_layer_cost_evidence": "Official pages advertise free resin-filled/capped via-in-pad for6+ layers (multilayer page6-32). Marketing starts at$2 for5 six-layer50x50mm ENIG2uin boards. The45x49.35mm study bounds fit that nominal size envelope, not proof of eligibility, delivered price, assembly price or a quote.",
+    "four_layer_process_and_price": "Not established for this exact required process by these pages. Do not infer unavailable, free or cheaper.",
+    "selected_stackup_or_rules_changed": false,
+    "next_limit": "Actual named4/6-layer constructions, full process/cap quality, exact order scope and cost remain required. Public via guidance does not waive the returned diagnostic project's0.15mm rule or authorize source edits."
   },
   "full_input_contract_disposition": {
     "date": "2026-10-04",

@@ -254,6 +254,23 @@ rings. Never resize preserved copper or suppress checks merely to make
 different rule contexts appear equivalent. See the
 [native recovery evidence](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json).
 
+**Repeated tooling failure, October 4:** a reused helper is not qualified
+merely because it worked against an older board/API. Preflight the exact
+Python/pcbnew ABI and separate track/via serialization: KiCad10 vias require
+an explicit layer for `GetWidth`, while the exercised track binding does
+not accept that argument. Test both object types before a whole-board
+analysis; do not blanket-replace calls or suppress a desktop assertion.
+The [retention inventory](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-2026-10-04.json)
+exhausted three attempts on these binding errors without qualifying a
+retained block. Its incomplete result is not evidence against Quilter.
+
+**Documented cost distinction:** current JLCPCB pages separate via sizing
+from component-PTH annular rules and advertise filled/capped via-in-pad at
+no additional charge for6+ layers. Their headline board promotion is not
+a quote for our assembly. Compare the same required process on both layer
+counts, rather than dropping filled/capped seeds to make four layers look
+cheaper. See the [public-source screen](quilter-workflow-study-2026-10-02.md#independent-public-supplier-screen).
+
 ## Keep the guidelines alive
 
 At each meaningful checkpoint, update the existing run ledger with the

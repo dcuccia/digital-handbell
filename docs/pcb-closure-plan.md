@@ -166,6 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 4 retention inventory stopped:** three attempts failed on Python/
+pcbnew ABI and type-specific width serialization. The desktop assertion was
+our private child PID14516, terminated by its 90-second timeout; no Jenkins
+service was used. All three child PIDs are absent and source hashes unchanged.
+Preserve the [incomplete receipt](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-2026-10-04.json).
+No complete copper/port set or 27-fixed/77-movable partition is approved.
+The next recovery needs separate bounded authorization and static/toolchain
+preflight before native execution, not a fourth attempt under the old item.
+The successful contact diagnostic remains qualified for its limited scope.
+
 **October 4, 09:58 continuation:** owner permits approximately two hours
 of sequential bounded work, ending by 11:58 with no new item after 11:48.
 The first item **recovered native DRC** on unchanged isolated contact-output

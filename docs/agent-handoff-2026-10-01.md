@@ -7,6 +7,16 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Current blocker, October 4:** the critical-block inventory exhausted its
+three attempts on tool binding/serialization errors. The owner's desktop
+alert was our timed-out private KiCad process, not Jenkins running locally.
+All three child PIDs are now absent; source hashes remain unchanged.
+The [failure receipt](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-2026-10-04.json)
+retains partial identities but no complete boost/protection cut or boundary
+proof. Do not approve 27-fixed/77-movable or stage input. Next requires
+separate bounded tooling-recovery authorization with interpreter and
+track/via API preflight; no automatic fourth native attempt.
+
 **October 4, 09:58: owner resumed bounded autonomous work until 11:58.**
 Logged native DRC recovery is now complete on unchanged output copies:
 zero unconnected items, 45 findings each, with no refill. See the
@@ -21,10 +31,10 @@ passes 20/20 foreign-via isolation cases (minimum 0.206229 mm against
 The isolated-copper warnings reflect the fixture's zero GND component pads;
 they remain valid, not suppressed. Root qualifies only the demonstrated
 retained-feed/guard routing behavior, not a clean or accepted product PCB.
-The common-input disposition now prefers retaining the two boost/protection
+The common-input disposition proposed retaining the two boost/protection
 cells: prospective 27 fixed/77 movable refs, pending exact copper/port
-qualification. Next inventory those source-bound critical blocks and
-external joins; see `full_input_contract_disposition` in the
+qualification, now blocked by the tooling result above. See
+`full_input_contract_disposition` in the
 [workflow contract](design-inputs/2026-10-02-quilter-workflow.json).
 New-via and retained-process annular-rule compatibility is a separate gate.
 No staging or submission follows automatically.
