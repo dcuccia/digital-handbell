@@ -742,6 +742,51 @@ separate draft's import preview. Full hashes and raw report bindings are
 in the evidence file. Do not upload generated PRLs, scripts, reports or
 account/browser data. This local checkpoint does not release compilation.
 
+### Contact-feed import preview completed
+
+The owner-approved [separate diagnostic draft](https://app.quilter.ai/jobs/6ac19743fc0d2d776ed1490e/create/files)
+now contains the exact qualified board/project pair, both marked **Parsed**.
+Reloading the page preserves that result. The original handbell project
+and authoritative source are unchanged. We stopped at Upload Files:
+**Continue, compilation and submission were not selected.**
+
+The preview reports **60 x 30 mm, two components, four pins, zero components
+to place and zero pins to route**. Its lookup exposes VBAT, CELL_NEG and GND,
+the four expected copper layers and preplaced-component/via collections.
+Filtering the lookup for `Keepout` exposes eight generic entries,
+`keepout_idx_1_lib_pin` through `keepout_idx_8_lib_pin`; the initial unfiltered
+suggestions were truncated and were not an exhaustive inventory. One
+highlighted rectangle was inspected visually. This is recognition of eight
+keepout entries, **not a complete independent comparison of their geometry,
+individual restriction flags, names or every segment/via identity**.
+
+The expected missing-schematic warning appeared during file selection;
+after parsing the page shows only the informational preplaced-component
+message. It did not reject the deliberate feed/keepout overlap at this
+stage. That does not establish what the router will do. A pre-upload
+thumbnail-raster 404 did not prevent parsing or detailed preview; it is
+not evidence about constraints or pricing. No payment, upgrade or new
+agreement prompt appeared, but no zero-price submission was reached.
+
+The browser upload tool could not read the external experiment directory.
+Only the two approved artifacts were copied byte-for-byte into its allowed,
+ignored workspace staging directory and rehashed before selection. No PRL,
+report, script or account data was uploaded. Raw browser evidence remains
+local/ignored; the [curated ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json)
+records the actual scope and limits.
+
+**Recommended next item, not executed:** define one small behavioral fixture
+with nonzero unrouted terminals and a known legal path. Include all test
+terminals before its initial upload: adding components/pins can exceed
+this two-component project's 10% similarity baseline, so do not assume
+reuse or change its baseline silently. Following separate approval and
+free-price confirmation, one controlled routing job should demonstrate
+both exact preservation of retained feeds and avoidance of all applicable
+guards by newly generated copper. Inspect native output, not merely the
+completion percentage. Only then release broader flexible four-/six-layer
+preparation through the remaining electrical/mechanical/manufacturing gates.
+Submitting this zero-work fixture would not answer the routing question.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

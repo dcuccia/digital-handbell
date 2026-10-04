@@ -2,6 +2,15 @@
 
 ## Bounded engineering work
 
+- **October 3 contact-feed preview completed:** the separate diagnostic
+  draft parsed both qualified files: two components, four pins, zero to
+  place/route. Filtered lookup shows eight keepouts, three nets and four
+  layers. Preview persists after reload; no Continue/submission or payment.
+  This is import recognition, not full flag/geometry fidelity or router
+  preservation. Do not submit the zero-work fixture. Next propose a
+  separately approved behavioral fixture with unrouted terminals and a
+  legal path; include them before first upload to respect project-baseline
+  similarity. Source and old job remain unchanged. See the workflow study.
 - **October 3 contact-feed import fixture qualified:** 11 static tests and
   native load/save/reload preserve 42 source subtrees, 30 segments, ten vias,
   two contacts/four pads and eight guards. Two validator-only corrections

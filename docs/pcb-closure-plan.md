@@ -166,6 +166,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest: separate diagnostic import preview completed.** Two files are
+Parsed after reload; eight keepout lookup entries, two components/four pins,
+zero to route. Stop here as requested: no submission or source changes.
+The [next proposal](quilter-workflow-study-2026-10-02.md#contact-feed-import-preview-completed)
+is a separately approved nonzero-work behavioral test with native-output
+preservation/guard checks, not a full-board or zero-work routing run.
+
+### Earlier checkpoints (historical; latest status above governs)
+
 **Local contact-feed fixture qualification complete.** The owner-approved
 next item is the separate diagnostic import preview using only the exact
 board/project pair in the [import ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json).

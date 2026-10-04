@@ -2,6 +2,17 @@
 
 ## Start here
 
+**Latest: isolated import preview completed; stop before routing.**
+The [diagnostic draft](https://app.quilter.ai/jobs/6ac19743fc0d2d776ed1490e/create/files)
+persistently shows both files Parsed, two components/four pins and zero
+pins to route. Filtered lookup exposes eight keepouts, three nets and
+four layers. No Continue, submission, payment or source change.
+Read the [outcome and next proposal](quilter-workflow-study-2026-10-02.md#contact-feed-import-preview-completed):
+one separately approved behavioral fixture with real unrouted test
+terminals, not a run of this zero-work fixture or a full-board trial.
+
+### Earlier checkpoints (historical; latest status above governs)
+
 **Local import fixture is qualified; cloud preview is next.** Eleven
 software tests and the native round trip preserve all intended source
 geometry. The deliberately contradictory keepout findings remain visible;
