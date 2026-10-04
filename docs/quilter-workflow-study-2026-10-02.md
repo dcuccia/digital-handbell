@@ -893,7 +893,7 @@ constraint tables currently supports Altium only; do not interpret that
 warning as evidence that the observed KiCad keepout objects are absent.
 Raw response bodies remain local/ignored; their hashes are in the ledger.
 
-**Held before Start Job.** Final review shows no price or account-specific
+**Initial hold before Start Job (checkpoint `7d455cc`).** Final review shows no price or account-specific
 free entitlement, despite the published free-personal policy. No payment,
 upgrade, new agreement or routing submission occurred. Setup stops at this
 price/authorization question, not another engineering repair. The next
@@ -901,6 +901,25 @@ decision is whether the owner authorizes this one diagnostic relying on
 the published personal-use policy without a displayed zero-price quote.
 Do not silently infer free entitlement or create another draft. The UI
 estimates 1-10 hours after submission; no automatic monitoring is established.
+
+**Owner disposition and submission, 17:49.** After that checkpoint, the
+owner explicitly selected **Start this one diagnostic under the
+free-personal-use policy**, authorizing reliance on the published policy
+without an account-specific $0 quote. This resolves the permission question,
+not proof of an account billing entitlement. Paid actions remain prohibited.
+Reinspected final review and clicked Start Job **once**, at approximately
+17:49:35 local. No payment, upgrade or new-terms prompt appeared.
+
+The resulting [job](https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911)
+is **Contact guard routing control - fixed feeds**. The UI confirms
+**Launched Oct 3, 2026, 5:49 PM**, says it is working on layout candidates,
+and initially shows 0/1 steps completed with no results. This is a real
+routing submission, not merely an import preview. No polling loop or
+automatic monitoring was started; Quilter says it will email when ready.
+Next preserve the native output unchanged and check identity, placement,
+all retained copper/vias/layers/guards and all new copper before judging
+the two control connections. No second submission, product integration,
+full-board trial or source change follows automatically.
 
 ## October 3 authenticated browser checkpoint
 

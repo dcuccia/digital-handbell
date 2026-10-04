@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "CONTACT_ROUTING_CONTROL_REVIEW_READY_PRICE_HELD",
+  "status": "CONTACT_ROUTING_CONTROL_SUBMITTED_AWAITING_NATIVE_OUTPUT",
   "checkpoint_history_note": "Named checkpoints record their own time and scope; contact_routing_control_checkpoint is current.",
   "contact_routing_control_checkpoint": {
     "date": "2026-10-03",
     "owner_approval_time_local": "17:13",
-    "status": "REVIEW_READY_PRICE_HELD",
+    "status": "SUBMITTED_AWAITING_NATIVE_OUTPUT",
     "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-routing-control-2026-10-03.json",
     "control_nets": ["CTRL_CLEAR", "CTRL_GUARD"],
     "expected_control_unrouted_pairs": 2,
@@ -18,6 +18,7 @@
     "full_board_staging_authorized": false,
     "project_url": "https://app.quilter.ai/projects/6ac19efbfc0d2d776ed14910",
     "draft_url": "https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911/create/confirmation",
+    "job_url": "https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911",
     "both_files_uploaded_and_parsed": true,
     "parsed_components": 6,
     "parsed_pins": 8,
@@ -28,8 +29,13 @@
     "diagnostic_minima_mm": {"trace_width": 0.1778, "clearance": 0.20, "via_diameter": 0.600, "via_drill": 0.300, "board_margin": 0.508},
     "product_rules_changed": false,
     "account_specific_zero_price_confirmed": false,
-    "next_item": "Owner disposition of starting this one diagnostic under the published free-personal policy when final review displays no price; do not submit automatically.",
-    "submitted": false
+    "owner_authorized_policy_based_start_without_account_quote": true,
+    "started_at_local": "2026-10-03T17:49:35-07:00",
+    "start_action_count": 1,
+    "launch_and_working_UI_confirmed": true,
+    "automatic_monitoring_established": false,
+    "next_item": "Preserve native output when available and inspect identity, placement, retained copper, layers, guards and all new copper before routing benefit. No rerun or integration.",
+    "submitted": true
   },
   "contact_feed_import_checkpoint": {
     "date": "2026-10-03",

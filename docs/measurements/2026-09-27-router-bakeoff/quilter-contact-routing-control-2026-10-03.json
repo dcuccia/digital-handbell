@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-03",
-  "status": "REVIEW_READY_PRICE_HELD",
+  "status": "SUBMITTED_AWAITING_NATIVE_OUTPUT",
   "license_context": "Source-derived CC BY-SA 3.0 hardware evidence; see ATTRIBUTION.md.",
   "owner_approval_time_local": "17:13",
   "owner_scope": "Prepare one meaningful contact routing diagnostic, submit only if qualified and confirmed free, then inspect native output. No authoritative PCB edits, full-board staging, paid action, new agreement or fabrication.",
@@ -137,6 +137,7 @@
     "project_name": "Handbell contact routing control",
     "project_url": "https://app.quilter.ai/projects/6ac19efbfc0d2d776ed14910",
     "draft_url": "https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911/create/confirmation",
+    "job_url": "https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911",
     "job_name_entered": "Contact guard routing control - fixed feeds",
     "setup_start_local": "17:34",
     "setup_stop_by_local": "17:47",
@@ -144,7 +145,7 @@
     "uploaded": true,
     "both_files_parsed": true,
     "uploaded_pair": "Exactly the two upload_whitelist files; ignored workspace copies were byte-verified. No PRL, report, script, schematic or account data.",
-    "stage": "Review and Submit",
+    "stage": "Submitted; UI working on layout candidates",
     "dimensions_mm": [60, 30],
     "components": 6,
     "components_to_place": 0,
@@ -196,9 +197,27 @@
       "parsed_board_sha256": "a36ad857686d70fdd0ca24b06220aead50369a879c010d59a1ef3d42d2ad2a20",
       "storage": "Raw already-fetched browser responses remain local under ignored .playwright-mcp; no authentication response was queried in this setup."
     },
-    "submitted": false,
+    "submitted": true,
     "account_specific_zero_price_confirmed": false,
-    "stop_reason": "Final review exposes Start Job but no price or account-specific free entitlement. No matching pricing/billing/entitlement request appeared in the observed request list. Absence is not zero-price proof; owner disposition is needed.",
+    "pre_submission_hold": "Final review exposed Start Job but no price or account-specific free entitlement. No matching pricing/billing/entitlement request appeared in the observed request list. Absence was not treated as zero-price proof; hold checkpoint 7d455cc was pushed before asking the owner.",
+    "submission_authorization": {
+      "owner_explicitly_approved": true,
+      "exact_question_choice": "Start this one diagnostic under the free-personal-use policy (Recommended)",
+      "scope": "One start relying on the published free-personal-use policy without an account-specific $0 quote; stop at payment, upgrade or new-terms prompts. No paid action authorized.",
+      "account_specific_zero_quote_requirement_disposition": "Owner explicitly authorized proceeding without that quote; no quote or confirmed billing entitlement is claimed."
+    },
+    "submission_observation": {
+      "start_action_count": 1,
+      "started_at_local": "2026-10-03T17:49:35-07:00",
+      "timestamp_source": "Browser action time; UI independently says Launched Oct 3, 2026, 5:49 PM.",
+      "job_name": "Contact guard routing control - fixed feeds",
+      "UI_message": "We're working on layout candidates for your design",
+      "steps_completed_at_initial_observation": "0/1",
+      "result_available_at_initial_observation": false,
+      "payment_upgrade_or_new_terms_prompt_encountered": false,
+      "automatic_monitoring_established": false,
+      "next_action": "Preserve returned native files and assess retained identity, placement, copper, layers and guards plus new copper before routing benefit; no automatic repair, rerun or full-board trial."
+    },
     "payment_upgrade_or_new_agreement_accepted": false,
     "UI_estimated_compute_hours": [1, 10],
     "prior_jobs_untouched": true

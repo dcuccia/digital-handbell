@@ -2,16 +2,19 @@
 
 ## Start here
 
-**Latest: diagnostic configured; held at final review for price disposition.**
-The [new draft](https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911/create/confirmation)
-has six components/eight pins, zero movers and four pins to route. Both
-qualified files are Parsed; all eight B guard declarations are present.
-The selected four-layer settings and diagnostic-only via minima are in the
+**Latest: contact-routing diagnostic launched at 17:49 on October 3.**
+The [running job](https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911)
+is named **Contact guard routing control - fixed feeds**. Owner explicitly
+approved this one start relying on the published free-personal-use policy
+without an account-specific $0 quote. Start Job was clicked once; the UI
+confirms launch and work in progress, with no payment/upgrade/new terms.
+Six fixed components/eight pins include four pins to route. The selected
+four-layer settings, eight B guard declarations and exact inputs are in the
 [control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json).
-Start Job is available, but the page shows no price or account-specific free
-entitlement. **Not submitted.** Resolve the price/authorization question
-without another preparation pass or draft. Source, prior jobs and all
-experiments remain unchanged; no full-board or paid-use release.
+No result is available yet. Preserve returned native files, then inspect
+identity/placement/retained copper/layers/guards and all new copper before
+routing benefit. No rerun, integration, full-board trial or automatic
+monitoring. Source and earlier jobs remain unchanged.
 
 **Latest: corrected diagnostic input qualified; cloud setup is next.**
 The owner-approved checker/report correction passes without changing either
