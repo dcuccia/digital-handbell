@@ -15,6 +15,20 @@ not another global single-land screen. Analysis12:22/report12:23/root12:25;
 at most three90-second native executions, preserving all prior failures.
 Source, cloud and full-input qualification gates remain unchanged.
 
+**12:34 power-interface decision:** the
+[GND/V+ report](measurements/2026-09-27-router-bakeoff/quilter-critical-ground-input-interfaces-2026-10-04.json)
+proposes18 complete existing local tracks beyond193. Root provisionally
+selects these and the whole8.061 mm,1.0 mm F GND feeder `3598d04b...`,
+giving212 copper primitives including five process seeds;97 retained pads
+remain separate. This keeps local bus overlap and a finite return feeder,
+not the old global GND network. Q1 remains movable and `fce9acd5...` is
+not selected; ordinary V+/GND/VAMP restoration remains required without
+fixing every old attachment coordinate. No PCB/input has been generated.
+Three native loads exited0 after a corrected zero/nonzero/timeout runner
+preflight; no fourth execution. All bound artifacts and five source hashes
+match. Next is nominal contact-metal clearance for the complete retained
+B copper/via annuli, before private-tap, placement/process and import gates.
+
 **12:22 VAMP source-feeder disposition:** the
 [interface report](measurements/2026-09-27-router-bakeoff/quilter-critical-interface-recovery-2026-10-04.json)
 recovers the complete191-copper/97-pad basis and actual contact controls.

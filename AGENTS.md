@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 4, 12:34 power-interface disposition:** the complete193 basis
+  and97 retained pads support18 additional whole-source V+/GND primitives.
+  Root provisionally selects those plus the existing8.061 mm,1.0 mm F GND
+  feeder `3598d04b...`, making212 including five process seeds. This preserves
+  local bus geometry without clipping or retaining the global GND network.
+  Q1 remains movable; its old `fce9acd5...` feeder is not selected. Restore
+  ordinary V+/GND/VAMP duties without freezing every historical attachment.
+  The new runner passes zero/nonzero/timeout controls; three native loads
+  exited0 and exhaust this item's allowance. Source is unchanged.
+  This is a planning partition, not a qualified input. Next screen the
+  complete212 B copper/via annuli against nominal contact metal; private-tap
+  guards, placement/process and native/import qualification still follow.
 - **October 4, 12:22 VAMP disposition:** the recovered basis includes191
   copper primitives and97 pads on27 proposed fixed refs. Actual edge/corner
   controls now distinguish Boolean area from native contact. Two existing

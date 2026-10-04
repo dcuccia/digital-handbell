@@ -61,6 +61,53 @@ this evidence limit rather than synthesizing exit0 or rerunning the item.
 Next is a distinct remaining GND/V+ interface disposition, with explicit
 zero/nonzero/timeout exit-capture controls before any new native load.
 
+### GND and input-bank retention disposition
+
+The [GND/V+ evidence](measurements/2026-09-27-router-bakeoff/quilter-critical-ground-input-interfaces-2026-10-04.json)
+starts from the complete193 basis and97 retained pads. It identifies ten
+V+ additions: seven small local escape/bus tracks and three1.2 mm C26.1
+support tracks. Eight GND additions preserve the C27.2 pair, four C28.2
+junction tracks and the two legitimate R27.2 return tracks. All are complete
+existing source primitives with positive-area bank contact, without
+dependence on movable pad copper. Repeated contacts across module views
+are deduplicated; eighteen objects, not nineteen interface-row witnesses.
+Retaining small overlaps preserves source geometry, not proven current
+sharing, ampacity or thermal behavior.
+
+**Root decision,12:34:** provisionally select the proposed18 plus the full
+1.0 mm F GND feeder `3598d04b-1396-5df4-953b-9f195d966b71`, from
+`[103.45,115.45]` to `[109.15,109.75]`, length8.061017 mm. This gives a
+verified unique planning union212 including five process seeds. As with
+the VAMP feeder, retaining a finite existing return preserves local bus
+overlap without clipping. Its17 reported downstream source contacts are
+not17 required fixed ports or a reason to absorb the global GND network.
+The original private R24/C28 and R26/R27 paths remain unchanged, with R27.2
+the legitimate protector return interface, not R26.2.
+
+The unselected1.2 mm `fce9acd5...` V+ track reaches movable Q1.3. Q1 remains
+movable and its supply connection is a restoration duty to the retained
+C26 feeder/net, not a fixed old-coordinate endpoint. Other ordinary
+V+/GND/VAMP destinations likewise retain connectivity duties, not their
+historical intermediate copper. This resolves the named planning choices;
+it is not full-input or electrical/process acceptance.
+
+A Python supervisor qualified exact child codes0 and7 plus an explicit
+timeout/supervisor124 and confirmed child exit. Its first harness wrongly
+expected a negative killed-child code on Windows; the observed code was1,
+and that failed control is preserved. After correction, three native loads
+completed in1.465/1.264/1.456 seconds with numeric exit0. Two revisions
+enriched named-primitive reporting and corrected the movable-role predicate.
+The three-execution allowance is exhausted. Root verifies the report
+`6cc2331b...`, raw `31bac91c...`, all bound artifact hashes and unchanged
+five authoritative source hashes.
+
+Next screen complete retained B copper and all via rear annuli against
+the existing nominal contact domains. Same-net intentional contact feeds
+must be distinguished from foreign copper and opposite-contact metal.
+Private-tap guards on all applicable layers, placement/access, supplier
+processes and native/import qualification remain separate dependencies.
+No source edit, board/input generation, routing, refill/DRC or cloud job.
+
 ## October 4 bounded autonomous continuation
 
 At 09:58 the owner resumed with roughly two hours for relatively autonomous

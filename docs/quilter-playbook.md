@@ -277,6 +277,10 @@ Preflight the complete logging runner too, not only helper functions.
 Exercise zero exit, deliberate nonzero exit and timeout capture. A final
 `ok` marker, empty stderr and an exited PID do not establish a numeric exit
 code; keep a missing code explicit rather than synthesizing success.
+Keep timeout status separate from the killed child's platform-dependent
+code. Our qualified Windows control records child1 and supervisor124,
+not a POSIX-style negative signal code; see the
+[runner evidence](measurements/2026-09-27-router-bakeoff/quilter-critical-ground-input-interfaces-2026-10-04.json).
 Compile each changed analyzer revision before launching native work; a
 later caching edit introduced a syntax failure despite the earlier preflight.
 
@@ -320,8 +324,10 @@ protected local bus, consider retaining that complete existing primitive
 to its next real boundary instead of clipping it or freezing its whole
 downstream network. Make the extent/placement tradeoff explicit and keep
 downstream restoration duties separate from fixed geometric ports. The
-handbell's two VAMP takeoffs are a planning selection only; this input has
-not been exercised in Quilter.
+handbell's two VAMP takeoffs and one GND feeder are a planning selection
+only; this input has not been exercised in Quilter. Numerous downstream
+contacts along one retained feeder do not make each old coordinate a
+mandatory port or require preserving the entire global network.
 
 **Observed physical-check limit:** a connectivity witness omitted a
 1.2 mm source BOOST_SW track that contributes real copper beyond the
