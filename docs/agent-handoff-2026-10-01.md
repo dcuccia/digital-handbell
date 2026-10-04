@@ -7,6 +7,20 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Core-only review:** the [corrected boundary report](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json)
+preserves all five boost F paths, both private GND paths and all five
+CELL_NEG duties using 62 copper objects and retained pads. The initial
+R28 failure was a checker omission of intermediate U6.4 copper, resolved
+from saved native evidence without another load or added copper.
+The 71 boundary edges and 52 lost internal pad-pair relationships require
+duty-level disposition, not 52 repairs or automatic retention of 113 extras.
+Current private-origin/branch/terminal fill checks have no intersections;
+source pour-only rules do not prevent new track/via taps. Exact projected
+guard coverage and future-plane protection remain unqualified.
+Next review named local input-power, feedback and protector paths from
+existing witnesses; do not automatically retain global GND paths, freeze
+Q3/GAIN0, generate input or submit a job. Source remains unchanged.
+
 **Recovery result:** the corrected analyzer completes one private-copy load
 in1.842s, with five explicit boost F-path witnesses and both private GND
 pickoffs passing the stated graph checks. Eight static tests pass; the
@@ -51,7 +65,8 @@ they remain valid, not suppressed. Root qualifies only the demonstrated
 retained-feed/guard routing behavior, not a clean or accepted product PCB.
 The common-input disposition proposed retaining the two boost/protection
 cells: prospective 27 fixed/77 movable refs, pending exact copper/port
-qualification, now blocked by the tooling result above. See
+qualification. Tooling has since recovered; core-only boundaries and
+private-pour constraints remain under review. See
 `full_input_contract_disposition` in the
 [workflow contract](design-inputs/2026-10-02-quilter-workflow.json).
 New-via and retained-process annular-rule compatibility is a separate gate.

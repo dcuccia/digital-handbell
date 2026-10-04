@@ -275,6 +275,20 @@ component. Group graph edges by true external connection and distinguish
 layer-specific witnesses from unrestricted connectivity. A successful
 inventory is not an approved retained block.
 
+**Observed subgraph trap:** retained copper includes retained pad lands,
+not only trace/via UUIDs and the two query endpoints. Excluding intermediate
+U6.4 pad copper falsely broke the R28 witness; the saved native path
+resolved it without adding copper or rerunning KiCad. Recompute boundaries
+when reducing a selection: edges internal to the old union may become
+external. Count separated electrical duties, not all lost pad-pair
+combinations. See the [corrected core review](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json).
+
+**Observed protection limit:** the source's 19 areas prohibit pours, not
+new same-net tracks/vias. Saved-plane isolation is not future routing
+protection. Rule names and absence of same-layer contacts also cannot
+prove that an inner-layer exclusion covers an outer-layer circuit's XY
+projection; qualify that projection and every relevant new layer explicitly.
+
 **Documented cost distinction:** current JLCPCB pages separate via sizing
 from component-PTH annular rules and advertise filled/capped via-in-pad at
 no additional charge for6+ layers. Their headline board promotion is not

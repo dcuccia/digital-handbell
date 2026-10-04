@@ -219,6 +219,46 @@ evidence. Group repeated graph edges by actual electrical duty; not every
 historical intermediate join must become a fixed new routing port. Preserve
 real retained branches and the private paths' exact terminal-only joins.
 
+### October 4 core-only boundary review
+
+One logged private-copy native load completed in 2.818 seconds. The
+[corrected report](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json)
+binds the unchanged 62-object core, 71 recomputed boundaries, actual
+saved-fill intersections and 19 rule areas. Boundaries include 37 pad
+contacts and 34 copper contacts; 12 copper contacts reach the unselected
+supplement. Q3.3 has one VBAT contact, but Q3 does not become fixed.
+GAIN0 has no direct core-pad contact.
+
+All five boost F paths and both private GND paths pass. An initial
+endpoint-only subgraph falsely reported a missing R28.2 CELL_NEG duty:
+the existing path crosses the retained U6.4 pad between retained tracks.
+Root identified that omitted node and the executor validated the exact
+saved native witness, core membership and pad identity. The original
+report/raw data are preserved; no additional native load or copper was
+needed. All five CELL_NEG duties therefore pass with retained pads.
+
+The remaining 52 lost pad-pair relationships span ten nets; they are not
+52 independent repair requirements. Some describe ordinary connections
+deliberately left for Quilter, while local input-power, feedback and
+protector paths need an explicit retention disposition. Do not approve
+the entire 113-object supplement merely to restore a pair count.
+
+Twelve actual saved-fill intersection tests cover private origins,
+branches/vias and terminal lands, with no intersections. This is current
+saved geometry, not future refill or new-plane qualification. Native flags
+and same-layer polygon contacts are recorded for ten F-private, two
+In1-private, six In1 BOOST_SW and one In1 clock rules; all prohibit pours
+only. Family labels derive from names. Zero same-layer In1 switch contacts
+does not establish projected coverage of F switch copper. New track/via
+taps, additional inner planes and movable-clock-relative rules remain gates.
+
+**Root disposition:** accept the corrected bounded evidence, not the
+62-object retained set or 27-fixed/77-movable partition. Next select named
+local input-power, feedback and protector paths from saved source witnesses,
+with ordinary external/global connections explicitly reroutable. Preserve
+the two private terminal-only joins, all contact feeds and process seeds.
+No source changes, generated input, repair, integration or cloud submission.
+
 ### Independent public supplier screen
 
 While that executor ran, root inspected public JLCPCB capability tables

@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 4 core-only review completed:** the 62 copper objects plus
+  retained terminal copper preserve five boost F paths, two private GND
+  paths and all five CELL_NEG duties. The initial R28 failure incorrectly
+  excluded intermediate U6.4 pad copper; a saved-witness correction resolves
+  it without a native rerun or added copper. There are 71 boundary edges
+  and 52 lost internal pad-pair relationships, not 52 repairs. Twelve
+  current saved-fill intersections are empty; all 19 source rules remain
+  pours-only. Rule-family names and same-layer tests do not prove projected
+  coverage or prevention of new private track/via taps. The set/27-77 split
+  remain unapproved. Next disposition local input-power, feedback and
+  protector-path retention from saved source witnesses, not a broad GND
+  all-pairs union, new routing or staging.
 - **October 4 retention tooling recovered:** type-specific serializer
   preflight passes and one logged native copy load completes in1.842s.
   All five required boost F paths and both private GND pickoffs pass the

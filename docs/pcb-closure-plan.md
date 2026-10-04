@@ -166,6 +166,20 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Core-only review completed:** the corrected source-bound
+[report](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json)
+confirms all five boost F paths, two private GND paths and five CELL_NEG
+duties with 62 copper objects plus retained pads. A report-only correction
+restored intermediate U6.4 pad copper to the R28 witness; no extra routing
+or native rerun was needed. The 71 boundary edges and 52 lost internal
+pad-pair relationships are not independent port/repair counts.
+Current saved fills do not intersect the checked private objects; all 19
+rules remain pours-only, without qualified projected coverage or future
+private-tap prevention. Accept this evidence, not the retained set/27-77
+partition. Next select named local input-power, feedback and protector
+source paths while leaving ordinary global connections reroutable.
+No source change, full input, repair, integration or cloud is released.
+
 **Retention recovery completed:** eight preflight tests and one1.842s
 native private-copy inventory now produce five required boost F paths
 and both private GND pickoff witnesses. The corrected bindings no longer
