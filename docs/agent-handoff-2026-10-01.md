@@ -2,6 +2,11 @@
 
 ## Start here
 
+Use the [Quilter playbook](quilter-playbook.md) for reusable operating
+guidelines and update its evidence-backed rules when a checkpoint teaches
+us a better approach. This handoff and the closure plan retain current
+state and authorization; a playbook update does not release blocked work.
+
 **Latest: both returned controls pass the static preservation/routing screen;
 native qualification remains incomplete.** The
 [output review](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)

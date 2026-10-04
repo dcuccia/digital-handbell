@@ -1,5 +1,11 @@
 # Quilter workflow learning study
 
+**Reusable guidelines:** the [Quilter playbook](quilter-playbook.md) turns
+these experiments into preparation, submission, evaluation and cost-control
+practices. Maintain its rules as evidence changes; keep the detailed dated
+reasoning and source-bound results here rather than treating this chronology
+as the procedure for every new job.
+
 Owner approved October 2 at 14:05 local; fully personal project.
 The goal is an economical owner/agent/layout-service workflow, not recovery
 of sunk token cost or human-style trace aesthetics. The two rejected raw

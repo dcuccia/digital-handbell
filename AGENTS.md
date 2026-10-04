@@ -2,6 +2,13 @@
 
 ## Bounded engineering work
 
+- **Quilter learning loop:** use [the Quilter playbook](docs/quilter-playbook.md)
+  for reusable practice, the dated workflow study for reasoning, and the
+  source-bound ledgers for evidence. At meaningful checkpoints, promote
+  new reusable lessons into the relevant playbook rule with evidence and
+  limits; distinguish observed, documented and proposed behavior. Revise
+  contradicted rules rather than accumulating conflicting progress notes.
+  Documentation updates do not release blocked engineering or new jobs.
 - **October 3, 21:34 returned contact controls assessed:** both 100%-reported
   candidates preserve six fixed footprints, eight pads, all 30 feeds, ten
   vias, eight guards, outline and four layers by parsed native comparison.

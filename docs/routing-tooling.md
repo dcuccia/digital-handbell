@@ -4,6 +4,12 @@ September 15, 2026. The owner authorizes bounded tooling/autorouting trials
 and requests that their lessons remain in the repository. This is not
 authorization for cloud routing, supplier uploads or automatic acceptance.
 
+For the reusable agent/service workflow, start with the
+[Quilter playbook](quilter-playbook.md). It separates exercised behavior,
+vendor documentation and proposed practices; this document and the
+[dated Quilter study](quilter-workflow-study-2026-10-02.md) retain the
+underlying tooling and experiment history.
+
 ## Current conclusion
 
 **Native local review views:** `tools/render_clock_detail.py` now also accepts

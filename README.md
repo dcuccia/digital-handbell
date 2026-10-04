@@ -71,6 +71,9 @@ current handoff and repo-only fill-check commands.
 The [routing-tooling study](docs/routing-tooling.md) records exercised native
 API strategies and the bounded offline Freerouting pilot. No external-router
 proposal was accepted; routing automation remains experimental.
+The [Quilter playbook](docs/quilter-playbook.md) collects reusable guidance
+for preparing inputs, evaluating native outputs and controlling agent/service
+effort, with demonstrated behavior kept separate from untested assumptions.
 Subsequent native-mask routing has connected the R2/CHG0 charge-indicator
 branch without moving parts or changing existing copper: **51 opens remain**.
 Core supply/return and amplifier GAIN attempts were preserved but not accepted.
