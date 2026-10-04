@@ -2,6 +2,15 @@
 
 ## Bounded engineering work
 
+- **October 4 common-input disposition:** prefer retaining the two
+  boost/protection cells as well as nine fixed interface/process refs;
+  prospective counts are 27 fixed/77 movable, not yet an approved set.
+  Next inventory exact critical copper and external ports for the 18
+  additional refs in the workflow contract. No bounding-box cuts, whole-net
+  retention, source edits or staging. New 0.604/0.350 via lower bounds also
+  imply 0.127 mm rings; a 0.150 mm rule would need >=0.650 mm diameter at
+  0.350 mm drill. Do not resize protected seeds or treat that derivation as
+  supplier approval. The retained five ordinary feed vias remain distinct.
 - **October 4 contact diagnostic qualified:** both retained candidates pass
   all 20 saved-inner-fill/foreign-via isolation cases (minimum 0.206229 mm
   against 0.20 mm) and all 20 GND seed attachments. Each plane is one

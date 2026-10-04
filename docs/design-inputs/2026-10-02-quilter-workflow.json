@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "CONTACT_ROUTING_DIAGNOSTIC_QUALIFIED_FULL_INPUT_CONTRACT_NEXT",
+  "status": "FULL_INPUT_CONTRACT_DISPOSITION_RECORDED_RETENTION_CUT_PENDING",
   "checkpoint_history_note": "Named checkpoints record their own time and scope. october_4_continuation controls current execution; contact_routing_control_checkpoint records the last assessed diagnostic result.",
   "october_4_continuation": {
     "owner_resumed_at_local": "2026-10-04T09:58:53-07:00",
@@ -32,7 +32,73 @@
     "minimum_saved_plane_foreign_via_clearance_mm": 0.206229,
     "diagnostic_behavior_qualified": true,
     "diagnostic_disposition": "Retained feeds/guards and both new B routes qualified only for this diagnostic. One island per plane attaches to all five GND seeds but no component GND pad; isolated-copper warnings remain valid. No product, process, powered or DRC-clean acceptance.",
-    "next_dependencies": ["Common full-board input contract"]
+    "next_dependencies": ["Exact critical-block retention and boundary inventory", "Placement-domain and process/stackup qualification", "Native/import input qualification"]
+  },
+  "full_input_contract_disposition": {
+    "date": "2026-10-04",
+    "status": "PLANNING_DISPOSITION_NOT_NATIVE_INPUT_RELEASE",
+    "checkpoint_due_local": "10:34",
+    "source_native_loads": 0,
+    "source_edits_or_staging": false,
+    "evidence": {
+      "trial_envelope_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-trial-envelope-2026-10-03.json",
+      "trial_envelope_sha256": "4178978d8e52db4d0b498e9e12aafdca5e43f098e43a7d084877ece1ed0da655",
+      "mechanical_screen_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-mechanical-screen-2026-10-03.json",
+      "mechanical_screen_sha256": "2d26b2a73d72d5864976cd9945b073c25e1b77dab624d22eefe57590c0a0975c",
+      "contact_feed_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-feed-candidate-2026-10-03.json",
+      "contact_feed_sha256": "ff166d733bdd06966e7f549e36e232784d11174ef80cbd2370f9ce9b170f675e",
+      "contact_guard_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-via-mask-2026-10-03.json",
+      "contact_guard_sha256": "489503349d1f05968ea165237a99bbd01e4381983b1f40273a9ab98fdef17fda",
+      "latest_diagnostic_checkpoint": "8ffe28f"
+    },
+    "reference_partition": {
+      "functional_groups": 16,
+      "reference_memberships": 104,
+      "unique_references": 104,
+      "exact_match_to_source_bound_mechanical_classification": true,
+      "initial_fixed_references": ["BT1", "BT2", "MH1", "MH2", "X6", "J1", "J2", "U4", "C24"],
+      "initial_eligible_references": 95,
+      "preferred_additional_retained_groups": ["boost", "cell-protection"],
+      "preferred_additional_retained_references": ["U5", "L1", "C26", "C27", "C28", "C29", "R23", "R24", "TP10", "U6", "Q5", "C30", "R25", "R26", "R27", "R28", "R29", "TP11"],
+      "prospective_fixed_references": 27,
+      "prospective_movable_references": 77,
+      "partition_status": "Preferred first-comparison strategy only. Exact protected-copper and external-terminal inventory must pass before these 18 references become an approved retained block. No new fixed poses applied.",
+      "reason": "Preserve the two source-reviewed power/private-pickoff cells rather than relying on heuristic clustering for same-net topology. Leave MCU/power escape, crystal, QSPI and other ordinary placement flexible. This is not preservation of all existing routes or a generic source-cell solution."
+    },
+    "retained_copper_strategy": {
+      "candidate_contact_B_segments": 30,
+      "candidate_existing_ordinary_vias": 5,
+      "mandatory_process_vias": 5,
+      "contact_representation": "Reuse the demonstrated source-bound feeds plus eight B track/via/pour guards, subject to full-input qualification. Preserve the exact intentional source-feed overlaps and compare all added copper independently; no new feed holes, flag removal or blanket DRC suppression.",
+      "critical_block_inventory_required": [
+        "Actual R26.2 to R27.2 private pickoff, independent until the native R27.2 land",
+        "Actual R24.2 to C28.2 private ground pickoff, independent until the native C28.2 land",
+        "U5.6 to C27.1/C28.1 supply and U5.4 to C27.2/C28.2 return paths; U5.5 to L1.P$2 switch path",
+        "CELL_NEG branch duties at Q5.A1/C1 and C30.2/U6.4/R28.2, separate from PROT_FET_RETURN",
+        "Every external terminal/junction, extra via, component-relative rule area and same-net branch touched by retained copper"
+      ],
+      "selection_rule": "Select source identities and electrical duties, not every shape inside a rectangle or every shape on a whole net. Do not retain the entire old GND plane to avoid enumerating return ports. A cut through a branch or joined copper needs explicit port/restoration treatment.",
+      "obsolete_copper": "Ordinary replaceable copper outside the subsequently approved retention set may be removed only in qualified disposable preparation. Boundary inventory precedes removal; no actual removal is released here."
+    },
+    "geometry_and_access": {
+      "shared_trial_domain": "D45 plus original USB tongue, 45 x 49.35 mm, with +2 mm speaker spacing; no global scaling or new enclosure build.",
+      "F_height_policy": "Pre-intersect actual physical-body/rotation constraints with F placement domains. L1 requires a peripheral domain outside nominal R11.1 magnet planning exclusion; source whole-body example passes but arbitrary positions do not.",
+      "fixed_planning_reservations": "Retain R3.2 mount domains, fixed J1/J2 proxies and existing X6 overhang/B-anchor reservation. J2 already includes 0.7 mm planning allowance.",
+      "remaining_geometric_gates": "Explicit domain polygons and native/import semantics; complete cable/latch/driver/recovery access; loaded contact motion and tolerance/insulation. These are not zero-clearance assumptions, and plastic adaptability is not a waiver.",
+      "placement_import_gate": "On-board or edge-overlapping F regions with reviewed manual KiCad assignments, not off-board grouping hints. Assigned regions combine by union. Movable F-only behavior remains unexercised."
+    },
+    "via_and_stackup_disposition": {
+      "five_existing_ordinary_vias": "Prefer exact retention of the five 0.600/0.300 mm contact-feed vias as existing geometry, not a new-via template. They have 0.150 mm nominal rings; supplier acceptance and full-board isolation remain required. No resizing or removal approved.",
+      "mandatory_U4_vias": "Preserve four 0.604/0.350 mm filled/planarized/capped vias with 0.127 mm rings. A 0.150 mm global annular rule conflicts with these exact seeds; no process waiver.",
+      "mandatory_C24_via": "Preserve the 0.600/0.300 mm filled/planarized/capped seed; ordinary geometry equality does not remove its special-process obligation.",
+      "new_ordinary_via_minima": "Existing 0.604/0.350 mm values are lower bounds, not a compatible diameter/drill pair for every supplier rule. Require diameter >= drill + 2*selected_annular_minimum as well as those lower bounds. A 0.150 mm ring with 0.350 mm drill requires at least 0.650 mm diameter; this derivation is not an approved new size or supplier selection.",
+      "stackup_gate": "Select actual supplier four/six-layer constructions compatible with the preserved process seeds before impedance routing. Do not copy the diagnostic's two-inner-GND profile or its minima as product approval. In1 remains protected GND."
+    },
+    "next_bounded_item": {
+      "scope": "Read-only exact-source critical-block retention and external-boundary inventory for the 18 named boost/protection references plus existing contact feeds and process seeds.",
+      "expected_output": "Source-bound candidate UUID inventory, all terminal/branch obligations, private-path evidence and explicit unsupported cases; no generated full board.",
+      "stop_condition": "One bounded initial plus two corrective attempts; stop if source topology or cut boundaries cannot be demonstrated. No expansion into placement/routing, source edits, DRC/refill, cloud, supplier selection or manufacturing release."
+    }
   },
   "contact_routing_control_checkpoint": {
     "date": "2026-10-03",
@@ -79,7 +145,7 @@
     "saved_plane_isolation_and_seed_attachments_pass": true,
     "diagnostic_behavior_qualified": true,
     "engineering_acceptance": false,
-    "next_item": "Bounded common full-board input-contract disposition using existing source/envelope/group evidence. No source changes, staging/upload, cloud rerun, repair or integration.",
+    "next_item": "Read-only critical-block retention/boundary inventory under full_input_contract_disposition. No source changes, staging/upload, cloud rerun, repair or integration.",
     "submitted": true
   },
   "contact_feed_import_checkpoint": {
@@ -496,7 +562,7 @@
   },
   "copper_policy": {
     "diagnostic_track": "Do not change or refill raw outputs. Measure actual cached copper.",
-    "fresh_track": "Proposed removal of existing ordinary tracks/vias/pours is confined to new disposable input after fixed/process seed and keepout classification. Preserve five exact process vias and all footprint copper.",
+    "fresh_track": "Proposed removal of replaceable ordinary tracks/vias/pours is confined to new disposable input after the full_input_contract_disposition retention/boundary inventory and keepout classification. Preserve five exact process vias, all footprint copper, and any explicitly approved contact/critical-block copper; do not infer an approved set from group names alone.",
     "keepouts": "Classify fixed mechanical versus component-relative electrical exclusions. Do not retain obsolete coordinate-bound crystal/private-return holes as if they followed moved parts; do not simply discard the underlying requirements.",
     "same_net_private_paths": "Whole-net continuity is insufficient for R26/R27 and R24/C28; require native cut/topology proofs or preserve an explicitly reviewed small circuit block if service cannot express the duty.",
     "source_changes": false

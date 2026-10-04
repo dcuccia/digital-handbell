@@ -56,6 +56,15 @@ by themselves establish the right electrical associations or distances.
 For unsupported essential constraints, retain a reviewed block, provide
 an explicit independent acceptance check, or stop; never silently omit them.
 
+**Proposed practice, not yet full-board exercised:** retain only a few
+source-reviewed sensitive cells and release ordinary layout around them.
+An exact retained block needs copper identities and external terminal/
+junction obligations, not just a list of fixed footprints or a rectangular
+cut. Check private pickoffs at the actual terminal lands; shared-net
+continuity is not equivalent. The handbell's prospective boost/protection
+strategy leaves 77 of 104 references movable, pending its source-cut audit.
+See the [common-input disposition](quilter-workflow-study-2026-10-02.md#common-input-strategy-retain-critical-cells-release-ordinary-layout).
+
 ## 2. Build a source-bound input contract
 
 Keep the authoritative board and raw experiments immutable. Record the
@@ -131,6 +140,14 @@ Read expanded values, not profile names. In our control, the display kept
 "6 mil / 6 mil" and rounded width to 0.178 mm while the saved value was
 0.1778 mm. Its 0.600/0.300 mm via minima and 0.508 mm margin were
 **diagnostic choices**, not permission to replace product manufacturing rules.
+
+Check coupled fabrication limits, not just each field separately:
+`via diameter >= drill + 2 * minimum annular ring`. Our proposed new-via
+lower bounds 0.604/0.350 mm imply 0.127 mm rings; a 0.150 mm ring rule
+requires at least 0.650 mm diameter at that drill. Preserved ordinary vias,
+new vias and mandatory filled/capped seeds may need different dispositions.
+Do not silently grow a protected seed or lower a global rule to hide this
+conflict; obtain a compatible process/rule contract and recheck geometry.
 
 Four enabled copper layers do not establish a physical stackup. The
 [pre-routed-trace documentation](https://docs.quilter.ai/design-parameters/pre-routed-traces.md)

@@ -21,8 +21,13 @@ passes 20/20 foreign-via isolation cases (minimum 0.206229 mm against
 The isolated-copper warnings reflect the fixture's zero GND component pads;
 they remain valid, not suppressed. Root qualifies only the demonstrated
 retained-feed/guard routing behavior, not a clean or accepted product PCB.
-Next: a bounded common full-board input-contract disposition using the
-existing source/envelope/group evidence, before any staging or submission.
+The common-input disposition now prefers retaining the two boost/protection
+cells: prospective 27 fixed/77 movable refs, pending exact copper/port
+qualification. Next inventory those source-bound critical blocks and
+external joins; see `full_input_contract_disposition` in the
+[workflow contract](design-inputs/2026-10-02-quilter-workflow.json).
+New-via and retained-process annular-rule compatibility is a separate gate.
+No staging or submission follows automatically.
 Read the [continuation scope](quilter-workflow-study-2026-10-02.md#october-4-bounded-autonomous-continuation).
 No source edits, refill, automatic integration or repeat cloud diagnostic.
 

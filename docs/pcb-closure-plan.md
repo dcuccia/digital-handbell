@@ -179,9 +179,12 @@ passes 20/20 foreign-via isolation cases (minimum 0.206229 mm against
 isolated-copper warnings reflect zero component GND terminals in the
 truncated fixture. Root qualifies the retained-feed/guard routing
 diagnostic only, not product/process/loaded-contact suitability or DRC
-cleanliness. No refill, repair or source change. Next is a bounded common
-full-board input-contract disposition; staging/upload/submission remains
-held until its own reviewed qualification.
+cleanliness. No refill, repair or source change. The common-input contract
+now prefers two retained boost/protection cells, prospectively 27 fixed/
+77 movable refs, with exact source copper/port qualification still required.
+Next is that bounded retention/boundary inventory; staging/upload/submission
+remains held. Via-family/ring compatibility and actual supplier stackups
+remain explicit gates, not reasons to resize protected process seeds.
 See the [continuation contract](quilter-workflow-study-2026-10-02.md#october-4-bounded-autonomous-continuation).
 
 **Historical October 3: returned controls retained with a validation gap.**

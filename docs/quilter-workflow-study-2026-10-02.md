@@ -101,6 +101,53 @@ to separate fixed/retained work from movable work, and identify exact
 remaining region/access, topology and process-rule gates. No source edit,
 full-board staging/upload, repeated diagnostic or integration is released.
 
+### Common-input strategy: retain critical cells, release ordinary layout
+
+The [contract](design-inputs/2026-10-02-quilter-workflow.json)'s
+`full_input_contract_disposition` records the next design choice rather
+than another generic platform inventory. Its 16 groups exactly partition
+the 104 references in the source-bound mechanical screen; current source
+PCB, schematic, project and manifest hashes still match.
+
+**Preferred first comparison:** retain the existing boost and cell-protection
+cells, in addition to the nine fixed interfaces/process references, while
+giving Quilter ordinary MCU/clock/QSPI and remaining placement freedom.
+The two groups add 18 references, including C29 DNP and TP10/TP11:
+**27 fixed and 77 movable references if their retention audit passes**.
+These are prospective counts, not an applied placement or approved copper
+set. Preserving critical source cells avoids trusting heuristic grouping
+to recreate the R26.2/R27.2 and R24.2/C28.2 private pickoffs. L1's existing
+whole-body peripheral example already passes the nominal D45/magnet/mount
+screen; this does not establish electrical or toleranced placement elsewhere.
+
+Select retained copper by exact source identities and terminal duties,
+not a bounding box or an entire net. The next read-only item must enumerate
+both private paths, paired boost capacitor supply/returns, switch path,
+raw-negative branches and every external join/port. Do not preserve the
+entire old GND plane or accidentally freeze replaceable escapes merely to
+avoid that accounting. Keep the demonstrated 30 B contact feeds, five
+ordinary transition-via candidates, five process seeds and eight guards
+as the starting representation; full-input qualification remains required.
+The old feed ledger stays immutable because the fixture builder pins it.
+
+**Rule conflict now made explicit:** the proposed new-via lower bounds
+0.604/0.350 mm also yield a 0.127 mm ring, not just the four retained U4
+vias. A selected 0.150 mm ring minimum would require at least 0.650 mm
+copper diameter for a 0.350 mm drill. That is arithmetic, not permission
+to resize preserved seeds or selection of a new fabrication process.
+Prefer exact retention of the five ordinary 0.600/0.300 mm feed vias
+(0.150 mm rings) as existing geometry, separately from new-via templates.
+The four U4 filled/capped seeds require a genuinely compatible supplier
+construction/process disposition; importing weaker rules is not one.
+
+Remaining preparation gates are concrete: approved retained-copper ports;
+physical-body/rotation-aware F domains with native/imported assignments;
+fixed connector, mount, recovery and loaded-contact/access treatment; actual
+four/six-layer supplier constructions and pin-specific electrical settings.
+No new full board, source mutation, native execution or cloud object was
+created in this contract item. Next is the exact-source critical-block
+retention/boundary inventory, not a placer trial or an enclosure rebuild.
+
 ## Earlier continuation scopes
 
 **October 3, approximately 14:30 owner continuation:** keep advancing for
