@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 4, 12:45 contact screen blocks complete212:** one static run,
+  zero native loads, finds existing `/PROT_COUT` via `2f82654e...` at
+  commonXY(-12.5,6.09),0.600/0.300 mm, only0.225 mm from BT2's nominal
+  under-cell base. This misses the required0.25 mm by0.025 mm at a flat
+  edge, not a corner-envelope artifact or nominal physical overlap.
+  All five mandatory process seeds clear; that does not qualify every
+  other retained via. Preserve212 as a held proposal and all source.
+  No clearance waiver, hole, via/part movement, removal or repair.
+  Next may assess this exact PROT_COUT route's source role and dependencies
+  read-only; private-guard/input work stays blocked pending disposition.
 - **October 4, 12:34 power-interface disposition:** the complete193 basis
   and97 retained pads support18 additional whole-source V+/GND primitives.
   Root provisionally selects those plus the existing8.061 mm,1.0 mm F GND

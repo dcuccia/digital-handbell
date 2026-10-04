@@ -174,6 +174,18 @@ analysis12:22/report12:23/root12:25, at most three90-second native runs.
 This supersedes the execution hold only for the new reviewed scope.
 Source, physical/input qualification and cloud/payment gates remain intact.
 
+**12:45 retained-copper contact blocker:** the
+[static screen](measurements/2026-09-27-router-bakeoff/quilter-critical-retained-contact-screen-2026-10-04.json)
+finds `/PROT_COUT` via `2f82654e...`0.225 mm from the nominal BT2 base,
+0.025 mm short of the0.25 mm requirement. This flat-side witness is not
+merely conservative corner expansion, but no nominal metal overlap exists.
+Complete212 is held; do not repair, move/remove copper, waive isolation
+or proceed to input generation. One static run/zero native loads; all
+five mandatory process seeds clear all eight guards. Next is bounded
+read-only source-role/dependency analysis of the exact PROT_COUT route.
+Private guard, placement/process and input qualification remain blocked
+dependencies, not automatic work to run past the conflict.
+
 **12:34 GND/V+ interface disposition:** root provisionally retains the18
 whole-source additions in the
 [interface report](measurements/2026-09-27-router-bakeoff/quilter-critical-ground-input-interfaces-2026-10-04.json)

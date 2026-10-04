@@ -15,6 +15,18 @@ not another global single-land screen. Analysis12:22/report12:23/root12:25;
 at most three90-second native executions, preserving all prior failures.
 Source, cloud and full-input qualification gates remain unchanged.
 
+**12:45 concrete input blocker:** the
+[complete212 contact screen](measurements/2026-09-27-router-bakeoff/quilter-critical-retained-contact-screen-2026-10-04.json)
+finds one `/PROT_COUT` through-via, `2f82654e...`, with0.225 mm nominal
+clearance to BT2.base.3 versus required0.25 mm. Root confirms the0.025 mm
+shortfall at the rectangle's flat edge; this is not a corner-bound artifact
+or actual nominal metal overlap. All five process seeds clear, but the
+complete212 retention proposal is held. One static execution/zero native
+loads; all source and bound artifact hashes match. Do not waive clearance,
+carve a hole, move/delete the via or repair a route. Next is a read-only
+source-role/dependency disposition for this exact PROT_COUT route, not
+guard/input generation past the blocker.
+
 **12:34 power-interface decision:** the
 [GND/V+ report](measurements/2026-09-27-router-bakeoff/quilter-critical-ground-input-interfaces-2026-10-04.json)
 proposes18 complete existing local tracks beyond193. Root provisionally

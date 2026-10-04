@@ -108,6 +108,66 @@ Private-tap guards on all applicable layers, placement/access, supplier
 processes and native/import qualification remain separate dependencies.
 No source edit, board/input generation, routing, refill/DRC or cloud job.
 
+### Complete retained-copper contact screen: one concrete blocker
+
+The [static ledger](measurements/2026-09-27-router-bakeoff/quilter-critical-retained-contact-screen-2026-10-04.json)
+binds all212 objects:192 tracks and20 through-vias, with40 B track strokes
+and20 via rear disks exposed. No selected arcs exist. It evaluates480
+primitive/guard cases. The120 exact-feed/own-contact cases are separate,
+including24 intentional expanded-domain intersections; the360 non-exempt
+cases include all opposite-contact feeds and every via against every guard.
+There is no blanket same-net exception.
+
+**One root/contact conflict:** `/PROT_COUT` via
+`2f82654e-3978-5993-8e0a-34da29a725b6`,0.600/0.300 mm, is at native
+`[87.5,106.09]`, common `[-12.5,6.09]`. BT2.base.3 ends at commonY5.565.
+Its full rear copper radius0.300 therefore leaves
+`6.09 - 5.565 - 0.300 = 0.225 mm`,0.025 mm below required0.25 mm.
+Root independently confirms this flat-side witness: the shortfall is
+not solely a conservative square-expanded corner artifact. The copper
+does not overlap the nominal metal; no actual short is established.
+
+The next clear non-exempt witness is the other PROT_COUT via `cdf78e87...`,
+with0.085 mm spare beyond the expanded guard. All five mandatory process
+seeds pass40 cases; C24's `fa83a8ab...` remains limiting at0.393331 mm
+spare. The other fifteen vias are five known ordinary feed vias and ten
+remaining existing vias; their presence does not establish off-pad,
+assembly or process suitability.
+
+One static analyzer execution completes in1.441 seconds with numeric
+exit0, using the existing S-expression parser and qualified supervisor.
+No KiCad import/load/save or DRC occurs. Report `bc2961cf...`, raw
+`2816de5e...`, all bound artifacts and five source hashes match.
+
+**Root disposition,12:45:** retain complete212 as a held planning proposal,
+not a physically qualified input. Do not waive the0.25 mm rule, carve a
+guard hole, resize/move/delete the via, change contacts or repair routing.
+A distinct read-only check may identify this exact PROT_COUT route's
+electrical role, existing alternatives and dependencies before proposing
+a retention-policy disposition. Do not continue guard/input generation
+past this blocker. Loaded-contact motion and all other gates remain.
+
+### Next guard-design distinction, read-only preparation only
+
+The existing [layer-role policy](routing-agent-policy.md#first-protected-ground-candidate-release)
+distinguishes surface private branches from the two R24/C28 through-vias.
+Do not translate all ten F rectangles into unnecessary inner-plane holes.
+Protect actual surface branches from new same-net taps and the two existing
+private barrels on every conductive layer, including any new inner layer.
+Clock/switching projection exclusions address coupling rather than those
+direct conductive joins and need their own disposition.
+
+The official [keepout page](https://docs.quilter.ai/design-parameters/keepouts.md),
+read October4 during the contact screen, describes trace/via/component/pour
+restrictions generically. It does not define a KiCad pad/footprint flag
+matrix or demonstrate moving-pad behavior. The
+[pre-routing page](https://docs.quilter.ai/design-parameters/pre-routed-traces.md)
+still warns that not preserving the input stackup can replace inner copper.
+Neither page nor our fixed-component B-routing control qualifies new
+private-tap guards. This is preparation for a distinct later item, not a
+native/cloud execution release or a claim that the existing19 pours-only
+areas are sufficient.
+
 ## October 4 bounded autonomous continuation
 
 At 09:58 the owner resumed with roughly two hours for relatively autonomous

@@ -73,6 +73,17 @@ not merely the net's name, and does not justify retaining global GND or
 amplifier feeds. Current-sharing and process qualification remain separate.
 See the [local-circuit evidence](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json).
 
+**Observed retention limit:** complete source-local routing can preserve
+an inherited physical conflict too. The
+[complete212 contact screen](measurements/2026-09-27-router-bakeoff/quilter-critical-retained-contact-screen-2026-10-04.json)
+finds one non-process PROT_COUT via with0.225 mm nominal metal clearance
+against required0.25 mm, although all five mandatory process seeds pass.
+Screen the complete proposed retention, not only its protected seeds.
+Distinguish an unmet clearance from actual metal overlap, and a real
+flat-edge shortfall from conservative corner-envelope effects. Hold the
+input and assess the affected route's role; neither source fidelity nor
+a small numerical shortfall authorizes a clearance waiver or silent repair.
+
 ## 2. Build a source-bound input contract
 
 Keep the authoritative board and raw experiments immutable. Record the
@@ -103,6 +114,19 @@ Keep placement regions separate from safety keepouts. Inspect each
 keepout's actual track/via/pour flags and layers; a suggestive name is not
 a rule. Screen full copper shapes, including the B annulus of through-vias.
 Filling or tenting a via does not remove its conductive rear land.
+
+**Purpose-specific private-return protection:** prevent new taps where the
+private copper actually conducts. Surface-only branches need surface
+track/pad/via protection; existing through-vias need isolation on every
+layer they reach, including newly added planes. Do not copy every surface
+rectangle into inner-plane voids: the handbell's two private through-vias,
+not all ten F exclusions, define its inherited conductive inner-layer
+exposure. Switching/clock coupling exclusions serve a different purpose.
+Follow the [layer-role policy](routing-agent-policy.md#first-protected-ground-candidate-release).
+Quilter's [keepout documentation](https://docs.quilter.ai/design-parameters/keepouts.md)
+generically includes components, but does not specify a KiCad pad/footprint
+flag matrix. Our fixed-component contact control does not establish
+movable-pad exclusion or all-layer private-tap protection.
 
 Do not flatten elevated or moving contact geometry into an unjustified
 full-height rectangle, or assume that permitting contact pads makes every
