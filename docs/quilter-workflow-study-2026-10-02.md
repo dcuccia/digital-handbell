@@ -829,6 +829,32 @@ are exhausted. Preserve all output and request one bounded checker/report
 correction using the saved native files; no new native run or cloud upload
 is released merely by the earlier serialization result.
 
+The owner subsequently approved **one additional checker/report correction**,
+with no new KiCad run. Limit rectangle handling to the exercised 0/180-degree
+cases, add real-BT2 regressions and remove the stale limitation. Recompute
+witness evidence from the saved static/native files and require unchanged
+PCB bytes before reusing the earlier native/DRC result. Executor stops at
+17:32; root review/checkpoint by 17:35. The eight cosmetic text warnings
+remain explicit rather than triggering a PCB rewrite.
+
+**Correction accepted for this diagnostic input.** Sixteen focused tests
+pass; actual BT2 boxes are corrected and unsupported pad/footprint rotations
+fail closed. Static and saved-native witness results agree: minimum spare
+foreign-copper clearances above 0.20 mm are 8.965120 mm for CTRL_CLEAR and
+2.575 mm for CTRL_GUARD. Minimum stroke-edge gaps to expanded guards are
+6.06/4.06 mm; outline gap is 2.875 mm. The direct reference intersects all
+eight guards. These are legal path witnesses, not new input copper or
+general router success. The corrected report removes the stale limitation.
+
+The static PCB remains `74cec878...`; native PCB remains `ce95303d...`.
+Exact unchanged bytes allow reuse of prior native preservation/DRC evidence,
+with **zero new native loads, DRC runs or refills**. Only native
+`contact-rule-fixture.kicad_pcb` and its `ca3d163b...` minimal project are
+released for the separate diagnostic cloud setup; local upload copies are
+byte-verified and ignored. Preserve the old patch/reports separately.
+One routing submission remains conditional on reviewed setup and a
+confirmed free price; it has not yet occurred.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

@@ -1,12 +1,32 @@
 {
   "schema_version": 1,
   "date": "2026-10-03",
-  "status": "NATIVE_SERIALIZATION_PASSED_WITNESS_REVIEW_BLOCKED",
+  "status": "QUALIFIED_DIAGNOSTIC_INPUT_CLOUD_PENDING",
   "license_context": "Source-derived CC BY-SA 3.0 hardware evidence; see ATTRIBUTION.md.",
   "owner_approval_time_local": "17:13",
   "owner_scope": "Prepare one meaningful contact routing diagnostic, submit only if qualified and confirmed free, then inspect native output. No authoritative PCB edits, full-board staging, paid action, new agreement or fabrication.",
   "preparation_stop_by_local": "17:26",
   "root_checkpoint_by_local": "17:28",
+  "additional_correction": {
+    "owner_approved": true,
+    "scope": "One checker/report correction for rotated rectangular pads and the stale no-terminal statement; reuse unchanged PCB/native evidence.",
+    "executor_stop_by_local": "17:32",
+    "root_checkpoint_by_local": "17:35",
+    "new_native_run_authorized": false,
+    "status": "CORRECTED_AND_REVIEWED",
+    "evidence_subdirectory": "checker-correction-20261003T1728",
+    "report_sha256": "e6286c72cd760ae96f64c9209eba0a8cf4b3d9b1e46b323b188c055a98682385",
+    "corrected_static_report_sha256": "289d62562f00174ed79412ef9b1d49d97af167c3f7a7e64d48b667fe49311adf",
+    "builder_sha256": "c9e3af078f5daa2cc5de11b5f9488fbbb1e6ea6ed08af646875716bebb39fdf0",
+    "tests_sha256": "a1644657b7d1fe55305034b094662815e6e795e9b32d637b1e4ca4f2ae51e937",
+    "unit_tests_passed": 16,
+    "static_native_witness_results_equal": true,
+    "new_native_loads": 0,
+    "new_drc_runs": 0,
+    "refills": 0,
+    "pcb_bytes_unchanged": true,
+    "rotation_scope": "Only rectangular B pads at the exercised 0/180-degree footprint/pad rotations; unsupported angles/shapes fail closed."
+  },
   "executor": {
     "agent_id": "8ace240a-7ea9-4d8e-bdcd-30fec7b77dde",
     "model": "gpt-5.6-sol",
@@ -17,8 +37,8 @@
   "feed_ledger_sha256": "ff166d733bdd06966e7f549e36e232784d11174ef80cbd2370f9ce9b170f675e",
   "mask_sha256": "489503349d1f05968ea165237a99bbd01e4381983b1f40273a9ab98fdef17fda",
   "evidence_directory": "quilter\\outputs\\contact-routing-control-20261003T1713",
-  "held_software": "Builder/test edits remain uncommitted and are also preserved as root-held-software.patch in the evidence directory. Do not treat their witness assertion as qualified.",
-  "preserved_artifacts": {
+  "held_software": "The earlier defective version remains preserved as root-held-software.patch in the evidence directory; the additional_correction fields bind the reviewed replacement.",
+  "preserved_pre_correction_artifacts": {
     "builder_sha256": "8977538947dcd753f07ac9e6da5f3da14f63655716114cf44e4cb58c85aabbaa",
     "tests_sha256": "4d8b31d0d8570b1f3a132ee75cf67951349e7669598de395935320ebde88ab1e",
     "static_pcb_sha256": "74cec878f2c5e1c2ad7887e21c1fd4b281f73ef1a6a856a8a7b65831666ef710",
@@ -53,10 +73,14 @@
     "probe_guard_or_short_clearance_findings": 0,
     "clean_product_claimed": false
   },
-  "root_review_blockers": [
-    "Witness checker adds footprint and local pad coordinates without rotation. BT2 is at 88.375,100 with 180 degrees: its local -8.005 pad belongs at x96.38, not x80.37. The two unequal-height contact pad boxes are misplaced, so the witness clearances are not accepted. This is a checker defect, not evidence that the proposed routes are impossible.",
-    "Routing-control report inherits the import-only limitation saying there are no unrouted probe terminals, despite the four added control pads.",
-    "Initial plus two corrections are exhausted. Hold upload; seek one bounded checker/report correction reusing saved native evidence, not an automatic native rerun."
+  "resolved_root_review_blockers": [
+    "The original checker ignored BT2 rotation. Corrected regression boxes are [94.26,97.4,98.5,102.6] and [78.25,98.35,82.49,101.65]; corrected static/native witness results agree.",
+    "The stale no-unrouted-terminals statement was replaced with the two-unrouted-control-pairs limitation.",
+    "The owner explicitly approved the additional correction after the initial plus two attempts. No new native run or PCB change occurred."
+  ],
+  "upload_whitelist": [
+    {"path": "native\\contact-rule-fixture.kicad_pcb", "sha256": "ce95303dda7b3839ce8937243a568768e4ddc857d78735523b06b40e0f743db0"},
+    {"path": "native\\contact-rule-fixture.kicad_pro", "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"}
   ],
   "planned_native_population": {
     "footprints": 6,
@@ -79,7 +103,7 @@
   ],
   "terminal_contract": "Preplaced B-side, angle 0, one rectangular 1x1 mm SMT pad number 1 at local 0,0; B.Cu/B.Mask/B.Paste. Synthetic geometry controls, not sourced product parts. No input copper on either control net.",
   "witness_contract": {
-    "status": "MEASURED_BY_DEFECTIVE_ROTATION_CHECKER_NOT_ACCEPTED",
+    "status": "CORRECTED_STATIC_AND_NATIVE_WITNESSES_PASS",
     "input_tracks_added": false,
     "layer": "B.Cu",
     "width_mm": 0.25,
@@ -87,7 +111,10 @@
     "CTRL_CLEAR": [[74, 88], [84, 88]],
     "CTRL_GUARD": [[74, 100], [74, 112], [126, 112], [126, 100]],
     "forbidden_direct_reference": [[74, 100], [126, 100]],
-    "acceptance": "Whole-stroke legality against retained copper/pads/vias, other control pads, all already-expanded guards and outline; direct reference must intersect a guard. Paths are proof witnesses only, never routed into the upload."
+    "acceptance": "Whole-stroke legality against retained copper/pads/vias, other control pads, all already-expanded guards and outline; direct reference intersects all eight guards. Paths are proof witnesses only, never routed into the upload.",
+    "minimum_foreign_clearance_margin_over_0_20_mm": {"CTRL_CLEAR": 8.965120, "CTRL_GUARD": 2.575},
+    "minimum_guard_stroke_edge_gap_mm": {"CTRL_CLEAR": 6.06, "CTRL_GUARD": 4.06},
+    "minimum_outline_stroke_edge_gap_mm": 2.875
   },
   "prior_import_metadata_supplement": {
     "input_pcb_sha256": "cadfccd4d424fc5e145f7eacb0cfc112b8daa2ee0841abfcd2cf2cfeaa841c7a",

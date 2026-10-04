@@ -5,7 +5,11 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from build_contact_rule_fixture import FEED, MASK, SOURCE, build_feed_fixture, build_fixture, digest, write_fixture
+from build_contact_rule_fixture import (
+    CONTROL_TERMINALS, FEED, MASK, SOURCE, build_feed_fixture, build_fixture,
+    build_routing_control_fixture, digest, identifier, net_name,
+    rectangular_b_pad_aabb, write_fixture,
+)
 from kicad_sexpr import loads
 
 
@@ -165,6 +169,109 @@ class ContactRuleFixtureTests(unittest.TestCase):
             "a54f71f8db307cabe0f88d7964e20533e64ce374d0e072c1ab24b51a3cf1a892",
             digest(text.encode()),
         )
+
+    def test_feed_import_bytes_remain_unchanged(self):
+        text, _ = build_feed_fixture(self.source, self.mask, json.loads(FEED.read_bytes()))
+        self.assertEqual(
+            "fc71e22b257d31ba2cc1260327ef0e77bf0b9a394c5c1ec8a211a4c884a0507a",
+            digest(text.encode()),
+        )
+
+    def test_routing_control_exact_population_and_preservation(self):
+        ledger = json.loads(FEED.read_bytes())
+        text, report = build_routing_control_fixture(self.source, self.mask, ledger)
+        fixture = loads(text)
+        self.assertEqual(6, len(fixture.children("footprint")))
+        self.assertEqual(8, sum(len(f.children("pad")) for f in fixture.children("footprint")))
+        self.assertEqual(30, len(fixture.children("segment")))
+        self.assertEqual(10, len(fixture.children("via")))
+        self.assertEqual(8, len(fixture.children("zone")))
+        self.assertEqual(42, len(report["retained_subtree_sha256"]))
+        controls = {f.properties().get("Reference"): f for f in fixture.children("footprint")
+                    if f.properties().get("Reference", "").startswith("TP")}
+        self.assertEqual({row[0] for row in CONTROL_TERMINALS}, set(controls))
+        all_ids = [n.value("uuid") for n in fixture.walk() if n.child("uuid")]
+        self.assertEqual(len(all_ids), len(set(all_ids)))
+        for ref, x, y, net in CONTROL_TERMINALS:
+            footprint = controls[ref]
+            self.assertEqual(["at", str(int(x)), str(int(y)), "0"], footprint.child("at").atoms())
+            self.assertEqual("B.Cu", footprint.value("layer"))
+            self.assertEqual(identifier("control/footprint/" + ref), footprint.value("uuid"))
+            self.assertEqual(["attr", "smd"], footprint.child("attr").atoms())
+            pads = footprint.children("pad")
+            self.assertEqual(1, len(pads))
+            pad = pads[0]
+            self.assertEqual(["pad", "1", "smd", "rect"], pad.atoms())
+            self.assertEqual(["size", "1", "1"], pad.child("size").atoms())
+            self.assertEqual(["B.Cu", "B.Paste", "B.Mask"], pad.child("layers").atoms()[1:])
+            self.assertEqual(net, net_name(pad))
+            self.assertEqual(identifier("control/pad/" + ref), pad.value("uuid"))
+        self.assertEqual(
+            {"VBAT", "/CELL_NEG", "GND", "CTRL_GUARD", "CTRL_CLEAR"},
+            {n.atoms()[1] for n in fixture.walk() if n.head == "net"},
+        )
+        self.assertFalse(any(net_name(s).startswith("CTRL_") for s in fixture.children("segment")))
+        self.assertFalse(any(net_name(v).startswith("CTRL_") for v in fixture.children("via")))
+        self.assertEqual(2, report["intended_unrouted_control_pairs"])
+        self.assertNotIn(
+            "No unrouted probe terminals: import recognition only, not routing-enforcement proof.",
+            report["intentional_limitations"],
+        )
+        self.assertIn(
+            "Two unrouted control pairs are present; routing enforcement remains unproven.",
+            report["intentional_limitations"],
+        )
+        self.assertTrue(report["witness_legality"]["direct_ctrl_guard_reference"]["intersected_guard_names"])
+        baseline, _ = build_feed_fixture(self.source, self.mask, ledger)
+        old = loads(baseline)
+        for head in ("general", "layers", "setup", "gr_line", "segment", "via", "zone"):
+            self.assertEqual(
+                [baseline[n.start:n.end] for n in old.children(head)],
+                [text[n.start:n.end] for n in fixture.children(head)],
+            )
+
+    def test_routing_control_opt_in_hash_gate_and_no_overwrite(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / "routing-control"
+            with self.assertRaisesRegex(ValueError, "requires"):
+                write_fixture(output, self.source_bytes, self.mask_bytes, routing_control=True)
+            self.assertFalse(output.exists())
+            feed = FEED.read_bytes()
+            report = write_fixture(output, self.source_bytes, self.mask_bytes, feed, True)
+            self.assertTrue(report["routing_control"])
+            before = (output / "contact-rule-fixture.kicad_pcb").read_bytes()
+            with self.assertRaises(FileExistsError):
+                write_fixture(output, self.source_bytes, self.mask_bytes, feed, True)
+            self.assertEqual(before, (output / "contact-rule-fixture.kicad_pcb").read_bytes())
+
+    def test_real_bt2_pad_aabbs_apply_180_degree_local_rotation(self):
+        fixture = loads(self.source)
+        bt2 = next(f for f in fixture.children("footprint")
+                   if f.properties().get("Reference") == "BT2")
+        boxes = {pad.value("uuid"): rectangular_b_pad_aabb(bt2, pad)
+                 for pad in bt2.children("pad")}
+        self.assertEqual(
+            (94.26, 97.4, 98.5, 102.6),
+            boxes["4dd660ac-86bc-58a4-a070-bf26f874d680"],
+        )
+        self.assertEqual(
+            (78.25, 98.35, 82.49, 101.65),
+            boxes["5b1d1490-a8e3-5d64-b249-21593de78fe5"],
+        )
+
+    def test_pad_aabb_rejects_unsupported_rotation(self):
+        text, _ = build_routing_control_fixture(
+            self.source, self.mask, json.loads(FEED.read_bytes())
+        )
+        fixture = loads(text.replace(
+            '(at 74 100 0) (property "Reference" "TPG1"',
+            '(at 74 100 90) (property "Reference" "TPG1"',
+            1,
+        ))
+        tpg1 = next(f for f in fixture.children("footprint")
+                    if f.properties().get("Reference") == "TPG1")
+        with self.assertRaisesRegex(ValueError, "Unsupported"):
+            rectangular_b_pad_aabb(tpg1, tpg1.children("pad")[0])
 
 
 if __name__ == "__main__":

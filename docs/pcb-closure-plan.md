@@ -166,6 +166,13 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest: corrected contact-routing input is qualified.** The approved
+checker/report correction passes; static/native PCB bytes are unchanged.
+The [control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json)
+releases only the exact native board/project pair for a separate diagnostic
+setup and one reviewed, confirmed-free routing submission. No native rerun,
+full-board staging, paid use, new agreement or fabrication.
+
 **Latest: contact-routing control held at root witness review.** The saved
 six-component native fixture preserves prior geometry, but its path checker
 misplaces BT2's rotated pads and retains a stale import-only report statement.

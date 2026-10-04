@@ -2,6 +2,14 @@
 
 ## Start here
 
+**Latest: corrected diagnostic input qualified; cloud setup is next.**
+The owner-approved checker/report correction passes without changing either
+PCB or rerunning KiCad. Use only native `ce95303d...` PCB and `ca3d163b...`
+project from the [control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json).
+Six components/eight pads include two genuinely unrouted pairs with legal
+B-only witnesses. One reviewed, confirmed-free submission is authorized;
+no full board, payment or new agreement. Earlier hold entries are historical.
+
 **Latest: meaningful routing control built, but upload held.** Native
 serialization preserves the source objects and four added test pads.
 Root found missing BT2 rotation in the path checker and an obsolete

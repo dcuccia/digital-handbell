@@ -259,12 +259,205 @@ def build_feed_fixture(source, mask, ledger):
     return result, report
 
 
-def write_fixture(output, source_bytes, mask_bytes, feed_bytes=None):
+CONTROL_TERMINALS = (
+    ("TPG1", 74.0, 100.0, "CTRL_GUARD"),
+    ("TPG2", 126.0, 100.0, "CTRL_GUARD"),
+    ("TPE1", 74.0, 88.0, "CTRL_CLEAR"),
+    ("TPE2", 84.0, 88.0, "CTRL_CLEAR"),
+)
+WITNESS_PATHS = {
+    "CTRL_CLEAR": ((74.0, 88.0), (84.0, 88.0)),
+    "CTRL_GUARD": ((74.0, 100.0), (74.0, 112.0), (126.0, 112.0), (126.0, 100.0)),
+}
+
+
+def control_footprint(ref, x, y, net):
+    return (
+        f'(footprint "CONTACT_CONTROL_TERMINAL" (layer "B.Cu") '
+        f'(uuid "{identifier("control/footprint/" + ref)}") (at {x:g} {y:g} 0) '
+        f'(property "Reference" "{ref}" (at 0 2 0) (layer "B.SilkS")) '
+        f'(property "Value" "CONTACT_CONTROL_TERMINAL" (at 0 -2 0) (layer "B.Fab")) '
+        f'(attr smd) (pad "1" smd rect (at 0 0) (size 1 1) '
+        f'(layers "B.Cu" "B.Paste" "B.Mask") (net "{net}") '
+        f'(uuid "{identifier("control/pad/" + ref)}")))'
+    )
+
+
+def _gap_axis_segment_to_box(a, b, box, radius):
+    """Conservative AABB stroke-edge gap for an axis-aligned segment."""
+    x0, y0, x1, y1 = box
+    if a[1] == b[1]:
+        lo, hi, fixed = min(a[0], b[0]), max(a[0], b[0]), a[1]
+        dx = max(x0 - hi, lo - x1, 0.0)
+        dy = max(y0 - fixed, fixed - y1, 0.0)
+    elif a[0] == b[0]:
+        lo, hi, fixed = min(a[1], b[1]), max(a[1], b[1]), a[0]
+        dx = max(x0 - fixed, fixed - x1, 0.0)
+        dy = max(y0 - hi, lo - y1, 0.0)
+    else:
+        raise ValueError("Witness segments must be axis aligned")
+    return math.hypot(dx, dy) - radius
+
+
+def rectangular_b_pad_aabb(footprint, pad):
+    """Bound the exercised 0/180-degree rectangular B-pad cases only."""
+    if pad.atoms()[3] != "rect" or "B.Cu" not in pad.child("layers").atoms()[1:]:
+        raise ValueError("Witness AABB supports rectangular B.Cu pads only")
+    fat = footprint.child("at").atoms()
+    pat = pad.child("at").atoms()
+    footprint_angle = float(fat[3]) % 360 if len(fat) > 3 else 0.0
+    pad_angle = float(pat[3]) % 180 if len(pat) > 3 else 0.0
+    if footprint_angle not in (0.0, 180.0) or pad_angle != 0.0:
+        raise ValueError("Unsupported footprint/pad rotation for witness AABB")
+    fx, fy = float(fat[1]), float(fat[2])
+    px, py = float(pat[1]), float(pat[2])
+    if footprint_angle == 180.0:
+        px, py = -px, -py
+    sx, sy = [float(v) for v in pad.child("size").atoms()[1:3]]
+    return tuple(round(value, 9) for value in (
+        fx + px - sx / 2, fy + py - sy / 2,
+        fx + px + sx / 2, fy + py + sy / 2,
+    ))
+
+
+def validate_witness_paths(fixture_text):
+    root = loads(fixture_text)
+    obstacles = []
+    endpoint_pad_ids = {}
+    for footprint in root.children("footprint"):
+        ref = footprint.properties().get("Reference")
+        for pad in footprint.children("pad"):
+            if "B.Cu" not in pad.child("layers").atoms()[1:]:
+                continue
+            box = rectangular_b_pad_aabb(footprint, pad)
+            item = {"kind": "pad", "id": pad.value("uuid"), "ref": ref, "box": box}
+            obstacles.append(item)
+            if ref in {row[0] for row in CONTROL_TERMINALS}:
+                endpoint_pad_ids[ref] = item["id"]
+    for segment in root.children("segment"):
+        if segment.value("layer") == "B.Cu":
+            start = [float(v) for v in segment.child("start").atoms()[1:3]]
+            end = [float(v) for v in segment.child("end").atoms()[1:3]]
+            half = float(segment.value("width")) / 2
+            obstacles.append({
+                "kind": "segment", "id": segment.value("uuid"),
+                "box": (min(start[0], end[0]) - half, min(start[1], end[1]) - half,
+                        max(start[0], end[0]) + half, max(start[1], end[1]) + half),
+            })
+    for via in root.children("via"):
+        if "B.Cu" in via.child("layers").atoms()[1:]:
+            at = [float(v) for v in via.child("at").atoms()[1:3]]
+            half = float(via.value("size")) / 2
+            obstacles.append({"kind": "via", "id": via.value("uuid"),
+                              "box": (at[0] - half, at[1] - half, at[0] + half, at[1] + half)})
+    guards = []
+    for zone in root.children("zone"):
+        if zone.child("keepout") is not None:
+            pts = [[float(v) for v in p.atoms()[1:3]]
+                   for p in zone.child("polygon").child("pts").children("xy")]
+            guards.append({"name": zone.value("name"),
+                           "box": (min(p[0] for p in pts), min(p[1] for p in pts),
+                                   max(p[0] for p in pts), max(p[1] for p in pts))})
+
+    route_refs = {"CTRL_CLEAR": {"TPE1", "TPE2"}, "CTRL_GUARD": {"TPG1", "TPG2"}}
+    route_report = {}
+    for net, points in WITNESS_PATHS.items():
+        minimum_clearance = math.inf
+        minimum_guard_gap = math.inf
+        limiting = None
+        ignored = {endpoint_pad_ids[ref] for ref in route_refs[net]}
+        for a, b in zip(points, points[1:]):
+            for obstacle in obstacles:
+                if obstacle["id"] in ignored:
+                    continue
+                gap = _gap_axis_segment_to_box(a, b, obstacle["box"], 0.125)
+                if gap < minimum_clearance:
+                    minimum_clearance, limiting = gap, obstacle["id"]
+            for guard in guards:
+                gap = _gap_axis_segment_to_box(a, b, guard["box"], 0.125)
+                minimum_guard_gap = min(minimum_guard_gap, gap)
+        edge_gap = min(min(x - 70.0, 130.0 - x, y - 85.0, 115.0 - y)
+                       for x, y in points) - 0.125
+        if minimum_clearance < 0.2 - 1e-9 or minimum_guard_gap < -1e-9 or edge_gap < 0.3 - 1e-9:
+            raise ValueError(f"{net} witness path is not legal")
+        route_report[net] = {
+            "points_mm": [list(p) for p in points],
+            "width_mm": 0.25,
+            "minimum_foreign_copper_clearance_mm": round(minimum_clearance, 6),
+            "foreign_clearance_margin_over_0_20_mm": round(minimum_clearance - 0.2, 6),
+            "limiting_foreign_object_uuid": limiting,
+            "minimum_expanded_guard_stroke_edge_gap_mm": round(minimum_guard_gap, 6),
+            "minimum_outline_stroke_edge_gap_mm": round(edge_gap, 6),
+        }
+    direct = ((74.0, 100.0), (126.0, 100.0))
+    hits = [g["name"] for g in guards
+            if _gap_axis_segment_to_box(direct[0], direct[1], g["box"], 0.125) <= 0]
+    if not hits:
+        raise ValueError("Direct CTRL_GUARD forbidden reference did not hit a guard")
+    return {
+        "method": "conservative axis-aligned AABB separation; guards already include their 0.25 mm metal margin",
+        "implemented_in_pcb": False,
+        "paths": route_report,
+        "direct_ctrl_guard_reference": {
+            "points_mm": [list(p) for p in direct], "forbidden": True,
+            "intersected_guard_names": sorted(hits),
+        },
+    }
+
+
+def build_routing_control_fixture(source, mask, ledger):
+    base, report = build_feed_fixture(source, mask, ledger)
+    root = loads(base)
+    parts = []
+    for item in root.children():
+        if item.head == "title_block":
+            parts.append(
+                '(title_block (title "CONTACT ROUTING CONTROL - NOT FOR FABRICATION") '
+                '(comment 1 "Adafruit-derived CC BY-SA 3.0; see ATTRIBUTION.md"))'
+            )
+        else:
+            parts.append(base[item.start:item.end])
+    parts.extend(control_footprint(*row) for row in CONTROL_TERMINALS)
+    result = "(kicad_pcb\n" + "\n".join(parts) + "\n)\n"
+    parsed = loads(result)
+    ids = [n.value("uuid") for n in parsed.walk() if n.child("uuid")]
+    if len(ids) != len(set(ids)):
+        raise ValueError("Duplicate routing-control fixture UUID")
+    stale = "No unrouted probe terminals: import recognition only, not routing-enforcement proof."
+    limitations = list(report["intentional_limitations"])
+    if limitations.count(stale) != 1:
+        raise ValueError("Expected stale feed-only no-terminal limitation exactly once")
+    limitations[limitations.index(stale)] = (
+        "Two unrouted control pairs are present; routing enforcement remains unproven."
+    )
+    report.update({
+        "status": "STATIC_CONTACT_ROUTING_CONTROL_NATIVE_NOT_RUN",
+        "import_only": False,
+        "routing_control": True,
+        "control_terminals": [
+            {"reference": ref, "at_mm": [x, y], "angle_deg": 0, "net": net,
+             "footprint_uuid": identifier("control/footprint/" + ref),
+             "pad_uuid": identifier("control/pad/" + ref)}
+            for ref, x, y, net in CONTROL_TERMINALS
+        ],
+        "control_net_segments": 0,
+        "control_net_vias": 0,
+        "intended_unrouted_control_pairs": 2,
+        "intentional_limitations": limitations,
+        "witness_legality": validate_witness_paths(result),
+        "fixture_sha256": digest(result.encode()),
+    })
+    return result, report
+
+
+def write_fixture(output, source_bytes, mask_bytes, feed_bytes=None, routing_control=False):
     if digest(mask_bytes) != MASK_SHA256:
         raise ValueError("Mask evidence hash does not match the reviewed report")
     mask = json.loads(mask_bytes)
     if digest(source_bytes) != mask["source_hashes_after"]["handbell.kicad_pcb"]:
         raise ValueError("PCB bytes do not match the reviewed source")
+    if routing_control and feed_bytes is None:
+        raise ValueError("--routing-control requires --feed-candidate")
     if feed_bytes is None:
         fixture, report = build_fixture(source_bytes.decode("utf-8-sig"), mask)
     else:
@@ -273,7 +466,8 @@ def write_fixture(output, source_bytes, mask_bytes, feed_bytes=None):
         ledger = json.loads(feed_bytes)
         if ledger["source_pcb_sha256"] != digest(source_bytes) or ledger["contact_mask_sha256"] != digest(mask_bytes):
             raise ValueError("Feed evidence source binding does not match inputs")
-        fixture, report = build_feed_fixture(source_bytes.decode("utf-8-sig"), mask, ledger)
+        builder = build_routing_control_fixture if routing_control else build_feed_fixture
+        fixture, report = builder(source_bytes.decode("utf-8-sig"), mask, ledger)
     report["input_sha256"] = {"pcb": digest(source_bytes), "mask": digest(mask_bytes)}
     if feed_bytes is not None:
         report["input_sha256"]["feed_candidate"] = digest(feed_bytes)
@@ -291,11 +485,13 @@ def main():
     parser.add_argument("--source", type=Path, default=SOURCE)
     parser.add_argument("--mask", type=Path, default=MASK)
     parser.add_argument("--feed-candidate", type=Path, help="Reviewed ledger for the import-only variant; omitting it preserves the original rule-control fixture")
+    parser.add_argument("--routing-control", action="store_true", help="Add four unrouted geometric terminals; requires --feed-candidate")
     parser.add_argument("--output", type=Path, required=True, help="New, non-existing output directory")
     args = parser.parse_args()
     report = write_fixture(
         args.output, args.source.read_bytes(), args.mask.read_bytes(),
         None if args.feed_candidate is None else args.feed_candidate.read_bytes(),
+        args.routing_control,
     )
     print(json.dumps(report, indent=2))
 

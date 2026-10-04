@@ -2,6 +2,19 @@
 
 ## Bounded engineering work
 
+- **October 3 contact-routing input qualified:** the explicitly approved
+  checker/report correction passes, with 16 tests and unchanged PCB bytes.
+  Corrected static/native witness clearances agree; no KiCad rerun occurred.
+  Only native `ce95303d...` PCB and `ca3d163b...` minimal project are released
+  for the separate six-component/eight-pad/two-open diagnostic. Proceed
+  through reviewed cloud setup only; submit once only if confirmed free.
+  No full-board staging, paid use, new agreement or fabrication. Preserve
+  the prior import draft and all earlier reports, including the held patch.
+- **October 3 checker-only correction approved:** owner permits one
+  additional bounded correction for BT2 rotation and the stale report
+  limitation. Reuse saved static/native bytes; no KiCad/DRC rerun, PCB
+  change or cosmetic cleanup. Executor stops 17:32, root checkpoint
+  by 17:35. Upload remains held until the corrected witness review passes.
 - **October 3 contact-routing control held:** six footprints/eight pads
   and two new opens now serialize natively with all prior source objects
   preserved. Root found the witness checker ignores BT2's 180-degree
