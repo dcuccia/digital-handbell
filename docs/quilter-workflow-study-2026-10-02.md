@@ -679,7 +679,9 @@ in a **separate diagnostic project**, not the existing 104-reference
 handbell project. Do not create a known-dissimilar job just to exercise
 the rejection or duplicate the old job and inherit its constraints.
 
-**Proposed next scope, pending owner approval:** prepare one disposable
+**Subsequently owner-approved scope:** the owner approved preparation and
+import preview, followed by proposed next steps at the next stopping point.
+Prepare one disposable
 contact-feed import fixture, then create a separate diagnostic draft and
 upload only that fixture's board/project to reach its parsed preview.
 Reuse the qualified builder/parser and the exact 30-segment/five-ordinary-
@@ -704,6 +706,41 @@ run would require separate scope approval and suitable unrouted test
 terminals/positive and negative controls. Do not submit a zero-work fixture
 and call it a successful routing experiment. The current full-board,
 electrical, manufacturing and enclosure gates remain in force.
+
+Local preparation began at 16:49:26; executor work stops by 17:01 and root
+checkpoints by 17:04. The new builder option is
+`--feed-candidate docs\measurements\2026-09-27-router-bakeoff\quilter-contact-feed-candidate-2026-10-03.json`;
+omitting it must preserve the original control fixture's exact bytes.
+The import variant retains 42 source root subtrees (two footprints, ten
+vias and 30 segments), eight guards and the fixture-only rectangular
+outline. It has no copper pours or synthetic failing probes. The reviewed
+ledger is hash-locked as `ff166d733bdd06966e7f549e36e232784d11174ef80cbd2370f9ce9b170f675e`.
+Root handles the software changes; runtime-verified Sol/medium executes
+static and native checks with hard 60-second subprocess limits. No old
+fixture, authoritative source or application preferences may be overwritten.
+
+**Local preparation completed:** the [import-fixture evidence](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json)
+binds 11 passing software tests and the native 10.0.6 round trip. All 42
+selected root subtrees and the two contacts/four pads, 30 B segments, ten
+vias, eight guards, four copper layers and four-line outline are preserved.
+The original rule-control fixture remains byte-identical. Two validator-only
+corrections addressed its mistaken rectangle-kind expectation and universal-
+newline hashing; both reused native output, with no native rerun. The raw
+failure evidence is preserved. Root additionally checked actual pad types,
+unchanged raw via-layer ordering and absence of unexpected geometry.
+
+The fixture remains deliberately non-clean: 24 keepout findings hit 15
+distinct feed segments across both nets; all ten vias avoid these findings.
+Ten dangling-via, two width, two library and four unconnected findings
+remain. These are not product-board defect counts or a fabrication-rule
+waiver. No native source load or refill occurred; all five authoritative
+hashes remain unchanged.
+
+Only `native\contact-rule-fixture.kicad_pcb` (`cadfccd4...`) and its
+empty minimal `.kicad_pro` (`ca3d163b...`) are released for the owner-approved
+separate draft's import preview. Full hashes and raw report bindings are
+in the evidence file. Do not upload generated PRLs, scripts, reports or
+account/browser data. This local checkpoint does not release compilation.
 
 ## October 3 authenticated browser checkpoint
 

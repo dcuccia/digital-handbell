@@ -2,6 +2,21 @@
 
 ## Start here
 
+**Local import fixture is qualified; cloud preview is next.** Eleven
+software tests and the native round trip preserve all intended source
+geometry. The deliberately contradictory keepout findings remain visible;
+no clean-product or routing-enforcement claim. Upload only the exact
+`cadfccd4...` native board and `ca3d163b...` minimal project bound in the
+[import ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json).
+No source change, refill or native retry; no compilation is approved.
+
+**Owner approved the isolated import-only scope.** Prepare and qualify the
+contact-feed fixture, then use a separate Quilter diagnostic draft only
+through parsed preview; propose next steps there, with no submission.
+Local preparation starts 16:49:26, Sol execution stops 17:01 and root
+checkpoints by 17:04. Source and old fixtures stay unchanged. See the
+[approved scope](quilter-workflow-study-2026-10-02.md#1635-quilter-diagnostic-readiness).
+
 **Latest: Quilter browser ready; isolated import scope pending approval.**
 No login is needed. Public personal-use eligibility is reconfirmed, but
 the account UI exposes no price/plan confirmation. No project, job or

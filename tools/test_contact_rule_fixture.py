@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from build_contact_rule_fixture import MASK, SOURCE, build_fixture, write_fixture
+from build_contact_rule_fixture import FEED, MASK, SOURCE, build_feed_fixture, build_fixture, digest, write_fixture
 from kicad_sexpr import loads
 
 
@@ -97,6 +97,74 @@ class ContactRuleFixtureTests(unittest.TestCase):
             with self.assertRaises(FileExistsError):
                 write_fixture(output, self.source_bytes, self.mask_bytes)
             self.assertEqual(before, (output / "contact-rule-fixture.kicad_pcb").read_bytes())
+
+    def test_feed_import_preserves_every_selected_subtree_without_synthetic_controls(self):
+        ledger = json.loads(FEED.read_bytes())
+        text, report = build_feed_fixture(self.source, self.mask, ledger)
+        original, fixture = loads(self.source), loads(text)
+        self.assertEqual(2, len(fixture.children("footprint")))
+        self.assertEqual(10, len(fixture.children("via")))
+        self.assertEqual(30, len(fixture.children("segment")))
+        self.assertEqual(8, len(fixture.children("zone")))
+        self.assertTrue(all(z.child("keepout") is not None for z in fixture.children("zone")))
+        self.assertEqual(42, len(report["retained_subtree_sha256"]))
+        self.assertEqual([], report["controls"])
+        self.assertTrue(report["import_only"])
+        self.assertEqual(
+            {u for b in ledger["blocks"] for u in b["segment_uuids"]},
+            {s.value("uuid") for s in fixture.children("segment")},
+        )
+        for item_id in report["retained_subtree_sha256"]:
+            before = next(n for n in original.children() if n.value("uuid") == item_id)
+            after = next(n for n in fixture.children() if n.value("uuid") == item_id)
+            self.assertEqual(self.source[before.start:before.end], text[after.start:after.end])
+        baseline, _ = build_fixture(self.source, self.mask)
+        for head in ("layers", "gr_line"):
+            self.assertEqual(
+                [baseline[n.start:n.end] for n in loads(baseline).children(head)],
+                [text[n.start:n.end] for n in fixture.children(head)],
+            )
+        base_guards = [z for z in loads(baseline).children("zone") if z.child("keepout")]
+        self.assertEqual(
+            [baseline[z.start:z.end] for z in base_guards],
+            [text[z.start:z.end] for z in fixture.children("zone")],
+        )
+
+    def test_feed_import_rejects_wrong_segments_and_via_geometry(self):
+        ledger = json.loads(FEED.read_bytes())
+        ledger["blocks"][0]["segment_uuids"][0] = "not-a-source-uuid"
+        with self.assertRaisesRegex(ValueError, "segment UUIDs"):
+            build_feed_fixture(self.source, self.mask, ledger)
+        ledger = json.loads(FEED.read_bytes())
+        ledger["blocks"][0]["records_sha256"] = "wrong-record-hash"
+        with self.assertRaisesRegex(ValueError, "segment geometry"):
+            build_feed_fixture(self.source, self.mask, ledger)
+        ledger = json.loads(FEED.read_bytes())
+        ledger["blocks"][0]["existing_via_candidates"][0]["drill_mm"] = 0.35
+        with self.assertRaisesRegex(ValueError, "via geometry"):
+            build_feed_fixture(self.source, self.mask, ledger)
+
+    def test_feed_import_write_hash_gate_and_no_overwrite(self):
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp) / "import-fixture"
+            feed = FEED.read_bytes()
+            with self.assertRaisesRegex(ValueError, "Feed evidence hash"):
+                write_fixture(output, self.source_bytes, self.mask_bytes, feed + b"\n")
+            self.assertFalse(output.exists())
+            report = write_fixture(output, self.source_bytes, self.mask_bytes, feed)
+            self.assertEqual(digest(feed), report["input_sha256"]["feed_candidate"])
+            board = output / "contact-rule-fixture.kicad_pcb"
+            before = board.read_bytes()
+            with self.assertRaises(FileExistsError):
+                write_fixture(output, self.source_bytes, self.mask_bytes, feed)
+            self.assertEqual(before, board.read_bytes())
+
+    def test_original_fixture_bytes_remain_unchanged(self):
+        text, _ = build_fixture(self.source, self.mask)
+        self.assertEqual(
+            "a54f71f8db307cabe0f88d7964e20533e64ce374d0e072c1ab24b51a3cf1a892",
+            digest(text.encode()),
+        )
 
 
 if __name__ == "__main__":

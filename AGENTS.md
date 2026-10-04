@@ -2,6 +2,23 @@
 
 ## Bounded engineering work
 
+- **October 3 contact-feed import fixture qualified:** 11 static tests and
+  native load/save/reload preserve 42 source subtrees, 30 segments, ten vias,
+  two contacts/four pads and eight guards. Two validator-only corrections
+  reused output; no native rerun or source change. Deliberate keepout/other
+  findings remain; no clean-product claim. The exact `cadfccd4...` native
+  PCB and `ca3d163b...` minimal project alone are released for the approved
+  separate draft import preview. No PRLs, full board or routing submission.
+- **October 3 import-only scope approved:** owner explicitly approves
+  preparation and a separate contact-feed diagnostic import preview, then
+  proposed next steps at the stopping point. No routing submission, paid
+  use, full-board staging or source change. Local fixture preparation
+  starts 16:49:26, executor stops 17:01, root checkpoint by 17:04.
+  Use the optional feed-ledger mode of the qualified builder, preserving
+  its original output; ten existing vias/30 B segments/two contacts/eight
+  guards, no synthetic fail probes or copper pour. Runtime-verified
+  Sol/medium executes checks. Upload only the qualified board/project,
+  never PRL/account data; stop at price, upgrade or agreement prompts.
 - **October 3, 16:35 Quilter readiness:** browser login remains valid.
   Read-only account/project/details inspection and public free-tier
   eligibility checks are complete; actual account pricing remains

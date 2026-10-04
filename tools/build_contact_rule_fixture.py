@@ -14,6 +14,8 @@ REPO = Path(__file__).resolve().parents[1]
 SOURCE = REPO / "hardware" / "handbell" / "iterations" / "printed-bell-four-layer" / "handbell.kicad_pcb"
 MASK = REPO / "docs" / "measurements" / "2026-09-27-router-bakeoff" / "quilter-contact-via-mask-2026-10-03.json"
 MASK_SHA256 = "489503349d1f05968ea165237a99bbd01e4381983b1f40273a9ab98fdef17fda"
+FEED = MASK.with_name("quilter-contact-feed-candidate-2026-10-03.json")
+FEED_SHA256 = "ff166d733bdd06966e7f549e36e232784d11174ef80cbd2370f9ce9b170f675e"
 NAMESPACE = uuid.UUID("5e5f6ef1-e88f-4e09-a6e9-f61724ebba16")
 FLAGS = {
     "tracks": "not_allowed",
@@ -178,14 +180,103 @@ def build_fixture(source, mask):
     return result, report
 
 
-def write_fixture(output, source_bytes, mask_bytes):
+def build_feed_fixture(source, mask, ledger):
+    base, report = build_fixture(source, mask)
+    original, fixture = loads(source), loads(base)
+    seeds = set(report["protected_via_uuids"])
+    segments, ordinary_vias = [], []
+    blocks = ledger["blocks"]
+    if len(blocks) != 2 or {b["net"] for b in blocks} != {"VBAT", "/CELL_NEG"}:
+        raise ValueError("Expected the two reviewed contact-feed blocks")
+    for block in blocks:
+        ids = block["segment_uuids"]
+        selected = [s for s in original.children("segment") if s.value("uuid") in ids]
+        if len(ids) != len(set(ids)) or len(selected) != block["selected_segment_count"] or len(selected) != len(ids):
+            raise ValueError("Contact-feed segment UUIDs do not match source")
+        if block["layer"] != "B.Cu" or any(
+            s.value("layer") != "B.Cu" or net_name(s) != block["net"] for s in selected
+        ):
+            raise ValueError("Unexpected contact-feed segment net or layer")
+        records = sorted([
+            {"uuid":s.value("uuid"), "start":s.child("start").atoms()[1:],
+             "end":s.child("end").atoms()[1:], "width":s.value("width")}
+            for s in selected
+        ], key=lambda row: row["uuid"])
+        if digest(json.dumps(records, sort_keys=True, separators=(",", ":")).encode()) != block["records_sha256"]:
+            raise ValueError("Contact-feed segment geometry does not match reviewed records")
+        segments.extend(selected)
+        for row in block["existing_via_candidates"]:
+            matches = [v for v in original.children("via") if v.value("uuid") == row["uuid"]]
+            if len(matches) != 1 or row["uuid"] in seeds:
+                raise ValueError("Ordinary contact-via UUID does not match source")
+            via = matches[0]
+            observed = [float(v) for v in via.child("at").atoms()[1:]]
+            observed += [float(via.value("size")), float(via.value("drill"))]
+            expected = row["xy_mm"] + [row["diameter_mm"], row["drill_mm"]]
+            if observed != expected or net_name(via) != block["net"] or via.child("layers").atoms()[1:] != ["F.Cu", "B.Cu"]:
+                raise ValueError("Ordinary contact-via geometry/net/span does not match source")
+            ordinary_vias.append(via)
+    if len(segments) != 30 or len(ordinary_vias) != 5:
+        raise ValueError("Expected 30 contact-feed segments and five ordinary vias")
+
+    parts = []
+    for item in fixture.children():
+        if item.head == "segment" or (item.head == "via" and item.value("uuid") not in seeds):
+            continue
+        if item.head == "zone" and item.child("keepout") is None:
+            continue
+        if item.head == "title_block":
+            parts.append(
+                '(title_block (title "CONTACT FEED IMPORT ONLY - NOT FOR FABRICATION") '
+                '(comment 1 "Adafruit-derived CC BY-SA 3.0; see ATTRIBUTION.md"))'
+            )
+        else:
+            parts.append(base[item.start:item.end])
+    retained = segments + ordinary_vias
+    parts.extend(source[item.start:item.end] for item in retained)
+    result = "(kicad_pcb\n" + "\n".join(parts) + "\n)\n"
+    parsed = loads(result)
+    ids = [n.value("uuid") for n in parsed.walk() if n.child("uuid")]
+    if len(ids) != len(set(ids)):
+        raise ValueError("Duplicate fixture UUID")
+    report["retained_subtree_sha256"].update({
+        n.value("uuid"): digest(source[n.start:n.end].encode()) for n in retained
+    })
+    report.update({
+        "status": "STATIC_CONTACT_FEED_IMPORT_ONLY_NATIVE_NOT_RUN",
+        "import_only": True,
+        "controls": [],
+        "contact_feed_segment_uuids": sorted(n.value("uuid") for n in segments),
+        "ordinary_via_uuids": sorted(n.value("uuid") for n in ordinary_vias),
+        "copper_pours": 0,
+        "intentional_limitations": [
+            "Retained same-net feeds overlap all-track guards; this is not a legal product-board feed solution.",
+            "Five inherited ordinary vias remain 0.600/0.300 mm; no manufacturing exception or resizing.",
+            "No unrouted probe terminals: import recognition only, not routing-enforcement proof.",
+        ],
+        "fixture_sha256": digest(result.encode()),
+    })
+    return result, report
+
+
+def write_fixture(output, source_bytes, mask_bytes, feed_bytes=None):
     if digest(mask_bytes) != MASK_SHA256:
         raise ValueError("Mask evidence hash does not match the reviewed report")
     mask = json.loads(mask_bytes)
     if digest(source_bytes) != mask["source_hashes_after"]["handbell.kicad_pcb"]:
         raise ValueError("PCB bytes do not match the reviewed source")
-    fixture, report = build_fixture(source_bytes.decode("utf-8-sig"), mask)
+    if feed_bytes is None:
+        fixture, report = build_fixture(source_bytes.decode("utf-8-sig"), mask)
+    else:
+        if digest(feed_bytes) != FEED_SHA256:
+            raise ValueError("Feed evidence hash does not match the reviewed report")
+        ledger = json.loads(feed_bytes)
+        if ledger["source_pcb_sha256"] != digest(source_bytes) or ledger["contact_mask_sha256"] != digest(mask_bytes):
+            raise ValueError("Feed evidence source binding does not match inputs")
+        fixture, report = build_feed_fixture(source_bytes.decode("utf-8-sig"), mask, ledger)
     report["input_sha256"] = {"pcb": digest(source_bytes), "mask": digest(mask_bytes)}
+    if feed_bytes is not None:
+        report["input_sha256"]["feed_candidate"] = digest(feed_bytes)
     output.mkdir(parents=True, exist_ok=False)
     (output / "contact-rule-fixture.kicad_pcb").write_bytes(fixture.encode("utf-8"))
     (output / "contact-rule-fixture.kicad_pro").write_bytes(b"{}\n")
@@ -199,9 +290,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=SOURCE)
     parser.add_argument("--mask", type=Path, default=MASK)
+    parser.add_argument("--feed-candidate", type=Path, help="Reviewed ledger for the import-only variant; omitting it preserves the original rule-control fixture")
     parser.add_argument("--output", type=Path, required=True, help="New, non-existing output directory")
     args = parser.parse_args()
-    report = write_fixture(args.output, args.source.read_bytes(), args.mask.read_bytes())
+    report = write_fixture(
+        args.output, args.source.read_bytes(), args.mask.read_bytes(),
+        None if args.feed_candidate is None else args.feed_candidate.read_bytes(),
+    )
     print(json.dumps(report, indent=2))
 
 

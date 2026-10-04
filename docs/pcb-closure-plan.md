@@ -166,6 +166,20 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Local contact-feed fixture qualification complete.** The owner-approved
+next item is the separate diagnostic import preview using only the exact
+board/project pair in the [import ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json).
+Keep all intentional DRC contradictions visible and stop before submission;
+no full-board or manufacturing acceptance follows.
+
+**Owner approved preparation and import preview only.** Build/qualify the
+small contact-feed variant, then upload its board/project to a separate
+diagnostic draft, stopping before compilation/submission or payments.
+Propose next steps at that stopping point. Local preparation starts
+16:49:26, executor stops 17:01 and root checkpoints by 17:04; no source
+edit or full-board staging. The prior read-only hold is superseded only
+for this [bounded scope](quilter-workflow-study-2026-10-02.md#1635-quilter-diagnostic-readiness).
+
 **Latest: read-only Quilter readiness check complete.** Authentication
 works; no login needed. Public personal free use is reconfirmed, not an
 account-specific price. No new cloud object, upload or submission exists.
