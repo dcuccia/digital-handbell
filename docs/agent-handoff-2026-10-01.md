@@ -2,6 +2,15 @@
 
 ## Start here
 
+**Latest: meaningful routing control built, but upload held.** Native
+serialization preserves the source objects and four added test pads.
+Root found missing BT2 rotation in the path checker and an obsolete
+report limitation. Two corrections are exhausted; the
+[next disposition](quilter-workflow-study-2026-10-02.md#1713-approved-contact-routing-control)
+is one explicitly approved checker/report-only repair using saved native
+evidence. No actual route blockage is established and no new cloud job
+was created. Source and earlier import draft remain unchanged.
+
 **Latest: isolated import preview completed; stop before routing.**
 The [diagnostic draft](https://app.quilter.ai/jobs/6ac19743fc0d2d776ed1490e/create/files)
 persistently shows both files Parsed, two components/four pins and zero

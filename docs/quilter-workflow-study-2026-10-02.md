@@ -787,6 +787,48 @@ completion percentage. Only then release broader flexible four-/six-layer
 preparation through the remaining electrical/mechanical/manufacturing gates.
 Submitting this zero-work fixture would not answer the routing question.
 
+### 17:13 approved contact routing control
+
+The owner approved the proposed next experiment, conditional on a qualified
+input and confirmed free submission. This is one isolated diagnostic, not
+full-board staging, paid use, agreement acceptance or fabrication.
+The [source-bound control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json)
+defines four additional fixed B-side, single-pad test terminals: a clear
+connection at y88 and a guard-challenging connection from x74 to x126 at
+y100. Both have proposed B-only legal witness paths; neither is put into
+the input as copper. Preserve the complete prior 42-subtree retention set.
+Preparation runs through 17:26, with root review/checkpoint by 17:28;
+unqualified input is not uploaded to meet a deadline.
+
+Read-only responses already fetched by the prior preview provide a useful
+clarification: all eight keepout metadata records explicitly list
+**TRACES, VIAS and POURS on renderer layer 3, mapped to B.Cu**. The board
+metadata also identifies BT1/BT2 and their two physical pins each (internally
+labelled 1.1/1.2). These are stronger observations than lookup names alone,
+but not exact geometric equivalence, native-output identity or enforcement
+proof. The renderer's packed mesh representation was not reverse-engineered
+into a new geometry framework. Account metadata did not establish a price;
+its temporary response was removed because it contained unrelated
+authentication data. Raw design/render evidence remains local and ignored.
+
+**Preparation outcome: native serialization passed; upload held at root
+review.** Fourteen tests pass and the native pair `ce95303d...` preserves
+the intended source objects with six footprints/eight pads and two added
+control opens. One native load/save/reload and one DRC completed without
+refill or source load. The existing 38 violations remain, plus eight
+nonmirrored-back-text warnings on the synthetic Reference/Value labels;
+unconnected items increase from four to six as intended.
+
+The path checker nevertheless adds local pad coordinates without applying
+footprint rotation. BT2 is rotated 180 degrees, so its unequal-height
+contact pads are assigned to the wrong ends. Root does **not** accept the
+reported witness clearances on that basis; this is not evidence of a
+physical obstruction. The report also inherits the obsolete import-only
+statement that no unrouted terminals exist. Initial plus two corrections
+are exhausted. Preserve all output and request one bounded checker/report
+correction using the saved native files; no new native run or cloud upload
+is released merely by the earlier serialization result.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved

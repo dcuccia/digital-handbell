@@ -1,8 +1,21 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "CONTACT_FEED_IMPORT_PARSED_ROUTING_BEHAVIOR_UNTESTED",
-  "checkpoint_history_note": "Named checkpoints record their own time and scope; contact_feed_import_checkpoint is current for import state.",
+  "status": "CONTACT_ROUTING_CONTROL_WITNESS_REVIEW_BLOCKED",
+  "checkpoint_history_note": "Named checkpoints record their own time and scope; contact_routing_control_checkpoint is current.",
+  "contact_routing_control_checkpoint": {
+    "date": "2026-10-03",
+    "owner_approval_time_local": "17:13",
+    "status": "NATIVE_SERIALIZATION_PASSED_WITNESS_REVIEW_BLOCKED",
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-routing-control-2026-10-03.json",
+    "control_nets": ["CTRL_CLEAR", "CTRL_GUARD"],
+    "expected_control_unrouted_pairs": 2,
+    "root_blocker": "Witness pad boxes ignore BT2's 180-degree rotation; report also retains an obsolete no-unrouted-terminals limitation. Two corrections used; upload held pending a bounded correction disposition.",
+    "conditional_free_diagnostic_submission_authorized": true,
+    "paid_use_or_new_agreement_authorized": false,
+    "full_board_staging_authorized": false,
+    "submitted": false
+  },
   "contact_feed_import_checkpoint": {
     "date": "2026-10-03",
     "status": "CONTACT_FEED_IMPORT_PARSED_ROUTING_BEHAVIOR_UNTESTED",

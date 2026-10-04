@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "status": "NATIVE_SERIALIZATION_PASSED_WITNESS_REVIEW_BLOCKED",
+  "license_context": "Source-derived CC BY-SA 3.0 hardware evidence; see ATTRIBUTION.md.",
+  "owner_approval_time_local": "17:13",
+  "owner_scope": "Prepare one meaningful contact routing diagnostic, submit only if qualified and confirmed free, then inspect native output. No authoritative PCB edits, full-board staging, paid action, new agreement or fabrication.",
+  "preparation_stop_by_local": "17:26",
+  "root_checkpoint_by_local": "17:28",
+  "executor": {
+    "agent_id": "8ace240a-7ea9-4d8e-bdcd-30fec7b77dde",
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "started_configured_completed_runtime_verified_before_writes": true
+  },
+  "source_pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+  "feed_ledger_sha256": "ff166d733bdd06966e7f549e36e232784d11174ef80cbd2370f9ce9b170f675e",
+  "mask_sha256": "489503349d1f05968ea165237a99bbd01e4381983b1f40273a9ab98fdef17fda",
+  "evidence_directory": "quilter\\outputs\\contact-routing-control-20261003T1713",
+  "held_software": "Builder/test edits remain uncommitted and are also preserved as root-held-software.patch in the evidence directory. Do not treat their witness assertion as qualified.",
+  "preserved_artifacts": {
+    "builder_sha256": "8977538947dcd753f07ac9e6da5f3da14f63655716114cf44e4cb58c85aabbaa",
+    "tests_sha256": "4d8b31d0d8570b1f3a132ee75cf67951349e7669598de395935320ebde88ab1e",
+    "static_pcb_sha256": "74cec878f2c5e1c2ad7887e21c1fd4b281f73ef1a6a856a8a7b65831666ef710",
+    "static_report_sha256": "3aa01c8599fe0364b75d3fbd0421aaa1f1bca1c9f51e431ad2c7ab69cc0b6bf5",
+    "native_saved_and_reloaded_pcb_sha256": "ce95303dda7b3839ce8937243a568768e4ddc857d78735523b06b40e0f743db0",
+    "minimal_project_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "native_validator_sha256": "09f235c1d8dc493b5d56a016d1fdeae8b8e0d66288f325bd96b16e195534cc24",
+    "native_report_sha256": "a2b02f0daf91a1a51b986f72da1f480d39459ba804b3604d2c4c4cf009889cb6",
+    "raw_drc_sha256": "d28be02dd7907a7861e00b7e465fafdcb70f973d36cf9f4103c44a92c3701fd7"
+  },
+  "execution": {
+    "unit_tests_passed": 14,
+    "corrections_used": 2,
+    "fixture_native_loads": 2,
+    "source_native_loads": 0,
+    "drc_invocations": 1,
+    "refills": 0,
+    "subprocess_timeouts_seconds": 60,
+    "native_seconds": 0.485,
+    "drc_seconds": 3.359,
+    "source_package_all_five_hashes_unchanged": true,
+    "all_42_source_subtrees_preserved": true
+  },
+  "drc": {
+    "items_not_allowed": 24,
+    "via_dangling": 10,
+    "track_width": 2,
+    "lib_footprint_issues": 2,
+    "new_nonmirrored_back_text_warnings": 8,
+    "unconnected_items": 6,
+    "new_control_pair_opens": 2,
+    "probe_guard_or_short_clearance_findings": 0,
+    "clean_product_claimed": false
+  },
+  "root_review_blockers": [
+    "Witness checker adds footprint and local pad coordinates without rotation. BT2 is at 88.375,100 with 180 degrees: its local -8.005 pad belongs at x96.38, not x80.37. The two unequal-height contact pad boxes are misplaced, so the witness clearances are not accepted. This is a checker defect, not evidence that the proposed routes are impossible.",
+    "Routing-control report inherits the import-only limitation saying there are no unrouted probe terminals, despite the four added control pads.",
+    "Initial plus two corrections are exhausted. Hold upload; seek one bounded checker/report correction reusing saved native evidence, not an automatic native rerun."
+  ],
+  "planned_native_population": {
+    "footprints": 6,
+    "physical_pads": 8,
+    "nets": 5,
+    "retained_source_root_subtrees": 42,
+    "retained_B_segments": 30,
+    "process_vias": 5,
+    "ordinary_vias": 5,
+    "B_guard_areas": 8,
+    "copper_layers": 4,
+    "copper_pours": 0,
+    "control_unrouted_pairs": 2
+  },
+  "planned_terminals": [
+    {"reference": "TPG1", "net": "CTRL_GUARD", "native_xy_mm": [74, 100]},
+    {"reference": "TPG2", "net": "CTRL_GUARD", "native_xy_mm": [126, 100]},
+    {"reference": "TPE1", "net": "CTRL_CLEAR", "native_xy_mm": [74, 88]},
+    {"reference": "TPE2", "net": "CTRL_CLEAR", "native_xy_mm": [84, 88]}
+  ],
+  "terminal_contract": "Preplaced B-side, angle 0, one rectangular 1x1 mm SMT pad number 1 at local 0,0; B.Cu/B.Mask/B.Paste. Synthetic geometry controls, not sourced product parts. No input copper on either control net.",
+  "witness_contract": {
+    "status": "MEASURED_BY_DEFECTIVE_ROTATION_CHECKER_NOT_ACCEPTED",
+    "input_tracks_added": false,
+    "layer": "B.Cu",
+    "width_mm": 0.25,
+    "foreign_copper_clearance_mm": 0.20,
+    "CTRL_CLEAR": [[74, 88], [84, 88]],
+    "CTRL_GUARD": [[74, 100], [74, 112], [126, 112], [126, 100]],
+    "forbidden_direct_reference": [[74, 100], [126, 100]],
+    "acceptance": "Whole-stroke legality against retained copper/pads/vias, other control pads, all already-expanded guards and outline; direct reference must intersect a guard. Paths are proof witnesses only, never routed into the upload."
+  },
+  "prior_import_metadata_supplement": {
+    "input_pcb_sha256": "cadfccd4d424fc5e145f7eacb0cfc112b8daa2ee0841abfcd2cf2cfeaa841c7a",
+    "source": "Read-only responses already fetched by the authenticated parsed-preview page; raw bodies remain local and ignored.",
+    "raw_render_response_sha256": "1a16120863b6206ec58194dee9d0d0c870be79c58b33ef71f6bc63c508ec0252",
+    "components": ["BT1", "BT2"],
+    "physical_pin_labels_per_contact": ["1.1", "1.2"],
+    "keepout_entries": 8,
+    "keepout_names": "keepout_idx_1_lib_pin through keepout_idx_8_lib_pin",
+    "restrictions_on_each": ["TRACES", "VIAS", "POURS"],
+    "renderer_layer_indices_on_each": [3],
+    "renderer_layer_mapping": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"],
+    "precise_geometry_independently_compared": false,
+    "routing_enforcement_proven": false,
+    "pricing_result": "Account response exposed no plan or price confirmation; do not treat an empty permissions list as entitlement.",
+    "privacy": "Temporary account response removed after selecting noncredential metadata; no authentication data retained in this ledger."
+  },
+  "cloud": {
+    "new_project_created": false,
+    "uploaded": false,
+    "submitted": false,
+    "account_specific_zero_price_confirmed": false
+  },
+  "acceptance_limits": [
+    "Existing feed/keepout contradictions are deliberate; do not suppress them or call the fixture DRC-clean.",
+    "Require native preservation of all existing contacts, pads, nets, copper, vias, guards, outline and four layers before interpreting new routing.",
+    "Check actual connectivity and all new copper against applicable guards; percentage completion is insufficient.",
+    "A legal F/inner-layer detour would be recorded as such, not proof that a B-only route was exercised.",
+    "No manufacturing, loaded-contact, actual-board placement or powered-use qualification follows from this control."
+  ]
+}

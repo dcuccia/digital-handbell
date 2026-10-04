@@ -166,6 +166,14 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest: contact-routing control held at root witness review.** The saved
+six-component native fixture preserves prior geometry, but its path checker
+misplaces BT2's rotated pads and retains a stale import-only report statement.
+Two corrections are exhausted; seek a bounded checker/report repair using
+the saved native files. No upload, native rerun or source change is released
+by the serialization result alone. See the
+[control disposition](quilter-workflow-study-2026-10-02.md#1713-approved-contact-routing-control).
+
 **Latest: separate diagnostic import preview completed.** Two files are
 Parsed after reload; eight keepout lookup entries, two components/four pins,
 zero to route. Stop here as requested: no submission or source changes.

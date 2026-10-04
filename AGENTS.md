@@ -2,6 +2,23 @@
 
 ## Bounded engineering work
 
+- **October 3 contact-routing control held:** six footprints/eight pads
+  and two new opens now serialize natively with all prior source objects
+  preserved. Root found the witness checker ignores BT2's 180-degree
+  rotation and inherits a stale no-unrouted-terminals report statement.
+  Two corrections are exhausted. Hold upload, preserve native evidence
+  and seek a bounded checker/report-only correction, not another native
+  run. This does not establish an actual route obstruction. Source remains
+  unchanged; no new cloud object or submission. See the control ledger.
+- **October 3, 17:13 behavioral diagnostic approved:** owner authorizes the
+  proposed meaningful control and one qualified, confirmed-free routing
+  submission. Prepare four fixed B test terminals on CTRL_CLEAR/CTRL_GUARD
+  while retaining the prior contacts, 30 feeds, ten vias and eight guards.
+  Native preparation is bounded through 17:26, root checkpoint by 17:28.
+  No source/full-board change, paid use or new agreement. Read-only parsed
+  metadata now confirms all eight prior keepouts list TRACES/VIAS/POURS on
+  B; exact geometry and generated-routing behavior remain unverified.
+  See the workflow study and routing-control ledger before proceeding.
 - **October 3 contact-feed preview completed:** the separate diagnostic
   draft parsed both qualified files: two components, four pins, zero to
   place/route. Filtered lookup shows eight keepouts, three nets and four
