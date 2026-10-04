@@ -297,6 +297,51 @@ copper and actual terminal boundaries. Private-tap/plane protection,
 placement domains, process and import qualification remain separate gates.
 No source changes, native saves/refill/DRC, routing or cloud occurred.
 
+### October 4 physical-cut stopping checkpoint
+
+The [physical report](measurements/2026-09-27-router-bakeoff/quilter-critical-physical-attachments-2026-10-04.json)
+preserves three attempts: a 90.141-second polygon-analysis timeout, a
+pre-import syntax failure, then a 2.926-second completed analysis after
+caching/indexing changes. Two private-copy native loads occurred. All
+recorded children exited; source and prior accepted artifact hashes match.
+Four Boolean controls passed, but the physical-cut qualification is partial.
+
+BOOST_SW has exactly two physical pads, U5.5 and L1.P$2, and four connected
+F tracks. The omitted `046e039e-0810-5599-ac5c-33a1afd3d3dc` is 1.2 mm
+wide and contributes copper not covered by the proposed185 geometry.
+Complete retention would make proposed union186, with five process seeds
+still separate. This qualifies a seventh source-local inventory, not a
+generated input or new current/thermal approval.
+
+**Root limitations:** four U4 process vias appeared in the residual GND
+group because the geometric basis contained185 copper objects and retained
+pads, but not the independent process seeds. The report subtracts those
+four from the displayed unselected count; it does not re-split or recompute
+the group's geometry. Do not interpret its remaining57-object grouping as
+a qualified independent cut.
+
+The single-land test also asks whether *all* contacts of a global network
+fit one retained pad. That mixes legitimate remote destinations with the
+local source interface. For example, VAMP patches include C29, TP10 and U4
+terminal lands as well as the local C28.1 land and `9514feb0...` bus.
+The local bus patches have bounds `[101.7,113.85,102.6,114.65]` and
+`[102.1111,113.85,102.2889,114.3389]` mm and are not wholly within C28.1.
+These are concrete local review locations; multiple remote terminal
+contacts are not themselves proof that the whole55-object feed must stay.
+Finally, empty polygon intersections are skipped before the tangency
+counter; zero recorded tangencies does not exclude tolerance-only graph
+contacts. The saved positive-area patches remain useful within these limits.
+
+**Stopping disposition:** retain the proposed BOOST_SW addition and all
+raw/failed evidence, but do not approve the remaining cuts or union186.
+No fourth execution or expanded global-network retention is released.
+A future separately scoped review must first build the complete retention
+union (including all five process seeds), define module-specific physical
+ports and exercise explicit tangency/contact controls. Start with the
+recorded C28.1/VAMP attachment rather than another whole-board inventory.
+The owner window is a maximum, not permission to bypass this item's stop.
+No source save/refill/DRC, routing, input generation, integration or cloud.
+
 ### Independent public supplier screen
 
 While that executor ran, root inspected public JLCPCB capability tables

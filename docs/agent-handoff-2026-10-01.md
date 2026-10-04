@@ -7,6 +7,25 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Stopping checkpoint: physical cut still held.** The
+[physical report](measurements/2026-09-27-router-bakeoff/quilter-critical-physical-attachments-2026-10-04.json)
+uses its full three-attempt allowance: timeout, syntax failure, then a
+2.926-second partial result. BOOST_SW passes the complete-local-net gate;
+adding its omitted existing 1.2 mm F track `046e039e...` would make proposed
+union186. Nothing was added to a board.
+
+Do not treat the eight remaining report sets as eight defects or qualified
+independent cuts. Four retained U4 process vias were omitted from the
+geometric retention basis, and the affected GND group was not recomputed.
+Testing whether a whole global network touches only one retained land
+conflates separate legitimate source/destination interfaces. The zero
+tangency counter also does not qualify empty-intersection graph contacts.
+Root retains the useful source evidence but holds further executions.
+A separately scoped future review should include all five process seeds,
+use module-specific ports and explicit contact controls, and start with
+the C28.1/VAMP `9514feb0...` bus attachment saved in the raw patch table.
+No source changes, input generation, repair, integration or new cloud job.
+
 **Local-circuit inventory:** the [corrected proposal](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json)
 identifies 105 complete copper primitives on six nets whose every physical
 terminal belongs to the 18 proposed retained cells. This includes both

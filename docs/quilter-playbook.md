@@ -274,6 +274,8 @@ retained block. Its incomplete result is not evidence against Quilter.
 The separately authorized [recovery](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-recovery-2026-10-04.json)
 passes the type-specific tests and completes one native load in1.842s.
 Preflight the complete logging runner too, not only helper functions.
+Compile each changed analyzer revision before launching native work; a
+later caching edit introduced a syntax failure despite the earlier preflight.
 
 **Observed selection trap:** the recovered all-pairs graph added113 objects
 beyond a62-object explicit-duty core. A path between two internal pads can
@@ -288,7 +290,10 @@ not only trace/via UUIDs and the two query endpoints. Excluding intermediate
 U6.4 pad copper falsely broke the R28 witness; the saved native path
 resolved it without adding copper or rerunning KiCad. Recompute boundaries
 when reducing a selection: edges internal to the old union may become
-external. Count separated electrical duties, not all lost pad-pair
+external. Build the effective retention union first, including independently
+protected process vias as well as the named copper set and retained pads.
+Removing a misclassified seed from a report count does not repair the
+already-computed component geometry. Count separated electrical duties, not all lost pad-pair
 combinations. See the [corrected core review](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json).
 
 **Observed protection limit:** the source's 19 areas prohibit pours, not
@@ -303,7 +308,20 @@ outside that duty from pads outside the retained footprint set. Two
 attachment UUIDs may represent a pad and track at one physical junction;
 they do not prove a distinct parallel current path. Use such screens to
 direct geometry review, not to manufacture defect counts or freeze whole
-external networks.
+external networks. Classify each module's interface separately: a global
+feed legitimately reaches several destination terminals. Requiring its
+entire network to touch only one land is not a useful local-cut test.
+
+**Observed physical-check limit:** a connectivity witness omitted a
+1.2 mm source BOOST_SW track that contributes real copper beyond the
+selected shapes. Complete-local-net inventory recovered it without new
+routing. Exact polygon work also needs explicit edge/corner-tangency and
+native contact-tolerance controls: an empty Boolean intersection is not
+proof that no graph contact exists. Cache native shapes and narrow pair
+tests conservatively by net/layer/bounds, but use actual geometry for the
+decision. The [bounded physical review](measurements/2026-09-27-router-bakeoff/quilter-critical-physical-attachments-2026-10-04.json)
+retains partial evidence after three attempts; no fourth retry follows
+merely because the overall owner time window has time remaining.
 
 **Documented cost distinction:** current JLCPCB pages separate via sizing
 from component-PTH annular rules and advertise filled/capped via-in-pad at

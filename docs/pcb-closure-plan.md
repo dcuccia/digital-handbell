@@ -166,6 +166,20 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 4 physical-cut stopping point:** the bounded item exhausted
+three attempts and returned partial evidence, not a retained-input approval.
+The [report](measurements/2026-09-27-router-bakeoff/quilter-critical-physical-attachments-2026-10-04.json)
+qualifies complete BOOST_SW inventory and proposes one existing 1.2 mm
+track addition for union186. The rest remains held: process-seed geometry
+was omitted from the subtraction basis, global endpoints were tested
+against an overly restrictive single-land criterion, and tangency-only
+graph contacts were not fully covered. These are qualification limits,
+not proof of defective source copper or failed Quilter routing.
+Stop native retries and preserve all source/raw evidence. The next item
+requires a separately scoped, complete-retention/module-port review,
+starting with the recorded C28.1/VAMP bus contact; no broad inventory loop,
+source change, routing, input generation or cloud is released.
+
 **Local-circuit selection evidence completed:** six source-local nets pass
 the all-physical-pad gate, with 105 complete primitives including four
 PROT_FET_RETURN vias. The [corrected report](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json)

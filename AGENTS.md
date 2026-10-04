@@ -2,6 +2,19 @@
 
 ## Bounded engineering work
 
+- **October 4 physical-cut checkpoint: stop this scope.** Three attempts
+  are exhausted: polygon-analysis timeout, syntax failure, then partial
+  completion. BOOST_SW is a seventh source-local net; preserve the proposed
+  addition of existing 1.2 mm F track `046e039e...` (union186), not an
+  applied PCB change. Other physical cuts remain unapproved. The geometric
+  basis omitted four independently retained U4 vias; the report excludes
+  their count but does not re-split/recompute the affected GND set.
+  Its whole-network/one-land criterion also mixes local interfaces with
+  legitimate remote terminals, and empty polygon intersections cannot
+  exclude tangency-only graph contacts. Preserve all evidence, source and
+  failures; no fourth execution, staging, routing or cloud. A future
+  separately scoped review must use the complete retention basis and
+  module-specific ports, starting at the recorded C28.1/VAMP bus attachment.
 - **October 4 local-circuit inventory completed:** six nets have all
   physical terminals inside the 18 proposed cells and 105 complete source
   primitives, including all four PROT_FET_RETURN vias/parallel branches.
