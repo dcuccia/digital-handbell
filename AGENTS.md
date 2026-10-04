@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 3, 21:34 returned contact controls assessed:** both 100%-reported
+  candidates preserve six fixed footprints, eight pads, all 30 feeds, ten
+  vias, eight guards, outline and four layers by parsed native comparison.
+  Both control pairs are connected entirely on B with no new vias; added
+  trace strokes clear the guards and selected clearance/edge minima.
+  Both add inner GND fills. Native output DRC timed out at 60 seconds per
+  candidate, so new-versus-inherited findings and inner-plane isolation
+  remain unqualified. Retain these promising candidates, not a rejection
+  or acceptance. No repeat Quilter job, repair or integration. Next is a
+  bounded native-validation blocker disposition, not a full-board trial.
+  Download UI explicitly confirms Free Tier. See the output-review ledger.
 - **October 3, 17:49 contact-routing diagnostic submitted:** owner
   explicitly approved starting this one job under the published free-personal
   policy without an account-specific $0 quote. Job `6ac19efbfc0d2d776ed14911`

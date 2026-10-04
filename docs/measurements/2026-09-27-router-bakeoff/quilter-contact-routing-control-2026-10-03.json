@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-03",
-  "status": "SUBMITTED_AWAITING_NATIVE_OUTPUT",
+  "status": "STATIC_PRESERVATION_AND_B_ROUTING_PASS_NATIVE_DRC_INCOMPLETE",
   "license_context": "Source-derived CC BY-SA 3.0 hardware evidence; see ATTRIBUTION.md.",
   "owner_approval_time_local": "17:13",
   "owner_scope": "Prepare one meaningful contact routing diagnostic, submit only if qualified and confirmed free, then inspect native output. No authoritative PCB edits, full-board staging, paid action, new agreement or fabrication.",
@@ -145,7 +145,7 @@
     "uploaded": true,
     "both_files_parsed": true,
     "uploaded_pair": "Exactly the two upload_whitelist files; ignored workspace copies were byte-verified. No PRL, report, script, schematic or account data.",
-    "stage": "Submitted; UI working on layout candidates",
+    "stage": "Finished with two complete candidates; static review positive, native qualification incomplete",
     "dimensions_mm": [60, 30],
     "components": 6,
     "components_to_place": 0,
@@ -221,6 +221,66 @@
     "payment_upgrade_or_new_agreement_accepted": false,
     "UI_estimated_compute_hours": [1, 10],
     "prior_jobs_untouched": true
+  },
+  "returned_results": {
+    "owner_requested_evaluation_at_local": "2026-10-03T21:34:08-07:00",
+    "review_status": "STATIC_PRESERVATION_AND_B_ROUTING_PASS_NATIVE_DRC_INCOMPLETE",
+    "review_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-routing-output-review-2026-10-03.json",
+    "review_report_sha256": "3b4ffa56448e3c1bd91bfa38f35600fed7a7981da0d74135a520411c79be69a5",
+    "native_review_executor": {
+      "agent_id": "23bdbfc4-1bd7-4ba2-b83f-13ca20d0e7b4",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "root_verified_started_configured_completed_before_writes": true,
+      "native_analysis_stop_local": "21:45",
+      "report_due_local": "21:46",
+      "root_checkpoint_target_local": "21:49"
+    },
+    "both_complete_board_archives_downloaded": true,
+    "archive_storage": "quilter\\outputs\\contact-routing-evaluation-20261003T2134",
+    "free_tier_UI_confirmed": true,
+    "free_tier_UI_evidence": "Both ordinary download confirmation pages explicitly said: You're currently on the Free Tier which has restrictions. No purchase, upgrade or new agreement was presented.",
+    "zero_price_quote_or_invoice_claimed": false,
+    "cloud_success_scope": "Both candidates show 100% routed, zero reported new CAD DRC violations and one passing physics check: VBAT 500 mA overheated_length. This is not a clean native DRC or full electrical/physical qualification.",
+    "cloud_candidates": [
+      {
+        "version": "1.1",
+        "candidate_id": "6ac1a41ad8d7bfd7863e0453",
+        "finished_at_local": "2026-10-03T17:55:54.092-07:00",
+        "elapsed_from_cloud_launch_seconds": 379.644,
+        "reported_routing_completion": 1.0,
+        "reported_new_CAD_DRC_violations": 0,
+        "passing_physics_checks": 1,
+        "private_candidate_response_sha256": "03c9fffe2b55363467d6ea150001893c55b5a4494e6516a6417e5fb2684bd093"
+      },
+      {
+        "version": "1.2",
+        "candidate_id": "6ac1c071f54086ddafaa5678",
+        "UI_beta_label": true,
+        "finished_at_local": "2026-10-03T19:56:49.055-07:00",
+        "elapsed_from_cloud_launch_seconds": 7634.607,
+        "reported_routing_completion": 1.0,
+        "reported_new_CAD_DRC_violations": 0,
+        "passing_physics_checks": 1,
+        "private_candidate_response_sha256": "fee579b2de5c43dd649b43ed2072ddbbcfc5e5c96bbbded335db31d253c4461a"
+      }
+    ],
+    "private_events_response_sha256": "d47735ef77761442cf302e9b19b8a3ab436dae41e56404f6ba18ad43385fb69e",
+    "timing_limit": "Observed first result in 6m20s and final candidate in 2h7m15s for this tiny diagnostic, not a prediction of full-board runtime or cost.",
+    "root_disposition": {
+      "retain_both_promising_candidates": true,
+      "static_preservation_pass": true,
+      "both_control_pairs_connected_on_B_without_new_vias": true,
+      "new_trace_guard_intersections": 0,
+      "new_trace_selected_minima_screen_pass": true,
+      "new_inner_GND_fills_per_candidate": 2,
+      "native_DRC_completed": false,
+      "native_DRC_timeout_seconds_per_candidate": 60,
+      "engineering_acceptance": false,
+      "remaining_evidence": "Completed native output DRC/connectivity, inherited-versus-new findings and saved inner-plane isolation from foreign-net through-vias. Static trace clearance does not cover those plane checks. Candidate timeout stdout/stderr were not preserved; exact termination stage is unknown. Capture streams before any newly authorized invocation.",
+      "next_item": "Bounded native-validation blocker disposition using saved evidence; no repeat Quilter job or candidate repair."
+    },
+    "source_or_cloud_mutations": "No new submission, rating, repair or integration; read-only job/results inspection and inbound complete-board downloads only."
   },
   "acceptance_limits": [
     "Existing feed/keepout contradictions are deliberate; do not suppress them or call the fixture DRC-clean.",

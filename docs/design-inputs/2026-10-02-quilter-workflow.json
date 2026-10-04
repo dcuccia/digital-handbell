@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "CONTACT_ROUTING_CONTROL_SUBMITTED_AWAITING_NATIVE_OUTPUT",
+  "status": "CONTACT_ROUTING_CONTROL_STATIC_PASS_NATIVE_QUALIFICATION_PENDING",
   "checkpoint_history_note": "Named checkpoints record their own time and scope; contact_routing_control_checkpoint is current.",
   "contact_routing_control_checkpoint": {
     "date": "2026-10-03",
     "owner_approval_time_local": "17:13",
-    "status": "SUBMITTED_AWAITING_NATIVE_OUTPUT",
+    "status": "STATIC_PRESERVATION_AND_B_ROUTING_PASS_NATIVE_DRC_INCOMPLETE",
     "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-routing-control-2026-10-03.json",
     "control_nets": ["CTRL_CLEAR", "CTRL_GUARD"],
     "expected_control_unrouted_pairs": 2,
@@ -34,7 +34,17 @@
     "start_action_count": 1,
     "launch_and_working_UI_confirmed": true,
     "automatic_monitoring_established": false,
-    "next_item": "Preserve native output when available and inspect identity, placement, retained copper, layers, guards and all new copper before routing benefit. No rerun or integration.",
+    "output_review": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-routing-output-review-2026-10-03.json",
+    "complete_candidates_preserved": ["1.1", "1.2"],
+    "both_static_preservation_pass": true,
+    "both_control_pairs_connected_on_B": true,
+    "new_B_trace_guard_intersections": 0,
+    "new_inner_GND_fills_per_candidate": 2,
+    "native_DRC_completed": false,
+    "native_DRC_timeout_seconds_per_candidate": 60,
+    "free_tier_UI_confirmed_at_download": true,
+    "engineering_acceptance": false,
+    "next_item": "Bounded native-validation blocker disposition and completion, including new inner-plane/foreign-via isolation. Preserve promising outputs; no rerun, repair, integration or full-board trial.",
     "submitted": true
   },
   "contact_feed_import_checkpoint": {

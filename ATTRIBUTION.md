@@ -74,6 +74,12 @@ JSON/SVG exports retain the adapted hardware's CC BY-SA 3.0 context and
 upstream notices linked above; they are not blanket relicensed under root MIT.
 No account/browser data, manufacturer imagery or vendor CAD is included.
 
+The [contact routing output review](docs/measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)
+separately records measurements of Quilter's returned source-derived
+candidates. Its hardware evidence retains the CC BY-SA 3.0 context and
+upstream notices; raw returned boards and browser responses remain in
+isolated local evidence, not blanket relicensed or vendored under MIT.
+
 The [local routing pilot](docs/routing-tooling.md) uses **Freerouting 2.4.1**
 as an external GPL-3.0 tool and a portable Eclipse Temurin runtime with its
 distribution notices retained locally. The

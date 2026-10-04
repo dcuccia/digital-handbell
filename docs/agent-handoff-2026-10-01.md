@@ -2,6 +2,25 @@
 
 ## Start here
 
+**Latest: both returned controls pass the static preservation/routing screen;
+native qualification remains incomplete.** The
+[output review](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)
+binds untouched candidates 1.1 (`6999747c...`) and 1.2 (`8f5e8ce5...`).
+Both preserve six footprints/eight pads, 30 feeds, ten vias, eight guards,
+outline and four layers. Both new pairs connect on B without new vias or
+guard intersections. Guarded paths are 59.798894/58.065571 mm; conservative
+foreign-clearance minima are 0.225109/0.424474 mm against required 0.20.
+Both add filled GND zones on In1/In2. Each native DRC hit its 60-second
+termination limit without a report. Do not infer native cleanliness or
+inner-plane/foreign-via isolation from the static trace screen.
+
+Retain the promising outputs and source unchanged. Next disposition is a
+bounded investigation/completion of native validation using saved evidence,
+not another Quilter run, input regeneration, repair or full-board staging.
+The first cloud result took about 6m20s; final 1.2 about 2h7m15s. Download
+UI now confirms Free Tier. Raw outputs remain in the isolated evaluation
+batch; the authoritative board still has its unchanged source hashes.
+
 **Latest: contact-routing diagnostic launched at 17:49 on October 3.**
 The [running job](https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911)
 is named **Contact guard routing control - fixed feeds**. Owner explicitly

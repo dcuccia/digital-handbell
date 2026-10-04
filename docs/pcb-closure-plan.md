@@ -166,6 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest: returned contact controls retained with a finite validation gap.**
+Both native files preserve the input inventory and connect both test nets
+entirely on B while clearing guards in the static geometry check. The
+[output review](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)
+records added In1/In2 GND fills and two 60-second native DRC timeouts.
+This is useful routing evidence, not full native/plane acceptance and not
+a demonstrated design failure. Preserve both candidates and the unchanged
+37-open source. Next resolve the bounded native-validation blocker and
+check inner-plane isolation; do not repeat Quilter, repair/merge or stage
+the full board automatically.
+
 **Latest: contact-routing diagnostic launched at 17:49 on October 3.**
 The [job](https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911)
 was started once after explicit owner approval to rely on the published

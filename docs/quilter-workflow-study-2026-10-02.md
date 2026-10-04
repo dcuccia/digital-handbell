@@ -921,6 +921,84 @@ all retained copper/vias/layers/guards and all new copper before judging
 the two control connections. No second submission, product integration,
 full-board trial or source change follows automatically.
 
+### Contact routing output evaluation, 21:34
+
+The owner reported success and requested evaluation. The job returned two
+complete native candidates, **1.1 and 1.2 (BETA)**, each advertised as
+100% routed with no new CAD DRC violations. Both untouched complete-board
+archives were downloaded into isolated evidence, not the authoritative PCB.
+
+The already-fetched candidate records put 1.1 completion at **17:55:54**,
+about **6 minutes 20 seconds** after launch. Candidate 1.2 completed at
+**19:56:49**, about **2 hours 7 minutes** after launch. Do not confuse the
+final job duration with time to the first result, or extrapolate this
+tiny fixture's timing to a full-board placement/routing job.
+
+The download confirmation now explicitly says **"You're currently on the
+Free Tier"**. This is account-specific evidence absent from the earlier
+submission screen; no invoice or explicit zero-price quote is claimed.
+No payment, upgrade, new agreement, rating or additional run occurred.
+The one passing physics check in each result is only the incidental
+**VBAT 500 mA overheated-length** check. Empty new-violation lists and the
+UI's "All checks pass" are not proof that the deliberately contradictory
+input became native-DRC-clean or that the complete handbell is qualified.
+
+The [native output review](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)
+is a separate preservation-first assessment of both candidates. Raw files
+remain under `quilter\outputs\contact-routing-evaluation-20261003T2134`;
+the [control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json)
+binds cloud receipts and their narrow claims. No output acceptance follows
+from the platform percentage alone.
+
+**Static result: a meaningful positive control, with native acceptance held.**
+Both candidates preserve all six fixed references/footprint UUIDs/poses,
+eight physical pads and nets, all 30 existing B feed segments, all ten
+vias including the five process seeds, all eight exact guard polygons and
+flags, the outline and four enabled copper layers. No old copper was
+resegmented or removed. This differs materially from the earlier full-board
+outputs' failed preservation gate.
+
+| Native-file static measurement | Candidate 1.1 | Candidate 1.2 |
+|---|---:|---:|
+| Easy pair connected, B only, no new vias | 10.000 mm | 9.999999 mm |
+| Guarded pair connected, B only, no new vias | 59.798894 mm | 58.065571 mm |
+| New trace width | 0.1779778 mm | 0.1779778 mm |
+| Trace stroke/expanded-guard intersections | 0 | 0 |
+| Minimum stroke-edge gap beyond expanded guard | 0.055888 mm | 0.129304 mm |
+| Conservative foreign-net clearance (0.20 required) | 0.225109 mm | 0.424474 mm |
+| Minimum trace-to-outline gap (0.508 required) | 2.911011 mm | 2.911011 mm |
+| Native output DRC | 60-second timeout | 60-second timeout |
+
+The foreign-pad screen uses conservative enclosing circles, not a claim
+of exact native shape clearance. Both outputs add two cached filled GND
+zones on In1/In2 and replace the empty input project with the same explicit
+diagnostic-rule project. No new B pour or via is present. These are actual
+B-side routes, not an F-side shortcut around the intended test.
+
+**Unresolved, not rejected:** neither native DRC attempt produced a report.
+The static checks therefore do not establish native cleanliness, the
+output's inherited-versus-new findings, or the new inner planes' isolation
+from foreign-net through-vias. Preserve the finite validation gap and both
+promising candidates rather than restarting placement/routing. Source and
+input files are unchanged; no refill, repair, merge or cloud rerun occurred.
+
+The timeout evidence binds the exact executable/arguments, but candidate
+stdout/stderr were not preserved. Project-lock activity does not identify
+the DRC stage or prove a defective board. Any newly authorized native
+diagnostic must persist streams and execution metadata before starting,
+including on timeout; do not simply repeat the same opaque invocation.
+
+**Workflow implication:** this supports the practical ability to retain
+selected hand-crafted feeds while letting Quilter complete legal routes
+around declared exclusions. Candidate 1.1 delivered that static result in
+about six minutes; 1.2 shortened the guarded trace by about 1.73 mm and
+improved the conservative clearance margin, but both meet this screen.
+It does not yet prove movable-component constraints, difficult full-board
+power/signal layout, or four-versus-six-layer value. The next bounded item
+is native-validation blocker disposition and completion, including inner
+plane isolation, **not another Quilter submission**. Full-board input
+qualification remains downstream.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved
