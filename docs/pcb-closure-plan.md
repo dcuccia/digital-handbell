@@ -166,6 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**October 4, 09:58 continuation:** owner permits approximately two hours
+of sequential bounded work, ending by 11:58 with no new item after 11:48.
+The first item **recovered native DRC** on unchanged isolated contact-output
+copies: zero opens and 45 findings each. The
+[native supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json)
+separates 39 inherited, four returned-rule annular-ring and two new
+isolated-fill findings. No refill, repair or source change. Next inspect
+saved inner-plane isolation and disposition isolated-fill findings before
+qualifying the contact diagnostic or releasing broader input preparation.
+See the [continuation contract](quilter-workflow-study-2026-10-02.md#october-4-bounded-autonomous-continuation).
+
 **Latest: returned contact controls retained with a finite validation gap.**
 Both native files preserve the input inventory and connect both test nets
 entirely on B while clearing guards in the static geometry check. The

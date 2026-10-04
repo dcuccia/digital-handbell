@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "status": "NATIVE_DRC_RECOVERED_EXACT_RETURNED_BYTES_FINDINGS_REMAIN_NO_ACCEPTANCE",
+  "scope": "Bounded recovery of persistent-logged KiCad DRC evidence for untouched saved Quilter contact-routing outputs. No source edit, candidate repair, routing, refill, cloud action, or baseline rerun.",
+  "runtime_gate": {
+    "verified_by_root": true,
+    "model": "gpt-5.6-sol",
+    "reasoning_effort": "medium",
+    "first_dispatched_model": "gpt-5.6-sol"
+  },
+  "source_contract": {
+    "package": "hardware/handbell/iterations/printed-bell-four-layer",
+    "native_source_loads": 0,
+    "all_five_hashes_unchanged": true,
+    "files_sha256": {
+      "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+      "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+      "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+    }
+  },
+  "execution": {
+    "evidence_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-native-validation-20261004T1000",
+    "copy_method": "Fresh sibling working copies; PCB and project hashes verified against the prior report before native launch.",
+    "tool": {
+      "path": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\\kicad-cli.exe",
+      "version": "10.0.6",
+      "sha256": "393525236969434e24bc710334efe244fb285ef6596a1aea8e74353ef4db5477",
+      "version_and_pcb_drc_help_exit_code": 0,
+      "help_timeout_seconds": 15
+    },
+    "runner": {
+      "path": "run_drc.py",
+      "sha256": "1722cce10e66e285e4ede9ad66730dae0699dba19a6fc8c336edfcb1af2b0c93",
+      "behavior": "Flushed and fsynced metadata containing executable, arguments, cwd, timeout and input/tool/runner hashes before launch; attached stdout/stderr directly to files; recorded PID, elapsed time, exit, timeout and exact-PID cleanup disposition.",
+      "attempts": 2,
+      "corrective_attempts": 0,
+      "hard_timeout_seconds_each": 120
+    },
+    "native_side_effects": "KiCad created contact-rule-fixture.kicad_prl in each isolated working copy. No source/raw output was touched; copied PCB and project hashes remained exact. No refill or save-board option was used.",
+    "candidate_1_2": {
+      "pcb_sha256": "8f5e8ce52f0fdf5314d6d79609c08ee74481608b1e9bf4be127cf8ee05873e71",
+      "project_sha256": "27952625ae01bd7dbfa5cd1e6bb105d83a71461741966c6328b8d4ed8d5b1d63",
+      "command": [
+        "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-native-validation-20261004T1000\\candidate-1-2\\drc.json",
+        "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-native-validation-20261004T1000\\candidate-1-2\\contact-rule-fixture.kicad_pcb"
+      ],
+      "pid": 59240,
+      "elapsed_seconds": 42.219,
+      "exit_code": 0,
+      "timed_out": false,
+      "cleanup": "not_needed",
+      "drc_json_sha256": "21d0cc32b5d5a6d5bade2bc2c144eeb710258b7dc9560b9291cf38f1e647fe1d",
+      "stdout_sha256": "cb9ed02e7846c1b3e27ff01641975ff3ca4336410a0e4064a8bf2eb147a8383a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "subprocess_metadata_sha256": "8010331c226be33d9344531a776a4eae44f52862e04018f08547d473e0477fab",
+      "prl_sha256": "09e0b6b74f94aec5d6ad79d33339b9ae0336f7ebc72ca4e4187ae623e7d540b6"
+    },
+    "candidate_1_1": {
+      "pcb_sha256": "6999747c7b5fd2c2fe532f5c4c4504e2683dd62022c6122a95c9338502e21b17",
+      "project_sha256": "27952625ae01bd7dbfa5cd1e6bb105d83a71461741966c6328b8d4ed8d5b1d63",
+      "command": [
+        "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-native-validation-20261004T1000\\candidate-1-1\\drc.json",
+        "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-native-validation-20261004T1000\\candidate-1-1\\contact-rule-fixture.kicad_pcb"
+      ],
+      "pid": 37520,
+      "elapsed_seconds": 3.844,
+      "exit_code": 0,
+      "timed_out": false,
+      "cleanup": "not_needed",
+      "drc_json_sha256": "d519a374783035adb16ddece6ee076216f6038af763a28efc815708292de6e4b",
+      "stdout_sha256": "270bf38c1e3de9f5c2599907b08f6200cddf7b029ab8d5bbc39847b297e3e465",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "subprocess_metadata_sha256": "64996319606555480c875714393f8851caa266d335aeed1d33b0994c5fe8ee10",
+      "prl_sha256": "09e0b6b74f94aec5d6ad79d33339b9ae0336f7ebc72ca4e4187ae623e7d540b6"
+    },
+    "failure_stage": "not_applicable_both_exact-byte_runs_completed",
+    "timing_note": "Candidate 1.2 took 42.219 seconds and candidate 1.1 took 3.844 seconds. Logs show completion but do not establish why the first run was slower; no timeout cause is assumed."
+  },
+  "native_findings": {
+    "candidate_1_1": {
+      "violations": 45,
+      "unconnected_items": 0,
+      "categories": {
+        "annular_width": 4,
+        "isolated_copper": 2,
+        "items_not_allowed": 24,
+        "lib_footprint_issues": 2,
+        "nonmirrored_text_on_back_layer": 8,
+        "via_dangling": 5
+      }
+    },
+    "candidate_1_2": {
+      "violations": 45,
+      "unconnected_items": 0,
+      "categories": {
+        "annular_width": 4,
+        "isolated_copper": 2,
+        "items_not_allowed": 24,
+        "lib_footprint_issues": 2,
+        "nonmirrored_text_on_back_layer": 8,
+        "via_dangling": 5
+      }
+    },
+    "candidate_comparison": "Finding substance and counts match. Reports differ in timestamp and generated item UUIDs for the two candidate-specific isolated zone fills.",
+    "reference": {
+      "raw_drc_sha256": "d28be02dd7907a7861e00b7e465fafdcb70f973d36cf9f4103c44a92c3701fd7",
+      "rerun": false,
+      "violations": 46,
+      "unconnected_items": 6,
+      "categories": {
+        "items_not_allowed": 24,
+        "via_dangling": 10,
+        "track_width": 2,
+        "lib_footprint_issues": 2,
+        "nonmirrored_text_on_back_layer": 8
+      }
+    },
+    "classification": {
+      "inherited_same_finding_identity": {
+        "items_not_allowed": 24,
+        "lib_footprint_issues": 2,
+        "nonmirrored_text_on_back_layer": 8,
+        "via_dangling": 5
+      },
+      "configuration_dependent": [
+        "The baseline's two track_width findings are absent under the returned project's 0.1778 mm minimum.",
+        "Four annular_width findings occur on retained GND vias with actual 0.1270 mm annular width under the returned project's 0.1500 mm minimum."
+      ],
+      "new_output_geometry": "Each candidate has two isolated_copper findings, one for GND.LAYER_1 on In1 and one for GND.LAYER_2 on In2.",
+      "connectivity_delta": "Both reports contain zero unconnected_items. The two intended control-pair opens are absent after returned routing. The four inherited GND open witnesses and five inherited GND via_dangling findings are also absent in the presence of the saved GND fills; this is fill-dependent native evidence, not acceptance of plane isolation or return topology.",
+      "retained_inherited_via_dangling": "Five findings remain: two VBAT and three /CELL_NEG vias."
+    }
+  },
+  "limitations": [
+    "Native DRC completion is recovered evidence, not a DRC-clean result or engineering acceptance.",
+    "The returned project rules differ materially from the empty baseline project, so count-only comparison is invalid.",
+    "No refill occurred. Results evaluate the exact returned PCB bytes and cached fills with the exact returned project settings.",
+    "This item did not inspect saved inner GND fill isolation from foreign-net through-vias; that is explicitly reserved for the following item.",
+    "No functional, return-path, plane-continuity, manufacturing, supplier, assembly, or child-use approval is claimed."
+  ],
+  "acceptance": false,
+  "next_gate": "Root review of recovered reports and finding classification; separately inspect saved inner GND fill/foreign-via isolation without inventing coverage here."
+}

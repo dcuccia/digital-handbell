@@ -7,6 +7,18 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 4, 09:58: owner resumed bounded autonomous work until 11:58.**
+Logged native DRC recovery is now complete on unchanged output copies:
+zero unconnected items, 45 findings each, with no refill. See the
+[native supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json).
+Thirty-nine inherited findings remain; four annular-width notices follow
+the returned 0.15 mm minimum, and two isolated-copper notices concern the
+new GND fills. Native exit 0 is not a clean-board claim. Prior timeout
+cause remains unknown. Next check saved inner fills versus foreign-net
+vias and disposition isolated-plane findings before broader input work.
+Read the [continuation scope](quilter-workflow-study-2026-10-02.md#october-4-bounded-autonomous-continuation).
+No source edits, refill, automatic integration or repeat cloud diagnostic.
+
 **Latest: both returned controls pass the static preservation/routing screen;
 native qualification remains incomplete.** The
 [output review](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)

@@ -2,6 +2,26 @@
 
 ## Bounded engineering work
 
+- **October 4 native DRC recovered:** persistent-logged runs on exact
+  returned PCB/project copies complete in 42.219/3.844 seconds, with
+  zero unconnected items and 45 findings each. No refill or source edit.
+  Thirty-nine findings are inherited; four annular-ring findings reflect
+  a returned 0.15 mm minimum applied to preserved U4 vias with 0.127 mm
+  rings, and two isolated-copper findings concern new inner GND fills.
+  Exit 0 means DRC ran, not a clean board. Prior timeout cause remains
+  unknown. Next inspect saved-fill isolation from the five foreign-net
+  vias and disposition the two isolated planes; no Quilter rerun or repair.
+- **October 4, 09:58 autonomous continuation:** owner resumes for roughly
+  two hours. Stop by 11:58 local; start no new item after 11:48. Begin
+  with a separately logged native-validation recovery of the preserved
+  contact outputs, then proceed only through reviewed dependencies.
+  First executor stops 10:11, report by 10:12, root checkpoint by 10:14.
+  Preserve original files; no opaque DRC retry, refill, source edit,
+  automatic integration, paid use or repeated Quilter diagnostic. Native
+  recovery may use explicit 120-second subprocess limits with persistent
+  streams. Initial plus two corrections applies to this new bounded item.
+  Full-board preparation/submission needs its qualified input disposition;
+  the time allowance does not waive any engineering or authorization gate.
 - **Quilter learning loop:** use [the Quilter playbook](docs/quilter-playbook.md)
   for reusable practice, the dated workflow study for reasoning, and the
   source-bound ledgers for evidence. At meaningful checkpoints, promote

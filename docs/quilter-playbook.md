@@ -4,7 +4,7 @@ Use this guide to prepare useful jobs and evaluate their results without
 relearning every experiment. Optimize for an acceptable board with bounded
 owner/agent effort, not trace aesthetics or recovery of sunk costs.
 
-Evidence reviewed through **October 3, 2026**: Quilter UI 1.40.0/API 1.40.1
+Evidence reviewed through **October 4, 2026**: Quilter UI 1.40.0/API 1.40.1
 and KiCad 10.0.6. This is a living procedure, not a platform guarantee.
 The [workflow study](quilter-workflow-study-2026-10-02.md) retains the dated
 reasoning; its linked ledgers bind exact files and results. The
@@ -16,10 +16,10 @@ native-tool retry, source edit, purchase or fabrication.
 
 | Finding | Evidence and limit | Working guideline |
 |---|---|---|
-| Selected existing routing can survive while Quilter adds useful routes. | Both [contact-control outputs](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json) preserve the checked inventory and connect both test pairs on B without new vias. Native DRC and inner-plane isolation remain incomplete. | Retain reviewed critical blocks where useful; independently verify preservation and new copper. Do not equate this small control with full-board qualification. |
+| Selected existing routing can survive while Quilter adds useful routes. | Both [contact-control outputs](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json) preserve the checked inventory and connect both test pairs on B without new vias. [Recovered native DRC](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json) reports zero opens but 45 findings each; inner-plane isolation remains pending. | Retain reviewed critical blocks where useful; independently verify preservation and new copper. Do not equate this small control with full-board qualification. |
 | Preservation is not automatic for every input/configuration. | Earlier [full-board outputs](measurements/2026-09-27-router-bakeoff/quilter-output-preservation-2026-10-02.json) lacked the original inner GND zone and exact matches for 24 In2 segments. That did not prove 24 lost electrical connections. | Inspect returned copper and planes before ranking routing improvement. Distinguish record changes from connectivity loss. |
 | Import recognition is weaker than routing evidence. | The [first contact preview](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json) had zero pins to route. The later control had actual unrouted pairs and legal-path witnesses. | Submit a diagnostic only when it can exercise the behavior in question; a parsed preview alone is not that experiment. |
-| A green dashboard has a limited scope. | The contact job's one physics pass was an inferred VBAT 500 mA check; its new-violation lists were empty. Local output DRC did not finish. | Record which checks ran, their assumptions and whether they cover inherited or new findings. Do not translate "100%" into engineering acceptance. |
+| A green dashboard has a limited scope. | The contact job's one physics pass was an inferred VBAT 500 mA check; its new-violation lists were empty. Native DRC subsequently completed with inherited, rule-dependent and new isolated-fill findings. | Record which checks ran, their assumptions and whether they cover inherited or new findings. Do not translate "100%" into engineering acceptance. |
 | Time to first result differs from time to final result. | [Candidate receipts](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json) show about 6m20s for 1.1 and 2h7m15s for 1.2. | Evaluate an available useful candidate without waiting unnecessarily for final optimization. Do not extrapolate this tiny job's runtime to a full board. |
 
 Use **observed** for a result demonstrated on identified artifacts,
@@ -199,10 +199,21 @@ Keep local items within the [bounded execution policy](routing-agent-policy.md).
 Use hard subprocess termination limits, not just initial output waits.
 Persist executable/arguments, input/tool hashes, stdout/stderr and exit or
 timeout metadata **before and throughout execution**, including failure.
-Our two output DRC timeouts lacked preserved streams, so their exact stage
-could not be diagnosed. Do not repeat an opaque invocation or count a
-timeout as a board failure. Reuse unchanged evidence and qualify a new
-binding/parser operation in a small control before expensive downstream work.
+Our two initial output DRC timeouts lacked preserved streams, so their exact
+stage could not be diagnosed. The subsequent logged runs completed on
+unchanged returned bytes/settings in 42.219 and 3.844 seconds; their success
+does not identify the old timeout cause. Do not repeat an opaque invocation
+or count a timeout as a board failure. Reuse unchanged evidence and qualify
+a new binding/parser operation in a small control before expensive downstream work.
+
+**Observed native-tool trap:** both successful DRC processes exited zero
+while reporting 45 findings. Parse the report (or deliberately configure
+the supported violation-exit option); process success is not a clean-board
+result. Compare rule context as well as geometry: the returned project
+introduced a 0.15 mm annular-ring minimum that flags four unchanged 0.127 mm
+rings. Never resize preserved copper or suppress checks merely to make
+different rule contexts appear equivalent. See the
+[native recovery evidence](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json).
 
 ## Keep the guidelines alive
 
@@ -218,7 +229,7 @@ rule, revise that rule and link the counterexample rather than appending
 another conflicting "latest" instruction. Do not invent a new rule when
 the experiment only confirms an existing one.
 
-The current evidence still leaves **native output DRC/inner-plane isolation,
+The current evidence still leaves **inner-plane isolation/disposition,
 movable F-only placement, full-board comprehension and four-/six-layer
 benefit** unresolved. Track their disposition in the closure plan; do not
 promote them to proven capabilities through repetition in progress reports.

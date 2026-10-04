@@ -12,6 +12,60 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4 bounded autonomous continuation
+
+At 09:58 the owner resumed with roughly two hours for relatively autonomous
+work. Conservatively stop by **11:58 local**, starting no new item after
+11:48. Continue in independently reviewed 10-15 minute items, at most an
+initial attempt plus two corrections per item. Exhausted retries, uncertain
+engineering choices and payment/new-term boundaries still stop that scope.
+
+The first item is **logged native DRC recovery**, not a repeat Quilter job.
+Use fresh byte-verified validation copies of the two preserved contact
+outputs and persist command/stream/termination evidence before launch.
+An explicit 120-second native subprocess cap is allowed for this recovery;
+no changes to original PCB/project bytes, refill or suppressed checks.
+Executor stops at 10:11, report by 10:12 and root checkpoints by 10:14.
+The [supplemental native-validation ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json)
+binds its results separately from the October 3 incomplete review.
+
+After successful native blocker disposition, separately qualify the added
+inner GND fills against foreign-net vias and review the diagnostic's
+acceptance limits. Only then advance the common full-board placement/
+constraint contract toward comparable four-/six-layer trials. Do not infer
+full-board upload/submission authority, acceptance of product copper or
+permission for a repeat diagnostic from the time allowance. Promote actual
+new lessons into the playbook at meaningful checkpoints.
+
+### Logged native DRC recovery
+
+**Recovered without changing returned bytes or settings.** Candidate 1.2
+completed in 42.219 seconds and 1.1 in 3.844 seconds, each under a hard
+120-second limit with persistent stdout/stderr and prewritten command/
+hash/PID metadata. Both report **zero unconnected items and 45 findings**.
+No refill, baseline rerun or authoritative-source load/change occurred.
+These runs do not establish why the October 3 invocations timed out or
+why the first recovery invocation was slower.
+
+Both candidates have the same finding substance: 24 retained feed/guard
+conflicts, eight back-label notices, two library notices and five dangling
+foreign-net vias are inherited. Four annular-width findings apply the
+returned project's 0.150 mm minimum to the unchanged U4 GND vias' 0.127 mm
+rings; that is a rule-context difference, not newly shrunk copper.
+Two **isolated_copper** findings concern the new In1/In2 GND fills.
+The two original track-width notices disappear under the returned width
+rule, while inherited GND opens/dangling notices disappear with the fills.
+Count-only improvement therefore would misstate the result.
+
+Root retains the positive preservation/routing evidence and releases only
+the next local isolation/disposition item. Native DRC completion is not
+cleanliness or plane acceptance: inspect actual saved fills against all
+five foreign-net vias, and determine why both planes are flagged isolated.
+The exit code was zero despite the 45 findings; automation must parse the
+report or deliberately use the supported violation-exit option.
+
+## Earlier continuation scopes
+
 **October 3, approximately 14:30 owner continuation:** keep advancing for
 the next hour. Use **15:30 local as the conservative stop**, stop starting
 new items by 15:20 and leave time for the final checkpoint. Work remains
