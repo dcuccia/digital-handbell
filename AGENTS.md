@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 3 contact-routing draft at final review:** the separate
+  `Handbell contact routing control` draft `6ac19efbfc0d2d776ed14911` parsed
+  both qualified files: six components/eight pins, zero to place, four to
+  route. Eight B keepouts declare TRACES/VIAS/POURS restrictions. Saved
+  four-layer diagnostic minima are 0.1778/0.20 mm, vias 0.600/0.300 mm and
+  margin 0.508 mm; these do not change product rules. GND is primary;
+  VBAT pours are disabled. Final review exposes Start Job but no price or
+  free entitlement, so no submission occurred. Resolve that authorization
+  before starting; do not repeat preparation or create another draft.
+  See the routing-control ledger and workflow study.
 - **October 3 contact-routing input qualified:** the explicitly approved
   checker/report correction passes, with 16 tests and unchanged PCB bytes.
   Corrected static/native witness clearances agree; no KiCad rerun occurred.

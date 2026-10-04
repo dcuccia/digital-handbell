@@ -166,6 +166,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Latest: contact-routing diagnostic held at Review and Submit.**
+The [configured draft](https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911/create/confirmation)
+has six fixed components, eight pins and four pins to route, with eight
+B keepout declarations. Saved diagnostic settings are recorded in the
+[control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json);
+they are not product manufacturing approval. No price/free entitlement
+appears beside Start Job, so submission remains held for owner disposition.
+Do not regenerate the fixture, duplicate the draft or start broader trials.
+
 **Latest: corrected contact-routing input is qualified.** The approved
 checker/report correction passes; static/native PCB bytes are unchanged.
 The [control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json)

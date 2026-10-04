@@ -855,6 +855,53 @@ byte-verified and ignored. Preserve the old patch/reports separately.
 One routing submission remains conditional on reviewed setup and a
 confirmed free price; it has not yet occurred.
 
+### Contact routing control at final review
+
+The 17:34 bounded setup created **Handbell contact routing control**, a
+[separate project](https://app.quilter.ai/projects/6ac19efbfc0d2d776ed14910)
+and [draft at Review and Submit](https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911/create/confirmation).
+Only native `ce95303d...` PCB and `ca3d163b...` minimal project were uploaded.
+Both Parsed: 60 x 30 mm, six components, zero to place, eight pins and
+**four pins to route**. The earlier zero-work draft and full-board job
+remain untouched. No fixture regeneration or native run occurred.
+
+Selected **JLCPCB 4-Layer | 6 mil / 6 mil**, with outer Signal and two
+inner Ground layers. There was no preserve-input-stackup choice; the
+saved configuration has `preserveMidLayers: false`. This fixture has no
+inner copper or explicit physical stackup to preserve. Saved minima are
+0.1778 mm width, 0.20 clearance, 0.600/0.300 via and 0.508 board margin.
+The already-fetched response confirms exactly 177.8 microns despite the
+rounded 0.178 UI and unchanged generic profile label. The via minima
+deliberately match inherited fixture vias: **diagnostic-only**, not a
+waiver of product rules or protected fill/planarization/cap obligations.
+
+All components stay preplaced. The default 0.127 mm component clearance
+and disabled single-sided preference were unchanged; movable F-only
+placement was not exercised. GND is the sole primary ground, not CELL_NEG.
+VBAT's inferred 500 mA remains incidental, with displayed computed outer
+width 0.187 mm; it is not an operating-current approval. Its unrelated
+power-pour option was disabled and reread as unchecked. No other inferred
+physics records, custom net widths or placement regions were added.
+Neither control is constrained to B-only routing; a legal F detour must
+be reported honestly rather than called a B-routing success.
+
+The **new draft's** render metadata declares all eight keepouts, each on
+B (index 3) with TRACES/VIAS/POURS restrictions. The five net names are
+correct. This does not yet prove polygon fidelity or routing enforcement.
+Separately, the ECAD Parsed Constraints tab warns that parsing those
+constraint tables currently supports Altium only; do not interpret that
+warning as evidence that the observed KiCad keepout objects are absent.
+Raw response bodies remain local/ignored; their hashes are in the ledger.
+
+**Held before Start Job.** Final review shows no price or account-specific
+free entitlement, despite the published free-personal policy. No payment,
+upgrade, new agreement or routing submission occurred. Setup stops at this
+price/authorization question, not another engineering repair. The next
+decision is whether the owner authorizes this one diagnostic relying on
+the published personal-use policy without a displayed zero-price quote.
+Do not silently infer free entitlement or create another draft. The UI
+estimates 1-10 hours after submission; no automatic monitoring is established.
+
 ## October 3 authenticated browser checkpoint
 
 The owner signed into the Playwright-controlled browser and approved
