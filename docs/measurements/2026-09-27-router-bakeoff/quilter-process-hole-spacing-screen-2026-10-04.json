@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "status": "PASS_STATIC_CONSERVATIVE_CURRENT_COORDINATES",
+  "scope": "One independent static source-bound screen of the five mandatory filled/capped process vias against every source component PTH/NPTH pad and, separately, the 13 other retained vias. No native KiCad operation, board generation, routing, cloud operation, quote, order, or source-board change.",
+  "comparison_policy": {
+    "source_statement": "The bound POFV article says more than 0.45 mm from regular PTH/NPTH; its diagram labels clearance >=0.45 mm.",
+    "screen_rule": "Conservatively require each computed whole-boundary lower bound to be >0.45 mm. No center-to-center interpretation is made.",
+    "interpretation_limit": "The supplier source does not completely specify its measurement boundary. Treating the 13 other retained vias as potentially non-filled for this conservative spacing branch is only a screening assumption. Their actual fill, off-pad and process disposition is separate and unresolved, and the results are not declared supplier violations or process qualification.",
+    "numerical_tolerance_mm": 0.000001,
+    "fabrication_tolerance": "Not modeled or qualified. Numerical tolerance is only for calculation/comparison and is not a fabrication allowance.",
+    "inconclusive_rule": "A conservative lower bound <=0.45 mm would be INCONCLUSIVE rather than proof of an actual geometric conflict; exact geometry and supplier interpretation would then be required."
+  },
+  "source_bindings": {
+    "pcb": {
+      "path": "hardware/handbell/iterations/printed-bell-four-layer/handbell.kicad_pcb",
+      "sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314"
+    },
+    "manifest": {
+      "path": "hardware/handbell/iterations/printed-bell-four-layer/placement-manifest.json",
+      "sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8"
+    },
+    "supplier_stackup_and_pofv_source_screen": {
+      "path": "docs/measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json",
+      "sha256": "ef0a395804060313d207195cb9d19c19323936d9bb92ec2a1897d25f2e8e914e"
+    },
+    "retained177_contract_report": {
+      "path": "docs/measurements/2026-09-27-router-bakeoff/quilter-prot-cout-release-contract-2026-10-04.json",
+      "sha256": "cc23592a8060db8a2732ff91954ff55e3177fbf733b22173b74062b7d4e5f896"
+    },
+    "retained177_raw": {
+      "path": "outputs/prot-cout-release-contract-20261004T1323/raw-prot-cout-release-contract.json",
+      "sha256": "639a7f81136e9e38319a55ac5d84dff42dfaaa08fe909ac87a68053fbefe23a9"
+    },
+    "saved_native_geometry_oracle": {
+      "path": "outputs/inventory-final-recovery-20261002T142910-sol/native-constraint-inventory.json",
+      "sha256": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba"
+    },
+    "release_membership": {
+      "exact_objects": 177,
+      "tracks": 159,
+      "vias": 18,
+      "mandatory_process_vias_included": 5
+    }
+  },
+  "tooling_and_run": {
+    "prior_report_revision": {
+      "sha256": "cf22ca58b845ee521d6828a16e5a7d997a8c9edcc7ee3d12cbec697cb590a61e",
+      "disposition": "Root-read provisional geometric-reasoning revision preserved by hash; this revision adds provenance clarification only."
+    },
+    "runtime": "Python 3.11.9",
+    "literal_parser": {
+      "path": "tools/kicad_sexpr.py",
+      "sha256": "be6d4647d1dea5186e4d1388ae640b43f8004fdfc94f50ca72b46e90bf0613e9"
+    },
+    "analyzer": {
+      "path": "outputs/process-hole-spacing-screen-20261004T1448/analyze.py",
+      "sha256": "c1040a695ee3a2517c208648f0abecd754065ee2c9bed9fbafd603e090d71e54"
+    },
+    "raw_result": {
+      "path": "outputs/process-hole-spacing-screen-20261004T1448/raw-process-hole-spacing-screen.json",
+      "sha256": "227c21ac9f835795ba409582120f8c7765e91c08d67c218f2220f14079a3ed0b"
+    },
+    "analyzer_executions": 1,
+    "maximum_authorized": 3,
+    "elapsed_seconds": 0.453,
+    "native_kicad_executed": false,
+    "execution_evidence_ledger": [
+      {
+        "execution": 1,
+        "command": "python 'C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\process-hole-spacing-screen-20261004T1448\\analyze.py'",
+        "tool_runtime_shell_id": "process-screen-1",
+        "tool_runtime_completion_status": "completed with exit code 0",
+        "numeric_exit_status": 0,
+        "evidence_source": "Agent tool-runtime completion record returned in-session; not an independently saved supervisor receipt.",
+        "pid": null,
+        "pid_status": "Not returned by the recorded synchronous tool completion.",
+        "requested_initial_wait_seconds": 90,
+        "hard_timeout_receipt": null,
+        "hard_timeout_status": "No independently saved hard-timeout or supervisor receipt exists. The recorded 90 seconds was the synchronous tool initial-wait setting and must not be represented as a proved process hard timeout.",
+        "stdout_artifact": null,
+        "stdout_artifact_status": "Completion output was returned in-session but was not independently saved as an artifact.",
+        "result_artifact": {
+          "path": "outputs/process-hole-spacing-screen-20261004T1448/raw-process-hole-spacing-screen.json",
+          "sha256": "227c21ac9f835795ba409582120f8c7765e91c08d67c218f2220f14079a3ed0b",
+          "embedded_status": "PASS_STATIC_CONSERVATIVE_CURRENT_COORDINATES"
+        }
+      }
+    ]
+  },
+  "population_and_identity": {
+    "source_references": 104,
+    "source_pads": 325,
+    "saved_native_references": 104,
+    "saved_native_pads": 325,
+    "literal_to_native_pad_uuid_set_equal": true,
+    "native_reference_binding_equal": true,
+    "retained27_reference_count": 27,
+    "eligible_reference_count": 77,
+    "drilled_component_pads": 8,
+    "drilled_fixed_retained27": 8,
+    "drilled_eligible77": 0,
+    "inventory_basis": "All source component pads, including unfitted and copper-only references; no fitted-BOM filter.",
+    "complete_population_confirmed": true,
+    "native_identity_mismatch": false
+  },
+  "algorithm": {
+    "coordinates": "Saved native GLOBAL pad positions and orientations keyed by pad UUID/reference are used directly; footprint-local coordinates are not transformed to reconstruct pad positions.",
+    "literal_geometry": "Pad type, shape, size, drill shape/dimensions, and drill offset presence come from the source S-expression.",
+    "hole_envelope": "A circular drill uses radius diameter/2. An oval drill uses a rotation-independent enclosing circle centered on the globally rotated drill-offset center with radius max(drill dimensions)/2.",
+    "pad_envelope": "Circle and oval copper use enclosing radius max(size)/2. Rectangular/roundrect copper would use the corner radius hypot(size_x/2,size_y/2). Unsupported/custom geometry fails closed.",
+    "gap": "Euclidean center distance minus both enclosing radii. For pads this is a conservative lower bound on actual whole-shape separation; retained vias are circular and their edge gaps are exact for nominal source geometry.",
+    "offset_handling": "All eight drilled pads have no literal drill-offset field. This absence is recorded explicitly; effective [0,0] follows the KiCad format default and was not silently substituted. A present offset is rotated by saved native global pad orientation.",
+    "limits": "Circumscribed circles may understate true clearance, never overstate it for the supported shapes. Nominal source geometry is screened; manufacturing variation, plating, cap geometry and supplier measurement convention are outside this calculation."
+  },
+  "drilled_pad_inventory": [
+    {
+      "name": "MH1.1",
+      "uuid": "bc1f09cc-4e90-5325-bc80-08b5f58578c0",
+      "classification": "fixed_retained27",
+      "type": "thru_hole",
+      "center_mm": [110.0, 115.7],
+      "orientation_deg": 0.0,
+      "pad": {"shape": "circle", "size_mm": [4.4, 4.4], "envelope_radius_mm": 2.2},
+      "drill": {"shape": "circle", "size_mm": [2.2, 2.2], "offset_literal": null, "effective_offset_mm": [0.0, 0.0], "envelope_radius_mm": 1.1}
+    },
+    {
+      "name": "MH2.1",
+      "uuid": "3ee74a8d-7103-57b2-9dbd-d3ab3ff8c1a6",
+      "classification": "fixed_retained27",
+      "type": "thru_hole",
+      "center_mm": [90.0, 84.3],
+      "orientation_deg": 0.0,
+      "pad": {"shape": "circle", "size_mm": [4.4, 4.4], "envelope_radius_mm": 2.2},
+      "drill": {"shape": "circle", "size_mm": [2.2, 2.2], "offset_literal": null, "effective_offset_mm": [0.0, 0.0], "envelope_radius_mm": 1.1}
+    },
+    {
+      "name": "X6.NPTH-left",
+      "uuid": "3189c891-57a7-5dc7-a5bb-00a7292a0f02",
+      "classification": "fixed_retained27",
+      "type": "np_thru_hole",
+      "center_mm": [102.89, 78.38],
+      "orientation_deg": 180.0,
+      "pad": {"shape": "circle", "size_mm": [0.65, 0.65], "envelope_radius_mm": 0.325},
+      "drill": {"shape": "circle", "size_mm": [0.65, 0.65], "offset_literal": null, "effective_offset_mm": [0.0, 0.0], "envelope_radius_mm": 0.325}
+    },
+    {
+      "name": "X6.NPTH-right",
+      "uuid": "8e659786-985c-5a3b-8d6a-fd715282132b",
+      "classification": "fixed_retained27",
+      "type": "np_thru_hole",
+      "center_mm": [97.11, 78.38],
+      "orientation_deg": 180.0,
+      "pad": {"shape": "circle", "size_mm": [0.65, 0.65], "envelope_radius_mm": 0.325},
+      "drill": {"shape": "circle", "size_mm": [0.65, 0.65], "offset_literal": null, "effective_offset_mm": [0.0, 0.0], "envelope_radius_mm": 0.325}
+    },
+    {
+      "name": "X6.M1",
+      "uuid": "2249eb1a-0b11-552f-95b3-23f088e83abf",
+      "classification": "fixed_retained27",
+      "type": "thru_hole",
+      "center_mm": [104.325, 78.88],
+      "orientation_deg": 270.0,
+      "pad": {"shape": "oval", "size_mm": [2.2, 1.1], "envelope_radius_mm": 1.1},
+      "drill": {"shape": "oval", "size_mm": [1.7, 0.6], "offset_literal": null, "effective_offset_mm": [0.0, 0.0], "envelope_radius_mm": 0.85}
+    },
+    {
+      "name": "X6.M2",
+      "uuid": "21438c54-3a6d-566d-b47f-4443b5a96225",
+      "classification": "fixed_retained27",
+      "type": "thru_hole",
+      "center_mm": [95.675, 78.88],
+      "orientation_deg": 270.0,
+      "pad": {"shape": "oval", "size_mm": [2.2, 1.1], "envelope_radius_mm": 1.1},
+      "drill": {"shape": "oval", "size_mm": [1.7, 0.6], "offset_literal": null, "effective_offset_mm": [0.0, 0.0], "envelope_radius_mm": 0.85}
+    },
+    {
+      "name": "X6.M3",
+      "uuid": "ec4d64cc-8307-5be1-8378-f92b79b9c838",
+      "classification": "fixed_retained27",
+      "type": "thru_hole",
+      "center_mm": [104.325, 74.7],
+      "orientation_deg": 270.0,
+      "pad": {"shape": "oval", "size_mm": [1.9, 1.1], "envelope_radius_mm": 0.95},
+      "drill": {"shape": "oval", "size_mm": [1.4, 0.6], "offset_literal": null, "effective_offset_mm": [0.0, 0.0], "envelope_radius_mm": 0.7}
+    },
+    {
+      "name": "X6.M4",
+      "uuid": "82819a8f-eab5-591f-a86e-4d2773fd5728",
+      "classification": "fixed_retained27",
+      "type": "thru_hole",
+      "center_mm": [95.675, 74.7],
+      "orientation_deg": 270.0,
+      "pad": {"shape": "oval", "size_mm": [1.9, 1.1], "envelope_radius_mm": 0.95},
+      "drill": {"shape": "oval", "size_mm": [1.4, 0.6], "offset_literal": null, "effective_offset_mm": [0.0, 0.0], "envelope_radius_mm": 0.7}
+    }
+  ],
+  "mandatory_process_vias": [
+    {"role": "U4 thermal", "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec", "center_mm": [111.050323, 89.587211], "copper_diameter_mm": 0.604, "drill_mm": 0.35},
+    {"role": "U4 thermal", "uuid": "c63c289d-af32-592b-9732-d17507fbf476", "center_mm": [111.050323, 90.237211], "copper_diameter_mm": 0.604, "drill_mm": 0.35},
+    {"role": "U4 thermal", "uuid": "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5", "center_mm": [110.400323, 90.237211], "copper_diameter_mm": 0.604, "drill_mm": 0.35},
+    {"role": "U4 thermal", "uuid": "eb628663-2af6-5175-bd63-91e9eecb0258", "center_mm": [110.400323, 89.587211], "copper_diameter_mm": 0.604, "drill_mm": 0.35},
+    {"role": "C24 capped", "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d", "center_mm": [92.004083, 93.491669], "copper_diameter_mm": 0.6, "drill_mm": 0.3}
+  ],
+  "component_drilled_pad_screen": {
+    "pairs": 40,
+    "result": "PASS_CONSERVATIVE_LOWER_BOUNDS_GT_0.45_MM",
+    "minimum_drill_edge_lower_bound": {
+      "gap_mm": 8.157610094,
+      "seed": {"uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d", "center_mm": [92.004083, 93.491669], "drill_radius_mm": 0.15, "bounds_mm": [91.854083, 93.341669, 92.154083, 93.641669]},
+      "object": {"name": "MH2.1", "uuid": "3ee74a8d-7103-57b2-9dbd-d3ab3ff8c1a6", "center_mm": [90.0, 84.3], "hole_envelope_radius_mm": 1.1, "bounds_mm": [88.9, 83.2, 91.1, 85.4]},
+      "center_distance_mm": 9.407610094
+    },
+    "minimum_full_copper_pad_lower_bound": {
+      "gap_mm": 6.907610094,
+      "seed": {"uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d", "center_mm": [92.004083, 93.491669], "copper_radius_mm": 0.3, "bounds_mm": [91.704083, 93.191669, 92.304083, 93.791669]},
+      "object": {"name": "MH2.1", "uuid": "3ee74a8d-7103-57b2-9dbd-d3ab3ff8c1a6", "center_mm": [90.0, 84.3], "pad_envelope_radius_mm": 2.2, "bounds_mm": [87.8, 82.1, 92.2, 86.5]},
+      "center_distance_mm": 9.407610094
+    }
+  },
+  "other_retained_via_screen": {
+    "other_retained_vias": 13,
+    "pairs": 65,
+    "other_retained_via_uuids": [
+      "0ba3129d-4c2f-51a5-b83d-47c5c587ae79",
+      "14e9c925-5186-5943-8002-513435324c90",
+      "1cb9cba6-90b8-5033-9ae1-e912259b9b0a",
+      "1fff4429-e233-533e-8d57-49618b67d41d",
+      "248ce18d-3a6e-50d8-b9ce-c721b99a2c63",
+      "358bf155-f890-5806-b895-ec3c485c3ac2",
+      "4a6858d1-d03b-58a1-8988-c2e0fd93ac1d",
+      "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+      "73f524c2-3597-5233-906e-93443fee9d54",
+      "800d4ec3-d77e-5045-aaea-e1b064b8e71f",
+      "bad9068e-b03b-5869-a449-cdb7731eb117",
+      "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+      "f0eb8165-a384-559b-a075-caa04a27f771"
+    ],
+    "screening_assumption": "For this conservative branch only, the 13 vias are treated as potentially non-filled features that might fall under the supplier spacing statement. This does not establish that any is ordinary, off-pad, non-filled or process-qualified.",
+    "process_disposition_limit": "Actual fill, off-pad and process dispositions remain separate. In particular, the four retained PROT_FET_RETURN vias 1cb9cba6-90b8-5033-9ae1-e912259b9b0a, 358bf155-f890-5806-b895-ec3c485c3ac2, 800d4ec3-d77e-5045-aaea-e1b064b8e71f and f0eb8165-a384-559b-a075-caa04a27f771 are not automatically qualified ordinary vias.",
+    "result": "PASS_GEOMETRY_UNDER_POTENTIALLY_NON_FILLED_SCREENING_ASSUMPTION_SUPPLIER_AND_PROCESS_DISPOSITIONS_UNRESOLVED",
+    "minimum_drill_edge_gap": {
+      "gap_mm": 13.843011805,
+      "seed": {"uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d", "center_mm": [92.004083, 93.491669], "radius_mm": 0.15, "bounds_mm": [91.854083, 93.341669, 92.154083, 93.641669]},
+      "other_retained_via": {"uuid": "1cb9cba6-90b8-5033-9ae1-e912259b9b0a", "center_mm": [86.949175, 106.70048], "radius_mm": 0.15, "bounds_mm": [86.799175, 106.55048, 87.099175, 106.85048]},
+      "center_distance_mm": 14.143011805
+    },
+    "minimum_copper_edge_gap": {
+      "gap_mm": 13.543011805,
+      "seed": {"uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d", "center_mm": [92.004083, 93.491669], "radius_mm": 0.3, "bounds_mm": [91.704083, 93.191669, 92.304083, 93.791669]},
+      "other_retained_via": {"uuid": "1cb9cba6-90b8-5033-9ae1-e912259b9b0a", "center_mm": [86.949175, 106.70048], "radius_mm": 0.3, "bounds_mm": [86.649175, 106.40048, 87.249175, 107.00048]},
+      "center_distance_mm": 14.143011805
+    }
+  },
+  "mandatory_seed_mutual_spacing": {
+    "classification": "INFORMATIONAL_NOT_TESTED_AGAINST_THE_0.45_MM_REGULAR_PTH_RULE",
+    "pairs": 10,
+    "minimum_drill_edge_gap_mm": 0.3,
+    "minimum_copper_edge_gap_mm": 0.046,
+    "minimum_pair": ["545fee40-3fbd-59ae-bd8d-30ffe16436ec", "c63c289d-af32-592b-9732-d17507fbf476"],
+    "note": "The other four mandatory filled/capped seeds were excluded from each other-retained-via set. Mutual seed geometry is not treated as a regular-PTH supplier-rule failure."
+  },
+  "edge_cuts_coverage": {
+    "primitive_counts": {"gr_line": 163},
+    "connected_components": 1,
+    "component_vertices": 163,
+    "all_vertices_degree_2": true,
+    "disposition": "The complete board-level Edge.Cuts inventory is one closed connected component. No separate non-pad Edge.Cuts component representing an internal hole was found.",
+    "coverage_limit": "This static topology disposition does not classify non-Edge.Cuts fabrication drawings, mechanical models, or supplier-added features."
+  },
+  "controls": {
+    "inside_case": "PASS",
+    "outside_case": "PASS",
+    "threshold_circle_exact_edge_case": "PASS",
+    "extended_oval_envelope_not_center_only": "PASS",
+    "offset_envelope_not_center_only": "PASS",
+    "missing_seed_must_fail": "PASS",
+    "incorrect_oracle_binding_must_fail": "PASS"
+  },
+  "applicability_and_nonqualification": {
+    "applies_to": "Only the exact current coordinates and exact retained177 membership bound above.",
+    "does_not_generalize_to": "Future movable-part coordinates, added/replaced vias, generated full input, returned routing, or another source hash.",
+    "unchanged_source_board_sha256_after": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "source_board_changed": false,
+    "qualification_limit": "Published hole/ring capability plus this static spacing screen does not qualify cap planarity, resin/copper-cap process, stencil/assembly, supplier capability for this design, native-guard behavior, actual selected stackup/full input, cloud behavior, fabrication, manufacturing, powered function, safety, or child use."
+  }
+}

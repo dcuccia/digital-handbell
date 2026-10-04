@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 4 process-hole screen accepted for current coordinates:** the
+  five protected process vias clear all eight source drilled component pads
+  and, separately, the13 other retained vias under conservative whole-shape
+  bounds. Minimum copper/pad gaps are6.907610 and13.543012mm against the
+  conservative>0.45mm screen. This does not qualify future routing, cap/
+  planarity or the other vias' fill/off-pad/process status. Report3349af15
+  preserves one completed static execution and explicitly missing hard-
+  timeout evidence;90 seconds was only an initial wait. No rerun occurred.
+  All five authoritative hashes are unchanged. Native guard qualification
+  remains held; next needs a separately authorized bounded runner/UUID/DRC
+  recovery, not another cloud job or full-board staging.
 - **October 4 supplier construction evidence bound:** the official
   JLC04161H-3313/JLC06161H-3313 rows are now saved with1.6mm/1oz/0.5oz
   display settings. Both use0.0994mm outer dielectrics; six layers add
@@ -11,7 +22,7 @@
   cap/planarity and exact-package acceptance remain open. Four-layer
   POFV is documented as charged, not unavailable; no quote is established.
   Keep both as candidates, not selected stackups. Native guard gate remains
-  held; next independent item may screen the fixed process-hole geometry.
+  held; the subsequent fixed-coordinate hole screen is recorded above.
 - **October 4 native guard control is partial/held:** the exact source
   subset passes static preflight and its generated four-layer fixture
   loads/saves, but pad UUID readback is incomplete and CLI DRC times out

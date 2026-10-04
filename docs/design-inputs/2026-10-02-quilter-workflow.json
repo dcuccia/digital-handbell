@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "SUPPLIER_CONSTRUCTION_ROWS_BOUND_NATIVE_GUARD_GATE_HELD",
+  "status": "CURRENT_COORDINATE_PROCESS_SPACING_ACCEPTED_NATIVE_GUARD_GATE_HELD",
   "checkpoint_history_note": "Named checkpoints record their own time and scope. october_4_fourth_continuation controls the new14:20-15:20 window; earlier deadlines remain historical. Exhausted attempts still stop an affected item.",
   "october_4_fourth_continuation": {
     "owner_message_at_local": "2026-10-04T14:20:28-07:00",
@@ -10,6 +10,35 @@
     "no_new_item_after_local": "15:10",
     "first_item": "Isolated native guard roundtrip and object-class behavior control",
     "source_edits_full_input_product_routing_cloud_released": false
+  },
+  "supplier_process_hole_spacing_item": {
+    "status": "ROOT_ACCEPTED_STATIC_CURRENT_COORDINATE_GEOMETRY_EXECUTION_LIMIT_GAP_RECORDED",
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-process-hole-spacing-screen-2026-10-04.json",
+    "report_sha256": "3349af15420593f85e6763c9a17f71e9e3f20ee33f99b6501ac0f5d37ca2f475",
+    "executor": "71cad88d-6175-42a7-b328-d38e353ce5aa",
+    "runtime_model_effort": "Root verified gpt-5.6-sol / medium before release.",
+    "runtime_configuration_event": "32036bd0-161a-450d-9318-d9cb66d82766",
+    "runtime_dispatch_completion_event": "45308779-b40f-4da6-abbb-3ffa4b7e50c4",
+    "analysis_stop_local": "14:59",
+    "report_due_local": "15:00",
+    "root_checkpoint_due_local": "15:03",
+    "source_population": {"references":104,"pads":325,"drilled_pads":8,"drilled_pads_fixed":8},
+    "mandatory_process_vias": 5,
+    "component_pad_pairs": 40,
+    "other_retained_vias": 13,
+    "other_retained_via_pairs": 65,
+    "conservative_threshold_strictly_greater_than_mm": 0.45,
+    "minimum_component_copper_pad_gap_mm": 6.907610094,
+    "minimum_other_via_copper_gap_mm": 13.543011805,
+    "other_vias_ordinary_off_pad_fill_or_process_qualified": false,
+    "actual_analyzer_executions": 1,
+    "tool_runtime_numeric_exit_status": 0,
+    "independent_supervisor_receipt_or_hard_timeout_evidenced": false,
+    "execution_limit_disposition": "90 seconds was only initial_wait. Preserve this execution-policy gap; do not infer a hard timeout or rerun to manufacture missing evidence.",
+    "all_five_authoritative_hashes_and_bound_artifacts_root_verified": true,
+    "native_execution_or_source_changes": false,
+    "future_geometry_supplier_cap_planarity_full_input_or_cloud_qualified": false,
+    "next_item": "Separately authorized bounded native runner/UUID/DRC recovery; no fourth native attempt is released by this independent result."
   },
   "supplier_stackup_source_screen": {
     "status": "PRIMARY_ROWS_BOUND_CANDIDATES_NOT_SELECTED",
@@ -25,7 +54,7 @@
     "four_layer_POFV_policy": "Documented additional charge; not an exact quote.",
     "native_guard_gate_waived": false,
     "actual_stackup_or_layer_roles_selected": false,
-    "next_independent_item": "Conservative source-bound process-hole clearance screen."
+    "next_independent_item": "Completed for current coordinates in supplier_process_hole_spacing_item; other supplier and native/input gates remain."
   },
   "private_guard_native_control_item": {
     "status": "PARTIAL_HELD_ATTEMPTS_EXHAUSTED",

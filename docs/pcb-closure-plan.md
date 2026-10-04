@@ -166,12 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Current-coordinate process-hole screen accepted:** the
+[spacing ledger](measurements/2026-09-27-router-bakeoff/quilter-process-hole-spacing-screen-2026-10-04.json)
+binds five required processed vias against eight drilled component pads
+and13 other retained vias. Conservative full-copper/pad gaps exceed0.45mm
+in all40/65 pairs; minima6.907610/13.543012mm. All source hashes remain
+unchanged. This is not cap/planarity, supplier acceptance, future-geometry
+or other-via process qualification. One static run completed, but no hard
+timeout was evidenced; the ledger distinguishes initial wait from a limit.
+Next is a separately authorized bounded native-runner/UUID/DRC recovery.
+No automatic fourth native attempt, input generation or cloud job.
+
 **Supplier screen complete, constructions not selected:** the
 [source-bound comparison packet](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
 supplies actual3313 dielectric/copper rows and POFV conditions. Exact hole
-spacing and cap/planarity remain open; published size/ring ranges alone
-do not qualify manufacturing. Next independent item is a conservative
-source-bound process-hole clearance screen. The native guard blocker
+spacing interpretation and cap/planarity remain open; published size/ring
+ranges and the subsequent current-coordinate clearance screen do not
+qualify manufacturing. The native guard blocker
 below is not waived, and no source/input/cloud changes are released.
 
 **Native-control gate held:** [1fd27e9d...](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)

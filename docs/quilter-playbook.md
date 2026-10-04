@@ -355,8 +355,23 @@ planarity. Preserve ambiguous diagram/quality wording for disposition
 instead of inventing tolerances or converting an advertised maximum into
 a guaranteed minimum.
 
+For hole-process screens, inventory every physical drilled pad, including
+unfitted parts, alignment holes, slots and mounts; do not use a fitted-BOM
+filter. Reuse saved native global centers and bound whole holes/copper,
+including offsets. A conservative enclosing-shape clearance above the
+threshold can establish nominal separation; one below it is inconclusive
+until exact geometry is examined. Keep an ambiguous supplier measurement
+boundary and via process classification separate from the geometric result.
+The [process-hole screen](measurements/2026-09-27-router-bakeoff/quilter-process-hole-spacing-screen-2026-10-04.json)
+exercises this method on40 component-pad and65 other-via pairs, but only
+for its bound source coordinates; new placement/routing invalidates reuse.
+
 Keep local items within the [bounded execution policy](routing-agent-policy.md).
 Use hard subprocess termination limits, not just initial output waits.
+Apply the same rule to static analyzers: the fast process-hole run completed
+successfully, but its90-second initial wait did not enforce the required
+limit. Preserve that noncompliance explicitly; neither a short duration nor
+a later report-only amendment retroactively supplies a supervisor receipt.
 Persist executable/arguments, input/tool hashes, stdout/stderr and exit or
 timeout metadata **before and throughout execution**, including failure.
 Our two initial output DRC timeouts lacked preserved streams, so their exact

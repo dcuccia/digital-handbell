@@ -7,6 +7,23 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Latest independent result: current-coordinate process spacing accepted.**
+The [spacing ledger](measurements/2026-09-27-router-bakeoff/quilter-process-hole-spacing-screen-2026-10-04.json)
+(`3349af15...`) covers all eight source drilled component pads, all fixed,
+and separately the13 other retained vias. The five required processed vias
+pass40/65 respective pair checks, including conservative full-copper/pad
+envelopes. Minimum gaps are6.907610/13.543012mm against>0.45mm.
+This does not resolve cap/planarity, supplier interpretation, the other
+vias' process classification or future geometry. All five source hashes
+remain unchanged. One static run completed; its90-second initial wait was
+not a hard termination limit. Missing PID/supervisor evidence is explicit,
+not reconstructed by rerunning. The executor is idle.
+
+The native guard hold below still blocks dependent inputs. Next requires
+separate bounded authorization to recover the reusable native runner,
+preflight a known UUID and obtain diagnostic DRC evidence. Do not spend the
+remaining hour on an unapproved fourth native attempt or a cloud trial.
+
 **Independent progress: supplier constructions bound.** The
 [four/six source screen](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
 records the exact shortlisted3313 constructions and process conditions.
@@ -14,8 +31,8 @@ Both have0.0994mm outer dielectrics, unlike the earlier saved generic
 Quilter4-layer preset. Six-layer reference adjacency requires an explicit
 role decision, not an assumption of two additional useful signal layers.
 Both protected via families pass the published hole/ring ranges only.
-Next independent preparation is the source-bound process-hole spacing
-screen; no stackup selection, quote or full-input release has occurred.
+The source-bound process-hole spacing screen is now complete for current
+coordinates only; no stackup selection, quote or full-input release occurred.
 
 **Latest: native guard control partial/held.** The
 [native-control ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)

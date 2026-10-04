@@ -101,6 +101,44 @@ size, order or cloud job is selected. Next independent work is a conservative
 source-bound process-hole clearance screen. The native guard behavior
 blocker remains held and is not bypassed by this supplier progress.
 
+### Current-coordinate process-hole screen accepted
+
+The [spacing ledger](measurements/2026-09-27-router-bakeoff/quilter-process-hole-spacing-screen-2026-10-04.json)
+(`3349af15...`) binds the selected177 and saved native global geometry.
+All104 references/325 pads were inventoried, without a fitted-BOM filter.
+The eight drilled pads are MH1/MH2, two X6 alignment holes and four X6
+anchor slots; all belong to the fixed27. No separate internal-hole
+Edge.Cuts component was found. Unsupported geometry fails closed; all
+eight drilled pads explicitly lack a drill offset.
+
+Five mandatory processed vias clear all40 component-pad pairs and,
+separately,65 pairs with the13 other retained vias. Minimum hole-edge
+bounds are8.157610/13.843012mm; more conservative copper/pad-edge bounds
+are6.907610/13.543012mm. Both exceed the conservative>0.45mm threshold.
+Enclosing circles include whole slots and copper, not just their centers.
+A failed conservative lower bound would be inconclusive, not proof of
+an actual violation. The four PROT_FET_RETURN vias are not thereby
+qualified ordinary/off-pad vias; all13 retain separate process duties.
+Mutual spacing of the five processed seeds is not classified under the
+supplier's regular-PTH condition.
+
+Root verified source/oracle/raw/analyzer bindings and all five unchanged
+authoritative hashes. One static execution completed in reported0.453s,
+with exit0 recorded by the session tool. Report-only clarifications preserve
+the prior revision and add no execution. The requested90 seconds was an
+initial wait, not an enforced timeout: no independent supervisor receipt,
+PID or stdout artifact exists. Accept the bounded geometric conclusion,
+not the execution as an example of compliant hard-timeout supervision.
+
+Both candidate constructions can reuse this exact-coordinate evidence;
+future placement/via changes require renewed checks. Cap/planarity, exact
+supplier acceptance, layer purposes and full-input/native/import gates
+remain open. No source, native fixture or cloud operation occurred in
+this item. Stop at this checkpoint: the next native runner/UUID/DRC
+recovery needs separate bounded authorization, not a reset of the exhausted
+control's attempts. Reuse proven launcher components and preserve actual
+execution receipts rather than producing another opaque invocation.
+
 ## October 4, 13:19 additional unattended hour
 
 The owner resumed at13:19:11 for one hour. Stop14:19 local and start no
