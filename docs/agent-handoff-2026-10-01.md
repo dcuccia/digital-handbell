@@ -7,7 +7,22 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 4, 18:42:** the
+**Current October 4, 18:56:** the
+[USB capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json)
+(`9d68447d...`) retains90-ohm intent. The loaded current client implements
+numeric impedance entry, not an85/100-only selector, and permits a blank
+independent single-ended target. No90-ohm value was entered/saved/solved;
+that remains an actual-preview gate on each qualified input. Read-only
+old-job details expose achieved100-ohm calculations, not new-profile proof.
+No new cloud object, recompute request, target substitution or source edit.
+
+Next local work is common movable-domain/native-profile qualification.
+Do not hold preparation circularly on a solve needing those exact inputs,
+or duplicate the old job to probe the editor. Paired submission still
+requires qualified domains, native/import findings, real90-ohm results and
+returned-object/fill acceptance checks.
+
+**Prior October 4, 18:42:** the
 [role selection](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
 (`724b755b...`) selects real JLC 3313 constructions with S/G/S/S and
 S/G/S/G/G/S roles. The
@@ -18,7 +33,7 @@ assembly and native profile qualification remain open. Existing18
 geometries and five filled/planarized/capped seeds stay unchanged.
 New ordinary starting size is0.650/0.350mm, with0.150mm ring.
 
-Next is a bounded read-only USB capability/engineering disposition:
+The subsequent bounded read-only USB capability disposition is above:
 Quilter documents85/100-ohm differential targets, but our target is90.
 Authenticated completed-job UI did not reveal editable options; this is
 not proof that current UI lacks90-ohm support. Do not substitute a target,

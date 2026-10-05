@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "90_OHM_INTENT_RETAINED_CURRENT_CLIENT_PATH_IDENTIFIED_ACTUAL_SOLVE_PENDING",
+  "date": "2026-10-04",
+  "scope": "Bounded read-only capability/engineering disposition; no configuration edit, new cloud object, constraint recompute request, routing submission or source modification.",
+  "requirement": {
+    "differential_target_ohms": 90,
+    "basis": "docs/routing-agent-policy.md and Raspberry Pi Hardware Design with RP2040 section2.4.1; approximately90-ohm differential intent over uninterrupted ground.",
+    "basis_url": "https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf",
+    "independent_single_ended_target": "Not selected merely by dividing90 by two. Establish a separate requirement before imposing one.",
+    "fabrication_impedance_tolerance_selected": false,
+    "manual_USB_routing_released": false
+  },
+  "documented": {
+    "differential_page": "https://docs.quilter.ai/physics-constraints/differential-pairs.md",
+    "listed_differential_targets_ohms": [85, 100],
+    "listed_single_ended_targets_ohms": [42.5, 50],
+    "constraints_page": "https://docs.quilter.ai/using-quilter/review-and-edit-constraints.md",
+    "constraints_page_claim": "Simbeor uses the stackup to calculate geometry, currently assuming1GHz; computed width/gap can be overridden.",
+    "historical_context": "The85/100 documentation mismatch was already recorded September27. This item revisits it against the current client, not as a newly discovered electrical defect.",
+    "limits": "Public text is not a versioned guarantee of the current editor, backend or returned routing. A geometry override alone is not proof of a supported90-ohm check."
+  },
+  "current_client_static_inspection": {
+    "asset_url": "https://app.quilter.ai/bits/index-Dh-zycbi.js",
+    "captured_body_sha256": "ac0cf4a4c7b699a57272b9f226f0754b936874a6a9f4dc178c2b7d961220174b",
+    "observations": [
+      "The differential-impedance OHM field selects a text/numeric editor, not an85/100 selector.",
+      "The inspected OHM validator checks positive numeric values. The pair validator checks the relationship to a separately supplied single-ended value.",
+      "The inspected single-ended differential-pair field permits null; its default is null.",
+      "Computed-result UI distinguishes requested and achieved differential/single-ended values and warns when hand-edited geometry makes prior results stale."
+    ],
+    "meaning": "A current-client path for specifying90 is supported by static inspection; the documentation's enumerated choices do not establish current frontend impossibility.",
+    "limits": "No downloaded application code was executed by the investigation. No90 value was entered, saved or solved. Backend acceptance, feature availability in an editable draft and routing enforcement remain unverified."
+  },
+  "existing_job_observation": {
+    "job_id": "6ab98d5ff989cc810b2fc4a1",
+    "displayed_built_api": "1.39.1",
+    "snapshot_sha256": "f452c7433b1ea51f25f8582d13e5d9c0cae58c3205e80a0d57f8cc3694a8565a",
+    "saved_pairs": ["D+/D-", "USB_D+/USB_D-", "VO+/VO-"],
+    "saved_target_ohms": 100,
+    "saved_single_ended_field": "blank for all three rows",
+    "saved_frequency_GHz": 1,
+    "computed_group": "One100-ohm group covers three pairs; not evidence that only one pair was processed.",
+    "displayed_layer_results": [
+      {"name":"Top Layer","type":"copper-signal","width_mm":0.236,"gap_mm":0.21,"achieved_differential_ohms":100.004,"achieved_single_ended_ohms":61.221},
+      {"name":"Ground Layer 2","type":"copper-signal","width_mm":0.321,"gap_mm":0.21,"achieved_differential_ohms":100.001,"achieved_single_ended_ohms":99.201},
+      {"name":"Bottom Layer","type":"copper-signal","width_mm":0.495,"gap_mm":0.21,"achieved_differential_ohms":100.033,"achieved_single_ended_ohms":99.469}
+    ],
+    "limits": "These are displayed saved100-ohm computations on the old job's different preset, not90-ohm evidence, measurements of routed copper, or acceptance of its erroneous VO pair and layer roles."
+  },
+  "root_disposition": {
+    "retain_90_ohm_target": true,
+    "substitute_85_or_100": false,
+    "continue_independent_local_profile_and_domain_qualification": true,
+    "no_duplicate_job_just_to_probe_editor": true,
+    "actual_import_gate": [
+      "On each separately qualified input, establish that the editable UI saves90 for both real USB pair sections and does not classify VO as a digital impedance pair.",
+      "Inspect nonstale per-layer computed geometry, achieved values and solver status against that exact native stackup, actual signal/ground purposes and routing minima.",
+      "Document the actual frequency/material assumptions; do not turn12Mbps into a carrier-frequency specification.",
+      "Preserve the common F-over-In1 preference and qualify any alternate reference/transition explicitly.",
+      "Hold submission if90 is rejected, omitted, substituted, unsolved or incompatible with the selected geometry/rules; no silent tolerance or manual-geometry waiver."
+    ],
+    "next_local_item": "Source-bound common movable-domain and native-profile qualification. Actual90-ohm solving belongs to the later qualified preview, not a prerequisite that circularly prevents preparing its stackup."
+  },
+  "evidence_storage": {
+    "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\usb-impedance-capability-20261004T1845",
+    "client_body": "app-index-Dh-zycbi-response.txt",
+    "UI_snapshot": "existing-100ohm-solver-details.yml",
+    "publication": "Only findings are committed. Application source, raw browser state and account material remain private/ignored.",
+    "inspection_note": "The first console excerpt read failed on Windows encoding; an ASCII-safe read recovered it. This was a read-only inspection, not a native validation run or a qualified reusable checker."
+  }
+}

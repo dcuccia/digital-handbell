@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 4, 18:56 USB capability disposition:** retain90-ohm intent.
+  Current-client static inspection finds numeric impedance entry and an
+  optional independent single-ended target, not an85/100-only selector.
+  This does not prove saved90-ohm backend solving or routing. Existing-job
+  details expose per-layer achieved100-ohm values, not evidence for90 or
+  the selected3313 profiles. Continue common local domain/profile work;
+  verify saved90 and nonstale per-layer results on each later qualified
+  preview before submission. No target substitution, new cloud object,
+  recompute request, manual routing or source change occurred. See the
+  capability ledger; do not duplicate a job just to probe its editor.
 - **October 4, 18:42 layer roles and retained-via geometry selected:**
   real JLC 3313 four/six constructions use S/G/S/S and S/G/S/G/G/S.
   Six layers buy closer references, not two extra signal layers.

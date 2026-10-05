@@ -166,7 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 4, 18:42: study roles and retained-via geometry selected.**
+**Current October 4, 18:56:90-ohm intent retained; current-client path identified.**
+The [capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json)
+finds numeric frontend entry rather than an85/100-only selector. Actual90
+persistence/solving remains unverified; saved100-ohm results are not a proxy.
+Continue independent local domain/profile qualification, then require
+nonstale90-ohm per-layer results on each qualified preview before submission.
+No duplicated job, new input, recompute request, substitution or source edit.
+Full native/import findings and returned-object/fill checks remain gates.
+
+**Prior October 4, 18:42: study roles and retained-via geometry selected.**
 The [role decision](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
 selects real JLC 3313 S/G/S/S and S/G/S/G/G/S constructions, not generic
 four/six presets. The [13-by97 screen](measurements/2026-09-27-router-bakeoff/quilter-retained-via-pad-process-screen-2026-10-04.json)
@@ -174,7 +183,7 @@ finds no fixed-land overlap for the other13 retained vias. Their mask/
 assembly treatment remains unqualified; preserve all18 vias and the five
 required filled/planarized/capped seeds. New ordinary starting geometry
 is0.650/0.350mm with0.150mm ring, not a source resize or global-rule waiver.
-Next is a bounded read-only USB capability/engineering disposition:
+The subsequent USB capability/engineering disposition is above:
 documented85/100-ohm choices do not establish support for our90-ohm target.
 No unsupported substitution, manual routing, source change, full input or
 cloud job. Movable domains and complete native/import/output gates remain.

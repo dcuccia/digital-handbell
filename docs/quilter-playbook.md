@@ -376,13 +376,25 @@ automatically a continuous return plane. Keep electrical roles, native
 layer identities/types and service-detected purposes distinct and reconcile
 all three during import.
 
-Check supported physics targets before staging. **Documented:** Quilter
-lists85/100-ohm differential choices, while this project's USB target is90.
-**Observed limit:** completed-job UI did not expose editable choices.
-Resolve that discrepancy rather than claiming unsupported operation or
-silently changing the target. A tolerance or independent acceptance
-alternative needs an explicit engineering basis; bit rate alone does not
-qualify transmission-line behavior.
+Check supported physics targets before staging, but distinguish documentation,
+client entry, backend solving and returned routing. **Documented:** Quilter
+lists85/100-ohm choices. **Observed in the current client implementation:**
+the impedance field uses numeric text entry with positive-value validation;
+the independent single-ended target can be blank. Thus the old documentation
+does not establish frontend impossibility for our90-ohm intent. Actual
+editable-draft persistence and90-ohm solving are still unverified. Keep the
+requirement, prepare the qualified stackup, and test that exact input at
+preview; do not create a circular dependency or duplicate a job merely to
+probe a selector. See the [capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json).
+
+Inspect achieved per-layer values and current solve status, not just the
+target label or a green aggregate. The old job displays100-ohm calculations
+with different reported single-ended values; do not invent an independent
+single-ended requirement by halving the differential target. Its layer named
+"Ground Layer 2" is classified copper-signal, reinforcing the need to inspect
+actual roles. Neither those old computations nor a manual width/gap override
+qualifies a new90-ohm result. Frequency/material assumptions and any tolerance
+need an explicit basis; bit rate alone is not a carrier-frequency specification.
 
 **Observed process-screen lesson:** the
 [13-by97 source screen](measurements/2026-09-27-router-bakeoff/quilter-retained-via-pad-process-screen-2026-10-04.json)

@@ -12,6 +12,33 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 18:56: retain USB intent; verify the actual solver later
+
+The [capability ledger](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json)
+(`9d68447d...`) revisits the85/100 documentation limit already known in
+September. Static inspection of the already-loaded client finds a numeric
+OHM editor and positive-value validation, with a nullable independent
+single-ended target. No downloaded code was executed by the investigation;
+no editor value was changed or90-ohm calculation requested. This evidence
+identifies a current-client path, not backend/routing qualification.
+
+Read-only completed-job details show three100-ohm records grouped into one
+computed constraint, with per-layer achieved values, widths and gaps.
+Top Layer reports100.004-ohm differential and61.221-ohm single-ended:
+do not invent a separate single-ended requirement by halving a differential
+target. Ground Layer2 is classified copper-signal despite its name.
+These are saved results for the old preset and erroneous pair/role setup,
+not acceptance of that job or evidence for either selected3313 profile.
+
+**Disposition:** retain90. Continue common local domain and native-profile
+qualification rather than demanding a stackup-dependent solve before its
+input can be prepared. At each later qualified preview, verify saved90,
+actual layer purposes, nonstale achieved geometry/status and the chosen
+frequency/material assumptions. Hold submission on rejection, substitution,
+missing/failed results or incompatible rules. No target/tolerance waiver,
+manual USB routing, duplicate job, new cloud object or source change.
+Raw client and browser evidence remain private; only findings are published.
+
 ## October 4, 18:42: actual layer roles and off-pad process screen
 
 The [role ledger](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)

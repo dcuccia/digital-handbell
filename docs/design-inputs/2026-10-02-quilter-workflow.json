@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
   "date": "2026-10-02",
-  "status": "STUDY_ROLES_SELECTED_USB_CAPABILITY_AND_FULL_INPUT_GATES_PENDING",
+  "status": "STUDY_ROLES_AND_90_OHM_INTENT_SELECTED_NATIVE_INPUT_AND_ACTUAL_SOLVE_PENDING",
+  "usb_capability_disposition": {
+    "checkpoint_local": "2026-10-04 18:56",
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-usb-impedance-capability-2026-10-04.json",
+    "report_sha256": "9d68447dcb85b968bc1887991f21f9920872ff4a7cde1de0136d16cb200aefc8",
+    "retain_differential_target_ohms": 90,
+    "current_client_numeric_entry_identified_by_static_inspection": true,
+    "actual_90_ohm_saved_solve_or_routing_qualified": false,
+    "next_local_work": "Common movable-domain and native-profile qualification; actual90-ohm persistence/nonstale per-layer computations remain later qualified-preview gates.",
+    "new_cloud_object_configuration_edit_recompute_or_source_change": false
+  },
   "four_six_role_selection_item": {
     "checkpoint_local": "2026-10-04 18:42",
     "role_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-four-six-role-selection-2026-10-04.json",
