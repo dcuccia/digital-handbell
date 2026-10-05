@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 5, 07:50 implementation completion authorized:** owner asks
+  to finish the gaps. One new bounded same-executor Sol/medium item may
+  create a preserved r3 derivative with native F footprint-only MH1/MH2
+  R3.2 and J1/J2/X6 reservations, plus source-bound semantic comparison
+  and finite mutation controls. Use existing evidence, not new inventory.
+  Execution08:02/report08:03/root08:05; initial plus two corrections,
+  hard30s static/90s native children. Native saves/reloads/DRC are r3-only;
+  no source-native load/edit, refill, routing or cloud. Preserve r1/r2.
+  Screen expanded209/164 and classify findings if the named implementation
+  closes within budget; unknowns remain holds, not silently deferred passes.
 - **October 5, 07:48 paired inputs constructed but held:** isolated r2
   four/six files native-roundtrip with104 refs/325 pads/209 copper.
   Contact flags, core/prepreg types and final manifest bindings are

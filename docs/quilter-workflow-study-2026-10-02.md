@@ -12,6 +12,24 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 5, 07:50: finish concrete implementation gaps
+
+The owner explicitly authorizes completion, not another source-selection
+study. Same verified Sol/medium executor targets a separate r3 pair:
+native footprint-only F reservations for MH1/MH2/J1/J2/X6 and exact semantic
+preservation comparison with finite mutation controls. MH1/MH2 use96-edge
+circumscribed polygons containing R3.2; connector polygons reuse the saved
+planning evidence without inventing extra mating allowances. Only
+footprints are prohibited, not pads/tracks/vias/pours. All eligible
+placement is F; this is not a new B-copper or all-layer restriction.
+
+Execution stops08:02/report08:03/root08:05; initial plus two corrections,
+hard30s static/90s native children. Preserve r1/r2 and all source. Only r3
+native loads/saves/reloads/DRC are allowed, with no refill/routing/cloud.
+Complete expanded209/164 screening and staged-finding disposition within
+the same budget if implementation closes; do not manufacture a pass by
+omitting unknown classes or widen this into another unbounded repair chain.
+
 ## October 5, 07:36: construct the two isolated inputs
 
 **07:48 disposition: both files constructed, usable-input objective

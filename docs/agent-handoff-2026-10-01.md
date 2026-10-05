@@ -7,7 +7,17 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 5, 07:48: two native packages exist, both HELD.**
+**Active October 5, 07:50:** owner authorizes finishing the implementation
+gaps in one new bounded item. Same runtime-verified Sol/medium executor
+may add native F footprint-only MH1/MH2/J1/J2/X6 reservations and exact
+semantic preservation checks to a separate r3 pair, with finite negative
+controls. Execution08:02/report08:03/root08:05; initial plus two corrections.
+Preserve r1/r2 and authoritative source. Native operations are r3-only,
+hard30s static/90s native limits; no refill, routing or cloud.
+Expanded209/164 screening and finding disposition follow only within the
+same finite budget. Usable-input status remains held until root review.
+
+**Prior October 5, 07:48: two native packages exist, both HELD.**
 The [construction ledger](measurements/2026-09-27-router-bakeoff/quilter-input-construction-2026-10-05.json)
 binds r2 at private `quilter\inputs\comparison-inputs-20261005T0746-sol-r2`;
 four PCB`7695b88e...`, six`97d99b4d...`. Contact flags, core/prepreg
