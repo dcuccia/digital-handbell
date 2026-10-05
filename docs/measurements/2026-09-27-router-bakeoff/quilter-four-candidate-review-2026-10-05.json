@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "review_window_local": "2026-10-05 13:44-13:56 America/Los_Angeles",
+  "job_id": "6ac3d5b7fc0d2d776ed14a60",
+  "scope": "Read-only browser review of available results, raw downloads, and bounded isolated candidate 1.1 native preservation/DRC attempt. No repair, refill, integration, job modification or new submission.",
+  "disposition": "Useful placement/routing proposals; no native candidate accepted as a build-on baseline.",
+  "progress": {
+    "initial_observation": "Six candidates, running, 63/69 workflow steps.",
+    "later_observation": "Seven candidates, running, 67/73 workflow steps; new beta 1.2 finished at 13:53:33 local.",
+    "interpretation": "The job was producing additional work, not demonstrably stalled. Step counts are not routing percentages or a completion-time prediction.",
+    "input_service_routing_fraction": 0.25925925925925924,
+    "native_comparison_limit": "184 staged native open items, 37 authoritative-source open items, and 28 service incomplete nets are different measures. No numerical improvement claim may compare those counts."
+  },
+  "initial_candidates": [
+    {"label": "1.1", "id": "6ac3f6b08cec584bc5e53207", "finished_local": "12:12:48", "routing_fraction": 0.8724279835390947, "vias": 111, "trace_length_m": 1.2730981436164914, "prc_groups_pass_fail_error": [34, 9, 2], "incomplete_nets": 28},
+    {"label": "2.1", "id": "6ac3f67581a1fe2c643dc70a", "finished_local": "12:11:49", "routing_fraction": 0.8641975308641975, "vias": 114, "trace_length_m": 1.219630404402699, "prc_groups_pass_fail_error": [31, 7, 7], "incomplete_nets": 28},
+    {"label": "3.1", "id": "6ac3f65dcda3b461d4e9a044", "finished_local": "12:11:25", "routing_fraction": 0.8724279835390947, "vias": 122, "trace_length_m": 1.4373947997560899, "prc_groups_pass_fail_error": [33, 8, 4], "incomplete_nets": 28},
+    {"label": "4.1", "id": "6ac3f76a500ca1ec414939d9", "finished_local": "12:15:54", "routing_fraction": 0.8724279835390947, "vias": 122, "trace_length_m": 1.4373947997560899, "prc_groups_pass_fail_error": [33, 8, 4], "incomplete_nets": 28},
+    {"label": "5.1", "id": "6ac3f6f308df2de82b3922aa", "finished_local": "12:13:55", "routing_fraction": 0.8724279835390947, "vias": 111, "trace_length_m": 1.2730981436164914, "prc_groups_pass_fail_error": [34, 9, 2], "incomplete_nets": 28},
+    {"label": "6.1", "id": "6ac3f76a989154ebd162a9a3", "finished_local": "12:15:54", "routing_fraction": 0.8641975308641975, "vias": 114, "trace_length_m": 1.219630404402699, "prc_groups_pass_fail_error": [31, 7, 7], "incomplete_nets": 28}
+  ],
+  "pairing_limit": "1/5, 2/6 and 3/4 have identical summarized metrics and incomplete-net lists. Render payloads differ; geometric or native duplication is not established.",
+  "candidate_1_1_service_findings": {
+    "power_check_statuses": {"pass": 11, "fail": 1, "error": 2},
+    "power_limits": "V+ fails with 0.2772014678061958 overheated-length fraction against 0.1. GND errors Invalid input net; VBUS errors Net is not fully connected. Passing provisional IPC2221 screens do not establish full-net connectivity or project power acceptance.",
+    "usb": "Both pairs have no valid full path for length/coupling/return checks; only return-connector-distance checks pass.",
+    "bypass": "28 associations yield 76 passes and 8 failures: C15-to-IC1 routes 31.191/32.224mm with two layer switches; C17-to-IC1 25.401/25.601mm; C18 two layer switches; C19-to-U4 12.784mm. All physical pin distances pass the generic 10mm screen.",
+    "region_membership_passes": 72,
+    "incomplete_nets": ["+3V3", "AMP_MUTE", "BUTTON", "D-", "D13", "EN", "GAIN", "GND", "I2S_BCLK", "I2S_DIN", "I2S_MOD", "INT", "Net-(U3-STAT)", "POWER", "QSPI_CS", "QSPI_DATA[0]", "QSPI_DATA[1]", "QSPI_DATA[2]", "QSPI_DATA[3]", "QSPI_SCK", "SCL", "SWCLK", "SWDIO", "USBBOOT", "USB_D-", "VBAT", "VBUS", "~{RESET}"],
+    "restoration_limit": "VCORE and /PROT_COUT are absent from the service incomplete-net list, but required-terminal/native topology checks remain open.",
+    "candidate_3_tradeoff": "USB_D+/USB_D- has evaluated length/return passes, but uncoupled spacing fails at 20.758mm against 10mm. D+/D- remains incomplete. Candidate 3 also lists VCORE incomplete; it is not uniformly better than 1."
+  },
+  "new_beta_1_2": {
+    "id": "6ac40e4dbb61c2699ba19dae",
+    "finished_local": "13:53:33",
+    "routing_fraction": 0.9218106995884774,
+    "router_strategy_metadata": "bitter_lesson",
+    "service_violation_counts": {"PADSTACK_COLLISION": 83, "INCOMPLETE_NET_ROUTING": 12},
+    "underlying_prc_pass_fail_error": [157, 5, 16],
+    "usb_check_statuses": {"pass": 7, "fail": 1},
+    "native_review": "Raw archive preserved, not extracted or natively assessed.",
+    "disposition": "Higher routing completion does not establish a better candidate. Collision reports require classification; do not equate 83 reports with 83 proven shorts or independent repairs."
+  },
+  "candidate_1_1_native_attempt": {
+    "executor": "05735a6e-4cc9-4736-8795-220e4c12ab15",
+    "verified_model": "gpt-5.6-sol",
+    "verified_effort": "medium",
+    "runtime_started_event": "decb1144-b4c5-4b4c-934b-62997e09678c",
+    "runtime_configured_event": "6e01cb3d-d055-410a-bcad-66393d970011",
+    "baseline_pcb_sha256": "342c242f3f7957c8cefb7ee0519326807cbe83b343f7afe07551e61f60c46b61",
+    "candidate_pcb_sha256": "92f9b07fad622f39ef68c645c3aa6d24af23724486603b1628c3aa67c69b841e",
+    "candidate_project_sha256": "8b1a02867b99a61e2ab86855ebb9707669e0060626ba5bf19853663f308ef90d",
+    "supported_static_findings": [
+      "104 footprints/325 pad objects; footprint reference/UUID/library identities match.",
+      "32 fixed poses preserved modulo approximately 1e-14mm serialization noise; 72 movers on F.",
+      "Outline exact; 1412 track and 111 via records versus staged 191/18.",
+      "Named PROTECTED_GND_In1.Cu GND zone present, without saved filled polygons.",
+      "Four copper layers remain; In1 declaration changes power to signal. Exact stackup comparison differs, without a completed numerical disposition."
+    ],
+    "rejected_checker_claims": [
+      "Retained-copper mapping collapses new UUID keys to null; missing=[] and mismatch_count=0 are not preservation proof.",
+      "Raw pad comparison does not normalize returned serialization; all-pad mismatches are not 325 demonstrated defects.",
+      "Do not publish the failed private checker as qualified reusable tooling."
+    ],
+    "static_attempts": 3,
+    "drc": {
+      "hard_limit_seconds": 90,
+      "elapsed_seconds": 90.312,
+      "supervisor_returncode": 124,
+      "timed_out": true,
+      "child_confirmed_exited": true,
+      "report_produced": false,
+      "limit": "Receipt also has numeric_child_returncode=0 and state=completed; neither overrides timed_out=true, supervisor124 and absent report."
+    },
+    "open_gates": ["exact retained209 and pad/net preservation", "actual new-versus-inherited minimum-width/via provenance", "full guard/stackup equivalence", "saved-plane/return/contact isolation", "native DRC and source-bound connectivity", "power/USB/decoupling/mechanical acceptance"],
+    "stop": "No fourth static execution or native retry. Source unchanged; no refill or repair."
+  },
+  "private_evidence": {
+    "directory": ".playwright-mcp",
+    "candidate_1_1_archive": {"file": "four-candidate-1-1-1348.zip", "sha256": "04319650ea7728ca0fb875ce37afdeb57548f4cffd3aa1f70eab856d6dfc71cd"},
+    "candidate_2_1_archive": {"file": "four-candidate-2-1-1352.zip", "sha256": "ba5a3ddd78db2447bc537ca58f83ca7d65fb20d47be03f8fbfc555e1f54a66dc"},
+    "candidate_3_1_archive": {"file": "four-candidate-3-1-1352.zip", "sha256": "905bfa1efe5566fb22a6c5686492215c8c63be59e45e145b46312d7807770577"},
+    "candidate_1_2_archive": {"file": "four-candidate-1-2-1355.zip", "sha256": "02081035996b1e87737d26b0f535a80f960841fa3643ebeb5d1a32ecde92d639"},
+    "detail_sha256": {
+      "four-candidate1-details-1349.json": "b48972596bddbc7be5c0f2a654114bb5331411d4af22896a347d7e55dea95011",
+      "four-candidate2-details-1349.json": "a4b34d4884ccfbb945ec64db4ead1ffc414a5564b59eaaa39a4eacb6ef2f0c74",
+      "four-candidate3-details-1349.json": "41a235685ba76d393233bf8a0613afe978673790ba1c3198fdcfe541fe45c151",
+      "four-candidate4-details-1349.json": "70f3840dcd98a136f976c5658931909d764be6c3f53393d9e915373596468917",
+      "four-candidate5-details-1349.json": "1dc8eac0b252c072257cef51691faa1bffde60671637250a03250062c29c508a",
+      "four-candidate6-details-1349.json": "671f8259ed06f01a0f54762fcd70bc7b73b8839c30add93a33902f93f86f605d",
+      "four-candidate1-2-details-1355.json": "2233f975aeee12456d63b44edff428dc80f65be1d4c4f7bf8d6f389172104cf3"
+    },
+    "native_review_directory": "four-candidate-1-1-native-review-1348",
+    "capture_limits": "Two batch-download helpers stopped on unsettled UI/note overlay after preserving 2.1 and 3.1. Only 1.1, 2.1, 3.1 and 1.2 archives preserved; all original six detail/render payloads saved."
+  },
+  "recommendation": "Keep 1.1 and 3.1 as review shortlist, not accepted bases. Leave current optimization untouched; do not chase percentage, combine differently placed routes, or resume expensive manual closure. Next separately bounded step should disposition returned-native preservation/DRC tooling before adopting a candidate; six-layer comparison remains a controlled experiment, not an assured cure."
+}

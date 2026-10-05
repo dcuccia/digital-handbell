@@ -4,7 +4,7 @@ Use this guide to prepare useful jobs and evaluate their results without
 relearning every experiment. Optimize for an acceptable board with bounded
 owner/agent effort, not trace aesthetics or recovery of sunk costs.
 
-Evidence reviewed through **October 4, 2026**: Quilter UI 1.40.0/API 1.40.1
+Evidence reviewed through **October 5, 2026**: Quilter UI 1.40.0/API 1.40.1
 and KiCad 10.0.6. This is a living procedure, not a platform guarantee.
 The [workflow study](quilter-workflow-study-2026-10-02.md) retains the dated
 reasoning; its linked ledgers bind exact files and results. The
@@ -50,6 +50,27 @@ placement's25.93% routing value merely repeats retained input copper.
 Workflow steps are not a routed-net percentage. Also inspect actual sides:
 `singleSided=false` correctly reflects two fixed rear contacts while all72
 eligible parts remain front-side in the checked placement.
+
+**Observed routed-result limits, October5:** the
+[first flexible outputs](measurements/2026-09-27-router-bakeoff/quilter-four-candidate-review-2026-10-05.json)
+arrived57-61minutes after launch at86-87%; another92% beta arrived about
+159minutes after launch with83 reported padstack collisions. A quiet result
+list does not prove the job stalled; workflow totals can grow. Compare
+completion alongside electrical failures and unexecuted checks, not as the
+sole objective. Identical summary metrics do not prove identical layouts.
+Physical capacitor proximity can pass while routed supply paths fail:
+candidate1.1 places C15 only2-3mm from its MCU pins but reports31-32mm
+routes. Region membership is not local electrical organization.
+
+Do not subtract incomplete-net counts from native unconnected-item counts,
+or treat a power-check pass as full-net connectivity. Preserve raw native
+outputs before inspection. Missing fill caches require a controlled output
+qualification, not an automatic claim of lost zone intent. A checker that
+collapses UUIDs or compares unnormalized pad serialization cannot qualify
+preservation; record its failure rather than rejecting the PCB on those
+false comparisons. Timeouts likewise leave evidence open. Keep promising
+candidates with a finite review list, but do not start costly manual
+closure or promote a higher-percentage output before those gates close.
 
 ## What the evidence supports
 

@@ -2,6 +2,21 @@
 
 ## Bounded engineering work
 
+- **October 5, 13:56 returned candidates reviewed, none accepted:** first six
+  finish57-61minutes after launch at86.42-87.24% by Quilter's metric.
+  During review, beta1.2 arrives at13:53 with92.18%, but83 padstack-collision
+  reports and12 incomplete nets. Router advances63/69 to67/73 steps;
+  do not call it stalled or interpret steps as routing percent.
+  Candidate1.1 preserves checked footprint identities/32 fixed poses/
+  72 F movers/outline, but retained209/pad semantics remain unqualified:
+  the private checker exhausts three attempts, and native DRC times out90s.
+  No saved fills; layer/stackup differences need disposition, not an
+  automatic copper-layer-loss claim.28 incomplete nets cannot be compared
+  with184 staged or37 source open items. C15/C17 long decoupling routes,
+  V+ current-screen failure and incomplete USB are substantive concerns.
+  Preserve1.1/2.1/3.1/1.2 downloads and failed tools privately. No retry,
+  repair, refill, integration, six-layer launch or monitoring. See
+  `quilter-four-candidate-review-2026-10-05.json` for the bounded review.
 - **October 5, 12:05 placement progress reviewed:** four-layer job has six
   placement results after41-46minutes and is routing (33/45 workflow steps,
   not percent routed); zero routed candidates at this observation.

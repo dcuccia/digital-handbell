@@ -7,6 +7,36 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5, 13:56: useful routed proposals, no accepted build-on board.**
+The [returned-candidate review](measurements/2026-09-27-router-bakeoff/quilter-four-candidate-review-2026-10-05.json)
+covers six initial86.42-87.24% candidates and the newly arrived92.18%
+beta1.2. The latter has83 reported padstack collisions and12 incomplete
+nets; higher completion is not a better-board verdict. The router advanced
+from63/69 to67/73 steps during this review and was left uninterrupted.
+Raw1.1/2.1/3.1/1.2 archives and all six original browser detail/render
+responses are preserved privately.
+
+Candidate1.1's bounded native attempt establishes footprint identities,
+32 fixed poses,72 F movers and unchanged outline, but NOT full pad/net or
+retained209 equivalence. Three static attempts exhausted their allowance;
+the UUID matcher collapses new keys and the pad comparison lacks proper
+normalization. Preserve that failed checker privately, not as qualified
+tooling. One90-second DRC attempt timed out with no report and confirmed
+child exit. No refill or source change. Saved zone fills are absent;
+In1's declaration and exact stackup differ without completed disposition.
+Neither absence of fill caches nor display-name differences establishes
+lost required copper. The next native action requires a separately bounded
+preservation/DRC blocker disposition, not another unchanged retry.
+
+Keep1.1 and3.1 on the review shortlist, not as accepted engineering bases.
+Service checks expose real closure work: C15/C17 long supply routes,
+V+ current-screen failure, USB and critical-net incompletes.
+Compare like measures: input25.93% versus returned87.24% is provisional
+service progress;28 incomplete nets is not comparable with184 staged or37
+source native open items. No manual closure, repair, integration or six-layer
+launch occurred. Preserve current optimization and assess its later results
+without automatically choosing the highest completion percentage.
+
 **October 5, 12:05: six placements available; routing continues.**
 Job reports33/45 router workflow steps and zero routed candidates.
 Placements completed41-46minutes after launch, each with29 passing groups.
