@@ -7,13 +7,28 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**17:11 next hour authorized:** stop18:11, no new item after18:01.
-**Current17:44:** the [collateral ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-collateral-2026-10-04.json)
-qualifies46 named relationships, not complete fixed-pad coverage. Root
-found that the old broad phase still transforms non-private obstacle pads
-incorrectly. Next is a bounded all97-native-pad/retained177 coverage audit,
-not new inventory or a PCB change. DOUT's0.212066mm copper gap is not a
-clearance defect; existing GND terminal-bank contacts remain preserved.
+**Current October 4, 18:00: final hour checkpoint.** The
+[coverage ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)
+(`3e79e0be...`) qualifies all 177 retained primitives and 97 native fixed
+pads against the unchanged guards. It closes the old obstacle-pose/layer
+coverage gap: 42 prior pairs are unchanged, four false positives disappear
+and 18 self pairs are recorded separately. No new collateral contact is
+found. DOUT's 0.212066 mm copper gap is not a clearance defect; existing
+GND terminal-bank contacts remain preserved.
+
+The missing 8 um PROT_VM track comes from an earlier source-bound native
+record. The three supervised children have exited; no fourth run is
+released. Exact-source bounds and the actual rectangular-pad/track/via
+relationships are accepted, not a generic geometry engine: TP10/TP11's
+degenerate roundrect cores need correction/tests before nearby narrow-phase
+use, which does not occur here. Preserve the raw attempts and old 46-pair
+evidence. All five authoritative source hashes remain unchanged.
+
+Stop within the authorized hour ending 18:11; no additional engineering
+item starts. On continuation, the next item is one native guard-representation
+and exact retained-source intrusion disposition for the four private pads,
+six private tracks and two private vias. No source repair, full input or
+new Quilter submission follows from this checkpoint.
 
 The first isolated four/six-layer plane control is now accepted for local
 geometry only. See the
@@ -24,8 +39,8 @@ base components/pads/copper and physical layer order is reconciled.
 The separate anchor is a VIA: its contact proves a nonempty local fill,
 not a terminal-connected functional ground. Native attempts are exhausted;
 no rerun. All five authoritative repository hashes remain unchanged.
-Guard collateral coverage is now the next specific dependency; full product
-representation, grounding, stackup roles and importer gates remain open.
+Guard collateral coverage is closed for the bound population above; full
+product representation, grounding, stackup roles and importer gates remain open.
 
 **Prior: native-tool completion accepted.** The
 [completion ledger](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json)

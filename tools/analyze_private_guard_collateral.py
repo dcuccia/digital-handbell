@@ -27,6 +27,9 @@ EXPECTED_INPUTS = {
     "connectivity": "079b47d115db668be0fd8af196b20bfea316193426eca36398dbc98dae0ee23d",
     "retained": "639a7f81136e9e38319a55ac5d84dff42dfaaa08fe909ac87a68053fbefe23a9",
 }
+EXPECTED_FULL_GEOMETRY_SUPPLEMENT = (
+    "4f5d16f9b631b2d01e3af7e1039dad2638462e76850bdbe6a45e4dea7ae9c72e"
+)
 
 
 def sha256(path: Path) -> str:
@@ -191,6 +194,95 @@ def parse_native_pad(reference, pad):
     }
 
 
+def parse_native_pad_full(reference, pad, enabled_layers):
+    """Parse saved-native global pad geometry without recomputing footprint poses."""
+    literal = pad["serialized_definition"]
+    header = re.search(r'^\(pad\s+"[^"]*"\s+(\S+)\s+(\S+)', literal)
+    size = re.search(r"\(size\s+([-+0-9.eE]+)\s+([-+0-9.eE]+)\)", literal)
+    if not header or not size:
+        raise ValueError("unsupported pad serialization: " + pad["uuid"])
+    pad_type, shape = header.groups()
+    if shape not in {"rect", "circle", "oval", "roundrect"}:
+        raise ValueError("unsupported full-population pad shape: " + pad["uuid"] + ":" + shape)
+    angle = float(pad["orientation_deg"]) % 360.0
+    if min(abs(angle - x) for x in (0.0, 90.0, 180.0, 270.0, 360.0)) > EPS:
+        raise ValueError("unqualified nonorthogonal native population pad: " + pad["uuid"])
+    native_layer_names = [x["name"] for x in pad["layer_ids_names"]]
+    layers = [x for x in enabled_layers if x in native_layer_names]
+    if not layers:
+        raise ValueError("pad has no enabled conductive/physical layer: " + pad["uuid"])
+    result = {
+        "uuid": pad["uuid"], "kind": "pad", "reference": reference, "number": pad["number"],
+        "net": pad["net_name"], "layers": layers, "center_mm": pad["position_mm"],
+        "orientation_deg": float(pad["orientation_deg"]),
+        "size_mm": [float(size.group(1)), float(size.group(2))],
+        "shape": shape, "pad_type": pad_type,
+        "conductive": pad_type != "np_thru_hole",
+        "serialized_definition_sha256": pad["serialized_definition_sha256"],
+        "layer_expansion": (
+            "saved-native layer IDs intersected with source-enabled copper layers"
+            + ("; wildcard/all-copper span" if '"*.Cu"' in literal else "")
+        ),
+    }
+    if shape == "roundrect":
+        ratio = re.search(r"\(roundrect_rratio\s+([-+0-9.eE]+)\)", literal)
+        if not ratio:
+            raise ValueError("roundrect missing radius ratio: " + pad["uuid"])
+        result["roundrect_rratio"] = float(ratio.group(1))
+    if pad_type == "np_thru_hole":
+        drill = re.search(r"\(drill\s+([-+0-9.eE]+)\)", literal)
+        if not drill:
+            raise ValueError("NPTH missing circular drill: " + pad["uuid"])
+        result["drill_mm"] = float(drill.group(1))
+    return result
+
+
+def expand_copper_layers(record, enabled_layers):
+    """Expand a track/via onto actual enabled conductive layers."""
+    result = normalized_geometry(record)
+    listed = list(result["layers"])
+    unknown = set(listed) - set(enabled_layers)
+    if unknown:
+        raise ValueError(f"copper uses non-enabled layer(s) {sorted(unknown)}: {result['uuid']}")
+    if result["kind"] == "track":
+        if len(listed) != 1:
+            raise ValueError("track layer count is not one: " + result["uuid"])
+        return result
+    if result["kind"] != "via" or len(listed) < 2:
+        raise ValueError("unsupported via layer span: " + result["uuid"])
+    indices = [enabled_layers.index(x) for x in listed]
+    lo, hi = min(indices), max(indices)
+    result["layers"] = enabled_layers[lo:hi + 1]
+    result["layer_expansion"] = {
+        "saved_span_endpoints": listed,
+        "actual_enabled_layers_in_span": result["layers"],
+    }
+    return result
+
+
+def rounded_rect_shape(center, size, rotation_deg, ratio):
+    radius = min(size) * ratio
+    core_size = [max(0.0, size[0] - 2 * radius), max(0.0, size[1] - 2 * radius)]
+    return {
+        "core": "rect", "corners": rect_corners(center, core_size, rotation_deg),
+        "radius": radius,
+    }
+
+
+def oval_shape(center, size, rotation_deg):
+    w, h = size
+    radius = min(w, h) / 2.0
+    half_core = abs(w - h) / 2.0
+    angle = math.radians(rotation_deg + (0.0 if w >= h else 90.0))
+    dx, dy = half_core * math.cos(angle), half_core * math.sin(angle)
+    return {
+        "core": "segment",
+        "a": (center[0] - dx, center[1] - dy),
+        "b": (center[0] + dx, center[1] + dy),
+        "radius": radius,
+    }
+
+
 def candidate_shape(record):
     if record["kind"] == "track":
         return {
@@ -202,12 +294,42 @@ def candidate_shape(record):
         diameter = record.get("diameter_mm", record.get("size_mm"))
         return {"core": "segment", "a": p, "b": p, "radius": float(diameter) / 2.0}
     if record["kind"] == "pad":
+        if record["shape"] == "circle":
+            p = tuple(record["center_mm"])
+            return {"core": "segment", "a": p, "b": p, "radius": record["size_mm"][0] / 2.0}
+        if record["shape"] == "oval":
+            return oval_shape(record["center_mm"], record["size_mm"], record["orientation_deg"])
+        if record["shape"] == "roundrect":
+            return rounded_rect_shape(
+                record["center_mm"], record["size_mm"], record["orientation_deg"],
+                record["roundrect_rratio"],
+            )
+        if record["shape"] != "rect":
+            raise ValueError("unsupported candidate pad shape: " + record["uuid"] + ":" + record["shape"])
         return {
             "core": "rect",
             "corners": rect_corners(record["center_mm"], record["size_mm"], record["orientation_deg"]),
             "radius": 0.0,
         }
     raise ValueError("unsupported candidate kind: " + record["kind"])
+
+
+def shape_bounds(shape):
+    if shape["core"] == "segment":
+        xs = (shape["a"][0], shape["b"][0])
+        ys = (shape["a"][1], shape["b"][1])
+    elif shape["core"] == "rect":
+        xs = [p[0] for p in shape["corners"]]
+        ys = [p[1] for p in shape["corners"]]
+    else:
+        raise ValueError("unsupported bounds core: " + shape["core"])
+    r = shape["radius"]
+    return [min(xs) - r, min(ys) - r, max(xs) + r, max(ys) + r]
+
+
+def bounds_overlap(a, b):
+    return not (a[2] < b[0] - EPS or b[2] < a[0] - EPS
+                or a[3] < b[1] - EPS or b[3] < a[1] - EPS)
 
 
 def normalized_geometry(record):
@@ -320,6 +442,319 @@ def run_controls():
     return controls
 
 
+def expect_validation_failure(name, action, controls):
+    try:
+        action()
+        detected = False
+    except (AssertionError, ValueError):
+        detected = True
+    controls.append({"name": name, "actual": detected, "expected": True, "passed": detected})
+    if not detected:
+        raise AssertionError(name)
+
+
+def validate_exact_ids(name, actual, expected):
+    if len(actual) != len(set(actual)):
+        raise ValueError(name + " contains duplicate identities")
+    if set(actual) != set(expected):
+        raise ValueError(name + " identity set mismatch")
+
+
+def run_full_population(args, paths, actual_hashes):
+    controls = run_controls()
+    repair, inventory = load(args.repair), load(args.inventory)
+    connectivity, retained = load(args.connectivity), load(args.retained)
+    enabled_layers = list(connectivity["enabled_copper_layers"])
+    if enabled_layers != ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"]:
+        raise ValueError("unexpected source-enabled copper layers: " + repr(enabled_layers))
+    guards = {x["proposal_uuid"]: x for x in repair["guard_definitions"]}
+    if len(guards) != 18 or len(guards) != len(repair["guard_definitions"]):
+        raise ValueError("guard identity/count mismatch")
+    fixed_refs = set(retained["identity_baseline"]["retained27_references"])
+    if len(fixed_refs) != 27:
+        raise ValueError("fixed reference count mismatch")
+    retained_ids = list(retained["retained177"]["uuids"])
+    if len(retained_ids) != 177:
+        raise ValueError("retained copper count mismatch")
+
+    if args.geometry_supplement is None:
+        raise ValueError("--full-population requires --geometry-supplement")
+    supplement_hash = sha256(args.geometry_supplement)
+    if supplement_hash != EXPECTED_FULL_GEOMETRY_SUPPLEMENT:
+        raise ValueError("unexpected geometry supplement hash: " + supplement_hash)
+    found = defaultdict(dict)
+    collect_geometry(connectivity, set(retained_ids), found)
+    primary_missing = sorted(uid for uid in retained_ids if not found[uid])
+    if primary_missing != ["898341e7-3649-568b-a9f2-8843ec69658c"]:
+        raise ValueError("unexpected primary saved-geometry gap: " + repr(primary_missing))
+    collect_geometry(load(args.geometry_supplement), set(retained_ids), found)
+    copper = {}
+    for uid in retained_ids:
+        if not found[uid]:
+            raise ValueError("missing saved retained copper geometry: " + uid)
+        if len(found[uid]) != 1:
+            raise ValueError("non-unique saved retained copper geometry: " + uid)
+        copper[uid] = expand_copper_layers(next(iter(found[uid].values())), enabled_layers)
+    validate_exact_ids("retained copper", list(copper), retained_ids)
+
+    pads = {}
+    pad_refs = {}
+    for ref, footprint in inventory["all_native_footprints_and_serialized_geometry"].items():
+        if ref not in fixed_refs:
+            continue
+        pad_refs[ref] = 0
+        for pad in footprint["pads"]:
+            uid = pad["uuid"]
+            if uid in pads:
+                raise ValueError("duplicate saved-native fixed pad: " + uid)
+            pads[uid] = parse_native_pad_full(ref, pad, enabled_layers)
+            pad_refs[ref] += 1
+    expected_pad_count = retained["identity_baseline"]["retained27_pad_count"]
+    if len(pads) != expected_pad_count or expected_pad_count != 97:
+        raise ValueError(f"fixed pad count mismatch: {len(pads)} != {expected_pad_count}")
+    if set(pad_refs) != fixed_refs or any(x <= 0 for x in pad_refs.values()):
+        raise ValueError("fixed reference pad coverage mismatch")
+
+    # Explicit completeness and regression controls.
+    controls.append({
+        "name": "all_97_saved_native_fixed_pads_covered",
+        "actual": len(pads), "expected": 97, "passed": len(pads) == 97,
+    })
+    controls.append({
+        "name": "all_177_retained_copper_resolved_uniquely",
+        "actual": len(copper), "expected": 177, "passed": len(copper) == 177,
+    })
+    pose_witness = {
+        "e5faefdc-06ab-5b87-9fc1-47bbda0e766a": [86.4, 112.208],  # R26.1
+        "bf411126-e0c1-5e14-b531-dc4dd157714a": [102.2, 114.25],  # C28.1
+    }
+    wrong_pose = {
+        "e5faefdc-06ab-5b87-9fc1-47bbda0e766a": [86.4, 111.192],
+        "bf411126-e0c1-5e14-b531-dc4dd157714a": [102.2, 116.15],
+    }
+    pose_pass = all(
+        list(pads[uid]["center_mm"]) == expected and list(pads[uid]["center_mm"]) != wrong_pose[uid]
+        for uid, expected in pose_witness.items()
+    )
+    controls.append({
+        "name": "wrong_R26.1_C28.1_opposite_pad_poses_rejected",
+        "actual": pose_pass, "expected": True, "passed": pose_pass,
+        "saved_native_centers_mm": {uid: pads[uid]["center_mm"] for uid in pose_witness},
+    })
+    if not pose_pass:
+        raise AssertionError("saved-native pose witness failed")
+    expect_validation_failure(
+        "omitted_fixed_pad_is_detected",
+        lambda: validate_exact_ids("fixed pads", list(pads)[:-1], pads.keys()), controls,
+    )
+    expect_validation_failure(
+        "omitted_retained_copper_is_detected",
+        lambda: validate_exact_ids("retained copper", list(copper)[:-1], retained_ids), controls,
+    )
+    wildcard_pad = next(x for x in pads.values() if "wildcard/all-copper span" in x["layer_expansion"])
+    expect_validation_failure(
+        "omitted_actual_copper_layer_is_detected",
+        lambda: validate_exact_ids(
+            "wildcard pad layers", wildcard_pad["layers"][:-1], enabled_layers
+        ), controls,
+    )
+
+    candidates = {**copper, **pads}
+    if len(candidates) != 274:
+        raise ValueError("combined population identity collision/count mismatch")
+    candidate_shapes = {uid: candidate_shape(x) for uid, x in candidates.items()}
+    candidate_bounds = {uid: shape_bounds(x) for uid, x in candidate_shapes.items()}
+    private_ids = set(repair["private_objects"])
+    old = load(args.compare) if args.compare else None
+    old_by_pair = {}
+    if old is not None:
+        old_by_pair = {
+            (x["guard_uuid"], x["candidate_uuid"], x["layer"]): x
+            for x in old["relationships"]
+        }
+        if len(old_by_pair) != len(old["relationships"]):
+            raise ValueError("prior relationship pair keys are not unique")
+
+    relationships = []
+    broad_pairs = []
+    self_pairs = []
+    halo = 0.25
+    for guard in sorted(guards.values(), key=lambda x: x["proposal_uuid"]):
+        layer = guard["layer"]
+        if layer not in enabled_layers:
+            raise ValueError("guard on non-enabled layer: " + layer)
+        guard_shape = shape_from_guard(guard, halo)
+        private_shape = copper_shape_from_guard(guard, halo)
+        guard_bounds = shape_bounds(guard_shape)
+        for uid in sorted(candidates):
+            item = candidates[uid]
+            if layer not in item["layers"] or not bounds_overlap(guard_bounds, candidate_bounds[uid]):
+                continue
+            pair = (guard["proposal_uuid"], uid, layer)
+            broad_pairs.append(pair)
+            cshape = candidate_shapes[uid]
+            guard_result = clearance(cshape, guard_shape)
+            copper_result = clearance(cshape, private_shape)
+            if uid == guard["source_uuid"]:
+                category = "protected_object_self"
+                self_pairs.append(pair)
+            elif item["kind"] == "pad" and not item["conductive"]:
+                category = "NPTH_physical_hole_candidate"
+            elif not guard_result["touch_or_overlap"]:
+                category = "broad_phase_false_positive"
+            elif uid in private_ids:
+                category = "protected_branch_join"
+            elif uid in BOUNDARY:
+                category = "reviewed_ordinary_GND_boundary_join"
+            elif item["net"] == "GND":
+                category = "other_retained_same_net_intrusion"
+            else:
+                category = "foreign_net_intrusion"
+            relationships.append({
+                "guard_uuid": guard["proposal_uuid"],
+                "guard_source_uuid": guard["source_uuid"],
+                "guard_branch": guard["branch"],
+                "candidate_uuid": uid,
+                "candidate_reference": item.get("reference"),
+                "candidate_number": item.get("number"),
+                "candidate_net": item["net"],
+                "candidate_kind": item["kind"],
+                "candidate_shape": item.get("shape"),
+                "candidate_conductive": item.get("conductive", True),
+                "layer": layer,
+                "guard_clearance": guard_result,
+                "private_copper_clearance": copper_result,
+                "contact_class": (
+                    "physical_hole_candidate" if item.get("conductive") is False
+                    else "actual_copper_contact" if copper_result["touch_or_overlap"]
+                    else "guard_halo_only" if guard_result["touch_or_overlap"]
+                    else "clear_of_guard"
+                ),
+                "category": category,
+                "review_note": BOUNDARY.get(uid),
+            })
+
+    if len(self_pairs) != 18 or len(set(self_pairs)) != 18:
+        raise ValueError(f"self exclusion count mismatch: {len(self_pairs)}")
+    relation_by_pair = {
+        (x["guard_uuid"], x["candidate_uuid"], x["layer"]): x for x in relationships
+    }
+    if len(relation_by_pair) != len(relationships):
+        raise ValueError("generated relationship pair keys are not unique")
+    old_keys, new_keys = set(old_by_pair), set(relation_by_pair)
+    common = sorted(old_keys & new_keys)
+    added = sorted(new_keys - old_keys)
+    removed = sorted(old_keys - new_keys)
+    comparable_fields = (
+        "guard_uuid", "guard_source_uuid", "guard_branch", "candidate_uuid", "candidate_net",
+        "candidate_kind", "layer", "guard_clearance", "private_copper_clearance",
+        "contact_class", "category", "review_note",
+    )
+    changed_common = []
+    for key in common:
+        before, after = old_by_pair[key], relation_by_pair[key]
+        delta = {
+            field: {"prior": before.get(field), "current": after.get(field)}
+            for field in comparable_fields if before.get(field) != after.get(field)
+        }
+        if delta:
+            changed_common.append({"pair": list(key), "fields": delta})
+    if changed_common:
+        raise AssertionError("shared prior relationship changed")
+
+    categories = Counter(x["category"] for x in relationships)
+    contacts = Counter(x["contact_class"] for x in relationships)
+    exact_shapes = Counter(
+        (x["kind"], x.get("shape", "capsule_or_circle")) for x in candidates.values()
+    )
+    result = {
+        "schema_version": 2,
+        "status": "STATIC_FULL_POPULATION_CANDIDATE_COVERAGE",
+        "runtime": {"python": sys.version, "native_loads": 0, "third_party_dependencies": 0},
+        "input_sha256": {
+            "repair_raw": actual_hashes["repair"],
+            "native_inventory": actual_hashes["inventory"],
+            "saved_connectivity": actual_hashes["connectivity"],
+            "retained177": actual_hashes["retained"],
+            "prior_corrected_raw": sha256(args.compare) if args.compare else None,
+            "saved_native_geometry_supplement": supplement_hash,
+        },
+        "scope": {
+            "guard_definitions_unchanged": 18,
+            "enabled_copper_layers": enabled_layers,
+            "retained_copper": len(copper),
+            "saved_native_fixed_references": len(fixed_refs),
+            "saved_native_fixed_pads": len(pads),
+            "combined_obstacle_population": len(candidates),
+            "broad_phase_relationships": len(broad_pairs),
+            "narrow_phase_relationships": len(relationships),
+            "explicit_self_exclusions": len(self_pairs),
+            "source_or_pcb_changes": 0,
+        },
+        "population_proof": {
+            "primary_geometry_gap_filled_from_pinned_saved_native_supplement": primary_missing,
+            "retained_copper_expected_uuids": sorted(retained_ids),
+            "retained_copper_resolved_uuids": sorted(copper),
+            "fixed_reference_expected": sorted(fixed_refs),
+            "fixed_reference_pad_counts": dict(sorted(pad_refs.items())),
+            "fixed_pad_uuids": sorted(pads),
+            "unsupported_or_unresolved_records": [],
+            "silent_exclusions_or_deduplication": 0,
+            "shape_counts": {
+                f"{kind}:{shape}": count for (kind, shape), count in sorted(exact_shapes.items())
+            },
+        },
+        "layer_population_counts": {
+            layer: {
+                "retained_copper": sum(layer in x["layers"] for x in copper.values()),
+                "fixed_pads": sum(layer in x["layers"] for x in pads.values()),
+            } for layer in enabled_layers
+        },
+        "geometry_contract": {
+            "broad_phase": "Conservative AABBs enclosing exact saved-global primitive shapes.",
+            "narrow_phase": (
+                "Exact Euclidean core distance for tracks/vias/circles/ovals/rectangles/"
+                "roundrects against unchanged circle/capsule/oriented-rectangle guards."
+            ),
+            "pad_pose": "Saved-native global center/orientation only; no footprint-local transform.",
+            "through_layer_policy": "Span endpoints expanded across all source-enabled copper layers.",
+            "NPTH_policy": "Reported as physical-hole candidates, never as copper contact.",
+        },
+        "controls": controls,
+        "relationship_counts": dict(sorted(categories.items())),
+        "contact_counts": dict(sorted(contacts.items())),
+        "relationships": relationships,
+        "broad_phase_pair_keys": [list(x) for x in broad_pairs],
+        "self_exclusion_pair_keys": [list(x) for x in self_pairs],
+        "prior_corrected_comparison": {
+            "prior_relationships": len(old_keys),
+            "common_relationships": len(common),
+            "common_relationships_unchanged": len(changed_common) == 0,
+            "added_relationships": len(added),
+            "removed_relationships": len(removed),
+            "added_pair_keys": [list(x) for x in added],
+            "removed_pair_keys": [list(x) for x in removed],
+            "changed_common": changed_common,
+        },
+        "limits": [
+            "Static population/geometry evidence only; no native rule enforcement or product keepout approval.",
+            "Existing intended-terminal joins are enumerated but not reinterpreted.",
+            "The DOUT halo conflict is not an electrical-clearance failure and its route is unchanged.",
+            "No functional grounding, routing, fill, source edit, cloud, manufacturing, or safety claim.",
+        ],
+    }
+    if not all(x["passed"] for x in controls):
+        raise AssertionError("full-population control failed")
+    args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps({
+        "status": result["status"], "population": len(candidates),
+        "broad_relationships": len(broad_pairs), "self": len(self_pairs),
+        "common": len(common), "added": len(added), "removed": len(removed),
+        "categories": result["relationship_counts"], "contacts": result["contact_counts"],
+    }, sort_keys=True))
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repair", required=True, type=Path)
@@ -328,6 +763,8 @@ def main():
     ap.add_argument("--retained", required=True, type=Path)
     ap.add_argument("--output", required=True, type=Path)
     ap.add_argument("--compare", type=Path)
+    ap.add_argument("--geometry-supplement", type=Path)
+    ap.add_argument("--full-population", action="store_true")
     args = ap.parse_args()
 
     if args.output.exists():
@@ -339,6 +776,10 @@ def main():
     actual_hashes = {name: sha256(path) for name, path in paths.items()}
     if actual_hashes != EXPECTED_INPUTS:
         raise ValueError("unexpected bound input hashes: " + json.dumps(actual_hashes, sort_keys=True))
+    if args.full_population:
+        if args.compare is None:
+            raise ValueError("--full-population requires --compare")
+        return run_full_population(args, paths, actual_hashes)
     controls = run_controls()
     repair, inventory = load(args.repair), load(args.inventory)
     connectivity, retained = load(args.connectivity), load(args.retained)

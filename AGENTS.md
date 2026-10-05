@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 4, 18:00 bound obstacle coverage accepted:** the rebuilt
+  static screen covers all177 retained primitives and97 native fixed pads,
+  including through-layer membership. It preserves42 prior pairs, removes
+  four wrong-pose false positives and separately records18 self pairs.
+  No new collateral contact appears. The missing8um PROT_VM segment is
+  recovered from a source-bound saved-native supplement, not a new load.
+  Three supervised executions are complete; no further run in this item.
+  The qualification is exact-source only: degenerate roundrect narrow-phase
+  generalization remains unqualified, but those pads are outside all
+  candidate bounds here. Source and177 are unchanged. Stop this hour at
+  the saved checkpoint; next is native guard/retained-intrusion encoding
+  disposition, not source repair, a full input or another Quilter job.
 - **October 4, 17:44 collateral relationships qualified; coverage held:**
   46 named pairs resolve into28 copper contacts, four halo-only overlaps
   and14 rejected candidates. DOUT's0.212066mm gap is not a clearance

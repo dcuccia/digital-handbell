@@ -166,25 +166,37 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current17:44: enumerated collateral accepted; candidate coverage held.**
-The46 named pairs resolve to28 copper contacts, four halo-only overlaps
-and14 rejected candidates. DOUT clears private copper by0.212066mm and
-is not a clearance failure. Existing terminal-bank contacts are preserved.
-The old upstream generator still uses an invalid transform for non-private
-obstacle pads; absent pairs are not proved clear. Next audit all97 saved
-native fixed pads and177 retained copper in a new static output. Do not
-rerun native inventory or change guards/source. The earlier17:42 root
-target slipped for this finding; the18:11 hour limit is unchanged.
+**Current October 4, 18:00: bound obstacle coverage accepted; hour closes.**
+The [coverage ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)
+qualifies the exact 177 retained primitives and 97 native fixed pads.
+It closes the upstream pose/layer-coverage gap without new collateral
+contact: 42 prior pairs remain, four wrong-pose false positives disappear,
+and 18 self pairs are recorded separately. Existing terminal-bank joins
+and DOUT's valid 0.212066 mm copper gap are unchanged.
 
-**17:26 local plane control accepted; current hour ends18:11.**
+The three supervised executions are complete; no further run or new
+engineering item starts this hour. The 37-open source and all experiments
+remain preserved. This is source-bound geometry, not generic shape-engine
+qualification: degenerate roundrect narrow-phase handling needs a separate
+correction/test before such a pad becomes a nearby candidate; it does not
+affect this exact run's enclosing bounds or surviving pairs.
+
+Next, on continuation, select the native guard representation and exact
+retained-source intrusion contract for the four private pads, six private
+tracks and two private vias. Expected output is an encoding disposition,
+not a changed board: no blanket same-net waiver, feed removal or automatic
+input/upload. Movable placement domains, supplier layer purposes/processes,
+functional grounding and full native/importer gates remain separate.
+
+**Earlier 17:26 local plane control accepted; current hour ends18:11.**
 No new item after18:01. The
 [plane ledger](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json)
 qualifies4/8 isolated four/six-layer private-via cases at0.250000mm and
 one missing-In3-guard negative with direct fill contact. Saved source-subset
 records and physical layer order reconcile. An anchor VIA proves local
 nonempty-fill contact, not functional grounding. Three native attempts
-are exhausted, with no rerun. Next is bounded collateral/retained-join
-disposition from the corrected guard data. No source-native load/edit,
+are exhausted, with no rerun. The collateral/retained-join item and its
+coverage follow-up are now completed as described above. No source-native load/edit,
 full product input, routing, cloud job or manufacturing release.
 
 **17:01 finite tool completion accepted:** ten supervised regressions

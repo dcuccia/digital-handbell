@@ -118,6 +118,15 @@ phase still used the wrong transform for non-private pads. A repair of
 protected objects alone does not fix obstacle coverage; omitted pairs can
 remain untested. Rebuild conservative candidates from the same qualified
 geometry source and compare additions/removals before claiming completeness.
+The subsequent [bound-population audit](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)
+does this for all177 retained primitives and97 native fixed pads, including
+actual through-layer membership. It removes four wrong-pose pairs without
+finding new collateral contact. Keep self pairs separate from design
+conflicts, and fail on missing geometry rather than silently shrinking the
+population: one8um segment needed a separately bound saved-native source.
+This qualifies the exercised shapes and source, not arbitrary future
+geometry; a far-away shape's valid bounds do not qualify its narrow-phase
+intersection algorithm.
 Also distinguish a prospective guard-halo conflict from actual copper
 contact or minimum-clearance failure. An unchanged terminal-bank overlap
 can be intentional; reuse source-bound topology evidence instead of

@@ -12,6 +12,57 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 17:46 saved-native obstacle coverage audit
+
+Fresh runtime-verified Sol/medium now audits all97 fixed-pad identities
+and177 retained primitives using the saved native geometry, not the old
+local-pad transform. Preserve the analytic guards and46 named results;
+regenerate only conservative candidates in a new output, compare pair
+additions/removals, and measure supported survivors. Unknown nearby shapes
+remain explicit gaps. Native layer membership must also handle through-hole
+pads rather than silently excluding literal `*.Cu` records.
+
+Execution stops17:56, report17:57/root18:00, at most three hard30-second
+static pipelines. No native inventory, fixture, source, guard/copper,
+cloud or manufacturing change. This is the final planned engineering item
+of the current hour; leave time for review and the18:11 stopping point.
+
+### 18:00 exact-source coverage accepted; hour checkpoint
+
+The [coverage ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)
+now binds all274 obstacles:177 retained primitives and97 pads of27 fixed
+references. Native global poses and actual layer membership replace the
+old obstacle transform/wildcard handling. All60 surviving pairs are
+classified:42 prior pairs are unchanged, four old opposite-pad false
+positives disappear, and18 own-source pairs are reported separately.
+Excluding self pairs,28 contacts/four halo-only overlaps remain; there is
+no newly discovered collateral contact. The DOUT0.212066mm disposition and
+the source terminal-bank interpretation remain unchanged.
+
+The first execution failed closed on a missing8um PROT_VM segment
+`898341e7...`. Its geometry was recovered from the earlier, independently
+source-bound native local-retention record. The corrected full-population
+execution and historical-mode regression then pass; the latter reproduces
+the earlier raw bytes exactly. All three children are below0.2 seconds
+under hard30-second limits. No additional native work or source edit occurs.
+
+Root verifies code/raw/receipt bindings and supplement lineage. The saved
+pad definitions have no geometry offsets/custom modifiers; circle sizes
+and NPTH extents reconcile. The actual narrow phase uses only rectangular
+pads, tracks and vias. Other pad shapes are screened out by conservative
+bounds; this is not generalized shape-engine qualification. In particular,
+TP10/TP11's degenerate rounded-rectangle cores need a separate correction
+and tests before use as nearby narrow-phase candidates. No further run
+is released in this completed item.
+
+The hour closes with local four/six plane behavior and exact-source
+obstacle coverage qualified, not a new product layout. Preserve the37-open
+source and all experiments. Next is one native guard-representation and
+retained-source intrusion disposition; movable placement domains, explicit
+supplier layer purposes and complete native/imported input checks still
+precede the paired routing trials. Do not reopen inventory or treat a
+halo-only source conflict as permission to reroute an already valid feed.
+
 ## October 4, 17:29 bounded collateral disposition
 
 The next item resolves the corrected analytic guards'14 broad-phase rows
