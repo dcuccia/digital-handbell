@@ -7,6 +7,19 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5, 12:05: six placements available; routing continues.**
+Job reports33/45 router workflow steps and zero routed candidates.
+Placements completed41-46minutes after launch, each with29 passing groups.
+First-placement browser screening preserves all32 fixed poses and puts
+all72 movers on F; only BT1/BT2 remain B. This is preliminary metadata
+evidence, not native geometry/preservation acceptance. The100 underlying
+passes cover28 capacitor distances (generic10mm threshold) and72 region
+memberships; power/USB routing checks have not run. C24-to-IC4.8's5.144mm
+reported distance needs output review. Leave routing alone, then preserve
+and review a returned native candidate before claiming routing improvement.
+Details and private evidence bindings are in the paired-import ledger's
+`placement_progress_checkpoint`. Six-layer job remains uncreated.
+
 **October 5, 11:14: first flexible four-layer run started.** Owner11:01
 authorized correction and launch. [Job](https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60)
 shows working layouts after one start. The paired-import ledger's

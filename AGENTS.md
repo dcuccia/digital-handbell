@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 5, 12:05 placement progress reviewed:** four-layer job has six
+  placement results after41-46minutes and is routing (33/45 workflow steps,
+  not percent routed); zero routed candidates at this observation.
+  All six report29 passing placement groups. First-placement browser data
+  preserves32 fixed transforms and puts all72 movers on F; only BT1/BT2
+  are B. Object counts/net distributions match input, not exact geometry
+  or native preservation proof. The100 underlying passes are28 capacitor
+  distances with a generic10mm limit plus72 region checks, not power/USB
+  routing qualification. C24-to-IC4.8 reports5.144mm and remains a review
+  concern, not a demonstrated failure. Leave the router uninterrupted;
+  no placement acceptance, source change, six-layer job or monitoring.
+  See paired-import ledger's placement_progress_checkpoint.
 - **October 5, 11:14 first flexible comparison submitted:** owner11:01
   authorizes common-setting corrections and first start. Four job
   `6ac3d5b7fc0d2d776ed14a60` is launched once and shows working layouts.

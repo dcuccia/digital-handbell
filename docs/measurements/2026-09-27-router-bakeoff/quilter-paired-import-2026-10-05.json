@@ -1,6 +1,53 @@
 {
   "schema_version": 1,
   "status": "FOUR_SUBMITTED_ONCE_1114_SIX_NOT_CREATED",
+  "placement_progress_checkpoint": {
+    "observed_local": "2026-10-05 12:05",
+    "trigger": "Owner reports available placements and asks implicitly to review current progress; bounded read-only browser review, no native execution or job change.",
+    "job_state": "running",
+    "placement_count": 6,
+    "routed_candidate_count": 0,
+    "router_steps": {"completed":33,"total":45,"not_a_routing_percentage":true},
+    "placements": [
+      {"ordinal":1,"id":"6ac3f29b4bfd48cd20a2bc63","finished_local":"11:55:26","elapsed_minutes":41.02},
+      {"ordinal":2,"id":"6ac3f2cda8e5a9e83700c020","finished_local":"11:56:16","elapsed_minutes":41.85},
+      {"ordinal":3,"id":"6ac3f2eb3f6f72c5a381b1fb","finished_local":"11:56:47","elapsed_minutes":42.36},
+      {"ordinal":4,"id":"6ac3f3a0d3508c052b4c6244","finished_local":"11:59:47","elapsed_minutes":45.37},
+      {"ordinal":5,"id":"6ac3f3be1647649088bd730a","finished_local":"12:00:18","elapsed_minutes":45.88},
+      {"ordinal":6,"id":"6ac3f3cea8153664323065ed","finished_local":"12:00:33","elapsed_minutes":46.14}
+    ],
+    "all_six_service_results": "Each reports29 successful PRC groups,100 underlying passes, zero reported warnings/errors. These are placement results, not native routed-board acceptance.",
+    "first_placement_preliminary_review": {
+      "basis": "Saved Quilter render/detail responses versus the exact saved input render. No native output downloaded or parsed.",
+      "references_equal":104,
+      "fixed_reference_transforms_equal":32,
+      "eligible_refs_repositioned":72,
+      "eligible_refs_on_front":72,
+      "back_references":["BT1","BT2"],
+      "metadata_counts_input_and_placement":{"pins":325,"tracks":191,"vias":18,"pours":1,"keepouts":50,"placement_regions":1},
+      "same_type_net_count_distributions":true,
+      "geometry_limit": "Counts/net distributions and fixed transforms are preliminary preservation evidence, not exact primitive geometry/UUID, pad-net/pose, polygon, outline, fill or native DRC qualification. Other five placements were read only at summary level.",
+      "prc_scope": "28 capacitor pin-distance checks plus72 region-membership checks. UI groups these as28 capacitor entries and one placement region. Power and differential suites contain configured entries but zero executed checks at this placement stage.",
+      "capacitor_distance_limit_mm":10,
+      "largest_reported_distances_mm":[["C26","U5.3",5.985354],["C24","IC4.8",5.143841],["C28","U5.6",3.174684],["C15","IC1.44",3.044750],["C6","IC1.50",2.973892]],
+      "distance_disposition": "The generic10mm threshold is not our electrical acceptance requirement. In particular C24 remains fixed while IC4 moves; its5.144mm reported separation needs routed return/path review before choosing this placement. No route failure is established.",
+      "placement_routing_completion":0.25925925925925924,
+      "completion_disposition": "Exactly the input's retained-copper completion, not new routing gain.",
+      "service_drc": "Placement designRulesCheckViolations.violations=[]; newCadDrcViolations=null. Do not call this native KiCad DRC-clean.",
+      "single_sided_disposition": "singleSided=false is consistent with the two deliberately retained rear battery contacts. It does not mean the72 eligible parts moved to the back.",
+      "url":"https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60?placement=1"
+    },
+    "private_evidence_sha256": {
+      "four-job-progress-1205.json":"0a49f37146d383080a41ebe4c0d50e6cfd296eff92154de1399a5039dcbd87a8",
+      "four-job-events-1205.json":"cd2cb7ef75c11689f2897b2d61566e9ac0bdf661dc3f7020717c2d16d457f697",
+      "four-placement1-render-1206.json":"9910a41f44697e4c4aac519124a26e961993cb7018824258ebc7aa142a63b9a7",
+      "four-placement1-details-1206.json":"539d969e0ad691823508f73597248dc97c119d56d68947da6b5ba924a94fa6ba",
+      "four-placement1-board-1206.json":"0fb821fa34e95c5db3e840c9fea37437a9394d32e749dcb73d671040d45d06f5"
+    },
+    "tool_limit": "Two optional batch-capture helper attempts stopped before actions because this Playwright runtime exposes neither require nor dynamic import. No repeated browser capture or native tooling repair was started; first-placement review and all-six summary evidence remain usable.",
+    "decision": "Promising observed placement-search progress: six results in41-46minutes with no agent placement search. Leave routing uninterrupted. No placement selected/approved, no new job, six-layer upload, source change, integration or background monitoring.",
+    "next": "When a routed candidate is available, preserve its native output and perform the bounded identity/placement/copper/layer/plane gate before assessing actual routing gain."
+  },
   "submission_checkpoint": {
     "owner_authorization_local": "2026-10-05 11:01",
     "submitted_local": "2026-10-05 11:14:25-07:00",

@@ -40,6 +40,17 @@ account-specific quote. Power values must be identified as source-backed
 routing screens versus actual operating budgets; Quilter's20C IPC2221
 check does not replace project thermal/transient acceptance.
 
+**Observed placement-stage limit, October5:** six placements arrived after
+41-46minutes and routing continued separately. Their29 passing groups
+represent28 bypass entries plus one region; first-placement details contain
+28 pin-distance checks and72 component-region checks. The bypass threshold
+is a generic10mm, not an independently accepted local-decoupling limit.
+Power/differential suites have no executed checks at this stage, and the
+placement's25.93% routing value merely repeats retained input copper.
+Workflow steps are not a routed-net percentage. Also inspect actual sides:
+`singleSided=false` correctly reflects two fixed rear contacts while all72
+eligible parts remain front-side in the checked placement.
+
 ## What the evidence supports
 
 | Finding | Evidence and limit | Working guideline |
