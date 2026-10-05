@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import hashlib
+import importlib
 import json
 import os
 import shutil
@@ -96,6 +97,34 @@ def read_native(pcb, pcb_path: Path) -> dict:
         del board
 
 
+def native_readback(kicad_bin: Path, pcb_path: Path, add_dll=os.add_dll_directory,
+                    importer=importlib.import_module) -> dict:
+    """Keep the DLL-directory cookie alive through load, readback and cleanup."""
+    dll_handle = add_dll(str(kicad_bin))
+    try:
+        sys.path.insert(0, str(kicad_bin / "Lib" / "site-packages"))
+        return read_native(importer("pcbnew"), pcb_path)
+    finally:
+        dll_handle.close()
+
+
+def require_child_success(receipt: dict, label: str) -> None:
+    if receipt["timed_out"] or receipt["numeric_child_returncode"] != 0:
+        raise RuntimeError(f"{label} failed")
+
+
+def validate_drc_report(path: Path) -> dict:
+    if not path.is_file():
+        raise RuntimeError("fresh DRC report absent")
+    parsed = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(parsed, dict):
+        raise RuntimeError("DRC report root is not an object")
+    for key in ("violations", "unconnected_items", "schematic_parity"):
+        if not isinstance(parsed.get(key), list):
+            raise RuntimeError(f"DRC report missing array: {key}")
+    return parsed
+
+
 def run_child(command, cwd: Path, limit: float, stem: str) -> dict:
     stdout = cwd / f"{stem}-stdout.bin"
     stderr = cwd / f"{stem}-stderr.bin"
@@ -155,32 +184,19 @@ def main() -> int:
     shutil.copyfile(args.fixture, pcb_path)
     shutil.copyfile(args.project, pro_path)
 
-    dll_handle = os.add_dll_directory(str(args.kicad_bin))
-    try:
-        sys.path.insert(0, str(args.kicad_bin / "Lib" / "site-packages"))
-        import pcbnew as pcb
-        readback = read_native(pcb, pcb_path)
-    finally:
-        dll_handle.close()
+    readback = native_readback(args.kicad_bin, pcb_path)
     write_json(args.output / "native-readback.json", readback)
 
     cli = args.kicad_bin / "kicad-cli.exe"
     version = run_child([str(cli), "--version"], args.output, 8, "cli-version")
-    if version["timed_out"] or version["numeric_child_returncode"] != 0:
-        raise RuntimeError("kicad-cli version probe failed")
+    require_child_success(version, "kicad-cli version probe")
     drc_output = args.output / "drc.json"
     drc = run_child([
         str(cli), "pcb", "drc", "--format", "json", "--output",
         str(drc_output), str(pcb_path)
     ], args.output, 60, "cli-drc")
-    if drc["timed_out"] or drc["numeric_child_returncode"] != 0:
-        raise RuntimeError("kicad-cli DRC failed")
-    if not drc_output.is_file():
-        raise RuntimeError("fresh DRC report absent")
-    parsed = json.loads(drc_output.read_text(encoding="utf-8"))
-    for key in ("violations", "unconnected_items", "schematic_parity"):
-        if not isinstance(parsed.get(key), list):
-            raise RuntimeError(f"DRC report missing array: {key}")
+    require_child_success(drc, "kicad-cli DRC")
+    validate_drc_report(drc_output)
     drc.update(
         executable_sha256=sha256(cli), input_sha256=sha256(pcb_path),
         project_sha256=sha256(pro_path), output_exists=drc_output.is_file(),

@@ -2,7 +2,16 @@
 
 ## Bounded engineering work
 
-- **October 4 native-tool repair partially recovered:** one isolated run
+- **October 4, 17:01 tool completion accepted:** ten supervised regression
+  tests and one corrected-revision native replay complete the finite repair.
+  All eight pad records/four pose witnesses and23 rule areas match; DRC
+  takes2.468 seconds and differs from the prior60-finding/11-open result
+  only in its date. Actual starting/executed code and report copies are
+  saved. Root accepts the exercised Windows diagnostic tooling, not product
+  rules, full guard geometry, fills, six-layer mapping or Quilter behavior.
+  The tooling blocker is resolved; those engineering/input gates remain.
+  All five authoritative source hashes are unchanged. No new job or input.
+- **Historical October 4 native-tool repair partially recovered:** one isolated run
   reads all eight source pads/four pose witnesses and23 rule areas; DRC
   completes in24.453 seconds with the diagnostic project's60 findings/
   11 opens. That project is not source-rule-equivalent. Root found and

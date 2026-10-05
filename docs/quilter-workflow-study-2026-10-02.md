@@ -12,6 +12,53 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 17:01 finite tool completion
+
+The owner authorizes completing the remaining tool work. Reuse the
+committed82ac73a candidate and the same verified Sol/medium executor.
+Finish fixture failure-case/DLL-lifetime regressions, then replay the
+exact saved diagnostic PCB/project through the corrected supervisor.
+Compare native identities, poses, rule flags and diagnostic results with
+the first-run evidence. Save actual prior tool/report copies before edits.
+
+Execution stops17:11, report17:12 and root checkpoint17:16; an initial
+plus two corrections with90-second hard limits. No new inventory,
+source-native load/edit, full input, six-layer/fill expansion, routes
+or cloud work. Diagnostic-project evidence remains distinct from product
+rules, full guard acceptance and Quilter enforcement.
+
+### Completion accepted on the executed corrected revision
+
+The [completion ledger](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json)
+records ten passing regressions under a30-second hard supervisor and one
+native replay under an85-second hard supervisor. The fixture inspector's
+small helper extraction makes DLL lifetime, failed child exits and report
+validation directly testable. Missing/malformed/non-object/missing-array
+reports and stale child output are rejected; the DLL handle stays alive
+through readback and closes on success or failure.
+
+The native pipeline completes in3.141 seconds, including2.468-second DRC.
+All eight source-pad records and23 rule areas are byte-identical to the
+first readback, including all four independent private-pad pose witnesses.
+The five same-net inside diagnostic controls appear and no outside
+counterpart does. The60 violations,11 opens and28 source-guard intrusion
+records are unchanged; independent full-report comparison finds only a
+different date. No findings were waived or repaired.
+
+Root independently verified saved starting/executed code copies, test/native
+receipts, actual invoked input/tool hashes, all five unchanged authoritative
+hashes and absent recorded PIDs. The pre-review agent ledger is also saved
+before the root acceptance edit. This closes the exercised Windows tooling
+repair, not exhaustive failure-path coverage: job-assignment failure was
+not separately injected. Native evidence belongs to the executed revision,
+not just a similarly named tool.
+
+The project remains the explicit `ada159b7...` diagnostic context, not the
+authoritative rules. The old silent timeout cause remains unresolved.
+Full guard representation/retained-copper treatment, inner-plane isolation,
+six-layer mapping and importer behavior still need separate engineering
+qualification. No product board, input, fill or cloud job changed.
+
 ## October 4, 16:36 bounded native-tool repair
 
 The owner explicitly authorizes repair of the tools. This releases one

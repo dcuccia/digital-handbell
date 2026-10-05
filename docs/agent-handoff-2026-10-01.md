@@ -7,7 +7,22 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Latest: native evidence recovered; reusable tools still held.** The
+**Latest: native-tool completion accepted.** The
+[completion ledger](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json)
+binds ten passing supervised regressions and one corrected-revision native
+replay. All eight pad records/four pose witnesses and23 rule areas match
+the first run. DRC takes2.468 seconds; the complete60-finding/11-open report
+differs only in its date. Actual starting/executed tool copies and the
+pre-review ledger are preserved, with hashes independently checked.
+
+The exercised Windows tooling is accepted and its finite repair is complete.
+The diagnostic project still differs from product rules. Full guard
+representation/retained-copper treatment, fill isolation, six-layer mapping
+and importer qualification remain engineering/input gates; no full-board
+input or new job is released. All five authoritative hashes remain unchanged,
+the executor is idle and no recorded process remains running.
+
+**Historical16:36 repair: native evidence recovered; tools then held.** The
 [repair ledger](measurements/2026-09-27-router-bakeoff/quilter-native-tool-repair-2026-10-04.json)
 records one completed native run: eight source pads/four pose witnesses,
 23 rule areas and24.453-second DRC. Five inside controls appeared with
@@ -15,11 +30,10 @@ no outside counterpart. Its60 findings/11 opens use a diagnostic project
 with different rules, not the authoritative project. No product approval.
 
 Root review prompted two corrective passes on DLL lifetime, suspended
-process containment, cleanup, fresh output and error reporting. The final
-revision passes five subprocess controls, but still needs fixture mocks
-for stale output, failed/malformed CLI output and DLL lifetime, then one
-native replay of that exact corrected revision. Do not attribute the first
-run to later code. The executor is idle and this bounded item has stopped;
+process containment, cleanup, fresh output and error reporting. At that
+checkpoint, five subprocess controls passed but fixture mocks and a native
+replay remained. The17:01 completion above closes those specific gaps.
+Do not attribute the first run to later code. That bounded item stopped;
 no source-native load/edit, full input, six-layer/fill or cloud work occurred.
 
 **Latest independent result: current-coordinate process spacing accepted.**
@@ -34,8 +48,8 @@ remain unchanged. One static run completed; its90-second initial wait was
 not a hard termination limit. Missing PID/supervisor evidence is explicit,
 not reconstructed by rerunning. The executor is idle.
 
-The native guard hold below still blocks dependent inputs. The partial
-tool repair above does not qualify full guards or release a cloud trial.
+The historical native guard hold below does not erase the newly observed
+diagnostic behavior. Full guards and cloud inputs remain unqualified.
 
 **Independent progress: supplier constructions bound.** The
 [four/six source screen](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)

@@ -431,12 +431,23 @@ useful evidence. Process-tree supervision must contain the child before it
 can spawn descendants. Regression controls must cover these failure paths,
 not just the happy path. Bind every result to the exact executed tool
 revision; later fixes do not retroactively qualify an earlier run.
-The [native-tool repair](measurements/2026-09-27-router-bakeoff/quilter-native-tool-repair-2026-10-04.json)
-recovered UUID and diagnostic DRC observations, but its final corrected
-tools remain an unqualified candidate pending fixture regressions and
-native replay. Invoke the supervisor with absolute executable/script paths
-and separate new receipt/payload locations; relative script paths would
-resolve under its private child working directory.
+The [initial repair](measurements/2026-09-27-router-bakeoff/quilter-native-tool-repair-2026-10-04.json)
+recovered observations but did not qualify its final changed code.
+The subsequent [completion](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json)
+binds ten supervised regressions and an actual corrected-revision replay:
+identical native readback and a DRC report differing only in date.
+Use `tools/supervise_process.py` for the exercised64-bit Windows runner;
+`tools/inspect_native_guard_fixture.py` is deliberately bound to this exact
+diagnostic fixture/project, not a general product-board validator.
+Invoke with absolute executable/script paths and separate new receipt/
+payload locations; relative scripts resolve under the child working
+directory. The ledger records the actual argument array.
+
+Save actual starting and executed tool/report copies before edits, verify
+their hashes against the invocation, and then update acceptance separately.
+A hash alone records identity but does not preserve a retrievable revision.
+The completion demonstrates this practice; the earlier repair's missing
+standalone copies remain a documented provenance limitation.
 
 **Observed selection trap:** the recovered all-pairs graph added113 objects
 beyond a62-object explicit-duty core. A path between two internal pads can

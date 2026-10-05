@@ -166,7 +166,18 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**16:36 tool repair partial, stopped:** native UUID/pose readback and
+**17:01 finite tool completion accepted:** ten supervised regressions
+and one corrected-revision native replay pass. Eight pad records/four
+pose witnesses and23 rule areas match; the2.468-second DRC differs from
+the first diagnostic result only in date. Actual revision snapshots,
+receipts and unchanged source hashes are verified in the
+[completion ledger](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json).
+The tooling blocker is closed. Next engineering work must address full
+guard representation/retained-copper treatment, fill isolation and
+six-layer mapping before full inputs/import qualification. No product
+rules, full input, routing, cloud job or fabrication is released.
+
+**Historical16:36 tool repair partial, stopped:** native UUID/pose readback and
 diagnostic DRC now complete on the isolated fixture, but root review
 required two code corrections. Five subprocess controls pass; missing
 fixture mocks and a native replay of the final revision still prevent

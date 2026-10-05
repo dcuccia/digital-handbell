@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "title": "Completed native launcher and exact diagnostic-fixture replay",
+  "status": "ROOT_ACCEPTED_TOOLING_AND_EXACT_DIAGNOSTIC_REPLAY_PRODUCT_GATES_REMAIN",
+  "root_review": {
+    "accepted": true,
+    "scope": "Exercised 64-bit Windows supervisor and Python 3.11.9/KiCad 10.0.6 diagnostic-fixture workflow, including the recorded failure controls and corrected-revision native replay.",
+    "agent_report_snapshot": {
+      "path": "executed-revision\\agent-completion-report.json",
+      "sha256": "546741590c1b3f2488b8fb812a71fb4481f1b48193b159ac7b3e02be75f0b64f"
+    },
+    "verified": [
+      "Actual starting and executed tool snapshots match recorded hashes and repository files.",
+      "Test receipts and saved output establish all 10 passing tests.",
+      "Actual native invocation binds the corrected inspector, exact PCB and diagnostic project.",
+      "Native readback is byte-identical to the first run.",
+      "Independent full DRC comparison differs only in the top-level date field.",
+      "All five authoritative source hashes are unchanged and all six recorded process IDs are absent."
+    ],
+    "coverage_limit": "Job-assignment failure was not separately fault-injected; no claim of exhaustive supervisor or cross-platform qualification.",
+    "product_rules_full_guard_geometry_fill_six_layer_importer_or_fabrication_accepted": false
+  },
+  "bindings": {
+    "repository_commit": "82ac73af650df5d4253cc9d4de05c394b4ffc07f",
+    "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701",
+    "input_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421",
+    "fixture_pcb_sha256": "0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148",
+    "diagnostic_project_sha256": "ada159b721f8667449437318b30bab1a5be3881a707d9e39859658784b0730d4",
+    "prior_ledger_sha256": "f4c32ddfa933635693563e9bb078860e076ba9b14da9ae1805525fc3198722e3"
+  },
+  "preserved_revisions": {
+    "starting_files_directory": "preserved-start",
+    "starting_files": {
+      "supervise_process.py": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+      "inspect_native_guard_fixture.py": "acd57b976653a9b5d095766e11f107e98e22ad3949904c9fe821c7a6a45e5f92",
+      "test_supervise_process.py": "e063a0c0314fa28ffda67d8ef14781e865a0c7eab7d6f48bf1ce0021cba62005",
+      "quilter-native-tool-repair-2026-10-04.json": "f4c32ddfa933635693563e9bb078860e076ba9b14da9ae1805525fc3198722e3"
+    },
+    "executed_files_directory": "executed-revision",
+    "executed_files": {
+      "supervise_process.py": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+      "inspect_native_guard_fixture.py": "81076e5678b31ae24f39458bbfd1e1c77bd255f1e3a5173d53df4eed9bccbab6",
+      "test_supervise_process.py": "e063a0c0314fa28ffda67d8ef14781e865a0c7eab7d6f48bf1ce0021cba62005",
+      "test_inspect_native_guard_fixture.py": "eddf88ba970ccb0a713bbfb75f68f1bf9ef227d0ef8e93c6b6c3f17fe1558876"
+    },
+    "statement": "These are actual saved files in the private batch, not hash-only provenance."
+  },
+  "tools": {
+    "python": {
+      "path": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "version": "3.11.9",
+      "sha256": "5f7b89a612c9b8af1d6456cdfcd1dbe5ca630849e79aebced9bee9a6694952ec"
+    },
+    "kicad": {
+      "pcbnew_version": "10.0.6",
+      "cli_path": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\\kicad-cli.exe",
+      "cli_sha256": "393525236969434e24bc710334efe244fb285ef6596a1aea8e74353ef4db5477"
+    }
+  },
+  "static_regressions": {
+    "result": "PASS",
+    "test_count": 10,
+    "elapsed_seconds": 4.544,
+    "pipeline_elapsed_seconds": 4.86,
+    "hard_limit_seconds": 30,
+    "supervisor_pid": 33336,
+    "child_pid": 2808,
+    "supervisor_exit": 0,
+    "child_exit": 0,
+    "receipt": {
+      "path": "tests\\supervisor.json",
+      "sha256": "6d146f10cd42f9e3cc2dc5a5de3ef242d5947e7ecbac3a12cbea7a740e15c33d"
+    },
+    "stderr": {
+      "path": "tests\\stderr.bin",
+      "sha256": "2f8a137e4734f688b575a13bf79366c4b34b3927736d6e076d235b19ac9f8557"
+    },
+    "covered": [
+      "stale child-output rejection",
+      "CLI nonzero and timeout rejection",
+      "missing, malformed, non-object and missing-array DRC rejection",
+      "DLL-directory handle lifetime through read_native success and failure",
+      "positive finite limits and missing inputs",
+      "launch failure receipt",
+      "zero/nonzero child exits",
+      "hard timeout and real descendant termination"
+    ],
+    "assignment_failure_mock": "Not separately injected; the exact-child kill/wait exception path is retained and the real process-tree timeout control passes."
+  },
+  "native_replay": {
+    "attempts_used": 1,
+    "maximum_authorized": 3,
+    "result": "PASS_DIAGNOSTIC_CONTEXT",
+    "hard_limit_seconds": 85,
+    "pipeline_elapsed_seconds": 3.141,
+    "supervisor_pid": 54320,
+    "pipeline_pid": 22080,
+    "supervisor_exit": 0,
+    "pipeline_exit": 0,
+    "timed_out": false,
+    "child_confirmed_exited": true,
+    "receipt": {
+      "path": "native-attempt-1\\supervisor.json",
+      "sha256": "3dfad9ac2aea14cb4f82fca0493e22b528283bc9c10222f7a28594f60a955c29"
+    },
+    "command_arguments": [
+      "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701\\executed-revision\\supervise_process.py",
+      "--receipt",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701\\native-attempt-1\\supervisor.json",
+      "--stdout",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701\\native-attempt-1\\pipeline.stdout.bin",
+      "--stderr",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701\\native-attempt-1\\pipeline.stderr.bin",
+      "--cwd",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701",
+      "--limit",
+      "85",
+      "--input",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pcb",
+      "--input",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pro",
+      "--input",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701\\executed-revision\\inspect_native_guard_fixture.py",
+      "--",
+      "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701\\executed-revision\\inspect_native_guard_fixture.py",
+      "--fixture",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pcb",
+      "--project",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pro",
+      "--output",
+      "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-completion-20261004T1701\\native-attempt-1\\payload",
+      "--kicad-bin",
+      "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin"
+    ],
+    "native_loads": 1,
+    "native_saves": 0,
+    "source_native_loads": 0,
+    "refills": 0
+  },
+  "native_readback": {
+    "path": "native-attempt-1\\payload\\native-readback.json",
+    "sha256": "02e04f29ce8d8f473bacc6e65bcf750b0d984174b12fb430cb1efdb38557f995",
+    "source_pad_records": 8,
+    "unique_pad_uuids": 8,
+    "global_pose_and_layer_records": 8,
+    "oracle_passed": 4,
+    "oracle_total": 4,
+    "oracle": {
+      "R26.2": [86.4, 111.192, 90],
+      "R27.2": [86.424019, 109.500966, 0],
+      "R24.2": [98.408, 111.4, 0],
+      "C28.2": [102.2, 116.15, 270]
+    },
+    "rule_areas": 23,
+    "restriction_groups": {
+      "all_five_not_allowed": 18,
+      "track_only": 2,
+      "via_only": 1,
+      "pad_only": 1,
+      "footprint_only": 1
+    },
+    "comparison_to_first_run": "Byte-identical native-readback JSON (same SHA-256)."
+  },
+  "cli_diagnostics": {
+    "version": {
+      "pid": 35200,
+      "exit": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.234,
+      "receipt_path": "native-attempt-1\\payload\\cli-version-receipt.json",
+      "receipt_sha256": "ad8f14ceeb8348837888623c3487b37635029c97cd80833ed494154b6b5c0b26"
+    },
+    "drc": {
+      "pid": 51428,
+      "exit": 0,
+      "timed_out": false,
+      "elapsed_seconds": 2.468,
+      "limit_seconds": 60,
+      "receipt_path": "native-attempt-1\\payload\\cli-drc-receipt.json",
+      "receipt_sha256": "ee507a0dd87397ae8f0572f1d17127711189dddccb27bc5d430e0a98a88f46ed",
+      "report_path": "native-attempt-1\\payload\\drc.json",
+      "report_sha256": "bdf1848c31bb76b252933d0c306f460ce0f275bdc0b67a50ced1102e4b3b68dd",
+      "report_bytes": 42935,
+      "violations": 60,
+      "unconnected_items": 11,
+      "schematic_parity": 0,
+      "categories": {
+        "items_not_allowed_error": 33,
+        "track_width_error": 6,
+        "lib_footprint_issues_warning": 8,
+        "track_dangling_warning": 4,
+        "silk_overlap_warning": 3,
+        "text_height_warning": 3,
+        "via_dangling_warning": 2,
+        "silk_over_copper_warning": 1
+      },
+      "diagnostic_inside": 5,
+      "diagnostic_outside": 0,
+      "source_guard_intrusions": 28,
+      "comparison_to_first_run": "Semantic violation/open multiset difference is zero. Report SHA changed from 1523862d... because the report date changed from 16:40:29 to 17:03:39; counts, categories and item UUID semantics are unchanged."
+    }
+  },
+  "rule_context": {
+    "classification": "EXACT_DIAGNOSTIC_PROJECT_CONTEXT_NOT_SOURCE_RULE_EQUIVALENT",
+    "diagnostic_project_rules_mm": {
+      "min_track_width": 0.2,
+      "min_clearance": 0,
+      "min_via_annular_width": 0.1
+    },
+    "product_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "product_project_rules_mm": {
+      "min_track_width": 0.1778,
+      "min_clearance": 0.1778,
+      "min_via_annular_width": 0.1
+    },
+    "limit": "The 60/11 result and keepout controls qualify only the exact diagnostic fixture/project context. They are not product-source DRC or product-rule acceptance."
+  },
+  "authoritative_hashes_unchanged": {
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "termination": {
+    "recorded_pids_checked_not_running": [33336, 2808, 54320, 22080, 35200, 51428],
+    "work_left_running": false
+  },
+  "limits": [
+    "Original 30-second timeout cause remains unknown.",
+    "No source board was loaded natively and no source or product file was edited.",
+    "No fill, six-layer, full-input, product-routing or cloud work occurred.",
+    "DRC and diagnostic guard success are not product, source-rule, manufacturing or functional acceptance.",
+    "Full process and engineering acceptance remain root-only."
+  ]
+}
