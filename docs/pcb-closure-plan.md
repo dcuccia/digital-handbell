@@ -166,17 +166,23 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Active October 4, 19:07:** verified Sol/medium executes one isolated
-F-placement-room serialization control, stopping19:17, report19:18 and
-root19:21. Use the exact active executor/fixture in the workflow contract.
-No authoritative-source native load, DRC/refill, full input or cloud action.
+**Current October 4, 19:15:** the isolated F-room native serialization
+control passes on returned`3a5f6d89...`: one new all-clear room, all58
+original subtrees/guards/fills intact, complete new-room equality and
+unique UUIDs. Two child import failures preceded the successful third
+attempt; receipts and recovered exact failed scripts are preserved.
+No fourth run. The executor is idle and all five source hashes unchanged.
+See the [control ledger](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json).
+Next is source-bound movable-domain requirements/representation from
+existing evidence. Actual product domains, importer association and
+body/rotation/F-only placement remain unqualified; no full input or cloud.
 
-**Current October 4, 19:06: common F-height class simplified.**
+**Prior October 4, 19:06: common F-height class simplified.**
 The+2mm height screen's only nonpositive cases, L1/X6, are both fixed under
 the current27/77 partition. Eligible fitted movers need no tall-part class,
-but this does not establish a whole-body/access domain. Next is one
-isolated native F-placement-room serialization control: a separate named
-all-clear rule area, with all restrictive source guards preserved.
+but this does not establish a whole-body/access domain. The subsequent
+native F-room serialization control is now qualified above, with all
+restrictive source guards preserved.
 No full input, cloud upload or placement/routing job. Canonical new-via
 fields are synchronized to0.650/0.350mm with0.150mm minimum ring.
 

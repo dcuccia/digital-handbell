@@ -3,7 +3,17 @@
   "date": "2026-10-02",
   "status": "STUDY_ROLES_AND_90_OHM_INTENT_SELECTED_NATIVE_INPUT_AND_ACTUAL_SOLVE_PENDING",
   "f_placement_region_native_item": {
-    "status": "NATIVE_SERIALIZATION_CONTROL_IN_PROGRESS",
+    "status": "ROOT_ACCEPTED_EXACT_NATIVE_F_ROOM_SERIALIZATION_NOT_PLACEMENT",
+    "root_review_local": "2026-10-04 19:15",
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-f-placement-region-native-control-2026-10-04.json",
+    "report_sha256": "57abe7de045a20c8eabb0dc74a7d60a8aff7c468151c23f0bf26b8406241d2f6",
+    "native_roundtrip_sha256": "3a5f6d89035a4b4b4c822d60020e4480083876e9fcd64f3511fe4d87441965d3",
+    "result": "One all-clear F room persists natively; all58 original subtrees, guards, copper and fills are preserved. Root also verifies complete saved-room equality and UUID uniqueness.",
+    "actual_native_children": 3,
+    "child_import_failures_before_native_load": 2,
+    "actual_native_loads": 2,
+    "retry_budget_exhausted": true,
+    "all_five_source_hashes_independently_unchanged": true,
     "executor": "6be4b7ec-32e3-42f3-b3e4-e0f14e7da7b7",
     "verified_model_effort": "gpt-5.6-sol / medium",
     "runtime_started_event": "c30fb8c6-46c5-4b81-b4f0-f384019fd06f",
@@ -20,8 +30,9 @@
     "not_proved_by_this_control": "Placement behavior, actual body/rotation containment, importer F-only enforcement or any product allowed domain."
   },
   "common_domain_disposition": {
-    "checkpoint_local": "2026-10-04 19:06",
-    "status": "COMMON_F_HEIGHT_CLASS_SIMPLIFIED_POSITIVE_REGION_ENCODING_UNQUALIFIED",
+    "checkpoint_local": "2026-10-04 19:15",
+    "height_disposition_local": "2026-10-04 19:06",
+    "status": "COMMON_F_HEIGHT_CLASS_AND_EXACT_NATIVE_ROOM_QUALIFIED_ACTUAL_DOMAINS_PENDING",
     "packaging_evidence_sha256": "85368ffc33fd1dd0cea22a9de8ac3510f39821953d939bf8f0a83d6d1d315b8c",
     "envelope_evidence_sha256": "4178978d8e52db4d0b498e9e12aafdca5e43f098e43a7d084877ece1ed0da655",
     "mechanical_screen_sha256": "2d26b2a73d72d5864976cd9945b073c25e1b77dab624d22eefe57590c0a0975c",
@@ -30,8 +41,8 @@
     "not_implied": "No uniform per-origin polygon, body/rotation clearance, toleranced fit, connector/harness envelope or full allowed-placement map is qualified by that height inference.",
     "source_planning_reservations": "Carry fixed J1/J2/X6, R3.2 mount and recovery-access duties unchanged; J2 already includes its0.7mm front-mating allowance. Do not freeze redesignable old plastic or replace unknown service space with zero.",
     "documented_KiCad_region_encoding": "A separate named F.Cu rule area with all keepout restrictions cleared represents a positive placement region. Preserve restrictive guards unchanged; do not convert them into rooms. Review/manual component association after import is required.",
-    "remaining_representation_gate": "Exact native persistence of an all-clear F rule area and later importer/body/rotation/F-only behavior are not yet exercised. Assigned allowed regions combine by union.",
-    "next_bounded_item": "One isolated native F-placement-room serialization control preserving the existing source-bound fixture objects/guards. No full-board input, cloud upload or placement/routing job."
+    "remaining_representation_gate": "The separate exact native all-clear F-room control passes; actual product domains, importer association, body/rotation containment and F-only placer behavior remain unqualified. Assigned allowed regions combine by union.",
+    "next_bounded_item": "Source-bound movable-domain requirements and representation disposition, reusing existing geometry and current77 eligible references; no repeated inventory, full-board staging, cloud upload or placement/routing job."
   },
   "usb_capability_disposition": {
     "checkpoint_local": "2026-10-04 18:56",

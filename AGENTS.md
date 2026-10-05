@@ -2,14 +2,17 @@
 
 ## Bounded engineering work
 
-- **October 4, 19:06 common-domain disposition:** with+2mm spacing, only
-  L1/X6 fail the old strict3.5mm height ceiling; both are now fixed.
-  Eligible fitted F movers share a below-gap class, not a qualified common
-  origin polygon. Body/rotation, access and copper-only duties remain.
-  Next is one isolated native F-placement-room serialization control:
-  add a separate named all-clear rule area, never clear existing guards.
-  No full input, cloud object or placement/routing job is released.
-  The canonical contract now matches the selected0.650/0.350mm new-via pair.
+- **October 4, 19:15 native F-room serialization qualified:** returned
+  `3a5f6d89...` adds one named all-clear F rule area while preserving all58
+  original fixture subtrees, guards and fills. Root verifies complete
+  saved-room equality and unique UUIDs. Two child import failures preceded
+  the successful third attempt; exact failed scripts are recovered against
+  receipt hashes. No further run. This does not prove Quilter placement or
+  importer/F-only behavior. At+2mm, L1/X6 are fixed and other fitted F movers
+  share a below-gap class, not a qualified common origin polygon.
+  Next use existing evidence for movable-domain requirements/representation.
+  Body/rotation, access and copper-only duties remain; no full input,
+  cloud object or placement/routing job is released. Source is unchanged.
 - **October 4, 18:56 USB capability disposition:** retain90-ohm intent.
   Current-client static inspection finds numeric impedance entry and an
   optional independent single-ended target, not an85/100-only selector.

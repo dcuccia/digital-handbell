@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "status": "ROOT_ACCEPTED_EXACT_NATIVE_F_ROOM_SERIALIZATION_NOT_PLACEMENT",
+  "root_review": {
+    "saved_evidence_verified_at_local": "2026-10-04T19:14:59-07:00",
+    "producer_report_preserved_as": "pre-root-review-report.json",
+    "producer_report_sha256": "7c50f95fcc0539441813f220c0b322fc1854950e0428135477e3134885516de9",
+    "independent_saved_byte_review": "All 58 original parsed subtrees match with multiplicity, not just dictionary keys; staged and saved new-room subtrees match completely; all saved UUIDs are unique. Artifact/receipt/stream digests and all five authoritative source hashes match. All eight recorded child/supervisor PIDs are absent.",
+    "additional_native_loads_DRC_refills": 0,
+    "validator_limit": "The private scripts are not a qualified general validator. The producer preflight did not explicitly check UUID uniqueness and native assertions did not compare the new contour; root closes those exact-artifact gaps by complete saved-room equality and UUID readback, without changing or rerunning the scripts.",
+    "failed_code_preservation": "Failed scripts were initially overwritten. Exact bytes were recovered from recorded edits after execution and matched to the original receipt hashes, not retrospectively represented as pre-execution snapshots.",
+    "failed_code_recovery_provenance": "failed-script-recovery-provenance.json",
+    "failed_code_recovery_provenance_sha256": "28debca2ba9c9030c0d5ae89ee7adaef047bcb10ea88d40921bb2a79f8bef2dc",
+    "successful_child_stderr": "Duplicate image-handler registration warnings only; numeric exit 0 and native readback were separately verified.",
+    "ambient_files": "Native-created native-roundtrip.kicad_pro and .kicad_prl remain private, unqualified artifacts; neither is a selected supplier profile or an upload input."
+  },
+  "scope": "One positive F.Cu placement-room syntax witness derived only from the authorized saved fixture; not an authoritative board or placement-semantics test.",
+  "source": {
+    "path": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pcb",
+    "sha256_before_and_after": "0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148",
+    "preserved_byte_for_byte": true
+  },
+  "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\f-placement-region-native-control-20261004T1908",
+  "tools": {
+    "python": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "kicad": "10.0.6",
+    "supervisor_sha256": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+    "kicad_sexpr_sha256": "be6d4647d1dea5186e4d1388ae640b43f8004fdfc94f50ca72b46e90bf0613e9",
+    "builder_sha256": "89190e2258fc49876d938c2b61717b85a98623d7d14cb83745ac391e12e6ff64",
+    "native_validator_sha256": "4ce603c8052f12e6bc15f6b463c027093029bbec4b4f520432259bc494a88e40"
+  },
+  "artifacts": {
+    "staged_derivative_sha256": "de5f02bff2099fbe2337255cc25bd3dd0d7793333cc6306b9c74fbc6d9187ea9",
+    "native_roundtrip_sha256": "3a5f6d89035a4b4b4c822d60020e4480083876e9fcd64f3511fe4d87441965d3",
+    "static_preflight_sha256": "26d31543fd4e02122298a4fa1c33adb9b84ed6ced19816f6c67de4e34832e748",
+    "native_result_sha256": "ef9ef8c7fad5bb006d89fa1fd2d38565c2b7149d27b184f9130e0f710a18bfac",
+    "static_receipt_sha256": "ba8e29e122799a8b6f749584e22e5dbc99f8aabfd4a8d8c790328b13fa675ffe",
+    "successful_native_receipt_sha256": "65d965498750a12cf00b0c6cb36fbb80980a3b080d9622bdc28b9b996fd4914f"
+  },
+  "room": {
+    "name": "CTRL_F_PLACEMENT_ROOM",
+    "uuid": "330928a3-d697-573e-8fb2-e919d8e7c8b4",
+    "layer": "F.Cu",
+    "native_is_rule_area": true,
+    "native_contour_mm": [[[97.858, 110.85], [98.958, 110.85], [98.958, 111.95], [97.858, 111.95]]],
+    "native_restrictions": {
+      "tracks_not_allowed": false,
+      "vias_not_allowed": false,
+      "pads_not_allowed": false,
+      "copperpour_not_allowed": false,
+      "footprints_not_allowed": false
+    },
+    "contour_source_guard": {
+      "name": "private-tap/R24.2->C28.2/1ba917bc-32e2-5176-954f-c3d06c7f6040/F.Cu",
+      "uuid": "19d78fbe-ec7b-5d86-b3cf-6beb0d851d2b",
+      "preserved": true
+    }
+  },
+  "preservation": {
+    "preflight_original_top_level_subtrees_byte_exact": true,
+    "preflight_original_identity_and_order_exact": true,
+    "native_saved_original_top_level_subtrees_semantically_exact": true,
+    "native_semantic_comparison_included_geometry_and_filled_polygon_subtrees": true,
+    "baseline_top_level_object_count": 58,
+    "derivative_top_level_object_count": 59,
+    "baseline_zone_count": 23,
+    "derivative_zone_count": 24,
+    "only_allowed_native_normalization": "Whitespace/indentation and object ordering; parsed S-expression subtrees were exact.",
+    "footprints_copper_planes_outline_layers_and_original_guards_changed": false
+  },
+  "negative_controls": {
+    "unnamed": {"executed": true, "rejected": true, "reason": "room_name_not_unique"},
+    "one_restriction_enabled": {"executed": true, "rejected": true, "reason": "room_not_all_allowed"},
+    "B_instead_of_F": {"executed": true, "rejected": true, "reason": "room_not_F"}
+  },
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "result": "child_import_failure_before_native_load",
+      "elapsed_seconds": 0.109,
+      "reason": "pcbnew module path absent",
+      "native_load_count": 0,
+      "recovered_executed_code": "recovered-attempt1-native_roundtrip.py",
+      "executed_code_sha256": "1327ea776e83e61adc124821610d808c6608cc7bb7990965af74a9c5ff6600c6",
+      "receipt_sha256": "13a0e406f32af095646682879a26ec6560b0f72988ef1b5a8dd761c2a2709d82"
+    },
+    {
+      "attempt": 2,
+      "result": "child_import_failure_before_native_load",
+      "elapsed_seconds": 0.125,
+      "reason": "KiCad bin, rather than bin/Lib/site-packages, was added to sys.path",
+      "native_load_count": 0,
+      "recovered_executed_code": "recovered-attempt2-native_roundtrip.py",
+      "executed_code_sha256": "05febecbd63178916edbea40e3602307d766158eea8e46c59542453884ddfc85",
+      "receipt_sha256": "6443041b32129cab72ca51724eddace161c1146840d5f0e6821ce58c533ad8d1"
+    },
+    {
+      "attempt": 3,
+      "result": "pass",
+      "elapsed_seconds": 1.922,
+      "native_load_count": 2,
+      "receipt_sha256": "65d965498750a12cf00b0c6cb36fbb80980a3b080d9622bdc28b9b996fd4914f"
+    }
+  ],
+  "static_execution": {
+    "elapsed_seconds": 0.265,
+    "hard_limit_seconds": 30,
+    "result": "pass"
+  },
+  "native_execution": {
+    "hard_limit_seconds_per_attempt": 90,
+    "total_successful_native_load_count": 2,
+    "retry_budget_exhausted": true
+  },
+  "unchanged_authoritative_bindings": {
+    "root_rehashed_all_five_at_local": "2026-10-04T19:14:59-07:00",
+    "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "limitations": [
+    "The overlapping positive room is only a serialization witness and is not cloud-ready or a real allowed placement domain.",
+    "No actual placement, importer enforcement, component-body containment, rotation, F-only routing/placement, DRC, refill, manufacturing, functional, supplier, or child-use behavior was tested.",
+    "Passing native persistence does not establish Quilter component association or placement semantics."
+  ]
+}

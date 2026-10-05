@@ -12,6 +12,40 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 19:15: native placement-room representation qualified
+
+The [F-room control](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json)
+preserves fixture`0caf804f...` and returns`3a5f6d89...` with exactly one
+new named F rule area, all five restrictions allowed. All58 original
+subtrees, guards, copper, layers and filled polygons survive. The actual
+native readback reports a rule area with the expected name/layer/UUID/flags.
+Root independently compares the complete staged/saved room, original
+subtrees with multiplicity, and UUID uniqueness; all five authoritative
+source hashes remain unchanged.
+
+Three supervised native children ran: two exited1 before importing
+pcbnew; the final child completed two derivative-only loads in1.922s.
+These were module-path failures, not launcher failures or design failures.
+The successful script uses both the KiCad bin DLL directory and its
+Lib/site-packages module directory. No DRC/refill occurred. Failed script
+versions were initially overwritten, then recovered from recorded edits
+and matched to receipt hashes; all streams, receipts and producer evidence
+are retained. This does not retroactively create pre-execution snapshots.
+
+The exact serialization witness is accepted, not a general validator or
+real allowed domain. The native validator only recorded the new contour
+and its static preflight lacked explicit UUID uniqueness; root's saved-byte
+review closes those exact-case gaps without another native run. The three
+negative controls genuinely reject unnamed, restricted and B-side rooms.
+No additional execution is released. Native-created project/preferences
+stay private and are not supplier-profile or upload inputs.
+
+Next resolve movable-domain requirements and representation using existing
+body/rotation, contact, connector/service and electrical evidence with the
+current77 eligible references. Do not repeat the inventory or infer actual
+Quilter placement/F-only behavior from native persistence. Full inputs and
+paired jobs remain held behind those and the native-profile/import gates.
+
 ## October 4, 19:06: simplify the common front domain before encoding
 
 The existing+2mm [height evidence](measurements/2026-09-27-router-bakeoff/quilter-packaging-sensitivity-2026-10-03.json)

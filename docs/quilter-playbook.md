@@ -169,6 +169,16 @@ placement room or expect an off-board grouping hint to enforce F-only.
 See [KiCad region setup](https://docs.quilter.ai/design-parameters/placement-regions.md)
 and [single-sided requirements](https://docs.quilter.ai/design-parameters/single-sided-placement.md).
 
+**Observed native representation, not placer behavior:** the isolated
+[F-room control](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json)
+preserves a named F rule area with all five restrictions allowed through
+KiCad10.0.6 save/reload, without changing its overlapping restrictive guard.
+Root compares the entire new-room subtree and all58 original subtrees
+with multiplicity and checks UUID uniqueness. Merely recording a contour
+or comparing UUID-keyed dictionaries would not establish those facts.
+The deliberate overlapping-room witness is not a useful cloud-placement
+input: retain separate gates for real geometry, association and placement.
+
 Keep placement regions separate from safety keepouts. Inspect each
 keepout's actual track/via/pour flags and layers; a suggestive name is not
 a rule. Screen full copper shapes, including the B annulus of through-vias.
@@ -538,7 +548,19 @@ later caching edit introduced a syntax failure despite the earlier preflight.
 again lost module and DLL search paths in fresh children. Reuse the complete
 qualified launcher, not just its Python executable or a prior shell's
 environment. Keep the object returned by `os.add_dll_directory` alive
-through the native scope, then close it explicitly. In that same execution
+through the native scope, then close it explicitly.
+The later [F-room control](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json)
+still consumed two attempts before importing pcbnew: absolute Python alone
+did not supply the module path. In the exercised Windows installation,
+`KiCad\10.0\bin` is the DLL directory and
+`KiCad\10.0\bin\Lib\site-packages` is the Python module directory; one is
+not a substitute for the other. Reuse both explicit paths in the child,
+checking their existence before native work. Count a started Python child
+that fails import as a child failure, not a launcher failure or board load.
+Snapshot each executed script before editing it: matching recovered bytes
+to an earlier receipt hash can repair evidence loss, but is not a
+pre-execution snapshot and should not become the normal workflow.
+In that same execution
 environment, preflight a known pad UUID
 and required getters before running the larger control. Missing identity
 readback must stop qualification; successful file I/O and a populated board
