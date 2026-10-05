@@ -36,6 +36,14 @@ and every guard; no full input, upload or placer job. The live contract's
 canonical via minima are also synchronized to the selected0.650/0.350mm
 pair rather than leaving its older provisional0.604/0.350mm field active.
 
+The isolated control is released at19:07 to runtime-verified Sol/medium:
+fixture`0caf804f...` gains one separate named all-clear F room using an
+existing F guard contour, while every original object/flag stays intact.
+Static negative controls and native derivative save/reload must establish
+that narrow persistence result. Execution stops19:17, report19:18/root19:21;
+initial plus two corrections, with hard90-second native child limits.
+This tiny overlapping-room witness is not a cloud-ready placement fixture.
+
 ## October 4, 18:56: retain USB intent; verify the actual solver later
 
 The [capability ledger](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json)

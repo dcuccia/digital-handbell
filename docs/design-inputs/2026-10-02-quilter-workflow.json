@@ -2,6 +2,23 @@
   "schema_version": 1,
   "date": "2026-10-02",
   "status": "STUDY_ROLES_AND_90_OHM_INTENT_SELECTED_NATIVE_INPUT_AND_ACTUAL_SOLVE_PENDING",
+  "f_placement_region_native_item": {
+    "status": "NATIVE_SERIALIZATION_CONTROL_IN_PROGRESS",
+    "executor": "6be4b7ec-32e3-42f3-b3e4-e0f14e7da7b7",
+    "verified_model_effort": "gpt-5.6-sol / medium",
+    "runtime_started_event": "c30fb8c6-46c5-4b81-b4f0-f384019fd06f",
+    "runtime_configured_event": "1445673f-24b2-414a-996a-5ffd99d8c703",
+    "runtime_probe_completed_event": "2e777d88-352c-4147-94ec-0680ae1d80dd",
+    "baseline_fixture_sha256": "0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148",
+    "scope": "One separate CTRL_F_PLACEMENT_ROOM all-clear rule area reusing an existing F guard contour; preserve every baseline object and original restrictive guard. Static controls, native derivative save/reload and exact preservation readback only.",
+    "execution_stop_local": "2026-10-04 19:17",
+    "report_due_local": "2026-10-04 19:18",
+    "root_checkpoint_due_local": "2026-10-04 19:21",
+    "maximum_corrective_retries": 2,
+    "hard_native_child_limit_seconds": 90,
+    "source_native_load_DRC_refill_full_input_or_cloud_allowed": false,
+    "not_proved_by_this_control": "Placement behavior, actual body/rotation containment, importer F-only enforcement or any product allowed domain."
+  },
   "common_domain_disposition": {
     "checkpoint_local": "2026-10-04 19:06",
     "status": "COMMON_F_HEIGHT_CLASS_SIMPLIFIED_POSITIVE_REGION_ENCODING_UNQUALIFIED",

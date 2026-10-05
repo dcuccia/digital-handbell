@@ -7,7 +7,14 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 4, 19:06:** common-domain review reuses the+2mm height
+**Active October 4, 19:07:** runtime-verified Sol/medium executor
+`6be4b7ec-32e3-42f3-b3e4-e0f14e7da7b7` is running one isolated F-room native
+serialization control against fixture`0caf804f...`, through19:17,
+report19:18/root19:21. No source load/change, DRC/refill, full input or
+cloud action. The exact scope/runtime events are in the workflow contract;
+wait for its result, not another executor or duplicate run.
+
+**Accepted October 4, 19:06:** common-domain review reuses the+2mm height
 screen with the current27/77 partition: L1/X6 are the only nonpositive
 height cases and both are fixed. No separate tall-mover region is needed,
 but body/rotation/access and copper-feature domains remain unqualified.

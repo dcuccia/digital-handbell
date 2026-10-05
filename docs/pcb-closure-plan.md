@@ -166,6 +166,11 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Active October 4, 19:07:** verified Sol/medium executes one isolated
+F-placement-room serialization control, stopping19:17, report19:18 and
+root19:21. Use the exact active executor/fixture in the workflow contract.
+No authoritative-source native load, DRC/refill, full input or cloud action.
+
 **Current October 4, 19:06: common F-height class simplified.**
 The+2mm height screen's only nonpositive cases, L1/X6, are both fixed under
 the current27/77 partition. Eligible fitted movers need no tall-part class,
