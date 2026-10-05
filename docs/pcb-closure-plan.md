@@ -166,7 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Active October 4, 21:14:** owner explicitly selects a bounded qualification
+**Current October 4, 21:26: HOLD.** The preserved-clock packet retains
+exact membership facts but does not qualify the proposed209-copper/32-fixed
+block. Y1 case-pad coordinate rebinding and complete external conductive
+contacts remain unclosed; an endpoint-only screen is insufficient.
+Both corrections are exhausted, with final child completion21:24:52.
+No demonstrated PCB defect; keep177 and27/77, source and experiments.
+A new bounded endpoint/boundary-proof authorization is required before
+further execution. No native retry, full input, cloud job or integration.
+See the [held ledger](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-qualification-2026-10-04.json).
+
+**Prior authorization October 4, 21:14:** owner explicitly selects a bounded qualification
 of preserved IC1/Y1/R6/C2/C3 for the first four/six comparison. Verified
 Sol/medium continues the reviewed clock task through21:25,
 report21:26/root21:29. Qualify complete clock signals, finite local returns

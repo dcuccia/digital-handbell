@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "checkpoint_local": "2026-10-04 21:26",
+  "status": "ROOT_HOLD_ENDPOINT_BINDING_AND_BOUNDARY_INVENTORY_INCOMPLETE",
+  "root_review": {
+    "disposition": "Preserve exact membership and proposed union facts, not a qualified self-contained retained block. Current177 primitives and27 fixed/77 eligible remain unchanged.",
+    "preserved_producer_report": "producer-report-rev2.json",
+    "preserved_producer_report_sha256": "a46cad41ecd75b1ca1cc4858bd32b91441e22722d8bfd8bbc04aba0179a3699f",
+    "correction_report": "root-review-correction-report.json",
+    "correction_report_sha256": "221f93edea4d3039416c303292b232f5b8142f0da583f69ff56cab51a48c0705",
+    "artifact_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\preserved-clock-qualification-20261004T2114",
+    "actual_initial_analysis_completed_local": "2026-10-04T21:18:51.660589-07:00",
+    "actual_final_analysis_completed_local": "2026-10-04T21:24:52.705049-07:00",
+    "actual_correction_report_generated_local": "2026-10-04T21:25:12.1026475-07:00",
+    "endpoint_result": "Four selected coordinates match UUID-bound saved-native records. Y1.2/Y1.4 records predate the accepted -0.50mm X/+0.20mm Y move; no post-move record or complete current/historical pad-geometry equality proof was bound. This is incomplete evidence, not a demonstrated pad disconnection.",
+    "boundary_result": "No exact external segment endpoint joins found by the narrow screen. Pad-land contacts, segment-interior contacts and complete conductive-object boundary coverage remain unqualified; P$1 is not proven to be the sole external attachment.",
+    "control_limit": "Executed controls cover membership and individual identities, not connectivity, coordinate binding, complete packet identity or boundary completeness.",
+    "next_scope_requires_new_bounded_authorization": "Close both Y1 case-pad coordinate bindings and complete selected-to-omitted conductive-object boundary inventory, reusing preserved evidence. No new native load or engineering retry is released here.",
+    "correction_budget_exhausted": true
+  },
+  "scope": "One source-bound static selection contract for preserving IC1/Y1/R6/C2/C3 in the first four/six-layer comparison. No retention was applied; no PCB/project generation, source edit, native load, DRC/refill, routing, staging or cloud action occurred.",
+  "authority_and_inputs": {
+    "workflow_contract_sha256": "5b0110d3dc1dae250345571f486aa5df386790f308a27674d3ba6a6fabd6a6ab",
+    "reviewed_clock_contract_sha256": "95d2737d6f5e748719b278ee5295f59ae9f1dcedbd2a474173fdb0753c809693",
+    "prot_cout_release_contract_sha256": "cc23592a8060db8a2732ff91954ff55e3177fbf733b22173b74062b7d4e5f896",
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement_manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "parser_sha256": "be6d4647d1dea5186e4d1388ae640b43f8004fdfc94f50ca72b46e90bf0613e9",
+    "supervisor_sha256": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301"
+  },
+  "selected_clock_signal_copper": {
+    "selection_rule": "Every current-source segment/via whose net is one of the three complete clock signal nets.",
+    "terminal_memberships": {
+      "Net-(IC1-XIN)": ["IC1.20", "Y1.3", "C2.2"],
+      "Net-(IC1-XOUT)": ["IC1.21", "R6.2"],
+      "Net-(C3-Pad2)": ["R6.1", "Y1.1", "C3.2"]
+    },
+    "counts": {
+      "segments": 17,
+      "vias": 0,
+      "F.Cu": 17,
+      "Net-(IC1-XIN)": 6,
+      "Net-(IC1-XOUT)": 2,
+      "Net-(C3-Pad2)": 9
+    },
+    "width_mm_observed_not_requirement": 0.1778,
+    "uuids_by_net": {
+      "Net-(IC1-XIN)": ["0f615350-0cdd-5afc-9272-60b780d53971", "2de77072-3836-56aa-aa34-61dd9d9e869a", "3eca473c-14bc-55cf-8c2f-09f8c94ebc93", "599bc4a4-f9e2-5318-85ae-6a329ea183cc", "9df96ba9-7077-532a-810f-c76c0eb04948", "e4a328fa-2d7d-524c-9583-d6a72f926b94"],
+      "Net-(IC1-XOUT)": ["a0c8bebc-f529-5a64-99e0-925162dc5da7", "f3a35706-bcca-5939-8e80-cde29e9480f4"],
+      "Net-(C3-Pad2)": ["12b61068-b2ba-53f0-a0dc-2ba3a31c382a", "1a870a0f-223a-5992-b011-fe7614b2e03e", "387e3555-dda5-5456-a076-fc1aef9f46b1", "4520109f-ef97-5b38-9307-3b58162a7e0f", "6c649988-b244-5099-b7f0-9d15d842083b", "90ce7ba9-20df-51f3-b77d-3373ff9edf57", "c185d54e-6020-5193-a9a7-4ecf99560653", "c7ad3855-30d6-5b6e-86ce-b35fd9d43709", "ed6f4a55-ae37-5dc1-b959-2674ca87b6e1"]
+    },
+    "series_topology": "IC1.21 -> R6.2; R6.1 -> Y1.1 and C3.2. R6 remains 1 kohm and C3 remains on the crystal side.",
+    "preservation_contract": "Retain exact current-source subtrees, poses, pad geometry, values and UUIDs. No rescaling, movement, rerouting or invented copper."
+  },
+  "finite_local_ground_path": {
+    "status": "HELD: selected segment endpoint graph connects, but pad binding and external boundary proof are incomplete",
+    "selected_terminal_set": ["C2.1", "C3.1", "Y1.2", "Y1.4", "IC1.P$1"],
+    "true_ground_terminal": {
+      "identity": "IC1.P$1",
+      "pad_uuid": "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec",
+      "role": "actual exposed GND pad and selected external protected-GND boundary"
+    },
+    "TESTEN_limit": "IC1.19/TESTEN is a ground-tied intermediate pad crossed by the existing selected path. It is not nominated as the ground terminal.",
+    "counts": {"segments": 15, "vias": 0, "layer": "F.Cu"},
+    "selected_segment_uuids": ["08727118-45d2-5ca1-9989-c574ea37a4ae", "5055b1ce-d219-5fd4-a548-d11478229c2d", "5da3c431-0df6-5f34-99e5-c1a91b873ec4", "7792ac4f-1f12-5f9b-a96a-a543cade6ca0", "7b49351e-9813-5d3b-9f3e-d9f4048136a7", "8c5a9336-4213-5f56-b137-43b3883550b5", "8c86b0a2-134a-5108-9946-1381f044ddb6", "8f023a63-ce0a-53db-9b22-6e34fc2fe2d1", "92733fe2-c1bc-57f6-bb68-1ff95c8149f3", "94a3d4fb-83aa-5505-a601-2330fa59021a", "9e39f0c7-b1b5-52a5-85d5-feda752f477e", "c935b6c4-18b9-58cc-9b6c-c33e85ab28b1", "cab392c0-45b1-5a5c-9f8e-cc37f608e092", "d8c2e342-94e7-5a83-976e-f014e66bbe2e", "e1bbb948-6e13-588d-9c70-ad64fbb8c58b"],
+    "proof": "All fifteen UUIDs are present as exact current adc262b3 GND/F.Cu segment subtrees. Their endpoint graph connects the six nominated coordinates. This does not yet prove those coordinates bind every current pad or qualify a self-contained retained block.",
+    "historical_limit": "Historical clock-approaches and local-routing records supplied the bounded candidate UUIDs and coordinates; their old required-pair assertions were not treated as present-source proof. Earlier plane-fill evidence is not rebound as a new current/future plane or SI result.",
+    "external_boundary": "IC1.P$1 is a nominated restoration terminal, not a proven exclusive cut boundary. Complete selected-to-omitted conductive-object contact enumeration remains required."
+  },
+  "union_with_original177": {
+    "original_count": 177,
+    "original_record_digest": "0e1dbecf31eb131597a811ad6e151a6898bf22837bfb32c1ad1cd8b7df2b9758",
+    "selected_clock_and_return_count": 32,
+    "intersection_count": 0,
+    "intersection_uuids": [],
+    "addition_count": 32,
+    "addition_uuids": ["08727118-45d2-5ca1-9989-c574ea37a4ae", "0f615350-0cdd-5afc-9272-60b780d53971", "12b61068-b2ba-53f0-a0dc-2ba3a31c382a", "1a870a0f-223a-5992-b011-fe7614b2e03e", "2de77072-3836-56aa-aa34-61dd9d9e869a", "387e3555-dda5-5456-a076-fc1aef9f46b1", "3eca473c-14bc-55cf-8c2f-09f8c94ebc93", "4520109f-ef97-5b38-9307-3b58162a7e0f", "5055b1ce-d219-5fd4-a548-d11478229c2d", "599bc4a4-f9e2-5318-85ae-6a329ea183cc", "5da3c431-0df6-5f34-99e5-c1a91b873ec4", "6c649988-b244-5099-b7f0-9d15d842083b", "7792ac4f-1f12-5f9b-a96a-a543cade6ca0", "7b49351e-9813-5d3b-9f3e-d9f4048136a7", "8c5a9336-4213-5f56-b137-43b3883550b5", "8c86b0a2-134a-5108-9946-1381f044ddb6", "8f023a63-ce0a-53db-9b22-6e34fc2fe2d1", "90ce7ba9-20df-51f3-b77d-3373ff9edf57", "92733fe2-c1bc-57f6-bb68-1ff95c8149f3", "94a3d4fb-83aa-5505-a601-2330fa59021a", "9df96ba9-7077-532a-810f-c76c0eb04948", "9e39f0c7-b1b5-52a5-85d5-feda752f477e", "a0c8bebc-f529-5a64-99e0-925162dc5da7", "c185d54e-6020-5193-a9a7-4ecf99560653", "c7ad3855-30d6-5b6e-86ce-b35fd9d43709", "c935b6c4-18b9-58cc-9b6c-c33e85ab28b1", "cab392c0-45b1-5a5c-9f8e-cc37f608e092", "d8c2e342-94e7-5a83-976e-f014e66bbe2e", "e1bbb948-6e13-588d-9c70-ad64fbb8c58b", "e4a328fa-2d7d-524c-9583-d6a72f926b94", "ed6f4a55-ae37-5dc1-b959-2674ca87b6e1", "f3a35706-bcca-5939-8e80-cde29e9480f4"],
+    "proposed_union_count": 209,
+    "proposed_union_record_digest": "ea87c13b851c953364636588c8e9588ca404c590ea6c1b8079fe0f6b3ca13401",
+    "zero_loss_contract": "The exact original177 set is an unchanged subset. All five mandatory process seeds, original guards, contact feeds, non-COUT private sets and COUT release/restoration obligations remain governed by the unchanged source and cc23592a contract."
+  },
+  "prospective_fixed_population": {
+    "status": "proposed only; current remains 27 fixed / 77 eligible until root acceptance",
+    "proposed_counts": {"fixed": 32, "eligible": 72},
+    "references": ["BT1", "BT2", "C24", "C26", "C27", "C28", "C29", "C30", "J1", "J2", "L1", "MH1", "MH2", "Q5", "R23", "R24", "R25", "R26", "R27", "R28", "R29", "TP10", "TP11", "U4", "U5", "U6", "X6", "IC1", "Y1", "R6", "C2", "C3"],
+    "pad_count": 164,
+    "exact_pad_record_digest": "b3aeaf7a00de4d7d75e22080ee26aa6f87df027bd2501abd27f924923634bf2a",
+    "pad_record_definition": "Sorted exact current-source records of reference, pad number, pad UUID, net and pad-subtree SHA256.",
+    "exact_private_table": "raw-preserved-clock-qualification.executed-rev2.json#/fixed32/records",
+    "new_reference_pad_counts": {"IC1": 57, "Y1": 4, "R6": 2, "C2": 2, "C3": 2},
+    "existing27_pad_count": 97
+  },
+  "boundary_and_restoration_obligations": {
+    "clock_signal_external_terminals": [],
+    "IC1_nonclock_pads": {
+      "total": 53,
+      "currently_named_connected_obligations": 34,
+      "source_unconnected_identities": 19,
+      "connected_functions": ["nine +3V3 supplies", "three VCORE terminals", "USB D+/D-", "QSPI CS/SCK/DATA0-3", "SDA/SCL", "SWDIO/SWCLK/reset", "USBBOOT", "I2S DIN/BCLK/LRCLK", "BUTTON", "AMP_MUTE", "D13", "INT", "POWER"],
+      "contract": "Fixing IC1 does not retain its ordinary nonclock fanout or make these terminals connected. Returned routing must restore every intended named terminal while preserving intentional source NC identities."
+    },
+    "selected_return_shared_branch": "The retained local return path includes the ground-tied IC1.19 pad and terminates at IC1.P$1. Removal of external ordinary GND copper must leave P$1 as an explicit restoration boundary; TESTEN19 is not a substitute GND terminal.",
+    "COUT": "Original /PROT_COUT copper remains fully released. U6.2, Q5.B2 and R29.1 remain three explicit restoration terminals under the existing contract; this clock selection neither retains a COUT stub nor weakens returned-output checks."
+  },
+  "clock_pour_exclusion": {
+    "uuid": "ec1cf4dc-a7ac-503d-a7de-eac8212578d7",
+    "layer": "In1.Cu",
+    "exact_source_subtree_sha256": "98bde38bf22720279d9c01f3e3b27f3350c4c607a8fc163d2cee3d34d43edf15",
+    "flags": {"tracks": "allowed", "vias": "allowed", "pads": "allowed", "copperpour": "not_allowed", "footprints": "allowed"},
+    "selection": "Proposed fixed-domain object retained exactly at its current source identity.",
+    "limits": "It is a pour-only exclusion, not a universal keepout, new clock SI qualification or proof of a complete return reference. No six-layer copies are created or implied."
+  },
+  "checker_controls": [
+    {"name": "valid_selection", "errors": [], "passed": true},
+    {"name": "missing_clock_signal_copper", "observed_errors": ["missing_clock_signal_copper"], "passed": true},
+    {"name": "missing_required_selected_return", "observed_errors": ["missing_required_return_member"], "passed": true},
+    {"name": "altered_protected_pad_identity", "observed_errors": ["altered_protected_pad_identity"], "passed": true},
+    {"name": "altered_protected_primitive_identity", "observed_errors": ["altered_protected_primitive_identity"], "passed": true}
+  ],
+  "future_gates": [
+    "Root engineering acceptance before changing retention from177 primitives or27/77 references.",
+    "Returned protected-GND/reference continuity, clock return-current and intentional In1 pour-hole engineering review.",
+    "Native/import preservation and returned-route checks for all IC1 boundary obligations.",
+    "Any future added via requires explicit all-layer guard, annular/process and rear-contact-metal isolation qualification; this selection adds no vias.",
+    "No observed width, pose, contour or historical route result is promoted to a new electrical performance requirement."
+  ],
+  "execution": {
+    "attempt_1": "Stopped before analysis because the workflow file changed after the pre-read; fail-closed hash mismatch preserved.",
+    "correction_1": "Repinned the root-updated workflow SHA256 and reran the unchanged analysis scope.",
+    "correction_2": "Partial saved-native endpoint binding and exact external segment endpoint screen; remaining Y1/boundary gaps held explicitly.",
+    "corrections_used": 2,
+    "correction_budget_exhausted": true,
+    "final_correction_elapsed_seconds": 1.657,
+    "final_correction_script_sha256": "3842a6b5ed7808935838552cc1c5dddc7b7c45a0b70e96db0121ac6626684d07",
+    "final_correction_raw_sha256": "7d2c0c8df93bd156b65bab149e70aef8f34390cfe8ea111ad6b9ce4e542a1733",
+    "successful_elapsed_seconds": 1.172,
+    "hard_limit_seconds": 30,
+    "native_loads": 0,
+    "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\preserved-clock-qualification-20261004T2114",
+    "executed_revision_sha256": "50615c1bf034c41f8c8fd2048e3fba186990a0b0e59b1d9f07e35109a9dc271f",
+    "raw_sha256": "20eb25985a21c35662e499158a3e8b0decd191b958c4b9d853fc8987870136a6"
+  },
+  "acceptance_boundary": "HOLD: reproducible membership facts are retained, but the complete source selection is not qualified. No expansion, source edit, clock engineering acceptance, native retry, four/six-layer input or submission is released."
+}

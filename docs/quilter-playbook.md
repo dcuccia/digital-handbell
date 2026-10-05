@@ -97,6 +97,16 @@ cannot establish a new proximity threshold or moved quiet-area margin.
 Reconcile intentional plane exclusions with reference/return intent by
 layer and purpose instead of imposing contradictory blanket rules.
 
+**Retained-cell proof discipline:** connect the selected graph to actual
+source-bound pad lands and enumerate its joins to copper that will be
+removed. A connected graph of hardcoded coordinates is not yet that proof;
+hashing an old report without comparing its relevant geometry does not
+rebind the coordinates. The initial
+[preserved-clock packet](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-qualification-2026-10-04.json)
+exposed both gaps at root review. Its executed missing-member controls
+exercise membership, not connectivity or complete identity coverage.
+Keep those claims separate even when all reported controls pass.
+
 **Observed local-net distinction:** every physical terminal on six
 protector/feedback nets belongs to the proposed retained cells. Retaining
 their complete source primitives preserves parallel branches missed by
@@ -133,6 +143,11 @@ Keep the authoritative board and raw experiments immutable. Record the
 exact PCB/project/schematic/manifest hashes, reference and physical-pad
 counts, net identities, fixed/movable references, protected copper/vias,
 outline, layer roles, physical stackup and applicable process requirements.
+Publish the execution scope before an executor pins its dependencies;
+keep subsequent progress bookkeeping outside those frozen inputs. The
+first preserved-clock attempt correctly failed closed when a concurrent
+root scope update changed the pinned workflow file. That avoidable
+coordination failure consumed a correction, not evidence of a PCB defect.
 Use native poses, including footprint rotation, for both protected objects
 and candidate obstacles rather than stale proxies.
 Check any local-to-global transform against saved native coordinates and

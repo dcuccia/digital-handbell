@@ -14,6 +14,20 @@ Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
 ## October 4, 21:14: owner selects preserved-clock qualification
 
+**21:26 disposition: held, not rejected as defective.** The
+[packet](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-qualification-2026-10-04.json)
+identifies17 signal/15 proposed return F segments, with no new vias and a
+prospective209-object union/32 fixed references/164 pads. Root found that
+the connected endpoint graph did not bind its nominated pad coordinates
+or enumerate actual external contacts. The final correction matches four
+coordinates to saved-native records but leaves Y1.2/Y1.4 on pre-move
+evidence. Zero exact external endpoint joins does not cover pad lands or
+segment interiors. Membership controls do not prove those missing gates.
+The child finished21:24:52, correction report21:25:12; both corrections
+are exhausted. Keep177/27/77 and all source bytes unchanged.
+A newly authorized bounded coordinate/boundary proof is the next scope.
+No native retry, input generation or Quilter submission follows.
+
 After the explicit scope choice, the owner selects a preserved
 IC1/Y1/R6/C2/C3 block for the first four/six comparison. The tradeoff is
 explicit: this first study would leave72 other references eligible but

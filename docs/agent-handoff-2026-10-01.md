@@ -7,7 +7,21 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Active October 4, 21:14:** owner chose to qualify a preserved MCU/clock
+**Current October 4, 21:26: HOLD.** The
+[preserved-clock packet](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-qualification-2026-10-04.json)
+preserves17 signal/15 proposed return F segments and prospective209/32/164
+primitive/reference/pad counts, not a qualified retained block. Four
+coordinates match saved-native records; Y1.2/Y1.4 records predate its move.
+Exact endpoint screening does not cover pad-land or segment-interior
+contacts, so the external boundary inventory remains incomplete.
+This is a proof gap, not a demonstrated board defect. Both corrections
+are exhausted; final child completed21:24:52, report21:25:12, executor idle.
+Current177 primitives and27 fixed/77 eligible remain unchanged.
+Next needs a newly authorized bounded Y1-binding/complete-contact proof,
+not another broad inventory or new graph framework. Preserve all private
+revisions and the unchanged source; no native retry, full input or cloud job.
+
+**Prior authorization October 4, 21:14:** owner chose to qualify a preserved MCU/clock
 block for the first comparison. The same verified Sol/medium executor
 `aa88e077-03b1-41be-b7e2-6a00d853d123` is preparing a static selection
 contract through21:25/report21:26/root21:29. It must prove exact signal

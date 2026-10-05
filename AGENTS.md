@@ -2,6 +2,15 @@
 
 ## Bounded engineering work
 
+- **October 4, 21:26 preserved-clock packet held:** exact17 signal plus15
+  proposed return F segments give a prospective209 union and32 fixed/
+  164 pads. This is membership evidence, not a qualified retained block:
+  Y1.2/Y1.4 saved-native coordinates predate its move, and the external
+  contact screen omits pad-land/segment-interior contacts. No actual
+  disconnection is established. Both corrections are exhausted; executor
+  stopped21:24:52 and is idle. Keep177 and27/77 unchanged. A new bounded
+  endpoint/boundary-proof scope needs authorization; no native retry,
+  source change, input staging or cloud job. See the preserved-clock ledger.
 - **October 4, 21:14 preserved-clock qualification approved:** owner
   selected a bounded preserved IC1/Y1/R6/C2/C3 option for the first4/6
   comparison, accepting that this would not test MCU relocation.
