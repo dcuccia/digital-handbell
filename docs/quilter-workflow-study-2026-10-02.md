@@ -12,6 +12,23 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 21:14: owner selects preserved-clock qualification
+
+After the explicit scope choice, the owner selects a preserved
+IC1/Y1/R6/C2/C3 block for the first four/six comparison. The tradeoff is
+explicit: this first study would leave72 other references eligible but
+would not test MCU relocation. This is bounded qualification, not an
+applied retention expansion, authoritative-board change or job release.
+
+Verified Sol/medium continues the reviewed clock task with one static
+selection packet: complete source signal nets, finite local GND returns
+to actual IC1.P$1, boundary/restoration duties and union with the existing
+177. Historical paths must be rebound to current primitive/pad geometry.
+A path through an unretained movable pad is a real dependency, not a
+connected-input claim. Do not retain all GND or freeze additional parts.
+Genuine missing-member and identity controls must exercise the checker.
+Stop execution21:25, report21:26/root21:29; no native or cloud action.
+
 ## October 4, 19:40: clock identities established; engineering criteria remain
 
 The [clock ledger](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)

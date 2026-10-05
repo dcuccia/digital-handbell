@@ -2,6 +2,15 @@
 
 ## Bounded engineering work
 
+- **October 4, 21:14 preserved-clock qualification approved:** owner
+  selected a bounded preserved IC1/Y1/R6/C2/C3 option for the first4/6
+  comparison, accepting that this would not test MCU relocation.
+  Same verified Sol/medium executor prepares the static packet through
+  21:25/report21:26/root21:29. Prove complete signals, finite local returns
+  to real P$1, external obligations and union with177; do not hide movable
+  pad dependencies or retain all GND. Prospective32 fixed/72 eligible and
+  expanded retention remain unapplied pending root review. No native
+  loads, source edits, full input, cloud action or automatic submission.
 - **October 4, 19:40 clock source bindings accepted:** one0.86s static
   extraction identifies all eight signal terminals, correct R6 ends and
   actual C2/C3 loads/case grounds. Source is unchanged and executor idle.

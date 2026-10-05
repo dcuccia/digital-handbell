@@ -166,7 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 4, 19:40:** source clock bindings are accepted from one
+**Active October 4, 21:14:** owner explicitly selects a bounded qualification
+of preserved IC1/Y1/R6/C2/C3 for the first four/six comparison. Verified
+Sol/medium continues the reviewed clock task through21:25,
+report21:26/root21:29. Qualify complete clock signals, finite local returns
+to actual P$1 and external restoration duties before expanding177 or
+applying the prospective32/72 partition. No hidden movable-pad dependency,
+whole-GND retention, extra frozen references, native load, source change,
+full input or cloud job. This would not test MCU relocation.
+
+**Prior accepted October 4, 19:40:** source clock bindings are accepted from one
 0.86s static extraction: all eight terminals on three signal nets, correct
 R6 ends, C2/C3 loads and Y1 case grounds. Source is unchanged; executor idle.
 The [clock ledger](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)

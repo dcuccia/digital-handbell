@@ -7,7 +7,16 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 4, 19:40:** the
+**Active October 4, 21:14:** owner chose to qualify a preserved MCU/clock
+block for the first comparison. The same verified Sol/medium executor
+`aa88e077-03b1-41be-b7e2-6a00d853d123` is preparing a static selection
+contract through21:25/report21:26/root21:29. It must prove exact signal
+copper, finite local returns to real P$1, boundary duties and union with177.
+Do not hide a dependency on a movable pad or retain all GND.
+The prospective32 fixed/72 eligible partition is conditional, not applied.
+No native load, source change, full input, cloud action or job is released.
+
+**Prior accepted October 4, 19:40:** the
 [clock evidence](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)
 (`95d2737d...`) pins the three signal nets and all eight terminals, with
 R6.2 MCU-facing and R6.1/Y1.1/C3.2 on the crystal side. One static child
@@ -20,10 +29,9 @@ hole needs reconciliation with reference/return intent, not a blanket
 continuous-plane requirement or an automatic copy of the old rectangle.
 Next is that bounded engineering disposition; no more terminal extraction,
 MCU freeze, new retention, full input or cloud release.
-Owner scope decision is pending: continue movable-clock qualification or
-separately qualify a preserved IC1/Y1/R6/C2/C3 block for the first comparison
-(prospective32 fixed/72 eligible). Neither a freeze nor added retention is
-applied. The accepted evidence was pushed at19:46:47,1m47 beyond the root
+The subsequent owner decision is recorded above. Neither a freeze nor
+added retention is applied. The accepted evidence was pushed at19:46:47,
+1m47 beyond the root
 target while completing documentation/hash bindings; no execution extended.
 
 **Current accepted October 4, 19:27:** the
