@@ -2,6 +2,22 @@
   "schema_version": 1,
   "date": "2026-10-02",
   "status": "STUDY_ROLES_AND_90_OHM_INTENT_SELECTED_NATIVE_INPUT_AND_ACTUAL_SOLVE_PENDING",
+  "clock_relative_contract_item": {
+    "status": "STATIC_SOURCE_RELATIONSHIP_EVIDENCE_IN_PROGRESS",
+    "executor": "aa88e077-03b1-41be-b7e2-6a00d853d123",
+    "verified_model_effort": "gpt-5.6-sol / medium",
+    "runtime_started_event": "caed571f-eb94-497c-af11-140f423c199a",
+    "runtime_configured_event": "770bd2e1-6288-4a3e-b337-511a91c6d2bf",
+    "runtime_probe_completed_event": "837d7248-5882-411c-b05f-1f80a34cdf03",
+    "scope": "Source IC1/Y1/R6/C2/C3 pad/net roles, all selected clock-signal terminals, clock-relative exclusion/return duties and existing normative versus observed numeric evidence. Candidate relative-pin identities only; Astra retains engineering thresholds and acceptance.",
+    "execution_stop_local": "2026-10-04 19:42",
+    "report_due_local": "2026-10-04 19:43",
+    "root_checkpoint_due_local": "2026-10-04 19:45",
+    "maximum_corrective_retries": 2,
+    "hard_static_child_limit_seconds": 30,
+    "expected_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-clock-relative-contract-2026-10-04.json",
+    "native_loads_source_changes_full_input_cloud_or_new_retention_allowed": false
+  },
   "movable_domain_disposition": {
     "checkpoint_local": "2026-10-04 19:27",
     "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-movable-domain-disposition-2026-10-04.json",

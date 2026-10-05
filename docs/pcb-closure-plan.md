@@ -166,6 +166,11 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Active October 4, 19:31:** runtime-verified Sol/medium performs one static
+IC1/Y1/R6/C2/C3 source-relationship evidence item through19:42,
+report19:43/root19:45. Use the executor in the workflow contract; no native
+inventory, source/candidate change, added retention or cloud action.
+
 **Current October 4, 19:27:** read-only domain disposition finds an
 additional relative-placement path: Custom Component Proximity, explicitly
 best effort, with parent-pin/max-distance fields but no child-pin field.

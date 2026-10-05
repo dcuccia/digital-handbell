@@ -12,6 +12,9 @@
   and independent clock/return/exclusion obligations. Do not bypass R6,
   freeze the MCU, add retention or route manually. Physical domains and
   native/import qualification still gate full input and paired jobs.
+  Verified Sol/medium now executes that static clock-evidence item under
+  the workflow contract: stop19:42/report19:43/root19:45. Do not duplicate
+  the active executor or run a new native inventory.
 - **October 4, 19:15 native F-room serialization qualified:** returned
   `3a5f6d89...` adds one named all-clear F rule area while preserving all58
   original fixture subtrees, guards and fills. Root verifies complete

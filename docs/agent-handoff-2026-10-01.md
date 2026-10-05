@@ -7,7 +7,14 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 4, 19:27:** the
+**Active October 4, 19:31:** verified Sol/medium
+`aa88e077-03b1-41be-b7e2-6a00d853d123` is extracting the bounded source clock
+relationship/acceptance evidence, execution19:42/report19:43/root19:45.
+Read its result before another item; no duplicate executor or native run.
+This does not release threshold invention, MCU placement, new retention,
+full input or cloud changes. Exact scope/runtime events are in the contract.
+
+**Current accepted October 4, 19:27:** the
 [movable-domain disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json)
 keeps27/77 and identifies Custom Component Proximity in the current client
 and existing-job schema. It is explicitly best effort, without a child-pin
