@@ -72,6 +72,19 @@ false comparisons. Timeouts likewise leave evidence open. Keep promising
 candidates with a finite review list, but do not start costly manual
 closure or promote a higher-percentage output before those gates close.
 
+**Final-run supplement:** the same job finished after3h13m with12 results.
+The beta strategy achieved92.18-94.65% but reported83-178 padstack
+collisions. Candidate3.2 did improve C15's actual reported route from
+its predecessor's28mm/two switches to4-5mm/zero switches, so later
+optimization can improve electrical geometry as well as completion.
+Compare candidates with their actual placement lineage and keep both
+gains and regressions visible. Classify collision findings before treating
+them as native shorts, benign reports or a count of independent repairs.
+Evaluate error statuses separately: fewer failed decoupling checks may
+mean missing paths became uncheckable, not that they were fixed.
+Computed differential-path checks can coexist with an incomplete-net
+report; they do not establish all-terminal connectivity.
+
 ## What the evidence supports
 
 | Finding | Evidence and limit | Working guideline |

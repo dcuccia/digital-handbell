@@ -1,5 +1,55 @@
 {
   "schema_version": 1,
+  "final_browser_checkpoint": {
+    "observed_local": "2026-10-05T14:57:41-07:00",
+    "scope": "Final-job browser review and representative native archive preservation only. No native loads, checker retry, DRC, refill, repair, acceptance or new submission.",
+    "job_state": "complete",
+    "finished_epoch_ms": 1791235670265,
+    "finished_local": "2026-10-05 14:27:50 America/Los_Angeles",
+    "elapsed_seconds": 11604.691,
+    "candidate_count": 12,
+    "service_successful_candidate_count": 0,
+    "highest_routing_fraction": 0.9465020576131687,
+    "interpretation": "Six original router2 proposals and six beta bitter_lesson proposals, linked by placementId. None reaches 95%. Service successful count is not independent engineering acceptance.",
+    "beta_candidates": [
+      {"label": "1.2", "id": "6ac40e4dbb61c2699ba19dae", "routing_fraction": 0.9218106995884774, "vias": 169, "incomplete_nets": 12, "padstack_collision_reports": 83},
+      {"label": "2.2", "id": "6ac4109aee3d679b2503c8f7", "routing_fraction": 0.934156378600823, "vias": 181, "incomplete_nets": 13, "padstack_collision_reports": 130},
+      {"label": "3.2", "id": "6ac414cf9131912de8c9e9a8", "routing_fraction": 0.9465020576131687, "vias": 188, "incomplete_nets": 9, "padstack_collision_reports": 178},
+      {"label": "4.2", "id": "6ac4149602cbab5368608a05", "routing_fraction": 0.9465020576131687, "vias": 188, "incomplete_nets": 9, "padstack_collision_reports": 178},
+      {"label": "5.2", "id": "6ac41606f2690dcb52575ba5", "routing_fraction": 0.9218106995884774, "vias": 169, "incomplete_nets": 12, "padstack_collision_reports": 83},
+      {"label": "6.2", "id": "6ac4162a3e05e8740bdfc16b", "routing_fraction": 0.934156378600823, "vias": 181, "incomplete_nets": 13, "padstack_collision_reports": 130}
+    ],
+    "collision_limits": "For representatives 1.2/2.2/3.2 the 83/130/178 records have distinct item strings. This does not establish independent physical defects or shorts. Layer counts for 3.2 are F118/B33/In1 9/In2 18. Root has not classified actual geometry or inherited versus new contacts.",
+    "candidate_3_2": {
+      "actual_predecessor": "3.1; same placementId 6ac3f2eb3f6f72c5a381b1fb",
+      "service_progress": "87.2428% to94.6502%; incomplete-net list28 to9; via count122 to188. Connectivity benefit remains conditional on native preservation/collision disposition.",
+      "c15_improvement": "IC1.44/42 routes change from27.732/28.762mm and two layer switches in3.1 to4.757/4.055mm and zero switches in3.2; all six associated service checks pass.",
+      "usb": "D+/D- passes all four service checks. USB_D+/USB_D- fails length mismatch23.155mm, uncoupled length13.366mm and interrupted return; return-connector distance passes. USB_D- also appears incomplete.",
+      "power": "Nine passes, two failures (VBUS overheated fraction0.7173122650703638 and VHI0.6387909991936662 against0.1), three errors (+3V3/VCORE incomplete and GND Invalid input net). These use provisional current screens, not measured operating temperatures.",
+      "bypass": "77 passes, one failure, six errors across84 checks. C24 signal path10.052536mm fails10mm threshold; C6 and both C17 associations cannot evaluate path/layer-switch checks. Lower failure counts must not hide errors.",
+      "incomplete_nets": ["+3V3", "I2S_DIN", "I2S_MOD", "Net-(D3-PadA)", "QSPI_CS", "QSPI_DATA[1]", "USB_D-", "VCORE", "~{RESET}"],
+      "newCadDrcViolations": [],
+      "native_limit": "Empty newCadDrcViolations does not override187 service findings or establish native DRC cleanliness. Archive preserved without extraction or native validation."
+    },
+    "evidence": {
+      "directory": ".playwright-mcp",
+      "job_response": {"file": "four-final-job-1455.json", "sha256": "8eddd0f4ab4d1a5c4f68182041a53ee32e6e18afd2d38513693ffb6410a95ed6"},
+      "detail_sha256": {
+        "four-final-candidate1-2-1456.json": "28b33af35ba84993cd93c41337a6580306d642c8904fefc36563ed35236ea738",
+        "four-final-candidate2-2-1456.json": "f68391c41ef8ec70ec2d82a8876b2d4284669bb729ecba13dd8ba2bcf2dbb2b1",
+        "four-final-candidate3-2-1456.json": "19767257264dbbf5569d7f2c344b36a9cf1da07fa6060878f7bdfb04398e3237",
+        "four-final-candidate4-2-1456.json": "5a95d6421e97dc18c9aecec365bad8df0ec32eaaf5c2a4e9698b5f01b4b373b2",
+        "four-final-candidate5-2-1456.json": "7da0408d3bf95f3830a966dca55c9ee38150aa37e896ae8799f499c99c4aed92",
+        "four-final-candidate6-2-1456.json": "9bdb2215ab2b332bd02962064ac39ad8e5001e175b0072fdd7085d51454b1957"
+      },
+      "new_archives": [
+        {"file": "four-final-candidate-2-2-1500.zip", "sha256": "10370ed75639ba0a686622f0a58971de03be12527e51d33ca72410c2dd4ea6ae"},
+        {"file": "four-final-candidate-3-2-1458.zip", "sha256": "be8964848d64e1f5e33135af0e4a1ee19dc499848b6522172fde072493be972c"}
+      ],
+      "download_terms": "Both downloads explicitly showed Free Tier; no payment or new agreement."
+    },
+    "recommendation": "Add3.2 as the high-completion candidate to diagnose, keeping1.1/3.1 as controls and preserving lower-collision beta1.2. First classify beta collisions and close the returned-native preservation/DRC gate in a separately bounded item before deciding whether it is economical to build on any result. Do not automatically prefer94.65%, merge candidates, resume manual routing, or start six-layer work from this observation."
+  },
   "review_window_local": "2026-10-05 13:44-13:56 America/Los_Angeles",
   "job_id": "6ac3d5b7fc0d2d776ed14a60",
   "scope": "Read-only browser review of available results, raw downloads, and bounded isolated candidate 1.1 native preservation/DRC attempt. No repair, refill, integration, job modification or new submission.",

@@ -7,6 +7,28 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5 final job review: complete,12 candidates, best94.65%.**
+Job ended14:27:50 after3h13m24s. The
+[returned-candidate ledger](measurements/2026-09-27-router-bakeoff/quilter-four-candidate-review-2026-10-05.json)
+now starts with `final_browser_checkpoint`; older observations below it
+remain historical. Six new beta results form three summary pairs:
+1.2/5.2=92.18%,83 collision reports,12 incomplete nets;
+2.2/6.2=93.42%,130 reports,13 incomplete;
+3.2/4.2=94.65%,178 reports,9 incomplete. Reports are not proven shorts or
+independent repairs, and identical metrics are not geometric equality.
+The service records zero successful candidates; none reaches95%.
+
+Candidate3.2 merits diagnosis: relative to3.1 on the same placementId,
+C15's27.7/28.8mm routes and two switches become4.76/4.05mm with no switch.
+D+/D- service checks pass. USB_D+/USB_D- still fails mismatch/coupling/
+return checks; VBUS/VHI fail provisional current screens. Its nine
+incomplete nets include+3V3,VCORE,USB_D-,QSPI_CS/DATA1,RESET and I2S duties.
+Preserve3.2 as a promising but unaccepted alternative, not the winner.
+Representative2.2/3.2 archives are downloaded under Free Tier; no native
+load, checker retry, refill, repair, source change or six-layer job.
+Next requires a separately bounded beta-collision and returned-native
+preservation/DRC disposition before committing to closure work.
+
 **October 5, 13:56: useful routed proposals, no accepted build-on board.**
 The [returned-candidate review](measurements/2026-09-27-router-bakeoff/quilter-four-candidate-review-2026-10-05.json)
 covers six initial86.42-87.24% candidates and the newly arrived92.18%

@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 5 final four-layer result:** job completed14:27:50 after3h13m24s
+  with12 candidates. Six beta outputs reach92.18/93.42/94.65%, paired by
+  summary metrics; none reaches95%. They report83/130/178 padstack
+  collisions and12/13/9 incomplete nets respectively, not proven shorts.
+  In3.2, C15 routes improve from predecessor3.1's28mm/two switches to
+  4-5mm/zero switches; D+/D- checks pass, but USB_D pair return/coupling,
+  VBUS/VHI current screens and important incompletes remain. Preserve
+  representative2.2/3.2 downloads; no new native execution or exhausted
+  checker retry. Add3.2 to the diagnostic shortlist, not acceptance.
+  Next is separately bounded collision/preservation/DRC disposition,
+  not automatic manual closure, integration or six-layer submission.
+  See returned-candidate ledger's final_browser_checkpoint.
 - **October 5, 13:56 returned candidates reviewed, none accepted:** first six
   finish57-61minutes after launch at86.42-87.24% by Quilter's metric.
   During review, beta1.2 arrives at13:53 with92.18%, but83 padstack-collision
