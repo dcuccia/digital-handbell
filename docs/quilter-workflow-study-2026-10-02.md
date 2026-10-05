@@ -12,6 +12,54 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 5, 07:36: construct the two isolated inputs
+
+**07:48 disposition: both files constructed, usable-input objective
+incomplete.** The [construction ledger](measurements/2026-09-27-router-bakeoff/quilter-input-construction-2026-10-05.json)
+preserves r1 and corrected r2. The last native pipeline completed07:46:19
+in3.719s; all three attempts are consumed. R2 fixes contact guard flags,
+core/prepreg types and final manifest bindings. Both packages read back
+104 references/325 pads/209 copper; counts are not a semantic comparison.
+Four PCB`7695b88e...` and six`97d99b4d...` remain HELD.
+
+The concrete unfinished implementation is native footprint-only mount/
+connector reservations and exact source/native preservation comparison
+for32 fixed/72 moved/209 retained objects, outline, guards and profiles.
+The complete209/164 contact/process screen and finding disposition also
+remain unqualified. Four's r1 DRC timeout was not retried; six r2 reports
+317 findings/184 opens. Zero parity entries do not prove parity was enabled.
+The unfilled planes and90-ohm sidecar remain declarations, not service
+enforcement or returned-layout performance. Root verified final manifest
+hash bindings and all five unchanged authoritative source hashes.
+
+No further executor run, cloud preview or submission is released. Preserve
+these concrete drafts and finish the named encoding/comparison gaps in
+a separately bounded item rather than reopen general requirement research.
+
+The owner explicitly asks to construct the inputs after the readiness
+decision. This is a new bounded implementation item, not an automatic
+extension of the earlier assessment. One runtime-verified Sol/medium
+executor builds both packages against the common209/32/72 contract.
+Execution07:47/report07:48/root07:50, initial plus two corrections.
+Static children have30-second hard limits; generated-derivative native
+load/save/reload/DRC children have90-second limits. No source-native load,
+source edits, refill, manual routing, cloud action or installation.
+
+The packages must contain actual PCB/project files and the unchanged
+schematic, not only a sidecar wish list. The implementation uses the
+accepted D45/tongue outline, broad F-placement freedom and source
+mount/connector reservations, selected contact/private guards, actual
+3313 profiles and explicit retained-versus-new minima. Exactly72 eligible
+references are parked outside the outline;32 fixed poses and all104/325
+source identities remain. Existing19 pour-only source exclusions refer
+to the now-fixed private/boost/clock circuitry and remain accounted for.
+
+Native-readable files are not automatically cloud-ready. Sidecar region
+associations,90-ohm intent and circuit-comprehension obligations are not
+claimed to be imported or enforced. Native comparison and finding
+disposition must identify their actual coverage; a later approved preview
+must verify service settings before any submission.
+
 ## October 5: budgeted path to a useful experiment
 
 **07:28 decision: clock source selection accepted; full-board trial no-go.**

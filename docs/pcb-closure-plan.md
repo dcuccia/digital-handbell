@@ -166,7 +166,28 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 5, 07:28: clock selection accepted; full trial NO-GO.**
+**Current October 5, 07:48: paired inputs constructed, not usable yet.**
+Preserve [r2 and its source-bound ledger](measurements/2026-09-27-router-bakeoff/quilter-input-construction-2026-10-05.json).
+Native counts104/325/209 and final manifest hashes are recorded, but
+MH1/MH2/J1/J2/X6 native reservations and semantic preservation matchers
+are incomplete. Expanded209/164 screening and finding disposition remain.
+Contact flags/core types were corrected without source changes; four DRC
+was not repeated, six has317 findings/184 opens. All three attempts are
+exhausted; executor idle since07:46:19. No preview/upload/submission release.
+One future bounded completion should target these exact encoding and
+comparison gaps, not restart the source-selection or placement search.
+
+**Historical authorization October 5, 07:36:** owner explicitly requests the two input
+packages. This new construction item may generate isolated full
+four/six derivatives from the selected209/32/72 contract, then load/save/
+reload and run bounded native diagnostics on those derivatives only.
+Verified Sol/medium`bbf4e823...` stops07:47/report07:48/root07:50.
+Source-native loads/edits, refill, routing and cloud actions are excluded.
+Constructed, native-checked and preview-qualified are separate outcomes;
+preserve partial files and name any remaining gate rather than call a
+parseable file usable by default.
+
+**Prior October 5, 07:28: clock selection accepted; full trial NO-GO.**
 The [current-source recovery](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-boundary-recovery-2026-10-05.json)
 closes pad binding and self-contained local signal/return paths. Select
 209 primitives,32 fixed references/164 pads and72 eligible for comparison

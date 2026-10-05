@@ -7,7 +7,31 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 5, 07:28: source-clock selection accepted; full trial
+**Current October 5, 07:48: two native packages exist, both HELD.**
+The [construction ledger](measurements/2026-09-27-router-bakeoff/quilter-input-construction-2026-10-05.json)
+binds r2 at private `quilter\inputs\comparison-inputs-20261005T0746-sol-r2`;
+four PCB`7695b88e...`, six`97d99b4d...`. Contact flags, core/prepreg
+serialization and final manifest bindings are corrected. Native readback
+counts104/325/209 do not establish semantic preservation. MH1/MH2 R3.2
+and J1/J2/X6 footprint reservations remain unencoded; exact fixed/moved/
+retained/outline/guard/profile comparisons remain incomplete.
+Expanded209/164 screening and DRC classification are also open.
+Four's r1 timeout was not retried; six r2 has317 findings/184 opens.
+All three construction attempts are consumed; native work ended07:46:19.
+Source hashes are unchanged, all experiments preserved, no upload.
+Next is a separately bounded completion of the finite encoding/comparison
+list, not another general inventory or automatic native/cloud retry.
+
+**Historical authorization October 5, 07:36:** owner explicitly requested constructing
+both inputs. New verified Sol/medium executor`bbf4e823...` may create
+isolated four/six PCB/project/schematic packages and run derivative-only
+native save/reload/DRC. Source and all prior experiments stay immutable.
+Execution stops07:47/report07:48/root07:50; at most two corrections,
+hard30s static/90s native limits. No source-native load, refill, manual
+routing or cloud action. Native parsing alone does not release upload;
+record unresolved region/electrical/import obligations explicitly.
+
+**Prior October 5, 07:28: source-clock selection accepted; full trial
 NO-GO.** The [recovery](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-boundary-recovery-2026-10-05.json)
 binds current Y1 pads and proves all local clock paths using selected
 copper/fixed lands only. Root selects209 primitives (191 tracks/18 vias),

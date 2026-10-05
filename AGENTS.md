@@ -2,6 +2,27 @@
 
 ## Bounded engineering work
 
+- **October 5, 07:48 paired inputs constructed but held:** isolated r2
+  four/six files native-roundtrip with104 refs/325 pads/209 copper.
+  Contact flags, core/prepreg types and final manifest bindings are
+  corrected; no source change or cloud action occurred. Missing native
+  MH1/MH2/J1/J2/X6 reservations and exact semantic preservation checks
+  prevent usable-input acceptance. Expanded209/164 screening and finding
+  disposition remain open. Four DRC was not retried after r1 timeout;
+  six reports317 findings/184 opens, not a clean result. All three
+  attempts are exhausted; executor stopped07:46:19 and is idle.
+  Preserve r1/r2. Next requires a separately bounded completion of these
+  concrete encoding/comparison gaps, not another inventory or cloud job.
+- **October 5, 07:36 two-input construction requested:** owner explicitly
+  asks to construct both usable inputs after the readiness no-go.
+  This is a new bounded local construction item, not a continuation of
+  clock repairs. Verified Sol/medium builds isolated four/six packages
+  from209/32/72 and existing envelope/guard/profile evidence.
+  Execution07:47/report07:48/root07:50; initial plus two corrections,
+  hard30s static/90s native children. Native loads/saves/DRC are derivative
+  only; no source load/edit, refill, routing or cloud action.
+  Distinguish constructed/native-checked/preview-qualified files;
+  unresolved essential constraints remain explicit blockers.
 - **October 5, 07:28 clock selection closed; full trial is no-go:** current
   saved-native pads resolve Y1, and selected local paths connect all clock
   terminals to their intended nets, including real P$1, without movable

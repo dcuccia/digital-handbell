@@ -240,6 +240,14 @@ input: retain separate gates for real geometry, association and placement.
 Keep placement regions separate from safety keepouts. Inspect each
 keepout's actual track/via/pour flags and layers; a suggestive name is not
 a rule. Screen full copper shapes, including the B annulus of through-vias.
+Use explicit flag profiles for each rule family rather than a generic
+"all prohibited" constructor. In the first October5 full-input draft that
+shortcut changed the demonstrated contact guards, which allow pads and
+footprints while excluding new tracks/vias/pours. Private-tap guards have
+different flags; a positive placement room clears every restriction.
+A reservation written only in a sidecar is not an encoded placement
+restriction, and dielectric material named "core" does not correct a
+native layer whose type still says "prepreg".
 
 Re-evaluate which parts actually move before building more domain classes.
 At the handbell's selected+2mm spacing, the saved height screen leaves only
