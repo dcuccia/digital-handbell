@@ -166,7 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 5, 07:58: stop after three failed static attempts.**
+**Active October 5, 08:10:** owner authorizes one sustained local
+completion push through09:10, no new item after09:00. Finish the checker
+and real mutations, review code before its first run, then advance through
+successful dependencies to reservations/native pairs and exact finding
+disposition. Reuse saved source-native poses; no new inventory. The
+[handoff](agent-handoff-2026-10-01.md#start-here) records the replacement
+runtime-verified Sol/medium executor and first08:26 checkpoint.
+Source/r1/r2 and failures remain immutable; no routing/refill/cloud/paid use.
+
+**Prior October 5, 07:58: stop after three failed static attempts.**
 The [completion ledger](measurements/2026-09-27-router-bakeoff/quilter-input-completion-2026-10-05.json)
 records partial reservation encoding but no complete r3 pair or native
 execution. The checker needs both representation normalization and

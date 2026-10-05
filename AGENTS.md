@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 5, 08:10 one-hour completion push authorized:** owner requests
+  sustained progress on the paired-input milestone, not more disconnected
+  micro-iterations. Stop09:10; start no new item after09:00. Reuse r2 and
+  saved source-native serialized definitions; do not guess pad transforms
+  or rebuild inventory. First implement and review complete checker code
+  plus real mutations BEFORE its first execution (review08:20,
+  execution08:24/root08:26). Same verified Sol/medium; at most initial plus
+  two corrections per newly bounded item,30s static/90s native children.
+  Continue through successful dependencies to reservations, saved-native
+  pairs and exact finding disposition within the hour. Source/r1/r2 and
+  failed evidence remain immutable. No refill, routing, cloud action,
+  paid use or weakened checks; exhausted retries still stop affected work.
 - **October 5, 07:58 completion blocked; executor stopped:** three static
   attempts failed before any r3 native work. Five F footprint reservations
   exist only in preserved partial four-layer copies. Root finds more than

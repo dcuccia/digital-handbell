@@ -7,7 +7,23 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 5, 07:58: implementation completion blocked.**
+**Active October 5, 08:10: one-hour local completion milestone.**
+The owner authorizes sustained work through09:10, starting no new item
+after09:00. First finish and root-review the entire static checker and
+real input mutations before execution, using existing source-native pad
+pose witnesses instead of guessing angle conventions. The serialized
+definitions in that inventory are still source text; its separately
+captured native positions/orientations are the physical witnesses.
+The old executor handle was cleared; replacement`2e0915c7...` is runtime
+verified Sol/medium (started`23a224cd...`, configured`2a0b1981...`).
+Code review08:20, execution08:24/root08:26; initial plus two corrections.
+After successful dependencies, continue to reservation/native-pair
+completion and exact finding disposition within the hour. Preserve
+source/r1/r2 and old failures; no refill, routing, cloud or paid action.
+This authorization does not turn missing tests into passes or renew an
+exhausted item automatically.
+
+**Prior October 5, 07:58: implementation completion blocked.**
 The [completion ledger](measurements/2026-09-27-router-bakeoff/quilter-input-completion-2026-10-05.json)
 preserves three failed static attempts and final checker`e4053ab4...`
 privately. No native r3 action occurred. Partial four-layer copies contain
