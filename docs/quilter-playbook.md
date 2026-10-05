@@ -611,6 +611,14 @@ exceeded it. This is a useful alternate construction, not proof that six
 is impossible or permission to lower a minimum. Compare soldermask, finished
 copper, dielectric assumptions and actual reference layers across solvers;
 two90-ohm labels do not establish equivalent models.
+The same eight2116 outer-layer example changes0.189738->0.211328mm when
+the supplier calculator switches from coated to uncoated differential mode,
+with0.254mm spacing retained. This demonstrates material model sensitivity,
+not the entire cause of a cross-solver discrepancy. Saved Quilter null
+mask/reference overrides do not reveal effective defaults. Preserve that
+uncertainty instead of calling them false. A construction that clears
+current minima in both examples can proceed to a fresh qualified preview;
+manufacturer impedance acceptance remains a separate gate.
 
 Do not copy a qualified input directory wholesale into a new experiment:
 old DRC/semantic reports and personal PRL files can appear to certify the
@@ -618,17 +626,29 @@ new board. Copy the intended inputs only, persist each phase's results before
 a slower phase, and bind the manifest only to final bytes. A DRC timeout
 must not erase already demonstrated native preservation, but neither does
 that preservation turn a missing diagnostic into a pass.
+The six-layer recovery completes separate CLI DRC in74.86s under90s, beyond
+the old internal60s timeout. Do not attribute success to host separation
+when the timeout changed too. Compare complete finding multisets:505 records
+here have only475 unique signatures. A set-only comparison loses30 repeated
+witnesses. Keep record counts, unique root signatures and inferred electrical
+equivalence distinct. Check every current manifest binding, not only a new
+`final_native_hashes` field; label earlier hashes as provenance explicitly.
 
 Check supported physics targets before staging, but distinguish documentation,
 client entry, backend solving and returned routing. **Documented:** Quilter
 lists85/100-ohm choices. **Observed in the current client implementation:**
 the impedance field uses numeric text entry with positive-value validation;
 the independent single-ended target can be blank. Thus the old documentation
-does not establish frontend impossibility for our90-ohm intent. Actual
-editable-draft persistence and90-ohm solving are still unverified. Keep the
+does not establish frontend impossibility for our90-ohm intent. At that
+checkpoint, editable-draft persistence and90-ohm solving were unverified. Keep the
 requirement, prepare the qualified stackup, and test that exact input at
 preview; do not create a circular dependency or duplicate a job merely to
-probe a selector. See the [capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json).
+probe a selector. That was the
+[October4 capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json);
+the [October5 paired import](measurements/2026-09-27-router-bakeoff/quilter-paired-import-2026-10-05.json)
+subsequently demonstrated saved90-ohm targets and selected-model solving.
+New constructions still need their own fresh results; prior success does
+not qualify new layer roles, material models or returned routing.
 
 Inspect achieved per-layer values and current solve status, not just the
 target label or a green aggregate. The old job displays100-ohm calculations

@@ -7,6 +7,42 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5, 16:20: six diagnostic complete; eight native construction next.**
+The preserved c7497180 board completes standalone DRC in74.86s with the same
+321 violations/184 staged opens. All505 records reconcile:498 inherited,
+seven changed open representatives, no new non-open findings; parity was
+not enabled. Report-only corrections fix duplicate loss and a stale
+current-file hash. Final manifest bef53063/report7181e108 are bound in the
+four-signal ledger. All five authoritative worktree files remain unchanged.
+The old60s timeout is insufficient for this observed duration, so success
+does not prove a native-host/lock explanation.
+
+The next bounded item constructs standard eight2116 from accepted six3313,
+not from a returned candidate: same104/325/209 geometry, four signal layers,
+four additional private-via guard rectangles and one additional In6 GND
+zone. Verified executor2402eefd stops16:33/report16:34/root16:36. No source
+native edits, refill, routing or cloud action. Six impedance compatibility
+and fresh preview/model gates remain explicit.
+
+**October 5, 16:02 continuation: eight2116 selected for the next input.**
+The owner requests next6/8 evaluation steps. `continuation_1602` in the
+[four-signal ledger](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json)
+binds the model disposition and exact eight-layer delta. Keep existing
+trace/space minima. Supplier outer90-ohm width changes0.190->0.211mm when
+mask treatment alone changes; saved Quilter null mask fields do not prove
+mask absence. Nominal copper, finished copper, etch and frequency assumptions
+are not identical. Fresh preview geometry and eventual fabrication-model
+acceptance remain separate gates; do not force numerical agreement by
+silently altering materials or waiving minima.
+
+Verified executor ebba2350 has a new diagnostic-only scope on c7497180:
+separate CLI process, no live pcbnew host, no rebuild/refill, execution
+stop16:22/report16:23. Its predecessor's cause is not established. Preserve
+that exhausted builder and all earlier partial evidence. Eight construction
+will start from accepted six3313, adding only In5/In6, four private-via guard
+copies and an In6 GND plane plus profile metadata. Source and geometry remain
+protected; no new cloud action has occurred.
+
 **October 5, 15:53: six native geometry demonstrated; no qualified preview.**
 The [latest checkpoint and exact artifacts](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json)
 preserve native `c7497180...`:104 references,325 pads,209 copper objects,

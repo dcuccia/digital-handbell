@@ -2,6 +2,31 @@
 
 ## Bounded engineering work
 
+- **October 5, 16:20 six diagnostic completed; eight construction released:**
+  One separate CLI run finishes in74.86s with321 findings/184 staged opens.
+  Corrected full-multiset comparison has498 inherited records and seven
+  changed open representatives, no new non-open findings. Parity was not
+  enabled. Report-only corrections preserve multiplicity/current bindings;
+  final manifest bef53063 binds unchanged c7497180. Host-separation causality
+  is unproven because runtime exceeds the old60s cap. Source remains intact.
+  Next verified Sol/medium constructs standard eight2116 from accepted
+  six3313, under the exact narrow delta: execution16:33/report16:34/root16:36,
+  initial plus two corrections,30s static/90s native children. No routing,
+  source edits/refill or cloud. Six impedance and all new previews remain
+  held; the exhausted old builder remains stopped.
+- **October 5, 16:02 next evaluation authorized:** owner requests next6/8
+  steps. Root retains0.1778/0.2mm minima and selects standard eight2116
+  for the next native input/preview. A controlled supplier outer-layer
+  mask toggle changes90-ohm width0.190->0.211mm at0.254mm gap; both clear
+  the floor. Saved Quilter mask fields are null, not proven disabled;
+  nominal versus finished copper/etch assumptions also differ. This is
+  a model disposition, not measured or cross-solver equivalence.
+  A new verified Sol/medium scope completes only c7497180's diagnostic/
+  manifest using a separate CLI host through16:22/report16:23; no rebuild,
+  source load/edit, refill or exhausted-builder rerun. Eight adds In5/In6,
+  four private-via guards and one In6 plane under a complete narrow-delta
+  contract. No eight PCB, preview or new job yet. See continuation_1602
+  in the four-signal evaluation ledger.
 - **October 5, 15:53 capacity evaluation checkpoint, input held:** selected
   six3313E now native-load/save/reloads with104refs/325pads/209copper and
   exact ordered profile/complement checks. Its DRC child times out at60s;
