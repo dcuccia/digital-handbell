@@ -196,6 +196,33 @@ their presence does not authorize deleting the copper, a blanket same-net
 exception, or suppressing future violations. Product representation and
 the router's treatment of pre-existing copper need their own disposition.
 
+**Selected experimental pattern, not full-board exercised: restrictive
+guards plus an immutable baseline.**
+When a required guard encloses an intentionally retained connection, keep
+the guard intact and identify the existing intrusion by guard, object,
+layer, net and full geometry. Do not erase the connection to obtain a green
+input DRC, cut a hole in the guard, or exempt the whole net. A returned
+object may match that baseline only if it is genuinely unchanged; new
+objects, changed geometry and new contacts remain failures. A preserved
+zone outline/UUID never grandfathers a changed fill.
+
+This is an independent acceptance comparison, not a native rule exemption
+or proof of cloud enforcement. Reconcile the complete native input findings,
+including footprint-level findings outside a pad/track screen, before
+submission. Use the first meaningful returned layout to evaluate the
+remaining importer/router behavior rather than creating an endless series
+of zero-work controls. Prefer already-qualified conservative rectangles
+over a new curved-geometry implementation when their extra blocked area
+and affected existing objects can be explicitly accepted; smaller voids
+are an optimization, not automatically a prerequisite.
+The [native rectangle decision](measurements/2026-09-27-router-bakeoff/quilter-native-guard-encoding-2026-10-04.json)
+accepts eight explicit overcoverage relationships without changing copper.
+Its one-off measurement is not a reusable-validator qualification:
+declarative controls are not executed negative tests, and printed expected
+layer order is not parsed evidence. Reuse independently bound facts where
+valid; preserve the missing controls as requirements for the full-input
+validator rather than reporting them as passes.
+
 **Observed layer-expansion control:** the
 [private-plane experiment](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json)
 keeps both private vias0.25mm from saved inner fills in four- and six-layer

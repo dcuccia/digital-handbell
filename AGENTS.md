@@ -2,6 +2,28 @@
 
 ## Bounded engineering work
 
+- **October 4, 18:26 native rectangle decision:** select the existing
+  18/22 four/six-layer rectangular guard obligations, not new curved rules.
+  The exact 60 candidates yield 58 rectangle contacts; eight additional
+  rectangle-only intrusions are retained-source overcoverage, including
+  DOUT fd088aad with 0.302239446 mm actual private-copper clearance.
+  Keep all source copper and full restriction flags. The private script's
+  alleged mutation controls/matcher were not executed; layer order instead
+  reuses the earlier exact-file static proof. Three launcher attempts are
+  exhausted; do not rerun or promote that script as a qualified validator.
+  Geometry selection is accepted, not complete-input DRC or output matching.
+  Next independent item is supplier layer-purpose/process-minimum selection;
+  movable domains and full native/import checks remain before paired jobs.
+- **October 4, 18:11 evaluation resumed:** owner asks to continue the plan
+  through process evaluation toward the four/six-layer comparison.
+  This supersedes the prior hour's stopping checkpoint, not any exhausted
+  item's retry limit. First is one new native guard-encoding disposition:
+  reuse already-exercised rectangular supersets and measure their exact
+  retained-object intrusions. Verified Sol/medium executes static work
+  through 18:23, report 18:24/root 18:26, at most three hard-30-second
+  children. No native rerun, new geometry framework, source edit, full
+  input or cloud submission in this item. Advance only through qualified
+  dependencies; preserve all source/experiments and the no-paid-use gates.
 - **October 4, 18:00 bound obstacle coverage accepted:** the rebuilt
   static screen covers all177 retained primitives and97 native fixed pads,
   including through-layer membership. It preserves42 prior pairs, removes

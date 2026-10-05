@@ -166,7 +166,18 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 4, 18:00: bound obstacle coverage accepted; hour closes.**
+**Current October 4, 18:26: native rectangles selected after owner continuation.**
+The [encoding decision](measurements/2026-09-27-router-bakeoff/quilter-native-guard-encoding-2026-10-04.json)
+selects the existing 18/22 guard obligations and preserves the exact eight
+additional rectangle-only retained intrusions. No source copper changes.
+The private measurement script's unexecuted controls and unimplemented
+matcher remain unqualified; actual layer order reuses older exact-file
+evidence. Its three launcher attempts are exhausted, with no rerun.
+Next independently select supplier layer purposes and compatible
+process/routing minima. Full movable domains, complete native input
+findings and new/changed returned-object/fill checks remain before jobs.
+
+**Prior October 4, 18:00: bound obstacle coverage accepted; hour closes.**
 The [coverage ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)
 qualifies the exact 177 retained primitives and 97 native fixed pads.
 It closes the upstream pose/layer-coverage gap without new collateral

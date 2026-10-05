@@ -12,6 +12,72 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 18:11 continuation: native guard representation
+
+Owner resumes the plan toward process evaluation and a four/six-layer
+comparison. The prior hour stop is superseded, not the source/price gates
+or exhausted attempts. The first new item ends at the 18:26 root checkpoint:
+verified Sol/medium measures saved artifacts through 18:23, report 18:24,
+at most three hard-30-second static children. No native rerun or new board.
+
+Prefer the already-exercised rectangular supersets if their incremental
+restrictions can be explicitly accounted for. Do not build a curved-polygon
+framework merely to obtain smaller voids. These rectangles have the same
+bounding boxes as the accepted analytic guards, allowing reuse of the
+complete fixed-obstacle candidate population; their actual intersections
+still need separate measurement. Existing copper is never cut to satisfy
+the guard that was deliberately drawn around it.
+
+The proposed operational contract separates **immutable existing objects**
+from **new/changed returned copper and placement**. Keep full restrictive
+native flags, preserve the original source geometry, and bind inherited
+intrusions to exact guard/object identities and geometry. This is an
+independent input/output comparison, not a KiCad exemption, whole-net
+waiver, or permission for new taps. Full-input DRC must additionally
+inventory actual footprint-level and other findings before submission;
+the 274-object screen is not a full native DRC baseline.
+
+Public [pre-routed-trace documentation](https://docs.quilter.ai/design-parameters/pre-routed-traces.md)
+reconfirmed October 4 says in-board traces/vias retain their paths and
+positions, but warns that internal traces/pours are deleted when the input
+stackup is not preserved. Each eventual comparison job must therefore
+explicitly select its own qualified input stackup, rather than permit an
+uncontrolled layer search. [Keepout documentation](https://docs.quilter.ai/design-parameters/keepouts.md)
+does not specify precedence against pre-existing objects or the complete
+KiCad pad/footprint flag matrix. The contact diagnostic supplies limited
+preservation evidence; first full-board trials must still challenge
+preservation and reject any unapproved intrusion independently.
+
+### 18:26 source-bound encoding selected; validator claims limited
+
+The [native encoding ledger](measurements/2026-09-27-router-bakeoff/quilter-native-guard-encoding-2026-10-04.json)
+selects the existing 18/22 rectangular four/six-layer obligations.
+All 60 bounded candidates are measured against those rectangles: 58 touch,
+including eight that clear the smaller analytic guard. Seven additional
+relationships involve GND; DOUT `fd088aad...` is the eighth, with an actual
+private-pad clearance of 0.302239446 mm. This is conservative overcoverage,
+not a new physical defect. Keep these exact source objects without holes,
+net-wide exemptions or relaxed treatment of future copper.
+
+The finite execution used three launcher attempts, only the third producing
+a measurement child. The first relied on ineffective `.py` association;
+the second supplied bare `python` to a supervisor requiring an absolute
+executable. The successful child took 0.203 seconds under a hard 30-second
+limit. Root corrected misleading claims: mutation controls and a baseline
+matcher were not implemented, and printed layer-order lists were constants.
+Earlier static evidence binds the actual layer order of these exact files;
+root also reviewed the actual rectangle contours and all dependency hashes.
+Reuse those facts rather than inventing a fourth attempt or a successful
+test. The private script is preserved, not promoted to reusable tooling.
+
+The encoding decision is complete for these source objects. Complete-input
+native findings, including footprints, and a qualified returned-object/fill
+comparison remain required. Only actual intersecting baseline entries can
+receive unchanged-source treatment; the two clear rows are not exceptions.
+Next independently select explicit supplier layer purposes and compatible
+process/routing minima. Movable placement domains and the complete
+native/imported packages still precede paired jobs.
+
 ## October 4, 17:46 saved-native obstacle coverage audit
 
 Fresh runtime-verified Sol/medium now audits all97 fixed-pad identities

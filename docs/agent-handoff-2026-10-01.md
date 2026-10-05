@@ -7,7 +7,21 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 4, 18:00: final hour checkpoint.** The
+**Current October 4, 18:26:** owner resumed at 18:10:56. The
+[native encoding decision](measurements/2026-09-27-router-bakeoff/quilter-native-guard-encoding-2026-10-04.json)
+(`933a6ede...`) selects the existing 18/22 rectangular guard obligations.
+The eight rectangle-only retained intrusions are explicitly accounted for,
+not repaired or waived by net. Actual source copper and all five files are
+unchanged. The private measurement script is not a qualified general
+validator: mutation tests/matcher were not implemented, and layer order
+comes from the earlier exact-file proof. Three launcher attempts are
+exhausted; no rerun.
+
+Next is explicit supplier four/six layer-purpose and process-minimum
+selection. Movable placement domains, complete native input findings and
+returned-object/fill matching remain gates. No full input or new job exists.
+
+**Prior October 4, 18:00 hour checkpoint.** The
 [coverage ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)
 (`3e79e0be...`) qualifies all 177 retained primitives and 97 native fixed
 pads against the unchanged guards. It closes the old obstacle-pose/layer
@@ -24,11 +38,11 @@ degenerate roundrect cores need correction/tests before nearby narrow-phase
 use, which does not occur here. Preserve the raw attempts and old 46-pair
 evidence. All five authoritative source hashes remain unchanged.
 
-Stop within the authorized hour ending 18:11; no additional engineering
-item starts. On continuation, the next item is one native guard-representation
+At that checkpoint work stopped within the authorized hour ending 18:11.
+The subsequent owner continuation released one native guard-representation
 and exact retained-source intrusion disposition for the four private pads,
 six private tracks and two private vias. No source repair, full input or
-new Quilter submission follows from this checkpoint.
+new Quilter submission followed from that checkpoint.
 
 The first isolated four/six-layer plane control is now accepted for local
 geometry only. See the
