@@ -2,6 +2,20 @@
   "schema_version": 1,
   "date": "2026-10-02",
   "status": "STUDY_ROLES_AND_90_OHM_INTENT_SELECTED_NATIVE_INPUT_AND_ACTUAL_SOLVE_PENDING",
+  "common_domain_disposition": {
+    "checkpoint_local": "2026-10-04 19:06",
+    "status": "COMMON_F_HEIGHT_CLASS_SIMPLIFIED_POSITIVE_REGION_ENCODING_UNQUALIFIED",
+    "packaging_evidence_sha256": "85368ffc33fd1dd0cea22a9de8ac3510f39821953d939bf8f0a83d6d1d315b8c",
+    "envelope_evidence_sha256": "4178978d8e52db4d0b498e9e12aafdca5e43f098e43a7d084877ece1ed0da655",
+    "mechanical_screen_sha256": "2d26b2a73d72d5864976cd9945b073c25e1b77dab624d22eefe57590c0a0975c",
+    "retention_partition": "Current27 fixed/77 eligible, not the historical9/95 partition.",
+    "height_derivation": "At the selected+2mm spacing only L1 and X6 are not strictly below the nominal3.5mm front magnet gap. Both are now fixed. All eligible fitted F components therefore share the below-gap height class; copper-only/service features still need separate treatment.",
+    "not_implied": "No uniform per-origin polygon, body/rotation clearance, toleranced fit, connector/harness envelope or full allowed-placement map is qualified by that height inference.",
+    "source_planning_reservations": "Carry fixed J1/J2/X6, R3.2 mount and recovery-access duties unchanged; J2 already includes its0.7mm front-mating allowance. Do not freeze redesignable old plastic or replace unknown service space with zero.",
+    "documented_KiCad_region_encoding": "A separate named F.Cu rule area with all keepout restrictions cleared represents a positive placement region. Preserve restrictive guards unchanged; do not convert them into rooms. Review/manual component association after import is required.",
+    "remaining_representation_gate": "Exact native persistence of an all-clear F rule area and later importer/body/rotation/F-only behavior are not yet exercised. Assigned allowed regions combine by union.",
+    "next_bounded_item": "One isolated native F-placement-room serialization control preserving the existing source-bound fixture objects/guards. No full-board input, cloud upload or placement/routing job."
+  },
   "usb_capability_disposition": {
     "checkpoint_local": "2026-10-04 18:56",
     "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-usb-impedance-capability-2026-10-04.json",
@@ -1428,9 +1442,10 @@
   "minimum_geometry_contract": {
     "foreign_copper_clearance_mm": 0.20,
     "edge_hole_contact_clearance_mm": 0.25,
-    "new_ordinary_via_copper_drill_mm": [0.604, 0.35],
-    "new_ordinary_via_pair_is_selected": false,
-    "via_coupling_rule": "These are lower bounds, not an approved pair: diameter must also be at least drill plus twice the selected supplier annular minimum. Preserve existing process-seed geometry; supplier compatibility remains a gate.",
+    "new_ordinary_via_copper_drill_mm": [0.65, 0.35],
+    "new_ordinary_via_pair_is_selected": true,
+    "new_ordinary_via_minimum_annular_ring_mm": 0.15,
+    "via_coupling_rule": "Selected new ordinary starting pair only; larger drills require copper diameter at least drill plus0.30mm. Preserve all18 existing geometries, including the four U4 seeds with0.127mm rings. Native encoding, mask/assembly and full supplier qualification remain gates.",
     "new_ordinary_via_over_smd_land_allowed": false,
     "via_under_conductive_contact_metal_allowed": false,
     "new_blind_buried_microvias_allowed": false,
@@ -1446,9 +1461,9 @@
     "comparison": "Same outline/BOM/requirements/minima. Placement may adapt by stackup; outcomes do not isolate layer count alone.",
     "shared_requirements": ["One qualified packaging envelope", "Same population and physical pad/net identities", "Same selected critical retention and fixed interface duties", "Same mandatory restoration and minimum-clearance requirements", "Same required filled/capped-via and assembly processes"],
     "legitimate_stackup_specific_variables": ["Actual supplier copper/dielectric construction", "Explicit signal/reference layer roles", "Placement within common qualified domains", "Impedance dimensions and reviewed transitions"],
-    "completed_preparation": ["Saved-native private-pad oracle and analytic guard definition", "Exercised supervised Windows native tooling", "Isolated rectangular private-via plane isolation and logical four/six layer mapping", "Exact-source obstacle coverage for177 retained primitives and97 fixed pads, with surviving collateral relationships reconciled", "Selected18/22 native rectangular guard geometry and enumerated retained-source intrusions; no blanket same-net waiver", "Named supplier construction rows and current-coordinate mandatory-process-via spacing screen"],
-    "remaining_gates": ["Complete native input findings and qualified new/changed-object/fill comparison; the one-off rectangle script is not a reusable validator", "Full-shape movable placement/contact/access and electrical constraint package", "Explicit layer-purpose selection, material-model limits and compatible retained-via/process treatment", "Native complete-input encoding and importer behavior for each package, including functional ground-return checks", "Separate authorized submissions and common native/engineering outcome review"],
-    "parallel_investigation_limit": "Bounded supplier-stackup and movable-domain investigations can proceed independently; each package release still requires all applicable gates. This checkpoint launches no additional item.",
+    "completed_preparation": ["Saved-native private-pad oracle and analytic guard definition", "Exercised supervised Windows native tooling", "Isolated rectangular private-via plane isolation and logical four/six layer mapping", "Exact-source obstacle coverage for177 retained primitives and97 fixed pads, with surviving collateral relationships reconciled", "Selected18/22 native rectangular guard geometry and enumerated retained-source intrusions; no blanket same-net waiver", "Named supplier construction rows and current-coordinate mandatory-process-via spacing screen", "Selected3313 S/G/S/S and S/G/S/G/G/S roles and new ordinary0.650/0.350mm policy", "All13 other retained vias clear all97 fixed pad lands; mask/assembly still unqualified", "Current-client numeric impedance path identified without changing90-ohm intent"],
+    "remaining_gates": ["Complete native input findings and qualified new/changed-object/fill comparison; the one-off rectangle script is not a reusable validator", "Full-shape movable placement/contact/access and electrical constraint package", "Native encoding of selected layer purposes, explicit material-model limits and compatible retained-via/process treatment", "Actual90-ohm persistence and nonstale per-layer solver results on each qualified preview", "Native complete-input encoding and importer behavior for each package, including functional ground-return checks", "Separate authorized submissions and common native/engineering outcome review"],
+    "parallel_investigation_limit": "Bounded supplier-stackup and movable-domain investigations can proceed independently; each package release still requires all applicable gates. Use the latest named bounded item and runtime gate, not older completed-item scopes.",
     "readiness_limit": "A successful guard repair alone will not make either full-board package eligible. No comparison date or parallel launch is promised; source and cloud remain unchanged."
   },
   "submission_gates": [

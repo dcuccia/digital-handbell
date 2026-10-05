@@ -12,6 +12,30 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 19:06: simplify the common front domain before encoding
+
+The existing+2mm [height evidence](measurements/2026-09-27-router-bakeoff/quilter-packaging-sensitivity-2026-10-03.json)
+leaves only L1 and X6 at/above the nominal3.5mm front magnet gap. Both are
+fixed in the current27/77 partition. Eligible fitted F movers therefore
+share the below-gap height class; there is no reason to build a separate
+tall-mover region from the obsolete9/95 partition. This inference does
+not qualify body/rotation, tolerance, service or copper-only feature space.
+
+Retain the source-bound D45/tongue envelope, contact guards, fixed connector
+planning envelopes and R3.2 mount reservations; J2's0.7mm mating allowance
+is already included. Unknown harness/tool space is not zero, and adaptable
+plastic is not automatically an immutable obstacle.
+
+The [KiCad recipe](https://docs.quilter.ai/design-parameters/placement-regions.md)
+uses a named F rule area with **all keepout restrictions cleared** as a
+positive placement room. That is a new object type for our native controls,
+not permission to clear existing protective flags. Exact persistence and
+later importer/body/rotation/F-only behavior remain unqualified. Next is
+one isolated native serialization control, preserving the existing fixture
+and every guard; no full input, upload or placer job. The live contract's
+canonical via minima are also synchronized to the selected0.650/0.350mm
+pair rather than leaving its older provisional0.604/0.350mm field active.
+
 ## October 4, 18:56: retain USB intent; verify the actual solver later
 
 The [capability ledger](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json)

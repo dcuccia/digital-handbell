@@ -166,7 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 4, 18:56:90-ohm intent retained; current-client path identified.**
+**Current October 4, 19:06: common F-height class simplified.**
+The+2mm height screen's only nonpositive cases, L1/X6, are both fixed under
+the current27/77 partition. Eligible fitted movers need no tall-part class,
+but this does not establish a whole-body/access domain. Next is one
+isolated native F-placement-room serialization control: a separate named
+all-clear rule area, with all restrictive source guards preserved.
+No full input, cloud upload or placement/routing job. Canonical new-via
+fields are synchronized to0.650/0.350mm with0.150mm minimum ring.
+
+**Prior October 4, 18:56:90-ohm intent retained; current-client path identified.**
 The [capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json)
 finds numeric frontend entry rather than an85/100-only selector. Actual90
 persistence/solving remains unverified; saved100-ohm results are not a proxy.

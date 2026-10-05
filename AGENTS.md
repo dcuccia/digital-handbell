@@ -2,6 +2,14 @@
 
 ## Bounded engineering work
 
+- **October 4, 19:06 common-domain disposition:** with+2mm spacing, only
+  L1/X6 fail the old strict3.5mm height ceiling; both are now fixed.
+  Eligible fitted F movers share a below-gap class, not a qualified common
+  origin polygon. Body/rotation, access and copper-only duties remain.
+  Next is one isolated native F-placement-room serialization control:
+  add a separate named all-clear rule area, never clear existing guards.
+  No full input, cloud object or placement/routing job is released.
+  The canonical contract now matches the selected0.650/0.350mm new-via pair.
 - **October 4, 18:56 USB capability disposition:** retain90-ohm intent.
   Current-client static inspection finds numeric impedance entry and an
   optional independent single-ended target, not an85/100-only selector.

@@ -7,7 +7,16 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 4, 18:56:** the
+**Current October 4, 19:06:** common-domain review reuses the+2mm height
+screen with the current27/77 partition: L1/X6 are the only nonpositive
+height cases and both are fixed. No separate tall-mover region is needed,
+but body/rotation/access and copper-feature domains remain unqualified.
+Next is one isolated native F-room serialization control, adding a named
+all-clear rule area without altering any restrictive guard. Full input,
+cloud and placer/routing submission remain held. The canonical via fields
+now match the selected0.650/0.350mm policy. See the current workflow section.
+
+**Prior October 4, 18:56:** the
 [USB capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json)
 (`9d68447d...`) retains90-ohm intent. The loaded current client implements
 numeric impedance entry, not an85/100-only selector, and permits a blank

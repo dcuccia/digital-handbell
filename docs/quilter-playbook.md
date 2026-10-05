@@ -172,6 +172,16 @@ and [single-sided requirements](https://docs.quilter.ai/design-parameters/single
 Keep placement regions separate from safety keepouts. Inspect each
 keepout's actual track/via/pour flags and layers; a suggestive name is not
 a rule. Screen full copper shapes, including the B annulus of through-vias.
+
+Re-evaluate which parts actually move before building more domain classes.
+At the handbell's selected+2mm spacing, the saved height screen leaves only
+L1 and X6 at/above the nominal3.5mm ceiling; both are fixed under the later
+27-reference retention. Thus eligible fitted movers no longer require a
+separate tall-part magnet class. This reuses source-bound height/membership
+evidence, not a new fit claim. It does not give every reference the same
+origin polygon: full body/rotation, board-edge, access and copper-feature
+obligations still need encoding. Qualify the smallest missing representation
+control before generating dozens of unnecessary regions.
 Filling or tenting a via does not remove its conductive rear land.
 
 **Purpose-specific private-return protection:** prevent new taps where the
