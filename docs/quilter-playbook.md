@@ -24,6 +24,22 @@ not return-path or output acceptance. The same project cannot create its
 second job until the first is submitted. Plan setup order accordingly;
 never submit unreviewed defaults just to unlock another draft.
 
+**October5 first submission lessons:** bulk CSV upload **appends**, rather
+than replacing, comprehension rows. Export the old table, clear only the
+intended category, import the corrected table, then verify persisted row
+counts and values. Values with voltage suffixes were misread as100nF;
+verify capacitance as well as parent pins. Explicitly assign every eligible
+component to its region and select preserved pours; neither a recognized
+room nor the internal-copper toggle alone proves those entries exist.
+Compare per-reference/pin/net/layer records rather than aggregate counters:
+duplicate-pin suffixes, NC naming, a paste-only aperture and a copper
+graphic produce different counts here without lost connected terminals.
+Public-page Markdown omitted pricing that remained in official HTML
+structured data (non-commercial price0); distinguish that policy from an
+account-specific quote. Power values must be identified as source-backed
+routing screens versus actual operating budgets; Quilter's20C IPC2221
+check does not replace project thermal/transient acceptance.
+
 ## What the evidence supports
 
 | Finding | Evidence and limit | Working guideline |

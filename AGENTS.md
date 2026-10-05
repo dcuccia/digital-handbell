@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 5, 11:14 first flexible comparison submitted:** owner11:01
+  authorizes common-setting corrections and first start. Four job
+  `6ac3d5b7fc0d2d776ed14a60` is launched once and shows working layouts.
+  Saved28 corrected capacitor associations,14 explicit power screens with
+  optional pours off, sole primary GND,72 exact F-room assignments and
+  explicit protected In1 pour. Import matches32 fixed/191tracks/18vias
+  and all324 copper-pad identities after documented normalization.
+  Native325 includes a paste-only aperture; render adds the jumper graphic.
+  Official current HTML states non-commercial price0; no payment/new terms.
+  Exact output geometry/preservation, electrical and manufacturing gates
+  remain. Six is not created; no monitoring or integration. Source unchanged.
+  See paired-import ledger's submission_checkpoint, not its older held state.
 - **October 5, 10:03 browser checkpoint:** four-layer draft
   `6ac3d5b7fc0d2d776ed14a60` in new comparison project`6ac3d5b7...14a5f`
   parses104 refs/72 movers/18 retained vias. Uploaded3313 S/G/S/S,

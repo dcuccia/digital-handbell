@@ -1,6 +1,60 @@
 {
   "schema_version": 1,
-  "status": "FOUR_DRAFT_CONFIGURED_HELD_FOR_COMPREHENSION_AND_REGION_REVIEW_SIX_NOT_CREATED",
+  "status": "FOUR_SUBMITTED_ONCE_1114_SIX_NOT_CREATED",
+  "submission_checkpoint": {
+    "owner_authorization_local": "2026-10-05 11:01",
+    "submitted_local": "2026-10-05 11:14:25-07:00",
+    "job_name": "Handbell flexible 4L - JLC3313 - retained209",
+    "url": "https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60",
+    "confirmation": "One normal Start Job UI click; start response200, redirect to job page, and We're working on layout candidates for your design. Subsequent job response369 confirms state=running and launched=1791224065574. Earlier response366 was stale draft; preserved, not used as running-state proof. No candidate reviewed.",
+    "pricing": "Official free-ai-pcb-design page HTML, published October5, includes Non-Commercial Tier, price0 USD, unlimited iterations. This is published policy, not an account-specific quote. Owner previously confirmed fully personal use and now explicitly requested this first start. No payment, upgrade or new agreement appeared.",
+    "bypass_rows": [
+      ["C1","U2","1",10000],["C4","U2","5",10000],["C5","U2","5",10000],
+      ["C6","IC1","50",100],["C7","IC1","45",100],["C8","IC1","45",1000],
+      ["C9","IC1","1",100],["C10","U1","8",1000],["C11","IC1","33",1000],
+      ["C12","IC1","10",100],["C13","IC1","43",100],["C14","IC1","22",100],
+      ["C15","IC1","44",1000],["C15","IC1","42",1000],["C16","U4","7",100],
+      ["C17","IC1","48",1000],["C17","IC1","49",1000],["C18","IC1","23",100],
+      ["C19","U4","8",10000],["C20","CHG_EN0","2",10000],
+      ["C21","FB2","2",0.22],["C22","FB1","2",0.22],
+      ["C23","IC4","5",100],["C24","IC4","8",100],["C25","IC1","30",10],
+      ["C26","U5","3",22000],["C27","U5","6",22000],["C28","U5","6",22000]
+    ],
+    "bypass_basis": "Rows are capacitor,parent,pin,nF. Values from exact source PCB; all parents exist on intended source nets. Flash C10/VREG C15-C8 duties reuse check_printed_bell_placement.py; C6/C7/C18 reuse accepted VCORE terminal groups; C23/C24 use motion-sensing.md. MCU remaining supply-pin associations use source functions and local placement context, not all-to-U2 inference. C15 and C17 each cover two adjacent supply pins; this is supported by documented multi-pin bypass behavior. C2/C3 omitted from generic bypass optimization because the complete series-R6 clock cell is retained. C29 DNP and C30 retained private cell remain unchanged. C21/C22/C25 remain filter-placement relationships, not newly asserted power decouplers.",
+    "power_screen_ma": {
+      "+3V3":600,"GND":2000,"VAMP":1000,"VBAT":2000,"VBUS":2000,
+      "VCORE":600,"VHI":2000,"V+":2000,"/CELL_NEG":2000,
+      "/PROT_FET_RETURN":2000,"VO+":1000,"VO-":1000,
+      "Net-(FB1-P$1)":1000,"Net-(FB2-P$1)":1000
+    },
+    "power_basis_and_limits": "Source/return2A and audio1A are provisional routing screens from printed-bell-routing/reports/power-routing-review.md. VBUS2A is a copper screen, not USB permission or a charge/play budget. Logic/core600mA deliberately uses upstream linear RT9080's documented maximum capacity as a conservative trace-sizing bound, not actual load or RP2040 regulator rating. RP2040 PDF retrieval failed; no unverified150/300mA search-summary claim was used. All14 optional power pours=false; primary GND alone still supplies the selected ground layer. Quilter's20C IPC2221 check does not close the project's10C/IPC2152, voltage-drop or transient gates. Private sense/feedback nets are not assigned blanket high-current requirements.",
+    "placement_and_planes": "Saved72 unique assignments equal exactly104 minus selected32 fixed refs; each uses QUILTER_F_PLACEMENT_ROOM. Saved preservedPours explicitly includes PROTECTED_GND_In1.Cu in addition to preserveMidLayers=true. GND is sole primary ground; PROT_FET_RETURN removed from ground inference, not from circuit or power-return duty.",
+    "import_disposition": {
+      "fixed_set_exact":32,
+      "retained_tracks":191,
+      "retained_vias":18,
+      "copper_net_counts_equal":true,
+      "connected_pin_reference_name_net_multisets_equal":285,
+      "native_copper_pad_reference_name_net_layer_multisets_equal":324,
+      "normalization": "Explicit duplicate-pin suffixes on BT1/BT2/J1/J2/X6 and unconnected-net names to empty only. All other reference/name/net/layer records match.",
+      "count_explanation": "Native325 pad objects include one U1 F.Paste-only aperture. Render325 PIN objects contain324 copper pads plus CHG_EN0's source F.Cu graphic bridge. Aggregate326 is consistent with325 native objects plus that graphic, but its internal counting implementation was not independently traced. This is not missing intended connected terminals.",
+      "keepout_classes": "50 recognized restrictions:19 original pours-only,8 B traces/vias/pours,18 private all-types,5 F PINS-only reservations. One additional positive F placement region accounts for native51 rule areas. PINS is Quilter's imported label; exact body/rotation semantics and every polygon vertex were not independently proven.",
+      "remaining_warnings": "Sixteen missing-schematic references remain;15 are fixed and U1's flash bypass is explicitly corrected. Initial pour-deletion text remains despite saved preservation choice. Neither warning is silently treated as source loss or a guarantee of output fidelity.",
+      "qualification_boundary": "Accepted for this disposable routing evaluation using saved input restrictions and independent output review, not complete importer geometry certification. Exact returned geometry, body access, retained209 identities, all terminal/net duties, private isolation and planes remain mandatory before any integration."
+    },
+    "evidence_sha256": {
+      "four-comprehension-1112.json":"ed02e2207aaf260b60d595b4420690c822d171db56b3e7314c7d98f97de03103",
+      "four-selected-config-1112.json":"9ce28a0dec993fe9cfc0406a33e69bc82e5bb6dd8ac9d457415b628badd9547e",
+      "four-render-1112.json":"4a25eaa0dd4431aec6e4baf0854bb713fa98edba821066da6e5ff6a33f952fd0",
+      "bypass-corrected-1107.csv":"696da6df71449e742d5d1bcfa1eab02a5dfb07b378f614e46a547265c82889c9",
+      "power-corrected-1110.csv":"b2ee9be714b5f6f9be7f916679d993a84c545a0567d4d0fcf6db749e7c6f8de1",
+      "placement-corrected-1110.csv":"ba1b5fe8013942706cdf4da02e0f5c256b899236f8593c1b746be3102d94f847"
+    },
+    "private_receipts": ["four-confirmed-job-1114.json","four-launched-job-1114.json","four-launched-comprehension-1114.json","four-launched-config-1114.json","four-launch-request-index-1114.txt"],
+    "preservation": "No PCB/project/schematic input changes, native loads, manual routing, refill, integration, new agreement or paid action. Old rejected draft remains preserved. Six not created or submitted; no automatic monitoring started.",
+    "next": "Six-layer counterpart may reuse these common associations after its own imported stackup/roles/guards/90-ohm profile review. Review returned four-layer native output separately when available."
+  },
+  "historical_preview_status": "FOUR_DRAFT_CONFIGURED_HELD_FOR_COMPREHENSION_AND_REGION_REVIEW_SIX_NOT_CREATED",
   "owner_authorization_local": "2026-10-05 09:16",
   "scope": "Playwright-driven setup and qualified free four/six comparison submissions. Owner separately approved staging six byte-identical PCB/project/schematic files inside ignored browser roots after private-path access denial.",
   "checkpoint_local": "2026-10-05 10:03",

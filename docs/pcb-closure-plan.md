@@ -11,6 +11,15 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
+**Current Quilter checkpoint, October5 11:14:** the owner-authorized first
+flexible four-layer [job](https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60)
+is submitted and working. See the [paired-import ledger](measurements/2026-09-27-router-bakeoff/quilter-paired-import-2026-10-05.json)
+`submission_checkpoint` for corrected common settings and precise limits.
+The authoritative37-open board and accepted native inputs are unchanged.
+Six is not created; no output acceptance, automatic monitoring or integration.
+Earlier construction/import holds below are historical for this four-layer
+submission, not waived output, fabrication or powered-use gates.
+
 Continue in `hardware/handbell/iterations/printed-bell-clock-draft`.
 Starting accepted PCB SHA-256:
 `0c81f57fd3046248448d778230800849527c8a8ecaf501454314c82fffbe8db0`.

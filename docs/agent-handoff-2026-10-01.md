@@ -7,7 +7,18 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**October 5, 10:03: four-layer cloud draft configured, neither run started.**
+**October 5, 11:14: first flexible four-layer run started.** Owner11:01
+authorized correction and launch. [Job](https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60)
+shows working layouts after one start. The paired-import ledger's
+`submission_checkpoint` records the exact28 bypass rows,14 power screens,
+72 F-room associations, sole primary GND and protected In1 pour selection.
+All324 native copper-pad identities/net/layers reconcile; the paste-only
+aperture and source jumper graphic explain different counting conventions.
+Current public HTML states non-commercial price0; no payment or new terms.
+Six remains uncreated. No candidate reviewed or source changed; preserve
+native returned output and check geometry/copper/planes before routing benefit.
+
+**Historical October 5, 10:03: four-layer cloud draft configured, neither run started.**
 Owner09:16 authorized Playwright setup/qualified free runs and separately
 approved exact ignored staging copies. The
 [paired-import ledger](measurements/2026-09-27-router-bakeoff/quilter-paired-import-2026-10-05.json)
