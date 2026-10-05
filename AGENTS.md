@@ -2,6 +2,20 @@
 
 ## Bounded engineering work
 
+- **October 5, 15:39 four-routing-layer selection:** owner15:26 authorizes
+  unattended six-layer routing-capacity evaluation, with eight as fallback,
+  prioritizing total closure time over board cost. Select actual
+  JLC06161H-3313E S/G/S/S/G/S for isolated input qualification: each signal
+  is0.0994/0.1mm from GND, with1.1208mm between middle signals. Current
+  supplier template resolves finished thickness1.65mm+/-10% and precise
+  material Dk; retain its central prepreg/core/prepreg sublayers, not an
+  unqualified average. Actual JLC08161H-3313 S/G/S/G/G/S/G/S is the fallback:
+  same four signals/close references, additional shielding,1.57mm+/-10%.
+  Start accepted six input, never returned3.2. Preserve209/32/72/source;
+  only profile/role/derivative In3 plane changes are released. Fresh pinned
+  Sol/medium must pass native input and root importer/90-ohm gates.
+  No source edit, old output-checker retry, paid use, order or integration.
+  See `quilter-four-signal-stackup-evaluation-2026-10-05.json`.
 - **October 5 final four-layer result:** job completed14:27:50 after3h13m24s
   with12 candidates. Six beta outputs reach92.18/93.42/94.65%, paired by
   summary metrics; none reaches95%. They report83/130/178 padstack

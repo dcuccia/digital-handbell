@@ -576,7 +576,7 @@ misrepresented essential input constraints. The
 [October5 stage table](quilter-workflow-study-2026-10-02.md#october-5-budgeted-path-to-a-useful-experiment)
 records this distinction for the handbell comparison.
 
-**Selected study practice, not yet routed:** choose layer purposes from
+**Selected study practice:** choose layer purposes from
 the actual dielectric adjacency, not the layer count. Our
 [3313 profiles](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
 use S/G/S/S versus S/G/S/G/G/S: six layers improve reference availability
@@ -584,6 +584,24 @@ without adding two signal layers. A nearby mixed-use layer is not
 automatically a continuous return plane. Keep electrical roles, native
 layer identities/types and service-detected purposes distinct and reconcile
 all three during import.
+
+Inspect alternative constructions before concluding that a layer count
+cannot provide useful routing capacity. The
+[October5 four-signal evaluation](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json)
+finds actual JLC06161H-3313E S/G/S/S/G/S:0.1mm inner signal-to-ground gaps
+and1.1208mm between the internal signals. JLC08161H-3313 supports the same
+four routing layers with extra ground shielding, not additional routing
+capacity. Prefer the least preparation that answers the owner's total-cost
+question; do not automatically run both when six addresses it.
+
+Bind the selected supplier template, not only its generic material table.
+The current calculator provides core-specific Dk4.36/4.53 and a1.65mm
+finished label for the six-layer option, despite a nominal1.6mm selector.
+Preserve mixed-material dielectric sublayers and distinguish exact physical
+construction from a solver approximation. Never silently average them to
+fit an importer. A profile-only derivative can reuse a qualified input's
+geometry evidence through a complete narrow-delta comparison; it need not
+restart full pad/placement qualification when those subtrees are unchanged.
 
 Check supported physics targets before staging, but distinguish documentation,
 client entry, backend solving and returned routing. **Documented:** Quilter

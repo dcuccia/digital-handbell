@@ -7,6 +7,27 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5, 15:39: selected a genuinely higher-capacity six-layer option.**
+Owner15:26 releases unattended evaluation, prioritizing total engineering
+time over board price. The [new supplier/role decision](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json)
+selects JLC06161H-3313E, S/G/S/S/G/S: four signals, all within0.1mm of
+ground, and1.1208mm separating the middle signals. Its actual finished
+label is1.65mm+/-10%, not exactly the nominal1.6mm menu selection.
+Current template Dk values supersede generic material constants for this
+new input only. Central prepreg/core/prepreg must remain explicitly modeled.
+Actual eight-layer JLC08161H-3313, S/G/S/G/G/S/G/S, adds shielding rather
+than more routing layers; retain it as the bounded fallback.
+
+Next construct an isolated derivative of the already accepted six input,
+using verified Sol/medium and a narrow complete-subtree comparison. Preserve
+the209 copper/32 fixed/72 eligible partition, all guards and source In1.
+Only stackup, In3 role/derivative plane and profile metadata may change.
+Then qualify the selected native profile and corrected common settings in
+Quilter, including fresh90-ohm geometry. This does not restart the exhausted
+returned-output checker or authorize paid use, fabrication or integration.
+Mature Adafruit circuits remain the risk-reduction basis; we are addressing
+the new assembly's routing/return geometry, not reopening component choices.
+
 **October 5 final job review: complete,12 candidates, best94.65%.**
 Job ended14:27:50 after3h13m24s. The
 [returned-candidate ledger](measurements/2026-09-27-router-bakeoff/quilter-four-candidate-review-2026-10-05.json)

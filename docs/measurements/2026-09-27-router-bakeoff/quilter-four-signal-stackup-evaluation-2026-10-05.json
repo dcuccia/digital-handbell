@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "checkpoint_local": "2026-10-05T15:39:00-07:00",
+  "status": "six-layer supplier construction selected for isolated native input; eight-layer fallback source-bound",
+  "authorization": {
+    "owner_local": "2026-10-05T15:26:42-07:00",
+    "scope": "Unattended evaluation of a four-routing-layer six-layer construction, with an eight-layer four-routing-layer alternative if needed.",
+    "objective": "Reduce overall engineering time and agent-token cost; bare-board cost is secondary.",
+    "not_authorized": ["paid use", "purchase or fabrication order", "source modification", "automatic output repair or integration"],
+    "old_output_checker": "Its exhausted allowance remains stopped; this is an independent input-profile task."
+  },
+  "sources": [
+    {
+      "url": "https://jlcpcb.com/impedance",
+      "local": ".playwright-mcp/jlc-stock-stackups-20261005-1528.html",
+      "sha256": "1507b8ab8596103700676cbc25cd26a78e5357e61fcdc430748cc02424af7343",
+      "selected_controls": ["1.6mm", "1oz outer", "0.5oz inner"],
+      "finding": "Fifteen named six-layer constructions are listed; old JLC06161H-3313 is not the only option."
+    },
+    {
+      "url": "https://jlcpcb.com/pcb-impedance-calculator/",
+      "response_endpoint": "https://jlcpcb.com/api/jlcTools/impedance/selectPageImpedanceDefaultTemplate",
+      "local": ".playwright-mcp/jlc-six-templates-20261005-1537.json",
+      "sha256": "dfbd3324fbd6a5d8db97c35b62a5bbadffa12da8d978ee2c34486ff79849eb8d",
+      "selected_controls": ["Rigid", "6", "1.6", "0.5oz inner", "1oz outer"],
+      "finding": "Exact current template identifies core-specific Dk values and finished 1.65mm +/-10%; use these rather than the generic core Dk4.6 table."
+    },
+    {
+      "url": "https://jlcpcb.com/pcb-impedance-calculator/",
+      "response_endpoint": "https://jlcpcb.com/api/jlcTools/impedance/selectPageImpedanceDefaultTemplate",
+      "local": ".playwright-mcp/jlc-eight-templates-20261005-1535.json",
+      "sha256": "6c56f19da718a9bdd4067a1e8c03d6fef08b8e0aef51a1121f890c07a932b256",
+      "selected_controls": ["Rigid", "8", "1.6", "0.5oz inner", "1oz outer"],
+      "finding": "Actual JLC08161H-3313 construction, not an extrapolation from six layers."
+    }
+  ],
+  "six_primary": {
+    "supplier_name": "JLC06161H-3313E",
+    "roles_top_to_bottom": ["signal", "GND", "signal", "signal", "GND", "signal"],
+    "copper_names": ["F.Cu", "In1.Cu", "In2.Cu", "In3.Cu", "In4.Cu", "B.Cu"],
+    "copper_mm": [0.035, 0.0152, 0.0152, 0.0152, 0.0152, 0.035],
+    "dielectric_gaps": [
+      [{"material": "3313 prepreg", "mm": 0.0994, "Dk": 4.1}],
+      [{"material": "FR4 core", "mm": 0.1, "Dk": 4.36}],
+      [
+        {"material": "7628 prepreg", "mm": 0.2104, "Dk": 4.4},
+        {"material": "bare FR4 core without copper faces", "mm": 0.7, "Dk": 4.53},
+        {"material": "7628 prepreg", "mm": 0.2104, "Dk": 4.4}
+      ],
+      [{"material": "FR4 core", "mm": 0.1, "Dk": 4.36}],
+      [{"material": "3313 prepreg", "mm": 0.0994, "Dk": 4.1}]
+    ],
+    "sum_copper_and_dielectric_mm": 1.6504,
+    "supplier_finished_label_mm": 1.65,
+    "supplier_finished_tolerance_percent": 10,
+    "nearest_ground_distances_for_four_signals_mm": [0.0994, 0.1, 0.1, 0.0994],
+    "central_signal_separation_mm": 1.1208,
+    "rationale": "One additional routing layer versus four-layer S/G/S/S, with a close ground reference for every signal layer. The central signal pair is separated by more than eleven times its respective 0.1mm ground distance.",
+    "representation_gate": "Preserve separate central prepreg/core/prepreg material thicknesses and Dk. KiCad 10 supports bare addsublayer tokens; its container type is shared. No silent homogeneous averaging. Native roundtrip and Quilter import remain to be demonstrated.",
+    "mechanical_limit": "Nominal 1.6mm selection is not exact 1.6mm construction. This is an isolated study; final thickness/tolerance, service fit and contact/mount stack need mechanical rebinding before manufacture."
+  },
+  "eight_fallback": {
+    "supplier_name": "JLC08161H-3313",
+    "roles_top_to_bottom": ["signal", "GND", "signal", "GND", "GND", "signal", "GND", "signal"],
+    "copper_mm": [0.035, 0.0152, 0.0152, 0.0152, 0.0152, 0.0152, 0.0152, 0.035],
+    "dielectric_gaps": [
+      [{"material": "3313 prepreg", "mm": 0.0994, "Dk": 4.1}],
+      [{"material": "FR4 core", "mm": 0.1, "Dk": 4.36}],
+      [{"material": "2116 prepreg", "plies_mm": [0.1164, 0.124, 0.1164], "mm": 0.3568, "Dk": 4.16}],
+      [{"material": "FR4 core", "mm": 0.3, "Dk": 4.41}],
+      [{"material": "2116 prepreg", "plies_mm": [0.1164, 0.124, 0.1164], "mm": 0.3568, "Dk": 4.16}],
+      [{"material": "FR4 core", "mm": 0.1, "Dk": 4.36}],
+      [{"material": "3313 prepreg", "mm": 0.0994, "Dk": 4.1}]
+    ],
+    "sum_copper_and_dielectric_mm": 1.5736,
+    "supplier_finished_label_mm": 1.57,
+    "supplier_finished_tolerance_percent": 10,
+    "nearest_ground_distances_for_four_signals_mm": [0.0994, 0.1, 0.1, 0.0994],
+    "rationale": "Same four routing layers and close references, with additional ground shielding between the internal signals. Not two more routing layers than the six-primary option.",
+    "activation_conditions": [
+      "Six-primary composite dielectric cannot be represented faithfully by native/imported tools.",
+      "Six-primary returned routing demonstrates a material reference/plane limitation, rather than assuming all collision reports are solved by layer count."
+    ],
+    "status": "Actual supplier alternative identified; no native input or cloud draft constructed."
+  },
+  "reference_design_disposition": {
+    "benefit": "Mature Adafruit reference designs reduce circuit and component-selection risk.",
+    "limits": "New shape, placement, shared supply/return paths and imported pads still require verification; output findings are not automatically reference-design defects.",
+    "actual_boost_reference": "Adafruit MiniBoost TPS61023 4654, not an interchangeable PowerBoost design.",
+    "preserved_strategy": "Retain reviewed boost/protector/clock cells; free ordinary placement and add usable routing capacity without reopening settled sourcing."
+  },
+  "next_input_contract": {
+    "base": "Accepted six-3313 final input, not any returned four-layer candidate",
+    "base_pcb_sha256": "c3749f5c6be862faa27a738c9b256ab8112881cae0833e3b15495f884e24fc07",
+    "preserve": ["104 references", "325 native pads", "32 fixed and 72 eligible references", "209 retained copper primitives", "source In1 GND zone", "all private/contact guards and reservations", "outline", "five protected process vias", "schematic and project minima"],
+    "allowed_delta": ["physical stackup", "In3.Cu ground-to-signal declaration", "remove only derivative-added In3 ground plane", "profile and thickness metadata"],
+    "method": "Reuse accepted input evidence and independently compare the complete remaining native subtrees; no new general-purpose output matcher.",
+    "preview_gates": ["exact physical roles/materials", "only In1/In4 reference planes", "corrected common circuit and F-placement settings", "fresh 90-ohm solutions on four signal layers", "unchanged source and private isolation obligations"],
+    "not_yet_done": ["native selected input", "Quilter selected-profile preview", "six-layer routing job"]
+  }
+}
