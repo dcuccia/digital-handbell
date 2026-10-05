@@ -603,6 +603,22 @@ fit an importer. A profile-only derivative can reuse a qualified input's
 geometry evidence through a complete narrow-delta comparison; it need not
 restart full pad/placement qualification when those subtrees are unchanged.
 
+Screen impedance geometry against existing trace/space minima before
+committing to the closest possible reference planes. In the same evaluation,
+supplier90-ohm examples for six3313E at~0.21mm pair spacing fell below
+our0.1778mm width floor; standard eight2116 examples at0.254mm spacing
+exceeded it. This is a useful alternate construction, not proof that six
+is impossible or permission to lower a minimum. Compare soldermask, finished
+copper, dielectric assumptions and actual reference layers across solvers;
+two90-ohm labels do not establish equivalent models.
+
+Do not copy a qualified input directory wholesale into a new experiment:
+old DRC/semantic reports and personal PRL files can appear to certify the
+new board. Copy the intended inputs only, persist each phase's results before
+a slower phase, and bind the manifest only to final bytes. A DRC timeout
+must not erase already demonstrated native preservation, but neither does
+that preservation turn a missing diagnostic into a pass.
+
 Check supported physics targets before staging, but distinguish documentation,
 client entry, backend solving and returned routing. **Documented:** Quilter
 lists85/100-ohm choices. **Observed in the current client implementation:**

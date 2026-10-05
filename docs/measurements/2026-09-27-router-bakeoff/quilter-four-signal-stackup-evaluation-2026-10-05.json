@@ -1,7 +1,83 @@
 {
   "schema_version": 1,
-  "checkpoint_local": "2026-10-05T15:39:00-07:00",
-  "status": "six-layer supplier construction selected for isolated native input; eight-layer fallback source-bound",
+  "checkpoint_local": "2026-10-05T15:53:00-07:00",
+  "status": "six-layer native structure demonstrated but input held; standard eight-layer alternative has preliminary minimum-compatible supplier impedance geometry; no cloud draft",
+  "latest_checkpoint": {
+    "recommendation": "Prefer evaluating standard JLC08161H-2116 next if retaining the current 0.1778mm trace floor. It supports four routed layers with ground shielding and preliminary supplier 90-ohm geometry above that floor. This is not native/import or fabrication acceptance.",
+    "why_selection_evolved": "The initial 3313E choice has excellent reference spacing, but the supplier calculator's 90-ohm solutions at approximately 0.21mm pair gap are narrower than the current input minimum. More layers and close planes do not by themselves resolve impedance geometry.",
+    "six_native_progress": "Attempt3 passed its ordered profile/complement checks both before and after a derivative-only KiCad10.0.6 load/save/reload. Eight mutation regressions ran before native execution. Full diagnostic/manifest qualification did not finish.",
+    "six_blocker": "DRC timed out at an internal60-second limit; no DRC report or final manifest binding. This is an implementation/tooling limit, not evidence of an impossible PCB. Three executions are consumed; no fourth.",
+    "source": "All five authoritative hashes and all four accepted-six package hashes reverified unchanged.",
+    "next_bounded_scope": "Reconcile supplier versus Quilter impedance assumptions and the signal-width policy, using the standard eight-layer alternative as the concrete comparator. Any native completion needs a separately bounded release; do not rerun the failed build loop.",
+    "no_actions": ["no new Quilter draft", "no six/eight routing launch", "no source repair", "no refill", "no integration", "no paid action"]
+  },
+  "supplier_impedance_screen": {
+    "source": "Interactive JLCPCB public calculator; current selected table, not a Quilter solve",
+    "target_ohms": 90,
+    "current_project_width_floor_mm": 0.1778,
+    "six_3313E": {
+      "entered_gap_mil": 8.2677165354,
+      "displayed_gap_mil": 8.27,
+      "outer_L1_ref_L2_width_mil": 6.05,
+      "outer_width_mm": 0.15367,
+      "inner_L3_refs_L2_L5_width_mil": 5.31,
+      "inner_width_mm": 0.134874,
+      "inner_snapshot": ".playwright-mcp/jlc-six-3313E-inner90-1547.yml",
+      "disposition": "Both displayed widths are below the current floor. This single-gap result does not prove no legal geometry, and no width relaxation is approved. Supplier soldermask/finished-copper/material assumptions must be reconciled with Quilter's earlier wider solutions."
+    },
+    "eight_standard_2116": {
+      "supplier_name": "JLC08161H-2116",
+      "roles_top_to_bottom": ["signal", "GND", "signal", "GND", "GND", "signal", "GND", "signal"],
+      "gap_sequence_mm": [0.1164, 0.3, 0.1528, 0.3, 0.1528, 0.3, 0.1164],
+      "gap_materials": ["2116 prepreg", "FR4 core", "two1080 prepregs", "FR4 core", "two1080 prepregs", "FR4 core", "2116 prepreg"],
+      "gap_Dk": [4.16, 4.41, 3.91, 4.41, 3.91, 4.41, 4.16],
+      "two1080_plies_mm": [0.0764, 0.0764],
+      "copper_mm": [0.035, 0.0152, 0.0152, 0.0152, 0.0152, 0.0152, 0.0152, 0.035],
+      "sum_copper_and_dielectric_mm": 1.5996,
+      "nearest_reference_gaps_for_four_signals_mm": [0.1164, 0.1528, 0.1528, 0.1164],
+      "initial_inner_at_8_27mil_gap_width_mil": 6.86,
+      "selected_gap_mil": 10,
+      "selected_gap_mm": 0.254,
+      "outer_L1_ref_L2_width_mil": 7.47,
+      "outer_width_mm": 0.189738,
+      "inner_L3_refs_L2_L4_width_mil": 7.28,
+      "inner_width_mm": 0.184912,
+      "snapshots": [
+        ".playwright-mcp/jlc-eight-2116-inner90-gap10-1551.yml",
+        ".playwright-mcp/jlc-eight-2116-outer90-gap10-1552.yml"
+      ],
+      "disposition": "Two selected-side supplier calculations exceed the existing width floor and0.2mm spacing floor. Physical construction is symmetric; opposite-side routing was not independently executed. Exact material/solver assumptions, native guards/stackup and Quilter import remain unqualified. No eight-layer PCB was generated."
+    },
+    "limits": "Numeric calculator output is not measured impedance, functional approval, board-level return continuity or a guarantee of routing completion."
+  },
+  "six_native_attempt": {
+    "executor": "3126a53a-0802-4c0d-b01e-e19e24a4fb5a",
+    "runtime": {"model": "gpt-5.6-sol", "reasoning_effort": "medium"},
+    "attempts": 3,
+    "corrected_attempt_history": "Initial report incorrectly claimed three before attempt3; actual first two were shell310/311. Root recovered their exact tool requests, then released only the unused final correction.",
+    "failed_first_candidate": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\six-four-signal-3313E-20261005T1539-sol",
+    "stale_first_candidate_evidence": "drc*.json and semantic-before/after-native.json were copied baseline results, not new execution. Preserve privately; never use them as derivative qualification.",
+    "candidate": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\six-four-signal-3313E-20261005T1544-sol-attempt3",
+    "pcb_sha256": "c749718086f4e29166ab346d44ec89324037b77e6668d6f1a1e378b3017ae38f",
+    "unfinished_manifest_sha256": "0625b73f219990e87f5687b92d582c7269f344ebda800968de0437f57f4699b8",
+    "native_readback_sha256": "2be592b2ce561d09d4fa79c40f453463eb172de1954187819bdb6afe882cb633",
+    "execution_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\six-four-signal-3313E-20261005T1544-sol-attempt3-execution",
+    "supervisor_receipt_sha256": "6f23135fa6f4ac7d8b489ef924c4eb8033c739fba2c77a02bd87602b17e368f0",
+    "helper_private_archive": ".playwright-mcp/six-3313E-failed-execution-recovery/build_six_four_signal_3313e.py",
+    "helper_sha256": "da3f90da5607e57f70124014fbbd50a6df7eaa524bce3d78e77ff76765a0c17a",
+    "root_hash_receipt": ".playwright-mcp/six-3313E-failed-execution-recovery/root-preservation-hashes.json",
+    "root_hash_receipt_sha256": "1cdbdd542095d68d6cc98730d801a6b9016549662cd979aa8025269f2512374e",
+    "native_counts": {"loads": 2, "saves": 1, "refills": 0, "references": 104, "pads": 325, "copper_objects": 209, "copper_layers": 6, "zones": 57, "rule_areas": 55},
+    "elapsed_seconds": 68.297,
+    "outer_supervisor_limit_seconds": 90,
+    "inner_DRC_limit_seconds": 60,
+    "helper_exit_code": 1,
+    "outer_supervisor_timed_out": false,
+    "inner_DRC_timed_out": true,
+    "completion_local": "2026-10-05T15:47:09-07:00",
+    "remaining": ["native DRC finding disposition", "final manifest binding", "90-ohm model/minimum-width disposition", "Quilter import"],
+    "tooling_limit": "Failed helper is privately archived, not qualified reusable tooling. Static outcomes are evidenced by reached control flow/readback, not a separately completed static test report."
+  },
   "authorization": {
     "owner_local": "2026-10-05T15:26:42-07:00",
     "scope": "Unattended evaluation of a four-routing-layer six-layer construction, with an eight-layer four-routing-layer alternative if needed.",
@@ -56,7 +132,7 @@
     "nearest_ground_distances_for_four_signals_mm": [0.0994, 0.1, 0.1, 0.0994],
     "central_signal_separation_mm": 1.1208,
     "rationale": "One additional routing layer versus four-layer S/G/S/S, with a close ground reference for every signal layer. The central signal pair is separated by more than eleven times its respective 0.1mm ground distance.",
-    "representation_gate": "Preserve separate central prepreg/core/prepreg material thicknesses and Dk. KiCad 10 supports bare addsublayer tokens; its container type is shared. No silent homogeneous averaging. Native roundtrip and Quilter import remain to be demonstrated.",
+    "representation_gate": "Separate central prepreg/core/prepreg thicknesses and Dk now survive the derivative KiCad10 roundtrip and ordered comparison. Bare addsublayer tokens share one container type. No homogeneous averaging was used. Quilter import remains unverified.",
     "mechanical_limit": "Nominal 1.6mm selection is not exact 1.6mm construction. This is an isolated study; final thickness/tolerance, service fit and contact/mount stack need mechanical rebinding before manufacture."
   },
   "eight_fallback": {
@@ -96,6 +172,6 @@
     "allowed_delta": ["physical stackup", "In3.Cu ground-to-signal declaration", "remove only derivative-added In3 ground plane", "profile and thickness metadata"],
     "method": "Reuse accepted input evidence and independently compare the complete remaining native subtrees; no new general-purpose output matcher.",
     "preview_gates": ["exact physical roles/materials", "only In1/In4 reference planes", "corrected common circuit and F-placement settings", "fresh 90-ohm solutions on four signal layers", "unchanged source and private isolation obligations"],
-    "not_yet_done": ["native selected input", "Quilter selected-profile preview", "six-layer routing job"]
+    "not_yet_done": ["complete native diagnostic and final manifest qualification", "Quilter selected-profile preview", "six-layer routing job"]
   }
 }

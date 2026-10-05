@@ -2,6 +2,20 @@
 
 ## Bounded engineering work
 
+- **October 5, 15:53 capacity evaluation checkpoint, input held:** selected
+  six3313E now native-load/save/reloads with104refs/325pads/209copper and
+  exact ordered profile/complement checks. Its DRC child times out at60s;
+  final manifest/report is not completed. Three executions are consumed;
+  no fourth or cloud preview. Preserve c7497180 native derivative and
+  privately archived failed helper; first attempt's copied reports are stale.
+  Independent supplier90-ohm calculations expose a width-policy mismatch:
+  six3313E at~0.21mm gap gives0.154/0.135mm widths below0.1778mm.
+  Standard eight JLC08161H-2116 at0.254mm gap gives0.190/0.185mm for
+  outer/inner examples, with S/G/S/G/G/S/G/S and1.5996mm construction.
+  Prefer that actual alternative for the next model comparison if keeping
+  the width floor; no eight PCB or routing job exists. Reconcile supplier/
+  Quilter assumptions before widening scope or relaxing a rule. Source
+  and accepted inputs unchanged; no refill, repair, paid use or integration.
 - **October 5, 15:39 four-routing-layer selection:** owner15:26 authorizes
   unattended six-layer routing-capacity evaluation, with eight as fallback,
   prioritizing total closure time over board cost. Select actual

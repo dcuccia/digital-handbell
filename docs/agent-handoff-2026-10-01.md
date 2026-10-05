@@ -7,6 +7,32 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5, 15:53: six native geometry demonstrated; no qualified preview.**
+The [latest checkpoint and exact artifacts](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json)
+preserve native `c7497180...`:104 references,325 pads,209 copper objects,
+the three central dielectric sublayers and complete unchanged complement.
+The final attempt reached derivative-only save/reload and post-native
+comparison, then DRC timed out at an internal60-second limit. No DRC
+report or final manifest binding exists. Three executions are consumed;
+the executor is stopped. Failed helper is archived privately, not published
+as reusable tooling. First attempt's copied DRC/semantic reports are stale.
+All authoritative and accepted-six input hashes remain unchanged.
+
+The independent impedance screen materially changes the recommendation.
+Supplier90-ohm examples for six3313E at~0.21mm pair gap require0.154mm
+outer/0.135mm inner widths, below our0.1778mm floor. This does not prove
+impossibility, and it is not the same solver model as Quilter's old results.
+Actual standard eight-layer **JLC08161H-2116**, S/G/S/G/G/S/G/S, produces
+0.190/0.185mm examples at0.254mm gap, above the current floor. Its physical
+sum is1.5996mm and nearest references are0.1164/0.1528mm. Prefer this as
+the next concrete comparator if preserving current minima, rather than
+automatically building eight3313 or relaxing the six-layer width rule.
+
+Next is a bounded supplier/Quilter model and width-policy disposition,
+not another unchanged native retry. Six needs diagnostic/manifest completion;
+eight has no native input. No new draft, job, source change, repair or paid
+action occurred. Supplier arithmetic is not hardware or routing acceptance.
+
 **October 5, 15:39: selected a genuinely higher-capacity six-layer option.**
 Owner15:26 releases unattended evaluation, prioritizing total engineering
 time over board price. The [new supplier/role decision](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json)
