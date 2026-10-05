@@ -12,6 +12,43 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 18:42: actual layer roles and off-pad process screen
+
+The [role ledger](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
+(`724b755b...`) selects JLC04161H-3313 as S/G/S/S and
+JLC06161H-3313 as S/G/S/G/G/S. Both retain F over close protected GND.
+The six-layer construction additionally references In2 to In3 and B to
+In4; its benefit is three closely referenced routing layers, not two
+extra signal layers. Four-layer In2 remains mixed routing/distribution,
+so it cannot promise a continuous B reference. These are study choices,
+not encoded native profiles or manufacturer acceptance.
+
+One runtime-verified Sol/medium static child screened all13 other
+retained vias against97 fixed pads. The
+[accepted result](measurements/2026-09-27-router-bakeoff/quilter-retained-via-pad-process-screen-2026-10-04.json)
+(`8bad927f...`) has1,261 clear pairs, with exact rectangles or positive
+conservative outer-box bounds; minimum copper clearance0.235169740mm
+is via358bf155 to R29.2. No additional via-in-fixed-pad requirement is
+found. All13 remain0.600/0.300mm through-vias. Root reviewed actual
+controls, code/raw/receipt hashes, process exit and the unchanged five-file
+source package. No native load or DRC was performed.
+
+Keep all18 retained geometries and the five mandatory resin-filled,
+planarized/capped seeds. New ordinary defaults start at0.650/0.350mm
+and0.150mm ring. A global0.150mm rule would reject the retained U4 seeds;
+retained and new policies must be encoded/reviewed separately. Mask,
+tenting, assembly and complete-board supplier acceptance remain open.
+
+**Next capability gate:** current
+[differential-pair documentation](https://docs.quilter.ai/physics-constraints/differential-pairs.md)
+lists85/100-ohm differential targets, versus our90-ohm USB target.
+Authenticated completed-job inspection worked but did not expose editable
+impedance choices. Do not infer current UI impossibility from this, silently
+substitute a target or resume manual USB routing. Resolve the capability/
+engineering mismatch read-only before differential-pair input release.
+The full movable-domain and native/import/output gates remain; no new
+full input, cloud configuration or job was created.
+
 ## October 4, 18:11 continuation: native guard representation
 
 Owner resumes the plan toward process evaluation and a four/six-layer

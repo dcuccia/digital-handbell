@@ -2,6 +2,18 @@
 
 ## Bounded engineering work
 
+- **October 4, 18:42 layer roles and retained-via geometry selected:**
+  real JLC 3313 four/six constructions use S/G/S/S and S/G/S/G/G/S.
+  Six layers buy closer references, not two extra signal layers.
+  All13 non-mandatory retained vias clear all97 fixed pad lands; minimum
+  copper gap0.235169740mm. Keep all18 vias and the five required filled/
+  planarized/capped seeds unchanged. New ordinary starting size is
+  0.650/0.350mm with0.150mm ring, not a retroactive global source rule.
+  Mask/tenting/assembly and complete native profiles remain unqualified.
+  Quilter documentation lists85/100-ohm differential targets, while USB
+  requires90; completed-job UI did not expose current choices. Next is a
+  bounded read-only capability/engineering disposition, not substitution,
+  manual USB routing, full-input upload or paired-job submission.
 - **October 4, 18:26 native rectangle decision:** select the existing
   18/22 four/six-layer rectangular guard obligations, not new curved rules.
   The exact 60 candidates yield 58 rectangle contacts; eight additional

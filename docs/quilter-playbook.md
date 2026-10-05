@@ -367,6 +367,33 @@ Quilter to cure a checker timeout, or automatically repair/merge an output.
 
 ## 6. Spend effort on discriminating comparisons
 
+**Selected study practice, not yet routed:** choose layer purposes from
+the actual dielectric adjacency, not the layer count. Our
+[3313 profiles](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
+use S/G/S/S versus S/G/S/G/G/S: six layers improve reference availability
+without adding two signal layers. A nearby mixed-use layer is not
+automatically a continuous return plane. Keep electrical roles, native
+layer identities/types and service-detected purposes distinct and reconcile
+all three during import.
+
+Check supported physics targets before staging. **Documented:** Quilter
+lists85/100-ohm differential choices, while this project's USB target is90.
+**Observed limit:** completed-job UI did not expose editable choices.
+Resolve that discrepancy rather than claiming unsupported operation or
+silently changing the target. A tolerance or independent acceptance
+alternative needs an explicit engineering basis; bit rate alone does not
+qualify transmission-line behavior.
+
+**Observed process-screen lesson:** the
+[13-by97 source screen](measurements/2026-09-27-router-bakeoff/quilter-retained-via-pad-process-screen-2026-10-04.json)
+proves positive separation from fixed lands without a new generic curved
+geometry engine. It does not qualify solder-mask dams, tenting or assembly,
+or protect against future moved pads. Distinguish existing immutable via
+families from new-route minima: raising a global annular minimum can reject
+retained processed seeds, while lowering it can underconstrain new vias.
+Use explicit retained-versus-new checks, never silent resizing or exemptions
+that extend to changed objects.
+
 Use one qualified packaging envelope and comparable BOM, interfaces,
 electrical and manufacturing requirements for a four-/six-layer comparison.
 Use real supplier stackups and let approved placement adapt; this compares

@@ -7,7 +7,25 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 4, 18:26:** owner resumed at 18:10:56. The
+**Current October 4, 18:42:** the
+[role selection](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
+(`724b755b...`) selects real JLC 3313 constructions with S/G/S/S and
+S/G/S/G/G/S roles. The
+[retained-via screen](measurements/2026-09-27-router-bakeoff/quilter-retained-via-pad-process-screen-2026-10-04.json)
+(`8bad927f...`) proves all13 non-mandatory vias clear all97 fixed lands;
+no additional via-in-fixed-pad process need was found. Mask/tenting,
+assembly and native profile qualification remain open. Existing18
+geometries and five filled/planarized/capped seeds stay unchanged.
+New ordinary starting size is0.650/0.350mm, with0.150mm ring.
+
+Next is a bounded read-only USB capability/engineering disposition:
+Quilter documents85/100-ohm differential targets, but our target is90.
+Authenticated completed-job UI did not reveal editable options; this is
+not proof that current UI lacks90-ohm support. Do not substitute a target,
+pre-route USB or create a cloud input. Movable domains, complete native
+findings and returned-object/fill matching still precede paired jobs.
+
+**Prior October 4, 18:26:** owner resumed at 18:10:56. The
 [native encoding decision](measurements/2026-09-27-router-bakeoff/quilter-native-guard-encoding-2026-10-04.json)
 (`933a6ede...`) selects the existing 18/22 rectangular guard obligations.
 The eight rectangle-only retained intrusions are explicitly accounted for,
@@ -17,9 +35,8 @@ validator: mutation tests/matcher were not implemented, and layer order
 comes from the earlier exact-file proof. Three launcher attempts are
 exhausted; no rerun.
 
-Next is explicit supplier four/six layer-purpose and process-minimum
-selection. Movable placement domains, complete native input findings and
-returned-object/fill matching remain gates. No full input or new job exists.
+The subsequent role/minimum selection is recorded above. No full input or
+new job exists.
 
 **Prior October 4, 18:00 hour checkpoint.** The
 [coverage ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)

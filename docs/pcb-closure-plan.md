@@ -166,15 +166,28 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 4, 18:26: native rectangles selected after owner continuation.**
+**Current October 4, 18:42: study roles and retained-via geometry selected.**
+The [role decision](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
+selects real JLC 3313 S/G/S/S and S/G/S/G/G/S constructions, not generic
+four/six presets. The [13-by97 screen](measurements/2026-09-27-router-bakeoff/quilter-retained-via-pad-process-screen-2026-10-04.json)
+finds no fixed-land overlap for the other13 retained vias. Their mask/
+assembly treatment remains unqualified; preserve all18 vias and the five
+required filled/planarized/capped seeds. New ordinary starting geometry
+is0.650/0.350mm with0.150mm ring, not a source resize or global-rule waiver.
+Next is a bounded read-only USB capability/engineering disposition:
+documented85/100-ohm choices do not establish support for our90-ohm target.
+No unsupported substitution, manual routing, source change, full input or
+cloud job. Movable domains and complete native/import/output gates remain.
+
+**Prior October 4, 18:26: native rectangles selected after owner continuation.**
 The [encoding decision](measurements/2026-09-27-router-bakeoff/quilter-native-guard-encoding-2026-10-04.json)
 selects the existing 18/22 guard obligations and preserves the exact eight
 additional rectangle-only retained intrusions. No source copper changes.
 The private measurement script's unexecuted controls and unimplemented
 matcher remain unqualified; actual layer order reuses older exact-file
 evidence. Its three launcher attempts are exhausted, with no rerun.
-Next independently select supplier layer purposes and compatible
-process/routing minima. Full movable domains, complete native input
+The subsequent layer-purpose/minimum selection is recorded above.
+Full movable domains, complete native input
 findings and new/changed returned-object/fill checks remain before jobs.
 
 **Prior October 4, 18:00: bound obstacle coverage accepted; hour closes.**

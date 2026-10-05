@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "status": "STUDY_LAYER_ROLES_SELECTED_NATIVE_PROFILE_AND_USB_CAPABILITY_PENDING",
+  "decision_date": "2026-10-04",
+  "scope": "Astra engineering selection for the paired routing study, not native encoded inputs, supplier acceptance, fabrication or powered use.",
+  "source_bindings": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "supplier_source_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-four-six-stackup-source-screen-2026-10-04.json",
+    "supplier_source_report_sha256": "ef0a395804060313d207195cb9d19c19323936d9bb92ec2a1897d25f2e8e914e",
+    "retained_objects": 177,
+    "fixed_references": 27,
+    "fixed_pads": 97
+  },
+  "shared_choices": {
+    "nominal_finished_thickness_mm": 1.6,
+    "outer_copper_mm": 0.035,
+    "inner_copper_mm": 0.0152,
+    "preferred_fast_route_face": "F.Cu over uninterrupted protected GND on In1.Cu",
+    "protected_ground_net": "GND",
+    "raw_CELL_NEG_is_ground_reference": false,
+    "private_return_rectangle_obligations_four_six": [18, 22],
+    "same_design_domains_and_restoration_duties": true,
+    "automatic_service_stackup_search": false,
+    "preserve_each_explicit_input_stackup": true,
+    "role_encoding_limit": "These are engineering/Quilter purposes, not literal KiCad layer-type tokens. Native canonical layer IDs, GND naming hints and detected service purposes must be reconciled during encoding/import.",
+    "no_blind_buried_or_microvias": true,
+    "B_surface": "Contact metal, service and mechanical exclusions still apply; no extra surface freedom is inferred from layer count."
+  },
+  "profiles": [
+    {
+      "id": "four-3313",
+      "supplier_construction": "JLC04161H-3313",
+      "dielectric_gaps_mm": [0.0994, 1.265, 0.0994],
+      "layer_roles_in_physical_order": [
+        {"native_layer":"F.Cu","role":"signal","purpose":"Components, critical signals, short local power/return paths"},
+        {"native_layer":"In1.Cu","role":"ground","net":"GND","purpose":"Substantially continuous protected-GND reference; private-via guards remain"},
+        {"native_layer":"In2.Cu","role":"signal","purpose":"Constrained lower-speed routing and reviewed power distribution, with useful GND fill; not a blanket power plane or guaranteed B reference"},
+        {"native_layer":"B.Cu","role":"signal","purpose":"Routing outside contact/service exclusions; fast routing needs separately demonstrated local reference continuity"}
+      ],
+      "close_reference_pairs": [{"signal":"F.Cu","ground":"In1.Cu","gap_mm":0.0994}],
+      "limit": "B-to-In2 spacing is small, but In2 is mixed-use rather than a guaranteed continuous ground reference. In2-to-In1 crosses the thick core."
+    },
+    {
+      "id": "six-3313-reference-rich",
+      "supplier_construction": "JLC06161H-3313",
+      "dielectric_gaps_mm": [0.0994, 0.55, 0.1088, 0.55, 0.0994],
+      "layer_roles_in_physical_order": [
+        {"native_layer":"F.Cu","role":"signal","purpose":"Components, critical signals and short local power/return paths"},
+        {"native_layer":"In1.Cu","role":"ground","net":"GND","purpose":"Protected-GND reference for F"},
+        {"native_layer":"In2.Cu","role":"signal","purpose":"Additional well-referenced ordinary routing and reviewed distribution"},
+        {"native_layer":"In3.Cu","role":"ground","net":"GND","purpose":"Protected-GND reference adjacent to In2"},
+        {"native_layer":"In4.Cu","role":"ground","net":"GND","purpose":"Protected-GND reference adjacent to B"},
+        {"native_layer":"B.Cu","role":"signal","purpose":"Constrained surface routing outside exposed-contact/service exclusions"}
+      ],
+      "close_reference_pairs": [
+        {"signal":"F.Cu","ground":"In1.Cu","gap_mm":0.0994},
+        {"signal":"In2.Cu","ground":"In3.Cu","gap_mm":0.1088},
+        {"signal":"B.Cu","ground":"In4.Cu","gap_mm":0.0994}
+      ],
+      "selection_reason": "S/G/S/G/G/S gives three routing layers with close reference planes. Do not automatically turn both central layers into signals across their thin shared dielectric.",
+      "limits": [
+        "This compares useful referenced routing capacity, not two extra signal layers or a predicted completion percentage.",
+        "Ground layers must connect to the intended functional GND network while preserving both private-via exclusions and CELL_NEG isolation.",
+        "Layer transitions require an actual nearby safe return path; plane labels alone are insufficient.",
+        "Copper balance, reference continuity and stackup-specific field geometry still require native/output and supplier review."
+      ]
+    }
+  ],
+  "routing_and_via_minimum_policy": {
+    "fresh_foreign_copper_clearance_mm": 0.2,
+    "fresh_board_edge_and_contact_clearance_mm": 0.25,
+    "absolute_track_width_floor_mm": 0.1778,
+    "width_limit": "A floor is not an ampacity or impedance specification. Retained widths stay exact; new power and impedance-sensitive routing requires its own circuit/path constraints.",
+    "new_ordinary_starting_diameter_drill_mm": [0.65, 0.35],
+    "new_ordinary_annular_ring_minimum_mm": 0.15,
+    "larger_drill_rule": "Copper diameter must be at least drill plus0.30mm; e.g. a0.50mm drill needs at least0.80mm copper. Do not treat independent minima as an automatically valid pair.",
+    "retained_vias": "Preserve all18 exact geometries. Existing sizes are not resized to fit new-route defaults.",
+    "mandatory_process": {
+      "four_U4_vias_diameter_drill_mm": [0.604, 0.35],
+      "four_U4_nominal_ring_mm": 0.127,
+      "C24_via_diameter_drill_mm": [0.6, 0.3],
+      "C24_nominal_ring_mm": 0.15,
+      "required": "Nonconductive resin fill, planarization and copper cap; no mask-plug/tenting substitution."
+    },
+    "other_13_process_classification": "The separate13-by97 screen now proves all13 off fixed lands, at unchanged0.600/0.300mm geometry and0.150mm rings. Mask/tenting/assembly and supplier treatment remain unqualified.",
+    "other_13_process_report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-retained-via-pad-process-screen-2026-10-04.json",
+    "native_rule_encoding_gate": "Use explicit retained-versus-new dispositions. A single global0.15mm annular minimum rejects the unchanged U4 seeds; a single smaller minimum does not enforce the new-via policy. Do not weaken output review or silently suppress inherited rule mismatches.",
+    "actual_authoritative_global_rules_not_new_defaults": {
+      "min_clearance_mm": 0.1778,
+      "min_copper_edge_clearance_mm": 0.025,
+      "min_track_width_mm": 0.1778,
+      "min_via_diameter_mm": 0.5,
+      "min_through_hole_diameter_mm": 0.3,
+      "min_via_annular_width_mm": 0.1
+    },
+    "source_rule_limit": "These are read-back source facts, not permission to inherit weak edge minima or silently replace the study's0.20/0.25mm requirements."
+  },
+  "material_and_process_limits": [
+    "Use the bound supplier layer rows unchanged. Their copper/dielectric sums are1.5642/1.5384mm, not guaranteed finished thickness; do not pad the values to force1.6mm.",
+    "Published nominal Dk values are3313=4.1,2116=4.16,core=4.6. Complete frequency-dependent Dk/Df, tolerances and finished thickness are not established.",
+    "POFV capability/spacing screens do not establish cap planarity or supplier acceptance of the actual complete board.",
+    "Four-layer POFV has a published additional charge; six-layer promotional inclusion is not a delivered-board/assembly quote."
+  ],
+  "USB_capability_gate": {
+    "required_target_differential_ohms": 90,
+    "documented_supported_targets_ohms": [85, 100],
+    "source_url": "https://docs.quilter.ai/physics-constraints/differential-pairs.md",
+    "checked_date": "2026-10-04",
+    "other_documented_limits": "Microstrip only, no coplanar-waveguide model; pairs require recognized net classes and paired names; series resistors can split displayed pairs that are combined during compilation.",
+    "decision": "Keep the project90-ohm requirement. Do not silently substitute85 or100, mistake the serial bit rate for a qualified frequency model, or pre-route USB under the paused manual-routing policy.",
+    "observed_UI_limit": "Authenticated read-only access to completed jobs works. Opening the old job's saved comprehension URL redirects to its completed viewer; this did not expose editable impedance choices or verify current90-ohm support.",
+    "next_required_disposition": "Bounded current-capability/engineering disposition before differential-pair input release. The documentation limitation is not proof that the current UI has no additional support."
+  },
+  "native_inputs_created": false,
+  "cloud_settings_changed_or_jobs_submitted": false,
+  "authoritative_source_changed": false
+}

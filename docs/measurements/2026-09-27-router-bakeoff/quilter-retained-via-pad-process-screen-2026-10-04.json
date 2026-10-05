@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "status": "ROOT_ACCEPTED_13_BY_97_OFF_FIXED_PAD_GEOMETRY_PROCESS_STILL_UNQUALIFIED",
+  "scope": {
+    "other_retained_vias": 13,
+    "fixed_references": 27,
+    "fixed_pads": 97,
+    "pair_evaluations": 1261,
+    "native_or_fixture_loads": 0,
+    "source_board_copper_or_fill_changes": 0,
+    "cloud_installs_or_full_board_staging": 0
+  },
+  "source_bindings_sha256": {
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "evidence_bindings_sha256": {
+    "process_hole_screen": "3349af15420593f85e6763c9a17f71e9e3f20ee33f99b6501ac0f5d37ca2f475",
+    "guard_coverage_ledger": "3e79e0be9614fbddd8eb5dd11354df434d0cd524854d1250e9b76812daff5f9c",
+    "complete_guard_coverage_raw": "85f3f7245b3a707d96f70e1a380db8f239c5474bfaf9f72626eecf7a02a886a9",
+    "saved_native_inventory": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba",
+    "retained177_raw": "639a7f81136e9e38319a55ac5d84dff42dfaaa08fe909ac87a68053fbefe23a9",
+    "saved_connectivity": "079b47d115db668be0fd8af196b20bfea316193426eca36398dbc98dae0ee23d"
+  },
+  "method": {
+    "via_geometry": "Saved complete connectivity records provide each retained via's global center, 0.600/0.300 mm geometry and explicit F.Cu/In1.Cu/In2.Cu/B.Cu through span.",
+    "pad_geometry": "All 97 fixed-pad global poses, layer memberships and serialized land shapes come from the bound saved-native inventory.",
+    "rectangles": "Qualified orthogonal rectangle-to-circle signed edge distance is exact.",
+    "circles_ovals_roundrects": "Only conservative oriented outer boxes are used. Positive separation proves CLEAR; any possible intersection would remain unresolved.",
+    "npth": "Both NPTH pads are included as physical holes in the 97-pad population and are never treated as conductive copper.",
+    "result": "Every one of 1261 copper-circle and drill-circle screens is either exact-clear or clear by a positive conservative lower bound. There are no potential intersections needing an unsupported narrow phase."
+  },
+  "population_accounting": {
+    "via_uuid_set_equal_to_authorized_13": true,
+    "fixed_pad_uuid_count_and_uniqueness": "97/97",
+    "pairs": "13*97=1261",
+    "missing_or_ambiguous_via_geometry": 0,
+    "unresolved_outer_box_pairs": 0,
+    "exact_land_overlap_or_tangent_pairs": 0,
+    "holes_overlapping_fixed_lands": 0,
+    "annulus_only_or_tangent_fixed_land_pairs": 0
+  },
+  "existing_via_family": {
+    "count": 13,
+    "copper_diameter_mm": 0.6,
+    "drill_mm": 0.3,
+    "nominal_ring_mm": 0.15,
+    "actual_span": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"]
+  },
+  "vias": [
+    {
+      "uuid": "0ba3129d-4c2f-51a5-b83d-47c5c587ae79",
+      "net": "VBAT",
+      "center_mm": [98.6, 107.45],
+      "nearest_fixed_land": {"reference": "R24", "pad": "2", "uuid": "1ba917bc-32e2-5176-954f-c3d06c7f6040", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 3.35, "drill_edge_gap_mm": 3.5, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "14e9c925-5186-5943-8002-513435324c90",
+      "net": "/CELL_NEG",
+      "center_mm": [91.1, 108.7],
+      "nearest_fixed_land": {"reference": "C30", "pad": "2", "uuid": "46f9a3ae-fcc5-5a47-9d6a-cb7da8cf1c38", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 0.492, "drill_edge_gap_mm": 0.642, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "1cb9cba6-90b8-5033-9ae1-e912259b9b0a",
+      "net": "/PROT_FET_RETURN",
+      "center_mm": [86.949175, 106.70048],
+      "nearest_fixed_land": {"reference": "Q5", "pad": "C2", "uuid": "021b2980-4367-540a-92b3-94992262b4b9", "shape": "circle", "pad_layers": ["F.Cu"], "copper_edge_lower_bound_mm": 0.277169819, "drill_edge_lower_bound_mm": 0.427169819, "distance_kind": "conservative_outer_box_positive_separation"},
+      "classification": "OFF_FIXED_PAD_CLEAR_PROCESS_UNRESOLVED_PRIVATE_RETURN",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "1fff4429-e233-533e-8d57-49618b67d41d",
+      "net": "GND",
+      "center_mm": [87.9, 110.3],
+      "nearest_fixed_land": {"reference": "R27", "pad": "2", "uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 0.606407467, "drill_edge_gap_mm": 0.756407467, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "248ce18d-3a6e-50d8-b9ce-c721b99a2c63",
+      "net": "/CELL_NEG",
+      "center_mm": [84.249175, 107.75048],
+      "nearest_fixed_land": {"reference": "Q5", "pad": "A1", "uuid": "827f2e8d-9572-5cc7-b558-5c0441f1edc8", "shape": "circle", "pad_layers": ["F.Cu"], "copper_edge_lower_bound_mm": 0.25, "drill_edge_lower_bound_mm": 0.4, "distance_kind": "conservative_outer_box_positive_separation"},
+      "classification": "OFF_FIXED_PAD_CLEAR",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "358bf155-f890-5806-b895-ec3c485c3ac2",
+      "net": "/PROT_FET_RETURN",
+      "center_mm": [83.4, 108.1],
+      "nearest_fixed_land": {"reference": "R29", "pad": "2", "uuid": "1f80163e-227c-5ad6-bfa4-f43754527fa1", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 0.23516974, "drill_edge_gap_mm": 0.38516974, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR_PROCESS_UNRESOLVED_PRIVATE_RETURN",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "4a6858d1-d03b-58a1-8988-c2e0fd93ac1d",
+      "net": "GND",
+      "center_mm": [99.4, 117.5],
+      "nearest_fixed_land": {"reference": "C27", "pad": "2", "uuid": "cd1ac9ea-17d7-560e-b79c-380d25d3feda", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 0.70124922, "drill_edge_gap_mm": 0.85124922, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+      "net": "GND",
+      "center_mm": [103.7, 117.5],
+      "nearest_fixed_land": {"reference": "C28", "pad": "2", "uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 1.012440475, "drill_edge_gap_mm": 1.162440475, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR_PRIVATE_BRANCH_PROCESS_UNRESOLVED",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "73f524c2-3597-5233-906e-93443fee9d54",
+      "net": "/CELL_NEG",
+      "center_mm": [86.949175, 107.75048],
+      "nearest_fixed_land": {"reference": "Q5", "pad": "C1", "uuid": "5bc4c05e-b185-5d0c-95d2-64a56209202b", "shape": "circle", "pad_layers": ["F.Cu"], "copper_edge_lower_bound_mm": 0.25, "drill_edge_lower_bound_mm": 0.4, "distance_kind": "conservative_outer_box_positive_separation"},
+      "classification": "OFF_FIXED_PAD_CLEAR",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "800d4ec3-d77e-5045-aaea-e1b064b8e71f",
+      "net": "/PROT_FET_RETURN",
+      "center_mm": [84.249175, 106.70048],
+      "nearest_fixed_land": {"reference": "Q5", "pad": "A2", "uuid": "1f68e652-aa0e-5428-ba7b-76559e99bae3", "shape": "circle", "pad_layers": ["F.Cu"], "copper_edge_lower_bound_mm": 0.277169819, "drill_edge_lower_bound_mm": 0.427169819, "distance_kind": "conservative_outer_box_positive_separation"},
+      "classification": "OFF_FIXED_PAD_CLEAR_PROCESS_UNRESOLVED_PRIVATE_RETURN",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "bad9068e-b03b-5869-a449-cdb7731eb117",
+      "net": "VBAT",
+      "center_mm": [98.6, 108.35],
+      "nearest_fixed_land": {"reference": "R24", "pad": "2", "uuid": "1ba917bc-32e2-5176-954f-c3d06c7f6040", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 2.45, "drill_edge_gap_mm": 2.6, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+      "net": "GND",
+      "center_mm": [100.2, 111.9],
+      "nearest_fixed_land": {"reference": "R23", "pad": "1", "uuid": "034b7fed-0432-5651-9fef-a5cac1b778bc", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 0.992619047, "drill_edge_gap_mm": 1.142619047, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR_PRIVATE_BRANCH_PROCESS_UNRESOLVED",
+      "mask_dam_tenting": "UNRESOLVED"
+    },
+    {
+      "uuid": "f0eb8165-a384-559b-a075-caa04a27f771",
+      "net": "/PROT_FET_RETURN",
+      "center_mm": [83.4, 107.2],
+      "nearest_fixed_land": {"reference": "R29", "pad": "2", "uuid": "1f80163e-227c-5ad6-bfa4-f43754527fa1", "shape": "rect", "pad_layers": ["F.Cu"], "copper_edge_gap_mm": 1.076206834, "drill_edge_gap_mm": 1.226206834, "distance_kind": "exact"},
+      "classification": "OFF_FIXED_PAD_CLEAR_PROCESS_UNRESOLVED_PRIVATE_RETURN",
+      "mask_dam_tenting": "UNRESOLVED"
+    }
+  ],
+  "process_disposition": {
+    "source_via_in_fixed_pad_count": 0,
+    "ordinary_via_candidate_count_by_fixed_land_geometry_only": 13,
+    "ordinary_process_qualified_count": 0,
+    "private_return_vias_not_automatically_ordinary": [
+      "1cb9cba6-90b8-5033-9ae1-e912259b9b0a",
+      "358bf155-f890-5806-b895-ec3c485c3ac2",
+      "800d4ec3-d77e-5045-aaea-e1b064b8e71f",
+      "f0eb8165-a384-559b-a075-caa04a27f771"
+    ],
+    "mask_dam_tenting_cap_planarity_stencil_and_assembly": "UNRESOLVED_FOR_ALL_13",
+    "interpretation": "The 13 are off the 97 fixed pad lands at current coordinates. That result does not establish ordinary fabrication treatment, mask behavior, assembly acceptance or permission to resize, move or refill them."
+  },
+  "mandatory_process_seeds_preserved_separately": {
+    "U4": {
+      "count": 4,
+      "copper_diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "treatment": "required nonconductive resin fill, planarization and copper cap"
+    },
+    "C24": {
+      "count": 1,
+      "copper_diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "treatment": "required nonconductive resin fill, planarization and copper cap"
+    },
+    "tenting_substitution_authorized": false
+  },
+  "new_ordinary_starting_policy": {
+    "copper_diameter_mm": 0.65,
+    "drill_mm": 0.35,
+    "minimum_ring_mm": 0.15,
+    "retroactive_change_to_existing_18_vias": false,
+    "global_rule_compatibility_declared": false
+  },
+  "controls": {
+    "executed_in_same_child": 4,
+    "all_passed": true,
+    "cases": [
+      "centered rectangle hole overlap detected",
+      "nonrectangle possible intersection remains unresolved",
+      "positive rectangle separation detected",
+      "NPTH possible intersection is not called copper"
+    ]
+  },
+  "execution": {
+    "attempts_used": 1,
+    "maximum_authorized": 3,
+    "python": "3.11.9",
+    "supervisor_sha256": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+    "executed_analyzer_sha256": "98699727bbc56c1d5f49683be8cb4313715efad8a791a313ef749f7015d8f057",
+    "raw_sha256": "b3f1e507891864c2592d55fe3d49344f041763faa02b9b079a5eb8fbf212e71a",
+    "receipt_sha256": "186c71e5d284ca0801eb9b474fdc23a240975ac524ad7367574487efe516eb10",
+    "stdout_sha256": "149fe7e2b6c45873a952609d361e4c33c347552645783368d83c84938b44cb61",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "child_pid": 14480,
+    "elapsed_seconds": 0.157,
+    "hard_limit_seconds": 30,
+    "timed_out": false,
+    "numeric_child_returncode": 0,
+    "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\retained-via-pad-process-screen-20261004T1832"
+  },
+  "root_review": {
+    "checkpoint_local": "2026-10-04 18:42",
+    "accepted": "All13 non-mandatory retained vias are clear of all97 fixed pad lands or physical holes using exact rectangles or strictly positive conservative bounds. No additional via-in-fixed-pad fill/cap requirement is found.",
+    "not_accepted": "Mask/tenting/assembly, ordinary-process signoff, future moved-pad clearance, returned routing, current/thermal capability or manufacturing release.",
+    "source_and_execution": "Root reviewed the executed code, real same-child controls, exact code/raw/receipt hashes, all five unchanged source hashes and absence of child/supervisor processes.",
+    "method_limit": "The exact result applies to the bound orthogonal pad definitions without offset/custom modifiers. No generalized nonrectangular intersection or degenerate-roundrect narrow phase was used.",
+    "preserved_pre_review_report": "pre-root-review-report.json",
+    "preserved_pre_review_report_sha256": "8b1c6f2c6b27e24995d3401bc9c9d6ab8b2c90d92042dcd90c2b641b5980cc59",
+    "remaining_process_gate": "Retain the existing13 geometries; qualify mask-dam/tenting and supplier treatment separately. The five original filled/planarized/capped seeds stay mandatory."
+  },
+  "limits": [
+    "This is a fixed-coordinate source-bound land-membership screen, not native DRC, supplier, mask, assembly, routing, electrical or manufacturing qualification.",
+    "No possible nonrectangular intersection was converted into a certain contact.",
+    "No source via is classified as ordinary merely because it is outside the five mandatory process seeds.",
+    "The authoritative 37-open five-file package and all prior experiments remain unchanged."
+  ]
+}
