@@ -5,6 +5,8 @@
   "clock_relative_contract_item": {
     "status": "ROOT_ACCEPTED_SOURCE_CLOCK_BINDINGS_ENGINEERING_CRITERIA_UNRESOLVED",
     "root_review_local": "2026-10-04 19:40",
+    "accepted_evidence_pushed_at_local": "2026-10-04T19:46:47-07:00",
+    "deadline_exception": "Root documentation and exact staged-byte binding completed1m47 beyond19:45. No executor, native run or new engineering item was extended.",
     "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-clock-relative-contract-2026-10-04.json",
     "report_sha256": "95d2737d6f5e748719b278ee5295f59ae9f1dcedbd2a474173fdb0753c809693",
     "actual_analysis_completed_local": "2026-10-04 19:34:28",
@@ -13,7 +15,7 @@
     "all_five_source_hashes_unchanged": true,
     "source_result": "XIN IC1.20/Y1.3/C2.2; XOUT IC1.21/R6.2; crystal-side R6.1/Y1.1/C3.2. IC1.19 is ground-tied TESTEN, not an MCU ground terminal; P$1 is the true exposed ground.",
     "remaining_gate": "Actual imported PIN tokens, justified proximity/timing screening and layer-specific quiet-exclusion versus ground-reference/return disposition. Exact source facts are not a completed acceptance contract.",
-    "next_item": "Bounded engineering disposition of the clock reference/quiet-area strategy and study acceptance criteria; no more terminal extraction or automatic MCU freeze/new retention.",
+    "next_item": "Owner scope decision: continue the movable clock engineering contract, or separately qualify a preserved IC1/Y1/R6/C2/C3 block for the first comparison. The latter would provisionally change27/77 to32/72 but is NOT authorized or applied; no automatic freeze or retention expansion.",
     "executor": "aa88e077-03b1-41be-b7e2-6a00d853d123",
     "verified_model_effort": "gpt-5.6-sol / medium",
     "runtime_started_event": "caed571f-eb94-497c-af11-140f423c199a",

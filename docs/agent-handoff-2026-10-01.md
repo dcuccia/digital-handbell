@@ -20,6 +20,11 @@ hole needs reconciliation with reference/return intent, not a blanket
 continuous-plane requirement or an automatic copy of the old rectangle.
 Next is that bounded engineering disposition; no more terminal extraction,
 MCU freeze, new retention, full input or cloud release.
+Owner scope decision is pending: continue movable-clock qualification or
+separately qualify a preserved IC1/Y1/R6/C2/C3 block for the first comparison
+(prospective32 fixed/72 eligible). Neither a freeze nor added retention is
+applied. The accepted evidence was pushed at19:46:47,1m47 beyond the root
+target while completing documentation/hash bindings; no execution extended.
 
 **Current accepted October 4, 19:27:** the
 [movable-domain disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json)
