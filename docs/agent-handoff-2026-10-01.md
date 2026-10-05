@@ -7,6 +7,20 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5, 10:03: four-layer cloud draft configured, neither run started.**
+Owner09:16 authorized Playwright setup/qualified free runs and separately
+approved exact ignored staging copies. The
+[paired-import ledger](measurements/2026-09-27-router-bakeoff/quilter-paired-import-2026-10-05.json)
+records draft`6ac3d5b7fc0d2d776ed14a60`, saved3313 S/G/S/S/minima,
+mid-layer preservation and actual90-ohm USB profile results.
+Quilter recognizes104 components/72 movers/18 fixed vias. Common
+comprehension and F-room/guard/pour/pin checks remain essential; do not
+submit its unreviewed29 bypass rows or generic500mA assumptions.
+The supported UI requires submitting the first project job before creating
+six. Preserve both current and oldproject similarity-rejected drafts.
+Next is a bounded source-bound common comprehension/association correction,
+not reconstructing inputs, duplicating jobs or bypassing project controls.
+
 **October 5 hourly result: the native construction milestone is closed.**
 The [hourly ledger](measurements/2026-09-27-router-bakeoff/quilter-input-hour-completion-2026-10-05.json)
 binds the separate pair at private

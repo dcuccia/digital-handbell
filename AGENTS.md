@@ -2,6 +2,28 @@
 
 ## Bounded engineering work
 
+- **October 5, 10:03 browser checkpoint:** four-layer draft
+  `6ac3d5b7fc0d2d776ed14a60` in new comparison project`6ac3d5b7...14a5f`
+  parses104 refs/72 movers/18 retained vias. Uploaded3313 S/G/S/S,
+  exact minima, mid-layer preservation and both90-ohm USB targets are
+  saved; fresh profile results meet target numerically. No job submitted.
+  Six cannot be created in this project until first submission. Do not
+  bypass the UI gate or launch bad defaults:29 bypass entries/power500mA
+  defaults, F-room associations/keepouts/pours and325/326 pin reconciliation
+  remain. Preserve the oldproject similarity-rejected draft and new draft.
+  Next is one bounded common comprehension/association correction using
+  saved evidence, not new PCB construction. See paired-import ledger.
+- **October 5, 09:16 paired Quilter setup authorized:** owner requests
+  Playwright-driven upload/setup and getting both accepted comparison
+  inputs running. Native source and accepted input bytes remain immutable.
+  Owner separately approves six hash-identical PCB/project/schematic copies
+  in ignored browser staging after Playwright rejects the private path.
+  Four-layer draft`6ac3cdd258ed28bd0fe882ba` is in the existing Handbell
+  routing evaluation project; no submission yet. Human approval wait
+  interrupted the first wall-clock window; upload resumes09:49 with a
+  bounded preview checkpoint by10:04. Qualify imported constraints and
+  free-use conditions before runs; no payment, new agreement, PRL upload,
+  source repair or automatic integration. Preserve drafts on a blocker.
 - **October 5 hourly milestone: both native inputs constructed and checked.**
   Separate four/six derivatives at`comparison-inputs-20261005T0852-sol-final`
   preserve104 refs/325 pads/209 copper,32 fixed/72 eligible, and all five

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "FOUR_DRAFT_CONFIGURED_HELD_FOR_COMPREHENSION_AND_REGION_REVIEW_SIX_NOT_CREATED",
+  "owner_authorization_local": "2026-10-05 09:16",
+  "scope": "Playwright-driven setup and qualified free four/six comparison submissions. Owner separately approved staging six byte-identical PCB/project/schematic files inside ignored browser roots after private-path access denial.",
+  "checkpoint_local": "2026-10-05 10:03",
+  "timing": "Human staging-approval wait interrupted the initial09:31 window. Active browser work resumed09:49 with10:04 preview checkpoint.",
+  "project": {
+    "name": "Handbell flexible 4-6 layer comparison",
+    "id": "6ac3d5b7fc0d2d776ed14a5f",
+    "url": "https://app.quilter.ai/projects/6ac3d5b7fc0d2d776ed14a5f",
+    "four_job_id": "6ac3d5b7fc0d2d776ed14a60",
+    "four_job_url": "https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60/create/constraints",
+    "six_job_id": null,
+    "six_creation_gate": "UI disables New Layout Job until the first project job is submitted. Do not bypass this control or submit an unqualified first job merely to unlock it.",
+    "old_project_rejected_draft": "6ac3cdd258ed28bd0fe882ba",
+    "old_project_result": "BOARD_SIMILARITY_VALIDATION blocks Continue against the old baseline. Preserved unchanged; used normal new-project workflow for the revised comparison baseline."
+  },
+  "inputs": {
+    "four_pcb_sha256": "342c242f3f7957c8cefb7ee0519326807cbe83b343f7afe07551e61f60c46b61",
+    "six_pcb_sha256": "c3749f5c6be862faa27a738c9b256ab8112881cae0833e3b15495f884e24fc07",
+    "both_projects_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+    "both_schematics_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "staging": ".playwright-mcp\\paired-inputs-20261005",
+    "six_uploaded": false,
+    "prl_uploaded": false
+  },
+  "four_import_observations": {
+    "components": 104,
+    "components_to_place": 72,
+    "preplaced_vias": 18,
+    "service_pins": 326,
+    "native_physical_pads": 325,
+    "pins_to_route": 235,
+    "display_dimensions_mm": [45, 49.34],
+    "region": {"name": "QUILTER_F_PLACEMENT_ROOM", "side": "front", "isOnBoard": true},
+    "recognized_pour": "PROTECTED_GND_In1.Cu",
+    "warnings": [
+      "Pin count mismatch;326 service pins must be reconciled with325 native physical pads, not assumed loss or equivalence.",
+      "Same16 missing-schematic-reference warning, including14 actual source refs and board-only MH1/MH2.",
+      "Initial existing-pours-deleted notice; preserveMidLayers was subsequently enabled, but explicit preservedPours entries remain null."
+    ]
+  },
+  "four_saved_configuration": {
+    "configuration_name": "existing",
+    "saved_updated_local": "2026-10-05T09:58:33.162-07:00",
+    "stackup": "Uploaded four-layer3313 numeric construction, not a vendor preset",
+    "copper_roles": ["signal", "ground", "signal", "signal"],
+    "copper_thickness_um": [35, 15.2, 15.2, 35],
+    "dielectric_thickness_um": [99.4, 1265, 99.4],
+    "dielectric_constants": [4.1, 4.6, 4.1],
+    "material_names": "Service metadata null; imported numeric thickness/Dk/core-prepreg structure matches input.",
+    "preserve_mid_layers": true,
+    "allow_stacked_vias": false,
+    "prefer_single_sided": true,
+    "component_clearance_mm": 0.127,
+    "fabrication_minima_um": {"width":177.8,"clearance":200,"via_copper":650,"via_drill":350,"board_margin":250},
+    "usb_pairs": ["D+/D-", "USB_D+/USB_D-"],
+    "differential_target_ohm": 90,
+    "independent_single_ended_target": null,
+    "removed_inference": "VO+/VO- removed from impedance-controlled differential data pairs; class-D speaker duties remain.",
+    "computed_usb_profile": [
+      {"layer":"F.Cu","width_um":199.78312103271486,"gap_um":210,"achieved_ohm":89.99447819391496,"status":"OK"},
+      {"layer":"In2.Cu","width_um":626.6328674316405,"gap_um":210,"achieved_ohm":90.00127617197565,"status":"OK"},
+      {"layer":"B.Cu","width_um":977.7901550292968,"gap_um":210,"achieved_ohm":90.00743582836864,"status":"OK"}
+    ],
+    "impedance_limit": "Observed saved target and fresh computed dimensions, not routing/reference-continuity or supplier acceptance."
+  },
+  "unclosed_submission_gates": [
+    "Reconcile29 bypass rows with actual source pin duties before allowing72 movable parts to be placed. Low-confidence rows assign C5/C9/C10/C11/C12/C13/C14/C17/C23/C24 to U2.5; C18 is assigned IC1.23. Do not treat a common supply net as the right local bypass parent.",
+    "Seven power rows retain generic500mA values and pour requests. Bind engineering current/return intent instead of treating defaults as reviewed values.",
+    "F room is recognized, but saved placementRegions entries are null. Confirm actual eligible-component associations and all five footprint reservations plus private/contact keepouts; single-sided preference alone is not enforcement.",
+    "Confirm protected-plane preservation and imported pin/net identity, including325/326 mismatch; preserve ground versus CELL_NEG/private returns.",
+    "Confirm current free-use conditions before any first submission. No payment/upgrade/agreement screen was accepted and no zero-price quote was established.",
+    "Only after qualified first submission can the supported UI create the six-layer counterpart in this project."
+  ],
+  "private_browser_evidence": [
+    ".playwright-mcp\\four-board-0955.json",
+    ".playwright-mcp\\four-comprehension-saved.json",
+    ".playwright-mcp\\four-selected-config-1000.json",
+    ".playwright-mcp\\four-90ohm-details-1000.json",
+    ".playwright-mcp\\four-request-index.txt"
+  ],
+  "preservation": "No native source/input edits, routing, refill, support message, paid action, submission or candidate integration. Raw browser payloads remain ignored; only sanitized findings are committed.",
+  "next_bounded_item": "One source-bound comprehension/placement-association correction for the existing four-layer draft using the saved29 rows and accepted source witnesses; no new inventory or duplicate job. Reuse corrected common settings for six only after first job qualifies."
+}

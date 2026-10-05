@@ -12,6 +12,18 @@ reasoning; its linked ledgers bind exact files and results. The
 authorization and blockers. This guide does not release another job,
 native-tool retry, source edit, purchase or fabrication.
 
+**October5 paired-input update:** the flexible draft recognizes72 movers
+and the named F room, but room recognition alone does not establish member
+assignment. The uploaded stackup initially classified every copper layer
+as signal; setting In1 to Ground and enabling internal-copper preservation
+persists in the selected configuration. That configuration, not the stale
+top-level detected-stackup summary or legacy design-parameters defaults,
+is the relevant settings evidence. Two saved90-ohm USB pairs produce
+fresh per-layer calculations; this closes numeric capability uncertainty,
+not return-path or output acceptance. The same project cannot create its
+second job until the first is submitted. Plan setup order accordingly;
+never submit unreviewed defaults just to unlock another draft.
+
 ## What the evidence supports
 
 | Finding | Evidence and limit | Working guideline |
