@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "status": "LOCAL_INPUT_CONSTRUCTION_ACCEPTED_IMPORT_REVIEW_PENDING_NO_CLOUD_RELEASE",
+  "root_final_disposition": {
+    "review_local": "2026-10-05 09:08",
+    "result": "Both local native inputs are accepted for the next separately authorized importer review. Construction, source preservation, reservations, expanded guard coverage and staged DRC disposition are closed within the limits below. This is not importer qualification, routing success, manufacturing approval or upload authorization.",
+    "corrected_pair_report_sha256": "c1befddfc0bc029b8c360432d20ea3cb04e78667669f7457f55265239aa1f5d2",
+    "four_manifest_sha256": "fdd4840b372fec94c624550e020bfaa3f969e13c990850634c17969b307f99de",
+    "six_manifest_sha256": "c111d1c21833961a716ac49be201fb2986eba8ac6a33f504655df0da57150292",
+    "expanded_screen_sha256": "2e91d5ff9eaf2ef29c6110f6c821fb1703484ee7a034e40c80126324f60adb95",
+    "prior_177_97_ledger_sha256": "3e79e0be9614fbddd8eb5dd11354df434d0cd524854d1250e9b76812daff5f9c",
+    "expanded_screen": "Actual32 finite-width clock segments and67 fixed pads screened against18/22 private guards:990 same-layer pairs per profile, zero conservative bounding-box overlaps. All13 ordinary vias screen against164 fixed lands without contact;1995 foreign-net pairs per profile have minimum0.514091034mm, exceeding0.20mm. Do not label that foreign-only minimum the all-net minimum.",
+    "drc_disposition": [
+      "Six preserves all317 r2 violation records exactly plus four owner-reservation findings: J1/J2/MH1/MH2. No new X6 or other-object finding.",
+      "Four preserves all317 object/item records plus those four owners. Two private-via descriptions select In2 guards rather than six-layer In4 guards; R24 pad2 and footprint select its overlapping pad guard rather than track guard. All selected guards are source-bound and expected; these are not new physical conflicts.",
+      "Retained-source private/contact-guard intrusions and four owner-reservation overlaps are accepted as staged representation conflicts, not permission for new taps or a global clearance waiver. Importer treatment of pre-existing objects inside restrictions remains a gate.",
+      "The4 annular,14 drill and18 diameter findings are retained-source versus new-route-minimum conflicts. Preserve all18 vias and the five mandatory filled/planarized/capped seeds; actual supplier/process acceptance remains open.",
+      "The11 dangling and184 open records are staged reconnection duties. All source terminal/net obligations remain mandatory for returned-output review.",
+      "Library lookup and silkscreen/text findings are not reasons to modify embedded source geometry during the placement/routing experiment; final manufacturing review must resolve applicable findings."
+    ],
+    "producer_report_correction": "Contrary to the producer's guard_identity text, KiCad DOES emit the keepout name in each top-level violation description. Root inspected the four changed descriptions directly. The producer only inspected item descriptions; do not carry its absence-of-guard-name claim forward.",
+    "provenance_limit": "Older overwritten checker revisions were not recovered. Their exact receipt/input hashes and outputs survive, but only the current full checker/test source is preserved. Do not claim full old-revision source preservation.",
+    "timing": "Expanded screen finished09:03:24. Final static report correction finished09:05:11, exceeding the delegated09:04 execution stop by71 seconds. No native rerun occurred; executor is idle and the owner09:10 overall stop remains in force.",
+    "next_item": "Separately authorized paired import preview using only the final PCB/project/schematic files: reconcile imported identities/pins, fixed/eligible placement, F room/reservations, private/contact restrictions, retained copper/planes, exact profiles and saved90-ohm calculations. Verify free-use conditions before any later submission. Never upload PRLs.",
+    "unchanged_prohibitions": ["No cloud action in this hour", "No source changes", "No manual routing/refill", "No automatic integration", "No paid use or fabrication"]
+  },
+  "owner_window": {
+    "started_local": "2026-10-05T08:10:32-07:00",
+    "stop_local": "2026-10-05T09:10:00-07:00",
+    "no_new_item_after_local": "2026-10-05T09:00:00-07:00",
+    "static_retry_override": "Owner explicitly replaced the static-software three-attempt cap with the09:10 timebox. Native limits, source protection and acceptance requirements remain unchanged.",
+    "cloud_action_authorized": false
+  },
+  "executor": {
+    "agent_id": "2e0915c7-5f7a-418e-b27c-5991389f79f3",
+    "actual_model": "gpt-5.6-sol",
+    "actual_effort": "medium",
+    "runtime_started_event": "23a224cd-8da1-48fc-97eb-e8fe18ad81ed",
+    "runtime_configured_event": "2a0b1981-0900-4ffd-8255-a627ccc833fc",
+    "runtime_probe_completed_event": "5152e440-c807-4fb2-954c-1d8dd521087c"
+  },
+  "checker": {
+    "root_accepted_local": "2026-10-05 08:50",
+    "path": "tools\\check_quilter_comparison_inputs.py",
+    "sha256": "2bdbcbce8533b791361435140ceef03b62eedc235bf3a76b6c994d8ab3c9b500",
+    "tests_path": "tools\\test_check_quilter_comparison_inputs.py",
+    "tests_sha256": "6ecdd92a48aee65b232c87715b92832cfa629e88897e399682fadeea65f9e224",
+    "scope": [
+      "Independent source electrical/physical footprint fields, property names/values, attributes, graphic/courtyard geometry and layers.",
+      "All104 reference and325 pad identities/nets/definitions; fixed32 poses and72 permitted parking translations using saved-native physical witnesses.",
+      "Exact209 retained primitives, intentional complete35-object COUT omission, original19 source rules and unique object populations.",
+      "Exact outline, contact/private guards, positive F room, optional five final reservations, unfilled protected-plane definitions, layer roles, supplier profiles and project minima.",
+      "Separate surgical preservation against immutable r2, including footprint child UUID population."
+    ],
+    "limits": [
+      "Text/property angles are preserved against native r2, not independently normalized from source text. Root explicitly dispositions this cosmetic limitation, not electrical or physical geometry.",
+      "Source-present child UUIDs and the r2 child UUID population are checked separately from semantic drawing multisets; do not claim complete raw-subtree equality.",
+      "This is an exact-source/profile checker using private saved evidence, not a generic KiCad or Quilter validator.",
+      "A static pass does not prove imported placement restrictions, routing behavior, physical fit or fabrication readiness."
+    ],
+    "tests": {
+      "preceding_checker_sha256": "629813b7cc790a8ee4cf751081a5789284fedc36066fd168e435cf6ddb78b280",
+      "preceding_tests_sha256": "8a35c30a5e3b1b111f78f78d76b38d242b6306bc14a30445ba97312c01f69df0",
+      "preceding_profile_test_methods": 32,
+      "preceding_positive_and_mutation_actions": 60,
+      "preceding_final_chunks": [
+        {"receipt_name": "quilter-snapshotAB-four-20261005T084133042-receipt.json", "methods": 8, "seconds": 15.516},
+        {"receipt_name": "quilter-snapshotAB-six-20261005T084133036-receipt.json", "methods": 8, "seconds": 15.813},
+        {"receipt_name": "quilter-snapshotC1-four-20261005T084157351-receipt.json", "methods": 3, "seconds": 9.328},
+        {"receipt_name": "quilter-snapshotC1-six-20261005T084157350-receipt.json", "methods": 3, "seconds": 9.610},
+        {"receipt_name": "quilter-snapshotCD-four-20261005T084218388-receipt.json", "methods": 5, "seconds": 24.829},
+        {"receipt_name": "quilter-snapshotCD-six-20261005T084218402-receipt.json", "methods": 5, "seconds": 25.172}
+      ],
+      "current_revision_targeted_checks": "Both profiles pass baseline plus actual exclude_from_bom removal and fp graphical-coordinate mutations. Two methods/three actions per profile;8.703/9.282 seconds.",
+      "typed_source_delta_report_sha256": "a50eb736066586f5dd2613a83fa35c42fae00ab98d030f21d4cdd40c57834038",
+      "typed_source_delta_counts": {"four": 0, "six": 0},
+      "hard_child_limit_seconds": 30,
+      "root_verified": "Root read actual code, hashes, numeric exit0, confirmed exits, no-timeout receipts and passing stderr for the six prior chunks and two current targeted runs.",
+      "reuse_limit": "The complete32-method suite belongs to the preceding revision. Current source-semantic changes received targeted coverage; do not attribute all prior executions to the new hash."
+    }
+  },
+  "native_pair": {
+    "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\comparison-inputs-20261005T0852-sol-final",
+    "private_evidence": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\checker-evidence-20261005T0851-sol",
+    "four_pcb_sha256": "342c242f3f7957c8cefb7ee0519326807cbe83b343f7afe07551e61f60c46b61",
+    "six_pcb_sha256": "c3749f5c6be862faa27a738c9b256ab8112881cae0833e3b15495f884e24fc07",
+    "both_projects_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+    "both_schematics_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "native_roundtrip": {
+      "tool": "KiCad 10.0.6",
+      "loads_per_profile": 2,
+      "saves_per_profile": 1,
+      "pipeline_seconds": 1.031,
+      "hard_child_limit_seconds": 90,
+      "native_corrective_retries": 0,
+      "source_native_loads": 0
+    },
+    "semantic_comparison": {
+      "before_native": "PASS_BOTH",
+      "after_native": "PASS_BOTH",
+      "checker_sha256": "2bdbcbce8533b791361435140ceef03b62eedc235bf3a76b6c994d8ab3c9b500",
+      "references": 104,
+      "pads": 325,
+      "fixed_references": 32,
+      "eligible_references": 72,
+      "retained_tracks": 191,
+      "retained_vias": 18,
+      "four_rule_areas_and_total_zones": [51, 52],
+      "six_rule_areas_and_total_zones": [55, 58],
+      "reservations": "Five F.Cu footprint-only areas per profile: MH1/MH2 circumscribed R3.2 and J1/J2/X6 planning polygons. All copper/pad flags allowed.",
+      "root_review": "Read executed native/post-native scripts and exact receipts. Independently verified final PCB/project/schematic hashes and all five unchanged authoritative source hashes at09:02."
+    },
+    "drc": {
+      "four_report_sha256": "af03e9f5400ecde5d9b4c069d1c94a18c1609f001175fe06f26f41e8fb763a3f",
+      "six_report_sha256": "358761705d733d046f9d76714ecb8af9e329e278f7613d7f58380ca09c85134f",
+      "four_seconds": 6.047,
+      "six_seconds": 5.61,
+      "hard_limit_seconds": 90,
+      "violations_each": 321,
+      "unconnected_items_each": 184,
+      "categories_each": {
+        "items_not_allowed": 74,
+        "lib_footprint_issues": 97,
+        "text_height": 72,
+        "silk_over_copper": 19,
+        "via_diameter": 18,
+        "drill_out_of_range": 14,
+        "silk_overlap": 7,
+        "via_dangling": 7,
+        "annular_width": 4,
+        "track_dangling": 4,
+        "silk_edge_clearance": 3,
+        "text_thickness": 2
+      },
+      "limit": "A completed DRC run is not a clean board. Opens are staged routing duties after intentional copper release and parking, not a routing-improvement result."
+    }
+  },
+  "root_review_correction": {
+    "time_local": "2026-10-05 09:01",
+    "initial_pair_result_sha256": "df729bd9785ab21f413efa9fcfd86a868484060f5ed3c7da79f0f5c1a546ea5a",
+    "initial_coverage_report_sha256": "2091d65f139f4308dfdb738e53b705f42b3d8e52a9afa4b2e7a3dc410122ff3f",
+    "rejected_claim": "The initial expanded coverage script checks via/pad contacts only; it does not execute the claimed32-segment/67-pad guard extension or measure the required minimum gap. Reservation other-footprint count0 is hardcoded rather than established by a baseline DRC multiset comparison.",
+    "bounded_correction": "Same closure item through09:04: execute the actual guard extension, measure ordinary-via/all164-land gaps and compare old/new DRC records with multiplicity. No new native operation or DRC retry."
+  },
+  "native_completion_release": {
+    "root_release_local": "2026-10-05 08:50",
+    "execution_stop_local": "2026-10-05 09:04",
+    "report_due_local": "2026-10-05 09:05",
+    "maximum_corrective_retries": 2,
+    "hard_native_child_limit_seconds": 90,
+    "scope": "Separate r2 derivatives with five F footprint-only reservations; final checker before/after native save/reload, per-profile DRC, expanded209/164 differential coverage and exact finding disposition.",
+    "prohibited": ["Source native load/edit", "Overwriting r1/r2 or failed evidence", "Refill", "New routing", "Cloud action", "Paid use", "Automatic integration"]
+  }
+}

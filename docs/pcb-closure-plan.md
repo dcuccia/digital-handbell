@@ -166,7 +166,22 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Active October 5, 08:10:** owner authorizes one sustained local
+**October 5 hourly milestone:** both isolated native inputs now have all
+five footprint reservations and pass source-aware comparisons before/after
+native save/reload. Four PCB`342c242f...` and six`c3749f5c...` preserve the
+209/32/72 contract. DRC completes on both:321 findings/184 staged opens,
+not a clean or routed board. The
+[hourly ledger](measurements/2026-09-27-router-bakeoff/quilter-input-hour-completion-2026-10-05.json)
+records exact files, real checker controls and root disposition of the
+expanded screen; its first overclaimed PASS is explicitly rejected.
+The corrected32/67 guard screen and13-via/164-land screen now pass; root
+dispositions staged DRC findings and accepts local input construction.
+Next is a separately authorized paired import preview, not rebuilding
+these files or restarting the old checker iterations.
+Source and all earlier experiments remain unchanged. No cloud action,
+refill, routing or integration is released by this construction milestone.
+
+**Historical October 5, 08:10:** owner authorizes one sustained local
 completion push through09:10, no new item after09:00. Finish the checker
 and real mutations, review code before its first run, then advance through
 successful dependencies to reservations/native pairs and exact finding

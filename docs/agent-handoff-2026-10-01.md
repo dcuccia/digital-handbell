@@ -7,7 +7,37 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Active October 5, 08:10: one-hour local completion milestone.**
+**October 5 hourly result: the native construction milestone is closed.**
+The [hourly ledger](measurements/2026-09-27-router-bakeoff/quilter-input-hour-completion-2026-10-05.json)
+binds the separate pair at private
+`quilter\inputs\comparison-inputs-20261005T0852-sol-final`:
+four PCB`342c242f...`, six`c3749f5c...`. Both now contain the five native
+F footprint-only reservations and pass the source-aware checker before
+and after KiCad save/reload:104 references,325 pads,209 retained copper,
+32 fixed and72 eligible. Both native DRC runs finish with321 findings and
+184 staged opens; these are routing inputs, not finished routed boards.
+All five authoritative hashes remain unchanged; source/r1/r2 are preserved.
+
+Checker`2bdbcbce...` separates source definitions, saved-native physical
+poses and r2 surgical preservation. Real mutation controls replace the old
+placeholder. Text/property angles remain native-r2-preserved, a disclosed
+cosmetic limit rather than independent source-angle proof. Root caught
+another overclaim in the first expanded-screen report: its code only
+checks via/pad contact, not the32/67 guard extension or minimum gap.
+Use the hourly ledger's final disposition, not that superseded PASS.
+The corrected screen now covers the actual32/67 extension: zero possible
+private-guard overlaps, no ordinary-via/fixed-land contact and0.514091034mm
+minimum foreign-net gap. Root dispositions the staged DRC classes and four
+owner-reservation additions. **Local inputs are accepted for later import
+review; importer qualification is the next task, not another construction
+loop.** CLI top-level descriptions contain keepout names; the producer's
+claim that names are absent is incorrect. The executor is idle. A final
+static report correction ended09:05:11,71 seconds beyond its delegated stop;
+no native rerun occurred. Older checker source revisions were unavailable,
+although their receipt hashes/results remain preserved.
+No cloud upload, routing, refill, integration or fabrication is released.
+
+**Historical October 5, 08:10: one-hour local completion authorization.**
 The owner authorizes sustained work through09:10, starting no new item
 after09:00. First finish and root-review the entire static checker and
 real input mutations before execution, using existing source-native pad
@@ -17,6 +47,8 @@ captured native positions/orientations are the physical witnesses.
 The old executor handle was cleared; replacement`2e0915c7...` is runtime
 verified Sol/medium (started`23a224cd...`, configured`2a0b1981...`).
 Code review08:20, execution08:24/root08:26; initial plus two corrections.
+At08:25 the owner explicitly replaced the static-software retry cap with
+the09:10 timebox; native-operation limits remained unchanged.
 After successful dependencies, continue to reservation/native-pair
 completion and exact finding disposition within the hour. Preserve
 source/r1/r2 and old failures; no refill, routing, cloud or paid action.

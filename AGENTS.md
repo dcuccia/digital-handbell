@@ -2,6 +2,33 @@
 
 ## Bounded engineering work
 
+- **October 5 hourly milestone: both native inputs constructed and checked.**
+  Separate four/six derivatives at`comparison-inputs-20261005T0852-sol-final`
+  preserve104 refs/325 pads/209 copper,32 fixed/72 eligible, and all five
+  F footprint-only reservations. Final-mode source/semantic comparisons
+  pass before and after KiCad save/reload. Source/r1/r2 remain unchanged.
+  Checker`2bdbcbce...` has genuine mutation controls; its explicit cosmetic
+  limit is native-r2 text-angle preservation, not source text-angle proof.
+  Both DRC runs complete with321 findings/184 staged opens. Root rejected
+  the first claimed expanded screen because its script only checked
+  via/pad contact, not the32/67 guard extension or minimum clearance.
+  The corrected32/67 screen has zero possible guard overlaps;13 ordinary
+  vias clear all164 fixed lands, with0.514091034mm minimum foreign-net gap.
+  Root dispositions inherited DRC classes and four owner-reservation
+  overlaps, accepting local inputs for later separately authorized import
+  review. CLI top-level descriptions DO contain guard names; the producer's
+  missing-name claim was wrong. Executor is idle. Do not
+  turn constructed/native-checked into importer-qualified or DRC-clean.
+  Stop09:10; no cloud action, refill, routing or source change is released.
+- **October 5, 08:25 static-development limit changed by owner:** after
+  the first hourly checker batch exhausted three runs (launcher error,
+  timeout, semantic mismatches), owner explicitly selected time-boxing
+  software-only checker development to09:10 instead of the three-attempt
+  cap. This exception applies only to static software development, not
+  native operations, source protection, acceptance criteria or cloud work.
+  Keep hard subprocess limits and preserved executed revisions/results.
+  Diagnose actual field differences together; first pass both baseline
+  positives, then real mutations, then consider native input completion.
 - **October 5, 08:10 one-hour completion push authorized:** owner requests
   sustained progress on the paired-input milestone, not more disconnected
   micro-iterations. Stop09:10; start no new item after09:00. Reuse r2 and

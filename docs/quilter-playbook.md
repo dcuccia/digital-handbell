@@ -260,6 +260,28 @@ For native serialization differences, reuse source-bound saved-native
 pad geometry and narrowly normalize set ordering/defaults; do not
 repeatedly guess angle conventions or discard meaningful fields.
 
+Keep three comparisons distinct: independent source definitions, saved-native
+physical poses, and surgical preservation against the preceding derivative.
+The October5 checker initially made its non-pad test pass by switching its
+oracle to r2; root rejected that as source proof. The corrected checker
+compares source attributes, property values, graphic/courtyard geometry and
+layers separately, with real attribute-removal and coordinate mutations.
+Its disclosed exception is text/property angles: these remain unchanged
+from native r2, not independently source-normalized. A cosmetic limitation
+can receive an explicit disposition without dropping physical geometry.
+Default normalization must be field-typed: numeric geometry, lexical pad
+identities such as `"01"`, set-valued layers, and ordered polygon vertices
+are different contracts. Run both profile positives first; split expensive
+mutation suites into bounded chunks instead of repeatedly timing out one
+large suite or changing engineering checks to accommodate the timeout.
+For staged DRC, compare complete finding multisets before declaring each
+warning a new defect. The completed pair preserves the317 baseline item
+records and adds four expected reservation-owner findings. Keep top-level
+violation descriptions: they identify keepout names that item descriptions
+alone omit. Profile-specific selection among overlapping guards can change
+that description without changing the offending object. Record and inspect
+those deltas rather than deleting descriptions from every comparison.
+
 Re-evaluate which parts actually move before building more domain classes.
 At the handbell's selected+2mm spacing, the saved height screen leaves only
 L1 and X6 at/above the nominal3.5mm ceiling; both are fixed under the later
