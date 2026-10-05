@@ -2,6 +2,30 @@
 
 ## Bounded engineering work
 
+- **October 5, 07:28 clock selection closed; full trial is no-go:** current
+  saved-native pads resolve Y1, and selected local paths connect all clock
+  terminals to their intended nets, including real P$1, without movable
+  pads or pours. Root conditionally selects209 copper/32 fixed/164 pads/
+  72 eligible for the comparison contract only; no PCB changed.
+  The54 track/via/pad contacts form20 incidence groups, not proven20
+  physical ports, and saved fills were not enumerated. Restore all source
+  terminal/net duties, not every old ordinary fanout or pour contact;
+  private boost/protector protections remain unchanged. Full209/164
+  coverage, common F/electrical encoding and two complete native inputs
+  are still absent. Stop the capped attempt early rather than start
+  another repair chain. No full input, cloud submission or next executor
+  item is released. See the October5 recovery and consolidated stage table.
+- **October 5, 07:16 budgeted experiment preparation approved:** owner
+  agrees to a finite path toward the flexible four/six comparison rather
+  than repeated qualification. Root caps this attempt at07:46:18, with
+  no new item after07:36:18. First is a newly bounded static endpoint/
+  boundary recovery on the preserved clock, using complete saved-native
+  geometry and exercised helpers, not a new framework or native inventory.
+  Fresh runtime-verified Sol/medium stops07:28/report07:29/root07:31;
+  the prior executor handle was unavailable after the overnight pause.
+  Root separately consolidates indispensable input versus output-review
+  gates. Keep source/177/27/77 until review. Old attempts remain exhausted;
+  no unqualified input, cloud action, paid use or automatic next repair.
 - **October 4, 21:26 preserved-clock packet held:** exact17 signal plus15
   proposed return F segments give a prospective209 union and32 fixed/
   164 pads. This is membership evidence, not a qualified retained block:

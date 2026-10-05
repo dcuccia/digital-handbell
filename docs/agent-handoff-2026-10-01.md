@@ -7,7 +7,38 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October 4, 21:26: HOLD.** The
+**Current October 5, 07:28: source-clock selection accepted; full trial
+NO-GO.** The [recovery](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-boundary-recovery-2026-10-05.json)
+binds current Y1 pads and proves all local clock paths using selected
+copper/fixed lands only. Root selects209 primitives (191 tracks/18 vias),
+32 fixed references/164 pads and72 eligible in the comparison contract.
+No PCB has changed. The54 contact witnesses cover tracks/vias/pads, not
+saved fills;20 groups are contact-incidence components, not20 mandatory
+physical ports. Restore all intended external source terminal/net duties,
+not every old ordinary fanout/via/pour contact. Private-path obligations
+remain protected separately.
+
+The common F-placement/electrical encoding and two complete native inputs,
+including expanded209/164 coverage, are not ready. The
+[consolidated stage table](quilter-workflow-study-2026-10-02.md#october-5-budgeted-path-to-a-useful-experiment)
+separates those essentials from output/assembly checks. Stop this capped
+attempt early; do not fill the remaining time with another proof chain.
+Executor29681c2d... is idle; final child exited07:23:40 after three attempts.
+Next work, if authorized, is one common-input implementation/preview
+milestone, not another clock inventory or a new general geometry framework.
+No full input or new Quilter job is released.
+
+**Prior authorization October 5, 07:16:** owner approves budgeted preparation toward
+a useful flexible four/six experiment. Overall stop07:46:18; no new item
+after07:36:18. A newly bounded static-only clock endpoint/boundary recovery
+uses complete saved-native geometry and existing helpers; verified
+Sol/medium stops07:28/report07:29/root07:31. Root consolidates remaining
+input protections versus output-dependent acceptance evidence in parallel.
+This does not reopen old native controls or waive input protections.
+Source and177/27/77 remain unchanged until review. If essentials cannot
+close in budget, publish a consolidated no-go rather than another repair.
+
+**Prior October 4, 21:26: HOLD.** The
 [preserved-clock packet](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-qualification-2026-10-04.json)
 preserves17 signal/15 proposed return F segments and prospective209/32/164
 primitive/reference/pad counts, not a qualified retained block. Four

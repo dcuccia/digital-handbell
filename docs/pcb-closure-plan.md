@@ -166,7 +166,22 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 4, 21:26: HOLD.** The preserved-clock packet retains
+**Current October 5, 07:28: clock selection accepted; full trial NO-GO.**
+The [current-source recovery](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-boundary-recovery-2026-10-05.json)
+closes pad binding and self-contained local signal/return paths. Select
+209 primitives,32 fixed references/164 pads and72 eligible for comparison
+preparation only. Ordinary interfaces carry source terminal/net restoration
+duties, not preservation of every old fanout or saved-pour contact.
+No new source or PCB bytes. The common allowed-F/electrical encoding,
+expanded209/164 coverage and two complete native inputs remain missing.
+Stop the owner-approved capped attempt early rather than launch another
+repair chain. The next separately scoped deliverable is common-input
+implementation and qualified previews, not more clock inventory.
+No source change, full input generation, cloud job or new executor item
+is released by this no-go. See the
+[stage/readiness table](quilter-workflow-study-2026-10-02.md#october-5-budgeted-path-to-a-useful-experiment).
+
+**Prior October 4, 21:26: HOLD.** The preserved-clock packet retains
 exact membership facts but does not qualify the proposed209-copper/32-fixed
 block. Y1 case-pad coordinate rebinding and complete external conductive
 contacts remain unclosed; an endpoint-only screen is insufficient.

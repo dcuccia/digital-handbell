@@ -61,8 +61,9 @@ source-reviewed sensitive cells and release ordinary layout around them.
 An exact retained block needs copper identities and external terminal/
 junction obligations, not just a list of fixed footprints or a rectangular
 cut. Check private pickoffs at the actual terminal lands; shared-net
-continuity is not equivalent. The handbell's prospective boost/protection
-strategy leaves 77 of 104 references movable, pending its source-cut audit.
+continuity is not equivalent. The handbell's selected first-comparison
+boost/protection/clock strategy leaves72 of104 references eligible;
+the complete input and physical/electrical constraints are not yet qualified.
 See the [common-input disposition](quilter-workflow-study-2026-10-02.md#common-input-strategy-retain-critical-cells-release-ordinary-layout).
 
 **Observed relative-constraint path, not qualified routing behavior:** the
@@ -106,6 +107,16 @@ rebind the coordinates. The initial
 exposed both gaps at root review. Its executed missing-member controls
 exercise membership, not connectivity or complete identity coverage.
 Keep those claims separate even when all reported controls pass.
+The [October5 recovery](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-boundary-recovery-2026-10-05.json)
+resolves the clock pad/path gap from the already available current-source
+native inventory. Search the authoritative geometry record before reviving
+older diagnostic coordinates. For an internally self-contained ordinary
+cell, preserve its local paths and external terminal/net obligations;
+do not freeze every historical fanout, via or pour contact. This is not a
+waiver for private/Kelvin paths or final reference/return behavior.
+Name contact-incidence groups accurately: shared object identities do not
+prove one physical junction, and counting pad/via pairs as "not endpoint
+matches" is not an independent segment-interior control.
 
 **Observed local-net distinction:** every physical terminal on six
 protector/feedback nets belongs to the proposed retained cells. Retaining
@@ -433,6 +444,23 @@ useful candidates while fixing a local validation problem. Do not rerun
 Quilter to cure a checker timeout, or automatically repair/merge an output.
 
 ## 6. Spend effort on discriminating comparisons
+
+Set an **overall preparation budget and a go/no-go deliverable** before
+starting local qualification tasks. Per-item time limits do not control
+the accumulated cost of many successful or repaired items. Count scope
+definition, root review, handoff and tooling corrections as preparation,
+not just subprocess runtime. Stop a dependency chain that exceeds the
+experiment's expected learning value rather than renewing it by default.
+
+Separate input truth, submitted configuration, observed router behavior
+and hardware release. Define indispensable restrictions and output
+acceptance criteria up front, but test actual new routing, reference
+continuity and final placement on returned candidates. Do not require
+proof of an unrun outcome before starting a disposable experiment.
+Conversely, output review is not an excuse to submit missing or knowingly
+misrepresented essential input constraints. The
+[October5 stage table](quilter-workflow-study-2026-10-02.md#october-5-budgeted-path-to-a-useful-experiment)
+records this distinction for the handbell comparison.
 
 **Selected study practice, not yet routed:** choose layer purposes from
 the actual dielectric adjacency, not the layer count. Our

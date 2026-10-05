@@ -12,6 +12,90 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 5: budgeted path to a useful experiment
+
+**07:28 decision: clock source selection accepted; full-board trial no-go.**
+The [recovery](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-boundary-recovery-2026-10-05.json)
+uses the complete current-source native inventory rather than old clock
+DRC records. All clock signal and local GND paths connect using only the
+selected32 primitives and fixed pad lands. Root selects the209-copper/
+32-fixed/164-pad/72-eligible comparison partition; no PCB is generated
+or changed. Final static execution ended07:23:40, with zero native loads.
+The initial malformed launcher option and irrelevant custom-pad parse
+failure consumed the two corrections; all versions/results stay preserved.
+
+Root narrows the producer's boundary claims. Its54 track/via/pad contacts
+are grouped by shared object incidence, not20 proven physical junctions.
+Saved F/In1 GND fills were not examined. They are not required as internal
+clock bridges: this experiment may replace ordinary external fanout and
+fills while restoring every intended source terminal/net. It need not
+reproduce every old contact location or MCU ground via. The separately
+protected boost/protector topology, exact clock routes and final
+reference/return requirements remain. Membership and raw-code limitations
+are explicit in the reviewed report rather than relabeled as complete proof.
+
+The common input specification still lacks its implemented allowed-F/
+electrical encoding and two complete native realizations, including
+expanded209/164 preservation/guard/process coverage. Those are real
+submission prerequisites, not output-only questions. Stop this capped
+attempt early rather than spend its balance on another proof chain.
+No full input, cloud upload/job or further executor item is released.
+The next separately scoped work would be a common-input implementation/
+preview milestone, not more clock evidence or production qualification.
+
+The owner approves a finite preparation attempt at07:16 after questioning
+the accumulated agent effort. Root sets an overall07:46:18 stop, not
+another series of automatically renewed ten-minute items. No new item
+starts after07:36:18. The intended outcome is a go/no-go decision for
+the flexible four/six comparison. A local proof success is not that outcome.
+
+The first item is a separately authorized static clock endpoint/boundary
+recovery, preserving the October4 failures. In parallel, root separates
+input essentials from evidence that can only come from a returned layout.
+The original clock executor handle was cleared overnight; a fresh
+explicit Sol/medium read-only probe is required before execution.
+
+| Stage | Indispensable evidence | Evidence not required at this stage |
+|---|---|---|
+| Before disposable input construction | Exact source identities; qualified fixed/retained circuit membership and internal paths; explicit external restoration duties; one defined F-placement envelope and real contact/mount/connector planning reservations; selected supplier profiles, layer roles and retained/new routing minima. | A predicted routing percentage, final component positions, complete new routes or a rebuilt enclosure. |
+| Before submitting each qualified input | Native identity/geometry preservation; expected free/movable population and F-region associations; critical guard/layer interpretation; corrected source-pin comprehension or an explicit preserve/check disposition; saved minima and real90-ohm calculations for the selected profile; free account/use confirmation. | Proof that the router will succeed, actual output F-only/body containment, completed new-reference planes or measured oscillator performance. |
+| On returned candidates, before selecting a layout | Exact required identity/retention; actual side/body/rotation/contact clearance; restored connectivity and private topology; no new shorts; actual references/return transitions and critical route geometry; new-via process compliance; root-defect count and total effort. | Fabrication release or automatic repair/integration. A failed candidate remains useful evidence when it answers the planned question. |
+| Before hardware release | Exact assembly rebinding and service access; tolerances/loaded contacts/insulation; supplier mask, cap, stencil and process acceptance; appropriate electrical/thermal/bring-up qualification. | These are not silently waived because a cloud job reports completion. |
+
+Existing nominal planning reservations may support a disposable experiment
+without proving final loaded fit, but unknown access is not zero and
+unencoded indispensable restrictions are not an acceptable input.
+Likewise, define output acceptance criteria before running; do not demand
+evidence of unobserved router outcomes before permitting the experiment.
+No extra small cloud diagnostic, broad geometry framework, additional
+layer-count matrix or manual routing is part of this budget.
+
+The remaining integration deliverable is **one common input specification
+and its two native realizations**, not a new collection of qualification
+tools. Clock recovery alone cannot supply missing placement/electrical
+rules, profile encoding or importer evidence. On an essential unresolved
+dependency or budget exhaustion, publish one consolidated no-go and
+stop without automatically authorizing the next repair.
+
+### Consolidated readiness inventory
+
+This inventory uses the accepted ledgers rather than rerunning completed
+controls. "Specified" does not mean "encoded in a complete input."
+
+| Work package | Already available | Remaining prerequisite for a useful run |
+|---|---|---|
+| Common retained circuits | Conditional209 selection; boost/protection/contact duties; all five protected process seeds; exact clock32-addition and internal-path proof with terminal-restoration disposition. | Enlarged209/164 preservation/foreign-contact/guard/process coverage in the complete input; no repeated clock inventory. |
+| Common placement freedom | Analytic D45/tongue outline; +2mm common below-gap F-height class; fixed L1/X6; R3.2 mount and source connector planning reservations. | One implemented allowed F domain with those reservations and actual component associations. Do not revive the obsolete tall-mover split or constrain every functional group to its old box. Final body/rotation and redesigned service fit remain output/assembly review. |
+| Electrical intent outside retained cells | Complete source schematic and16 functional groups; USB90-ohm intent; retained boost/private-return topology and explicit COUT restoration. | Correct capacitor-to-pin and other relevant imported circuit associations, plus source-backed routing requirements. Group names are not those associations; the old U2-dominated inference and500mA defaults are not accepted replacements. This is a preview review, not a request for another general net inventory. |
+| Two native profiles and one preservation comparison | Named3313 layer constructions; S/G/S/S and S/G/S/G/G/S; selected minima and retained/new-via policy; isolated room/guard/plane controls. | Compose the full native PCB/project pair without dropping source identities or guard intent, and compare their actual saved contents. The existing one-off rectangle script is not a ready whole-input validator. |
+| Actual preview and submission | Existing authenticated workflow and a prior Free Tier diagnostic; client numeric impedance capability. | Each new qualified preview must demonstrate expected population/regions/layers/settings, saved90 and nonstale calculations, and free use. Old-job evidence cannot be reused as those new results. |
+
+Do not describe the clock as the sole remaining blocker. Equally, do not
+make final harness qualification, supplier quoting, finished enclosure
+CAD or powered oscillator measurements prerequisites for a disposable
+unpowered routing experiment. Those distinctions reduce unnecessary
+preparation without hiding the still-missing common native input.
+
 ## October 4, 21:14: owner selects preserved-clock qualification
 
 **21:26 disposition: held, not rejected as defective.** The
