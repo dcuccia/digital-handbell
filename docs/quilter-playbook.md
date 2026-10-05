@@ -249,6 +249,17 @@ A reservation written only in a sidecar is not an encoded placement
 restriction, and dielectric material named "core" does not correct a
 native layer whose type still says "prepreg".
 
+Validate the validator's actual comparisons before treating a positive
+path as useful evidence. Comparing a new draft to an unqualified prior
+draft does not independently validate the latter's outline, zones or
+profile. Negative controls must alter real inputs and demonstrate the
+specific rejection; returning "passed" beside a list of mutation names
+is not a test. The [failed October5 completion](measurements/2026-09-27-router-bakeoff/quilter-input-completion-2026-10-05.json)
+was stopped before such a placeholder could become accepted evidence.
+For native serialization differences, reuse source-bound saved-native
+pad geometry and narrowly normalize set ordering/defaults; do not
+repeatedly guess angle conventions or discard meaningful fields.
+
 Re-evaluate which parts actually move before building more domain classes.
 At the handbell's selected+2mm spacing, the saved height screen leaves only
 L1 and X6 at/above the nominal3.5mm ceiling; both are fixed under the later

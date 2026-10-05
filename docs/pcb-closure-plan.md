@@ -166,7 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Active October 5, 07:50:** finish the paired-input implementation gaps
+**Current October 5, 07:58: stop after three failed static attempts.**
+The [completion ledger](measurements/2026-09-27-router-bakeoff/quilter-input-completion-2026-10-05.json)
+records partial reservation encoding but no complete r3 pair or native
+execution. The checker needs both representation normalization and
+missing independent outline/zone/profile/plane comparisons; its nominal
+mutation helper mutates nothing and has no accepted result. Final code
+is archived privately. Source/r2 remain unchanged; r2 stays held.
+Executor exited07:54:35. A new bounded checker completion requires
+authorization; remaining wall time does not renew the exhausted retries.
+
+**Historical authorization October 5, 07:50:** finish the paired-input implementation gaps
 under a new bounded authorization. Same verified Sol/medium executor
 adds native F footprint-only MH1/MH2/J1/J2/X6 reservations and source-bound
 semantic matchers/negative controls on preserved r3 derivatives.
@@ -175,7 +185,7 @@ Expanded209/164 screening and finding disposition remain in this finite
 completion scope if time permits. No source-native edit/load, refill,
 routing or cloud; r1/r2 stay immutable and upload remains held.
 
-**Current October 5, 07:48: paired inputs constructed, not usable yet.**
+**Prior October 5, 07:48: paired inputs constructed, not usable yet.**
 Preserve [r2 and its source-bound ledger](measurements/2026-09-27-router-bakeoff/quilter-input-construction-2026-10-05.json).
 Native counts104/325/209 and final manifest hashes are recorded, but
 MH1/MH2/J1/J2/X6 native reservations and semantic preservation matchers

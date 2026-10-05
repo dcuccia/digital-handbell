@@ -14,6 +14,26 @@ Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
 ## October 5, 07:50: finish concrete implementation gaps
 
+**07:58 result: not completed.** Three static attempts failed in the
+source/native pad comparison; actual final exit was07:54:35. Five F
+footprint reservations were written into preserved partial four-layer
+copies, but no completed r3 pair, native operation or mutation test exists.
+The [reviewed completion ledger](measurements/2026-09-27-router-bakeoff/quilter-input-completion-2026-10-05.json)
+rejects a normalization-only diagnosis: expected outline geometry was
+only counted, most zone/profile fields were not independently checked,
+and the nominal mutation function assigned success without changing any
+input. That unexecuted function is not evidence. The final failed checker
+is archived unchanged privately rather than promoted into reusable tools.
+
+Some observed pad differences are representational: BT1 layer membership
+has changed order, and saved source-native IC1.1 orientation90 agrees with
+r2's angle90 despite the source text's180. These limited witnesses do not
+establish full equivalence or an actual damaged pad. Neither another
+native load nor broad field omission is the appropriate next step.
+Source and r2 hashes are unchanged. Stop at the exhausted attempt limit;
+a separately authorized checker completion must implement actual
+comparisons and actual negative mutations before generating another pair.
+
 The owner explicitly authorizes completion, not another source-selection
 study. Same verified Sol/medium executor targets a separate r3 pair:
 native footprint-only F reservations for MH1/MH2/J1/J2/X6 and exact semantic

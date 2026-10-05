@@ -2,6 +2,17 @@
 
 ## Bounded engineering work
 
+- **October 5, 07:58 completion blocked; executor stopped:** three static
+  attempts failed before any r3 native work. Five F footprint reservations
+  exist only in preserved partial four-layer copies. Root finds more than
+  pad normalization: outline/zone/profile checks are incomplete and the
+  unexecuted mutation helper changes no inputs. Reject those proof claims;
+  archive the failed checker privately, not as qualified tooling.
+  Saved-native IC1.1 orientation90 and BT layer-order witnesses show why
+  raw serialized comparisons need care, not a demonstrated source defect.
+  Source/r2 remain unchanged; no cloud/native r3 action. Last child exited
+  07:54:35. New bounded checker completion needs authorization; do not
+  spend the remaining clock budget on a fourth attempt.
 - **October 5, 07:50 implementation completion authorized:** owner asks
   to finish the gaps. One new bounded same-executor Sol/medium item may
   create a preserved r3 derivative with native F footprint-only MH1/MH2
