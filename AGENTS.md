@@ -2,6 +2,31 @@
 
 ## Bounded engineering work
 
+- **October 5, 16:49 eight preview held at new Floorplanner:** draft
+  6ac434b6a389adaff19ad80e imports the qualified three files,104 components/
+  72 movers/326 service pins. Saved physical stack and S/G/S/G/G/S/G/S,
+  preserved internal copper and177.8/200/650/350/250um minima match.
+  All72 eligible refs are assigned to the fixed Front room. One UI1.42.0
+  Floorplanner attempt returns PINNED_ROOM_INFEASIBLE: the room rectangle
+  exceeds inset placeable bounds. Preflight stops before packing; this is
+  not a demonstrated inability to place the board. No resize, unlock,
+  margin waiver, retry or routing launch. Continue became enabled but was
+  not used. Floorplanner state saves0.127mm/single-sided preference; those
+  are not yet persisted in selected configuration. Common circuit inputs,
+  full imported-rule comparison and fresh90-ohm results remain unfinished.
+  Stop this bounded preview; next disposition this exact room semantics/
+  bounds mismatch, not another native reconstruction or cloud draft.
+- **October 5, 16:34 eight2116 local input accepted for preview:** exact
+  10b04d84 PCB preserves104/325/209 and adds four private-via guards plus
+  one In6 plane. Native roundtrip and separate DRC complete;505 records
+  differ only in three open representatives and two self-guard names on
+  the same protected vias. Final manifest ab1b77ba/report0ac22aa5 correct
+  stale inherited closure fields. Root resolves the legacy count as four
+  planes total/three beyond In1/one added here; process duties are unchanged.
+  No new correction is needed for that presentation. All construction
+  attempts are exhausted. Next one existing-project preview through16:49,
+  root16:51: only PCB/pro/sch, common associations, fresh eight-layer roles
+  and90-ohm results. No routing launch, source edit, paid use or integration.
 - **October 5, 16:20 six diagnostic completed; eight construction released:**
   One separate CLI run finishes in74.86s with321 findings/184 staged opens.
   Corrected full-multiset comparison has498 inherited records and seven

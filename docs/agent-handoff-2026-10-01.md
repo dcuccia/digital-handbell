@@ -7,6 +7,57 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5, 16:49: eight-layer preview created; Floorplanner hold.**
+The qualified PCB/project/schematic are uploaded to
+[the unsubmitted eight-layer draft](https://app.quilter.ai/jobs/6ac434b6a389adaff19ad80e/create/floorplan)
+in the existing comparison project. Import reports104 components,72 to
+place,326 service pins and235 pins to route. Known schematic/pin-count/
+pour warnings remain. Saved selected configuration has the exact eight2116
+thickness/Dk rows, S/G/S/G/G/S/G/S, preserved internal copper and unchanged
+177.8/200/650/350/250um minima. Material names are null in the service
+response; do not claim complete material/model equivalence.
+
+UI1.42.0 adds Floorplanner Beta. All72 eligible references, and none of the
+fixed32, were assigned to the existing pinned Front room. One attempt
+returns `PINNED_ROOM_INFEASIBLE`: rectangle `(0,0,256,234)` exceeds
+placeable bounds `(3,3,253,231)`. It stops at preflight with no packing.
+This is a room/bounds constraint failure, not evidence that the board
+cannot be placed or that the Adafruit circuit choices are defective.
+The fixed room was not resized, unlocked or moved; no margin was waived.
+Continue became enabled after the failed attempt, but was not clicked.
+The browser remains on its details dialog.
+
+The response saves all72 assignments, Front/pinned state,0.127mm component
+clearance and single-sided preference. These are **Floorplanner state**:
+the latest captured selected configuration still has false/null placement
+options, so downstream persistence is not established. Common28 bypass/
+14 power associations, GND/pour/USB settings, full imported guard/identity
+comparison and fresh90-ohm solutions are not completed. Resume from this
+draft and existing CSVs, not a new upload. Next is a bounded disposition
+of the exact room-versus-inset-bounds semantics before changing geometry
+or treating the warning as harmless. No additional Floorplanner attempt,
+native construction, routing launch, payment or integration is released
+by this checkpoint. Raw response hashes and exact resume state are in
+`continuation_1602.eight_preview_checkpoint` in the four-signal ledger.
+
+**October 5, 16:34: eight2116 native input accepted for preview.**
+Exact PCB10b04d84/manifestab1b77ba/report0ac22aa5 preserves104 references,
+325 pads and209 copper objects, with four added private-via guards and
+one new In6 GND plane. Native roundtrip and separate DRC finish without
+another native retry. Of505 diagnostic records,500 match; three changed
+opens and two self-guard layer names are explicitly dispositioned. Root
+verified the same two protected via UUIDs, not just category counts.
+Report-only corrections remove stale six-layer closure bindings. Four
+planes exist, three are retained and one is new here; the legacy sidecar
+count3 means beyond protectedIn1. Its structured process presentation
+preserves the same filled/capped duties and is not a new blocker.
+
+The qualified three files alone may enter one existing-project preview.
+Reuse common input settings, not previous computed widths. Current item
+ends16:49/root16:51 with imported profile/guard/90-ohm evidence or an
+explicit hold. No routing launch or source change is released in this item.
+The six3313E variant remains native-complete but impedance-held.
+
 **October 5, 16:20: six diagnostic complete; eight native construction next.**
 The preserved c7497180 board completes standalone DRC in74.86s with the same
 321 violations/184 staged opens. All505 records reconcile:498 inherited,

@@ -300,6 +300,22 @@ placement room or expect an off-board grouping hint to enforce F-only.
 See [KiCad region setup](https://docs.quilter.ai/design-parameters/placement-regions.md)
 and [single-sided requirements](https://docs.quilter.ai/design-parameters/single-sided-placement.md).
 
+**Observed October5 in UI/API1.42.0:** the new Floorplanner Beta step does
+not automatically accept every previously documented edge-overlapping
+region. Our unchanged pinned Front room, spanning the board's bounding
+rectangle, failed its inset-bounds preflight before packing. This does
+not establish a component-placement failure. Continue became enabled
+after the warning; an enabled button is not constraint qualification.
+Review the exact reported rule before shrinking/unlocking a region,
+changing the comparison domain or waiving a margin. Floorplanner state
+and selected configuration are separate evidence: the former saved our
+72 assignments and placement options while the latter still showed old
+options. Verify downstream persistence rather than counting UI chips as
+effective routing settings. The component picker closed after each
+selection; reopen it and inspect selected state to avoid toggling an
+already-selected component during recovery.
+See the [eight preview checkpoint](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json).
+
 **Observed native representation, not placer behavior:** the isolated
 [F-room control](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json)
 preserves a named F rule area with all five restrictions allowed through
@@ -633,6 +649,12 @@ here have only475 unique signatures. A set-only comparison loses30 repeated
 witnesses. Keep record counts, unique root signatures and inferred electrical
 equivalence distinct. Check every current manifest binding, not only a new
 `final_native_hashes` field; label earlier hashes as provenance explicitly.
+Move an inherited closure block into history before binding the new result;
+otherwise a correct top-level profile can coexist with old layer lists and
+old diagnostic hashes. Give counts explicit scopes: total planes, retained
+planes and planes added in this step differ. Resolve a truthful presentation
+ambiguity from the bound native evidence rather than starting another CAD
+repair; missing physical restrictions still require an actual correction.
 
 Check supported physics targets before staging, but distinguish documentation,
 client entry, backend solving and returned routing. **Documented:** Quilter
