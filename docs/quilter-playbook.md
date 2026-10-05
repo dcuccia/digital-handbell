@@ -165,6 +165,30 @@ generically includes components, but does not specify a KiCad pad/footprint
 flag matrix. Our fixed-component contact control does not establish
 movable-pad exclusion or all-layer private-tap protection.
 
+Do not mistake a prospective "no new taps" engineering requirement for a
+native new-objects-only rule. The
+[completed native control](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json)
+also reports the retained source objects inside the restrictive guards.
+Keep such diagnostic intrusions bound to exact identities and geometry;
+their presence does not authorize deleting the copper, a blanket same-net
+exception, or suppressing future violations. Product representation and
+the router's treatment of pre-existing copper need their own disposition.
+
+**Observed layer-expansion control:** the
+[private-plane experiment](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json)
+keeps both private vias0.25mm from saved inner fills in four- and six-layer
+fixtures; omitting one new inner guard creates actual copper contact.
+Extend through-via protection to every newly enabled conductive layer,
+then challenge one deliberately omitted guard. Measure saved full polygons
+with holes against whole copper shapes. A local filled witness under an
+F-only guard checks nonprojection without needlessly voiding entire planes.
+Use a separate anchor to reject empty-fill false successes, but distinguish
+anchor-via contact from a terminal-connected functional ground network.
+Verify actual serialized layer mapping and per-UUID preservation rather
+than trusting a printed expected-order list or unchanged object counts.
+These rectangle-fixture observations do not establish curved-rule fidelity,
+product grounding, supplier layer roles or importer behavior.
+
 Do not flatten elevated or moving contact geometry into an unjustified
 full-height rectangle, or assume that permitting contact pads makes every
 track beneath the metal safe. The retained-feed/blanket-guard contradiction

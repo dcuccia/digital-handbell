@@ -12,6 +12,66 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 17:11 next bounded hour
+
+The owner authorizes logical next work for one hour: stop18:11 and
+start no new item after18:01. The accepted tooling now permits useful
+engineering controls rather than another bootstrap repair.
+
+First test the two private GND through-vias `eafa404c...` and
+`6623be95...` against actual filled inner planes in separate four/six-layer
+logical fixtures. Retain the saved source subset and conservative
+rectangular guards; add one independently identified GND anchor outside
+the guards so a missing/empty fill cannot masquerade as isolation.
+Check full via-copper clearance on every inner layer, anchor attachment
+and a surface-only witness without incorrectly projecting F guards inward.
+A six-layer negative case omits one newly required private-via guard
+and must reveal the unwanted local plane attachment.
+
+The source-intrusion findings remain explicit expected diagnostic evidence,
+not waived product violations. This item does not decide how Quilter treats
+pre-existing protected copper or select actual layer purposes/materials.
+Execution17:23/report17:24/root17:26, initial plus two hard90-second
+attempts. Preserve old files and source bytes; no authoritative native load,
+full-board input, product route, cloud submission or manufacturing release.
+Later items require review of their own prerequisites within the hour.
+
+### 17:26 local fill-isolation checkpoint
+
+The [plane-control ledger](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json)
+qualifies the isolated rectangle-based behavior:4/4 four-layer and8/8
+six-layer private-via/inner-layer cases have0.250000mm native clearance.
+Removing only the first private via's In3 guard produces zero clearance
+and actual fill intersection there; the other seven cases remain separated.
+The metric uses saved/reloaded native polygon sets including holes and
+whole via effective shapes. F-only R26.2's small projection witness remains
+filled on every inner layer; this is not whole-pad or general no-void proof.
+
+All three profiles have one filled island per inner layer, contacting the
+separate synthetic GND VIA. Root accepts that as a useful nonempty/local
+attachment control, not proof of a pad-terminal-connected functional return.
+The native recipe records, but does not assert, single-island count; its
+printed order is expected metadata. A separate supervised saved-file
+comparison supplies the missing physical-layer and per-UUID evidence:
+all8 footprints/12 pads/10 tracks/4 base vias match, with only the anchor
+added. The precise negative rule delta matches; the old `DIAG_VIA_ALL`
+area remains F-only and is not all-layer diagnostic coverage.
+
+Two implementation errors preceded the final0.813-second pipeline:
+missing parser import, then missing saved-project copy. All partial files
+and actual code snapshots remain preserved. Final execution used6 fixture
+loads/3 fills/3 saves; totals including the failed partial are8/4/4.
+A0.203-second static reconciliation reused saved bytes, with no native rerun.
+The three native attempts are exhausted. No DRC or source-native load ran.
+Root independently confirms the five unchanged authoritative repository
+hashes, receipt/code/result bindings and absent recorded child processes.
+
+This closes local rectangular private-via plane isolation and logical
+four/six-layer mapping, not product rules, exact curved guards, functional
+grounding, supplier constructions or Quilter enforcement. The next useful
+item is resolving the corrected guard collateral candidates and intended
+retained joins without carving exception holes or changing source copper.
+
 ## October 4, 17:01 finite tool completion
 
 The owner authorizes completing the remaining tool work. Reuse the

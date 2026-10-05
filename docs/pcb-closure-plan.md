@@ -166,6 +166,17 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**17:26 local plane control accepted; current hour ends18:11.**
+No new item after18:01. The
+[plane ledger](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json)
+qualifies4/8 isolated four/six-layer private-via cases at0.250000mm and
+one missing-In3-guard negative with direct fill contact. Saved source-subset
+records and physical layer order reconcile. An anchor VIA proves local
+nonempty-fill contact, not functional grounding. Three native attempts
+are exhausted, with no rerun. Next is bounded collateral/retained-join
+disposition from the corrected guard data. No source-native load/edit,
+full product input, routing, cloud job or manufacturing release.
+
 **17:01 finite tool completion accepted:** ten supervised regressions
 and one corrected-revision native replay pass. Eight pad records/four
 pose witnesses and23 rule areas match; the2.468-second DRC differs from

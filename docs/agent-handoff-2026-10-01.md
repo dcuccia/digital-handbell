@@ -7,7 +7,20 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Latest: native-tool completion accepted.** The
+**17:11 next hour authorized:** stop18:11, no new item after18:01.
+The first isolated four/six-layer plane control is now accepted for local
+geometry only. See the
+[plane ledger](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json):
+4/8 private-via cases have0.250000mm clearance, while one omitted In3
+guard creates direct fill contact. Saved per-UUID records preserve the
+base components/pads/copper and physical layer order is reconciled.
+The separate anchor is a VIA: its contact proves a nonempty local fill,
+not a terminal-connected functional ground. Native attempts are exhausted;
+no rerun. All five authoritative repository hashes remain unchanged.
+Next is bounded guard collateral/retained-join disposition; full product
+representation, grounding, stackup roles and importer gates remain open.
+
+**Prior: native-tool completion accepted.** The
 [completion ledger](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json)
 binds ten passing supervised regressions and one corrected-revision native
 replay. All eight pad records/four pose witnesses and23 rule areas match

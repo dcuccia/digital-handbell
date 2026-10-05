@@ -2,6 +2,25 @@
 
 ## Bounded engineering work
 
+- **October 4, 17:26 local plane controls accepted:** four/six-layer
+  saved fills clear both private vias by0.250000mm in4/8 cases. Omitting
+  only eafa404c's In3 guard creates direct fill contact; the other seven
+  cases stay separated. Static saved-record comparison preserves all
+  source-subset components/pads/copper and confirms layer order. Each
+  plane is nonempty and contacts a synthetic anchor VIA, not a functional
+  ground terminal. No product grounding or full guard/import approval.
+  Three native attempts are exhausted; no rerun. Source remains unchanged.
+  Next consider the corrected guard collateral/retained-join disposition,
+  not another native bootstrap or cloud job. Current hour ends18:11.
+- **October 4, 17:11 next hour authorized:** continue bounded input
+  qualification through18:11, starting no new item after18:01. First is
+  an isolated four/six-layer private-plane control using the accepted
+  tools: preserve the two private vias and source subset, add a separate
+  diagnostic GND anchor, test filled-copper isolation/attachment and one
+  missing-new-inner-guard negative case. These are logical layer controls,
+  not selected supplier stackups. Execution17:23/report17:24/root17:26;
+  initial plus two hard90-second attempts. No source-native load/edit,
+  full-board input, product routing, cloud submission or fabrication.
 - **October 4, 17:01 tool completion accepted:** ten supervised regression
   tests and one corrected-revision native replay complete the finite repair.
   All eight pad records/four pose witnesses and23 rule areas match; DRC
