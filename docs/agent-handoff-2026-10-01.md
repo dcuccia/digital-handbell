@@ -7,12 +7,19 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Active October 4, 19:31:** verified Sol/medium
-`aa88e077-03b1-41be-b7e2-6a00d853d123` is extracting the bounded source clock
-relationship/acceptance evidence, execution19:42/report19:43/root19:45.
-Read its result before another item; no duplicate executor or native run.
-This does not release threshold invention, MCU placement, new retention,
-full input or cloud changes. Exact scope/runtime events are in the contract.
+**Current October 4, 19:40:** the
+[clock evidence](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)
+(`95d2737d...`) pins the three signal nets and all eight terminals, with
+R6.2 MCU-facing and R6.1/Y1.1/C3.2 on the crystal side. One static child
+completed in0.86s; no corrections/native loads. All five source hashes match.
+Executor`aa88e077...` is idle. Root accepts source identities, not completed
+electrical acceptance: imported PIN tokens and proximity/timing limits
+remain unset. IC1.19 is TESTEN tied to GND, not a ground terminal; use the
+real exposed ground P$1 in return obligations. The intentional In1 pour
+hole needs reconciliation with reference/return intent, not a blanket
+continuous-plane requirement or an automatic copy of the old rectangle.
+Next is that bounded engineering disposition; no more terminal extraction,
+MCU freeze, new retention, full input or cloud release.
 
 **Current accepted October 4, 19:27:** the
 [movable-domain disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json)

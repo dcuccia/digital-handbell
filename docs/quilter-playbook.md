@@ -86,6 +86,17 @@ unsupported topology. Preserve R6 and the real load-capacitor connections;
 resolve the missing contract before freezing the MCU or releasing clocks
 as generic low-speed signals.
 
+Bind physical pad number, schematic function and imported service PIN
+token separately. The [clock binding](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)
+corroborates20=XIN and21=XOUT, but descriptive20/XIN is not a verified
+API value. Nor does a GND net make every terminal a suitable ground
+anchor: pin19 is TESTEN; P$1 is the actual exposed ground.
+Keep source observations distinct from new acceptance limits. A historical
+route width, a literal old guard rectangle and a zone's min_thickness
+cannot establish a new proximity threshold or moved quiet-area margin.
+Reconcile intentional plane exclusions with reference/return intent by
+layer and purpose instead of imposing contradictory blanket rules.
+
 **Observed local-net distinction:** every physical terminal on six
 protector/feedback nets belongs to the proposed retained cells. Retaining
 their complete source primitives preserves parallel branches missed by

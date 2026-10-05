@@ -12,6 +12,35 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 19:40: clock identities established; engineering criteria remain
+
+The [clock ledger](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)
+(`95d2737d...`) establishes complete3/2/3 terminal memberships:
+IC1.20/Y1.3/C2.2 on XIN, IC1.21/R6.2 on XOUT, and
+R6.1/Y1.1/C3.2 on the crystal-facing node. Both15pF loads and case grounds
+remain explicit. One supervised static extraction finished at19:34:28
+in0.86s, with no corrections or native load. Root verifies every input,
+raw identity and signal-pad multiplicity; all five source hashes match.
+
+The four proximity proposals deliberately keep thresholds null. Root also
+separates pad number, schematic name and imported PIN token: descriptive
+aliases such as20/XIN are not established backend values. IC1.19 is TESTEN
+tied to GND, not an MCU ground terminal. Historical copper touching it is
+not a replacement for the true exposed-ground P$1 return.
+
+The exact source In1 clock rectangle is pour-only, not an all-copper guard.
+Its0.25mm min_thickness is not a quiet-zone clearance. The earlier plane
+and clock reports concern other PCB hashes; their complete fill/path
+results are not silently rebound. The staging generator also hardcodes
+the old rectangle rather than deriving a movable ownership rule.
+Do not combine a blanket continuous-reference demand with an intentional
+pour hole without a layer/purpose-specific engineering disposition.
+
+Source facts are accepted, not a completed layout acceptance contract.
+Next address that reference/quiet/return strategy and justified study
+screening criteria. No more terminal extraction, automatic MCU freeze,
+additional retention, full-board input or cloud submission follows.
+
 ## October 4, 19:27: relative constraints before more placement polygons
 
 The [movable-domain disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json)

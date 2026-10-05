@@ -2,6 +2,15 @@
 
 ## Bounded engineering work
 
+- **October 4, 19:40 clock source bindings accepted:** one0.86s static
+  extraction identifies all eight signal terminals, correct R6 ends and
+  actual C2/C3 loads/case grounds. Source is unchanged and executor idle.
+  This is not completed electrical acceptance. IC1.19 is ground-tied
+  TESTEN, not a ground terminal; P$1 is the exposed GND. Imported PIN
+  tokens and distance/timing criteria remain unset. Next reconcile the
+  intentional In1 clock pour hole with real reference/return requirements;
+  do not copy its old XY box or demand a continuous plane there by default.
+  No repeated inventory, automatic MCU freeze/new retention or cloud input.
 - **October 4, 19:27 relative-placement disposition:** existing16 groups
   still cover104 references with27 fixed/77 eligible. Current-client and
   old-job schema evidence identify Custom Component Proximity, explicitly
@@ -12,9 +21,8 @@
   and independent clock/return/exclusion obligations. Do not bypass R6,
   freeze the MCU, add retention or route manually. Physical domains and
   native/import qualification still gate full input and paired jobs.
-  Verified Sol/medium now executes that static clock-evidence item under
-  the workflow contract: stop19:42/report19:43/root19:45. Do not duplicate
-  the active executor or run a new native inventory.
+  The subsequent static clock-evidence result is recorded above; no new
+  native inventory is released.
 - **October 4, 19:15 native F-room serialization qualified:** returned
   `3a5f6d89...` adds one named all-clear F rule area while preserving all58
   original fixture subtrees, guards and fills. Root verifies complete

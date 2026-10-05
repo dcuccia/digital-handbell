@@ -166,12 +166,18 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Active October 4, 19:31:** runtime-verified Sol/medium performs one static
-IC1/Y1/R6/C2/C3 source-relationship evidence item through19:42,
-report19:43/root19:45. Use the executor in the workflow contract; no native
-inventory, source/candidate change, added retention or cloud action.
+**Current October 4, 19:40:** source clock bindings are accepted from one
+0.86s static extraction: all eight terminals on three signal nets, correct
+R6 ends, C2/C3 loads and Y1 case grounds. Source is unchanged; executor idle.
+The [clock ledger](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)
+does not complete the engineering acceptance contract. Next reconcile
+clock reference/return intent with the intentional In1 pour hole and
+choose justified study screening criteria. Native pad numbers, schematic
+names and imported PIN tokens remain separate; ground-tied TESTEN19 is
+not a true MCU return terminal. No more inventory, source/candidate change,
+automatic MCU freeze, added retention or cloud release.
 
-**Current October 4, 19:27:** read-only domain disposition finds an
+**Prior October 4, 19:27:** read-only domain disposition finds an
 additional relative-placement path: Custom Component Proximity, explicitly
 best effort, with parent-pin/max-distance fields but no child-pin field.
 Existing-job timing fields likewise do not prove actual availability or
