@@ -12,6 +12,42 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 19:27: relative constraints before more placement polygons
+
+The [movable-domain disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json)
+reconciles the existing16 groups to104 unique references,27 fixed and77
+eligible, without another native inventory. The source-bound physical and
+service reservations remain; the documentation describes components plus
+clearances within regions, not enough to choose an unverified centre-only
+erosion or double-apply body margins.
+
+A useful additional path appears in the already-saved current client and
+read-only existing-job response: **Custom Component Proximity**, with
+child, parent, parent pin and maximum distance. The help calls it best
+effort and promises a final distance PRC, not a hard placement region.
+There is no explicit child-pin field; the10mm initial value is not our
+requirement. Bypass relationships retain their dedicated comprehension.
+
+Timing-sensitive fields also exist in that saved response and current
+client despite the public page's internal-testing warning. Both categories
+have zero saved entries. These are capability leads, not demonstrated
+availability, persistence, solving or routing. The saved response's own
+version is1.12.0/updated October1; do not describe it as a newly exercised
+backend feature. Only response bodies are preserved privately.
+
+The old R6 crystal limitation remains unresolved, not newly discovered:
+R6 is the required1kohm series element, C2/C3 are15pF, and C3 belongs on
+the crystal side. Ordinary crystal comprehension explicitly excludes
+load-limiting resistors. Proximity may assist placement but cannot replace
+the full clock-path/return/quiet-zone contract. Do not bypass R6, invent a
+different parent pin, freeze the MCU or retain more copper automatically.
+
+Next is one source-bound IC1/Y1/R6/C2/C3 relationship and acceptance
+contract, reusing existing evidence. Exact numeric limits and legitimate
+relative controls must be established, not borrowed from UI defaults.
+Actual physical domains, complete bypass mapping, native profiles and
+qualified preview/returned-output behavior still gate the four/six jobs.
+
 ## October 4, 19:15: native placement-room representation qualified
 
 The [F-room control](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json)

@@ -166,7 +166,19 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**Current October 4, 19:15:** the isolated F-room native serialization
+**Current October 4, 19:27:** read-only domain disposition finds an
+additional relative-placement path: Custom Component Proximity, explicitly
+best effort, with parent-pin/max-distance fields but no child-pin field.
+Existing-job timing fields likewise do not prove actual availability or
+execution. Do not use the10mm UI default as an engineering threshold.
+The known R6 oscillator limitation remains. Next bind source
+IC1/Y1/R6/C2/C3 terminals and independent clock/return/exclusion obligations,
+not more arbitrary rooms, an MCU freeze or automatic added retention.
+See the [disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json).
+Physical domains and complete electrical/native/import gates remain open;
+no source edit, full input, cloud object or new job.
+
+**Prior accepted October 4, 19:15:** the isolated F-room native serialization
 control passes on returned`3a5f6d89...`: one new all-clear room, all58
 original subtrees/guards/fills intact, complete new-room equality and
 unique UUIDs. Two child import failures preceded the successful third

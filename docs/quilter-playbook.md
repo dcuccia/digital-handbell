@@ -65,6 +65,27 @@ continuity is not equivalent. The handbell's prospective boost/protection
 strategy leaves 77 of 104 references movable, pending its source-cut audit.
 See the [common-input disposition](quilter-workflow-study-2026-10-02.md#common-input-strategy-retain-critical-cells-release-ordinary-layout).
 
+**Observed relative-constraint path, not qualified routing behavior:** the
+[October4 capability disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json)
+finds Custom Component Proximity in the current client and an existing-job
+schema: child component, parent component/pin and maximum distance in mm.
+The help explicitly says best effort, with a final distance PRC; there is
+no explicit child-pin field. Use it only for a reviewed relationship not
+already covered by bypass comprehension. Its10mm new-row default is not
+an engineering target, and proximity does not bound routed length,
+return paths or private topology. Prefer legitimate relative constraints
+over needless fixed rooms, but qualify persistence and actual behavior.
+
+Keep public documentation, client code, saved schemas and executed
+constraints separate. Timing controls remain described as unavailable
+in public prose, while the current client and old-job schema expose their
+fields; neither justifies claiming a working timing constraint. Likewise,
+the documented crystal limitation for series/load-limiting resistors
+remains relevant to R6. Manually adding a row cannot be assumed to repair
+unsupported topology. Preserve R6 and the real load-capacitor connections;
+resolve the missing contract before freezing the MCU or releasing clocks
+as generic low-speed signals.
+
 **Observed local-net distinction:** every physical terminal on six
 protector/feedback nets belongs to the proposed retained cells. Retaining
 their complete source primitives preserves parallel branches missed by

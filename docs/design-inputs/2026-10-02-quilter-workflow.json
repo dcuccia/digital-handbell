@@ -2,6 +2,17 @@
   "schema_version": 1,
   "date": "2026-10-02",
   "status": "STUDY_ROLES_AND_90_OHM_INTENT_SELECTED_NATIVE_INPUT_AND_ACTUAL_SOLVE_PENDING",
+  "movable_domain_disposition": {
+    "checkpoint_local": "2026-10-04 19:27",
+    "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-movable-domain-disposition-2026-10-04.json",
+    "report_sha256": "ead7091763b832ae9d1c750aa4c0fa179c9af6abf9abf37e939bdca8b46d70f4",
+    "status": "RELATIVE_CONSTRAINT_PATHS_IDENTIFIED_PHYSICAL_DOMAINS_AND_BEHAVIOR_UNQUALIFIED",
+    "existing_group_coverage": [16, 104, 27, 77],
+    "custom_proximity": "Current-client help and saved existing-job schema support a best-effort child-component/parent-pin/max-mm relationship, not a hard region, specific child terminal, route-length or return-path guarantee. No entries saved;10mm is not an engineering limit.",
+    "timing": "Client and saved-schema fields contradict a simple public-unavailability inference, not proof of current account support, persistence or execution.",
+    "clock_gate": "Known R6 series-resistor exclusion remains; preserve1kohm and C3 on the crystal side. A manually added oscillator row or proximity alone is not a qualified solution.",
+    "next_item": "Source-bound IC1/Y1/R6/C2/C3 relative-terminal and independent acceptance contract using existing evidence; no default-derived limits, MCU freeze, added retention, source edit or cloud action."
+  },
   "f_placement_region_native_item": {
     "status": "ROOT_ACCEPTED_EXACT_NATIVE_F_ROOM_SERIALIZATION_NOT_PLACEMENT",
     "root_review_local": "2026-10-04 19:15",
@@ -42,7 +53,7 @@
     "source_planning_reservations": "Carry fixed J1/J2/X6, R3.2 mount and recovery-access duties unchanged; J2 already includes its0.7mm front-mating allowance. Do not freeze redesignable old plastic or replace unknown service space with zero.",
     "documented_KiCad_region_encoding": "A separate named F.Cu rule area with all keepout restrictions cleared represents a positive placement region. Preserve restrictive guards unchanged; do not convert them into rooms. Review/manual component association after import is required.",
     "remaining_representation_gate": "The separate exact native all-clear F-room control passes; actual product domains, importer association, body/rotation containment and F-only placer behavior remain unqualified. Assigned allowed regions combine by union.",
-    "next_bounded_item": "Source-bound movable-domain requirements and representation disposition, reusing existing geometry and current77 eligible references; no repeated inventory, full-board staging, cloud upload or placement/routing job."
+    "next_bounded_item": "The movable-domain disposition identifies relative-control leads but does not complete physical domains. Next bind the source clock relationship/acceptance contract; no repeated inventory, full-board staging, cloud upload or placement/routing job."
   },
   "usb_capability_disposition": {
     "checkpoint_local": "2026-10-04 18:56",

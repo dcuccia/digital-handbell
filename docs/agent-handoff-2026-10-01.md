@@ -7,7 +7,19 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Accepted October 4, 19:15:** the
+**Current October 4, 19:27:** the
+[movable-domain disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json)
+keeps27/77 and identifies Custom Component Proximity in the current client
+and existing-job schema. It is explicitly best effort, without a child-pin
+field;10mm is only a UI default. Timing fields also exist despite contrary
+public availability prose. Both categories have zero saved entries: no
+new persistence, solving or routing has been exercised.
+Next bind the actual IC1/Y1/R6/C2/C3 clock relationships and independent
+acceptance obligations. The known series-R6 crystal-comprehension limit
+is not solved by manual row entry or proximity. No MCU freeze, added
+retention, native inventory, source change, full input or cloud action.
+
+**Prior accepted October 4, 19:15:** the
 [F-room native control](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json)
 adds one all-clear named F rule area and preserves all58 original subtrees,
 including every guard and saved fill. Root verifies complete new-room

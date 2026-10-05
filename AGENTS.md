@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 4, 19:27 relative-placement disposition:** existing16 groups
+  still cover104 references with27 fixed/77 eligible. Current-client and
+  old-job schema evidence identify Custom Component Proximity, explicitly
+  best effort with no child-pin field;10mm is not a design requirement.
+  Timing fields exist despite public internal-testing prose, but neither
+  category has saved entries or qualified execution. The known series-R6
+  crystal limitation remains. Next bind IC1/Y1/R6/C2/C3 source terminals
+  and independent clock/return/exclusion obligations. Do not bypass R6,
+  freeze the MCU, add retention or route manually. Physical domains and
+  native/import qualification still gate full input and paired jobs.
 - **October 4, 19:15 native F-room serialization qualified:** returned
   `3a5f6d89...` adds one named all-clear F rule area while preserving all58
   original fixture subtrees, guards and fills. Root verifies complete
