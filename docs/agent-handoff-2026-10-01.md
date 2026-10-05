@@ -8,6 +8,13 @@ us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
 **17:11 next hour authorized:** stop18:11, no new item after18:01.
+**Current17:44:** the [collateral ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-collateral-2026-10-04.json)
+qualifies46 named relationships, not complete fixed-pad coverage. Root
+found that the old broad phase still transforms non-private obstacle pads
+incorrectly. Next is a bounded all97-native-pad/retained177 coverage audit,
+not new inventory or a PCB change. DOUT's0.212066mm copper gap is not a
+clearance defect; existing GND terminal-bank contacts remain preserved.
+
 The first isolated four/six-layer plane control is now accepted for local
 geometry only. See the
 [plane ledger](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json):
@@ -17,7 +24,7 @@ base components/pads/copper and physical layer order is reconciled.
 The separate anchor is a VIA: its contact proves a nonempty local fill,
 not a terminal-connected functional ground. Native attempts are exhausted;
 no rerun. All five authoritative repository hashes remain unchanged.
-Next is bounded guard collateral/retained-join disposition; full product
+Guard collateral coverage is now the next specific dependency; full product
 representation, grounding, stackup roles and importer gates remain open.
 
 **Prior: native-tool completion accepted.** The
@@ -29,9 +36,9 @@ differs only in its date. Actual starting/executed tool copies and the
 pre-review ledger are preserved, with hashes independently checked.
 
 The exercised Windows tooling is accepted and its finite repair is complete.
-The diagnostic project still differs from product rules. Full guard
-representation/retained-copper treatment, fill isolation, six-layer mapping
-and importer qualification remain engineering/input gates; no full-board
+The diagnostic project still differs from product rules. Full product guard
+representation/retained-copper treatment, functional plane connectivity,
+final layer-role encoding and importer qualification remain engineering/input gates; no full-board
 input or new job is released. All five authoritative hashes remain unchanged,
 the executor is idle and no recorded process remains running.
 

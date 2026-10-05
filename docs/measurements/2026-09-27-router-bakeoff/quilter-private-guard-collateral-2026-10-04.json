@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "title": "Static analytic disposition of retained177 private-guard collateral",
+  "status": "ENUMERATED_RELATIONSHIPS_ACCEPTED_BROAD_PHASE_COMPLETENESS_HELD",
+  "head": "f602de46437b9d82ec7e0603800c88565e2901d6",
+  "scope": {
+    "guard_root_objects": 12,
+    "guard_layer_obligations": 18,
+    "broad_phase_rows": 14,
+    "unique_candidate_objects": 25,
+    "guard_candidate_relationships": 46,
+    "candidate_population": "Corrected retained177 copper plus the 97 pads of the retained27 fixed references.",
+    "population_limit": "This is not all 325 pads, future movers, footprint bodies, future copper, or a full product-input screen.",
+    "native_or_pcbnew_loads": 0,
+    "pcb_fixture_generation_or_saves": 0,
+    "fills_or_drc": 0,
+    "routing_or_cloud": 0,
+    "source_changes": 0,
+    "acceptance_decisions": 0
+  },
+  "bindings_sha256": {
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "battery_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "guard_ledger": "3ccaf019fd84adf596aeb8163e1dd16fd84697110f770fa63464e952b70b783e",
+    "guard_repair_raw": "f15a7743c8f5bcc205f2fabac34dd44d1901ce5c07a6204ad3b34c5085120d94",
+    "saved_native_pad_inventory": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba",
+    "saved_connectivity": "079b47d115db668be0fd8af196b20bfea316193426eca36398dbc98dae0ee23d",
+    "retained177": "639a7f81136e9e38319a55ac5d84dff42dfaaa08fe909ac87a68053fbefe23a9"
+  },
+  "method": {
+    "geometry": "Exact Euclidean primitive distance for circle/capsule/oriented-rectangle cores, with the declared 0.25 mm Minkowski halo.",
+    "pad_authority": "Every candidate pad uses saved-native global center and orientation plus its saved serialized rectangular dimensions. No local/global transform was recomputed.",
+    "unsupported_shape_policy": "Fail explicitly; all six candidate pads were saved-native rect records and supported.",
+    "alias_policy": "Accepted via position_mm/at_mm and diameter_mm/size_mm aliases are normalized into the geometry signature; contradictory aliases fail.",
+    "bound_input_policy": "The analyzer fails unless all four evidence hashes exactly match the released pins and the output path is new.",
+    "clearance_fields": "The raw record reports nonnegative edge clearance and signed core offset for both the expanded guard and unexpanded private copper. Signed offset <=0 is touch/overlap.",
+    "actual_contact": "Candidate copper touches or overlaps unexpanded private source copper.",
+    "guard_halo_only": "Candidate copper clears private copper but touches or overlaps the 0.25 mm halo."
+  },
+  "results": {
+    "candidate_evidence": {
+      "retained_copper_objects": 19,
+      "saved_native_global_pad_records": 6
+    },
+    "candidate_pad_angles_deg": {
+      "1ba917bc-32e2-5176-954f-c3d06c7f6040": 0.0,
+      "3ed47a01-14b9-59e7-bdfe-95561c7f1435": 90.0,
+      "933e95b2-4ef8-5095-ab3d-4759e7fa0826": 0.0,
+      "bcb9e722-fe71-5b16-8387-e04b4bcd0520": 270.0,
+      "bf411126-e0c1-5e14-b531-dc4dd157714a": 270.0,
+      "e5faefdc-06ab-5b87-9fc1-47bbda0e766a": 90.0
+    },
+    "candidate_pad_angle_gate": "All actual candidate angles are orthogonal. Any nonorthogonal native candidate pad now fails pending independent qualification.",
+    "relationship_counts": {
+      "protected_branch_join": 20,
+      "reviewed_ordinary_GND_boundary_join": 4,
+      "other_retained_same_net_intrusion": 7,
+      "foreign_net_intrusion": 1,
+      "broad_phase_false_positive": 14
+    },
+    "contact_counts": {
+      "actual_copper_contact": 28,
+      "guard_halo_only": 4,
+      "clear_of_guard": 14
+    },
+    "root_object_counts": {
+      "protected_branch_objects": 12,
+      "reviewed_boundary_join_objects": 2,
+      "other_retained_same_net_intrusion_objects": 6,
+      "foreign_net_intrusion_objects": 1,
+      "objects_with_at_least_one_false_positive_relationship": 11,
+      "note": "Object categories can overlap across different guards; relationship categories are the partitioned counts."
+    },
+    "every_pair_reported": true,
+    "every_pair_location": "raw-private-guard-collateral-corrected.json#/relationships",
+    "exact_candidate_records_location": "raw-private-guard-collateral-corrected.json#/candidate_copper_records_used and #/candidate_native_pad_records_used",
+    "attempt1_relationship_array_identical": true,
+    "attempt1_relationship_difference": null,
+    "pair_record_fields": [
+      "guard_uuid",
+      "guard_source_uuid",
+      "guard_branch",
+      "candidate_uuid",
+      "candidate_net",
+      "candidate_kind",
+      "layer",
+      "guard_clearance",
+      "private_copper_clearance",
+      "contact_class",
+      "category"
+    ]
+  },
+  "exact_blocking_and_nearest_witnesses": {
+    "foreign_net_guard_intrusion": {
+      "guard_source_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+      "guarded_terminal": "R27.2",
+      "candidate_uuid": "1c54fc7b-22aa-5a15-a0c5-3d136866e518",
+      "candidate_net": "/PROT_DOUT",
+      "candidate_kind": "track",
+      "layer": "F.Cu",
+      "contact_class": "guard_halo_only",
+      "guard_signed_offset_mm": -0.037934,
+      "private_copper_clearance_mm": 0.212066
+    },
+    "nearest_clear_guard_relationship": {
+      "guard_source_uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+      "candidate_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+      "candidate_net": "GND",
+      "layer": "F.Cu",
+      "guard_clearance_mm": 0.001412424,
+      "private_copper_clearance_mm": 0.251412424,
+      "reciprocal_relationship_has_same_clearance": true
+    },
+    "reviewed_boundary_joins": [
+      {
+        "candidate_uuid": "8b095e6c-ce66-5915-a589-2b1a247f9129",
+        "location": "C28.2",
+        "root_object_relationships": 2,
+        "all_actual_copper_contact": true
+      },
+      {
+        "candidate_uuid": "665297da-57ea-5e05-aa18-5a3aa335eedd",
+        "location": "R27.2",
+        "root_object_relationships": 2,
+        "all_actual_copper_contact": true
+      }
+    ],
+    "other_same_net_intrusions": {
+      "root_objects": [
+        "290b2b2e-8d6d-52c7-bffa-510f365c4e4a",
+        "3598d04b-1396-5df4-953b-9f195d966b71",
+        "39bc67ef-89cc-573c-b359-4175d59004cc",
+        "682e2c34-7a98-5fc9-af50-1df111589c1d",
+        "78dc0310-5f37-5d13-9746-a36aee15afb6",
+        "82b03a25-ac0f-5116-8a10-efcb713d347d"
+      ],
+      "relationships": 7,
+      "actual_copper_contact_relationships": 4,
+      "guard_halo_only_relationships": 3,
+      "full_numeric_witnesses": "raw-private-guard-collateral-corrected.json#/relationships"
+    }
+  },
+  "disposition": {
+    "truly_blocks_direct_product_representation": "The proposed exact-object blanket guard overlaps retained foreign-net /PROT_DOUT track 1c54fc7b... at the R27.2 halo, despite 0.212066 mm actual copper clearance. It also covers six additional retained same-net GND objects beyond the two already reviewed boundary joins. A direct no-track/no-pad guard representation therefore remains unresolved; no intrusion is waived or carved out here.",
+    "not_an_electrical_clearance_failure": "The sole foreign-net relationship is a halo representation conflict, not actual copper contact: 0.212066 mm is greater than the selected 0.20 mm minimum.",
+    "same_net_topology_unresolved": "This supplement does not decide whether the six other GND objects bypass either private path; that remains root topology disposition.",
+    "broad_phase_disposition": "Fourteen of 46 AABB relationships are analytic guard false positives.",
+    "preserved_duties": "Retained177 and all PROT_COUT restoration duties remain unchanged."
+  },
+  "controls": {
+    "count": 6,
+    "all_passed": true,
+    "independent_known_coordinate_cases": [
+      "parallel capsule 0.25 mm boundary",
+      "circle tangent to axis-aligned rectangle",
+      "90-degree oriented rectangle clearance",
+      "segment contact with 45-degree oriented rectangle",
+      "boolean overlap versus tangent versus small positive gap",
+      "conflicting via-alias rejection"
+    ]
+  },
+  "execution": {
+    "python": "3.11.9",
+    "supervisor_sha256": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+    "analyzer_sha256": "c499dbdeea2aa5a3319cdc53fb24e551632d9d94118c64654728dee41cb2a57a",
+    "attempts": [
+      {
+        "attempt": 1,
+        "child_pid": 58120,
+        "exit": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.125,
+        "hard_limit_seconds": 30
+      },
+      {
+        "attempt": 2,
+        "child_pid": 58980,
+        "exit": 0,
+        "timed_out": false,
+        "elapsed_seconds": 0.141,
+        "hard_limit_seconds": 30,
+        "result": "Corrected alias-safe supplement; relationship array byte-structure equivalent after JSON load."
+      }
+    ],
+    "corrections_used": 1,
+    "receipt_sha256": "9a5e093795965eb709964d7810035f1a62ec9da99f99f54c244faba75788e253",
+    "stdout_sha256": "2ec3f20fc69bf8b223dd77855f7539f532302785961407ed7597e2b45de014ba",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "raw_artifacts": {
+    "batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-collateral-20261004T1729",
+    "raw": "raw-private-guard-collateral-corrected.json",
+    "raw_sha256": "ae4aee9111b164d712fe4f7f966aa31a161a1f5acf3e43ac268485a7edec4b9f",
+    "executed_analyzer": "analyze_private_guard_collateral-corrected.py",
+    "receipt": "attempt-2-receipt.json",
+    "stdout": "attempt-2-stdout.log",
+    "stderr": "attempt-2-stderr.log",
+    "preserved_attempt1": {
+      "analyzer": "attempt-1-analyze-private-guard-collateral.py",
+      "analyzer_sha256": "4b5b4abdbc71fc2f3c9d6e5187fc2ea0d642fb06afc9928ad35a9181eee22ccb",
+      "raw": "attempt-1-raw-private-guard-collateral.json",
+      "raw_sha256": "1c088d27d9624fb6e4c9e1b28085f41a8effa12c9108eec7193b21b45f6dcd9b",
+      "report": "attempt-1-repo-report.json",
+      "report_sha256": "1ec6f45ef607c42052d0c8305318bc54fd238940e8642db9b1aeb8f50b98246e"
+    }
+  },
+  "limits": [
+    "This static result does not qualify native KiCad or Quilter guard serialization or enforcement.",
+    "The accepted narrow plane-control f602de4 is not rerun and its three attempts remain exhausted.",
+    "No product input, product grounding, routing, manufacturing, supplier, or child-use acceptance is claimed.",
+    "The upstream candidate generator still transforms non-private pads with the invalid footprint rotation sign. The46 checked relationships are useful, but absence from that list does not establish clearance for all97 fixed pads."
+  ],
+  "root_review": {
+    "checkpoint_local": "2026-10-04 17:44",
+    "timing_note": "The17:42 target was exceeded during discovery and documentation of an upstream candidate-completeness gap; no further executor run was requested in this item.",
+    "accepted_scope": "Exact analytic outcomes for the enumerated46 relationships only. Corrected code, immutable snapshots, raw/receipt hashes and full relationship-array equality were reviewed.",
+    "broad_phase_completeness_accepted": false,
+    "upstream_defect": {
+      "analyzer": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-tap-guard-repair-20261004T1407\\analyze.py",
+      "sha256": "0e9af063e991025de14256b4619a8d97ca09be62a7673e908e44dbafb94486ef",
+      "lines": [34,47,118,120],
+      "finding": "Only four private pads use saved-native poses. Other fixed pads used for candidate generation still use the old positive-angle local-to-global transform.",
+      "witnesses": "R26.1 and C28.1 appear near opposite private pads in the old broad phase; the new narrow phase correctly uses their actual saved-native centers.",
+      "unaffected": "The twelve-object private guard definition and this enumerated narrow-phase geometry remain source-bound; potential omitted obstacle pairs are not qualified."
+    },
+    "baseline_topology_reuse": {
+      "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-critical-core-boundaries-2026-10-04.json",
+      "sha256": "be78b4f38cc6dbcf31a83e38f0ae5dcd8cd731f8a7379053b812ff327c5fb567",
+      "key": "core_boundary_summary.private_terminal_only_joins",
+      "finding": "The prior native proof already places a2730cca-to-78dc0310 contact wholly within C28.2. The two other newly enumerated actual GND contacts are with C28.2 itself; the other three GND relationships are halo-only. These observations are not evidence of a newly introduced bypass.",
+      "limit": "This reuses unchanged-source evidence, not future routing or full candidate-population acceptance."
+    },
+    "DOUT_disposition": "Keep the existing route. Its0.212066mm copper gap exceeds the0.20mm comparison minimum; the0.25mm prospective guard creates a representation conflict, not an electrical short or clearance defect.",
+    "next_item": "Rebuild and audit conservative candidate coverage from all97 saved-native fixed-pad poses/bounds and retained177 copper before any all-population clearance claim.",
+    "source_copper_rules_or_product_input_released": false
+  }
+}

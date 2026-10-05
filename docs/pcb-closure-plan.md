@@ -166,6 +166,16 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
+**Current17:44: enumerated collateral accepted; candidate coverage held.**
+The46 named pairs resolve to28 copper contacts, four halo-only overlaps
+and14 rejected candidates. DOUT clears private copper by0.212066mm and
+is not a clearance failure. Existing terminal-bank contacts are preserved.
+The old upstream generator still uses an invalid transform for non-private
+obstacle pads; absent pairs are not proved clear. Next audit all97 saved
+native fixed pads and177 retained copper in a new static output. Do not
+rerun native inventory or change guards/source. The earlier17:42 root
+target slipped for this finding; the18:11 hour limit is unchanged.
+
 **17:26 local plane control accepted; current hour ends18:11.**
 No new item after18:01. The
 [plane ledger](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json)

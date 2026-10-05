@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 4, 17:44 collateral relationships qualified; coverage held:**
+  46 named pairs resolve into28 copper contacts, four halo-only overlaps
+  and14 rejected candidates. DOUT's0.212066mm gap is not a clearance
+  failure; its existing route stays. Prior native evidence already covers
+  the additional C28 terminal-bank join. Root found the OLD broad phase
+  still transforms non-private obstacle pads incorrectly; a correct
+  narrow phase cannot prove omitted pairs safe. Preserve all results and
+  guards. Next rebuild coverage from all97 saved-native fixed pads and177
+  copper, without native loads or source changes. The17:42 checkpoint
+  slipped for this finding; current hour still ends18:11.
 - **October 4, 17:26 local plane controls accepted:** four/six-layer
   saved fills clear both private vias by0.250000mm in4/8 cases. Omitting
   only eafa404c's In3 guard creates direct fill contact; the other seven

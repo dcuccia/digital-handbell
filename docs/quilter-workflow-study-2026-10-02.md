@@ -12,6 +12,46 @@ of sunk token cost or human-style trace aesthetics. The two rejected raw
 outputs and the authoritative 37-open board remain immutable evidence.
 Tracking: E04/#4, E05/#5, E07/#7 and E08/#8.
 
+## October 4, 17:29 bounded collateral disposition
+
+The next item resolves the corrected analytic guards'14 broad-phase rows
+and25 unique candidate copper objects from saved source-bound data.
+Use complete copper shapes and saved native pad poses to distinguish
+actual private-copper contact, guard-halo intrusion and AABB false positives.
+Identify private-branch relationships and the two reviewed ordinary-GND
+boundary joins separately; do not turn expected intrusions into waivers.
+This is the retained177/fixed97-pad population, not a new full inventory,
+footprint-body rule qualification or permission to carve guard holes.
+
+Fresh runtime-verified Sol/medium executes static analysis only, through
+17:38; report17:39/root17:42. Use actual30-second supervised child limits,
+initial plus two corrections. No native loads, new fixtures, source edits,
+product routes or cloud work. Unsupported shapes remain explicit gaps.
+
+### 17:44 enumerated pairs accepted; upstream coverage gap
+
+The [collateral ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-collateral-2026-10-04.json)
+resolves all46 supplied pairs:28 actual contacts, four halo-only overlaps
+and14 rejected candidates. One corrected static replay leaves the full
+relationship array unchanged and adds alias/input/rotation/output guards.
+The six candidate pads have saved-native0/90/270-degree orientations.
+Both executions finish below a second under hard30-second supervision.
+
+The retained DOUT segment clears R27.2 copper by0.212066mm, exceeding
+the0.20mm comparison minimum; its conflict is with the prospective0.25mm
+guard, not a short or clearance failure. The additional GND contacts
+are at C28.2, with the one private-track overlap already shown wholly
+inside that terminal by the saved native core-boundary proof. Preserve
+these source-bound facts without blanket waivers or rerouting.
+
+Root found a separate upstream defect: the old repair's candidate generator
+uses native poses only for the four private pads, and the invalid transform
+for other obstacle pads. Therefore the enumerated narrow-phase results are
+valid but the list is not a proven conservative screen of all97 fixed pads.
+The12-object guard definition remains valid. The17:42 root target slipped
+while documenting this gap. Next rebuild candidate coverage from the saved
+native oracle; do not rerun native inventory or start a full-board trial.
+
 ## October 4, 17:11 next bounded hour
 
 The owner authorizes logical next work for one hour: stop18:11 and

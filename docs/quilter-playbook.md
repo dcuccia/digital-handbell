@@ -101,7 +101,8 @@ Keep the authoritative board and raw experiments immutable. Record the
 exact PCB/project/schematic/manifest hashes, reference and physical-pad
 counts, net identities, fixed/movable references, protected copper/vias,
 outline, layer roles, physical stackup and applicable process requirements.
-Use native poses, including footprint rotation, rather than stale proxies.
+Use native poses, including footprint rotation, for both protected objects
+and candidate obstacles rather than stale proxies.
 Check any local-to-global transform against saved native coordinates and
 known source-track endpoint joins before trusting generated keepouts.
 Include signed90/270-degree cases: a180-degree case alone cannot distinguish
@@ -109,6 +110,18 @@ rotation sign. The [failed private-guard proposal](measurements/2026-09-27-route
 put two guards on opposite pads while its self-consistency controls passed.
 Do not count tests sharing the same erroneous geometry as independent proof;
 prefer a previously qualified native-coordinate source over a new transform.
+
+Qualify candidate generation before trusting a precise narrow-phase result.
+The [collateral review](measurements/2026-09-27-router-bakeoff/quilter-private-guard-collateral-2026-10-04.json)
+correctly measures46 enumerated pairs, but root found the upstream broad
+phase still used the wrong transform for non-private pads. A repair of
+protected objects alone does not fix obstacle coverage; omitted pairs can
+remain untested. Rebuild conservative candidates from the same qualified
+geometry source and compare additions/removals before claiming completeness.
+Also distinguish a prospective guard-halo conflict from actual copper
+contact or minimum-clearance failure. An unchanged terminal-bank overlap
+can be intentional; reuse source-bound topology evidence instead of
+automatically redesigning the circuit or waiving all same-net findings.
 
 **Proposed reusable staging practice:** capture a compact native geometry
 record once for a specific source revision: UUID/reference/pad/net identity,
