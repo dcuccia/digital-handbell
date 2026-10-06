@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **October 6, 13:00 support reply recorded:** Justin says beta routing
+  tends to add padstack collisions; recommends Focus in Viewer, placement
+  refinement/more spacing, feasible smaller process minima and configured
+  native DRC. This is attributed guidance, not classification of our274
+  reports. Prefer estimated finishing effort; eight2.1 is a same-placement
+  non-beta control for2.2, not an accepted board. Clarify spacing geometry
+  and supplier-qualified new-route limits; preserve retained copper,
+  five process seeds, current/impedance and contact/private-return duties.
+  No checker retry, native/refill work, rule change or new job is released.
+  See support disposition in the eight-output ledger and playbook.
 - **October 6 eight-layer outputs reviewed:** completed02:24:54 after4h31m
   with12 candidates, none95%. Best2.2/5.2 equal four's94.6502% but report
   11 incomplete nets/274 unclassified padstack collisions versus9/178.

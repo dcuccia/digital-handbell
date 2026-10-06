@@ -7,6 +7,21 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 6, 13:00: owner shares Justin's support guidance.**
+Support attributes frequent collisions to the experimental beta router
+and recommends Focus in Viewer, placement refinement, more component
+spacing, feasible smaller process minima and correctly configured full
+native DRC. This is guidance, not a diagnosis of individual collisions.
+Rank estimated finishing effort, not routed percentage: eight2.1 offers
+a same-placement non-beta control for2.2 (87.65%/26 incomplete/zero reported
+collisions versus94.65%/11/274). Zero reports is not native DRC cleanliness.
+The proposed next diagnostic should compare these results before another
+layer trial; pad-semantic recovery remains separately scoped, not a fourth
+checker attempt. Clarify spacing semantics and qualify any new-route
+minima without altering retained copper, process seeds or electrical/
+contact protections. No engineering execution or new job was started.
+See `support_reply_shared_2026_10_06_1300` in the eight-output ledger.
+
 **October 6: eight-layer outputs reviewed; no closure breakthrough.**
 The job completed at02:24:54 after4h31m with12 candidates. Best2.2/5.2
 reach94.6502%, exactly the four-layer best, with11 incomplete nets and274

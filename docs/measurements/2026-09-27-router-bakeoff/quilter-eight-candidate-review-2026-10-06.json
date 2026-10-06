@@ -1,5 +1,28 @@
 {
   "schema_version": 1,
+  "support_reply_shared_2026_10_06_1300": {
+    "provenance": "Owner pasted reply from Quilter support engineer Justin in this conversation at13:00 local. Attributed support guidance, not independently reproduced findings or a new execution authorization.",
+    "guidance": [
+      "Select a padstack collision in the right-hand column and use Focus in Viewer to locate it.",
+      "The experimental beta router tends to produce padstack collisions while reaching higher completion. Justin suspects that behavior here and advises detailed review; possible examples include courtyard crossings or overlapping traces, with no likely single common cause.",
+      "Tight placement and larger early-routed traces can block remaining connections. Consider smaller trace/space/via fabrication minima where feasible, increased component spacing in Floorplanning, and placement refinement before routing.",
+      "Rank candidates by estimated remaining completion effort, not completion percentage alone; fewer PRC flags can make a lower-completion result preferable.",
+      "Perform full native DRC with correctly configured design rules on every returned candidate."
+    ],
+    "root_disposition": [
+      "Reconsider the higher-completion beta shortlist against its non-beta predecessor: eight2.1 and2.2 share the same placementId. The26 versus11 incomplete-net reports and0 versus274 collision reports are useful comparison inputs, not proven repair counts or a clean-board claim.",
+      "Use the supported viewer navigation for representative geometric diagnosis before assuming every collision is a short, a benign warning, or a separate root defect. Courtyard intrusion and foreign-net copper overlap need distinct dispositions.",
+      "Review new ordinary-signal trace/space/via minima against an actual supplier construction and assembly process; do not automatically shrink retained copper or five protected process vias, weaken contact/private-return exclusions, or substitute minimum-width traces for current/impedance requirements.",
+      "Clarify whether Floorplanner component spacing measures bodies, courtyards or pads before selecting a larger value; the previous0.127mm setting is not a qualified copper-routing channel.",
+      "A proposed next bounded diagnostic compares eight2.1/2.2 collision geometry and correctly configured native results, with a separately scoped recovery for unresolved pad comparisons. No native/refill/checker retry, placement edit or new job is released by this support note."
+    ],
+    "still_unanswered": [
+      "Which objects and electrical conditions cause this board's individual collision reports.",
+      "Meaning of GND Invalid input net, VAMP's inconsistent incomplete-path reporting, and the empty newCadDrcViolations field.",
+      "Exact Floorplanner spacing geometry and whether a non-beta-only routing option is available.",
+      "A specific candidate, placement change and qualified process-rule set recommended for the next run."
+    ]
+  },
   "review_started_local": "2026-10-06T10:41:08-07:00",
   "scope": "Owner requests eight-layer outputs. Read-only service review of all12 candidates and one bounded isolated native review of representative2.2. No refill, repair, integration, additional routing job, paid use or source-native load.",
   "job": {

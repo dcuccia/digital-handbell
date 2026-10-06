@@ -115,6 +115,27 @@ do not alone prove ground-plane loss, just as1e-14mm serialization tails
 do not prove meaningful fixed-part movement. Compare actual layer use,
 zone definitions and filled returns separately.
 
+**Attributed support guidance, October6:** owner shared Justin's reply:
+the experimental beta router tends to introduce padstack collisions while
+increasing completion and needs detailed review. Select a collision and
+use **Focus in Viewer** to locate it; that navigation remains unexercised
+in our review. Possible courtyard crossings and copper overlaps are not
+interchangeable electrical defects. Support's likely-router explanation
+does not classify our individual reports or establish their independence.
+
+Support recommends ranking by estimated finishing effort, reviewing
+placements, increasing Floorplanner component spacing and reducing
+fabrication trace/space/via minima where feasible. Compare a beta result
+with its same-placement non-beta predecessor before assuming the higher
+percentage is cheaper to finish. Clarify what geometry the spacing field
+measures; body/courtyard separation alone is not copper escape clearance.
+Review ordinary new-route minima against a real supplier/process while
+retaining current/impedance requirements, protected process seeds and
+contact/private-return exclusions. Do not globally shrink existing copper.
+Full native DRC needs the intended project rules, not just the downloaded
+defaults. The [support disposition](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json)
+records unanswered questions; it authorizes no rerun, refill or repair.
+
 ## What the evidence supports
 
 | Finding | Evidence and limit | Working guideline |
