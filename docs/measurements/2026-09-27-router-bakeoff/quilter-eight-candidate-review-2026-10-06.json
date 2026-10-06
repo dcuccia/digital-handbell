@@ -1,5 +1,94 @@
 {
   "schema_version": 1,
+  "paired_diagnostic_2026_10_06_1321": {
+    "authorization": "Owner accepted the proposed bounded eight2.1/2.2 diagnostic and requested durable lessons. No repair, refill, changed routing rules or new cloud job.",
+    "checkpoint_timing": "Native execution finished before13:33:30; root evidence/document verification finished13:37:11,41seconds after the planned13:36:30 checkpoint. No additional engineering item was started; remaining work was documentation/persistence.",
+    "disposition": "Prefer non-beta2.1 as the next diagnostic baseline, not an accepted or demonstrably cheapest-to-finish board. Beta2.2 closes more connections but introduces real shorts, clearance and contact/hole conflicts; do not manually repair or integrate it automatically.",
+    "native_evidence_root": ".playwright-mcp/eight-paired-native-1324",
+    "artifacts": {
+      "paired-native-report.json": "568c6745192d960329672f9c2618a96db7a6e4fe141379b0e99e45a78432ebd9",
+      "native-pad-comparison.json": "85f3f58d532f5ba96c7d1e5cebbf179c210fd028ee93f167bd9e8979c66913dd",
+      "drc-2.1.json": "289304bb7e3c0c31c97ccb1d31e4c3663850cd89ce0f54ba0613807851759676",
+      "drc-2.2.json": "206ee4b62d6a12b52e99e2be8708631db21289c27229618322fe7fab6babb859",
+      "viewer-native-correlation.json": "4fe2b90c0addb4f559dbd915d57d5e82195aa8679fdc03719242e98d2c2df3f7"
+    },
+    "candidate_2_1_archive": {
+      "path": ".playwright-mcp/eight-candidate-2-1-1324.zip",
+      "sha256": "87f8fd0a2962bf50d897b7de6a32e350c92ed7eb01f55444a5b9da152439c598",
+      "pcb_sha256": "c1e9e0255f885636b3c2fa31ef90e24da0b4f67deae8136d06e4607c6f782344",
+      "download": "Existing candidate, confirmed Free Tier; no payment or new terms. Raw archive preserved."
+    },
+    "method": {
+      "executor": "Runtime-verified gpt-5.6-sol, medium; agent4ff989f4-158f-4353-ad67-4bd54e6d53ff",
+      "native_version": "10.0.6",
+      "rule_control": "Each unchanged returned PCB was paired in an isolated rule-controlled directory with hash-identical qualified eight-input project917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c. Returned projects preserved separately; their design_settings differ from input. No rule relaxation.",
+      "parity": "OFF: --schematic-parity absent; no empty-array parity-pass claim.",
+      "refill": false,
+      "drc_exit_codes": [0, 0],
+      "completed_drc_seconds": [15.593, 2.406],
+      "attempts": [
+        "Initial CLI syntax supplied 'no' to a boolean flag and failed before DRC.",
+        "Second pair ran concurrently and each hit its hard90s limit; no reports. Concurrency causality remains unproven.",
+        "Third pair ran sequentially and completed with persistent receipts and exact PCB/project hashes. No further native retry.",
+        "First pad comparator incorrectly loaded the qualified comparison input read-only at its original path. No save/refill or byte change; its result is preserved but excluded. Corrected0.469s comparator used a hash-identical isolated input copy. The authoritative37-open board was not natively loaded.",
+        "Root render-message classifier required two corrections for None net tokens and nonfinite clearance sentinels; third extraction covers all274 reports. This is bounded saved-JSON analysis, not native geometry validation."
+      ]
+    },
+    "pad_semantics": {
+      "footprints_each": 104,
+      "pads_each": 325,
+      "same_placement_output_records_exact": true,
+      "input_output_pose_differences": "161 pads on exactly72 eligible moved references; differences confined to global position/orientation. Native reference/pad number/net, footprint-relative position, size, shape, attribute, layers and drill match.",
+      "disposition": "The new native evidence resolves the earlier45-reference text-normalization hold for the checked pad fields. It does not qualify the old exhausted checker as reusable tooling or prove all assembly/courtyard/process properties."
+    },
+    "native_drc_counts": {
+      "2.1": {
+        "violations": 468,
+        "unconnected_items": 76,
+        "classes": {"items_not_allowed": 74, "lib_footprint_issues": 97, "track_width": 80, "solder_mask_bridge": 50, "via_dangling": 54, "via_diameter": 18, "drill_out_of_range": 14, "silk_over_copper": 70, "silk_edge_clearance": 4, "annular_width": 4, "track_dangling": 3},
+        "shorting_items": 0,
+        "clearance": 0,
+        "hole_clearance": 0
+      },
+      "2.2": {
+        "violations": 647,
+        "unconnected_items": 32,
+        "classes": {"clearance": 114, "shorting_items": 7, "hole_clearance": 4, "items_not_allowed": 82, "lib_footprint_issues": 97, "track_width": 145, "solder_mask_bridge": 55, "via_dangling": 33, "via_diameter": 18, "drill_out_of_range": 14, "silk_over_copper": 70, "silk_edge_clearance": 4, "annular_width": 4},
+        "short_examples": ["/PROT_BAT versus VBAT", "D- versus VBAT (two records)", "D+ versus VBAT", "/CELL_NEG versus AMP_MUTE", "+3V3 versus VCORE", "D13 versus IC1 pad15"],
+        "contact_hole_examples": "AMP_MUTE via98acb0c7 at(97.814586,102.641457) versus BT2 CELL_NEG and D+ via5d362aed at(101.477654,102.054156) versus BT1 VBAT each report actual hole clearance0.0000mm against0.2500mm. Do not waive battery/contact protections."
+      },
+      "comparison": "Beta has44 fewer unconnected records but125 additional short/clearance/hole-clearance records and179 more total findings. These are diagnostic witnesses, not125 independent repair tasks, and cannot be compared directly with the authoritative37-open board.",
+      "shared_private_guard_records": "Nine same protected private-GND pad/via/footprint-to-own-guard records occur in both outputs. They are not foreign-net shorts. This does not disposition every74/82 items_not_allowed record.",
+      "width_caution": "Both results fail the retained0.1778mm minimum: sampled2.1 actual0.1620mm,2.2 actual0.1600mm. Separate inherited versus added objects before attributing all80/145 width findings to Quilter or approving smaller process rules."
+    },
+    "viewer_classification": {
+      "navigation": "Exercised category -> individual collision -> Focus in viewer, data-testid pltr-ctrl-focus-drc. Initial category-only view and missing accessible button label obscured the action. Focus moved the viewport and selected marker on F, B and In1 samples; screenshots alone do not classify copper.",
+      "render_path": ".playwright-mcp/eight22-collision-render-1328.json",
+      "render_sha256": "8951d113dcb13848a6976fa29551ba46a7f13d68084ebf5a960605d904d3fc1c",
+      "classification_path": ".playwright-mcp/eight22-collision-classification-1332.json",
+      "classification_sha256": "9fa8ae5528e3779fc12a09ca33455e8cebad64c06f57aaac6d303bb62304c208",
+      "reports": 274,
+      "service_object_pair_groups": 148,
+      "multiplicity": "130 singleton groups plus18 through-via pairs each repeated on all8 layers; grouping is a diagnostic aid, not proof of148 independent defects.",
+      "net_code_relations": {"same_code": 130, "different_codes": 132, "unknown": 12},
+      "objects": {"pad_trace": 33, "trace_trace": 23, "pad_via": 26, "via_trace": 40, "keepout_trace": 1, "keepout_via": 7, "via_via": 144},
+      "numerical_limits": "All messages are ClearanceViolation. Finite reported gaps range-607.934 to199.919um;14 finite reports are nonpositive and3 use -inf sentinels, not measured infinite penetration. Same-code records are not automatically harmless: hole/process spacing still matters. Service codes are not native net codes.",
+      "correlated_samples": [
+        {"uid": "8c50b65e-eb17-4085-b315-bffb9e90a9d1", "layer": "F.Cu", "native_objects": "IC1.23 VCORE versus +3V3 track", "service_gap_mm": 0.177942, "native_gap_mm": 0.1779},
+        {"uid": "cadfeb36-ac96-44ab-9619-fe441ad1f2cf", "layer": "B.Cu", "native_objects": "GND viafa83a8ab versus USBBOOT track583af1f5", "service_gap_mm": 0.194902, "native_gap_mm": 0.1949},
+        {"uid": "9876f00e-4df9-435a-bf65-d2f1428c8f7e", "layer": "In1.Cu", "native_objects": "I2S_DIN via842c4a72 versus INT viab492e360", "service_gap_mm": 0.126056, "native_gap_mm": 0.1261}
+      ],
+      "sample_limit": "All three correlate to native finite foreign-net clearance deficits against0.2000mm, not hard shorts; separate native shorting_items records exist. The through-via pair has six native witnesses versus eight service witnesses."
+    },
+    "remaining_gates": [
+      "All three files have63 zone definitions but zero saved filled-polygon/fill-segment records. Neither no-refill DRC qualifies final plane connectivity, return paths or clearance to filled pours.",
+      "97 missing-library findings remain per output; no external libraries fetched or invented. Parity remains off.",
+      "2.1 has76 unconnected records and width/keepout/process findings, not a clean or completed board;32 in2.2 is not proof it improves on the authoritative37-open board.",
+      "No measured finishing-time estimate. Next use the same-placement evidence with Justin to select a non-beta placement/routing continuation and resolve selected-minimum/contact-obstacle behavior before a new job.",
+      "Any refill, repair, placement/rule change, new submission or integration needs its own bounded authorization. Six-layer impedance hold remains."
+    ],
+    "source_preservation": "All five authoritative37-open artifact hashes rechecked unchanged at13:32. Qualified eight input and both raw archives unchanged. No source edits, refill, repair, routing or integration."
+  },
   "support_reply_shared_2026_10_06_1300": {
     "provenance": "Owner pasted reply from Quilter support engineer Justin in this conversation at13:00 local. Attributed support guidance, not independently reproduced findings or a new execution authorization.",
     "guidance": [

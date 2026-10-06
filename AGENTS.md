@@ -2,6 +2,21 @@
 
 ## Bounded engineering work
 
+- **October 6, 13:34 paired diagnostic completed:** owner-approved
+  eight2.1/2.2 native comparison resolves325 pad semantics; changes versus
+  input are global poses on72 movers. Same-rule/no-refill DRC has76/32
+  unconnected records and468/647 findings.2.1 has no short/clearance/hole
+  records;2.2 has7/114/4 including battery-contact/signal-via conflicts.
+  Prefer2.1 as next diagnostic, not acceptance or proven finishing-time win.
+  Focus in viewer works;274 service reports group into148 object pairs,
+  with18 via pairs repeated8 times, not148 independent defects.
+  Three gaps correlate natively. No saved fills; parity/library and
+  width/keepout/process gates remain. Three DRC attempts exhausted;
+  executor idle. First comparator mistakenly read the comparison input
+  without saving; corrected evidence uses a copy and all source hashes
+  match. Next use this evidence with Justin for a specific non-beta
+  placement/constraint continuation, not automatic repair/refill/new job.
+  See paired diagnostic in the eight-output ledger and playbook.
 - **October 6, 13:00 support reply recorded:** Justin says beta routing
   tends to add padstack collisions; recommends Focus in Viewer, placement
   refinement/more spacing, feasible smaller process minima and configured

@@ -7,6 +7,36 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 6, 13:34: paired diagnostic completed; prefer non-beta2.1.**
+Owner authorized one bounded eight2.1/2.2 comparison. KiCad10.0.6 DRC on
+unchanged output copies with the qualified input project reports76 versus32
+unconnected records.2.1 has no shorts/copper-clearance/hole-clearance records;
+2.2 has7/114/4, including battery-contact versus signal-via conflicts.
+Totals468/647 include inherited and unresolved findings, not unique repairs.
+2.1 is the safer next diagnostic baseline, not clean or accepted; no
+demonstrated finishing-time estimate or comparison to source37 opens.
+
+Native104/325 identity/local-pad checks pass; same-placement pad records
+match exactly and input/output differences are global transforms on72
+eligible movers. This closes the earlier45-reference comparison ambiguity,
+not qualification of that failed checker. All63 zone definitions remain,
+but no saved fills exist; no-refill DRC cannot qualify final planes/returns.
+Parity is off and97 missing-library notices per output remain.
+
+Focus in viewer now works on selected individual collisions. Richer
+renderer messages group274 reports into148 object pairs, including18 via
+pairs repeated across8 layers; not148 independent defects. Three sampled
+foreign-net clearance deficits correlate with native findings. Exact
+counts, artifacts, hashes, failed attempts and limits are in the
+eight-output ledger's `paired_diagnostic_2026_10_06_1321`.
+The executor accidentally read the qualified comparison input natively
+before switching to an isolated copy; no save/refill or byte change.
+The authoritative37-open board was not loaded and all five hashes match.
+Stop native execution: three DRC attempts are consumed, executor idle.
+Next bring Justin the same-placement evidence and resolve ordinary-route
+minimum/contact-obstacle behavior before choosing a placement continuation.
+No repair/refill, new job, source change or integration is released.
+
 **October 6, 13:00: owner shares Justin's support guidance.**
 Support attributes frequent collisions to the experimental beta router
 and recommends Focus in Viewer, placement refinement, more component

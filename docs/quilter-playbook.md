@@ -118,8 +118,9 @@ zone definitions and filled returns separately.
 **Attributed support guidance, October6:** owner shared Justin's reply:
 the experimental beta router tends to introduce padstack collisions while
 increasing completion and needs detailed review. Select a collision and
-use **Focus in Viewer** to locate it; that navigation remains unexercised
-in our review. Possible courtyard crossings and copper overlaps are not
+use **Focus in Viewer** to locate it. The13:21 paired diagnostic subsequently
+exercised category -> individual collision -> Focus in viewer on F/B/In1.
+Possible courtyard crossings and copper overlaps are not
 interchangeable electrical defects. Support's likely-router explanation
 does not classify our individual reports or establish their independence.
 
@@ -135,6 +136,40 @@ contact/private-return exclusions. Do not globally shrink existing copper.
 Full native DRC needs the intended project rules, not just the downloaded
 defaults. The [support disposition](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json)
 records unanswered questions; it authorizes no rerun, refill or repair.
+
+**Observed same-placement diagnostic, October6:** under the identical
+qualified input project, native2.1 has76 unconnected records and no
+short/copper-clearance/hole-clearance findings; beta2.2 has32 but adds
+7 short,114 copper-clearance and4 hole-clearance records. Some directly
+involve VBAT/CELL_NEG contact pads and signal vias. Prefer2.1 for the next
+diagnostic, not acceptance: it still has468 findings, including80 width
+violations. Neither output has saved fill caches, so this no-refill result
+does not qualify plane/return connectivity or final poured clearance.
+Native pad comparison resolves the earlier serialization uncertainty:
+325 pad records match between outputs; input differences are expected
+global transforms on the72 movers, not changed checked local pad semantics.
+
+The renderer's saved `infos.message` contains object/net codes, coordinates
+and numerical clearances missing from the ordinary violation details.
+All274 reports group into148 service object pairs:18 via pairs repeat on
+all8 layers. These are not148 proven root defects.130 reports use equal
+nonempty internal net codes,132 different codes and12 unknown; neither
+blank-net equality nor same-net copper automatically disposes hole/process
+spacing. Three viewer samples correlate to native gaps0.1779,0.1949 and
+0.1261mm against0.2mm: genuine clearance deficits, not hard shorts.
+Keep collision counts, physical object pairs and independent repair tasks
+distinct; preserve nonfinite sentinels rather than inventing distances.
+
+Use isolated, unchanged PCB copies with the intended project configuration,
+preserving returned projects separately. Both outputs contain below-floor
+tracks; classify inherited versus new copper before blaming all width
+findings on the router. Sequential CLI runs completed after concurrent
+runs timed out, but this does not establish concurrency as the cause.
+Preflight boolean CLI flags and verify copy paths before native loading:
+the first comparator wrongly read the original qualified comparison input
+without saving; its evidence was excluded and bytes remained unchanged.
+These lessons and exact hashes are in `paired_diagnostic_2026_10_06_1321`
+in the eight-output ledger. No extra retry or product acceptance follows.
 
 ## What the evidence supports
 
