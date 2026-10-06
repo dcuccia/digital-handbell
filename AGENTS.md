@@ -2,6 +2,24 @@
 
 ## Bounded engineering work
 
+- **October 5, 21:53 eight-layer job launched:** owner21:38 resumes.
+  Existing draft6ac434b6a389adaff19ad80e starts once at21:53:30.545,
+  state=running/full_layout. Normal Floorplanner Continue accepts the
+  original failed bounds attempt unchanged; root distinguishes planner
+  rectangle preflight from documented overlapping placement regions.
+  No resize/rerun/margin waiver or packing-pass claim. Saved72 Front,
+  .127mm/single-sided and all common28 bypass/14 power/GND/In1/USB inputs
+  match the four trial. Imported104 poses/325 rendered pin records/
+  191 tracks/18 vias and XY primitives preserve reviewed evidence with
+  only expected inner-layer guard/pad/substrate additions. Fresh90-ohm
+  four-signal profiles clear177.8/200um minima. Failed private final helper
+  is preserved, not rerun: its whole-stack assertion wrongly included
+  regenerated impedance profiles; root exact-field diff resolves that
+  without changing physical rows. Published noncommercial price0 remains;
+  no payment/new terms/source edit/native rebuild/integration. No results
+  yet. Let the job run without supervision; next inspect returned native
+  preservation/electrical results against the four-layer shortlist.
+  Six remains impedance-held; no automatic second job or manual routing.
 - **October 5, 16:49 eight preview held at new Floorplanner:** draft
   6ac434b6a389adaff19ad80e imports the qualified three files,104 components/
   72 movers/326 service pins. Saved physical stack and S/G/S/G/G/S/G/S,

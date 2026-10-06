@@ -1,5 +1,77 @@
 {
   "schema_version": 1,
+  "continuation_2138": {
+    "authorization": "Owner resumes at21:38 after the proposed20-30minute attempt to launch the existing eight-layer draft. First Floorplanner checkpoint21:48; overall stop22:08. No source/native reconstruction, six launch, paid use or integration.",
+    "job_id": "6ac434b6a389adaff19ad80e",
+    "prelaunch_disposition": "ROOT_ACCEPTS_FOR_ONE_ISOLATED_FREE_EVALUATION; not manufacturer, placement or returned-output acceptance.",
+    "floorplanner": {
+      "decision": "Documented on-board/edge-overlapping placement regions remain the intended domain. Client1.42.0 permits Continue for a completed unchanged attempt, separately from planner success. Root selected that normal UI save once, not a resize or a rerun.",
+      "observed": "PUT floorplanner/save200 at21:40:09, revision2, finalized original requestb9353290-c8fc-452f-ab9c-5e7b01c8f414 including PINNED_ROOM_INFEASIBLE. Same room/member/Front/pinned/rectangle state; no packing pass claimed.",
+      "effective_settings": "Circuit comprehension contains the same72 room associations as four baseline, compared with multiplicity. Selected configuration now saves preferSingleSided=true, componentClearanceMm=.127; final review displays both.",
+      "documentation": "https://docs.quilter.ai/guides/placement-guide.md",
+      "saved_response_sha256": "2253a539ea0be4f6510159d5212211f96f89f19a946163e647fc89a77a12fd05"
+    },
+    "common_inputs": "All comprehension input-entry multisets match four-comprehension-1112.json:28 bypass,14 power with optional pours false,72 Front,sole primaryGND,protected In1,and both USB90-ohm pairs at1GHz with no single-ended target. No added clock/converter inference. CSV upload appends; initial57 bypass rows were cleared and replaced, final28 verified.",
+    "import_review": {
+      "basis": "Read-only saved render3.6.0 comparison against previously source-qualified four input. Decode mesh geometry/transform/item/tag indices from the actual client; compare exact polygon arrays plus XY matrix fields, without rounding. Exclude display Z/material/color changes, not electrical layer membership.",
+      "component_poses_equal": 104,
+      "fixed": 32,
+      "pin_semantic_records_equal": 325,
+      "trace_metadata_equal": 191,
+      "via_centers_diameters_drills_nets_equal": 18,
+      "pin_normalization": "Resolve component library names to reference. Normalize through membership only when exactly all enabled copper layers. Prior source-bound paste-aperture/jumper-graphic explanation remains;325 rendered PINs are not325 native copper pads.",
+      "xy_primitive_multisets": {
+        "traces": {"four": 573, "eight": 573, "lost": 0, "added": 0},
+        "positive_front_room": {"four": 94, "eight": 94, "lost": 0, "added": 0},
+        "keepouts": {"four": 1626, "eight": 1746, "lost": 0, "added": 120},
+        "pins": {"four": 349, "eight": 381, "lost": 0, "added": 32},
+        "substrate": {"four": 3, "eight": 7, "lost": 0, "added": 4}
+      },
+      "additions": "Every added keepout/pin/substrate XY primitive equals its existing In2 template on In3/In4/In5/In6, with multiplicity. No other addition/loss.58 keepout records:19 original pours-only,8 B track/via/pour guards,26 private all-types,5 F PINS-only reservations;one separate positiveFront region.",
+      "limits": "Render precision and prior four-native source bridge, not new native output geometry or body/rotation certification. Exact returned209/source identity/private isolation/planes and physical/process gates remain.",
+      "private_checker": "Initial inline geometry review failed on micro-sign spelling; corrected inline review completed. Final private helperf42b8d42 passed geometry/comprehension/minima assertions then stopped at an overbroad whole-stack equality check; it was NOT rerun or promoted. Root exact-field diff shows ONLY impedanceProfiles changed: nine initial generic profiles replaced by the freshly computed90-ohm profile. Physical layer rows/roles/settings are unchanged. Remaining profile values/source hashes were inspected separately. No PASS report from the failed helper is claimed.",
+      "failed_helper_receipt_sha256": "40769b263a9f3cdbfdb625fe67ac2638298c351ce9bd9b90c794fb1c1664afaf"
+    },
+    "fresh_impedance": {
+      "pairs": ["D+ / D-", "USB_D+ / USB_D-"],
+      "target_ohms": 90,
+      "frequency_ghz": 1,
+      "single_ended_target": null,
+      "profiles": [
+        {"layer": "F.Cu", "width_um": 227.3475863647461, "gap_um": 210, "achieved_diff_ohms": 89.96924533322829},
+        {"layer": "In2.Cu", "width_um": 186.69000000000003, "gap_um": 216.47878417968752, "achieved_diff_ohms": 89.99163998689698},
+        {"layer": "In5.Cu", "width_um": 187.34859710693362, "gap_um": 210, "achieved_diff_ohms": 89.98556911571002},
+        {"layer": "B.Cu", "width_um": 227.3475863647461, "gap_um": 210, "achieved_diff_ohms": 89.96924533322837}
+      ],
+      "disposition": "All eight pair/layer records reportOK and exceed177.8um width/200um gap; largest target error<.031ohm. Accept fresh solver-selected gaps rather than forcing supplier example. Grounds have no routed profile.",
+      "limits": "Supplier examples used254um gap and different finished-copper/mask assumptions. Saved mask/reference overrides null do not establish effective defaults;etchFactor=.5. No cross-solver equivalence, measured impedance or fabrication acceptance."
+    },
+    "warnings": "Known pin-count/16 schematic-reference/pour texts remain dispositioned as in four trial. No-power-layer notice is intentional S/G/S/G/G/S/G/S with optional power pours off. ECAD Parsed Constraints says Altium-only; this is not absent KiCad keepouts or minima, which are independently inspected. No waiver of actual isolation or routing minima.",
+    "pricing": "Official free-ai-pcb-design HTML, published October5, still declares Non-Commercial Tier, price0USD and unlimited iterations. Prior owner personal-use authorization applies; no account-specific quote, payment or new agreement.",
+    "evidence": {
+      "eight-comprehension-final-2148.json": "2136e7d6bf159af521d94bec3044bc16950e4ea34a6417c1861bf6462e4945fa",
+      "eight-config-final-2148.json": "427784d67d91b26ff4e83089540e2415d1a70879bb04c7f421a3593ae6de8dd1",
+      "eight-render-final-2148.json": "9dad585f510c442aed61177281aa421d7f50eed0a186249b88890b10257d1f49"
+    },
+    "source": "All five authoritative hashes rechecked unchanged. No native PCB load/save/refill or source edit.",
+    "launch": {
+      "local": "2026-10-05T21:53:30.545-07:00",
+      "name": "Handbell flexible 8L - JLC2116 - four signals retained209",
+      "mode": "full_layout",
+      "state": "running",
+      "url": "https://app.quilter.ai/jobs/6ac434b6a389adaff19ad80e",
+      "start_clicks": 1,
+      "http_status": 200,
+      "confirmation": "Redirected to job page; saved job state=running and launched1791262410545. UI says working on layout candidates, no results yet, and window may close while service continues.",
+      "evidence": {
+        "eight-launch-request-2153.json": "4fabdada7a0b37239dd2f513faaae7f31f3e2369dd841baada30ee4054eee1d0",
+        "eight-launch-response-2153.json": "d10ac45c4d7897bf8bea86579ebba7179dfe975a3da565d88e40dcc832f5490f",
+        "eight-launched-job-2153.json": "19d6af7edf6b6bc22e8d71366f3188b38a63d1fea15be206689bd3c1287aa715"
+      },
+      "no_actions": ["no six-layer launch", "no source/native rebuild", "no manual routing", "no payment/new agreement", "no integration", "no monitoring automation"],
+      "next": "Let the service run. Preserve native returned outputs when available; inspect source/copper/layer/plane preservation and electrical/physical findings before comparing with the four-layer shortlist. Do not automatically repair, accept or resubmit."
+    }
+  },
   "continuation_1602": {
     "owner_local": "2026-10-05T16:02:40-07:00",
     "scope": "Proceed with next evaluation steps for the suggested six/eight variants.",
@@ -180,16 +252,16 @@
       "stop": "UI work stopped before16:49, details dialog left open. No more engineering in this bounded preview; preserve draft and resume only with a separately bounded disposition. No routing job, paid use, source changes or integration."
     }
   },
-  "checkpoint_local": "2026-10-05T16:49:00-07:00",
-  "status": "six native diagnostic complete, impedance held; eight native input accepted and imported, preview held at Floorplanner bounds preflight; no routing launch",
+  "checkpoint_local": "2026-10-05T21:55:00-07:00",
+  "status": "eight2116 preview accepted for isolated evaluation and full-layout job running since21:53:30; six native complete but impedance-held; no output accepted",
   "latest_checkpoint": {
-    "recommendation": "Continue with standard JLC08161H-2116 if retaining the current 0.1778mm trace floor. Its native input is accepted and physical stackup imported; full preview and fabrication qualification are still held. Preliminary supplier90-ohm geometry clears the floor.",
+    "recommendation": "Await the running standard JLC08161H-2116 full-layout evaluation. Its native/preview input is accepted for this isolated experiment and fresh90-ohm geometry clears current minima. Returned-output and fabrication qualification remain separate.",
     "why_selection_evolved": "The initial 3313E choice has excellent reference spacing, but the supplier calculator's 90-ohm solutions at approximately 0.21mm pair gap are narrower than the current input minimum. More layers and close planes do not by themselves resolve impedance geometry.",
     "six_native_progress": "Preserved attempt3 native geometry is now diagnostic-complete under a new separate CLI scope:74.86s, unchanged321 violations/184 staged opens, no new non-open findings, current manifest accurately bound.",
     "six_blocker": "90-ohm/minimum-width and preview remain held. The old three-attempt builder stays stopped; its later diagnostic completion was not a reconstruction.",
     "source": "All five authoritative hashes and all four accepted-six package hashes reverified unchanged.",
-    "next_bounded_scope": "Stopped at the16:49 preview checkpoint. Next disposition the exact Floorplanner room/bounds mismatch in the existing draft, then remaining common configuration/import/fresh90-ohm gates. No automatic geometry change, native reconstruction or new draft.",
-    "no_actions": ["no six/eight routing launch", "no source repair", "no refill", "no integration", "no paid action"]
+    "next_bounded_scope": "When results are available, preserve and review returned native identity/copper/layers/pours and electrical findings before comparing against four-layer candidates. No automatic repair or second job.",
+    "no_actions": ["no six-layer routing launch", "no source repair", "no refill", "no integration", "no paid action"]
   },
   "supplier_impedance_screen": {
     "source": "Interactive JLCPCB public calculator; current selected table, not a Quilter solve",

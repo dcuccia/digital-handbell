@@ -7,6 +7,52 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 5, 21:53: eight-layer full-layout job is running.**
+[Handbell flexible 8L - JLC2116 - four signals retained209](https://app.quilter.ai/jobs/6ac434b6a389adaff19ad80e)
+launched once at21:53:30.545 local. Start returned200, the saved job
+response reports `state=running` / `mode=full_layout`, and the UI says it
+is working on layout candidates and can continue after closing the window.
+No results have been reviewed. This completes the resumed setup/launch
+attempt in about15minutes, not the routing evaluation itself.
+
+The Floorplanner issue needed no geometry repair. Root reviewed the
+documented edge-overlapping-region semantics and current client's normal
+Continue path. Server save accepted the original failed planner attempt
+unchanged, retaining the Front/pinned rectangle and all72 members.
+The planner did **not** pass packing; its rectangle-inset failure remains
+in the finalized evidence. Selected configuration now persists the0.127mm
+component clearance and single-sided preference. No resize, unlock, rerun
+or board-margin waiver occurred.
+
+Common input-entry multisets match the four-layer run:28 bypass,14 power,
+72 Front,sole primaryGND,protected In1 and both90-ohm USB pairs at1GHz.
+The exact physical eight2116 rows/roles/minima are unchanged. Fresh
+F/In2/In5/B widths are0.227348/0.186690/0.187349/0.227348mm, with
+0.210/0.216479/0.210/0.210mm gaps; achieved differential values span
+89.969-89.992ohms. These are valid numerical preview solutions above the
+current minima, not manufacturer-model or measured-impedance acceptance.
+
+Saved-render comparison preserves all104 poses,32 fixed,325 pin semantic
+records,191 trace records and18 via center/size/net records. Exact rendered
+XY primitive multisets lose nothing; additions are only expected In3-In6
+copies of the private guards, through pads and substrate. Prior native
+paste-aperture/jumper normalization and output-review limits remain.
+The private final helper stopped on a whole-stack equality assertion that
+incorrectly included the regenerated impedance profiles. It was not rerun
+or published as qualified tooling; root's exact-field diff shows only
+those intended computed-profile changes, not physical-layer changes.
+Evidence, the failed helper receipt and all dispositions are in
+`continuation_2138` in the
+[four-signal ledger](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json).
+
+The official non-commercial price0 policy was reconfirmed; no payment or
+new agreement appeared. Authoritative37-open source and all experiments
+remain unchanged. No six-layer job, native rebuild, manual routing,
+integration or monitoring automation was started. Next, when outputs
+arrive, preserve them and review native identities/copper/planes and
+electrical failures before comparison with the four-layer shortlist.
+Six3313E remains separately impedance-held.
+
 **October 5, 16:49: eight-layer preview created; Floorplanner hold.**
 The qualified PCB/project/schematic are uploaded to
 [the unsubmitted eight-layer draft](https://app.quilter.ai/jobs/6ac434b6a389adaff19ad80e/create/floorplan)

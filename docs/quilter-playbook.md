@@ -4,8 +4,9 @@ Use this guide to prepare useful jobs and evaluate their results without
 relearning every experiment. Optimize for an acceptable board with bounded
 owner/agent effort, not trace aesthetics or recovery of sunk costs.
 
-Evidence reviewed through **October 5, 2026**: Quilter UI 1.40.0/API 1.40.1
-and KiCad 10.0.6. This is a living procedure, not a platform guarantee.
+Evidence reviewed through **October 5, 2026**: Quilter UI/API through1.42.0
+(earlier observations used UI1.40.0/API1.40.1) and KiCad10.0.6.
+This is a living procedure, not a platform guarantee.
 The [workflow study](quilter-workflow-study-2026-10-02.md) retains the dated
 reasoning; its linked ledgers bind exact files and results. The
 [closure plan](pcb-closure-plan.md#owner-pause-and-next-item) controls current
@@ -300,20 +301,24 @@ placement room or expect an off-board grouping hint to enforce F-only.
 See [KiCad region setup](https://docs.quilter.ai/design-parameters/placement-regions.md)
 and [single-sided requirements](https://docs.quilter.ai/design-parameters/single-sided-placement.md).
 
-**Observed October5 in UI/API1.42.0:** the new Floorplanner Beta step does
-not automatically accept every previously documented edge-overlapping
-region. Our unchanged pinned Front room, spanning the board's bounding
-rectangle, failed its inset-bounds preflight before packing. This does
-not establish a component-placement failure. Continue became enabled
-after the warning; an enabled button is not constraint qualification.
-Review the exact reported rule before shrinking/unlocking a region,
-changing the comparison domain or waiving a margin. Floorplanner state
-and selected configuration are separate evidence: the former saved our
-72 assignments and placement options while the latter still showed old
-options. Verify downstream persistence rather than counting UI chips as
-effective routing settings. The component picker closed after each
-selection; reopen it and inspect selected state to avoid toggling an
-already-selected component during recovery.
+**Observed October5 in UI/API1.42.0:** distinguish the Floorplanner's
+rectangle-packing preflight from downstream placement-region constraints.
+Our unchanged pinned Front room, spanning the board's bounding rectangle,
+failed the planner's inset bounds before packing. On resumed review,
+the normal Continue path saved that completed failed attempt unchanged
+and the full-layout job subsequently started. No resize, unlock or margin
+waiver was needed. This is not a planner packing pass or a general claim
+that warnings can be ignored: bind the reported rule, documented region
+semantics and exact saved downstream geometry before disposition.
+
+Floorplanner state and selected configuration are separate evidence:
+72 assignments/options initially lived only in planner state; Continue
+saved the matching comprehension entries and selected placement options.
+Verify downstream persistence rather than counting UI chips as effective
+routing settings. The component picker closed after each selection;
+reopen it and inspect selected state to avoid toggling an already-selected
+component during recovery. Comprehension edits in this workflow persisted
+on Continue, not after every cell edit; stackup autosave behaved differently.
 See the [eight preview checkpoint](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json).
 
 **Observed native representation, not placer behavior:** the isolated
@@ -635,6 +640,15 @@ mask/reference overrides do not reveal effective defaults. Preserve that
 uncertainty instead of calling them false. A construction that clears
 current minima in both examples can proceed to a fresh qualified preview;
 manufacturer impedance acceptance remains a separate gate.
+
+The eight2116 preview subsequently produced fresh90-ohm results on
+F/In2/In5/B above the unchanged trace/space floors. Keep physical
+construction comparison separate from computed-profile comparison:
+the service replaces initial generic `stackup.impedanceProfiles` when
+it computes the selected circuit targets. Whole-stack equality therefore
+rejects an expected successful recomputation. Inspect the exact changed
+fields, preserving failed check evidence; never require stale widths to
+remain or silently ignore physical layer/role changes.
 
 Do not copy a qualified input directory wholesale into a new experiment:
 old DRC/semantic reports and personal PRL files can appear to certify the
