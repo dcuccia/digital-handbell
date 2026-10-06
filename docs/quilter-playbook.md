@@ -4,7 +4,7 @@ Use this guide to prepare useful jobs and evaluate their results without
 relearning every experiment. Optimize for an acceptable board with bounded
 owner/agent effort, not trace aesthetics or recovery of sunk costs.
 
-Evidence reviewed through **October 5, 2026**: Quilter UI/API through1.42.0
+Evidence reviewed through **October 6, 2026**: Quilter UI/API through1.42.0
 (earlier observations used UI1.40.0/API1.40.1) and KiCad10.0.6.
 This is a living procedure, not a platform guarantee.
 The [workflow study](quilter-workflow-study-2026-10-02.md) retains the dated
@@ -85,6 +85,35 @@ Evaluate error statuses separately: fewer failed decoupling checks may
 mean missing paths became uncheckable, not that they were fixed.
 Computed differential-path checks can coexist with an incomplete-net
 report; they do not establish all-terminal connectivity.
+
+**Eight-layer comparison, October6:** the
+[eight2116 run](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json)
+finished in4h31m with12 candidates and the same94.65% best completion
+as four layers. Its best2.2 reports11 incomplete nets and274 padstack
+collisions, versus four3.2's9 and178. The extra routing layer did not
+demonstrate an overall closure advantage in this run, although C15/C17
+have useful short, zero-transition paths. Different placements, impedance
+geometry and client/backend versions prevent attributing the outcome
+solely to layer count. Prefer a finite remaining-work comparison over
+another automatic stackup trial.
+
+Collision records here omit both nets and the other colliding object.
+Do not label equal empty net fields as same-net contact, count every
+reported layer witness as an independent defect, or dismiss them as
+benign. Eight2.2 also has zero failed power screens but six errors;
+VAMP's incomplete-path error is absent from its separate incomplete-net
+list. Preserve both observations rather than treating either list as
+complete electrical truth. Passing downstream placement-region checks
+does not retroactively turn the earlier Floorplanner preflight into a
+packing pass or establish physical clearance.
+
+The bounded eight-output static review did preserve all209 retained
+copper objects and63 zone definitions, but stopped with unresolved pad
+normalization at45 references. Preserve that partial evidence without a
+fourth retry or an all-pad pass. KiCad power-to-signal declaration changes
+do not alone prove ground-plane loss, just as1e-14mm serialization tails
+do not prove meaningful fixed-part movement. Compare actual layer use,
+zone definitions and filled returns separately.
 
 ## What the evidence supports
 

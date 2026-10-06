@@ -2,6 +2,23 @@
 
 ## Bounded engineering work
 
+- **October 6 eight-layer outputs reviewed:** completed02:24:54 after4h31m
+  with12 candidates, none95%. Best2.2/5.2 equal four's94.6502% but report
+  11 incomplete nets/274 unclassified padstack collisions versus9/178.
+  These are not native open or independent defect counts. C15/C17 have
+  useful short zero-transition routes; D+/D-, USB_D return/coupling,
+  C18/C24 and power-error gates remain. All12 service details and native2.2
+  archive are preserved. Static review supports104 identities/209 retained
+  copper/outline/all63 zone definitions, but45 references' pad semantics
+  remain unresolved after three attempts; no native load or DRC occurred.
+  Tiny fixed-pose numeric tails and power-to-signal declaration labels
+  are not proof of meaningful moves or lost planes. Checker stays held.
+  See `quilter-eight-candidate-review-2026-10-06.json`
+  for exact bounded native-review disposition and evidence. Source unchanged;
+  no refill, repair, integration or new job. No demonstrated overall
+  closure advantage, not proof extra layers cannot help. Next classify
+  native preservation/collisions/critical terminals rather than blindly
+  rerunning layers; six remains impedance-held.
 - **October 5, 21:53 eight-layer job launched:** owner21:38 resumes.
   Existing draft6ac434b6a389adaff19ad80e starts once at21:53:30.545,
   state=running/full_layout. Normal Floorplanner Continue accepts the

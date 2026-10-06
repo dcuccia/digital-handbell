@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "review_started_local": "2026-10-06T10:41:08-07:00",
+  "scope": "Owner requests eight-layer outputs. Read-only service review of all12 candidates and one bounded isolated native review of representative2.2. No refill, repair, integration, additional routing job, paid use or source-native load.",
+  "job": {
+    "id": "6ac434b6a389adaff19ad80e",
+    "url": "https://app.quilter.ai/jobs/6ac434b6a389adaff19ad80e",
+    "state": "complete",
+    "launched_epoch_ms": 1791262410545,
+    "finished_epoch_ms": 1791278694644,
+    "finished_local": "2026-10-06T02:24:54.644-07:00",
+    "elapsed_seconds": 16284.099,
+    "candidate_count": 12,
+    "service_successful_count": 0,
+    "first_original_candidate_minutes": 81.15311666666666,
+    "first_beta_minutes": 167.99733333333333,
+    "highest_routing_fraction": 0.9465020576131687
+  },
+  "candidates": [
+    {"label": "1.1", "id": "6ac491ebd756a01bd0b17743", "routing_fraction": 0.8436213991769548, "vias": 118, "incomplete_nets": 31, "padstack_collision_reports": 0},
+    {"label": "1.2", "id": "6ac4a62935418875d112efd0", "routing_fraction": 0.9259259259259259, "vias": 199, "incomplete_nets": 14, "padstack_collision_reports": 295},
+    {"label": "2.1", "id": "6ac491edddd69d563b0369aa", "routing_fraction": 0.8765432098765432, "vias": 123, "incomplete_nets": 26, "padstack_collision_reports": 0},
+    {"label": "2.2", "id": "6ac4a6faeb4ef8a421b71a6b", "routing_fraction": 0.9465020576131687, "vias": 193, "incomplete_nets": 11, "padstack_collision_reports": 274},
+    {"label": "3.1", "id": "6ac491cf69ab0dc511097f5d", "routing_fraction": 0.8683127572016461, "vias": 110, "incomplete_nets": 27, "padstack_collision_reports": 0},
+    {"label": "3.2", "id": "6ac4a7e7f044764d8b09eb0c", "routing_fraction": 0.934156378600823, "vias": 193, "incomplete_nets": 13, "padstack_collision_reports": 315},
+    {"label": "4.1", "id": "6ac498df422a59bf3b2db5a5", "routing_fraction": 0.8436213991769548, "vias": 118, "incomplete_nets": 31, "padstack_collision_reports": 0},
+    {"label": "4.2", "id": "6ac4be3193f74b1a9c53c158", "routing_fraction": 0.9259259259259259, "vias": 199, "incomplete_nets": 14, "padstack_collision_reports": 295},
+    {"label": "5.1", "id": "6ac497ce3e749b43c6905b84", "routing_fraction": 0.8765432098765432, "vias": 123, "incomplete_nets": 26, "padstack_collision_reports": 0},
+    {"label": "5.2", "id": "6ac4bb4095ba49f01d406a6f", "routing_fraction": 0.9465020576131687, "vias": 193, "incomplete_nets": 11, "padstack_collision_reports": 274},
+    {"label": "6.1", "id": "6ac49772cda2b1cabd3c498b", "routing_fraction": 0.8683127572016461, "vias": 110, "incomplete_nets": 27, "padstack_collision_reports": 0},
+    {"label": "6.2", "id": "6ac4bba294e2d818de3d90c4", "routing_fraction": 0.934156378600823, "vias": 193, "incomplete_nets": 13, "padstack_collision_reports": 315}
+  ],
+  "pairing_limit": "1/4,2/5,3/6 share summarized metrics. Geometric identity is not established. Candidate2.2 has placementId6ac48c6b46616aaf63c60200, shared with its actual predecessor2.1.",
+  "candidate_2_2_service": {
+    "placement_region_checks": {"pass": 72},
+    "placement_limit": "All72 region checks pass on each of the first six reviewed candidates. This is downstream service behavior despite the earlier Floorplanner preflight failure, not a retrospective packing pass or native body/clearance approval.",
+    "incomplete_nets": ["+3V3", "D+", "D-", "QSPI_DATA[3]", "QSPI_SCK", "SCL", "SWDIO", "VBUS", "VCORE", "VHI", "~{RESET}"],
+    "power": {
+      "pass": 8,
+      "fail": 0,
+      "error": 6,
+      "error_nets": ["+3V3", "GND", "VAMP", "VBUS", "VCORE", "VHI"],
+      "limit": "GND says Invalid input net; other five say not fully connected. VAMP is not in the separate incomplete-net list. Do not suppress that inconsistency or interpret zero failures as complete power routing. Provisional current screens are not operating-temperature or current-budget qualification."
+    },
+    "usb": {
+      "D_pair": "Three path checks ERROR because no valid complete path; return-connector-distance PASS. Both D+ and D- appear incomplete.",
+      "USB_D_pair": {
+        "length_mismatch_mm": 17.24976360020736,
+        "uncoupled_length_mm": 21.83391807890381,
+        "interrupted_return_path": true,
+        "statuses": ["FAIL", "FAIL", "FAIL", "PASS"]
+      },
+      "limit": "Generic service10mm thresholds are not independent USB design acceptance criteria."
+    },
+    "bypass": {
+      "pass": 80,
+      "fail": 2,
+      "error": 2,
+      "C15_IC1_44_path_mm": 3.5182190965462085,
+      "C15_IC1_42_path_mm": 1.2658790396633426,
+      "C17_IC1_48_path_mm": 0.6764505889393051,
+      "C17_IC1_49_path_mm": 0.6868655455541936,
+      "C15_C17_layer_switches": 0,
+      "C18": "Pin distance passes; path length and layer-switch checks ERROR.",
+      "C24_IC4_8": "Pin distance10.527831mm and path13.696944mm both fail the generic10mm threshold; zero layer switches.",
+      "limit": "Short reported C15/C17 routes are useful local improvements, not complete supply/ground-loop or native connectivity acceptance."
+    },
+    "collisions": {
+      "reports": 274,
+      "distinct_item_strings": 274,
+      "distinct_uids": 274,
+      "layer_counts": {"F.Cu": 113, "In5.Cu": 28, "B.Cu": 34, "In1.Cu": 18, "In2.Cu": 27, "In3.Cu": 18, "In4.Cu": 18, "In6.Cu": 18},
+      "limit": "Every record has classItem PadStack but blank net, otherItem and other-net fields. Equality of blank net fields is NOT same-net contact evidence. These are unclassified reports, not274 demonstrated shorts or independent repairs; counts across different stack depths are not normalized defect counts."
+    },
+    "newCadDrcViolations": [],
+    "empty_native_field_limit": "The empty service field does not establish native DRC cleanliness."
+  },
+  "four_layer_comparison": {
+    "basis": "quilter-four-candidate-review-2026-10-05.json final_browser_checkpoint, four3.2 versus eight2.2; these are different placements, not a same-placement routing replay.",
+    "four_best_routing_fraction": 0.9465020576131687,
+    "eight_best_routing_fraction": 0.9465020576131687,
+    "four_elapsed_seconds": 11604.691,
+    "eight_elapsed_seconds": 16284.099,
+    "four_best_incomplete_nets": 9,
+    "eight_best_incomplete_nets": 11,
+    "four_best_padstack_reports": 178,
+    "eight_best_padstack_reports": 274,
+    "four_best_vias": 188,
+    "eight_best_vias": 193,
+    "interpretation": "No demonstrated overall closure advantage from this eight-layer run: same best completion, longer elapsed job time, critical incomplete nets and unresolved collision/USB/power gates. Local C15/C17 organization is useful. Different placements, impedance geometry and UI/backend versions mean this does not prove that eight layers are intrinsically worse or isolate layer count as the cause."
+  },
+  "native_review": {
+    "status": "PARTIAL_STATIC_PRESERVATION_SUPPORTED; FULL_ACCEPTANCE_HELD",
+    "candidate": "2.2",
+    "executor": "a7bb797c-ddf3-48e2-8dbd-6a53e29544e9",
+    "runtime_model": "gpt-5.6-sol",
+    "runtime_effort": "medium",
+    "runtime_started_event": "465ea63d-a829-4e25-9118-1603b23d57d4",
+    "runtime_configured_event": "578cc6a5-31a0-4345-9c57-a6763c74a379",
+    "execution_stop_local": "2026-10-06T10:54:30-07:00",
+    "completed_local": "2026-10-06T10:54:11.8650642-07:00",
+    "candidate_pcb_sha256": "edc05482858ba5f4b704bdf5ccd15adc88423b26198de2fa1cf1effc8c1739ce",
+    "candidate_project_sha256": "8b1a02867b99a61e2ab86855ebb9707669e0060626ba5bf19853663f308ef90d",
+    "supported": {
+      "references_and_library_uuid_path_identities": 104,
+      "retained_source_tracks_exact_by_non_null_uuid_and_geometry": 191,
+      "retained_source_vias_exact_by_non_null_uuid_and_geometry": 18,
+      "candidate_tracks": 1336,
+      "candidate_vias": 193,
+      "outline_objects_exact_multiset": 6,
+      "zone_definitions_exact_excluding_fill_cache": 63,
+      "ground_definitions_retained": 4,
+      "protected_In1_retained": true,
+      "contract_private_guards_retained": 26,
+      "source_hashes_unchanged": true
+    },
+    "root_disposition": {
+      "fixed_pose": "Four exact comparisons flag Q5/R29/R6/Y1 because of approximately1e-14mm floating serialization tails. This is not meaningful component movement; do not reject placement on that basis. Whole fixed32 and eligible72 F-side geometry remain incompletely reported, not broadly certified.",
+      "layers": "All eight copper IDs/names remain. In1/In3/In4/In6 declaration type changes power to signal, while four GND zone definitions survive exactly. Declaration metadata alone proves neither loss of ground planes nor use of those layers for new signals. Actual added-layer use, physical-stack equivalence and filled return continuity remain unqualified.",
+      "project": "Returned project omits top-level boards, component_class_settings, erc and tuning_profiles. This is a recorded structural delta, not proof of an electrical constraint loss; full rule-content disposition remains open.",
+      "pads": "325 pads and non-null unique pad identities remain, but normalized local-pad comparison has unresolved differences at45 references. Three attempts exhausted; no all-pad/net semantics pass or demonstrated45-reference defect claim.",
+      "guard_summary": "The report's narrow PRIVATE_VIA name counter says8. Receipt correctly distinguishes26 contract guards within the63 exactly retained zone definitions. Do not present8 as the complete private-guard count.",
+      "new_copper": "1145 added tracks and175 added vias counted only; parser reports no UUID node for those new objects. This does not invalidate original209 non-null UUID matches, but added-copper identity/geometry, physical collisions and connectivity are not certified."
+    },
+    "native_loads": 0,
+    "drc_runs": 0,
+    "refills": 0,
+    "static_attempts": 3,
+    "static_elapsed_seconds": [0.665, 0.738, 0.736],
+    "retry_disposition": "Stopped within budget. Preserve all executed evidence; no fourth checker run, native recovery, refill or source edit authorized by this review.",
+    "evidence_directory": ".playwright-mcp/eight-candidate-2-2-native-1049",
+    "script": {"file": "review_static.py", "sha256": "fcdf902cc59ad8166940e0605dce82314c9e5436e01c704d3be5f92f34e691d3"},
+    "report": {"file": "preservation-review.json", "sha256": "6ad625f7f1481b4b555923e340d4cac2ea5c35cf936d2bf2bb58502747ac6401"},
+    "receipt": {"file": "preservation-receipt.json", "sha256": "0494be171e3f8fc1e24264e03340a5fbcb2754e4f8d78da96416d9db1b43d713"}
+  },
+  "private_evidence": {
+    "directory": ".playwright-mcp",
+    "job": {"file": "eight-final-job-1042.json", "sha256": "d91702e2d7605f3992359959f65538249ace1237f6acafcdee31df04514eeeec"},
+    "details_1_to_3": {"file": "eight-six-details-1048.json", "sha256": "f92f3f1cdb6ea046addf15b31976def340b262511bfc110e7797f26e9657e963"},
+    "details_4_to_6": {"file": "eight-other-six-details-1051.json", "sha256": "3788a802acc7aa1e2a261aba2fdc786c6e52abe2ffbbe16418ace1f868bbb948"},
+    "native_archive": {"file": "eight-candidate-2-2-1049.zip", "sha256": "d35c18b80a045c9ab8e7322b93091ddd056161823081114dcf28ac3ffa66b86b", "bytes": 126409},
+    "download_recovery": "Normal download page confirmed Free Tier. Browser download handling twice lost its context without a saved archive; module-import helpers also failed. Read-only recovery used the current client's actual candidate-download endpoint with the existing same-session authenticated request headers; HTTP200 application/zip. Raw archive preserved, no new agreement/payment, and no credentials written to evidence. Browser six-detail UI capture succeeded; unauthenticated/manual compressed-JSON reads were not used as evidence."
+  },
+  "source": {
+    "directory": "hardware/handbell/iterations/printed-bell-four-layer",
+    "unchanged_sha256": {
+      "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+      "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+      "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+    }
+  },
+  "disposition": "Retain eight2.2 alongside four3.2 as diagnostic proposals, not accepted build-on baselines. No automatic rerun or manual closure. Next decision is a finite native preservation/collision/critical-terminal disposition, not another blind layer-count experiment."
+}

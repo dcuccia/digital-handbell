@@ -7,6 +7,43 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October 6: eight-layer outputs reviewed; no closure breakthrough.**
+The job completed at02:24:54 after4h31m with12 candidates. Best2.2/5.2
+reach94.6502%, exactly the four-layer best, with11 incomplete nets and274
+unclassified padstack-collision reports; four3.2 had9 and178. These are
+service measures, not native open counts or independent repair counts.
+The eight2.2 native archive and all12 detailed service responses are
+preserved privately. See the
+[eight-output ledger](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json)
+for exact identities, hashes and the bounded native-review disposition.
+
+The static native-file inspection supports104 reference identities, all
+191 retained tracks/18 retained vias, the outline and all63 zone definitions
+including four GND planes and26 contract private guards. It does not yet
+qualify all325 pad/net semantics: differences at45 references remain
+unresolved after three attempts. No native load or DRC was performed.
+Preserve the failed/partial checker, not as qualified general tooling.
+Tiny fixed-pose serialization tails are not meaningful moves, and changing
+KiCad layer type labels from power to signal is not proof of lost ground
+planes. Actual new copper, filled returns and collisions remain unqualified.
+
+There are useful local results: C15 routes3.52/1.27mm and C17 routes
+0.676/0.687mm, all with zero layer switches. But C18 path checks error,
+C24-to-IC4.8 is10.53mm apart with a13.70mm route, both D nets remain
+incomplete, and the USB_D pair fails mismatch/coupling/return screens.
+Zero power failures masks six errors, including VAMP, which is absent
+from the separate incomplete-net list. None of this establishes a
+functionally closed or acceptable power/USB layout.
+
+This run does not justify another automatic layer-count trial. Preserve
+eight2.2 alongside four3.2; next disposition native preservation and
+actual collision/critical-terminal geometry before choosing a finite
+repair strategy. Different placements, impedance geometry and software
+versions prevent calling this a controlled layer-count-only experiment.
+The authoritative37-open board remains unchanged. No refill, repair,
+merge, manual routing, six-layer launch or paid use is released.
+The older running/no-results checkpoint below is now historical.
+
 **October 5, 21:53: eight-layer full-layout job is running.**
 [Handbell flexible 8L - JLC2116 - four signals retained209](https://app.quilter.ai/jobs/6ac434b6a389adaff19ad80e)
 launched once at21:53:30.545 local. Start returned200, the saved job
