@@ -208,6 +208,52 @@ worktree browser staging only as a transfer location. Recheck availability
 and hashes before promising a continuation. Do not reconstruct an allegedly
 identical placement from a summary or borrow unrelated older output.
 
+**Observed placement-preparation lessons, October12:** the regenerated
+candidate ZIP changed bytes while its embedded PCB and project matched
+their historical hashes exactly. Preserve both archive identities and
+compare the actual native payload before declaring placement drift.
+
+Study a complete local supply group, not one capacitor distance. IC4 is
+the LSM6DSOX IMU, not an amplifier: its eligible C23 bypass must remain
+local while approaching fixed C24. The finite four-pose proposal reduces
+native pad-centre distances from11.19 to2.26mm for C24 and2.33 to2.07mm
+for C23, but these are not routed lengths, service pin-distance metrics
+or electrical acceptance. R11 and TP4 moves also carry QSPI/debug
+restoration obligations. This proposal is conditionally selected for
+qualification; its later native derivative is constructed but held, not
+an accepted input. A90-second DRC timeout supplies no placement verdict.
+
+Apply obstacle semantics by side and function. Opposing-face battery
+contact courtyards are not automatically F-component-body exclusions;
+their conductive metal still restricts B copper and through-vias.
+Missing courtyards require an explicit alternate body envelope, not a
+claim that a Fab/silk/pad bound is a native courtyard. Narrow mixed-envelope
+gaps above the placement setting do not prove copper clearance or usable
+escape space. A via probe that omits complete contact/private-guard
+polygons is not a legal transition witness. Check both supply and return
+access, reusing a protected existing return seed only when its actual
+topology and a feasible local path support that use.
+
+**Observed qualification-tooling limits, October12:** a failed native
+check saved its output before failing a later angle assertion. The corrected
+checker then saved that output again; equality on the second save proves
+idempotence, not preservation through the first save. Retain immutable
+pre-save and post-save files and the exact executed checker revision.
+Here the initial checker was overwritten, and its intended snapshot
+omitted complete footprint graphics, copper geometry, zone settings,
+outline geometry and stack/rule fields. Do not promote that partial
+snapshot into a complete source-preservation pass.
+
+Bind the actual board-matching project path/hash at diagnostic launch.
+The October12 receipt instead hashed a differently named project; a later
+correct same-stem copy cannot establish which rules the timed-out run
+used. A supervisor timeout overrides success-looking child/receipt fields
+when no result was produced. Preserve these failures explicitly and
+finish the named evidence gaps in a separately bounded item rather than
+restarting the placement search. For a deliberately unrouted input, prove
+legal local placement and feasible escapes/restoration, not already
+completed product routing; filled-return acceptance still follows routing.
+
 ## What the evidence supports
 
 | Finding | Evidence and limit | Working guideline |

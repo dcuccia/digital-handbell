@@ -2,6 +2,38 @@
 
 ## Bounded engineering work
 
+- **October12,12:25 four-pose derivative held; preparation stopped:**
+  PCBb9fe58fc/project917b3f16 preserve the proposed IC4/C23/R11/TP4 layout
+  as a private native derivative; no generated output copper imported.
+  No-refill DRC times out90.343s, supervisor124, no report, child exited.
+  Exact local copper/guard/access gates remain. Report-only supplement
+  confirms first-save proof is incomplete: initial script overwritten,
+  second save only idempotent, snapshot omitted full geometry/rules.
+  DRC receipt also binds the wrong project path; current917b does not prove
+  pre-launch rules. These are tooling/evidence gaps, not proven bad placement.
+  All three new native children consumed; no fourth, refill or pose search.
+  Keep the promising derivative; no upload/cloud draft/job/source change.
+  Executor idle. Next requires separately bounded completion of these exact
+  gaps on preserved static55fa1729/nativeb9fe58fc, not fresh placement.
+- **October12,12:18 finite placement selected for qualification only:**
+  IC4 is the LSM6DSOX IMU, not amplifier. Exact IC4/C23/R11/TP4 translations
+  bring native C24-to-IC4 distance11.19->2.26mm without worsening C23.
+  Other100 poses/32fixed/209copper remain. Mixed-envelope gaps0.138/0.147mm
+  are not copper/guard proof; opposing-face contact bodies must not be
+  flattened into F-body obstacles. Same verified Sol constructs one isolated
+  input and checks exact local restrictions/access, stopping native12:29/
+  report12:30/root12:36. Earlier geometry attempts stay exhausted; no more
+  pose search, via insertion, refill, cloud draft or upload before review.
+  See `placement_proposal_review_1218` in the eight-output ledger.
+- **October12,12:04 access restored:** owner signed in; regenerated
+  ZIP18c9b5ac contains exact2.1 PCBc1e9e025/project8b1a0286. Archive and
+  service evidence now saved in durable private placement-preparation
+  directory, not just worktree staging. Current UI/API1.43 versus output
+  backend1.42. Same verified Sol has isolated-copy geometry review through
+  12:17; root must select finite legal moves before construction/upload.
+  IC4/C24 pin distance10.53mm is priority; preserve C15/C17, and do not
+  equate C18's12.04mm routed detour with proven placement failure.
+  Original12:36 checkpoint remains. No new cloud draft/job yet.
 - **October12 placement continuation approved but access-blocked:** owner
   selects one revised eight2116 placement plus qualified free routing-only
   run, not more support questions or a layer matrix. Justin says courtyard

@@ -7,7 +7,80 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**October12: placement-first continuation approved; recovery is blocked.**
+**October12,12:25: revised input HELD; preparation stopped, no new job.**
+The exact four-pose proposal is saved as PCB`b9fe58fc...`, with final
+project`917b3f16...`, under the durable private
+`quilter\outputs\placement-preparation-20261012T1155\eight2116-four-pose-derivative`.
+The original qualified input and authoritative37-open board are unchanged.
+No generated2.1 copper was imported, no via added and no refill occurred.
+
+DRC hit its hard90s limit after90.343s with no report. The supervisor
+reports124 and confirms the child exited; the receipt's child0/`completed`
+fields do not establish a completed check. Exact moved-part copper,
+guard/contact and local supply/return-access checks remain incomplete.
+Report-only supplement`476f180b...` confirms two additional proof gaps:
+the initial native checker was overwritten and its intended snapshot
+omitted complete footprint/copper/zone/outline/stack/rule fields; the
+successful second save proves only idempotence. Also, the DRC receipt
+hashes the wrong project path. A same-stem project existed before launch,
+but its pre-launch bytes are unproved because it was overwritten later.
+Do not describe that attempt as configured under exact intended rules.
+Static`55fa1729...` and native`b9fe58fc...` both remain available for
+a future full first-save comparison. Preserve the contradictory original
+reports alongside the corrective supplement, not as qualified tooling.
+
+Three new native children are consumed; no further run is released.
+Executor is idle; remaining clock allowance does not reset retries.
+Preserve this useful derivative and all failed evidence, not an accepted
+input or demonstrated placement failure. Next is a separately bounded
+completion of exact preservation/local-clearance/access and intended-rule
+diagnostic gaps, not another placement search or automatic cloud job.
+Complete routing remains the later router's task; local input legality
+and explicit signal/supply/return restoration still gate submission.
+See `held_derivative_checkpoint_1224` in the eight-output ledger.
+
+**October12,12:18 earlier scope: four-pose proposal selected for qualification.**
+IC4 is the LSM6DSOX IMU, correcting earlier root amplifier terminology.
+Native C24.1-to-IC4.8 distance falls11.193397->2.263963mm while C23's
+corresponding distance improves2.326025->2.069075mm. Root conditionally
+selects IC4(95.3,94.5), C23(98.2,92.75), R11(100.3,92.5) and TP4(100,90.5),
+with their rotations/F layers unchanged. Other100 poses match2.1.
+R11 QSPI_CS/D3 and TP4 SWCLK restoration remains mandatory.
+
+This is not an accepted input. IC4 lacks a courtyard; limiting mixed
+envelope gaps0.138124/0.1474mm cannot prove copper legality. B-contact
+bodies are not F-body obstacles, but conductive-metal/private restrictions
+still apply to B copper and full-span vias. The non-added supply-via
+probe lacks complete guard checks; C24's existing ground seed is a
+possible local return, not a routed-return pass.
+
+Same verified Sol now has one new isolated derivative construction/
+qualification item, with native execution ending12:29, report12:30 and
+root checkpoint12:36. Reuse qualified input definitions/209 copper and
+recovered72 eligible poses plus the four deltas. Earlier native inspection
+attempts remain exhausted. No further pose search, added via, refill,
+source change or cloud draft/upload before root acceptance.
+Exact artifacts and limits: `placement_proposal_review_1218` in the
+eight-output ledger. The held outcome above supersedes this in-progress scope.
+
+**October12,12:04 resume: exact candidate recovered after owner sign-in.**
+The newly downloaded ZIP`18c9b5ac...` contains the exact prior2.1
+PCB`c1e9e025...` and project`8b1a0286...`; ZIP equality alone was an
+incorrect initial recovery assertion, not a changed-board finding.
+Native archive and recovered service payloads are now saved in the durable
+private `quilter\outputs\placement-preparation-20261012T1155` directory.
+Free Tier is displayed; no payment/terms or new job. Current UI/API1.43.0
+differs from the historical candidate's backend1.42.0.
+
+Same verified Sol executor now has a bounded isolated-copy geometry item
+through12:17, with root reviewing exact proposed moves before construction.
+Prioritize IC4/C24's10.53mm pin distance; C18 is only1.99mm from its pin
+but has a12.04mm/two-switch route, so placement alone may not explain it.
+Keep C15/C17's useful poses. Original12:36 checkpoint remains.
+See `resumed_after_sign_in_1204` in the eight-output ledger; the earlier
+access blocker below is historical, not a continuing login requirement.
+
+**October12 earlier checkpoint: preparation approved, access blocked.**
 Owner11:51 approves one bounded revised eight-layer placement/input and a
 qualified free routing-only run, not another support round or layer matrix.
 Justin's new guidance: edit/reuse placement; beta may still run but can be
