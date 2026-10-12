@@ -7,7 +7,53 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October12,14:40: submission remains HELD; executor stopped.**
+**Current October12,15:44: decoder correction is partial; full shapes HELD.**
+The focused recovery corrects one concrete association: a scene node's
+third field identifies an item, and `items[item][1]` identifies its metadata.
+Seven exact PIN identities (IC4.5/.8, C24.1, U1.1, BT2.1.1/.2 and C1.1)
+now match independent native centres within0.000383mm and exact nets/layers.
+This does not establish the full scene schema. The second field interpreted
+as geometry still yields shapes unlike the native lands. Direct COMPONENT
+geometry and its immediate ancestor also fail; the proposed layer-parent
+turns out to carry keepout metadata under that interpretation. Do not
+declare the import damaged or promote all these nodes as merely markers.
+
+The original broad `renderer_decoder_witness.py` draft was rejected before
+execution because its named witnesses were only a list, not independent
+measurements. The subsequent focused diagnostics are preserved under
+`placement-preparation-20261012T1155\renderer-decoder-20261012T1524`.
+`corrected-focused-report.json` (`e7fa705c...`) binds the seven narrowed
+positives and failed extents; `component-ring-report.json` (`d6723606...`)
+and `ancestor-ring2-report.json` (`d130c4ee...`) preserve failed full-ring
+interpretations. Native rectangle-corner/area screens did not pass; their
+one-way vertex distances are not qualified general shape-equivalence tests.
+No angle/size/net mutations or complete importer comparison ran.
+
+Thirteen supervised children completed within30s each; one additional
+supervisor preparation failed before launching a child. Last diagnostic
+completed15:41:22, before the15:43:53 software deadline. Exit0 means a
+diagnostic report was produced, not that its geometry passed. No native
+operation, PCB change, browser/network access, reupload or routing launch.
+All five authoritative hashes still match; the existing draft was untouched,
+not freshly queried in this saved-evidence-only scope.
+
+The executor overwrote script filenames between runs. Two archival-only
+children followed the stop; root recovered the principal corrected decoder
+and original component extractor into exact receipt-hash-matching copies
+without rerunning them. Four versioned scripts now bind the principal reports.
+Several earlier failed revisions remain receipt-bound but unrecovered as
+standalone executed files; the ledger lists these gaps. Do not claim complete
+immutable-code preservation or use the post-run edited decoder as executed
+evidence. Total supervised executor children including archival work:15.
+
+Stop guessing renderer tuple or matrix semantics. The next necessary input
+is the actual saved renderer/client schema or another independently specified
+physical drawable representation. The raw captures and locally qualified
+PCB remain reusable; no board rebuild or another full-check rerun is implied.
+See `renderer_decoder_authorization_1524` and `renderer_decoder_outcome_1544`
+in the eight-output ledger for scope, exact artifacts and evidence limits.
+
+**Historical October12,14:40: submission remains HELD; executor stopped.**
 The owner-approved30-minute push did not reach submission. The replacement
 runtime-verified Sol/medium executor used the software-only timebox instead
 of the old three-execution cap, with19 supervised children and zero native

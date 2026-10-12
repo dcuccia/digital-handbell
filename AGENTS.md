@@ -2,6 +2,22 @@
 
 ## Bounded engineering work
 
+- **October12,15:44 decoder recovery is partial; physical shapes still held:**
+  Correct item-to-info indirection resolves seven named pad identities,
+  centres within0.000383mm, and exact net/layers. This is not full decoding:
+  the tested PIN geometry, COMPONENT geometry and immediate-ancestor
+  geometry do not match native land outlines. The second scene field's
+  physical drawable meaning and remaining frames/units are unqualified.
+  Do not promote a universal world-transform/selection-marker explanation.
+  No healthy shape baseline, mutations or full importer rerun occurred.
+  Thirteen supervised children finished within30s; one supervisor preparation
+  failed before launch. Last diagnostic15:41:22; no timeout/native/cloud work.
+  Reports e7fa705c/d6723606/d130c4ee preserve the successive narrowed evidence.
+  Root rejects the unexecuted broad comparator and further guessing. Source
+  and corrected input remain unchanged; existing draft was not touched.
+  Next needs the actual saved renderer/client schema or an independently
+  specified physical representation, not another matrix/index permutation.
+  See renderer_decoder_outcome_1544 in the eight-output ledger.
 - **October12,14:40 submission push stopped at renderer-model blocker:**
   Owner's14:23 software-only timebox replaced the old three-execution cap.
   Fresh verified Sol/medium completed19 supervised children: nine schema

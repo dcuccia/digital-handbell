@@ -337,6 +337,22 @@ all-terminal service pins; compare like schemas and retain the separate
 native325/render325 membership reconciliation. All new failures remain
 checker holds, not demonstrated Quilter defects; no routing job was launched.
 
+**Saved-render index correction, October12:** the focused recovery establishes
+the tested scene node's item association in its third field, with
+`items[item_index][1]` indexing `infos`. Treating the third field directly
+as an info index paired geometry with unrelated identities. Seven physical
+pin identities across IC4, C24, U1, both BT2 lands and C1 now match independent
+native centres within0.000383mm and exact net/layer semantics. This is not
+a complete renderer specification: interpreting the second field as a
+geometry index still fails full-land witnesses. Five tested PIN shapes
+decode to0.002mm markers; the tested BT2 shapes also differ from its lands.
+COMPONENT-node and immediate-ancestor geometry hypotheses failed too.
+Do not generalize these observations into a proven hierarchy or universal
+world-transform rule. Resolve physical drawables from the actual schema,
+not by another index permutation or a nearest-looking polygon. A reported
+exit0 means the diagnostic completed, not that its geometry passed. Preserve
+failed hypotheses and healthy metadata witnesses separately.
+
 **False-collision control, October12:** the local checker falsely called
 C23/R23 an overlap: its orientation-product-only segment test treated
 disjoint collinear edges as intersecting. The pads' centres were19.95mm
