@@ -2,53 +2,34 @@
 
 ## Bounded engineering work
 
-- **October12,12:25 four-pose derivative held; preparation stopped:**
-  PCBb9fe58fc/project917b3f16 preserve the proposed IC4/C23/R11/TP4 layout
-  as a private native derivative; no generated output copper imported.
-  No-refill DRC times out90.343s, supervisor124, no report, child exited.
-  Exact local copper/guard/access gates remain. Report-only supplement
-  confirms first-save proof is incomplete: initial script overwritten,
-  second save only idempotent, snapshot omitted full geometry/rules.
-  DRC receipt also binds the wrong project path; current917b does not prove
-  pre-launch rules. These are tooling/evidence gaps, not proven bad placement.
-  All three new native children consumed; no fourth, refill or pose search.
-  Keep the promising derivative; no upload/cloud draft/job/source change.
-  Executor idle. Next requires separately bounded completion of these exact
-  gaps on preserved static55fa1729/nativeb9fe58fc, not fresh placement.
-- **October12,12:18 finite placement selected for qualification only:**
-  IC4 is the LSM6DSOX IMU, not amplifier. Exact IC4/C23/R11/TP4 translations
-  bring native C24-to-IC4 distance11.19->2.26mm without worsening C23.
-  Other100 poses/32fixed/209copper remain. Mixed-envelope gaps0.138/0.147mm
-  are not copper/guard proof; opposing-face contact bodies must not be
-  flattened into F-body obstacles. Same verified Sol constructs one isolated
-  input and checks exact local restrictions/access, stopping native12:29/
-  report12:30/root12:36. Earlier geometry attempts stay exhausted; no more
-  pose search, via insertion, refill, cloud draft or upload before review.
-  See `placement_proposal_review_1218` in the eight-output ledger.
-- **October12,12:04 access restored:** owner signed in; regenerated
-  ZIP18c9b5ac contains exact2.1 PCBc1e9e025/project8b1a0286. Archive and
-  service evidence now saved in durable private placement-preparation
-  directory, not just worktree staging. Current UI/API1.43 versus output
-  backend1.42. Same verified Sol has isolated-copy geometry review through
-  12:17; root must select finite legal moves before construction/upload.
-  IC4/C24 pin distance10.53mm is priority; preserve C15/C17, and do not
-  equate C18's12.04mm routed detour with proven placement failure.
-  Original12:36 checkpoint remains. No new cloud draft/job yet.
-- **October12 placement continuation approved but access-blocked:** owner
-  selects one revised eight2116 placement plus qualified free routing-only
-  run, not more support questions or a layer matrix. Justin says courtyard
-  spacing, placement reuse and minimum-width intent; beta may still run.
-  Restored`fc44882` lacks ignored2.1 raw/evidence files; qualified input and
-  all five authoritative hashes match. Existing job redirects to login and
-  owner is unavailable. Recover exact2.1`c1e9e025...` before selecting moves;
-  do not substitute original poses or older outputs. Keep209/32/five seeds/
-  stack/rules. Only static surviving-input inspection may proceed; no
-  native work, source edits, placement or job occurred at this checkpoint.
-  Static input audit completes:191 tracks all>=0.1778mm, no0.160/0.162mm
-  widths; historical narrow output tracks were not unchanged retained
-  tracks. Exact output locations remain unrecovered. Audit in durable
-  private outputs/placement-preparation-20261012T1155; Sol idle.
-  See `placement_continuation_2026_10_12` in the eight-output ledger.
+- **October12,13:25 corrected input ready; importer check held:**
+  Native1e4e41a/project917b preserves104/325/209/32fixed/63zones and uses
+  recovered2.1 poses with only IC4/C23/R11/TP4 translations. IC4 is the IMU.
+  Correct pad-relative/global orientation checks reject malformedb9fe:
+  our first constructor changed parent poses without global child angles.
+  Its apparent IC4/U1 defects and preservation/access claims are withdrawn.
+  Corrected exact-project DRC has427 findings/184 opens, zero shorts or
+  copper-clearance findings; inherited process/library and increased silk
+  warnings remain. Compatible local supply/return witnesses pass, not
+  completed routing. TP4/D+1 are bare test lands with0.271516mm copper gap,
+  not fitted bodies colliding at their conservative envelope limit.
+  Six native children plus three no-board API probes were used, not three
+  child invocations; pipeline-versus-child budgeting must be explicit.
+  No further native work is released. All source and failed evidence stay.
+  Draft6acd3f5501e64eae4591facd imports the three exact files with104refs/
+  0toPlace. Physical stack/minima/common circuit entries match; fresh90-ohm
+  profiles pass on four signal layers. Normal Floorplanner Continue accepts
+  no-movable-member error; no packing pass or moved parts claimed. It clears
+  the now-inapplicable72 mover-room associations, not the imported room.
+  Static importer checker exhausts three children before render comparison:
+  wrong name-only pad-net and comprehension schemas; no fourth run.
+  Root also finds it uses empty candidate board metadata as the pin baseline,
+  and its unexecuted tail does not prove all required geometry. Preserve
+  draft and saved captures; NO routing job launched. Next is separately
+  bounded checker completion on saved evidence, not PCB rebuild/reupload,
+  support request or new draft. Owner hour ends13:33; executor idle.
+  No payment/new terms, second experiment or integration. Detailed history
+  and hashes: `placement_continuation_2026_10_12` in the eight-output ledger.
 - **October 6, 13:34 paired diagnostic completed:** owner-approved
   eight2.1/2.2 native comparison resolves325 pad semantics; changes versus
   input are global poses on72 movers. Same-rule/no-refill DRC has76/32

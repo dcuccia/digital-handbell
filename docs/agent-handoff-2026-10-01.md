@@ -7,6 +7,113 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**Current October12,13:25: corrected native input ready; cloud draft HELD.**
+PCB`1e4e41a...`/project`917b3f16...` replaces rejected`b9fe...` in the
+durable private `placement-preparation-20261012T1155\corrected-native-pose-20261012T1301`.
+Native footprint transforms preserve all325 pad-relative shapes/angles
+and independently match recovered2.1 global geometry plus four translations.
+Complete fixed footprints/209 copper/63 zones/outline/stack stay intact.
+Configured no-refill DRC:427 violations/184 opens, zero shorts/clearance.
+The increase over baseline321 is silkscreen findings; inherited process,
+library, parity and finished-routing gates remain. Local compatible cap
+supply/return witnesses pass without adding copper. TP4/D+1 are bare
+circular test lands, with0.271516mm copper gap, not fitted-body interference.
+
+[Draft6acd3f5501e64eae4591facd](https://app.quilter.ai/jobs/6acd3f5501e64eae4591facd/create/constraints)
+contains only the corrected PCB, exact project and unchanged schematic.
+It parses104 components/zero to place,191 tracks/18 vias/325 rendered pins.
+All physical stack rows, minima and preservation options match the previous
+eight trial; four ground roles were restored through UI after replacement.
+The28 bypass/14 power/2 USB pairs/sole GND/protected In1 entries survive.
+Fresh90-ohm results meet targets on F/In2/In5/B at the same177.8/200um
+minimums. Floorplanner returned `no movable member in any room`; normal
+Continue succeeded without changing poses or bounds. Its saved region
+association list becomes empty because all components are preplaced.
+This is neither a packing pass nor removal of the input room.
+
+**No routing job was launched.** The three-child static importer item
+failed before complete renderer geometry comparison. Preserve its two
+executed scripts and receipts in `browser-preview-20261012T1313`.
+Next is a separately bounded saved-evidence checker completion, not a new
+board, native run, reupload, cloud draft or support request. Fix the actual
+schemas together: KiCad10 name-only nets, top-level comprehension `entries`
+(not nullable `constraintOutput`), and the populated original input-board
+metadata rather than candidate2.1's empty component list. The unexecuted
+render tail still lacks complete physical pad/outline/guard proof; do not
+promote it merely by making it finish. Reuse the saved render and prior
+qualified semantic normalization. Root independently compared circuit
+entry arrays; a duplicate comparison is not the missing geometry gate.
+
+The direct unauthenticated fetch saved as `draft-job-after-upload.json`
+contains only a401 error, not job metadata; the normal UI remained signed
+in. `draft-job-final-valid.json` is the real captured UI response. All raw
+captures and exact upload files are archived under the private preview
+directory, not dependent on ignored worktree staging. Source is unchanged,
+executor idle, no automatic fourth check or second job. Owner's renewed
+hour ends13:33. See `corrected_input_review_1313` and
+`browser_preview_checkpoint_1325` in the eight-output ledger.
+
+### Historical October12 checkpoints (superseded by the current state above)
+
+**October12,13:01: constructor bug confirmed; b9fe is rejected as input.**
+Changing only parent footprint poses left globally serialized pad-land
+angles unchanged. Centres moved correctly, but IC4 and U1 lands did not
+rotate with their footprints. Intended-rule DRC completed in63.031s and
+exposed9 clearance findings and6 shorts (all U1 adjacent-pad pairs).
+These are our construction defects, not bad reference designs or Quilter.
+Root withdraws earlier physical-preservation acceptance: identical child
+S-expressions and a stable native save enforced the wrong transform.
+The0.025mm IC4 gaps and malformed-land0.1736mm escape limits are not
+source constraints and must not trigger a rule waiver.
+
+Keep all four intended poses. Verified Sol now constructs a NEW derivative
+using native footprint translation/rotation from an isolated qualified
+input copy. Independent325-pad global/relative comparisons must match
+source and recovered2.1, with only four known translations; b9fe is a
+required negative control. Native save/reload, exact-project-bound DRC
+and corrected local/access review follow within execution13:14/report
+13:15/root13:17. Preserve source/209/32/63 and every old artifact. No
+new placement search, refill or cloud action before qualification.
+This disposition supersedes the earlier serialized-field acceptance below.
+See `rotation_frame_disposition_1301` in the eight-output ledger.
+
+**October12,12:48: first-save preservation passes; no C23/R23 collision.**
+Root reviewed the complete exact-artifact comparator and five real
+mutation rejections. First-save field preservation is now established,
+with at most0.000000494565mm top-level mover XY rounding. The subsequent
+local check's C23/R23 overlap was false: disjoint collinear edges were
+misclassified by a custom segment predicate. Native collision controls
+resolve it; the pads share X but their centres differ19.95mm in Y.
+The earlier placement screen had not omitted R23. Keep all four poses.
+
+C23 actual copper and conservative filled-envelope checks pass narrowly.
+Individual ground paths and the original non-added via witness pass the
+corrected geometric screens, but supply paths still fail the finite
+radial-outward templates. These are not proven unavoidable blockages,
+and independent paths do not establish a compatible complete return group.
+Next is one new standalone DRC with actual same-stem917b project hash
+bound before launch, plus finite pad-normal supply-access disposition.
+Execution ends13:01/report13:02/root13:04, within the owner's13:33 hour.
+No candidate edits, new poses, refill or cloud action yet.
+See `recovery_review_1242` and `correction_review_1248` in the eight ledger.
+
+**October12,12:33: owner resumes the next hour, through13:33.**
+No new item after13:23. The saved candidate remains held, but one new
+bounded validation recovery is released to verified Sol: source-bound
+static`55fa1729...` to native`b9fe58fc...` preservation, exact four-mover
+legality and local supply/return/transition access. No placement search,
+source edit or refill. Stop execution12:47/report12:48/root12:50; three
+attempts maximum, immutable executed revisions and hard30s/90s children.
+Only after that review may a separately bound no-refill DRC proceed.
+Original authorization still permits one qualified free routing-only job,
+not an automatic rerun or second experiment.
+
+The official free-page HTML still explicitly declares noncommercial
+price0USD and unlimited iterations. Saved HTML`3e42c3b0...` resolves the
+earlier incomplete Markdown/pricing-page observation; it does not create
+an account-specific quote or authorize payment/new terms.
+See `resumed_validation_1233` in the eight-output ledger.
+
 **October12,12:25: revised input HELD; preparation stopped, no new job.**
 The exact four-pose proposal is saved as PCB`b9fe58fc...`, with final
 project`917b3f16...`, under the durable private

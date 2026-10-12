@@ -219,9 +219,9 @@ local while approaching fixed C24. The finite four-pose proposal reduces
 native pad-centre distances from11.19 to2.26mm for C24 and2.33 to2.07mm
 for C23, but these are not routed lengths, service pin-distance metrics
 or electrical acceptance. R11 and TP4 moves also carry QSPI/debug
-restoration obligations. This proposal is conditionally selected for
-qualification; its later native derivative is constructed but held, not
-an accepted input. A90-second DRC timeout supplies no placement verdict.
+restoration obligations. Keep the proposed poses distinct from their
+implementation: the first derivative was later rejected for a constructor
+rotation defect. A90-second DRC timeout alone supplied no placement verdict.
 
 Apply obstacle semantics by side and function. Opposing-face battery
 contact courtyards are not automatically F-component-body exclusions;
@@ -253,6 +253,74 @@ finish the named evidence gaps in a separately bounded item rather than
 restarting the placement search. For a deliberately unrouted input, prove
 legal local placement and feasible escapes/restoration, not already
 completed product routing; filled-return acceptance still follows routing.
+
+**Serialized equality is not physical pose preservation, October12:**
+the complete source/static/native comparator proved child-field equality,
+bounded sub-nm mover-coordinate serialization and five mutation rejections,
+but root later withdrew its physical-preservation acceptance. The builder
+changed only each parent footprint `at`; KiCad's globally serialized pad
+angles then stayed at the source pose while the pad centres moved.
+For IC4, source footprint-90/pad5=0 should become footprint180/pad5=270,
+as independently observed in recovered2.1. The bad derivative retained
+pad5=0 and also produced six adjacent U1 pad shorts. A same-file native
+roundtrip and a checker repeating the constructor's frame mistake both
+missed this.
+
+Use native footprint transforms and preserve pad orientation **relative
+to its footprint**, not an unchanged global child angle. Cross-check
+actual global pad geometry against an independent correctly transformed
+placement, and include a wrong-child-angle mutation with centres unchanged.
+Do not infer defective source lands or relax routing rules from a malformed
+derivative. Complete native DRC exposed this construction error under the
+actual intended project; all source files remained unchanged.
+
+The corrected native-transform derivative subsequently passed independent
+source-relative and recovered-placement global-pad checks, including the
+actual malformed board as a negative control. Its configured no-refill DRC
+removed all six shorts and all nine clearance findings without changing
+rules or footprints. Increased silkscreen warnings remain separate from
+copper legality; neither184 staged opens nor zero shorts means a routed,
+manufacturable board. TP4/D+1 also illustrate why a tight rectangular
+envelope is not the physical gap: both are bare circular test lands,
+with0.271516mm copper separation versus0.127543mm envelope separation.
+
+Define retry budgets in **total child launches as well as stages**. The
+corrected item used six board-processing children and three no-board API
+probes under an executor interpretation of two multi-stage pipelines.
+Do not report that as three-or-fewer native invocations. Likewise, label
+an interactive type/UUID-multiset DRC comparison as such; without a saved
+checker/report it is not a durable complete-record equivalence proof.
+
+**Observed duplicate/reupload behavior, October12, UI/API1.43:** corrected
+placement imported with104 components and zero to place. The existing
+circuit entry arrays survived replacement, but copper-layer roles reverted
+to Signal and required restoring the four Ground roles. Continue from
+circuit comprehension regenerated a genuine90-ohm profile matching the
+physical stack and minimums; initial unsolved profiles were not evidence.
+With no movable parts, Floorplanner returned `no movable member in any
+room`; normal Continue worked and removed the72 inapplicable mover-room
+associations. Do not rerun packing, move fixed parts or remove the room to
+cure a zero-work diagnostic. This is an observed preview, not a launched
+routing job or demonstrated router behavior.
+
+The separate static importer checker failed before its renderer comparison.
+Inspect actual captured schemas before spending the execution budget:
+comprehension inputs are top-level `entries`, not nullable computed outputs;
+candidate `/board` can have no component metadata even when its render is
+populated; KiCad10 nets may be name-only. Correctly bound upload bytes and
+render counts are useful but do not prove complete interpreted geometry.
+Preserve the draft and captures on that blocker rather than constructing
+another input or attributing our checker errors to Quilter.
+
+**False-collision control, October12:** the local checker falsely called
+C23/R23 an overlap: its orientation-product-only segment test treated
+disjoint collinear edges as intersecting. The pads' centres were19.95mm
+apart. Native `SHAPE.Collide` with separated-collinear, tangent and actual
+overlap controls disproved it; no component move was needed. Prefer
+exercised native shapes over a new hand-written intersection routine.
+Graphic strokes alone are not filled courtyard interiors; use a complete
+shape or an explicitly conservative filled extent. Preserve and retract
+the faulty report rather than fixing a board to fit a checker bug.
 
 ## What the evidence supports
 

@@ -1,6 +1,165 @@
 {
   "schema_version": 1,
   "placement_continuation_2026_10_12": {
+    "browser_preview_checkpoint_1325": {
+      "status": "HELD at importer geometry gate; no routing launch. Corrected native input remains accepted for diagnostic preview. Stop exhausted checker; preserve existing draft and captures.",
+      "job_id": "6acd3f5501e64eae4591facd",
+      "project_id": "6ac3d5b7fc0d2d776ed14a5f",
+      "url": "https://app.quilter.ai/jobs/6acd3f5501e64eae4591facd/create/constraints",
+      "actions": "One normal Duplicate of eight job at13:13, Replace Files, then exact correctedPCB1e4e41a/project917b/schematicec93 upload at13:16. No PRL/lock/account files uploaded. All components preplaced. UI/API1.43.0.",
+      "parsed": {"components": 104, "components_to_place": 0, "service_pins": 326, "render_pins": 325, "render_tracks": 191, "render_vias": 18, "render_keepouts": 58},
+      "settings": "Root exact-field comparison of final selected response proves all physical stack rows, designRules177.8/200/650/350/250um, preserveMidLayers=true, allowStackedVias=false and .127mm/single-sided placementOptions equal previous eight settings. Replacement initially reset all roles to Signal; root restored In1/In3/In4/In6 to Ground through normal UI. No physical source stack or rules changed.",
+      "common_entries": "All16 original comprehension entry arrays survive reupload exactly. After Floorplanner Continue in this all-preplaced case,15 remain identical; placementRegions changes72->0.28 bypass/14 power optionalpoursfalse/2pairs/soleGND/protectedIn1 remain unchanged. This is consistent with zero movers, not a demonstrated removal of the input's serialized room or proof of full importer rule semantics.",
+      "floorplanner": "One normal preflight returns ValueError: no movable member in any room - member fit covers nothing. Continue becomes enabled and succeeds unchanged. No pose/bounds modification, retry or packing-pass claim.",
+      "impedance": {
+        "fresh_evidence": "Normal circuit-comprehension Continue triggers POST circuit-comprehension/constraints200; subsequent selected configuration contains only the needed90-ohm differential profile and UI says All layers met. Initial unsolved defaults are not reused as proof.",
+        "target_ohms": 90,
+        "single_ended_target": null,
+        "signal_layers": [
+          {"layer": "F.Cu", "width_um": 227.3475863647461, "gap_um": 210, "achieved_ohms": 89.96924533322829},
+          {"layer": "In2.Cu", "width_um": 186.69000000000003, "gap_um": 216.47878417968752, "achieved_ohms": 89.99163998689698},
+          {"layer": "In5.Cu", "width_um": 187.34859710693362, "gap_um": 210, "achieved_ohms": 89.98556911571002},
+          {"layer": "B.Cu", "width_um": 227.3475863647461, "gap_um": 210, "achieved_ohms": 89.96924533322837}
+        ],
+        "limits": "Numerical service results, not measured impedance. All width/gap minima clear. Null final mask fields retain the prior interpretation limit."
+      },
+      "importer_gate": {
+        "directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-preparation-20261012T1155\\browser-preview-20261012T1313",
+        "attempts": "Three total static children: schema/hash inspection, checker0 missing no-net name atom, checker1 nullable constraintOutput access. Zero native imports/loads/saves. No fourth execution.",
+        "checker0_sha256": "0febc85e502b2bc31eefbb70ca71c0bd9f976e7db6909f66e0fdf8fbc5828d77",
+        "checker1_sha256": "7ae54d64d695619d9422ca2ec11dc9c9ec608e1487e4fa409182331d6ecbedea",
+        "report": "importer-static-summary.json is report-only, not a completed checker output.",
+        "root_code_review": "Do not fix only the null exception. Correct native name-only net parsing instead of collapsing names to empty. Compare top-level comprehension entries, not constraintOutput entries. Archived candidate2.1 board metadata has empty components; use original populated input-board/source-bound normalization. Unexecuted renderer tail assumes node/name/matrix structure and does not finish all325 physical pad, outline and58 keepout geometry checks. Its future success-shaped status would not alone meet the gate.",
+        "held": "All104 interpreted global component transforms, complete pin/net/land association, actual retained209 geometry and complete outline/guard interpretation remain unqualified by this new checker. Root counts/common settings and exact source-side upload hashes are useful narrower evidence, not replacement proof."
+      },
+      "capture_bindings": {
+        "render-after-upload.json": "95ab18bc35d77b9b7981c38e6ecd23ae5da35cff8be83d83d4fdd15dbb228004",
+        "board-after-upload.json": "ee07b106427a19fad2f8123c84dcbe43bc62f5b3640462dea9356367374eb0f8",
+        "comprehension-after-upload.json": "14502192cf0dab527f52efcbedcaaf288a537b448fa038146d33507cac3955da",
+        "comprehension-final.json": "e8797b6a6ad63b5df036fed32eef4c21c36ca3975885c39c898ab7225cada33e",
+        "selected-final-computed.json": "3a762fb3ef64162fe3671ab69a05df752dfde279fb52bb8790c899e8e6e40da5",
+        "floorplanner-no-movers.json": "d4f0e7f2e4fbedab2043957e7b853ed427d83902387debd56917c26daf868416",
+        "draft-job-final-valid.json": "07be44719492d2bb000ffdf2ada7b28552e01f69cd3b249cb97e9ad653a34b5a",
+        "verified_job_state": "draft",
+        "archive": "browser-preview-20261012T1313\\browser-captures-1325",
+        "job_capture_correction": "draft-job-after-upload.json is a direct-fetch401 Not authenticated response, not job metadata or proof UI login expired. Use UI network response draft-job-final-valid.json instead."
+      },
+      "next": "Separately authorize one bounded saved-evidence importer checker completion with complete code/schema review before execution. Reuse this exact corrected input and draft, no native reconstruction/reupload/new draft/support loop. All remaining gate failures stay explicit; no automatic launch or exhausted retry."
+    },
+    "corrected_input_review_1313": {
+      "status": "Root accepts corrected1e4e41a for one bounded import preview, not product acceptance or automatic submission. Rejectedb9fe and all failed evidence remain preserved.",
+      "directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-preparation-20261012T1155\\corrected-native-pose-20261012T1301",
+      "artifacts": {
+        "handbell-corrected.kicad_pcb": "1e4e41a9374959326756d74429a3c72285ece27a8442665653943fce2dc899e0",
+        "handbell-corrected.kicad_pro": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+        "construction-attempt1.json": "cb91716dc420a6f09952108b4953511461e0b85af2a3a79b3db79737268bea53",
+        "construct_native_attempt1.py": "9f3fce8028ba1e763010ede7579329487ab99be220db718c6df62bb3dbbacfaf",
+        "static-preservation-attempt2.json": "c2632f21245a999da0cddf565df4bae8e68b4f25b62883c27c5c92e757defb96",
+        "static_preservation_attempt2.py": "1af6e1bd531a6589a796f22e5e67d587a09dfa7bcc98191dfb540a694c0e59a6",
+        "drc-report-attempt1.json": "002af4ee76dfb0b3d71cb28c779bbeb4261a27b1642a32c1eb3b13d0d7e708c3",
+        "drc-attempt1-receipt.json": "cd7a14fd09cc3216e94e6783261d3b84d25df861b33825b1db037577c877de46",
+        "corrected-access-attempt1.json": "39bc357871be5866088cfb0b84393309247b2f0ae0ca74dd3ed5c2ba57a015c7",
+        "corrected_access_attempt1.py": "759973219f3afd6803d70a0bf585e03868ae89802c62381748595d011be5e806"
+      },
+      "preservation": "Root read complete exercised constructor/static/access code and reports. Native source-relative pad geometry remains invariant; all mover global pads match recovered2.1 plus four translations.32 fixed complete footprints stay equal source.104refs/325pads/191segments/18vias/63zones, full untouched board children/outline/stack preserved. Native save/reload maximum position delta0; explicit1.1nm allowance. Malformedb9fe same-centre/wrong-angle IC4/U1 is rejected by static regression. Synthetic constructor control alone is only a dictionary mutation, not native rejection; the actual bad-board comparison supplies the stronger witness.",
+      "drc": {
+        "violations": 427,
+        "unconnected_items": 184,
+        "shorting_items": 0,
+        "clearance": 0,
+        "elapsed_seconds": 2.531,
+        "refill": false,
+        "parity": false,
+        "project_binding": "Qualifying second DRC binds actual same-stem917b before launch; first run used native-modified7840 project and is preserved as non-qualifying. Do not equate output status0 with a clean board.",
+        "baseline": "Saved qualified input has321 violations/184 opens. Non-silk class counts and type/sorted-item-UUID multiplicities match in executor's interactive Counter comparison, not a separately saved full-record comparison artifact. This is narrower than complete finding equality. Silk-edge3->4, silk-over-copper19->86, silk-overlap7->45; opens have changed representative pairs."
+      },
+      "local_disposition": "Both cap supply/return pairs have compatible finite177.8um witnesses clearing foreign copper by>=0.2mm; nothing was routed/saved. C23 return minimum0.229276mm, C24 return0.301834mm. Other IMU grounds/signals remain mandatory later. C23/C12 conservative body gap0.135539mm and IC4/IC1 gap0.149325mm are nominal screening evidence, not assembly tolerances. Optional0.65/0.35 via probe remains non-added.",
+      "test_land_margin": "TP4(SWCLK) and D+1(USB_D+) are bare no-paste, BOM/position-excluded circular test lands, not fitted bodies. Their0.127543mm rectangular-envelope gap is conservative; circle copper gap is0.271516mm from1.656516mm centres minus0.75/0.635mm radii. Keep poses unchanged; no clearance waiver.",
+      "attempt_accounting": "Six board-processing native/CLI children:2 construction,2 DRC,2 access; also3 no-board pcbnew API introspections and3 static checks. Executor interpreted maximum3 pipelines as end-to-end rounds, not total native children. Record both counts; do not describe this as <=3 native invocations. No further native execution is released. Future scopes must separately cap stages and total child launches.",
+      "source": "Root13:11 rechecked all five authoritative hashes unchanged. Qualified input and recovered2.1 remain immutable.",
+      "next": "One bounded duplicate/replace-files browser preview, start13:13, execute through13:28/root checkpoint13:30 within owner13:33 limit. Only correctedPCB/exactproject/unchangedschematic. Require zero-to-place, exact imported poses/retained copper/constraints and fresh90-ohm results; submit once only if qualified and free. No new native work, source change, terms/payment or second job."
+    },
+    "resumed_validation_1233": {
+      "owner": "Owner12:33:30 explicitly says please keep going - no need to pause for the next hour.",
+      "window": "Stop13:33 local; no new bounded item after13:23. Prior exhausted scopes remain exhausted; this releases a newly bounded saved-candidate validation recovery.",
+      "first_item": "Same runtime-verified Sol/medium; execute through12:47/report12:48/root12:50, at most initial plus two corrections, hard30s static/90s native children. Preserve immutable executed checker versions. Complete static55fa-to-nativeb9fe source-bound fields, then exact four-mover local legality and supply/return/transition access on isolated copies. No DRC in this first item; root reviews before a separately scoped exact-project-bound diagnostic.",
+      "invariants": "No new placement search, copper/via additions, source/input-native load, source edit, refill, paid use or automatic cloud launch. One originally authorized routing-only job remains conditional on local/import/pricing qualification.",
+      "rotation_frame_disposition_1301": {
+        "status": "REJECT b9fe58fc as routing input: our derivative constructor failed to rotate global pad-land angles when changing footprint poses. Preserve the four intended global poses, not their malformed implementation. Authoritative source, qualified input and recovered2.1 remain unchanged.",
+        "configured_diagnostic": {
+          "directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-preparation-20261012T1155\\intended-rule-diagnostic-20261012T1249",
+          "drc-report-attempt0.json": "028262b0f3342d497a1a7921d7d946e3856893dca7650334f40bd2ddf1c2ed9d",
+          "drc-attempt0-receipt.json": "224500d273855d175aa94725eb0feaae0aceedd17920230d0f189e57ff995f59",
+          "drc-analysis-attempt1.json": "5939f19384c8611c20cb735060833c9d7ae4c767eb09567a20f7a5b5ed04d3d7",
+          "elapsed_seconds": 63.031,
+          "timed_out": false,
+          "same_stem_project_before_after_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+          "violations": 473,
+          "unconnected_items": 183,
+          "shorting_items": 6,
+          "clearance": 9,
+          "parity": false,
+          "refill": false,
+          "disposition": "Genuine intended-rule diagnostic, not clean. Seven local clearance findings concern adjacent intra-IC4 lands, including0.025mm gaps; all six shorts concern adjacent U1 pads. These exposed a construction defect, not source footprint or Quilter routing defects."
+        },
+        "IC4_angles_degrees": {
+          "input": {"footprint": -90, "pads_5_6_global": 0, "pads_8_9_global": 90},
+          "recovered_2_1": {"footprint": 180, "pads_5_6_global": 270, "pads_8_9_global": 0},
+          "bad_derivative_b9fe": {"footprint": 180, "pads_5_6_global": 0, "pads_8_9_global": 90}
+        },
+        "U1_angles_degrees": {
+          "input": {"footprint": -90, "all_pads_global": 270},
+          "recovered_2_1": {"footprint": 0, "all_pads_global": 0},
+          "bad_derivative_b9fe": {"footprint": 0, "all_pads_global": 270}
+        },
+        "physical_invariant": "Preserve (native global pad orientation minus footprint orientation) modulo360, plus local position/shape and expected transformed global geometry. Recovered2.1 obeys it; b9fe does not. Pad centres moved correctly while elongated lands did not rotate.",
+        "withdrawn_claims": "Root withdraws physical-preservation acceptance based on identical child S-expressions. The raw comparator correctly showed child-field equality but enforced the WRONG invariant for changed parent poses. Save/reload idempotence also cannot expose this. Withdraw source-footprint-defect inference and all b9fe malformed-land supply-access limits, including0.1736mm. Do not lower clearance/width or edit source footprints to cure our constructor.",
+        "preserved_access_reports_not_qualification": {
+          "terminal_access_attempt1.py": "927f6c2a0f56761ca286b16109ea1e943f5ea6f170e374ffe59671c6234e4e42",
+          "terminal-access-attempt1.json": "95d8f6cf74cbb30e09360aa50eacd2c0d6d6d4360aa0bfc8e100e865ceb1f2c4",
+          "access-attempt1-receipt.json": "aee3fe4a2c3a70fdcd520775e7252c70c4f84a7e6d783eb744cc5257af6cef56"
+        },
+        "next_item": "New corrected native-pose construction from isolated qualified-input COPY, preserving all prior files. Use native position/orientation APIs for72 movers, same four overrides and32fixed; compare all325 native pad centres/angles independently with recovered2.1 modulo four translations, plus source-relative invariants and complete untouched objects. Include malformed b9fe as real negative control. Save/reload only new derivative, then standalone exact-project-bound DRC and corrected-geometry local/access checks. Execute13:14/report13:15/root13:17, initial plus two native pipelines, hard90s native/30s static. No source change, new poses, refill or cloud before review.",
+        "baseline_availability_correction": "Qualified input directory does contain drc-final.json, drc-comparison.json and qualification-report.json. The executor's statement that no baseline report was available was incomplete. Reuse saved evidence without rerunning it; original versus returned placements still require object-aware rather than count-only comparison."
+      },
+      "correction_review_1248": {
+        "artifacts_in_recovery_directory": {
+          "c23-repair-summary.json": "02a82ab2e2161f157d40f371b1f7295da6dd9201c4723454a592ad71e9e02bec",
+          "c23-repair-attempt2.json": "98edad8e739c6f7e0ce6937a5810506690ee57d95821c34d38cc8d3e813b3bd9",
+          "c23_repair_attempt2.py": "e84b2bb0cd4d140eb36833ceaa8ed11883bbcf9ca59b8674725f05a9b67a0657",
+          "c23-repair-attempt2-receipt.json": "dac353b8c81458fe877faa2127b147041cc15c18007b4bb1960d6436832de3c2"
+        },
+        "retraction": "C23/R23 collision was false. Matching pad X coordinates with centres19.95mm apart in Y exposed the invalid collinear intersection predicate. Native SHAPE.Collide independently reports no overlap and passes separated-collinear, exact-tangency and overlap controls. Earlier finite envelope screen DID include R23; it was not a coverage omission. Retain original C23 pose; no alternative search or board change.",
+        "local_body_copper": "Corrected C23 native foreign-pad/retained-copper screen has no failures. Conservative filled courtyard/Fab+pad extent has0.135539mm minimum to C12, only0.008539mm above the0.127 placement setting. This is low-margin geometric input evidence, not assembly tolerance qualification.",
+        "access": "Individual C23-ground witnesses pass to IC4.1/.2, and C24-ground witnesses to IC4.1/.2/.7. They do not prove all IC4 ground terminals joined or simultaneous supply/return routes. Four deterministic radial-outward supply witnesses per cap fail; best0.173600mm to IC4.6 GND or IC4.9 IMU_INT2. This is a finite path result, not inability to route or proof a via is necessary.",
+        "nonadded_via": "Native0.65/0.35mm probe at(93.4,93.75) has no detected foreign copper/fill, via-prohibited contact/private outline, hole/slot/drill or board-edge violation under the exercised thresholds. It remains non-added, optional and not routed. Body-face and conductive-contact semantics stay distinct.",
+        "new_scope_1249": "Root retains b9fe and releases a new intended-rule diagnostic plus terminal-normal access disposition: execution13:01/report13:02/root13:04, initial plus two attempts maximum, hard90s native/30s static. Fresh isolated board/project pair; receipt hashes actual matching-stem917b project before standalone no-refill DRC. No opaque timeout retry. Examine radial endpoint/endcap limitations and <=8 pad-normal supply witnesses per duty; preserve existing source pad copper, enforce0.2 clearance on genuinely new copper, require compatible supply/return evidence. No product tracks, pose search, refill or source edit."
+      },
+      "recovery_review_1242": {
+        "directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-preparation-20261012T1155\\validation-recovery-20261012T1235",
+        "artifacts": {
+          "validation-recovery-summary.json": "4ae46b797fc6f835d96905aa5c62e557697b27e8e774ffffca9f5068a18698ad",
+          "preservation-attempt2.json": "bb62cdfbddfa7471af394001efd2e6346a88e09a55c00d985637296e5039da8a",
+          "preservation_check_attempt2.py": "03e28f6fa2d6d844d0faf454316a7fbcb3faff13d9a90b60d93b41efb81e4f35",
+          "preservation-attempt2-receipt.json": "e8a8092812b990c337740c92e09775575279154d023f110dfad6c0a0368cc453",
+          "local-legality-attempt0.json": "cc807b5a2837c13c23d40c716abe536e9bc30fbb8cea226157ae736b0ca40cec",
+          "local_legality_attempt0.py": "7725c11bd559349700ecc2f54b147a5a31dbc7227e92486a96117f334882af12",
+          "local-legality-attempt0-receipt.json": "8d4a4dd362a90aea2960c3b8beca729d60a1065fc61f8983ba56570bfab8b141"
+        },
+        "preservation_disposition": "Root reviews complete S-expression comparator and accepts exact-artifact first-save preservation:104 complete footprints/325pads/191segments/18vias/63zones, layers/setup/remaining board children. Only top-level footprint XY rounding changes, maximum0.000000494565mm, within0.5nm. Five real parsed-input mutations reject pad net, track width, guard flag, outline coordinate and stack thickness. This closes the earlier first-save gap for these bytes; it does not qualify arbitrary future geometry.",
+        "attempts": "Static comparison consumes initial plus two corrections, final explicit pose-serialization normalization passes. One16s read-only native local check completes; no save/refill/DRC/cloud. Original and executed revisions preserved separately.",
+        "local_report_not_accepted": "Native report claims C23 overlaps fixedR23 and rejects four straight supply/ground witnesses. Root subsequently finds its hand-written segment-crossing test omits collinear bounds, so disjoint collinear edges can falsely report zero separation. Root retracts immediate true-collision classification pending independent native corroboration. Separate graphic strokes also do not represent filled courtyard interiors, and contour extraction ignores holes; do not call this a general full-shape pass.",
+        "next_bounded_item": "Through12:51/report12:52/root12:54, independently resolve the exact C23/R23 witness using exercised native geometry with separated-collinear/tangent/overlap controls before any repair. Only if conflict is real, consider a maximum12-pose C23-only correction; all other poses/copper unchanged. Finite non-added outward/bent supply/return witnesses and missing original via-probe mechanics may be assessed. No native save/DRC or upload before root selection; no new geometry framework or failed-helper reuse."
+      },
+      "current_free_policy": {
+        "url": "https://www.quilter.ai/free-ai-pcb-design",
+        "retrieved_local": "2026-10-12T12:36:03-07:00",
+        "saved_html": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-preparation-20261012T1155\\official-free-policy-20261012T1236.html",
+        "sha256": "3e42c3b05cf6a4809a36e7b381a11746cbabb73937307b4c16faa6cc205628cf",
+        "json_ld": "Service: Free AI PCB Design - Non-Commercial Tier; offers.price=0, priceCurrency=USD, description free for non-commercial use, unlimited iterations; eligibleCustomerType schema.org/NonProfit.",
+        "disposition": "Official HTML title/body and structured data restore the previously observed free-use policy evidence. Earlier simplified Markdown omitted this material and pricing URL covered enterprise deployment; neither proved policy withdrawal. This remains published-policy evidence, not an account-specific quote. No payment/upgrade/new agreement accepted."
+      }
+    },
     "authorization": "Owner11:51 approves the proposed placement-first continuation: one revised eight2116 input preserving209 retained copper and existing rules, then one qualified confirmed-free routing-only job. Preparation capped at45minutes, with no new item after12:26 and checkpoint by12:36. No automatic second experiment, manual routing, fabrication or authoritative-source change.",
     "held_derivative_checkpoint_1224": {
       "status": "Constructed, HELD; no upload/new cloud draft/job. Native operations stopped. Timeout is incomplete evidence, not a demonstrated geometry failure.",
