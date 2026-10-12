@@ -1,5 +1,76 @@
 {
   "schema_version": 1,
+  "placement_continuation_2026_10_12": {
+    "authorization": "Owner11:51 approves the proposed placement-first continuation: one revised eight2116 input preserving209 retained copper and existing rules, then one qualified confirmed-free routing-only job. Preparation capped at45minutes, with no new item after12:26 and checkpoint by12:36. No automatic second experiment, manual routing, fabrication or authoritative-source change.",
+    "support_reply_shared_1127": {
+      "provenance": "Owner pasted Justin's follow-up; attributed support guidance, not newly exercised client behavior.",
+      "placement": "Justin strongly recommends starting from a placement, making edits and returning it for routing. Beta will likely still run; its candidates need not be selected. No beta-disable switch was promised.",
+      "spacing": "Floorplanner spacing generally measures from courtyard layers. This is not proof of usable pad escape, whole-body fit or routing-channel width.",
+      "width": "Fabricator constraints should be the minimum across the board. Justin requests a specific counterexample; BGA fanout may be an exception when selected width exceeds BGA pitch. No exception is established for this design.",
+      "owner_preference": "Use this advice to make progress locally; do not send further support questions unless a concrete unresolved blocker warrants one."
+    },
+    "next_experiment": {
+      "basis": "Recover exact candidate2.1 PCBc1e9e0255f885636b3c2fa31ef90e24da0b4f67deae8136d06e4607c6f782344 and its shared2.1/2.2 placement; apply reviewed poses to a derivative of the qualified input, not all generated routing from either output.",
+      "hypotheses": [
+        "Assess an improved corridor for eligible USB-path components while X6 and IC1 remain fixed.",
+        "Assess C18/VCORE pad and ordinary-transition access, retaining useful C15/C17 relationships and reviewing supply/return paths together.",
+        "Assess eligible IC4/nearby placement relative to fixed C24; never move C24's protected process via to make the placement fit."
+      ],
+      "limits": "These are investigation targets, not established defects or approved exact moves. Keep all32 protected poses,191 tracks,18 vias,63 zone definitions, outline, supplier construction, current/USB/process/contact obligations. Only root-reviewed eligible pose changes may be applied. No blind global spreading or shrinking.",
+      "routing_comparison": "Hold revised placement and existing eight-layer electrical/fabrication settings for the first routing-only run. Review non-beta candidates first. A smaller ordinary-route geometry experiment is conditional on a real supplier/process and measured bottleneck, not an automatic second job.",
+      "success_basis": "Reduce unresolved terminal relationships and grouped remaining work without adding shorts, contact violations or worsening critical USB/supply paths. Compare identical native rules and distinguish inherited findings. Full filled-plane/return qualification remains a separate gate; historical2.1 is not a controlled same-version replay."
+    },
+    "retained_input_width_audit": {
+      "scope": "New static inspection of the surviving qualified input only. This is not a rerun of an exhausted native checker or a new examination of missing output bytes.",
+      "evidence_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-preparation-20261012T1155",
+      "artifacts": {
+        "track-width-audit.json": "32e6ad1a352906ae1e34643820dd4a2dfd747075a5e080eadbc05cc0135df8c4",
+        "supervisor-receipt-correction1.json": "8141d6aa83cdef2d574750a8964d5f4822219bf2fe8fed30bb9eb4dfe498edfe",
+        "audit_track_widths.py": "b9abac13e30b72978e842a6b761387ff643c2781c406957eb50be65d98ed1a43"
+      },
+      "segments": 191,
+      "track_arcs": 0,
+      "vias": 18,
+      "project_minimum_track_width_mm": 0.1778,
+      "minimum_retained_track_width_mm": 0.1778,
+      "track_width_histogram_mm": {"0.1778": 118, "0.2": 11, "0.3": 2, "0.6": 8, "0.8": 10, "1.0": 30, "1.2": 7, "1.5": 5},
+      "below_minimum_tracks": 0,
+      "tracks_at_0_160_mm": 0,
+      "tracks_at_0_162_mm": 0,
+      "minimum_examples": [
+        {"uuid": "08727118-45d2-5ca1-9989-c574ea37a4ae", "net": "GND", "layer": "F.Cu", "width_mm": 0.1778},
+        {"uuid": "1212a327-4ed4-50da-a0bb-71afc8145254", "net": "GND", "layer": "B.Cu", "width_mm": 0.1778}
+      ],
+      "retained_via_diameter_histogram_mm": {"0.600": 14, "0.604": 4},
+      "retained_via_drill_histogram_mm": {"0.300": 14, "0.350": 4},
+      "interpretation": "The previously recorded0.160/0.162mm output track widths were not widths of unchanged retained input tracks. This narrows the investigation to downstream routing/export behavior but does not re-establish any specific output segment location or count. No width exception or relaxed rule is selected.",
+      "via_limit": "Retained vias predate the0.650/0.350mm new-route minima; do not confuse their inherited dimensional findings with the track-width question, resize protected seeds or waive limits for new vias.",
+      "execution": "Two supervised static attempts: initial parse failure preserved, then one correction completed in0.281s, exit0, hard30s, empty stderr and no timeout. No native loads/saves/refill. Executor idle."
+    },
+    "recovery_checkpoint": {
+      "restored_commit": "fc44882",
+      "initial_worktree_clean": true,
+      "qualified_input_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\eight-four-signal-2116-20261005T1621-sol",
+      "verified_input_pcb_sha256": "10b04d84d3bc41b98d3b2683bc15561925d7e65281e2625673000304af999656",
+      "verified_input_project_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+      "verified_input_manifest_sha256": "ab1b77baaf9e26fa19e8822f76b56002a12f1cdf2f8b0c7b41550f130f065d82",
+      "authoritative_source": "All five hashes under source_preservation below rechecked unchanged; no native load or save.",
+      "missing_evidence": "Recorded .playwright-mcp paths for candidate2.1 archive/PCB, isolated input, native-pad comparison and six service details are absent from the restored worktree. Bounded search of the authorized private quilter tree finds older outputs/inputs but no eight2.1 PCB/archive. This is not an exhaustive machine-wide search.",
+      "browser": "Navigating to the existing eight job/candidate2.1 redirects to auth.quilter.ai login. No authenticated job state, export or configuration was accessed.",
+      "owner_input": "Requested browser sign-in; owner unavailable. No credential search, authentication bypass, alternate-account access or support message.",
+      "runtime_probe": {
+        "agent": "c999b74d-4c1d-4290-ac00-f17c523f3994",
+        "model": "gpt-5.6-sol",
+        "effort": "medium",
+        "started_event": "4d259a6e-fe04-441f-90fb-bd7ece5ebd35",
+        "configured_event": "14341616-defe-4d5e-9135-79bbca721f2f",
+        "completed_probe_event": "71d8c410-0511-4808-ba37-ceffcbe08bf7",
+        "probe_scope": "Policy/profile reads only. Subsequently released only static retained-input width inspection, not missing-placement reconstruction or native work."
+      },
+      "status": "Placement selection/construction and job launch blocked by unavailable exact returned placement. Do not substitute original pre-Quilter poses or an older unrelated output.",
+      "resume": "After browser sign-in or provision of the exact candidate archive, recover candidate2.1 from the existing job and bind its embedded PCB hash before the finite placement study. Preserve recovered native files in the durable private experiment root, not solely disposable worktree staging. A regenerated ZIP may differ; preserve it separately and compare contained native bytes rather than assuming identity."
+    }
+  },
   "paired_diagnostic_2026_10_06_1321": {
     "authorization": "Owner accepted the proposed bounded eight2.1/2.2 diagnostic and requested durable lessons. No repair, refill, changed routing rules or new cloud job.",
     "checkpoint_timing": "Native execution finished before13:33:30; root evidence/document verification finished13:37:11,41seconds after the planned13:36:30 checkpoint. No additional engineering item was started; remaining work was documentation/persistence.",

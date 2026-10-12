@@ -2,6 +2,21 @@
 
 ## Bounded engineering work
 
+- **October12 placement continuation approved but access-blocked:** owner
+  selects one revised eight2116 placement plus qualified free routing-only
+  run, not more support questions or a layer matrix. Justin says courtyard
+  spacing, placement reuse and minimum-width intent; beta may still run.
+  Restored`fc44882` lacks ignored2.1 raw/evidence files; qualified input and
+  all five authoritative hashes match. Existing job redirects to login and
+  owner is unavailable. Recover exact2.1`c1e9e025...` before selecting moves;
+  do not substitute original poses or older outputs. Keep209/32/five seeds/
+  stack/rules. Only static surviving-input inspection may proceed; no
+  native work, source edits, placement or job occurred at this checkpoint.
+  Static input audit completes:191 tracks all>=0.1778mm, no0.160/0.162mm
+  widths; historical narrow output tracks were not unchanged retained
+  tracks. Exact output locations remain unrecovered. Audit in durable
+  private outputs/placement-preparation-20261012T1155; Sol idle.
+  See `placement_continuation_2026_10_12` in the eight-output ledger.
 - **October 6, 13:34 paired diagnostic completed:** owner-approved
   eight2.1/2.2 native comparison resolves325 pad semantics; changes versus
   input are global poses on72 movers. Same-rule/no-refill DRC has76/32

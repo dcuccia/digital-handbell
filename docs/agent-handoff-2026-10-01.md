@@ -7,6 +7,41 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October12: placement-first continuation approved; recovery is blocked.**
+Owner11:51 approves one bounded revised eight-layer placement/input and a
+qualified free routing-only run, not another support round or layer matrix.
+Justin's new guidance: edit/reuse placement; beta may still run but can be
+ignored; spacing generally uses courtyards; fabrication width should be a
+minimum, with a possible BGA exception not established here.
+
+The restored branch starts clean at`fc44882`. Qualified eight input
+`10b04d84...`, project`917b3f16...`, manifest`ab1b77ba...` and all five
+authoritative37-open hashes match. However, the recorded ignored2.1
+archive/PCB and native/service evidence paths did not survive in the
+restored worktree. The authorized private Quilter tree has no recovered
+eight2.1 copy. Its job page redirects to login; owner is unavailable to
+sign in. No placement was reconstructed, changed or uploaded.
+
+Next recover exact2.1 PCB`c1e9e025...` from existing job
+`6ac434b6a389adaff19ad80e`, candidate`6ac491edddd69d563b0369aa`,
+then apply the bounded USB/C18/IC4 placement study to a derivative of the
+qualified input with209 retained copper, not all of2.1's generated routes.
+Preserve32 fixed poses, five process seeds, contacts, private returns and
+existing stack/rules. The finite hypotheses and recovery state are in
+`placement_continuation_2026_10_12` in the eight-output ledger.
+No new job or native execution; do not consume the remaining preparation
+allowance on a substitute placement or an unrelated routing experiment.
+
+One useful independent check completed: all191 retained input tracks meet
+the0.1778mm floor; neither0.160 nor0.162mm exists among them. Thus those
+historically reported output widths were not unchanged inherited tracks,
+although specific output geometry remains unavailable for reinspection.
+The durable static audit is under the private experiment root at
+`quilter\outputs\placement-preparation-20261012T1155`; its report hash is
+`32e6ad1a...`. One parse correction, no native work; Sol is idle.
+The eighteen smaller retained vias are a separate inherited-process issue,
+not permission to relax new-route limits or resize protected seeds.
+
 **October 6, 13:34: paired diagnostic completed; prefer non-beta2.1.**
 Owner authorized one bounded eight2.1/2.2 comparison. KiCad10.0.6 DRC on
 unchanged output copies with the qualified input project reports76 versus32

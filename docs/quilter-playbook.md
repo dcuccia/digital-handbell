@@ -128,8 +128,9 @@ Support recommends ranking by estimated finishing effort, reviewing
 placements, increasing Floorplanner component spacing and reducing
 fabrication trace/space/via minima where feasible. Compare a beta result
 with its same-placement non-beta predecessor before assuming the higher
-percentage is cheaper to finish. Clarify what geometry the spacing field
-measures; body/courtyard separation alone is not copper escape clearance.
+percentage is cheaper to finish. Justin's October12 follow-up says spacing
+generally uses the courtyard layer; body/courtyard separation alone is not
+copper escape clearance.
 Review ordinary new-route minima against a real supplier/process while
 retaining current/impedance requirements, protected process seeds and
 contact/private-return exclusions. Do not globally shrink existing copper.
@@ -170,6 +171,42 @@ the first comparator wrongly read the original qualified comparison input
 without saving; its evidence was excluded and bytes remained unchanged.
 These lessons and exact hashes are in `paired_diagnostic_2026_10_06_1321`
 in the eight-output ledger. No extra retry or product acceptance follows.
+
+**Attributed continuation guidance, October12:** Justin recommends editing
+a placement and returning it for routing. Beta candidates may still be
+generated; ignoring them is not the same as disabling that router. Use
+reviewed edited poses with the qualified retained-copper input rather than
+accidentally freezing all generated routing from a congested candidate.
+For a routing-only comparison, save and hold the actual revised placement;
+changing a spacing preference does not itself move fixed imported parts.
+Keep the stack/rules fixed for a placement experiment before considering a
+separate supplier-qualified ordinary-signal geometry change.
+
+Justin also says fabricator width constraints should apply as minima,
+with a possible BGA-fanout exception when width exceeds pitch. This is
+not an established exception for this board. Distinguish retained-input
+tracks from newly generated output, and check pad/return/transition access
+before choosing local moves. Do not turn a useful internal width audit into
+an automatic support round, global rule waiver or manual repair exercise.
+
+The bounded October12 static audit of the exact qualified eight input
+finds191 tracks, all at least0.1778mm;0.160/0.162mm do not occur. The
+previously reported narrow output widths therefore were not unchanged
+retained input tracks. This narrows attribution without restoring missing
+output coordinates or proving a particular router exception. Keep the
+retained vias' older diameters/drills separate from track-width failures;
+new-route minima are not retroactive permission to resize protected seeds.
+
+**Observed evidence-lifecycle limit, October12:** restoring tracked branch
+`fc44882` did not restore the ignored candidate archives and raw diagnostic
+files at their recorded paths. The qualified input survived in the separate
+private experiment root, but the browser required sign-in to recover the
+returned placement. A committed hash records provenance, not availability
+of its bytes. Archive raw native files, exercised helpers and receipts in a
+durable private experiment directory outside disposable worktrees; use
+worktree browser staging only as a transfer location. Recheck availability
+and hashes before promising a continuation. Do not reconstruct an allegedly
+identical placement from a summary or borrow unrelated older output.
 
 ## What the evidence supports
 
