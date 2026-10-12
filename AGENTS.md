@@ -2,6 +2,27 @@
 
 ## Bounded engineering work
 
+- **October12,14:40 submission push stopped at renderer-model blocker:**
+  Owner's14:23 software-only timebox replaced the old three-execution cap.
+  Fresh verified Sol/medium completed19 supervised children: nine schema
+  inspections, two helper searches, four revision preparations and four
+  full comparisons. All exited within30s; no native work. Root reviewed
+  complete code before execution. Final23486f71 checker/report96379b90
+  remains HELD:104 component metadata transforms and exact upload hashes
+  match, but pad/shape/retained-copper/keepout comparisons do not qualify.
+  Scene transform/index interpretation remains unresolved; neither local
+  matrices nor naive hierarchy composition proved the physical geometry.
+  No healthy positive baseline means no negative controls were executed.
+  The populated /board exposes285 connected entries, not all326 service
+  terminals; preserve the separate324 copper+paste/jumper normalization.
+  Executor stopped14:37:46, before the14:42:53 deadline, on repeated lack of
+  qualified progress. Do not claim timeout or actual imported PCB damage.
+  Live draft/settings/render still match saved evidence; free policy remains
+  price0 for personal use, but NO Start Job, reupload or new draft occurred.
+  Source/corrected input remain immutable. Next requires a separately bounded
+  saved-render decoder recovery with independent frame/shape witnesses,
+  not another board rebuild, blind full-check rerun or support loop.
+  See checker_recovery_outcome_1440 in the eight-output ledger.
 - **October12,13:25 corrected input ready; importer check held:**
   Native1e4e41a/project917b preserves104/325/209/32fixed/63zones and uses
   recovered2.1 poses with only IC4/C23/R11/TP4 translations. IC4 is the IMU.

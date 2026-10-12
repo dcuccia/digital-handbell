@@ -312,6 +312,31 @@ render counts are useful but do not prove complete interpreted geometry.
 Preserve the draft and captures on that blocker rather than constructing
 another input or attributing our checker errors to Quilter.
 
+Review the **positive baseline and independent negative controls together**
+before running a replacement checker. October12's first review-ready draft
+still used recovered placement coordinates without the four intended
+translations, equated325 native and rendered declarations despite their
+different paste/jumper membership, and combined pad-angle and net mutations.
+Those were checker-code gaps caught before execution, not import failures.
+Require a healthy baseline, then one defect per control through the same
+comparison path: an elongated land rotated about its unchanged centre,
+a net change, retained-copper movement, an actual keepout-layer change and
+an outline change. A combined mutation can hide a missing check. Empty
+decoded geometry and ambiguous identities must fail, not become equal
+empty signatures; oriented bounding extents alone do not establish shape.
+
+The renewed checker reached full comparisons but remained held at the
+renderer frame/index model. A scene tree may mix geometric parents with
+layer/findable grouping; neither an isolated local matrix nor multiplying
+every ancestor is automatically correct. Establish that interpretation
+with independent fixed/moved elongated-pad witnesses before relying on
+full-board polygon comparisons. Successful decoding into nonempty arrays
+does not prove the coordinates are physical. Likewise, the populated
+`/board` capture exposed285 connected pin entries while the job reported326
+all-terminal service pins; compare like schemas and retain the separate
+native325/render325 membership reconciliation. All new failures remain
+checker holds, not demonstrated Quilter defects; no routing job was launched.
+
 **False-collision control, October12:** the local checker falsely called
 C23/R23 an overlap: its orientation-product-only segment test treated
 disjoint collinear edges as intersecting. The pads' centres were19.95mm

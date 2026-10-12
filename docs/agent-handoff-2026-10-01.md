@@ -7,7 +7,52 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October12,13:25: corrected native input ready; cloud draft HELD.**
+**Current October12,14:40: submission remains HELD; executor stopped.**
+The owner-approved30-minute push did not reach submission. The replacement
+runtime-verified Sol/medium executor used the software-only timebox instead
+of the old three-execution cap, with19 supervised children and zero native
+operations. Four complete comparisons finished in under a second each;
+the last exited2 at14:37:46. No child timed out. Work stopped early on the
+unresolved renderer-model blocker, not because the14:42:53 deadline expired.
+
+Final private checker `checker-recovery-20261012T1423\check_importer_geometry_review6.py`
+has SHA`23486f71...`; report `importer-geometry-review6-attempt0.json` has
+SHA`96379b90...`. Root read the complete final code and saved results.
+All104 component metadata transforms match the corrected construction
+targets, and the input hashes/declared pad counts match. The populated
+`/board` comparison covers285 connected entries, not the separate326
+all-terminal service count. Its four pour names and the saved-render
+POUR/SUBSTRATE comparisons match, but that is not independently established
+physical geometry: PIN mapping/anchors, component shapes,191 retained
+traces,18 retained vias and58 keepouts still fail the checker.
+
+The renderer's index/frame model remains unresolved. Local matrices and
+naive hierarchy composition produced incompatible coordinates; layer and
+findable grouping cannot simply be treated as geometric parents. Do not
+attribute all mismatches to one proven cause, declare the import damaged,
+or accept geometry because counts match. The final revision also replaced
+per-pad polygon/size checks with component polygons and pose anchors; its
+unexecuted mutation tail is not evidence that those checks remain adequate.
+No positive baseline passed, so no negative controls were executed.
+
+The live existing draft, selected configuration, comprehension and render
+were refreshed against the saved evidence with no drift. Final confirmation
+retains the explicit In1 pour, zero components to place and a notice that
+routing will not move them; `Full layout` is the routing-enabled mode.
+The descriptive new name is only in the form, not persisted job metadata.
+Public noncommercial pricing remains0USD, with no payment/terms prompt.
+**Start Job was never clicked.** No PCB change, native operation, reupload,
+new draft, source repair or integration occurred.
+
+Preserve this exact input/draft and all failed revisions. The next narrowly
+defined recovery is the saved-render decoder: establish index/parent-frame
+semantics using independently known fixed/moved elongated lands, then verify
+full land shape and retained-object geometry before rerunning the full gate.
+This requires a new bounded authorization; no automatic second experiment.
+See `checker_recovery_authorization_1423` and `checker_recovery_outcome_1440`
+in the eight-output ledger.
+
+**Historical October12,13:25: corrected native input ready; cloud draft HELD.**
 PCB`1e4e41a...`/project`917b3f16...` replaces rejected`b9fe...` in the
 durable private `placement-preparation-20261012T1155\corrected-native-pose-20261012T1301`.
 Native footprint transforms preserve all325 pad-relative shapes/angles
