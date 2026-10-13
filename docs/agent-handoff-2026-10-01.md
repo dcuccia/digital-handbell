@@ -7,7 +7,70 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13 final checkpoint: importer still HELD; engineering stopped.**
+**Current October13,16:44 checkpoint: submitted once and running.**
+Existing [job6acd3f5501e64eae4591facd](https://app.quilter.ai/jobs/6acd3f5501e64eae4591facd)
+launched at16:44:41.092 local. One normal-UI Start Job request returned200;
+the subsequent job response reports `running` / `full_layout`, and the UI
+says it is working on layout candidates. No result exists at this checkpoint.
+Let it run without monitoring; no second job, native output repair or
+integration is released.
+
+The complete importer baseline and all13 deliberate-error controls now pass
+the limited preplaced-routing gate. Thirteen separately persisted fresh
+positives are byte-identical to accepted report `34424849...`; every negative
+fails its intended gate without changing unrelated appearances or healthy
+gates. Final controls-v12 is `32d8fe2b...`, unchanged comparator-v9 is
+`b79d2a8f...`. The third grouped attempt hit its hard30s limit; the separately
+bounded scheduling-only recovery retained that limit and ran each case in
+10.782-14.562s. All failed evidence remains. An executor API400 required a
+fresh independently verified Sol/medium handle, not an Astra fallback.
+
+Live settings, imported render and free-policy evidence remained unchanged.
+Root rechecked all five authoritative source hashes and all three uploaded
+files at16:46:14. No native operation, source/input edit, reupload, new draft,
+payment or new terms occurred. The77 supervised receipts represent76 launched
+children and one prelaunch failure; one grouped timeout is included. A separate
+receipt-free AST preparation invocation is explicitly not supervised evidence.
+
+Next preserve the returned native candidates and compare all104 poses,
+pad/net/drill semantics, retained209 copper, outline, eight layers,63 zone
+definitions and configured rules before assessing routing improvement.
+The preview's31 unobservable footprint prohibitions, eight PIN drill definitions
+and four planes' native intent fields remain mandatory output gates. This
+submission is not electrical closure, manufacturing release or board acceptance.
+Exact launch/control hashes and preserved failure history are in
+`continuation_2026_10_13.submission_outcome` and `qualified_importer_controls`
+in the eight-output ledger.
+
+**Historical October13,16:30: saved baseline passes; control gate held.**
+The owner's15:50:49 autonomous continuation superseded the earlier stopping
+window. Focused evidence resolves the complete CHG_EN0 pad/bridge union and
+the ordered outline representation chain. Comparator-v9 (`b79d2a8f...`) and
+report `full-comparator-v9-focused-attempt1-report.json` (`34424849...`) pass
+all12 observable preview gates. The31 footprint prohibitions, eight PIN
+drill definitions and four planes' native intent fields still need returned-
+native review; this is not board or manufacturing acceptance.
+
+The first control child stopped before mutations because locale-default
+Windows decoding corrupted three unit-bearing metadata keys. A preserved
+focused diagnostic proves no geometry/transform/numeric difference. The
+minimal UTF-8 correction, controls-v10 (`de46adc8...`), reproduces a healthy
+positive and correctly rejects component-angle and physical pad-angle
+mutations. Its third pad-size mutation remains accepted; root requests its
+actual world-scale effect before classifying that as a comparator blind spot.
+Report `controls-v10-batch0-report.json` (`09c4f1f2...`) preserves all three
+cases. Ten remaining negatives have not run. No automatic retry after this
+failure; the current bounded control item stops16:30.
+
+Normal live reload succeeds with UI/API1.43.0. All five fresh job/render/
+board/selected/comprehension bodies and official free-policy HTML are byte-
+identical to the reviewed14:28 refresh. Root independently rechecked all five
+authoritative source hashes at16:22:51. No Start Job, native operation, source
+or input edit, new draft, reupload, payment or integration occurred. Preserve
+the draft and all failed evidence. See the October13 completion entries in
+the eight-output ledger for exact bindings and the next control disposition.
+
+**Historical October13,15:43 checkpoint: importer HELD; engineering stopped.**
 The actual client decoder and final source-bound comparator now account for
 all104 component poses,324 native copper pads,191 retained tracks,18 vias,
 147 routing-guard obligations and four plane physical/net/layer comparisons.

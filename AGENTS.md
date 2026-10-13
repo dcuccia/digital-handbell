@@ -2,7 +2,42 @@
 
 ## Bounded engineering work
 
-- **October13 final importer comparison HELD; engineering stopped:** actual
+- **October13,16:44 placement-first eight-layer job submitted once:**
+  Existing job6acd3f5501e64eae4591facd launched16:44:41.092 and reports
+  running/full_layout. Comparator b79d2a8f/report34424849 and all13 actual
+  controls pass the limited preplaced-routing preview gate;13 fresh positives
+  are byte-identical to that baseline. The grouped final attempt timed out;
+  a scheduling-only recovery ran one case per unchanged hard30s child,
+  completing in10.782-14.562s each. No acceptance tolerance was relaxed.
+  Preserve the UTF-8 and world-unit harness failures, all old reports and
+  the one timeout. Source/corrected input,104 poses and retained209 stay
+  unchanged; fresh live settings/free policy match. No reupload, new draft,
+  payment/new terms, native work, manual routing or integration occurred.
+  All five authoritative and three uploaded hashes rechecked16:46:14.
+  Preview cannot expose31 footprint prohibitions, eight pad drill definitions
+  or four planes' native rule fields; later native output must verify these,
+  all104 poses, copper/layers/zones and configured rules before routing benefit.
+  Let this one job run without monitoring; no second experiment or output
+  acceptance is released. See submission_outcome in the October13 ledger.
+- **Historical October13,16:30: saved baseline passes; controls held.**
+  Owner15:50:49 explicitly resumed autonomous completion after the old stop.
+  Focused source evidence resolves the jumper's complete pad/bridge union
+  and ordered metadata/mesh outline correspondence. Comparator b79d2a8f,
+  report34424849 passes all12 routing-preview gates, with explicit native
+  hole/plane/footprint-rule limits. Raw239-point outline rings have one exact
+  closing endpoint, not a missing vertex; all internal duplicates stay.
+  A fresh-decode harness mismatch was Windows locale decoding of UTF-8 unit
+  keys, not changed geometry. Corrected controls de46adc8 reproduce the
+  healthy baseline and reject both component-angle and pad-angle mutations,
+  but the pad-size control remains accepted. Its actual world-scale effect
+  needs disposition before calling this comparator blindness.
+  Three negatives ran, two rejected as intended; ten remain unexecuted.
+  No Start Job. Five live responses/free-policy HTML and all five source
+  hashes remain unchanged. Preserve all evidence and the existing draft;
+  no native work, input edits, reupload, payment or integration occurred.
+  Current control item stops16:30; do not reset its correction budget.
+  See completion entries in the October13 eight-output ledger.
+- **Historical October13,15:43 importer comparison HELD; engineering stopped:** actual
   client schema/layers now resolve104 components, all324 copper pads,
   191 retained traces,18 vias,147 routing-guard obligations and four plane
   physical/net/layer comparisons. All110 curved-pad appearances match

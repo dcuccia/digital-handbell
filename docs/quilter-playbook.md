@@ -412,16 +412,73 @@ complete occupied area/boundary against the independently specified model.
 This result covers the source's cardinal-angle shapes, not arbitrary future
 shapes, analytic copper equality or drilled-hole preservation.
 
-A healthy subset is not a healthy complete baseline. The final comparator
-still holds on CHG_EN0's separate copper graphic and the physical outline's
-vertex witness. The latter misses a2.423556um limit by62.1nm even though the
-full boundary is within a separately derived10.137um tessellation envelope;
-distinguish representation precision from a manufacturing-rule violation.
-The jumper's native graphic has zero stroke and declared net-tie groups.
-Before calling its0.100045mm fragment mismatch electrical damage, examine
-the complete pad/bridge union and source intent. Neither question was resolved
-by another run: three attempts were exhausted and all twelve prepared
-controls remained unexecuted. See the final October13 ledger outcome.
+A healthy subset is not a healthy complete baseline. At the October13,15:43
+checkpoint, three comparisons were exhausted on CHG_EN0's graphic and the
+physical outline's vertex witness; the prepared controls had not run. Preserve
+that failed evidence. A separately authorized focused completion subsequently
+resolved both representation questions, rather than rerunning unchanged code.
+
+**Compare complete conducting unions without hiding fragment differences.**
+CHG_EN0's separately rendered graphic is0.12mm2 smaller, but that area is
+already occupied by its matched pad lands. Source and renderer complete
+pad/bridge unions both measure3.18mm2, with0.000045706mm boundary difference.
+Keep both distinct pad nets and the native net-tie declaration. Require the
+complete union to be connected and the graphic to contact both actual pads:
+each shares a0.6mm boundary despite zero overlap area. Tangency can be a real
+electrical contact. Also retain raw added/missing graphic regions and require
+any unexplained residual outside the source-or-pad union buffered by the
+existing2um positional allowance to be zero within the fixed area epsilon.
+This source-bound explanation is not permission to ignore copper graphics.
+
+**Qualify each representation step before composing precision bounds.**
+The physical outline's old direct vertex witness missed its2.423556um limit
+by62.1nm; preserve that result rather than rounding it into a pass. Independent
+metadata-to-source checks pass, and all seven mesh outlines correspond to
+metadata at238 ordered canonical points, with maximum0.000630538mm error
+against the existing2um position allowance. Corresponding segment interiors
+are bounded by their endpoint deltas. Compose the explicit triangle bound
+while retaining independent source-to-mesh whole-boundary, endpoint and
+straight-interface checks. This does not establish universal backend
+quantization, analytic-curve equality or a manufacturing clearance change.
+
+Use the decoded raw rings for that correspondence, not a geometry library's
+possibly normalized exterior. Here239 physical raw points include one exact
+repeated closing endpoint; metadata has238. Normalize only that exact closure
+for cyclic alignment, preserve the four internal duplicate points, and keep
+all raw points in direct metrics. The first integration incorrectly rejected
+that representational closure; the reviewed correction produced the healthy
+v9 saved-capture baseline. A saved baseline must still reproduce through the
+fresh raw-decode path before genuine mutations qualify the checker. Persist
+the full recomputed positive report even on failure, rather than only a
+generic blocked message. See the October13 completion entries in the ledger.
+
+On Windows, make capture encoding explicit in every entry point. The decoder
+CLI used UTF-8, but the controls harness initially used locale-default
+`Path.read_text()`. Unit-bearing metadata keys were corrupted, falsely
+unmatching all191 tracks and18 vias while geometry and numeric values stayed
+identical. A full fresh-positive diagnostic isolated all1722 differences to
+the three unit-key pairs. The correction is consistent UTF-8 input, not
+renaming captured fields, ignoring dimensional metadata or relaxing a gate.
+
+Prove a negative control's actual effect in the comparison frame. A local
+polygon-coordinate change of0.0001 produced only0.1nm after this pad's1e-6
+linear transform, so its acceptance was not a blind spot. A document-level
+serialized-metres label is not a unit contract for every mesh-local value.
+The corrected control applies an occupied-centre world affine and verifies
+the decoded width increased by0.1mm while the centre stayed fixed. Inspect
+all remaining mutation unit paths together; never keep increasing a number
+until a test fails without defining and measuring the intended physical change.
+
+Budget a test group for runtime variation, not just one previous timing.
+Our three-control group took26.594s once and then exceeded its hard30s limit;
+that timeout did not prove a board or comparator defect. The scheduling-only
+recovery kept the same comparator, mutations, tolerances and30s cap, but ran
+one case per child and saved each complete positive before the mutation.
+All13 positives matched the accepted baseline byte-for-byte; all13 negatives
+were rejected at their intended gates with unchanged non-target appearances.
+Each final child took10.782-14.562s. Those finite controls qualified this
+source-bound preview and the one16:44 submission, not arbitrary future inputs
+or the native fields that the preview does not expose.
 
 **Routing-only applicability, October13:** exact native/render keepout
 identity is a different question from preservation of the forbidden area.
