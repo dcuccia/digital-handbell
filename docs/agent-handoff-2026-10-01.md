@@ -7,7 +7,57 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October12,15:44: decoder correction is partial; full shapes HELD.**
+**Current October13,14:24: owner resumes for up to90minutes.**
+Stop15:54 and start no new item after15:44. First bounded item through14:39
+uses the actual currently served renderer client implementation, not another
+index/matrix permutation. Fresh Sol/medium runtime is verified. Root captures
+public client assets privately and refreshes the existing draft read-only;
+the executor analyzes the implementation and prepares independent witnesses.
+Proceed through reviewed dependencies toward the one existing free job only
+if complete importer and unchanged-live-setting gates pass. No native work,
+source/PCB changes, reupload, relaxed rules, payment/new terms or second job.
+Old failed evidence stays preserved. See `continuation_2026_10_13` in the
+eight-output ledger for the execution scope and subsequent outcome.
+
+**October13,14:58 progress: schema recovered; complete importer gate pending.**
+The served client separates scene, mesh-call and instance tuples; the old
+recursive decoder conflated them. Decoder-v3 also implements the actual
+missing-layer fallback from findables/infos/root tags. Seven named rectangular
+pad lands now match complete physical rings and identities. Each track is
+three display fragments, and a through-via appears on each layer. Two selected
+track unions and one eight-layer via agree with native-derived display
+representations;16-gon tessellation is not exact native curved copper, and
+the via drill is metadata-only. No complete importer or mutation gate ran.
+
+The remaining guard question is no longer a guessed transform. Item0's full
+union covers native guard0410a652 with about15um display expansion, but exact
+contour/identity equality fails and no footprint-prohibition token is exposed.
+The all58-guard coverage diagnostic finds four tiny residual flag/layer
+records on two source zones; raw area alone does not qualify their depth.
+Thirty-one native footprint prohibitions remain unobservable. Static source
+has104 unlocked footprints; `/board` exposes only names/pins, while the fully
+loaded1445 UI explicitly reports0toPlace and routing without moving placed
+components. Do not equate UI preplacement with native lock bits or proven
+backend enforcement.
+
+Root accepts applicability only to this already-preplaced routing experiment:
+143 of147 routing-restriction/layer obligations have exact full coverage;
+four raw corner residuals on two source zones become covered with a tested
+0.0001mm outward bound, below the existing0.002mm position tolerance. The
+raw residuals remain failures of exact equality, not zeroed areas. Local
+minimum-cover candidates expand about15–16.1um in the display. Source flags
+and all files stay intact. The31 unobservable footprint prohibitions are
+not aliased or claimed preserved by the renderer; current0toPlace UI intent
+is the limited experimental contract. Every returned component pose and
+native rule still requires independent comparison before output acceptance.
+This does not qualify a future movable-component job.
+
+Next bounded item prepares the full static comparator through15:12/report15:13,
+with complete code review before its first run. All324 copper-pad identities
+and geometry,209 retained objects, outline and plane intent still need full
+coverage and genuine raw-capture mutation controls. No job has started.
+
+**Historical October12,15:44: decoder correction is partial; full shapes HELD.**
 The focused recovery corrects one concrete association: a scene node's
 third field identifies an item, and `items[item][1]` identifies its metadata.
 Seven exact PIN identities (IC4.5/.8, C24.1, U1.1, BT2.1.1/.2 and C1.1)

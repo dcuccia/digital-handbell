@@ -353,6 +353,65 @@ not by another index permutation or a nearest-looking polygon. A reported
 exit0 means the diagnostic completed, not that its geometry passed. Preserve
 failed hypotheses and healthy metadata witnesses separately.
 
+**Client-defined correction, October13:** reading the actually served client
+resolved the missing structural distinction. A scene is
+`[name, colorIndex, infoIndex, meshCalls]`; a mesh call is
+`[meshType, geometryIndex, materialIndex, instances]`; an instance is
+`[transformIndex, colorIndex, itemIndex, tagSetIndex]`. Only that instance's
+item indexes the item/info table. The earlier recursive-node decoder treated
+color indices as geometry indices and mesh-material indices as item indices.
+Its apparent point markers, unrelated component rectangles and keepout
+ancestors were therefore not established renderer behavior. Keep those
+failed reports, but withdraw their proposed physical interpretations.
+
+The client applies each instance's affine matrix directly to the geometry
+selected by its mesh call; it does not compose invented parent transforms.
+Its preprocessing splits board metadata from scenes without changing their
+geometry. Empty mesh calls are explicitly skipped, not malformed physical
+objects. Capture the client asset hash and implementation locators privately,
+then verify decoded physical shapes against independent native evidence.
+Source inspection resolves the schema, not the full importer acceptance gate.
+
+The same client has a material fallback: when top-level `layers` is absent,
+derive layers from its layer findables/infos/root tags before resolving
+instance tag sets. An empty default silently assigned every instance a null
+layer in our first correction. The saved input also demonstrates that one
+native track becomes three physical instances (body plus two end caps), and
+one through-via has an appearance on each of eight layers. Group by item
+and physical layer and compare every polygon/ring; do not demand one
+instance per native object or mistake144 via appearances for144 vias.
+The191 retained tracks are154F/37B, with none on inner layers. Do not invent
+an inner-layer track requirement to satisfy a planned witness.
+
+Distinguish display tessellation from native curved copper. A16-sided disc
+inscribed in a0.6mm-radius circle has approximately0.011529mm maximum inward
+deviation. Matching a native-derived16-gon representation can validate the
+represented centre, radius and approximation, but cannot establish6um
+native-curve equality. Report the independent approximation bound and check
+semantic dimensions; a rendered solid via disc also does not prove its
+drilled hole, which may exist only in metadata.
+
+**Routing-only applicability, October13:** exact native/render keepout
+identity is a different question from preservation of the forbidden area.
+The full58-keepout diagnostic compares all147 track/via/pad/pour-layer
+obligations using complete polygon unions and matching restriction tokens.
+It finds143 exact covers and four tiny corner residuals, each bounded by
+a tested0.0001mm outward distance. Preserve raw missing polygons and measure
+distance: their6.46e-10mm2 areas equal646nm2, not "sub-nanometre-square",
+and small area alone cannot exclude a deep narrow gap. Local minimum-cover
+candidates, rather than incidental larger overlaps, show about15–16.1um
+display expansion. Do not infer the solver's exact obstacle from that border.
+
+Thirty-one native footprint prohibitions have no direct render token.
+Do not invent a `FOOTPRINTS` to `PINS` alias. The104 source footprints are
+native-unlocked; `/board` has names/pins only, while the UI independently
+declares104 preplaced components/zero to place and routing without movement.
+Root accepts these limitations only for the existing routing-only experiment,
+with unchanged native input and mandatory later comparison of every returned
+pose/rule. This is not a general placement qualification, proven backend
+enforcement, or permission to remove source restrictions. Full pad/copper/
+outline/plane checks and actual validator controls still gate submission.
+
 **False-collision control, October12:** the local checker falsely called
 C23/R23 an overlap: its orientation-product-only segment test treated
 disjoint collinear edges as intersecting. The pads' centres were19.95mm

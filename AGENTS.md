@@ -2,6 +2,30 @@
 
 ## Bounded engineering work
 
+- **October13,14:24 owner resumes for up to90minutes:** stop15:54, no new
+  item after15:44. First bounded item through14:39 obtains the actual
+  renderer client implementation instead of repeating failed index guesses.
+  Fresh Sol/medium runtime verified; root captures current public client
+  assets and refreshes the existing draft read-only. Actual client-defined
+  scene/mesh/instance schema and missing-layer fallback are now recovered.
+  Seven rectangular pads, two track display unions and eight appearances
+  of one via pass focused comparisons; this is not full-input acceptance.
+  Track/via16-gon tessellation and metadata-only drill remain explicit.
+  Keepout display unions differ from native contours, and31 native footprint
+  prohibitions have no direct render token. The104 uploaded footprints are
+  native-unlocked, while the UI separately declares104 preplaced/0toPlace.
+  Root14:58 accepts current routing-only applicability:147 routing/layer
+  obligations have143 exact covers and four preserved corner residuals
+  bounded by0.0001mm. This does not alias footprint restrictions toPINS,
+  prove backend enforcement or release general placement. All104 returned
+  poses/native rules remain mandatory output gates. Full importer comparison
+  and real controls remain pending; no job has started. Subsequent decoder/
+  importer work requires reviewed client-defined semantics and independent
+  physical witnesses; initial-plus-two corrections and hard30s static children
+  remain. No native work, source/PCB change, reupload, rule relaxation,
+  payment/new terms or second job. The one existing free submission remains
+  conditional on all importer/live-setting gates. See October13 continuation
+  in the eight-output ledger; prior exhausted attempts remain preserved.
 - **October12,15:44 decoder recovery is partial; physical shapes still held:**
   Correct item-to-info indirection resolves seven named pad identities,
   centres within0.000383mm, and exact net/layers. This is not full decoding:
