@@ -7,7 +7,52 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13,14:24: owner resumes for up to90minutes.**
+**Current October13 final checkpoint: importer still HELD; engineering stopped.**
+The actual client decoder and final source-bound comparator now account for
+all104 component poses,324 native copper pads,191 retained tracks,18 vias,
+147 routing-guard obligations and four plane physical/net/layer comparisons.
+All110 curved-pad appearances agree with independently constructed native-core/
+28-sided circumscribed-circle unions; maximum model boundary error is0.000560mm.
+The earlier convex-support model did not represent the actual joined shapes.
+Root rejected filtering out short failing edges, rather than passing that
+result-conditioned shortcut. All geometry remains included in the final model.
+
+The third and final full comparison still reports two holds:
+CHG_EN0's separate copper graphic differs by0.100045mm at the boundary and
+0.120mm2 in absolute area; seven physical substrate appearances each exceed
+the strict vertex witness by0.000062053mm (62.1nm). The complete outline is
+within its independent0.010137mm display envelope, and straight interfaces
+match within0.000027mm. These are not established native PCB defects.
+Direct source inspection confirms the jumper graphic is a filled0.5x0.6mm
+polygon with zero stroke width and declared net-tie groups; missing stroke
+is not an explanation. Its relationship to the complete pad/bridge copper
+union still needs disposition, not an assumed expansion or loss of connection.
+
+The exact final checker is `static_importer_comparator_v6.py` (`850c1b2c...`);
+report `full-comparator-v6-attempt2-report.json` (`d2f672aa...`) is preserved
+under the ledger's `client-schema-20261013T1425` directory. Three full attempts
+are exhausted. `raw_capture_importer_controls_v6.py` (`164c2f6d...`) contains
+twelve real isolated controls but **none ran**, because no complete baseline
+passed. No fourth comparison, native operation, PCB change, reupload, new
+draft, Start Job or automatic repair is released. The authoritative37-open
+board, corrected input and existing draft remain intact.
+The final comparison ended15:43:04 local. The executor's48 supervised receipts
+represent47 launched children plus one prelaunch failure: three full results,
+13 diagnostics/witnesses,19 preparation/search/summary records, nine compiles,
+three decodes and one dependency installation. No child timed out; receipt
+counts are not native loads or additional full-comparison attempts.
+
+Next is a separately bounded completion of those two representation questions
+followed by genuine controls, not another inventory or full input rebuild.
+The25 named-unconnected nets retain their source identities and are mapped
+to renderer null only with one-pad/no-track/no-via/no-pour source evidence;
+ten duplicate-number lands use proved occurrence suffixes. Drilled-pad
+dimensions and plane rule fields remain explicitly unobservable in preview.
+Any future returned output still needs independent native hole/plane/pose/
+rule checks before acceptance. See `final_comparator_outcome` in the
+October13 ledger for exact results and execution accounting.
+
+**Historical October13,14:24: owner resumes for up to90minutes.**
 Stop15:54 and start no new item after15:44. First bounded item through14:39
 uses the actual currently served renderer client implementation, not another
 index/matrix permutation. Fresh Sol/medium runtime is verified. Root captures

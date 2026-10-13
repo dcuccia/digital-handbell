@@ -2,6 +2,25 @@
 
 ## Bounded engineering work
 
+- **October13 final importer comparison HELD; engineering stopped:** actual
+  client schema/layers now resolve104 components, all324 copper pads,
+  191 retained traces,18 vias,147 routing-guard obligations and four plane
+  physical/net/layer comparisons. All110 curved-pad appearances match
+  source-derived28-gon/core unions within0.000560mm; no edges are discarded.
+  Root rejected the intermediate32um failure-conditioned edge filter.
+  Final850c1b2c/reportd2f672aa still holds on CHG_EN0's separately rendered
+  copper graphic (0.100045mm boundary difference) and a physical-outline
+  vertex witness62.1nm over its declared limit. The source graphic has
+  zero stroke width; do not invent missing stroke or actual PCB damage.
+  Three full attempts are exhausted. Twelve controls are prepared but
+  unexecuted; no healthy complete baseline, native work or job launch.
+  Unobservable drilled-pad/plane fields remain explicit routing-preview
+  limits with mandatory returned-native checks, not proven preservation.
+  Source/corrected input and draft6acd3f5501e64eae4591facd stay unchanged.
+  Next needs a separately bounded disposition of the jumper graphic versus
+  its complete pad/bridge union and outline representation precision, then
+  real controls. No fourth run, rebuild, reupload, new draft or support loop.
+  See final_comparator_outcome in the October13 eight-output ledger.
 - **October13,14:24 owner resumes for up to90minutes:** stop15:54, no new
   item after15:44. First bounded item through14:39 obtains the actual
   renderer client implementation instead of repeating failed index guesses.

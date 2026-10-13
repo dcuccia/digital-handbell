@@ -391,6 +391,38 @@ native-curve equality. Report the independent approximation bound and check
 semantic dimensions; a rendered solid via disc also does not prove its
 drilled hole, which may exist only in metadata.
 
+**October13 complete-pad evidence:** bind identity, net, shape and layer
+expectations to the exact uploaded native file, not a recovered candidate
+used as a pose oracle. The observed compiler uses bare library identifiers
+for19 unique libraries and numeric instance suffixes for85 repeated-library
+components. Ten duplicate-number lands receive occurrence suffixes, including
+`.1`/`.2` for blank numbers. Do not discard downstream pad diagnostics just
+because an independent library-string check fails. Renderer null also covers
+ 25 explicitly named-unconnected source pads; preserve that source state
+separately from no-net, and require exactly one source copper pad and no
+track/via/pour on each such net. Connected nets still require exact equality.
+
+All110 curved-pad appearances in this exact capture match complete unions
+of native-sized core rectangles and28-sided circumscribed corner/end circles
+(`r*sec(pi/28)`, phase0), with maximum boundary error0.000560mm. Such unions
+need not have a convex-support boundary. The previously failing2.8-31um join
+edges are not floating-point zero edges; filtering them only because they
+fail a model is not qualification. Preserve every actual ring and compare
+complete occupied area/boundary against the independently specified model.
+This result covers the source's cardinal-angle shapes, not arbitrary future
+shapes, analytic copper equality or drilled-hole preservation.
+
+A healthy subset is not a healthy complete baseline. The final comparator
+still holds on CHG_EN0's separate copper graphic and the physical outline's
+vertex witness. The latter misses a2.423556um limit by62.1nm even though the
+full boundary is within a separately derived10.137um tessellation envelope;
+distinguish representation precision from a manufacturing-rule violation.
+The jumper's native graphic has zero stroke and declared net-tie groups.
+Before calling its0.100045mm fragment mismatch electrical damage, examine
+the complete pad/bridge union and source intent. Neither question was resolved
+by another run: three attempts were exhausted and all twelve prepared
+controls remained unexecuted. See the final October13 ledger outcome.
+
 **Routing-only applicability, October13:** exact native/render keepout
 identity is a different question from preservation of the forbidden area.
 The full58-keepout diagnostic compares all147 track/via/pad/pour-layer
