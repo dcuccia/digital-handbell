@@ -7,7 +7,44 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October14,11:51 checkpoint: paired configured DRC completed; six changed open witnesses remain held.**
+**Current October14,12:30 checkpoint: the isolated twelve-width repair is qualified.**
+Exact `117cbe9a...` is now retained as a **twelve-VCORE-width-only diagnostic
+improvement**, not a completed core repair or accepted product board.
+Configured all-track DRC gives393 violations/64 width findings/34 opens/
+46 parity versus405/76/34/46 for `05857d58...`; the complete non-width and
+parity multisets are unchanged.
+
+One1.313s static execution of helper `6bb9c9f0...` produced supplement
+`daae6897...` and receipt `41999f02...`. All six changed open representatives
+are proven equivalent: four exact F.Cu segment joins, the I2S_LRCLK track at
+the source-qualified rectangular U4 land centre, and SCL track copper
+reaching the actual via annulus. Old/new representatives share their saved
+native component; each untouched other endpoint stays in a distinct
+component. All12 unmatched raw records are persisted,28 records remain
+exact, and the healthy baseline plus five real negative controls pass,
+including an altered pad position. Root independently verified these
+results and every bound input at12:30:10. The original strict raw comparison
+remains HELD as an exact-record result; this source-bound supplement
+resolves electrical equivalence without normalizing away the mismatch.
+
+Use the hash-identical **`quilter\drc-recovery-20261014T1139\candidate`**
+PCB/project/schematic package for any later authorized diagnostic work.
+Keep the original width-staging copy, timeout/lock residue, all unexecuted
+helpers, raw output and authoritative37-open board unchanged. This item
+made no PCB edit and performed no native load, fill, save or DRC.
+An initial timestamp-anchored window expired before executor work; the
+explicitly documented host-bound scheduling correction reused the unspent
+budget. Its one execution passed without retry.
+
+The width-validation blocker is closed. The earlier finite core/C18 route
+strategies remain rejected, so P1 connectivity/loop quality and P2-P4 have
+not become a go. The34 non-GND opens,64 other width subjects, CC2 and
+USB/power gates remain. Next is a bounded core/C18 engineering disposition
+using the existing named blockers, not another DRC/witness rerun or automatic
+routing/integration. No measured overall finishing-cost advantage is established.
+See `core_width_witness_disposition_2026_10_14` in the eight-output ledger.
+
+**Historical October14,11:51 checkpoint: paired configured DRC completed; six changed open witnesses remain held.**
 The post-timeout continuation authorized fresh, hash-identical short-path
 copies in private `quilter\drc-recovery-20261014T1139`. Baseline `05857d58`
 and candidate `117cbe9a` now complete **all-track, all-severity, parity-enabled

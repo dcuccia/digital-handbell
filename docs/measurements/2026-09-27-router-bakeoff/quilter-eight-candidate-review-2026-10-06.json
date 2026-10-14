@@ -1,5 +1,52 @@
 {
   "schema_version": 1,
+  "core_width_witness_disposition_2026_10_14": {
+    "authorization": "Owner11:54:34 explicitly requests autonomous completion and resolution of remaining errors. Static six-open representative disposition only; no further PCB repair or native execution.",
+    "scheduling_correction": "The initial11:54:34-12:09:34 window was anchored to the user-message timestamp and expired before the executor acted. Executor reports zero helpers/files/children under that window. Root read-only saved-evidence inspection returned at12:21:55, after that cutoff; no native or board operation occurred. At freshly observed host12:22:39 root explicitly corrected scheduling for the same unstarted static item under the continuing owner instruction, preserving the original unspent three-execution budget. Do not claim the first window was met or a new owner message at12:22.",
+    "window": "Host-bound12:22:39-12:37:39 including root review; prepare12:28; execution stops12:35:00, last hard30s start12:34:20 including reserve; report12:35:30. No native operations.",
+    "executor_agent": "edea0eaa-1b94-40b4-8e14-9b1771ddebc7",
+    "inputs": "Unchanged05857d58/117cbe9a boards, same-mode DRC6ad9400b/a25e9c04, saved native snapshot46436a1c, exact width/native stage4f630762 and parserbe6d4647. Strict HELD comparisonb857020a and old helperd39b4189 remain immutable.",
+    "scope": "Persist all12 unmatched raw records, uniquely pair six replacements by exact untouched item and source net, prove native component membership plus independent physical source attachments. No UUID normalization, net/count-only acceptance, DRC rerun, new routing or source integration.",
+    "review": "Root independently confirms all six old/new UUID pairs have the same exact saved net/native component. Snapshot bounds come from actual GetEffectiveShape copper; the original stage compares complete UUID/layer component maps. This supports source-bound proof, not generic bounding-box collision acceptance.",
+    "prepared_helpers": {
+      "v2_sha256": "47f7bb531a1a9f1c5a6d886bdaa2747ecd11a9f08080f46dca869f4aacdfaee4",
+      "v3_sha256": "a858d39cba904b6e4f24adcbdf324d673e1edd48c84076a0be9010ce20ea0117",
+      "status": "UNEXECUTED_PRESERVED",
+      "reviewed_correction": "Root reviewed all250 v3 lines. Requested explicit non-null/distinct component records, an actual pad-specific negative control, and control-failure persistence before first execution. Track/via proof must reach actual annular copper, not assume the drill centre is copper."
+    },
+    "v4_release": {
+      "helper_sha256": "6bb9c9f0b909ef7b3a58d0873caebdea1d3fc2a178e04bf0c431dd1ddea6f83e",
+      "review": "Root12:28:35 reviewed actual complete v3->v4 diff after full v3 review, checked parser interfaces, independently verified helper hash and absence of report/receipt/streams. Released one hard30s static execution only; no automatic retry.",
+      "status": "EXECUTED_ONCE; PASS"
+    },
+    "result": {
+      "report": "quilter\\drc-recovery-20261014T1139\\open-representative-supplement.v4.json",
+      "report_sha256": "daae68972901698205038aa43b241659f21af87bc5b0d0d7bb000abec9c07928",
+      "receipt_sha256": "41999f02410310a02697bfe32a398dd164dc590ce3fda55177df30ef4663e0d5",
+      "stdout_sha256": "4f26dd2e7aa122759551d41fbd202ccd0d7fc70032fc3d495308419eb0ee31d3",
+      "launched_local": "2026-10-14T12:28:56.259775-07:00",
+      "completed_local": "2026-10-14T12:28:57.569802-07:00",
+      "seconds": 1.313, "supervisor_exit": 0, "child_exit": 0,
+      "timed_out": false, "child_confirmed_exited": true,
+      "raw_records": "28 unchanged open records; six baseline and six candidate unmatched records all persisted; six uniquely paired replacements.",
+      "physical_witnesses": [
+        {"net": "~{ENABLE}", "method": "exact common F segment endpoint", "point_mm": [92.094587,108.3969]},
+        {"net": "VHI", "method": "exact common F segment endpoint", "point_mm": [109.517356,102.61653]},
+        {"net": "I2S_LRCLK", "method": "F track endpoint at source-qualified solid native U4 pad14 centre", "point_mm": [110.975323,88.412211], "pad": "smd rect0.8x0.28mm, no drill/custom offset; actual effective-copper bbox centre matches"},
+        {"net": "SCL", "method": "F track physically reaches actual via annulus", "point_mm": [100.893065,95.522843], "extent_plus_half_width_mm": 0.23222963440079945, "drill_radius_mm": 0.175175, "copper_radius_mm": 0.325325},
+        {"net": "VCORE", "method": "exact common F segment endpoint", "point_mm": [104.10392,99.8]},
+        {"net": "AMP_MUTE", "method": "exact common F segment endpoint", "point_mm": [98.268588,86.288108]}
+      ],
+      "topology": "For every pair old/new components are non-null and equal; untouched second item stays in its distinct non-null component; every physical path UUID remains in the representative component. Exact source geometry and stage before/after full component maps remain bound.",
+      "controls": "All six pass: healthy actual six-pair baseline; changed component, changed physical attachment, shifted I2S pad native position, missing unmatched record and duplicated unmatched record each rejected."
+    },
+    "operations": "One supervised static child, zero executed retries, native loads, DRC, saves, refills or PCB mutations. Old d39 helper plus v2/v3 remain preserved and unexecuted.",
+    "root_review": "At12:30:10 root independently verified supplement/receipt/strict-HELD hashes, all bound input hashes, all four gates/six controls, all12 raw-record occurrences, six complete physical witnesses and component assignments. Successful composite evidence resolves the six substitutions without altering the strict raw comparison.",
+    "root_disposition": "Qualify exact117cbe9a as the isolated twelve-VCORE-width-only diagnostic repair: all-track violations405->393, widths76->64, unchanged34 opens/46 parity and complete non-width findings. Source05857d58 and authoritative37-open board remain unchanged. No core connectivity/C18-loop acceptance, full-board/product release, measured finishing-cost win, P2-P4, integration or new cloud job.",
+    "next_scope": "Width-validation blocker is closed. Next is a bounded core/C18 engineering disposition using the existing rejected finite strategies and named obstacles, not another witness checker, native DRC, reconstruction or route resampling. Other64 widths, CC2 and USB/power gates remain outside this completed milestone.",
+    "root_final_check": "At12:33:07 all five authoritative files, all six exact recovery package files, original filled05857d58, historical repair plan and all four supplement-helper versions match their hashes. Ledger JSON and diff hygiene pass. Root reviewed the complete final ledger diff; only checkpoint publication remains.",
+    "status": "TWELVE_WIDTH_DIAGNOSTIC_REPAIR_QUALIFIED_BY_COMPOSITE_EVIDENCE"
+  },
   "core_width_validation_recovery_2026_10_14": {
     "authorization": "Owner11:38:42 explicitly resumes after the published timeout checkpoint52078a2 and asks to keep working autonomously. New bounded logged validation recovery only; original width item and failed DRC remain stopped/preserved.",
     "window": "11:38:43-11:53:43 including root review; execution stops11:50:30/report11:51:30; no120s native child starts after11:48:20 including10s reserve.",

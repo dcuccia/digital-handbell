@@ -348,7 +348,16 @@ classify each replacement against source-bound attachment evidence instead
 of normalizing away UUIDs or assuming equal counts prove equivalence.
 Persist unmatched records before evaluating proof gates. A supplement that
 only indexes segments/vias cannot prove a track-to-pad replacement; root
-rejected that helper before execution. The witness disposition remains held.
+rejected that helper before execution. A corrected source-bound supplement
+then resolved all six: four exact F segment joins, one solid rectangular
+pad-centre attachment and one actual track/via annular contact. For the pad,
+serialized shape/positive size/no drill and native effective-copper bounds
+qualified this specific centre; generic bbox overlap remains insufficient.
+A via's drill centre alone is not annular copper: check that real track
+extent reaches the ring. Require equal non-null representative components,
+a distinct unchanged other endpoint, and actual component/attachment/pad
+negative controls. Retain the strict raw HELD result beside that supplemental
+proof rather than rewriting it as an exact match. No open was removed.
 
 Prepared native-save comparisons must distinguish originally serialized
 UUIDs from transient IDs assigned to anonymous copper. Name every required

@@ -2,7 +2,26 @@
 
 ## Bounded engineering work
 
-- **October14,11:51 paired DRC recovered; open witnesses still held:**
+- **October14,12:30 twelve-width diagnostic repair qualified:**
+  Owner requests autonomous completion. One1.313s static child resolves
+  all six changed open representatives using four exact F segment joins,
+  one source-qualified solid U4 pad attachment and one real SCL annular
+  contact. Old/new native components match; each untouched open endpoint
+  stays in its distinct component. All12 unmatched records and six actual
+  controls are saved in daae6897; original raw HELD b857020a is preserved.
+  Composite evidence now qualifies exact117cbe9a's twelve VCORE width
+  corrections only:405->393 violations,76->64 widths, unchanged34 opens/
+  46 parity and other non-width findings. No new native run or PCB edit.
+  Source05857d58 and authoritative37-open board remain unchanged. Prior
+  unexecuted helpers and expired scheduling window remain disclosed; the
+  host-bound continuation reused its unspent budget, with zero retries.
+  Retain117cbe9a as the isolated width-repair checkpoint, not a completed
+  core/C18 repair, product acceptance or finishing-cost win. Those route
+  strategies remain blocked;64 widths, CC2, USB/power and P2-P4 remain.
+  Next needs a core/C18 engineering disposition, not more DRC/witness
+  validation, route resampling or automatic integration. Executor idle.
+  See core_width_witness_disposition_2026_10_14 in the eight-output ledger.
+- **Historical October14,11:51 paired DRC recovered; open witnesses still held:**
   Owner11:38 resumes the logged validation recovery. Fresh exact short-path
   baseline05857d58/candidate117cbe9a complete all-track/parity/all-severity
   DRC in39.860/3.047s, with405/393 violations,76/64 widths,34/34 opens

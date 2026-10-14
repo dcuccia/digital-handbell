@@ -11,16 +11,17 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
-**Current Quilter checkpoint, October14 11:51:** isolated `117cbe9a` changes
-only12 new VCORE widths to0.1778mm, with exact inverse-byte preservation and
-unchanged native connected components. Paired all-track/parity DRC now
-completes:405->393 violations,76->64 widths, unchanged34 opens/46 parity.
-Raw non-width/parity/remaining-width multisets pass. Acceptance remains held
-on six changed open representatives, not new opens or established damage.
-Root rejected an unexecuted supplement that omitted pad geometry and failure
-records. Next is their bounded saved-evidence disposition, not another DRC,
-restaging or route resampling. Earlier finite core/C18 routes remain rejected;
-P2-P4 are unstarted. See the [current handoff](agent-handoff-2026-10-01.md).
+**Current Quilter checkpoint, October14 12:30:** isolated `117cbe9a` is
+qualified as a twelve-VCORE-width-only diagnostic repair. Exact inverse-byte
+and unchanged native component proofs combine with all-track/parity DRC:
+405->393 violations,76->64 widths, unchanged34 opens/46 parity and non-width
+findings. Supplement `daae6897` proves physical equivalence for all six
+changed open representatives; the original raw HELD report remains preserved.
+One static child and six actual controls pass, with no new native operation.
+The authoritative37-open source is unchanged. Core connectivity/C18 loop
+quality remains blocked by the finite strategy results;64 widths, CC2,
+USB/power and P2-P4 remain. No product acceptance or demonstrated overall
+finishing-cost advantage. See the [current handoff](agent-handoff-2026-10-01.md).
 
 **Historical planning checkpoint, October14:** the
 [saved standard 1.1 repair plan](quilter-repair-plan-2026-10-14.md) covers all
@@ -194,15 +195,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**October14 11:51 stopping checkpoint:** the post-timeout continuation
-completed both configured all-track DRC runs on exact short-path copies.
-The12 selected width findings disappear with no other non-width/parity
-changes, but six substituted open representatives still need source-bound
-disposition. Preserve the strict HELD report and rejected unexecuted helper.
-Source05857d58 and the authoritative37-open board remain unchanged. Next is
-a bounded static witness supplement using saved component and pad/track/via
-evidence, not another native DRC, board reconstruction, additional route
-samples or routine closure. Core/C18 viability has not become a go.
+**October14 12:30 completed width-validation milestone:** retain exact
+`117cbe9a` as the isolated12-width diagnostic improvement. The six changed
+open representatives are now source-proven equivalent; no new native work
+was needed. Keep `05857d58`, the authoritative37-open board, strict raw HELD
+comparison and all failed/unexecuted evidence. This closes width validation,
+not core connectivity or C18 supply-loop quality. Next requires a bounded
+engineering disposition of the existing core/C18 blockers, not another
+checker, DRC, reconstruction, expanded route sampling or routine closure.
+P2-P4 remain unstarted; no integration or new cloud job is released.
 Exact evidence and limits are in the [handoff](agent-handoff-2026-10-01.md).
 
 **Historical October14 planning checkpoint:** use the
