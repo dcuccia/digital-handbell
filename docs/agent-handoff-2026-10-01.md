@@ -7,7 +7,49 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13,16:44 checkpoint: submitted once and running.**
+**Current October13,19:19 checkpoint: job complete; both outputs retained, neither accepted.**
+The placement-first job completed18:34:49.363 local,1h50m08.271 after launch,
+with two candidates and none at95%. Non-beta1.1 reports86.0082% routing,
+30 incomplete nets and zero service padstack-collision reports. Beta1.2
+reports94.2387%,12 incomplete nets and277 collisions. These are service
+counts, not native opens, independent repairs or DRC acceptance. Both
+archives and their PCB/project members are preserved privately in
+`quilter\outputs\placement-first-results-20261013T1904` under the established
+routing-bakeoff experiment root. No returned schematic was supplied.
+
+One source-bound static comparison preserves all104 component poses,209
+retained copper objects,63 zone definitions including31 footprint prohibitions
+and four GND planes, and the outline. Pad population/UUIDs remain325, but
+38 footprint subtrees differ by140 added zero atoms. Only123 are directly
+traced to omitted at-angle serialization; the remaining17 were not mapped
+reliably after child-order changes. Do not promote this partial evidence
+to a full all-pad/physical-native pass.
+
+The initial checker's209 total/zero added routing count only covers its
+UUID-indexed subset: actual totals are1563/1693 primitives, with1354/1484
+new anonymous objects. That is an inventory limitation, not missing copper
+or proof of invalid KiCad output. All eight physical copper thicknesses and
+seven dielectric thickness/Dk/loss/type rows remain; removed material labels
+and changed declaration/setup metadata are distinct from layer/plane loss.
+Both returned projects change hole-clearance minima0.25->0.20mm, minimum
+resolved spokes2->1 and netclass rules, among97 JSON deltas. Do not use these
+returned defaults as the intended DRC configuration.
+
+Reported C23/C24 IMU supply routes are short and zero-transition; non-beta
+C18 remains12mm/two switches, while beta reduces it to2.6mm/zero switches.
+USB remains incomplete or fails coupling checks, and V+ current screens fail.
+The best overall percentage is below the previous94.6502%; no finishing-time
+advantage has been demonstrated. Next is a bounded field/configuration
+disposition followed by native DRC on isolated copies under intended rules.
+No KiCad load, DRC, refill, repair, integration or new cloud job occurred.
+Two supervised static children completed in2.281s/2.094s; root rechecked
+all five authoritative source hashes unchanged at19:18:09.
+
+See `continuation_2026_10_13.returned_output_review_1904` in the eight-output
+ledger for exact archive/report hashes, corrected interpretations and limits.
+The executor is idle; this bounded review has stopped.
+
+**Historical October13,16:44 checkpoint: submitted once and running.**
 Existing [job6acd3f5501e64eae4591facd](https://app.quilter.ai/jobs/6acd3f5501e64eae4591facd)
 launched at16:44:41.092 local. One normal-UI Start Job request returned200;
 the subsequent job response reports `running` / `full_layout`, and the UI

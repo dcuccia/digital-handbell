@@ -2,6 +2,26 @@
 
 ## Bounded engineering work
 
+- **October13,19:19 placement-first outputs reviewed; neither accepted:**
+  Job6acd3f5501e64eae4591facd completed18:34:49 after1h50m08 with two
+  candidates: non-beta1.1 reports86.0082%/30 incomplete nets/no service
+  padstack collisions; beta1.2 reports94.2387%/12/277. Those are not native
+  opens or independent defects. Both native archives are preserved under
+  placement-first-results-20261013T1904. One static comparison preserves
+  all104 poses,209 retained copper,63 zones/31 footprint prohibitions/four
+  planes and outline. Thirty-eight footprints differ by140 explicit zeros;
+  only123 are directly mapped to omitted at angles, so full-pad proof is
+  held. New anonymous copper totals1354/1484 objects; the first checker's
+  UUID-only209/zero-additions census is not the actual routing population.
+  Physical stack thickness/Dk/type rows remain; material labels/settings
+  differ, not missing layers. Returned projects change hole minima, spokes
+  and netclass rules; use intended input rules for any later isolated DRC.
+  IMU supply paths are encouraging but USB/power and beta collision gates
+  remain. No native load/DRC/refill, repair, merge or new job occurred.
+  Two hard30s static children completed; stop this bounded review, retain
+  all evidence and the unchanged37-open source. Next is concrete field/
+  configuration disposition and separately bounded native DRC, not rerouting.
+  See returned_output_review_1904 in the October13 eight-output ledger.
 - **October13,16:44 placement-first eight-layer job submitted once:**
   Existing job6acd3f5501e64eae4591facd launched16:44:41.092 and reports
   running/full_layout. Comparator b79d2a8f/report34424849 and all13 actual

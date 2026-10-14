@@ -1,6 +1,98 @@
 {
   "schema_version": 1,
   "continuation_2026_10_13": {
+    "returned_output_review_1904": {
+      "scope": "Owner19:03:46 reported this job completed. Bounded19:04-19:19 read-only service/native-format review; preserve both raw archives and compare exact corrected input before judging routing benefit. No KiCad load, DRC, refill, repair, manual routing, integration or new job.",
+      "status": "COMPLETED_JOB; BOTH_OUTPUTS_PRESERVED; STATIC_PRESERVATION_PARTIAL_AND_HELD",
+      "job": {
+        "state": "complete",
+        "candidate_count": 2,
+        "successful_candidate_count": 0,
+        "finished_local": "2026-10-13T18:34:49.363-07:00",
+        "elapsed": "1h50m08.271s",
+        "first_result": "39m34.353s after launch, consistent with rounded UI39m35s",
+        "shared_placement_id": "6acec40840c46956aa9f5b33",
+        "job_response_sha256": "4b59aa372ef41729c53a2aa9361f830ba5193d5635f1fb993a481797cc0e0472"
+      },
+      "private_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-first-results-20261013T1904",
+      "download": "Normal Complete Board -> Free Tier confirmation -> Download for each existing candidate. Archives have exactly handbell.kicad_pcb and handbell.kicad_pro; no returned schematic. Both original ZIPs and extracted members are preserved separately. No price, payment or new agreement.",
+      "candidates": [
+        {
+          "label": "1.1",
+          "beta": false,
+          "id": "6acecbafa7022bc539416989",
+          "routing_completion": 0.8600823045267489,
+          "service_incomplete_nets": 30,
+          "service_padstack_collisions": 0,
+          "service_vias": 117,
+          "service_min_width_um": 162.0,
+          "service_min_clearance_um": 200.0,
+          "zip_sha256": "aa4f90b216f0a751c9468cf5e1fbb9dee132ece6be303d2e1c2e32317a21501d",
+          "pcb_sha256": "1adf790707a6afc7f654c66924d04a8f369f4c4f4de8ef41c8590e8aacf32f38",
+          "project_sha256": "8b1a02867b99a61e2ab86855ebb9707669e0060626ba5bf19853663f308ef90d",
+          "service_detail_sha256": "d41f8c7af5c5e55a316838e6d19b303da9ddedba47e1e651d2ff5df9c51933cf",
+          "reported_electrical": "C23->IC4.5 supply path1.677271mm and C24->IC4.8 path1.759681mm, both zero layer switches. C18->IC1.23 remains12.041860mm/two switches. D+/D- path checks error; USB_D pair length mismatch17.152565mm and uncoupled length20.682254mm fail. V+ current screen fails; five power entries error.",
+          "prc_individual_checks": {"pass": 93, "fail": 5, "error": 8},
+          "native_primitive_totals": {"segments": 1446, "vias": 117, "total": 1563, "added_segments": 1255, "added_vias": 99}
+        },
+        {
+          "label": "1.2",
+          "beta": true,
+          "id": "6acedc083778a4afb52798e8",
+          "routing_completion": 0.9423868312757202,
+          "service_incomplete_nets": 12,
+          "service_padstack_collisions": 277,
+          "service_vias": 198,
+          "service_min_width_um": 160.00000718365612,
+          "service_min_clearance_um": 200.0,
+          "zip_sha256": "944e35f72348f92eb3b3a788d702abe60eff5dc49c54781169065ecfab94d9e8",
+          "pcb_sha256": "96e7ab05fdad5541cd600a5e65bdd5ba7a0b82bb4422285e723312b8b095b509",
+          "project_sha256": "8b1a02867b99a61e2ab86855ebb9707669e0060626ba5bf19853663f308ef90d",
+          "service_detail_sha256": "de863223db5fcfb729b7c0df29e1f1900ff43bfa7392e1857eddffedcaad3ffc",
+          "reported_electrical": "C23->IC4.5 supply path2.787079mm and C24->IC4.8 path3.526018mm, both zero switches; C18 improves to2.625973mm/zero switches. D+/D- checks still error; USB_D uncoupled length12.864640mm fails despite length-mismatch pass. V+ current screen fails; six power entries error.",
+          "prc_individual_checks": {"pass": 95, "fail": 2, "error": 9},
+          "native_primitive_totals": {"segments": 1495, "vias": 198, "total": 1693, "added_segments": 1304, "added_vias": 180}
+        }
+      ],
+      "metric_limits": "These are attributed service metrics, not native opens, independent defect counts, ampacity or electrical acceptance. UI category totals differ from underlying106 individual PRC checks. Do not subtract30/12 incomplete nets from184 input or37 authoritative native-open records. Missing paths can make checks unexecutable, not fixed.",
+      "executor": {
+        "id": "b2eb4193-c88f-4ab7-982b-c1a883ef5f8f",
+        "model": "gpt-5.6-sol",
+        "effort": "medium",
+        "started_event": "a590239b-9a86-40f6-9fe5-6c73803d6665",
+        "configured_event": "e5ea1593-5e10-4f95-81c7-df55f1c9b134",
+        "probe_completed_event": "3e28fe21-dd1e-40db-95eb-10398725f547",
+        "runtime_archive_sha256": "b88179c6693020a1bff49f99c352dd46959b2a71501bdc1b251e8a11888c0895"
+      },
+      "static_result": {
+        "checker": "static_returned_preservation_cli.executed-1a9039b1.py",
+        "checker_sha256": "1a9039b175fefeb528810273c1f315f67e6996020ad7f82d6a1422cdf7d5a131",
+        "report": "static-preservation-combined-initial-report.json",
+        "report_sha256": "e21d543872050d49785b5ddc2e93ef4bfe30b4235fa26dc818b0f19e56d14de1",
+        "receipt_sha256": "e25677d9a03d9ecd7e65f6cc899aeabfea03dc075b241e77192974bebc96ee16",
+        "execution": "One combined initial Python3.11 child,2.281s, exit2, no timeout under hard30s. No native APIs or output modification.",
+        "preparation": "Root rejected invented global pad transforms before execution. Corrected checker reports serialized local XY/global angle only and compares complete source subtrees. Initiald207 preparation was unexecuted and not separately archived; the executed revision is preserved. No general validator qualification claimed.",
+        "preserved": "Both preserve104 component poses/UUID/reference populations, all209 retained copper objects by exact normalized subtree/UUID, all63 zone definitions including31 footprint prohibitions and four GND planes, and outline/other-board structures. Both contain325 pads with no missing/duplicate pad UUID finding.",
+        "footprint_hold": "38 footprint subtrees differ by140 explicit zero atoms. No changed net/drill/layer/size value was identified. The supplement directly traces123 omitted-zero at-angle insertions; its positional traversal misses17 because child ordering changes. Semantic leaf depth alone does not bind those remaining parent fields. Root does NOT accept the executor's full140-angle proof claim; complete default-zero disposition remains before an all-pad-subtree pass. Do not revive the removed invented global-coordinate calculation.",
+        "new_copper_inventory_limit": "New tracks/vias lack serialized UUIDs. The initial checker counts only its UUID-indexed population as routing_objects_total209 and routing_additions0; those are NOT actual copper totals and must not be cited as no new routing. Missing new UUIDs do not by themselves establish invalid KiCad geometry or lost retained copper.",
+        "stack_disposition": "Root inspected full baseline/candidate setup trees and corrected executor prose: physical stackup IS present. Eight copper and seven dielectric thickness/type/Dk/loss rows remain; material labels and copper_finish are removed, F.Paste is added, dielectric_constraints changes and solder_mask_min_width is added. Inner power->signal declaration changes are not proof of lost plane copper.",
+        "project_hold": "Both returned projects are identical to each other but have97 exact JSON differences from configured input. Includes hole-clearance and hole-to-hole minima0.25->0.20mm, minimum resolved spokes2->1, netclass width/via changes, omitted fields and integer/float serialization differences. Returned defaults must not replace the intended DRC configuration.",
+        "next_gate": "Finish concrete field/anonymous-copper disposition, then separately bounded configured native DRC on isolated output copies. Keep source project/stackup intent separate from returned settings; no automatic correction of raw outputs."
+      },
+      "read_only_supplement": {
+        "report": "static-initial-readonly-supplement.json",
+        "report_sha256": "d939b1be163f49deacd4855f39d03dda96decd5691c6171cc861d723692d82d7",
+        "receipt_sha256": "6a1e41847dd3adfc31474c8f999b2f2520d87c442e39fe6c9040264a23715a61",
+        "helper_sha256": "f4eb786b20bd595984b6b5b92185df0cc3851cb5885fd3946e37c5ef798124ac",
+        "execution": "One read-only hard30s static child,2.094s, exit0, no timeout. Root subsequently read complete helper; its output is diagnostic, not acceptance.",
+        "accepted_evidence": "Direct counts establish1563/1693 total routing primitives and1354/1484 anonymous additions. Project class names remain Default/power/thickpower. Direct project JSON deltas are retained.",
+        "limits": "Positional child traversal cannot resolve every reordered footprint child; only123 of140 zero insertions are directly traced. Positional stack rows are shifted by F.Paste; physical-row preservation comes from root's independent named-row review of the complete initial setup trees, not these index-paired differences.",
+        "project_specifics": "power via diameter0.604->0.65mm; thickpower track width0.3048->0.1778mm, via diameter0.754->0.65mm and drill0.5->0.35mm; N$10->power pattern removed. Rule-severity table and other fields omitted. These are configured-rule differences, not permission to apply them."
+      },
+      "assessment": "Local IMU supply-path reports are encouraging, but no overall closure advantage is demonstrated: best94.2387% is below earlier94.6502%, with unresolved USB/power and277 unclassified beta collision reports. Native preservation/electrical review is not complete; neither candidate is accepted.",
+      "source_check": "Root19:18:09 rehashed all five authoritative37-open source files; unchanged. Raw outputs and corrected uploaded input remain unchanged.",
+      "next": "Stop this bounded review at its checkpoint. Preserve both candidates for a specific configuration/native-DRC disposition, not another cloud run, support loop, manual closure or integration."
+    },
     "submission_outcome": {
       "status": "SUBMITTED_ONCE_AND_RUNNING",
       "job_id": "6acd3f5501e64eae4591facd",

@@ -172,6 +172,32 @@ without saving; its evidence was excluded and bytes remained unchanged.
 These lessons and exact hashes are in `paired_diagnostic_2026_10_06_1321`
 in the eight-output ledger. No extra retry or product acceptance follows.
 
+**Placement-first return, October13:** two outputs arrived in1h50m instead
+of the earlier eight-layer job's4h31m, but fewer candidates and a different
+input prevent attributing the runtime difference solely to placement.
+Non-beta1.1 reports86.01%/30 incomplete nets/no padstack collisions; beta1.2
+reports94.24%/12 incomplete nets/277 collisions. Short zero-transition IMU
+supply paths are useful local evidence, not an overall closure win. USB
+and power gates remain; beta's better C18 path does not dispose its collisions.
+
+Check native export metadata separately from physical content. Both preserve
+the retained209 copper and all63 zone definitions, yet their projects lower
+hole-clearance/hole-spacing minima and alter spokes/netclass rules. The
+physical copper/dielectric thickness, Dk and type rows remain despite removed
+material labels and changed declaration/setup fields. Do not call this lost
+stackup or silently adopt returned rules. Preserve the original download,
+and use an explicitly isolated intended-configuration copy for later DRC.
+
+New native routing can lack serialized UUIDs even while retained objects
+keep theirs. A UUID-only dictionary then undercounts real additions: this
+review initially reported209 objects/zero additions, while direct primitive
+counts found1563/1693 objects. Retained-UUID preservation and new-copper
+inventory need separate strategies. Anonymous new objects are not by
+themselves proof of invalid output. Likewise, explicit zero-angle insertions
+can reorder serialized children; positional traversal verified only123 of
+140 zero deltas here. Keep the remaining mapping uncertainty rather than
+calling every zero a qualified default or rerunning an unchanged checker.
+
 **Attributed continuation guidance, October12:** Justin recommends editing
 a placement and returning it for routing. Beta candidates may still be
 generated; ignoring them is not the same as disabling that router. Use
