@@ -7,7 +7,38 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October14,11:35 checkpoint: partial core-width derivative staged; acceptance held by DRC timeout.**
+**Current October14,11:51 checkpoint: paired configured DRC completed; six changed open witnesses remain held.**
+The post-timeout continuation authorized fresh, hash-identical short-path
+copies in private `quilter\drc-recovery-20261014T1139`. Baseline `05857d58`
+and candidate `117cbe9a` now complete **all-track, all-severity, parity-enabled
+DRC without refill/save** in39.860/3.047 seconds. Violations fall405->393,
+width findings76->64; opens remain34 and parity46. The full non-width and
+parity multisets are unchanged, and the remaining width multiset is exactly
+the baseline minus the12 authorized VCORE subjects. All three actual
+comparison controls pass. The earlier timeout and its lock residue remain
+preserved; successful recovery does not establish its cause.
+
+The raw comparison `b857020a...` remains **HELD**, because six open records
+select different first-item representatives on ~{ENABLE}, VHI, I2S_LRCLK,
+SCL, VCORE and AMP_MUTE. Each second item is unchanged. These are not six
+additional opens, and the existing native stage proves unchanged components,
+but a source-bound disposition of each replacement is still missing.
+The comparator omitted the requested unmatched-record details. Root inspected
+them from the two complete preserved reports, then rejected the unexecuted
+supplement `d39b4189...`: its segment/via-only inventory cannot cover the
+I2S_LRCLK pad, and an early exception would again omit failure records.
+
+Stop this recovery at its existing cutoff. Preserve all exact copies,
+`comparison.json`, native receipts/reports and the unexecuted supplement.
+Next is a bounded **static six-witness disposition**, including saved
+pad/track/via attachment evidence and persisted unmatched records before
+classification. No new native load/DRC, reconstruction or geometry search is
+needed for that question. The12-width diagnostic is not yet accepted as a
+completed repair; core connectivity/C18 quality, the other64 widths, CC2,
+USB/power and P2-P4 remain unresolved. No source integration or cloud job.
+See `core_width_validation_recovery_2026_10_14` in the eight-output ledger.
+
+**Historical October14,11:35 checkpoint: partial core-width derivative staged; acceptance held by DRC timeout.**
 The owner resumed at11:01 and requested continued work. Two native screens
 now provide real, bounded negative geometry evidence: all12 F core/C18 paths
 fail foreign-copper clearance, and both off-contact whole-span sites plus18

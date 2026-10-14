@@ -2,7 +2,24 @@
 
 ## Bounded engineering work
 
-- **October14,11:35 core widths staged; DRC validation held:**
+- **October14,11:51 paired DRC recovered; open witnesses still held:**
+  Owner11:38 resumes the logged validation recovery. Fresh exact short-path
+  baseline05857d58/candidate117cbe9a complete all-track/parity/all-severity
+  DRC in39.860/3.047s, with405/393 violations,76/64 widths,34/34 opens
+  and46/46 parity. No refill/save, timeout or native retry. Full raw
+  non-width/parity and remaining-width multisets pass; exactly12 selected
+  VCORE width findings disappear. Three real comparison controls pass.
+  Raw open comparison remains HELD: six changed representatives on ENABLE,
+  VHI,I2S_LRCLK,SCL,VCORE,AMP_MUTE, not six new opens. Existing native
+  components remain equal, but individual replacement witnesses are not
+  yet qualified. Root stops an unexecuted supplement: it omits the I2S pad
+  geometry and would raise before saving failure records. Preserve that
+  helper and original HELD comparison. Executor stopped; no new board edit.
+  Timeout cause remains unknown; no lock/path causal claim. Next is one
+  bounded saved-evidence witness disposition, not another DRC or rebuild.
+  No completed core repair, reduced opens, P2-P4, integration or new job.
+  See core_width_validation_recovery_2026_10_14 in the eight-output ledger.
+- **Historical October14,11:35 core widths staged; DRC validation held:**
   Owner11:01 resumes and says keep going as needed. Native recovery now
   rejects all12 finite F core/C18 proposals on foreign-copper clearance.
   False hole hits on zero-drill SMT pads are withdrawn by saved-inventory

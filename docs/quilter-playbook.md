@@ -338,6 +338,18 @@ reconstruct an overwritten helper revision from its hash. See the three
 October14 continuation entries in the
 [source-bound ledger](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json).
 
+The separately authorized paired recovery completed without refill/save:
+39.860s baseline and3.047s candidate, with exactly12 width findings removed
+and unchanged complete non-width/parity multisets. This does not explain
+the earlier timeout or prove a path/lock workaround. Raw open witnesses can
+select different objects: six records changed representatives while counts
+and saved native components stayed unchanged. Preserve the strict mismatch;
+classify each replacement against source-bound attachment evidence instead
+of normalizing away UUIDs or assuming equal counts prove equivalence.
+Persist unmatched records before evaluating proof gates. A supplement that
+only indexes segments/vias cannot prove a track-to-pad replacement; root
+rejected that helper before execution. The witness disposition remains held.
+
 Prepared native-save comparisons must distinguish originally serialized
 UUIDs from transient IDs assigned to anonymous copper. Name every required
 invariant explicitly: suffix-filtering Boolean fields omitted a nonfill

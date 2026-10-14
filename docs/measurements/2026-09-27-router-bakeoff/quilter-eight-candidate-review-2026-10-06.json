@@ -1,5 +1,63 @@
 {
   "schema_version": 1,
+  "core_width_validation_recovery_2026_10_14": {
+    "authorization": "Owner11:38:42 explicitly resumes after the published timeout checkpoint52078a2 and asks to keep working autonomously. New bounded logged validation recovery only; original width item and failed DRC remain stopped/preserved.",
+    "window": "11:38:43-11:53:43 including root review; execution stops11:50:30/report11:51:30; no120s native child starts after11:48:20 including10s reserve.",
+    "executor_agent": "edea0eaa-1b94-40b4-8e14-9b1771ddebc7",
+    "scope": "Fresh short-path hash-identical PCB/pro/sch copies of baseline05857d58 and width derivative117cbe9a, intended917b/ec93 dependencies, no old lock copies/deletions. At most two all-track/parity native runs, baseline first; stop on first timeout/failure. No geometry edit, width restaging, refill/save, source integration or cloud action.",
+    "runtime": "Same actual verified Sol/medium executor; existing kill-on-close supervisor with persistent streams/receipts, hard120s per native child and hard30s static children.",
+    "mode": "--format json --units mm --all-track-errors --schematic-parity --severity-all; no --refill-zones or --save-board.",
+    "comparison": "Raw complete non-width/open/parity multisets unchanged; candidate width multiset equals new same-mode baseline minus exactly12 selected records. Do not transplant default405/393 totals or relabel the prior unexecuted default comparator.",
+    "prior_success_limit": "Root read the actual prior fill-drc-1.1 receipt: its2.953s success INCLUDED --refill-zones --save-board. That differs from the width timeout and this recovery. Do not attribute outcomes solely to path/lock context or silently add fill flags.",
+    "directory": "quilter\\drc-recovery-20261014T1139",
+    "manifest_sha256": "14b3972319d1d7206a7721af77ca8aaabdc03695ce0c94b4fc25bac656cbf065",
+    "helper_sha256": "8eaaca8e2449b1d84fbc6e7b1660885d727ffd002be8114761f22cb36d128299",
+    "preparation": "Supervised preparation completed0.359s; separate hard30s AST preflight passed. Six PCB/pro/sch copies are byte-identical and each directory initially contains exactly those three files, no locks. Root independently verified this at11:42:45 and reviewed the complete145-line helper and native commands before release.",
+    "logging_limit": "Existing supervisor records PID, timestamps, elapsed time, stream hashes and termination. No CPU sampler or new watchdog was added; prior timeout mechanism remains unresolved.",
+    "native_runs": [
+      {
+        "label": "baseline",
+        "pcb_sha256": "05857d580f37294177d7b4be91b5edb958c82806cb7b414749960f63cf70062c",
+        "report_sha256": "6ad9400b3bd2b369ff04dfbd8f55ae97365e1ae4ef7b336eadae0152b2570895",
+        "receipt_sha256": "fba9f4fc56cf8326fbedeade7ee1074d6ee6bfd9ac8849bd976581731671675d",
+        "launched_local": "2026-10-14T11:43:25.422507-07:00",
+        "seconds": 39.86,
+        "violations": 405, "width_findings": 76, "opens": 34, "parity": 46
+      },
+      {
+        "label": "candidate",
+        "pcb_sha256": "117cbe9afaf9de77426e0e869dba19fd1338956da1583982bfec7d34a9d2b082",
+        "report_sha256": "a25e9c043a72d2c7f7fa195f71acee4df12ddec6251508cdd35553a56880f9ec",
+        "receipt_sha256": "dc39011b9c391bc1351612533f95041858e7fd42ac1339168cae9abb0b767a9b",
+        "launched_local": "2026-10-14T11:44:20.493637-07:00",
+        "seconds": 3.047,
+        "violations": 393, "width_findings": 64, "opens": 34, "parity": 46
+      }
+    ],
+    "native_disposition": "Both hard120s runs exit0, confirmed exited/no timeout, no refill/save and no remaining lock in either fresh directory. Root independently verified both report/receipt hashes and success states11:45:32. Different39.860/3.047s runtimes and earlier timeout cause remain unexplained. Root's one read-only startup-state observation found the baseline already completed, so no live CPU sample was obtained.",
+    "raw_comparison": {
+      "report_sha256": "b857020abdb5d8a5f237e8dc4b9b2993cf7547172465561a85123bdbf5b5dc8a",
+      "receipt_sha256": "bcd915d7bbf4136e6cae4cc6eeb96f3d726678822364986eaac7b82af04ce6a4",
+      "seconds": 0.234, "exit": 2, "timed_out": false,
+      "passed": ["raw_non_width_multiset_equal", "raw_parity_multiset_equal", "remaining_width_multiset_exact", "width_delta_exactly_12"],
+      "failed": ["raw_open_multiset_equal"],
+      "controls": "All three executed controls pass: healthy baseline-minus12, changed non-width description rejected, added unrelated width rejected.",
+      "limitation": "Helper persisted the failed gate but omitted exact unmatched records despite the requested failure evidence. Root's read-only inspection finds six replaced first-item representatives, with unchanged second items, on ~{ENABLE}, VHI, I2S_LRCLK, SCL, VCORE and AMP_MUTE. Equal counts alone do not disposition these12 unmatched raw record occurrences."
+    },
+    "supplement_review": {
+      "helper": "core-width-repair-1122\\open_representative_supplement.py",
+      "sha256": "d39b418997ea355da16c33202351a65fc54859cafaf889750ca5eb1c6b32d856",
+      "status": "ROOT_REJECTED_BEFORE_EXECUTION",
+      "reason": "Root reviewed all130 lines. source_primitives indexes only segments/vias, so known I2S_LRCLK candidate pad74a63c23 is necessarily absent. require raises before the final report write and would again omit unmatched failure evidence. Do not run a known-failing helper or extend the11:50:30 execution cutoff.",
+      "limit": "Saved native component equality is encouraging; exact paired representative attachments are not yet qualified. No source damage or new open is inferred from differing representatives."
+    },
+    "operations": "Five supervised children: recovery-helper AST, exact copy/manifest preparation, baseline DRC, candidate DRC, raw comparison. Exactly two native runs, zero native saves/refills, zero geometry changes or supplement executions.",
+    "stopping_record": "Executor confirms stopped. Supplement request received11:48:35.121; root rejection received11:50:51.887, after the11:50:30 execution cutoff. No instrumented preparation completion timestamp exists, so meeting the requested11:49:15 preparation target is not established. No correction or execution occurred after cutoff; preserve the unexecuted helper.",
+    "root_disposition": "Retain unchanged117cbe9a and all evidence. Paired native validation recovered and exact12 width findings are removed without non-width/parity changes, but strict open comparison remains HELD. No completed core repair, fewer-open claim, source integration, P2-P4 or new cloud job. No further execution in this item.",
+    "next_scope": "One separately bounded static disposition of the six changed open representatives using saved source component plus pad/track/via attachment evidence. Persist all unmatched raw records before classification. No native rerun, board reconstruction, new geometry sampling or generic checker rebuild.",
+    "root_final_check": "At11:52:49 all five authoritative hashes, both recovery PCB hashes, strict comparison/report receipt and unchanged historical repair-plan hash match. Ledger JSON and diff hygiene pass. Executor is confirmed idle; only documentation publication follows.",
+    "status": "PAIRED_ALL_TRACK_DRC_COMPLETE; SIX_OPEN_REPRESENTATIVES_HELD; EXECUTION_STOPPED"
+  },
   "core_width_repair_2026_10_14": {
     "authorization": "Owner's implementation continuation and root exact-delta release cover only12 new VCORE F widths0.162->0.1778mm. Connection/C18 failures do not become a go for general closure. This partial critical-core repair remains isolated from the authoritative37-open source.",
     "window": "11:22-11:37 root; execution stops11:34:30/report11:35:30; no90s start after11:32:50 including10s reserve.",

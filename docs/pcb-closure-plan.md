@@ -11,14 +11,16 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
-**Current Quilter checkpoint, October14 11:35:** isolated `117cbe9a` changes
+**Current Quilter checkpoint, October14 11:51:** isolated `117cbe9a` changes
 only12 new VCORE widths to0.1778mm, with exact inverse-byte preservation and
-unchanged native connected components. It is held, not accepted: configured
-DRC timed out90.266s without a report; paired all-track validation is absent.
-Finite F and whole-span access screens found actual fixed-copper blockers,
-not global impossibility. Preserve all originals and failures. P2-P4 remain
-unstarted; next is bounded logged validation recovery, not restaging or route
-resampling. See the [current handoff](agent-handoff-2026-10-01.md).
+unchanged native connected components. Paired all-track/parity DRC now
+completes:405->393 violations,76->64 widths, unchanged34 opens/46 parity.
+Raw non-width/parity/remaining-width multisets pass. Acceptance remains held
+on six changed open representatives, not new opens or established damage.
+Root rejected an unexecuted supplement that omitted pad geometry and failure
+records. Next is their bounded saved-evidence disposition, not another DRC,
+restaging or route resampling. Earlier finite core/C18 routes remain rejected;
+P2-P4 are unstarted. See the [current handoff](agent-handoff-2026-10-01.md).
 
 **Historical planning checkpoint, October14:** the
 [saved standard 1.1 repair plan](quilter-repair-plan-2026-10-14.md) covers all
@@ -192,13 +194,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**October14 11:35 stopping checkpoint:** the owner's continuation produced
-finite native rejection evidence and a12-width-only derivative117cbe9a.
-Source05857d58 and the authoritative board remain unchanged. The derivative's
-DRC timed out; no report, acceptance or reduced-open claim is available.
-Stop dependent native/repair work, preserve lock/streams/receipts, and reuse
-the exact candidate for a separately bounded validation recovery. Do not
-restart construction, expand site samples or proceed to routine closure.
+**October14 11:51 stopping checkpoint:** the post-timeout continuation
+completed both configured all-track DRC runs on exact short-path copies.
+The12 selected width findings disappear with no other non-width/parity
+changes, but six substituted open representatives still need source-bound
+disposition. Preserve the strict HELD report and rejected unexecuted helper.
+Source05857d58 and the authoritative37-open board remain unchanged. Next is
+a bounded static witness supplement using saved component and pad/track/via
+evidence, not another native DRC, board reconstruction, additional route
+samples or routine closure. Core/C18 viability has not become a go.
 Exact evidence and limits are in the [handoff](agent-handoff-2026-10-01.md).
 
 **Historical October14 planning checkpoint:** use the
