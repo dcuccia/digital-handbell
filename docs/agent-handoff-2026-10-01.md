@@ -7,6 +7,14 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**October14 support follow-up:** the owner requested a
+[focused email draft to Quilter](quilter-support-email-2026-10-14.md).
+It references the exact project/job/candidate, original input, raw standard
+1.1 archive and separately labeled native diagnostics. This is a draft only:
+no message, upload, paid engagement or new job. Our prior tooling stop does
+not establish a need for expert redesign; seek targeted support guidance
+before commissioning independent layout help. PCB work remains stopped.
+
 **Current October14,12:56 checkpoint: coordinated core trial stopped at its contract gate; no routing repair.**
 The owner directed implementation of the proposed45-minute trial. Within
 its first15-minute item, two known obstacles were confirmed as Quilter-added:

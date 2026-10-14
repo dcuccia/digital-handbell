@@ -2,6 +2,12 @@
 
 ## Bounded engineering work
 
+- **October14 support follow-up is draft-only:** owner requests an email to
+  Quilter/Justin before independent layout help. Exact project/job/candidate,
+  uploaded inputs, untouched1.1 archive and separate native diagnostics are
+  referenced in docs/quilter-support-email-2026-10-14.md. No email, upload,
+  paid engagement, new job or engineering continuation is authorized by
+  drafting. The prior local tooling stop is not proof redesign is required.
 - **October14,12:56 coordinated core trial stopped without a repair:**
   Owner requests implementation of the proposed45-minute trial. Its first
   15-minute contract gate does not produce a qualified replacement plan.

@@ -1,0 +1,163 @@
+# Quilter support email draft
+
+Draft only. Not sent; no files uploaded and no new job requested or started.
+The attachment map below is for David, not part of the email.
+
+## Email
+
+**Subject:** Review request: handbell 8-layer candidate 1.1 - width minimum and MCU routing
+
+Hi Justin,
+
+Thanks for your earlier guidance on placement refinement and reviewing the
+non-beta results. I followed up with an eight-layer run using revised,
+preplaced components, and would appreciate a targeted review by someone
+familiar with the routing and PCB constraints.
+
+The specific project and result are:
+
+- **Project:** [Handbell flexible 4-6 layer comparison](https://app.quilter.ai/projects/6ac3d5b7fc0d2d776ed14a5f)
+  (`6ac3d5b7fc0d2d776ed14a5f`). The project name is historical; this job uses
+  an **eight-layer** stack.
+- **Job:** [handbell.kicad_pcb](https://app.quilter.ai/jobs/6acd3f5501e64eae4591facd),
+  completed October 13.
+- **Result:** standard/non-beta **candidate 1.1**, candidate ID
+  `6acecbafa7022bc539416989`, reported **86.0082% routing completion**
+  and **30 incomplete nets**. This is not beta candidate 1.2.
+
+Design background is in the public
+[digital-handbell repository](https://github.com/dcuccia/digital-handbell),
+but this review concerns the isolated eight-layer job input, not the
+repository's authoritative four-layer board.
+
+The input had 104 preplaced components and 209 intentionally retained
+routing objects (191 tracks and 18 vias). My questions are:
+
+1. **Trace-width minimum.** The saved job settings show
+   `minTraceWidthMicrons: 177.8` and `minClearanceMicrons: 200`.
+   Candidate 1.1 metadata reports `minTraceWidth: 162`, and KiCad identifies
+   76 newly generated F.Cu segments at **0.162 mm**, below the intended
+   **0.1778 mm** minimum. The retained input tracks were all at or above
+   that floor. Does the fanout exception you mentioned apply here, or is
+   this a constraint/export issue? I would like to understand this before
+   changing the minimum or widening the output.
+
+2. **Core/flash completion and decoupling.** On a separately saved,
+   locally zone-filled copy, KiCad still reports **34 unconnected records
+   across 30 non-GND nets**, including VCORE and all six QSPI nets. VCORE
+   leaves the C6.2/IC1.50 group separate from the group containing
+   C7.2, C8.1, C18.2 and IC1.23/.45. The service's C18-to-IC1.23 check also
+   reports about **12.04 mm and two layer switches**. Is there a specific
+   placement or constraint issue preventing a better core/flash escape and
+   local C18 supply/return arrangement? I am not treating that length alone
+   as proof of an electrical failure.
+
+3. **A targeted next step.** Could you recommend a concrete adjustment to
+   this input, or explain which limitation makes it better suited to manual
+   finishing? If a placement or retained-copper change is needed, please
+   identify the affected references/connections so I can review it before
+   another submission. The critical pre-routed blocks, battery-contact
+   copper/via exclusions, protected ground returns and battery-protection
+   isolation are intentional; I do not want to waive them simply to raise
+   the completion percentage.
+
+The reference files are the original `handbell.kicad_pcb`,
+`handbell.kicad_pro` and `handbell.kicad_sch`, the untouched download
+`candidate-1.1.zip`, and the native diagnostic reports `drc.json`
+(unfilled review) and `all-track.json` (filled review).
+The KiCad reviews use **10.0.6 and the originally supplied project rules**,
+not the different project defaults in the returned archive.
+
+For clarity, the unfilled output has **80** native unconnected records;
+the **34** figure is from the separately labeled filled diagnostic copy.
+The reports also contain inherited library, silkscreen, process and parity
+findings, so I am not attributing their total finding count to the router.
+A later local twelve-track width correction is excluded from the reference
+files for this request.
+
+My goal is to determine whether a specific, supported input adjustment would
+make Quilter an economical way to finish this design, rather than launch
+another broad experiment. If this kind of review is outside support's scope,
+please let me know so I can arrange an independent PCB-layout review.
+
+Thanks,
+David
+
+## Attachment map - local preparation notes, not email text
+
+Files below were checked on October 14. No new attachment bundle has been
+created. Use distinct folders/labels if packaging them: several files share
+the name `handbell.kicad_pcb`.
+
+Set `R` to this existing local directory:
+
+```text
+C:\Projects\dcuccia\digital-handbell-routing-bakeoff-20260927\quilter\outputs\placement-first-results-20261013T1904
+```
+
+Set `Q` to:
+
+```text
+C:\Projects\dcuccia\digital-handbell-routing-bakeoff-20260927\quilter
+```
+
+| Suggested attachment label | Existing source | Purpose / identity |
+|---|---|---|
+| `job-input\handbell.kicad_pcb` | `R\configured-native-review-20261013T2001\baseline\handbell.kicad_pcb` | Byte-identical uploaded input; SHA-256 `1e4e41a9...` |
+| `job-input\handbell.kicad_pro` | Same baseline folder, `handbell.kicad_pro` | Original intended rules; SHA-256 `917b3f16...` |
+| `job-input\handbell.kicad_sch` | Same baseline folder, `handbell.kicad_sch` | Original schematic; SHA-256 `ec93cc6f...` |
+| `candidate-1.1.zip` | `R\candidate-1.1.zip` | Untouched Quilter download; SHA-256 `aa4f90b2...` |
+| `diagnostics-unfilled\drc.json` | `R\configured-native-review-20261013T2001\candidate-1.1\drc.json` | Same raw PCB under original rules, no refill/save; 80 opens, 76 width findings; SHA-256 `49352d45...` |
+| `diagnostics-filled-1.1\handbell.kicad_pcb` | `Q\drc-recovery-20261014T1139\baseline\handbell.kicad_pcb` | Locally filled standard 1.1, not raw download and not width-repaired; SHA-256 `05857d58...` |
+| `diagnostics-filled-1.1\handbell.kicad_pro` | Same recovery baseline folder, `handbell.kicad_pro` | Original intended rules, `917b3f16...` |
+| `diagnostics-filled-1.1\handbell.kicad_sch` | Same recovery baseline folder, `handbell.kicad_sch` | Original schematic, `ec93cc6f...` |
+| `diagnostics-filled-1.1\all-track.json` | Same recovery baseline folder, `all-track.json` | All-track, all-severity, parity-enabled DRC on the saved filled copy; 34 opens, 76 width findings; SHA-256 `6ad9400b...` |
+
+The untouched ZIP contains the raw PCB `1adf7907...` and the **returned**
+project `8b1a0286...`. Keep that archive intact. To reproduce the unfilled
+review, place a separate copy of its PCB beside the **original** project
+`917b3f16...` and original schematic; do not overwrite the archived download.
+The existing configured-review `candidate-1.1` folder already provides this
+isolated arrangement.
+
+The filled diagnostic PCB was produced by a local KiCad fill/save after
+controlled mask-setting staging; it is **not** the original upload or raw
+Quilter export. Its `all-track.json` was subsequently produced without
+refilling or saving that PCB. Local twelve-width derivative `117cbe9a...`
+is deliberately omitted to avoid attributing our repair to Quilter.
+
+Do **not** attach `.kicad_prl`, `.lck`, browser/account captures, credentials,
+or our experimental checking scripts. In particular, `browser-evidence\job.json`
+contains account-related metadata and is not an attachment. The email quotes
+only the relevant job/project/candidate identifiers and design-rule fields.
+
+### Verified identities
+
+```text
+Uploaded PCB:
+1e4e41a9374959326756d74429a3c72285ece27a8442665653943fce2dc899e0
+
+Original project:
+917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c
+
+Original schematic:
+ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e
+
+Untouched standard 1.1 archive:
+aa4f90b216f0a751c9468cf5e1fbb9dee132ece6be303d2e1c2e32317a21501d
+
+Raw standard 1.1 PCB:
+1adf790707a6afc7f654c66924d04a8f369f4c4f4de8ef41c8590e8aacf32f38
+
+Raw returned project:
+8b1a02867b99a61e2ab86855ebb9707669e0060626ba5bf19853663f308ef90d
+
+Unfilled configured DRC:
+49352d459f9d2ef152b470e775eab3ac42de8d457e2463c914106cbc851b4c2d
+
+Locally filled standard 1.1 PCB:
+05857d580f37294177d7b4be91b5edb958c82806cb7b414749960f63cf70062c
+
+Filled all-track DRC:
+6ad9400b3bd2b369ff04dfbd8f55ae97365e1ae4ef7b336eadae0152b2570895
+```
