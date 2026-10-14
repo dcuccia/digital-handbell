@@ -2,6 +2,28 @@
 
 ## Bounded engineering work
 
+- **October13,20:28 configured native review completed; neither accepted:**
+  Owner20:00 requests field resolution and isolated DRC. All140 zero angles
+  now map to36 footprint/104 pad at nodes; full static subtrees and native
+  104 poses/325 pads match. All209 retained objects remain; native totals
+  are1563/1693, including anonymous routing. Exact intended project917b
+  and schematic were used on three unchanged isolated PCB copies, with
+  parity/all severities and no save/refill. Native non-open violations/
+  opens/parity are input427/184/46, standard1.1 458/80/46, beta1.2 716/36/46.
+  Standard has no short/copper-clearance findings but76 width and one
+  hole-clearance finding. Beta has7 short records/117 clearance/199 width/
+  one hole finding and nine additional keepout reports, six on contact
+  guards. Static below-floor new-segment census is76/255; default DRC
+  first-error-per-track reporting is not a complete width census.
+  All three files lack saved fill caches. Returned embedded mask-web0.1
+  versus absent input setting complicates50/64 mask reports; identical
+  project files are not identical embedded setup. Prefer1.1 diagnostically,
+  not acceptance or a demonstrated finishing-cost win. Seven supervised
+  children completed, one pre-execution correction, no executed retry.
+  Preparation was checkpointed/split from bounded execution, not extended
+  silently. Source/raw/staged bytes remain; no refill, repair or new job.
+  Next is mask/setup and controlled-fill/private-return disposition plus
+  a finite1.1 closure assessment, not rerouting. See configured_native_review_2001.
 - **October13,19:19 placement-first outputs reviewed; neither accepted:**
   Job6acd3f5501e64eae4591facd completed18:34:49 after1h50m08 with two
   candidates: non-beta1.1 reports86.0082%/30 incomplete nets/no service

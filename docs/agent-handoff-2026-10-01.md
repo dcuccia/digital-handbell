@@ -7,7 +7,55 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13,19:19 checkpoint: job complete; both outputs retained, neither accepted.**
+**Current October13,20:28 checkpoint: preservation resolved and configured native DRC complete.**
+Owner20:00 requested the remaining field resolution and isolated DRC. All140
+inserted zeros are now matched directly to36 footprint and104 pad angle
+fields. Complete static footprint/pad subtrees match; independent KiCad10.0.6
+readback confirms all104 poses and325 pad UUID/net/size/drill/layer/global
+position/angle records. All209 retained copper objects remain. Native routing
+counts1563/1693 include all1354/1484 anonymous additions. The earlier17-field
+mapping hold is resolved, not evidence of damaged pads.
+
+Three unchanged isolated PCBs used the same intended input project917b3f16
+and bound schematic, with explicit parity/all severities and no save/refill.
+These are separate report sections, not summed or interchangeable counts:
+
+| Input/candidate | Non-open DRC violations | Unconnected items | Parity |
+|---|---:|---:|---:|
+| Corrected uploaded input | 427 | 184 | 46 |
+| Standard1.1 | 458 | 80 | 46 |
+| Beta1.2 | 716 | 36 | 46 |
+
+Standard has no short/copper-clearance records, but76 width errors and one
+CC2-track/X6-hole clearance error (0.2437 versus0.25mm). Beta has7 native
+short records,117 copper-clearance,199 width and one hole-clearance finding.
+Its shorts include VCORE/+3V3, POWER/BOOST_FB and D-/VBAT; nine additional
+keepout records include six vias in contact-metal guards. These are concrete
+native findings, not277 service reports reinterpreted as independent defects.
+Static census finds76/255 new below-floor segments at0.162/0.160mm versus
+0.1778mm. Default first-error-per-track DRC reporting undercounts beta's width
+census; retained tracks do not explain these narrow additions.
+
+All three files have zero serialized saved-fill records, so this no-refill
+comparison does not qualify filled planes or final returns. Both returned
+PCBs embed a0.1mm minimum mask web absent from the input; identical project
+rules do not make that setup identical. The50/64 mask-bridge findings need
+separate configuration/physical disposition, not automatic attribution to
+new routing or a rule waiver. All46 parity records are net-conflict warnings;
+library/process/reservation findings inherited from the input remain explicit.
+
+Prefer1.1 for further diagnosis, not board acceptance or a finishing-cost
+claim. Next is controlled mask/setup and fill/private-return disposition,
+then a finite assessment of1.1's remaining closure work. No repair, refill,
+new cloud job or integration was performed or automatically released.
+Exact artifacts, checks and operations are in
+`continuation_2026_10_13.configured_native_review_2001` in the eight-output
+ledger. Private directory: `placement-first-results-20261013T1904\configured-native-review-20261013T2001`.
+Seven supervised children completed without timeout; one pre-execution
+correction, no executed retry. Preparation was checkpointed before a separate
+bounded execution stage. Executor is idle; all source/raw/staged inputs remain.
+
+**Historical October13,19:19 checkpoint: job complete; both outputs retained, neither accepted.**
 The placement-first job completed18:34:49.363 local,1h50m08.271 after launch,
 with two candidates and none at95%. Non-beta1.1 reports86.0082% routing,
 30 incomplete nets and zero service padstack-collision reports. Beta1.2

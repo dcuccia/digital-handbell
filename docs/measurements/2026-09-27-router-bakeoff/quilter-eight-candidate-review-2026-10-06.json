@@ -1,6 +1,104 @@
 {
   "schema_version": 1,
   "continuation_2026_10_13": {
+    "configured_native_review_2001": {
+      "authorization": "Owner20:00:39 requests resolving remaining differences and configured native DRC on isolated copies. Root releases a new bounded item, not an old checker retry or source repair.",
+      "status": "COMPLETED_STATIC_AND_NATIVE_PRESERVATION; CONFIGURED_DRC_COMPLETED; BOTH_CANDIDATES_HELD",
+      "deadline": "Engineering20:13/report20:14/root20:16 local October13; initial plus at most two corrective revisions, hard30s static/hard90s native children.",
+      "scope": "Resolve all140 omitted-zero angle deltas by matched semantic parent; inspect native pad/pose/count readback and sequential baseline/1.1/1.2 DRC using exact intended uploaded project and schematic. All native inputs are new isolated copies. No saves/refills/repair/routing/cloud/source edits.",
+      "configuration_decision": "Use intended input project917b3f16 rather than returned8b1a0286 on all three diagnostic copies. Retain each original PCB's embedded setup and zone fields without silent edits; material-label/declaration changes remain separate manufacturing-intent evidence. Fresh same-mode baseline permits controlled findings comparison; explicitly enable schematic parity if supported and report separately.",
+      "initial_preparation_review": "Root read all three complete helpers and exact commands before execution. Rejected static routing index that would exclude anonymous additions again, invalid stack-row counters, and native equality using transient net codes/display layer names. Requested one preserved pre-execution correction, numeric-only angle normalization, staged-path guards, explicit equality failure status and missing-position-safe DRC multiset matching. No candidate defect inferred from these tool issues.",
+      "preparation_checkpoint": "The first item ended with three staged input packages, preserved initial/v2 helpers and one successful board-free CLI help child; no checker or native board run. Root reviewed exact v2 diffs and actual help after the20:13 deadline. Prepared code now handles anonymous routing separately and uses semantic pad/native identifiers. No exhausted retry budget reset.",
+      "execution_stage": "Split the remaining user-authorized work into a separate bounded execution stage20:15-20:27/report20:28/root20:30, rather than starting native work past the preparation deadline. Same verified executor and v2 artifacts; one corrective revision already consumed, at most one remains across both stages. Static positive/control gate precedes native work; no90s child starts after20:25:30. No scope expansion to saves, refill, repair or cloud.",
+      "executor": {
+        "id": "05a412be-c148-4000-9a40-33756b57fb5a",
+        "model": "gpt-5.6-sol",
+        "effort": "medium",
+        "started_event": "f8ccd354-6d9b-477d-8cbc-4241d0bb26c0",
+        "configured_event": "6502c283-ef63-4eb9-ba66-127661c9c977",
+        "probe_completed_event": "a87b5e0a-c5b7-4948-a8e1-7d5226f58ce0",
+        "runtime_archive": "Session files/configured-native-runtime-20261013.json",
+        "runtime_archive_sha256": "68b9d116a20b6f56c231f5bf4fde17c50c6f22da7a98f6e99f5dd723298eddf0"
+      },
+      "source_precheck": "Root20:03:17 verified all five authoritative hashes unchanged, without native loading.",
+      "private_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-first-results-20261013T1904\\configured-native-review-20261013T2001",
+      "executed_helpers": {
+        "static_qualification.v2.py": "1baa424abae6fb02d5eab429ea6ad04a5f4e6a7fbe21b354b855b3e915bba195",
+        "native_inventory.v2.py": "423a737571b13470252a9c02a7118979191a71b6b9a72ad8a562498cde3cd2d2",
+        "summarize_drc.v2.py": "f8a4450549f969dc8da0ff875d76e3207d051efc6030141d7eefb9bc43c45995"
+      },
+      "operations": [
+        {"name": "preflight-drc-help", "seconds": 1.625, "hard_limit_seconds": 30, "exit_code": 0, "receipt_sha256": "f9113ce6069b0e62de197b10f03508e60f69a94d632eb3423c5133d97e2a31d5"},
+        {"name": "static-attempt-1", "seconds": 2.328, "hard_limit_seconds": 30, "exit_code": 0, "receipt_sha256": "9d37ce6f06c391d8724a73d395e31e322bcfd16b1f99c9af5fe1902f311ca44b"},
+        {"name": "native-inventory-attempt-1", "seconds": 1.516, "hard_limit_seconds": 90, "exit_code": 0, "receipt_sha256": "0bd2f3425ce2713c823455a2317088c65fc072ab8e2ad884964a7cc83d96a501"},
+        {"name": "drc-baseline-attempt-1", "seconds": 42.296, "hard_limit_seconds": 90, "exit_code": 0, "receipt_sha256": "96b2e4d693b31efd07690ed9b3310491d7961c3f7ea6b1299901c0142dec58af"},
+        {"name": "drc-1.1-attempt-1", "seconds": 3.453, "hard_limit_seconds": 90, "exit_code": 0, "receipt_sha256": "158703de41d30079f62c5011de935ce8ad8a532167a50b1a71685cde62b299f0"},
+        {"name": "drc-1.2-attempt-1", "seconds": 3.672, "hard_limit_seconds": 90, "exit_code": 0, "receipt_sha256": "5dccf3e06bfdee49ffc23040a7f0f7345a23c20758bcb2decca658adc0c15bf4"},
+        {"name": "drc-summary-attempt-1", "seconds": 0.219, "hard_limit_seconds": 30, "exit_code": 0, "receipt_sha256": "a8ed3ca6a9b5c26409abbf4cb38ed618e0f7cfc4043311b523223123d4f72ff6"}
+      ],
+      "operation_accounting": "Seven supervised children total, all confirmed exited without timeout; one board-free help, two static result children, one native inventory child loading three copies and three separate native CLI DRC children. Six native board loads total, zero saves/refills. One pre-execution correction; no executed failure/retry. Last child completed20:16:37.998927 local, before execution-stage deadline. Child runtime does not include preparation/review overhead.",
+      "preservation": {
+        "static_report": "static-attempt-1\\report.json",
+        "static_report_sha256": "fdcebdd5f206162109c3268806c91c1d2eb63624825a1eb6424bb0df34fa85fd",
+        "native_report": "native-inventory-attempt-1\\report.json",
+        "native_report_sha256": "49bf8d684cab01a5c95ad7c748dd0e4e1c41606244724842682a4a312294914b",
+        "angle_resolution": "Both candidates match all104 complete footprint and325 pad subtrees under declared numeric/order normalization. All140 inserted zero angles are directly bound to matched parents:36 footprint at nodes and104 pad at nodes across38 references. This resolves the prior17-unmapped-field hold.",
+        "mutation_controls": "After healthy positives, actual in-memory nonzero pad-angle, pad-net, pad-drill and footprint-pose mutations all detected by the same canonical comparison.",
+        "native_resolution": "KiCad10.0.6 directly read all104 poses and325 pad UUID/net/size/drill/numeric-layer/global-position/global-angle records from each isolated copy; zero differences. Transient net codes and display-layer names were retained diagnostically, not mistaken for changed electrical identity. Global coordinates came from native APIs, not invented transforms.",
+        "routing_resolution": "All209 retained objects still match. Native counts independently confirm baseline191 tracks18 vias,1.1 1446/117 and1.2 1495/198. Thus1354/1484 anonymous additions really load; missing serialized UUIDs are not missing native routing.",
+        "limits": "Specific-source preservation, not a generally qualified validator or complete electrical acceptance. Prior exact63 zone/31 footprint-prohibition/four-plane/outline evidence remains bound to the unchanged files."
+      },
+      "drc_configuration": {
+        "kicad_version": "10.0.6",
+        "project_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+        "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+        "flags": "--format json --schematic-parity --severity-all",
+        "units": "mm",
+        "omitted_flags": ["--refill-zones", "--save-board", "--exit-code-violations", "--all-track-errors"],
+        "rule_witnesses": "Returned-native reports explicitly use intended minimum trace width0.1778mm and hole clearance0.2500mm, not returned0.20mm hole defaults.",
+        "dependencies": "CAP has no .kicad_dru, fp-lib-table or sym-lib-table. None invented or copied from ambient preferences; installed-library resolution remains an explicit environment limitation.",
+        "embedded_setup_limit": "Exact PCB bytes retain candidate solder_mask_min_width0.1, absent in the input, and other previously identified embedded setup differences. Identical project files do not imply identical embedded settings. Candidate50/64 solder-mask-bridge findings are not automatically50/64 newly routed defects; actual effect needs a separate controlled disposition, not silent rule relaxation.",
+        "fill_limit": "Root20:19 raw-text inspection found zero filled_polygon/fill_segments cache records in all three exact staged PCBs. This no-refill DRC does not evaluate a completed plane-fill state or prove final ground-return connectivity."
+      },
+      "drc_results": [
+        {
+          "label": "baseline", "report": "baseline\\drc.json", "sha256": "b19605e389494d8f6ce918a351e59bcc3b53bc2aef482e13b08cec417068e1b6",
+          "violations_excluding_opens_and_parity": 427, "unconnected_items": 184, "schematic_parity": 46,
+          "violation_types": {"annular_width": 4, "drill_out_of_range": 14, "items_not_allowed": 74, "lib_footprint_issues": 97, "silk_edge_clearance": 4, "silk_over_copper": 86, "silk_overlap": 45, "text_height": 72, "text_thickness": 2, "track_dangling": 4, "via_dangling": 7, "via_diameter": 18}
+        },
+        {
+          "label": "1.1", "report": "candidate-1.1\\drc.json", "sha256": "49352d459f9d2ef152b470e775eab3ac42de8d457e2463c914106cbc851b4c2d",
+          "violations_excluding_opens_and_parity": 458, "unconnected_items": 80, "schematic_parity": 46,
+          "violation_types": {"annular_width": 4, "drill_out_of_range": 14, "hole_clearance": 1, "items_not_allowed": 74, "lib_footprint_issues": 97, "silk_edge_clearance": 4, "silk_over_copper": 62, "solder_mask_bridge": 50, "track_dangling": 3, "track_width": 76, "via_dangling": 55, "via_diameter": 18}
+        },
+        {
+          "label": "1.2", "report": "candidate-1.2\\drc.json", "sha256": "253473b64bd2e588865b7050a738f792f1e2bcccdca41766da9f5d3c93ce1ca6",
+          "violations_excluding_opens_and_parity": 716, "unconnected_items": 36, "schematic_parity": 46,
+          "violation_types": {"annular_width": 4, "clearance": 117, "drill_out_of_range": 14, "hole_clearance": 1, "items_not_allowed": 83, "lib_footprint_issues": 97, "shorting_items": 7, "silk_edge_clearance": 4, "silk_over_copper": 62, "solder_mask_bridge": 64, "track_dangling": 1, "track_width": 199, "via_dangling": 45, "via_diameter": 18}
+        }
+      ],
+      "root_finding_disposition": {
+        "parity": "All three reports contain46 net_conflict warnings. They are a separate report section, not included in427/458/716 non-open violation counts; enabled explicitly in this fresh comparison.",
+        "minimum_width": "Retained191 segment minimum0.1778mm. All76 standard0.162mm and255 beta0.160000007mm below-floor segments are new anonymous routing. Native DRC reports76/199 width findings respectively; default first-error-per-track suppression means the beta report count is not a complete census of below-floor segments. Do not attribute these widths to retained source copper or an unverified BGA exception.",
+        "non_beta": "No native short/copper-clearance findings, but a CC2 In2 track to X6 NPTH has0.2437mm clearance versus0.2500mm; width, mask and80-open gates remain. All74 items_not_allowed records match baseline physical evidence; inherited reservation/private-guard witnesses are not automatically74 new violations.",
+        "beta_shorts": "Seven shorting_items records across six unordered net pairs: ~{RESET}/I2S_DIN, ~{ENABLE}/VBUS, VCORE/+3V3 at two different capacitor lands, unused IC1 GPIO12/SCL, POWER/BOOST_FB, and D-/VBAT. This is native cross-net evidence, not an interpretation of277 service reports and not a count of independent repair actions.",
+        "beta_clearance": "117 copper-clearance findings include BT1 VBAT pad to D+ via at0.1833mm versus0.20mm. Its hole finding is IC1 exposed GND pad versus D+ via0.1722mm versus0.25mm. RESET/ENABLE tracks have0.0685mm copper clearance versus0.20mm.",
+        "beta_keepouts": "Nine unmatched items_not_allowed findings beyond the74 inherited records: six vias in explicitly named BT1/BT2 contact-metal guards and three B.Cu tracks (D13 and two VBAT). These additional reports are not the pre-existing private guard self-witnesses.",
+        "engineering_choice": "Prefer1.1 over beta as a further diagnostic starting point, not as an accepted or cheaper-to-finish board. Beta's36-open count cannot outweigh native cross-net shorts/contact intrusions, nor be treated as beating the authoritative37-open board because the staged input/fills differ.",
+        "remaining": "Controlled solder-mask/setup disposition, plane-fill/private-return/contact qualification and a finite1.1 closure/width/hole assessment remain. No fill or repair is implied by this completed inspection; no new cloud run or support request is needed to interpret these concrete findings."
+      },
+      "multiset_summary": {
+        "report": "drc-summary-attempt-1\\report.json", "sha256": "e9b8a1ea26bd44476030bb1ee65a85001856635d7f34de75888581c98c1130e3",
+        "counts": [
+          {"label": "1.1", "inherited": 291, "unmatched_candidate": 293, "no_longer_reported": 366},
+          {"label": "1.2", "inherited": 267, "unmatched_candidate": 531, "no_longer_reported": 390}
+        ],
+        "limits": "Multiplicity preserved; generated UUIDs ignored across independent loads. Matching uses section/type/severity/description/item descriptions and positions. Wording or anchor changes can prevent matching; these are report classifications, not new/resolved root-defect counts."
+      },
+      "preservation_postcheck": "Root20:19:09 verified all six report hashes and all nine staged PCB/project/schematic hashes. Native-generated .kicad_prl side effects remain private and were never copied between runs or used as source inputs; all three hash0c1d11b8514c82dc0e96a312d66c6badd2ec5abecc3d60ae69ac2652558261a5.",
+      "final_scope": "Requested static/native identity resolution and configured isolated DRC are complete. Both candidates remain held; engineering executor is idle. Source/raw downloads unchanged; no repair, native save, refill, cloud job or integration.",
+      "final_hash_check": "Root20:27:36.9512429 reverified all five authoritative files, six raw returned archives/PCB/projects and three uploaded input files unchanged. Helper/receipt/report hashes and violation-category totals also match the ledger."
+    },
     "returned_output_review_1904": {
       "scope": "Owner19:03:46 reported this job completed. Bounded19:04-19:19 read-only service/native-format review; preserve both raw archives and compare exact corrected input before judging routing benefit. No KiCad load, DRC, refill, repair, manual routing, integration or new job.",
       "status": "COMPLETED_JOB; BOTH_OUTPUTS_PRESERVED; STATIC_PRESERVATION_PARTIAL_AND_HELD",
