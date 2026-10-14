@@ -300,6 +300,17 @@ to narrow the review, without claiming SI/current legality. Budget the hard
 core/flash/USB/power corridors before easy service closure; keep every required
 terminal in the plan. See the [bounded plan](quilter-repair-plan-2026-10-14.md).
 
+**First pilot limitation:** a completed native inventory is not a repair
+result. Six nearest-endpoint proposals here collapsed to three path shapes
+with10nm-neighbor anchors; do not count them as six distinct corridors.
+Track sums through a BFS path, especially one using a filled plane, are not
+shortest electrical lengths or loop-area evidence. The snapshot's syntax
+failure survived full code review; static syntax preflight should precede
+native dispatch. A later inline-expression syntax failure and3.520s-late
+launch remain failed/deviating evidence, not completed crossing tests.
+Reserve actual analysis/review time rather than launching at the cutoff;
+stop the item without inventing a physical PCB blocker.
+
 Prepared native-save comparisons must distinguish originally serialized
 UUIDs from transient IDs assigned to anonymous copper. Name every required
 invariant explicitly: suffix-filtering Boolean fields omitted a nonfill

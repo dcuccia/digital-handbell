@@ -11,7 +11,14 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
-**Current Quilter checkpoint, October14:** the
+**Current Quilter checkpoint, October14 10:59:** the approved pilot stopped
+at its first15-minute core/C18 item. A native snapshot was obtained, but no
+geometry qualified or repair applied; two syntax failures and one late static
+launch are preserved explicitly. P2-P4 remain unstarted. Reuse the snapshot
+for a separately authorized bounded screen, not another inventory or cloud
+job. See the [current handoff](agent-handoff-2026-10-01.md).
+
+**Historical planning checkpoint, October14:** the
 [saved standard 1.1 repair plan](quilter-repair-plan-2026-10-14.md) covers all
 34 non-GND open records, 76 under-width segments, CC2 and critical USB/power
 quality gates on exact `05857d58`. The authoritative 37-open board remains
@@ -183,7 +190,13 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**October14 superseding planning checkpoint:** use the
+**October14 10:59 stopping checkpoint:** owner approved the pilot; P1 then
+reached its timebox with native snapshot46436a1c but no qualified repair.
+No continuation to P2-P4 or automatic P1 recovery is released. The saved
+candidate05857d58 and authoritative board remain unchanged. Exact next scope
+and failure accounting are in the [handoff](agent-handoff-2026-10-01.md).
+
+**Historical October14 planning checkpoint:** use the
 [source-bound repair plan](quilter-repair-plan-2026-10-14.md), not the older
 automatic engineering continuations below. The owner's current request
 authorized planning only. Saved `05857d58` is retained; the next proposed

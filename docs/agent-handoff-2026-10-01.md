@@ -7,7 +7,28 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October14 checkpoint: [bounded repair plan](quilter-repair-plan-2026-10-14.md) completed; no repairs applied.**
+**Current October14,10:59 checkpoint: approved pilot stopped at P1 without a repair.**
+The owner approved the proposed hour at10:44. P1's15-minute core/C18 item
+produced a complete native snapshot (`46436a1c...`) of the unchanged saved
+candidate but did not qualify any connection, width correction or replacement
+C18 path. The C18 supply has an F/B/F topology witness; its actual exposed-pad
+ground return reaches In1. Neither is a high-frequency loop acceptance.
+
+The six unscreened bridge proposals are effectively three local path shapes.
+A subsequent static crossing test failed before calculation and started3.520s
+late; it proves no obstruction. An earlier snapshot syntax failure, also missed
+by root's review, was corrected and the native load succeeded. All four child
+receipts are preserved, with one native load and no timeout or board mutation.
+There was no DRC, refill or save. P2-P4 were not started: stop rather than turn
+the remaining overall allowance into an extension of the blocked first item.
+
+Reuse `setup-fill-recovery-20261013T2243\repair-pilot-20261014T1045\p1-core`
+for any separately authorized bounded core-geometry screen. Do not regenerate
+the inventory, claim the candidate unrepairable, or resume automatically.
+All source and saved candidate hashes match. See `repair_pilot_2026_10_14`
+in the eight-output ledger for exact paths, receipts, hashes and limits.
+
+**Historical October14 planning checkpoint: [bounded repair plan](quilter-repair-plan-2026-10-14.md) completed; no repairs applied.**
 All 34 saved open records reconcile with 64 terminal groups across 30 nets.
 The plan assigns every open and all 76 narrow segments to six functional
 packages plus return checks. Seven of nine prospective same-net contacts

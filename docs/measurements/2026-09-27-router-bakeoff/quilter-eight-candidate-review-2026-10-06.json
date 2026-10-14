@@ -1,5 +1,41 @@
 {
   "schema_version": 1,
+  "repair_pilot_2026_10_14": {
+    "authorization": "Owner10:44:36 says go for it, approving the four-item at-most60-minute pilot proposed after repair-plan commit f238947. Isolated candidate engineering only; authoritative source/raw/saved05857d58 and all prior evidence remain immutable. No cloud job, fabrication or integration.",
+    "overall_window": "10:44:36-11:44:36 local October14. Each item includes root review within15minutes; no automatic retry on timeout or exhausted attempts and no structural redesign without disposition.",
+    "status": "P1_HELD_AT_TIMEBOX; NATIVE_SNAPSHOT_RETAINED; NO_QUALIFIED_ROUTE_OR_BOARD_EDIT; P2_P4_NOT_STARTED",
+    "p1": {
+      "scope": "VCORE two existing terminal groups, C18 supply/return and12 below-floor new F VCORE segments. Associated+3V3/GND copper is inspected as obstacles/return context, not a release to repair all53 supply widths.",
+      "window": "P1 root checkpoint10:59:36; helper/command review target10:49; native execution stops10:57/report10:58. No90s child starts after10:55:30.",
+      "executor_agent": "edea0eaa-1b94-40b4-8e14-9b1771ddebc7",
+      "runtime": {
+        "model": "gpt-5.6-sol", "reasoning_effort": "medium",
+        "started_event": "04aca4c1-958d-4008-8b60-5373bda4ad28",
+        "configured_event": "58799789-d825-49b8-87b9-61baef819e67",
+        "completed_probe_event": "10df81d9-2e8d-4179-a5c9-8641fd8aace9",
+        "verification": "Root read actual started/configured/completed metadata before granting private evidence writes. Probe used zero tools."
+      },
+      "private_directory": "setup-fill-recovery-20261013T2243\\repair-pilot-20261014T1045\\p1-core",
+      "initial_release": "Exact PCB/pro/sch staging copies and compact read-only native-helper preparation only; root reviews complete helper/command before first native child and exact delta before any board mutation. Use existing supervisor with hard30s static/hard90s native limits and persistent streams/receipts; initial plus two corrections maximum.",
+      "saved_input_pcb_sha256": "05857d580f37294177d7b4be91b5edb958c82806cb7b414749960f63cf70062c",
+      "helper_original_sha256": "1ddbd2ff5b9fe1f1f0e085197a7d71bb58b49f6b014d1bd0cd2a67e6c95a76a7",
+      "helper_corrected_sha256": "42597972f761321a7d76af8cf9f3ff6d27a9c21929e5f7a1148441aafbe0a486",
+      "snapshot_report_sha256": "46436a1c848641f983238a00ab4286131a545557185c6dcd139e420c2c9e76a6",
+      "children": [
+        {"file": "snapshot-attempt-1.receipt.json", "sha256": "dac60ef800122c29c82b039e76d4d7c10be304daab1fb9995da1dc7927d388b8", "seconds": 0.094, "hard_limit": 90, "exit": 1, "native_loads": 0, "result": "Syntax error: missing closing bracket; executor preparation and root405-line review both missed it."},
+        {"file": "static-v2-attempt-1.receipt.json", "sha256": "d0ebdd69d3b23e2df3bb85866855f9c9556add96bda986a9bfb3d2533f42906d", "seconds": 0.141, "hard_limit": 30, "exit": 0, "native_loads": 0, "result": "AST preflight passes after authorized syntax-only correction1."},
+        {"file": "snapshot-attempt-2.receipt.json", "sha256": "4f43101ed3beab21d9de8216c7402f9e2c0ff7e021d24dc77d803858068bbde1", "seconds": 3.0, "hard_limit": 90, "exit": 0, "native_loads": 1, "result": "Complete read-only native snapshot;104/325/1563/63 and two VCORE terminal groups match."},
+        {"file": "intersection-attempt-1.receipt.json", "sha256": "a06802735113d3773d8ed0122fb6f0b16f1d5c85471a9defe12275e4513bdcde", "seconds": 0.078, "hard_limit": 30, "exit": 1, "native_loads": 0, "result": "Inline Python unmatched-parenthesis syntax failure; no geometry calculation. Launched10:56:33.520,3.520s after declared10:56:30 start cutoff. Explicit procedural deviation, not retroactive approval. No retry."}
+      ],
+      "topology_result": "C18.2-to-IC1.23 BFS witness traverses F/B/F with12.954855mm summed track length, not a weighted shortest-current path or directly comparable to12.041860mm service metric. C18.1 reaches actual IC1.P$1 via an In1 filled island;1.844044mm track-sum excludes plane travel, so no high-frequency loop/length acceptance. IC1.19 is ground-tied TESTEN, not the proper GND terminal anchor.",
+      "finite_candidates": "Six unscreened0.1778mm F polylines are direct/X-then-Y/Y-then-X variants between near104.163031,101.7205 and104.103920,99.8. The second anchor differs only10nm in X; these are effectively three local shapes, not six independent corridors. No same-layer clearance, hole/edge/rule or current/return feasibility was established.",
+      "analytic_limit": "D+ track3292e03d-b713-463a-b34c-df303a6fa560 was identified as a possible crossing witness; failed analytic child establishes no intersections. Do not claim these paths are proven blocked, all routes impossible, or placement changes necessary.",
+      "outcome": "Useful exact native inventory retained, but core connection/C18 replacement and12 widths remain unqualified and unapplied. Zero board mutations/DRC/fills/saves. Four children/one native load, one syntax correction, all children confirmed exited without timeout."
+    },
+    "root_disposition": "Stop the affected pilot at the first15-minute checkpoint rather than silently extend P1 or spend the remaining hour repeating preparation. P2 flash, P3 USB/CC2 and P4 source/audio were not started; no critical feasibility go or repair acceptance. This is a tooling/time-budget blocker, not an electrical impossibility finding or rejection of05857d58.",
+    "next_scope": "A separately bounded correction/screen of the existing concrete core/C18 candidate geometry can reuse snapshot46436a1c and exact05857d58. Do not rebuild inventory, restart placement, widen blanket rules or create a new cloud job. No automatic recovery run released.",
+    "root_postcheck": "At10:58:10 root independently verified all five authoritative source hashes, all three saved05857d58 package hashes and all three P1 copies; four receipts show confirmed child exit and no timeout. Original/corrected helper and snapshot/failed-stderr hashes verified. Authoritative source, saved candidate and copies unchanged. Documentation JSON/diff validation completed11:00:10,34s after the10:59:36 root checkpoint target; only preservation/publication followed, not extended engineering."
+  },
   "repair_plan_2026_10_14": {
     "authorization": "Owner10:31:42 requests: ok, let's do a bounded repair plan for this saved candidate. work liberally but efficiently to get this done. Planning only; no implementation/native/cloud authority inferred.",
     "status": "BOUNDED_REPAIR_PLAN_COMPLETE; NO_BOARD_CHANGES_OR_REPAIR_RELEASE",

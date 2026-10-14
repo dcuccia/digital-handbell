@@ -2,6 +2,21 @@
 
 ## Bounded engineering work
 
+- **October14,10:59 pilot P1 held; no repairs applied:**
+  Owner10:44 approves the60-minute pilot. First15-minute core/C18 item
+  obtains a complete native snapshot46436a1c on unchanged05857d58, but no
+  qualified geometry. C18 supply BFS remains F/B/F; actual P$1 return uses
+  In1, not high-frequency approval. Six unscreened bridges are effectively
+  three shapes with10nm-neighbor anchors, not independent corridors.
+  Four hard-bounded children/one native load include an initial syntax
+  failure, corrected AST/native success and failed static intersection.
+  The latter also launched3.520s past its start cutoff; preserve deviation.
+  Root's original full-code review missed the first syntax defect too.
+  No proven crossing, physical impossibility, board edit/DRC/fill/save or
+  repair acceptance. P2-P4 unstarted; stop rather than reset P1's timebox.
+  Preserve snapshot and all failures. Next requires bounded core geometry
+  screening using saved data, not another inventory/rebuild/new cloud job.
+  See repair_pilot_2026_10_14 in the eight-output ledger.
 - **October14 repair plan completed; implementation remains unreleased:**
   Owner requests a bounded plan for saved05857d58. All34 DRC witnesses
   reconcile with64 pad groups across30 nets; four joins are service-only,
