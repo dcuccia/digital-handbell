@@ -2,6 +2,22 @@
 
 ## Bounded engineering work
 
+- **October13,23:12 paired fills completed; candidate return witness pending:**
+  Explicit owner22:57 continuation starts a separate native item. Filled
+  baseline e8f5ec3b has448 violations/180 opens/46 parity; standard1.1
+  05857d58 has405/34/46, no shorts/copper clearance,76 width/one hole.
+  Baseline nonfill/private-return proofs pass. Candidate native geometry
+  matches all1563 routes; a source-specific supplement resolves1281
+  precision-only structural mismatches plus eight self-name aliases and
+  seven FR4/one finish-label defaults. No tolerance or supplier approval.
+  Strict HELD report remains beside accepted composite evidence.
+  Candidate graph missed its start cutoff and remains unexecuted.
+  Mask-only baseline DRC timed out90s; its attribution comparison is absent.
+  Executor continued after that timeout contrary to the stop instruction;
+  retain and disclose the deviation, not retroactive approval.
+  Eight children, two isolated fills/saves, no repair/source edit/new job.
+  Next dependency is candidate private-return proof on05857d58, then finite
+  width feasibility; no input rebuild. See native_fill_comparison_2258.
 - **October13,22:55 byte-staging recovered; native fill still unperformed:**
   Owner22:42 resumed. New bounded recovery preserves all earlier failures.
   Root caught candidate whitespace assumptions before execution; v4 then

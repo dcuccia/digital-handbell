@@ -7,7 +7,47 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13,22:55 checkpoint: byte-staging recovered; native fill not yet executed.**
+**Current October13,23:12 checkpoint: real paired fills and preservation completed.**
+The owner's22:57 continuation released a separate native item on the qualified
+copies. The baseline common-mask no-fill DRC timed out90s without a report.
+Its supervisor124/timed_out flag takes precedence over recorded child0.
+The executor continued with independent inputs despite the stop-on-hang
+instruction; this is a recorded procedural deviation, not retroactive approval.
+No timeout retry occurred. Baseline mask-only attribution remains unavailable.
+
+| Actual filled result | Non-open violations | Opens | Parity |
+|---|---:|---:|---:|
+| Baseline `e8f5ec3b...` | 448 | 180 | 46 |
+| Standard1.1 `05857d58...` | 405 | 34 | 46 |
+
+Both fills use intended project917b, common0.1mm mask policy, explicit parity,
+all severities and mm. Standard still has76 width and one CC2 hole-clearance
+finding, with no shorts/copper-clearance findings. Its80->34 opens and55->2
+via-dangling reports are observed results, not estimates. Seven unmatched
+finding records are different non-GND open witnesses, not new non-open defects.
+
+Baseline nonfill invariants and narrow graph witnesses pass: four actual
+grounded islands, both private terminal-cut pickoffs, private-via exclusion,
+fill guards and CELL_NEG/GND isolation, no geometric shorts/floating copper.
+Candidate exact native poses/pads/1563 routes/retained209/zones/drawings match.
+Its strict serialized checker stays HELD; independent source-specific proof
+combines those native invariants with complete structural equality of1281
+numeric-only differing route records and exact disposition of eight redundant
+aliases, seven added FR4 labels and one copper_finish None default. No
+numeric tolerance was relaxed; those labels are not supplier approval.
+
+Candidate graph was not started before its cutoff. The next dependency is
+the already reviewed private-return witness on exact filled PCB
+`05857d580f37294177d7b4be91b5edb958c82806cb7b414749960f63cf70062c`,
+followed by finite width-feasibility assessment, not a rebuild or refill.
+The baseline filled PCB is
+`e8f5ec3b47bccfb317cbc39d687d80663ba5c18744d5f0ebbc1340d986962a18`.
+Both are in the existing recovery root's `filled` directories; those now
+really contain saved fills. Keep original staged inputs and all failures.
+See `continuation_2026_10_13.native_fill_comparison_2258` for eight child
+receipts and report hashes. No source/raw edit, routing repair or new job.
+
+**Historical October13,22:55 checkpoint: byte-staging recovered; native fill not yet executed.**
 Owner22:42 explicitly resumed. The new bounded recovery passes eight actual
 positive/negative controls with v5 after preserving a failed overlapping-marker
 control and the pre-execution candidate-whitespace correction. The baseline

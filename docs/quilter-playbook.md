@@ -251,6 +251,24 @@ staged-file hashes match. Directory names are not evidence: the recovery's
 was not reached within its start cutoff. Reuse these qualified inputs;
 do not repeat staging merely to resume the next stage.
 
+The subsequent native item actually filled both copies: standard1.1 changed
+from80 to34 open records with no new non-open findings in the physical DRC
+multiset;76 width findings and one hole finding remained. Baseline filled
+nonfill/return witnesses passed, but its separate mask-only no-fill DRC timed
+out. A timed_out/supervisor124 receipt cannot become success because the
+child return field says0. Continuing after a stop-on-timeout instruction is
+a procedural deviation even when subsequent independent outputs are useful.
+Preserve the evidence and missing attribution control without hiding either.
+
+Strict serialized comparisons can reject precision/default-label changes
+while exact native geometry remains equal. Here a separate source-bound
+proof covered all differing routing structures plus the precise alias and
+material/finish-label deltas, requiring native physical and retained-object
+equality. Keep that composite proof distinct from the original HELD report;
+do not widen a generic tolerance or treat a failure-gate guard as an actual
+geometry mutation test. Candidate private-return qualification is a separate
+dependency, not implied by native zero shorts or the34-open DRC result.
+
 Prepared native-save comparisons must distinguish originally serialized
 UUIDs from transient IDs assigned to anonymous copper. Name every required
 invariant explicitly: suffix-filtering Boolean fields omitted a nonfill
