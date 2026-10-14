@@ -1,6 +1,58 @@
 {
   "schema_version": 1,
   "continuation_2026_10_13": {
+    "candidate_completion_2314": {
+      "authorization": "After committed7249d28 and successful source-specific candidate preservation, root advances to the next ready bounded dependency under the owner's continue-until-finished instruction and standing sequential-work authorization.",
+      "deadline": "Execution23:14-23:24/report23:25/root23:28; hard90s children, none starts after23:22:30. Stop immediately on timeout. No automatic retries, board edits, refill or new job.",
+      "status": "BOUNDED_FILLED_RETURN_AND_WIDTH_FEASIBILITY_ASSESSMENT_COMPLETED; CANDIDATE_RETAINED_NOT_ACCEPTED",
+      "candidate_witness": {
+        "report": "setup-fill-recovery-20261013T2243\\witness-1.1-attempt-1\\report.json",
+        "report_sha256": "8f288b0e40b401f93bf1d4facdc316b6e6fe5df4e5621c6e068cc63b4750ee2e",
+        "receipt_sha256": "7e9ae4bc1e4d698588633a9133ba20050857f3b792daf23a61cca9255f6268db",
+        "pcb_sha256": "05857d580f37294177d7b4be91b5edb958c82806cb7b414749960f63cf70062c",
+        "status": "PASS_NARROW_FILLED_WITNESS", "seconds": 0.750, "exit_code": 0, "timed_out": false,
+        "result": "All ten gates pass. Both R24.2/C28.2 and R26.2/R27.2 remain connected and independent until their actual terminals, with no other-pad connection beforehand. Both named private vias have no filled-island incidence; fill-blocking areas clear; every GND island has an actual GND terminal; no geometric shorts/floating copper and CELL_NEG/GND isolated.",
+        "limits": "Narrow saved-fill topology/guard qualification on exact05857d58 only, not global return-current, SI/PI, function, supplier process or fabrication approval."
+      },
+      "saved_width_preparation": {
+        "directory": "setup-fill-recovery-20261013T2243\\width-screen-saved-1.1",
+        "helper": "screen_saved_width.v3.py",
+        "helper_sha256": "99517d6266aabbfd1ab5d2a35a9e8afa1e8f49f24816b2b83c96ae333e594501",
+        "binding": "A new exact copy of qualified native-saved05857d58 plus intended917b/ec93. Bind original1ad for static retained209 membership and existing native/composite preservation reports. All76 selected F0.162mm tracks now have persistent saved UUIDs; require exact source/native UUID/net/type/layer/width equality and disjointness from retained209. No raw long-coordinate FromMM conversion or guessed rounding.",
+        "scope": "Reuse reviewed native effective-shape and single/both-grow controls, NPTH exclusions/null-shape accounting. Baseline0.20mm concerns separate from prospective0.2079/0.2158mm and new same-net contacts. No SetWidth, save or route change. Full hole/edge/keepout/impedance/current legality remains outside this copper-only screen.",
+        "review": "Root23:16:43 read exact diff against fully reviewed oldv2 and released one hard90s child. Old failed raw-input screen remains preserved; this is a new qualified saved-input binding approach, not an unchanged retry."
+      },
+      "root_saved_drc_review": {
+        "checked_local": "23:16:21",
+        "mask_result": "All50 solder_mask_bridge findings in filled baseline and all50 in filled candidate match as complete physical multisets of type/severity/description plus sorted item descriptions/exact XY, ignoring UUIDs. Zero unmatched; these50 are also present on the common-mask input, not50 newly routed candidate defects.",
+        "mask_limit": "Does not resurrect the missing mask-only unfilled baseline DRC or isolate its mask-only versus fill-only count changes.",
+        "open_result": "Every one of34 filled candidate open records resolves consistently to one exact net across its item descriptions;30 distinct nets, zero GND records. All six QSPI nets remain. This confirms disappearance of the46 former GND open witnesses, not46 independent repairs or proof of global return quality."
+      },
+      "saved_width_result": {
+        "status": "READ_ONLY_WIDTH_SCREEN_COMPLETE",
+        "failed_invocation": {"receipt_sha256": "53793ce4f02b641d8e42bf5cfc8c0eb257034e6534bd5bbe94264ad25d728ea1", "stderr_sha256": "0aea0bd46cf8974ca1a22488752a2079686642c437cd767dd3afcaba379e91b6", "seconds": 0.078, "exit_code": 2, "cause": "Supervisor bound invariant/composite reports as inputs but child invocation omitted their required CLI arguments. Failed before native import/load; no report."},
+        "correction": "One root-approved invocation-only correction; unchanged99517d62 helper, freshattempt2 and explicit full child argument list. No raw-coordinate retry, tolerance change or board modification.",
+        "report": "width-screen-saved-1.1\\attempt-2\\report.json",
+        "report_sha256": "600151ca7bf834ee8ecbf601282fc8ca6d8e5151ee2320af9c38e2dcf86091d8",
+        "receipt_sha256": "a3ce3f229ee555525dbe4608e60d37641f17a5305059340c752542d4d323b570",
+        "seconds": 2.375, "hard_limit_seconds": 90, "exit_code": 0, "timed_out": false,
+        "coverage": "All76 persistent UUID/net/type/F-layer/0.162mm bindings match; all disjoint from retained209. Native104/325/1563 counts and single/both-growth controls pass.113559 foreign/unnamed and12259 same-net physical pairs compared; no null shapes.",
+        "baseline_foreign_concerns": 0, "prospective_foreign_concerns": 0,
+        "new_same_net_pairs": 9, "unique_selected_tracks_in_same_net_pairs": 11,
+        "same_net_groups": [
+          {"net": "+3V3", "pairs": 5, "selected_tracks": 6, "all_involved_tracks": 8},
+          {"net": "D+", "pairs": 2, "selected_tracks": 2, "all_involved_tracks": 3},
+          {"net": "VCORE", "pairs": 2, "selected_tracks": 3, "all_involved_tracks": 4}
+        ],
+        "thresholds": "Four new same-net pairs have one widened member (7900nm additional radius); five have both members widened (15800nm combined). Foreign clearance screen uses0.20mm plus that added radius. Track geometry was never changed.",
+        "limits": "Two X6 NPTH pads excluded explicitly. No full hole/edge/keepout/filled-plane/impedance/current legality proof, no exact clearance measurement and no claim nine contacts are harmless or nine independent repairs. Saved graph net summaries list pad components, not membership of all15 involved tracks; no same-net circuit-join classification is inferred.",
+        "disposition": "No present foreign-copper obstacle found in this limited F.Cu widening screen. Local width correction is worth planning, not approved for blanket application. Conditional all-track-errors DRC was not needed for a baseline concern and was not run."
+      },
+      "operation_accounting": "This final bounded item used three children: candidate native witness0.750s, failed argparse invocation0.078s, successful width screen2.375s. Two native board loads, zero mutations/DRC/fills/saves; all exited without timeout. One invocation-only correction. All prior staged/filled/raw/failed artifacts remain separate.",
+      "root_recommendation": "Preserve exact filled standard1.1/05857d58 as a credible diagnostic checkpoint. Ground connectivity and protected local returns are demonstrated, and width correction is not blocked by present foreign copper in the measured screen. Still no cheap-finish or integration go:34 non-GND records across30 nets include all six QSPI nets, USB D-, supplies and control/audio/debug;76 width and one CC2 hole finding remain, alongside existing functional/process/parity gates. Nine possible same-net overlaps require local disposition before any width change, particularly D+ geometry. Do not rank this as automatically cheaper than the differently placed/four-layer37-open source.",
+      "next_scope": "Only separately authorized repair planning/implementation should address the exact34 non-GND work packages, width/CC2 full-rule feasibility and USB/power quality. No new cloud volley, blanket widening, manual routing, integration or fabrication is released by this completed diagnostic.",
+      "root_postcheck": "Root23:25:24 verified36 exact file hashes: five authoritative files, two raw archives/four raw PCB-project files,21 copied input/common-mask/filled/width PCB-project-schematic files, and four final witness/width reports-receipts. Root23:27:23 verified seven further DRC/preservation/helper/comparison/failed-invocation bindings. An intervening check used a mistyped62-character DRC digest; persisted ledger and comparison already contained the correct64-character digest matching unchanged disk bytes. No evidence was rewritten. Width totals, actual receipt command/exit and source-preserving final documentation reviewed; no further engineering execution."
+    },
     "native_fill_comparison_2258": {
       "authorization": "Owner22:57:56 again explicitly resumes autonomous completion after staging checkpoint333b802. Root starts a new bounded native item rather than extending the stopped staging allowance.",
       "status": "PAIRED_FILL_DRC_AND_COMPOSITE_PRESERVATION_COMPLETED; CANDIDATE_WITNESS_PENDING; MASK_ONLY_CONTROL_UNAVAILABLE",

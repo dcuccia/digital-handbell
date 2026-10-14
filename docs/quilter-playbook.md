@@ -269,6 +269,25 @@ do not widen a generic tolerance or treat a failure-gate guard as an actual
 geometry mutation test. Candidate private-return qualification is a separate
 dependency, not implied by native zero shorts or the34-open DRC result.
 
+That candidate witness subsequently passed on the exact saved file. Its34
+remaining native opens are all non-GND across30 nets; the50 mask findings
+also match the common-mask filled input physically. This resolves useful
+candidate attribution without resurrecting the missing unfilled control.
+Do not turn a nearby headline open count into an economic comparison with
+a different source layout/layer count.
+
+For later read-only route studies, a qualified native-saved output supplies
+persistent UUIDs for previously anonymous routing. Bind those exact IDs and
+net/type/layer/width attributes to native objects rather than reconstructing
+long raw coordinates with an unqualified rounding rule. Here all76 width
+subjects matched; the native screen found no foreign-copper obstacle to the
+small proposed growth, but nine same-net contacts across+3V3/D+/VCORE.
+That supports local repair planning, not blanket width edits or a claim
+the contacts are harmless. NPTH/edge/keepout/impedance/current duties remain.
+Hash-binding an input in a supervisor does not pass it as a child CLI
+argument: preserve the actual failed invocation and check the complete
+command, not just the reviewed helper source.
+
 Prepared native-save comparisons must distinguish originally serialized
 UUIDs from transient IDs assigned to anonymous copper. Name every required
 invariant explicitly: suffix-filtering Boolean fields omitted a nonfill

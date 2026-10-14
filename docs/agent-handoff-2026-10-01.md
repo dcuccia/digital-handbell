@@ -7,7 +7,49 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13,23:12 checkpoint: real paired fills and preservation completed.**
+**Current October13,23:23 checkpoint: bounded filled1.1 evaluation completed; candidate retained, not accepted.**
+The exact filled standard1.1 PCB `05857d58...` now also passes all ten
+narrow saved-fill/private-return gates. Both private pickoffs remain
+independent until their real terminals; both protected vias avoid fills,
+fill-blocking areas are clear, every GND island reaches actual GND terminals,
+CELL_NEG/GND remain isolated, and no geometric shorts/floating copper occur.
+This is not global SI/PI, functional or manufacturing approval.
+
+All34 configured native open records are on30 non-GND nets: all six QSPI
+nets, USB D-, supplies, I2C, interrupts and audio/debug/control work remain.
+All50 mask-bridge records exactly match the common-mask filled baseline's
+physical finding multiset, so they are not50 new routing defects. The
+separate mask-only unfilled baseline control remains unavailable.
+
+The finite saved-board width screen completed after an invocation-only
+correction. It binds all76 new F0.162mm tracks by persistent saved UUIDs,
+not raw floating-point coordinate reconstruction. With single/both-track
+growth accounted for,113559 foreign/unnamed pairs show no baseline or
+prospective foreign-copper concern. Nine new same-net contact concerns
+involve11 selected tracks: five pairs on+3V3, two on D+, two on VCORE.
+No GND contact concern was reported. These are not nine independent repairs
+or proven harmless joins. Two X6 NPTH holes are explicitly excluded;
+edge/keepout/hole, impedance and current legality still need full disposition
+before applying any widths. No track was changed.
+
+**Decision:** keep this candidate as a credible diagnostic checkpoint.
+Ground closure and protected local returns are now demonstrated, and
+width repair is not blocked by present foreign copper in the measured
+screen. Do not yet fund an open-ended manual finish or integrate it:
+34 non-GND records,76 width findings, the separate CC2 hole finding and
+USB/power/process gates remain. A three-record difference from the
+authoritative37-open board is not a demonstrated finishing-time advantage
+across different layouts, layer counts and routing states.
+
+Evidence is in the existing recovery root, including
+`witness-1.1-attempt-1` and `width-screen-saved-1.1\attempt-2`.
+The final item used three children/two native loads and no board mutation;
+one failed argument invocation is preserved. Source/raw and all failed
+experiments remain intact. No new job, repair, merge or fabrication occurred.
+Next work requires a bounded repair-planning decision, not a repeat stager,
+refill or cloud volley. See `continuation_2026_10_13.candidate_completion_2314`.
+
+**Historical October13,23:12 checkpoint: real paired fills and preservation completed.**
 The owner's22:57 continuation released a separate native item on the qualified
 copies. The baseline common-mask no-fill DRC timed out90s without a report.
 Its supervisor124/timed_out flag takes precedence over recorded child0.
