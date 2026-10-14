@@ -2,6 +2,21 @@
 
 ## Bounded engineering work
 
+- **October13,22:55 byte-staging recovered; native fill still unperformed:**
+  Owner22:42 resumed. New bounded recovery preserves all earlier failures.
+  Root caught candidate whitespace assumptions before execution; v4 then
+  failed a real overlapping-marker negative control. Final v5 passes all
+  eight controls and stages baseline339100c with exactly31 mask-field
+  bytes added, plus unchanged1.1/1adf790. Intended project917b and schematic
+  remain exact. Two static children, zero native operations; both correction
+  allowances consumed. Root verified all12 staged files22:54:57, after the
+  declared22:54:30 last-native-child start. No deadline workaround or fill.
+  The new recovery root's filled folder contains UNFILLED pre-copies.
+  Staging is qualified, not filled-state preservation/return proof; width
+  screen stays held. Next is separately bounded native comparison on these
+  exact staged files, not another rebuild/stager retry or cloud job.
+  Preserve source/raw and previous checkpoints; executor idle. See
+  setup_fill_recovery_2242 in the October13 eight-output ledger.
 - **October13,22:40 fill and width screens blocked; net assessment saved:**
   Owner22:15 approved30-45minutes. Common0.1mm diagnostic mask staging
   failed before output because our helper expected LF, not source CRLF;

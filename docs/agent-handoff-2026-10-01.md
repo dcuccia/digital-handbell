@@ -7,7 +7,44 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13,22:40 checkpoint: fill and width screens stopped; saved-net assessment complete.**
+**Current October13,22:55 checkpoint: byte-staging recovered; native fill not yet executed.**
+Owner22:42 explicitly resumed. The new bounded recovery passes eight actual
+positive/negative controls with v5 after preserving a failed overlapping-marker
+control and the pre-execution candidate-whitespace correction. The baseline
+gains exactly31 bytes for the diagnostic0.1mm mask field, with exact original
+restoration on removal; candidate1.1 stays byte-identical. No rule waiver.
+
+New private root:
+`quilter\outputs\placement-first-results-20261013T1904\setup-fill-recovery-20261013T2243`.
+Its `common-mask-unfilled` and `filled` directories each contain baseline
+and candidate PCB/project/schematic sets. **Both directories are unfilled
+staged inputs.** No native operation or filled-state result exists here.
+
+| Qualified staged artifact | SHA-256 |
+|---|---|
+| Baseline PCB | `339100c04d301cf024dfbc4873a8cdd4de8bfa165f00c8f288dbc910fbd2006e` |
+| Candidate1.1 PCB | `1adf790707a6afc7f654c66924d04a8f369f4c4f4de8ef41c8590e8aacf32f38` |
+| Intended project | `917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c` |
+| Schematic | `ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e` |
+| Manifest | `e1e7c93c898d8852ef4005f63eccffb8db9bc7f2cf95583f199a496f53af6346` |
+
+The manifest is `mask-recovery-manifest.v3.json`; its versioned name does
+not change the fact that executed helper v5 produced it. Two hard30s static
+children took0.094s (failed control) and0.829s (success), without timeout.
+Root completed manifest/receipt and all12 staged-file hash checks22:54:57,
+after the declared22:54:30 last90s-child start. No native work was released,
+and the original23:00 stop remains. Preserve both failure scopes, not
+just the successful files; both recovery corrections are consumed.
+
+Next is a separately bounded native comparison on these exact staged files:
+baseline no-refill DRC, paired intended-project isolated refill/save/DRC,
+then nonfill preservation and actual private-return witnesses using the
+already reviewed helpers. Do not rebuild or rerun staging. Width feasibility
+and overall closure-cost acceptance remain held. No repair, source/raw edit,
+integration or new job occurred; executor is idle. See
+`continuation_2026_10_13.setup_fill_recovery_2242` in the eight-output ledger.
+
+**Historical October13,22:40 checkpoint: fill and width screens stopped; saved-net assessment complete.**
 The owner's22:15 request authorized30-45minutes for controlled mask/fill
 comparison and a finite standard1.1 closure assessment. Our byte-staging
 helper failed at22:26:54: it expected an LF setup marker, while the exact

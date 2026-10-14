@@ -239,6 +239,18 @@ requires newline-aware matching with an exact one-change assertion, not
 blind normalization. Preserve the failed helper and stop at the correction
 limit; a remaining time allowance does not authorize another retry.
 
+The separately authorized22:42 recovery resolved byte staging, not native
+fill. Keep candidate formatting independent of the baseline: the returned
+file uses spaces/trailing whitespace, whereas the baseline uses tabs/CRLF.
+An actual adjacent-marker control also exposed `bytes.count` ignoring
+overlapping matches at shared newlines; an overlap-aware count fixed that
+without removing the control. All eight final controls passed. Baseline
+mask insertion adds exactly31 bytes, candidate stays unchanged, and all12
+staged-file hashes match. Directory names are not evidence: the recovery's
+`filled` folder still contains unfilled pre-copies because native execution
+was not reached within its start cutoff. Reuse these qualified inputs;
+do not repeat staging merely to resume the next stage.
+
 Prepared native-save comparisons must distinguish originally serialized
 UUIDs from transient IDs assigned to anonymous copper. Name every required
 invariant explicitly: suffix-filtering Boolean fields omitted a nonfill
