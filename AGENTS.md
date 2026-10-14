@@ -2,6 +2,28 @@
 
 ## Bounded engineering work
 
+- **October14,11:35 core widths staged; DRC validation held:**
+  Owner11:01 resumes and says keep going as needed. Native recovery now
+  rejects all12 finite F core/C18 proposals on foreign-copper clearance.
+  False hole hits on zero-drill SMT pads are withdrawn by saved-inventory
+  supplement; independent copper rejections stand. Two off-contact whole-
+  span sites and18 paths then fail fixed GND via4722ed77 and other copper,
+  not refillable GND planes. This is finite evidence, not impossibility.
+  Exact new117cbe9a changes only12 VCORE widths0.162->0.1778; inverse-byte
+  proof, three controls and two native graphs preserve104/325/1563 and all
+  connected components with no graph shorts. Source05857d58 remains intact.
+  Configured DRC times out90.266s, produces no report, and its process tree
+  is confirmed exited. Supervisor124 overrides the recorded child0.
+  Preserve lock residue; it is not a proven timeout cause. No retry.
+  CLI help confirms --all-track-errors, but neither paired all-track DRC
+  nor report-comparison controls ran. No repair acceptance or open reduction.
+  Four+three+five supervised children in the three continuation items;
+  one AST-only core revision was overwritten, a disclosed preservation gap.
+  All other helpers/raw failures remain. Executor stopped; no P2-P4,
+  further routing, source replacement or new cloud job. Next requires
+  separately bounded logged validation recovery on117cbe9a/05857d58,
+  not width restaging, route resampling or another generic checker.
+  See October14 core recovery/transition/width entries in the eight-output ledger.
 - **October14,10:59 pilot P1 held; no repairs applied:**
   Owner10:44 approves the60-minute pilot. First15-minute core/C18 item
   obtains a complete native snapshot46436a1c on unchanged05857d58, but no

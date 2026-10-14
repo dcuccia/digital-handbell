@@ -11,12 +11,14 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
-**Current Quilter checkpoint, October14 10:59:** the approved pilot stopped
-at its first15-minute core/C18 item. A native snapshot was obtained, but no
-geometry qualified or repair applied; two syntax failures and one late static
-launch are preserved explicitly. P2-P4 remain unstarted. Reuse the snapshot
-for a separately authorized bounded screen, not another inventory or cloud
-job. See the [current handoff](agent-handoff-2026-10-01.md).
+**Current Quilter checkpoint, October14 11:35:** isolated `117cbe9a` changes
+only12 new VCORE widths to0.1778mm, with exact inverse-byte preservation and
+unchanged native connected components. It is held, not accepted: configured
+DRC timed out90.266s without a report; paired all-track validation is absent.
+Finite F and whole-span access screens found actual fixed-copper blockers,
+not global impossibility. Preserve all originals and failures. P2-P4 remain
+unstarted; next is bounded logged validation recovery, not restaging or route
+resampling. See the [current handoff](agent-handoff-2026-10-01.md).
 
 **Historical planning checkpoint, October14:** the
 [saved standard 1.1 repair plan](quilter-repair-plan-2026-10-14.md) covers all
@@ -190,11 +192,14 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 
 ## Owner pause and next item
 
-**October14 10:59 stopping checkpoint:** owner approved the pilot; P1 then
-reached its timebox with native snapshot46436a1c but no qualified repair.
-No continuation to P2-P4 or automatic P1 recovery is released. The saved
-candidate05857d58 and authoritative board remain unchanged. Exact next scope
-and failure accounting are in the [handoff](agent-handoff-2026-10-01.md).
+**October14 11:35 stopping checkpoint:** the owner's continuation produced
+finite native rejection evidence and a12-width-only derivative117cbe9a.
+Source05857d58 and the authoritative board remain unchanged. The derivative's
+DRC timed out; no report, acceptance or reduced-open claim is available.
+Stop dependent native/repair work, preserve lock/streams/receipts, and reuse
+the exact candidate for a separately bounded validation recovery. Do not
+restart construction, expand site samples or proceed to routine closure.
+Exact evidence and limits are in the [handoff](agent-handoff-2026-10-01.md).
 
 **Historical October14 planning checkpoint:** use the
 [source-bound repair plan](quilter-repair-plan-2026-10-14.md), not the older

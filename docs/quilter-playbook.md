@@ -311,6 +311,33 @@ launch remain failed/deviating evidence, not completed crossing tests.
 Reserve actual analysis/review time rather than launching at the cutoff;
 stop the item without inventing a physical PCB blocker.
 
+**Exercised continuation:** native effective-shape tests can reject a finite
+route batch without proving general impossibility. Check positive drill
+dimensions before treating `GetEffectiveHoleShape` as a physical hole:
+zero-drill SMT placeholders produced false hole-hit labels here. Preserve
+the raw report and correct its interpretation; independent copper-clearance
+rejections need not be rerun. Inspect actual Python overloads too:
+`SHAPE_CIRCLE.Collide` exposes a segment overload, while the exercised polygon
+receiver accepts a shape. AST success alone does not qualify native APIs.
+
+For ordinary through-via access, include fixed copper on every layer and
+actual rear-contact guards. Separate refillable GND-cache intersections from
+fixed obstacles, then require refill/private-island evidence before acceptance.
+Both tested sites here failed a real whole-span GND via, not their plane
+intersections. For a strictly width-only edit, source-span replacement plus
+exact inverse-byte reproduction can preserve all other geometry/fill bytes;
+native component equality adds topology evidence, not current or DRC approval.
+
+Bind the report mode before milestone validation: `--all-track-errors` needs
+the same-mode baseline, not a comparison with default first-error counts.
+The12-width derivative's default DRC timed out with empty streams and no
+report. Supervisor timeout/124 remains authoritative even if a terminated
+child records0. A leftover project lock is evidence to preserve, not proof
+of the cause. Do not count AST-only comparison controls as executed or
+reconstruct an overwritten helper revision from its hash. See the three
+October14 continuation entries in the
+[source-bound ledger](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json).
+
 Prepared native-save comparisons must distinguish originally serialized
 UUIDs from transient IDs assigned to anonymous copper. Name every required
 invariant explicitly: suffix-filtering Boolean fields omitted a nonfill

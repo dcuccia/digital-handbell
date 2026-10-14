@@ -7,7 +7,40 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October14,10:59 checkpoint: approved pilot stopped at P1 without a repair.**
+**Current October14,11:35 checkpoint: partial core-width derivative staged; acceptance held by DRC timeout.**
+The owner resumed at11:01 and requested continued work. Two native screens
+now provide real, bounded negative geometry evidence: all12 F core/C18 paths
+fail foreign-copper clearance, and both off-contact whole-span sites plus18
+paths fail fixed copper, principally GND via `4722ed77...`. Refillable ground
+planes were recorded as future refill duties, not falsely treated as fixed
+obstacles. Neither result proves all routing strategies impossible.
+
+An isolated **`117cbe9a...`** derivative now changes exactly12 new VCORE F
+widths from0.162 to0.1778mm. Inverse source-span edits reproduce every original
+byte of `05857d58...`; three actual controls pass. Two native loads preserve
+104 footprints/325 pads/1563 routing objects and identical connected components
+with no graph shorts. This is a real partial geometry change, not an accepted
+repair, core-group connection, C18 loop improvement or measured DRC reduction.
+The other64 known narrow segments and every required connection remain.
+
+Configured default-mode DRC timed out after90.266s with no report or stream
+output. The supervisor terminated the process tree and confirmed exit;
+its timeout/124 status overrides the recorded child return0. Preserve the
+project lock residue, which is not an established cause. The documented
+`--all-track-errors` option was confirmed by a help-only probe, but neither
+same-mode all-track run nor the prepared comparison controls executed.
+Do not waive that milestone gate or restart native work under the stopped item.
+
+Use the existing private `repair-pilot-20261014T1045\core-width-repair-1122`
+package, `candidate\handbell.kicad_pcb`, stage report `4f630762...`, and timeout
+receipt `650faa84...`. Preserve `05857d58`, raw output and the37-open source.
+Next is a separately bounded logged DRC-validation recovery on these exact
+files, not another board construction or geometry search. P2-P4 were not
+started. Detailed hashes, native negatives, corrected false hole labels and
+the unarchived first AST-only core-helper revision are recorded in the
+eight-output ledger's three October14 continuation entries.
+
+**Historical October14,10:59 checkpoint: approved pilot stopped at P1 without a repair.**
 The owner approved the proposed hour at10:44. P1's15-minute core/C18 item
 produced a complete native snapshot (`46436a1c...`) of the unchanged saved
 candidate but did not qualify any connection, width correction or replacement
