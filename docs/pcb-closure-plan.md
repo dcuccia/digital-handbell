@@ -11,7 +11,16 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
-**Current Quilter checkpoint, October14 12:30:** isolated `117cbe9a` is
+**Current trial checkpoint, October14 12:56:** the proposed coordinated core
+trial stopped at its first contract gate without a repair. Both named GND/
+D+ obstacles are Quilter-added, but physical cut/return duties remain
+unqualified. The prepared contact helper was rejected before execution;
+correction/review missed its fixed start cutoff. No native query or PCB
+change occurred. Stop further automated rework and recommend a focused human
+MCU/core/USB layout review. This is a preparation limit, not unroutability
+proof; no paid engagement or external transfer is authorized or performed.
+
+**Retained qualified checkpoint, October14 12:30:** isolated `117cbe9a` is
 qualified as a twelve-VCORE-width-only diagnostic repair. Exact inverse-byte
 and unchanged native component proofs combine with all-track/parity DRC:
 405->393 violations,76->64 widths, unchanged34 opens/46 parity and non-width
@@ -194,6 +203,15 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 `reports/power-device-local-reuse.json` records that limited reuse explicitly.
 
 ## Owner pause and next item
+
+**October14 12:56 trial stop:** no complete core/C18 replacement contract was
+qualified within the first item's cap. Both reviewed obstructions have new
+Quilter provenance, but that alone does not authorize moving them. Preserve
+unexecuted helper48b131ff and the missing physical-branch/return dependency.
+Do not consume the remaining trial time on another correction chain.
+Recommend focused human layout review before further automated repair; the
+owner must disposition that next step. No implementation or validation phase
+started, and no claim of physical impossibility is supported.
 
 **October14 12:30 completed width-validation milestone:** retain exact
 `117cbe9a` as the isolated12-width diagnostic improvement. The six changed

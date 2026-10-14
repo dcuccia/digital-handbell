@@ -7,7 +7,36 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October14,12:30 checkpoint: the isolated twelve-width repair is qualified.**
+**Current October14,12:56 checkpoint: coordinated core trial stopped at its contract gate; no routing repair.**
+The owner directed implementation of the proposed45-minute trial. Within
+its first15-minute item, two known obstacles were confirmed as Quilter-added:
+GND via `4722ed77...` at `(104.652448,96.844692)`,0.65065/0.35035mm, and
+D+ F track `3292e03d...`,0.227575mm. Both are absent from exact retained209
+input `1e4e41a9` and present in unchanged `117cbe9a`; root independently
+verified the bindings and UUID membership at12:55:26.
+
+That establishes provenance, **not replacement eligibility**. Complete
+segment-interior/pad contacts, kept branch partitions, local ground-return
+duties and any via-in-pad/process implications remain unqualified. The
+prepared focused contact query `48b131ff...` was rejected before execution:
+it labels source pads and filled islands as new routing, and its purported
+controls are only invariants. Preparation completed12:50:05, after the12:48
+target; corrected review could not fit the12:52:50 native-start cutoff.
+The helper is preserved unexecuted. No native contact query, board mutation,
+route search, DRC, refill or save occurred. No replacement geometry exists.
+
+The proposed trial's first stop condition is met. Do not use its remaining
+30minutes to reset this item or silently turn it into another tooling project.
+This is a limit of the automated preparation achieved here, **not evidence
+that the PCB is unroutable or placement must change**. Root recommends a
+focused human PCB-layout review of the MCU/core/USB area before further
+automated rework; no external contact, spending or file transmission occurred.
+Keep the qualified twelve-width-only `117cbe9a` checkpoint below and all
+original evidence. Implementation/validation phases were not started.
+Next action needs owner disposition rather than automatic routing.
+See `core_coordinated_rework_trial_2026_10_14` in the eight-output ledger.
+
+**Historical October14,12:30 checkpoint: the isolated twelve-width repair is qualified.**
 Exact `117cbe9a...` is now retained as a **twelve-VCORE-width-only diagnostic
 improvement**, not a completed core repair or accepted product board.
 Configured all-track DRC gives393 violations/64 width findings/34 opens/

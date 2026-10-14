@@ -365,6 +365,17 @@ invariant explicitly: suffix-filtering Boolean fields omitted a nonfill
 semantics gate in this preparation. These were code-review corrections,
 not exercised fill-preservation evidence.
 
+A retained-routing UUID set classifies routing, not source pads or saved
+filled islands. Keep those categories separate in contact/cut reports.
+Generated provenance, a GND net name or ordinary through-via dimensions do
+not qualify replacement, private-return topology or via-in-pad processing.
+Adjacency invariants are not negative mutation controls. The October14 core
+trial's contact helper failed this review before execution; its first-item
+cap ended without a qualified replacement plan. Honor that stop/go result
+instead of spending the reserved implementation time on a new tooling loop.
+Attribute the limitation to the uncompleted preparation, not the physical
+board or Quilter's routing capability.
+
 Use exact source net identities before classifying closure work. The
 saved-evidence assessment grouped76 narrow segments into eight net/layer
 packages and15 exact endpoint runs, totaling17.045255mm;53 segments are

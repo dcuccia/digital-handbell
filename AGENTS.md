@@ -2,7 +2,26 @@
 
 ## Bounded engineering work
 
-- **October14,12:30 twelve-width diagnostic repair qualified:**
+- **October14,12:56 coordinated core trial stopped without a repair:**
+  Owner requests implementation of the proposed45-minute trial. Its first
+  15-minute contract gate does not produce a qualified replacement plan.
+  Both blocker4722ed77 GND via and3292e03d D+ track are absent from exact
+  retained209 input1e4e41a9 and present in117cbe9a; root verifies this.
+  Generated provenance does not qualify removal, process status or private
+  return topology. Full physical cut/branch duties remain unknown.
+  Prepared48b131ff mislabels source pads and filled islands as new routing,
+  and its invariants are not actual negative controls. Root rejects it
+  before execution; preparation missed12:48 and correction/review missed
+  the12:52:50 native-start cutoff. Zero contact-query/native executions,
+  board changes or new routes. Preserve the unexecuted helper and all inputs.
+  Stop the trial at this gate rather than spend its remaining30minutes on
+  another tooling loop. This is an automation/preparation limit, not a
+  physical impossibility result. Recommend focused human MCU/core/USB
+  layout review before more automated rework; no contact or payment made.
+  Keep the qualified12-width117cbe9a checkpoint and authoritative37-open
+  source. Next action requires owner disposition, not automatic repair.
+  See core_coordinated_rework_trial_2026_10_14 in the eight-output ledger.
+- **Historical October14,12:30 twelve-width diagnostic repair qualified:**
   Owner requests autonomous completion. One1.313s static child resolves
   all six changed open representatives using four exact F segment joins,
   one source-qualified solid U4 pad attachment and one real SCL annular
