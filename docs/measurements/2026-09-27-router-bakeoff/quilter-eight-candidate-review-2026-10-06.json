@@ -1,5 +1,75 @@
 {
   "schema_version": 1,
+  "repair_plan_2026_10_14": {
+    "authorization": "Owner10:31:42 requests: ok, let's do a bounded repair plan for this saved candidate. work liberally but efficiently to get this done. Planning only; no implementation/native/cloud authority inferred.",
+    "status": "BOUNDED_REPAIR_PLAN_COMPLETE; NO_BOARD_CHANGES_OR_REPAIR_RELEASE",
+    "plan": "docs/quilter-repair-plan-2026-10-14.md",
+    "plan_sha256": "9ae52378a91cf2e79ed752df9b51efda918873ed71c61fd160f035e06ea6b5b1",
+    "execution_window": "Read-only executor starts approximately10:33; original extraction and role follow-ups stop before10:42. Root planning/publication checkpoint targeted10:47. No additional engineering item.",
+    "bindings": {
+      "saved_pcb": "05857d580f37294177d7b4be91b5edb958c82806cb7b414749960f63cf70062c",
+      "intended_project": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+      "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "drc": "64c59ec14915af8ecf5f3f3c24bc8f8444c82cc97426097b40e810c156fa9bcb",
+      "saved_graph": "8f288b0e40b401f93bf1d4facdc316b6e6fe5df4e5621c6e068cc63b4750ee2e",
+      "width_report": "600151ca7bf834ee8ecbf601282fc8ca6d8e5151ee2320af9c38e2dcf86091d8"
+    },
+    "executor": {
+      "agent_id": "d0d83ee9-4309-457a-986b-b6e068924d18",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "started_event": "340df216-fa53-4f95-b1d1-9c968a7b78af",
+      "configured_event": "522e413f-f0a1-40e5-886e-31dd6c40c522",
+      "runtime_verification": "Root read actual subagent.started and subagent.configured metadata, not executor self-report.",
+      "operations": "Nine shell/static invocations: eight exit0, one exit1 from a legacy numeric-net-field assumption. Corrected source parse found1446 segments in0.5059s. No native loads/imports, DRC, fills, saves, file writes, Git changes or network actions.",
+      "timeout_limit": "Original eight invocations completed before initial_wait but did not enforce the requested hard30s supervisor; root explicitly obtained and records this deviation. Last boot-role read used Wait-Job-Timeout30 with stop/exit124 handling. Zero actual timeouts. Do not label all nine supervised or rerun them to rewrite history."
+    },
+    "open_inventory": {
+      "nets": 30,
+      "records": 34,
+      "pad_groups": 64,
+      "two_group_nets": 26,
+      "three_group_nets": ["VHI", "POWER", "SDA", "~{RESET}"],
+      "reconciliation": "All30 exact net names and DRC multiplicities equal saved pad-island-count minus one. This is a consistency check, not34 independent geometric repair operations.",
+      "service_only_joins": ["SWDIO", "SWCLK", "/IMU_INT2", "~{RESET}:TP7 branch only"],
+      "limit": "All service connections remain required. I2S_DIN/LRCLK/AMP_MUTE witness groups containing test pads also contain functional amplifier terminals and are not merely service opens."
+    },
+    "source_role_corrections": {
+      "IC4.12": "LSM6DSOXTR CS_12 input on+3V3, not VDD; restores interface/mode strap.",
+      "POWER": "IC1.35 GPIO23 / U5.2 EN / Q2.1 gate plus TP16/R17: enable control, not supply distribution.",
+      "R25": "330R between VBAT and PROT_BAT; preserve the functional branch without inventing a more specific sense role.",
+      "R11_D3": "QSPI_CS-R11.1, R11.2-Net-(D3-PadA)-D3.A; D3.C on complete USBBOOT group IC1.9/TP3.P$1/D3.C. Mandatory boot-path connection, not optional indication. Native diode pad is C, not K.",
+      "scope": "Initial executor supply/control labels were corrected from exact serialized pinfunctions; source connectivity was never edited."
+    },
+    "same_net_refinement": {
+      "new_pairs": 9,
+      "already_joined_by_literal_F_segments": 7,
+      "direct_intervening_segment_pairs": [1, 5, 6, 8],
+      "multi_segment_chain_pairs": [4, 7, 9],
+      "unknown_pairs": [2, 3],
+      "unknown_locality": "Selected7b9ecb44-46de-4045-bf08-bc653d87b57a versus b7701ba0-84bb-4da1-8b23-ed33397a41ca/e73c635a-325a-4b3e-9e26-9fb7f276a98d. Both other tracks share an endpoint near103.334088,102.78966.",
+      "limit": "Static endpoint-chain evidence only, not pad/zone/all-layer component recomputation or widening approval. D+ paths remain subject to impedance/pair/reference review. Original nine-pair report remains unchanged."
+    },
+    "cc2": {
+      "track_uuid": "689b9c2a-470e-4d4c-b020-482207c32a05",
+      "layer": "In2.Cu",
+      "start_mm": [97.767685, 76.971614],
+      "end_mm": [97.767685, 80.641492],
+      "width_mm": 0.177978,
+      "npth_uuid": "8e659786-985c-5a3b-8d6a-fd715282132b",
+      "npth_center_mm": [97.11, 78.38],
+      "reported_gap_mm": 0.2437,
+      "minimum_mm": 0.25,
+      "proposal": "Later exact local track detour, not guessed6.3um translation, hole move, global rule change or inclusion among76 F width subjects."
+    },
+    "plan_disposition": {
+      "pilot": "Four future items of at most15minutes each: core/C18, six-net QSPI/boot corridor, USB/CC2, source/audio current paths. Exact geometry/branch contracts first; implementation only under separate authority and within each cap. Stop on structural conflict or exhausted attempts, no automatic extra experiment.",
+      "conditional_packages": "R1 core/rail2 opens; R2 flash/boot/reset9; R3 USB1; R4 source/control8; R5 motion/audio8; R6 user/indicator/service6. Sum34; all76 width subjects assigned across these plus GND return checks.",
+      "acceptance": "Preserve104 poses/325 pads/retained209/zones/outline/stack/rules/process/private returns. Restore complete terminal groups, not fixed DRC witness endpoints. Full intended-project/all-track-errors DRC and filled group/guard/private-return comparison at coherent future milestones, without comparing different DRC modes as equal baselines.",
+      "economic_limit": "Caps are stop/go budgets, not time-to-finish estimates or a cost advantage over the differently placed37-open source. No automatic new job, manual finish, merge or fabrication."
+    },
+    "root_verification": "At10:34:39 all five authoritative source hashes matched. At10:41:26 one hard30s static verification checked all six candidate/report bindings; exact30-net/34-record coverage;64 graph groups; all76 width subjects in8 packages; six implementation package totals34 and all local plan links. JSON/diff and final source preservation checks precede publication."
+  },
   "continuation_2026_10_13": {
     "candidate_completion_2314": {
       "authorization": "After committed7249d28 and successful source-specific candidate preservation, root advances to the next ready bounded dependency under the owner's continue-until-finished instruction and standing sequential-work authorization.",

@@ -2,6 +2,23 @@
 
 ## Bounded engineering work
 
+- **October14 repair plan completed; implementation remains unreleased:**
+  Owner requests a bounded plan for saved05857d58. All34 DRC witnesses
+  reconcile with64 pad groups across30 nets; four joins are service-only,
+  not removable duties. IC4.12 is CS, not VDD; POWER is an enable-control
+  net; the R11/D3 open belongs to QSPI/USBBOOT, not indicator cleanup.
+  Seven of nine prospective same-net pairs already have literal F segment
+  paths; two unresolved pairs share one +3V3 area. This is not width legality.
+  Exact CC2/In2 segment and X6 NPTH are bound. The plan assigns every open
+  and all76 width subjects to coherent batches and proposes four15-minute
+  critical pilots: core, flash/boot, USB/CC2, source/audio power, then stop/go.
+  One Sol/medium executor used saved evidence only; zero native/board/cloud
+  actions. Nine shell/static invocations include one parser correction;
+  the first eight lacked a hard supervisor despite finishing promptly.
+  Preserve that limitation; no evidence-replay or routing permission follows.
+  See docs/quilter-repair-plan-2026-10-14.md and the eight-output ledger's
+  repair_plan_2026_10_14. Next needs authorization of a bounded implementation
+  item, not a source rebuild or new cloud job. All existing candidates remain.
 - **October13,23:23 filled1.1 diagnostic completed; retain, do not integrate:**
   Exact05857d58 now passes narrow private-return/guard/island/CELL_NEG and
   no-short/no-floating witnesses. All34 configured open records are non-GND

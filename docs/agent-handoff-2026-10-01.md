@@ -7,7 +7,24 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13,23:23 checkpoint: bounded filled1.1 evaluation completed; candidate retained, not accepted.**
+**Current October14 checkpoint: [bounded repair plan](quilter-repair-plan-2026-10-14.md) completed; no repairs applied.**
+All 34 saved open records reconcile with 64 terminal groups across 30 nets.
+The plan assigns every open and all 76 narrow segments to six functional
+packages plus return checks. Seven of nine prospective same-net contacts
+already have literal F segment paths between their members; two unresolved
+pairs share one +3V3 area. This narrows topology questions, not full-rule or
+impedance acceptance. IC4.12 is a CS strap, POWER is enable control, and
+R11/D3 is mandatory flash/USBBOOT circuitry, not an optional indicator.
+
+Proposed next authorization is a capped four-item viability pilot (15 minutes
+each): core power/C18, QSPI/boot, USB/CC2, and source/audio current paths.
+Start with the core item, preserve one isolated derivative, and stop on a
+structural conflict or exhausted attempts instead of spending on easy service
+connections first. The plan alone releases no edits or native reruns.
+All source/raw/saved candidate bytes remain unchanged; see the plan and
+`repair_plan_2026_10_14` ledger entry for evidence and execution limitations.
+
+**Historical October13,23:23 checkpoint: bounded filled1.1 evaluation completed; candidate retained, not accepted.**
 The exact filled standard1.1 PCB `05857d58...` now also passes all ten
 narrow saved-fill/private-return gates. Both private pickoffs remain
 independent until their real terminals; both protected vias avoid fills,

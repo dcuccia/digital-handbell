@@ -11,7 +11,15 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
-**Current Quilter checkpoint, October5 11:14:** the owner-authorized first
+**Current Quilter checkpoint, October14:** the
+[saved standard 1.1 repair plan](quilter-repair-plan-2026-10-14.md) covers all
+34 non-GND open records, 76 under-width segments, CC2 and critical USB/power
+quality gates on exact `05857d58`. The authoritative 37-open board remains
+unchanged. Planning is complete; no repair/native rerun or new cloud job is
+released. The proposed next item is a bounded core-power/C18 feasibility and
+exact-delta pilot, ahead of flash/USB/source-current gates and routine closure.
+
+**Historical Quilter checkpoint, October5 11:14:** the owner-authorized first
 flexible four-layer [job](https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60)
 is submitted and working. See the [paired-import ledger](measurements/2026-09-27-router-bakeoff/quilter-paired-import-2026-10-05.json)
 `submission_checkpoint` for corrected common settings and precise limits.
@@ -174,6 +182,13 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 `reports/power-device-local-reuse.json` records that limited reuse explicitly.
 
 ## Owner pause and next item
+
+**October14 superseding planning checkpoint:** use the
+[source-bound repair plan](quilter-repair-plan-2026-10-14.md), not the older
+automatic engineering continuations below. The owner's current request
+authorized planning only. Saved `05857d58` is retained; the next proposed
+15-minute core-power/C18 pilot needs implementation authorization. No
+authoritative-board changes, unbounded manual finish or new Quilter volley.
 
 **October 5 hourly milestone:** both isolated native inputs now have all
 five footprint reservations and pass source-aware comparisons before/after

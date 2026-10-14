@@ -288,6 +288,18 @@ Hash-binding an input in a supervisor does not pass it as a child CLI
 argument: preserve the actual failed invocation and check the complete
 command, not just the reviewed helper source.
 
+**Repair-planning lesson, October14:** reconcile each open net's complete
+saved terminal groups before assigning routes. Here all30 nets' record counts
+equal group-count-minus-one; that is a topology consistency check, not34
+independent repair jobs. Bind pin functions too: the isolated +3V3 terminal
+is IMU CS, POWER is GPIO/enable/gate control, and R11/D3 connects QSPI_CS
+to USBBOOT. Neither names nor a test-pad witness establish optionality.
+Seven of nine prospective same-net contacts already have literal F segment
+paths; two share one unresolved local area. Reuse such cheap static evidence
+to narrow the review, without claiming SI/current legality. Budget the hard
+core/flash/USB/power corridors before easy service closure; keep every required
+terminal in the plan. See the [bounded plan](quilter-repair-plan-2026-10-14.md).
+
 Prepared native-save comparisons must distinguish originally serialized
 UUIDs from transient IDs assigned to anonymous copper. Name every required
 invariant explicitly: suffix-filtering Boolean fields omitted a nonfill
