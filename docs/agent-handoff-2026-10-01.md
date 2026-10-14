@@ -7,7 +7,57 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**Current October13,20:28 checkpoint: preservation resolved and configured native DRC complete.**
+**Current October13,22:40 checkpoint: fill and width screens stopped; saved-net assessment complete.**
+The owner's22:15 request authorized30-45minutes for controlled mask/fill
+comparison and a finite standard1.1 closure assessment. Our byte-staging
+helper failed at22:26:54: it expected an LF setup marker, while the exact
+baseline uses CRLF. No common-mask derivative was written. Both preparation
+corrections were already consumed, so the fill scope stopped without a
+retry. This is a tooling error, not evidence against the PCB or Quilter.
+The common0.1mm mask choice was diagnostic, not supplier approval.
+
+An independent saved-evidence extraction completed successfully:
+
+| Standard1.1 evidence | Result | Limit |
+|---|---|---|
+| Unfilled open records | 46 GND +34 across30 other nets | Not a prediction of34 final opens |
+| Below-floor F segments | 76 on eight nets;17.045255mm | 53 segments on+3V3/VCORE |
+| Exact endpoint runs | 15 | Not full connectivity components or repair count |
+| CC2/X6 hole deficit | 6.3um on In2 | CC2 is not among the76 narrow segments |
+
+All six QSPI nets, USB D-, supplies, I2C, interrupts and other functional
+nets remain in the non-GND work packages. Ground fills cannot substitute
+for routing those other nets. Reported pad endpoints are not exhaustive
+net terminal populations; regex circuit labels are heuristics, not source
+semantics. Preserve the exact-net tables and existing USB/power gates.
+
+The final width feasibility screen also stopped on a tooling gate. Its
+single authorized native child loaded an exact isolated1.1 copy and passed
+104-footprint/325-pad/1563-routing and76-selected-track counts, but failed
+static/native selected-geometry signature equality before any pair screen.
+The failure gives no field-level difference; do not guess rounding, actual
+PCB damage or widening infeasibility. No report JSON or pair results exist.
+The reviewed correction accounted for7.9um growth per side, or15.8um gap
+loss when both tracks widen; that method is not executed clearance evidence.
+
+Current evidence lives under the private experiment root at
+`quilter\outputs\placement-first-results-20261013T1904\setup-fill-review-20261013T2216`.
+Keep failed `prepare-attempt-1`, successful `finishing-assessment-attempt-1`,
+failed `width-screen\attempt-1`, raw copies and all prepared helper revisions.
+There are no files in `common-mask-unfilled` or `filled`. Three supervised
+children took0.125s/0.438s/1.735s; all exited without timeout. Exactly one
+native board load, no board mutation, DRC, fill, save or graph run occurred
+in this continuation. Root rehashed all five authoritative files and nine
+current copied input files unchanged at22:39:28. Executor is idle.
+
+Neither candidate is accepted; no cheap-closure claim, repair, merge or
+new cloud job is released. The next proposed item is separately authorized
+byte-safe staging recovery with LF/CRLF controls before controlled native
+fill/private-return qualification. Do not use leftover time to reset either
+stopped helper's allowance. See `continuation_2026_10_13.setup_fill_review_2216`
+in the eight-output ledger for exact hashes, scope and operation accounting.
+
+**Historical October13,20:28 checkpoint: preservation resolved and configured native DRC complete.**
 Owner20:00 requested the remaining field resolution and isolated DRC. All140
 inserted zeros are now matched directly to36 footprint and104 pad angle
 fields. Complete static footprint/pad subtrees match; independent KiCad10.0.6

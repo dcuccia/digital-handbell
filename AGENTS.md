@@ -2,6 +2,27 @@
 
 ## Bounded engineering work
 
+- **October13,22:40 fill and width screens blocked; net assessment saved:**
+  Owner22:15 approved30-45minutes. Common0.1mm diagnostic mask staging
+  failed before output because our helper expected LF, not source CRLF;
+  two preparation corrections were already consumed. No fill retry.
+  Independent saved evidence groups standard1.1's80 unfilled opens into
+  46 GND and34 across30 other nets, including all six QSPI nets. Do not
+  predict34 final opens. Its76 narrow F segments form eight net/layer
+  groups,15 exact endpoint runs and17.045255mm;53 are on+3V3/VCORE.
+  These are review packages, not guaranteed repair counts. CC2's separate
+  In2 hole-clearance deficit is not one of those width segments.
+  One final read-only width child passes controls/counts but stops at
+  serialized/native76-selection equality before any copper-pair screen.
+  Cause is unresolved; no widening obstruction or legality is established.
+  Three supervised children total: two static and one native preflight;
+  one isolated board load, no fill/save/DRC/graph or board mutation.
+  All exited without timeout; no executed retry. Source and copied inputs
+  are unchanged, prepared fill trees empty, executor idle. Preserve1.1,
+  not a repair-go or demonstrated finishing-cost win. Stop this scope;
+  next proposed item is separately authorized byte-safe staging recovery,
+  not rerouting, a cloud job or an automatic width-check retry.
+  See setup_fill_review_2216 in the October13 eight-output ledger.
 - **October13,20:28 configured native review completed; neither accepted:**
   Owner20:00 requests field resolution and isolated DRC. All140 zero angles
   now map to36 footprint/104 pad at nodes; full static subtrees and native
