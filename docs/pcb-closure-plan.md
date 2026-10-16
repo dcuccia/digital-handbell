@@ -14,7 +14,8 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 **Support disposition, October16:** Quilter/Justin offers product-specific
 help, not layout review. The requested width metadata and original-export
 examples are prepared in a small [report](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json)
-with an unsent [reply](quilter-support-email-2026-10-14.md).
+with a [reply](quilter-support-email-2026-10-14.md) the owner reports sent
+at15:58 local. Attachment inclusion was not independently checked.
 An export issue is possible but unproven. IC1-area spacing is a suggested
 placement experiment, not a promised completion gain. This all-preplaced
 input needs actual local pose changes or a deliberately revised placement

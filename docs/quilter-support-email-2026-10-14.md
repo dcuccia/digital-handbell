@@ -1,16 +1,18 @@
-# Quilter support correspondence and draft follow-up
+# Quilter support correspondence
 
 The owner reports sending the original email body without attachments on
 October 14. On October 16 the owner supplied Justin's reply: Quilter does
 not offer layout review services, but can answer product-specific questions.
 Justin requests the metadata behind the width finding and suggests an
 IC1-area placement/spacing experiment. An export discrepancy is a possibility,
-not a diagnosed cause. The follow-up below is prepared locally, **not sent**.
+not a diagnosed cause. At15:58 local on October16 the owner reported
+**"email sent"** for the follow-up. The outgoing message and attachment
+inclusion were not independently inspected; the prepared text is preserved below.
 No new job, PCB change or paid engagement has occurred in this follow-up.
 
-## October 16 follow-up - attach one small JSON report
+## October 16 follow-up - owner reports sent
 
-**Attachment:** [quilter-width-evidence-2026-10-16.json](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json).
+**Prepared attachment:** [quilter-width-evidence-2026-10-16.json](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json).
 This is a field-limited report we prepared from saved evidence, not a
 Quilter-generated report. It contains no account/browser credentials or
 personal paths. Do not substitute the full `browser-evidence\job.json`.

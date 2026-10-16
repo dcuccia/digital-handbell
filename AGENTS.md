@@ -8,8 +8,10 @@
   suggests IC1-area spacing/placement experiments; export causality remains
   unproven. Saved October13 job177.8/candidate162 fields and untouched raw
   0.162mm segment examples are packaged in quilter-width-evidence-2026-10-16.json
-  under the router-bakeoff measurements directory. A reply is drafted in
-  docs/quilter-support-email-2026-10-14.md, not sent. Full captures stay private.
+  under the router-bakeoff measurements directory. Owner15:58 reports the
+  follow-up email sent; its prepared text remains in
+  docs/quilter-support-email-2026-10-14.md. Attachment inclusion was not
+  independently checked. Await support's response; full captures stay private.
   All104 parts were preplaced: spacing settings alone do not implement a
   local placement change. Smaller geometry/power-plane changes need separate
   electrical/process dispositions. No new job, board edit or native run.

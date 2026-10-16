@@ -15,8 +15,10 @@ incomplete nets and recommends more IC1-area spacing/placement exploration.
 His export explanation is tentative, not an established root cause.
 
 A [small metadata report](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json)
-and [draft reply with its exact attachment path](quilter-support-email-2026-10-14.md)
-are prepared locally, not sent. The report quotes saved October13 job
+and [prepared reply with its exact attachment path](quilter-support-email-2026-10-14.md)
+are preserved. At15:58 local the owner reports the follow-up email sent;
+attachment inclusion was not independently inspected. Await support's reply,
+without automatic resending or monitoring. The report quotes saved October13 job
 minimum177.8 and candidate minimum162 fields, plus two0.162mm segments in
 the untouched raw archive. It explicitly asks what the candidate field
 means rather than equating it with pre-export routing. Full browser/account
