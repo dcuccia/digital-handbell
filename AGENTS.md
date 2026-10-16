@@ -2,12 +2,18 @@
 
 ## Bounded engineering work
 
-- **October14 support follow-up is draft-only:** owner requests an email to
-  Quilter/Justin before independent layout help. Exact project/job/candidate,
-  uploaded inputs, untouched1.1 archive and separate native diagnostics are
-  referenced in docs/quilter-support-email-2026-10-14.md. No email, upload,
-  paid engagement, new job or engineering continuation is authorized by
-  drafting. The prior local tooling stop is not proof redesign is required.
+- **October16 support disposition:** owner sent the October14 email body
+  without attachments and now supplies Justin's reply. Quilter offers
+  product support, not layout review. Justin requests width metadata and
+  suggests IC1-area spacing/placement experiments; export causality remains
+  unproven. Saved October13 job177.8/candidate162 fields and untouched raw
+  0.162mm segment examples are packaged in quilter-width-evidence-2026-10-16.json
+  under the router-bakeoff measurements directory. A reply is drafted in
+  docs/quilter-support-email-2026-10-14.md, not sent. Full captures stay private.
+  All104 parts were preplaced: spacing settings alone do not implement a
+  local placement change. Smaller geometry/power-plane changes need separate
+  electrical/process dispositions. No new job, board edit or native run.
+  Engineering remains stopped; this support response is not routing release.
 - **October14,12:56 coordinated core trial stopped without a repair:**
   Owner requests implementation of the proposed45-minute trial. Its first
   15-minute contract gate does not produce a qualified replacement plan.

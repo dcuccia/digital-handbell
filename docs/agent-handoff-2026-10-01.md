@@ -7,13 +7,29 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**October14 support follow-up:** the owner requested a
-[focused email draft to Quilter](quilter-support-email-2026-10-14.md).
-It references the exact project/job/candidate, original input, raw standard
-1.1 archive and separately labeled native diagnostics. This is a draft only:
-no message, upload, paid engagement or new job. Our prior tooling stop does
-not establish a need for expert redesign; seek targeted support guidance
-before commissioning independent layout help. PCB work remains stopped.
+**October16 support checkpoint:** the owner reports sending the October14
+email body without attachments and supplies Justin's reply. Quilter does
+not offer layout-review services; product-specific export/constraint help
+remains available. Justin asks for the width metadata, confirms30 service
+incomplete nets and recommends more IC1-area spacing/placement exploration.
+His export explanation is tentative, not an established root cause.
+
+A [small metadata report](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json)
+and [draft reply with its exact attachment path](quilter-support-email-2026-10-14.md)
+are prepared locally, not sent. The report quotes saved October13 job
+minimum177.8 and candidate minimum162 fields, plus two0.162mm segments in
+the untouched raw archive. It explicitly asks what the candidate field
+means rather than equating it with pre-export routing. Full browser/account
+captures are excluded. No live query, native run, PCB change or new job.
+
+The useful next engineering proposal is an actual bounded IC1-area
+placement alternative, not another layer/spacing/minima matrix. All104
+components were preplaced, so a spacing-setting change alone does not move
+them. Preserve the qualified retained209 input and clock/private-return
+duties; do not freeze all output copper into a new input. Smaller traces/vias
+and power-plane changes require separate process/current/impedance/return
+review. No such proposal or implementation was started. Independent layout
+help remains an option, not a proven necessity; PCB work remains stopped.
 
 **Current October14,12:56 checkpoint: coordinated core trial stopped at its contract gate; no routing repair.**
 The owner directed implementation of the proposed45-minute trial. Within

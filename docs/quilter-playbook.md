@@ -138,6 +138,25 @@ Full native DRC needs the intended project rules, not just the downloaded
 defaults. The [support disposition](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json)
 records unanswered questions; it authorizes no rerun, refill or repair.
 
+**Attributed support scope and export lesson, October16:** Justin says
+Quilter does not offer design-review services, but can investigate
+product-specific questions. He requests the width metadata because his
+internal view shows no generated below-minimum traces; export is a possible
+explanation, not a confirmed diagnosis. Send a small field-limited excerpt
+with capture date, exact job/candidate IDs, source hashes and coordinates
+from the untouched download, not full account/browser captures or a locally
+repaired board. A candidate summary field need not describe the router's
+pre-export geometry. The [width evidence](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json)
+binds177.8/162 metadata to two raw0.162mm examples without claiming causality.
+
+His recommendation to increase IC1 spacing needs an effective placement
+change: this job had104 preplaced components. A parameter change alone is
+not evidence of moved parts or more routing room. Prefer a bounded actual
+placement alternative before a multi-variable job matrix, and retain the
+existing electrical/process gates before reducing geometry or assigning a
+power plane. Product support is not a substitute for those engineering
+decisions, and advice does not itself authorize a new job.
+
 **Observed same-placement diagnostic, October6:** under the identical
 qualified input project, native2.1 has76 unconnected records and no
 short/copper-clearance/hole-clearance findings; beta2.2 has32 but adds

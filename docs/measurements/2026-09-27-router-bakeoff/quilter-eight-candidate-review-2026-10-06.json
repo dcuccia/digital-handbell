@@ -1,5 +1,19 @@
 {
   "schema_version": 1,
+  "support_metadata_response_2026_10_16": {
+    "owner_report": "Owner sent the October14 email body without attachments and supplies Justin's reply on October16. This is not an instruction to send a response or restart PCB work.",
+    "attributed_reply": "Quilter does not offer review services, but supports product-specific questions. Justin requests the width metadata because he sees no generated below-minimum traces internally and suggests a possible export issue. He confirms30 incomplete nets and recommends more IC1-area space, actual placement iteration, possibly smaller traces/vias or a power plane where the design allows, and small parallel experiments.",
+    "disposition": "Separate the product/export question from engineering experiments. The internal/export discrepancy is unresolved, not a proven backend or export defect. All104 parts were preplaced; a spacing parameter alone does not implement more room. No geometry reduction, power-plane reassignment or new job is released.",
+    "prepared_report": "quilter-width-evidence-2026-10-16.json",
+    "prepared_report_sha256": "37609e0f11951a3c8a4eb419d2324819d304d8e250c48dfe359681c0152dda5e",
+    "prepared_report_bytes": 4552,
+    "draft_reply": "docs/quilter-support-email-2026-10-14.md, October16 follow-up",
+    "report_scope": "Field-limited excerpts of saved October13 job/candidate responses, original archive/member hashes, two coordinate/line-bound0.162mm raw segments, and the existing unfilled configured76-width-finding report. Not a Quilter-generated report, fresh service query or locally repaired board. Account/browser state and personal paths excluded.",
+    "source_readback_completed_local": "2026-10-16T15:45:36.4739524-07:00",
+    "verification": "One validation child under a30-second subprocess limit confirms exact response-field subsets and source hashes, both original ZIP members, extracted PCB byte equality, both normalized raw line ranges, PCB/project/schematic/DRC bindings, all76 width descriptions and all five authoritative source hashes. Read-only shell/text inspection also performed; no native PCB operations.",
+    "operation_limits": "No message or file sent to Quilter, live service request, native load/DRC/fill/save, PCB edit, source integration, new cloud job or paid engagement. Original captures, archives and all prior candidates remain unchanged.",
+    "next": "Owner may send the focused draft with the one prepared JSON attachment. A separately authorized bounded actual IC1-area placement proposal is an option; retain the209 input/clock/private-return/process duties and do not freeze all generated output copper. Smaller geometry and power-plane options require separate supplier/current/impedance/return dispositions."
+  },
   "core_coordinated_rework_trial_2026_10_14": {
     "authorization": "Owner12:42:26 directs implementation/autonomous completion after root proposed one45-minute core-closure trial in three capped items. Root freshly observed host12:42:48.030 and clean HEAD4c35e67. No authoritative-board change, protected-object modification, cloud job or fabrication is released.",
     "trial_window": "12:42:48-13:27:48 maximum. First exact-contract item12:42:48-12:57:48 including root review; prepare12:48, execution stops12:54:30/report12:55:30. No automatic phase advance without root review.",

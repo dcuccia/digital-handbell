@@ -1,0 +1,90 @@
+{
+  "report_kind": "Project-prepared, field-limited excerpt of saved Quilter responses and original exported KiCad text; not a Quilter-generated report",
+  "prepared_date": "2026-10-16",
+  "capture_date": "2026-10-13",
+  "current_service_state_queried": false,
+  "scope": "Standard/non-beta candidate 1.1 width question only. No locally filled or width-repaired PCB is used in these examples.",
+  "job_url": "https://app.quilter.ai/jobs/6acd3f5501e64eae4591facd",
+  "candidate_label": "1.1",
+  "saved_job_response": {
+    "source_capture_filename": "job.json",
+    "source_capture_sha256": "4b59aa372ef41729c53a2aa9361f830ba5193d5635f1fb993a481797cc0e0472",
+    "excerpt": {
+      "data": {
+        "id": "6acd3f5501e64eae4591facd",
+        "projectId": "6ac3d5b7fc0d2d776ed14a5f",
+        "name": "handbell.kicad_pcb",
+        "state": "complete",
+        "designRules": {
+          "minTraceWidthMicrons": 177.8,
+          "minClearanceMicrons": 200.0,
+          "minViaDiameterMicrons": 650.0,
+          "minViaHoleDiameterMicrons": 350.0,
+          "boardMarginMicrons": 250.0
+        }
+      }
+    }
+  },
+  "saved_candidate_response": {
+    "source_capture_filename": "candidate-1.1.json",
+    "source_capture_sha256": "d41f8c7af5c5e55a316838e6d19b303da9ddedba47e1e651d2ff5df9c51933cf",
+    "excerpt": {
+      "data": {
+        "id": "6acecbafa7022bc539416989",
+        "index": 0,
+        "numLayers": 8,
+        "minTraceWidth": 162.0,
+        "minClearance": 200.0,
+        "routingCompletion": 0.8600823045267489
+      }
+    }
+  },
+  "original_download": {
+    "archive_filename": "candidate-1.1.zip",
+    "archive_sha256": "aa4f90b216f0a751c9468cf5e1fbb9dee132ece6be303d2e1c2e32317a21501d",
+    "pcb_member": "handbell.kicad_pcb",
+    "pcb_member_sha256": "1adf790707a6afc7f654c66924d04a8f369f4c4f4de8ef41c8590e8aacf32f38",
+    "returned_project_member": "handbell.kicad_pro",
+    "returned_project_sha256": "8b1a02867b99a61e2ab86855ebb9707669e0060626ba5bf19853663f308ef90d",
+    "raw_segment_examples": [
+      {
+        "source_line_start": 26775,
+        "source_line_end": 26781,
+        "units": "mm",
+        "text_format": "Whitespace collapsed only",
+        "sexpr": "(segment (start 104.37432728607122 100.37515950000001) (end 103.88782728607121 100.59965950000002) (width 0.162) (layer \"F.Cu\") (net \"+3V3\") )"
+      },
+      {
+        "source_line_start": 28882,
+        "source_line_end": 28888,
+        "units": "mm",
+        "text_format": "Whitespace collapsed only",
+        "sexpr": "(segment (start 103.45 101.8) (end 103.8875 101.8) (width 0.162) (layer \"F.Cu\") (net \"VCORE\") )"
+      }
+    ]
+  },
+  "existing_unfilled_native_diagnostic": {
+    "tool": "KiCad 10.0.6",
+    "source_report_filename": "drc.json",
+    "source_report_sha256": "49352d459f9d2ef152b470e775eab3ac42de8d457e2463c914106cbc851b4c2d",
+    "pcb_sha256": "1adf790707a6afc7f654c66924d04a8f369f4c4f4de8ef41c8590e8aacf32f38",
+    "project_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project_selection": "Originally supplied project, not the different returned project",
+    "track_width_findings": 76,
+    "finding_description": "Track width (board setup constraints min width 0.1778 mm; actual 0.1620 mm)",
+    "new_native_run_performed": false
+  },
+  "interpretation_limits": [
+    "These are saved October 13 captures, not a fresh service query.",
+    "The original exported file already contains width 0.162 before any local fill/save or twelve-width correction.",
+    "The candidate field minTraceWidth is reproduced exactly. Whether it describes pre-export routing, exported geometry, or another calculation requires Quilter clarification.",
+    "This evidence does not establish the cause of the discrepancy or contradict a different internal representation inspected by support.",
+    "The two raw segments are coordinate-based examples; their anonymous raw records must not be identified by later KiCad-assigned UUIDs.",
+    "Account/user metadata, authorization headers, browser storage, local paths and personal KiCad preferences are not included."
+  ],
+  "questions_for_quilter": [
+    "What does data.minTraceWidth describe, and at which stage is it computed?",
+    "Can you compare the two exact exported segments with the corresponding pre-export routing geometry under the saved 177.8 micrometre minimum?"
+  ]
+}
