@@ -2,9 +2,13 @@
 
 ## Bounded engineering work
 
-- **November5 routing-completion plan approved; Step0 done, DeepPCB blocked
-  on owner API key.** Owner is a software developer, not a router; tools must
-  drive routing. See docs/routing-completion-plan-2026-11.md progress log.
+- **November5 routing-completion plan approved; Step0 done; DeepPCB boards
+  uploaded (protected wiring, no job) and waiting on owner credit purchase.**
+  Free trial unusable (150-airwire limit counts all 224 connections). Full
+  input board id a4535c0f-c4cb-4271-bc9a-1cac47c64acf, 31 unrouted by
+  DeepPCB count, $0.50/min. Owner is a software developer, not a router;
+  tools must drive routing. See docs/routing-completion-plan-2026-11.md
+  progress log.
   Input prep: tools/prepare_deeppcb_input.py (private work folder
   deeppcb-20261105 under the bakeoff root); standard check:
   tools/check_routing_result.py; API driver: tools/deeppcb_route.py (always

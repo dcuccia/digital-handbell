@@ -53,9 +53,9 @@ and placement files change together). Keep SWD, RESET and BOOT access.
 
 ## Plan
 
-**Status, November 5:** approved by the owner; Step 0 complete; DeepPCB run
-waiting for the owner's API key. No upload, purchase or freelancer contact
-has happened.
+**Status, November 5:** approved by the owner; Step 0 complete; boards
+uploaded to DeepPCB with existing wiring protected; waiting for the owner to
+buy credits. No routing job, purchase or freelancer contact has happened.
 
 ### Progress log
 
@@ -101,7 +101,29 @@ cost cap.
 **Blocked on owner (one action):** Playwright is not signed in to DeepPCB,
 and creating an API key needs owner approval. Owner: open
 `https://app.deeppcb.ai/integration`, create a key, and save only the key
-text in `C:\Users\david.cuccia\.deeppcb\api_key.txt`. Then the agent runs:
+text in `C:\Users\david.cuccia\.deeppcb\api_key.txt`.
+
+**November 5, 15:40 update:** key provided. Two boards uploaded with
+`CurrentProtectedWiring`; no job started, nothing spent:
+
+| Upload | DeepPCB board id | Components | Pins | Unrouted (DeepPCB) | Total airwires | Free? |
+|---|---|---|---|---|---|---|
+| Trial probe (no TP12-TP15) | `b966cf25-b402-44f7-9757-c9871830181f` | 100 | 306 | 27 | 220 | No |
+| Full routing input | `a4535c0f-c4cb-4271-bc9a-1cac47c64acf` | 104 | 310 | 31 | 224 | No |
+
+The free trial is unusable: its 150-airwire limit counts **all** connections,
+routed or not. Both boards need credits at 0.5 per minute ($30/hour). Account
+balance is $0, and buying credits is an owner payment action.
+
+**Next (owner):** buy the 1-hour ($30) pack at
+`https://app.deeppcb.ai/time-balance`. **Then the agent:** start the existing
+full-input board for 30 minutes (`deeppcb_route.py start --state full-run.json
+--minutes 30 --allow-paid --max-usd 15`), wait, download, DRC and the standard
+check. Keep the result only if existing copper is preserved and opens fall;
+the remaining 30 minutes fund one placement-assist round. If existing copper
+is not preserved, stop DeepPCB.
+
+Original runbook once credits exist:
 
 1. `deeppcb_route.py create` on the free-trial probe, then `status` to see
    whether it is free (`requiresCredits`). If it is not free, stop and ask

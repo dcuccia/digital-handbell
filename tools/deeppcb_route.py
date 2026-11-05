@@ -82,7 +82,9 @@ def cmd_create(args):
     files = [("kicadBoardFile", (f"{args.name}.kicad_pcb", (folder / "handbell.kicad_pcb").read_bytes())),
              ("kicadProjectFile", (f"{args.name}.kicad_pro", (folder / "handbell.kicad_pro").read_bytes()))]
     data = {"routingType": "CurrentProtectedWiring", "boardName": args.name,
-            "requestId": str(uuid.uuid4()), "boardInputType": "Kicad", "smartConstraints": "false"}
+            "requestId": str(uuid.uuid4()), "boardInputType": "Kicad", "smartConstraints": "false",
+            # The API requires a webhook; this is the KiCad plugin's own placeholder endpoint.
+            "webhookUrl": "https://plugin.kicad.deeppcb.ai", "webhookToken": "webhook_token"}
     r = check(requests.post(f"{API}/boards", headers=headers(), data=data, files=files, timeout=300))
     board_id = r.text.strip().strip('"')
     state = {"board_id": board_id, "name": args.name, "input_dir": str(folder)}
