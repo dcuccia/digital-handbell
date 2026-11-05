@@ -2,15 +2,16 @@
 
 ## Bounded engineering work
 
-- **November5 routing-completion plan proposed (tool-driven):** owner is a
-  software developer, not a router, and wants a tool to drive routing. See
-  docs/routing-completion-plan-2026-11.md: finish authoritative four-layer
-  adc262b3 (Quilter outputs are reference only); Step0 netlist/rule freeze;
-  capped DeepPCB run after a preservation test; agent placement-only assist
-  loop (max3 rounds); freelancer fallback; one pre-fab gate. Owner does not
-  route. Proposal only: no board edits, accounts, uploads, purchases or
-  contacts until the owner approves its listed decisions. Agents must not
-  resume move-by-move hand routing or broad router/layer sweeps.
+- **November5 routing-completion plan approved; Step0 done, DeepPCB blocked
+  on owner API key.** Owner is a software developer, not a router; tools must
+  drive routing. See docs/routing-completion-plan-2026-11.md progress log.
+  Input prep: tools/prepare_deeppcb_input.py (private work folder
+  deeppcb-20261105 under the bakeoff root); standard check:
+  tools/check_routing_result.py; API driver: tools/deeppcb_route.py (always
+  CurrentProtectedWiring; refuses paid runs without --allow-paid/--max-usd).
+  Baseline under refill: 38 opens, zero errors. Freelancers gated until the
+  owner is prompted. Never create accounts/keys or buy credits for the owner.
+  Agents must not resume move-by-move hand routing or broad router sweeps.
 
 - **October16 support disposition:** owner sent the October14 email body
   without attachments and now supplies Justin's reply. Quilter offers

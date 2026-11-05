@@ -53,8 +53,64 @@ and placement files change together). Keep SWD, RESET and BOOT access.
 
 ## Plan
 
-**Status, November 5:** proposed plan only. No board, rule, upload, purchase,
-account or freelancer contact has happened.
+**Status, November 5:** approved by the owner; Step 0 complete; DeepPCB run
+waiting for the owner's API key. No upload, purchase or freelancer contact
+has happened.
+
+### Progress log
+
+**November 5 owner decisions:** four-layer baseline confirmed (move to six or
+eight layers only if it clearly gives line-of-sight to completion); all steps
+approved, fail fast and preserve personal budget; DeepPCB account exists
+(Google sign-in, owner's Chrome); parts may move freely except keep USB and
+important buttons/switches accessible, board may grow 10-20% if needed; test
+points may go anywhere; freelancer step gated until the owner is prompted.
+See the [freelancer explainer](layout-freelancer-explainer-2026-11.md).
+
+**November 5 Step 0 completed (no spending):**
+
+- `tools/prepare_deeppcb_input.py` copies the verified authoritative files to
+  a private work folder and builds the routing input: eight reviewed
+  battery-contact guards (no tracks, vias or pours on B.Cu), the twelve
+  private-return guards now also block new tracks and vias, In1 marked as a
+  power plane with a whole-board track keep-out (vias still allowed), 0.3 mm
+  edge clearance, Default class 0.2/0.2 mm with 0.6/0.3 mm vias, and a 0.3 mm
+  `power` class for VBUS, VBAT, VHI and VAMP. A 100-footprint free-trial probe
+  copy omits TP12-TP15.
+- KiCad 10.0.6 DRC with refill: the unchanged baseline has **38 opens**
+  (37 was recorded from saved fills) and **no errors**, only warnings. The
+  routing input has the same 38 opens plus 74 inherited errors (existing
+  protected copper inside the new guard areas, two edge findings). The probe
+  has 34 opens.
+- `tools/check_routing_result.py` is the standard check. Controls: unchanged
+  copy fails (no opens closed); a removed track, new `/CELL_NEG` copper and new
+  copper on private pad R24.2 are each caught.
+- Schematic parity (46 naming warnings) is deferred to the pre-fab gate: the
+  router receives only the PCB and project, whose nets are authoritative.
+  USB on the RP2040 is 12 Mbit/s full speed, so a short pair needs no tight
+  impedance control; no USB net class was added.
+
+**DeepPCB facts verified November 5:** $30 per routing hour pay-as-you-go
+($28/h and $26.7/h in larger packs). Free trial: 30 minutes, one board, up to
+4 layers, 150 airwires and 100 components. Official API spec offers
+`CurrentProtectedWiring` ("protect existing wiring"); the KiCad plugin
+defaults to `CurrentUnprotectedWiring`, so we use `tools/deeppcb_route.py`,
+which always requests protection and refuses paid runs without an explicit
+cost cap.
+
+**Blocked on owner (one action):** Playwright is not signed in to DeepPCB,
+and creating an API key needs owner approval. Owner: open
+`https://app.deeppcb.ai/integration`, create a key, and save only the key
+text in `C:\Users\david.cuccia\.deeppcb\api_key.txt`. Then the agent runs:
+
+1. `deeppcb_route.py create` on the free-trial probe, then `status` to see
+   whether it is free (`requiresCredits`). If it is not free, stop and ask
+   before any paid run.
+2. Start up to 30 minutes, wait, download, run DRC and the standard check
+   against the probe baseline.
+3. If existing copper is not preserved, stop DeepPCB (fail fast). If it is,
+   proceed to the full input as a capped paid run (about $15 for 30 minutes)
+   and the placement-assist loop.
 
 ### Step 0 - prepare a clean input (agent, about 1-2 hours)
 
