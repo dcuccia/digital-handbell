@@ -7,6 +7,13 @@ guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
+**November5 next-step plan:** see the proposed
+[routing completion plan](routing-completion-plan-2026-11.md). It selects the
+authoritative four-layer 37-open board as the baseline and replaces
+agent-generated routing with human interactive routing plus agent checks,
+a capped DeepPCB probe and freelance quotes. Proposal only; awaiting owner
+decisions. No Quilter reply is expected.
+
 **October16 support checkpoint:** the owner reports sending the October14
 email body without attachments and supplies Justin's reply. Quilter does
 not offer layout-review services; product-specific export/constraint help

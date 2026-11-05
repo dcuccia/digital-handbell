@@ -2,6 +2,16 @@
 
 ## Bounded engineering work
 
+- **November5 routing-completion plan proposed:** owner does not expect a
+  Quilter reply and asks for a plan to finish routing and fab prototypes.
+  See docs/routing-completion-plan-2026-11.md: finish the authoritative
+  four-layer adc262b3 board (Quilter outputs become reference only), human
+  interactive KiCad routing with agent support, Step0 netlist/rule freeze,
+  parallel owner easy-closure, capped DeepPCB probe and freelance quotes,
+  measurable session stop rules and one pre-fab gate. Proposal only: no
+  board edits, uploads, purchases or contacts until the owner approves its
+  listed decisions. Do not restart broad agent routing or router sweeps.
+
 - **October16 support disposition:** owner sent the October14 email body
   without attachments and now supplies Justin's reply. Quilter offers
   product support, not layout review. Justin requests width metadata and
