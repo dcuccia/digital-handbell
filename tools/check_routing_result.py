@@ -112,6 +112,8 @@ def main():
     ap.add_argument("--base-drc", required=True)
     ap.add_argument("--candidate-drc", required=True)
     ap.add_argument("--allow-move", nargs="*", default=[])
+    ap.add_argument("--allow-changed-nets", nargs="*", default=[],
+                    help="nets deliberately ripped up; lost copper on them is not a failure")
     ap.add_argument("--report", required=True)
     args = ap.parse_args()
 
@@ -133,6 +135,8 @@ def main():
         failures.append(f"Unapproved part moves: {unapproved}")
 
     lost, new = compare_copper(copper_items(pcbnew, base_board), copper_items(pcbnew, cand_board))
+    allowed = set(args.allow_changed_nets)
+    lost = [(k, s) for k, s in lost if (k[0] if isinstance(k, tuple) else k) not in allowed]
     if lost:
         failures.append(f"{len(lost)} existing track/via items not preserved")
         notes.append("lost examples: " + "; ".join(f"{k} {[round(v, 4) for v in s[:4]]}" for k, s in lost[:6]))

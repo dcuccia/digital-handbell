@@ -174,6 +174,33 @@ adds legal F.Cu escape stubs and vias for the open IC1 pins (no part moves),
 then DeepPCB routes from them. Blind F-to-In2 vias would also avoid the
 contacts but need costly HDI fabrication.
 
+**November 5, 16:40 - iteration results; DeepPCB stopped again (fail fast).**
+Total DeepPCB use 26.7 minutes ($13.34); about $16.66 credit remains.
+
+| Attempt | Result |
+|---|---|
+| Free IC1 fanout on the 25-open board | No usable gain (escaped pins were already routed). |
+| Remove board-wide In1 track keep-out, fanout again | IC1 pins in keep-outs 57 -> 28; no usable gain. |
+| `tools/escape_ic1_pins.py` (grid A* F.Cu stubs to legal vias, 0.15 mm rules) | Individually some pins escape, but only by running under the QFN body, which blocks neighbours; with the body excluded almost nothing escapes. F.Cu around IC1 is saturated (104 +3V3 segments within 7 mm). D- has no exit at all. |
+| Rip-up of +3V3/VCORE/USBBOOT/D13/GND tracks/I2S within 7 mm (`tools/rip_up_region.py`), fanout + 7.5 min route | DeepPCB 51 -> 15 by its count, but its routing again moved protected copper; the filtered merge creates shorts/clearance/crossings and reaches only 24 opens. Rejected. |
+
+**Root cause:** IC1 sits over both battery contacts' inner bases. Their via
+keep-outs cover IC1's left and right pin rows (28 of 57 pins), and the only
+F.Cu escape space is already filled by supply routing. More router passes
+will not change that. Realistic options (owner decision):
+
+1. **Move IC1 and its cluster** about 6 mm north or south, so no IC1 pin row
+   lies over the contact bases, then let DeepPCB route the area (the board
+   may grow 10-20% if needed). Biggest benefit; a real placement change
+   requiring a mechanical re-check.
+2. **Relax the via keep-out under the positive (VBAT) contact only**, for
+   example filled and capped vias under solder mask. Never under the
+   negative contact, where it could bypass battery protection. Needs an
+   explicit insulation decision.
+3. **Six layers do not help** this specific wall: escape vias are still
+   blocked through the contacts. Blind F-to-In2 vias would help but need HDI
+   fabrication at extra cost.
+
 ### Step 0 - prepare a clean input (agent, about 1-2 hours)
 
 1. Regenerate the exact open list for `adc262b3` on a copy.

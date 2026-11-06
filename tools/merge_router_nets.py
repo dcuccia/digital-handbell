@@ -30,6 +30,7 @@ def main():
     ap.add_argument("--base", required=True)
     ap.add_argument("--router", required=True)
     ap.add_argument("--base-drc", required=True, help="DRC report whose unconnected nets are eligible")
+    ap.add_argument("--extra-nets", nargs="*", default=[], help="additional eligible nets (e.g. ripped-up nets)")
     ap.add_argument("--exclude-net", nargs="*", default=[])
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
@@ -38,7 +39,7 @@ def main():
     base = pcbnew.LoadBoard(args.base)
     router = pcbnew.LoadBoard(args.router)
     _, new = crr.compare_copper(crr.copper_items(pcbnew, base), crr.copper_items(pcbnew, router))
-    eligible = open_nets_from_drc(args.base_drc) - set(args.exclude_net) - crr.ISOLATED_NETS
+    eligible = (open_nets_from_drc(args.base_drc) | set(args.extra_nets)) - set(args.exclude_net) - crr.ISOLATED_NETS
     added = {}
     for key, item in new:
         net = key[0] if isinstance(key, tuple) else key

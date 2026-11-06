@@ -2,14 +2,15 @@
 
 ## Bounded engineering work
 
-- **November5 DeepPCB result: 38->25 opens, stopped (fail fast); freelancer
-  gate reached, awaiting owner.** DeepPCB ignores "protected wiring" and some
-  keep-outs, so only filtered merges are usable (tools/merge_router_nets.py,
-  tools/stitch_gnd_islands.py, checked by tools/check_routing_result.py).
-  Best private candidate best-25-open-relaxed (PCB ce81d6af) uses 0.15mm
-  signal rules pending owner approval. Remaining tail is IC1 pin escape +
-  GND islands. $9.02 of $30 DeepPCB credit used. Details in
-  docs/routing-completion-plan-2026-11.md progress log.
+- **November5 16:40: DeepPCB iterations stopped at 25 opens (best
+  best-25-open-relaxed, PCB ce81d6af).** Root cause: IC1 sits over both
+  battery-contact inner bases, whose via keep-outs cover 28 of 57 IC1 pins;
+  F.Cu escape space is saturated. Fanout, escape stubs and rip-up/reroute all
+  failed the check. Next requires an owner placement decision (move IC1
+  cluster ~6 mm, or VBAT-contact via policy). $13.34 of $30 DeepPCB credit
+  used. Freelancers on back burner per owner. Tools: escape_ic1_pins.py,
+  rip_up_region.py, merge_router_nets.py --extra-nets, check
+  --allow-changed-nets.
   Input prep: tools/prepare_deeppcb_input.py (private work folder
   deeppcb-20261105 under the bakeoff root); standard check:
   tools/check_routing_result.py; API driver: tools/deeppcb_route.py (always
