@@ -463,3 +463,64 @@ eight opens. Compact engineering dispositions:
 
 These are diagnosis options, not released changes. Pass 4 added no copper,
 moved no component, changed no DRC/check result and spent no routing credit.
+
+## Finishing pass 5 (Sol)
+
+Pass 5 started from accepted best-8
+`finish-pass2/07-rip-vbus/handbell.kicad_pcb`
+(`e158ccd251325b63b8f03e1d3230dce9c6098b2702356208ec46d68465f9c826`).
+No trial met the acceptance gates, so **no pass-5 PCB was accepted** and the
+best-8 board, DRC and checks remain authoritative.
+
+### Coordinated U2 regulator cell
+
+The pre-edit attachment inventory found:
+
+- C1: only removable VHI/GND routing.
+- C4: removable +3V3 routing plus frozen pad-only GND stub
+  `eaf8141b-3b2b-57f3-b759-95b87b6412d0`.
+- C5: removable +3V3 routing; no frozen attached track.
+- U2: removable VHI/+3V3, but frozen GND stub
+  `0fc7f4e7-93d3-5057-98be-eb289f73920e` and EN stub
+  `7c618612-5597-54c6-8341-424b52c21d93`.
+
+`tools/move_u2_regulator_cell.py` screened four rotations on a 0.25 mm grid,
+zero courtyard overlap, applicable keep-outs, direct 0.50 mm VHI and 0.25 mm
++3V3 links, and a GND connection no more than 1 mm to a new or existing via.
+The initial fixed-U2/C5 search found 28 C1 candidates but zero C4 candidates.
+The first correction allowed C5 to move; C4 and C5 each still had zero legal
+candidates. The final correction also allowed short returns to existing GND
+vias, with the same result. Dominant C4/C5 blockers were U2 courtyard
+(1,242 samples), surrounding R17/R15/IC4/R14 courtyards, foreign copper and
+103 otherwise placed candidates without a legal GND-via return.
+
+The correction budget ended before exercising U2 movement. Moving U2 would
+also require explicit replacement of the frozen GND and EN pad stubs listed
+above. No part or copper changed. Final retained adjacency is:
+
+| Capacitor | Served pin | Best-8 distance | Limit | Reference |
+|---|---|---:|---:|---:|
+| C1 | U2.1 VIN | 12.95 mm | 3.0 mm | 1.45 mm |
+| C4 | U2.5 VOUT | 5.08 mm | 3.0 mm | 2.83 mm |
+| C5 | U2.5 VOUT | 3.04 mm | unchanged part | 4.18 mm |
+
+### F.GND island
+
+`tools/remove_gnd_dead_island.py` changes only
+`quote-native-F-GND-v1` to area-based island removal and refills natively.
+The first trial exposed the KiCad squared-internal-unit API and was rejected.
+The corrected file wrote `island_area_min 3`, but native DRC still reported
+eight opens, retained the zone-to-zone open, and introduced ten
+`isolated_copper` warnings. It was rejected; the zone and fills in best-8 are
+unchanged.
+
+### TP14 expanded relocation
+
+The path-aware relocation domain was expanded to the whole practical board
+(`--near 30`, F/B, contact guards retained). None of 1,144 legal placement
+candidates had an actual route to U4.14. TP14 remains at
+`(110.799999, 94.512211)` mm on F.Cu, 180 degrees.
+
+Pass 5 added no copper, including no supply copper, moved no component,
+changed no accepted DRC/check result and spent no routing credit. Trial
+artifacts are retained under `multilayer-20261106/finish-pass5`.
