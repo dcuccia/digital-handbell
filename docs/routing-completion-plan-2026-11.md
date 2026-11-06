@@ -53,9 +53,9 @@ and placement files change together). Keep SWD, RESET and BOOT access.
 
 ## Plan
 
-**Status, November 5:** approved by the owner; Step 0 complete; boards
-uploaded to DeepPCB with existing wiring protected; waiting for the owner to
-buy credits. No routing job, purchase or freelancer contact has happened.
+**Status, November 5, 16:10:** Steps 0-2 done. DeepPCB plus automatic
+filtering and ground stitching took the board from 38 to 25 opens, then
+stalled at the RP2040 pins. **Freelancer gate reached; waiting for owner.**
 
 ### Progress log
 
@@ -133,6 +133,29 @@ Original runbook once credits exist:
 3. If existing copper is not preserved, stop DeepPCB (fail fast). If it is,
    proceed to the full input as a capped paid run (about $15 for 30 minutes)
    and the placement-assist loop.
+
+**November 5, 16:10 DeepPCB result: 38 -> 25 opens, then stopped (fail fast).**
+Owner bought one hour ($30); 18 minutes ($9.02) used, about $21 left.
+
+| Step | Opens (KiCad) | Notes |
+|---|---|---|
+| Baseline routing input | 38 | 0.2 mm signal rules |
+| Run 1, 5.5 min, protected mode | - | DeepPCB **did not honour "protect existing wiring"**: it rerouted the reviewed crystal clock (XIN/XOUT), charger STAT and some VBAT copper, and ran VBAT through a battery-contact guard. Its web summary says one keep-out type was ignored and edge clearance is 0.05 mm. Stopped. |
+| Filtered merge (`tools/merge_router_nets.py`) | 31 | Keep every baseline item; add DeepPCB copper only on previously open nets; exclude VBAT (contact guard) and AMP_MUTE (edge via). Passes the check. |
+| Run 2, relaxed signal rules, 7.5 min | 28 | Signal class 0.15 mm track/space, 0.5/0.3 mm vias (JLC standard reportedly 0.10 mm and 0.45/0.20 mm). Closed D13, two I2S lines, a TP and part of VCORE; new tracks split the F GND pour (+2 islands). |
+| GND stitching (`tools/stitch_gnd_islands.py`) | **25** | Four 0.6/0.3 mm GND vias into In1 where every layer is clear. Passes the check: no part moved, all existing copper kept, no new DRC errors. |
+| Run 3, 5 min | 25 | Plateaued; nothing usable. Second pass without progress, so DeepPCB stopped. |
+
+Best candidate (private): `deeppcb-20261105\best-25-open-relaxed`, PCB
+`ce81d6af...`. It needs owner approval of the 0.15 mm signal rules before
+fabrication use, plus the normal electrical review of DeepPCB's new routes.
+
+**Remaining 25 opens:** 13 at RP2040 (IC1) pins (~RESET x2, SWCLK, SWDIO,
+D+, D-, I2S_DIN, INT, POWER x2, BUTTON, AMP_MUTE, VCORE); 6 GND islands with
+no safe via site; GAIN, VBAT, VBUS, USB_D+, USB_D-, VO+. Tools - Quilter,
+DeepPCB and earlier agents - all stall at IC1 pin escape. That tail needs a
+layout judgement around IC1 (small part moves, escape pattern), which is the
+gated freelancer step.
 
 ### Step 0 - prepare a clean input (agent, about 1-2 hours)
 

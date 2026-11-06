@@ -8,6 +8,7 @@ Run with the Python that matches KiCad's pcbnew (3.11 for KiCad 10).
 """
 import argparse
 import json
+import math
 import os
 import sys
 from collections import Counter
@@ -20,6 +21,8 @@ ISOLATED_NETS = {"/CELL_NEG"}
 REQUIRED_ZONES = {"in1-protected-gnd-v1"}
 # DRC types that are informational for this comparison; everything else may not grow.
 IGNORED_TYPES = {"unconnected_items"}
+TOL_MM = 0.002  # export rounding observed from DeepPCB is below 1 um
+STEP_MM = 0.05
 
 
 def load_pcbnew():
@@ -29,30 +32,68 @@ def load_pcbnew():
     return pcbnew, handle
 
 
-def snapshot(pcbnew, path):
-    board = pcbnew.LoadBoard(str(path))
+def copper_items(pcbnew, board):
+    """Return tracks and vias as plain tuples in mm, grouped by (net, layer)."""
     mm = pcbnew.ToMM
-    parts, pads, copper = {}, {}, Counter()
-    for fp in board.GetFootprints():
-        ref = fp.GetReference()
-        pos = fp.GetPosition()
-        parts[ref] = (round(mm(pos.x), 4), round(mm(pos.y), 4),
-                      round(fp.GetOrientationDegrees(), 3), fp.GetLayerName())
-        for pad in fp.Pads():
-            pads[(ref, pad.GetNumber())] = pad
+    tracks, vias = {}, {}
     for item in board.GetTracks():
         net = item.GetNetname()
         if item.GetClass() == "PCB_VIA":
             p = item.GetPosition()
-            key = ("via", net, round(mm(p.x), 4), round(mm(p.y), 4),
-                   round(mm(item.GetWidth(pcbnew.F_Cu)), 4), round(mm(item.GetDrillValue()), 4))
+            vias.setdefault(net, []).append((mm(p.x), mm(p.y), mm(item.GetWidth(pcbnew.F_Cu)),
+                                             mm(item.GetDrillValue()), item))
         else:
             a, b = item.GetStart(), item.GetEnd()
-            ends = sorted([(round(mm(a.x), 4), round(mm(a.y), 4)), (round(mm(b.x), 4), round(mm(b.y), 4))])
-            key = ("track", net, item.GetLayerName(), *ends[0], *ends[1], round(mm(item.GetWidth()), 4))
-        copper[key] += 1
-    zones = {z.GetZoneName() for z in board.Zones()}
-    return board, parts, pads, copper, zones
+            tracks.setdefault((net, item.GetLayerName()), []).append(
+                (mm(a.x), mm(a.y), mm(b.x), mm(b.y), mm(item.GetWidth()), item))
+    return tracks, vias
+
+
+def _dist_point_segment(px, py, x0, y0, x1, y1):
+    dx, dy = x1 - x0, y1 - y0
+    length2 = dx * dx + dy * dy
+    t = 0.0 if length2 == 0 else max(0.0, min(1.0, ((px - x0) * dx + (py - y0) * dy) / length2))
+    return math.hypot(px - (x0 + t * dx), py - (y0 + t * dy))
+
+
+def track_covered(seg, others):
+    """True if every sample point of seg lies on some other centreline at least as wide."""
+    x0, y0, x1, y1, width = seg[:5]
+    length = math.hypot(x1 - x0, y1 - y0)
+    steps = max(1, int(length / STEP_MM))
+    for i in range(steps + 1):
+        px, py = x0 + (x1 - x0) * i / steps, y0 + (y1 - y0) * i / steps
+        if not any(o[4] >= width - TOL_MM and _dist_point_segment(px, py, *o[:4]) <= TOL_MM for o in others):
+            return False
+    return True
+
+
+def via_covered(via, others):
+    return any(math.hypot(via[0] - o[0], via[1] - o[1]) <= TOL_MM and abs(via[2] - o[2]) <= TOL_MM
+               and abs(via[3] - o[3]) <= TOL_MM for o in others)
+
+
+def compare_copper(base, cand):
+    """Return (lost base items, new candidate items) with geometric tolerance."""
+    (bt, bv), (ct, cv) = base, cand
+    lost = [(k, s) for k, segs in bt.items() for s in segs if not track_covered(s, ct.get(k, []))]
+    lost += [(n, v) for n, vs in bv.items() for v in vs if not via_covered(v, cv.get(n, []))]
+    new = [(k, s) for k, segs in ct.items() for s in segs if not track_covered(s, bt.get(k, []))]
+    new += [(n, v) for n, vs in cv.items() for v in vs if not via_covered(v, bv.get(n, []))]
+    return lost, new
+
+
+def parts(pcbnew, board):
+    mm = pcbnew.ToMM
+    return {fp.GetReference(): (mm(fp.GetPosition().x), mm(fp.GetPosition().y),
+                                fp.GetOrientationDegrees(), fp.GetLayerName())
+            for fp in board.GetFootprints()}
+
+
+def moved(a, b):
+    turn = (a[2] - b[2]) % 360
+    return (math.hypot(a[0] - b[0], a[1] - b[1]) > 0.001 or min(turn, 360 - turn) > 0.01
+            or a[3] != b[3])
 
 
 def drc_counts(path):
@@ -74,49 +115,47 @@ def main():
     args = ap.parse_args()
 
     pcbnew, _handle = load_pcbnew()
-    _, base_parts, _, base_copper, base_zones = snapshot(pcbnew, args.base)
-    cand_board, cand_parts, cand_pads, cand_copper, cand_zones = snapshot(pcbnew, args.candidate)
+    base_board = pcbnew.LoadBoard(str(args.base))
+    cand_board = pcbnew.LoadBoard(str(args.candidate))
+    base_parts, cand_parts = parts(pcbnew, base_board), parts(pcbnew, cand_board)
+    cand_pads = {(fp.GetReference(), p.GetNumber()): p for fp in cand_board.GetFootprints() for p in fp.Pads()}
+    base_zones = {z.GetZoneName() for z in base_board.Zones()}
+    cand_zones = {z.GetZoneName() for z in cand_board.Zones()}
     failures, notes = [], []
 
     if set(base_parts) != set(cand_parts):
         failures.append(f"Footprint set changed: missing {sorted(set(base_parts) - set(cand_parts))}, "
                         f"added {sorted(set(cand_parts) - set(base_parts))}")
-    moved = sorted(r for r in base_parts if r in cand_parts and base_parts[r] != cand_parts[r])
-    unapproved = [r for r in moved if r not in set(args.allow_move)]
+    moved_refs = sorted(r for r in base_parts if r in cand_parts and moved(base_parts[r], cand_parts[r]))
+    unapproved = [r for r in moved_refs if r not in set(args.allow_move)]
     if unapproved:
         failures.append(f"Unapproved part moves: {unapproved}")
 
-    lost = base_copper - cand_copper
-    added = cand_copper - base_copper
+    lost, new = compare_copper(copper_items(pcbnew, base_board), copper_items(pcbnew, cand_board))
     if lost:
-        failures.append(f"{sum(lost.values())} existing track/via items changed or removed")
+        failures.append(f"{len(lost)} existing track/via items not preserved")
+        notes.append("lost examples: " + "; ".join(f"{k} {[round(v, 4) for v in s[:4]]}" for k, s in lost[:6]))
     missing_zones = (REQUIRED_ZONES & base_zones) - cand_zones
     if missing_zones:
         failures.append(f"Required zones missing: {sorted(missing_zones)}")
 
-    bad_net = [k for k in added if k[1] in ISOLATED_NETS]
+    def net_of(key):
+        return key[0] if isinstance(key, tuple) else key
+
+    bad_net = [k for k, _ in new if net_of(k) in ISOLATED_NETS]
     if bad_net:
         failures.append(f"{len(bad_net)} new copper items on isolated nets {sorted(ISOLATED_NETS)}")
     touching = []
-    new_tracks = [t for t in cand_board.GetTracks()]
-    for item in new_tracks:
-        if item.GetClass() == "PCB_VIA":
-            p = item.GetPosition()
-            key = ("via", item.GetNetname(), round(pcbnew.ToMM(p.x), 4), round(pcbnew.ToMM(p.y), 4),
-                   round(pcbnew.ToMM(item.GetWidth(pcbnew.F_Cu)), 4), round(pcbnew.ToMM(item.GetDrillValue()), 4))
-            points = [p]
+    for _key, item in new:
+        obj = item[-1]
+        if obj.GetClass() == "PCB_VIA":
+            points = [obj.GetPosition()]
         else:
-            a, b = item.GetStart(), item.GetEnd()
-            ends = sorted([(round(pcbnew.ToMM(a.x), 4), round(pcbnew.ToMM(a.y), 4)),
-                           (round(pcbnew.ToMM(b.x), 4), round(pcbnew.ToMM(b.y), 4))])
-            key = ("track", item.GetNetname(), item.GetLayerName(), *ends[0], *ends[1],
-                   round(pcbnew.ToMM(item.GetWidth()), 4))
-            points = [a, b]
-        if key not in added:
-            continue
+            points = [obj.GetStart(), obj.GetEnd()]
         for ref_pad in PRIVATE_PADS:
             pad = cand_pads.get(ref_pad)
-            if pad and any(pad.HitTest(pt) for pt in points) and pad.IsOnLayer(item.GetLayer()):
+            if pad and any(pad.HitTest(pt) for pt in points) and (
+                    obj.GetClass() == "PCB_VIA" or pad.IsOnLayer(obj.GetLayer())):
                 touching.append(f"{ref_pad[0]}.{ref_pad[1]}")
     if touching:
         failures.append(f"New copper lands on private-return pads: {sorted(set(touching))}")
@@ -129,11 +168,11 @@ def main():
     if cand_drc["unconnected_items"] >= base_drc["unconnected_items"] and not grown:
         failures.append("Open count did not decrease")
     notes.append(f"opens {base_drc['unconnected_items']} -> {cand_drc['unconnected_items']}")
-    notes.append(f"new copper items: {sum(added.values())}; moved parts: {moved}")
+    notes.append(f"new copper items: {len(new)}; moved parts: {moved_refs}")
 
     result = {"status": "PASS" if not failures else "FAIL", "failures": failures, "notes": notes,
               "drc_base": dict(base_drc), "drc_candidate": dict(cand_drc),
-              "added_by_net": dict(Counter(k[1] for k in added.elements()))}
+              "added_by_net": dict(Counter(net_of(k) for k, _ in new))}
     Path(args.report).write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2))
     return 0 if not failures else 1
