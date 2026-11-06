@@ -269,6 +269,8 @@ def main():
     ap.add_argument("--narrow-net", nargs="*", default=[], help="route these supply nets at signal width")
     ap.add_argument("--net-width", nargs=2, action="append", default=[], metavar=("NET", "MM"),
                     help="explicit per-net track width; clearance remains the established net clearance")
+    ap.add_argument("--nearest-own-copper", action="store_true",
+                    help="replace each reported goal with nearest copper outside the start's own-net group")
     args = ap.parse_args()
     global VIA_COST, MARGIN
     LAYERS[:] = args.layers
@@ -300,6 +302,27 @@ def main():
         if not start or not goal:
             results.append({"net": net, "status": "unresolved item"})
             continue
+        if args.nearest_own_copper:
+            nearest = {}
+            for name in LAYERS:
+                reached = start.get(name, Point(0, 0).buffer(0))
+                own = [shape for own_net, shape in bd.copper[name] if own_net == net]
+                members, changed = set(), True
+                while changed:
+                    changed = False
+                    for index, shape in enumerate(own):
+                        if index not in members and shape.intersects(reached):
+                            members.add(index)
+                            reached = reached.union(shape)
+                            changed = True
+                outside = [shape for index, shape in enumerate(own) if index not in members]
+                if outside:
+                    nearest[name] = unary_union(outside)
+            goal = nearest
+            if not goal:
+                results.append({"net": net, "distance_mm": round(d, 2),
+                                "status": "no outside own-net copper"})
+                continue
         found = route_pair(bd, net, start, goal)
         if found is None:
             results.append({"net": net, "distance_mm": round(d, 2), "status": "no path"})

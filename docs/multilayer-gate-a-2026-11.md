@@ -339,5 +339,46 @@ warning delta. Placement, frozen copper, planes, USB D+/D-, contact
 exclusions, private returns, stackup and rules remain unchanged. This is
 staged connectivity evidence for Astra review, not promotion or fabrication
 acceptance.
+
+## Finishing pass 3 (Sol)
+
+Pass 3 started from accepted best-8
+`finish-pass2/07-rip-vbus/handbell.kicad_pcb`
+(`e158ccd251325b63b8f03e1d3230dce9c6098b2702356208ec46d68465f9c826`).
+No trial strictly reduced the open count, so **no pass-3 PCB was accepted**;
+the exact best-8 board, DRC and checks remain authoritative and were not
+rerun unchanged.
+
+`relocate_test_points.py` now supports one aggregate path-aware A* over all
+legal relocation candidates rather than a separate expensive search per
+position. It can screen both faces, keeps B candidates outside every B-side
+rule area (including the contact guards/band), and requires an actual
+F/In2/In3/B route to the reported endpoint. The 12 mm, 0.5 mm-grid screen
+tested 176 legal F/B TP5 candidates and 233 legal F/B TP14 candidates. None
+had a route under the fixed copper, hole, edge, courtyard, via and rule-area
+constraints. Both test points therefore remain unchanged:
+
+- TP5: `(95.073680, 95.191699)` mm, F.Cu, -90 degrees.
+- TP14: `(110.799999, 94.512211)` mm, F.Cu, 180 degrees.
+
+The deeper full-width power screens also stopped before any removable-net
+obligation was created, so the released two-level restoration was not
+applicable. POWER U5.2-Q2.1 exhausted the hard-obstacle component after 67
+expansions with a 12 mm margin. VO+ J1.1-C22.1, screened at 0.60 mm to match
+its existing wide local copper, exhausted after 420 expansions; increasing
+the margin from 5 to 12 mm did not change that component.
+
+The final GND stitch pass added no via; the remaining 2.443 mm2 F island had
+no legal site. A new `route_gaps.py --nearest-own-copper` mode then tried each
+reported GND item against the nearest separate GND track, pad or via on F.Cu.
+The zero-distance pour report, GAIN0 group and IC1.19 TESTEN group all returned
+`no path`; no copper was written.
+
+Pass 3 added no board copper, including no supply copper, moved no component
+and changed no DRC/check result. Trial artifacts are retained under
+`multilayer-20261106/finish-pass3`; they are blocker evidence, not candidates
+for promotion. The unresolved engineering question is whether any of these
+hard endpoint enclosures warrants a placement/frozen-copper change; this pass
+does not authorize one.
   - Widen this copper, or move C1, before fabrication. Do not count it as
     finished supply routing.
