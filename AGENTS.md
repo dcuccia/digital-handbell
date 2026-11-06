@@ -6,6 +6,14 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 6, 15:43: owner resumes one template-only repair.**
+  Lead code review finds U2 GND was routed laterally toward VIN, not outward
+  from its pad row; the C4 frozen-stub UUID is mistyped and In4.Cu omitted
+  from the via screen. New private screen-only revision must first prove a
+  row-normal template and reject the old lateral-return mutation, with exact
+  collision pairs. Only the five previously internal-failed poses may then
+  be screened. Full code review precedes one corrected native execution;
+  no builder tail, board creation or paid run is released by this repair.
 - **November 6, 15:42: whole-cell screen held on template implementation.**
   Three revisions exhausted; no candidate PCB constructed or paid run.
   Final 24 templates: 12 U2/IC4 courtyard hits, seven capacitor/fixed-part

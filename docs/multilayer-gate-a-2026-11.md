@@ -744,3 +744,32 @@ repair and explicitly prove the noncrossing row-normal template first,
 with exact failing pairs retained, before revisiting the five internally
 rejected cases. Do not broaden the placement batch or spend on a shorted
 input.
+
+### Template-only repair resumed (November 6, 15:43)
+
+The owner's 15:42:53 continuation releases the requested narrow repair.
+Lead read the complete 232-line executed helper before granting another
+execution. The review establishes more than the previously suspected
+radial-cap problem:
+
+- `side=(-o1[1],o1[0])` sends U2's GND return along its pin row, toward
+  VIN, rather than outward normal to that row. Both cap orientation and
+  the IC GND return must use the native package-row normal.
+- The C4 released-stub UUID has `3b2` instead of `3b2b`; missing-ID
+  assertions are required before relying on the release set.
+- The layer list omits In4.Cu, so its prospective full-span via check
+  is incomplete.
+- The unexecuted builder projects F-only shapes onto every routing layer,
+  omits other required shapes, and records net names rather than complete
+  interrupted branch obligations. That builder remains unreleased.
+
+A fresh private helper is screen-only. It must prove the internal
+row-normal cell independently of board obstacles, reject an actual
+old-lateral-return mutation with named conflicting shapes, and retain
+native orientation/orthogonality witnesses. Only after that positive
+template may it examine the exact five saved internal-failure cases.
+All six layers, exact source/release identities and support-placement
+limitations must be explicit. It cannot save a board or invoke the
+old construction tail. Code preparation ends by 15:51; complete lead
+review precedes one corrected native screen, with no automatic retry.
+Source and the one unspent paid-run allowance remain unchanged.
