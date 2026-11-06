@@ -6,6 +6,15 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 6, 15:42: whole-cell screen held on template implementation.**
+  Three revisions exhausted; no candidate PCB constructed or paid run.
+  Final 24 templates: 12 U2/IC4 courtyard hits, seven capacitor/fixed-part
+  courtyard hits, five internal foreign-net collisions with no saved pair
+  IDs. Helper used radial rather than package-row-normal placement; its
+  five internal failures are not evidence those IC poses are impossible.
+  Source/best-8 unchanged; preserve all revisions in
+  `regulator-cell-outward-20261106`. Stop retries; next requires a separately
+  bounded template-only correction, not a broader placement sweep.
 - **November 6, 15:35: owner resumes with a whole-cell alternative.**
   Saved-data follow-up corrects the prior blocker: the five R14/R15 attached
   branches are router additions, not frozen copper. Initial trials did move

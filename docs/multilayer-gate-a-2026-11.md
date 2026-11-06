@@ -701,3 +701,46 @@ most initial plus two corrections. Saved-fill ground attachment, exact
 complement/open restoration and matching-mode non-open DRC comparison
 still gate spending. The previously approved single run remains unspent
 and capped at 15 minutes/$7.50; no second run is authorized.
+
+### Outward-cell screen held (November 6, 15:42)
+
+No candidate was constructed and no routing credit was spent. The executor
+used all three permitted revisions: initial mistakenly treated C5/R3 as
+fixed obstacles; correction one recognized all allowed movable supports;
+correction two increased capacitor spacing to clear internal courtyards.
+The final 24 offset/rotation combinations failed as follows:
+
+| Executed-template rejection | Count |
+| --- | --- |
+| U2 courtyard versus fixed IC4 | 12 |
+| C4 courtyard versus fixed C24 | 4 |
+| Internal foreign-net collision | 5 |
+| C4 courtyard versus fixed IC4 | 2 |
+| C1 courtyard versus fixed IC4 | 1 |
+
+This is an implementation-limited screen, not a demonstration that the
+regulator cannot be rearranged. The helper used vectors from U2's origin
+to its supply pins to orient the capacitors, rather than the package-row
+normals. Its final five internal collision failures lack exact conflicting
+primitive-pair records. The seven capacitor/fixed-part conflicts apply to
+the executed capacitor poses, not every possible cell at those U2 origins.
+Only the twelve U2/IC4 overlap reports directly reject those exact IC poses
+under the courtyard model.
+
+Each revision used one native load, reported at 2.484, 1.219 and 0.937
+seconds, without timeout. No native full-board DRC, copper removal, new
+serialized pose, or filled-return qualification occurred. Proposed 1.20 mm
+supply links and 0.65 mm ground approaches are template dimensions only.
+All five R14/R15 branch obligations and the protected stub set remain
+untouched; there is no activated restoration ledger or qualified input.
+
+Preserve `01-initial`, `02-correction1`, `03-correction2` and private
+`screen_and_build.py`, SHA-256
+`7b9bc5adcff2f9e98bf9c030c8f07fb8aa3eb0018055fb0ed9dea11bd23b442e`.
+Lead rechecked best-8's unchanged full `e158ccd2` hash.
+The executor is idle. Stop rather than silently spending the unused clock
+budget on a fourth correction. A separately authorized next item would
+repair and explicitly prove the noncrossing row-normal template first,
+with exact failing pairs retained, before revisiting the five internally
+rejected cases. Do not broaden the placement batch or spend on a shorted
+input.
