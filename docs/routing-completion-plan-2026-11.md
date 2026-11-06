@@ -55,7 +55,10 @@ and placement files change together). Keep SWD, RESET and BOOT access.
 
 **Status, November 5, 16:10:** Steps 0-2 done. DeepPCB plus automatic
 filtering and ground stitching took the board from 38 to 25 opens, then
-stalled at the RP2040 pins. **Freelancer gate reached; waiting for owner.**
+stalled at the RP2040 pins. **16:20 owner decision:** freelancer option is on
+the back burner (cost and turnaround); continue iterating with DeepPCB
+(including its single-component fanout API) and agent-driven placement and
+layout for the stickiest pieces.
 
 ### Progress log
 
@@ -156,6 +159,20 @@ no safe via site; GAIN, VBAT, VBUS, USB_D+, USB_D-, VO+. Tools - Quilter,
 DeepPCB and earlier agents - all stall at IC1 pin escape. That tail needs a
 layout judgement around IC1 (small part moves, escape pattern), which is the
 gated freelancer step.
+
+**November 5, 16:30 - why IC1 is stuck (physical constraint, not a router
+limit):** IC1 sits directly over the rear battery-contact bases. The
+`CONTACT_METAL_GUARD_BT1.base.1` and `BT2.base.1` areas (needed so no via or
+B.Cu copper touches the cell terminal metal or bypasses CELL_NEG isolation)
+cover IC1's left and right pin rows. Those pins cannot drop a via near the
+chip; they must run about 2 mm on F.Cu past nearby decouplers first.
+DeepPCB's free single-component fanout API (`POST /boards/{id}/fanout`)
+reported the same: pins in keep-outs, 46/57 escaped. Removing the board-wide
+In1 track keep-out reduced "pins in keep-out" from 57 to 28; the standard
+check now separately rejects any new In1 track. Next: an Astra sub-agent
+adds legal F.Cu escape stubs and vias for the open IC1 pins (no part moves),
+then DeepPCB routes from them. Blind F-to-In2 vias would also avoid the
+contacts but need costly HDI fabrication.
 
 ### Step 0 - prepare a clean input (agent, about 1-2 hours)
 

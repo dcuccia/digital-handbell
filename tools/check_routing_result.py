@@ -18,6 +18,7 @@ KICAD_BIN = Path(os.environ.get("KICAD_BIN", r"C:\Users\david.cuccia\AppData\Loc
 # Pads whose local return path must not be bypassed by new copper (see AGENTS.md).
 PRIVATE_PADS = {("R24", "2"), ("C28", "2"), ("R26", "2"), ("R27", "2")}
 ISOLATED_NETS = {"/CELL_NEG"}
+PLANE_LAYERS = {"In1.Cu"}  # protected GND plane: no new tracks allowed
 REQUIRED_ZONES = {"in1-protected-gnd-v1"}
 # DRC types that are informational for this comparison; everything else may not grow.
 IGNORED_TYPES = {"unconnected_items"}
@@ -145,6 +146,9 @@ def main():
     bad_net = [k for k, _ in new if net_of(k) in ISOLATED_NETS]
     if bad_net:
         failures.append(f"{len(bad_net)} new copper items on isolated nets {sorted(ISOLATED_NETS)}")
+    plane_tracks = [k for k, _ in new if isinstance(k, tuple) and k[1] in PLANE_LAYERS]
+    if plane_tracks:
+        failures.append(f"{len(plane_tracks)} new tracks on plane layers {sorted(PLANE_LAYERS)}")
     touching = []
     for _key, item in new:
         obj = item[-1]
