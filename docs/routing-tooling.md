@@ -553,3 +553,22 @@ existing-track changes were needed. The board now has **51 opens**.
 See [`charge-led-routing.json`](../hardware/handbell/iterations/printed-bell-clock-draft/reports/charge-led-routing.json).
 This is demonstrated usefulness on one short branch, not qualification of
 the router for arbitrary nets or evidence of a total completion cost.
+
+## November 6 six-layer lessons
+
+- The six-layer 3313E stackup (S/G/S/S/G/S) plus moving the MCU off the
+  battery contacts made the decisive difference. DeepPCB took 86 opens to
+  12 in about 13 minutes ($6.50), compared with long-tail stalls on four
+  layers.
+- Board-wide "no tracks" rule areas on plane layers make DeepPCB's fanout
+  treat every pin as in a keep-out. Mark plane layers as `power` type
+  instead; the standard check enforces no tracks on them.
+- Once most copper is placed, extra DeepPCB runs plateau immediately:
+  protected mode added nothing, and unprotected mode was worse after
+  merging. Stop after one productive run.
+- Remove zero-length router stubs before freezing a baseline, because
+  DeepPCB drops them on round trip.
+- Corridor rip-up of everything near a straight line is too crude; finishing
+  long blocked links needs per-net, path-aware rip-up (or a person).
+- `--narrow-net` must keep the net class clearance; dropping it created a
+  0.19 mm clearance violation on a 0.2 mm class net.

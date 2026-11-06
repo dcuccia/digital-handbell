@@ -2,7 +2,10 @@
 
 ## Bounded engineering work
 
-- **November6 multilayer prep G1-G5 done; awaiting Gate A owner decisions.**
+- **November6 six-layer routing: 86 -> 11 opens rule-clean** (best-11-open-6c,
+  be2b98c3; ~$14 DeepPCB used, $20.35 left). Remaining long blocked links need
+  path-aware rip-up or a person; see docs/multilayer-gate-a-2026-11.md.
+- **November6 multilayer prep G1-G5 done; Gate A approved (6C).**
   See docs/multilayer-gate-a-2026-11.md. Six-layer 6C frozen baseline
   multilayer-20261106\6c-frozen (b82f2fe3, 86 opens, no new DRC errors);
   DeepPCB copy uploaded as d254093c (no run). Check is plane-aware with five

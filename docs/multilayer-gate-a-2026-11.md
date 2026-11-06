@@ -172,3 +172,40 @@ islands.
 Next (free, agent): relocate test points onto their own nets' existing
 copper (owner allowed test points anywhere), then targeted
 rip-up-and-reroute of blocking router-made copper for the long nets.
+
+### Free follow-up (November 6, 11:15-12:00)
+
+- `tools/relocate_test_points.py` (new): moves single-pad test points onto
+  own-net copper, or (`--near`) into a free spot next to own-net pads, for
+  the gap router to link.
+  - TP7 (~RESET) moved 10 mm and was linked: **11 opens**, still no new DRC
+    errors.
+  - TP14 moved next to U4, but its link is not yet routed.
+  - TP5 has no legal spot near IC1.
+- `tools/rip_corridor.py` (new, experimental): rip-up of router-made copper
+  along straight corridors. Too crude: it ripped about 120 items and ended
+  at 18 opens. Rejected; corridor rip-up needs per-net, path-aware
+  selection.
+- **Best board:** `multilayer-20261106\best-11-open-6c`, PCB SHA-256
+  `be2b98c3c023821bc1c78b6fc206ddf39806f2fb72b1326ad01e648bc4e7064c`.
+  Moves TP7 and TP14 only, versus the frozen placement.
+- Remaining 11:
+
+  | Link | Length |
+  |---|---|
+  | SWDIO IC1-TP5 | 6.5 mm |
+  | I2S_LRCLK IC1-U4 | 13.8 mm |
+  | I2S_LRCLK U4-TP14 | 6.1 mm |
+  | POWER U5-Q2 | 16.7 mm |
+  | USBBOOT to D3 | 21.3 mm |
+  | VBUS U3-CHG0 | 7.8 mm |
+  | VHI to C1 | 7.8 mm |
+  | VO+ J1-C22 | 8.9 mm |
+  | GND islands, including IC1 pin 19 (TESTEN) and GAIN0 pin 1 | 3 links |
+
+- DeepPCB credit left: **$20.35** (about $14 used).
+- Still open before acceptance:
+  - USB pair as a coupled 90-ohm route.
+  - +3V3 pour on In3.
+  - Remove dangling stubs.
+  - Electrical review and mechanical re-bind.
