@@ -2,6 +2,10 @@
 
 ## Bounded engineering work
 
+- **Read docs/agent-first-pcb-workflow.md first** for PCB routing/placement work:
+  the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
+  before routing, one productive autorouter run, checked finishing).
+
 - **November6 finishing passes (Sol, no spend): 11 -> 8 opens** (finish-pass2\07-rip-vbus, e158ccd2;
   tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper: electrical review item.
   Still open: I2S_LRCLK TP14, SWDIO TP5, USBBOOT, POWER, VO+, three GND groups.

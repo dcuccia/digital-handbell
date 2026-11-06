@@ -12,6 +12,8 @@ underlying tooling and experiment history.
 
 ## Current conclusion
 
+Short evergreen guide: [agent-first PCB workflow](agent-first-pcb-workflow.md).
+
 **November 2026 lessons: finishing a long routing tail cheaply.** Evidence:
 [routing completion plan](routing-completion-plan-2026-11.md) progress log.
 Owner is a software developer, not a layout engineer; tools and agents
