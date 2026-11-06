@@ -275,3 +275,20 @@ best-11. Placement, frozen copper, planes, contact exclusions, private returns,
 USB D+/D-, stackup and rules are unchanged. KiCad CLI 10.0.6 and Python 3.11.9
 were used. This is staged routing evidence, not Astra engineering acceptance
 or a fabrication release.
+
+### Lead review of finishing pass 1 (November 6)
+
+- Runtime verified from the session's `subagent.configured` event:
+  `gpt-5.6-sol`, effort medium.
+- `finish-pass1\02-rip-vhi` (4d0a08d2…) is accepted as the **connectivity
+  best: 10 opens**. Its DRC matches best-11 apart from one fewer open.
+- **Electrical review item (required before acceptance):** VHI has 0.15 mm
+  copper, against the approved 0.8 mm.
+  - best-11 already had about 15 mm of it (mostly F.Cu stubs, 4 mm on
+    In3).
+  - Pass 1 adds 9.4 mm (6.7 mm on In3) to reach C1 (10 µF VHI
+    decoupling).
+  - C1 is connected, but its high-frequency decoupling value through
+    about 9 mm of thin trace is doubtful.
+  - Widen this copper, or move C1, before fabrication. Do not count it as
+    finished supply routing.
