@@ -146,8 +146,10 @@ constrained first**, never left as ordinary nets:
    placement is at most about 15, and the remainder is a concrete,
    repairable list. DeepPCB's own count does not decide this. Then at most
    one more 15-minute run.
-5. Budget: **experiment ceiling $30 total**, including the $4.36 already
-   in the account. Expected use about $15. Any more needs owner approval.
+5. Budget: about **$15 is the target** for this experiment. The owner will
+   add $30 when it is time, so about $34 is available. That is a guide, not
+   a hard cap: continue past $15 only when Gate B criteria show real
+   progress, and report spending at each gate.
 
 ### G7 - Acceptance, then fabrication, then bring-up (separate approvals)
 - **Routing acceptance:** zero opens; DRC clean under real rules; schematic

@@ -23,14 +23,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import check_routing_result as crr  # noqa: E402
 from stitch_gnd_islands import item_shape, poly_set_to_shapely  # noqa: E402
 
-LAYERS = ["F.Cu", "In2.Cu", "B.Cu"]
+LAYERS = ["F.Cu", "In2.Cu", "B.Cu"]  # overridden by --layers
 GRID = 0.05
 VIA_D, VIA_DRILL = 0.5, 0.3
 HOLE_TO_HOLE = 0.25
 EDGE = 0.3
 MARGIN = 4.0
 VIA_COST = 12.0
-POWER = {"VBUS": (0.3, 0.2), "VBAT": (0.3, 0.2), "VHI": (0.3, 0.2), "VAMP": (0.3, 0.2)}
+POWER = {"VBUS": (0.3, 0.2), "VBAT": (0.3, 0.2), "VHI": (0.3, 0.2), "VAMP": (0.3, 0.2),
+         "+3V3": (0.25, 0.2), "VCORE": (0.25, 0.2)}
 SIGNAL = (0.15, 0.15)
 SKIP_NETS = {"/CELL_NEG"}
 SAFETY = 0.025  # grid/polygon discretization margin added to every clearance
@@ -54,7 +55,7 @@ class Board:
     def __init__(self, pcbnew, board):
         self.p, self.b = pcbnew, board
         mm = pcbnew.ToMM
-        self.lay = {"F.Cu": pcbnew.F_Cu, "In2.Cu": pcbnew.In2_Cu, "B.Cu": pcbnew.B_Cu}
+        self.lay = {name: board.GetLayerID(name) for name in LAYERS}
         outline = pcbnew.SHAPE_POLY_SET()
         board.GetBoardPolygonOutlines(outline, False)
         self.area = unary_union(poly_set_to_shapely(pcbnew, outline))
@@ -133,7 +134,8 @@ def route_pair(bd, net, start, goal):
     if bd.via_keepout:
         via_block = via_block.union(unary_union(bd.via_keepout).buffer(VIA_D / 2 + SAFETY))
     via_ok = shapely.contains_xy(bd.area.buffer(-(EDGE + VIA_D / 2 + SAFETY)), gx, gy) & ~shapely.contains_xy(via_block, gx, gy)
-    via_ok &= free[0] & free[1] & free[2]
+    for f in free:
+        via_ok &= f
 
     def cells(region):
         out = []
@@ -257,7 +259,17 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--report", required=True)
     ap.add_argument("--skip-net", nargs="*", default=[])
+    ap.add_argument("--only-net", nargs="*", default=[], help="route only these nets")
+    ap.add_argument("--layers", nargs="+", default=["F.Cu", "In2.Cu", "B.Cu"],
+                    help="signal layers the router may use (never plane layers)")
+    ap.add_argument("--via-cost", type=float, default=12.0)
+    ap.add_argument("--narrow-net", nargs="*", default=[], help="route these supply nets at signal width")
     args = ap.parse_args()
+    global VIA_COST
+    LAYERS[:] = args.layers
+    VIA_COST = args.via_cost
+    for net in args.narrow_net:
+        POWER.pop(net, None)
 
     pcbnew, _h = crr.load_pcbnew()
     board = pcbnew.LoadBoard(args.board)
@@ -266,8 +278,8 @@ def main():
     pairs = []
     for u in report.get("unconnected_items", []):
         a, b = u["items"][0], u["items"][1]
-        net = a["description"].split("[", 1)[1].split("]", 1)[0] if "[" in a["description"] else ""
-        if not net or net in SKIP_NETS or net in args.skip_net:
+        net = crr.drc_net(a["description"])
+        if not net or net in SKIP_NETS or net in args.skip_net or (args.only_net and net not in args.only_net):
             continue
         d = math.hypot(a["pos"]["x"] - b["pos"]["x"], a["pos"]["y"] - b["pos"]["y"])
         pairs.append((d, net, a, b))

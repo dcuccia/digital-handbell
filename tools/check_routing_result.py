@@ -10,6 +10,7 @@ import argparse
 import json
 import math
 import os
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -24,6 +25,12 @@ REQUIRED_ZONES = {"in1-protected-gnd-v1"}
 IGNORED_TYPES = {"unconnected_items"}
 TOL_MM = 0.002  # export rounding observed from DeepPCB is below 1 um
 STEP_MM = 0.05
+
+
+def drc_net(description):
+    """Net name from a KiCad DRC item description, e.g. 'Track [QSPI_DATA[3]] on F.Cu'."""
+    m = re.search(r"\[(.*)\](?= (?:on|of)\b|$)", description)
+    return m.group(1) if m else ""
 
 
 def load_pcbnew():

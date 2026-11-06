@@ -24,7 +24,7 @@ def violation_items(report):
         if v["type"] in CONFLICT_TYPES:
             for item in v.get("items", []):
                 desc = item.get("description", "")
-                net = desc.split("[", 1)[1].split("]", 1)[0] if "[" in desc else ""
+                net = crr.drc_net(desc)
                 kind = "via" if desc.startswith("Via") else ("track" if desc.startswith("Track") else "")
                 pairs.add((v["type"], item.get("uuid", ""), kind, net,
                            round(item["pos"]["x"], 3), round(item["pos"]["y"], 3)))

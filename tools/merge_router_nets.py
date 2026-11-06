@@ -21,7 +21,7 @@ def open_nets_from_drc(path):
         for obj in item.get("items", []):
             desc = obj.get("description", "")
             if "[" in desc:
-                nets.add(desc.split("[", 1)[1].split("]", 1)[0])
+                nets.add(crr.drc_net(desc))
     return nets
 
 
