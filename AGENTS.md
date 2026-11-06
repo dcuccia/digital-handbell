@@ -2,6 +2,11 @@
 
 ## Bounded engineering work
 
+- **November6 options 1-3 tried:** wider-clearance DeepPCB run, repair
+  pipeline (route_gaps.py) and charger-group spread. Best on moved placement
+  28 opens rule-clean (opt2-route3); overall best still 25 (old placement).
+  $4.36 credit left. Next needs owner choice: fresh full DeepPCB route of
+  moved placement (top-up), JST battery lead, or freelancer.
 - **November6 MCU move tried:** cluster moved under USB clears the contact
   blockage (0 IC1 pins in keep-outs), but DeepPCB output undercuts rules
   (~0.13mm clearance, 0.19mm edge, 2 shorts); cleaned result 43 opens, not

@@ -56,6 +56,20 @@ drive routing, the owner approves decisions and spending.
   wider clearances than the real minimum.
 - Agents should not hand-route move by move, and should not start broad
   router or layer sweeps. Repository policy pins routing helpers to the Sol
+- **November 6 additions:**
+  - Requesting **wider clearances from DeepPCB than the real minimum**
+    (0.18 instead of 0.15) cut its rule violations from 27 to about 12.
+    Validate under the real rules.
+  - `merge_router_nets.py` now skips duplicate vias.
+  - KiCad DRC can report UUIDs that are not in the saved file, so
+    `clean_drc_conflicts.py` also matches by net and reported position.
+  - `tools/route_gaps.py` is a free, clearance-aware multi-layer grid A*
+    router for short tails. It closed 15-20 pairs per pass rule-clean, but
+    only after using the stricter of both nets' clearances, hole clearance
+    for tracks and a 0.025 mm discretization margin. Without these it misses
+    by a few micrometres.
+  - Moving parts on top of existing routing creates shorts unless every net
+    under the new location is ripped too. Repository policy pins routing helpers to the Sol
   model; an Astra sub-agent declined routing work under that policy.
 
 **Native local review views:** `tools/render_clock_detail.py` now also accepts

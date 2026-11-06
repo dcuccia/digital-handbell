@@ -232,6 +232,26 @@ board is unchanged. Next options:
 3. Reconsider placement around the moved charger group (U3/R2/CHG0), where
    several violations occurred.
 
+**November 6, 08:05-09:10 - all three options tried (owner: "try all three in
+that order").** Best clean result is still **25 opens** on the original
+placement (`best-25-open-relaxed`). DeepPCB credit left: **$4.36**.
+
+| Option | Result |
+|---|---|
+| 1. DeepPCB with clearances raised for it only (0.18 signal, 0.23 power, 0.45 edge) on the cleaned moved board | Much cleaner output: 34 opens with 1 short, 1 clearance, 6 edge and 3 duplicate-via findings, versus 27 violations before. Then plateaued at DeepPCB's count of 17. About 10 minutes, $5. |
+| 2. Repair instead of delete: duplicate-via filter, position-aware cleanup of new copper only, then `tools/route_gaps.py` (our clearance-aware F/In2/B grid router) | **28 opens, no new DRC errors**; only 4 extra dangling-stub warnings. Trimming the stubs cascades to 31. Not better than 25. |
+| 3. Spread the moved charger group horizontally, rip its local wiring, re-route with `route_gaps.py` | 30 opens plus 4 shorts against copper that was not ripped. No improvement; stopped after one attempt. |
+
+The moved placement's tail is now long cross-board nets (USBBOOT, POWER,
+VHI, D13, GND) through DeepPCB's dense routing. Remaining realistic options:
+
+1. A fresh DeepPCB full route of the moved placement, keeping only critical
+   protected copper, with the raised clearances. About 15 minutes ($7.50)
+   needs a small credit top-up.
+2. The owner's fallback: a JST battery lead. Taking the contacts off the board
+   would free the whole centre band.
+3. A freelancer for the 25-open board (on the back burner).
+
 ### Step 0 - prepare a clean input (agent, about 1-2 hours)
 
 1. Regenerate the exact open list for `adc262b3` on a copy.

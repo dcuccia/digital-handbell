@@ -39,6 +39,12 @@ def main():
     base = pcbnew.LoadBoard(args.base)
     router = pcbnew.LoadBoard(args.router)
     _, new = crr.compare_copper(crr.copper_items(pcbnew, base), crr.copper_items(pcbnew, router))
+    base_vias = [(t.GetNetname(), t.GetPosition()) for t in base.GetTracks() if t.GetClass() == "PCB_VIA"]
+
+    def duplicate_via(src):
+        p = src.GetPosition()
+        return any(n == src.GetNetname() and abs(q.x - p.x) < 20000 and abs(q.y - p.y) < 20000
+                   for n, q in base_vias)
     eligible = (open_nets_from_drc(args.base_drc) | set(args.extra_nets)) - set(args.exclude_net) - crr.ISOLATED_NETS
     added = {}
     for key, item in new:
@@ -46,6 +52,8 @@ def main():
         if net not in eligible:
             continue
         src = item[-1]
+        if src.GetClass() == "PCB_VIA" and duplicate_via(src):
+            continue
         if src.GetClass() == "PCB_VIA":
             dst = pcbnew.PCB_VIA(base)
             dst.SetPosition(src.GetPosition())
