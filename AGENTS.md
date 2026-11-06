@@ -9,6 +9,9 @@
 - **November6 finishing passes (Sol, no spend): 11 -> 8 opens** (finish-pass2\07-rip-vbus, e158ccd2;
   tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper: electrical review item.
   Still open: I2S_LRCLK TP14, SWDIO TP5, USBBOOT, POWER, VO+, three GND groups.
+  Passes 3-5 found no gain: links are enclosed by frozen critical copper;
+  C1/C4 cannot reach U2 without wider re-placement. Stop rule reached; next
+  step (re-placement + one router run, or a person) needs owner choice.
 - **November6 six-layer routing: 86 -> 11 opens rule-clean** (best-11-open-6c,
   be2b98c3; ~$21.5 DeepPCB used, ~$12.85 left). Remaining long blocked links need
   path-aware rip-up or a person; see docs/multilayer-gate-a-2026-11.md.

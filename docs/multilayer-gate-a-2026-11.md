@@ -524,3 +524,30 @@ candidates had an actual route to U4.14. TP14 remains at
 Pass 5 added no copper, including no supply copper, moved no component,
 changed no accepted DRC/check result and spent no routing credit. Trial
 artifacts are retained under `multilayer-20261106/finish-pass5`.
+
+### Lead disposition after finishing passes 3-5 (November 6, evening)
+
+- Passes 3-5 (Sol, no spend) produced **no accepted candidate**. The best
+  board stays `finish-pass2\07-rip-vbus` (e158ccd2, **8 opens**,
+  rule-clean apart from the 71 inherited items).
+- Evidence:
+  - Test-point relocation: 176, 233 and then 1,144 legal positions, none
+    routable.
+  - The U2 regulator cell cannot be rebuilt at fixed U2: there are 28 legal
+    C1 spots but 0 for C4 or C5, blocked by the U2, R14/R15/R17, IC4, TP16
+    and Q2 courtyards.
+  - Dead-island removal left the open and added isolated-copper warnings.
+- Every remaining link is enclosed by frozen (reviewed critical) copper:
+  clock/XIN, VCORE escape, boost cell, VBAT, the USB pair or C22 GND
+  (`finish-pass4\enclosures.json`).
+- **Stop rule reached:** three bounded passes with no measurable progress.
+  Further gains need one of:
+  - a wider local re-placement (U2 cell plus neighbours) that releases
+    adjacent frozen copper, followed by one autorouter run and finishing;
+  - a person with an interactive push-and-shove router.
+
+  Either is an owner decision. Do not start more agent passes on the
+  current placement.
+- C1/C4 adjacency defects (12.95/5.08 mm against reference 1.45/2.83 mm)
+  stay open review items, to be fixed in the same re-placement or by a
+  person.
