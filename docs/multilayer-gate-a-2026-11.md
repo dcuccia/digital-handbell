@@ -290,5 +290,54 @@ or a fabrication release.
     decoupling).
   - C1 is connected, but its high-frequency decoupling value through
     about 9 mm of thin trace is doubtful.
+
+## Finishing pass 2 (Sol)
+
+Pass 2 started from accepted staged candidate
+`finish-pass1/02-rip-vhi` (`4d0a08d2...`, 10 opens) and retained the same
+verified Sol/medium runtime. The final private candidate is
+`finish-pass2/07-rip-vbus/handbell.kicad_pcb`, SHA-256
+`e158ccd251325b63b8f03e1d3230dce9c6098b2702356208ec46d68465f9c826`,
+with **8 opens**.
+
+The long I2S_LRCLK link from U4.14 to IC1.29 was closed with 0.15 mm signal
+copper after path-aware removal and restoration of four router-made items.
+The first restoration left one preserved CC2 via and one preserved INT track
+dangling; `tools/repair_new_dangling.py` now deterministically reconnects such
+newly dangling preserved items through the existing clearance-aware A*. The
+corrected candidate restored the best-10 dangling counts. TP14-to-U4 remains
+open: the selective-rip proposal did not produce a route, and both on-copper
+and 2 mm near-anchor TP14 relocation screens found no legal position.
+
+The later optional VBUS trial closed U3.4-to-CHG0.A and restored its one
+I2S_DIN replacement obligation. Every pass-2 VBUS addition is at the approved
+width: two F, 46 B and seven In2 tracks at **0.50 mm**, plus three
+**0.50/0.30 mm** through-vias. No pass-2 0.15 mm copper was added to VBUS,
+VHI, VBAT, V+, VAMP, VO+/VO-, +3V3, VCORE or POWER. `route_gaps.py` and the
+rip-up planner now accept an explicit `--net-width NET MM` without changing
+their defaults; this was used only to screen VO+ at the existing 0.60 mm power
+width. That screen exhausted its sampled component after 420 expansions and
+added nothing.
+
+Other bounded outcomes:
+
+- TP5 relocation, including the 2 mm near-anchor screen, found no legal SWDIO
+  position. The rejected pass-1 SWDIO rip-up result was not promoted.
+- USBBOOT itself routed after four selective removals, but neither the
+  full-width 0.25 mm +3V3 replacement nor the D3-anode replacement found a
+  path. The whole trial was rejected.
+- POWER is in the native Default class, but its path screen still exhausted
+  after only 67 expansions with hard/frozen obstacles; no copper was changed.
+- VO+ was screened at 0.60 mm, matching its existing wide local copper, and
+  left open rather than adding prohibited 0.15 mm supply copper.
+
+Native KiCad 10.0.6 DRC retains the 71 inherited `items_not_allowed` and
+exactly the best-10 six track-dangling plus one via-dangling warnings; no
+finding type or count grew. The direct best-10 check passes, 10 to 8 opens.
+The frozen-baseline standard check fails only on that already-known dangling
+warning delta. Placement, frozen copper, planes, USB D+/D-, contact
+exclusions, private returns, stackup and rules remain unchanged. This is
+staged connectivity evidence for Astra review, not promotion or fabrication
+acceptance.
   - Widen this copper, or move C1, before fabrication. Do not count it as
     finished supply routing.

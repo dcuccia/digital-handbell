@@ -267,6 +267,8 @@ def main():
     ap.add_argument("--via-cost", type=float, default=12.0)
     ap.add_argument("--margin", type=float, default=4.0, help="search window margin around each pair (mm)")
     ap.add_argument("--narrow-net", nargs="*", default=[], help="route these supply nets at signal width")
+    ap.add_argument("--net-width", nargs=2, action="append", default=[], metavar=("NET", "MM"),
+                    help="explicit per-net track width; clearance remains the established net clearance")
     args = ap.parse_args()
     global VIA_COST, MARGIN
     LAYERS[:] = args.layers
@@ -275,6 +277,8 @@ def main():
     for net in args.narrow_net:  # narrower track only; the net class clearance still applies
         if net in POWER:
             POWER[net] = (SIGNAL[0], POWER[net][1])
+    for net, width in args.net_width:
+        POWER[net] = (float(width), net_clearance(net))
 
     pcbnew, _h = crr.load_pcbnew()
     board = pcbnew.LoadBoard(args.board)

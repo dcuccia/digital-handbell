@@ -65,6 +65,13 @@ def main():
         base = pcbnew.LoadBoard(args.base_board)
         _, added = crr.compare_copper(crr.copper_items(pcbnew, base), crr.copper_items(pcbnew, board))
         removable = {item[-1].m_Uuid.AsString() for _, item in added}
+        # A newly added item may exactly overlap old copper (most often a
+        # duplicate via), so geometric comparison intentionally calls it
+        # covered.  Its UUID still proves that deleting that new duplicate
+        # preserves every base primitive.
+        base_uuids = {item.m_Uuid.AsString() for item in base.GetTracks()}
+        removable |= {item.m_Uuid.AsString() for item in board.GetTracks()
+                      if item.m_Uuid.AsString() not in base_uuids}
         targets &= removable
     removed = {}
     for item in list(board.GetTracks()):

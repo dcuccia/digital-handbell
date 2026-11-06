@@ -234,12 +234,16 @@ def main():
     ap.add_argument("--expansion-limit", type=int, default=3_000_000)
     ap.add_argument("--narrow-net", nargs="*", default=[],
                     help="plan these approved supply nets at signal width, retaining class clearance")
+    ap.add_argument("--net-width", nargs=2, action="append", default=[], metavar=("NET", "MM"),
+                    help="explicit per-net width matching the subsequent route_gaps invocation")
     ap.add_argument("--out", required=True)
     ap.add_argument("--report", required=True)
     args = ap.parse_args()
     for net in args.narrow_net:
         if net in rg.POWER:
             rg.POWER[net] = (rg.SIGNAL[0], rg.POWER[net][1])
+    for net, width in args.net_width:
+        rg.POWER[net] = (float(width), rg.net_clearance(net))
     started = time.monotonic()
     pcbnew, _handle = crr.load_pcbnew()
     base = pcbnew.LoadBoard(args.base_board)
