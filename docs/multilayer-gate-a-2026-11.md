@@ -649,8 +649,55 @@ of an increased keepout count does not substitute for those checks.
 final U2 move was only 0.05 mm. This result does not establish that the
 authorized 5 mm coordinated neighborhood was adequately explored, nor
 that moving R14/R15 is inherently forbidden: their poses were released,
-but additional frozen fanout was not. A future item needs a coherent cell
+but the executor had characterized their fanout as frozen (corrected below).
+A future item needs a coherent cell
 pose and exact support-fanout replacement contract before constructing
 another board. Stop here rather than reset the exhausted correction budget
 or ask the router to fix a shorted input. No human contact/payment,
 fabrication release or promotion of the attempted board follows.
+
+### Owner-resumed whole-cell alternative (November 6, 15:35)
+
+The owner explicitly requests continued autonomous implementation after the
+held result. The new item changes the geometry strategy; it does not restart
+the exhausted direct-capacitor construction or spend on an unqualified input.
+
+A saved-data executor follow-up corrects two important limitations:
+
+- The five attached R14/R15 branches are best-8 router/agent additions,
+  absent from the frozen copper set. Calling their fanout frozen was wrong;
+  their enumerated replacement already fits the released scope.
+- Earlier initial/correction-one trials moved U2 by (0, +4.5) mm; the last
+  trial moved it by (0, +0.05) mm. No X-offset or rotated U2 was tried.
+  Neither earlier construction provided a coherent noncrossing local cell.
+
+The specific supporting branches are R14.1 +3V3 `6ffdc49f` and `a9bc8ccf`
+(both joins mandatory), R14.2 SCL `268c67ad`, R15.1 +3V3 `549cec34` and
+R15.2 SDA `4de761fe`. Their source pin identities and exact boundary
+coordinates remain in the executor handoff. Full original primitive and
+branch-contact accounting is required before any removal, not just this
+short identifier list.
+
+New private root: `multilayer-20261106\regulator-cell-outward-20261106`.
+The executor screens one finite batch of connected-cell templates:
+U2 offsets (1.5,0), (3,0), (4.5,0), (1.5,1.5), (3,1.5), (4.5,1.5) mm,
+each at native 0/90/180/270-degree orientation. C1 and C4 face their
+respective supply rows from outside the package, with short outward
+ground connections and qualified through-via access. Supporting passive
+movement remains within the existing allowance. Screen self-crossings,
+fixed geometry and the retained complement after explicit proposed cuts;
+do not reject a cell merely because eligible router copper or an allowed
+movable support initially occupies it.
+
+Only a screened coherent cell may become a native board trial. Local
+capacitor connections/returns must close; enumerated remote distribution,
+EN and supporting-fanout opens may wait for the router. This avoids
+reintroducing shorts in an attempt to restore every remote connection
+before autorouting. Existing frozen-release limits, mechanical/guard
+requirements and source preservation stay unchanged.
+
+Preparation stops by 15:57, with no new native child after 15:52 and at
+most initial plus two corrections. Saved-fill ground attachment, exact
+complement/open restoration and matching-mode non-open DRC comparison
+still gate spending. The previously approved single run remains unspent
+and capped at 15 minutes/$7.50; no second run is authorized.

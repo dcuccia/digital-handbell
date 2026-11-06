@@ -43,7 +43,8 @@ repeated re-routes.
 - For every decoupling, input/output, crystal-load and boost capacitor,
   record **which pin it serves** and a maximum distance. The rule is the
   pin, not "near the IC". Example: C1 (10 µF on VHI) is the input capacitor
-  of LDO U2; the Adafruit reference puts it 3.8 mm from U2.
+  of LDO U2; the reference supply-pad center distance is 1.45 mm.
+  Its approximately 3.8 mm footprint-center distance is a different metric.
 - Keep reference-design intent. When copying a vendor or open-hardware
   reference, read its layout as well as its schematic. Its placement shows
   which capacitor belongs to which pin.
@@ -65,6 +66,19 @@ repeated re-routes.
   Agents moving parts to legalize courtyards will otherwise silently drag a
   capacitor away from its pin, and the router will then connect it with a
   long, thin trace. That is electrically connected but functionally wrong.
+- For a repair, place the **connected cell**, not independently legal
+  component centers. Check its actual pin geometry, noncrossing local supply
+  and return paths, and via access before constructing a full-board trial.
+  Moving a capacitor closer can still put its connection across another pin.
+- Couple placement permission to a precise copper-replacement contract.
+  Allowing a supporting resistor to move is ineffective if its old fanout
+  remains immovable. Enumerate the released primitives, branch joins and
+  terminal duties; do not release an entire shared supply or signal net.
+  Classify copper against the exact protected baseline: "already present"
+  does not mean frozen. A mistaken classification can block an authorized
+  placement change without any real electrical reason.
+  Record which cell translations and rotations were actually examined:
+  a 0.05 mm IC shift does not exercise a 5 mm relocation allowance.
 
 ## Phase 4: Stackup choice
 

@@ -6,6 +6,15 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 6, 15:35: owner resumes with a whole-cell alternative.**
+  Saved-data follow-up corrects the prior blocker: the five R14/R15 attached
+  branches are router additions, not frozen copper. Initial trials did move
+  U2 4.5 mm in Y, but no X shift/rotation or coherent outward-return cell.
+  New bounded preparation screens up to 24 translated/rotated connected
+  cells, with allowed support moves and exact fanout-restoration duties.
+  New private root `regulator-cell-outward-20261106`; stop 15:57, last new
+  native child 15:52, initial plus two corrections. No cloud spend before
+  qualification; original one-run 15-minute/$7.50 cap remains.
 - **November 6, 15:34: regulator preparation failed; no paid run.**
   Initial construction plus two corrections exhausted. Final `1382dde8`
   brings C1/C4 close but introduces shorts/clearances and 18 opens versus
