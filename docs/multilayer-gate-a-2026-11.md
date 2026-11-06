@@ -142,3 +142,33 @@ continuous (3 A sensitivity), 5 V distribution 1 A, speaker 1.2 A peak.
 4. Supply widths and the In3 +3V3 pour (G4). The agent applies these to the
    frozen board before the first paid run.
 5. Then top up DeepPCB credit. Run 1 is a 15-minute full route, about $7.50.
+
+## Gate A approved (November 6, 10:22) and routing results
+
+**Owner decisions:** six layers (6C); the C1/C20 magnet margin is fine;
+kept-copper rule and supply widths approved; $30 credit added (the $15
+target is a guide, not a hard cap).
+
+- Net classes applied to the frozen board: `thickpower` 0.8 mm (VBAT, VHI,
+  V+), `power` 0.5 mm (VBUS, VAMP), `supply` 0.25 mm (+3V3, VCORE). No new
+  DRC errors.
+- **+3V3 pour on In3: deferred to after routing**, as a fill-around zone,
+  so it does not block In3 signal routing.
+
+| Step | KiCad opens | Notes |
+|---|---|---|
+| Frozen six-layer baseline | 86 | |
+| DeepPCB run 1 (protected, 13 min, plateau stop) | 14 after merge | DeepPCB count 83 -> 12. Merge: 6 edge-clearance findings, 1 B.Cu VBAT track in a contact guard (removed). |
+| Clean + gap router + stitch (free) | **12** | **No new DRC errors**; only dangling-stub warnings. Best board `best-12-open-6c` (`d62a0494...`). |
+| Run 2 (protected, from the 12-open board, 4 min) | 12 | Added nothing; plateau stop. |
+| Run 3 (unprotected, 10 min) | 14 after cleanup | Worse; discarded. |
+| Gap router with 10 mm search window | 12 | No change: the remaining links are blocked by routed copper. |
+
+DeepPCB spend: about **$14**; **$20.35** credit left. Remaining 12 opens:
+SWDIO (TP5), ~RESET (TP7), I2S_LRCLK x2 (IC1-U4, IC1-TP14), POWER (U5-Q2),
+USBBOOT (to D3), VBUS (U3-CHG0), VHI (to C1), VO+ (J1-C22), and 3 GND pour
+islands.
+
+Next (free, agent): relocate test points onto their own nets' existing
+copper (owner allowed test points anywhere), then targeted
+rip-up-and-reroute of blocking router-made copper for the long nets.

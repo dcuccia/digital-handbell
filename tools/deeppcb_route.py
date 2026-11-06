@@ -81,13 +81,13 @@ def cmd_create(args):
     folder = Path(args.dir)
     files = [("kicadBoardFile", (f"{args.name}.kicad_pcb", (folder / "handbell.kicad_pcb").read_bytes())),
              ("kicadProjectFile", (f"{args.name}.kicad_pro", (folder / "handbell.kicad_pro").read_bytes()))]
-    data = {"routingType": "CurrentProtectedWiring", "boardName": args.name,
+    data = {"routingType": args.routing_type, "boardName": args.name,
             "requestId": str(uuid.uuid4()), "boardInputType": "Kicad", "smartConstraints": "false",
             # The API requires a webhook; this is the KiCad plugin's own placeholder endpoint.
             "webhookUrl": "https://plugin.kicad.deeppcb.ai", "webhookToken": "webhook_token"}
     r = check(requests.post(f"{API}/boards", headers=headers(), data=data, files=files, timeout=300))
     board_id = r.text.strip().strip('"')
-    state = {"board_id": board_id, "name": args.name, "input_dir": str(folder)}
+    state = {"board_id": board_id, "name": args.name, "input_dir": str(folder), "routing_type": args.routing_type}
     save_state(args.state, state)
     time.sleep(5)
     print(json.dumps({"board_id": board_id, **summary(board_status(board_id))}, indent=2))
@@ -112,7 +112,8 @@ def cmd_start(args):
         if estimate > args.max_usd:
             sys.exit(f"Estimated ${estimate:.2f} exceeds --max-usd {args.max_usd}")
     body = {"timeout": args.minutes, "maxBatchTimeout": 30, "timeToLive": 300,
-            "maxInactivityWaitTimeout": 60, "jobType": "Routing", "routingType": "CurrentProtectedWiring"}
+            "maxInactivityWaitTimeout": 60, "jobType": "Routing",
+            "routingType": state.get("routing_type", "CurrentProtectedWiring")}
     check(requests.patch(f"{API}/boards/{state['board_id']}/confirm",
                          headers=headers("application/json-patch+json"), json=body, timeout=60))
     state["started"] = {"minutes": args.minutes, "at": time.strftime("%Y-%m-%dT%H:%M:%S%z")}
@@ -157,7 +158,11 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(required=True)
     p = sub.add_parser("create"); p.add_argument("--dir", required=True); p.add_argument("--state", required=True)
-    p.add_argument("--name", default="handbell"); p.set_defaults(func=cmd_create)
+    p.add_argument("--name", default="handbell")
+    p.add_argument("--routing-type", default="CurrentProtectedWiring",
+                   choices=["CurrentProtectedWiring", "CurrentUnprotectedWiring"],
+                   help="unprotected lets DeepPCB rip up existing copper; only safe with a merge against a frozen base")
+    p.set_defaults(func=cmd_create)
     p = sub.add_parser("status"); p.add_argument("--state", required=True); p.add_argument("--raw")
     p.set_defaults(func=cmd_status)
     p = sub.add_parser("start"); p.add_argument("--state", required=True)

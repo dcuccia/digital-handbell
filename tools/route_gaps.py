@@ -30,8 +30,8 @@ HOLE_TO_HOLE = 0.25
 EDGE = 0.3
 MARGIN = 4.0
 VIA_COST = 12.0
-POWER = {"VBUS": (0.3, 0.2), "VBAT": (0.3, 0.2), "VHI": (0.3, 0.2), "VAMP": (0.3, 0.2),
-         "+3V3": (0.25, 0.2), "VCORE": (0.25, 0.2)}
+POWER = {"VBAT": (0.8, 0.2), "VHI": (0.8, 0.2), "V+": (0.8, 0.2), "VBUS": (0.5, 0.2), "VAMP": (0.5, 0.2),
+         "+3V3": (0.25, 0.15), "VCORE": (0.25, 0.15)}  # approved Gate A widths (track, clearance)
 SIGNAL = (0.15, 0.15)
 SKIP_NETS = {"/CELL_NEG"}
 SAFETY = 0.025  # grid/polygon discretization margin added to every clearance
@@ -265,13 +265,16 @@ def main():
     ap.add_argument("--layers", nargs="+", default=["F.Cu", "In2.Cu", "B.Cu"],
                     help="signal layers the router may use (never plane layers)")
     ap.add_argument("--via-cost", type=float, default=12.0)
+    ap.add_argument("--margin", type=float, default=4.0, help="search window margin around each pair (mm)")
     ap.add_argument("--narrow-net", nargs="*", default=[], help="route these supply nets at signal width")
     args = ap.parse_args()
-    global VIA_COST
+    global VIA_COST, MARGIN
     LAYERS[:] = args.layers
     VIA_COST = args.via_cost
-    for net in args.narrow_net:
-        POWER.pop(net, None)
+    MARGIN = args.margin
+    for net in args.narrow_net:  # narrower track only; the net class clearance still applies
+        if net in POWER:
+            POWER[net] = (SIGNAL[0], POWER[net][1])
 
     pcbnew, _h = crr.load_pcbnew()
     board = pcbnew.LoadBoard(args.board)

@@ -58,7 +58,7 @@ def main():
     filler = pcbnew.ZONE_FILLER(board)
     filler.Fill(board.Zones())
     mm, radius = pcbnew.ToMM, VIA_DIAMETER / 2
-    layers = {"F.Cu": pcbnew.F_Cu, "In1.Cu": pcbnew.In1_Cu, "In2.Cu": pcbnew.In2_Cu, "B.Cu": pcbnew.B_Cu}
+    layers = {board.GetLayerName(l): l for l in board.GetEnabledLayers().CuStack()}
 
     outline = pcbnew.SHAPE_POLY_SET()
     board.GetBoardPolygonOutlines(outline, False)
@@ -79,7 +79,9 @@ def main():
     in1_fill = unary_union(in1_fill)
 
     through_gnd, holes = [], []
-    blockers = {name: [] for name in ("In2.Cu", "B.Cu")}
+    # Every copper layer except F (the island itself) and power-type plane layers.
+    blockers = {name: [] for name, l in layers.items()
+                if name != "F.Cu" and board.GetLayerType(l) != pcbnew.LT_POWER}
     for item in board.GetTracks():
         if item.GetClass() == "PCB_VIA":
             p = Point(mm(item.GetPosition().x), mm(item.GetPosition().y))
