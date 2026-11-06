@@ -2,6 +2,11 @@
 
 ## Bounded engineering work
 
+- **November6 multilayer plan drafted (no spend):**
+  docs/multilayer-routing-plan-2026-11.md, reviewed by an Astra rubber duck.
+  Options 6C (JLC06161H-3313E, four signal layers) or eight layers with a
+  +3V3 plane, pending owner's live quote. Owner approval covers preparation
+  G1-G5 on private copies only; Gate A precedes any DeepPCB spend.
 - **November6 options 1-3 tried:** wider-clearance DeepPCB run, repair
   pipeline (route_gaps.py) and charger-group spread. Best on moved placement
   28 opens rule-clean (opt2-route3); overall best still 25 (old placement).

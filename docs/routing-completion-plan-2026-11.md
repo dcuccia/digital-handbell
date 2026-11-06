@@ -252,6 +252,11 @@ VHI, D13, GND) through DeepPCB's dense routing. Remaining realistic options:
    would free the whole centre band.
 3. A freelancer for the 25-open board (on the back burner).
 
+**November 6, 09:00:** the owner asked whether six or eight layers could
+separate signals from power. The answer is yes, now that the MCU is off the
+contacts. See the reviewed
+[six/eight-layer routing plan](multilayer-routing-plan-2026-11.md).
+
 ### Step 0 - prepare a clean input (agent, about 1-2 hours)
 
 1. Regenerate the exact open list for `adc262b3` on a copy.
