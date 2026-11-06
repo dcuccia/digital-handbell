@@ -209,3 +209,34 @@ rip-up-and-reroute of blocking router-made copper for the long nets.
   - +3V3 pour on In3.
   - Remove dangling stubs.
   - Electrical review and mechanical re-bind.
+
+### Run 4: fresh 15-minute route of frozen placement plus test-point moves (November 6, afternoon)
+
+- New standard pipeline: `tools/postprocess_router_result.ps1`. It chains
+  merge, GND stitch, conflict clean, `tools/remove_guard_copper.py` (new),
+  gap route, stitch, gap route and the standard check, one folder per
+  stage.
+- New baseline `multilayer-20261106\6c-frozen-tp`: the frozen board with
+  only TP7/TP14 moved. It has the same 86 opens and 71 inherited
+  `items_not_allowed` as the frozen board.
+  - The first attempt used `move_cluster.py`; its legalizer removed three
+    vias, so it was discarded and the upload (a08e5272) was not run.
+- DeepPCB board 3b3e141c, protected, 15 minutes (about $7.50).
+  - The API returned no stats during the run, so the plateau stop could
+    not trigger and the run used its full cap.
+  - After the pipeline: **14 opens**, no new DRC errors, three more
+    dangling items. **Worse than best-11.**
+- Run 4 did close five links that are open on best-11 (SWDIO, VHI at C1,
+  both I2S_LRCLK, VBUS U3-CHG0). A net-copper transplant onto best-11 was
+  tried:
+  - All four nets together: 49 clearance errors and 38 shorts; 14 opens
+    after cleaning.
+  - Each net alone: still 2-34 clearance errors plus shorts.
+  - Rejected. Router copper for one net depends on that run's routing of
+    the others.
+- Lesson: fresh full re-routes of the same placement reach a similar open
+  count (11-14), but strand different links. More DeepPCB minutes on this
+  placement are not a good use of credit. The remaining links need
+  per-net, path-aware finishing on the best board.
+- DeepPCB credit left: about **$12.85**. Best board is still
+  `best-11-open-6c`.
