@@ -409,3 +409,57 @@ does not authorize one.
 - The pass 3 negative result means the remaining links are boxed in by
   frozen copper. Pass 4 diagnoses which frozen items, so that any change
   is an explicit, reviewed decision.
+
+## Finishing pass 4 (Sol)
+
+Pass 4 started from accepted best-8
+`finish-pass2/07-rip-vbus/handbell.kicad_pcb`
+(`e158ccd251325b63b8f03e1d3230dce9c6098b2702356208ec46d68465f9c826`).
+No PCB candidate was written or accepted, so the exact best-8 board, DRC and
+checks remain authoritative.
+
+### C1 decoupling placement screen
+
+`tools/move_c1_decoupling.py` screened four orthogonal rotations on 0.25 mm
+and corrective 0.10 mm grids. A candidate had to put C1.1 within 3.0 mm of
+U2.1, preserve zero courtyard overlap, avoid footprint/pad keep-outs and
+contact guards, admit a clearance-aware 0.50 mm VHI route, and provide an
+adjacent legal GND through-via plus short F trace. Frozen copper was never
+eligible for removal.
+
+No candidate passed the placement geometry, before routing or old-branch
+removal. The three nearest useful 0.25 mm-grid candidates all rotate C1 to
+90 degrees and are blocked by C4's courtyard:
+
+| C1 centre (mm) | C1.1-to-U2.1 | Blocker |
+|---|---:|---|
+| 85.0132, 90.6921 | 1.1000 mm | C4 courtyard |
+| 84.7632, 90.6921 | 1.1281 mm | C4 courtyard |
+| 85.2632, 90.6921 | 1.1281 mm | C4 courtyard |
+
+The 0.10 mm correction confirmed that still-closer positions overlap U2
+itself. The required adjacency check on retained best-8 therefore remains
+flagged at **12.95 mm** versus 1.45 mm in the Adafruit reference. C1, its old
+0.15 mm VHI branch and all other copper remain byte-for-byte unchanged. A
+coordinated C4/C1 placement decision is now required; this screen does not
+authorize moving C4.
+
+### Frozen endpoint enclosure diagnosis
+
+`finish-pass4/enclosures.json` binds best-8 and frozen-board hashes and lists
+the nearest frozen pad/track/via/rule-area witnesses for both ends of all
+eight opens. Compact engineering dispositions:
+
+| Open group | Representative frozen bounds | Smallest single change | Risk |
+|---|---|---|---|
+| POWER U5-Q2 | U5 V+/BOOST_FB cell; Q2 `~ENABLE` track `29cc6e59...` | Shift that enable escape about 0.3 mm and restore it | High: power selection/boost adjacency |
+| VO+ J1-C22 | J1 B.VBAT `dbfe8896...`, F.VAMP `76a1d351...`; C22 GND/USB D- | Shift C22 about 0.5 mm toward J1 and replace local VO+/GND | High: BTL output current and USB adjacency |
+| GND IC1.19 | XIN track `b239cecf...` and via `56beb5d8...` | Move the XIN escape about 0.3 mm and restore the clock route | Very high: crystal plus MCU return |
+| GND GAIN0.1 | F.VBAT `0d6ce402...`, B.VBAT `2f49a8db...`, GAIN/VAMP pads | Move the nearest F.VBAT segment about 0.3 mm | High: source current beside amplifier gain |
+| F.GND island | USB anchor X6.M3 `ec4d64cc...` on all layers | Revise the zone neck around X6.M3 and refill | Medium-high: USB mechanics/return |
+| USBBOOT-D3 | IC1 +3V3 pad `c924f4a0...`; R18 I2S_MOD/VAMP pads | Move R18 about 0.3 mm and restore its fanout | Medium-high: amplifier mode/supply |
+| SWDIO TP5-IC1 | IC1 SWCLK/RESET pads and VCORE track `1a7d010e...`; TP5 R13 pads | Reroute the VCORE escape about 0.3 mm | Very high: core PI versus recovery access |
+| LRCLK TP14-U4 | USB D+ In2 `0d5ce84c...`; U4 GND `0858c33e...` and thermal group | Move TP14 beyond the prior 12 mm domain | Medium: preferable to USB/thermal reroute |
+
+These are diagnosis options, not released changes. Pass 4 added no copper,
+moved no component, changed no DRC/check result and spent no routing credit.
