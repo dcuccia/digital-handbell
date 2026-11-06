@@ -382,3 +382,30 @@ hard endpoint enclosures warrants a placement/frozen-copper change; this pass
 does not authorize one.
   - Widen this copper, or move C1, before fabrication. Do not count it as
     finished supply routing.
+
+### Lead design review: capacitor adjacency (November 6)
+
+- New read-only screen `tools/check_cap_adjacency.py` measures each
+  capacitor's distance to the pin it serves, optionally against a reference
+  layout. Explicit rules name the pin. Results for best-8 against the
+  Adafruit 5768 reference:
+  - **C1** (U2 RT9080 LDO input, VHI): 12.95 mm versus 1.45 mm in the
+    reference. **Defect**: it is connected through about 9 mm of 0.15 mm
+    trace. Fix in finishing pass 4 by moving C1 within 3 mm of U2.1.
+  - C20 (VBAT bulk): 12.7 mm from Q3, but the reference is also about
+    11 mm. This is battery-node bulk capacitance, not IC decoupling. Not a
+    defect.
+  - Also flagged; review before fabrication rather than move now:
+    - C2/C3 crystal loads: 3.6/5.1 mm versus 1.2/2.6 mm in the reference.
+      The crystal copper was pre-reviewed.
+    - C7 VCORE: 5.8 mm versus 2.2 mm.
+    - C4 LDO output: 5.1 mm versus 2.8 mm. C5 is a second output
+      capacitor at 3.0 mm.
+    - C15: 3.9 mm.
+    - C25 (button debounce, not decoupling) and C26/C28 are expected
+      placements.
+- Remaining thin VHI copper to R3/R16 (10k/100k) is signal-level and
+  acceptable at 0.15 mm. Only C1's path was a power-path concern.
+- The pass 3 negative result means the remaining links are boxed in by
+  frozen copper. Pass 4 diagnoses which frozen items, so that any change
+  is an explicit, reviewed decision.
