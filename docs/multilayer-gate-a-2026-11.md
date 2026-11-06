@@ -240,3 +240,38 @@ rip-up-and-reroute of blocking router-made copper for the long nets.
   per-net, path-aware finishing on the best board.
 - DeepPCB credit left: about **$12.85**. Best board is still
   `best-11-open-6c`.
+
+## Finishing pass 1 (Sol)
+
+Runtime gate: the lead supplied the `subagent.configured` event for agent
+`c522a19f-8e09-450d-885c-15b9912cdc50` at `2026-11-06T20:00:35Z`; it records
+`gpt-5.6-sol`, medium reasoning and `explicit_override`.
+
+`tools/reroute_with_ripup.py` adds deterministic per-net soft-obstacle A*.
+Copper absent from `6c-frozen-tp` is costly but traversable; frozen copper,
+pads, hard holes, keep-outs and the edge remain hard. The tool removes only
+the crossed router-made primitives and records their UUIDs as replacement
+obligations. Routing and restoration remain separate fresh processes because
+pcbnew wrappers are unsafe after removal.
+
+The initial SWDIO attempt found a path after 264,414 expansions in 4.859 s,
+but required removing eight SWCLK/I2S_DIN/RESET primitives. Routine restoration
+closed only I2S_DIN, leaving 14 opens, so the trial was rejected. The first
+correction targeted narrow VHI. It found a path after 15,941 expansions in
+2.141 s, removed two GND and two `/IMU_INT2` router-made F tracks, added eleven
+0.15 mm VHI tracks plus one 0.50/0.30 mm through-via, and restored `/IMU_INT2`
+with 42 new 0.15 mm F tracks. The two removed GND tracks were not required by
+the filled connectivity: the same three GND opens remain and no prior open
+group regressed. Final native DRC has **10 opens**, the same 71 inherited
+`items_not_allowed`, and no new finding type or count versus best-11.
+
+Private candidate:
+`multilayer-20261106/finish-pass1/02-rip-vhi/handbell.kicad_pcb`,
+SHA-256 `4d0a08d2b7184efbea55879f9b850eebf6ad6a1fad30e8353a11757a620a708a`.
+The frozen-baseline standard check fails only because the candidate retains
+the already-known best-11 dangling-warning delta (six tracks and one via versus
+four tracks and no vias in the frozen board); those counts did not grow from
+best-11. Placement, frozen copper, planes, contact exclusions, private returns,
+USB D+/D-, stackup and rules are unchanged. KiCad CLI 10.0.6 and Python 3.11.9
+were used. This is staged routing evidence, not Astra engineering acceptance
+or a fabrication release.
