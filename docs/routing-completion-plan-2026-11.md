@@ -53,6 +53,11 @@ and placement files change together). Keep SWD, RESET and BOOT access.
 
 ## Plan
 
+**Status, November 6:** Steps 0-2 done; best clean result is still 25 opens.
+Moving the MCU cleared the battery-contact blockage, but DeepPCB's output
+needs rule repair before it beats 25 (see the November 6 entry below).
+Lessons are summarized in [routing tooling](routing-tooling.md#current-conclusion).
+
 **Status, November 5, 16:10:** Steps 0-2 done. DeepPCB plus automatic
 filtering and ground stitching took the board from 38 to 25 opens, then
 stalled at the RP2040 pins. **16:20 owner decision:** freelancer option is on
@@ -200,6 +205,32 @@ will not change that. Realistic options (owner decision):
 3. **Six layers do not help** this specific wall: escape vias are still
    blocked through the contacts. Blind F-to-In2 vias would help but need HDI
    fabrication at extra cost.
+
+**November 5, 16:45 owner decision:** move the MCU (no HDI). The owner is
+flexible about where the MCU goes. A JST battery lead is acceptable only if
+moving the MCU fails.
+
+**November 6 - MCU move result.** Moving the processor cluster up under
+the USB connector (`tools/move_cluster.py`, 41 parts and their internal
+copper; courtyards legalized; private copy `deeppcb-20261105\swap-5`)
+cleared the contact blockage: DeepPCB fanout reported **0** IC1 pins in
+keep-outs, down from 28. A full 15-minute run ($7.50) reached DeepPCB's own
+count of 18 missing of 222. After our filtered merge and stitching, KiCad
+reports 31 opens plus 27 new rule violations: DeepPCB used about
+0.125-0.137 mm clearance and 0.19 mm edge clearance, and made two shorts.
+Removing only the new conflicting copper leaves **43 opens**, so this is
+not yet better than the 25-open best (`best-25-open-relaxed`).
+
+DeepPCB credit: 41.7 of 60 minutes used, **$9.16 left**. The authoritative
+board is unchanged. Next options:
+
+1. One more short DeepPCB run on the cleaned swap board with project
+   clearances raised for DeepPCB only (for example 0.18 mm signal, wider
+   edge), so its undercut output still meets 0.15 mm.
+2. Have an agent repair the specific small clearance violations instead of
+   deleting whole tracks.
+3. Reconsider placement around the moved charger group (U3/R2/CHG0), where
+   several violations occurred.
 
 ### Step 0 - prepare a clean input (agent, about 1-2 hours)
 

@@ -34,6 +34,7 @@ def main():
     ap.add_argument("--drc", required=True)
     ap.add_argument("--baseline-drc", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--base-board", help="if given, only copper absent from this board may be removed")
     args = ap.parse_args()
 
     new = violation_uuids(json.loads(Path(args.drc).read_text(encoding="utf-8")))
@@ -41,6 +42,11 @@ def main():
     targets = {u for t, u in new - old}
     pcbnew, _h = crr.load_pcbnew()
     board = pcbnew.LoadBoard(args.board)
+    if args.base_board:
+        base = pcbnew.LoadBoard(args.base_board)
+        _, added = crr.compare_copper(crr.copper_items(pcbnew, base), crr.copper_items(pcbnew, board))
+        removable = {item[-1].m_Uuid.AsString() for _, item in added}
+        targets &= removable
     removed = {}
     for item in list(board.GetTracks()):
         net = item.GetNetname()

@@ -2,6 +2,11 @@
 
 ## Bounded engineering work
 
+- **November6 MCU move tried:** cluster moved under USB clears the contact
+  blockage (0 IC1 pins in keep-outs), but DeepPCB output undercuts rules
+  (~0.13mm clearance, 0.19mm edge, 2 shorts); cleaned result 43 opens, not
+  better than best 25. $9.16 credit left. Lessons in docs/routing-tooling.md
+  "Current conclusion"; clean_drc_conflicts.py must use --base-board.
 - **November5 16:40: DeepPCB iterations stopped at 25 opens (best
   best-25-open-relaxed, PCB ce81d6af).** Root cause: IC1 sits over both
   battery-contact inner bases, whose via keep-outs cover 28 of 57 IC1 pins;

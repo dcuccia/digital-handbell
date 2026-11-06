@@ -12,6 +12,52 @@ underlying tooling and experiment history.
 
 ## Current conclusion
 
+**November 2026 lessons: finishing a long routing tail cheaply.** Evidence:
+[routing completion plan](routing-completion-plan-2026-11.md) progress log.
+Owner is a software developer, not a layout engineer; tools and agents
+drive routing, the owner approves decisions and spending.
+
+- **Check placement against hard keep-outs before any router.** IC1 sat over
+  both battery-contact inner bases, whose via keep-outs blocked 28 of 57
+  pins. Quilter, DeepPCB and earlier agent routing all stalled there. Render
+  parts over via/B.Cu keep-outs (as in `placement-map.png`) and keep fine-pitch
+  or via-dense ICs off them first. More router minutes, more layers or escape
+  stubs cannot fix a blocked pin field; six layers would not have helped,
+  and blind vias mean HDI cost.
+- **DeepPCB** (pay-as-you-go, $30/hour, KiCad plugin and public API): the
+  free trial counts all connections (150 airwire cap), so real boards need
+  credit. `CurrentProtectedWiring` was **not honoured**: it rerouted the
+  reviewed clock and battery copper and ignored a keep-out type. It routes
+  at about 0.125-0.137 mm clearance and 0.19 mm edge clearance even when the
+  project asks for 0.15 and 0.3 mm. Treat its output as a proposal.
+- **Working pipeline** (tools in `tools/`): `prepare_deeppcb_input.py`
+  (copy, guards, rules) -> `deeppcb_route.py` (always protected mode, refuses
+  paid runs without `--allow-paid --max-usd`, poll and stop on plateau) ->
+  `merge_router_nets.py` (keep every baseline item, add router copper only on
+  open nets) -> `stitch_gnd_islands.py` (GND vias for isolated pour islands)
+  -> KiCad DRC with refill -> `check_routing_result.py` (parts, copper
+  preservation, CELL_NEG, private pads, In1 tracks, DRC growth). This took
+  the board from 38 to 25 opens for about $9.
+- **Plateau stopping saves money:** stop a run after about 3 minutes without
+  progress; most gain arrives in the first 3-5 minutes.
+- **Relaxed but standard rules help escape:** 0.15 mm signal track/space
+  (fabs commonly allow 0.10 mm) closed several more pins; keep supply classes
+  wider and record the decision.
+- **DeepPCB's free fanout API** (`POST /boards/{id}/fanout`) is a cheap
+  diagnostic: its anomaly list named the keep-out blockage directly.
+- **Placement moves:** `move_cluster.py` moves part groups with their
+  internal copper and legalizes courtyards by local search;
+  `clean_drc_conflicts.py --base-board` removes only new conflicting copper.
+  Removing whole conflicting tracks undoes routing, and without `--base-board`
+  the cleanup cascades into original copper. After moving the MCU cluster
+  under USB, keep-out-blocked pins went from 28 to 0. One 15-minute DeepPCB
+  run then left 31 opens, but with 27 rule violations; cleaned, 43. This is
+  not yet better than 25. Next time, give the router a margin by asking for
+  wider clearances than the real minimum.
+- Agents should not hand-route move by move, and should not start broad
+  router or layer sweeps. Repository policy pins routing helpers to the Sol
+  model; an Astra sub-agent declined routing work under that policy.
+
 **Native local review views:** `tools/render_clock_detail.py` now also accepts
 `--pcb`, `--layer`, `--bounds XMIN YMIN XMAX YMAX` in native millimetres,
 and repeated `--highlight-net` options. The default clock view and its

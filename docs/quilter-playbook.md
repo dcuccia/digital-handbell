@@ -7,6 +7,12 @@ owner/agent effort, not trace aesthetics or recovery of sunk costs.
 Evidence reviewed through **October 6, 2026**: Quilter UI/API through1.42.0
 (earlier observations used UI1.40.0/API1.40.1) and KiCad10.0.6.
 This is a living procedure, not a platform guarantee.
+
+**November 2026:** Quilter work is paused. Finishing continues with the
+four-layer board, DeepPCB and agent placement tools; see the November
+lessons in [routing tooling](routing-tooling.md#current-conclusion). The
+biggest lesson applies to any router: check placement against battery-contact
+via keep-outs before routing.
 The [workflow study](quilter-workflow-study-2026-10-02.md) retains the dated
 reasoning; its linked ledgers bind exact files and results. The
 [closure plan](pcb-closure-plan.md#owner-pause-and-next-item) controls current
