@@ -551,3 +551,51 @@ artifacts are retained under `multilayer-20261106/finish-pass5`.
 - C1/C4 adjacency defects (12.95/5.08 mm against reference 1.45/2.83 mm)
   stay open review items, to be fixed in the same re-placement or by a
   person.
+
+### Owner-approved local re-arrangement and one route (November 6, 15:22)
+
+The owner explicitly selects the agent re-arrangement plus one DeepPCB
+run. This is a new coordinated placement item, not another attempt on the
+unchanged placement or a waiver of the previous rejected results.
+
+- Preserve best-8 `finish-pass2\07-rip-vbus`, PCB SHA-256
+  `e158ccd251325b63b8f03e1d3230dce9c6098b2702356208ec46d68465f9c826`.
+  The authoritative four-layer PCB/project/schematic remain untouched.
+- Prepare a separate U2 regulator-neighborhood layout, allowing a coherent
+  movement of its input/output capacitors and directly obstructing local
+  passives rather than repeatedly testing one capacitor against a fixed U2.
+  Enumerate every changed pose, removed copper primitive and interrupted
+  terminal/branch obligation. Keep the outline, stackup, interfaces,
+  source-selection/protection, boost, clock and MCU/core blocks unchanged
+  unless a further explicit engineering disposition identifies a necessary
+  narrow change.
+- Before cloud spend, demonstrate short real C1-to-VIN and output-capacitor
+  paths, local ground access, native pose/pad agreement, and no new
+  non-open DRC errors under the intended project rules. Distance alone is
+  a placement screen, not decoupling or stability qualification. Increased
+  opens from deliberately released fanout must be enumerated for restoration;
+  they are allowed in the router input, not silently accepted in the result.
+- Run at most one newly qualified input for 15 minutes, with a $7.50 ceiling
+  at the observed $0.50/minute rate. Reconfirm the live rate before starting.
+  Missing progress statistics are not evidence of a plateau; retain the
+  duration cap and confirm a terminal service state.
+- Preserve native output before processing. Merge against the revised
+  protected baseline and compare the result against both that input and
+  best-8. Do not use blanket `--narrow-net VHI VCORE` finishing. Confirm
+  supply widths, complete guard clearance, local supply/return paths and
+  restored obligations, not merely DRC counts.
+
+No run has started at this authorization checkpoint. The freelancer brief
+remains unposted. Preparation or validation failure stops spending rather
+than submitting an unqualified board.
+
+**Post-processing preparation:** the wrapper no longer passes blanket
+`--narrow-net VHI VCORE`; it retains the gap router's approved supply widths
+and explicitly uses 0.6 mm for the two speaker-output nets. Every native
+child now has a hard timeout, retained stdout/stderr and a checked exit
+status. Existing work folders and receipts are refused rather than erased;
+intermediate boards remain available. Native DRC requests all track errors,
+so its baseline must use the same reporting mode. Six software-only
+controls passed: successful child, nonzero exit, timeout, reused receipt,
+existing work folder and routing-width arguments. These controls do not
+qualify a board or replace the returned-copper width/geometry audit.

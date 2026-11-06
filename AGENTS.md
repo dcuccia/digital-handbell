@@ -6,6 +6,12 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 6, 15:22: owner approves local re-arrangement plus one run.**
+  Preserve best-8 `e158ccd2` and all failed passes. Qualify a coordinated
+  U2/C1/C4/C5 neighborhood on a separate copy, including replacement
+  supply/return paths and exact released-copper obligations, before spending.
+  One new DeepPCB run only, at most 15 minutes / $7.50; no unchanged-placement
+  retry or fabrication release. See the current Gate A continuation.
 - **November6 finishing passes (Sol, no spend): 11 -> 8 opens** (finish-pass2\07-rip-vbus, e158ccd2;
   tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper: electrical review item.
   Still open: I2S_LRCLK TP14, SWDIO TP5, USBBOOT, POWER, VO+, three GND groups.
