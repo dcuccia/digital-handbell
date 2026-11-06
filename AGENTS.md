@@ -2,6 +2,11 @@
 
 ## Bounded engineering work
 
+- **November6 multilayer prep G1-G5 done; awaiting Gate A owner decisions.**
+  See docs/multilayer-gate-a-2026-11.md. Six-layer 6C frozen baseline
+  multilayer-20261106\6c-frozen (b82f2fe3, 86 opens, no new DRC errors);
+  DeepPCB copy uploaded as d254093c (no run). Check is plane-aware with five
+  passing negative controls. Live quote: 6L ~$35-49, 8L ~$90 (5 pcs).
 - **November6 multilayer plan drafted (no spend):**
   docs/multilayer-routing-plan-2026-11.md, reviewed by an Astra rubber duck.
   Options 6C (JLC06161H-3313E, four signal layers) or eight layers with a

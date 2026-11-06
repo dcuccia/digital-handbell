@@ -36,7 +36,7 @@ plane.
     chips.
 - Still to do: FreeCAD re-bind of the frozen placement.
 
-Private files: `multilayer-20261106\6c-crit2` under the bakeoff root. DRC
+Private files: `multilayer-20261106\6c-frozen` under the bakeoff root. DRC
 under real rules has **no new errors**; only the 71 reviewed keep-out
 findings inherited from the authoritative board remain. **86 opens.**
 
@@ -88,19 +88,57 @@ continuous (3 A sensitivity), 5 V distribution 1 A, speaker 1.2 A peak.
   return guards are mirrored onto the new In4 plane; /CELL_NEG never touches
   GND. Plane stitching must skip R24.2 and R26.2.
 
-## G5 - Tools and fixes so far
+## G5 - Tools and fixes (done)
 
-- New: `tools/build_multilayer_input.py` (kept-copper rule, stackup
-  transplant, In1 -> In4 zone mirroring) and `tools/fit_parts_to_copper.py`
-  (nudge parts off kept copper; drop moved copper in keep-outs; avoid a
-  height zone).
+- New tools:
+  - `tools/build_multilayer_input.py`: kept-copper rule, stackup
+    transplant, In1 -> In4 zone mirroring.
+  - `tools/fit_parts_to_copper.py`: nudges parts off kept copper, drops
+    moved copper in keep-outs, keeps parts out of a height zone.
 - `tools/route_gaps.py` now takes the layer list, a net filter, via cost and
-  supply widths.
+  supply widths, and never emits zero-length segments.
 - **Bug fix:** DRC net names with brackets (`QSPI_DATA[3]`) were truncated
   by three tools, so such nets were silently skipped; a shared parser
   (`drc_net`) fixes it.
-- KiCad's Python API breaks process-wide after removing items. Tools now
+- KiCad's Python API breaks process-wide after removing items; tools now
   edit in separate processes.
-- Still to do: plane-aware standard check with negative controls, plane
-  stitching honouring the exception list, the +3V3 pour, and the free
-  DeepPCB import/export round trip.
+- **Standard check is now plane-aware:**
+  - It rejects new tracks on any power-type layer (In1, In4).
+  - It flags new vias inside the copper island of a private-return pad
+    (R24.2, R26.2), which a plane would otherwise join.
+  - It ignores zero-length items.
+- **Negative controls (six layers), each FAILs as required:**
+  - a private-return via;
+  - a track on In4;
+  - a via in the battery-contact band;
+  - new /CELL_NEG copper;
+  - a removed 5.1 mm protected /PROT_COUT track.
+- **Frozen baseline:** `multilayer-20261106\6c-frozen`, PCB SHA-256
+  `b82f2fe3474f32711bc0f36c4d3a83546f57121b0bf268a3a75a299b5564f93d`;
+  86 opens, no new DRC errors.
+- **Free DeepPCB checks:**
+  - **Round trip:** the unrouted revision downloaded and preserved every
+    part and copper item (three zero-length router stubs were removed
+    beforehand).
+  - **Fanout:** DeepPCB sees 6 layers and 3 planes. The board-wide "no
+    tracks" rule areas on the plane layers made DeepPCB count all 57 IC1
+    pins as in a keep-out. With those areas removed from the DeepPCB copy
+    only (the check still enforces no plane tracks), 0 pins are in
+    keep-outs and 44/57 escape. The other 13 sit beside the pre-routed
+    critical circuits.
+- **DeepPCB copy** `multilayer-20261106\deeppcb-input2`, uploaded as board
+  `d254093c-a410-4a5a-95e1-dd72885c83d3`: the frozen board without plane
+  no-track areas, with clearances raised to 0.18 / 0.23 / 0.45 mm. No routing
+  job started.
+- Plane stitching needs no new exception logic. The private-return guards
+  already forbid vias and pours on F/In1/In4 around R24.2/R26.2, and the
+  check's private-bypass test catches any violation.
+
+## Decisions needed at Gate A
+
+1. Stackup: 6C (recommended) or eight layers (about $40-55 more per 5 pcs).
+2. C1/C20: accept the thin magnet margin, or move/substitute them.
+3. Kept-copper rule (G3).
+4. Supply widths and the In3 +3V3 pour (G4). The agent applies these to the
+   frozen board before the first paid run.
+5. Then top up DeepPCB credit. Run 1 is a 15-minute full route, about $7.50.

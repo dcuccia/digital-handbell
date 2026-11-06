@@ -84,7 +84,8 @@ def via_covered(via, others):
 def compare_copper(base, cand):
     """Return (lost base items, new candidate items) with geometric tolerance."""
     (bt, bv), (ct, cv) = base, cand
-    lost = [(k, s) for k, segs in bt.items() for s in segs if not track_covered(s, ct.get(k, []))]
+    lost = [(k, s) for k, segs in bt.items() for s in segs
+            if math.hypot(s[2] - s[0], s[3] - s[1]) > 1e-6 and not track_covered(s, ct.get(k, []))]
     lost += [(n, v) for n, vs in bv.items() for v in vs if not via_covered(v, cv.get(n, []))]
     new = [(k, s) for k, segs in ct.items() for s in segs if not track_covered(s, bt.get(k, []))]
     new += [(n, v) for n, vs in cv.items() for v in vs if not via_covered(v, bv.get(n, []))]
@@ -110,6 +111,39 @@ def drc_counts(path):
     counts["unconnected_items"] = len(report.get("unconnected_items", []))
     counts["schematic_parity"] = len(report.get("schematic_parity", []))
     return counts
+
+
+def private_bypass(pcbnew, base_board, cand_board):
+    """New vias in the F.Cu track island of each private-return pad (planes would join it)."""
+    from stitch_gnd_islands import item_shape  # local import: stitch_gnd_islands imports this module
+    mm = pcbnew.ToMM
+    base_vias = {(round(mm(v.GetPosition().x), 3), round(mm(v.GetPosition().y), 3))
+                 for v in base_board.GetTracks() if v.GetClass() == "PCB_VIA"}
+    found = []
+    for ref, number in sorted(PRIVATE_PADS):
+        fp = cand_board.FindFootprintByReference(ref)
+        pad = next((p for p in fp.Pads() if p.GetNumber() == number), None) if fp else None
+        if pad is None:
+            continue
+        net = pad.GetNetname()
+        items = [(t, item_shape(pcbnew, t, pcbnew.F_Cu)) for t in cand_board.GetTracks()
+                 if t.GetNetname() == net and t.IsOnLayer(pcbnew.F_Cu)]
+        reached = item_shape(pcbnew, pad, pcbnew.F_Cu)
+        members, grown = set(), True
+        while grown:
+            grown = False
+            for i, (t, s) in enumerate(items):
+                if i not in members and s.intersects(reached):
+                    members.add(i)
+                    reached = reached.union(s)
+                    grown = True
+        for i in members:
+            t = items[i][0]
+            if t.GetClass() == "PCB_VIA":
+                key = (round(mm(t.GetPosition().x), 3), round(mm(t.GetPosition().y), 3))
+                if key not in base_vias:
+                    found.append(f"{ref}.{number}@{key}")
+    return found
 
 
 def main():
@@ -157,9 +191,16 @@ def main():
     bad_net = [k for k, _ in new if net_of(k) in ISOLATED_NETS]
     if bad_net:
         failures.append(f"{len(bad_net)} new copper items on isolated nets {sorted(ISOLATED_NETS)}")
-    plane_tracks = [k for k, _ in new if isinstance(k, tuple) and k[1] in PLANE_LAYERS]
+    plane_layers = set(PLANE_LAYERS)
+    for layer in cand_board.GetEnabledLayers().CuStack():
+        if cand_board.GetLayerType(layer) == pcbnew.LT_POWER:
+            plane_layers.add(cand_board.GetLayerName(layer))
+    plane_tracks = [k for k, _ in new if isinstance(k, tuple) and k[1] in plane_layers]
     if plane_tracks:
-        failures.append(f"{len(plane_tracks)} new tracks on plane layers {sorted(PLANE_LAYERS)}")
+        failures.append(f"{len(plane_tracks)} new tracks on plane layers {sorted(plane_layers)}")
+    bypass = private_bypass(pcbnew, base_board, cand_board)
+    if bypass:
+        failures.append(f"New vias join private-return copper (plane bypass risk): {bypass}")
     touching = []
     for _key, item in new:
         obj = item[-1]

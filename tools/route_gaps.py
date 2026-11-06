@@ -207,6 +207,8 @@ def add_path(bd, net, path, xs, ys):
         pts = simplify([(float(xs[c]), float(ys[r])) for _, r, c in run])
         layer = LAYERS[run[0][0]]
         for (ax, ay), (bx, by) in zip(pts, pts[1:]):
+            if math.hypot(bx - ax, by - ay) < 1e-6:
+                continue
             t = p.PCB_TRACK(bd.b)
             t.SetStart(p.VECTOR2I(p.FromMM(ax), p.FromMM(ay)))
             t.SetEnd(p.VECTOR2I(p.FromMM(bx), p.FromMM(by)))
