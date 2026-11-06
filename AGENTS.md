@@ -6,6 +6,15 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 6, 15:34: regulator preparation failed; no paid run.**
+  Initial construction plus two corrections exhausted. Final `1382dde8`
+  brings C1/C4 close but introduces shorts/clearances and 18 opens versus
+  best-8. Final U2 displacement was only 0.05 mm, not a demonstrated search
+  of the authorized 5 mm neighborhood. R14/R15 fanout and crossed regulator
+  returns remain blockers for the tested geometry, not proof of impossibility.
+  Preserve all stages and held helpers in `regulator-rearrangement-20261106`.
+  Best-8 and authoritative source hashes are unchanged. Executor idle;
+  no retry or spend until a newly bounded geometry/release disposition.
 - **November 6, 15:22: owner approves local re-arrangement plus one run.**
   Preserve best-8 `e158ccd2` and all failed passes. Qualify a coordinated
   U2/C1/C4/C5 neighborhood on a separate copy, including replacement

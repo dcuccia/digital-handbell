@@ -599,3 +599,58 @@ so its baseline must use the same reporting mode. Six software-only
 controls passed: successful child, nonzero exit, timeout, reused receipt,
 existing work folder and routing-width arguments. These controls do not
 qualify a board or replace the returned-copper width/geometry audit.
+
+### Rearrangement preparation stopped (November 6, 15:34)
+
+The runtime-verified Sol executor exhausted its initial construction plus
+two corrections before producing a qualified input. **No DeepPCB call or
+paid run occurred.** Best-8 remains the retained candidate, not electrical
+or fabrication acceptance. Lead rechecked its full `e158ccd2` hash and the
+authoritative PCB/project/schematic `adc262b3`/`82132618`/`ec93cc6f`.
+
+Private evidence is under `multilayer-20261106\regulator-rearrangement-20261106`:
+`00-source`, `01-initial`, `02-correction1`, `03-correction2`, with native
+boards, reports, DRC and supervised execution records. Final attempted PCB:
+`1382dde8a23cce1badec7797f12b3166a1c3db443a85693eb38eb16e6139fd69`.
+The unqualified preparation helpers are retained in `held-tools-lead`
+(`inspect_regulator_neighborhood.py`, hash `00ea3f11`;
+`prepare_regulator_rearrangement.py`, hash `4b195859`), not promoted as
+reusable placement tooling.
+
+The executor reports final poses in millimetres/degrees:
+
+| Ref | Original x, y, angle | Attempted x, y, angle |
+| --- | --- | --- |
+| U2 | 84.063240, 93.992200, 180 | 84.063240, 94.042200, 180 |
+| C1 | 95.965225, 98.708818, 90 | 86.400000, 93.200000, 0 |
+| C4 | 84.006419, 90.585985, 0 | 84.167315, 91.570000, 90 |
+| C5 | 83.821409, 97.491452, 0 | unchanged |
+
+C1/VIN and C4/VOUT direct F branches measure 0.6683/2.9943 mm at
+0.50/0.25 mm width. Nominal ground approaches measure 1.0000, 0.8485 and
+0.3902 mm. These dimensions are **not accepted paths**: C1 ground conflicts
+with R15.1 and R14.2; C4's supply connection crosses regulator VHI/GND
+terminals, a retained GND via and the local return.
+
+Matching all-track, all-severity DRC reports show 400 -> 440 violations,
+8 -> 18 opens and unchanged 46 parity records. New reported hard classes
+include four clearance, one hole-clearance, eight shorting-item and eight
+solder-mask-bridge records; these counts are witnesses, not independent
+root defects. The 71 inherited `items_not_allowed` records remain.
+
+Twenty-three copper items were removed: the three released frozen U2
+GND/EN and C4 GND stubs plus twenty router/agent fanout items on +3V3, SCL,
+VHI, D13, I2S_BCLK and GND. The local replacements fail DRC and the
+fanout restoration ledger is unfinished. Untouched-complement, filled
+return, courtyard and mechanical qualification remain incomplete; absence
+of an increased keepout count does not substitute for those checks.
+
+**Lead disposition:** reject the attempted input and hold spending. The
+final U2 move was only 0.05 mm. This result does not establish that the
+authorized 5 mm coordinated neighborhood was adequately explored, nor
+that moving R14/R15 is inherently forbidden: their poses were released,
+but additional frozen fanout was not. A future item needs a coherent cell
+pose and exact support-fanout replacement contract before constructing
+another board. Stop here rather than reset the exhausted correction budget
+or ask the router to fix a shorted input. No human contact/payment,
+fabrication release or promotion of the attempted board follows.
