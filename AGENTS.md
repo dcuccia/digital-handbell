@@ -32,7 +32,12 @@
   Full read check passed; a test restore matched every file's SHA-256,
   including best-8 and frozen. Credentials, restore steps and expiry are
   in the owner's private `%USERPROFILE%\.digital-handbell\backup` README.
-  Never commit them. Take a new snapshot after adding evidence.
+  The read check and restore were independently replayed without cache;
+  full logs, matching source/restored manifests, exit receipts and live
+  private/Cool storage probes are retained there. Account-policy evidence
+  limits are recorded in that private README. Never commit private backup
+  material. This is a one-time backup, not a scheduled service; take a new
+  snapshot after adding evidence.
 - **November6 finishing passes (Sol, no spend): 11 -> 8 opens** (finish-pass2\07-rip-vbus, e158ccd2;
   tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper: electrical review item.
   Still open: I2S_LRCLK TP14, SWDIO TP5, USBBOOT, POWER, VO+, three GND groups.
