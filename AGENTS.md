@@ -6,7 +6,17 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
-- **November 6, 15:43: owner resumes one template-only repair.**
+- **November 6, 16:15: template v2 held before execution; final v3 window.**
+  Lead static geometry: v2's U2 ground via (1.00 mm, the lead's own spec)
+  touches C1.1, so its positive control must fail; no native screen ran.
+  v1 was rejected before execution (A-F in the ledger). 15:51 deadline
+  slipped; the expired executor was replaced by verified Sol/medium.
+  Final correction v3 shifts C1 0.30 mm along the U2 row and the U2 ground
+  via to 1.20 mm, adds footprint rule areas and all-net via-pad gaps.
+  Code 16:25, review 16:31, one native screen by 16:33, decision 16:39;
+  no retry. The 15:35/15:42:53 continuations were autopilot, not owner
+  messages. Paid run unspent; best-8 unchanged.
+- **November 6, 15:43: autopilot continues one template-only repair.**
   Lead code review finds U2 GND was routed laterally toward VIN, not outward
   from its pad row; the C4 frozen-stub UUID is mistyped and In4.Cu omitted
   from the via screen. New private screen-only revision must first prove a
@@ -23,7 +33,7 @@
   Source/best-8 unchanged; preserve all revisions in
   `regulator-cell-outward-20261106`. Stop retries; next requires a separately
   bounded template-only correction, not a broader placement sweep.
-- **November 6, 15:35: owner resumes with a whole-cell alternative.**
+- **November 6, 15:35: autopilot continues with a whole-cell alternative.**
   Saved-data follow-up corrects the prior blocker: the five R14/R15 attached
   branches are router additions, not frozen copper. Initial trials did move
   U2 4.5 mm in Y, but no X shift/rotation or coherent outward-return cell.

@@ -656,9 +656,10 @@ another board. Stop here rather than reset the exhausted correction budget
 or ask the router to fix a shorted input. No human contact/payment,
 fabrication release or promotion of the attempted board follows.
 
-### Owner-resumed whole-cell alternative (November 6, 15:35)
+### Autopilot-continued whole-cell alternative (November 6, 15:35)
 
-The owner explicitly requests continued autonomous implementation after the
+An autopilot continuation under the owner's standing 15:22 approval (not a
+new owner message; corrected 16:15) resumes implementation after the
 held result. The new item changes the geometry strategy; it does not restart
 the exhausted direct-capacitor construction or spend on an unqualified input.
 
@@ -747,10 +748,10 @@ input.
 
 ### Template-only repair resumed (November 6, 15:43)
 
-The owner's 15:42:53 continuation releases the requested narrow repair.
-Lead read the complete 232-line executed helper before granting another
-execution. The review establishes more than the previously suspected
-radial-cap problem:
+The 15:42:53 autopilot continuation (owner's 15:22 approval; corrected
+16:15) releases the narrow repair. Lead read the complete 231-line
+executed helper before granting another execution. The review
+establishes more than the previously suspected radial-cap problem:
 
 - `side=(-o1[1],o1[0])` sends U2's GND return along its pin row, toward
   VIN, rather than outward normal to that row. Both cap orientation and
@@ -773,3 +774,62 @@ limitations must be explicit. It cannot save a board or invoke the
 old construction tail. Code preparation ends by 15:51; complete lead
 review precedes one corrected native screen, with no automatic retry.
 Source and the one unspent paid-run allowance remain unchanged.
+
+### Template v2 held before execution (November 6, 16:15)
+
+No native screen, PCB or routing credit has been used in this item.
+Lead review rejected the initial revision, `screen_row_normal_only.py`
+(SHA-256 `0c4e094c3f5b90de…`), before execution:
+
+| Item | Defect | Required correction |
+| --- | --- | --- |
+| A | Radial "outward" test; U2.5's 0.95 mm row offset gives about -0.81 | Signed side test `dot(p5-centre, normal) < 0` |
+| B | Assertions could precede saved evidence | Write both control records and a HELD report first; exit nonzero |
+| C | No hole, via-rule, contact-guard or edge checks | Add them; otherwise GEOMETRY_QUALIFICATION_PENDING, never a pass; F-footprint courtyards only |
+| D | 0.65 mm U2 ground approach overlaps U2's own pad | Lead specified 1.00 mm; record via gaps to every SMT pad; negative control must name its pair |
+| E | Implied full qualification | Support holds are permitted outcomes; no qualified-board claim |
+| F | Incomplete records | Save track endpoints/widths and via centre/drill/diameter |
+
+Correction one, `screen_row_normal_only_v2.py` (492 lines, SHA-256
+`bdf144f3b746b94c…`), passed only a supervised compile. Lead static
+geometry at the source pose shows its own positive control must fail.
+C1 pad 1, 1.20 mm along the row normal from U2.1, spans X
+84.388-85.638 mm; the 0.65 mm U2 ground via, 1.00 mm from U2.2, is
+centred at X 84.063. Its annulus touches C1.1 (zero gap) and the 0.30 mm
+ground track passes 0.175 mm from it. The 1.00 mm figure was the lead's
+own item-D template choice: the 15:22 contract requires short real
+C1-to-VIN/output-capacitor paths and local ground access, but sets no
+1.00 mm limit. No native screen was released for a template whose healthy
+case cannot pass.
+
+The 15:51 preparation deadline passed without an executable revision,
+and the previous executor handle expired. Replacement executor
+`c4511095` is runtime-verified GPT-5.6 Sol/medium from its configuration
+event. This checkpoint splits the remaining work rather than silently
+extending the old window.
+
+Correction two (v3) is the final allowed revision. It keeps every v2
+check and revises only the lead template and gates:
+
+- C1 pad 1 = U2.1 + 1.20 mm row normal + 0.30 mm along the row away
+  from U2.2; C4 is unchanged.
+- U2 ground via = U2.2 + 1.20 mm row normal; C1/C4 ground vias stay
+  1.00 mm beyond their pad 2.
+- Any via-to-SMT-pad gap below 0.20 mm, on any net, is an internal
+  reject; same-net gaps to fixed and support pads are also checked.
+- Rule areas include footprint-owned areas as well as board zones.
+- The negative mutation changes only the via direction, toward VIN at
+  1.20 mm, and must reject with a named U2 ground-versus-U2.1 pair.
+- Control failures write explicit held report states and exit nonzero.
+
+Lead hand calculation at the source pose gives at least 0.275 mm between
+the ground via and U2.2, 0.300 mm to C1.1, 0.475 mm between ground track
+and C1.1, and 0.638 mm between the 0.50 mm VIN track and the via.
+
+Window: code by 16:25; full lead review and an independent static
+positive-control check by 16:31; one supervised native screen (120 s
+limit) started by 16:33; disposition by 16:39. No further correction.
+A GEOMETRY_QUALIFICATION_PENDING case still needs a construction contract,
+restoration ledger, saved-fill ground proof and matching-mode DRC before
+the one capped run. Support holds or rejections stop for an owner
+decision. Best-8, source and the unspent run allowance remain unchanged.
