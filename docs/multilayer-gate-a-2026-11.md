@@ -833,3 +833,57 @@ A GEOMETRY_QUALIFICATION_PENDING case still needs a construction contract,
 restoration ledger, saved-fill ground proof and matching-mode DRC before
 the one capped run. Support holds or rejections stop for an owner
 decision. Best-8, source and the unspent run allowance remain unchanged.
+
+### Template v3 screen held on witness tolerance (November 6, 16:28)
+
+The lead's independent static check (pure Python and Shapely, no pcbnew;
+16:25:56, exit 0) passed v3's source-pose positive control. Fallback-box
+separations are 0.30 mm for U2-C1 and U2-C4. Minimum foreign copper gap
+is 0.30 mm (C1.1 to the U2 ground via). Minimum via-to-pad gap is
+0.275 mm (U2.2, same net). Drills clear and the negative named pair is
+present. The board text shows U2, C1 and C4 have no courtyard graphics,
+user-layer graphics or footprint zones. The screen's courtyard test
+(`tools/move_cluster.py` `footprint_area`) therefore falls back to the
+unexpanded `GetBoundingBox(False)` box that the check emulated.
+`FOOTPRINT.Zones()` exists in the installed KiCad 10 `pcbnew.py`.
+
+One supervised native screen (executor `c4511095`, Sol/medium) ran at
+16:28:13-16:28:14 local: 1.125 s, no timeout, supervisor and child exit 2.
+Report `row-normal-v3-screen-report.json` (SHA-256 `b12d822b…`) has
+status HELD_C1_WITNESS_FAILED.
+
+| Gate | Result |
+| --- | --- |
+| Positive control | Passed: zero copper, courtyard, drill and via-pad findings; U2.2 via gap 0.275 mm |
+| Negative control | Rejected: four copper findings, including named pair U2.1 (VHI) to U2 ground track (GND) at 0 mm, plus one via-pad intersection |
+| Release identities | All three frozen releases and five support branches found; none missing |
+| Layers | All six copper layers |
+| C1 witness | Normal 1.200001 mm, row 0.300000 mm, tolerance 0.000001 mm |
+
+Line 323 of the helper asserts `abs(normal - 1.20) <= 1e-6` mm. The
+installed KiCad 10 `pcbnew.FromMM` truncates (`int(mm * 1e6)`) rather
+than rounding, so `SetPosition(VECTOR2I(FromMM(x), FromMM(y)))` placed C1
+at y 90.592099 instead of 90.5921 (and C4 at x 85.013239 instead of
+85.01324). C1.1 therefore lands 1 nm farther from U2.1 along the normal.
+This is a helper tolerance defect, not a geometric failure: both controls
+had already passed. The lead's static review did not compare assertion
+tolerances with coordinate conversion.
+
+The screen therefore exited before the fixed-obstacle stage. None of
+the five cases, and no rule-area inventory, was evaluated. No PCB was
+constructed, no copper removed and no credit spent. The receipt binds
+BOARD `e158ccd2…c826`, FROZEN `b82f2fe3…` and v3 `8802e453…`; the lead
+re-hashed all three unchanged at 16:29 and 16:32. Stderr contains only
+duplicate wx image-handler warnings.
+
+v3 was this item's final permitted revision, so no correction or rerun
+follows. Preserve v1-v3, `static_check_v3_template.py` and all receipts.
+The single approved run (15 minutes/$7.50) remains unspent.
+
+The next step requires an owner choice. One option is to authorize a
+tolerance-only change (0.000001 to 0.001 mm on lines 323-324, no other
+edit) and one native screen. A GEOMETRY_QUALIFICATION_PENDING case would
+still need the construction contract, restoration ledger, saved-fill
+ground proof and matching-mode DRC before the run. The alternative is to
+stop the rearrangement and keep best-8, with C1/U2 decoupling as a
+documented finishing requirement (already item 2 of the finishing brief).

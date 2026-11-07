@@ -6,16 +6,17 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
-- **November 6, 16:15: template v2 held before execution; final v3 window.**
-  Lead static geometry: v2's U2 ground via (1.00 mm, the lead's own spec)
-  touches C1.1, so its positive control must fail; no native screen ran.
-  v1 was rejected before execution (A-F in the ledger). 15:51 deadline
-  slipped; the expired executor was replaced by verified Sol/medium.
-  Final correction v3 shifts C1 0.30 mm along the U2 row and the U2 ground
-  via to 1.20 mm, adds footprint rule areas and all-net via-pad gaps.
-  Code 16:25, review 16:31, one native screen by 16:33, decision 16:39;
-  no retry. The 15:35/15:42:53 continuations were autopilot, not owner
-  messages. Paid run unspent; best-8 unchanged.
+- **November 6, 16:28: v3 screen held on a 1 nm tolerance; owner decision.**
+  Lead static check passed v3's healthy cell. One native screen (1.1 s)
+  passed the positive control and rejected the negative (named pair U2.1
+  VHI versus U2 ground track), then held: C1 landed 1.200001 mm from U2.1
+  against a 0.000001 mm tolerance. KiCad 10 `pcbnew.FromMM` truncates
+  to integer nanometres (C1 placed 1 nm short), so this is a helper
+  defect, not geometry. The five cases were not evaluated.
+  v1-v3 are exhausted (v2 held statically: its 1.00 mm U2 ground via
+  touched C1.1). No PCB, copper change or spend; best-8 unchanged. Next:
+  owner authorizes a tolerance-only fix (0.001 mm) plus one screen, or
+  keeps best-8 with the C1/U2 requirement in the finishing brief.
 - **November 6, 15:43: autopilot continues one template-only repair.**
   Lead code review finds U2 GND was routed laterally toward VIN, not outward
   from its pad row; the C4 frozen-stub UUID is mistyped and In4.Cu omitted

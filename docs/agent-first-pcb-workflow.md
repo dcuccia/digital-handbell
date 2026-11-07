@@ -153,6 +153,27 @@ Routing completion is not acceptance. Before fabrication, check:
 
 Fabrication and power-on need separate owner approval.
 
+## Screens and checkers
+
+A defective helper costs a whole bounded attempt. Before a native run:
+
+- Recompute the healthy positive case independently and statically, with
+  the screen's real geometry model. A footprint without a courtyard
+  outline falls back to its unexpanded bounding box in
+  `tools/move_cluster.py`. Include via-to-pad gaps on every net and the
+  full extent of neighbouring pads, not just their centres. This caught a
+  template whose positive case could never pass, before any native run.
+- Set witness tolerances above coordinate quantization. KiCad stores
+  integer nanometres, and the installed `pcbnew.FromMM` truncates
+  (`int(mm * 1e6)`), so a placed pad can land 1 nm from its computed
+  target. Round explicitly when converting. A tolerance of exactly
+  0.000001 mm held a screen after both of its controls had passed; use
+  about 0.001 mm.
+- Save the report, with an explicit held status, before asserting, and
+  exit nonzero on a held control, so every failure leaves evidence.
+- Confirm that an API exists in the installed `pcbnew.py` before relying
+  on it. Re-verify an executor's runtime after a pause: handles expire.
+
 ## Roles, budgets and stopping
 
 - The owner approves spend, stackup, placement policy and fabrication.
