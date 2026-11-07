@@ -79,6 +79,13 @@ repeated re-routes.
   placement change without any real electrical reason.
   Record which cell translations and rotations were actually examined:
   a 0.05 mm IC shift does not exercise a 5 mm relocation allowance.
+- Give every decoupling capacitor room for a legal ground via beside its
+  ground pad. Map contact guards and protection-side copper before placing
+  a regulator near them. Protection-side copper here is B.Cu `/CELL_NEG`,
+  where a ground via would bypass the cell protection. A BT2 contact
+  guard's bounding box starts 0.19 mm below U2's centre, so every pose a
+  later local repair screened put a ground via in the guard, and four of
+  the five also put one on `/CELL_NEG`.
 
 ## Phase 4: Stackup choice
 
@@ -138,6 +145,13 @@ and no DRC type or count grows.
 - Links that remain usually need a small, local placement change: a test
   point relocated, a capacitor moved, a part rotated. Make that an explicit,
   reviewed decision, then rebind the mechanical model.
+- Before screening local moves, list the frozen copper, guards and
+  protection-side copper within the move allowance. If they enclose the
+  cell, local screens are unlikely to help. Release copper under a
+  replacement contract, or hand the work to a person. Here four bounded
+  items found no qualified pose that put C1 and C4 beside U2. Run Phase 3's
+  capacitor-distance check before any copper around the cell is frozen,
+  while moving a capacitor is still cheap.
 
 ## Phase 8: Electrical and release review
 
@@ -169,6 +183,12 @@ A defective helper costs a whole bounded attempt. Before a native run:
   target. Round explicitly when converting. A tolerance of exactly
   0.000001 mm held a screen after both of its controls had passed; use
   about 0.001 mm.
+- Fail closed on empty geometry. Shapely returns NaN for a distance to an
+  empty shape, and `NaN < limit` is false, so an empty obstacle passes
+  silently. Count empty shapes in the report and hold on a nonzero count.
+- Review a rejection as carefully as a pass. Confirm that each hit
+  involves a foreign net and copper that really stays fixed before you
+  call a pose impossible.
 - Save the report, with an explicit held status, before asserting, and
   exit nonzero on a held control, so every failure leaves evidence.
 - Confirm that an API exists in the installed `pcbnew.py` before relying

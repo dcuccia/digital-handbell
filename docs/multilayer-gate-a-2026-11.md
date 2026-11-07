@@ -887,3 +887,96 @@ still need the construction contract, restoration ledger, saved-fill
 ground proof and matching-mode DRC before the run. The alternative is to
 stop the rearrangement and keep best-8, with C1/U2 decoupling as a
 documented finishing requirement (already item 2 of the finishing brief).
+
+### Item 4: autonomous tolerance-only v4 screen (November 6, 16:37)
+
+At about 16:36 the lead offered the owner the choice above through the
+app's question prompt. The app replied that the owner was unavailable and
+asked the agent to work autonomously. At about 16:37 the lead therefore
+selected the tolerance-only option under the owner's 15:22 approval
+(rearrangement plus one run). This is a lead decision recorded as such,
+not an owner selection. It is a new bounded item: an initial attempt plus
+at most two corrections, each one supervised read-only native screen of
+at most 120 s. No board writes, copper removal or spend.
+
+v4 is a copy of v3 with these edits only:
+
+- C1 witness tolerance on lines 323-324 changed from 0.000001 to 0.001 mm,
+  the same 1 µm tolerance line 195 already uses.
+- Version and provenance labels: `v4`, the v3 SHA-256, and the version in
+  held reports.
+- One diagnostic-only addition beyond the 16:32 proposal: counts of empty
+  fixed-obstacle, SMT-pad and rule-area shapes in the final report. Shapely
+  returns NaN for a distance to empty geometry, and `NaN < limit` is false,
+  so an empty obstacle would be skipped silently. The counts make that
+  measurable. They change no status.
+
+Lines 192-193 keep their 0.000001 tolerances. The lead emulated the
+installed `FromMM` (`int(mm * 1e6)`) for all five U2 case poses (source
+84.06324, 93.9922 plus the case offsets). Every pose lands exactly on a
+nanometre, so the row witnesses remain valid there.
+
+### Item 4 outcome: every pose rejected, rearrangement stopped (November 6, 16:47)
+
+The lead diffed v4 (SHA-256 `7a90cb8d…a4bf`) against v3 and found only
+the edits listed above. A supervised `py_compile` passed (exit 0,
+0.125 s). One supervised native screen (executor `c4511095`, Sol/medium,
+120 s limit) ran at 16:44:06-16:44:07 local: 1.328 s, no timeout,
+supervisor and child exit 0. Report `row-normal-v4-screen-report.json`
+(SHA-256 `b59fdc2c…6693`) has status SCREEN_ONLY. No correction was used.
+
+| Gate | Result |
+| --- | --- |
+| Positive control | Passed; C1 witness 1.200001 mm, now within the 0.001 mm tolerance |
+| Negative control | Rejected; named pair U2.1 (VHI) to the U2 ground track (GND) at 0 mm |
+| Release identities | Three frozen releases and five support branches present and unique |
+| Empty shapes | Zero on all six copper layers, zero fixed SMT pads, zero rule areas |
+
+All five U2/C1/C4 poses are FIXED_REJECT. The lead checked every
+external hit: none is same-net. Each is a foreign-net overlap, or a gap
+below the 0.2 mm requirement, against copper or pads that stay fixed:
+
+| U2 move (mm), rotation | Decisive conflicts |
+| --- | --- |
+| +1.5, 0; 0° | C1.2 and its ground track on frozen POWER (0 mm); C1 ground via on frozen B.Cu `/CELL_NEG` (0 mm); C4 ground track and via on TP3 (USBBOOT) (0 mm); U2 and C1 ground vias in the BT2 contact guard |
+| +1.5, 0; 180° | C4.2 on four frozen POWER objects (0 mm); C4 ground via on `/CELL_NEG` (0 mm) and in the BT2 contact guard |
+| +1.5, +1.5; 0° | U2.5 (+3V3) on frozen GND (0 mm); C1 ground via on `/CELL_NEG` (0 mm); C4 ground via on a frozen hole (0 mm); four further gaps of 0.126-0.156 mm; two vias in the BT2 contact guard |
+| +1.5, +1.5; 90° | C4.2 and its ground track on frozen POWER (0 mm); U2 and C1 ground vias in the BT2 contact guard |
+| +1.5, +1.5; 180° | U2.3 (EN) on frozen GND (0 mm); C4.2 on frozen POWER (0 mm); C4 ground via on `/CELL_NEG` and frozen `~{ENABLE}` (0 mm); C4.1 (+3V3) 0.124-0.158 mm from POWER; via in the BT2 contact guard |
+
+Every case also places at least one ordinary ground via inside
+`CONTACT_METAL_GUARD_BT2.base.3`, whose bounding box starts at y 94.185
+mm, only 0.19 mm below U2's source centre (y 93.992 mm). Four cases put
+a through ground via on frozen B.Cu `/CELL_NEG` copper: a short there
+would bypass the cell protection, so these rejections are
+safety-relevant, not marginal. Each case also holds on three to five
+supporting parts (C5, R14, R15, R17, Q2, TP16) that would need their own
+moved-support contracts. In the screened directions the U2 cell is
+bounded by frozen POWER, GND and `~{ENABLE}` copper, the BT2 contact
+guard below it and `/CELL_NEG` on B.Cu. That is consistent with
+finishing passes 3-5: no screened local move places C1 and C4 beside U2
+without releasing frozen copper. It does not prove that no pose exists.
+
+The lead re-hashed BOARD `e158ccd2…c826`, FROZEN `b82f2fe3…`, v4 and its
+report at 16:47, all unchanged. No PCB was constructed, no copper removed
+and no credit spent. Preserve v1-v4, all reports and all receipts.
+
+Disposition (lead, under the 15:22 approval): stop the rearrangement and
+keep best-8. The single approved run stays unspent, because the only
+input available is the unchanged placement and the approval excludes an
+unchanged-placement retry. Items 1-4 produced no qualified geometry, so
+the stop rule applies; running the same screen again is not an option.
+C1/U2 and C4/U2 decoupling remain item 2 of the finishing brief.
+
+Any further step needs an owner choice:
+
+1. Wider re-placement. Release the frozen POWER, GND and `~{ENABLE}`
+   objects that the report identifies, and TP3 if needed, with their
+   replacement duties. Keep `/CELL_NEG` intact and move the cell, or at
+   least its ground vias, clear of the BT2 contact guard and that copper.
+   Then requalify the geometry and spend the one run. This is a larger,
+   new scope: the screen above shows the cell's neighbours, not their
+   replacement routes.
+2. A human finisher with `docs/finishing-job-brief-2026-11.md`, which
+   already includes the C1/C4 moves.
+3. Accept best-8 as the agent result and stop.

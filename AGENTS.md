@@ -6,58 +6,26 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
-- **November 6, 16:28: v3 screen held on a 1 nm tolerance; owner decision.**
-  Lead static check passed v3's healthy cell. One native screen (1.1 s)
-  passed the positive control and rejected the negative (named pair U2.1
-  VHI versus U2 ground track), then held: C1 landed 1.200001 mm from U2.1
-  against a 0.000001 mm tolerance. KiCad 10 `pcbnew.FromMM` truncates
-  to integer nanometres (C1 placed 1 nm short), so this is a helper
-  defect, not geometry. The five cases were not evaluated.
-  v1-v3 are exhausted (v2 held statically: its 1.00 mm U2 ground via
-  touched C1.1). No PCB, copper change or spend; best-8 unchanged. Next:
-  owner authorizes a tolerance-only fix (0.001 mm) plus one screen, or
-  keeps best-8 with the C1/U2 requirement in the finishing brief.
-- **November 6, 15:43: autopilot continues one template-only repair.**
-  Lead code review finds U2 GND was routed laterally toward VIN, not outward
-  from its pad row; the C4 frozen-stub UUID is mistyped and In4.Cu omitted
-  from the via screen. New private screen-only revision must first prove a
-  row-normal template and reject the old lateral-return mutation, with exact
-  collision pairs. Only the five previously internal-failed poses may then
-  be screened. Full code review precedes one corrected native execution;
-  no builder tail, board creation or paid run is released by this repair.
-- **November 6, 15:42: whole-cell screen held on template implementation.**
-  Three revisions exhausted; no candidate PCB constructed or paid run.
-  Final 24 templates: 12 U2/IC4 courtyard hits, seven capacitor/fixed-part
-  courtyard hits, five internal foreign-net collisions with no saved pair
-  IDs. Helper used radial rather than package-row-normal placement; its
-  five internal failures are not evidence those IC poses are impossible.
-  Source/best-8 unchanged; preserve all revisions in
-  `regulator-cell-outward-20261106`. Stop retries; next requires a separately
-  bounded template-only correction, not a broader placement sweep.
-- **November 6, 15:35: autopilot continues with a whole-cell alternative.**
-  Saved-data follow-up corrects the prior blocker: the five R14/R15 attached
-  branches are router additions, not frozen copper. Initial trials did move
-  U2 4.5 mm in Y, but no X shift/rotation or coherent outward-return cell.
-  New bounded preparation screens up to 24 translated/rotated connected
-  cells, with allowed support moves and exact fanout-restoration duties.
-  New private root `regulator-cell-outward-20261106`; stop 15:57, last new
-  native child 15:52, initial plus two corrections. No cloud spend before
-  qualification; original one-run 15-minute/$7.50 cap remains.
-- **November 6, 15:34: regulator preparation failed; no paid run.**
-  Initial construction plus two corrections exhausted. Final `1382dde8`
-  brings C1/C4 close but introduces shorts/clearances and 18 opens versus
-  best-8. Final U2 displacement was only 0.05 mm, not a demonstrated search
-  of the authorized 5 mm neighborhood. R14/R15 fanout and crossed regulator
-  returns remain blockers for the tested geometry, not proof of impossibility.
-  Preserve all stages and held helpers in `regulator-rearrangement-20261106`.
-  Best-8 and authoritative source hashes are unchanged. Executor idle;
-  no retry or spend until a newly bounded geometry/release disposition.
-- **November 6, 15:22: owner approves local re-arrangement plus one run.**
-  Preserve best-8 `e158ccd2` and all failed passes. Qualify a coordinated
-  U2/C1/C4/C5 neighborhood on a separate copy, including replacement
-  supply/return paths and exact released-copper obligations, before spending.
-  One new DeepPCB run only, at most 15 minutes / $7.50; no unchanged-placement
-  retry or fabrication release. See the current Gate A continuation.
+- **November 6, 16:47: U2 regulator rearrangement stopped; best-8 kept.**
+  The owner's 15:22 approval covered a local U2/C1/C4/C5 rearrangement plus
+  one DeepPCB run (at most 15 min / $7.50; no unchanged-placement retry,
+  no fabrication release). Four bounded items produced no qualified
+  geometry: direct construction (`1382dde8`: shorts, 18 opens), a
+  24-template screen (six U2 offsets up to 4.5 mm, four rotations),
+  template repair v1-v3 (v3 held on `pcbnew.FromMM` 1 nm truncation), and
+  a tolerance-only v4 that rejects all five poses it screens. Each v4 hit
+  is a real foreign-net conflict with fixed copper, mostly frozen POWER,
+  GND and ~{ENABLE}. The BT2 contact guard's bounding box starts 0.19 mm
+  below U2's centre: every screened pose puts a ground via in it, and four
+  also put one on B.Cu /CELL_NEG, which would bypass the cell protection.
+  The run is unspent; best-8 `e158ccd2` and frozen `b82f2fe3` re-hash
+  unchanged.
+  Evidence is in `regulator-rearrangement-20261106` and
+  `regulator-cell-outward-20261106` under multilayer-20261106; history is
+  in the docs/multilayer-gate-a-2026-11.md ledger. Next needs an owner
+  choice: wider re-placement that releases that frozen copper, plus the
+  run; a human finisher (docs/finishing-job-brief-2026-11.md); or accept
+  best-8.
 - **November6 finishing passes (Sol, no spend): 11 -> 8 opens** (finish-pass2\07-rip-vbus, e158ccd2;
   tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper: electrical review item.
   Still open: I2S_LRCLK TP14, SWDIO TP5, USBBOOT, POWER, VO+, three GND groups.

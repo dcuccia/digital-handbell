@@ -26,7 +26,12 @@ a quote.
 > 2. Move C1 (10 µF, LDO U2 input) to within 3 mm of U2 pin 1, and C4
 >    (U2 output) to within 3 mm of U2 pin 5, as in the Adafruit Feather
 >    RP2040 Prop-Maker reference. Small moves of nearby passives are fine;
->    keep U2 within 1 mm of its current position.
+>    keep U2 within 1 mm of its current position. None of the U2/C1/C4
+>    positions our automated tools tried cleared the existing tracks. U2
+>    sits next to a battery-contact guard area and /CELL_NEG copper on
+>    B.Cu, so keep new ground vias out of the guard and off /CELL_NEG.
+>    Expect to reroute some nearby tracks; the constraints below still
+>    apply.
 > 3. Route the USB D+/D- pair (connector X6 to the protection part and the
 >    MCU) as a coupled 90-ohm differential pair, using the JLC stackup
 >    calculator.
