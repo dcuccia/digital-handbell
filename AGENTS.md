@@ -22,28 +22,35 @@
   unchanged.
   Evidence is in `regulator-rearrangement-20261106` and
   `regulator-cell-outward-20261106` under multilayer-20261106; history is
-  in the docs/multilayer-gate-a-2026-11.md ledger. Next needs an owner
-  choice: wider re-placement that releases that frozen copper, plus the
-  run; a human finisher (docs/finishing-job-brief-2026-11.md); or accept
-  best-8.
+  in the docs/multilayer-gate-a-2026-11.md ledger. The owner later approved
+  the wider re-placement; its first candidate is held below.
+- **November 7, 17:20: wider U2 re-placement held; best-8 remains.** The
+  owner approved the wider local attempt and the existing capped router run.
+  Sol's first isolated construction moved U2/C1/C4/R3 but failed native
+  DRC (8 -> 11 opens, 45 shorting-item findings and other new defects).
+  No candidate qualified; no DeepPCB upload/run or spend occurred. The
+  authoritative best-8 hash is unchanged and the approved run is unspent.
+  Preserve failed evidence under the private bakeoff root at
+  `multilayer-20261107\regulator-wide-replacement`; full details and the
+  next decision are in `docs/multilayer-gate-a-2026-11.md`. Do not retry
+  this pose; a different local cell/ground-transition strategy needs review,
+  or use the prepared human-finisher brief / accept best-8.
 - **November 7: bakeoff evidence folder backed up off-machine.** The
-  private, local-only bakeoff root (4,360 files, 625 MiB) is an encrypted
-  restic snapshot (`410f4f27`) in the owner's private cloud storage.
-  Full read check passed; a test restore matched every file's SHA-256,
-  including best-8 and frozen. Credentials, restore steps and expiry are
-  in the owner's private `%USERPROFILE%\.digital-handbell\backup` README.
-  The read check and restore were independently replayed without cache;
-  full logs, matching source/restored manifests, exit receipts and live
-  private/Cool storage probes are retained there. Account-policy evidence
-  limits are recorded in that private README. Never commit private backup
-  material. This is a one-time backup, not a scheduled service; take a new
-  snapshot after adding evidence.
+  private, local-only bakeoff root is encrypted in the owner's private
+  restic/Azure storage. Latest snapshot `8358a65d` covers 4,373 files
+  (628 MiB), including the held wider-replacement trial; initial snapshot
+  `410f4f27` is retained. A fresh no-cache full-data check and full restore
+  matched every SHA-256, including best-8 and frozen. Credentials, restore
+  steps and expiry are in the owner's private
+  `%USERPROFILE%\.digital-handbell\backup` README. Full receipts and evidence
+  limits are retained there. Never commit private backup material. This is
+  a one-time backup, not a scheduled service; snapshot again after adding evidence.
 - **November6 finishing passes (Sol, no spend): 11 -> 8 opens** (finish-pass2\07-rip-vbus, e158ccd2;
   tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper: electrical review item.
   Still open: I2S_LRCLK TP14, SWDIO TP5, USBBOOT, POWER, VO+, three GND groups.
   Passes 3-5 found no gain: links are enclosed by frozen critical copper;
-  C1/C4 cannot reach U2 without wider re-placement. Stop rule reached; next
-  step (re-placement + one router run, or a person) needs owner choice.
+  C1/C4 cannot reach U2 without wider re-placement. The owner later approved
+  that scope; the first attempt is recorded above.
   Ready-to-post human finishing brief (not posted): docs/finishing-job-brief-2026-11.md;
   bundle multilayer-20261106\finishing-job-bundle.zip under the bakeoff root.
 - **November6 six-layer routing: 86 -> 11 opens rule-clean** (best-11-open-6c,

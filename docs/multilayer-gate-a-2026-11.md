@@ -968,7 +968,7 @@ unchanged-placement retry. Items 1-4 produced no qualified geometry, so
 the stop rule applies; running the same screen again is not an option.
 C1/U2 and C4/U2 decoupling remain item 2 of the finishing brief.
 
-Any further step needs an owner choice:
+At that November 6 checkpoint, any further step required an owner choice:
 
 1. Wider re-placement. Release the frozen POWER, GND and `~{ENABLE}`
    objects that the report identifies, and TP3 if needed, with their
@@ -980,3 +980,58 @@ Any further step needs an owner choice:
 2. A human finisher with `docs/finishing-job-brief-2026-11.md`, which
    already includes the C1/C4 moves.
 3. Accept best-8 as the agent result and stop.
+
+### November 7 wider U2 replacement trial held
+
+The owner approved a wider local U2/C1/C4 re-placement attempt, with the
+previously approved single DeepPCB run still capped at 15 minutes/$7.50.
+The run is conditional on a fully qualified private input; this item did
+not authorize uploading or routing an unqualified candidate.
+
+Sol's one isolated construction attempt used the immutable best-8 source
+`e158ccd251325b63b8f03e1d3230dce9c6098b2702356208ec46d68465f9c826` and
+saved evidence under the private bakeoff root at
+`multilayer-20261107\regulator-wide-replacement`. It moved U2 from
+(84.06324, 93.99220, 180) to (82.06324, 93.29220, 180), C1 to
+(83.01324, 91.09210, 90), C4 to (83.01324, 95.49230, -90), and R3 to
+(80.00000, 94.00000, 0). It removed only the three previously released
+U2/C4 pad stubs and added nine F.Cu tracks plus two ordinary through-vias.
+The additional nearby POWER and `~{ENABLE}` segments eligible under this
+local scope remained unchanged.
+
+Native KiCad 10.0.6 all-track/all-severity DRC rejected the candidate:
+
+| Finding | Best-8 | Trial |
+|---|---:|---:|
+| Unconnected records | 8 | 11 |
+| Shorting items | 0 | 45 |
+| Clearance | 0 | 18 |
+| Hole clearance | 0 | 23 |
+| Copper-edge clearance | 0 | 3 |
+| Tracks crossing | 0 | 4 |
+| Dangling tracks | 6 | 10 |
+| Items not allowed | 71 | 72 |
+
+The reported shorts include the new EN routes colliding with existing
+VHI/AMP_MUTE copper and GND/EN crossings. These indicate that this specific
+cell pose and local route pattern are not usable. They do not prove all
+broader poses fail. The candidate stopped at the first native legality
+gate: full six-layer via-span/contact-guard, CELL_NEG, private-return,
+plane, untouched-complement and endpoint-restoration checks did not run.
+The candidate was never a qualified router input.
+
+Preserve `HELD-report.json`, `build-report.json`, the failed candidate and
+its DRC. Best-8 was independently re-hashed unchanged
+(`e158ccd2…c826`); frozen remains `b82f2fe3…`. No DeepPCB upload/run or
+spend occurred. The run remains unspent and must not be used on this failed
+candidate. A different cell/return-transition geometry must be engineered
+and qualified first, or the owner may choose the prepared human-finisher
+brief or accept best-8. Do not retry this pose or infer physical impossibility.
+
+The new private evidence was captured in the encrypted off-machine restic
+snapshot `8358a65d` (4,373 files, 628.122 MiB). A no-cache
+`check --read-data` found no errors in both snapshots/seven packs; a complete
+restore verified all 4,373 SHA-256 entries against the saved manifest and
+the current evidence root. Best-8 and frozen board hashes matched. Private
+receipts and manifests are under `%USERPROFILE%\.digital-handbell\backup`;
+no credentials are in this repository. Backup is still one-time, not scheduled.
