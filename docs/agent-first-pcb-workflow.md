@@ -133,6 +133,17 @@ and no DRC type or count grows.
 
 ## Phase 7: Finishing the long tail
 
+- Route between **connected copper groups**, not only the two objects a
+  DRC airwire happens to name. Inspect alternate attachment points on each
+  group before moving a component or declaring its escape blocked.
+  The default pair mode of `route_gaps.py` and the rip-up helper select
+  individual DRC witnesses; both represent a zone endpoint by a small disk at the
+  reported position, not its actual disconnected filled island. Their
+  failures therefore do not exhaust group-to-group routes. However,
+  `route_gaps.py --nearest-own-copper` already expands the goal to outside
+  same-net copper on each layer; it was tried for GAIN0. Reuse that evidence,
+  not an unchanged retry or a duplicate implementation. Resolve real
+  island membership before using a zone witness as a route target.
 - Use per-net, path-aware rip-up and reroute (`tools/reroute_with_ripup.py`).
   Only router- or agent-made copper may be ripped up, never frozen copper.
   Accept a step only on a strict open decrease with no new DRC findings.
@@ -152,6 +163,11 @@ and no DRC type or count grows.
   items found no qualified pose that put C1 and C4 beside U2. Run Phase 3's
   capacitor-distance check before any copper around the cell is frozen,
   while moving a capacitor is still cheap.
+- When a reviewed change releases a few frozen primitives, preserve every
+  external branch and compare the untouched complement explicitly.
+  `check_routing_result.py --allow-changed-nets` suppresses lost-copper
+  findings for whole nets; it is not proof that only the approved local
+  copper changed or that its replacement duties were restored.
 
 ## Phase 8: Electrical and release review
 

@@ -6,6 +6,18 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 8: owner prefers bounded agent-led design over hiring.**
+  Three read-only strategy reviews cover debug/boot, power/audio and ground.
+  Awkward test-point access is acceptable; deleting recovery or functional
+  connections is not approved. Best-8-c1c4 `2e8e16bf` remains unchanged.
+  Next proposed item: identify actual connected groups/filled islands and
+  finite accessible service-pad sites before any local replacement trial.
+  Default gap/rip-up pair searches target DRC witness objects; gap routing
+  also has a broader `--nearest-own-copper` mode already tried for GAIN0.
+  Do not repeat that unchanged or generalize the pair-mode limitation.
+  No route is newly qualified, no board edit or paid run
+  follows from this design review. See the latest Gate A ledger section.
+
 - **November 6, 16:47: U2 regulator rearrangement stopped; best-8 kept.**
   The owner's 15:22 approval covered a local U2/C1/C4/C5 rearrangement plus
   one DeepPCB run (at most 15 min / $7.50; no unchanged-placement retry,
@@ -50,7 +62,7 @@
   (`2e8e16bf`) moves C1 to 1.16 mm from U2.1 (was 12.95) and C4 to 1.54 mm
   from U2.5 (was 5.08), removing the 0.15 mm VHI chain. Against 6c-frozen-tp
   it passes like best-8, plus waived silk_over_copper 94 -> 97 (labels over
-  pads). Same 8 opens. TP5/TP14 relocation is infeasible; one 15-minute
+  pads). Same 8 opens. TP5/TP14's finite screen found no qualified pose; one 15-minute
   DeepPCB run on it gave no gain (~$7.50), so do not repeat this placement.
   Next is an owner action: post `docs/finishing-job-brief-2026-11.md` with
   bundle `multilayer-20261108\finishing-job-bundle-c1c4.zip`, or redesign

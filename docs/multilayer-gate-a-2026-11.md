@@ -1139,3 +1139,81 @@ and its zip (`e9aece5d…`). Its brief drops the capacitor-move deliverable.
 Best-8 (`e158ccd2…`), frozen (`b82f2fe3…`) and the November 6 bundle are
 kept unchanged as fallbacks. The brief is still not posted; posting and any
 payment remain owner actions.
+
+### November 8: bounded functional-group strategy review
+
+The owner prefers time-boxed agent-led design to hiring a finisher and
+accepts awkward test-point access. Three parallel read-only reviews covered
+debug/boot (three opens), power/audio (three), and ground/reference (two).
+This is strategy selection, not permission to implement all proposals.
+No native KiCad operation, board change, router submission or spend occurred.
+Current `best-8-c1c4` (`2e8e16bf`), historical best-8 (`e158ccd2`) and frozen
+(`b82f2fe3`) were hash-bound before the review.
+
+**Shared tooling finding:** the default pair mode of
+`route_gaps.py:96-112,290-301` and `reroute_with_ripup.py:96-105,260-277`
+select the DRC witness objects, not
+every possible attachment on their connected groups. A zone is approximated
+by a 0.25 mm disk at its reported point, not the actual filled island.
+Failure of these searches does not exhaust group-to-group routing.
+This does not invalidate every prior search: `route_gaps.py:305-324` already
+has `--nearest-own-copper`, expanding the goal to outside same-net copper
+on each layer, and that mode was tried for GAIN0. Dedicated ground stitching
+also exists. Reuse their saved evidence first; the review does not justify
+an unchanged retry or a new general group-routing implementation.
+The same net name alone does not establish membership in the same connected
+group, and a zone UUID can identify multiple disconnected fill islands.
+
+| Obligation | Preferred design direction | Escalation only if needed |
+| --- | --- | --- |
+| SWDIO / TP5 | Preserve SWD recovery; screen a smaller, inconvenient but physically reachable service land with a short dogleg or legal off-pad transition, using actual connected-group geometry. | A precisely bounded neighboring escape replacement, with all VCORE/reset/clock duties preserved. |
+| I2S_LRCLK / TP14 | Establish that MCU-to-amplifier clock connectivity is intact; move/resize only the diagnostic tap onto an accessible part of that connected group. | Omitting this diagnostic pad would need a separate explicit schematic decision, not a claim of routing improvement. |
+| USBBOOT / D3.C | Keep the recovery circuit; inspect all attachment points on its disconnected groups before choosing a local escape replacement. | A coordinated diode/support-cell move, preserving every terminal, not deleting the boot branch. |
+| POWER / U5.2--Q2.1 | Treat this as boost-enable control, not load-current copper. First try legal group attachments without changing the boost cell. | Review the local Q2 enable escape as a specific replacement, not a release of the boost power/feedback loop. |
+| VO+ / J1.1--C22.1 | Preserve speaker-output/filter duties and established width; inspect complete copper groups. | Move C22 with BOTH its VO+ and GND connections if a short local cell can be qualified without disturbing USB, VBAT or VAMP. |
+| GND / GAIN0.1 | Ordinary main-GND attachment unless an actual private-return duty is found; inspect reachable GND and possible jumper orientation before touching power copper. | A bounded gain-jumper relocation; moving frozen VBAT is a higher-risk last option, not the first choice. |
+| GND / IC1.19 TESTEN | A mandatory tie-down, not an optional diagnostic pad. Examine legal off-pad ground access to actual main GND. | A short, explicitly reviewed oscillator-escape replacement; preserve crystal geometry and return duties. |
+| F.Cu GND island near X6 | Identify the real filled polygon and every attached pad/reference duty, then consider a legal stitch or local neck repair. | Never delete the island as cosmetic copper without proving it carries no functional or reference obligation. |
+
+**Lead dispositions and evidence limits:** the workers proposed strategies,
+not screened coordinates. No new land/via site is accepted. Previously
+rejected TP14 sites under an IC remain rejected; awkward access does not
+mean physically inaccessible. A DRC pair is not a two-terminal net census.
+The debug worker corrected its omitted MCU LRCLK terminal and withdrew
+an inferred R18-to-USBBOOT connection: R18 was named as an obstacle, not
+a terminal. Its text scan did not certify an exhaustive terminal list or
+connected-group membership, so neither claim is accepted from that scan.
+Likewise, X6 having ground pads does not prove which disconnected polygon
+contains them; the worker's inferred island-membership claim is not accepted.
+USB signal-ground pins and connector shield/anchor duties are distinct.
+No via-at-pad proposal or new special process is released.
+POWER and its neighboring `~ENABLE` obstruction are different nets.
+The older brief's VO+ "0.6 mm" denotes the trial **track width**, not the
+gap distance (the reported pad centers are approximately 8.9 mm apart).
+Sub-millimeter part/track moves remain hypotheses, not clearance evidence.
+
+**Proposed next budget:** three sequential 15-minute gates, not another
+parallel board-editing exercise. First reuse saved connectivity/fill evidence
+to produce actual group boundaries, mandatory terminal duties and a small
+list of accessible service-land/ground-attachment candidates. Stop if that
+concrete output is unavailable; do not build a new general routing framework.
+Second, screen and construct only the best low-disturbance service/ground
+candidate on one private copy. Third, restore and validate that complete
+candidate, or use the remaining time on one independently justified local
+cell after a successful checkpoint. Initial plus two corrections within
+each timebox, no automatic budget reset. Frozen/control/clock releases
+require an exact reviewed replacement contract before construction.
+
+Acceptance must prove named new connections and unchanged prior connectivity,
+not merely a reduced DRC count. Compare all copper outside the enumerated
+release: `check_routing_result.py:179-180` exempts whole net names under
+`--allow-changed-nets`, which cannot substitute for that complement proof.
+Keep C1/C4 adjacency, plane roles, private returns, contact exclusions and
+CELL_NEG isolation. No DeepPCB run until a changed, qualified problem has
+legal endpoints/corridors that the previous run did not have.
+
+Reduced test-point convenience is compatible with this direction, but zero
+opens alone cannot promise reliable operation. Retain the focused electrical
+and mechanical release review plus a small first-board bring-up covering
+power/current/temperature, USB/programming/recovery and audio operation.
+An extensive production-test fixture is not a prerequisite for this prototype.
