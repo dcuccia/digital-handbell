@@ -45,18 +45,19 @@
   `%USERPROFILE%\.digital-handbell\backup` README. Full receipts and evidence
   limits are retained there. Never commit private backup material. This is
   a one-time backup, not a scheduled service; snapshot again after adding evidence.
-- **November 8: C1/C4 move built; DeepPCB gave no gain; 8 opens remain.**
-  Candidate `plan\v1` (private `regulator-north-ground-transition`) moves C1
-  to 1.16 mm from U2.1 (was 12.95) and C4 to 1.54 mm from U2.5 (was 5.08)
-  with no new copper/clearance DRC findings; only a silk waiver (94 -> 97).
-  TP5/TP14 relocation screened infeasible (no free 1.5 mm pad site). One
-  15-minute CurrentProtectedWiring run (~$7.50, board 7f4cd69b) and standard
-  post-processing left opens 8 -> 8. No repeat on this placement. Best-8 and
-  frozen re-hash unchanged; v1 is not promoted. Next is an owner decision:
-  human finisher (brief ready) on best-8 or v1, or a placement redesign.
+- **November 8: best-8-c1c4 is the finisher base; 8 opens remain.**
+  The owner approved the silk waiver. Private `multilayer-20261108\best-8-c1c4`
+  (`2e8e16bf`) moves C1 to 1.16 mm from U2.1 (was 12.95) and C4 to 1.54 mm
+  from U2.5 (was 5.08), removing the 0.15 mm VHI chain. Against 6c-frozen-tp
+  it passes like best-8, plus waived silk_over_copper 94 -> 97 (labels over
+  pads). Same 8 opens. TP5/TP14 relocation is infeasible; one 15-minute
+  DeepPCB run on it gave no gain (~$7.50), so do not repeat this placement.
+  Next is an owner action: post `docs/finishing-job-brief-2026-11.md` with
+  bundle `multilayer-20261108\finishing-job-bundle-c1c4.zip`, or redesign
+  placement. Best-8 `e158ccd2`, frozen and the old bundle are kept.
   The executor-model waiver was session-only. See the ledger.
 - **November6 finishing passes (Sol, no spend): 11 -> 8 opens** (finish-pass2\07-rip-vbus, e158ccd2;
-  tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper: electrical review item.
+  tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper (removed in best-8-c1c4).
   Still open: I2S_LRCLK TP14, SWDIO TP5, USBBOOT, POWER, VO+, three GND groups.
   Passes 3-5 found no gain: links are enclosed by frozen critical copper;
   C1/C4 cannot reach U2 without wider re-placement. The owner later approved

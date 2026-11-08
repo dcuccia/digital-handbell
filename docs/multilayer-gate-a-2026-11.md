@@ -1111,3 +1111,31 @@ candidate is retained as an electrical-quality improvement (decoupling
 distance) with no open-count change; it is not promoted. Remaining options:
 accept v1 or best-8 and close the 8 opens with the human-finisher brief
 (`docs/finishing-job-brief-2026-11.md`), or a larger placement redesign.
+
+### November 8, 15:01: silk waiver approved; best-8-c1c4 becomes the finisher base
+
+The owner approved the silk_over_copper waiver ("sounds fine to me").
+Root re-checked the copied `plan\v1-drc` board (`2e8e16bf…`) before
+promoting it:
+
+- **Silk detail:** four new findings are the R15, R17, TP3 and C5
+  reference labels over C1/C4 pads; one old finding (C1's reference over
+  TP5) cleared. Fabricators clip silk from pads, so there is no electrical
+  effect. Labels may be nudged during finishing.
+- **Copper diff against best-8:** removes the old 0.15 mm VHI chain and
+  via to C1 (12 items) and the long +3V3 In3/F detour and via to C4
+  (5 items), plus one 0.15 mm GND stub. Adds one 1.008 mm +3V3 stub
+  (0.25 mm) and one GND stub (0.30 mm). USBBOOT copper is identical; only
+  KiCad's open witness changed.
+- **Standard check against `6c-frozen-tp`** with `--allow-move C1 C4`:
+  opens 86 -> 8, no lost frozen copper, only C1/C4 moved. track_dangling
+  4 -> 6 and via_dangling 0 -> 1 are the findings already present in best-8;
+  silk_over_copper 94 -> 97 is the waived item.
+
+Promoted copy: private `multilayer-20261108\best-8-c1c4` (board, project,
+schematic, DRC, check, cap-adjacency reports, `waiver-silk.json`,
+`SHA256SUMS`). New finisher bundle `multilayer-20261108\finishing-job-bundle-c1c4`
+and its zip (`e9aece5d…`). Its brief drops the capacitor-move deliverable.
+Best-8 (`e158ccd2…`), frozen (`b82f2fe3…`) and the November 6 bundle are
+kept unchanged as fallbacks. The brief is still not posted; posting and any
+payment remain owner actions.

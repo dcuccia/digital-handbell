@@ -1,7 +1,10 @@
 # Finishing-job brief: six-layer handbell PCB (ready to post; not posted)
 
 Prepared November 6 after automated finishing reached its stop rule
-([Gate A results](multilayer-gate-a-2026-11.md), end sections). **The owner
+([Gate A results](multilayer-gate-a-2026-11.md), end sections). Updated
+November 8: the base is now best-8-c1c4 (`2e8e16bf`), which already has
+C1 and C4 beside U2. The owner waived its silkscreen-over-pad increase,
+so the capacitor-move deliverable is dropped. **The owner
 decides whether and where to post.** Agents must not create accounts, post
 jobs or pay anyone.
 
@@ -16,22 +19,18 @@ a quote.
 ## Job text (copy and paste)
 
 > **Finish routing of a nearly complete 6-layer KiCad 10 board (8 open
-> links) and fix two capacitor placements.** Open-source hobby project
+> links).** Open-source hobby project
 > (an RP2040 digital handbell), about 45 x 49 mm, JLCPCB six-layer stackup
 > JLC06161H-3313E (signal/GND/signal/signal/GND/signal). All parts are
 > placed, and all but 8 connections are routed rule-clean.
 >
 > Deliverables:
 > 1. Route the 8 remaining unconnected links listed in `opens.md`.
-> 2. Move C1 (10 µF, LDO U2 input) to within 3 mm of U2 pin 1, and C4
->    (U2 output) to within 3 mm of U2 pin 5, as in the Adafruit Feather
->    RP2040 Prop-Maker reference. Small moves of nearby passives are fine;
->    keep U2 within 1 mm of its current position. None of the U2/C1/C4
->    positions our automated tools tried cleared the existing tracks. U2
->    sits next to a battery-contact guard area and /CELL_NEG copper on
->    B.Cu, so keep new ground vias out of the guard and off /CELL_NEG.
->    Expect to reroute some nearby tracks; the constraints below still
->    apply.
+> 2. Keep C1 (10 µF, LDO U2 input) and C4 (U2 output) where they are,
+>    within 3 mm of U2 pins 1 and 5. Optional: nudge the R15, R17, TP3 and
+>    C5 reference labels off the C1/C4 pads. U2 sits next to a
+>    battery-contact guard area and /CELL_NEG copper on B.Cu, so keep new
+>    ground vias out of the guard and off /CELL_NEG.
 > 3. Route the USB D+/D- pair (connector X6 to the protection part and the
 >    MCU) as a coupled 90-ohm differential pair, using the JLC stackup
 >    calculator.
@@ -74,13 +73,14 @@ Test points TP5/TP14 may move anywhere legal. SWD access (TP5) must stay.
 
 1. `kicad-cli pcb drc --refill-zones --schematic-parity --severity-all`:
    - 0 unconnected items;
-   - error types and counts no higher than best-8;
+   - error types and counts no higher than best-8-c1c4 (its
+     `silk_over_copper` count of 97 is waived; fewer is better);
    - dangling items reviewed.
 2. `tools/check_routing_result.py` against `6c-frozen-tp`, with
-   `--allow-move` for every part the person moved. Reviewed critical copper
-   changes must be listed and explained.
-3. `tools/check_cap_adjacency.py`: C1 and C4 at 3 mm or less from their
-   pins.
+   `--allow-move C1 C4` plus every part the person moved. Reviewed critical
+   copper changes must be listed and explained.
+3. `tools/check_cap_adjacency.py`: C1 and C4 still at 3 mm or less from
+   their pins (now 1.16 and 1.54 mm).
 4. Width audit: no new supply copper below its class, except pad escapes
    of 1 mm or less.
 5. Electrical review of USB pair coupling and impedance, then a FreeCAD
@@ -89,15 +89,18 @@ Test points TP5/TP14 may move anywhere legal. SWD access (TP5) must stay.
 ## Bundle
 
 The bundle is outside the repository:
-`multilayer-20261106\finishing-job-bundle\` under the bakeoff root, plus a
-zip. It contains:
+`multilayer-20261108\finishing-job-bundle-c1c4\` under the bakeoff root,
+plus a zip. It contains:
 
-- best-8 `handbell.kicad_pcb` (e158ccd2);
+- best-8-c1c4 `handbell.kicad_pcb` (2e8e16bf);
 - `.kicad_pro` with the net classes, and `.kicad_sch`;
 - `drc.json`;
 - `opens.md`;
 - this brief;
 - the stackup note.
+
+The November 6 best-8 bundle remains in
+`multilayer-20261106\finishing-job-bundle\` as a fallback.
 
 All files are from the public OSS project, so they are fine to share with
 a contractor.
