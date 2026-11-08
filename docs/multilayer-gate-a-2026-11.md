@@ -1035,3 +1035,44 @@ restore verified all 4,373 SHA-256 entries against the saved manifest and
 the current evidence root. Best-8 and frozen board hashes matched. Private
 receipts and manifests are under `%USERPROFILE%\.digital-handbell\backup`;
 no credentials are in this repository. Backup is still one-time, not scheduled.
+
+### November 7 C1/C4 capacitor move paused during preparation
+
+The owner approved a narrower strategy: keep U2 where it is and move only
+its two capacitors. C1 (the VHI input capacitor, now about 12 mm away on
+0.15 mm copper) would sit north of U2 beside U2.1, in C4's old area. C4
+(the +3V3 output capacitor) would sit beside U2.5. The existing capped
+DeepPCB run (at most 15 minutes / $7.50) may be used only if the candidate
+passes every input gate. The owner also waived the Sol-only executor rule
+for that session only; reconfirm executor choice when resuming.
+
+The owner paused the work before any candidate existed. Read-only
+preparation is saved in the private
+`multilayer-20261107\regulator-north-ground-transition` folder (27 files,
+4.3 MiB): a best-8 copy that re-hashes `e158ccd2…`, baseline DRC, a window
+inventory with full UUIDs and frozen flags, layer renders, and a KiCad
+10.0.6 API probe. After refill, the probe reproduces the 8 unconnected
+items. Findings so far:
+
+- With our strict screening margins, C1 at 90 degrees has a narrow window,
+  about cy 90.71-90.74 for cx 85.15-85.94, bounded by TP3, U2.1/U2.2 and R15.
+  Relaxing the 0.15 mm same-net pad spacing widens it to about cy 90.89.
+  These are bounding-box estimates that native shapes must confirm.
+- C1 needs a 0.3 mm GND stub from frozen GND track `eaf8141b`, whose end
+  now sits on the C4.2 pad at (84.9064, 90.586). Its VHI pad should overlap
+  feed `9a737d67`; check natively.
+- C4's south-east site is clear of the frozen POWER copper, which starts at
+  R17.1 (y about 98.5). No vias exist in that window.
+- C1, C4, C5 and U2 have no courtyards, so moving them cannot create
+  courtyard-overlap findings. Moved reference text needs relocation or hiding
+  and must be reported as a silk-only change.
+- Rule areas restrict only B.Cu and In1/In4, so F.Cu part moves are not
+  blocked by them. No new vias are planned.
+
+No candidate board, native DRC, DeepPCB upload or spend has occurred.
+Best-8 and frozen (`b82f2fe3…`) were re-hashed unchanged at the pause. The
+preparation folder is not yet in a restic snapshot; it can be regenerated
+from best-8. Next item: write and run the read-only pose/stub planner
+(`plan_candidate.py` in that folder), then native DRC and the standard
+gates on at most the best few variants. Hold without spending if no pose
+qualifies.
