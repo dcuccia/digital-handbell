@@ -1076,3 +1076,38 @@ from best-8. Next item: write and run the read-only pose/stub planner
 (`plan_candidate.py` in that folder), then native DRC and the standard
 gates on at most the best few variants. Hold without spending if no pose
 qualifies.
+
+### November 8 C1/C4 move built; DeepPCB run gave no gain
+
+The owner approved up to 60 DeepPCB minutes (about $30): move C1/C4, try
+TP5/TP14 relocation, then route whatever passes the gates. All work is in
+the private `regulator-north-ground-transition\plan` folder.
+
+- **C1/C4 candidate `plan\v1`** (`plan_candidate.py`): C1 at (85.55, 90.76)
+  rot 90, C4 at (86.40, 96.75) rot 0; old long chains pruned, short stubs
+  added. Native DRC on a copy (`plan\v1-drc`): no new copper, clearance,
+  short, hole or courtyard findings; opens 8 -> 8 (USBBOOT reports a
+  different witness on the same open). Cap adjacency improves C1->U2.1 from
+  12.95 to 1.16 mm and C4->U2.5 from 5.08 to 1.54 mm. The standard check
+  fails only on silk: silk_over_copper 94 -> 97 (R15/TP3/R17/C5 reference
+  text over the new pads; C1/C4 references hidden, text_height 72 -> 70).
+  This is a cosmetic waiver, not a routing gain.
+- **TP5/TP14 relocation:** a shapely free-space screen (`plan\tp_screen.py`)
+  finds no legal 1.5 mm pad position within 6 mm of the SWDIO or I2S_LRCLK
+  targets at 0.16-0.20 mm clearance; about 99% of grid points hit copper.
+  Smaller-pad hits fall under IC1's body (unreliable imported courtyards)
+  and were discarded. Not attempted further.
+- **DeepPCB:** input `plan\v1-deeppcb` (v1 minus the two plane no-track
+  areas, run 4's raised-clearance project), board
+  `7f4cd69b-5f08-4d41-814b-d8e1ed1cb8b0`, CurrentProtectedWiring, one
+  15-minute run (14:09-14:24, 15.02 burned minutes at $0.50/min, about
+  $7.50). DeepPCB's own count went 5 -> 6 unconnected air wires; its last
+  revision came at about 2 minutes. The standard post-processing
+  (`plan\v1-post`) ends at 8 -> 8 opens with no new copper kept. No second
+  run: repeating the same placement is not justified.
+
+Best-8 (`e158ccd2…`) and frozen (`b82f2fe3…`) re-hash unchanged. The v1
+candidate is retained as an electrical-quality improvement (decoupling
+distance) with no open-count change; it is not promoted. Remaining options:
+accept v1 or best-8 and close the 8 opens with the human-finisher brief
+(`docs/finishing-job-brief-2026-11.md`), or a larger placement redesign.

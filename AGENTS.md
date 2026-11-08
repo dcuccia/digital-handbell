@@ -45,17 +45,16 @@
   `%USERPROFILE%\.digital-handbell\backup` README. Full receipts and evidence
   limits are retained there. Never commit private backup material. This is
   a one-time backup, not a scheduled service; snapshot again after adding evidence.
-- **November 7 (later): C1/C4 capacitor move paused during read-only prep.**
-  The owner approved keeping U2 fixed and moving only C1 (VHI input cap,
-  now about 12 mm away on 0.15 mm copper) north of U2 beside U2.1, and C4
-  (+3V3 output cap) beside U2.5. The existing capped DeepPCB run (15 min /
-  $7.50) may be used only if every input gate passes. Preparation is saved
-  in the private `multilayer-20261107\regulator-north-ground-transition`
-  folder; its KiCad API probe reproduces the 8 opens. C1's screened window is
-  tight (about 0.04 mm in y, pending native confirmation). No candidate,
-  DRC, upload or spend yet. Best-8 and frozen re-hash unchanged. Next: write
-  and run the read-only pose/stub planner, then DRC and gates; hold if
-  nothing qualifies. The executor-model waiver was session-only. See the ledger.
+- **November 8: C1/C4 move built; DeepPCB gave no gain; 8 opens remain.**
+  Candidate `plan\v1` (private `regulator-north-ground-transition`) moves C1
+  to 1.16 mm from U2.1 (was 12.95) and C4 to 1.54 mm from U2.5 (was 5.08)
+  with no new copper/clearance DRC findings; only a silk waiver (94 -> 97).
+  TP5/TP14 relocation screened infeasible (no free 1.5 mm pad site). One
+  15-minute CurrentProtectedWiring run (~$7.50, board 7f4cd69b) and standard
+  post-processing left opens 8 -> 8. No repeat on this placement. Best-8 and
+  frozen re-hash unchanged; v1 is not promoted. Next is an owner decision:
+  human finisher (brief ready) on best-8 or v1, or a placement redesign.
+  The executor-model waiver was session-only. See the ledger.
 - **November6 finishing passes (Sol, no spend): 11 -> 8 opens** (finish-pass2\07-rip-vbus, e158ccd2;
   tools/reroute_with_ripup.py). VHI to C1 uses 0.15 mm copper: electrical review item.
   Still open: I2S_LRCLK TP14, SWDIO TP5, USBBOOT, POWER, VO+, three GND groups.
