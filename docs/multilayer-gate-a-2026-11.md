@@ -2329,3 +2329,51 @@ initial plus two corrective attempts. Only private reports/scripts and
 read-only PCB examination are released; no construction or paid routing
 before root reviews exact geometry and runtime dispatch. The accepted
 two-open base and all earlier trials remain unchanged.
+
+### November 9 - Coupled VBUS/stitch proposal retained; qualification held
+
+Private `usbboot-vbus-local-1353\proposal.json` SHA-256:
+`c73ace1b6890ca206bb384120b293a292dceac7e9b151652b44798b415e36894`.
+Final `qualify.py` SHA-256:
+`f9aa2856608469fe955ce5451a5d709073c2f0f8ea9ba8a7f43c1855dad1931d`.
+
+The provisional D03/V01 pair replaces the existing 0.50 mm In2 VBUS
+segment with points (94.357,87.996), (94.357,89.0), (95.007,89.7),
+(95.007,91.2), (94.357,91.9), (94.357,105.951). It adds 0.510497 mm
+length with 0.65 mm displacement. A 0.50/0.30 mm GND via at
+(94.246295,90.45) has a proposed 0.25 mm F attachment to C14.2.
+Reported mutual copper/hole gaps are 0.260706/0.360706 mm against
+screened 0.225/0.275 mm requirements. These are provisional geometry
+results, not completed legality or branch-preservation evidence.
+
+The initial execution failed on a native collision overload; correction 1
+reported 188 provisional pairs without rule-area screening. Correction 2
+rejected the vias against `IN1_PLANE_NO_TRACKS` (`95624d07`). Root confirms
+the exact source explicitly allows vias there while prohibiting tracks.
+That particular rejection is false, but removing it would not complete
+qualification. Root's final-code review additionally finds:
+
+- `net_rule` distinguishes VBUS only, rather than resolving all actual
+  netclasses and overrides.
+- Geometry-access exceptions silently omit obstacles; footprint-local
+  rule coverage is not demonstrated by the board-zone inventory.
+- Interior track/via/pad/zone contact lists are hardcoded empty, not
+  computed by this script.
+- Existing-hole clearance is checked for the proposed via, but not
+  comprehensively for the moved VBUS track and F attachment.
+
+Only the final script and report were found in this item folder. The
+executor subsequently confirmed that distinct executed revisions and raw
+receipts were not preserved. Correction 1's result and the claimed contact
+inventory appeared only in console output; the next run overwrote the
+report. The empty contact lists are not computed proof. The executor
+withdraws its complete all-layer/guard/CELL_NEG/contact-screen claims.
+No further tools or file changes were made by that clarification.
+Do not treat narrative attempt history as archived raw evidence or the
+provisional clearances as a qualified finite path.
+
+Disposition: HOLD; three executions exhausted, no fourth run or
+construction authorized. Preserve the finite proposed pair for a separately
+bounded checker/evidence recovery decision rather than repeat the layout
+sweep. Accepted `b602e998` and near miss `afd2d740` remain unchanged.
+No PCB write, refill, DRC or paid call occurred.

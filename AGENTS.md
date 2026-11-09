@@ -27,6 +27,21 @@
   near miss. Phase 1 is read-only PCB work through 14:04 local; no new
   board or paid routing before root review.
 
+- **November 9: USBBOOT paired VBUS/stitch screen held on tooling.**
+  `usbboot-vbus-local-1353\proposal.json` (`c73ace1b`) preserves D03/V01:
+  a 0.65 mm In2 VBUS detour, +0.510497 mm length at unchanged 0.50 mm
+  width, and ordinary GND via at (94.246295,90.45). Provisional mutual
+  copper/hole gaps are 0.260706/0.360706 mm, not a qualified board.
+  Three executions are exhausted. The final checker incorrectly treats
+  via-allowed `IN1_PLANE_NO_TRACKS` as a via keepout. Root also found
+  incomplete netclass/guard/hole coverage, silent geometry omissions and
+  hardcoded empty branch-contact lists. Do not waive these or run a fourth
+  attempt. Only the final script/report are present in the item folder;
+  the executor confirms prior revisions/raw evidence were not preserved.
+  Best-2 and near miss remain unchanged; no board/refill/DRC/spend.
+  Next requires a separately bounded checker/evidence recovery decision,
+  not a new layout sweep or unconditional construction.
+
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`
   finds the 0.15 mm F pin-19-to-EP stub clears pins 18/20 by 0.225 mm.
