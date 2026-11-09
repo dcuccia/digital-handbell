@@ -57,6 +57,11 @@
   result, board or spend; corrections exhausted. Not geometry evidence.
   Never name PowerShell parameters `$Args`/`$Input`; require each child's
   expected output file; dry-run launchers. A rerun needs owner approval.
+  **14:55: approved launcher-only rerun also HOLD.** Fixed launcher passed
+  its dry-run controls; the frozen qualifier then failed closed on USB-C
+  shell pad M1's oval drill (`2249eb1a`) in its global hole inventory,
+  before any D03/V01 check. Rerun consumed; no candidate/board/spend.
+  Next attempt needs a reviewed qualifier change (oval-drill modeling).
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`

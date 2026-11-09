@@ -2433,3 +2433,29 @@ name a parameter `$Args`/`$Input`; require the expected report file after a
 child exits; dry-run the launcher with a trivial script before release.
 A new item needs separate owner approval; the corrected scripts plus a
 renamed wrapper parameter are the obvious starting point.
+
+## November 9, 14:55 - Execution-only USBBOOT rerun held on qualifier slot inventory
+
+The owner approved one execution-only rerun: the same reviewed Python
+scripts with only the launcher fixed, plus a launcher dry-run first.
+`run_released.ps1` was preserved as `.r1`; the fixed launcher renames
+the child-argument parameter (`$ChildArgs`), quotes arguments, re-waits
+before reading the exit code, fails closed on null/non-zero exit, timeout
+or missing fresh expected output, and records timed receipts. Root reviewed
+the diff; phase commands match `.r1`.
+
+- Dry-run PASS: positive output, missing-output rejection and two
+  whitespace arguments preserved (0.18/0.12/0.12 s).
+- Qualify (1.103 s, exit 1): `qualification-20261109-145118.json`
+  (`3ace0715`), source `afd2d740`, status HOLD:
+  `unsupported slot/asymmetric drill 2249eb1a...` - the USB-C shell pad
+  M1 (oval drill 1.7 x 0.6 mm). The frozen qualifier's global hole
+  inventory fails closed before reaching any D03/V01 geometry check.
+- Construct/validate not run. No candidate, board write, refill, DRC
+  or spend.
+
+This is a qualifier coverage limit, not a geometric finding about the
+D03/V01 pair. The launcher defect is resolved; the approved single rerun
+is consumed. A further attempt needs a reviewed qualifier change
+(oval-drill hole modeling, or a bounded window excluding remote holes
+with an explicit justification). Base stays best-2-vo `b602e998`.
