@@ -2289,3 +2289,43 @@ No new pose sweep, native load, board write, refill, DRC or paid call is
 authorized. Preserve the original screen and every executed revision.
 Best-2-vo remains the accepted two-open base; the owner's total 30-minute
 DeepPCB allowance remains unspent by this item.
+
+### November 9 - N025 supplement held; independent USBBOOT/VBUS item started
+
+The completed supplement `ic1-cell-nudge-1720\review-supplement.json`
+has SHA-256
+`f45478cc8cb23909f90f94b49773b5d550fbbdafa8fc21e6bb58a253a3b5d270`;
+raw static correction-1 evidence is
+`f5ed02bdd70d1210afdd9c4b991dac750e27cc8dccf327f198039d3d3222711c`.
+The original screen remains unchanged.
+
+- C14.1/TP5 is a real foreign-copper failure: approximately 0.093 mm
+  versus 0.150 mm required (0.175 mm with the screening margin).
+- C2/C3-MH2 and C7-U4 are courtyard-only witnesses in the examined
+  serialized body, mount-envelope and pad geometry; no actual collision
+  was found there.
+- Both blocking +3V3 primitives move with the rigid cell and proposed EP
+  stub, preserving the crossing and 0.104 mm spacing. No materially
+  different all-layer-clean replacement path was demonstrated.
+
+Root stops N025 construction. This is not a conclusion that every MCU
+relocation is infeasible. No new native load, board write, fill, DRC or
+paid call occurred in the supplement.
+
+Under the owner's standing copper-movement and autonomous-progress
+permission, the next independent item is `usbboot-vbus-local-1353`, not
+another unchanged IC1 or via-grid trial. A fresh pinned Sol/medium executor
+qualifies one bounded paired repair on retained near-miss `afd2d740`:
+locally replace In2 VBUS segment `250e8d5d` at unchanged 0.50 mm width
+while finding a legal C14 GND stitch. The proposal must preserve every
+interior contact/branch, all other copper and both C14 duties, and check
+the entire through-via span and contact guards.
+
+The engineering bounds are at most 1 mm detour displacement, 3 mm added
+VBUS length and 24 detour templates paired with at most 12 via candidates.
+These are exploration bounds, not prequalified electrical performance.
+Phase 1 ends by 2026-11-09 14:04 local, with hard subprocess limits and
+initial plus two corrective attempts. Only private reports/scripts and
+read-only PCB examination are released; no construction or paid routing
+before root reviews exact geometry and runtime dispatch. The accepted
+two-open base and all earlier trials remain unchanged.

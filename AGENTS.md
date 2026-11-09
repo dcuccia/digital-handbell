@@ -17,6 +17,15 @@
   14:00 local: resolve actual bodies/copper/mounts and demonstrate a new
   legal corridor using saved evidence, without another pose sweep/native
   load. Preserve the screen and best-2-vo unchanged. See the ledger.
+  The supplement is now complete (`f45478cc`), HOLD: C14.1/TP5 has
+  about 0.093 mm actual foreign-copper spacing versus 0.150 mm required.
+  The other three pairs are courtyard-only in the examined geometry.
+  Both blocking +3V3 tracks move with the cell, so their EP-stub crossing/
+  spacing is invariant. No new replacement path was proved; stop N025.
+  Next independent item `usbboot-vbus-local-1353` qualifies a paired local
+  In2 VBUS `250e8d5d` detour and C14 GND stitch, using the retained USBBOOT
+  near miss. Phase 1 is read-only PCB work through 14:04 local; no new
+  board or paid routing before root review.
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`
