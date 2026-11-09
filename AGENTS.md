@@ -27,6 +27,23 @@
   Private snapshot `1678e902` includes the accepted package and POWER evidence;
   the backup succeeded, without a repeated full restore/integrity check.
 
+- **November 8, 23:39: five-open SWDIO closure accepted for routing continuation.**
+  Private base `multilayer-20261108\best-5-swdio`, PCB
+  `f8ec463b9384e6618726346155de6bab3bb312bb7e226a6f0cea8e5bde66b9ba`.
+  TP5 is a 0.30 mm bare F land at (95.8, 89.1), joined to SWDIO by two
+  0.15 mm F segments. Native all-track/all-severity/parity DRC: six opens
+  to five, 396 to 391 non-open findings, parity unchanged at 46; standard
+  checker and exact-complement pass. Only SWDIO closes. TP5 remains available
+  as awkward fine-microprobe access, not qualified universal hand probing.
+  Complete private acceptance and 46-file copy manifest are alongside the
+  board; best-6 and failed trials remain preserved. No paid router run.
+  Next bounded item: source-bound ground connectivity/attachment census,
+  starting with the C7.1 filled island; reuse saved evidence only where
+  invariance is exact. Do not repeat exhausted USBBOOT local-site attempts.
+  Five opens remain: USBBOOT, VO+, GND C7.1 island, GND GAIN0.1, and
+  GND IC1.19 TESTEN. This routing checkpoint is not fabrication, powered-use,
+  safety, or child-use approval.
+
 - **November 8, 20:37: USBBOOT local attempts stopped; six opens remain.**
   No candidate: translated direct-F templates found no pair; eight local
   cathode vias lie under BT1's contact guard. Exact boundary exits are east

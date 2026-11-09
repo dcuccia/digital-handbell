@@ -1802,3 +1802,81 @@ other moved parts or removed copper. Construction is conditional on complete
 clearance/access screening, then 6 -> 5 native/connected-group preservation.
 No expansion of this finite set. Private folder:
 `swdio-service-recovery-2038`.
+
+The cached screen completes in 0.312 s with zero qualified 0.6 mm sites.
+Parent review finds a reporting/configuration defect: it hardcodes 0.20 mm,
+not the requested net-pair rules, and labels actual gap as "margin."
+Best-site recorded gaps at (95.80, 89.10) are 0.028150 mm to RESET and
+0.051347 mm to VCORE, not positive headroom; these also miss 0.15 mm.
+Preserve the raw report (`8eea08b1...`) and produce a static rule-bound
+disposition, not a silently corrected original result.
+
+The lead releases one local repair at that SAME best centre, not more
+grid points: a 0.30 mm bare microprobe land with the existing direct/dogleg
+choices and actual net-pair rules. The 0.15 mm radius reduction may help,
+but the complete route and physical access must be rechecked. This is
+deliberately small service access; do not claim universal hand-probe
+usability. The land must remain exposed outside fitted bodies. If qualified,
+add a separate local 0.3 mm footprint, preserving TP14/the 0.6 mm library,
+and apply only the TP5-bound schematic property. Same 6 -> 5 acceptance
+gates and 20:52/20:49 cutoffs; no further size reduction or centre change.
+
+**SWDIO geometry result: one dogleg qualifies, builder not yet qualified.**
+The corrected saved-rule supplement maps SWDIO/RESET and VCORE/+3V3 to
+0.15 mm project clearance. The original 0.6 mm sites all fail; their report's
+misnamed "margin" values were gaps, not headroom. At the single released
+0.30 mm centre `(95.80, 89.10)`, the direct line fails to IC1.26 RESET
+(0.102143 mm gap versus 0.150 mm). The dogleg through `(95.95, 88.90)`
+passes the local geometry screen, with fitted-body bounding gaps of 0.455370
+mm (C18), 0.522534 mm (C14) and 0.550000 mm (IC1). This is bounded
+microprobe access evidence, not universal probe usability.
+
+Native construction attempts then failed three times: two KiCad `LSET`
+API mismatches, followed by a schematic-binding assertion after a private
+board refill. That partial candidate is unaccepted and has no DRC,
+connectivity or exact-complement qualification. The assertion came from
+searching only for indented `symbol` nodes; TP5's symbol UUID
+`eeee113d-ae59-4cdc-abe9-679e1836adbb` begins at column zero. The correct
+next action is a new bounded **builder-only** item using parsed UUID plus
+Reference binding and a precise one-property schematic diff. Do not retry
+geometry, change land size/centre, globally replace a footprint string,
+or use the partial board. Preserve best-6 immutable. Build, refill and full
+native acceptance are separate gates; a helper fix alone is not closure.
+
+### November 8, 23:39 - SWDIO TP5 closure accepted (6 -> 5)
+
+The separate builder-recovery item is complete and its exact private output is
+accepted as the next routing-continuation baseline:
+`multilayer-20261108\best-5-swdio`. Source `best-6-power` remains unchanged.
+The accepted PCB SHA-256 is
+`f8ec463b9384e6618726346155de6bab3bb312bb7e226a6f0cea8e5bde66b9ba`;
+the prior base is
+`dacfb543f2eabedf1e4bf77e9612e94e74f022aa514535bc0f08167bbbc9cdc4`.
+
+The recovery correctly bound the schematic edit to TP5's symbol UUID
+`eeee113d-ae59-4cdc-abe9-679e1836adbb` and `Reference=TP5`, changing only its
+footprint property. It moves only TP5 to (95.8, 89.1), changes its land to a
+0.30 mm bare F.Cu/F.Mask land with no paste, and adds two 0.15 mm F.Cu SWDIO
+segments through (95.95, 88.9). The existing 0.6 mm TP14 footprint/library
+is untouched. This is intentionally small, awkward fine-probe access; it is
+not universal hand-probe or fixture qualification.
+
+KiCad 10.0.6 all-track/all-severity/parity DRC reports 6 -> 5 opens, 396 -> 391
+non-open findings, and unchanged parity (46). Only SWDIO's open disappears;
+no finding type grows. The standard routing checker and exact-complement
+checker pass. All 2,166 pre-existing copper blocks, 103 other footprint
+blocks, 41 zone definitions, In1 serialization, private returns, CELL_NEG,
+POWER changes, project file and schematic parity remain preserved. The exact
+candidate package has a 46-file hash manifest and an acceptance record.
+Earlier native receipt overwrite during correction is disclosed in the
+private `swdio-builder-recovery-2329\final-summary.json`; recovered evidence
+and constructor revisions are retained.
+
+The next bounded independent item is a source-bound ground connectivity and
+attachment census on this exact five-open baseline, first resolving the C7.1
+filled GND island and finite accessible service-pad/terminal sites. Reuse
+unchanged saved evidence only where exact invariance is demonstrated. Do not
+repeat the exhausted USBBOOT local via/exit searches, TP5 geometry searches,
+or invoke another paid router run. Five opens remain: USBBOOT, VO+, GND at
+C7.1, GAIN0.1 and IC1.19 TESTEN. This routing-continuation acceptance is not
+fabrication, powered-use, safety, or child-use approval.
