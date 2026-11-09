@@ -1240,6 +1240,73 @@ by the D13 F track at y85.3 and the adjacent QFN pins; XIN's via/stub
 blocks the west side. These are finite-screen results, not impossibility.
 
 Gate 3 (refill/DRC/complement) was not reached. No board edit, save, DRC or
-DeepPCB spend. Further closure of any of the eight opens now requires an
-owner-approved release of existing copper (e.g. the VBAT or D13 segment) with
-a replacement contract, or the prepared human-finisher brief.
+DeepPCB spend. These finite GND screens do not establish that all eight opens
+require moving existing copper or hiring a finisher. A reviewed local
+replacement is a proposed next approach, not the only physically possible one.
+
+## November 8, 17:36 local copper-replacement authorization
+
+The owner says, "I'm ok with moving existing copper." The first bounded item
+is a local VBAT detour beside GAIN0, with exact primitives and all attachment
+duties reviewed before construction. Work is on private derivatives of
+best-8-c1c4 `2e8e16bf`, never the base itself. Preserve source-current widths,
+all existing branches, component poses, plane roles, contact exclusions,
+private returns, CELL_NEG isolation and mandatory process vias. No general
+VBAT release, new supply-layer transition or DeepPCB spend is authorized by
+this item. D13/XIN/clock changes are outside this first trial.
+
+The Sol/medium executor passed a read-only runtime probe, with the parent
+verifying actual configured model/effort and first-dispatched-model events.
+The contract checkpoint is 17:42, no new native child after 17:48, and the
+engineering stop is 17:51. Initial plus two corrections is the total allowance,
+with hard child-process timeouts and preserved executed revisions/results.
+Acceptance requires the named GAIN0 join, restored VBAT duties, no prior
+connected-group split, exact unchanged-complement preservation and no new
+native DRC defects; a lower open count alone is insufficient.
+
+**Outcome: contract held; no construction.** The executor identified eight
+affected 0.1778 mm F.Cu primitives between (98.2, 107.15) and (101.55, 109.8),
+including frozen `0d6ce402-...`. Five additional source-side track/interior
+contacts, including via `0ba3129d-...`, prevent treating this as a simple
+two-endpoint chain. VBAT's connected pad group includes BT1.1, C20.1,
+CHG_EN0.2, Q3.3, R25.1 and TP11.P$1.
+
+The finite proposal screen considered three VBAT detours and five GND links
+(15 pairs); none passed. Each VBAT detour conflicts with fixed +3V3 copper.
+Only GND proposal G2 reached saved main F.Cu GND fill, and it conflicts with
+the closest proposed VBAT detours. This is a finite proposal rejection, not
+proof that GAIN0 cannot be connected after a different coordinated change.
+No PCB mutation/save, refill, DRC, cloud upload or paid run occurred.
+The screen retained the existing 0.1778 mm VBAT width, not 0.8-1.0 mm.
+The closest reported clearance miss is a **0.010096 mm deficit**:
+0.189904 mm measured gap versus 0.200000 mm required, not a 0.010096 mm gap.
+The five source-side contacts are four tracks and one via, not pads.
+
+**Lead dispositions:** the existing narrow width is not proof of its local
+current duty. Before a replacement is qualified, distinguish load-current
+copper from a signal-level tap using the actual branch connections; do not
+blindly preserve or widen an entire supply net. The seven adjoining segments'
+frozen/router provenance is unresolved, but that is not an authorization
+blocker: this item expressly allowed specific replacements of either. The
+geometric rejection stands independently. Do not retry these three detours
+unchanged or silently extend the release to +3V3.
+
+Private evidence is under `multilayer-20261108\gain0-vbat-replacement-1736`:
+`stage1-contract.json` (final clarified `cee49fce...`; initial report hash
+`82674719...` is superseded), `local-inventory.json` (`ba872d3c...`),
+`vbat-group.json` (`f2accf7a...`) and `proposal-screen.json` (`0030c246...`).
+The initial inventory timed out at its 90-second limit; a corrected read-only
+inventory completed and the separate finite proposal screen returned no pair.
+The executor reports 17 PowerShell children, including four native board-load
+children, not three individual executions; one non-native CLI-path lookup
+also failed. The initial report arrived at 17:42:33.470, missing the contract
+checkpoint by 33.470 seconds. No item process remains live. Raw reports were
+retained through the report-only clarification; no further native run followed.
+Best-8-c1c4 remains unchanged
+at eight opens. Next engineering work needs the local current/branch contract
+and a genuinely different coordinated corridor, not more router minutes or
+another request for general permission to move copper.
+
+Private evidence backup: restic snapshot `333cc7ba`, parent `42bceb0a`;
+4,555 files, 658.338 MiB, six new files. Backup exited successfully; integrity
+check and restore were not repeated for this snapshot.

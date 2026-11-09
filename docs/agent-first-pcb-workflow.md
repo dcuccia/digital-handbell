@@ -145,7 +145,9 @@ and no DRC type or count grows.
   not an unchanged retry or a duplicate implementation. Resolve real
   island membership before using a zone witness as a route target.
 - Use per-net, path-aware rip-up and reroute (`tools/reroute_with_ripup.py`).
-  Only router- or agent-made copper may be ripped up, never frozen copper.
+  Its automatic rip-up scope is router- or agent-made copper, not frozen
+  copper. A separately reviewed local replacement contract is required to
+  change frozen copper; owner permission is not a blanket whole-net release.
   Accept a step only on a strict open decrease with no new DRC findings.
   This took the board from 11 to 8 opens at no cost.
 - Do not rip up along straight corridors. That removed about 120 items and

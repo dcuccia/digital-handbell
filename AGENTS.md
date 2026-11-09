@@ -15,8 +15,16 @@
   Gate 2 stub+via-to-In1 screen (straight and dogleg, 2.5 mm): no legal
   site. C7.1 has none; GAIN0.1's only via region is fenced by a VBAT
   F track at x101.35; IC1.19 is fenced by D13 track/QFN pins. Gate 3 not
-  reached; no board edit, DRC or DeepPCB spend. Any further closure needs
-  an owner-approved move of existing copper (VBAT/D13) or a human finisher.
+  reached; no board edit, DRC or DeepPCB spend. Those finite screens do not
+  prove that every remaining connection requires existing-copper changes.
+  Owner 17:36 approves moving existing copper. First bounded item: a local
+  GAIN0/VBAT replacement contract screen found no qualified paired route:
+  three detours conflict with fixed +3V3; five GND links give no passing pair.
+  No candidate constructed. The affected eight F segments are 0.1778 mm;
+  their branch-specific current duty is unresolved, not proven full-load.
+  Preserve every branch/interior contact, not just chain endpoints. Unknown
+  frozen/router provenance is not an approval blocker for an exact reviewed
+  replacement. Base remains eight-open; no DeepPCB spend.
   Default gap/rip-up pair searches target DRC witness objects; gap routing
   also has a broader `--nearest-own-copper` mode already tried for GAIN0.
   Do not repeat these screens unchanged. See the latest Gate A ledger section.
