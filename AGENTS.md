@@ -46,6 +46,22 @@
   Private snapshot `79553016` includes this package and earlier trials.
   Its full-data check and uncached restore match all 5,084 source files.
 
+- **November 9, 13:35: C7 POFV accepted, 5 -> 4 opens.** New private base
+  `multilayer-20261109\best-4-c7`, PCB `77d3762d`. It adds a GND POFV
+  through-via in C7.1, IPC-4761 Type VII (the owner exception; state it on
+  the fab order). Six local 0.15 mm I2S_DIN (In2) / I2S_MOD (B) segments
+  are rerouted. Astra re-verified independently: opens 4, non-open 391,
+  parity 46, checker PASS.
+  The GAIN0 POFV and TESTEN dog-bone trials returned NO_PASS without
+  changing the board:
+  - GAIN0 is blocked by In2 VHI `db3520d2`.
+  - TESTEN is blocked by AMP_MUTE In3 `2132e8d1`, I2S_BCLK B
+    `55ad0a5d`/`c0d500d9` and VCORE In2.
+
+  Follow-up trials `gain0-vhi-1335` and `testen-release-1335` release
+  those nets locally. Do not repeat the narrower screens. Remaining opens:
+  USBBOOT, VO+, GND GAIN0.1, GND IC1.19. Not fabrication approval.
+
 - **November 9, 12:20: J1 NO_POSE, TESTEN NO_PATH; owner decisions recorded.**
   Neither item wrote a board; best-5 `f8ec463b` is unchanged. 131,044 F
   Pico-Lock poses fail the combined edge, magnet, frozen-F and 4 mm mating

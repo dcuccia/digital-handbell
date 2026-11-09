@@ -2009,3 +2009,49 @@ exact complement):
 
 A separate read-only research item is gathering connector drawings and
 sourcing data. Speaker output and USBBOOT remain open.
+
+## November 9, 13:35 - C7 POFV accepted (5 -> 4); GAIN0 and TESTEN trials NO_PASS
+
+**Accepted: `multilayer-20261109\best-4-c7`, PCB `77d3762db0c8b7265ce07cc071d9e73d708f33294a2494ae55af3f133faab4c4`.**
+`c7-pofv-1215` adds GND through-via `eab0bf8e`, 0.50/0.30 mm, centred in
+C7.1 at (109.311, 92.500). Its native fill and cap properties are set and
+survive a save and reload. It locally reroutes three 0.15 mm In2
+`I2S_DIN` segments and three 0.15 mm B `I2S_MOD` segments; their widths
+and terminals are unchanged. C7, C7.2/VCORE, every footprint, USB, BTL/VO,
+private returns and CELL_NEG are unchanged. The candidate was refilled once.
+
+Astra re-verified independently on a fresh copy:
+- native DRC: 4 opens, with only C7.1 removed;
+- 391 non-open findings and parity 46;
+- `check_routing_result.py` PASS with `--allow-changed-nets I2S_DIN I2S_MOD`.
+
+The base re-measured in this environment is 393. The extra two are
+`lib_footprint_issues` that depend on the environment; every candidate
+category is at or below the base. The via attaches to filled GND on both
+In1 and In4. Its nearest annulus-to-BT-keepout gap is 1.434986 mm.
+
+The process requirement is IPC-4761 Type VII POFV (owner exception), and
+it must be stated on the fabrication order. This is a routing checkpoint,
+not fabrication or powered-use approval.
+
+**`gain0-pofv-1215`: NO_PASS, no board change.**
+- 4,605 POFV sites overlapping GAIN0.1 were screened; none is legal,
+  including after the authorized VBAT moves.
+- The closest site, (100.660, 108.336), is blocked by In2 VHI `db3520d2`
+  (0.8 mm, vertical at x 100.134 from y 103.501 to 109.391).
+- The centred site also hits B VBAT `2f49a8db` and In3 GAIN `a5a0dae3`.
+- Correction 2's hole check hit a native overload error, so retries are
+  exhausted.
+
+**`testen-dogbone-1215`: NO_PASS, no board change.**
+- 225 sites over x 97.55-97.90, y 87.75-88.10 were screened. All are
+  blocked by In2 VCORE `93e90d10`, In3 AMP_MUTE `2132e8d1` and B I2S_BCLK
+  `55ad0a5d`/`c0d500d9`.
+
+Follow-up trials on `best-4-c7` widen the released scope:
+- `gain0-vhi-1335`: local In2 VHI jog at a width of at least 0.8 mm, plus
+  GAIN/VBAT.
+- `testen-release-1335`: local AMP_MUTE and I2S_BCLK reroutes; a VCORE
+  detour only as a flagged last resort.
+
+Four opens remain: USBBOOT, VO+, GND GAIN0.1 and GND IC1.19.
