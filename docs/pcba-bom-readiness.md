@@ -60,7 +60,7 @@ candidate**, and applied no native changes.
 
 | References | Finding requiring disposition before freezing |
 |---|---|
-| J1 | Retain Molex 5040500291, alias 504050-0291. Manufacturer nominal lands agree; body height is 2.00 +/-0.15 mm. Preserve the larger proxy and map the specified pickup region rather than using its proxy centre. |
+| J1 | Superseded November 9 (owner-approved swap, accepted best-2-vo): JST ACHL SMT header, LCSC C594367, mating SACH-003G crimps on AWG30-28 leads. The earlier Molex 5040500291 evidence is historical. Confirm the exact ACHL part number, pickup datum, mating housing and per-contact current before quotation. |
 | J2 | Complete identity is SM02B-SRSS-TB(LF)(SN). Nominal side-entry lands agree; toleranced maximum geometry and actual pickup datum remain unresolved. |
 | U5 | TI's example uses 0.67 x 0.30 mm pads at X +/-0.74, versus frozen 0.65 x 0.275 at +/-0.635. Local depth needs 1.70 mm for the body, or 2.00 including the documented protrusion allowance. |
 | R27 | Panasonic's part-specific example permits 1.15 x 1.40 mm pads at X +/-1.025. Maximum package is 2.20 x 1.45 x 0.75 mm; frozen depth and height each underbound it by 0.05 mm. Preserve the independent sense connections when reconciling lands. |
@@ -147,7 +147,7 @@ maximum, and its nominal power rating is not a board-level thermal result.
 | D4 | 1 | Nexperia PMEG2020AEA base identity. Reconcile exact orderable and SOD323F drawing; generic SOD323 names are not interchangeable. |
 | FB1,FB2 | 2 | Only "Ferrite", 0603. Define actual impedance/frequency, DCR, rated/DC-bias current and maximum dimensions before selecting. |
 | CHG0,L0 | 2 | Orange/red 0603 LEDs need separate exact orderables, polarity, electrical/optical specifications and dimensions. |
-| J1 | 1 | Molex 504050-0291 is explicit. Confirm manufacturer/mating/current evidence; 3.1 mm remains a proxy. |
+| J1 | 1 | JST ACHL (LCSC C594367) since November 9; Molex 504050-0291 is superseded. Confirm mating housing, SACH-003G crimps and current evidence. |
 | J2 | 1 | JST SM02B-SRSS-TB is explicit. Confirm suffix/finish and side-entry package; do not substitute BM02/top-entry. |
 | L1 | 1 | 1 uH and TDK_VLC5045 footprint family do not establish an orderable. Priority: actual saturation/thermal current, DCR/loss, tolerance, lands and maximum height. Do not invent a part number from the family name or shrink the 5 mm proxy without evidence. |
 | X6 | 1 | CUSB31-CFM2AX-01-X footprint alias versus source C165948/HRO TYPE-C-31-M-12 is unresolved. Obtain the exact manufacturer drawing and reconcile the actual lands, NPTH/anchors, mouth and height. |
