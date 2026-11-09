@@ -2459,3 +2459,28 @@ D03/V01 pair. The launcher defect is resolved; the approved single rerun
 is consumed. A further attempt needs a reviewed qualifier change
 (oval-drill hole modeling, or a bounded window excluding remote holes
 with an explicit justification). Base stays best-2-vo `b602e998`.
+
+Owner decision 14:58: approves a reviewed qualifier change limited to
+slotted/oval drill modeling (stadium hole shapes plus controls), a cutoff
+update, and one pipeline run. Construction/validation scripts stay frozen.
+
+## November 9, 15:00 - Slot-aware USBBOOT qualifier run held on netclass pattern guard
+
+Root reviewed the `qualify_exact.py` diff against `.r1` and probed KiCad's
+binding: an oblong 1.7x0.6 mm PTH returns `SHAPE_SEGMENT` (length 1.1 mm
+plus width 0.6 mm = major drill). New controls (`slot_dimension_identity`,
+`round_gap_equivalence`, `slot_inventory_present`) gate READY. Released
+14:59; cutoff 15:30.
+
+- Qualify exited 1 after 0.578 s. `qualification-20261109-145519.json`
+  (`3c26d926f5576232d9dce88b8c1f44fa138bfe290c804eac7f3a12cb7f3faf46`),
+  source `afd2d740`, status HOLD: `unsupported netclass pattern V+`.
+- The slotted-hole inventory completed; the failure is in netclass
+  resolution, whose guard regex treats `+` as pattern syntax. KiCad net
+  names such as `V+` and `+3V3` contain a literal `+`; the guard should
+  admit it while still rejecting real wildcard syntax.
+- Controls and hole evidence were not reached. Construct/validate not run.
+  No candidate, board write, refill, DRC or spend.
+
+The approved run is consumed. This remains a tooling limit, not geometry
+evidence about D03/V01. Base stays best-2-vo `b602e998`.

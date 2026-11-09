@@ -62,6 +62,13 @@
   shell pad M1's oval drill (`2249eb1a`) in its global hole inventory,
   before any D03/V01 check. Rerun consumed; no candidate/board/spend.
   Next attempt needs a reviewed qualifier change (oval-drill modeling).
+  **15:00: owner-approved slot-aware qualifier run also HOLD.** Slot
+  modeling (native SHAPE_SEGMENT, root API-probed) passed inventory; the
+  qualifier then rejected the literal netclass pattern `V+` because its
+  guard treats `+` as regex syntax. `+` is literal in KiCad net names.
+  Report `qualification-20261109-145519.json` (`3c26d926`). Run consumed;
+  no candidate/board/DRC/spend. Next needs approval of that one-character
+  guard fix plus one run; still no D03/V01 geometry evidence either way.
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`
