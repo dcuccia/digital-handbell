@@ -2122,3 +2122,68 @@ Neither trial wrote a board; best-3-gain0 `e685a74b` is unchanged.
     is a tooling failure, not a physical result.
   Next: build that same EP-stub plan with text-level s-expression edits
   instead of pcbnew object removal.
+
+## November 9, 15:25 - retrials: TESTEN EP stub NO_PASS, VO+ ACHL near miss
+
+Neither trial was promoted; best-3-gain0 `e685a74b` is unchanged.
+
+- **`testen-ep-text-1440`** (summary `37ad9d20`): the text-level EP-stub
+  edit worked (3 -> 2 opens) but added 15, then 11, non-open findings
+  against SWCLK via `63ac9eab`, RESET tracks, VBUS/VCORE In2, AMP_MUTE In3,
+  I2S_BCLK B and the +3V3 transition via. Rolled back byte-identical.
+- **`vo-achl-ml-1440`**: J1 became JST ACHL at F (119.5, 98.0) rot 0;
+  VO+/VO- were routed at 0.60 mm on F/In2 with four 0.50/0.30 vias, and
+  In1 GND shields the USB crossing. Correction 1 (`83abb547`) reached
+  3 -> 2 opens with 393 non-open findings unchanged. It failed only on J1
+  MP2 copper-edge clearance (0.225 mm against 0.300) and one parity item
+  (missing MPN field). B-side screen: 0 of 200 poses qualified.
+- **`vo-achl-edge-1510`** (summary `08218f4b`, PCB `2b518041`): J1 moved to
+  (119.5, 97.7), which gives MP2 0.325 mm edge clearance; parity is 46 and
+  3 -> 2 opens. It failed only because the copied MPN field was visible on
+  F.SilkS (silk_edge 5 -> 6, silk_over_copper 93 -> 94). A separate
+  silk-only visibility fix, `vo-achl-silk-1525`, follows. Promotion also
+  needs the owner to approve the J1 swap to ACHL (C594367, Extended).
+
+**Owner decision (15:25):** no HDI or laser microvias. TESTEN strategy
+order: first reroute the +3V3 feed between the west pin row and the EP so
+a pin-19-to-EP F stub fits (`testen-3v3-reroute-1530`); if that fails,
+nudge IC1 together with its decoupling.
+
+## November 9, 15:50 - VO+ closed: best-2-vo accepted (owner approved ACHL)
+
+The silk-only fix `vo-achl-silk-1525` (summary `26ae75e2`, PCB `307fc60c`)
+moved J1's copied MPN field from F.SilkS to hidden F.Fab. Astra reran
+base and candidate DRC in the same session, plus the checker: 3 -> 2 opens
+with only VO+ removed, 393 -> 391 non-open findings with every category
+at or below base, parity 46, and checker PASS.
+
+The owner approved swapping J1 to JST ACHL `BM02B-ACHLKS-GAN-ETF` (LCSC
+C594367, Extended). On promotion, J1's Value/MPN fields were corrected
+from the stale Molex `504050-0291` in both the PCB and the schematic, and
+the speaker note was updated. This changed no copper or pose; re-verified
+DRC and checker results are unchanged.
+
+New private base: `multilayer-20261109\best-2-vo`.
+
+| File | SHA-256 |
+|---|---|
+| PCB | `b602e998d91819caf276b40632fde00ecd77bac557f6270fb5f0af8ca9a0e20e` |
+| Schematic | `72110104…` |
+| `acceptance.json` | `1af71aec…` |
+
+J1 sits at F (119.5, 97.7), rotation 0, with 0.325 mm MP2 edge clearance
+and a 1.2 mm height (limit 1.5 mm). VO+/VO- run at 0.60 mm on F/In2.
+
+Two opens remain: USBBOOT D3.C and GND IC1.19 TESTEN.
+
+Limits: the ACHL footprint is trial-local, with a reconstructed courtyard
+and body outline. The harness uses SACH-003G crimps on AWG30-28 wire.
+Repository docs that still name the Molex part (BOM readiness, electrical
+reduction) describe the earlier design.
+
+**TESTEN reroute gate:** the west +3V3 feed from IC1.22 runs 0.2111 mm
+edge-to-edge from XOUT over a 1.64 mm parallel length. Astra first
+required 0.225 mm in error; +3V3 is in the `supply` class, so the
+screened requirement is 0.175 mm. Construction was re-authorized on
+best-3. An accepted result must then be ported onto best-2-vo, whose
+changed regions do not overlap.

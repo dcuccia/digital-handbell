@@ -6,6 +6,25 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 9, 15:50: VO+ closed; best-2-vo accepted, two opens remain.**
+  The owner approved swapping J1 to JST ACHL `BM02B-ACHLKS-GAN-ETF`
+  (C594367), placed at F (119.5, 97.7), rotation 0.
+  - VO+/VO- run at 0.60 mm on F/In2 with four vias.
+  - Same-session DRC: 3 -> 2 opens, non-open findings 393 -> 391,
+    parity 46, checker PASS.
+  - Private base `multilayer-20261109\best-2-vo`, PCB `b602e998`.
+  - Remaining opens: USBBOOT D3.C and TESTEN IC1.19.
+
+  Owner decisions:
+  - No HDI or laser microvias.
+  - TESTEN order: first reroute the +3V3 feed west of IC1.22 so a
+    pin-19-to-EP stub fits (+3V3 is the `supply` class, 0.15 mm
+    clearance); then try an IC1-plus-decoupling nudge.
+
+  testen-ep-text-1440 was NO_PASS: it hit SWCLK, RESET, In2, In3 and B
+  copper, so do not repeat it unchanged. A TESTEN result built on best-3
+  must be ported onto best-2. Ledger: November 9, 15:25 and 15:50.
+  Not fabrication approval.
 - **November 8, 20:24: six-open POWER closure accepted for routing continuation.**
   New private base `multilayer-20261108\best-6-power`, PCB `dacfb543`,
   moves U5 +0.4 mm and replaces exactly six released local tracks.
