@@ -6,6 +6,19 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 9: TESTEN exposed-pad stub classification completed.**
+  Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`
+  finds the 0.15 mm F pin-19-to-EP stub clears pins 18/20 by 0.225 mm.
+  That local geometry needs no mask/rule change, but is not a complete
+  process or board qualification. On unchanged best-2-vo it crosses +3V3
+  `e14edcf0` and clears `b0cc831b` by only 0.104 mm versus 0.150 mm.
+  The earlier 11-15 added findings are real neighboring-reroute defects,
+  not harmless stub/mask artifacts; later mask bridges accompany about
+  0.040 mm copper clearance. No waiver or unchanged-stub retry.
+  The ongoing IC1-cell placement assessment must restore the blocking
+  power connections legally before using this stub. Base stays `b602e998`;
+  no new board or DeepPCB spend. See the ledger for the report hash.
+
 - **November 9, 15:50: VO+ closed; best-2-vo accepted, two opens remain.**
   The owner approved swapping J1 to JST ACHL `BM02B-ACHLKS-GAN-ETF`
   (C594367), placed at F (119.5, 97.7), rotation 0.

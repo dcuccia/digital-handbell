@@ -2233,3 +2233,29 @@ a local VBUS detour must retain width, branches and clearance on every affected
 layer; a new USBBOOT corridor must preserve C14.2's actual ground connection.
 Those are still prospective options, not proven repairs. No new board or paid
 run was started by this clarification.
+
+### November 9 - TESTEN exposed-pad stub findings classified
+
+The read-only Sol/medium item `ep-stub-classify-1720` completed. Its private
+`report.md` has SHA-256
+`6649e8799b8e51471ec2be043587598879368723dafaff5a714e8735d5ca7707`.
+The executor verified the unchanged best-2-vo source as
+`b602e998d91819caf276b40632fde00ecd77bac557f6270fb5f0af8ca9a0e20e`.
+
+- A 0.15 mm F.Cu TESTEN-to-EP stub has 0.225 mm clearance to neighboring
+  pins 18 and 20/XIN. That pad-local geometry needs no mask or rule change.
+  This supports the geometry, not an unrestricted manufacturability claim.
+- On the existing board, the stub crosses +3V3 segment `e14edcf0` and has
+  only 0.104 mm clearance to `b0cc831b`, below the 0.150 mm requirement.
+- The prior 11-15 new findings are real defects in the coordinated
+  neighboring-net reroutes, not false positives attributable to grounding
+  TESTEN. Later mask-bridge reports coincide with about 0.040 mm copper
+  clearances and cannot be dismissed as harmless fine-pitch mask artifacts.
+
+Disposition: not promising on unchanged best-2-vo; retain the inward stub
+as an option for a genuinely different coordinated placement/copper plan.
+Do not waive the findings or repeat the exhausted +3V3 reroute. These
+conclusions were forwarded to the existing IC1-cell nudge assessment,
+without expanding its execution budget or authorizing construction.
+No new board, native validation run or DeepPCB spend occurred in this
+classification. Two opens remain; this is not fabrication approval.
