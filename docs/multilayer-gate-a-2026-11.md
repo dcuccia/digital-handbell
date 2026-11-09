@@ -2259,3 +2259,33 @@ conclusions were forwarded to the existing IC1-cell nudge assessment,
 without expanding its execution budget or authorizing construction.
 No new board, native validation run or DeepPCB spend occurred in this
 classification. Two opens remain; this is not fabrication approval.
+
+### November 9 - IC1-cell nudge screen reviewed; construction held
+
+The private `ic1-cell-nudge-1720\screen.json` has SHA-256
+`70be233a39dfd5044b35937c632b22830211b56f36f2d0404bed48c10ae4fed9`.
+It screens 675 poses of IC1, Y1/R6/C2/C3 and C6-C15/C17/C18 (17 parts)
+over translations up to 1.50 mm and quarter-turn orientations. No
+conflict-free pose is proved. N025, a 0.25 mm northward translation, ranks
+first but has a C14.1/TP5 courtyard witness and four new/worsened courtyard
+pairs: C14/TP5, C2/MH2, C7/U4 and C3/MH2. These are conservative witnesses,
+not established physical collisions or native DRC results.
+
+Root withholds construction: the report's `conditional_plan_legal=true`
+only assumes a successful replacement of the blocking +3V3 copper. Carrying
+internal copper through a rigid move does not resolve its intrinsic crossing
+with the proposed stub. A concrete newly available corridor must be shown.
+The 24 shared nets do not enumerate actual boundary contacts, and the
+207.112 mm baseline terminal-distance sum is not incremental reroute length
+or a supported estimate of cost. The proposed 10-15 minute paid run is
+therefore not released.
+
+One same-item, report-only N025 supplement is authorized through
+2026-11-09 14:00 local, using saved geometry/serialized source: resolve the
+four witness pairs against actual copper, bodies, mount hardware and probe
+access; distinguish moving/fixed blocking tracks; and either demonstrate a
+finite legal replacement path with exact branch obligations or return HOLD.
+No new pose sweep, native load, board write, refill, DRC or paid call is
+authorized. Preserve the original screen and every executed revision.
+Best-2-vo remains the accepted two-open base; the owner's total 30-minute
+DeepPCB allowance remains unspent by this item.

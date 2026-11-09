@@ -6,6 +6,18 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 9: IC1 nudge screen held at construction gate.**
+  `ic1-cell-nudge-1720\screen.json` (`70be233a`) ranks a 0.25 mm northward
+  move of 17 parts first, but proves no conflict-free pose or replacement
+  +3V3 path. C14/TP5, C2/C3/MH2 and C7/U4 witnesses remain unresolved.
+  Its 24 shared nets are not an exact cut/branch-restoration inventory;
+  its 207.112 mm baseline distance sum is not additional reroute length.
+  Root rejects `conditional_plan_legal=true` as unproved. No construction
+  or DeepPCB release. One report-only N025 supplement is authorized to
+  14:00 local: resolve actual bodies/copper/mounts and demonstrate a new
+  legal corridor using saved evidence, without another pose sweep/native
+  load. Preserve the screen and best-2-vo unchanged. See the ledger.
+
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`
   finds the 0.15 mm F pin-19-to-EP stub clears pins 18/20 by 0.225 mm.
