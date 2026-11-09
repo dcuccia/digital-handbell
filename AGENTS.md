@@ -27,6 +27,16 @@
   Private snapshot `1678e902` includes the accepted package and POWER evidence;
   the backup succeeded, without a repeated full restore/integrity check.
 
+- **November 8, 20:37: USBBOOT local attempts stopped; six opens remain.**
+  No candidate: translated direct-F templates found no pair; eight local
+  cathode vias lie under BT1's contact guard. Exact boundary exits are east
+  9.842 mm (beyond the 5 mm stub cap) and south 2.411 mm (crosses D3 anode
+  and B BUTTON_EXT). Do not repeat these unchanged. A future diode/control
+  cell decision must preserve both terminal duties and the actual corridor.
+  Next independent item recovers the SWDIO smaller-land tooling with a finite
+  cached F-only screen and a TP5-bound schematic edit, not the failed broad
+  grid or its unsafe first-occurrence replacement. See ledger for budgets.
+
 - **November 8, 18:13: continue after successful checkpoints.**
   Owner explicitly requests autonomous progress toward closing the remaining
   connections without another prompt after each milestone. Preserve and

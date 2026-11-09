@@ -1696,3 +1696,109 @@ the POWER experiments, failed witnesses and accepted six-open package:
 full-data integrity check or restore was performed for this snapshot.
 The PCB packages remain private; the public commit carries this handoff,
 engineering disposition and reusable workflow lessons.
+
+### November 8, 20:28: USBBOOT local-cell continuation
+
+The owner requests continued autonomous implementation after the six-open
+checkpoint. A fresh executor's configured Sol/medium and first-dispatched
+model are verified. Source is immutable best-6-power `dacfb543...`;
+private work is `usbboot-cell-2028`. First bind the complete USBBOOT group,
+both D3 terminal nets, actual attached anode fanout and all branch joins.
+Screen at most 12 paired templates with D3 translated within 1.5 mm,
+unchanged package/orientation, and every other part and unrelated copper
+fixed. Any anode replacement requires exact lead review before construction.
+Do not repeat the exhausted fixed-route/R18 screens or treat an obstacle as
+a terminal. Both ends and any ordinary via's complete span must be usable.
+Source-contract report target 20:32; item stop 20:42, no native start after
+20:39, final report 20:43. Initial plus two corrections; hard 90-second
+geometry/native and 30-second static children. No paid router run.
+
+**Translation screen stopped:** the final report binds D3 at
+(109.353, 104.733939), -90 degrees, and identifies the five 0.15 mm F tracks
+between D3.A and R11.2. D3.C is USBBOOT; the opposite group contains IC1.9
+and TP3, with existing vias at (99.156, 84.914) and (84.832, 87.390).
+None of 12 translated direct-F paired templates passes. This is not a
+local-transition feasibility result: the helper attempts long F cathode
+lines to remote group endpoints and never screens an adjacent cathode via.
+The lead also identifies SWIG parent equality in the D3 exclusion and a
+group pool without filled zones; the claimed complete group therefore
+requires confirming that neither relevant net has zone copper. Via spans
+on all six layers do not establish tracks on all six.
+
+The attempt history includes a quoting preflight failure, pad-class failure,
+90-second screen timeout and final successful screen. The folder initially
+contains only the last helper/report, not separately preserved failed
+helpers or receipts. Preserve that provenance gap. The translation screen
+is exhausted; do not rerun it as a correction.
+
+**Distinct fixed-D3 transition contract:** keep D3 and ALL existing copper
+unchanged. Screen eight local off-pad 0.5/0.3 mm ordinary via sites at
+cardinal offsets 0.8/1.1 mm from D3.C (109.353, 103.663939), each with a
+direct 0.15 mm F stub. Use actual pad shapes and stricter project net-pair
+rules, all-layer fixed copper, contact/edge/drill restrictions and UUID
+identity. Normal refillable GND antipads are allowed, not cuts in fixed
+private copper. No added arbitrary screening margin or reuse of U5's
+source-specific exceptions.
+
+If a complete site passes, construction is released for one additive-only
+private candidate followed by one USBBOOT-only four-signal-layer route,
+starting at the new via and targeting the real opposite group. Preserve
+the anode chain, all parts and all old copper; require 6 -> 5 with no
+native finding growth, exact complement and preserved filled groups.
+No site means stop, not expand the eight-site set. This changes topology,
+not the exhausted translation screen's parameters. The original 20:42
+stop/20:39 native-start cutoff remains; executed revisions/receipts must
+be preserved and no paid run is released.
+
+**Eight-site result: NO_SITE.** All eight cathode-via centres fall in
+`CONTACT_METAL_GUARD_BT1.base.3`
+(`0f6959e1-644e-5a0a-aca1-8d8044c98517`). East/south sites have no additional
+fixed-copper blocker; north hits VAMP and west-1.1 hits R18/VAMP.
+No candidate, route, refill or DRC followed. The source remains `dacfb543`.
+The 0.907-second run preserves `fixed-via-screen.json` (`ef3f500c...`),
+helper `6ff4430c...` and receipt `3543398d...`. Zero USBBOOT/anode copper
+zones are confirmed, resolving that earlier group-pool limitation.
+The original translation failures remain explicitly missing, not recovered.
+
+The lead stops the eight-site strategy and releases a final boundary-derived
+test under the SAME 20:42/20:39 deadlines: exactly two rays, east and south
+from fixed D3.C, using the actual union of all via guards to derive the first
+fully off-guard 0.5 mm via centre, plus 0.01 mm numerical reserve.
+Maximum direct F stub is 5 mm. This is not a ninth nearby grid point or
+permission to move copper. Check the complete stub/full-span via and actual
+edge/hole restrictions before using the existing additive-only construction
+contract. At most two derived sites, no resampling; failure escalates the
+contact/corridor problem instead of another local batch. No paid run.
+
+**Final USBBOOT result: no candidate.** BT1 base.3 spans x105.435..118.935,
+y94.185..105.815 mm. Including the via radius and reserve, east's first
+exit is 9.842 mm from D3.C, outside the 5 mm contract. South exits after
+2.411061 mm at approximately (109.353, 106.075001), but its straight stub
+crosses D3.A/its required anode track and the B via overlaps BUTTON_EXT
+`ee5f1aec...`. No resampling, router call, refill or board write followed.
+Report `guard-boundary-ray-screen.json` (`30fbcdee...`) and its exact-boundary
+supplement (`310f5a9f...`) preserve the finite result. Best-6 is unchanged.
+Stop this item's USBBOOT geometry; a future diode/control-cell corridor
+decision must address the actual anode and B-side duties, not repeat nearby
+via screens or infer physical impossibility.
+
+**Next independent item: finite SWDIO tooling recovery.** The earlier
+smaller-land attempt produced no geometry result. Reviewing its retained
+helper shows thousands of candidate shapes with repeated whole-inventory
+distance scans, plus an unsafe first-matching schematic-footprint replacement
+in its unexecuted construction tail. The new item must cache scoped F copper,
+use a small finite land set and bind any schematic edit to TP5 itself.
+No unchanged rerun, global footprint substitution, copper removal or lost
+recovery function. Base remains best-6. New item stops 20:52, with no native
+child after 20:49; its separate runtime gate precedes execution.
+
+At 20:38 the fresh executor's configured Sol/medium and first-dispatched
+model match. Released finite screen: nine 0.6 mm F bare-land centres,
+x95.50/95.65/95.80 crossed with y88.70/88.90/89.10; each gets a direct
+0.15 mm link from IC1.25 or one dogleg through (95.95, 88.9).
+Only TP5's pose/land and matching schematic footprint property may change;
+the existing local 0.6 mm library and TP14 must remain untouched. No vias,
+other moved parts or removed copper. Construction is conditional on complete
+clearance/access screening, then 6 -> 5 native/connected-group preservation.
+No expansion of this finite set. Private folder:
+`swdio-service-recovery-2038`.
