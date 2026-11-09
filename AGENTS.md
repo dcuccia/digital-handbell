@@ -39,6 +39,13 @@
   PowerShell params `$Args`/`$Input`; model slotted drills; `+` is literal
   in net names; KiCad 10 uses `Reference()`; SWIG `EDA_ANGLE !=` is always
   True, so compare `AsDegrees()`. Only TESTEN IC1.19 remains. See ledger.
+  **15:55: TESTEN DeepPCB IC1-window run NO_PASS ($7.50, 15 of 30
+  approved minutes).** `testen-window-1530`, job `99e564e1`: 8 mm IC1
+  window, 37 nets/73 connections released, CurrentProtectedWiring. Best
+  result `ff02c309`: opens 1 -> 6 (IC1.19 still open, plus GND islands,
+  VBUS, D+, D-), dangling tracks 6 -> 30. A merge restricted to GND added
+  nothing. No promotion; best-1-usbboot unchanged. Do not repeat a broad
+  IC1-window rip-up; 15 DeepPCB minutes remain approved.
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`

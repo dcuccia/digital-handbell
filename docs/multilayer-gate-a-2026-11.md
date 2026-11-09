@@ -2541,3 +2541,20 @@ Owner 15:07: "approve, and keep going/fixing as needed to get this done."
   EP stub, dog-bones, west feed, north POFV or N025 nudge. Up to 30 DeepPCB
   minutes remain approved for TESTEN.
   Routing checkpoint only; not fabrication, powered-use, safety or child-use approval.
+
+## November 9, 15:55 - TESTEN DeepPCB IC1-window run NO_PASS
+
+- Executor: pinned GPT-5.6 Sol/medium (a first unpinned launch correctly refused, $0).
+- Item `testen-window-1530`, from best-1-usbboot `bae58edd` (unchanged).
+- Rip-up: 8.0 mm radius around IC1, all copper layers, 37 nets touching the window;
+  opens 1 -> 74 (73 released connections), parity 46 -> 46. DeepPCB has no
+  no-routing exchange mode, so that control was unsupported.
+- DeepPCB job `99e564e1-14c3-4c38-bea8-c177f8e8c50c`, CurrentProtectedWiring,
+  one full 15-minute capped run: **$7.50** (15 of the 30 approved TESTEN minutes).
+- Best post-processed result `03-post\5-gaps` `ff02c309...aa07`: 503 tracks/54 vias
+  removed, 365/53 added. DRC versus base: unconnected 1 -> 6 (IC1.19 still open,
+  two GND island separations, VBUS, D-, D+), track_dangling 6 -> 30,
+  lib_footprint 97 -> 98; other categories and parity unchanged. Checker FAIL.
+- A GND-only additions merge added no usable copper and reproduced `bae58edd`.
+- Disposition: NO_PASS, no promotion. Do not repeat a broad IC1-window rip-up.
+  15 DeepPCB minutes remain approved for TESTEN.
