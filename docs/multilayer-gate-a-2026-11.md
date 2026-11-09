@@ -2187,3 +2187,24 @@ required 0.225 mm in error; +3V3 is in the `supply` class, so the
 screened requirement is 0.175 mm. Construction was re-authorized on
 best-3. An accepted result must then be ported onto best-2-vo, whose
 changed regions do not overlap.
+
+### November 9, 16:40 - TESTEN local reroute exhausted (three NO_PASS)
+
+Trial `multilayer-20261109\testen-3v3-reroute-1530` used an initial attempt
+and two corrections. All rebuilt on best-2-vo; every candidate was preserved
+and the board rolled back byte-identical to `b602e998`. No promotion.
+
+| Attempt | Released | Opens | Non-open | Main blockers | Failed PCB |
+|---|---|---|---|---|---|
+| Initial | +3V3 west feed, pin19->EP F stub | 3->3 (on best-3) | 393->399 | VCORE via `75f85f9c` (short; 0.10 mm hole), VCORE track `fb823e05` 0.125, R6.2 XOUT 0.086 | `b9ebd9b4…` |
+| Corr. 1 | + VCORE via/track, R6 +/-0.6 mm | 2->2 | 391->401 | XIN via `56beb5d8` 0.128/0.228 hole, IC1.20 to XOUT 0.054, XIN tracks 0.084, IC1.21 to +3V3 0.040 + mask bridge | `69f712f4…` |
+| Corr. 2 | + XIN via/tracks, +3V3 via In2/In3 | 2->2 | 392->404 | replacement XIN to IC1.19 0.040 + mask bridge, XIN In2 to C3 via 0.113, +3V3 to VCORE via 0.141, +3V3 to XOUT 0.134 | `f7ec342d…` |
+
+Conclusion: at IC1's fixed pose, the 0.4 mm-pitch escape for pins 19-22 is
+saturated by +3V3, XIN, XOUT and VCORE. Local releases only shift the
+conflict. Do not repeat these releases unchanged. The remaining options
+need an owner or lead decision:
+
+- move or rotate IC1 together with its crystal/decoupling cell (a placement change);
+- accept the earlier EP-stub construction with its new findings dispositioned;
+- leave TESTEN tied through an alternative ground (none found so far).
