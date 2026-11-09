@@ -27,52 +27,18 @@
   near miss. Phase 1 is read-only PCB work through 14:04 local; no new
   board or paid routing before root review.
 
-- **November 9: USBBOOT paired VBUS/stitch screen held on tooling.**
-  `usbboot-vbus-local-1353\proposal.json` (`c73ace1b`) preserves D03/V01:
-  a 0.65 mm In2 VBUS detour, +0.510497 mm length at unchanged 0.50 mm
-  width, and ordinary GND via at (94.246295,90.45). Provisional mutual
-  copper/hole gaps are 0.260706/0.360706 mm, not a qualified board.
-  Three executions are exhausted. The final checker incorrectly treats
-  via-allowed `IN1_PLANE_NO_TRACKS` as a via keepout. Root also found
-  incomplete netclass/guard/hole coverage, silent geometry omissions and
-  hardcoded empty branch-contact lists. Do not waive these or run a fourth
-  attempt. Only the final script/report are present in the item folder;
-  the executor confirms prior revisions/raw evidence were not preserved.
-  Best-2 and near miss remain unchanged; no board/refill/DRC/spend.
-  Next requires a separately bounded checker/evidence recovery decision,
-  not a new layout sweep or unconditional construction.
-  **14:11 follow-up:** owner explicitly approved one new 15-minute
-  recovery with conditional isolated construction/validation, ending 14:26
-  including root review. Same verified Sol/medium, exact D03/V01 only,
-  private `usbboot-pair-recovery-1411`; original failed evidence immutable.
-  Root must review complete corrected code before execution; no new native
-  child after 14:22, executor report by 14:24. Initial plus two pipeline
-  corrections maximum, hard child timeouts and preserved actual revisions/
-  streams. No paid work, clearance waiver or automatic promotion.
-  **14:17 outcome: HOLD on wrapper defect.** Two root reviews forced real
-  controls, JSON DRC, per-island zone connectivity and C14.2/D3.C join
-  proofs (revisions kept as `*.r0`/`*.r1`). After release, qualification
-  never ran: `Invoke-Bounded` named a parameter `$Args` (PowerShell
-  automatic variable), so `python.exe` opened a REPL and exited 0. No
-  result, board or spend; corrections exhausted. Not geometry evidence.
-  Never name PowerShell parameters `$Args`/`$Input`; require each child's
-  expected output file; dry-run launchers. A rerun needs owner approval.
-  **14:55: approved launcher-only rerun also HOLD.** Fixed launcher passed
-  its dry-run controls; the frozen qualifier then failed closed on USB-C
-  shell pad M1's oval drill (`2249eb1a`) in its global hole inventory,
-  before any D03/V01 check. Rerun consumed; no candidate/board/spend.
-  Next attempt needs a reviewed qualifier change (oval-drill modeling).
-  **15:00: owner-approved slot-aware qualifier run also HOLD.** Slot
-  modeling (native SHAPE_SEGMENT, root API-probed) passed inventory; the
-  qualifier then rejected the literal netclass pattern `V+` because its
-  guard treats `+` as regex syntax. `+` is literal in KiCad net names.
-  Report `qualification-20261109-145519.json` (`3c26d926`). Run consumed;
-  no candidate/board/DRC/spend. Next needs approval of that one-character
-  guard fix plus one run; still no D03/V01 geometry evidence either way.
-  **15:05: guard-fixed run HOLD on a control defect.** All controls but
-  `round_gap_equivalence` passed; `gap()` caps at 20 mm, so remote holes
-  disagree with uncapped analytic distance by construction. Enforced
-  hole checks are unaffected. No candidate/board/spend. See ledger.
+- **November 9, 15:20: USBBOOT closed; best-1-usbboot accepted, 1 open.**
+  Private base `multilayer-20261109\best-1-usbboot`, PCB `bae58edd`
+  (pro/sch unchanged). It combines the D3/R11 re-site (`afd2d740`) with
+  the D03/V01 pair: In2 VBUS `250e8d5d` detoured at 0.50 mm (+0.51 mm),
+  and an ordinary GND via at (94.246295,90.45) stitching C14.2.
+  Root same-environment DRC: opens 2 -> 1, non-open 391 -> 388 (none
+  new), parity 46; checker PASS (allow-move D3/R11, nets VBUS/GND/USBBOOT/
+  D3 anode/QSPI_CS, the last inherited); exact validation PASS.
+  Owner 15:07 approved continuing. Tool lessons from the holds: never name
+  PowerShell params `$Args`/`$Input`; model slotted drills; `+` is literal
+  in net names; KiCad 10 uses `Reference()`; SWIG `EDA_ANGLE !=` is always
+  True, so compare `AsDegrees()`. Only TESTEN IC1.19 remains. See ledger.
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`

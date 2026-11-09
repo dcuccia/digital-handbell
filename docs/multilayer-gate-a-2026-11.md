@@ -2503,3 +2503,41 @@ literal) plus one run; root verified both single-line diffs and released.
   Construct/validate not run; no candidate, board write, DRC or spend.
 
 Run consumed. Still no D03/V01 geometry evidence. Base stays `b602e998`.
+
+## November 9, 15:20 - USBBOOT closed; best-1-usbboot accepted (1 open)
+
+Owner 15:07: "approve, and keep going/fixing as needed to get this done."
+
+- **Qualifier:** corrected round-gap control (`abs(native - min(20, analytic)) <= .001`)
+  reached READY: report `qualification-20261109-145943.json` (`5df62392`),
+  all controls true, four X6 slots, 143 in-cap and 30 out-of-range rounds.
+- **Construct:** the first attempt failed on KiCad 10 lacking `GetReferenceField`
+  (partial `candidate-20261109-150017`, `38f82f2e`, preserved). With one line
+  changed to `Reference()` (original kept as `construct_exact.py.r0`),
+  `candidate-20261109-150117` passed: PCB `bae58edd2c31f94c...406f`, report
+  `b91c0bb9`. It removes `250e8d5d`/`0b6e041f` and adds five In2 VBUS 0.50 mm
+  segments, an F GND attachment and GND via `dfe160e9` at (94.246295, 90.45).
+  The R11 reference is hidden.
+- **Executor validation:** timed out at its 90 s base-DRC cap (environmental).
+- **Root re-verification** (`root-verify-1505`):
+  - Same-environment DRC ran in ~23 s each. Opens 2 -> 1; only IC1.19 (TESTEN)
+    remains. Non-open 391 -> 388: one text_height and two silk_over_copper
+    findings disappear, none appear. Parity 46/46.
+  - Standard checker with the launcher's narrow allow-list FAILed only on the
+    expected D3-anode tracks. With `--allow-move D3 R11 --allow-changed-nets
+    VBUS GND USBBOOT "Net-(D3-PadA)" QSPI_CS` it PASSes. The QSPI_CS item
+    `49bc1258` is present in `afd2d740` (inherited); relative to `afd2d740`
+    the only new copper is VBUS and GND.
+  - `validate_exact.root.py` (root copy) changes only `Reference()` and the
+    orientation comparison. KiCad's SWIG `EDA_ANGLE != EDA_ANGLE` returns True
+    for equal angles, so the original reported every footprint as moved.
+    Comparing `AsDegrees()` gives PASS: exact removed/added UUIDs, no DRC
+    growth, no prior group splits, private returns and CELL_NEG checked,
+    C14.2 joined to the IC1 GND group.
+- **Promotion:** private `multilayer-20261109\best-1-usbboot` with
+  `acceptance.json` and root evidence. Project/schematic are byte-identical
+  to best-2-vo. No DeepPCB spend. Best-2-vo and all trials stay unchanged.
+- **Remaining:** TESTEN IC1.19 GND. Do not repeat the +3V3 reroute, unchanged
+  EP stub, dog-bones, west feed, north POFV or N025 nudge. Up to 30 DeepPCB
+  minutes remain approved for TESTEN.
+  Routing checkpoint only; not fabrication, powered-use, safety or child-use approval.
