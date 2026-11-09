@@ -49,6 +49,14 @@
   child after 14:22, executor report by 14:24. Initial plus two pipeline
   corrections maximum, hard child timeouts and preserved actual revisions/
   streams. No paid work, clearance waiver or automatic promotion.
+  **14:17 outcome: HOLD on wrapper defect.** Two root reviews forced real
+  controls, JSON DRC, per-island zone connectivity and C14.2/D3.C join
+  proofs (revisions kept as `*.r0`/`*.r1`). After release, qualification
+  never ran: `Invoke-Bounded` named a parameter `$Args` (PowerShell
+  automatic variable), so `python.exe` opened a REPL and exited 0. No
+  result, board or spend; corrections exhausted. Not geometry evidence.
+  Never name PowerShell parameters `$Args`/`$Input`; require each child's
+  expected output file; dry-run launchers. A rerun needs owner approval.
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`

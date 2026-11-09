@@ -2402,3 +2402,34 @@ child limits and uniquely preserved executed code, raw streams and reports.
 Same-environment full native DRC, exact complement/branch connectivity and
 standard checker gates remain mandatory before root acceptance. No result
 or new board exists at authorization time.
+
+### November 9, 14:17 - Exact-pair recovery held on wrapper defect
+
+Outcome: HOLD. No qualification result, no board, refill, DRC or spend.
+Best-2-vo `b602e998` and near miss `afd2d740` are unchanged.
+
+Code review and corrections (all preserved as `*.r0`/`*.r1` beside the
+final scripts in private `usbboot-pair-recovery-1411`):
+- Root review 1 (14:14) held five defects: bare `python`; DRC without
+  `--format json --units mm`; flag-readback/fail-open controls; validator
+  proving only terminal existence, not C14.2-to-IC1/In1 GND and D3.C-to-all
+  USBBOOT joins; no `ACHL_Local.pretty`/`fp-lib-table` presence assertion.
+  Correction 1 fixed these with real `screen()` controls initialised false.
+- Root review 2 (14:15) found two more: the split check iterated deleted
+  track/via labels (guaranteed false FAIL), and each filled zone was one
+  multi-island poly set, which would merge the very C14.2 island under test.
+  Correction 2 checks only pad labels and adds one item per filled outline.
+- Released 14:16:20. Qualification started 14:16:29 and exited 0, but
+  `Invoke-Bounded` declares a parameter named `$Args`, a PowerShell automatic
+  variable. The script path was never passed; KiCad `python.exe` opened an
+  interactive REPL (stderr banner/prompt, sha256 `6CCD5437...`, empty stdout)
+  and exited 0 on EOF. No `qualification-*.json` was produced. Root's two
+  reviews missed this; the wrapper also trusts exit 0 without requiring the
+  expected output file.
+
+Both corrections are consumed, so no rerun. This is a tooling defect, not
+evidence about the D03/V01 geometry. Lessons for any future wrapper: never
+name a parameter `$Args`/`$Input`; require the expected report file after a
+child exits; dry-run the launcher with a trivial script before release.
+A new item needs separate owner approval; the corrected scripts plus a
+renamed wrapper parameter are the obvious starting point.
