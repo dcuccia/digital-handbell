@@ -170,6 +170,13 @@ and no DRC type or count grows.
   `check_routing_result.py --allow-changed-nets` suppresses lost-copper
   findings for whole nets; it is not proof that only the approved local
   copper changed or that its replacement duties were restored.
+- Keep a promising result with a finite defect rather than restarting the
+  search. Here a smaller rear TP14 land joined the complete LRCLK group but
+  missed one control-track clearance by 0.015 mm. A separately reviewed
+  0.05 mm AMP_MUTE detour preserved its width/branches and closed that open
+  without paid routing. The failed pad-only trials remain evidence, not
+  accepted boards. Bare-land access and a matching local footprint library
+  still matter; shrinking a pad does not waive either.
 
 ## Phase 8: Electrical and release review
 

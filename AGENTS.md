@@ -6,6 +6,23 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 8, 17:52: owner requests agent-driven forward progress.**
+  Human finishing is not an available dependency. Existing-copper movement
+  is already permitted; the lead must select exact bounded replacements
+  rather than repeatedly ask for that general permission. Next assess a
+  smaller accessible TP14 service land on the actual connected LRCLK group,
+  preserving the IC1.29-U4.14 route and all functional/recovery access.
+  Prior unchanged-pad searches and under-IC smaller-pad sites remain rejected.
+  **18:08: TP14 closure accepted, 8 -> 7 opens.** New private finisher base
+  `multilayer-20261108\best-7-tp14`, PCB `7cb61fef`, puts a 0.6 mm B service
+  land on the existing LRCLK via and shifts one AMP_MUTE control segment
+  0.05 mm, retaining width/endpoints. No new non-open defects; all other
+  copper, parts and zone definitions preserved. Matching local footprint
+  library and TP14 schematic assignment travel with the board. No spend.
+  Best-8-c1c4 and rejected trials remain immutable. Seven opens remain:
+  SWDIO, USBBOOT, POWER, VO+ and GND C7.1/GAIN0.1/IC1.19.
+  See ledger for exact evidence/access limits; not fabrication approval.
+
 - **November 8: owner prefers bounded agent-led design over hiring.**
   Three read-only strategy reviews cover debug/boot, power/audio and ground.
   Awkward test-point access is acceptable; deleting recovery or functional

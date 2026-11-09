@@ -1310,3 +1310,111 @@ another request for general permission to move copper.
 Private evidence backup: restic snapshot `333cc7ba`, parent `42bceb0a`;
 4,555 files, 658.338 MiB, six new files. Backup exited successfully; integrity
 check and restore were not repeated for this snapshot.
+
+## November 8, 17:52 service-pad closure direction
+
+The owner requests agent-driven forward progress; hiring a human finisher
+is not an available dependency. The lead selects TP14 before another
+power-copper replacement. The existing IC1.29-U4.14 LRCLK connection stays
+intact; only its disconnected diagnostic pad needs attachment.
+
+The read-only Sol/medium probe identifies a materially different search.
+TP14 currently has a 1.5 mm circular pad. The earlier smaller-pad screen
+used three selected anchor neighbourhoods within 6 mm, not the complete
+61-member connected LRCLK group or every accessible F/B track/via surface.
+Its smaller-pad hits under IC1 remain rejected. The new finite screen uses
+existing connected track samples/via centres and 1.0, 0.8 or 0.6 mm bare
+service lands. This is not a repeat of the 1,144 unchanged-pad relocation
+poses or a new free-space router.
+
+After verifying actual Sol/medium runtime metadata, the lead releases a
+private TP14-only placement/side/pad-size derivative, including matching
+mask/courtyard/Fab/silk geometry. All existing tracks/vias and other parts
+remain unchanged. Preserve pad/footprint identities, net and schematic
+binding; no paste, fitted component, new hole or special via process.
+Real body/contact exclusion and accessible probing space are mandatory.
+Native DRC, exact complement and existing-group preservation gate any
+promotion; a smaller pad or lower open count alone is not acceptance.
+The item stops engineering at 18:07, with no new native child after 18:04
+and a report checkpoint at 18:08. No DeepPCB spend is released.
+
+**TP14-only outcome, 18:03: held but with a finite repair.** Three private
+revisions put TP14 on the existing connected LRCLK via at (110.950, 87.712).
+All join TP14 to IC1.29/U4.14 and reduce opens 8 -> 7 without changing tracks
+or vias. None is accepted: the initial 1.0 mm F land has shorts/clearance/mask
+defects because selection omitted nearby BCLK tracks; it was not screened
+legal. The 0.6 mm F correction has nine BCLK clearance findings (0.1254-0.1476
+mm against 0.150 mm). The 0.6 mm B correction has one AMP_MUTE clearance
+finding: 0.1350 mm against 0.150 mm, no shorts or mask bridges. The initial
+plus two corrections are exhausted; no fourth TP14-only revision is released.
+The executor initially claimed the 18:04 cutoff had passed at 18:00; the lead
+checked the actual clock and used the remaining original allowance, not an
+extension. No matching local footprint was made for these rejected revisions.
+Private evidence: `tp14-service-1752`, final candidate `e2f13601...`,
+DRC `c86a9dfa...`, summary `5386633e...`. Best-8-c1c4 stays unchanged.
+
+**Next coordinated item:** rather than abandon the seven-open diagnostic or
+ask again for permission to move copper, the lead releases a different,
+exact replacement contract. Only B.Cu AMP_MUTE track
+`2abd2d2e-57cf-49cb-8396-8f73340d516e` may change beside the 0.6 mm B test land.
+Preserve its width, endpoints and every branch/interior contact; keep the
+replacement within 0.25 mm of its old centreline with at most 0.5 mm extra
+length. No new vias or adjoining-track release. Construction is conditional
+on the full paired geometry screen with 0.025 mm margin and actual B-side
+contact/assembly access, not only U4's front-body outline. This new item
+stops at 18:18, no native start after 18:15, report by 18:19; no paid routing.
+
+### 18:08 acceptance: TP14 closed; seven opens remain
+
+The coordinated candidate completed at 18:07:23 and the lead accepts exact
+PCB `7cb61fef122cea12cb0797e83587ebe513d4994354cb592256e69dd76ff280d0`
+for incremental routing continuation. Its private finisher package is
+`multilayer-20261108\best-7-tp14`; the source is
+`tp14-amp-mute-1804\rev3`. Best-8-c1c4 `2e8e16bf` and every failed trial stay
+unchanged. No DeepPCB time or money was used.
+
+TP14 becomes a 0.6 mm bare B.Cu/B.Mask probe land at (110.950, 87.712), over
+the existing LRCLK via. It has no paste or new hole. The released AMP_MUTE
+segment retains its 0.15 mm width and endpoints (110.44, 84.252) and
+(110.44, 88.39); the replacement runs through (110.39, 84.752) and
+(110.39, 87.89). Maximum displacement is 0.05 mm and added length is
+0.004988 mm. Both existing endpoint contacts survive. Twenty finite
+templates produced three passing routes; no other existing track changed.
+
+Native KiCad 10.0.6 refill and all-track/all-severity/parity DRC give **8 -> 7
+opens**, unchanged 46 parity notices and no growing non-open defect class.
+Silk overlap falls 52 -> 50, silk-over-copper 97 -> 95 and library issues
+97 -> 96. This is improvement against the baseline, not a clean-board claim.
+LRCLK now has one group containing IC1.29, U4.14 and TP14; AMP_MUTE retains
+IC1.31, Q4.1, R20.2 and TP15. No prior terminal group splits were reported.
+The exact complement preserves every track/via except the released segment
+and its two new endpoint segments; only TP14's footprint changes and all
+41 zone definitions match. Project rules are byte-identical.
+
+The portable `Handbell_Local:TP_BareProbe_D0.6mm` footprint, project-relative
+`fp-lib-table` and TP14 schematic assignment agree. The schematic's only
+line change is that footprint property. Parent verification binds every
+final-summary hash, the unchanged protected base and the raw native counts.
+The B land intersects no fitted-body or rule area; the nearest contact
+guard is 6.173 mm away. This supports bare-board rear probing, not loaded
+contact, complete assembly access or fabrication qualification.
+
+Evidence: final DRC `a0702493...`, exact complement `c7fa2c8b...`,
+routing check `2c47f5d7...`, rear-access proof `819073bd...`,
+final summary `0943d7b4...`. The three coordinated revisions were an initial
+LIB_ID-constructor failure before save, a geometry-passing revision with a
+local-library mismatch, and the final matching native footprint export.
+The earlier TP14-only three failures remain separately preserved.
+
+Remaining duties are SWDIO, USBBOOT, POWER, VO+ and three GND groups
+(C7.1, GAIN0.1 and IC1.19). TP14 is no longer on the repair list. Retain the
+same approach: use an exact connected group and a narrowly released adjacent
+control route before disturbing broad power/clock routing or buying another
+unchanged-placement router run. Historical finisher bundles still describe
+the older eight-open board; they are not the current seven-open package.
+
+Administrative promotion verified 19 files, excluding KiCad personal
+preferences; acceptance receipt `7706baad...`. Private backup snapshot
+`f569bdf9` (parent `333cc7ba`) includes the accepted package and both trial
+families: 4,709 files, 674.644 MiB. Backup exited successfully; integrity
+check and restore were not repeated.
