@@ -2377,3 +2377,28 @@ construction authorized. Preserve the finite proposed pair for a separately
 bounded checker/evidence recovery decision rather than repeat the layout
 sweep. Accepted `b602e998` and near miss `afd2d740` remain unchanged.
 No PCB write, refill, DRC or paid call occurred.
+
+### November 9, 14:11 - Exact-pair recovery explicitly approved
+
+The owner selected "Approve the bounded recovery and conditional validation
+(Recommended)" for one new 15-minute item: correct qualification of this
+exact pair, then construct/validate an isolated copy only if it passes.
+No new layout sweep or paid routing is authorized.
+
+Root verified runtime events for the retained executor: actual configured
+`gpt-5.6-sol`/`medium` and completed `firstDispatchedModel` match. The new
+private item is `usbboot-pair-recovery-1411`, preserving all original files.
+Code preparation must address the complete known rule/geometry/contact/
+hole/evidence gaps together, include real controls, and await root code
+review before execution. Eventual construction is limited to exact D03/V01,
+the redundant D3.C via removal and R11 reference hide on near miss
+`afd2d740`; no other geometry is released.
+
+The item ends at 14:26 local including root review. Code-ready target is
+14:15:30; no new native child after 14:22; executor report by 14:24.
+At most an initial qualification/construction/validation pipeline plus two
+corrections is allowed, with hard 30-second static and 90-second native
+child limits and uniquely preserved executed code, raw streams and reports.
+Same-environment full native DRC, exact complement/branch connectivity and
+standard checker gates remain mandatory before root acceptance. No result
+or new board exists at authorization time.

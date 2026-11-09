@@ -41,6 +41,14 @@
   Best-2 and near miss remain unchanged; no board/refill/DRC/spend.
   Next requires a separately bounded checker/evidence recovery decision,
   not a new layout sweep or unconditional construction.
+  **14:11 follow-up:** owner explicitly approved one new 15-minute
+  recovery with conditional isolated construction/validation, ending 14:26
+  including root review. Same verified Sol/medium, exact D03/V01 only,
+  private `usbboot-pair-recovery-1411`; original failed evidence immutable.
+  Root must review complete corrected code before execution; no new native
+  child after 14:22, executor report by 14:24. Initial plus two pipeline
+  corrections maximum, hard child timeouts and preserved actual revisions/
+  streams. No paid work, clearance waiver or automatic promotion.
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`
