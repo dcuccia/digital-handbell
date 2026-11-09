@@ -46,6 +46,17 @@
   VBUS, D+, D-), dangling tracks 6 -> 30. A merge restricted to GND added
   nothing. No promotion; best-1-usbboot unchanged. Do not repeat a broad
   IC1-window rip-up; 15 DeepPCB minutes remain approved.
+  **16:40: TESTEN closed; ZERO opens. New base `best-0-testen` `0051b2e3`.**
+  `testen-via-relocate-1610` (via south of stub only) was NO_PASS: the via
+  shorted In3 SDA `6429eebe`. `testen-via-sda-1625` adds a local In3 SDA
+  jog (0.15 mm, around y 86.62) and moves the +3V3 via `e52f6dae` to about
+  (97.95, 87.2), 0.50/0.30 mm, with an F/B reconnect. It adds a 0.15 mm
+  F stub from IC1.19 to the EP. Astra's same-environment DRC: opens 1 -> 0,
+  all 388 non-open findings unchanged by category, parity 46. Checker PASS
+  (changed nets +3V3/GND/SDA). The via clears the IC1 EP by exactly
+  0.200 mm, which is at the rule limit. No DeepPCB spend. Next: a
+  manufacturing-readiness review of the accumulated waivers and narrow
+  margins. This is a routing milestone, not fabrication approval.
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`

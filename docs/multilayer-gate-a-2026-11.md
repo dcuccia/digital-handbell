@@ -2558,3 +2558,21 @@ Owner 15:07: "approve, and keep going/fixing as needed to get this done."
 - A GND-only additions merge added no usable copper and reproduced `bae58edd`.
 - Disposition: NO_PASS, no promotion. Do not repeat a broad IC1-window rip-up.
   15 DeepPCB minutes remain approved for TESTEN.
+
+## November 9, 16:40 - TESTEN closed; zero opens (best-0-testen)
+
+- `testen-via-relocate-1610` (NO_PASS): relocated +3V3 via to (97.95, 87.2)
+  with an IC1.19 -> EP 0.15 mm F stub. Opens 1 -> 0, but the via shorts In3
+  SDA `6429eebe` (y 87.021), producing +4 clearance/+4 hole/+1 short.
+  Evidence: `testen-via-relocate-1610\final-summary.json`, `failed-initial.kicad_pcb`.
+- `testen-via-sda-1625` (PASS): the same construction plus a local In3 SDA
+  jog at 0.15 mm (y around 86.62), rejoining the trimmed `d3999345`. SDA
+  terminals are unchanged; all 33 +3V3 terminals are in one group. Zones
+  were refilled, with antipads present.
+- Astra re-verification (same environment): base `bae58edd` 388/1/46 ->
+  candidate `0051b2e3` 388/0/46, every category identical. Checker PASS,
+  allowing +3V3/GND/SDA. Evidence: `testen-via-sda-1625\astra-verify\`.
+- Via minimum clearances: SDA 0.255, AMP_MUTE 0.231, VBUS In2 0.255,
+  VCORE 0.475, BCLK 0.611, USBBOOT 0.857, IC1 EP 0.200 mm (at the rule limit).
+- Promoted to private `multilayer-20261109\best-0-testen`. DeepPCB spend:
+  none (15 approved minutes remain unspent). Not fabrication approval.
