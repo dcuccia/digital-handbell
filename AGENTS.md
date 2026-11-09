@@ -46,6 +46,21 @@
   Private snapshot `79553016` includes this package and earlier trials.
   Its full-data check and uncached restore match all 5,084 source files.
 
+- **November 9: fixed-J1 speaker trial stopped; systems-level options released.**
+  Both 1.00 mm F GND-detour templates hit fixed +3V3 `06054ee5`/`b239a24e`
+  and TP9 (0 mm versus 0.175 mm). No build was made, and best-5 `f8ec463b`
+  is unchanged. Evidence is in private `multilayer-20261109\speaker-output-cell-0000`.
+  Do not repeat those templates. The owner now releases J1 placement:
+  anywhere not blocked by the speaker or printed parts, including B, an
+  edge channel or an outline notch. The owner also permits moving existing
+  copper. Speaker height applies only over the D21.70 magnet (F z25 versus
+  z23.5); printed yoke/carrier supports may adapt after layout. Systems
+  options per open are in the ledger's November 9 table: VO+ via J1
+  relocation, TESTEN via a pin-19-to-EP stub after a +3V3 reroute, C7
+  relocation near VCORE, GAIN0 owner choice, and D3/R11 re-siting. Wire
+  pads, outline changes, via-in-pad and dropping the gain option still need
+  owner confirmation. Not fabrication or powered-use approval.
+
 - **November 8, 23:57: C7 local attribution stopped on tooling; five opens remain.**
   Private `multilayer-20261108\c7-ground-local-recovery-2348` preserves three
   attempts. r1's prospective via area is unqualified: it used global 0.15 mm

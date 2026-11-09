@@ -1915,3 +1915,39 @@ identify complete connector/filter-cell duties and any exact local replacement
 before construction, preserving the companion BTL output, USB and private
 returns. Prior fixed-copper searches are evidence, not a reason to repeat them
 or to thin the speaker-output route.
+
+### November 9 - speaker GND-detour trial stopped; systems-level replan
+
+The paired F-only GND-detour plus VO+ trial ended `NO_TEMPLATE_PASS`. A
+verified Sol/medium runtime ran it and bound all eight GND trunk contacts,
+including C19.2. Both 1.00 mm F detour templates (x=116.20 and x=116.30) touch
+fixed +3V3 tracks `06054ee5...` and `b239a24e...` and the TP9.P$1 pad at
+0 mm against the required 0.175 mm. No candidate was built, no VO+ copper
+was added and base `f8ec463b` is unchanged. The initial attempt and both
+corrections are exhausted. Evidence is private, in
+`multilayer-20261109\speaker-output-cell-0000` (`template-screen.json`
+`22e54d31...`, helper `5cb08ec0...`).
+
+The owner has now released connector placement: J1 may move anywhere not
+blocked by the speaker or printed parts. A back-side J1, an edge channel or a
+small outline notch, and hand-soldered alternatives are acceptable options.
+The owner also permits moving existing copper. Speaker clearance applies
+only over the D21.70 magnet: F face z25, magnet rear z23.5. Outside the
+magnet, the basket back is at about z16.5. Printed yoke/carrier supports may
+be redesigned after layout selection, so they are not frozen obstacles. B
+near y=100 is BT1 contact space.
+
+The fixed-J1 constraint is replaced by four systems-level options:
+
+| Open | Proposed systems option | Gate |
+|---|---|---|
+| VO+ | Move/rotate J1 toward the FB1.2/FB2.2/C21/C22 filter outputs, rip and reroute VO- as a 0.60 mm pair, and move +3V3 `06054ee5`/`b239a24e`/TP9 if required. Fallback: wire pads east of the filters, or B-side J1 with an edge notch. | Preserve the BTL pair, USB, private returns and the speaker magnet envelope. Wire pads/outline change need owner confirmation. |
+| IC1.19 TESTEN | Short F stub from pin 19 to the exposed pad after rerouting the adjacent +3V3 piece `e14edcf0`/`b0cc831b`. | Preserve XIN/clock geometry and +3V3 continuity. |
+| C7.1 GND | Relocate C7 beside a VCORE pin; this also improves decoupling. Via-in-pad POFV is only an alternative. | Via-in-pad needs an explicit policy exception. |
+| GAIN0.1 | Owner choice: fix gain (drop the 12 dB GND option), or allow POFV via-in-pad. | Deleting functional options is not approved by default. |
+| USBBOOT -> D3.C | Re-site D3/R11 nearer IC1 pin 9 or TP3 at system level. | BOOT recovery must remain functional. |
+
+Next, J1 relocation and TESTEN run as two isolated bounded items on
+disjoint regions of the exact five-open base. Each has an initial attempt
+plus two corrections, with native DRC/preservation acceptance. No paid
+router use. This replan is not fabrication or powered-use approval.
