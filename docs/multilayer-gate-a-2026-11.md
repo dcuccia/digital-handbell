@@ -2215,5 +2215,21 @@ Base best-2-vo `b602e998` is unchanged (2 opens: GND IC1.19 TESTEN, USBBOOT D3.C
 
 - `usbboot-resite-1600` (Sol/medium, three attempts): D3 moved to F (102.3,103.4) rot 0, R11 to F (104.3,103.4) rot 90, both outside the contact guards; USBBOOT rerouted (55 tracks, F/In2/B, four 0.50/0.30 vias). D3.C closes, but opens stay 2 -> 2: the F.Cu USBBOOT jog between vias `9b373053` (93.53,89.90) and `34b6fe16` (95.28,95.65) splits the F GND fill, leaving C14.2 (94.30,89.80) on a ~1.98 mm2 island with no GND via. Also new: dangling POFV `0b6e041f` at D3.C (redundant; D3.C is fed by via `4bb9069d`), and the R11 reference over D3 silk/pad. Candidate `afd2d740` is preserved, not accepted.
 - `usbboot-repair-1700` (Sol/medium, three attempts, NO_PASS, final `83d7764f`): removing the POFV and hiding R11's reference work. A GND stitch via in the C14.2 island closes the open but hits In2 VBUS `250e8d5d` (short + hole clearance). Moving the 13-segment jog to In3 crosses POWER `c30f86a7` and I2S_BCLK `c74fe2e2` (0.0705 mm actual vs 0.15 mm).
-- Root's netclass-aware screen of all 792 points (0.05 mm grid) in that island finds no legal 0.50 mm via site. The best, at (95.00,91.05), is 0.088 mm short; the blockers are In2 VBUS (790 points), F +3V3 and CC1.
-- Do not repeat these unchanged. A future USBBOOT item needs a different corridor from via `9b373053` that avoids the C14.2 GND region (or a C14 re-site), keeping the D3/R11 re-site and the POFV/R11-text corrections. No DeepPCB spend. Not fabrication approval.
+- Root's exploratory track-clearance screen rejected all 792 sampled centers on a 0.05 mm grid in that island with existing copper fixed. It reported a best deficit of 0.088 mm at (95.00,91.05), with In2 VBUS, F +3V3 and CC1 among the blockers. The earlier conclusion "no legal via site" was too broad: this is neither a continuous-search proof nor a complete via qualification, and 0.088 mm is not a demonstrated required track displacement. The temporary screen scripts were subsequently deleted; the transcript retains their code/output, but no standalone screen report is preserved. The saved native attempt-1 report independently confirms that its different proposed via at (94.296295,90.45) shorts In2 VBUS `250e8d5d` and has zero hole-to-copper clearance.
+- Do not repeat these unchanged. A future USBBOOT item can assess a different corridor from via `9b373053` that preserves C14.2's return, a bounded replacement of the actual blocking copper, or a C14 re-site preserving both terminal duties. Retain the useful D3/R11 re-site and POFV/R11-text corrections as unaccepted trial evidence. No DeepPCB spend occurred in these attempts. Not fabrication approval.
+
+### Owner follow-up and interpretation of the 0.088 mm screen result
+
+The owner selected the IC1-plus-crystal/decoupling nudge and authorized up
+to 30 DeepPCB minutes total, while requesting explanation of the exposed-pad
+ground-stub alternative. Separate read-only cell-placement and EP-stub reviews
+were started; neither a clearance waiver nor acceptance of the stub's findings
+was granted.
+
+The owner then asked whether the small reported via deficit warrants further
+strategies. It supports considering a bounded geometry change, not accepting
+the failed spacing or resetting an exhausted unchanged search. In particular,
+a local VBUS detour must retain width, branches and clearance on every affected
+layer; a new USBBOOT corridor must preserve C14.2's actual ground connection.
+Those are still prospective options, not proven repairs. No new board or paid
+run was started by this clarification.

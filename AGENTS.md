@@ -28,13 +28,19 @@
 - **November 9, 17:15: USBBOOT and TESTEN local items exhausted; best-2-vo kept.**
   Base `multilayer-20261109\best-2-vo` `b602e998`; 2 opens remain (GND
   IC1.19 TESTEN and USBBOOT D3.C). TESTEN: the +3V3 reroute plus two
-  corrections all fail; IC1 pins 19-22 escape is saturated by +3V3/XIN/
-  XOUT/VCORE. USBBOOT: the D3/R11 re-site closes D3.C (`afd2d740`), but its
-  F jog isolates C14.2's GND island; there is no legal stitch-via site
-  (best 0.088 mm short, In2 VBUS) and an In3 jog crosses POWER/I2S_BCLK.
-  Do not repeat unchanged. Next: owner choice for TESTEN (IC1+crystal/
-  decoupling cell move vs a DeepPCB IC1-window run); USBBOOT needs a new
-  corridor or a C14 re-site. J1 BOM notes now name JST ACHL C594367. See the ledger.
+  corrections all fail against +3V3/XIN/XOUT/VCORE obstacles; this does
+  not exhaust other IC1-cell placements. USBBOOT: the D3/R11 re-site
+  closes D3.C (`afd2d740`), but its F jog isolates C14.2's GND island.
+  No sampled stitch-via center passed the exploratory 0.05 mm grid
+  (reported best track-clearance deficit 0.088 mm); this is not proof
+  that no legal site or local copper replacement exists. The tested
+  In3 jog crosses POWER/I2S_BCLK. Do not repeat these unchanged.
+  The owner subsequently selected the IC1+crystal/decoupling nudge
+  and authorized up to 30 DeepPCB minutes total, not per trial.
+  USBBOOT alternatives include a different corridor, a bounded local
+  blocker detour, or a C14 re-site preserving its supply/return duties.
+  No clearance waiver or EP-stub acceptance follows. J1 BOM notes now
+  name JST ACHL C594367. See the ledger.
 - **November 8, 20:24: six-open POWER closure accepted for routing continuation.**
   New private base `multilayer-20261108\best-6-power`, PCB `dacfb543`,
   moves U5 +0.4 mm and replaces exactly six released local tracks.
