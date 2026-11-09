@@ -2099,3 +2099,26 @@ SACH(L)-003G crimps. No pre-terminated assembly for either end was
 confirmed; loose pre-crimped leads are the closest path that needs no
 soldering. ACHL fits under the 1.5 mm magnet limit, which opens placement
 options for J1 and VO+.
+
+## November 9, 14:40 - ACHL VO+ and coordinated TESTEN trials NO_PASS
+
+Neither trial wrote a board; best-3-gain0 `e685a74b` is unchanged.
+
+- **`vo-achl-1410`** (summary `1658a76f`): a trial-local ACHL footprint
+  was built from the JLCEDA C594367 geometry, with its courtyard and body
+  outline marked as reconstructed. Of 200 poses screened, three on F
+  passed; the best was (118.05, 98.4) at 270 degrees. The 0.60 mm paired
+  VO+/VO- search failed in both orders: either net routes on its own, but
+  not both while preserving USB_D-, local power/GND and edge clearance.
+  Next: allow layer transitions for the pair (vias, In3/B) and B-side
+  poses. Do not repeat the F-only pair search unchanged.
+- **`testen-north-1410`** (summary `530ecaf9`):
+  - A POFV in the pin-19 pad cannot meet 0.25 mm hole-to-copper to the
+    adjacent pads.
+  - All 165 westward stub-out POFV sites are blocked by preserved XIN
+    clock copper.
+  - The coordinated pin-19-to-EP stub plan never got built. Three attempts
+    failed on pcbnew post-removal binding errors and a native crash. This
+    is a tooling failure, not a physical result.
+  Next: build that same EP-stub plan with text-level s-expression edits
+  instead of pcbnew object removal.
