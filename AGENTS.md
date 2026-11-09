@@ -6,6 +6,24 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 8, 18:13: continue after successful checkpoints.**
+  Owner explicitly requests autonomous progress toward closing the remaining
+  connections without another prompt after each milestone. Preserve and
+  record each accepted result, then start the next ready bounded item.
+  Do not mark the overall task complete at a single-connection checkpoint.
+  Existing retry limits and real blockers still stop the affected item;
+  investigate another justified approach rather than repeat an exhausted
+  screen or ask again for already-granted copper-movement permission.
+  SWDIO/TP5 smaller-land item stopped after three tooling failures, with no
+  site result or board change; not a physical infeasibility finding. Do not
+  retry unchanged. Next independent item is the complete GAIN0 jumper cell,
+  preserving its normally-open configuration and all THREE terminal duties
+  (GND/GAIN/VAMP). Short gain-selection tap extensions are released, not
+  changes to existing VBAT/VAMP power routes. Base remains best-7-tp14.
+  GAIN0's 32-pose screen also stopped without a legal pose; do not expand it
+  automatically. Next independent probe is the POWER enable-control link,
+  considering exact Q2-side control escape and U5.2 access together.
+
 - **November 8, 17:52: owner requests agent-driven forward progress.**
   Human finishing is not an available dependency. Existing-copper movement
   is already permitted; the lead must select exact bounded replacements

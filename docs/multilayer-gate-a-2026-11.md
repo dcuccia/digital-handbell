@@ -1418,3 +1418,88 @@ preferences; acceptance receipt `7706baad...`. Private backup snapshot
 `f569bdf9` (parent `333cc7ba`) includes the accepted package and both trial
 families: 4,709 files, 674.644 MiB. Backup exited successfully; integrity
 check and restore were not repeated.
+
+## November 8, 18:13 autonomous continuation
+
+The owner explicitly requests continued progress without prompting after
+each accepted connection. A successful local checkpoint is not completion
+of the routing task. Preserve it and select the next ready bounded item,
+while retaining finite retry limits and escalating genuine blockers rather
+than silently extending an exhausted search.
+
+The next item starts from accepted best-7-tp14 `7cb61fef`: a small accessible
+TP5 service land and short SWDIO escape from IC1.25. Unlike LRCLK, SWDIO has
+no existing routed group to attach to; the MCU pin and test land are each
+isolated. Prior unchanged-pad and under-IC proposals remain rejected.
+Neighbouring copper may be replaced only under an exact reviewed contract,
+with complete branch restoration and untouched-complement evidence.
+
+The verified Sol/medium executor binds IC1.25 at (96.550, 88.900), with a
+0.875 x 0.200 mm land and actual IC1 body boundary x=96.5..103.5,
+y=84..91. TP5 is presently a 1.5 mm F land. The released first candidate
+uses a 0.6/0.8/1.0 mm bare service land and short 0.15 mm SWDIO escape,
+without changing neighbouring copper. An ordinary through-via is allowed
+only if required and clear of all-layer copper, holes and contact guards.
+Preserve the accepted TP14 package and every other footprint/route/zone
+definition; require a matching local footprint and schematic assignment.
+This item stops at 18:28, with no native child starting after 18:25 and a
+report by 18:29. No paid router run is released.
+
+**SWDIO item stopped at 18:18 on tooling, not geometry.** Initial plus two
+corrections were consumed: wrong interpreter without Shapely; native UUID
+conversion failure after switching interpreter; then a complete-shape
+screen exceeding its hard 30-second limit. No candidate or site-result report
+was produced. The last helper is retained at
+`swdio-service-1813\screen_construct.py` (`89e3c42a...`). No board was saved,
+refilled or promoted. The finite screen did not establish infeasibility.
+Do not silently run a fourth SWDIO attempt.
+
+The lead continues with an independent, previously proposed GAIN0 cell
+strategy rather than another VBAT detour: establish the jumper's actual
+default bridge/configuration and consider a small whole-jumper relocation
+with both GND and GAIN duties restored. VBAT/VAMP remain unchanged; exact
+local GAIN-copper replacement still requires the lead's contract. This
+changes the component being allowed to move rather than repeating the
+fixed-pose ground/via or power-detour screens. Best-7-tp14 remains the base.
+
+**GAIN0 source correction and 18:20 contract:** it is a three-pad normally-
+open selector, not a two-pad jumper: pad 1 GND, pad 2 GAIN, pad 3 VAMP.
+Preserve all three pads, their spacing, continuous mask opening and both
+selectable gain settings. No copper bridge is currently serialized.
+The lead permits short same-layer GAIN (0.15 mm) and VAMP (0.1778 mm)
+attachments to their exact retained source terminals, at most 3 mm each.
+This VAMP branch is a gain-selection tap, not a new amplifier-current feed;
+existing power copper remains fixed. A move need not detach a terminal if
+the moved pad still overlaps it; actual contact, not centre coincidence,
+determines that.
+
+A finite 32-pose screen combines eight translations within 2 mm with four
+rotations. All three terminal attachments must work together, including
+GND to actual main F fill, with no new via. Geometry/native children have
+hard 90-second limits; the whole item ends 18:33, no native start after
+18:30 and report by 18:34. No source mutation or paid router run is released.
+
+**GAIN0 finite result:** all 32 released poses fail foreign-copper clearance
+and/or courtyard checks before attachment construction. Rightward poses
+enter fixed VBAT; leftward poses enter Q3/R7/R24, VBAT or L0 structures.
+The final native geometry screen completed in 0.703 seconds with no empty
+shapes. Two earlier implementation corrections addressed a Shapely
+`dict_values` argument and SWIG-object identity incorrectly retaining the
+jumper's own pads as obstacles. Those three attempts exhaust this item.
+No PCB save, refill or native DRC followed. This is not a proof against
+every possible pose within 2 mm. Evidence: `gain0-cell-1820`,
+`screen-report.json` (`5431b58a...`), script `c52b94e4...`, and `attempts.json`.
+
+The next independent probe is POWER, the boost-enable control connection,
+not the load-current rail. It must determine whether the previously named
+Q2-side `~ENABLE` escape replacement addresses a useful group attachment
+and whether U5.2 has a legal exit; changing one end does not prove a complete
+route. No boost power/feedback-loop change or repeated fixed-route sweep is
+released. All seven opens and the accepted best-7 baseline remain unchanged.
+
+Private snapshot `042e1dd7` preserves the new SWDIO/GAIN0 evidence (parent
+`f569bdf9`, 4,713 files, 674.754 MiB; four new files). Backup succeeded;
+integrity/restore were not repeated. The saved package has the final helpers,
+GAIN0 report and attempt record, not separately archived copies of every
+failed helper revision; retain that provenance limitation rather than claim
+complete revision preservation.
