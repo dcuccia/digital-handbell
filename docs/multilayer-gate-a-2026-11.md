@@ -1880,3 +1880,38 @@ repeat the exhausted USBBOOT local via/exit searches, TP5 geometry searches,
 or invoke another paid router run. Five opens remain: USBBOOT, VO+, GND at
 C7.1, GAIN0.1 and IC1.19 TESTEN. This routing-continuation acceptance is not
 fabrication, powered-use, safety, or child-use approval.
+
+The completed private snapshot `79553016` contains 5,084 files (698.332 MiB).
+Pre/post source manifests agree; a no-cache full-data check passes across all
+10 snapshots/23 packs, and an uncached restore matches every source file.
+Private verification receipts remain outside the repository. This backs up
+the accepted five-open package and all preceding failed attempts.
+
+### November 8, 23:57 - C7 local obstruction item stopped
+
+The owner's explicit continuation starts one source-bound C7 attribution item
+at 23:48. The executor's configured Sol/medium and actual first-dispatched
+model were verified before writes/native access. Private evidence is in
+`multilayer-20261108\c7-ground-local-recovery-2348`; base `f8ec463b` is unchanged.
+
+The first report identifies nearby B I2S_MOD and AMP_MUTE segments, but its
+claimed zero-relocation feasible area (0.063345258 mm2) is **unqualified**.
+Root review finds global 0.15 mm clearance incorrectly used against local
+VBUS, whose class requires 0.20 mm; missing same-net component-land/hole
+exclusions; and a changed domain (island buffer versus the original pad-centred
+disk). The result cannot attribute the historical zero-site count to excessive
+clearance. Its direct/one-bend reroute failures also included same-net endpoint
+obstacles and boundary-intersection limitations, not a physical impossibility.
+
+Correction 1 preserves r2 and stops at the 90-second native limit, with a
+via-width accessor warning and no report. Correction 2 preserves r3 but fails
+on `KeyError: 'forbid'` in guard filtering. Three attempts are exhausted.
+No zero-removal site or zero-region result is qualified. There were no board
+mutations, saves, fills, DRC runs or paid operations. The independent VO+
+speaker-output item follows; C7's exhausted implementation is not retried.
+
+The VO+ item keeps J1 fixed and the approved 0.60 mm output width. It must
+identify complete connector/filter-cell duties and any exact local replacement
+before construction, preserving the companion BTL output, USB and private
+returns. Prior fixed-copper searches are evidence, not a reason to repeat them
+or to thin the speaker-output route.

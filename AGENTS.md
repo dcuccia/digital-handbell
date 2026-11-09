@@ -43,6 +43,19 @@
   Five opens remain: USBBOOT, VO+, GND C7.1 island, GND GAIN0.1, and
   GND IC1.19 TESTEN. This routing checkpoint is not fabrication, powered-use,
   safety, or child-use approval.
+  Private snapshot `79553016` includes this package and earlier trials.
+  Its full-data check and uncached restore match all 5,084 source files.
+
+- **November 8, 23:57: C7 local attribution stopped on tooling; five opens remain.**
+  Private `multilayer-20261108\c7-ground-local-recovery-2348` preserves three
+  attempts. r1's prospective via area is unqualified: it used global 0.15 mm
+  instead of net-pair minima, omitted ordinary-via land exclusions and changed
+  the old search domain. r2 timed out at 90 s; r3 failed on missing `forbid`.
+  No qualified site or no-site conclusion, board edit, fill, DRC or spend.
+  Keep best-5 `f8ec463b` unchanged; no fourth run of this item. Next independent
+  item is the fixed-J1 / VO+ speaker-output escape and complete filter-cell
+  restoration contract, not another unchanged 0.60 mm route search. Preserve
+  BTL output width, VO- duty, USB and both filter-terminal obligations.
 
 - **November 8, 20:37: USBBOOT local attempts stopped; six opens remain.**
   No candidate: translated direct-F templates found no pair; eight local

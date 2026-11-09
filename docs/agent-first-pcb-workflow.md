@@ -221,6 +221,11 @@ A defective helper costs a whole bounded attempt. Before a native run:
 - Review a rejection as carefully as a pass. Confirm that each hit
   involves a foreign net and copper that really stays fixed before you
   call a pose impossible.
+- Resolve each copper pair's actual net classes and local/custom overrides.
+  The global minimum is only a floor: GND-to-VBUS here requires 0.20 mm
+  even though both the global minimum and GND's Default class are 0.15 mm.
+  An ordinary-via screen must also exclude component lands and check all
+  holes, including same-net ones; copper-net equality is not process approval.
 - Distinguish project-rule clearance from an additional screening margin.
   A rigid footprint move cannot enlarge intrinsic pad spacing. The U5
   POWER closure passed native rules but failed an extra 0.025 mm margin
