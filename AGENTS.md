@@ -46,6 +46,23 @@
   Private snapshot `79553016` includes this package and earlier trials.
   Its full-data check and uncached restore match all 5,084 source files.
 
+- **November 9, 12:20: J1 NO_POSE, TESTEN NO_PATH; owner decisions recorded.**
+  Neither item wrote a board; best-5 `f8ec463b` is unchanged. 131,044 F
+  Pico-Lock poses fail the combined edge, magnet, frozen-F and 4 mm mating
+  gates. 24 F-only +3V3 loops and 54 alternative GND paths fail for TESTEN.
+  Owner decisions:
+  - Keep and close GAIN0's 12 dB GND option; the 6 dB VAMP option may drop.
+  - POFV via-in-pad is approved where it closes an open (policy exception).
+    Through vias still stay out of battery-contact space.
+  - Plug-and-play is the priority, and wire pads are declined. J1 stays
+    unchanged until a connector comparison exists: Pico-Lock sequencing
+    recheck, top-mating SMT envelope screen, JLC and harness sourcing, and
+    at least 1.5 A per contact.
+
+  Three isolated Sol/medium trials then started: C7 POFV, GAIN0 POFV and a
+  TESTEN dog-bone. See the ledger's November 9 12:20 section. Not fabrication
+  approval.
+
 - **November 9: fixed-J1 speaker trial stopped; systems-level options released.**
   Both 1.00 mm F GND-detour templates hit fixed +3V3 `06054ee5`/`b239a24e`
   and TP9 (0 mm versus 0.175 mm). No build was made, and best-5 `f8ec463b`

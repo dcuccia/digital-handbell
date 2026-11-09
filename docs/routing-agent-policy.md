@@ -197,6 +197,13 @@ Capability, dimensional limits, planarization/capping and quotation must
 be confirmed for the exact package. Do not infer that VIPPO requires HDI,
 or change layer count merely to obtain a promotional process price.
 
+**Owner exception, November 9, 2026 (six-layer closure work):** POFV
+(IPC-4761 Type VII filled and capped) via-in-pad is approved where it closes
+a recorded open on the six-layer board. Each such via joins the explicit
+process-via list in its acceptance record. It must still clear foreign copper
+on every layer and stay out of battery-contact space. This exception does not
+cover blind or buried spans, which need separate fabrication approval.
+
 Keep any necessary special process explicit in the generic fabrication
 notes and quotation options, independent of a vendor promotion. Preserve
 manufacturer MPNs and a fab-neutral native/Gerber/drill master; supplier BOM

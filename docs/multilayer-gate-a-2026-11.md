@@ -1951,3 +1951,61 @@ Next, J1 relocation and TESTEN run as two isolated bounded items on
 disjoint regions of the exact five-open base. Each has an initial attempt
 plus two corrections, with native DRC/preservation acceptance. No paid
 router use. This replan is not fabrication or powered-use approval.
+
+### November 9, 12:20 - J1 NO_POSE, TESTEN NO_PATH; owner decisions; POFV trials
+
+Both replan items ran on verified Sol/medium executors. Neither wrote a
+candidate, and base `f8ec463b` is unchanged.
+
+- **TESTEN (`testen-ep-1125`, summary `44ca5f83...`): `NO_PATH`.** After
+  correcting the screen to the 0.15 mm Default/Supply clearance, 24 F-only
+  +3V3 replacement loops and 54 alternative GND paths all fail against
+  fixed F copper. The stub IC1.19->EP is legal once tracks `e14edcf0`/
+  `b0cc831b` are released. The obstacles are GND via `5246ed9a`, SWCLK,
+  I2S_DIN and the D13 via. An inner-layer +3V3 dog-bone was not tried.
+- **J1 (`j1-relocation-1125`, summary `03bd2a65...`): `NO_POSE`.**
+  - 131,044 F-side Pico-Lock poses were screened (0.25 mm grid, four
+    rotations). None passes the edge, the magnet body, frozen F geometry
+    and a 4.0 mm side-mating corridor together.
+  - Closest pose: (116.25, 98.25) at 270°. Its west mating corridor meets
+    the D21.70 + 0.50 mm magnet reservation after 1.08 mm.
+  - B-side poses outside BT1's conservative base: 0.
+  - Wire-pad screen only: 450 of 783 SMD pad pairs with straight 0.60 mm
+    routes; zero THT pairs.
+
+Owner decisions (November 9):
+
+- **Gain:** keep the GAIN0 GND (12 dB) option and close it. The VAMP
+  (6 dB) option may be dropped if needed. High volume is preferred over
+  low THD; a firmware volume cap is an acceptable safeguard.
+- **Via-in-pad:** POFV (IPC-4761 Type VII filled and capped) via-in-pad is
+  approved wherever it closes an open. JLC includes it on six layers.
+  This is the explicit exception that `routing-agent-policy.md` requires.
+  Filled/capped through vias remain conductive on B, so they still cannot
+  enter battery-contact space.
+- **Speaker connector:** plug-and-play is the priority. The board is
+  factory assembled, and the end user does not solder. Wire pads are
+  declined. J1 stays unchanged until a connector comparison exists:
+  - a Pico-Lock assembly-sequencing recheck (mated-body clearance versus
+    mating-path clearance);
+  - top-mating, side-wire-exit SMT candidates screened against the CAD
+    envelope (Pico-EZmate Plus `2121340002`, JST ACHL
+    `BM02B-ACHLKS-GAN-ETF`, Pico-EZmate `78171-0002`, JST ACH);
+  - JLC availability, harness sourcing and a contact rating of at least
+    1.5 A;
+  - a factory pigtail with an inline connector only if none fits. Direct
+    solder pads are the last resort.
+
+Three isolated Sol/medium trials then started on copies of `f8ec463b`,
+under `multilayer-20261109`. Each has the standard acceptance contract
+(only its target open removed, no finding growth, parity 46, checker PASS,
+exact complement):
+
+| Trial | Target | Strategy |
+|---|---|---|
+| `c7-pofv-1215` | C7.1 GND | POFV via in C7.1 or its F island, moving In2/B signal copper if needed; fallback relocates C7 beside a VCORE pin |
+| `gain0-pofv-1215` | GAIN0.1 GND | POFV via in pad 1, preserving all three pads and mask; VBAT copper may move |
+| `testen-dogbone-1215` | IC1.19 TESTEN | Release `e14edcf0`/`b0cc831b`, F stub to EP, +3V3 dog-bone via in the pin-to-EP gap with an inner/B rejoin |
+
+A separate read-only research item is gathering connector drawings and
+sourcing data. Speaker output and USBBOOT remain open.
