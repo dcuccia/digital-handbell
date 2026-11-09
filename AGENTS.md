@@ -69,6 +69,10 @@
   Report `qualification-20261109-145519.json` (`3c26d926`). Run consumed;
   no candidate/board/DRC/spend. Next needs approval of that one-character
   guard fix plus one run; still no D03/V01 geometry evidence either way.
+  **15:05: guard-fixed run HOLD on a control defect.** All controls but
+  `round_gap_equivalence` passed; `gap()` caps at 20 mm, so remote holes
+  disagree with uncapped analytic distance by construction. Enforced
+  hole checks are unaffected. No candidate/board/spend. See ledger.
 
 - **November 9: TESTEN exposed-pad stub classification completed.**
   Saved-evidence review `multilayer-20261109\ep-stub-classify-1720\report.md`

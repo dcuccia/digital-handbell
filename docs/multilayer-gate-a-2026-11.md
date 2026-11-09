@@ -2484,3 +2484,22 @@ plus width 0.6 mm = major drill). New controls (`slot_dimension_identity`,
 
 The approved run is consumed. This remains a tooling limit, not geometry
 evidence about D03/V01. Base stays best-2-vo `b602e998`.
+
+## November 9, 15:05 - Pattern-fixed USBBOOT qualifier run held on round-gap control design
+
+Owner approved (15:02) the one-character guard fix (`+` admitted as a
+literal) plus one run; root verified both single-line diffs and released.
+
+- Qualify exited 1 after 0.924 s. `qualification-20261109-145727.json`
+  (`e908b75fceab2c7b2b326243d1dfc39013a8e075b76b59ffad1a39b128dfb621`),
+  status HOLD. All controls passed except `round_gap_equivalence`, which
+  forced `positive_baseline` false. Slot identity and inventory passed.
+- Root diagnosis: `gap()` bisects `SHAPE.Collide` and returns its 20 mm
+  cap for shapes farther apart, while the analytic comparison uses
+  uncapped centre distance. Holes beyond 20 mm therefore disagree by
+  construction. This is a control-design defect; the enforced hole-to-hole
+  check remains sound because the cap far exceeds the requirement.
+- `hole_control_evidence` was not serialized (control raised first).
+  Construct/validate not run; no candidate, board write, DRC or spend.
+
+Run consumed. Still no D03/V01 geometry evidence. Base stays `b602e998`.
