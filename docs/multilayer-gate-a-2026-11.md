@@ -1217,3 +1217,29 @@ opens alone cannot promise reliable operation. Retain the focused electrical
 and mechanical release review plus a small first-board bring-up covering
 power/current/temperature, USB/programming/recovery and audio operation.
 An extensive production-test fixture is not a prerequisite for this prototype.
+
+## November 8 closure gates (autopilot, no spend)
+
+**Gate 1, connected-group census** (private `multilayer-20261108\closure-gates\gate1`,
+`group_census.py`/`groups.json`, on unchanged best-8-c1c4 `2e8e16bf`):
+SWDIO IC1.25 and TP5 are each alone, with no SWDIO copper at all; I2S_LRCLK
+IC1.29-U4.14 is connected and only TP14 is isolated; POWER U5.2, USBBOOT D3.C
+and VO+ J1.1 (apart from the F-only C22.1/FB1.2 group) are isolated. Three GND
+singletons: C7.1 together with F zone island #11 (2.443 mm²), GAIN0.1 and
+IC1.19 (TESTEN). **Correction:** the "X6-area island" in earlier notes is
+C7.1's (VCORE decoupling) ground pad, not an X6 feature.
+
+**Gate 2, stub plus new via to In1 GND** (`gate2\gnd_stub_via_screen.py`, read-only):
+0.5/0.3 mm via, annulus inside In1 fill (0.05 mm inset), clear of foreign
+copper on all layers and via keep-outs; 0.2 mm F stub, straight then
+two-segment, within 2.5 mm. **No legal site** for any of the three.
+C7.1 has zero via-legal area. GAIN0.1's only via region (x101.9-102.6,
+y108.0-109.7, 0.64 mm²) is separated from the pad by a VBAT F track at
+x101.35 (y107.2-109.8). IC1.19's region (0.04 mm², y≈84.35) is separated
+by the D13 F track at y85.3 and the adjacent QFN pins; XIN's via/stub
+blocks the west side. These are finite-screen results, not impossibility.
+
+Gate 3 (refill/DRC/complement) was not reached. No board edit, save, DRC or
+DeepPCB spend. Further closure of any of the eight opens now requires an
+owner-approved release of existing copper (e.g. the VBAT or D13 segment) with
+a replacement contract, or the prepared human-finisher brief.

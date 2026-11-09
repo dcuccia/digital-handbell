@@ -10,13 +10,16 @@
   Three read-only strategy reviews cover debug/boot, power/audio and ground.
   Awkward test-point access is acceptable; deleting recovery or functional
   connections is not approved. Best-8-c1c4 `2e8e16bf` remains unchanged.
-  Next proposed item: identify actual connected groups/filled islands and
-  finite accessible service-pad sites before any local replacement trial.
+  Gate 1 census (done): SWDIO IC1.25/TP5 have no copper; TP14, U5.2,
+  D3.C, J1.1 and GND C7.1 (+F island; not "X6"), GAIN0.1, IC1.19 isolated.
+  Gate 2 stub+via-to-In1 screen (straight and dogleg, 2.5 mm): no legal
+  site. C7.1 has none; GAIN0.1's only via region is fenced by a VBAT
+  F track at x101.35; IC1.19 is fenced by D13 track/QFN pins. Gate 3 not
+  reached; no board edit, DRC or DeepPCB spend. Any further closure needs
+  an owner-approved move of existing copper (VBAT/D13) or a human finisher.
   Default gap/rip-up pair searches target DRC witness objects; gap routing
   also has a broader `--nearest-own-copper` mode already tried for GAIN0.
-  Do not repeat that unchanged or generalize the pair-mode limitation.
-  No route is newly qualified, no board edit or paid run
-  follows from this design review. See the latest Gate A ledger section.
+  Do not repeat these screens unchanged. See the latest Gate A ledger section.
 
 - **November 6, 16:47: U2 regulator rearrangement stopped; best-8 kept.**
   The owner's 15:22 approval covered a local U2/C1/C4/C5 rearrangement plus
