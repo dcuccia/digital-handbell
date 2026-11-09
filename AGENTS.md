@@ -46,6 +46,21 @@
   Private snapshot `79553016` includes this package and earlier trials.
   Its full-data check and uncached restore match all 5,084 source files.
 
+- **November 9, 14:10: GAIN0 accepted, 4 -> 3 opens.** New private base
+  `multilayer-20261109\best-3-gain0`, PCB `e685a74b`. It adds a GND POFV
+  in GAIN0.1, the 12 dB option, and jogs In2 VHI `db3520d2` (still 0.8 mm,
+  +0.09 mm, no new vias). The 6 dB VAMP option is kept.
+  Astra checked against a base DRC run in the same environment: every
+  non-open category is identical, parity is 46 and the checker passes.
+  `lib_footprint_issues` reads 95 or 97 depending on the environment, so
+  compare DRC counts only within one environment.
+  `testen-release-1335` returned NO_PASS: release still needs a VCORE
+  detour, and BCLK on In3 is NO_PATH. Next for TESTEN is a coordinated
+  IC1-north cell, not more local screens.
+  Connector comparison is in the ledger. JST ACHL `BM02B-ACHLKS-GAN-ETF`
+  (C594367) is top-mating, 1.2 mm high and rated 2 A. ACH (C5118738) is
+  1.4 mm. Remaining opens: USBBOOT D3.C, VO+ J1.1, GND IC1.19.
+
 - **November 9, 13:35: C7 POFV accepted, 5 -> 4 opens.** New private base
   `multilayer-20261109\best-4-c7`, PCB `77d3762d`. It adds a GND POFV
   through-via in C7.1, IPC-4761 Type VII (the owner exception; state it on

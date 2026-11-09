@@ -2055,3 +2055,47 @@ Follow-up trials on `best-4-c7` widen the released scope:
   detour only as a flagged last resort.
 
 Four opens remain: USBBOOT, VO+, GND GAIN0.1 and GND IC1.19.
+
+## November 9, 14:10 - GAIN0 accepted (4 -> 3); TESTEN release NO_PASS; connector comparison
+
+**Accepted: `multilayer-20261109\best-3-gain0`, PCB `e685a74b454d820145ef6f709382499eb61af287cf75a34522d63c4597b7b354`.**
+`gain0-vhi-1335` adds GND POFV `d338a1c3`, 0.50/0.30 mm, in GAIN0.1 at
+(100.660, 108.336). It is IPC-4761 Type VII, with fill and cap persisted,
+and attaches to both In1 and In4 GND. In2 VHI `db3520d2` is replaced by
+three 0.8 mm segments with the same contacts and no new VHI vias, adding
+0.0907 mm. The VHI-to-POFV gap is 0.2357 mm, and the minimum POFV
+foreign-copper gap is 0.175 mm. The GAIN0 VAMP (6 dB) option is preserved.
+
+Astra checked against a base DRC run in the same environment: all
+non-open categories are identical (393 = 393, including environment-
+dependent `lib_footprint_issues` 97), opens fell from 4 to 3 with only
+GAIN0.1 removed, parity is 46, and the checker passes with
+`--allow-changed-nets GND VHI`.
+
+Compare DRC counts only within one environment. `lib_footprint_issues`
+alternates between 95 and 97 across environments.
+
+**`testen-release-1335`: NO_PASS, no board change** (summary `d938d88c`).
+With AMP_MUTE and I2S_BCLK released, 136 partial transition candidates
+were found. The best, (97.55, 87.75), still needs both nets restored plus
+a VCORE detour. Moving the local BCLK connection to In3 returned NO_PATH;
+the helper reported no expansion data, so this is not an exhausted-space
+claim. Next is a coordinated IC1-north escape cell (TESTEN, VCORE,
+AMP_MUTE, BCLK together), not another local screen.
+
+**Connector comparison (read-only research; Molex primary PDFs
+unreachable, so Molex values are provisional):**
+
+| Part | Mating | Mated height | Rating | JLC |
+|---|---|---|---|---|
+| JST ACHL `BM02B-ACHLKS-GAN-ETF` | top entry, side wire exit | 1.2 mm (datasheet) | 2.0 A @ AWG28, 50 V | C594367, Extended |
+| JST ACH `BM02B-ACHSS-GAN-ETF` | top entry, side wire exit | 1.4 mm | 2.0 A | C5118738, Extended |
+| Molex Pico-EZmate Plus `2121340002` | unresolved (JLC says right angle) | 1.2 mm? | 2.8 A | C7467058 |
+| Molex Pico-EZmate `78171-0002` | top | about 1.55 mm (over budget) | 1.5 A | unknown |
+| Molex Pico-Lock `504050-0291` (current) | - | 2.0 or 3.1 mm, unresolved | 3.5 A | not stocked |
+
+ACH and ACHL take AWG30-28 wire with insulation OD 0.50-0.63 mm and use
+SACH(L)-003G crimps. No pre-terminated assembly for either end was
+confirmed; loose pre-crimped leads are the closest path that needs no
+soldering. ACHL fits under the 1.5 mm magnet limit, which opens placement
+options for J1 and VO+.
