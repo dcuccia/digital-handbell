@@ -144,6 +144,13 @@ and no DRC type or count grows.
   same-net copper on each layer; it was tried for GAIN0. Reuse that evidence,
   not an unchanged retry or a duplicate implementation. Resolve real
   island membership before using a zone witness as a route target.
+- Bind a newly constructed escape to the router's **source** explicitly.
+  `--nearest-own-copper` expands goals, not the starting group. For POWER,
+  a literal F-track witness could not reach a via even after adding In3;
+  starting at the new EN via found the inner-layer connection. Pass all
+  intended signal layers explicitly: the tool defaults to F/In2/B, not
+  six-layer 6C's F/In2/In3/B. Keep synthetic routing requests separate
+  from native DRC evidence and verify the resulting connected-group merge.
 - Use per-net, path-aware rip-up and reroute (`tools/reroute_with_ripup.py`).
   Its automatic rip-up scope is router- or agent-made copper, not frozen
   copper. A separately reviewed local replacement contract is required to
@@ -214,6 +221,17 @@ A defective helper costs a whole bounded attempt. Before a native run:
 - Review a rejection as carefully as a pass. Confirm that each hit
   involves a foreign net and copper that really stays fixed before you
   call a pose impossible.
+- Distinguish project-rule clearance from an additional screening margin.
+  A rigid footprint move cannot enlarge intrinsic pad spacing. The U5
+  POWER closure passed native rules but failed an extra 0.025 mm margin
+  at two unchanged pad pairs and two new copper pairs. Keep that raw HOLD;
+  any lead disposition must name the exact pairs, measured gaps and release
+  limits rather than silently lower a checker threshold or call it a pass.
+- Separate probe/component access from copper routing. A package-body
+  outline can make a test land inaccessible without prohibiting an insulated
+  trace beneath the body. Assess actual pads, underside metal, mask,
+  assembly requirements and all-layer/contact constraints; do not turn a
+  body bounding box into an invented track or via keep-out.
 - Save the report, with an explicit held status, before asserting, and
   exit nonzero on a held control, so every failure leaves evidence.
 - Confirm that an API exists in the installed `pcbnew.py` before relying

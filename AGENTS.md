@@ -6,6 +6,27 @@
   the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
   before routing, one productive autorouter run, checked finishing).
 
+- **November 8, 20:24: six-open POWER closure accepted for routing continuation.**
+  New private base `multilayer-20261108\best-6-power`, PCB `dacfb543`,
+  moves U5 +0.4 mm and replaces exactly six released local tracks.
+  POWER routes on In3 from the new EN via; native opens 7 -> 6,
+  unchanged 396 non-open/46 parity findings, exact parsed complement
+  and terminal-group preservation. No paid run or promotion-time native work.
+  The lead explicitly accepts four conditions at the existing 0.20 mm
+  project clearance instead of the additional 0.025 mm screening margin:
+  new GND/VAMP branches at 0.202272 mm, VAMP/SW at 0.203939 mm, and two
+  unchanged intrinsic U5 pad pairs at 0.20 mm. Raw margin report stays HOLD.
+  Owner was unavailable at the specific question; do not claim an owner
+  waiver. This is delegated engineering disposition for continued routing,
+  not fabrication or powered-use approval. Revisit new narrow-margin pairs
+  at manufacturing review. The return gap is the EN-via antipad, not a plane
+  split. Keep best-7 and all older evidence unchanged. Remaining: SWDIO,
+  USBBOOT, VO+ and GND C7.1/GAIN0.1/IC1.19. Next bounded item: USBBOOT D3.C
+  group/escape and both diode terminal duties, not an unchanged route retry.
+  Exact acceptance, source hashes and limits are in the package and ledger.
+  Private snapshot `1678e902` includes the accepted package and POWER evidence;
+  the backup succeeded, without a repeated full restore/integrity check.
+
 - **November 8, 18:13: continue after successful checkpoints.**
   Owner explicitly requests autonomous progress toward closing the remaining
   connections without another prompt after each milestone. Preserve and

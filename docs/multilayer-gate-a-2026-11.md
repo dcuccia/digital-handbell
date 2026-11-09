@@ -1503,3 +1503,196 @@ integrity/restore were not repeated. The saved package has the final helpers,
 GAIN0 report and attempt record, not separately archived copies of every
 failed helper revision; retain that provenance limitation rather than claim
 complete revision preservation.
+
+**POWER probe:** the Q2-side three-segment `~ENABLE` detour would open only
+one end. U5.2 is separately hemmed in by its adjacent BOOST_FB/VIN pads and
+the V+ input feed west of EN. The lead declines a Q2-only construction.
+This is not a request for the owner to approve copper movement again:
+the next engineering contract considers a small same-layer V+ input-feed
+replacement, preserving width, cap/branch duties and endpoints with at most
+0.5 mm added path. BOOST_FB, switching copper, private returns, placement
+and special via processes remain unreleased.
+
+The bounded `power-entry-1827` item first identifies the exact input-feed
+UUIDs and all attached duties, then screens at most 12 paired feed-detour/
+EN-exit templates. No board construction before that exact contract is
+reviewed. Geometry/native child limit is 90 seconds; initial plus two
+corrections total. Engineering stop 18:40, no native start after 18:37,
+report by 18:41. No paid router run.
+
+**POWER input-feed result:** 12 same-F detour/EN-exit pairs produced no
+qualified pair. The existing seven-segment V+ pin-feed section is 3.268521 mm
+long, from (96.665, 115.7) to (95.85, 113.1), with C26.1/source/L1.P$1
+connections outside the released section. At y=114.7 the reported gap
+between L1.P$2 switching copper and U5.1 feedback-pad copper is 0.675 mm;
+the screen's two-trace allocation requires 0.8528 mm. This establishes a
+blocker for that local same-layer contract, not every route or layer strategy.
+No candidate was built. Receipt `power-entry-1827\stage1-receipt.json`,
+`9cac9114...`.
+
+**18:36 broader local implementation:** the lead releases a three-pose U5
+cell study, eastward +0.4/+0.5/+0.6 mm with unchanged orientation, identities
+and all six terminal duties. Fixed L1/capacitors/divider/private-pickoff
+terminals and process vias remain mandatory. Replacement fanout must restore
+every exterior join, preserve widths and input-cap/feedback/switching
+relationships, and provide an actual EN exit; a legal component centre is
+insufficient. The existing V+ pin feed may not become longer or narrower.
+No whole-net rip-up, board-outline change, special vias or paid run.
+Exact replacement geometry is reviewed before construction. Stop 18:49,
+no native start after 18:46, report by 18:50.
+
+The lead also corrects the probe's under-body assumption: an IC body alone
+does not prohibit insulated routing underneath it. Under-body EN exits must
+be judged against actual pad/underside-metal/process geometry and full via
+span, not rejected merely as "inside the body." Probe-land access is a
+different requirement. No pad/clearance/assembly exemption follows.
+
+**U5 screen: retain the +0.4 mm pose for a specific completion.** Three
+geometry revisions found a mechanically clear pose at (97.7, 115.2), with
+unchanged orientation. Actual pad overlap retains BOOST_FB and the full
+3.268521 mm V+ chain without rerouting either. A proposed 0.15 mm EN route
+uses pad-free under-body space to an off-row ordinary-via site (97.7, 114.2).
+The 0.810 mm opposing-pad gap is insufficient for the screened centred via,
+but that does not reject the off-row site. Proposed BOOST_SW replacement
+is 2.0161 mm versus 2.135 mm removed, retaining width and its external join.
+
+The pose remains HELD: moved U5.5 conflicts with two existing 0.8 mm GND/
+VAMP branch continuations. The old three-pose item is stopped after initial
+plus two corrections. Receipt `power-u5-cell-1836\stage1-receipt.json`,
+`f910c38e...`; no board was constructed.
+
+The next, specifically expanded contract releases exactly those two branches
+(`1882384a-8437-51aa-84e0-67f4c472cc46`,
+`5f740232-0ad1-5df6-a1d0-daa1b956e7bf`) in addition to the prior two
+BOOST_SW segments and local GND/VAMP stubs. Preserve all exterior joins,
+private pickoffs, 0.8 mm broad copper and short 0.3 mm pad necks (each at
+most 1 mm exposed length). Apply the stricter actual net clearance plus
+0.025 mm; the earlier 0.185 mm suggested clearance is not a blanket pass.
+No other part or power-net release. Screen the complete paired geometry,
+construct only if it passes, then attempt the remaining POWER connection
+using the existing single-net router. A useful local cell that fails the
+long connection stays separately held, not promoted or discarded.
+
+The completion item is `power-u5-complete-1840`, stop 19:00, no native start
+after 18:57 and report by 19:01. No paid router run or fabrication release.
+
+**Complete U5 cell staged:** `power-u5-complete-1840\rev2` PCB `393b23b9...`
+moves only U5 +0.4 mm, replaces exactly the six released tracks, preserves
+V+/BOOST_FB, and adds a POWER escape with off-pad via
+`3f9b8296-6b59-4dee-8083-76f098779939` at (97.7, 114.2).
+The GND/VAMP exposed 0.3 mm necks become 0.650 mm (was 0.525); their
+0.8 mm branches shorten to 0.450694 mm. BOOST_SW shortens to 2.008079 mm.
+Local native geometric clearance has no new findings, but opens remain
+7 -> 7. A new dangling via and missing local TP14 library context keep
+the standard result held. The library context must be restored, not waived.
+
+The first long-link invocation found no path but used legacy F/In2/B
+defaults, omitting 6C's In3 signal layer. The lead identified a second
+invocation issue: `route_gaps.py` expands goals, not the source group.
+The correction must start at the newly qualified EN via, not a trapped
+literal pad witness, and explicitly enable F/In2/In3/B. Any substitute
+routing-request JSON is labelled synthetic and kept separate from native
+DRC evidence. This correction stays within the current completion item's
+allowance and deadline; it is not acceptance or an unchanged router rerun.
+
+**Corrected invocation closes POWER, pending final lead disposition.**
+Four layers with the old F-track source still found no path (4.234 s;
+1,112 reachable cells, all F, none via-capable). The third route invocation,
+using the EN via as source, routed in 5.906 s: 208 In3 segments, 0.15 mm
+width, 20.58 mm centreline, no additional vias. Q2-side copper stayed
+unchanged. Filled candidate `rev2-routed4-via\handbell.kicad_pcb`,
+`dacfb543...`, has 6 opens versus 7, identical 396 non-open findings and
+46 parity notices. Exact local-library context removes the temporary TP14
+warning. No paid run.
+
+The lead independently verifies exact PCB hashes, identical project/
+schematic/local-library bytes, all unchanged copper/footprint subtrees
+(except U5's +0.4 mm pose), zone definitions and other top-level fields.
+Exactly six released tracks disappear; 218 copper objects are added.
+Source-bound `parent-complement.json` records that parsed comparison.
+The executor's filled-island graph finds zero prior terminal-group splits
+and only the authorized POWER merge. Main GND retains 61 terminals;
+private-net and CELL_NEG memberships are unchanged.
+
+The In3 route has 20.333646 mm of actual In4 main-GND reference under its
+20.580004 mm centreline; the 0.246357 mm uncovered span is at the EN-via
+transition. BOOST_SW's full centreline shortens 6.735 -> 6.608079 mm,
+while its right extent grows 0.171064 mm; fixed L1/capacitors remain.
+The two 0.3 mm necks are 0.650 mm and the broad branches shorten.
+These are geometry witnesses, not measured switching performance.
+
+The package witness uses the source six-pad DRL footprint, with no exposed
+centre pad or copper graphics. With no F.Fab body present, its silhouette
+comes from F.Silk; the via centre is outside that silhouette, not proof
+that its entire annulus is outside it. One failed F.Fab-assumption helper
+receipt and its corrected witness are preserved. Final review must
+explicitly reconcile the original uniform 0.175 mm screen with the
+released stricter-net-plus-0.025 mm margin: project V+/VAMP require 0.20 mm.
+Native DRC establishes the rule floor, not that extra screening margin.
+Candidate remains staged while this final finite witness is checked.
+
+### November 8, 20:24: six-open baseline accepted with explicit margin disposition
+
+The final read-only clearance witness completed at 18:52, before the
+original item's deadline: 224 subjects (218 new copper items and six moved
+U5 pads), 1.219 s wall time, no new board write or routing. It returned
+**HOLD**, even though its process exit was zero. Seven failed item records
+represent four physical conditions, not seven defects:
+
+| Condition | Actual gap | Project floor | Extra screening target |
+|---|---:|---:|---:|
+| New broad GND/VAMP branches | 0.202272 mm | 0.200 mm | 0.225 mm |
+| New VAMP neck to BOOST_SW | 0.203939 mm | 0.200 mm | 0.225 mm |
+| U5.2 POWER to U5.3 V+ pads | 0.200 mm | 0.200 mm | 0.225 mm |
+| U5.5 BOOST_SW to U5.6 VAMP pads | 0.200 mm | 0.200 mm | 0.225 mm |
+
+The latter two spacings are intrinsic to the unchanged footprint, not
+created by its translation. All added POWER tracks and its full-span via
+pass the extra margin. Report `clearance-witness.json`, `486f9376...`, and
+helper `9e9e632a...` remain unchanged; no threshold or result was rewritten.
+The helper uses an explicit net-name clearance mapping matching this exact
+project, not a general KiCad rule resolver.
+
+**Lead disposition:** accept exact `dacfb543...` as an incremental routing
+baseline at the unchanged native project rules, with the four listed
+exceptions to the additional agent-imposed screening margin. This is not a
+claim that the stricter screen passed. The two new copper gaps have only
+0.002272/0.003939 mm nominal headroom above the project floor; retain them
+for final manufacturing review rather than silently generalize the exception.
+The owner asked whether to accept and push; the specific margin question
+returned owner-unavailable/autonomous handling. No explicit owner waiver is
+claimed. This is the lead's delegated engineering decision for continued
+routing, not fabrication, powered-use or electrical-performance approval.
+
+The actual In4 fill boundary is 0.450499 mm from the EN-via centre,
+consistent with its 0.250 mm annulus radius plus 0.200 mm zone clearance.
+The 0.246357 mm uncovered route projection is therefore the ordinary
+transition antipad, not a long reference-plane split. The lead retains the
+20.58 mm enable-control route and the source-bound local switching-cell
+changes: shorter actual SW/return paths, unchanged widths/exterior joins,
+fixed capacitors/inductor and preserved feedback/private pickoffs. This
+does not establish measured noise, current or thermal performance. No new
+return stitch or fully outside-body via annulus is claimed.
+
+**Promoted package:** private `multilayer-20261108\best-6-power`,
+PCB SHA-256 `dacfb543f2eabedf1e4bf77e9612e94e74f022aa514535bc0f08167bbbc9cdc4`.
+Administrative exact copies only: 26 package/evidence files verified before
+writing `acceptance.json`; no native save/refill/routing on promotion.
+Project, schematic, local footprint and table match best-7 exactly;
+`.kicad_prl` is excluded. The acceptance records the margin exceptions,
+all six removed tracks, evidence, preservation and release limits.
+Best-7 `7cb61fef...`, best-8-c1c4 and older sources remain immutable.
+
+Six opens remain: SWDIO, USBBOOT, VO+, GND C7.1's island, GAIN0.1 and
+IC1.19 TESTEN. The next bounded item is USBBOOT: review D3.C's escape
+against the complete connected group and preserve both diode terminal
+duties before selecting any local replacement. Do not repeat previous
+fixed-route/R18 screens unchanged. U5's mechanical rebinding and the
+remaining electrical/manufacturing gates are still outstanding.
+
+Private Azure/restic snapshot `1678e902` (parent `042e1dd7`) now preserves
+the POWER experiments, failed witnesses and accepted six-open package:
+4,798 files, 684.590 MiB, 85 new files. Backup exited successfully; no fresh
+full-data integrity check or restore was performed for this snapshot.
+The PCB packages remain private; the public commit carries this handoff,
+engineering disposition and reusable workflow lessons.
