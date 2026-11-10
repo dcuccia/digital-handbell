@@ -14,7 +14,7 @@ is a routing milestone; see the
 - JLC **auto-saved** that upload to the account's "Projects > Quotes" history
   (toast: "Success! The file has been saved to the 'Projects > Quotes' menu.").
   This is a quote-history record, not an order and not a cart item. The owner
-  may delete it.
+  can decide whether to keep it; whether it can be removed was not checked.
 - Nothing was ordered, paid, put in the cart or accepted (no terms, no coupon).
   No BOM or CPL file was uploaded, the "PCB Assembly" and "Stencil" options
   stayed off, and no part was matched.

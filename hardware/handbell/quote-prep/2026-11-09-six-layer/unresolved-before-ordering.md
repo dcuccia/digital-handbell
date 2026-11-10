@@ -22,7 +22,8 @@ The [README](README.md) says what was uploaded, and
    minimum height, and JLC's public page quotes 1.0 mm.
 6. **Quantity, colour, lead time and panelization.**
 7. **Quote acceptance.** Nothing has been accepted. The upload was auto-saved
-   to the account's "Projects > Quotes" history; delete that record if it is
+   to the account's "Projects > Quotes" history; its removal was not checked,
+   so see whether it can be deleted if it is
    not wanted.
 8. **JLCONE or the web flow** for the ordering step (section H).
 9. **Six-layer CAD rebind (R4).** Whether and when to regenerate the
@@ -182,7 +183,8 @@ listed at the end of [fab-options.md](fab-options.md).
    present. He deferred them twice; ask once more at that step. Record matches
    as "verify live" candidates only, and stop before the cart, an order or
    payment.
-3. Keep or delete the auto-saved "Projects > Quotes" record.
+3. Keep the auto-saved "Projects > Quotes" record, or see whether it can be
+   deleted (not checked).
 4. Accept or reject a quote. That is the owner's act alone: no payment,
    coupon, terms or cart save has been made.
 5. Choose JLCONE or the web flow. Per JLC's
