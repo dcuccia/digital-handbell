@@ -15,25 +15,76 @@ Evidence:
 
 ## The one-paragraph version
 
-Most of this project's routing cost came from decisions made before
-routing. A dense IC was placed over a via keep-out. A decoupling capacitor
-drifted away from its pin. The stackup was too thin for the pin field.
-Autorouters (DeepPCB, Quilter) do 80-90% of a board in minutes, but they
-cannot fix a blocked placement, and they plateau on the last 10-15 links.
-Freeze placement rules and keep-outs first, choose a stackup that suits the
-pin density, run one productive autorouter pass, then finish with
-deterministic, checked tools. Spend money on placement fixes, not on
-repeated re-routes.
+We have not measured how much of the total cost was caused by placement
+versus tooling. The record does show repeated rework around a dense IC
+over a via keep-out, misplaced decouplers, inaccessible returns and
+constrained interconnects. Start with
+the system's power, return and data paths; design critical functional cells
+and their interfaces together; then select placement and a real stackup.
+Use a bounded autorouter run for the remaining interconnect and checked
+local replacements for a finite tail. The six-layer candidate eventually
+reached zero opens, but neither a service's routing percentage nor native
+connectivity proves electrical or manufacturing readiness.
+
+## Phase 0: System architecture before coordinates
+
+This is the recommended next-revision method, not a claim that we exercised
+it end-to-end or measured its savings. It applies to a small respin as well
+as an MCU replacement. Keep the zero-open milestone as the comparison
+baseline; do not start a redesign just to demonstrate the method.
+
+Draw the source-to-load **power tree and its return paths**, and the data/
+control connections between subsystems, before optimizing component poses.
+For each connection, record voltage, current/load cases or edge-rate needs,
+local decoupling, return/reference, candidate layer, width/impedance intent,
+transition space and service/recovery duty. Unknown budgets stay unknown;
+a shared net name is not a shared current or noise requirement.
+
+| Functional cell | Design locally first | Reserve between cells |
+|---|---|---|
+| USB/source selection, charger and cell protection | Actual contact metal, source-switch paths, sense pickoffs, raw CELL_NEG versus protected GND, insulation | Charging/load-current paths and returns; no ground bypass of the protector |
+| Audio boost and amplifier | Switching hot loop, input/output capacitors, feedback/private returns, amplifier decoupling and output filter | Supply/return capacity and the complete two-wire BTL speaker path, not a speaker-to-GND shortcut |
+| MCU/core, flash and crystal | Every supply pin and capacitor return, boot/test straps, crystal/load network, QSPI escape and debug access | Usable through-via sites, USB pair with reference continuity, I2S/control corridors |
+| IMU and external controls | Supply/ground, mode straps, pullups, interrupt and connector duties | I2C/interrupt/button interfaces and their returns; placement/axis constraints |
+
+These are **functional placement cells**, not isolated ground islands.
+Use a coherent protected-ground reference where appropriate; do not split
+digital/audio ground by label. Deliberate protection-side isolation and
+private sense paths are separate, source-backed circuit requirements.
+
+Define each cell's interface contract: actual terminal identities, required
+branches/joins, permitted moves, layer transitions, current/return duties,
+mechanical envelope and acceptance evidence. Review the small critical
+circuits before routing the rest. Do not retain whole shared nets or every
+old escape trace simply to keep a cell "protected".
+
+Sketch several meaningful floorplans cheaply, not hundreds of tiny poses.
+Orient cell interfaces toward their destinations and reserve the wide
+power/return routes, coupled pairs and transition sites before ordinary
+controls occupy them. Check the interfaces together: locally valid cells
+can still be impossible to connect at their boundaries. Move a flexible
+connector or adapt printed supports when justified rather than protecting
+an arbitrary old coordinate at the expense of the circuit.
+
+**Placement release gate:** show actual pin-to-capacitor supply *and return*
+paths, all-layer legal transition sites, critical escape corridors, real
+contact/body/access constraints and a feasible inter-cell routing sketch.
+Body fit, schematic connectivity and an inner-layer empty corridor alone
+are insufficient. Bind checks to the candidate geometry; repeat affected
+checks when a cell, connector, rail route or stackup changes.
 
 ## Phase 1: Requirements and constraints (before schematic capture is "done")
 
-- Write down the hard interfaces: board outline, connectors, buttons, USB
-  access, mounting, battery contacts, and height zones. Each one becomes a
-  keep-out or a fixed position.
+- Classify interfaces as genuinely fixed, bounded-flexible or preferred:
+  outline, connectors, buttons, USB access, mounting, contacts and height
+  zones. Encode real metal/access exclusions, not every old coordinate.
+  Connector reachability and a workable harness can permit relocation.
 - Write down current per supply net, and derive copper width from it. Put
   widths in net classes. Distinguish **power-path** copper (load current)
   from **signal-level taps** on a supply net, such as divider or pull-up
-  resistors. Taps can be minimum width; blanket rules waste routing space.
+  resistors. Qualify tap width against its actual duty and process rules;
+  blanket full-load widths waste routing space, while blanket minimum-width
+  supply routing is unsafe.
 - Decide which circuits are critical and need hand-reviewed copper:
   switching-regulator loops, crystal, USB pair (impedance), battery and
   protection paths, private returns.
@@ -89,15 +140,27 @@ repeated re-routes.
 
 ## Phase 4: Stackup choice
 
-- Choose layers by pin density and the number of critical return paths, not
-  by habit. Here, four layers stalled. The JLC 3313E six-layer stackup
-  (signal/GND/signal/signal/GND/signal: four routing layers, each next to a
-  ground plane) cut the problem from 25+ opens to 12 in one run.
+- Choose layers by usable escape capacity and reference paths, not just
+  total layer count. The six-layer 6C board uses
+  signal/GND/signal/signal/GND/signal. Its frozen 86-open input reached
+  11 opens through routing/post-processing. Placement, retained copper
+  and tooling also changed versus earlier four-layer trials: this is not
+  a controlled measurement of the benefit of adding two layers alone.
 - Use a real fab stackup and its impedance calculator for controlled pairs
-  (USB 90 ohm). Price both options live; at prototype quantity six layers
-  cost about $35-49 and eight about $90 here.
-- Avoid HDI (blind/buried vias, via-in-pad) unless budgeted. Through-vias
-  with standard 0.3 mm drill are enough when placement is sane.
+  (USB 90 ohm). The November 6 example quotes for five boards were about
+  $35-49 for six layers and $90 for eight, with differing defaults; these
+  are not current full PCB+assembly/process quotes.
+- Separate **via-in-pad process** from **HDI**. This milestone uses
+  filled/planarized/capped through-vias, including the owner-approved C7
+  and GAIN0 exceptions; that is not permission for laser microvias or
+  blind/buried vias. Standard through-vias still need all-layer clearance,
+  land/annulus/hole checks and a qualified mask/stencil/process disposition.
+- Screen real 4/6/8-layer constructions with the same circuit obligations,
+  process assumptions and mechanical envelope before buying routing runs.
+  Count usable signal/reference layers and legal transitions, not nominal
+  layers. Reject a USB profile below the permitted width floor; do not
+  invent impedance compatibility. Date quotes and include POFV/assembly
+  charges, preparation and review effort, not bare-board price alone.
 
 ## Phase 5: Autorouter run (DeepPCB or similar)
 
@@ -105,17 +168,19 @@ repeated re-routes.
   with router-friendly rules: wider clearances than the real minimum
   (0.18 versus 0.15 mm) and a larger edge clearance. Remove board-wide
   plane "no track" rule areas, which make fanout think every pin is blocked.
-- Assume the router ignores "protected" copper and undercuts clearances.
-  Treat its output as a proposal.
+- Do not assume a protection flag or imported rule is enforced. Exercise
+  the relevant behavior and compare returned native data under intended
+  rules; treat output as a proposal, not proof that all routers ignore rules.
 - Watch progress and stop on plateau. Most gain arrives in the first 3-5
   minutes. Cap spend per run (`--allow-paid --max-usd`). If the API reports
   no stats, the cap is the only stop.
-- **One productive run per placement.** Fresh re-routes of the same
-  placement landed at 11-14 opens but stranded different links. Their
+- **Default to one productive run per qualified placement.** Fresh re-routes
+  of the same placement landed at 11-14 opens but stranded different links. Their
   copper cannot be transplanted, because each net's route depends on the
-  others.
+  others. Another run needs a specific changed hypothesis, a bounded
+  release/restoration contract and an expected discriminating result.
 
-## Phase 6: Deterministic post-processing (no judgment, all checked)
+## Phase 6: Checked post-processing under a reviewed contract
 
 The standard pipeline is `tools/postprocess_router_result.ps1`:
 
@@ -129,7 +194,10 @@ The standard pipeline is `tools/postprocess_router_result.ps1`:
    returns, plane layers and DRC growth.
 
 Every stage writes its own folder. Accept a board only if opens decrease
-and no DRC type or count grows.
+and no unapproved new findings appear. Category counts alone can hide a
+new defect replacing an old one; compare objects/geometry and connected
+groups, and investigate changed witnesses. A routing acceptance is not a
+release acceptance.
 
 ## Phase 7: Finishing the long tail
 
@@ -184,6 +252,14 @@ and no DRC type or count grows.
   without paid routing. The failed pad-only trials remain evidence, not
   accepted boards. Bare-land access and a matching local footprint library
   still matter; shrinking a pad does not waive either.
+- Prefer a paired blocker replacement when a near miss identifies the
+  exact cause. USBBOOT needed a local VBUS detour plus the C14 return
+  stitch, not just a diode move. TESTEN needed the +3V3 via relocation
+  **and** an In3 SDA jog; the via-only attempt shorted SDA. All-layer
+  through-via access belongs in the cell design, not an afterthought.
+  The broad IC1-window paid reroute instead increased opens from 1 to 6.
+  These outcomes support targeted local contracts, not a claim that every
+  near miss is cheaply repairable.
 
 ## Phase 8: Electrical and release review
 
@@ -198,6 +274,35 @@ Routing completion is not acceptance. Before fabrication, check:
 - fab outputs and a fresh quote.
 
 Fabrication and power-on need separate owner approval.
+Use the [zero-open milestone review](pcb-review-2026-11.md) for the current
+board's specific outstanding evidence; this generic checklist is not its
+completed disposition.
+
+## Next revision: keep the evidence, change the experiment
+
+For an MCU swap, first compare package escape/pin assignment, required
+power/clock/flash parts, I2S implementation, USB and boot/debug support,
+firmware/driver work, idle/peak power, sourcing and assembly process.
+An integrated feature can remove a critical cell but introduce different
+power, RF or software constraints. Freeze the required behavior, not the
+RP2040 floorplan; require a new schematic/net/footprint equivalence review
+where interfaces change. No replacement MCU is selected by this guide.
+
+For either a small respin or a larger revision, compare a small number of
+source-bound alternatives against the preserved milestone. Use unresolved
+root connections, critical-loop/return quality, remaining review effort,
+process dependence and total measured cost as outcomes, not only routed
+percentage. Record agent preparation, native checks and human review effort
+separately from router runtime/spend; do not infer compute cost from elapsed
+wall time. The owner-reported earlier token expense is context, not an
+audited lifetime project total.
+
+DeepPCB v5 placement/Cooper capabilities are a **future experiment** here,
+not exercised independent validation. A read-only second opinion could
+help find missed risks, but must bind each finding to a source object and
+be independently dispositioned. Check capabilities, upload scope and price
+before a separately authorized run; remaining TESTEN minutes are not a
+blanket budget for a new review or redesign.
 
 ## Screens and checkers
 
@@ -245,8 +350,14 @@ A defective helper costs a whole bounded attempt. Before a native run:
 ## Roles, budgets and stopping
 
 - The owner approves spend, stackup, placement policy and fabrication.
-  Agents run bounded items: about 15-45 minutes, an initial attempt plus at
-  most two corrections, an explicit stop condition, and an honest report.
+  Agents normally run 10-15 minute coherent items, including review, with
+  an initial attempt plus at most two corrections, an explicit stop
+  condition and an honest report. Longer allowances must be explicit.
+- Keep the system-level plan with the lead and delegate a complete cell or
+  interface obligation, not isolated field edits. Batch bookkeeping and
+  reuse source-bound evidence when its invariants hold. Count preparation/
+  checker repair against the budget; many small reports are not progress
+  if they do not qualify a route, resolve a risk or enable the next gate.
 - Pin routing executors and verify their runtime (`routing-agent-policy.md`).
   The lead verifies the session's `subagent.configured` record when an
   executor cannot see it.

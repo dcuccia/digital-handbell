@@ -14,6 +14,12 @@ underlying tooling and experiment history.
 
 Short evergreen guide: [agent-first PCB workflow](agent-first-pcb-workflow.md).
 
+**November 9 update:** the later six-layer candidate reached zero opens.
+Use the [review brief](pcb-review-2026-11.md) for current evidence and the
+evergreen guide for next-time practice. Earlier conclusions below describe
+their tested placement/tooling scopes, not proof that all alternative
+layer counts, placements or local repairs are infeasible.
+
 **November 2026 lessons: finishing a long routing tail cheaply.** Evidence:
 [routing completion plan](routing-completion-plan-2026-11.md) progress log.
 Owner is a software developer, not a layout engineer; tools and agents

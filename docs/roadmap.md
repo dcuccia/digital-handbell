@@ -16,6 +16,14 @@ shell, acoustic, and assembly feasibility work.
 
 ## Execution and dependencies
 
+**November 9 review milestone:** six-layer candidate `0051b2e3` has zero
+native unconnected items. The [PR review brief](pcb-review-2026-11.md)
+separates connectivity from the remaining E04/E05/E07/E08 electrical,
+mechanical, DFM and quotation gates. Neither M2 nor these epics are complete.
+The [agent-first workflow](agent-first-pcb-workflow.md#phase-0-system-architecture-before-coordinates)
+now starts future revisions with power/return/data paths and critical-cell
+interfaces; an MCU replacement remains an evaluated option, not new scope.
+
 **September 14 execution update:** the owner-approved
 [cost-aware closure plan](pcb-closure-plan.md) coordinates the remaining
 E04/E05/E07/E08 geometry, routing and quotation work. It preserves previous

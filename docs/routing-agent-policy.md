@@ -5,6 +5,16 @@ to four copper layers, retaining Astra engineering authority and pinned Sol
 execution. The four-layer policy below supersedes the earlier two-layer-only
 work scopes, not the preserved evidence, failed-attempt history or supplier gates.
 
+**November 9 onward:** the current six-layer zero-open milestone enters
+[board review](pcb-review-2026-11.md); older four-layer execution scopes
+below remain historical. For a respin or MCU change, use
+[Phase 0 of the agent-first workflow](agent-first-pcb-workflow.md#phase-0-system-architecture-before-coordinates):
+define power/return/data paths, critical functional cells and their external
+interfaces before freezing coordinates. A functional cell does not justify
+a split ground plane. Legal component placement must include supply/return
+paths and all-layer via access. Board publication or PR merge is not a new
+routing, process-waiver, paid-service or fabrication authorization.
+
 ## Model and invocation gate
 
 Repository profile: `.github/agents/kicad-router.agent.md`, model

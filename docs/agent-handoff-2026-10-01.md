@@ -2,12 +2,19 @@
 
 ## Start here
 
+**Current phase, November 9:** the separate six-layer `best-0-testen`
+candidate (`0051b2e3`) reached zero opens. Start with the
+[milestone review brief](pcb-review-2026-11.md), not the older continuation
+instructions below. The owner requested a PR to `main` and review of both
+the board and the next-revision workflow. All historical four-layer and
+Quilter evidence remains preserved; no fabrication approval follows.
+
 Use the [Quilter playbook](quilter-playbook.md) for reusable operating
 guidelines and update its evidence-backed rules when a checkpoint teaches
 us a better approach. This handoff and the closure plan retain current
 state and authorization; a playbook update does not release blocked work.
 
-**November5 next-step plan:** see the proposed
+**Historical November5 next-step plan:** see the proposed
 [routing completion plan](routing-completion-plan-2026-11.md). It selects the
 authoritative four-layer 37-open board as the baseline. Routing is
 tool-driven (owner is not a router): DeepPCB after a preservation test, an

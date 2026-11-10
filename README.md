@@ -1,5 +1,17 @@
 # Digital Handbell
 
+**November 9: six-layer routing milestone reached zero opens.** The
+`best-0-testen` PCB (`0051b2e3`) retains **388 non-open DRC findings and
+46 schematic-parity findings**; it is not fabrication-ready or electrically
+qualified. Start with the [board-review brief](docs/pcb-review-2026-11.md)
+for the exact snapshot, evidence limits and remaining gates. The historical
+37-open four-layer board and all isolated experiments are preserved.
+The [agent-first workflow](docs/agent-first-pcb-workflow.md) captures the
+next-revision method: system power/return/data planning, critical functional
+cells, legal escape geometry and then routing.
+
+The dated updates below describe earlier milestones, not the current board.
+
 **September 22: inner ground plane, +3V3 bridge and four ground stitches accepted.** The active
 four-layer PCB now has **44 opens**, with existing connected groups and
 protected sense returns preserved. The supply bridge adds three 0.40 mm

@@ -11,7 +11,16 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
-**Support disposition, October16:** Quilter/Justin offers product-specific
+**Current phase, November 9: review the zero-open six-layer milestone.**
+Use [the review brief](pcb-review-2026-11.md) and its exact snapshot/evidence
+bindings. `best-0-testen` (`0051b2e3`) is the routing-continuation milestone,
+not a fabrication or powered-use release. The 37-open four-layer source,
+Quilter results and failed local trials remain preserved. Review the
+accumulated electrical/process/mechanical obligations in the PR before
+new optimization. The older continuation instructions below describe their
+own checkpoints; do not resume them as current work.
+
+**Historical support disposition, October16:** Quilter/Justin offers product-specific
 help, not layout review. The requested width metadata and original-export
 examples are prepared in a small [report](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json)
 with a [reply](quilter-support-email-2026-10-14.md) the owner reports sent
@@ -22,7 +31,7 @@ input needs actual local pose changes or a deliberately revised placement
 release; a spacing parameter alone is not an implemented alternative.
 No geometry reduction, plane reassignment, new job or engineering restart.
 
-**Current trial checkpoint, October14 12:56:** the proposed coordinated core
+**Historical trial checkpoint, October14 12:56:** the proposed coordinated core
 trial stopped at its first contract gate without a repair. Both named GND/
 D+ obstacles are Quilter-added, but physical cut/return duties remain
 unqualified. The prepared contact helper was rejected before execution;
@@ -214,6 +223,12 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 `reports/power-device-local-reuse.json` records that limited reuse explicitly.
 
 ## Owner pause and next item
+
+**November 9 current next item:** enter the PR review phase using
+[the zero-open review brief](pcb-review-2026-11.md). It controls the
+current snapshot/publication and review work. Older pauses and next-item
+instructions below retain their original scope; they do not restart failed
+Quilter/native/routing attempts or authorize spending.
 
 **October14 12:56 trial stop:** no complete core/C18 replacement contract was
 qualified within the first item's cap. Both reviewed obstructions have new

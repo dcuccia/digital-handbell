@@ -1,5 +1,12 @@
 # Routing completion plan - November 2026
 
+**November 9 milestone:** a separate six-layer candidate `0051b2e3` now has
+zero native opens. See the [review brief](pcb-review-2026-11.md) and
+[evergreen next-revision workflow](agent-first-pcb-workflow.md). The plan,
+estimates and progress entries below are historical, not remaining tasks
+or current fabrication forecasts. Board/electrical/process review is still
+required; the 37-open source and all failed trials remain unchanged.
+
 Goal: a fabricable **engineering-prototype** PCB in about two to three weeks,
 **driven by routing tools, not by the owner routing by hand**. The owner is
 a software developer, not a layout engineer: the owner's role is decisions,

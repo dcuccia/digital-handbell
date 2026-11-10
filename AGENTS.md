@@ -3,8 +3,23 @@
 ## Bounded engineering work
 
 - **Read docs/agent-first-pcb-workflow.md first** for PCB routing/placement work:
-  the evergreen phase-by-phase lessons (keep-outs and pin-adjacency rules
-  before routing, one productive autorouter run, checked finishing).
+  start with its Phase 0 system power/return/data map and critical-cell
+  interface contracts before coordinates. "Islands" means functional
+  placement cells, not arbitrary splits in the ground reference. Qualify
+  supply AND return paths and all-layer transition access before freezing
+  placement; apply this to small respins and MCU replacements alike.
+
+- **Current milestone: zero-open six-layer review, not fabrication release.**
+  PCB `0051b2e3` (`best-0-testen`) has 0 opens, 388 non-open findings and
+  46 parity findings. Use `docs/pcb-review-2026-11.md` for the review entry
+  point, source/publication limits and required dispositions. The older
+  four-layer 37-open board and private trials remain preserved. Earlier
+  dated "next item"/stop notes below are historical, not instructions to
+  restart exhausted trials. Review is the current phase; no new paid
+  router/Cooper run, redesign or fabrication is authorized by opening a PR.
+  Update the evergreen workflow when lessons change; do not bury reusable
+  rules only in this chronology. A future MCU swap is an option to evaluate,
+  not a selected revision.
 
 - **November 9: IC1 nudge screen held at construction gate.**
   `ic1-cell-nudge-1720\screen.json` (`70be233a`) ranks a 0.25 mm northward

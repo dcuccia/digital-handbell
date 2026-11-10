@@ -8,11 +8,13 @@ Evidence reviewed through **October 6, 2026**: Quilter UI/API through1.42.0
 (earlier observations used UI1.40.0/API1.40.1) and KiCad10.0.6.
 This is a living procedure, not a platform guarantee.
 
-**November 2026:** Quilter work is paused. Finishing continues with the
-four-layer board, DeepPCB and agent placement tools; see the November
-lessons in [routing tooling](routing-tooling.md#current-conclusion). The
-biggest lesson applies to any router: check placement against battery-contact
-via keep-outs before routing.
+**November 9, 2026:** Quilter work is paused. A separate six-layer
+DeepPCB/agent-assisted candidate reached zero opens; see the
+[review brief](pcb-review-2026-11.md). It is not a Quilter completion result
+or a released board. The [agent-first workflow](agent-first-pcb-workflow.md)
+consolidates cross-tool lessons: plan power/return/data paths and complete
+critical cells before routing, including battery-contact via exclusions.
+No controlled total-cost comparison establishes a universal platform winner.
 The [workflow study](quilter-workflow-study-2026-10-02.md) retains the dated
 reasoning; its linked ledgers bind exact files and results. The
 [closure plan](pcb-closure-plan.md#owner-pause-and-next-item) controls current
@@ -811,14 +813,16 @@ by themselves establish the right electrical associations or distances.
 For unsupported essential constraints, retain a reviewed block, provide
 an explicit independent acceptance check, or stop; never silently omit them.
 
-**Proposed practice, not yet full-board exercised:** retain only a few
+**Historical October 4 proposal, subsequently exercised in comparison
+inputs/jobs, not a qualified product layout:** retain only a few
 source-reviewed sensitive cells and release ordinary layout around them.
 An exact retained block needs copper identities and external terminal/
 junction obligations, not just a list of fixed footprints or a rectangular
 cut. Check private pickoffs at the actual terminal lands; shared-net
 continuity is not equivalent. The handbell's selected first-comparison
 boost/protection/clock strategy leaves72 of104 references eligible;
-the complete input and physical/electrical constraints are not yet qualified.
+input qualification and returned-output limits are recorded separately in
+the later October ledgers. This early proposal is not the current status.
 See the [common-input disposition](quilter-workflow-study-2026-10-02.md#common-input-strategy-retain-critical-cells-release-ordinary-layout).
 
 **Observed relative-constraint path, not qualified routing behavior:** the
