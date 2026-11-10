@@ -11,13 +11,18 @@ The [README](README.md) says what was uploaded, and
    `2f738ccb`). The private working board `best-0-testen` (PCB `0051b2e3`)
    differs only in J1's footprint expression. Choose one; a different source
    needs a fresh export and a fresh `verify` run.
-2. **Surface finish:** OSP (live default, $0.00) or ENIG (+$16.80 at
-   quantity 5).
-3. **Via covering and the via-fill size question.** The five U4/C24 vias and
-   the two POFV vias must come out filled and capped; see
+2. **Surface finish: decided 2026-11-10, ENIG with 1 U" gold** (+$16.80 at
+   quantity 5). The owner chose it for corrosion resistance; see
+   [Surface finish](fab-options.md#surface-finish).
+3. **Via covering: selected 2026-11-10 (delegated by the owner), Epoxy
+   Filled & Capped** (live default, $0.00). The question of whether its
+   0.5 mm limit means drill or land is still open. It is handled by the
+   draft order note's stop-and-contact clause and by confirming the
+   production files; see
    [Vias and via protection](fab-options.md#vias-and-via-protection-the-main-open-question).
-4. **Outline tolerance.** Is +/-0.2 mm, the only live choice, acceptable for
-   the PCB mounts and the BT1/BT2 contact bases?
+4. **Outline tolerance: selected 2026-11-10 (delegated by the owner),
+   Regular +/-0.2 mm,** the only live choice. The printed mounts must absorb
+   it (R4); see [Outline and tolerance](fab-options.md#outline-and-tolerance).
 5. **Silk legibility.** At least 69 text items are below the project's 0.8 mm
    minimum height, and JLC's public page quotes 1.0 mm.
 6. **Quantity, colour, lead time and panelization.**
@@ -199,3 +204,13 @@ listed at the end of [fab-options.md](fab-options.md).
    its shipping beats the $26.60 web estimate, are unverified. Suggested: stay
    on the web for quote prep and consider JLCONE at ordering time for the
    discounts. Installing it needs explicit owner approval.
+
+   Recommendation for the agent-first workflow (2026-11-10): the agent does
+   every preparation step on the web through Playwright: upload, options,
+   BOM/CPL matching and preview review. Playwright reads the page structure
+   and uploads files directly, and it has already done the Gerber upload.
+   Driving JLCONE would need screenshot-level desktop automation for the
+   same pages and adds no capability. JLCONE is useful only as the owner's
+   checkout channel for its promotions, and only if the web-prepared quote
+   or cart is visible there. The owner installs it and checks this; the
+   agent does not.

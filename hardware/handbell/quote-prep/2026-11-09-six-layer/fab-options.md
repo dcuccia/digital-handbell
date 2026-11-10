@@ -126,6 +126,20 @@ unspecific. The two readings give different answers for this board:
   and 0.5 mm). Under the Untented tooltip's "<= 0.3mm" the 12 x 0.35 mm and
   4 x 0.5 mm drills would not be filled, but only for that option.
 
+**Selected 2026-11-10 (delegated by the owner): Epoxy Filled & Capped,**
+the live default at $0.00. It matches the non-conductive resin intent.
+Copper-paste fill (+$332.61) is not needed. The drill-or-land question stays
+open, so:
+
+1. Use the draft order note below, which names the seven vias and says to
+   stop and contact us before substituting.
+2. At ordering, consider "Confirm Production file". A transient $1.05 line
+   with that name appeared once during probing; the price is unverified.
+   The option shows JLC's production files before manufacture.
+3. Ask question 1 below if JLC's engineers do not answer it.
+
+Under the drill reading, all 169 vias qualify.
+
 This is a supplier question and an owner decision. Do not change the vias,
 the stackup or the covering to get around it. If the supplier's rule excludes
 any via in the table above, stop and ask the owner before substituting
@@ -144,6 +158,10 @@ tenting or plugging. Do not claim vendor IPC-4761 Type VII certification.
   and suits a single reflow soon after fabrication. The board has an RP2040
   QFN, an LSM6DSOX LGA and bare test lands (TP3 to TP16, plus TP5 as a 0.30 mm
   microprobe land), so ask JLC for advice before choosing.
+- **Decided 2026-11-10: ENIG, 1 U" gold.** The owner chose ENIG for corrosion
+  resistance. It also suits the QFN/LGA pads and the bare test lands. 1 U" is
+  enough: the board has no edge fingers, and the battery contacts are
+  soldered parts, not plated pads that wear.
 
 ## Stackup, thickness and impedance
 
@@ -183,6 +201,12 @@ tenting or plugging. Do not claim vendor IPC-4761 Type VII certification.
 - Live: Precision is disabled; Regular +/-0.2 mm is selected.
 - Owner decision: is +/-0.2 mm acceptable for the PCB mounts in the printed
   cartridge and for the BT1/BT2 contact bases? This ties to work package R4.
+- **Selected 2026-11-10 (delegated by the owner): Regular +/-0.2 mm.**
+  Precision cannot be ordered for this board: it needs at least 50 x 50 mm
+  and tooling holes. The 0.3 mm edge-copper rule exceeds the tolerance. The
+  printed cartridge mounts are designed to adapt to the board, so R4 must
+  give them +/-0.2 mm clearance in addition to the print tolerance. The
+  board design is unchanged.
 
 ## Holes, slots and drill files
 
@@ -291,6 +315,7 @@ substituting tenting or plugging.
 Stackup: 6 layers, intended JLC06161H-3313E style (S/G/S/S/G/S),
 finished thickness about 1.65 mm. Please confirm what the 1.6 mm option
 builds. No impedance control requested.
+Surface finish ENIG; via covering Epoxy Filled & Capped (as selected).
 Four plated slots (X6 shell anchors): 0.6 mm wide, 1.4 and 1.7 mm long.
 ```
 
