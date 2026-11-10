@@ -68,6 +68,12 @@ Narrow margins carried into R3 (accepted for routing continuation only):
 
 ## B. Sourcing (BOM)
 
+- **Update 2026-11-10:** all 44 lines were matched live on JLC's quote page.
+  The selections, the R27/J2 substitutions and the stock risks are in
+  [pcba-quote-2026-11-10.md](pcba-quote-2026-11-10.md). The notes below
+  describe the uploaded CSV, which is unchanged. The substitutions still
+  need an engineering check before ordering.
+
 - Only 8 of 44 BOM rows carry an LCSC code: D4 C389354, IC1 C2040, IC4
   C481766, J1 C594367, Q2 and Q4 C20917, U3 C424093 and X6 C165948. All are
   status `VERIFY LIVE`: catalog evidence recorded in this repository, not

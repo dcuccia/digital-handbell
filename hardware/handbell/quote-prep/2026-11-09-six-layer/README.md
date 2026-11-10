@@ -20,8 +20,13 @@ is a routing milestone; see the
   stayed off, and no part was matched.
 - Display-only probes of surface finish and via covering changed only the
   displayed price. The page was restored to JLC's defaults afterwards.
-- The PCBA step (BOM/CPL upload and LCSC part matching) is deferred until the
-  owner is present. Update this section when it proceeds.
+- Later on 2026-11-10, with owner approval, the PCBA step ran on the web
+  quote page. The unchanged BOM/CPL were uploaded, all 44 lines were matched
+  to in-stock LCSC parts (two substitutions: R27 and J2), and a quote was
+  obtained: **$277.16 for 5 assembled boards before shipping**. Nothing was
+  added to the cart or ordered. See
+  [pcba-quote-2026-11-10.md](pcba-quote-2026-11-10.md); it supersedes the
+  "no BOM/CPL uploaded" statement above for that later session.
 
 ## Why this exists
 
