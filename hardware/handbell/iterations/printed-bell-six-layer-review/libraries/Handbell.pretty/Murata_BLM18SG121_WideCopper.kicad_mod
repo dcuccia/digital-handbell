@@ -1,0 +1,211 @@
+(footprint "Murata_BLM18SG121_WideCopper"
+	
+	
+	
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 1.778 0.127 0)
+		(layer "F.SilkS")
+		
+		(effects
+			(font
+				(size 0.666496 0.666496)
+				(thickness 0.146304)
+			)
+			(justify left bottom)
+		)
+	
+(uuid "ea140d7e-3e86-5853-9895-4cde67ea4d1a"))
+	(property "Value" "Ferrite"
+		(at 1.778 0.762 0)
+		(layer "F.Fab")
+		
+		(effects
+			(font
+				(size 0.36576 0.36576)
+				(thickness 0.04064)
+			)
+			(justify left bottom)
+		)
+	
+(uuid "73d25601-cc1a-52a1-a8d0-fd0cabdf7b25"))
+	(property "Datasheet" "https://pim.murata.com/asset/pim4/ferriteBeadInductortypefilter/ENFA0003_PDF_FERRITEBEADINDUCTORTYPEFILTER?lastModifiedDatetime=20260603144239"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	
+(uuid "4f65839b-2e5e-5ea4-aa58-7501be758af4"))
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	
+(uuid "c89547d8-7989-5f03-a33a-4b683a5f77b8"))
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 0 -0.4)
+		(end 0 0.4)
+		(stroke
+			(width 0.3048)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		
+	
+(uuid "33c579b1-e649-5188-abcd-26c8391699c7"))
+	(fp_poly
+		(pts
+			(xy -0.1999 0.3) (xy 0.1999 0.3) (xy 0.1999 -0.3) (xy -0.1999 -0.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Adhes")
+		
+	
+(uuid "e9491380-0de6-5ecd-bf7c-799244749308"))
+	(fp_line
+		(start -1.473 -0.729)
+		(end 1.473 -0.729)
+		(stroke
+			(width 0.0508)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		
+	
+(uuid "0710de11-9146-5e01-9eeb-797e4ff06176"))
+	(fp_line
+		(start -1.473 0.729)
+		(end -1.473 -0.729)
+		(stroke
+			(width 0.0508)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		
+	
+(uuid "f007db18-5529-5635-9ca5-1d793e6e1fc0"))
+	(fp_line
+		(start 1.473 -0.729)
+		(end 1.473 0.729)
+		(stroke
+			(width 0.0508)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		
+	
+(uuid "331cae48-fb11-5857-b566-de797480a5ec"))
+	(fp_line
+		(start 1.473 0.729)
+		(end -1.473 0.729)
+		(stroke
+			(width 0.0508)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		
+	
+(uuid "8f46334c-a1e1-5128-9366-c0b614c9c7af"))
+	(fp_line
+		(start -0.356 -0.432)
+		(end 0.356 -0.432)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		
+	
+(uuid "afd35168-330c-55a1-817e-f5e8c7e9be1f"))
+	(fp_line
+		(start -0.356 0.419)
+		(end 0.356 0.419)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		
+	
+(uuid "80453e8c-912f-56bf-958e-1aadcc212277"))
+	(fp_poly
+		(pts
+			(xy -0.8382 0.4699) (xy -0.3381 0.4699) (xy -0.3381 -0.4801) (xy -0.8382 -0.4801)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		
+	
+(uuid "80898870-cfd4-5f40-be54-be9a9bad47d2"))
+	(fp_poly
+		(pts
+			(xy 0.3302 0.4699) (xy 0.8303 0.4699) (xy 0.8303 -0.4801) (xy 0.3302 -0.4801)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		
+	
+(uuid "9922e54c-df23-529e-9742-8dea1a842efc"))
+	(pad "1" smd rect
+		(at -0.675 0)
+		(size 0.65 1.2)
+		(layers "F.Cu")
+		
+		
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "eb6ec6bc-30de-5a83-ab2c-5bd3e1de2bba")
+
+
+)
+	(pad "2" smd rect
+		(at 0.675 0)
+		(size 0.65 1.2)
+		(layers "F.Cu")
+		
+		
+		(thermal_bridge_angle 0)
+		
+	
+(uuid "3cd4bee7-df34-5b01-a4d6-b79b76ce6a35")
+
+
+)
+	(embedded_fonts no)
+
+
+
+
+(property "MPN" "BLM18SG121TN1D" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+(property "Manufacturer" "Murata" (at 0 0 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1))))
+(attr smd)
+(fp_rect (start -1.000000 -0.350000) (end -0.350000 0.350000) (stroke (width 0) (type solid)) (fill solid) (layer "F.Mask") (uuid "a919671b-9d2a-5d65-82ff-a6314f13714b"))
+(fp_rect (start -1.000000 -0.350000) (end -0.350000 0.350000) (stroke (width 0) (type solid)) (fill solid) (layer "F.Paste") (uuid "bbedf516-77a9-544d-8c6b-a78b71151af8"))
+(fp_rect (start 0.350000 -0.350000) (end 1.000000 0.350000) (stroke (width 0) (type solid)) (fill solid) (layer "F.Mask") (uuid "90a66ed3-5550-5fc5-ae24-e43941dd4ab6"))
+(fp_rect (start 0.350000 -0.350000) (end 1.000000 0.350000) (stroke (width 0) (type solid)) (fill solid) (layer "F.Paste") (uuid "6a2fb4a5-613e-583c-96e6-0fb7e97b5bb2"))
+)

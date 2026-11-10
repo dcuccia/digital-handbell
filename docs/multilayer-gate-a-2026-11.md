@@ -2576,3 +2576,52 @@ Owner 15:07: "approve, and keep going/fixing as needed to get this done."
   VCORE 0.475, BCLK 0.611, USBBOOT 0.857, IC1 EP 0.200 mm (at the rule limit).
 - Promoted to private `multilayer-20261109\best-0-testen`. DeepPCB spend:
   none (15 approved minutes remain unspent). Not fabrication approval.
+
+## November 9 - PR review snapshot and next-revision workflow
+
+The owner requested a PR to main, board review in that PR, and durable
+systems-first lessons for small respins or a future MCU change. The
+[review brief](pcb-review-2026-11.md) defines R1-R6; the
+[evergreen workflow](agent-first-pcb-workflow.md) now starts with
+power/return/data paths, critical functional cells and inter-cell interfaces.
+This does not start a redesign, Cooper run or fabrication.
+
+The owner explicitly selected a provenance-cleared public snapshot, then
+approved an independent JST-drawing-based J1 rebuild when the converted
+JLCEDA/EasyEDA asset's redistribution terms could not be cleared.
+Runtime-verified Sol/medium built only the publication derivative:
+
+- Public package: `hardware/handbell/iterations/printed-bell-six-layer-review`.
+  PCB `2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2`.
+  Private `0051b2e3` remains unchanged; project/schematic are exact copies.
+- Official JST `eACHL.pdf`, pages 1-2, supplies factual dimensions.
+  New J1 Fab/Silk/Courtyard expression and child UUIDs replace the converted
+  asset; pads, nets, pose and footprint UUID are preserved.
+- Lead independently verified every published manifest entry, source hash,
+  exact project/schematic equality, byte-identical complete non-J1
+  complement, and full parsed J1 pad semantics/pose/layer/UUID.
+- Executor native comparison: zero opens and 46 parity in both.
+  Non-open findings 388 -> 291 solely from 97 missing-library findings
+  disappearing with the complete package. Other category counts are equal.
+  This is library resolution, not copper repair or full library equivalence.
+- 56 allowlisted public files include local libraries, license/notices and
+  sanitized native/report evidence. No preferences, account/browser files,
+  raw third-party CAD or stale CAD/placement acceptance package is included.
+  Legacy schematic refresh aliases remain explicitly unsupported.
+  Root added package-local byte-preservation attributes, regenerated the
+  manifest and verified all staged blobs byte-for-byte; inherited parent
+  attributes otherwise normalized support-file line endings.
+- Execution limitation: initial native checks exposed J1 Datasheet then
+  Description parity differences, corrected in two revisions. A further
+  byte-preservation correction restored CRLF outside J1, followed by final
+  DRC. This exceeded the stated initial-plus-two correction allowance;
+  preserve it as a process deviation, not retroactive authorization or a
+  reason to omit the final exact-byte verification. No additional routing
+  or rule relaxation occurred. Private evidence:
+  `multilayer-20261109\publication-j1-jst-1604`.
+- Four repository-local static tooling suites passed 27 tests. The
+  private-fixture Quilter comparison suite was not rerun. These tests are
+  not electrical or native-board qualification.
+
+Review checkpoint only: 291 non-open findings and 46 parity findings still
+need dispositions. No paid router run, supplier order or powered-use approval.

@@ -61,6 +61,15 @@ are not copied manufacturer STEP models.
 
 ## License boundaries
 
+The [six-layer review snapshot](hardware/handbell/iterations/printed-bell-six-layer-review/README.md)
+retains the adapted hardware's CC BY-SA 3.0 license and credits in its
+adjacent `LICENSE.txt` and `NOTICE.md`. Its J1 footprint is an original
+project implementation of factual dimensions from JST's ACHL drawing,
+not the earlier converted JLCEDA/EasyEDA asset. No manufacturer drawing
+artwork/PDF, external CAD response or account material is redistributed.
+The [source-bound publication record](hardware/handbell/iterations/printed-bell-six-layer-review/reports/publication-validation.json)
+identifies that derivation and the exact delta from the private milestone.
+
 The [October 3 Quilter-input mechanical screen](docs/quilter-workflow-study-2026-10-02.md#october-3-allowed-domain-engineering-disposition)
 and its [packaging sensitivity report](docs/quilter-workflow-study-2026-10-02.md#size-sensitivity-and-engineering-choice)
 and [trial-envelope exports](docs/quilter-workflow-study-2026-10-02.md#october-3-trial-envelope-engineering-review)

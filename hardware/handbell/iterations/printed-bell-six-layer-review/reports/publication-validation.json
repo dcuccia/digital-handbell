@@ -1,0 +1,359 @@
+{
+  "status": "PASS",
+  "scope": "provenance-cleared zero-open review snapshot; not fabrication approval",
+  "official_source": {
+    "manufacturer": "JST",
+    "url": "https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf",
+    "document": "ACHL CONNECTOR",
+    "document_revision": "no revision identifier printed in inspected document; URL path dated 2025/06",
+    "retrieved": "2026-11-09",
+    "sha256": "b33b8099ddf7e3e78d897451d7ecd04f1ef3bd682018d3416a0be4e435012e59",
+    "pages": [
+      1,
+      2
+    ],
+    "units": "mm",
+    "drawing_datum": "page-1 PCB layout: reinforcement-land left edge x=0 before rotation",
+    "dimensions_used": {
+      "signal_pitch": 1.2,
+      "signal_land": [
+        0.85,
+        0.6
+      ],
+      "reinforcement_land": [
+        1.1,
+        0.7
+      ],
+      "reinforcement_land_outer_pitch": 4.2,
+      "signal_land_left_edge_x": 3.85,
+      "signal_land_right_edge_x": 4.7,
+      "header_body_transverse": 4.2,
+      "header_body_length": 4.4
+    },
+    "project_expression": {
+      "fab_body": "4.2 x 4.4 mm rectangle placed from manufacturer body dimensions",
+      "courtyard": "project rectangle x +/-2.50, y -0.50..4.55 mm",
+      "silkscreen": "two original pin-1 corner strokes only; no vendor drawing artwork"
+    }
+  },
+  "source": {
+    "pcb_sha256": "0051b2e32c78533f102f3e20cb1bdac3c23377ec9d53b594b4ae5deda663a6bd",
+    "pro_sha256": "78f6c36e62d8e2f724c6a081e6355b4ec6fc98efc0aba2a099498dd3d56335f4",
+    "sch_sha256": "72110104cef60ed84bad1cbcbab5527bd644a686984fa69b4a1b9f7e3abfd21f",
+    "final_summary_sha256": "9ee4832ec121b53b5992bc8a06fe76a2b6b70399bb49ece7f0df6a418eb572e6",
+    "root_base_drc_sha256": "e769067f0583f694776ffaab0533a1c06ac91badf691287c3798a857e2c352f6",
+    "root_candidate_drc_sha256": "c441f2e821ced78e1192b8b378b452e04aa6d804369b2fcabcbeffecfc230297",
+    "root_checker_sha256": "42481b53902d6de8ad42349f0bf29d500fd995c8181e366ff64872a493c75b46"
+  },
+  "publication": {
+    "pcb_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+    "pro_sha256": "78f6c36e62d8e2f724c6a081e6355b4ec6fc98efc0aba2a099498dd3d56335f4",
+    "sch_sha256": "72110104cef60ed84bad1cbcbab5527bd644a686984fa69b4a1b9f7e3abfd21f",
+    "j1_library_sha256": "adf0b264bee2fb000690ac2341bd5316216910eb42264d4a045d0d730f57062c",
+    "native_drc_sha256": "73dd5be225e214e06d5d52c4b19896e635db30fe57240780c7ae576b8994f0e1"
+  },
+  "exact_complement": {
+    "non_j1_source_text_byte_identical": true,
+    "therefore_saved_zone_fills_and_all_non_j1_objects_identical": true,
+    "j1_footprint_uuid_preserved": "ce90647c-93c1-4eef-9164-4c6543e3f7cb",
+    "j1_pose": {
+      "x_mm": 119.5,
+      "y_mm": 97.7,
+      "rotation_deg": 0,
+      "side": "F"
+    },
+    "source_pad_facts": [
+      [
+        "\"\"",
+        -1.75,
+        3.725,
+        0.7,
+        1.1,
+        null
+      ],
+      [
+        "\"\"",
+        1.75,
+        3.725,
+        0.7,
+        1.1,
+        null
+      ],
+      [
+        "\"1\"",
+        -0.6,
+        0.0,
+        0.6,
+        0.85,
+        "VO+"
+      ],
+      [
+        "\"2\"",
+        0.6,
+        0.0,
+        0.6,
+        0.85,
+        "VO-"
+      ]
+    ],
+    "publication_pad_facts": [
+      [
+        "\"\"",
+        -1.75,
+        3.725,
+        0.7,
+        1.1,
+        null
+      ],
+      [
+        "\"\"",
+        1.75,
+        3.725,
+        0.7,
+        1.1,
+        null
+      ],
+      [
+        "\"1\"",
+        -0.6,
+        0.0,
+        0.6,
+        0.85,
+        "VO+"
+      ],
+      [
+        "\"2\"",
+        0.6,
+        0.0,
+        0.6,
+        0.85,
+        "VO-"
+      ]
+    ],
+    "copper_pad_geometry_equal": true,
+    "changed_geometry": "J1 Fab/Silk/Courtyard expression and J1 child UUIDs only"
+  },
+  "native_drc": {
+    "tool": "KiCad 10.0.6 kicad-cli",
+    "command": "pcb drc --format json --units mm --all-track-errors --severity-all --schematic-parity",
+    "timeout_seconds_each": 180,
+    "no_refill_or_save": true,
+    "base": {
+      "unconnected_items": 0,
+      "schematic_parity": 46,
+      "violations": {
+        "items_not_allowed": 71,
+        "lib_footprint_issues": 97,
+        "silk_edge_clearance": 5,
+        "silk_over_copper": 90,
+        "silk_overlap": 47,
+        "text_height": 69,
+        "text_thickness": 2,
+        "track_dangling": 6,
+        "via_dangling": 1
+      }
+    },
+    "publication": {
+      "unconnected_items": 0,
+      "schematic_parity": 46,
+      "violations": {
+        "items_not_allowed": 71,
+        "silk_edge_clearance": 5,
+        "silk_over_copper": 90,
+        "silk_overlap": 47,
+        "text_height": 69,
+        "text_thickness": 2,
+        "track_dangling": 6,
+        "via_dangling": 1
+      }
+    },
+    "physical_electrical_categories_equal": true,
+    "library_issue_change": "97 -> 0 because the publication package resolves local libraries"
+  },
+  "dependencies": {
+    "board_footprint_resolution": [
+      {
+        "library": "ACHL_Local",
+        "footprint": "JST_ACHL_BM02B-ACHLKS-GAN-ETF",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "B1,27",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "CHIPLED_0603_NOOUTLINE",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "QFN16_3MM",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "QFN56_7MM_REDUCEDEPAD",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "SOD-323F",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "SOD-323_MINI",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "SOT23-5",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "SOT23-WIDE",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "TESTPOINT_ROUND_1.5MM_NO",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit Feather RP2040 Prop-Maker-import-fps",
+        "footprint": "_0402NO",
+        "resolved": true
+      },
+      {
+        "library": "Adafruit_LSM6DSOX-import-fps",
+        "footprint": "LGA-14L",
+        "resolved": true
+      },
+      {
+        "library": "Clock",
+        "footprint": "ABM8_272_T3",
+        "resolved": true
+      },
+      {
+        "library": "Clock",
+        "footprint": "GRM1555C1H150JA01D",
+        "resolved": true
+      },
+      {
+        "library": "Connector_JST",
+        "footprint": "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+        "resolved": true
+      },
+      {
+        "library": "Handbell",
+        "footprint": "DFN2015-3_DrainPad",
+        "resolved": true
+      },
+      {
+        "library": "Handbell",
+        "footprint": "ERJ6BW_0805_Panasonic_Example",
+        "resolved": true
+      },
+      {
+        "library": "Handbell",
+        "footprint": "Murata_BLM18SG121_WideCopper",
+        "resolved": true
+      },
+      {
+        "library": "Handbell",
+        "footprint": "Murata_GRM21_10uF_Reflow",
+        "resolved": true
+      },
+      {
+        "library": "Handbell",
+        "footprint": "Murata_GRM21_22uF_Reflow",
+        "resolved": true
+      },
+      {
+        "library": "Handbell",
+        "footprint": "TDK_VLS5045EX_Reflow",
+        "resolved": true
+      },
+      {
+        "library": "Handbell",
+        "footprint": "TPS61023_DRL_TI_Example",
+        "resolved": true
+      },
+      {
+        "library": "Handbell",
+        "footprint": "USB_C_HRO_TYPE_C_31_M_12_Handbell",
+        "resolved": true
+      },
+      {
+        "library": "Handbell_Local",
+        "footprint": "TP_BareProbe_D0.3mm",
+        "resolved": true
+      },
+      {
+        "library": "Handbell_Local",
+        "footprint": "TP_BareProbe_D0.6mm",
+        "resolved": true
+      },
+      {
+        "library": "Jumper",
+        "footprint": "SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm",
+        "resolved": true
+      },
+      {
+        "library": "Jumper",
+        "footprint": "SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm",
+        "resolved": true
+      },
+      {
+        "library": "MountingHole",
+        "footprint": "MountingHole_2.2mm_M2_Pad",
+        "resolved": true
+      },
+      {
+        "library": "Package_TO_SOT_SMD",
+        "footprint": "SOT-23",
+        "resolved": true
+      },
+      {
+        "library": "T8",
+        "footprint": "BQ29700_DSE6",
+        "resolved": true
+      },
+      {
+        "library": "T8",
+        "footprint": "CSD83325L_YJE6",
+        "resolved": true
+      },
+      {
+        "library": "T8",
+        "footprint": "Keystone_254_RevC",
+        "resolved": true
+      },
+      {
+        "library": "T8",
+        "footprint": "Winbond_USON8_UX_2x3",
+        "resolved": true
+      }
+    ],
+    "all_board_footprints_resolved": true,
+    "schematic_embedded_symbols": true,
+    "legacy_refresh_aliases": [
+      "Adafruit Feather RP2040 Prop-Maker",
+      "Adafruit TPS61023",
+      "Adafruit_LSM6DSOX"
+    ],
+    "blanket_schematic_footprint_refresh_supported": false
+  },
+  "privacy": {
+    "hits": [],
+    "pass": true
+  },
+  "limits": [
+    "Review snapshot only; not fabrication, quotation, CAD-fit, supplier, functional, safety, or child-use approval.",
+    "Zero opens does not disposition 291 inherited non-open findings or 46 parity findings.",
+    "No PCB refill/save was performed; saved fills are inherited byte-for-byte outside J1."
+  ]
+}

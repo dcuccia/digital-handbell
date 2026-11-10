@@ -1,9 +1,13 @@
 # Digital Handbell
 
-**November 9: six-layer routing milestone reached zero opens.** The
-`best-0-testen` PCB (`0051b2e3`) retains **388 non-open DRC findings and
-46 schematic-parity findings**; it is not fabrication-ready or electrically
-qualified. Start with the [board-review brief](docs/pcb-review-2026-11.md)
+**November 9: six-layer routing milestone reached zero opens.**
+The [public review snapshot](hardware/handbell/iterations/printed-bell-six-layer-review/README.md)
+(`2f738ccb`) preserves the routing of private `best-0-testen` (`0051b2e3`),
+with an independently rebuilt J1 footprint. It retains **291 non-open DRC
+findings and 46 schematic-parity findings**; resolving missing local
+libraries accounts for the reduction from the private milestone's 388.
+It is not fabrication-ready or electrically qualified.
+Start with the [board-review brief](docs/pcb-review-2026-11.md)
 for the exact snapshot, evidence limits and remaining gates. The historical
 37-open four-layer board and all isolated experiments are preserved.
 The [agent-first workflow](docs/agent-first-pcb-workflow.md) captures the

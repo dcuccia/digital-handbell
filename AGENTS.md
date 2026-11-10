@@ -11,7 +11,13 @@
 
 - **Current milestone: zero-open six-layer review, not fabrication release.**
   PCB `0051b2e3` (`best-0-testen`) has 0 opens, 388 non-open findings and
-  46 parity findings. Use `docs/pcb-review-2026-11.md` for the review entry
+  46 parity findings. Public review derivative `2f738ccb` lives in
+  `hardware/handbell/iterations/printed-bell-six-layer-review`: only J1's
+  expression is independently rebuilt from JST dimensions, with identical
+  pads/pose/nets and exact non-J1 bytes. It has 0 opens, 291 non-open and
+  46 parity findings; the 97-count difference is library availability, not
+  copper repairs. Do not bulk-refresh legacy schematic footprint aliases.
+  Use `docs/pcb-review-2026-11.md` for the review entry
   point, source/publication limits and required dispositions. The older
   four-layer 37-open board and private trials remain preserved. Earlier
   dated "next item"/stop notes below are historical, not instructions to

@@ -8,7 +8,8 @@ fabrication, powered use, supplier uploads or further paid routing.
 
 ## What to review first
 
-Read this brief, the snapshot README/manifest when published, and the
+Read this brief, the [snapshot README](../hardware/handbell/iterations/printed-bell-six-layer-review/README.md)
+and [manifest](../hardware/handbell/iterations/printed-bell-six-layer-review/MANIFEST.sha256), and the
 [agent-first workflow](agent-first-pcb-workflow.md). Use the
 [November ledger](multilayer-gate-a-2026-11.md) for individual dispositions.
 The long [Quilter study](quilter-workflow-study-2026-10-02.md) and
@@ -36,8 +37,23 @@ The historical 37-open four-layer PCB remains unchanged at
 must not overwrite it or relabel its CAD/placement manifest as current.
 
 The owner approved a **separate provenance-cleared review snapshot** in
-this PR. Publication is gated on an exact file allowlist, hashes, library
-completeness and applicable hardware notices. Do not copy the whole private
+this PR. It is now published at
+`hardware/handbell/iterations/printed-bell-six-layer-review`, PCB SHA-256
+`2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2`.
+J1 was independently rebuilt from the official JST dimensional drawing
+after the earlier converted library asset's redistribution terms could not
+be cleared. Its pad semantics, pose and nets match; every byte outside J1's
+footprint expression is unchanged. This publication derivative is **not**
+hash-identical to the private milestone. Project and schematic remain exact.
+
+The [publication validation](../hardware/handbell/iterations/printed-bell-six-layer-review/reports/publication-validation.json)
+binds the manufacturer source, dimensions, hashes and native results.
+All board footprints resolve; embedded schematic symbols permit review,
+but blanket library refresh remains unsupported for three documented legacy
+aliases. No current CAD/placement manifest is claimed.
+
+Future publication changes remain gated on an exact file allowlist, hashes,
+library completeness and applicable hardware notices. Do not copy the whole private
 trial directory: `.kicad_prl`, lock files, account/browser material and backup
 records are excluded. Imported footprint provenance must be resolved, not
 silently assigned the root MIT license. Any unresolved publication blocker
@@ -72,6 +88,14 @@ UUID/geometry and connectivity evidence for review.
 | `text_height` / `text_thickness` | 69 / 2 |
 | `silk_overlap` / `silk_over_copper` | 47 / 90 |
 
+The table above describes the private routing milestone. The packaged
+publication derivative has **291 non-open findings, zero opens and 46
+parity findings** in the fresh native run. The difference is 97 missing-
+library findings disappearing after supplying the local libraries, not
+97 repaired copper defects. Every other category is unchanged. The
+[published native report](../hardware/handbell/iterations/printed-bell-six-layer-review/reports/native-drc.json)
+is the review input.
+
 These are not all cosmetic or waived. Unchanged counts can also conceal
 different subjects. Review the actual objects and rule origins, grouping
 repeated witnesses into root issues while retaining every raw finding.
@@ -87,7 +111,7 @@ items and revalidate affected dependencies after a correction.
 
 | Package | Required review and exit evidence |
 |---|---|
-| R1: Native rules and parity | Disposition all 71 prohibited-item findings, 46 parity findings, library mismatches and dangling copper. Distinguish intended exceptions from real net/geometry errors; no blanket waiver because the previous board had them. Confirm project/embedded rules and exact local-delta preservation, not only category counts. |
+| R1: Native rules and parity | Disposition all 71 prohibited-item findings, 46 parity findings and dangling copper. Library availability now resolves the former 97 missing-library findings, but does not prove library-to-board equivalence or justify bulk refresh. Distinguish intended exceptions from real net/geometry errors; no blanket waiver because the previous board had them. Confirm project/embedded rules and exact local-delta preservation, not only category counts. |
 | R2: Power, returns and critical signals | Review branch current/drop/thermal budgets, necks/vias, boost loops/private pickoffs, CELL_NEG isolation, and each MCU/IMU capacitor's supply and return. The ledger explicitly records USB initially routed as separate traces: establish coupled 90-ohm geometry and reference continuity on the actual stackup, including transitions and both resistor-side pairs. Review clock, QSPI, I2S and TESTEN/boot/recovery duties. Zero opens is not SI/PI evidence. |
 | R3: Process and margins | Inventory every filled/planarized/capped through-via, including U4/C24 and the C7/GAIN0 additions; reconcile exact via identities with pad/mask/paste and IPC-4761 Type VII fabrication notes. Confirm supplier support and cost. No HDI/laser microvias. Review the narrow-margin table below and actual rule minima. |
 | R4: Mechanical and service | Rebind the exact new board and placements into the assembly. Check contact/cell isolation, speaker height, mounts, USB mating, assembly order and service access. Include relocated JST ACHL J1 and its mating harness; preserve both BTL leads. TP5 is a 0.30 mm microprobe land, TP14 a 0.6 mm rear land, not qualified universal hand probing. Do not reuse historical CAD as if it matched. |
