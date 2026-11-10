@@ -47,6 +47,37 @@ at about $26.60 (UPS DDP). JLCONE desktop advertises $1-20 lower prices.
 Feeder loading fees come from Extended parts; reducing Extended parts is the
 main lever on cost.
 
+## Quantity scaling (November 10)
+
+Bare-PCB web prices are from live quotes using the same 6-layer, ENIG and
+epoxy-filled-and-capped settings, with a 7-8 day build and shipping excluded:
+
+| PCB qty | Web price | Basis |
+|---|---|---|
+| 5 | 48.80 | special offer 32.00 + finish 16.80 |
+| 10 | 64.10 | special offer 47.00 + finish 17.10 |
+| 20 | 56.20 | engineering 33.00 + finish 17.60 + board 5.60 |
+
+At quantity 20 the price is lower than at 10 because the 10-piece special
+offer no longer applies.
+
+The PCBA totals below are estimates, not live quotes. Each one is the PCB price
+plus fixed fees of about 131.59 (setup, stencil and Extended feeders) plus
+about 19.27 per assembled board (components 16.83, SMT 0.69, X-ray 1.65,
+packaging 0.10). Applied to quantity 5, this model gives 276.74, against the
+quoted 277.16.
+
+| PCBs / assembled | Total | Per assembled board |
+|---|---|---|
+| 5 / 2 | ~219 | ~110 |
+| 5 / 5 | 277.16 (quoted) | ~55 |
+| 10 / 10 | ~388 | ~39 |
+| 20 / 20 | ~573 | ~29 |
+
+The quantity-2 estimate may be higher, because of component MOQ and attrition.
+Larger quantities may be slightly lower, because of price breaks. Re-quote live
+before ordering.
+
 ## Live part selections (verify live before ordering)
 
 | References | LCSC | Note |
