@@ -1,0 +1,1502 @@
+{
+  "counts": {
+    "bom_rows": 44,
+    "fitted": 83,
+    "footprints": 104,
+    "lcsc_resolved_rows": 8,
+    "lcsc_unresolved_rows": 36
+  },
+  "excluded": [
+    {
+      "reasons": [
+        "dnp"
+      ],
+      "ref": "C29"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "CHG_EN0"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "D+1"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "D-1"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "GAIN0"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files",
+        "board_only"
+      ],
+      "ref": "MH1"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files",
+        "board_only"
+      ],
+      "ref": "MH2"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP3"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP4"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP5"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP6"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP7"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP8"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP9"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP10"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP11"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP12"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP13"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP14"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP15"
+    },
+    {
+      "reasons": [
+        "exclude_from_bom",
+        "exclude_from_pos_files"
+      ],
+      "ref": "TP16"
+    }
+  ],
+  "fitted": [
+    {
+      "footprint": "Keystone_254_RevC",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "254",
+      "ref": "BT1",
+      "rot": 0.0,
+      "side": "bottom",
+      "value": "Keystone 254 POS",
+      "x": 111.625,
+      "y": 100.0
+    },
+    {
+      "footprint": "Keystone_254_RevC",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "254",
+      "ref": "BT2",
+      "rot": 180.0,
+      "side": "bottom",
+      "value": "Keystone 254 NEG",
+      "x": 88.375,
+      "y": 100.0
+    },
+    {
+      "footprint": "Murata_GRM21_10uF_Reflow",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61C106KE15L",
+      "ref": "C1",
+      "rot": 90.0,
+      "side": "top",
+      "value": "10uF/16V",
+      "x": 85.55,
+      "y": 90.76
+    },
+    {
+      "footprint": "GRM1555C1H150JA01D",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM1555C1H150JA01D",
+      "ref": "C2",
+      "rot": 90.0,
+      "side": "top",
+      "value": "15pF",
+      "x": 92.6036,
+      "y": 86.75245
+    },
+    {
+      "footprint": "GRM1555C1H150JA01D",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM1555C1H150JA01D",
+      "ref": "C3",
+      "rot": -90.0,
+      "side": "top",
+      "value": "15pF",
+      "x": 90.849181,
+      "y": 87.749331
+    },
+    {
+      "footprint": "Murata_GRM21_10uF_Reflow",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61C106KE15L",
+      "ref": "C4",
+      "rot": 0.0,
+      "side": "top",
+      "value": "10uF/16V",
+      "x": 86.4,
+      "y": 96.75
+    },
+    {
+      "footprint": "Murata_GRM21_10uF_Reflow",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61C106KE15L",
+      "ref": "C5",
+      "rot": 0.0,
+      "side": "top",
+      "value": "10uF/16V",
+      "x": 83.821409,
+      "y": 97.491452
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C6",
+      "rot": 180.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 105.497898,
+      "y": 87.499744
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C7",
+      "rot": 180.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 108.803336,
+      "y": 92.500014
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R61E105KA12D",
+      "ref": "C8",
+      "rot": 0.0,
+      "side": "top",
+      "value": "1uF/25V",
+      "x": 105.501069,
+      "y": 89.930145
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C9",
+      "rot": 90.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 102.615534,
+      "y": 82.228672
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R61E105KA12D",
+      "ref": "C10",
+      "rot": 0.0,
+      "side": "top",
+      "value": "1uF/25V",
+      "x": 108.6,
+      "y": 83.7
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R61E105KA12D",
+      "ref": "C11",
+      "rot": -90.0,
+      "side": "top",
+      "value": "1uF/25V",
+      "x": 99.005927,
+      "y": 92.495623
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C12",
+      "rot": 90.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 99.00005,
+      "y": 82.230077
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C13",
+      "rot": 0.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 105.502546,
+      "y": 91.140537
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C14",
+      "rot": 180.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 94.804295,
+      "y": 89.804504
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R61E105KA12D",
+      "ref": "C15",
+      "rot": -90.0,
+      "side": "top",
+      "value": "1uF/25V",
+      "x": 107.189143,
+      "y": 91.696168
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C16",
+      "rot": 0.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 111.33959,
+      "y": 93.016901
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R61E105KA12D",
+      "ref": "C17",
+      "rot": 0.0,
+      "side": "top",
+      "value": "1uF/25V",
+      "x": 105.499429,
+      "y": 88.717675
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C18",
+      "rot": 0.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 94.80364,
+      "y": 88.503449
+    },
+    {
+      "footprint": "Murata_GRM21_10uF_Reflow",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61C106KE15L",
+      "ref": "C19",
+      "rot": 0.0,
+      "side": "top",
+      "value": "10uF/16V",
+      "x": 114.218731,
+      "y": 93.06263
+    },
+    {
+      "footprint": "Murata_GRM21_10uF_Reflow",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61C106KE15L",
+      "ref": "C20",
+      "rot": 90.0,
+      "side": "top",
+      "value": "10uF/16V",
+      "x": 104.846036,
+      "y": 96.216111
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM1555C1H221JA01D",
+      "ref": "C21",
+      "rot": 90.0,
+      "side": "top",
+      "value": "220pF",
+      "x": 116.752667,
+      "y": 88.79485
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM1555C1H221JA01D",
+      "ref": "C22",
+      "rot": 90.0,
+      "side": "top",
+      "value": "220pF",
+      "x": 116.95189,
+      "y": 90.911232
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C23",
+      "rot": 0.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 89.302835,
+      "y": 91.491614
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C24",
+      "rot": 90.0,
+      "side": "top",
+      "value": "0.1uF",
+      "x": 92.004083,
+      "y": 93.999669
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C103KA01D",
+      "ref": "C25",
+      "rot": 0.0,
+      "side": "top",
+      "value": "10nF",
+      "x": 104.990239,
+      "y": 107.50713
+    },
+    {
+      "footprint": "Murata_GRM21_22uF_Reflow",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61C226ME44L",
+      "ref": "C26",
+      "rot": 180.0,
+      "side": "top",
+      "value": "22uF",
+      "x": 90.5,
+      "y": 110.9
+    },
+    {
+      "footprint": "Murata_GRM21_22uF_Reflow",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61C226ME44L",
+      "ref": "C27",
+      "rot": -90.0,
+      "side": "top",
+      "value": "22uF",
+      "x": 100.1,
+      "y": 115.2
+    },
+    {
+      "footprint": "Murata_GRM21_22uF_Reflow",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM21BR61C226ME44L",
+      "ref": "C28",
+      "rot": -90.0,
+      "side": "top",
+      "value": "22uF",
+      "x": 102.2,
+      "y": 115.2
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "GRM155R71C104KA88D",
+      "ref": "C30",
+      "rot": -90.0,
+      "side": "top",
+      "value": "100n 16V X7R",
+      "x": 91.1,
+      "y": 107.1
+    },
+    {
+      "footprint": "CHIPLED_0603_NOOUTLINE",
+      "hints": {
+        "ROT": "270"
+      },
+      "manufacturer": "Kingbright",
+      "mpn": "APT1608LSECK/J4-PRV",
+      "ref": "CHG0",
+      "rot": 90.0,
+      "side": "top",
+      "value": "ORANGE",
+      "x": 107.249567,
+      "y": 94.601987
+    },
+    {
+      "footprint": "SOD-323_MINI",
+      "hints": {},
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "1N4148WS-7-F",
+      "ref": "D3",
+      "rot": 0.0,
+      "side": "top",
+      "value": "1N4148",
+      "x": 102.3,
+      "y": 103.4
+    },
+    {
+      "footprint": "SOD-323F",
+      "hints": {},
+      "manufacturer": "Nexperia",
+      "mpn": "PMEG2020AEA,115",
+      "ref": "D4",
+      "rot": 0.0,
+      "side": "top",
+      "value": "PMEG2020AEA",
+      "x": 97.999141,
+      "y": 103.501032
+    },
+    {
+      "footprint": "Murata_BLM18SG121_WideCopper",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "BLM18SG121TN1D",
+      "ref": "FB1",
+      "rot": 0.0,
+      "side": "top",
+      "value": "Ferrite",
+      "x": 114.513146,
+      "y": 90.010292
+    },
+    {
+      "footprint": "Murata_BLM18SG121_WideCopper",
+      "hints": {},
+      "manufacturer": "Murata",
+      "mpn": "BLM18SG121TN1D",
+      "ref": "FB2",
+      "rot": 0.0,
+      "side": "top",
+      "value": "Ferrite",
+      "x": 114.513529,
+      "y": 87.925648
+    },
+    {
+      "footprint": "QFN56_7MM_REDUCEDEPAD",
+      "hints": {},
+      "manufacturer": "Raspberry Pi",
+      "mpn": "RP2040",
+      "ref": "IC1",
+      "rot": -90.0,
+      "side": "top",
+      "value": "RP2040_QFN56",
+      "x": 100.0,
+      "y": 87.5
+    },
+    {
+      "footprint": "LGA-14L",
+      "hints": {},
+      "manufacturer": "STMicroelectronics",
+      "mpn": "LSM6DSOXTR",
+      "ref": "IC4",
+      "rot": -90.0,
+      "side": "top",
+      "value": "LSM6DSOXTR",
+      "x": 89.499806,
+      "y": 93.492711
+    },
+    {
+      "footprint": "JST_ACHL_BM02B-ACHLKS-GAN-ETF",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "BM02B-ACHLKS-GAN-ETF",
+      "ref": "J1",
+      "rot": 0.0,
+      "side": "top",
+      "value": "BM02B-ACHLKS-GAN-ETF",
+      "x": 119.5,
+      "y": 97.7
+    },
+    {
+      "footprint": "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "SM02B-SRSS-TB",
+      "ref": "J2",
+      "rot": 0.0,
+      "side": "top",
+      "value": "SM02B-SRSS-TB",
+      "x": 114.0,
+      "y": 108.0
+    },
+    {
+      "footprint": "CHIPLED_0603_NOOUTLINE",
+      "hints": {
+        "ROT": "270"
+      },
+      "manufacturer": "Kingbright",
+      "mpn": "APT1608LSECK/J3-PRV",
+      "ref": "L0",
+      "rot": 0.0,
+      "side": "top",
+      "value": "RED",
+      "x": 98.0,
+      "y": 101.27
+    },
+    {
+      "footprint": "TDK_VLS5045EX_Reflow",
+      "hints": {},
+      "manufacturer": "TDK",
+      "mpn": "VLS5045EX-1R0N",
+      "ref": "L1",
+      "rot": 0.0,
+      "side": "top",
+      "value": "1uH",
+      "x": 93.0,
+      "y": 114.8
+    },
+    {
+      "footprint": "SOT23-WIDE",
+      "hints": {},
+      "manufacturer": "Alpha & Omega Semiconductor",
+      "mpn": "AO3401",
+      "ref": "Q1",
+      "rot": 90.0,
+      "side": "top",
+      "value": "AO3401",
+      "x": 93.6,
+      "y": 108.0
+    },
+    {
+      "footprint": "SOT23-WIDE",
+      "hints": {},
+      "manufacturer": "Alpha & Omega Semiconductor",
+      "mpn": "AO3400A",
+      "ref": "Q2",
+      "rot": 0.0,
+      "side": "top",
+      "value": "AO3400A",
+      "x": 86.972445,
+      "y": 101.315177
+    },
+    {
+      "footprint": "DFN2015-3_DrainPad",
+      "hints": {},
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "DMP2045UFY4-7",
+      "ref": "Q3",
+      "rot": 0.0,
+      "side": "top",
+      "value": "DMP2045UFY4",
+      "x": 97.5,
+      "y": 107.45
+    },
+    {
+      "footprint": "SOT-23",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "AO3400A",
+      "ref": "Q4",
+      "rot": 0.0,
+      "side": "top",
+      "value": "AO3400A",
+      "x": 110.633404,
+      "y": 85.948348
+    },
+    {
+      "footprint": "CSD83325L_YJE6",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "CSD83325L",
+      "ref": "Q5",
+      "rot": 90.0,
+      "side": "top",
+      "value": "CSD83325L",
+      "x": 85.599175,
+      "y": 107.35048
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R1",
+      "rot": 0.0,
+      "side": "top",
+      "value": "10K",
+      "x": 95.488993,
+      "y": 92.505938
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R2",
+      "rot": 0.0,
+      "side": "top",
+      "value": "10K",
+      "x": 104.51505,
+      "y": 93.795629
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R3",
+      "rot": 90.0,
+      "side": "top",
+      "value": "10K",
+      "x": 81.562727,
+      "y": 93.802243
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R4",
+      "rot": 90.0,
+      "side": "top",
+      "value": "10K",
+      "x": 100.201085,
+      "y": 100.99871
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R5",
+      "rot": 90.0,
+      "side": "top",
+      "value": "10K",
+      "x": 106.901181,
+      "y": 105.798536
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-071KL",
+      "ref": "R6",
+      "rot": -90.0,
+      "side": "top",
+      "value": "1K",
+      "x": 94.825414,
+      "y": 86.705901
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R7",
+      "rot": 0.0,
+      "side": "top",
+      "value": "10K",
+      "x": 97.0,
+      "y": 110.0
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-075K1L",
+      "ref": "R8",
+      "rot": 0.0,
+      "side": "top",
+      "value": "5.1K",
+      "x": 105.698911,
+      "y": 99.001078
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0722RL",
+      "ref": "R9",
+      "rot": 180.0,
+      "side": "top",
+      "value": "22 ohm",
+      "x": 107.505371,
+      "y": 88.142334
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0722RL",
+      "ref": "R10",
+      "rot": 180.0,
+      "side": "top",
+      "value": "22 ohm",
+      "x": 107.709565,
+      "y": 86.940867
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-071KL",
+      "ref": "R11",
+      "rot": 90.0,
+      "side": "top",
+      "value": "1K",
+      "x": 104.3,
+      "y": 103.4
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-075K1L",
+      "ref": "R12",
+      "rot": 180.0,
+      "side": "top",
+      "value": "5.1K",
+      "x": 106.631292,
+      "y": 93.300076
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-075K1L",
+      "ref": "R13",
+      "rot": 180.0,
+      "side": "top",
+      "value": "5.1K",
+      "x": 94.502623,
+      "y": 93.780294
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R14",
+      "rot": 90.0,
+      "side": "top",
+      "value": "10K",
+      "x": 87.094469,
+      "y": 94.71803
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R15",
+      "rot": 90.0,
+      "side": "top",
+      "value": "10K",
+      "x": 87.082668,
+      "y": 92.101941
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-07100KL",
+      "ref": "R16",
+      "rot": 0.0,
+      "side": "top",
+      "value": "100K",
+      "x": 83.499431,
+      "y": 103.801519
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-07100KL",
+      "ref": "R17",
+      "rot": 0.0,
+      "side": "top",
+      "value": "100K",
+      "x": 86.699495,
+      "y": 98.505288
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R18",
+      "rot": 90.0,
+      "side": "top",
+      "value": "10K",
+      "x": 107.633456,
+      "y": 103.49618
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-074K7L",
+      "ref": "R20",
+      "rot": 90.0,
+      "side": "top",
+      "value": "4.7K",
+      "x": 107.633897,
+      "y": 99.816257
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-0710KL",
+      "ref": "R21",
+      "rot": -90.0,
+      "side": "top",
+      "value": "10K",
+      "x": 102.999181,
+      "y": 107.519537
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-071KL",
+      "ref": "R22",
+      "rot": 0.0,
+      "side": "top",
+      "value": "1K",
+      "x": 108.001343,
+      "y": 107.492733
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-07732KL",
+      "ref": "R23",
+      "rot": 180.0,
+      "side": "top",
+      "value": "732K",
+      "x": 98.2,
+      "y": 112.7
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-07100KL",
+      "ref": "R24",
+      "rot": 0.0,
+      "side": "top",
+      "value": "100K",
+      "x": 97.9,
+      "y": 111.4
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-07330RL",
+      "ref": "R25",
+      "rot": 0.0,
+      "side": "top",
+      "value": "330R",
+      "x": 92.5,
+      "y": 105.3
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-072K2L",
+      "ref": "R26",
+      "rot": 90.0,
+      "side": "top",
+      "value": "2.2k",
+      "x": 86.4,
+      "y": 111.7
+    },
+    {
+      "footprint": "ERJ6BW_0805_Panasonic_Example",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "ERJ-6BWFR033V",
+      "ref": "R27",
+      "rot": 0.0,
+      "side": "top",
+      "value": "33m 1% 0.5W",
+      "x": 85.399019,
+      "y": 109.500966
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-075M1L",
+      "ref": "R28",
+      "rot": 0.0,
+      "side": "top",
+      "value": "5.1M gate discharge",
+      "x": 88.4,
+      "y": 108.55
+    },
+    {
+      "footprint": "_0402NO",
+      "hints": {},
+      "manufacturer": "Yageo",
+      "mpn": "RC0402FR-075M1L",
+      "ref": "R29",
+      "rot": 90.0,
+      "side": "top",
+      "value": "5.1M gate discharge",
+      "x": 82.799851,
+      "y": 109.351077
+    },
+    {
+      "footprint": "Winbond_USON8_UX_2x3",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "W25Q16JVUXIQ TR",
+      "ref": "U1",
+      "rot": -90.0,
+      "side": "top",
+      "value": "W25Q16JVUXIQ TR / 2MB",
+      "x": 106.301448,
+      "y": 84.340754
+    },
+    {
+      "footprint": "SOT23-5",
+      "hints": {
+        "JLC_ROTATION": "270",
+        "JLC_ROTATION_1": "0"
+      },
+      "manufacturer": "Richtek",
+      "mpn": "RT9080-33GJ5",
+      "ref": "U2",
+      "rot": 180.0,
+      "side": "top",
+      "value": "RT9080-3.3",
+      "x": 84.06324,
+      "y": 93.9922
+    },
+    {
+      "footprint": "SOT23-5",
+      "hints": {
+        "JLC_ROTATION": "270",
+        "JLC_ROTATION_1": "0"
+      },
+      "manufacturer": "Microchip Technology",
+      "mpn": "MCP73831T-2ACI/OT",
+      "ref": "U3",
+      "rot": 90.0,
+      "side": "top",
+      "value": "MCP73831T-2ACI/OT",
+      "x": 101.69527,
+      "y": 97.188163
+    },
+    {
+      "footprint": "QFN16_3MM",
+      "hints": {
+        "ROT": "270"
+      },
+      "manufacturer": "Analog Devices / Maxim Integrated",
+      "mpn": "MAX98357AETE+T",
+      "ref": "U4",
+      "rot": 0.0,
+      "side": "top",
+      "value": "MAX98357A",
+      "x": 110.725323,
+      "y": 89.912211
+    },
+    {
+      "footprint": "TPS61023_DRL_TI_Example",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "TPS61023DRLR",
+      "ref": "U5",
+      "rot": 0.0,
+      "side": "top",
+      "value": "TPS61023DRLR",
+      "x": 97.7,
+      "y": 115.2
+    },
+    {
+      "footprint": "BQ29700_DSE6",
+      "hints": {},
+      "manufacturer": "",
+      "mpn": "BQ29700DSER",
+      "ref": "U6",
+      "rot": 0.0,
+      "side": "top",
+      "value": "BQ29700DSER",
+      "x": 89.2,
+      "y": 106.6
+    },
+    {
+      "footprint": "USB_C_HRO_TYPE_C_31_M_12_Handbell",
+      "hints": {},
+      "manufacturer": "HRO / Korean Hroparts Elec",
+      "mpn": "TYPE-C-31-M-12",
+      "ref": "X6",
+      "rot": 180.0,
+      "side": "top",
+      "value": "USB Type C",
+      "x": 100.0,
+      "y": 77.18
+    },
+    {
+      "footprint": "ABM8_272_T3",
+      "hints": {},
+      "manufacturer": "Abracon",
+      "mpn": "ABM8-272-T3",
+      "ref": "Y1",
+      "rot": 90.0,
+      "side": "top",
+      "value": "12MHz/CL10pF",
+      "x": 93.974801,
+      "y": 83.902596
+    }
+  ],
+  "lcsc_conflicts": [],
+  "pcb_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+  "schema": "handbell-quote-inventory-v1",
+  "unresolved_lcsc": [
+    {
+      "designators": [
+        "BT1"
+      ],
+      "footprint": "Keystone_254_RevC",
+      "mpn": "254",
+      "value": "Keystone 254 POS"
+    },
+    {
+      "designators": [
+        "BT2"
+      ],
+      "footprint": "Keystone_254_RevC",
+      "mpn": "254",
+      "value": "Keystone 254 NEG"
+    },
+    {
+      "designators": [
+        "C1",
+        "C4",
+        "C5",
+        "C19",
+        "C20"
+      ],
+      "footprint": "Murata_GRM21_10uF_Reflow",
+      "mpn": "GRM21BR61C106KE15L",
+      "value": "10uF/16V"
+    },
+    {
+      "designators": [
+        "C2",
+        "C3"
+      ],
+      "footprint": "GRM1555C1H150JA01D",
+      "mpn": "GRM1555C1H150JA01D",
+      "value": "15pF"
+    },
+    {
+      "designators": [
+        "C6",
+        "C7",
+        "C9",
+        "C12",
+        "C13",
+        "C14",
+        "C16",
+        "C18",
+        "C23",
+        "C24"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "GRM155R71C104KA88D",
+      "value": "0.1uF"
+    },
+    {
+      "designators": [
+        "C8",
+        "C10",
+        "C11",
+        "C15",
+        "C17"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "GRM155R61E105KA12D",
+      "value": "1uF/25V"
+    },
+    {
+      "designators": [
+        "C21",
+        "C22"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "GRM1555C1H221JA01D",
+      "value": "220pF"
+    },
+    {
+      "designators": [
+        "C25"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "GRM155R71C103KA01D",
+      "value": "10nF"
+    },
+    {
+      "designators": [
+        "C26",
+        "C27",
+        "C28"
+      ],
+      "footprint": "Murata_GRM21_22uF_Reflow",
+      "mpn": "GRM21BR61C226ME44L",
+      "value": "22uF"
+    },
+    {
+      "designators": [
+        "C30"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "GRM155R71C104KA88D",
+      "value": "100n 16V X7R"
+    },
+    {
+      "designators": [
+        "CHG0"
+      ],
+      "footprint": "CHIPLED_0603_NOOUTLINE",
+      "mpn": "APT1608LSECK/J4-PRV",
+      "value": "ORANGE"
+    },
+    {
+      "designators": [
+        "D3"
+      ],
+      "footprint": "SOD-323_MINI",
+      "mpn": "1N4148WS-7-F",
+      "value": "1N4148"
+    },
+    {
+      "designators": [
+        "FB1",
+        "FB2"
+      ],
+      "footprint": "Murata_BLM18SG121_WideCopper",
+      "mpn": "BLM18SG121TN1D",
+      "value": "Ferrite"
+    },
+    {
+      "designators": [
+        "J2"
+      ],
+      "footprint": "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+      "mpn": "SM02B-SRSS-TB",
+      "value": "SM02B-SRSS-TB"
+    },
+    {
+      "designators": [
+        "L0"
+      ],
+      "footprint": "CHIPLED_0603_NOOUTLINE",
+      "mpn": "APT1608LSECK/J3-PRV",
+      "value": "RED"
+    },
+    {
+      "designators": [
+        "L1"
+      ],
+      "footprint": "TDK_VLS5045EX_Reflow",
+      "mpn": "VLS5045EX-1R0N",
+      "value": "1uH"
+    },
+    {
+      "designators": [
+        "Q1"
+      ],
+      "footprint": "SOT23-WIDE",
+      "mpn": "AO3401",
+      "value": "AO3401"
+    },
+    {
+      "designators": [
+        "Q3"
+      ],
+      "footprint": "DFN2015-3_DrainPad",
+      "mpn": "DMP2045UFY4-7",
+      "value": "DMP2045UFY4"
+    },
+    {
+      "designators": [
+        "Q5"
+      ],
+      "footprint": "CSD83325L_YJE6",
+      "mpn": "CSD83325L",
+      "value": "CSD83325L"
+    },
+    {
+      "designators": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R14",
+        "R15",
+        "R18",
+        "R21"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-0710KL",
+      "value": "10K"
+    },
+    {
+      "designators": [
+        "R6",
+        "R11",
+        "R22"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-071KL",
+      "value": "1K"
+    },
+    {
+      "designators": [
+        "R8",
+        "R12",
+        "R13"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-075K1L",
+      "value": "5.1K"
+    },
+    {
+      "designators": [
+        "R9",
+        "R10"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-0722RL",
+      "value": "22 ohm"
+    },
+    {
+      "designators": [
+        "R16",
+        "R17",
+        "R24"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-07100KL",
+      "value": "100K"
+    },
+    {
+      "designators": [
+        "R20"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-074K7L",
+      "value": "4.7K"
+    },
+    {
+      "designators": [
+        "R23"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-07732KL",
+      "value": "732K"
+    },
+    {
+      "designators": [
+        "R25"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-07330RL",
+      "value": "330R"
+    },
+    {
+      "designators": [
+        "R26"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-072K2L",
+      "value": "2.2k"
+    },
+    {
+      "designators": [
+        "R27"
+      ],
+      "footprint": "ERJ6BW_0805_Panasonic_Example",
+      "mpn": "ERJ-6BWFR033V",
+      "value": "33m 1% 0.5W"
+    },
+    {
+      "designators": [
+        "R28",
+        "R29"
+      ],
+      "footprint": "_0402NO",
+      "mpn": "RC0402FR-075M1L",
+      "value": "5.1M gate discharge"
+    },
+    {
+      "designators": [
+        "U1"
+      ],
+      "footprint": "Winbond_USON8_UX_2x3",
+      "mpn": "W25Q16JVUXIQ TR",
+      "value": "W25Q16JVUXIQ TR / 2MB"
+    },
+    {
+      "designators": [
+        "U2"
+      ],
+      "footprint": "SOT23-5",
+      "mpn": "RT9080-33GJ5",
+      "value": "RT9080-3.3"
+    },
+    {
+      "designators": [
+        "U4"
+      ],
+      "footprint": "QFN16_3MM",
+      "mpn": "MAX98357AETE+T",
+      "value": "MAX98357A"
+    },
+    {
+      "designators": [
+        "U5"
+      ],
+      "footprint": "TPS61023_DRL_TI_Example",
+      "mpn": "TPS61023DRLR",
+      "value": "TPS61023DRLR"
+    },
+    {
+      "designators": [
+        "U6"
+      ],
+      "footprint": "BQ29700_DSE6",
+      "mpn": "BQ29700DSER",
+      "value": "BQ29700DSER"
+    },
+    {
+      "designators": [
+        "Y1"
+      ],
+      "footprint": "ABM8_272_T3",
+      "mpn": "ABM8-272-T3",
+      "value": "12MHz/CL10pF"
+    }
+  ],
+  "warnings": []
+}

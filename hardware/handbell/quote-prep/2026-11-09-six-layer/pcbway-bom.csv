@@ -1,0 +1,45 @@
+Item #,Designator,Qty,Manufacturer,Mfg Part #,Description / Value,Package/Footprint,Type,Your Instructions / Notes
+1,BT1,1,,254,Keystone 254 POS,Keystone_254_RevC,SMD,
+2,BT2,1,,254,Keystone 254 NEG,Keystone_254_RevC,SMD,
+3,"C1,C4,C5,C19,C20",5,Murata,GRM21BR61C106KE15L,10uF/16V,Murata_GRM21_10uF_Reflow,SMD,
+4,"C2,C3",2,Murata,GRM1555C1H150JA01D,15pF,GRM1555C1H150JA01D,SMD,
+5,"C6,C7,C9,C12,C13,C14,C16,C18,C23,C24",10,Murata,GRM155R71C104KA88D,0.1uF,_0402NO,SMD,
+6,"C8,C10,C11,C15,C17",5,Murata,GRM155R61E105KA12D,1uF/25V,_0402NO,SMD,
+7,"C21,C22",2,Murata,GRM1555C1H221JA01D,220pF,_0402NO,SMD,
+8,C25,1,Murata,GRM155R71C103KA01D,10nF,_0402NO,SMD,
+9,"C26,C27,C28",3,Murata,GRM21BR61C226ME44L,22uF,Murata_GRM21_22uF_Reflow,SMD,
+10,C30,1,Murata,GRM155R71C104KA88D,100n 16V X7R,_0402NO,SMD,
+11,CHG0,1,Kingbright,APT1608LSECK/J4-PRV,ORANGE,CHIPLED_0603_NOOUTLINE,SMD,
+12,D3,1,Diodes Incorporated,1N4148WS-7-F,1N4148,SOD-323_MINI,SMD,
+13,D4,1,Nexperia,"PMEG2020AEA,115",PMEG2020AEA,SOD-323F,SMD,Catalog LCSC code; stock was recorded at retrieval only and is not a guarantee.
+14,"FB1,FB2",2,Murata,BLM18SG121TN1D,Ferrite,Murata_BLM18SG121_WideCopper,SMD,
+15,IC1,1,Raspberry Pi,RP2040,RP2040_QFN56,QFN56_7MM_REDUCEDEPAD,SMD,"Matches the LCSC property already stored on the PCB. hardware/handbell/parts/device-component-candidates.json:474 records that SC0914(7) is a procurement order code, not an LCSC number.; register agrees"
+16,IC4,1,STMicroelectronics,LSM6DSOXTR,LSM6DSOXTR,LGA-14L,SMD,"Standard PCBA only and X-ray inspection required per docs/pcba-quotation-plan.md. Assembler LGA/MSL/reflow, sourcing tier and mechanical-stress qualification remain open."
+17,J1,1,,BM02B-ACHLKS-GAN-ETF,BM02B-ACHLKS-GAN-ETF,JST_ACHL_BM02B-ACHLKS-GAN-ETF,SMD,"Not stored as a PCB property. Listed Extended in the November ledger. Confirm the exact ACHL part number, pickup datum, mating housing (SACH-003G crimps) and per-contact current before quotation."
+18,J2,1,,SM02B-SRSS-TB,SM02B-SRSS-TB,JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal,SMD,
+19,L0,1,Kingbright,APT1608LSECK/J3-PRV,RED,CHIPLED_0603_NOOUTLINE,SMD,
+20,L1,1,TDK,VLS5045EX-1R0N,1uH,TDK_VLS5045EX_Reflow,SMD,
+21,Q1,1,Alpha & Omega Semiconductor,AO3401,AO3401,SOT23-WIDE,SMD,
+22,Q2,1,Alpha & Omega Semiconductor,AO3400A,AO3400A,SOT23-WIDE,SMD,"Identity observed on JLCPCB metadata; stock and tier are not asserted. Q4 is a standard SOT23 with a rotated land while Q2 is SOT23-WIDE, so equal rotation numbers are not interchangeable."
+23,Q3,1,Diodes Incorporated,DMP2045UFY4-7,DMP2045UFY4,DFN2015-3_DrainPad,SMD,
+24,Q4,1,,AO3400A,AO3400A,SOT-23,SMD,"Identity observed on JLCPCB metadata; stock and tier are not asserted. Q4 is a standard SOT23 with a rotated land while Q2 is SOT23-WIDE, so equal rotation numbers are not interchangeable."
+25,Q5,1,,CSD83325L,CSD83325L,CSD83325L_YJE6,SMD,
+26,"R1,R2,R3,R4,R5,R7,R14,R15,R18,R21",10,Yageo,RC0402FR-0710KL,10K,_0402NO,SMD,
+27,"R6,R11,R22",3,Yageo,RC0402FR-071KL,1K,_0402NO,SMD,
+28,"R8,R12,R13",3,Yageo,RC0402FR-075K1L,5.1K,_0402NO,SMD,
+29,"R9,R10",2,Yageo,RC0402FR-0722RL,22 ohm,_0402NO,SMD,
+30,"R16,R17,R24",3,Yageo,RC0402FR-07100KL,100K,_0402NO,SMD,
+31,R20,1,Yageo,RC0402FR-074K7L,4.7K,_0402NO,SMD,
+32,R23,1,Yageo,RC0402FR-07732KL,732K,_0402NO,SMD,
+33,R25,1,Yageo,RC0402FR-07330RL,330R,_0402NO,SMD,
+34,R26,1,Yageo,RC0402FR-072K2L,2.2k,_0402NO,SMD,
+35,R27,1,,ERJ-6BWFR033V,33m 1% 0.5W,ERJ6BW_0805_Panasonic_Example,SMD,
+36,"R28,R29",2,Yageo,RC0402FR-075M1L,5.1M gate discharge,_0402NO,SMD,
+37,U1,1,,W25Q16JVUXIQ TR,W25Q16JVUXIQ TR / 2MB,Winbond_USON8_UX_2x3,SMD,
+38,U2,1,Richtek,RT9080-33GJ5,RT9080-3.3,SOT23-5,SMD,
+39,U3,1,Microchip Technology,MCP73831T-2ACI/OT,MCP73831T-2ACI/OT,SOT23-5,SMD,
+40,U4,1,Analog Devices / Maxim Integrated,MAX98357AETE+T,MAX98357A,QFN16_3MM,SMD,
+41,U5,1,,TPS61023DRLR,TPS61023DRLR,TPS61023_DRL_TI_Example,SMD,
+42,U6,1,,BQ29700DSER,BQ29700DSER,BQ29700_DSE6,SMD,
+43,X6,1,HRO / Korean Hroparts Elec,TYPE-C-31-M-12,USB Type C,USB_C_HRO_TYPE_C_31_M_12_Handbell,SMD+THT,Manufacturer HRO / Korean Hroparts Elec. Reconciling the footprint alias CUSB31-CFM2AX-01-X with C165948 is unresolved (docs/pcba-bom-readiness.md:153; docs/usb-connector-qualification.md:30-41).; register agrees
+44,Y1,1,Abracon,ABM8-272-T3,12MHz/CL10pF,ABM8_272_T3,SMD,

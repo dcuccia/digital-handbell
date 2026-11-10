@@ -1,0 +1,31 @@
+{
+  "schema": "handbell-quote-expectations-v1",
+  "scope": "Independent expectations for the six-layer review snapshot 2f738ccb. Counts come from the earlier static census, the native Sol export receipt and the JLC06161H-3313E stackup evidence, not from the builder under test. Perimeter and area are deliberately absent because no independent source exists for them.",
+  "expect": {
+    "pcb.sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+    "pcb.footprints": 104,
+    "pcb.pos_all": 84,
+    "pcb.pos_fitted": 83,
+    "pcb.bom_refs": 83,
+    "pcb.cpl_refs": 83,
+    "pcb.fitted": 83,
+    "pcb.fitted_side": {"top": 81, "bottom": 2},
+    "edge.segments": 163,
+    "edge.bbox": [77.75, 73.15, 122.25, 121.5],
+    "edge.closed": true,
+    "vias.total": 169,
+    "vias.through_FB": 169,
+    "vias.capped_filled_flags": 2,
+    "holes.PTH.total": 175,
+    "holes.PTH.by_tool": {
+      "0.300 round": 153,
+      "0.350 round": 12,
+      "0.500 round": 4,
+      "0.600 slot": 4,
+      "2.200 round": 2
+    },
+    "holes.NPTH.total": 2,
+    "holes.NPTH.by_tool": {"0.650 round": 2},
+    "stackup.total_mm": 1.6504
+  }
+}

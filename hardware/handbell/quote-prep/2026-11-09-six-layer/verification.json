@@ -1,0 +1,542 @@
+{
+  "checks": [
+    {
+      "detail": "BOM 83 refs, CPL 83 refs, difference []",
+      "name": "fitted:bom-vs-cpl",
+      "status": "PASS"
+    },
+    {
+      "detail": "163 segments, bbox [77.75, 73.15, 122.25, 121.5], perimeter 150.683305 mm, area 1523.740354 mm2",
+      "name": "edge:closed-loop",
+      "status": "PASS"
+    },
+    {
+      "detail": "169 vias, 0 not F.Cu-B.Cu through vias; {'0.5/0.3': 111, '0.6/0.3': 42, '0.604/0.35': 12, '0.75/0.5': 4}",
+      "name": "vias:through-only",
+      "status": "PASS"
+    },
+    {
+      "detail": "18 via-pad pairs with the via centre inside a pad bbox, 7 fully inside; screen only, not a process decision",
+      "name": "vias:in-pad-screen",
+      "status": "INFO"
+    },
+    {
+      "detail": "copper 0.1308 + dielectric 1.5196 = 1.6504 mm (other 0.0); general.thickness 1.6",
+      "name": "stackup:summary",
+      "status": "INFO"
+    },
+    {
+      "detail": "171 hits, 4 slots, tools {1: 0.3, 2: 0.35, 3: 0.5, 4: 0.6, 5: 2.2}",
+      "name": "drill:PTH:parse",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected 153, file 153, matched 153, max error 0.000500 mm",
+      "name": "drill:PTH:round 0.300",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected 12, file 12, matched 12, max error 0.000476 mm",
+      "name": "drill:PTH:round 0.350",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected 4, file 4, matched 4, max error 0.000000 mm",
+      "name": "drill:PTH:round 0.500",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected 2, file 2, matched 2, max error 0.000000 mm",
+      "name": "drill:PTH:round 2.200",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected 4, file 4, matched 4, max error 0.000000 mm",
+      "name": "drill:PTH:slot 0.600",
+      "status": "PASS"
+    },
+    {
+      "detail": "2 hits, 0 slots, tools {1: 0.65}",
+      "name": "drill:NPTH:parse",
+      "status": "PASS"
+    },
+    {
+      "detail": "expected 2, file 2, matched 2, max error 0.000000 mm",
+      "name": "drill:NPTH:round 0.650",
+      "status": "PASS"
+    },
+    {
+      "detail": "84 rows, 84 expected",
+      "name": "pos:pos-all.csv:rows",
+      "status": "PASS"
+    },
+    {
+      "detail": "83 rows, 83 expected",
+      "name": "pos:pos-fitted.csv:rows",
+      "status": "PASS"
+    },
+    {
+      "detail": "83 rows, 83 expected",
+      "name": "cpl:rows",
+      "status": "PASS"
+    },
+    {
+      "detail": "83 designators, expected 83, header ok True, duplicates [], missing [], extra []",
+      "name": "bom:designators",
+      "status": "PASS"
+    },
+    {
+      "detail": "15 entries, flat True, crc None, exact set True, differing from source []; missing [], extra []",
+      "name": "zip:members",
+      "status": "PASS"
+    },
+    {
+      "detail": "job 44.55 x 48.4 vs outline 44.5500 x 48.4000",
+      "name": "gbrjob:size",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Copper,L1,Top', job 'Copper,L1,Top'",
+      "name": "gerber:handbell-F_Cu.gtl:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "1548 objects, bbox [79.297, 73.4505, 121.9495, 121.1994]",
+      "name": "gerber:handbell-F_Cu.gtl:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "317 pad flashes with identity; mismatched []; unknown refs []",
+      "name": "gerber:handbell-F_Cu.gtl:pad-positions",
+      "status": "PASS"
+    },
+    {
+      "detail": "net mismatches 0: []",
+      "name": "gerber:handbell-F_Cu.gtl:pad-nets",
+      "status": "PASS"
+    },
+    {
+      "detail": "board pads without a matching flash 0: []",
+      "name": "gerber:handbell-F_Cu.gtl:pad-coverage",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Copper,L2,Inr', job 'Copper,L2,Inr'",
+      "name": "gerber:handbell-In1_Cu.g1:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "176 objects, bbox [78.0505, 73.4505, 121.9495, 121.1994]",
+      "name": "gerber:handbell-In1_Cu.g1:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Copper,L3,Inr', job 'Copper,L3,Inr'",
+      "name": "gerber:handbell-In2_Cu.g2:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "611 objects, bbox [79.929, 73.75, 120.524, 118.783]",
+      "name": "gerber:handbell-In2_Cu.g2:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Copper,L4,Inr', job 'Copper,L4,Inr'",
+      "name": "gerber:handbell-In3_Cu.g3:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "529 objects, bbox [79.929, 73.75, 120.2656, 118.783]",
+      "name": "gerber:handbell-In3_Cu.g3:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Copper,L5,Inr', job 'Copper,L5,Inr'",
+      "name": "gerber:handbell-In4_Cu.g4:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "176 objects, bbox [78.0505, 73.4505, 121.9495, 121.1994]",
+      "name": "gerber:handbell-In4_Cu.g4:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Copper,L6,Bot', job 'Copper,L6,Bot'",
+      "name": "gerber:handbell-B_Cu.gbl:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "456 objects, bbox [78.25, 73.75, 121.75, 118.783]",
+      "name": "gerber:handbell-B_Cu.gbl:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "11 pad flashes with identity; mismatched []; unknown refs []",
+      "name": "gerber:handbell-B_Cu.gbl:pad-positions",
+      "status": "PASS"
+    },
+    {
+      "detail": "net mismatches 0: []",
+      "name": "gerber:handbell-B_Cu.gbl:pad-nets",
+      "status": "PASS"
+    },
+    {
+      "detail": "board pads without a matching flash 0: []",
+      "name": "gerber:handbell-B_Cu.gbl:pad-coverage",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Paste,Top', job 'SolderPaste,Top'",
+      "name": "gerber:handbell-F_Paste.gtp:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "295 objects, bbox [81.2627, 78.88, 121.6, 116.8]",
+      "name": "gerber:handbell-F_Paste.gtp:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Paste,Bot', job 'SolderPaste,Bot'",
+      "name": "gerber:handbell-B_Paste.gbp:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "4 objects, bbox [78.25, 97.4, 121.75, 102.6]",
+      "name": "gerber:handbell-B_Paste.gbp:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Legend,Top', job 'Legend,Top'",
+      "name": "gerber:handbell-F_Silkscreen.gto:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "3242 objects, bbox [79.94, 71.038, 121.6, 122.0455]",
+      "name": "gerber:handbell-F_Silkscreen.gto:content",
+      "status": "INFO"
+    },
+    {
+      "detail": "header 'Legend,Bot', job 'Legend,Bot'",
+      "name": "gerber:handbell-B_Silkscreen.gbo:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "413 objects, bbox [78.25, 73.6992, 121.75, 117.9]",
+      "name": "gerber:handbell-B_Silkscreen.gbo:content",
+      "status": "INFO"
+    },
+    {
+      "detail": "header 'Soldermask,Top', job 'SolderMask,Top'",
+      "name": "gerber:handbell-F_Mask.gts:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "322 objects, bbox [80.2003, 73.6992, 121.6, 120.5595]",
+      "name": "gerber:handbell-F_Mask.gts:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Soldermask,Bot', job 'SolderMask,Bot'",
+      "name": "gerber:handbell-B_Mask.gbs:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "13 objects, bbox [78.25, 73.6992, 121.75, 117.9]",
+      "name": "gerber:handbell-B_Mask.gbs:inside-outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "header 'Profile,NP', job 'Profile'",
+      "name": "gerber:handbell-Edge_Cuts.gm1:function",
+      "status": "PASS"
+    },
+    {
+      "detail": "163 objects, bbox [77.725, 73.125, 122.275, 121.525] vs [77.725, 73.125, 122.275, 121.525]",
+      "name": "gerber:handbell-Edge_Cuts.gm1:outline",
+      "status": "PASS"
+    },
+    {
+      "detail": "24 entries; []",
+      "name": "receipt:rehash",
+      "status": "PASS"
+    },
+    {
+      "detail": "got [77.75, 73.15, 122.25, 121.5], want [77.75, 73.15, 122.25, 121.5]",
+      "name": "expect:edge.bbox",
+      "status": "PASS"
+    },
+    {
+      "detail": "got True, want True",
+      "name": "expect:edge.closed",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 163, want 163",
+      "name": "expect:edge.segments",
+      "status": "PASS"
+    },
+    {
+      "detail": "got {'0.650 round': 2}, want {'0.650 round': 2}",
+      "name": "expect:holes.NPTH.by_tool",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 2, want 2",
+      "name": "expect:holes.NPTH.total",
+      "status": "PASS"
+    },
+    {
+      "detail": "got {'0.300 round': 153, '0.350 round': 12, '0.500 round': 4, '0.600 slot': 4, '2.200 round': 2}, want {'0.300 round': 153, '0.350 round': 12, '0.500 round': 4, '0.600 slot': 4, '2.200 round': 2}",
+      "name": "expect:holes.PTH.by_tool",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 175, want 175",
+      "name": "expect:holes.PTH.total",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 83, want 83",
+      "name": "expect:pcb.bom_refs",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 83, want 83",
+      "name": "expect:pcb.cpl_refs",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 83, want 83",
+      "name": "expect:pcb.fitted",
+      "status": "PASS"
+    },
+    {
+      "detail": "got {'top': 81, 'bottom': 2}, want {'top': 81, 'bottom': 2}",
+      "name": "expect:pcb.fitted_side",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 104, want 104",
+      "name": "expect:pcb.footprints",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 84, want 84",
+      "name": "expect:pcb.pos_all",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 83, want 83",
+      "name": "expect:pcb.pos_fitted",
+      "status": "PASS"
+    },
+    {
+      "detail": "got '2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2', want '2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2'",
+      "name": "expect:pcb.sha256",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 1.6504, want 1.6504",
+      "name": "expect:stackup.total_mm",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 2, want 2",
+      "name": "expect:vias.capped_filled_flags",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 169, want 169",
+      "name": "expect:vias.through_FB",
+      "status": "PASS"
+    },
+    {
+      "detail": "got 169, want 169",
+      "name": "expect:vias.total",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "INFO": 4,
+    "PASS": 67
+  },
+  "files": {
+    "drill/handbell-NPTH-drl_map.gbr": {
+      "bytes": 31467,
+      "sha256": "94f177a2bafb4ee8f7d5d2ad8b15a6cb0631152c3760e478377e963258de84f4"
+    },
+    "drill/handbell-NPTH.drl": {
+      "bytes": 374,
+      "sha256": "6989e3f1607cd82684b321e62ddafd902c48f267128e7353938983466cb5fe81"
+    },
+    "drill/handbell-PTH-drl_map.gbr": {
+      "bytes": 104703,
+      "sha256": "b4f3257d4baafd7e9e0f1b31e20b30503bb8a727149e68ebf9781d7db9017256"
+    },
+    "drill/handbell-PTH.drl": {
+      "bytes": 3614,
+      "sha256": "a6128809573028ab8b8e27eff88119f2b6fd134f46672925eafefe67407de1ca"
+    },
+    "drill/handbell-drill-report.txt": {
+      "bytes": 976,
+      "sha256": "6b29f3934d037a7094347af436c4ab8ab048444b5edf0169c6bb209e505eb435"
+    },
+    "gerbers/handbell-B_Cu.gbl": {
+      "bytes": 23068,
+      "sha256": "7b4b133328c03d93c4b2e19af42c51b61370bf09ea350d08251efa40c7fdf264"
+    },
+    "gerbers/handbell-B_Mask.gbs": {
+      "bytes": 1821,
+      "sha256": "92d8018c4c56dff0d3deb335243e0b1532cf735e9162d22918cb70996da4e17b"
+    },
+    "gerbers/handbell-B_Paste.gbp": {
+      "bytes": 708,
+      "sha256": "51f9cb0d428a28d5a80c6dc21db8d3b3169e26a9cf0fbeeadd541d4d6e0db6ee"
+    },
+    "gerbers/handbell-B_Silkscreen.gbo": {
+      "bytes": 22665,
+      "sha256": "098f6be480604a2e43454ea4072ad0bcdd9245e3ac2c5ed65caa7f25df108708"
+    },
+    "gerbers/handbell-Edge_Cuts.gm1": {
+      "bytes": 9001,
+      "sha256": "79280e66d6f3add5e678c95dc7152ca41c42443191d2dfcb78c288a27f8434e6"
+    },
+    "gerbers/handbell-F_Cu.gtl": {
+      "bytes": 295956,
+      "sha256": "a6df18d32f6cdbee628a7c62548e22eabdf7da315fc750e79d7d06b520625e9b"
+    },
+    "gerbers/handbell-F_Mask.gts": {
+      "bytes": 20086,
+      "sha256": "0b8ec9e898325beb5a3f221ca680788accb130b7d09f41638f81267efb1fb74f"
+    },
+    "gerbers/handbell-F_Paste.gtp": {
+      "bytes": 13977,
+      "sha256": "620a243752d8bf984686c0906b8f03ee0063818af20d6b39a02d3f776452cc50"
+    },
+    "gerbers/handbell-F_Silkscreen.gto": {
+      "bytes": 174029,
+      "sha256": "03c4fb2979d0b611682aface18ecfa83fe6b53be4b9526a37b8969d0d4ef87e3"
+    },
+    "gerbers/handbell-In1_Cu.g1": {
+      "bytes": 142735,
+      "sha256": "8de4184fdf7a706faf5afb073c05f95e980437d0fd7f0fbf92561d768519254c"
+    },
+    "gerbers/handbell-In2_Cu.g2": {
+      "bytes": 29732,
+      "sha256": "7ef9be3352b379df76cce9a0f8b3a817bfd88e2d58daff4f6037fe5ffb6e2300"
+    },
+    "gerbers/handbell-In3_Cu.g3": {
+      "bytes": 25111,
+      "sha256": "7fd7121e59af9f40cd98cda4058ca825c3b69d6fd1c1e42f5212b696b91ba7bc"
+    },
+    "gerbers/handbell-In4_Cu.g4": {
+      "bytes": 142735,
+      "sha256": "b06a42673e593bfcd7ce1d0049765bd3559a039a16492d45710d9fb95530484f"
+    },
+    "gerbers/handbell-job.gbrjob": {
+      "bytes": 4792,
+      "sha256": "bec73da9e58d9dc9511002dbf882b993a86c66a6ac30bab3369587c72c07e26b"
+    },
+    "handbell.kicad_pcb": {
+      "bytes": 1402283,
+      "sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2"
+    },
+    "pos/pos-all.csv": {
+      "bytes": 5734,
+      "sha256": "f5d107ee579e247469dde7e66f9bdaa0212a7821b1b0eb788dea469e769a8de9"
+    },
+    "pos/pos-fitted.csv": {
+      "bytes": 5668,
+      "sha256": "31d14719438037bd0dd07f4515d65d7845a12534f7e03245d6e1f85bf3d67d20"
+    },
+    "upload/handbell-six-layer-quote-only-gerber-drill.zip": {
+      "bytes": 222603,
+      "sha256": "0bdddd0fbe1ed08c564b101ee978906e8feba50767c9dd88f062020d0f722099"
+    }
+  },
+  "metrics": {
+    "edge.area_mm2": 1523.740354,
+    "edge.bbox": [
+      77.75,
+      73.15,
+      122.25,
+      121.5
+    ],
+    "edge.closed": true,
+    "edge.perimeter_mm": 150.683305,
+    "edge.segments": 163,
+    "edge.stroke_widths": [
+      0.05
+    ],
+    "holes.NPTH.by_tool": {
+      "0.650 round": 2
+    },
+    "holes.NPTH.total": 2,
+    "holes.PTH.by_tool": {
+      "0.300 round": 153,
+      "0.350 round": 12,
+      "0.500 round": 4,
+      "0.600 slot": 4,
+      "2.200 round": 2
+    },
+    "holes.PTH.total": 175,
+    "pcb.board_only_refs": [
+      "MH1",
+      "MH2"
+    ],
+    "pcb.bom_refs": 83,
+    "pcb.cpl_refs": 83,
+    "pcb.dnp_refs": [
+      "C29"
+    ],
+    "pcb.excluded_refs": [
+      "C29",
+      "CHG_EN0",
+      "D+1",
+      "D-1",
+      "GAIN0",
+      "MH1",
+      "MH2",
+      "TP3",
+      "TP4",
+      "TP5",
+      "TP6",
+      "TP7",
+      "TP8",
+      "TP9",
+      "TP10",
+      "TP11",
+      "TP12",
+      "TP13",
+      "TP14",
+      "TP15",
+      "TP16"
+    ],
+    "pcb.fitted": 83,
+    "pcb.fitted_side": {
+      "bottom": 2,
+      "top": 81
+    },
+    "pcb.footprints": 104,
+    "pcb.pos_all": 84,
+    "pcb.pos_fitted": 83,
+    "pcb.sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+    "stackup.copper_mm": 0.1308,
+    "stackup.dielectric_mm": 1.5196,
+    "stackup.total_mm": 1.6504,
+    "via_in_pad.centre_inside": 18,
+    "via_in_pad.fully_inside": 7,
+    "via_in_pad.pairs": 18,
+    "vias.by_size_drill": {
+      "0.5/0.3": 111,
+      "0.6/0.3": 42,
+      "0.604/0.35": 12,
+      "0.75/0.5": 4
+    },
+    "vias.capped_filled_flags": 2,
+    "vias.through_FB": 169,
+    "vias.total": 169
+  },
+  "overall": "PASS",
+  "schema": "handbell-quote-verification-v1"
+}
