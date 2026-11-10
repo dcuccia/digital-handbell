@@ -165,6 +165,34 @@ Different inputs, placement, stackups and effort prevent an apples-to-apples
 vendor ranking. Prefer measured end-to-end effort and remaining root risks
 over service-reported routed percentages.
 
+## Cooper preflight, November 9
+
+The owner authorized an independent read-only review and Cooper capability/
+pricing inspection, stopping before a new upload, prompt, board edit or
+charge. The authenticated UI was inspected on the historical
+`testen-window-1530` cloud board, **not** this published zero-open snapshot.
+No new Cooper message, upload or routing action was submitted.
+
+The UI exposes a Cooper usage percentage and reset countdown separately
+from the routing-time balance. The refill page offers routing hours; it
+does not establish that buying hours increases Cooper's allowance. No
+Cooper overage/top-up price or enforced review-only mode was established
+from the inspected controls. Absence of a visible control is not proof
+that the capability is unavailable. The official
+[STRF example](https://deeppcb.ai/benchmark/mixed-signal-rf-board-routing/)
+demonstrates Cooper changing constraints/planes and starting routing;
+a request to "review" must not be assumed to disable those capabilities.
+
+For a separately authorized review, use an isolated copy of the exact PR
+snapshot and bind findings to that revision. Record the usage meter and
+reset countdown immediately before and after each bounded prompt, along
+with its scope and elapsed time. Treat changes as **percentage points**,
+not token counts, currency or routing minutes; unchanged rounded readings
+do not prove zero consumption. Keep account-specific observations private.
+Stop at any paid/upgrade gate; neither a reset countdown nor willingness
+to consider more usage authorizes a purchase. Additional usage availability
+and price remain unknown.
+
 ## PR and release boundaries
 
 The milestone PR can preserve a clearly limited, reviewable engineering
