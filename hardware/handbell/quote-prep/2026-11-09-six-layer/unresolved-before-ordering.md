@@ -25,7 +25,9 @@ The [README](README.md) says what was uploaded, and
    it (R4); see [Outline and tolerance](fab-options.md#outline-and-tolerance).
 5. **Silk legibility.** At least 69 text items are below the project's 0.8 mm
    minimum height, and JLC's public page quotes 1.0 mm.
-6. **Quantity, colour, lead time and panelization.**
+6. **Quantity, colour, lead time and panelization.** Recommendation for a
+   first-article build: 5 bare PCBs (JLC minimum), with 2-3 assembled.
+   Inspect and bring up those boards before ordering more.
 7. **Quote acceptance.** Nothing has been accepted. The upload was auto-saved
    to the account's "Projects > Quotes" history; its removal was not checked,
    so see whether it can be deleted if it is
@@ -125,6 +127,20 @@ Narrow margins carried into R3 (accepted for routing continuation only):
   are soldered.
 - Panelization and stencil: the board is below JLC's 70 x 70 mm SMT panel
   minimum, so assembly needs a panel. Stencil was left off in the live quote.
+- J1 body overhang (November 10, owner review): J1's ACHL body extends about
+  0.3 mm past the D43 circle at its north-east corner, in the y 97.5-97.7
+  strip just north of the east contact tab. Its copper pads are inside the
+  outline. Moving J1 on the board is not feasible without rerouting:
+  - West: USB_D- (F, x 117.08) is 0.23 mm from J1's west retention pad, so
+    the 0.3 mm or more needed to clear the corner is blocked.
+  - South: the retention pad is already at 0.325 mm from the tab edge,
+    against the 0.3 mm edge rule. A private 0.25 mm trial
+    (`multilayer-20261110\j1-west-0900`) added a copper edge-clearance
+    finding (0.075 mm), so it was rejected. The base board is unchanged.
+  - Disposition: keep the board, so the quote's Gerbers and CPL stay valid.
+    Add a printed-housing relief over the east tab sized for the J1 body,
+    the mated plug and the wire exit. This is part of R4 and needs the ACHL
+    plug drawing.
 
 ## D. Fabrication
 
