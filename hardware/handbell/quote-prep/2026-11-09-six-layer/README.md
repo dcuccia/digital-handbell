@@ -23,8 +23,9 @@ is a routing milestone; see the
 - Later on 2026-11-10, with owner approval, the PCBA step ran on the web
   quote page. The unchanged BOM/CPL were uploaded, all 44 lines were matched
   to in-stock LCSC parts (two substitutions: R27 and J2), and a quote was
-  obtained: **$277.16 for 5 assembled boards before shipping**. Nothing was
-  added to the cart or ordered. See
+  obtained: **$277.16 for 5 assembled boards before shipping**. The owner
+  then selected 10 PCBs with 8 assembled, quoted live at **$345.84** before
+  shipping. Nothing was added to the cart or ordered. See
   [pcba-quote-2026-11-10.md](pcba-quote-2026-11-10.md); it supersedes the
   "no BOM/CPL uploaded" statement above for that later session.
 

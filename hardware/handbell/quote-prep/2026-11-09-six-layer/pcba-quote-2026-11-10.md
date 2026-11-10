@@ -78,6 +78,30 @@ The quantity-2 estimate may be higher, because of component MOQ and attrition.
 Larger quantities may be slightly lower, because of price breaks. Re-quote live
 before ordering.
 
+### Owner selection: 10 PCBs, 8 assembled (live quote, November 10)
+
+The owner chose to assemble eight boards. JLC requires at least as many PCBs
+as assembled boards, so the order is 10 PCBs with 8 assembled. The same
+saved project was re-quoted live with 6 layers, ENIG, epoxy-filled and capped
+vias, Standard PCBA, both sides and JLC edge rails. The model estimated $350.
+
+| Item | USD |
+|---|---|
+| PCB (10 pcs: special offer 47.00 + ENIG 17.70) | 64.70 |
+| Setup | 51.50 |
+| Stencil | 16.54 |
+| Components (41 items) | 130.91 |
+| Extended-part feeders | 63.55 |
+| SMT assembly | 4.93 |
+| X-ray inspection | 13.20 |
+| Packaging | 0.51 |
+| **Total, before shipping and tax** | **345.84** |
+
+That is about $43 per assembled board, plus about $27 UPS shipping. The BOM
+quantities scaled correctly; for example, 16 battery clips for BT1/BT2. No
+stock shortage was flagged. Build time: PCB 7-8 days, assembly 3-4 days
+(2-3 days costs $49.63 more). Nothing was added to the cart or ordered.
+
 ## Live part selections (verify live before ordering)
 
 | References | LCSC | Note |

@@ -27,7 +27,11 @@ The [README](README.md) says what was uploaded, and
    minimum height, and JLC's public page quotes 1.0 mm.
 6. **Quantity, colour, lead time and panelization.** Recommendation for a
    first-article build: 5 bare PCBs (JLC minimum), with 2-3 assembled.
-   Inspect and bring up those boards before ordering more.
+   **Owner selection (November 10): 10 PCBs with 8 assembled**, quoted live
+   at $345.84 before shipping and tax. See the
+   [quote](pcba-quote-2026-11-10.md#owner-selection-10-pcbs-8-assembled-live-quote-november-10).
+   Colour, lead time and panelization stay as quoted. Bring up the first
+   boards before relying on the rest.
 7. **Quote acceptance.** Nothing has been accepted. The upload was auto-saved
    to the account's "Projects > Quotes" history; its removal was not checked,
    so see whether it can be deleted if it is
