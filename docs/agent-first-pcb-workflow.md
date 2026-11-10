@@ -58,6 +58,20 @@ mechanical envelope and acceptance evidence. Review the small critical
 circuits before routing the rest. Do not retain whole shared nets or every
 old escape trace simply to keep a cell "protected".
 
+The November review found four contract outputs missing. They are method
+requirements, not evidence about the current board:
+
+1. A pin-level entry-copper contract: the bypass capacitor, the maximum
+   loop, and the minimum entry width and length to the trunk.
+2. Widths in netclasses **and** enforceable DRC rules. Netclass patterns
+   cover every net, including GND and /CELL_NEG, and each finding count is
+   recorded beside the rules in force when it was produced.
+3. Numeric evidence for controlled pairs: coupled fraction, intra-pair
+   skew, layer list, and reference transitions with their stitching vias.
+4. Via protection (IPC-4761 type, filling, capping) as a cell-contract
+   output, with per-via properties gated in the PCB and not only in a
+   fabrication note.
+
 Sketch several meaningful floorplans cheaply, not hundreds of tiny poses.
 Orient cell interfaces toward their destinations and reserve the wide
 power/return routes, coupled pairs and transition sites before ordinary

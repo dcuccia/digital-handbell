@@ -113,9 +113,9 @@ items and revalidate affected dependencies after a correction.
 |---|---|
 | R1: Native rules and parity | Disposition all 71 prohibited-item findings, 46 parity findings and dangling copper. Library availability now resolves the former 97 missing-library findings, but does not prove library-to-board equivalence or justify bulk refresh. Distinguish intended exceptions from real net/geometry errors; no blanket waiver because the previous board had them. Confirm project/embedded rules and exact local-delta preservation, not only category counts. |
 | R2: Power, returns and critical signals | Review branch current/drop/thermal budgets, necks/vias, boost loops/private pickoffs, CELL_NEG isolation, and each MCU/IMU capacitor's supply and return. The ledger explicitly records USB initially routed as separate traces: establish coupled 90-ohm geometry and reference continuity on the actual stackup, including transitions and both resistor-side pairs. Review clock, QSPI, I2S and TESTEN/boot/recovery duties. Zero opens is not SI/PI evidence. |
-| R3: Process and margins | Inventory every filled/planarized/capped through-via, including U4/C24 and the C7/GAIN0 additions; reconcile exact via identities with pad/mask/paste and IPC-4761 Type VII fabrication notes. Confirm supplier support and cost. No HDI/laser microvias. Review the narrow-margin table below and actual rule minima. |
-| R4: Mechanical and service | Rebind the exact new board and placements into the assembly. Check contact/cell isolation, speaker height, mounts, USB mating, assembly order and service access. Include relocated JST ACHL J1 and its mating harness; preserve both BTL leads. TP5 is a 0.30 mm microprobe land, TP14 a 0.6 mm rear land, not qualified universal hand probing. Do not reuse historical CAD as if it matched. |
-| R5: Assembly and quotation | Generate matched BOM/CPL, fabrication/drill and assembly outputs only from the reviewed revision. Reconcile J1 `BM02B-ACHLKS-GAN-ETF` / C594367, all fitted back-side contacts, X6 slots/placement and DNP exclusions. Carry process notes and the exact silk waiver; a supplier quote is neither an order nor functional approval. |
+| R3: Process and margins | Inventory every filled/planarized/capped through-via, including U4/C24 and the C7/GAIN0 additions; reconcile exact via identities with pad/mask/paste and IPC-4761 Type VII fabrication notes. Confirm supplier support and cost. No HDI/laser microvias. Review the narrow-margin table below and actual rule minima. Open question for JLC: its live default is Epoxy Filled and Capped, whose tooltip says vias should be at most 0.5 mm in diameter or be left unfilled. The four U4 thermal vias are 0.604 mm land / 0.35 mm drill and C24.2 is 0.6 / 0.3, and none carries a per-via filling or capping flag (only C7.1 and GAIN0.1 do), so the written order note is their only control. Whether the limit means land or drill is unresolved; see [the quote-prep fab options](../hardware/handbell/quote-prep/2026-11-09-six-layer/fab-options.md#vias-and-via-protection-the-main-open-question). |
+| R4: Mechanical and service | Rebind the exact new board and placements into the assembly. Check contact/cell isolation, speaker height, mounts, USB mating, assembly order and service access. Include relocated JST ACHL J1 and its mating harness; preserve both BTL leads. TP5 is a 0.30 mm microprobe land, TP14 a 0.6 mm rear land, not qualified universal hand probing. Do not reuse historical CAD as if it matched: the existing 3D renders and CAD under `mechanical/studies/2026-09-13-printed-bell/` predate this board and the JST ACHL J1. |
+| R5: Assembly and quotation | Generate matched BOM/CPL, fabrication/drill and assembly outputs only from the reviewed revision. Reconcile J1 `BM02B-ACHLKS-GAN-ETF` / C594367, all fitted back-side contacts, X6 slots/placement and DNP exclusions. Carry process notes and the exact silk waiver; a supplier quote is neither an order nor functional approval. A quote-only bare-PCB package is in [quote-prep](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md); 36 of its 44 BOM rows still need an LCSC code and no assembly matching was done. |
 | R6: Bring-up and acceptance | Define a bounded, risk-based bring-up before powered use: protection/charging/source selection, rails, USB/boot/debug, IMU initialization, audio/mute and thermal/current behavior. The owner's limited testing preference does not establish reliability or remove these gates. No child-use claim follows from a working prototype. |
 
 Known margins/dispositions to carry into R3:
@@ -192,6 +192,69 @@ do not prove zero consumption. Keep account-specific observations private.
 Stop at any paid/upgrade gate; neither a reset countdown nor willingness
 to consider more usage authorizes a purchase. Additional usage availability
 and price remain unknown.
+
+## Independent review disposition, November 9
+
+A read-only background reviewer examined the zero-open snapshot's USB, U5
+boost supply, via-fill metadata and netclass widths. The owner paused work
+before it finished, so the list is **partial**. Its findings are leads and
+open gates, not confirmed defects and not repair authorizations. Several
+first-draft claims were retracted after source checks and are recorded so
+they are not repeated.
+
+| ID | Subject | Qualified observation | Status |
+|---|---|---|---|
+| F1 | USB D+/D- | Branch-inclusive copper: USB_D+ 36.40 mm (In2 31.40, F 5.00); USB_D- 49.68 mm (B 31.68, F 18.00). The two halves use mostly disjoint layers; same-layer adjacency is about 3-4 percent. No skew or 90-ohm qualification is supported. | Open gate (R2). Retracted: "DRC can never fire", "Default means no netclass" and a 13.3 mm skew figure. Unverified: which differential-pair rules ran and whether a .kicad_dru exists. |
+| F2 | U5 (TPS61023) input | The only capacitor pad on V+ is C26.1, about 7.3 mm from U5.3. U5.3 is the bias/control pin, not the L1 load path. | Open gate (R2). Retracted: start-up/UVLO predictions and a 0.1 uF addition. Next: read the TI SLVSDU8 layout guidance. |
+| F3 | Via-fill metadata | Board default is (filling no)(capping no); only C7.1 and GAIN0.1 carry overrides. The 18 via-in-pad sites found are a screen, not a required-POFV count. The U4/C24 vias carry no override. | Open gate (R3). |
+| F4 | Widths below netclass track_width | Inventory only: VHI 2.32 mm of copper at 0.31 mm; VBUS 1.99 mm at 0.31; VAMP 23.56 mm at 0.1778; V+ 9.24 mm at 0.1778; VBAT 29.03 mm at 0.1778. | No ampacity conclusion follows; needs a current budget (R2/R3). |
+| F5 | GND and /CELL_NEG netclass | Both resolve to the Default netclass. | Observation only. |
+| F6 | DRC environment | Which rules were in force for the 291/46 run is undocumented. | Record rules beside counts (R1). |
+
+Not covered: the 46 parity findings, the 71 prohibited-item findings,
+dangling objects, silk findings, clock/QSPI/I2S routing, In2/In3 reference
+continuity, decoupling distances, thermal behavior, mechanical fit and
+BOM/CPL correctness. The reviewer's four method comments are folded into
+Phase 0 of [the agent-first PCB workflow](agent-first-pcb-workflow.md).
+
+## Quote-only package, November 9 and 10
+
+[quote-prep/2026-11-09-six-layer](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md)
+holds a bare-PCB quote package for the exact public snapshot (PCB
+`2f738ccb`). **Quote only: it is not a fabrication release, and zero opens
+is not fabrication approval.**
+
+- Native KiCad 10.0.6 exports were made by the verified Sol executor
+  (gpt-5.6-sol, medium). The lead re-hashed all 24 receipt entries with no
+  mismatch. The upload ZIP and raw exports stay in the private evidence
+  root; the package binds them by SHA-256.
+- Hash-bound outputs: CPL (83 rows, 21 references excluded), JLC, PCBWay and
+  sourcing BOMs (44 rows; 8 carry an LCSC code, 36 are marked NEEDS LCSC
+  CODE), inventory, verification, LCSC register and expectations, under a
+  9-entry `MANIFEST.sha256`.
+- `tools/build_quote_package.py` builds and verifies the package; 98 unit
+  tests pass. Verification: 67 PASS, 4 INFO, 0 WARN, 0 FAIL. That proves the
+  exports correspond to the snapshot, not functional correctness, JLC CAM
+  acceptance, rotation conventions or stock.
+
+At JLC (2026-11-10, driven by the lead through a browser session):
+
+- One Gerber/drill ZIP (222,603 bytes) was uploaded. JLC parsed a 6-layer
+  48.35 x 44.5 mm board and **auto-saved it to the account's Projects >
+  Quotes history** (not the cart). Whether the entry can be removed was
+  not checked.
+- Option probing was display-only and defaults were restored. Live web
+  prices at quantity 5: OSP $32.00, ENIG +$16.80, shipping $26.60 for one
+  session, not a binding quote.
+- Nothing was ordered, paid or accepted: no cart, coupon, terms, BOM, CPL or
+  part matching, and no credentials were entered by the agent.
+
+Deferred to an owner-present session: the PCB Assembly flow (BOM/CPL
+upload and part matching). Everything still open before any order is in
+[unresolved-before-ordering.md](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md).
+The 3D renders and CAD under `mechanical/studies/2026-09-13-printed-bell/`
+and the C24/U4 notes in [pcba-quotation-plan.md](pcba-quotation-plan.md)
+predate the six-layer board and the JST ACHL J1.
 
 ## PR and release boundaries
 
