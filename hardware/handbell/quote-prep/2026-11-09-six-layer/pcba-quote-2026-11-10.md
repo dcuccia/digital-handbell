@@ -61,6 +61,36 @@ epoxy-filled-and-capped settings, with a 7-8 day build and shipping excluded:
 At quantity 20 the price is lower than at 10 because the 10-piece special
 offer no longer applies.
 
+## HDI reference (November 10, future option only)
+
+The owner has decided against HDI for this board. These figures are for
+reference only.
+
+On the quote page, HDI was selected as the base material, with 6 layers,
+45 x 49.35 mm, ENIG and no upload. Web prices before shipping:
+
+| HDI structure | 5 PCBs | 10 PCBs |
+|---|---|---|
+| 1-step | 158.40 (HDI fee 67.08) | 161.44 (HDI fee 68.00) |
+| 2-step | not checked | 263.44 (HDI fee 170.00) |
+
+The buried-via and lamination fees are shown as "Manual Quote", so they are
+set during engineering review and are not included above.
+At 10 PCBs, 1-step costs about 2.5 times the standard 6-layer price ($64.10).
+
+From the [HDI capabilities page](https://jlcpcb.com/pcb-fabrication/hdi-pcb):
+
+| Item | Capability |
+|---|---|
+| Layers | 4-24, with 1st to 3rd order |
+| Laser vias | 0.075-0.15 mm (default 0.10 mm) on a 0.25 mm pad, copper filled |
+| Track/space | 3/3 mil |
+| Material | FR-4, Tg 170 |
+| Minimum order | 3 PCBs |
+
+Via-in-pad does not require HDI. Our epoxy-filled and capped through vias
+already cover that need.
+
 The PCBA totals below are estimates, not live quotes. Each one is the PCB price
 plus fixed fees of about 131.59 (setup, stencil and Extended feeders) plus
 about 19.27 per assembled board (components 16.83, SMT 0.69, X-ray 1.65,
