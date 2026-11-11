@@ -2178,6 +2178,10 @@ Two opens remain: USBBOOT D3.C and GND IC1.19 TESTEN.
 
 Limits: the ACHL footprint is trial-local, with a reconstructed courtyard
 and body outline. The harness uses SACH-003G crimps on AWG30-28 wire.
+**November 10 sourcing correction:** that contact name omitted the `L`.
+JST's [ACHL drawing](https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)
+specifies **SACHL-003G-P0.2** in **ACHLR-02V-S**; the earlier sentence is
+retained as dated evidence, not a purchasing instruction.
 Repository docs that still name the Molex part (BOM readiness, electrical
 reduction) describe the earlier design.
 

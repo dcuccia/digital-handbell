@@ -20,6 +20,12 @@ The [quotation plan](pcba-quotation-plan.md) requires a sourced, matched final
 package. Do not overwrite this immutable draft CSV to suggest its original
 metadata was already procurement-ready.
 
+**Harness correction, November 10:** the current ACHL J1 takes an
+ACHLR-02V-S housing and **SACHL-003G-P0.2** contacts, not the `SACH-003G`
+named in the historical tables below. See the
+[manufacturer drawing](https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)
+and [ancillary procurement list](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md#ancillary-procurement-for-eight-first-articles).
+
 ## First sourcing increment
 
 The separate [standard-passive register](../hardware/handbell/parts/README.md)

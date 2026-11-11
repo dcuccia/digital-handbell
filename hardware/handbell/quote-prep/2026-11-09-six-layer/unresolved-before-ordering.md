@@ -98,7 +98,11 @@ Narrow margins carried into R3 (accepted for routing continuation only):
   R16/R17/R24, R20, R23, R25, R26, R27 and R28/R29; U1; U2; U4; U5; U6; Y1.
 - IC4 (LSM6DSOX) is Standard PCBA only and needs X-ray inspection.
 - J1 is listed Extended in the November ledger. Confirm the ACHL part number,
-  pickup datum, mating housing (SACH-003G crimps) and per-contact current.
+  pickup datum and per-contact current. The mating housing is ACHLR-02V-S
+  with **SACHL-003G-P0.2** contacts, per the
+  [JST ACHL drawing](https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf).
+  Earlier notes incorrectly omitted the `L` in the contact series; do not
+  buy ACH/SACH leads for this ACHL connector.
 - X6: the alias CUSB31-CFM2AX-01-X versus C165948 is unresolved
   ([pcba-bom-readiness.md](../../../../docs/pcba-bom-readiness.md) line 153,
   [usb-connector-qualification.md](../../../../docs/usb-connector-qualification.md)

@@ -22,7 +22,7 @@ historical decision record; this document describes the implemented revision.
 | Power control | Retained source selection and Q1/Q2 switching; GPIO23 enables both the switched converter input and converter EN; R17 keeps POWER low by default |
 | Mute/channel | Added GPIO20-controlled AO3400A pull-down on SD_MODE; R18 is now 10 kohm to VAMP, selecting the left channel when unmuted |
 | Button | Side-entry JST-SH SM02B-SRSS-TB, GPIO19 through 1 kohm, 10 kohm released-state pull-up and 10 nF filtering |
-| Speaker | Separate speaker connector: pin 1 VO+, pin 2 VO-; neither is ground. Originally Molex Pico-Lock 504050-0291; replaced November 9 by JST ACHL (LCSC C594367, SACH-003G crimps) in the six-layer routing base |
+| Speaker | Separate speaker connector: pin 1 VO+, pin 2 VO-; neither is ground. Originally Molex Pico-Lock 504050-0291; replaced November 9 by JST ACHL (LCSC C594367, ACHLR-02V-S housing and SACHL-003G-P0.2 crimps) in the six-layer routing base |
 | Indication | Retained CHG0 charger LED and L0 GPIO13 firmware LED; no RGB indicator |
 | Sensor/core | Retained the 0.1 LSM6DSOX Mode 1 interface, RP2040/flash/clock/USB, regulated logic supply and charger/source-selection circuitry |
 

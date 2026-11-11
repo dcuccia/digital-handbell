@@ -17,4 +17,5 @@ not current-six-layer geometry or fit qualification.*
 
 - [Design gallery](design-gallery.html)
 - [Project roadmap](roadmap.html)
+- [Ancillary procurement for eight first articles](https://github.com/dcuccia/digital-handbell/tree/main/hardware/handbell/quote-prep/2026-11-09-six-layer#ancillary-procurement-for-eight-first-articles)
 - [Project home and source repository](https://github.com/dcuccia/digital-handbell)
