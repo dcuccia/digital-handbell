@@ -24,7 +24,7 @@ metadata was already procurement-ready.
 ACHLR-02V-S housing and **SACHL-003G-P0.2** contacts, not the `SACH-003G`
 named in the historical tables below. See the
 [manufacturer drawing](https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)
-and [ancillary procurement list](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md#ancillary-procurement-for-eight-first-articles).
+and [build guide procurement list](build-a-handbell.md#2-procurement-for-eight-bells).
 
 ## First sourcing increment
 

@@ -5,21 +5,23 @@
   "source_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
   "model": {
     "file": "handbell-pcba.glb",
-    "sha256": "45c21a66ef232c416d971f38cdaec06b617ee18422ab8265fbb092650cfaed3f",
-    "bytes": 776168,
+    "sha256": "81abdd68cd00043b0e70fc3efb67ff3939664bfdd28526cf9e733b87f091e6a1",
+    "bytes": 10582812,
     "added_library_models": 77,
     "preserved_source_models": 1,
-    "optimizer": "glTF Transform CLI 4.5.1, Draco compression"
+    "optimizer": "glTF Transform CLI 4.5.1, Draco compression",
+    "project_proxies": 3,
+    "note": "One primitive was left uncompressed by Draco."
   },
   "poster": {
     "file": "../images/showcase/pcba-six-layer-3d.png",
-    "sha256": "55a7a8622c148311a7429ec1d3c23fbb4f51d6b2052905de92f480329c4bb09a",
-    "render": "KiCad 10.0.6, 1800x1100, perspective, rotation -55,0,45"
+    "sha256": "f407cccdddbfdd24c5cbe31b8b17c755a84efd05f979fe9502d691443b08acd1",
+    "render": "KiCad 10.0.6, 1800x1100, perspective, top side, rotation 305,0,45 (equivalent to -55,0,45)"
   },
   "rear_still": {
     "file": "../images/showcase/pcba-six-layer-3d-rear.png",
-    "sha256": "7a0b821fb26a831c4d0af49f794810ec0c000918a47d4aafdd6663ba3e788268",
-    "render": "Retained KiCad 10.0.6 bottom view of the same scratch visualization PCB; battery-contact bodies omitted"
+    "sha256": "1b220fccb738aa1fab25449c0d995be34f21b200755f4c9d6bee71681ad4747a",
+    "render": "KiCad 10.0.6, 1800x1100, perspective, bottom side, rotation 305,0,45; battery-clip proxies shown"
   },
   "viewer": "Google model-viewer 4.1.0; fixed board-center target, rotation and zoom only, no automatic motion",
   "stand_ins": [
@@ -27,12 +29,29 @@
     "L1 uses the KiCad library 5 mm inductor package model in place of the TDK VLS5045EX."
   ],
   "omitted": [
-    "J1 JST ACHL speaker connector",
-    "BT1 and BT2 rear battery contacts",
     "Q3",
     "Q5",
     "test lands, mounting holes, and solder-jumper component bodies",
     "DNP C29"
   ],
-  "export_note": "KiCad GLB export emitted a VBUS pad-cutting boolean warning and self-intersection warnings. Do not use the GLB for precise geometry or measurement."
+  "export_note": "KiCad GLB export emitted a VBUS pad-cutting boolean warning and three self-intersection warnings. Do not use the GLB for precise geometry or measurement.",
+  "project_proxies": [
+    {
+      "refs": [
+        "BT1",
+        "BT2"
+      ],
+      "file": "proxies/battery-contact-project-proxy.step",
+      "sha256": "8a04715d7d80544265778c13058b3ff41a171ff4f3e700e118c483c3508e6474",
+      "description": "ContactMetal_BT1 from the extended-run FreeCAD assembly, translated (-11.625, 0, -26.6) mm to the footprint origin; about 19.9 x 17.0 x 16.6 mm. Project kinematic proxy, not vendor CAD or loaded-spring geometry."
+    },
+    {
+      "refs": [
+        "J1"
+      ],
+      "file": "proxies/j1-achl-proxy.step",
+      "sha256": "bd4767873f70ed05137d19aea81f83752088bd0f10b00846d4217f92569a5ea0",
+      "description": "4.2 x 4.4 x 1.2 mm box with a 3.0 x 2.0 x 0.8 mm top recess for JST ACHL BM02B-ACHLKS-GAN-ETF; no plug or wire. Dimension proxy, not vendor CAD."
+    }
+  ]
 }

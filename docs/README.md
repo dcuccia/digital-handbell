@@ -11,6 +11,7 @@ the time; their words "current" or "next" do not override newer review records.
 |---|---|
 | [Design gallery](design-gallery.md) | Bell, board and populated-PCBA views, with dates and source limits |
 | [Roadmap](roadmap.md) | Current priorities and the path to a working instrument |
+| [Build a handbell](build-a-handbell.md) | Parts to buy, printing and material guidance, speaker harness, assembly order and battery gates |
 | [Six-layer board review](pcb-review-2026-11.md) | Exact snapshot, remaining risks and review packages R1-R6 |
 | [Hardware guide](../hardware/README.md) | Native KiCad, libraries, reference designs and revision selection |
 | [Mechanical guide](../mechanical/README.md) | FreeCAD/STEP/STL inventory and the six-layer integration gap |

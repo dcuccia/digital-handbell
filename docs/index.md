@@ -1,21 +1,19 @@
 # Digital Handbell project pages
 
-The [interactive six-layer PCBA visualization](3d/) is a browser-based
-design aid, not a fit, electrical, manufacturing, or safety qualification.
+A rechargeable, motion-triggered musical instrument in a 3D-printed bell,
+developed in the open. The first prototype PCBA batch has been ordered.
 
-| Component side | Rear side |
+| Front: electronics | Back: battery clips |
 |:---:|:---:|
-| [![Oblique six-layer PCBA rendering](images/showcase/pcba-six-layer-3d.png)](3d/) | [![Rear PCB rendering without battery-contact bodies](images/showcase/pcba-six-layer-3d-rear.png)](3d/) |
+| [![Rendered front of the six-layer PCBA with components, USB-C and the JST speaker connector](images/showcase/pcba-six-layer-3d.png)](3d/) | [![Rendered back of the six-layer PCBA with the two 16340 battery clips](images/showcase/pcba-six-layer-3d-rear.png)](3d/) |
 
-Public PCB `2f738ccb`; package models and USB/inductor stand-ins are used.
-The speaker connector and rear battery-contact bodies are omitted.
+*KiCad renders of public PCB `2f738ccb`, not photographs. The battery
+clips and J1 speaker connector are simplified project proxies; this is a
+design aid, not a fit, electrical, manufacturing or safety qualification.*
 
-![Earlier assembly with battery-clip proxies](images/showcase/pcba-four-layer-rear.png)
+**[Rotate and zoom the PCBA in 3D](3d/)**
 
-*Historical four-layer FreeCAD assembly with simplified battery contacts;
-not current-six-layer geometry or fit qualification.*
-
+- [Build a handbell: parts, printing, speaker harness and assembly](build-a-handbell.html)
 - [Design gallery](design-gallery.html)
 - [Project roadmap](roadmap.html)
-- [Ancillary procurement for eight first articles](https://github.com/dcuccia/digital-handbell/tree/main/hardware/handbell/quote-prep/2026-11-09-six-layer#ancillary-procurement-for-eight-first-articles)
-- [Project home and source repository](https://github.com/dcuccia/digital-handbell)
+- [Source repository and project README](https://github.com/dcuccia/digital-handbell)

@@ -14,7 +14,7 @@ old model do not close that gap.
 | Editable complete printed bell | [printed-bell.FCStd](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/printed-bell.FCStd) | Latest completed assembly, bound to four-layer PCB `d2a098b0` |
 | Complete assembly in another CAD tool | [printed-bell-complete.step](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/printed-bell-complete.step) | Same completed review |
 | Populated board alone | [full-populated-pcba.step](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/full-populated-pcba.step) | Historical four-layer component proxies with full contacts |
-| Structural prints / assembly instructions | [Printed-bell study guide](studies/2026-09-13-printed-bell/README.md) and [completed outputs](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/) | Inert fit-study files, not a six-layer production kit |
+| Structural prints / assembly instructions | [Build guide](../docs/build-a-handbell.md), [printed-bell study guide](studies/2026-09-13-printed-bell/README.md) and [completed outputs](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/) | Inert fit-study files, not a six-layer production kit |
 | Pictures without CAD | [Design gallery](../docs/design-gallery.md) | Source-labelled enclosure, current PCB and earlier PCBA views |
 | Exact fit/evidence binding | [Fit report](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/fit-report.json), [artifact manifest](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/artifact-manifest.json) | Nominal geometry and artifact checks, not physical qualification |
 

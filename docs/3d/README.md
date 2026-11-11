@@ -18,16 +18,14 @@ center at KiCad (100, 100) mm and the board mid-plane (0.79 mm in this export),
 or glTF (0.1, 0.00079, 0.1) m. Explicit coordinates avoid the exported model's
 origin-inclusive automatic bounds. Panning and tap-to-recenter are disabled;
 only rotation and zoom are enabled.
-An additional, explicitly historical four-layer FreeCAD still shows the
-battery-clip proxies; it is not substituted for current-six-layer geometry.
 
 ## What is shown
 
 The board and copper come from public snapshot
 [`2f738ccb`](https://github.com/dcuccia/digital-handbell/blob/main/hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb).
 The 3D models were added to a scratch copy only. The generated GLB contains
-77 KiCad-library models on fitted components plus the source board's existing
-J2 model. Generic package models represent package shape, not exact vendor
+77 KiCad-library models on fitted components, the source board's existing
+J2 model, and three project proxies from [`proxies/`](proxies/). Generic package models represent package shape, not exact vendor
 parts.
 
 - X6 uses the KiCad GCT USB4105-xx-A 16-pin top-mount model as a visual
@@ -36,8 +34,14 @@ parts.
   mating geometry.
 - L1 uses the library's 5 mm inductor package model as a stand-in for the
   TDK VLS5045EX.
-- J1 (JST ACHL), BT1/BT2 (rear battery contacts), Q3 and Q5 have no body
-  model. Test lands, mounting holes and solder jumpers remain board features.
+- BT1/BT2 use [`battery-contact-project-proxy.step`](proxies/battery-contact-project-proxy.step):
+  the `ContactMetal_BT1` body from the extended-run FreeCAD assembly,
+  translated (-11.625, 0, -26.6) mm to the footprint origin. It is the
+  project's kinematic proxy, not vendor CAD or loaded-spring geometry.
+- J1 uses [`j1-achl-proxy.step`](proxies/j1-achl-proxy.step), a
+  4.2 x 4.4 x 1.2 mm box with a top recess for JST ACHL
+  BM02B-ACHLKS-GAN-ETF. No plug or wire is modelled.
+- Q3 and Q5 have no body model. Test lands, mounting holes and solder jumpers remain board features.
   DNP C29 is excluded.
 
 Do not use the image to infer connector clearance, component height, battery
@@ -65,6 +69,12 @@ New-Item -ItemType Directory -Force $scratch | Out-Null
 npx --yes @gltf-transform/cli optimize "$scratch\handbell-pcba-raw.glb" `
   "$scratch\handbell-pcba.glb" --compress draco --simplify false
 ```
+
+The published model also attaches the two proxy STEP files above to BT1,
+BT2 and J1 in the scratch board (KiCad default offset/rotation/scale) before
+export. `build_preview.py` does not yet do this step. The stills use
+`kicad-cli pcb render` at 1800x1100, perspective, rotation `305,0,45`
+with `--side top` and `--side bottom`.
 
 The final GLB is copied to this directory. The source board, its manifest,
 schematic and project remain unchanged. KiCad's 3D library license is

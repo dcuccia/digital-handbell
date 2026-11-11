@@ -121,31 +121,35 @@
     },
     {
       "file": "pcba-six-layer-3d-rear.png",
-      "sha256": "7a0b821fb26a831c4d0af49f794810ec0c000918a47d4aafdd6663ba3e788268",
+      "sha256": "1b220fccb738aa1fab25449c0d995be34f21b200755f4c9d6bee71681ad4747a",
       "sources": [
         {
-          "source": "pages3d/preview-bottom.png",
-          "sha256": "7a0b821fb26a831c4d0af49f794810ec0c000918a47d4aafdd6663ba3e788268"
+          "source": "session pages3d/clips-j1-r2/rear.png",
+          "sha256": "1b220fccb738aa1fab25449c0d995be34f21b200755f4c9d6bee71681ad4747a"
         }
       ],
       "design_source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
       "design_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
-      "transform": "Unmodified retained KiCad 10.0.6 bottom-view render of the scratch visualization PCB",
-      "scope": "Current six-layer rear board features; battery-contact bodies omitted; not a fit or assembly check"
+      "transform": "KiCad 10.0.6 bottom render, 1800x1100, perspective, rotation 305,0,45, of a scratch copy with package models and docs/3d/proxies",
+      "scope": "Current six-layer rear with simplified project battery-clip proxies; not vendor CAD, fit or assembly check"
     },
     {
       "file": "pcba-six-layer-3d.png",
-      "sha256": "55a7a8622c148311a7429ec1d3c23fbb4f51d6b2052905de92f480329c4bb09a",
+      "sha256": "f407cccdddbfdd24c5cbe31b8b17c755a84efd05f979fe9502d691443b08acd1",
       "sources": [
         {
+          "source": "session pages3d/clips-j1-r2/front.png",
+          "sha256": "f407cccdddbfdd24c5cbe31b8b17c755a84efd05f979fe9502d691443b08acd1"
+        },
+        {
           "source": "docs/3d/handbell-pcba.glb",
-          "sha256": "45c21a66ef232c416d971f38cdaec06b617ee18422ab8265fbb092650cfaed3f"
+          "sha256": "81abdd68cd00043b0e70fc3efb67ff3939664bfdd28526cf9e733b87f091e6a1"
         }
       ],
       "design_source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
       "design_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
-      "transform": "KiCad 10.0.6 render at 1800x1100, perspective, rotation -55,0,45",
-      "scope": "Interactive visualization of public six-layer PCB 2f738ccb with 77 library package models and its existing J2 model; USB and inductor stand-ins; J1, battery contacts, Q3 and Q5 omitted; not a fit or assembly check"
+      "transform": "KiCad 10.0.6 top render, 1800x1100, perspective, rotation 305,0,45 (equivalent to -55,0,45)",
+      "scope": "Six-layer PCB 2f738ccb with 77 library package models, existing J2 model, USB/inductor stand-ins and J1/battery-clip project proxies; Q3 and Q5 omitted; not a fit or assembly check"
     }
   ]
 }

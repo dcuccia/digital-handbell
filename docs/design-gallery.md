@@ -39,15 +39,15 @@ colours do not specify the selected ENIG surface finish.
 
 | Rendered component side | Rendered rear side |
 |:---:|:---:|
-| [![Oblique six-layer PCBA rendering](images/showcase/pcba-six-layer-3d.png)](3d/) | [![Rear six-layer PCB rendering without battery-contact bodies](images/showcase/pcba-six-layer-3d-rear.png)](3d/) |
+| [![Oblique six-layer PCBA rendering](images/showcase/pcba-six-layer-3d.png)](3d/) | [![Rear six-layer PCBA rendering with battery-clip proxies](images/showcase/pcba-six-layer-3d-rear.png)](3d/) |
 
 [Open the KiCad snapshot](../hardware/handbell/iterations/printed-bell-six-layer-review/README.md) ·
 [Review findings](pcb-review-2026-11.md) ·
 [Quote/export recipe](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md)
 
 [Open the interactive 3D visualization](3d/). It adds package-form models
-and disclosed USB-C/inductor stand-ins to a scratch copy; the exact J1
-speaker connector and rear battery contacts are omitted. It is not a
+and disclosed USB-C/inductor stand-ins to a scratch copy; J1 and the rear
+battery clips are simplified project proxies, not vendor CAD. It is not a
 mechanical-fit or assembly check.
 
 ## Populated PCBA: recent renders of an earlier board

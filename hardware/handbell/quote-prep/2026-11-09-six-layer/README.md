@@ -58,72 +58,11 @@ approved substitution or a durable update to the hash-bound BOM.
 
 ## Ancillary procurement for eight first articles
 
-November 10 planning list; no purchases made. The quoted PCBA includes the
-two battery clips (BT1/BT2, C6993377) and board-side speaker header (J1,
-C594367), not batteries, speakers, wire harnesses, prints or fasteners.
-Supplier fulfillment still needs incoming inspection. Mechanical quantities
-below follow the retained printed-bell assembly, **not an updated six-layer
-fit approval**.
-
-| Item | Per bell | Eight bells / suggested procurement |
-|---|---|---|
-| Speaker plug | One JST **ACHLR-02V-S** housing | 8 needed; buy 10. [LCSC C566313](https://www.lcsc.com/product-detail/C566313.html) |
-| Speaker pre-crimped leads | Two **SACHL-003G-P0.2** terminated, 28 AWG leads | 16 ends needed; for 10 harnesses, buy 20 [ASACHLSACHL28W152](https://www.lcsc.com/product-detail/C5304083.html) double-ended 152.4 mm jumpers and retain one end per lead. If a length below about 75 mm is verified sufficient, 10 jumpers cut in half instead provide 20 usable ends. |
-| Speaker | One 4 ohm Gikfun EK1794, matching the measured D40/H19 unit | 8 needed minus on-hand stock; one spare is useful. Do not silently substitute another 40 mm driver. Seller's 3 W title conflicts with its 2 W description; acoustic/output limits remain unqualified. |
-| Cell | One **Vapcell T8 16340 button-top**, 850 mAh typical, 3.6 V nominal / 4.2 V full, manufacturer-rated 3 A continuous | Obtain 2 evaluation samples first; plan for 8 installed plus 2 spares only after supplied dimensions, retention and electrical tests pass. No live-cell or charging approval follows from procurement. |
-| Internal screws | Six M2x6, ISO 4762-style cap heads | 48 needed; buy 60 or a 100-pack. Existing head screen D3.8/H2 mm. |
-| Front cartridge screws | Three M2x8 | 24 needed; buy 30 or a 50-pack; match the recessed head envelope before selecting a supplier. |
-| M2 hex nuts | Nine, DIN 934-style AF4/H1.6 mm | 72 needed; buy 100. Verify printed captive-pocket fit. |
-| Handle joint | One M4x16 pan-head screw, one M4 hex nut, one DIN 9021 large washer (OD12/ID4.3/about 1 mm thick) | 8 sets needed; buy 10 sets. M4x20 and 8-32 are not substitutes. |
-| Prints | Shell, handle, carrier/grille, yoke, cradle and cover | 8 sets after current-board/J1 harness clearance is rebound; retain older fit prints as evidence. |
-| Consumables and bench equipment | Heat-shrink/lead markers, solder/flux, insulated cell cases, USB-C data cable, DMM and current-limited supply | Shared tools; do not count them as fitted PCB parts. SWD recovery needs the fine-land/probe arrangement, not a standard fitted header. |
-
-### Speaker harness assembly
-
-The [JST manufacturer drawing](https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)
-specifies ACHLR-02V-S with **SACHL-003G-P0.2**, AWG30-28 and insulation
-OD0.50-0.63 mm. Its 2 A rating is with AWG28. Earlier project prose named
-`SACH-003G` without the `L`; that is not the selected contact.
-The [pre-crimped jumper listing](https://www.lcsc.com/product-detail/C5304083.html)
-identifies ASACHLSACHL28W152 as double-ended, 28 AWG, white, 152.4 mm.
-Stock and prices were not independently confirmed at checkout.
-
-Insert two correctly oriented pre-crimped contacts into each housing,
-verify retention, cut/strip the speaker ends and solder to the speaker
-tabs with insulation and strain relief. Both leads are white, so mark pin 1
-at both ends. Verify continuity from J1.1 (VO+) to the speaker's marked
-positive tab and J1.2 (VO-) to its other tab before powering. Neither lead
-is ground. A preassembled harness from a vendor is an alternative; specify
-these exact parts, polarity and the measured routing length rather than
-ordering generic "JST 1.2 mm" cables. Plug/body/wire-exit clearance remains
-open for the latest J1 location.
-
-### Battery purchase and use gates
-
-The [Vapcell manufacturer page](https://www.vapcelltech.com/h-pd-60.html?fromMid=470)
-lists the T8's 850 mAh typical/820 mAh minimum capacity, 3 A continuous
-rating and 4.2 V charging endpoint. It also lists 16.4 x 34.0 mm while warning
-that a button top can add 2-3 mm. Obtain maximum **finished button-top**
-length/diameter and the applicable charge specification from the actual
-seller; do not assume the flat-top envelope. The previously proposed
-Liion Wholesale listing and a
-[16340 T8 button-top listing at 18650BatteryStore](https://www.18650batterystore.com/products/vapcell-16340-t8-850mah-3a-button-top-battery)
-are sourcing leads, not verified current stock or prices.
-
-The proposed T8 is unprotected. The PCB has a BQ29700/Q5 protection stage,
-but that is not completed system qualification. The current charger has no
-automatic cell-temperature inhibit, and no reverse-insertion protection is
-claimed. Start electrical bring-up with controlled, current-limited power,
-not an inserted cell; verify the protection/charge behavior before live-cell
-testing. A short directly across loose-cell terminals bypasses the PCB
-protection. Buy individual insulating storage cases with the samples.
-CR123A primary cells, LiFePO4 RCR123 cells and longer protected/USB-chargeable
-16340 variants are not automatic substitutes.
-
-Sources and limits: [cell/protection review](../../../../docs/t8-electrical-revision.md),
-[contact/cell geometry](../../../../docs/battery-contact-options.md),
-[measured speaker selection](../../../../docs/mechanics-and-manufacturing.md),
-and [retained assembly hardware](../../../../docs/printed-bell-revision.md).
+The quoted PCBA includes the two battery clips (BT1/BT2, C6993377) and the
+board-side speaker header (J1, C594367), not batteries, speakers, wire
+harnesses, prints or fasteners. The procurement list, speaker-harness
+assembly, printing guidance and battery gates now live in the
+[build guide](../../../../docs/build-a-handbell.md).
 
 ## Source of record
 

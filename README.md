@@ -7,6 +7,8 @@ local speaker, custom electronics, and a removable cartridge inside a
 3D-printed bell. The goal is expressive, affordable music-making without a
 phone or computer during play.
 
+[Project site and 3D board](https://dcuccia.github.io/digital-handbell/) ·
+[Build a handbell](docs/build-a-handbell.md) ·
 [Explore the design](docs/design-gallery.md) ·
 [Roadmap](docs/roadmap.md) ·
 [Join the project](CONTRIBUTING.md) ·
@@ -60,34 +62,25 @@ velocity response, note selection and reliable gesture detection are
 development goals, not demonstrated features. Wireless is a future option,
 not a dependency of the first instrument.
 
-### The current board
+### The ordered PCBA
 
-| Component side | Contact side |
+| Front: electronics | Back: battery clips |
 |:---:|:---:|
-| ![Six-layer review PCB, front copper, mask and silkscreen](docs/images/showcase/pcb-six-layer-front.png) | ![Six-layer review PCB, mirrored rear copper, mask and battery-polarity silkscreen](docs/images/showcase/pcb-six-layer-rear.png) |
+| [![Rendered front of the six-layer PCBA with components, USB-C and the JST speaker connector](docs/images/showcase/pcba-six-layer-3d.png)](https://dcuccia.github.io/digital-handbell/3d/) | [![Rendered back of the six-layer PCBA with the two 16340 battery clips](docs/images/showcase/pcba-six-layer-3d-rear.png)](https://dcuccia.github.io/digital-handbell/3d/) |
 
-*Views from the quote Gerbers for public snapshot `2f738ccb`. These are
-unpopulated illustrations, not photographs or drill/assembly checks.
-[More views, including the earlier populated PCBA](docs/design-gallery.md).*
-
-| Rendered component side | Rendered rear side |
-|:---:|:---:|
-| [![Oblique rendering of the current six-layer PCBA](docs/images/showcase/pcba-six-layer-3d.png)](https://dcuccia.github.io/digital-handbell/3d/) | [![Rear rendering of the six-layer PCB without battery-contact bodies](docs/images/showcase/pcba-six-layer-3d-rear.png)](https://dcuccia.github.io/digital-handbell/3d/) |
-
-[Rotate the PCBA in your browser](https://dcuccia.github.io/digital-handbell/3d/). Package models and disclosed
-USB/inductor stand-ins are used; the speaker connector and rear battery
-contacts are omitted, so this is not a fit check.
-
-![Earlier four-layer assembly rear view showing the battery-clip proxies](docs/images/showcase/pcba-four-layer-rear.png)
-
-*Battery clips in the preserved four-layer assembly. These are simplified
-contact bodies, not a current-six-layer placement or fit check.*
+*KiCad renders of public snapshot `2f738ccb`, not photographs. Package
+models and disclosed stand-ins are used; the battery clips and J1 speaker
+connector are simplified project proxies. This is not a fit check.*
+**[Rotate it in 3D on the project site](https://dcuccia.github.io/digital-handbell/)** ·
+[Build a handbell](docs/build-a-handbell.md) ·
+[More views](docs/design-gallery.md)
 
 ## Explore without getting lost
 
 | I want to... | Start here |
 |---|---|
-| See the bell and board | [Design gallery](docs/design-gallery.md) |
+| See the bell and board | [Design gallery](docs/design-gallery.md) or the [3D project site](https://dcuccia.github.io/digital-handbell/) |
+| Build one: parts, printing, harness, assembly | [Build a handbell](docs/build-a-handbell.md) |
 | Open the latest electronics | [Six-layer review snapshot](hardware/handbell/iterations/printed-bell-six-layer-review/README.md) |
 | Open the enclosure or find STEP/STL files | [Mechanical asset guide](mechanical/README.md) |
 | Understand what is next | [Roadmap](docs/roadmap.md) |

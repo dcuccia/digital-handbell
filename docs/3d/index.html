@@ -108,24 +108,19 @@
   </header>
 
   <main>
-    <p class="notice"><strong>Visualization only.</strong> This model is not an assembly drawing, mechanical-fit check, circuit review, fabrication release, or safety qualification. Some parts are represented by package models or disclosed stand-ins; others are omitted. KiCad also reported a VBUS pad-cutting/boolean warning during export, so do not use this mesh for precise geometry or measurement.</p>
+    <p class="notice"><strong>Visualization only.</strong> This model is not an assembly drawing, mechanical-fit check, circuit review, fabrication release, or safety qualification. Some parts are represented by package models, disclosed stand-ins or simplified project proxies; a few are omitted. KiCad also reported a VBUS pad-cutting/boolean warning during export, so do not use this mesh for precise geometry or measurement.</p>
     <h2>Rendered views</h2>
     <div class="stills">
       <figure>
-        <img src="../images/showcase/pcba-six-layer-3d.png" alt="Oblique component-side rendering of the six-layer PCBA with package models">
-        <figcaption>Component side: package models with USB-C and inductor stand-ins.</figcaption>
+        <img src="../images/showcase/pcba-six-layer-3d.png" alt="Rendered front of the six-layer PCBA with components, USB-C and the JST speaker connector">
+        <figcaption>Front: electronics, USB-C and the J1 speaker connector.</figcaption>
       </figure>
       <figure>
-        <img src="../images/showcase/pcba-six-layer-3d-rear.png" alt="Rear rendering of the six-layer PCB showing battery-contact lands without contact bodies">
-        <figcaption>Rear side: battery-contact lands are shown, but contact bodies are omitted.</figcaption>
+        <img src="../images/showcase/pcba-six-layer-3d-rear.png" alt="Rendered back of the six-layer PCBA with the two battery clips">
+        <figcaption>Back: the two battery clips (simplified proxies).</figcaption>
       </figure>
     </div>
-    <figure class="stills">
-      <a href="../design-gallery.html">
-        <img src="../images/showcase/pcba-four-layer-rear.png" alt="Historical four-layer assembly rear view with two gold-colored battery-clip proxies">
-      </a>
-      <figcaption><strong>Earlier assembly with battery clips.</strong> This preserved four-layer FreeCAD view uses simplified contact bodies, not the current six-layer PCB. It does not qualify current placement or fit.</figcaption>
-    </figure>
+    <p><a href="../build-a-handbell.html">Build a handbell</a> · <a href="https://github.com/dcuccia/digital-handbell">Source repository</a></p>
     <h2>Interactive 3D view</h2>
     <model-viewer
       id="pcba"
@@ -162,8 +157,8 @@
         <ul>
           <li>X6 USB-C uses a GCT USB4105 library model, positioned by matching its main pad row to the local footprint. It is not the fitted HRO connector.</li>
           <li>L1 uses a same-size inductor package stand-in, not the TDK VLS5045EX model.</li>
-          <li>J1's JST ACHL speaker connector and both rear battery contacts are omitted; their exact bodies and mating wire remain important mechanical work.</li>
-          <li>Q3 and Q5 are also omitted because no sufficiently matched library bodies were available.</li>
+          <li>J1's JST ACHL speaker connector is a simple 4.2 x 4.4 x 1.2 mm box at its footprint, and both rear battery clips reuse the project's earlier FreeCAD contact proxy. Neither is vendor CAD; the mated plug, wire exit and clip fit remain mechanical work.</li>
+          <li>Q3 and Q5 are omitted because no sufficiently matched library bodies were available.</li>
           <li>Test lands, mounting holes, and solder jumpers are shown as board features, not fitted parts. DNP C29 is excluded.</li>
         </ul>
       </section>
