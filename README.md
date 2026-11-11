@@ -70,6 +70,12 @@ not a dependency of the first instrument.
 unpopulated illustrations, not photographs or drill/assembly checks.
 [More views, including the earlier populated PCBA](docs/design-gallery.md).*
 
+[![Interactive 3D visualization of the current six-layer PCBA](docs/images/showcase/pcba-six-layer-3d.png)](docs/3d/)
+
+[Rotate the PCBA in your browser](docs/3d/). Package models and disclosed
+USB/inductor stand-ins are used; the speaker connector and rear battery
+contacts are omitted, so this is not a fit check.
+
 ## Explore without getting lost
 
 | I want to... | Start here |

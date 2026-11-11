@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12251f">
+  <meta name="description" content="Interactive visualization of the digital handbell's six-layer prototype PCBA.">
+  <title>Six-layer PCBA 3D view | Digital Handbell</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #17231f;
+      background: #f5f7f5;
+    }
+
+    body {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+
+    a { color: #075d4a; }
+
+    header, main, footer { margin-block: 1.25rem; }
+
+    .eyebrow {
+      color: #49645a;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 { margin-block: 0.35rem; }
+
+    .notice {
+      border-left: 4px solid #ae6b09;
+      background: #fff7e8;
+      padding: 0.85rem 1rem;
+    }
+
+    .viewer {
+      display: block;
+      width: 100%;
+      height: min(68vh, 700px);
+      min-height: 380px;
+      background: #15231f;
+      border-radius: 0.75rem;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-block: 0.8rem;
+    }
+
+    button {
+      border: 1px solid #547267;
+      border-radius: 0.35rem;
+      background: white;
+      color: #173a30;
+      cursor: pointer;
+      font: inherit;
+      padding: 0.45rem 0.8rem;
+    }
+
+    button:focus-visible, a:focus-visible {
+      outline: 3px solid #e29b2e;
+      outline-offset: 3px;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-block: 1.5rem;
+    }
+
+    .details section {
+      background: white;
+      border: 1px solid #d6dfda;
+      border-radius: 0.5rem;
+      padding: 0.9rem 1rem;
+    }
+
+    .details h2 { font-size: 1.05rem; margin-top: 0; }
+    .details p:last-child { margin-bottom: 0; }
+    footer { border-top: 1px solid #ccd7d1; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../../">Digital Handbell project home</a>
+    <p class="eyebrow">Prototype design visualization</p>
+    <h1>Six-layer PCBA</h1>
+    <p>Rotate by dragging, zoom with the wheel or pinch, and use the controls to pause or reset the view. This is public PCB snapshot <code>2f738ccb</code>.</p>
+  </header>
+
+  <main>
+    <p class="notice"><strong>Visualization only.</strong> This model is not an assembly drawing, mechanical-fit check, circuit review, fabrication release, or safety qualification. Some parts are represented by package models or disclosed stand-ins; others are omitted. KiCad also reported a VBUS pad-cutting/boolean warning during export, so do not use this mesh for precise geometry or measurement.</p>
+    <model-viewer
+      id="pcba"
+      class="viewer"
+      src="./handbell-pcba.glb"
+      poster="../images/showcase/pcba-six-layer-3d.png"
+      alt="Interactive three-dimensional visualization of the six-layer digital handbell prototype circuit board"
+      camera-controls
+      auto-rotate
+      auto-rotate-delay="1200"
+      rotation-per-second="12deg"
+      shadow-intensity="0.7"
+      exposure="1"
+      camera-orbit="0deg 65deg 0.14m"
+      min-camera-orbit="auto 10deg 30%"
+      max-camera-orbit="auto 170deg 250%"
+      loading="eager">
+      <span slot="progress-bar"></span>
+      <p slot="error">The 3D model could not be loaded. Try the <a href="./handbell-pcba.glb">GLB file</a> directly or use a recent browser.</p>
+    </model-viewer>
+    <div class="controls" aria-label="Model controls">
+      <button id="reset-view" type="button">Reset view</button>
+      <button id="spin-toggle" type="button" aria-pressed="true">Pause rotation</button>
+    </div>
+
+    <div class="details">
+      <section>
+        <h2>Model scope</h2>
+        <p>Generated from the public six-layer review PCB with the routed copper, board, solder mask, pads, silkscreen, and 3D package bodies. Models were added only to a scratch copy; the published KiCad board was not edited.</p>
+        <p>Generic KiCad library bodies show package form, not the exact manufacturer part number or its tolerances.</p>
+      </section>
+      <section>
+        <h2>Stand-ins and omissions</h2>
+        <ul>
+          <li>X6 USB-C uses a GCT USB4105 library model, positioned by matching its main pad row to the local footprint. It is not the fitted HRO connector.</li>
+          <li>L1 uses a same-size inductor package stand-in, not the TDK VLS5045EX model.</li>
+          <li>J1's JST ACHL speaker connector and both rear battery contacts are omitted; their exact bodies and mating wire remain important mechanical work.</li>
+          <li>Q3 and Q5 are also omitted because no sufficiently matched library bodies were available.</li>
+          <li>Test lands, mounting holes, and solder jumpers are shown as board features, not fitted parts. DNP C29 is excluded.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Rebuild and attribution</h2>
+        <p>KiCad 10.0.6 rendered the model using its 3D model library; the optimization step uses glTF Transform. See the <a href="./manifest.json">source and asset manifest</a>, <a href="https://github.com/dcuccia/digital-handbell/blob/main/docs/3d/README.md">build and provenance notes</a>, and <a href="https://github.com/dcuccia/digital-handbell/blob/main/ATTRIBUTION.md">project attribution</a>.</p>
+        <p>The GLB is served directly from this GitHub Pages site. Git LFS is not used; GitHub documents that LFS cannot be used with Pages sites.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <a href="../design-gallery.html">Design gallery</a> ·
+    <a href="https://github.com/dcuccia/digital-handbell/tree/main/hardware/handbell/iterations/printed-bell-six-layer-review/">Native six-layer PCB and review evidence</a> ·
+    <a href="../pcb-review-2026-11.html">Review findings</a>
+  </footer>
+
+  <script>
+    const viewer = document.querySelector("#pcba");
+    const spinToggle = document.querySelector("#spin-toggle");
+
+    document.querySelector("#reset-view").addEventListener("click", () => {
+      viewer.cameraOrbit = "0deg 65deg 0.14m";
+      viewer.cameraTarget = "auto";
+      viewer.jumpCameraToGoal();
+    });
+
+    spinToggle.addEventListener("click", () => {
+      viewer.autoRotate = !viewer.autoRotate;
+      spinToggle.setAttribute("aria-pressed", String(viewer.autoRotate));
+      spinToggle.textContent = viewer.autoRotate ? "Pause rotation" : "Resume rotation";
+    });
+  </script>
+</body>
+</html>

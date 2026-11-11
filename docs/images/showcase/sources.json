@@ -118,6 +118,20 @@
         1104
       ],
       "scope": "November 9-10 render of historical September 24 four-layer IMU assembly; component proxies; not current J1 or six-layer placement"
+    },
+    {
+      "file": "pcba-six-layer-3d.png",
+      "sha256": "55a7a8622c148311a7429ec1d3c23fbb4f51d6b2052905de92f480329c4bb09a",
+      "sources": [
+        {
+          "source": "docs/3d/handbell-pcba.glb",
+          "sha256": "45c21a66ef232c416d971f38cdaec06b617ee18422ab8265fbb092650cfaed3f"
+        }
+      ],
+      "design_source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
+      "design_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+      "transform": "KiCad 10.0.6 render at 1800x1100, perspective, rotation -55,0,45",
+      "scope": "Interactive visualization of public six-layer PCB 2f738ccb with 77 library package models and its existing J2 model; USB and inductor stand-ins; J1, battery contacts, Q3 and Q5 omitted; not a fit or assembly check"
     }
   ]
 }

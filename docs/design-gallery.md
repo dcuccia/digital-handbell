@@ -29,6 +29,8 @@ remain unchanged.
 |:---:|:---:|
 | ![Front copper, solder mask and silkscreen of public six-layer snapshot 2f738ccb](images/showcase/pcb-six-layer-front.png) | ![Mirrored rear copper, solder mask and polarity markings of public six-layer snapshot 2f738ccb](images/showcase/pcb-six-layer-rear.png) |
 
+[![Interactive 3D visualization of public six-layer board 2f738ccb](images/showcase/pcba-six-layer-3d.png)](3d/)
+
 These are project-generated Gerber illustrations for **public PCB
 `2f738ccb`**, the source of the November quote. They show copper, mask and
 silkscreen without fitted component bodies. The renderer omitted Excellon
@@ -40,6 +42,11 @@ colours do not specify the selected ENIG surface finish.
 [Open the KiCad snapshot](../hardware/handbell/iterations/printed-bell-six-layer-review/README.md) ·
 [Review findings](pcb-review-2026-11.md) ·
 [Quote/export recipe](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md)
+
+[Open the interactive 3D visualization](3d/). It adds package-form models
+and disclosed USB-C/inductor stand-ins to a scratch copy; the exact J1
+speaker connector and rear battery contacts are omitted. It is not a
+mechanical-fit or assembly check.
 
 ## Populated PCBA: recent renders of an earlier board
 

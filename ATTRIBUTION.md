@@ -71,6 +71,15 @@ imported third-party CAD is included. Original mechanical geometry retains
 MIT; views of adapted electronics and mixed assemblies retain the
 CC BY-SA 3.0 hardware context and notices below, not blanket MIT.
 
+The [interactive six-layer PCBA visualization](docs/3d/) uses 3D models
+from KiCad's library, licensed CC BY-SA 4.0 with the
+[design and generated-file exception](https://www.kicad.org/libraries/license/).
+The GLB is an optimized project-generated render of public board `2f738ccb`,
+with library package models added to a scratch copy. It includes disclosed
+GCT USB-C and 5 mm inductor stand-ins; J1, the rear battery contacts, Q3 and
+Q5 are omitted. These are visual aids, not exact manufacturer CAD, a
+mechanical-fit check, or a fabrication release.
+
 The [six-layer review snapshot](hardware/handbell/iterations/printed-bell-six-layer-review/README.md)
 retains the adapted hardware's CC BY-SA 3.0 license and credits in its
 adjacent `LICENSE.txt` and `NOTICE.md`. Its J1 footprint is an original
