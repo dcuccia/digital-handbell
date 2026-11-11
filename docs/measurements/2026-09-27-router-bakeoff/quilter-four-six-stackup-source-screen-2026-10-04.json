@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "status": "PRIMARY_CONSTRUCTION_ROWS_BOUND_CANDIDATES_NOT_SELECTED",
+  "scope": "Independent public-source engineering screen during the authorized14:20-15:20 hour. No design upload, quote, order, native execution or source change.",
+  "source_package": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "retention_definition_unchanged": 177
+  },
+  "public_artifact_base": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\public-sources\\20261004-stock-stackups",
+  "sources": [
+    {"url":"https://jlcpcb.com/impedance","file":"jlcpcb-impedance.html","sha256":"2d03a99bca9f7c5202d13bad12409a25d7be235d7011747d8883dad4a57efab7"},
+    {"url":"https://jlcpcb.com/news/free-via-in-pad-6-20-layer-pcbs-pofv","file":"jlcpcb-pofv.html","sha256":"a866ad848c78e3fc59dc7e99929d71100e53dfc0c699359483b731f729800a64"},
+    {"url":"https://jlcpcb.com/help/article/pcb-via-covering","file":"jlcpcb-via-covering.html","sha256":"d807b82f4ef69964f9c4b5a8365d7f193ae40867257c076d018884c00c29a0df"},
+    {"url":"https://jlcpcb.com//msgCustomerMessage/downloadMessageFile?fileUploadAccessId=96b13f57d54049148dd286d57e91549c","file":"pofv-hole-spacing.png","sha256":"deadfa10f4194d12d09541c60e7e44b339c510ca92b699495f5f85bf632ad9d1"},
+    {"url":"https://docs.quilter.ai/design-parameters/stackups.md","file":"quilter-stackups.md","sha256":"55eb4d8904481626dfc3913689acfaf6759b388dac99b6e68c0e899dbed66a97"}
+  ],
+  "extraction": {
+    "method": "Read exact named stackup sections from archived server-rendered HTML. Inspect table-tr text in the matching li, not the generic Markdown rendering, which omitted the div-based construction rows.",
+    "checked_options_on_both_panels": {"nominal_thickness_mm":1.6,"outer_copper_oz":1,"inner_copper_oz":0.5},
+    "selected_option_evidence": "Both panels'1.6mm,1oz and0.5oz button class attributes contain checked.",
+    "dimensions": "Published table values, not new measurements or a fabrication drawing."
+  },
+  "constructions": [
+    {
+      "name": "JLC04161H-3313",
+      "copper_layers": 4,
+      "ordered_layers": [
+        {"role":"copper","supplier_layer":"Top","thickness_mm":0.035},
+        {"role":"dielectric","material":"3313*1 prepreg","thickness_mm":0.0994},
+        {"role":"copper","supplier_layer":"L2","thickness_mm":0.0152},
+        {"role":"dielectric","material":"core","thickness_mm":1.265},
+        {"role":"copper","supplier_layer":"L3","thickness_mm":0.0152},
+        {"role":"dielectric","material":"3313*1 prepreg","thickness_mm":0.0994},
+        {"role":"copper","supplier_layer":"Bottom","thickness_mm":0.035}
+      ],
+      "literal_core_note": "1.3mm H/HOZ with copper",
+      "sum_of_displayed_copper_and_dielectric_mm": 1.5642
+    },
+    {
+      "name": "JLC06161H-3313",
+      "copper_layers": 6,
+      "ordered_layers": [
+        {"role":"copper","supplier_layer":"Top","thickness_mm":0.035},
+        {"role":"dielectric","material":"3313*1 prepreg","thickness_mm":0.0994},
+        {"role":"copper","supplier_layer":"L2","thickness_mm":0.0152},
+        {"role":"dielectric","material":"core","thickness_mm":0.55},
+        {"role":"copper","supplier_layer":"L3","thickness_mm":0.0152},
+        {"role":"dielectric","material":"2116*1 prepreg","thickness_mm":0.1088},
+        {"role":"copper","supplier_layer":"L4","thickness_mm":0.0152},
+        {"role":"dielectric","material":"core","thickness_mm":0.55},
+        {"role":"copper","supplier_layer":"L5","thickness_mm":0.0152},
+        {"role":"dielectric","material":"3313*1 prepreg","thickness_mm":0.0994},
+        {"role":"copper","supplier_layer":"Bottom","thickness_mm":0.035}
+      ],
+      "literal_core_note": "0.55mm H/Hwithout copper, repeated for both cores",
+      "sum_of_displayed_copper_and_dielectric_mm": 1.5384
+    }
+  ],
+  "material_model": {
+    "published_prepreg_Dk": {"3313":4.1,"2116":4.16},
+    "published_core_Dk": 4.6,
+    "published_soldermask": {"C1_mil":1.2,"C2_mil":0.6,"C3_mil":1.2,"Dk":3.8},
+    "limits": [
+      "The displayed copper/dielectric sums are not exactly1.6mm. Do not alter the published values to force a match or treat either sum as qualified finished thickness.",
+      "The cited rows do not establish a complete tolerance, frequency-specific Dk/Df or laminate-grade model.",
+      "Use the supplier-confirmed construction and finished-thickness/process definition before final fabrication or impedance acceptance."
+    ]
+  },
+  "engineering_implications": {
+    "shared_outer_dielectric_mm": 0.0994,
+    "four_layer": "F over In1 protected GND has a close reference. The lower internal layer is separated from In1 by the1.265mm core; B routing cannot assume a continuous reference if that lower layer carries split power/signals.",
+    "six_layer": "The thin central0.1088mm dielectric is between L3 and L4. L3-to-L2 and L4-to-L5 separations are each0.55mm. Simply labeling both central layers SIGNAL does not provide each a nearby solid ground plane.",
+    "illustrative_six_layer_tradeoff": "S/G/S/G/G/S gives three signal layers with close references at the three thin dielectric gaps; S/G/S/S/G/S gives four signal layers but requires separate inner-signal reference/coupling review. These are engineering alternatives, not selected input profiles or demonstrated Quilter capabilities.",
+    "root_disposition": "Retain the two named constructions as comparison candidates, not approved stackups. Select and verify explicit layer purposes before counting useful routing layers or predicting routing/compute benefit."
+  },
+  "mandatory_process_screen": {
+    "process": "Nonconductive epoxy resin fill, surface leveling/planarization and copper cap; no tenting, mask plugging or conductive-paste substitution.",
+    "published_POFV_hole_range_mm": [0.2,0.5],
+    "published_POFV_minimum_ring_mm": 0.05,
+    "published_POFV_preferred_ring_mm": 0.075,
+    "preserved_families": [
+      {"duty":"four U4 process vias","copper_mm":0.604,"drill_mm":0.35,"calculated_nominal_ring_mm":0.127,"listed_hole_and_ring_screen":"pass"},
+      {"duty":"one C24 process via","copper_mm":0.6,"drill_mm":0.3,"calculated_nominal_ring_mm":0.15,"listed_hole_and_ring_screen":"pass"}
+    ],
+    "four_layer_policy": "POFV is documented as available with an additional charge; amount and exact-package eligibility are not established.",
+    "six_layer_policy": "The international-market article documents POFV included for6-20 layers; this is not a delivered-board or assembly quote.",
+    "remaining_conditions": [
+      "The article says more than0.45mm from regular PTH/NPTH; the diagram labels clearance>=0.45mm. The measurement boundary and exact board hole-clearance screen remain unresolved here; do not infer center-to-center distance.",
+      "The via-covering quality table mentions surface copper>=5um and depression/protrusion wording of127um/50um; the separate POFV article advertises up to25um. Do not turn that advertised upper value into a guaranteed minimum or silently declare planarity qualified.",
+      "Exact filled-via selection, cap/planarity acceptance, component-hole spacing and supplier manufacturing review remain gates.",
+      "A source-size/ring screen does not waive the previously observed returned-project0.15mm annular rule or authorize resizing protected vias."
+    ]
+  },
+  "quilter_binding": {
+    "documented": "A correctly configured/detected input stackup and design minimums can be selected at the top of the Stackups step. Quilter documents writing its used stackup into returned native files.",
+    "name_requirement": "Documentation asks for ground/gnd names for ground layers and power/pwr for power layers. Supply those naming hints, then verify actual imported purpose and material fields; names alone are not proof.",
+    "observed_old_preset_not_equivalent": "Earlier saved JLCPCB4-Layer UI showed dielectric0.21/1.065/0.21mm, not this3313 construction's0.0994/1.265/0.0994mm.",
+    "unqualified": "Neither input-defined candidate has been encoded, imported or selected. Exact material/role/minimum detection must be demonstrated; a generic supplier/layer-count label is insufficient."
+  },
+  "next_dependency": "Conservative source-bound process-hole clearance assessment and explicit layer-purpose disposition, while the separate native guard behavior gate remains held.",
+  "native_guard_gate_waived": false,
+  "full_input_or_submission_eligible": false,
+  "source_or_cloud_changed": false
+}

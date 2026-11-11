@@ -61,6 +61,44 @@ are not copied manufacturer STEP models.
 
 ## License boundaries
 
+The [design gallery](docs/design-gallery.md) republishes project-generated
+enclosure, PCBA-proxy and six-layer Gerber views, with only whitespace
+cropping, proportional resizing and a two-view composition. Its
+[source manifest](docs/images/showcase/sources.json) records original and
+published hashes and distinguishes the older CAD from the current PCB.
+No supplier account UI, JLCPCB model preview, vendor artwork or newly
+imported third-party CAD is included. Original mechanical geometry retains
+MIT; views of adapted electronics and mixed assemblies retain the
+CC BY-SA 3.0 hardware context and notices below, not blanket MIT.
+
+The [six-layer review snapshot](hardware/handbell/iterations/printed-bell-six-layer-review/README.md)
+retains the adapted hardware's CC BY-SA 3.0 license and credits in its
+adjacent `LICENSE.txt` and `NOTICE.md`. Its J1 footprint is an original
+project implementation of factual dimensions from JST's ACHL drawing,
+not the earlier converted JLCEDA/EasyEDA asset. No manufacturer drawing
+artwork/PDF, external CAD response or account material is redistributed.
+The [source-bound publication record](hardware/handbell/iterations/printed-bell-six-layer-review/reports/publication-validation.json)
+identifies that derivation and the exact delta from the private milestone.
+
+The [October 3 Quilter-input mechanical screen](docs/quilter-workflow-study-2026-10-02.md#october-3-allowed-domain-engineering-disposition)
+and its [packaging sensitivity report](docs/quilter-workflow-study-2026-10-02.md#size-sensitivity-and-engineering-choice)
+and [trial-envelope exports](docs/quilter-workflow-study-2026-10-02.md#october-3-trial-envelope-engineering-review)
+and [nominal contact-mask evidence](docs/quilter-workflow-study-2026-10-02.md#october-3-contact-and-access-disposition)
+and the [source-extracted contact control fixture](docs/quilter-workflow-study-2026-10-02.md#1546-resumption-static-builder-qualified)
+and [contact-feed candidate ledger](docs/quilter-workflow-study-2026-10-02.md#existing-contact-feed-retention-candidate)
+and [contact routing-control fixture](docs/quilter-workflow-study-2026-10-02.md#1713-approved-contact-routing-control)
+are generated from the project's accepted hardware and original mechanical
+planning data, not Quilter's returned designs. Its source-derived hardware
+JSON/SVG exports retain the adapted hardware's CC BY-SA 3.0 context and
+upstream notices linked above; they are not blanket relicensed under root MIT.
+No account/browser data, manufacturer imagery or vendor CAD is included.
+
+The [contact routing output review](docs/measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)
+separately records measurements of Quilter's returned source-derived
+candidates. Its hardware evidence retains the CC BY-SA 3.0 context and
+upstream notices; raw returned boards and browser responses remain in
+isolated local evidence, not blanket relicensed or vendored under MIT.
+
 The [local routing pilot](docs/routing-tooling.md) uses **Freerouting 2.4.1**
 as an external GPL-3.0 tool and a portable Eclipse Temurin runtime with its
 distribution notices retained locally. The

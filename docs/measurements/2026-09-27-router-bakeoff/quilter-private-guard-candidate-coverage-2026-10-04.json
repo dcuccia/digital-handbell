@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "title": "Static full-population candidate coverage for retained private guards",
+  "status": "ROOT_ACCEPTED_BOUND_POPULATION_COVERAGE_AND_ENUMERATED_CONTACTS",
+  "head": "34df07de5f820635cdc8614dd5824c3ae387e5a6",
+  "scope": {
+    "unchanged_guard_definitions": 18,
+    "retained_copper_objects": 177,
+    "fixed_references": 27,
+    "saved_native_fixed_pads": 97,
+    "combined_obstacle_objects": 274,
+    "enabled_copper_layers": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "broad_phase_pairs": 60,
+    "exact_narrow_phase_classifications": 60,
+    "explicit_self_exclusions": 18,
+    "native_or_pcbnew_loads": 0,
+    "board_generation_saves_refills_or_drc": 0,
+    "source_rule_retention_or_routing_changes": 0,
+    "cloud_or_install_actions": 0
+  },
+  "bindings_sha256": {
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "battery_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "guard_repair_raw": "f15a7743c8f5bcc205f2fabac34dd44d1901ce5c07a6204ad3b34c5085120d94",
+    "saved_native_inventory": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba",
+    "saved_connectivity": "079b47d115db668be0fd8af196b20bfea316193426eca36398dbc98dae0ee23d",
+    "retained177_contract": "639a7f81136e9e38319a55ac5d84dff42dfaaa08fe909ac87a68053fbefe23a9",
+    "prior_corrected_relationships": "ae4aee9111b164d712fe4f7f966aa31a161a1f5acf3e43ac268485a7edec4b9f",
+    "saved_native_geometry_supplement": "4f5d16f9b631b2d01e3af7e1039dad2638462e76850bdbe6a45e4dea7ae9c72e"
+  },
+  "population_proof": {
+    "retained_copper_resolved_uniquely": "177/177",
+    "fixed_saved_native_pads_covered": "97/97 across 27/27 fixed references",
+    "combined_identity_count": 274,
+    "silent_exclusions_deduplication_or_unresolved_records": 0,
+    "primary_saved_geometry_gap": [
+      "898341e7-3649-568b-a9f2-8843ec69658c"
+    ],
+    "primary_saved_geometry_gap_disposition": "The initial execution failed closed. The one missing /PROT_VM track was then resolved uniquely from the pinned earlier saved-native local-retention raw, at (86.4,112.2) to (86.4,112.208) mm on F.Cu, width 0.1778 mm.",
+    "shape_counts": {
+      "tracks": 159,
+      "vias": 18,
+      "pad_rect": 61,
+      "pad_roundrect": 22,
+      "pad_circle_including_two_NPTH": 10,
+      "pad_oval": 4
+    },
+    "unsupported_or_unresolved_shapes": 0,
+    "NPTH_policy": "The two NPTH circles are retained as physical-hole obstacles, never reported as conductive copper; neither entered the 60 broad-phase pairs.",
+    "layer_population": {
+      "F.Cu": {
+        "retained_copper": 140,
+        "fixed_pads": 93
+      },
+      "In1.Cu": {
+        "retained_copper": 18,
+        "fixed_pads": 8
+      },
+      "In2.Cu": {
+        "retained_copper": 18,
+        "fixed_pads": 8
+      },
+      "B.Cu": {
+        "retained_copper": 55,
+        "fixed_pads": 12
+      }
+    }
+  },
+  "method": {
+    "pad_authority": "Saved-native global centres, sizes, orientations and layer IDs only; no footprint-local pose transform.",
+    "layer_expansion": "Saved through-pad and via spans were intersected/expanded across the actual four enabled copper layers. No literal '*.Cu' comparison was used.",
+    "broad_phase": "Conservative AABBs enclosing every supported exact primitive on each actual conductive layer.",
+    "narrow_phase": "Exact Euclidean core distance for tracks, vias, circles, ovals, rectangles and roundrects against the unchanged circle/capsule/oriented-rectangle guard shapes and 0.25 mm halo.",
+    "shape_limit": "All population shapes were supported. Any future unsupported or nonorthogonal saved-native pad fails rather than producing a zero/success fallback.",
+    "self_policy": "Each guard's own source object is included in coverage and reported separately as one of 18 explicit protected-object self pairs, not waived."
+  },
+  "controls": {
+    "count": 12,
+    "all_passed": true,
+    "new_population_controls": [
+      "all 97 fixed saved-native pads covered",
+      "all 177 retained copper UUIDs resolved uniquely",
+      "wrong opposite-pad poses for R26.1 and C28.1 rejected",
+      "omitted fixed pad detected",
+      "omitted retained copper object detected",
+      "omitted actual copper layer detected"
+    ],
+    "saved_native_pose_witnesses_mm": {
+      "R26.1 e5faefdc-06ab-5b87-9fc1-47bbda0e766a": [
+        86.4,
+        112.208
+      ],
+      "C28.1 bf411126-e0c1-5e14-b531-dc4dd157714a": [
+        102.2,
+        114.25
+      ]
+    },
+    "historical_mode_regression": {
+      "objects": 25,
+      "relationships": 46,
+      "relationship_array_identical": true,
+      "raw_sha256": "ae4aee9111b164d712fe4f7f966aa31a161a1f5acf3e43ac268485a7edec4b9f"
+    }
+  },
+  "comparison_to_prior_46": {
+    "common_pairs": 42,
+    "common_pair_numeric_and_classification_fields_unchanged": true,
+    "added_pairs": 18,
+    "added_pair_disposition": "All 18 are the guard's own protected source object on that guard layer. They are expected actual-copper self contacts and are separated from collateral findings.",
+    "removed_pairs": 4,
+    "removed_pair_disposition": "All four were old broad-phase false positives caused by placing R26.1 or C28.1 at the opposite private-pad location. They were already exact-clear relationships, not contacts.",
+    "removed_pair_keys": [
+      [
+        "6926648f-fe02-5f16-9bb9-9af38f69b379",
+        "bf411126-e0c1-5e14-b531-dc4dd157714a",
+        "F.Cu"
+      ],
+      [
+        "71859588-3982-55ff-a9e1-8dd2ef19aa0c",
+        "bf411126-e0c1-5e14-b531-dc4dd157714a",
+        "F.Cu"
+      ],
+      [
+        "a1479871-a2bd-5fff-bbc4-71d64ec9b88c",
+        "e5faefdc-06ab-5b87-9fc1-47bbda0e766a",
+        "F.Cu"
+      ],
+      [
+        "aedc6476-4b62-5564-a09c-846130dc4fb1",
+        "e5faefdc-06ab-5b87-9fc1-47bbda0e766a",
+        "F.Cu"
+      ]
+    ],
+    "added_pair_keys": [
+      ["19d78fbe-ec7b-5d86-b3cf-6beb0d851d2b", "1ba917bc-32e2-5176-954f-c3d06c7f6040", "F.Cu"],
+      ["1aa0a42d-2d9d-572d-a60f-c7222e48516b", "6623be95-c657-5a8e-bedb-c5a73d42d40b", "In2.Cu"],
+      ["2c324d54-ed45-5d3c-8fda-4e9357102af2", "933e95b2-4ef8-5095-ab3d-4759e7fa0826", "F.Cu"],
+      ["37e4811e-91cd-5f87-8c43-fbd1a19e495c", "eafa404c-be47-5f5c-8167-d39a967ba2e5", "F.Cu"],
+      ["3d4da8b9-e02d-5a56-8751-224cb1607081", "6623be95-c657-5a8e-bedb-c5a73d42d40b", "B.Cu"],
+      ["61340f71-d279-5d84-887c-a4079b556e49", "eafa404c-be47-5f5c-8167-d39a967ba2e5", "In2.Cu"],
+      ["6926648f-fe02-5f16-9bb9-9af38f69b379", "bcb9e722-fe71-5b16-8387-e04b4bcd0520", "F.Cu"],
+      ["71859588-3982-55ff-a9e1-8dd2ef19aa0c", "a2730cca-5ecb-58a3-be5f-9d176ac8a629", "F.Cu"],
+      ["7f91e89f-1213-547b-9fe6-8e3c4a5f8a99", "eafa404c-be47-5f5c-8167-d39a967ba2e5", "In1.Cu"],
+      ["8abebb8c-df26-5d2f-adef-7222db35aa28", "34d001e5-c45d-5645-a43a-6ab95d630ff0", "F.Cu"],
+      ["a1479871-a2bd-5fff-bbc4-71d64ec9b88c", "d400cba9-bf59-5d9f-b921-dc5efd499b8c", "F.Cu"],
+      ["aa7680d4-3516-5201-b567-8bf32f7f6aae", "6623be95-c657-5a8e-bedb-c5a73d42d40b", "F.Cu"],
+      ["aedc6476-4b62-5564-a09c-846130dc4fb1", "3ed47a01-14b9-59e7-bdfe-95561c7f1435", "F.Cu"],
+      ["b4ac8b95-c962-53e1-b8ae-cc3e360ae74e", "7b625d38-c89c-5e26-93c2-4cbe5302680a", "B.Cu"],
+      ["ba99739b-ddf3-5888-88dc-0acbc66cfb38", "1212a327-4ed4-50da-a0bb-71afc8145254", "B.Cu"],
+      ["cc65311c-7779-5be8-a8fc-3a627876b326", "51e3a8d5-1e6b-5f46-a297-c3739ea5de91", "F.Cu"],
+      ["f0e6077d-8512-5e5f-a6a7-ebb392bd6a3e", "eafa404c-be47-5f5c-8167-d39a967ba2e5", "B.Cu"],
+      ["fd652d8e-4f94-5be0-abdd-9462b2ebc068", "6623be95-c657-5a8e-bedb-c5a73d42d40b", "In1.Cu"]
+    ]
+  },
+  "collateral_results_excluding_18_self_pairs": {
+    "relationships": 42,
+    "actual_copper_contacts": 28,
+    "guard_halo_only": 4,
+    "clear_of_guard": 10,
+    "new_actual_contacts": 0,
+    "new_halo_only_contacts": 0,
+    "relationship_categories": {
+      "protected_branch_join": 20,
+      "reviewed_ordinary_GND_boundary_join": 4,
+      "other_retained_same_net_intrusion": 7,
+      "foreign_net_intrusion": 1,
+      "broad_phase_false_positive": 10
+    },
+    "foreign_net_minimum": {
+      "guard_uuid": "2c324d54-ed45-5d3c-8fda-4e9357102af2",
+      "guard_source_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+      "candidate_uuid": "1c54fc7b-22aa-5a15-a0c5-3d136866e518",
+      "candidate_net": "/PROT_DOUT",
+      "layer": "F.Cu",
+      "private_copper_clearance_mm": 0.212066,
+      "guard_signed_offset_mm": -0.037934,
+      "contact_class": "guard_halo_only",
+      "disposition": "Unchanged guard-representation conflict. The copper gap exceeds 0.20 mm; this is not a copper-clearance failure and the existing route remains."
+    }
+  },
+  "execution": {
+    "python": "3.11.9",
+    "supervisor_sha256": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+    "starting_analyzer_sha256": "c499dbdeea2aa5a3319cdc53fb24e551632d9d94118c64654728dee41cb2a57a",
+    "executed_analyzer_sha256": "4b64b5c402a90e6bc49da97787713aabd772abad8d8bec48ce7e979e26f76611",
+    "attempts": [
+      {
+        "attempt": 1,
+        "child_pid": 44392,
+        "elapsed_seconds": 0.141,
+        "timed_out": false,
+        "exit": 1,
+        "result": "Failed closed because retained UUID 898341e7... had no complete geometry in the primary saved-connectivity JSON."
+      },
+      {
+        "attempt": 2,
+        "child_pid": 56996,
+        "elapsed_seconds": 0.172,
+        "timed_out": false,
+        "exit": 0,
+        "result": "Successful full-population audit after adding the pinned saved-native geometry supplement."
+      },
+      {
+        "attempt": 3,
+        "child_pid": 52060,
+        "elapsed_seconds": 0.157,
+        "timed_out": false,
+        "exit": 0,
+        "result": "Final-code historical default-mode regression; exact prior raw reproduced."
+      }
+    ],
+    "corrections_used": 1,
+    "execution_allowance_status": "Three supervised analyzer/test children used; no further execution remains in this bounded item.",
+    "raw_sha256": "85f3f7245b3a707d96f70e1a380db8f239c5474bfaf9f72626eecf7a02a886a9",
+    "success_receipt_sha256": "403dd1279fd9fa79e9b5f537f3ce30fbbbc8332379b20c166a4b10646e83c787",
+    "regression_receipt_sha256": "8f735211cbd96bf45b10bb5dcaa3ecc19ac41be1578af22239be6f3f29e352cd"
+  },
+  "raw_artifacts": {
+    "batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-candidate-coverage-20261004T1746",
+    "full_numeric_raw": "attempt-2-raw-private-guard-candidate-coverage.json",
+    "executed_analyzer": "attempt-2-analyze_private_guard_collateral.py",
+    "success_receipt": "attempt-2-receipt.json",
+    "historical_regression_raw": "attempt-3-default-regression-raw.json",
+    "all_attempt_receipts_stdout_stderr_and_code_snapshots_preserved": true
+  },
+  "root_review": {
+    "checkpoint_local": "2026-10-04 18:00",
+    "accepted_scope": "Conservative coverage of the exact177 retained primitives and97 saved-native fixed pads against the unchanged18 analytic guards, plus the60 actual surviving pair classifications.",
+    "original_gap_closed": "Non-private obstacle poses and all-enabled-layer pad/via membership now come from the bound native evidence. No new collateral contact was found; four wrong-pose false positives were removed.",
+    "independently_checked": [
+      "Repository analyzer equals the actually executed snapshot; numeric raw and process receipt hashes match.",
+      "The historical-mode regression reproduces the exact earlier corrected raw bytes.",
+      "The supplementary missing-track geometry has the same five authoritative source hashes as the primary evidence.",
+      "All97 saved pad records have no offset, chamfer, rect_delta or custom-primitive modifiers. Circle widths/heights agree; both NPTH pad extents equal their0.65mm drills.",
+      "The60 surviving pairs comprise eight rectangular-pad,39 track and13 via relationships. Rounded-rectangle, oval and circular component pads are excluded by conservative bounds.",
+      "All recorded child and supervisor PIDs are absent; no further analyzer execution was performed by root."
+    ],
+    "geometry_supplement_lineage": {
+      "report": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-critical-local-retention-2026-10-04.json",
+      "report_sha256": "7ce6586a1e35123d2a26ed46c08f28752411d9ef6d97e695d45a6f8b8f358c81",
+      "original_raw": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\critical-local-retention-20261004T1114\\raw-local-retention.json",
+      "raw_sha256": "4f5d16f9b631b2d01e3af7e1039dad2638462e76850bdbe6a45e4dea7ae9c72e"
+    },
+    "generalization_limit": "This is not a generalized new-source geometry-engine qualification. TP10/TP11 use ratio0.5 rounded rectangles: their zero-size cores give valid enclosing bounds here, but degenerate-core narrow-phase handling is not qualified and must be corrected/tested before such a shape can become a nearby candidate. No such shape reaches narrow phase in this exact bound run.",
+    "preserved_pre_review_ledger": "pre-root-review-report.json",
+    "guard_geometry_retention_or_source_changed": false,
+    "native_rule_importer_product_or_fabrication_accepted": false,
+    "next_item": "Select a native guard representation and exact retained-source intrusion contract for the critical block; do not waive whole nets or automatically generate/upload full-board inputs."
+  },
+  "limits": [
+    "This is static saved-native population and geometry evidence, not native KiCad rule behavior or product keepout approval.",
+    "Existing intended-terminal joins and known GND contacts are not reinterpreted.",
+    "No product grounding, circuit repair, routing, fabrication, supplier, or child-use acceptance is claimed.",
+    "Pre-existing worktree modifications in docs/design-inputs/2026-10-02-quilter-workflow.json and docs/quilter-workflow-study-2026-10-02.md were preserved and not touched by this item."
+  ]
+}

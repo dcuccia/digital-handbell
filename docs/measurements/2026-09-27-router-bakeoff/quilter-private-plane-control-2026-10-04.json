@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "title": "Isolated native private-via guard and inner-plane fill control",
+  "status": "PASS_LIMITED_ISOLATED_FILL_GEOMETRY_WITH_STATIC_BINDING_CLOSEOUT_NOT_PRODUCT_ACCEPTANCE",
+  "question_answered": {
+    "positive": "Yes in this exact isolated fixture. Correctly layer-mapped conservative rectangular guards kept the native saved inner GND fill at least 0.250000 mm from the complete 0.600/0.300 mm private-via copper shape in all 4 four-layer cases and all 8 six-layer cases.",
+    "anchor": "The synthetic unattached GND VIA at (120,120) mm collided with nonempty native fill on every exercised inner layer. This is a useful valid local filled-via contact and nonempty-plane geometry control; it does not by itself establish a pad-terminal-connected or nonfloating functional return network.",
+    "nonprojection": "A 0.020 x 0.020 mm native polygon witness at F-only R26.2 intersected fill on every inner layer, showing that the F-only private pad guard was not spuriously projected.",
+    "negative": "Omitting only eafa404c-be47-5f5c-8167-d39a967ba2e5's In3.Cu guard in the six-layer negative produced direct native fill contact there: intersection true and measured clearance 0.000000 mm. The other seven private-via/layer cases retained 0.250000 mm.",
+    "scope_limit": "This demonstrates native KiCad 10.0.6 behavior for the exact synthetic fixture and conservative rectangles. It is not exact-curved-guard, full-input, Quilter-import, product-plane, stackup, supplier, manufacturing, or routing acceptance."
+  },
+  "bindings": {
+    "repository_commit_at_start": "a17fe3b7413485e520839a8861481a26fccdd832",
+    "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-plane-control-20261004T1716",
+    "input_fixture": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pcb",
+    "fixture_sha256": "0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148",
+    "input_project": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pro",
+    "project_sha256": "ada159b721f8667449437318b30bab1a5be3881a707d9e39859658784b0730d4",
+    "native_result": "native-attempt-3\\result.json",
+    "native_result_sha256": "12d5520829b984740c2044b050ec17717d04fc01bac64c9901137243e9eddb2e",
+    "preserved_pre_closeout_ledger": "quilter-private-plane-control-2026-10-04.pre-closeout.json",
+    "preserved_pre_closeout_ledger_sha256": "63d69ce3dfff67389adba6aa1cb9ed68b641a5be1835183c8905db566eb34c6e",
+    "preserved_pre_point6_correction_ledger": "quilter-private-plane-control-2026-10-04.pre-point6-correction.json",
+    "preserved_pre_point6_correction_ledger_sha256": "92c7f56aebec3d7c0a9088565d6d896a275acf21da414d48d7d2ff58c61500b5",
+    "static_closeout": "static-closeout.json",
+    "static_closeout_sha256": "ebdf91d564cee2c85aeae8e28e03e4817ab685014489ab0d57b615c0d1248d2c"
+  },
+  "tools": {
+    "python": {
+      "version": "3.11.9",
+      "path": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "sha256": "5f7b89a612c9b8af1d6456cdfcd1dbe5ca630849e79aebced9bee9a6694952ec"
+    },
+    "pcbnew": {
+      "version": "10.0.6",
+      "bin": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin"
+    },
+    "supervisor": {
+      "path": "snapshots\\supervise_process.py",
+      "sha256": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301"
+    },
+    "accepted_inspector_helper": {
+      "path": "snapshots\\inspect_native_guard_fixture.py",
+      "sha256": "81076e5678b31ae24f39458bbfd1e1c77bd255f1e3a5173d53df4eed9bccbab6",
+      "reuse": "The executed helper dynamically loaded this accepted module and rechecked its exact fixture/project hash bindings before native work; its established DLL-lifetime import pattern was retained."
+    },
+    "executed_control": {
+      "path": "snapshots\\private_plane_control.py",
+      "sha256": "bcfa76bb7041d2ba73aa15bbdbc88e9bfe1337db547e8d06aa501443e988e1cc"
+    },
+    "unit_test": {
+      "path": "snapshots\\test_private_plane_control.py",
+      "sha256": "24bc899298847a0da3e52d6b562022d75f4d927cd523c7a2d1415671acc6a509"
+    },
+    "static_closeout_checker": {
+      "path": "snapshots\\check_private_plane_static.py",
+      "sha256": "8e0a62fdbb093704d52ce1aba8812bb985c34562ab3ef5947dbdad00083030e4"
+    },
+    "sexpr_parser": {
+      "path": "snapshots\\kicad_sexpr.py",
+      "sha256": "be6d4647d1dea5186e4d1388ae640b43f8004fdfc94f50ca72b46e90bf0613e9"
+    },
+    "preserved_failed_revision": {
+      "path": "snapshots\\private_plane_control-attempts-1-2.py",
+      "sha256": "78106d573042f266cdea643e822b4fb8df245eefbe1f350f9045bd0936e49b97"
+    }
+  },
+  "geometry_metric": {
+    "fill": "ZONE.GetFilledPolysList(layer).CloneDropTriangulation(); the complete native saved polygon set, including holes, was used rather than zone outlines, centers, or bounding boxes.",
+    "private_via": "PCB_VIA.GetEffectiveShape(layer) for each complete 0.600 mm outer-copper shape; no drill, mask, or center-point credit.",
+    "distance": "Native SHAPE_POLY_SET.Collide monotonic boundary search to a one-internal-unit lower bound.",
+    "threshold": "No collision at 0.25 mm minus one internal unit (1 nm). The 1 nm is numerical control tolerance, not fabrication tolerance.",
+    "guard": "Each private-via guard is the 0.600 mm copper extent plus a 0.25 mm rectangular halo: [x-0.55,y-0.55,x+0.55,y+0.55] mm, all five restriction flags not_allowed.",
+    "anchor": "Native collision between each filled polygon set and the synthetic unattached GND VIA effective shape. This is a valid local filled-via attachment/nonempty-plane geometry control, while not proving grounding through a pad terminal or absence of floating copper in a functional return network.",
+    "F_only_witness": "Native collision between each filled polygon set and a 0.020 x 0.020 mm polygon centered on R26.2 at (86.4,111.192) mm."
+  },
+  "profiles": {
+    "four_positive": {
+      "physical_order": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"],
+      "native_copper_layer_count": 4,
+      "private_guard_obligations": 18,
+      "diagnostic_rule_areas": 5,
+      "total_rule_areas": 23,
+      "fill_zones": 2,
+      "cases": 4,
+      "passes": 4,
+      "minimum_clearance_mm": 0.25,
+      "all_anchor_attachments": true,
+      "raw_observed_island_count_each_layer": 1,
+      "island_count_limit": "Observed in raw output; positive_pass did not assert island_count == 1 and this is not a general validator proof.",
+      "all_F_only_nonprojection_witnesses": true,
+      "filled_pcb": "native-attempt-3\\four-positive-filled.kicad_pcb",
+      "filled_pcb_sha256": "9f180f82cafde120656d1f86df6d62de6e6c49257ba465b3194aee447062d55c"
+    },
+    "six_positive": {
+      "physical_order": ["F.Cu", "In1.Cu", "In2.Cu", "In3.Cu", "In4.Cu", "B.Cu"],
+      "serialized_native_layer_ids": {"F.Cu": 0, "In1.Cu": 4, "In2.Cu": 6, "In3.Cu": 8, "In4.Cu": 10, "B.Cu": 2},
+      "native_copper_layer_count": 6,
+      "private_guard_obligations": 22,
+      "diagnostic_rule_areas": 5,
+      "total_rule_areas": 27,
+      "fill_zones": 4,
+      "cases": 8,
+      "passes": 8,
+      "minimum_clearance_mm": 0.25,
+      "all_anchor_attachments": true,
+      "raw_observed_island_count_each_layer": 1,
+      "island_count_limit": "Observed in raw output; positive_pass did not assert island_count == 1 and this is not a general validator proof.",
+      "all_F_only_nonprojection_witnesses": true,
+      "filled_pcb": "native-attempt-3\\six-positive-filled.kicad_pcb",
+      "filled_pcb_sha256": "efc79c68bd33def021d73d3931042c3cdec84dda0259fb72a5578df42f9c3b8a"
+    },
+    "six_negative": {
+      "physical_order": ["F.Cu", "In1.Cu", "In2.Cu", "In3.Cu", "In4.Cu", "B.Cu"],
+      "private_guard_obligations": 21,
+      "diagnostic_rule_areas": 5,
+      "total_rule_areas": 26,
+      "omitted_only": {
+        "via_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "layer": "In3.Cu"
+      },
+      "omitted_case_intersects_fill": true,
+      "omitted_case_clearance_mm": 0.0,
+      "other_cases": 7,
+      "other_cases_passed": 7,
+      "other_case_minimum_clearance_mm": 0.25,
+      "all_anchor_attachments": true,
+      "raw_observed_island_count_each_layer": 1,
+      "island_count_limit": "Observed in raw output; positive_pass did not assert island_count == 1 and this is not a general validator proof.",
+      "all_F_only_nonprojection_witnesses": true,
+      "filled_pcb": "native-attempt-3\\six-negative-filled.kicad_pcb",
+      "filled_pcb_sha256": "9c532acc00accaff69519c8c4494c332a3b4f61baad11a7fe724002ff56af07e"
+    }
+  },
+  "retained_object_preservation": {
+    "fixture_base": {"footprints": 8, "pads": 12, "tracks": 10, "vias": 4, "rule_areas": 23},
+    "diagnostic_addition": {"GND_through_vias": 1},
+    "four_positive_before_and_after_reload": {"footprints": 8, "pads": 12, "tracks": 10, "vias": 5, "rule_areas": 23, "fill_zones": 2},
+    "six_positive_before_and_after_reload": {"footprints": 8, "pads": 12, "tracks": 10, "vias": 5, "rule_areas": 27, "fill_zones": 4},
+    "six_negative_before_and_after_reload": {"footprints": 8, "pads": 12, "tracks": 10, "vias": 5, "rule_areas": 26, "fill_zones": 4},
+    "saved_static_closeout": {
+      "four_positive": {"footprints": 8, "pads": 12, "tracks": 10, "vias": 4, "all_retained_uuid_records_exactly_equal": true},
+      "six_positive": {"footprints": 8, "pads": 12, "tracks": 10, "vias": 4, "all_retained_uuid_records_exactly_equal": true},
+      "six_negative": {"footprints": 8, "pads": 12, "tracks": 10, "vias": 4, "all_retained_uuid_records_exactly_equal": true},
+      "only_added_primitive_uuid": "27ce04ad-cd63-5106-8bdb-2446fbfe5713",
+      "added_primitive": "unattached GND VIA at (120,120) mm, diameter/drill 0.600/0.300 mm, serialized F.Cu-to-B.Cu span",
+      "method": "Canonical S-expression comparison by exact UUID over saved native base and saved filled outputs; footprint, pad, segment and via geometry/net records were compared without pcbnew import."
+    },
+    "method_and_limit": "Native before/after counts and the saved-file per-UUID canonical comparison reconcile all retained fixture primitives. This is exact serialized-record preservation, not another native geometry execution or functional connectivity proof."
+  },
+  "saved_serialized_closeout": {
+    "copper_layer_records": {
+      "four_layer": [[0, "F.Cu"], [4, "In1.Cu"], [6, "In2.Cu"], [2, "B.Cu"]],
+      "six_layer": [[0, "F.Cu"], [4, "In1.Cu"], [6, "In2.Cu"], [8, "In3.Cu"], [10, "In4.Cu"], [2, "B.Cu"]],
+      "qualification": "Exact serialized ID/order from saved files; this corrects the native control's weaker printed expected-list/presence check."
+    },
+    "via_bindings": {
+      "anchor": {"uuid": "27ce04ad-cd63-5106-8bdb-2446fbfe5713", "center_mm": [120.0, 120.0], "diameter_mm": 0.6, "outer_radius_mm": 0.3, "drill_mm": 0.3, "layers": ["F.Cu", "B.Cu"], "net": "GND", "terminal_attached": false},
+      "eafa404c-be47-5f5c-8167-d39a967ba2e5": {"center_mm": [100.2, 111.9], "diameter_mm": 0.6, "outer_radius_mm": 0.3, "drill_mm": 0.3, "layers": ["F.Cu", "B.Cu"], "net": "GND"},
+      "6623be95-c657-5a8e-bedb-c5a73d42d40b": {"center_mm": [103.7, 117.5], "diameter_mm": 0.6, "outer_radius_mm": 0.3, "drill_mm": 0.3, "layers": ["F.Cu", "B.Cu"], "net": "GND"}
+    },
+    "actual_saved_rule_groups": {
+      "four_positive": {"all_five_not_allowed": 18, "track_only": 2, "via_only": 1, "pad_only": 1, "footprint_only": 1},
+      "six_positive": {"all_five_not_allowed": 22, "track_only": 2, "via_only": 1, "pad_only": 1, "footprint_only": 1},
+      "six_negative": {"all_five_not_allowed": 21, "track_only": 2, "via_only": 1, "pad_only": 1, "footprint_only": 1},
+      "DIAG_VIA_ALL": {"layers": ["F.Cu"], "flags": {"tracks": "allowed", "vias": "not_allowed", "pads": "allowed", "copperpour": "allowed", "footprints": "allowed"}, "expanded_to_new_inner_layers": false}
+    },
+    "six_positive_vs_negative_rule_delta": {
+      "missing_only_uuid": "e2d67006-3714-51b1-8d6c-f6eb8e2e342c",
+      "missing_only_name": "PRIVATE_VIA_eafa404c-be47-5f5c-8167-d39a967ba2e5_In3.Cu",
+      "layer": "In3.Cu",
+      "bounds_mm": [99.65, 111.35, 100.75, 112.45],
+      "all_five_flags_not_allowed": true,
+      "added_rule_areas": 0,
+      "changed_common_rule_areas": 0
+    }
+  },
+  "execution": {
+    "unit_static": {
+      "tests": 1,
+      "result": "PASS",
+      "receipt": "tests-receipt.json",
+      "receipt_sha256": "a5b71b9b6a0750fcb61938dd2caf221679be2bf817d5d8bd51e96d0be806a888",
+      "child_pid": 7828,
+      "elapsed_seconds": 0.219,
+      "timed_out": false,
+      "child_confirmed_exited": true,
+      "command": "python -m unittest -v test_private_plane_control.py"
+    },
+    "native_attempts": [
+      {
+        "attempt": 1,
+        "result": "IMPLEMENTATION_ERROR_MISSING_LOCAL_PARSER_MODULE_BEFORE_NATIVE_IMPORT",
+        "receipt": "native-attempt-1-receipt.json",
+        "child_pid": 56732,
+        "elapsed_seconds": 0.11,
+        "exit": 1,
+        "timed_out": false,
+        "child_confirmed_exited": true,
+        "native_loads": 0,
+        "fills": 0,
+        "saves": 0
+      },
+      {
+        "attempt": 2,
+        "result": "IMPLEMENTATION_ERROR_MISSING_FILLED_PROJECT_COPY_AFTER_FIRST_PROFILE",
+        "receipt": "native-attempt-2-receipt.json",
+        "child_pid": 38640,
+        "elapsed_seconds": 0.734,
+        "exit": 1,
+        "timed_out": false,
+        "child_confirmed_exited": true,
+        "native_loads": 2,
+        "fills": 1,
+        "saves": 1,
+        "preservation": "Partial four-layer artifacts are retained under native-attempt-2; no pass is claimed from this failed reporting revision."
+      },
+      {
+        "attempt": 3,
+        "result": "PASS_ALL_THREE_PROFILES",
+        "receipt": "native-attempt-3-receipt.json",
+        "receipt_sha256": "8625f17f56ee369ddd456ef06ab045dbe799a3db4a8c88c96370c8370b50fc68",
+        "child_pid": 14964,
+        "elapsed_seconds": 0.813,
+        "exit": 0,
+        "timed_out": false,
+        "child_confirmed_exited": true,
+        "profile_native_loads": 6,
+        "fills": 3,
+        "saves": 3,
+        "command": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-plane-control-20261004T1716\\snapshots\\private_plane_control.py --fixture C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pcb --project C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421\\fixture-4layer-roundtrip.kicad_pro --private-root C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter --output C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-plane-control-20261004T1716\\native-attempt-3 --kicad-bin C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin --accepted-inspector C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-plane-control-20261004T1716\\snapshots\\inspect_native_guard_fixture.py",
+        "private_root_argument_role": "The literal argument is the private Quilter root, which contains authoritative-byte copies used only for five hash bindings. It is not the repository source package and was not loaded through pcbnew. Root independently checks the repository package."
+      }
+    ],
+    "total_native_loads": 8,
+    "total_fixture_profile_fills": 4,
+    "total_fixture_profile_saves": 4,
+    "source_native_loads": 0,
+    "hard_limit_seconds_each": 90,
+    "attempt_budget_exhausted": true,
+    "work_left_running": false,
+    "static_closeout": {
+      "result": "PASS_SAVED_STATIC_RECONCILIATION",
+      "receipt": "static-closeout-receipt.json",
+      "receipt_sha256": "da2995a1641d203ea5f5afddfe476c31f4191e15bc85158504f8e3e417a41063",
+      "child_pid": 53136,
+      "elapsed_seconds": 0.203,
+      "exit": 0,
+      "hard_limit_seconds": 30,
+      "timed_out": false,
+      "child_confirmed_exited": true,
+      "native_loads": 0,
+      "command_locator": "Exact argv is preserved in static-closeout-receipt.json.",
+      "output": "static-closeout.json",
+      "output_sha256": "ebdf91d564cee2c85aeae8e28e03e4817ab685014489ab0d57b615c0d1248d2c"
+    }
+  },
+  "private_authoritative_copy_hash_bindings": {
+    "native_loads": 0,
+    "private_copies_match_expected_hashes": true,
+    "directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter",
+    "repository_source_package_checked_by_this_hash_step": false,
+    "repository_source_package_disposition": "Root independently checks the repository package; these five values are private authoritative-copy bindings, not a fresh repository-package hash read.",
+    "hashes": {
+      "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+      "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+      "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+    }
+  },
+  "drc": {
+    "run": false,
+    "reason": "The bounded question was qualified directly against actual native saved fill polygons, complete via effective shapes, anchor attachment, nonprojection, and a missing-guard negative. Full DRC was unnecessary and inherited all-object source intrusions are deliberately retained."
+  },
+  "limits": [
+    "The synthetic anchor is an unattached diagnostic VIA, not a pad/PTH terminal, selected component, route, layer role, or process. Its measured filled-via contact is a valid local geometry/nonempty control but does not establish a pad-terminal-connected or nonfloating functional return network.",
+    "The six-layer all-inner GND exposure is conservative diagnostic coverage, not supplier-stackup or plane-role selection.",
+    "Existing same-net private traces, pads, and footprints deliberately intrude into all-object guards and remain known baseline findings.",
+    "No source PCB, source project, placement, routing, cloud job, full-board input, product fill, or manufacturing data was changed or qualified.",
+    "No DRC-clean, electrical, SI/PI, assembly, supplier, manufacturing, functional, or child-use claim is made."
+  ],
+  "root_review": {
+    "checkpoint_local": "2026-10-04T17:26:00-07:00",
+    "status": "ACCEPTED_EXACT_LOCAL_FILL_ISOLATION_CONTROL_WITH_STATIC_RECONCILIATION",
+    "observed_positive_cases": {"four_layer": 4, "six_layer": 8},
+    "observed_negative": "Only the omitted eafa404c In3 guard permits local fill contact; the other seven cases remain separated.",
+    "reviewed": [
+      "Executed native code equals the preserved snapshot; native result and supervision receipt hashes match.",
+      "Native saved polygon sets include holes and use complete via effective shapes, not center-only isolation samples.",
+      "Saved-file canonical comparison preserves all eight footprints, twelve pads, ten tracks and four base vias; the only new primitive is the diagnostic anchor.",
+      "Static saved layer IDs/order and the precise six-layer negative rule delta reconcile with the measured profiles.",
+      "Every measured inner fill has one island and contacts the separate anchor via. This is an observed local nonempty-fill control, not functional grounding or a generalized validator guarantee.",
+      "All five authoritative repository-package hashes independently match the expected values; recorded native/test/static child PIDs are absent."
+    ],
+    "preserved_pre_review_ledger": "quilter-private-plane-control-2026-10-04.pre-root-review.json",
+    "native_attempts_exhausted_no_rerun": true,
+    "full_product_guards_ground_return_stackup_importer_or_routing_accepted": false
+  },
+  "acceptance": true,
+  "acceptance_scope": "Exact isolated local native plane-isolation behavior only; not a product board or general-purpose acceptance checker."
+}

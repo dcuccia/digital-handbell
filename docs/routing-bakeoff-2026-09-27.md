@@ -1,7 +1,27 @@
 # Purpose-built routing bakeoff - September 27, 2026
 
-**Local assessment complete; a disposable Quilter diagnostic run may proceed
-without another support round. No experimental routing is accepted.**
+**October 2 learning follow-up:** owner approved a personal two-track study.
+A read-only diagnostic finds 37 source graph opens, 38 in v1.1 and 22 in
+v1.2 (native DRC: 38/24 for the outputs). v1.2 demonstrates same-net gains
+but raw foreign-net contacts/native short findings remain; no candidate is
+accepted and the 22/24 discrepancy is unresolved. Read the
+[workflow-study checkpoint](quilter-workflow-study-2026-10-02.md#existing-output-diagnostic-checkpoint)
+for context, rule-mismatch limits and the separate flexible-layout brief.
+No refill, repair, merge or new cloud submission occurred in this follow-up.
+
+**October 2: the disposable Quilter diagnostic returned two candidates;
+both are rejected for integration at the bounded preservation gate.**
+Checked placement and all 325 native physical-pad geometry/net records
+match, but the original named In1 GND zone has no exact structural
+substitute and all 24 baseline In2 segment records are unmatched.
+Four copper layers remain enabled; output display-name changes are not
+layer loss. These are preservation findings, not native lost-connection
+counts or a routing-performance comparison. The 37-open baseline and all
+raw inputs/outputs remain unchanged. No repair, merge, rerun or support
+loop is released. See the [corrected assessment and explicit limits](agent-handoff-2026-10-01.md#october-2-bounded-preservation-result)
+and [compact source-bound record](measurements/2026-09-27-router-bakeoff/quilter-output-preservation-2026-10-02.json).
+
+The earlier running/submission/support states below are historical.
 
 **October 1, 16:02 local update:** the owner reports the Quilter job working.
 This is owner-reported execution, not an independently queried cloud status.
@@ -242,7 +262,7 @@ Their hashes are respectively `c51da7a7...` and `f4678027...`.
 Raw DSN/SES, scratch PCBs, native reports, helpers and views remain in the
 separate local experiment directory, not the authoritative package.
 
-### Quilter: uploaded and comprehension reviewed; no routing job
+### Quilter: historical setup and comprehension review
 
 Official documentation directly supports this use case: components inside
 the board boundary retain position/orientation, existing traces/vias retain
@@ -370,7 +390,7 @@ conversion tests on this board.
 | Approach | Setup effort observed | Connections completed | DRC / preservation | Routing quality and cleanup | This board / next greenfield |
 |---|---|---|---|---|---|
 | Freerouting local DSN/SES | Reused prior tooling; control, one conservative trial and one width correction | 0/7 tested; 37 remain | No new native findings; exchange not byte-exact; extra non-target records | No useful target routes; integration cleanup unjustified | No demonstrated leverage in tested F-only scope; multilayer remains unassessed / potentially useful with router-ready constraints |
-| Quilter | Account/UI upload and constraint review; now support-dependent | Not measured; no routing job | Import/inference and internal-copper preservation unresolved | Cannot grade unseen routes; substantial constraint preparation currently needed | Promising documented incremental workflow, blocked here / promising, with early verified comprehension and stackup |
+| Quilter | Account/UI and constraint review; one diagnostic returned two candidates | Native benefit not measured; stopped at preservation gate | Checked pad identities/placement match; original In1 zone and 24 In2 records not preserved exactly | No repair or every-trace review; electrical equivalence not established | Neither output accepted here / earlier interoperability and constraint qualification still needed for greenfield use |
 | tscircuit | Short documentation/source reconnaissance; no installation or migration | Not measured | Converter reconstructs rules, layers and pours | Preservation adapter would exceed this trial's value | Not a drop-in solution / stronger greenfield candidate |
 
 | Approach | Non-interactive operation | LLM involvement after setup | Obvious engineering concern categories |
@@ -400,12 +420,17 @@ on this exact board today.**
    Any future transfer of accepted new copper needs separate authorization
    and an exact-source integration gate.
 
-The next adoption step is **Quilter support qualification**, not another
+The September 27 recommendation was **Quilter support qualification**, not another
 blind run: locate/enable the actual preservation workflow and resolve the
 specific KiCad import findings. If that cannot be done economically,
 evaluate whether a small deterministic local constraint bridge is worth
 building before more Freerouting trials. Neither path is automatically
 authorized by this report.
+
+That support-first recommendation was superseded by the October 1
+owner-approved diagnostic. The October 2 result now stops at observed
+preservation differences; it does not automatically restart support,
+authorize a corrected run or justify manual cleanup.
 
 For a greenfield board, choose and encode a supported physical stackup
 early, use consistent native symbols/footprints and values, establish

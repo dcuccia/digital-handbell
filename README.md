@@ -1,237 +1,113 @@
 # Digital Handbell
 
-**September 22: inner ground plane, +3V3 bridge and four ground stitches accepted.** The active
-four-layer PCB now has **44 opens**, with existing connected groups and
-protected sense returns preserved. The supply bridge adds three 0.40 mm
-In2 segments between existing vias; component placement is unchanged.
-An off-pad ground via and short R4 stub now join the existing C9/R4/R8
-ground group to main GND without changing the plane fills; C9's local
-high-frequency return remains unqualified.
-Three further stitches connect C4, shared C11/C15 and U2 ground groups;
-C12, C23 and C24 remain unresolved within the finite screen.
-This is an incremental routing baseline, not a fabrication
-release or final SI/PI qualification. See the
-[latest acceptance record](hardware/handbell/iterations/printed-bell-four-layer/reports/supply-ground-radial-acceptance.json)
-and [handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
+**A real ringing gesture. A digitally voiced bell. An open design to build together.**
 
-**September 21: four-layer migration approved, with Astra/Sol role separation.**
-The [routing-agent policy](docs/routing-agent-policy.md) retains Astra's
-engineering review and requires pinned Sol for corridor/group routing batches.
-A separate [four-layer migration baseline](hardware/handbell/iterations/printed-bell-four-layer/README.md)
-was established with 51 open connections, preserving placement and existing
-copper. The first staged ground plane was rejected after a refill regression.
-The explicit-settings replay subsequently preserved the connections and was
-accepted September 22; the rejected trial remains historical evidence.
-The two-layer layout is preserved unchanged. Saved SCL experiments and the older routing-recovery archive
-are preserved separately; neither is accepted replacement copper. See the
-[current handoff](docs/pcb-closure-plan.md#owner-pause-and-next-item).
+We're developing a rechargeable, motion-triggered musical instrument with a
+local speaker, custom electronics, and a removable cartridge inside a
+3D-printed bell. The goal is expressive, affordable music-making without a
+phone or computer during play.
 
-An open-source, motion-triggered electronic handbell for affordable educational
-music-making. Replace the clapper in a children's play handbell with a speaker,
-rechargeable battery, and compact electronics. A natural ringing gesture should
-produce a convincing bell sound; the instrument should be quiet between notes.
+[Explore the design](docs/design-gallery.md) ·
+[Roadmap](docs/roadmap.md) ·
+[Join the project](CONTRIBUTING.md) ·
+[Documentation](docs/README.md)
 
-**Status: schematic, PCB and mechanical engineering drafts, not a
-fabrication-ready or child-use-qualified design.** The preserved 0.2
-[native KiCad draft](hardware/handbell/README.md) and
-[schematic PDF](hardware/handbell/reports/handbell-schematic.pdf) integrate
-LSM6DSOX, TPS61023 audio boost, independent mute, keyed speaker/button connectors
-and service pads. Feather/RGB/servo/STEMMA extras are removed.
-The [0.2 handoff](docs/electrical-reduction-and-placement.md) and
-[mechanical models](docs/mechanical-feasibility.md) distinguish actual CAD,
-screening assumptions and unresolved fit/power/manufacturing gates.
-A separate partial-routing checkpoint is now available; no fabrication-ready
-PCB or functioning firmware has been released.
+![Gold-coloured printed-bell CAD concept beside a cutaway showing its speaker, electronics and battery cartridge](docs/images/showcase/bell-and-cutaway.png)
 
-**September 14 closure work:** the [current integration draft](hardware/handbell/iterations/printed-bell-clock-draft/README.md)
-has its local clock routed, recorded ground fill restored, and USB slot/land
-correction applied with local CC/VBUS repairs. All **83 fitted MPNs** are
-assigned, and eleven selected power/passive land patterns are applied.
-It retains **56 unconnected items**, with zero other native DRC errors and
-232 silkscreen/text warnings.
-The [cost-aware closure plan](docs/pcb-closure-plan.md) tracks remaining
-geometry, routing and matched PCB+PCBA quotation inputs. This is still an
-engineering checkpoint, not a complete or qualified board.
-**September 15:** work has resumed. Six documented device-envelope corrections
-are applied without moving parts. The selected U5 boost and R27 current-sense
-land patterns are now applied too, with local U5 escape corrections and a
-matching enlargement of R27's protected ground exclusion. The first local
-core-supply links to C18, C6 and the C8 regulator-output capacitor are now
-routed; **52 opens remain**.
-C6's QSPI obstruction was resolved by a shorter QSPI escape and small
-capacitor-column moves, retaining the existing courtyard geometry.
-C8's obstruction was resolved by moving the unchanged-width VHI feed into
-the central backside corridor and rearranging, not removing, the nine MCU
-ground vias. Thermal/stencil review remains open.
-Remaining native lands are retained for routing with explicit
-supplier-process questions, including filled/capped amplifier thermal vias;
-two-layer supplier availability and price are not yet confirmed.
-The closure plan contains the
-current handoff and repo-only fill-check commands.
-The [routing-tooling study](docs/routing-tooling.md) records exercised native
-API strategies and the bounded offline Freerouting pilot. No external-router
-proposal was accepted; routing automation remains experimental.
-Subsequent native-mask routing has connected the R2/CHG0 charge-indicator
-branch without moving parts or changing existing copper: **51 opens remain**.
-Core supply/return and amplifier GAIN attempts were preserved but not accepted.
+*Enclosure concept, not a product photograph. These preserved CAD views
+predate the latest six-layer PCB; fitting that board and its speaker
+connector into the assembly is still on the roadmap.*
 
-**September 13 printed-bell revision:** the owner reports that the latest
-inert pieces fit and authorizes a single-piece printed bell, flush removable
-cartridge and black handle. The separate
-[front-electronics placement](hardware/handbell/iterations/printed-bell-front/README.md)
-fits **81 electronic parts on F and two battery contacts on B without growing
-the D43 PCB**. Rear SMT contacts still require assembly work.
-The [coordinated revision](docs/printed-bell-revision.md) records the new
-interfaces, conditional routing authorization and pending mechanical results;
-[material/handle notes](docs/printed-bell-material-and-handle.md) distinguish
-silk-PLA guidance from qualified structural or thermal performance.
+## Where we are
 
-The [original printed bell and rendered views](docs/printed-bell-revision.md#printed-shell-cartridge-and-handle)
-now provide a **70 mm diameter, 55.8 mm body with an 80 mm black handle**,
-flush grille and removable complete cartridge. Native FreeCAD/STEP and nine
-inert STL files are available separately from the earlier metal-bell studies.
-The coordinated PCB interfaces support the authorized critical-routing stage;
-this does not approve fabrication or live-cell operation.
+**November 2026: the six-layer PCB has reached zero unconnected items, and
+we have a prototype assembly quote.** The next step is turning a routed
+design into a reviewed, working instrument.
 
-The [first routed candidate](hardware/handbell/iterations/printed-bell-routing/README.md)
-contains real tracks/vias and reduces unconnected items from 222 to 148.
-It remains incomplete and inoperable. The owner-requested
-[high-current review](hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
-identified boost output-capacitor loop and protector-sense pickoff corrections.
-The [separate power-rework milestone](hardware/handbell/iterations/printed-bell-power-rework/README.md)
-now implements those corrections, and the complete FreeCAD assembly has been
-rebuilt around its exact placement. It still has **155 unconnected items**;
-the main switched-battery feed, other routing, sourced parts and manufacturing
-inputs remain unfinished. A newly identified
-[USB import/land-pattern problem](docs/usb-connector-qualification.md) must also
-be corrected before the quotation package.
-
-The intended handoff includes [full PCB+PCBA quotation assets](docs/pcba-quotation-plan.md)
-for JLCPCB and PCBWay after completing the design, not just the partial
-routing checkpoint. No supplier upload or order is authorized.
-
-**September 11 revision:** the owner confirms the newer print assembly fits,
-supplies [measured shell stations](docs/measurements/2026-09-11-shell-speaker-inputs.json),
-and refines the speaker magnet to **21.70 mm OD**. The
-[next integration plan](docs/t8-integration-plan.md) combines the Vapcell T8
-contact/capture candidate, compact cell protection, 2 MB flash, revised mouth
-profile, supported USB access and reversible servicing. A complete placed
-FreeCAD assembly is the owner-review checkpoint before routing. Earlier
-profiles and prints below remain historical snapshots, not current tolerances.
-
-The [new native T8 placement](hardware/handbell/iterations/t8-protected-draft/README.md)
-implements **83 fitted parts**, including two SMT battery contacts, an eight-part
-cell-protection stage and the smaller Winbond flash footprint. Its
-[schematic PDF](hardware/handbell/iterations/t8-protected-draft/reports/handbell-schematic.pdf)
-and [electrical handoff](docs/t8-electrical-revision.md) explain the protected
-return, sourcing and current/charging limits. It remains unrouted and does not
-approve live-cell operation.
-
-The coordinated [T8 cartridge review model](mechanical/studies/2026-09-11-t8-cartridge/README.md)
-adds a four-piece body/yoke/cradle/cover, M2 captive-nut hardware, insulating
-shell attachment and a mouth-open USB service slot. Its current contact/guard
-geometry requires a **6.25 mm mouthward stack shift**, putting the grille
-10.75 mm outside the mouth. This is a review alternative, not an approved
-final exterior or permission to route. Earlier print files remain unchanged.
-
-**Preserved September 9 placement/fit draft:** the [two-face wing placement](hardware/handbell/iterations/wing-draft/README.md)
-keeps a central battery/contact reservation, moves the boost and amplifier
-blocks to rear wings, and adds two GND-assigned M2 mounting holes. The
-[two-piece cartridge](mechanical/studies/2026-09-09-integrated-cartridge/README.md)
-provides an integrated grille/seat/support body, removable capture yoke and
-new populated-PCBA STEP/STL. Its 72 mm flange sits outside the assumed 70 mm
-mouth; it does not yet include battery retention or shell attachment. The
-[electromechanical handoff](docs/electromechanical-wing-iteration.md) separates
-draft progress from the remaining cell, retention, routing and assembly-cost
-gates. The original project/print files remain intact.
-
-**September 9 measurements:** the arrived speaker is 40 mm OD x 19 mm overall,
-with a 32 mm basket rear at 12 mm and a 22 mm x 7 mm magnet. The
-[measured-speaker follow-up](mechanical/studies/2026-09-09-measured-speaker/README.md)
-keeps the original print files intact and compares speaker-facing electronics
-with cylindrical/pouch battery space. The PCBA print received positive fit
-feedback; some other pieces need structural reconsideration.
-
-The [compact power and packaging review](docs/compact-power-and-packaging.md)
-records the earlier decisions behind this revision. Its hypothetical taper
-example is superseded by the owner's z13/50 mm to z43/34 mm working profile.
-
-The working first-revision baseline is the
-[Adafruit RP2040 Prop-Maker Feather (5768)](https://www.adafruit.com/product/5768):
-RP2040, CircuitPython, MAX98357A I2S DAC/amplifier, LIS3DH accelerometer, USB-C,
-and single-cell LiPo charging. Its documented, code-supported circuitry is
-adapted into the reduced circular candidate, with the sensor and audio-power
-changes described above. This is not a frozen BOM.
-
-The owner-approved [LSM6DSOX six-axis sensor](docs/motion-sensing.md) is now in
-the separate handbell draft for strike plus chest-stop/rest development.
-The imported reference retains its original LIS3DH. Gesture performance,
-assembled cost and final electrical decisions remain evidence gates.
-
-## Start here
-
-| Document | Purpose |
+| Ready to explore | Still to do |
 |---|---|
-| [Project brief](docs/project-brief.md) | Captured goals, requirements, open questions, and original mechanical ideas |
-| [Reference catalog](docs/reference-designs.md) | Every proposed source, learning guides, source revisions, and important corrections |
-| [Architecture](docs/architecture.md) | Proposed blocks, verified baseline GPIOs, and retain/remove decisions |
-| [Schematic and CAD plan](docs/schematic-plan.md) | Beginner-oriented KiCad setup/import path and schematic review gates |
-| [KiCad setup and readiness](docs/kicad-setup.md) | Installed tooling, opening the native reference, and remaining import-review work |
-| [Firmware and audio](docs/firmware-and-audio.md) | CircuitPython, bell assets, strike detection, quiet idle, and power modes |
-| [Motion-sensor decision](docs/motion-sensing.md) | LIS3DH versus six-axis sensing, chest-stop limits, CircuitPython APIs, and sourcing |
-| [Mechanics and manufacturing](docs/mechanics-and-manufacturing.md) | Speaker/board trade space, measurements, mounting, JLCPCB and OSH Park |
-| [Compact power and packaging review](docs/compact-power-and-packaging.md) | Approved next revision, boost/cell/mute review, speaker-rating conflict and fit constraints |
-| [0.2 reduction and placement](docs/electrical-reduction-and-placement.md) | Implemented circuits, 43 mm candidate, service map and open routing/DFM gates |
-| [Mechanical feasibility](docs/mechanical-feasibility.md) | Editable FreeCAD, STEP/STL, assumed shell profile and cartridge interference findings |
-| [Wing/cartridge iteration](docs/electromechanical-wing-iteration.md) | Preserved September 9 placement, two-piece fit models and JLC assembly-tier findings |
-| [Measured-shell T8 integration](docs/t8-integration-plan.md) | September 11 measurements, compact protection/contact/capture revision and owner review before routing |
-| [T8 electrical revision](docs/t8-electrical-revision.md) | Actual 2 MB flash lands, protected battery return, pin map, current tradeoffs and remaining gates |
-| [T8 cartridge model](mechanical/studies/2026-09-11-t8-cartridge/README.md) | Complete placed FreeCAD/STEP assembly, four inert structural prints, M2 service sequence and explicit fit limitations |
-| [Routing readiness](docs/routing-readiness.md) | Print-fit checkpoint, electrical floorplanning gates and the path to reviewed Gerbers/BOM/CPL |
-| [Validation plan](docs/validation-plan.md) | Measurements and evidence required before each hardware release |
-| [Decision log](docs/decisions.md) | Provisional decisions and the evidence needed to close them |
-| [Roadmap and epics](docs/roadmap.md) | Milestones, dependencies, scope, and acceptance criteria |
-| [Attribution and licensing](ATTRIBUTION.md) | Hardware, software, sound-asset, and documentation provenance |
+| Native KiCad schematic, routed PCB and local libraries | Electrical/DFM review and disposition of remaining rule findings |
+| FreeCAD enclosure/cartridge studies and inert fit-print files | Updated assembly for the six-layer board, connector/harness clearance and physical fit |
+| Supplier quote for 10 PCBs, 8 assembled: **$345.84 before shipping/tax**, observed November 10 | Review substitutions and production files; no order has been placed |
+| Firmware, audio and gesture requirements | Implement and demonstrate a sounding instrument; measure latency, noise and runtime |
 
-Track execution in the public
-[Digital Handbell Project](https://github.com/users/dcuccia/projects/1),
-[12 epic issues](https://github.com/dcuccia/digital-handbell/issues?q=is%3Aissue%20label%3Aepic),
-and [five milestones](https://github.com/dcuccia/digital-handbell/milestones).
-The epics include checklists, acceptance criteria, native blocked-by
-relationships, and links to supporting plans.
+This is **an engineering prototype, not a build-ready kit**. Zero opens
+means the connectivity check found no unconnected items; it does not prove
+the circuit works. The public snapshot retains 291 non-open DRC findings
+and 46 schematic-parity findings. Electrical, mechanical, manufacturing
+and safety review remain open. No child-use qualification is claimed.
 
-## Design direction
+[Board review and remaining risks](docs/pcb-review-2026-11.md) ·
+[Quote details](hardware/handbell/quote-prep/2026-11-09-six-layer/pcba-quote-2026-11-10.md) ·
+[Before ordering](hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md)
 
-- Start with a bench demonstration using the integrated Prop-Maker Feather,
-  while developing the reduced schematic in parallel.
-- Prefer a single circular PCB and compare selective rear-wing population
-  against the original one-face assembly goal using complete assembly cost.
-  Two copper layers remain the draft baseline. Establish diameter through real
-  placement and measured shell geometry, not the sum of chip areas; compare
-  four layers or stacked boards if evidence warrants them.
-- Keep sounding local/offline; evaluate an S3-MINI wireless variant early
-  enough to inform antenna/carrier choices. The draft already has six-axis
-  sensing; the unchanged reference has neither a radio nor a gyroscope.
-- Optimize complete assembled cost and novice assembly, not merely IC prices.
-  Fine-pitch soldering should not be a prerequisite for an educational kit.
+## Inside the design
 
-## Project history
+| Subsystem | Current direction |
+|---|---|
+| Processing | RP2040 with 2 MB QSPI flash; CircuitPython is the planned firmware path |
+| Motion | LSM6DSOX six-axis accelerometer/gyroscope for ringing and damping experiments |
+| Sound | MAX98357A I2S amplifier, TPS61023 boosted audio rail and a 40 mm speaker |
+| Power and service | Rechargeable 1S Li-ion design, cell protection, USB-C charging/programming and debug access |
+| Electronics | Six copper layers; 83 fitted parts: 81 front-side electronic parts and two rear battery contacts |
+| Enclosure | Original printed shell, black handle and removable speaker/PCB/cell cartridge |
 
-The original [2023 design notes](Design%20Notes.md) and
-[system diagram](System%20Diagram.pptx) are preserved unchanged. They considered
-wireless connectivity, a host interface, and a six-degree-of-freedom IMU.
-The 2026 planning baseline narrows the first experiment; it does not silently
-erase those earlier ideas.
+The intended behavior is local and offline: recognize a ringing gesture,
+play a bell sound, and stay quiet between notes. Natural damping,
+velocity response, note selection and reliable gesture detection are
+development goals, not demonstrated features. Wireless is a future option,
+not a dependency of the first instrument.
 
-## Licensing and attribution
+### The current board
 
-The existing [MIT license](LICENSE) remains in place for original project
-software and documentation. It does **not** relicense third-party hardware,
-software, images, or recordings. Most candidate Adafruit hardware sources use
-CC BY-SA 3.0; adapted material must retain its applicable terms and notices.
-See [ATTRIBUTION.md](ATTRIBUTION.md) before importing anything.
+| Component side | Contact side |
+|:---:|:---:|
+| ![Six-layer review PCB, front copper, mask and silkscreen](docs/images/showcase/pcb-six-layer-front.png) | ![Six-layer review PCB, mirrored rear copper, mask and battery-polarity silkscreen](docs/images/showcase/pcb-six-layer-rear.png) |
 
-Pinned, licensed Adafruit CAD and notices are vendored in the reference
-packages; the separate derivative identifies its modifications. No third-party
-firmware or recordings are vendored. This is an independent project, not an
-Adafruit-endorsed product.
+*Views from the quote Gerbers for public snapshot `2f738ccb`. These are
+unpopulated illustrations, not photographs or drill/assembly checks.
+[More views, including the earlier populated PCBA](docs/design-gallery.md).*
+
+## Explore without getting lost
+
+| I want to... | Start here |
+|---|---|
+| See the bell and board | [Design gallery](docs/design-gallery.md) |
+| Open the latest electronics | [Six-layer review snapshot](hardware/handbell/iterations/printed-bell-six-layer-review/README.md) |
+| Open the enclosure or find STEP/STL files | [Mechanical asset guide](mechanical/README.md) |
+| Understand what is next | [Roadmap](docs/roadmap.md) |
+| Help with a specific part | [Contributing](CONTRIBUTING.md) |
+| Understand the circuits and intended behavior | [Architecture](docs/architecture.md) and [firmware/audio plan](docs/firmware-and-audio.md) |
+| Find older experiments or engineering evidence | [Documentation index](docs/README.md) and [hardware revision guide](hardware/handbell/iterations/README.md) |
+
+Keep the whole checkout when opening CAD: some library paths reference
+sibling directories. KiCad 10.0.6 and FreeCAD 1.1.3 have been exercised.
+No CAD installation is needed to browse the gallery or plans.
+
+## Come build with us
+
+There is useful work for software developers, electronics reviewers,
+mechanical designers, musicians and curious first-time contributors.
+Near-term needs include CircuitPython/audio experiments, motion replay
+tools, PCB review, the updated cartridge fit, and clear assembly/test
+documentation. You do not need to route a PCB to help.
+
+Pick a workstream in the [contribution guide](CONTRIBUTING.md), or introduce
+your idea in an [issue](https://github.com/dcuccia/digital-handbell/issues).
+We track work in the [project board](https://github.com/users/dcuccia/projects/1)
+and keep decisions and evidence in the repository.
+
+## Open design, with attribution
+
+The electronics adapt published Adafruit designs, including the RP2040
+Prop-Maker Feather, LSM6DSOX breakout and TPS61023 MiniBoost. Original
+software, documentation and mechanical work use MIT; adapted hardware
+retains **CC BY-SA 3.0**. Mixed CAD exports and images retain their
+electronics attribution. See [ATTRIBUTION.md](ATTRIBUTION.md) for the
+per-asset boundaries; this is not an Adafruit-endorsed product.
+
+The [2023 design notes](Design%20Notes.md) and
+[system diagram](System%20Diagram.pptx) remain preserved. The
+[research and routing history](docs/README.md#history-and-research)
+records how we reached the current design without making every experiment
+the starting point for a new contributor.

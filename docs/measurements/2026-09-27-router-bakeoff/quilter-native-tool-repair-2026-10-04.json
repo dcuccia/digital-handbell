@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "title": "Bounded native launcher, UUID readback, and exact four-layer fixture DRC repair",
+  "status": "FIRST_NATIVE_EVIDENCE_PRESERVED_CORRECTED_RUNNER_STATIC_ONLY_NOT_YET_QUALIFIED",
+  "scope": {
+    "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-repair-20261004T1636",
+    "fixture": "private source-subset plus synthetic diagnostic controls; not a product board",
+    "native_pipeline_attempts": 1,
+    "maximum_authorized": 3,
+    "source_native_loads": 0,
+    "fixture_native_loads": 1,
+    "native_saves": 0,
+    "refills": 0,
+    "six_layer_work": false,
+    "cloud_work": false
+  },
+  "authoritative_hashes_unchanged": {
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+  },
+  "tools": {
+    "python": {
+      "version": "3.11.9",
+      "path": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "sha256": "5f7b89a612c9b8af1d6456cdfcd1dbe5ca630849e79aebced9bee9a6694952ec"
+    },
+    "kicad": {
+      "pcbnew_version": "10.0.6",
+      "bin": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin",
+      "kicad_cli_sha256": "393525236969434e24bc710334efe244fb285ef6596a1aea8e74353ef4db5477"
+    },
+    "repo_files": {
+      "tools/supervise_process.py": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+      "tools/inspect_native_guard_fixture.py": "acd57b976653a9b5d095766e11f107e98e22ad3949904c9fe821c7a6a45e5f92",
+      "tools/test_supervise_process.py": "e063a0c0314fa28ffda67d8ef14781e865a0c7eab7d6f48bf1ce0021cba62005"
+    }
+  },
+  "supervision": {
+    "hard_limit_seconds": 88,
+    "implementation": "Windows kill-on-close Job Object around the pipeline; timeout closes the job and waits for the exact recorded child. Descendant control was separately checked absent after timeout.",
+    "controls": {
+      "zero": {
+        "supervisor_exit": 0,
+        "child_exit": 0,
+        "receipt_sha256": "209d44eb7171fa91862c9724a31ff31dfe2c519c76cfb296a25c2ab4a822e060"
+      },
+      "nonzero": {
+        "supervisor_exit": 9,
+        "child_exit": 9,
+        "receipt_sha256": "a214316cc77e7720d79dc9f5f78aecb6935c8912844b0c69703a3e9398efa284"
+      },
+      "timeout": {
+        "supervisor_exit": 124,
+        "timed_out": true,
+        "elapsed_seconds": 0.422,
+        "descendant_pid": 49632,
+        "descendant_alive_after_supervision": false,
+        "receipt_sha256": "ffbe026a9cf63f4f4465ed2f0c35936efdacb8b0b502c46a7b1555a64184dcd9"
+      }
+    },
+    "unit_test": {
+      "command": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m unittest tools.test_supervise_process -v",
+      "result": "PASS",
+      "tests": 2,
+      "elapsed_seconds": 0.812
+    }
+  },
+  "native_pipeline": {
+    "evidence_revision_notice": "This successful native evidence was produced by the first revision: supervisor SHA-256 11ac27e0aaa39f7c474c39e13f325bd62f805499238fb3a156599140541c7f3d and fixture-inspector SHA-256 4364160307d9835d5067d93b6680391d3d669f4d0b9a68c76eb309b53c966196. Those original tool hashes are recorded, but standalone copies of the original .py/report revisions are not retained in the recursively inventoried private batch. The session transcript contains the earlier code. Native evidence is not transferred to the corrected static-only revision.",
+    "supervisor_receipt_sha256": "83e7e1c6a6e88e6e02b0b056ced0c71ea56389a8c6465e30ca8d1fc5bd34ea6a",
+    "supervisor_exit": 0,
+    "pipeline_child_exit": 0,
+    "pipeline_pid": 53144,
+    "elapsed_seconds": 25.063,
+    "timed_out": false,
+    "child_confirmed_exited": true,
+    "fixture_input_sha256": "0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148",
+    "project_input_sha256": "ada159b721f8667449437318b30bab1a5be3881a707d9e39859658784b0730d4",
+    "working_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\native-tool-repair-20261004T1636",
+    "cli_version_probe": {
+      "pid": 40428,
+      "exit": 0,
+      "elapsed_seconds": 0.219,
+      "stdout_sha256": "1d58ab4b5633f79f6fffe047200a49b26062019a1275f95361eb98cb257440f0"
+    },
+    "corrective_review": {
+      "execution_deadline_disposition": "No second native pipeline was started because the correction and requested regression work reached the execution deadline. The corrected revision is static-only and the reusable runner is NOT yet qualified.",
+      "static_test_command": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m unittest tools.test_supervise_process -v",
+      "static_test_result": "PASS: 5 tests in 3.771 seconds",
+      "covered": [
+        "positive finite limit and missing-input rejection",
+        "launch failure creates an explicit failed receipt",
+        "zero and nonzero child exits remain distinct",
+        "timeout returns supervisor 124 with confirmed exit",
+        "a real descendant is terminated by the Windows job"
+      ],
+      "implemented_not_natively_executed": [
+        "64-bit typed JOBOBJECT_EXTENDED_LIMIT_INFORMATION",
+        "CREATE_SUSPENDED launch, job assignment, then NtResumeProcess",
+        "unique new supervisor outputs and fail-closed input checks",
+        "retained os.add_dll_directory handle closed in finally after native readback",
+        "exact private project binding before copy",
+        "direct fixture-tool execution rejected outside supervisor context",
+        "per-child running receipt persisted before wait and completed afterward",
+        "CLI version must exit zero before DRC",
+        "DRC must exit zero, not time out, create a fresh report, parse as JSON, and contain violations/unconnected_items/schematic_parity arrays"
+      ],
+      "requested_regressions_not_completed": [
+        "mocked stale fixture-output rejection",
+        "mocked CLI nonzero and malformed DRC output",
+        "mocked retained DLL-handle lifetime assertion"
+      ],
+      "project_binding": {
+        "origin": "private-guard-native-control-20261004T1421/fixture-4layer-roundtrip.kicad_pro",
+        "private_fixture_project_sha256": "ada159b721f8667449437318b30bab1a5be3881a707d9e39859658784b0730d4",
+        "authoritative_product_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+        "note": "These are intentionally different; the private fixture project is not the product project."
+      },
+      "future_exact_command_template": "\"<ABSOLUTE_PYTHON_EXE>\" \"<ABSOLUTE_REPO>\\tools\\supervise_process.py\" --receipt \"<ABSOLUTE_NEW_ATTEMPT>\\supervisor.json\" --stdout \"<ABSOLUTE_NEW_ATTEMPT>\\pipeline.stdout\" --stderr \"<ABSOLUTE_NEW_ATTEMPT>\\pipeline.stderr\" --cwd \"<ABSOLUTE_PRIVATE_BATCH>\" --limit 88 --input \"<ABSOLUTE_OLD_BATCH>\\fixture-4layer-roundtrip.kicad_pcb\" --input \"<ABSOLUTE_OLD_BATCH>\\fixture-4layer-roundtrip.kicad_pro\" -- \"<ABSOLUTE_PYTHON_EXE>\" \"<ABSOLUTE_REPO>\\tools\\inspect_native_guard_fixture.py\" --fixture \"<ABSOLUTE_OLD_BATCH>\\fixture-4layer-roundtrip.kicad_pcb\" --project \"<ABSOLUTE_OLD_BATCH>\\fixture-4layer-roundtrip.kicad_pro\" --output \"<ABSOLUTE_NEW_ATTEMPT>\\payload\" --kicad-bin \"C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\""
+    },
+    "drc": {
+      "pid": 50264,
+      "exit": 0,
+      "limit_seconds": 60,
+      "elapsed_seconds": 24.453,
+      "timed_out": false,
+      "output_bytes": 42935,
+      "output_sha256": "1523862db04a0ecefbab8e0ed754ecb92d4cd4fe6a9c4ef20e143c9ad01b6158",
+      "stdout_sha256": "adc2017ff053ea60d902823527c5a76a78d72ebc178cda229539f599b69d030b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "proven_repairs": {
+    "module_and_dll_bootstrap": "PASS: add KiCad bin with os.add_dll_directory before importing pcbnew and prepend KiCad Lib/site-packages to sys.path.",
+    "uuid_accessor": "PASS: m_Uuid.AsString() produced all eight unique source-pad UUIDs.",
+    "oracle": {
+      "R26.2": {
+        "uuid": "3ed47a01-14b9-59e7-bdfe-95561c7f1435",
+        "xy_mm": [86.4, 111.192],
+        "orientation_deg": 90,
+        "result": "PASS"
+      },
+      "R27.2": {
+        "uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826",
+        "xy_mm": [86.424019, 109.500966],
+        "orientation_deg": 0,
+        "result": "PASS"
+      },
+      "R24.2": {
+        "uuid": "1ba917bc-32e2-5176-954f-c3d06c7f6040",
+        "xy_mm": [98.408, 111.4],
+        "orientation_deg": 0,
+        "result": "PASS"
+      },
+      "C28.2": {
+        "uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+        "xy_mm": [102.2, 116.15],
+        "orientation_deg": 270,
+        "result": "PASS"
+      }
+    },
+    "all_source_pads": "Eight R24/R26/R27/C28 pads read with unique UUID, global position, orientation and native layer set.",
+    "rule_area_readback": "23 native rule areas read. Eighteen have all five restrictions asserted; the five diagnostics separately assert F-track, In1-track, through-via, pad and footprint restrictions.",
+    "exact_fixture_drc": "PASS as tooling evidence: a parsed report was produced from exact roundtrip fixture bytes beside a copied project."
+  },
+  "drc_classification": {
+    "rule_context": {
+      "classification": "EXACT_DIAGNOSTIC_PROJECT_CONTEXT_NOT_SOURCE_RULE_EQUIVALENT",
+      "fixture_project_sha256": "ada159b721f8667449437318b30bab1a5be3881a707d9e39859658784b0730d4",
+      "fixture_project_rules_mm": {
+        "min_track_width": 0.2,
+        "min_clearance": 0,
+        "min_via_annular_width": 0.1
+      },
+      "authoritative_source_project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "authoritative_source_project_rules_mm": {
+        "min_track_width": 0.1778,
+        "min_clearance": 0.1778,
+        "min_via_annular_width": 0.1
+      },
+      "effect": "The parsed 60 violations, 11 unconnected items and keepout controls are evidence only for the exact copied diagnostic fixture/project pair. They are not recovered source-project DRC, source-rule qualification or product acceptance.",
+      "independent_root_verification": "Root independently verified DRC SHA-256 1523862db04a0ecefbab8e0ed754ecb92d4cd4fe6a9c4ef20e143c9ad01b6158, PCB SHA-256 0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148, project SHA-256 ada159b721f8667449437318b30bab1a5be3881a707d9e39859658784b0730d4, and the diagnostic categories."
+    },
+    "violations": 60,
+    "unconnected_items": 11,
+    "schematic_parity": 0,
+    "by_type": {
+      "items_not_allowed_error": 33,
+      "track_width_error": 6,
+      "lib_footprint_issues_warning": 8,
+      "track_dangling_warning": 4,
+      "silk_overlap_warning": 3,
+      "text_height_warning": 3,
+      "via_dangling_warning": 2,
+      "silk_over_copper_warning": 1
+    },
+    "diagnostic_controls": {
+      "F_track_inside": 1,
+      "In1_track_inside": 1,
+      "through_via_inside": 1,
+      "F_pad_inside": 1,
+      "F_courtyard_footprint_inside": 1,
+      "outside_counterparts_reported": 0
+    },
+    "source_intrusions": {
+      "items_not_allowed_records": 28,
+      "disposition": "Preserved, not waived. These are expected from deliberately placing conservative source-object guards over the source subset, but root must decide whether this semantics is suitable."
+    }
+  },
+  "comparative_evidence_and_limits": {
+    "old_timeout_cause": "UNRESOLVED. The old 30-second run had zero-byte streams and no report. This repair changed execution directory, used an isolated exact fixture/project pair, performed a successful CLI version startup probe, and allowed a diagnosed 60-second child limit under an 88-second hard pipeline limit. The successful 24.453-second DRC does not identify which changed condition mattered.",
+    "not_claimed": [
+      "No product-board native rule qualification",
+      "No exact curved-guard qualification beyond the existing rectangular fixture",
+      "No fill or six-layer qualification",
+      "No Quilter importer/enforcement qualification",
+      "No DRC-clean claim",
+      "No guard, product, fabrication, or functional acceptance"
+    ],
+    "private_side_effect": "kicad-cli created a .kicad_prl only beside the copied private fixture; authoritative files were not loaded or written."
+  },
+  "second_corrective_pass": {
+    "native_replay": "NOT_RUN: insufficient remaining execution window for an honest hard-limited replay ending by 16:49.",
+    "fix": "Exception cleanup now explicitly kills and waits for the exact child when still running after the job is closed. This covers AssignProcessToJobObject failure while the child is suspended and outside the job, and preserves the failed-receipt path.",
+    "unit_runner_limits": "Every subprocess.run invocation in the regression suite now has an explicit five-second timeout.",
+    "static_test_command": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe -m unittest tools.test_supervise_process -v",
+    "static_test_result": "PASS: 5 tests in 3.284 seconds",
+    "missing_fixture_mocks": [
+      "stale output rejection",
+      "CLI nonzero result",
+      "malformed DRC JSON",
+      "DLL-directory handle lifetime"
+    ],
+    "qualification": "Final runner revision remains static-only and NOT qualified by a corrected native replay. First-run native evidence is bound to the recorded original tool hashes; standalone copies of those original tool revisions were not retained, and the session transcript contains the earlier code."
+  }
+}

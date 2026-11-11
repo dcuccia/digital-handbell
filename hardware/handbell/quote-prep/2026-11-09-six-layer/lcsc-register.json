@@ -1,0 +1,49 @@
+{
+  "schema": "handbell-lcsc-register-v1",
+  "status": "VERIFY LIVE IN JLC - catalog evidence recorded in this repository only; not a stock, price, tier or suitability statement",
+  "scope": "Maps an MPN to an LCSC code only when the repository already holds a source line. A code written in the PCB LCSC property always wins over this register. Parts without a source line stay unresolved; no code is invented.",
+  "entries": [
+    {
+      "mpn": "PMEG2020AEA,115",
+      "lcsc": "C389354",
+      "designators": ["D4"],
+      "source": "hardware/handbell/parts/device-component-candidates.json:438,442,1287-1289",
+      "note": "Catalog LCSC code; stock was recorded at retrieval only and is not a guarantee."
+    },
+    {
+      "mpn": "LSM6DSOXTR",
+      "lcsc": "C481766",
+      "designators": ["IC4"],
+      "source": "hardware/handbell/parts/device-component-candidates.json:587,591,1188,1203",
+      "note": "Standard PCBA only and X-ray inspection required per docs/pcba-quotation-plan.md. Assembler LGA/MSL/reflow, sourcing tier and mechanical-stress qualification remain open."
+    },
+    {
+      "mpn": "AO3400A",
+      "lcsc": "C20917",
+      "designators": ["Q2", "Q4"],
+      "source": "hardware/handbell/parts/device-component-candidates.json:711,724,801,807,1256-1258; docs/pcba-bom-readiness.md:143; docs/device-component-selection.md:27",
+      "note": "Identity observed on JLCPCB metadata; stock and tier are not asserted. Q4 is a standard SOT23 with a rotated land while Q2 is SOT23-WIDE, so equal rotation numbers are not interchangeable."
+    },
+    {
+      "mpn": "TYPE-C-31-M-12",
+      "lcsc": "C165948",
+      "designators": ["X6"],
+      "source": "hardware/handbell/parts/hro-usb-candidate.json:15,17",
+      "note": "Manufacturer HRO / Korean Hroparts Elec. Reconciling the footprint alias CUSB31-CFM2AX-01-X with C165948 is unresolved (docs/pcba-bom-readiness.md:153; docs/usb-connector-qualification.md:30-41)."
+    },
+    {
+      "mpn": "BM02B-ACHLKS-GAN-ETF",
+      "lcsc": "C594367",
+      "designators": ["J1"],
+      "source": "docs/electrical-reduction-and-placement.md:25; docs/pcba-bom-readiness.md:63,150; docs/multilayer-gate-a-2026-11.md:2091,2108,2145,2161; hardware/handbell/parts/README.md:34",
+      "note": "Not stored as a PCB property. Listed Extended in the November ledger. Confirm the exact ACHL part number, pickup datum, mating housing (SACH-003G crimps) and per-contact current before quotation."
+    },
+    {
+      "mpn": "RP2040",
+      "lcsc": "C2040",
+      "designators": ["IC1"],
+      "source": "docs/pcba-bom-readiness.md:134",
+      "note": "Matches the LCSC property already stored on the PCB. hardware/handbell/parts/device-component-candidates.json:474 records that SC0914(7) is a procurement order code, not an LCSC number."
+    }
+  ]
+}

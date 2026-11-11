@@ -4,7 +4,81 @@ September 15, 2026. The owner authorizes bounded tooling/autorouting trials
 and requests that their lessons remain in the repository. This is not
 authorization for cloud routing, supplier uploads or automatic acceptance.
 
+For the reusable agent/service workflow, start with the
+[Quilter playbook](quilter-playbook.md). It separates exercised behavior,
+vendor documentation and proposed practices; this document and the
+[dated Quilter study](quilter-workflow-study-2026-10-02.md) retain the
+underlying tooling and experiment history.
+
 ## Current conclusion
+
+Short evergreen guide: [agent-first PCB workflow](agent-first-pcb-workflow.md).
+
+**November 9 update:** the later six-layer candidate reached zero opens.
+Use the [review brief](pcb-review-2026-11.md) for current evidence and the
+evergreen guide for next-time practice. Earlier conclusions below describe
+their tested placement/tooling scopes, not proof that all alternative
+layer counts, placements or local repairs are infeasible.
+
+**November 2026 lessons: finishing a long routing tail cheaply.** Evidence:
+[routing completion plan](routing-completion-plan-2026-11.md) progress log.
+Owner is a software developer, not a layout engineer; tools and agents
+drive routing, the owner approves decisions and spending.
+
+- **Check placement against hard keep-outs before any router.** IC1 sat over
+  both battery-contact inner bases, whose via keep-outs blocked 28 of 57
+  pins. Quilter, DeepPCB and earlier agent routing all stalled there. Render
+  parts over via/B.Cu keep-outs (as in `placement-map.png`) and keep fine-pitch
+  or via-dense ICs off them first. More router minutes, more layers or escape
+  stubs cannot fix a blocked pin field; six layers would not have helped,
+  and blind vias mean HDI cost.
+- **DeepPCB** (pay-as-you-go, $30/hour, KiCad plugin and public API): the
+  free trial counts all connections (150 airwire cap), so real boards need
+  credit. `CurrentProtectedWiring` was **not honoured**: it rerouted the
+  reviewed clock and battery copper and ignored a keep-out type. It routes
+  at about 0.125-0.137 mm clearance and 0.19 mm edge clearance even when the
+  project asks for 0.15 and 0.3 mm. Treat its output as a proposal.
+- **Working pipeline** (tools in `tools/`): `prepare_deeppcb_input.py`
+  (copy, guards, rules) -> `deeppcb_route.py` (always protected mode, refuses
+  paid runs without `--allow-paid --max-usd`, poll and stop on plateau) ->
+  `merge_router_nets.py` (keep every baseline item, add router copper only on
+  open nets) -> `stitch_gnd_islands.py` (GND vias for isolated pour islands)
+  -> KiCad DRC with refill -> `check_routing_result.py` (parts, copper
+  preservation, CELL_NEG, private pads, In1 tracks, DRC growth). This took
+  the board from 38 to 25 opens for about $9.
+- **Plateau stopping saves money:** stop a run after about 3 minutes without
+  progress; most gain arrives in the first 3-5 minutes.
+- **Relaxed but standard rules help escape:** 0.15 mm signal track/space
+  (fabs commonly allow 0.10 mm) closed several more pins; keep supply classes
+  wider and record the decision.
+- **DeepPCB's free fanout API** (`POST /boards/{id}/fanout`) is a cheap
+  diagnostic: its anomaly list named the keep-out blockage directly.
+- **Placement moves:** `move_cluster.py` moves part groups with their
+  internal copper and legalizes courtyards by local search;
+  `clean_drc_conflicts.py --base-board` removes only new conflicting copper.
+  Removing whole conflicting tracks undoes routing, and without `--base-board`
+  the cleanup cascades into original copper. After moving the MCU cluster
+  under USB, keep-out-blocked pins went from 28 to 0. One 15-minute DeepPCB
+  run then left 31 opens, but with 27 rule violations; cleaned, 43. This is
+  not yet better than 25. Next time, give the router a margin by asking for
+  wider clearances than the real minimum.
+- Agents should not hand-route move by move, and should not start broad
+  router or layer sweeps. Repository policy pins routing helpers to the Sol
+- **November 6 additions:**
+  - Requesting **wider clearances from DeepPCB than the real minimum**
+    (0.18 instead of 0.15) cut its rule violations from 27 to about 12.
+    Validate under the real rules.
+  - `merge_router_nets.py` now skips duplicate vias.
+  - KiCad DRC can report UUIDs that are not in the saved file, so
+    `clean_drc_conflicts.py` also matches by net and reported position.
+  - `tools/route_gaps.py` is a free, clearance-aware multi-layer grid A*
+    router for short tails. It closed 15-20 pairs per pass rule-clean, but
+    only after using the stricter of both nets' clearances, hole clearance
+    for tracks and a 0.025 mm discretization margin. Without these it misses
+    by a few micrometres.
+  - Moving parts on top of existing routing creates shorts unless every net
+    under the new location is ripped too. Repository policy pins routing helpers to the Sol
+  model; an Astra sub-agent declined routing work under that policy.
 
 **Native local review views:** `tools/render_clock_detail.py` now also accepts
 `--pcb`, `--layer`, `--bounds XMIN YMIN XMAX YMAX` in native millimetres,
@@ -487,3 +561,22 @@ existing-track changes were needed. The board now has **51 opens**.
 See [`charge-led-routing.json`](../hardware/handbell/iterations/printed-bell-clock-draft/reports/charge-led-routing.json).
 This is demonstrated usefulness on one short branch, not qualification of
 the router for arbitrary nets or evidence of a total completion cost.
+
+## November 6 six-layer lessons
+
+- The six-layer 3313E stackup (S/G/S/S/G/S) plus moving the MCU off the
+  battery contacts made the decisive difference. DeepPCB took 86 opens to
+  12 in about 13 minutes ($6.50), compared with long-tail stalls on four
+  layers.
+- Board-wide "no tracks" rule areas on plane layers make DeepPCB's fanout
+  treat every pin as in a keep-out. Mark plane layers as `power` type
+  instead; the standard check enforces no tracks on them.
+- Once most copper is placed, extra DeepPCB runs plateau immediately:
+  protected mode added nothing, and unprotected mode was worse after
+  merging. Stop after one productive run.
+- Remove zero-length router stubs before freezing a baseline, because
+  DeepPCB drops them on round trip.
+- Corridor rip-up of everything near a straight line is too crude; finishing
+  long blocked links needs per-net, path-aware rip-up (or a person).
+- `--narrow-net` must keep the net class clearance; dropping it created a
+  0.19 mm clearance violation on a 0.2 mm class net.

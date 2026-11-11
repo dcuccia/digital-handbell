@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "checkpoint_local": "2026-10-05 07:28",
+  "status": "ROOT_ACCEPTED_CLOCK_INTERNAL_PATHS_AND_TERMINAL_RESTORATION_CONTRACT",
+  "scope": "Current source-bound clock pad locations and selected32 internal paths are accepted for conditional source selection. Track/via/pad contacts are useful boundary evidence, not a complete saved-fill boundary or a qualified full-board input.",
+  "root_review": {
+    "producer_report": "producer-report.json",
+    "producer_report_sha256": "1cefab83ad70692d2c65698fcd9232e0135f592c24f2007e370798d6799a91c0",
+    "actual_analysis_completed_local": "2026-10-05T07:23:40.838388-07:00",
+    "source_selection": "Select the exact prior177 plus these32 F segments for the first comparison:191 tracks/18 vias,32 fixed references/164 pads,72 eligible. This changes the comparison contract only, not any PCB.",
+    "reason": "All three complete clock signal nets and local GND terminals connect using only the selected primitives and fixed pad lands. No movable pad or saved pour is needed as an internal bridge. Current Y1 positions are directly bound to the same adc262b3 saved-native inventory.",
+    "geometry_limits": "Root inspected the exercised clock lands: orthogonal rectangles and nondegenerate P$1 roundrect. The complete saved pad population has only orthogonal orientations. This is not qualification of arbitrary pads or a new general geometry tool.",
+    "boundary_correction": "The script enumerates track/via/pad contacts but does not inspect saved fills; the source has F and In1 GND zones. Its20 groups are connected components of contact incidence by shared objects, not proven distinct physical points or20 independently mandatory old junctions.",
+    "restoration_disposition": "The clock is not a private Kelvin pickoff. Keep its exact selected local routes and restore every intended external source terminal/net, including all MCU supplies and true P$1 GND. Ordinary omitted routing and ground fills remain replaceable; their old shapes, via positions and individual contact locations need not be reproduced. Do not apply this ordinary-interface disposition to the separately protected boost/protector private paths.",
+    "control_correction": "Necessary-member removal genuinely exercises graph disconnection. The Y1 assertion binds the actual coordinates and distinguishes the stale ones, but is not a general identity-mutation suite. Pad-contact witnesses exercise land geometry; the non-endpoint classifier returns false for every pad/via pair and is not an independent segment-interior/tangency control.",
+    "membership_provenance": "177+32=209 and its exact record digest reuse the prior hash-bound membership packet against unchanged source; the recovery script does not independently recompute that digest.",
+    "remaining_input_gate": "Complete209/164 preservation and foreign-copper/guard/process coverage, actual allowed F domain/electrical associations, two native profiles and qualified importer settings. No full-input generation or upload is released by this source selection."
+  },
+  "source": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement_manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "prior_held_report_sha256": "e5e407129d1d7983c26921d09541ada6c623494adc6e32e356443ddd9d59ecc9",
+    "current_workflow_snapshot_sha256": "1602a263c8b6c58052d2684ae1a7d44da6437a519eb53454507c80951e2a58d3"
+  },
+  "bound_current_geometry": {
+    "saved_native_inventory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\inventory-final-recovery-20261002T142910-sol\\native-constraint-inventory.json",
+    "saved_native_inventory_sha256": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba",
+    "inventory_population": {
+      "references": 104,
+      "pads": 325
+    },
+    "static_source_parser_sha256": "be6d4647d1dea5186e4d1388ae640b43f8004fdfc94f50ca72b46e90bf0613e9",
+    "finite_width_geometry_helper_sha256": "4b64b5c402a90e6bc49da97787713aabd772abad8d8bec48ce7e979e26f76611",
+    "method": "Saved-native global pad centres, orientations, layers and serialized shapes were authoritative for pads. The hash-pinned current PCB was parsed statically for all current track/via capsules and spans. No historical clock DRC coordinates or guessed transform were used."
+  },
+  "current_pad_binding": {
+    "signal_memberships": {
+      "Net-(IC1-XIN)": [
+        "IC1.20",
+        "Y1.3",
+        "C2.2"
+      ],
+      "Net-(IC1-XOUT)": [
+        "IC1.21",
+        "R6.2"
+      ],
+      "Net-(C3-Pad2)": [
+        "R6.1",
+        "Y1.1",
+        "C3.2"
+      ]
+    },
+    "ground_path_terminals": [
+      "C2.1",
+      "C3.1",
+      "Y1.2",
+      "Y1.4",
+      "IC1.19",
+      "IC1.P$1"
+    ],
+    "Y1_case_pad_centres_mm": {
+      "Y1.2": [
+        93.449801,
+        97.052596
+      ],
+      "Y1.4": [
+        91.699801,
+        99.352596
+      ]
+    },
+    "identity_limit": "IC1.P$1 is the true exposed GND pad. IC1.19 is the ground-tied TESTEN intermediate, not a substitute terminal.",
+    "component_values": {
+      "R6": "1K",
+      "C2": "15pF",
+      "C3": "15pF on crystal side"
+    }
+  },
+  "internal_path_result": {
+    "selected_signal_segments": 17,
+    "selected_ground_segments": 15,
+    "selected_vias": 0,
+    "complete": {
+      "Net-(IC1-XIN)": true,
+      "Net-(IC1-XOUT)": true,
+      "Net-(C3-Pad2)": true,
+      "GND": true
+    },
+    "proof_definition": "Exact same-net finite-width contact graph over only the selected32 current primitives and the named saved-native pad lands."
+  },
+  "track_via_pad_contact_boundary": {
+    "cell_definition": "Selected32 plus every retained pad land of IC1, Y1, R6, C2 and C3.",
+    "omitted_population_definition": "Every other current source track/via plus all pads outside the five retained references; all 325 saved-native pads were screened and unsupported irrelevant custom pads could not silently enter a same-net screen.",
+    "contact_count": 54,
+    "boundary_incidence_group_count": 20,
+    "contact_kinds": {
+      "selected_track_to_omitted_via": 6,
+      "retained_pad_to_omitted_track": 39,
+      "retained_pad_to_omitted_via": 9,
+      "retained_or_selected_to_movable_pad": 0
+    },
+    "contacts_by_net": {
+      "GND": 15,
+      "+3V3": 26,
+      "VCORE": 3,
+      "USBBOOT": 2,
+      "SDA": 1,
+      "SCL": 1,
+      "QSPI_CS": 1,
+      "QSPI_SCK": 1,
+      "QSPI_DATA[0]": 1,
+      "QSPI_DATA[1]": 1,
+      "QSPI_DATA[2]": 1,
+      "QSPI_DATA[3]": 1
+    },
+    "clock_signal_external_contacts": 0,
+    "restoration_contract": "The54 witnesses and20 incidence groups describe existing track/via/pad attachments only. Preserve source terminal/net duties, not every omitted conductor or old junction position. P$1 must reconnect to functional protected GND; all nine old GND conductors are not independently retained. Saved-fill contacts were not enumerated.",
+    "functional_dependency": "Freezing IC1 retains its pad lands but not the omitted +3V3, VCORE, QSPI, SDA/SCL, USBBOOT or external GND copper. A future prepared input must preserve or explicitly restore these interfaces; this proof does not retain them or freeze additional references."
+  },
+  "membership_and_exclusion": {
+    "original_retained_primitives": 177,
+    "selected_clock_and_return_additions": 32,
+    "intersection": 0,
+    "proposed_union": 209,
+    "proposed_union_record_digest": "ea87c13b851c953364636588c8e9588ca404c590ea6c1b8079fe0f6b3ca13401",
+    "current_state": "Root conditionally selects209 primitives and32 fixed/72 eligible for comparison preparation. No PCB, full input or cloud object is changed; expanded full-input qualification remains required.",
+    "clock_exclusion": {
+      "uuid": "ec1cf4dc-a7ac-503d-a7de-eac8212578d7",
+      "layer": "In1.Cu",
+      "source_subtree_sha256": "98bde38bf22720279d9c01f3e3b27f3350c4c607a8fc163d2cee3d34d43edf15",
+      "limit": "Conditional exact current-source pour-only exclusion. No six-layer copies, broader keepout or new clock SI qualification."
+    }
+  },
+  "controls": [
+    {
+      "name": "genuinely_necessary_path_member_removed",
+      "omitted_uuid": "08727118-45d2-5ca1-9989-c574ea37a4ae",
+      "result": "At least one required internal terminal set disconnected.",
+      "passed": true
+    },
+    {
+      "name": "wrong_pre_move_Y1_binding_rejected",
+      "result": "Both current saved-native case-pad centres differ from and reject the obsolete pre-move binding.",
+      "passed": true
+    },
+    {
+      "name": "pad_land_contact_witnesses_present_not_an_independent_interior_control",
+      "pad_contact_witnesses": 48,
+      "non_endpoint_only_contact_witnesses": 54,
+      "passed": true
+    }
+  ],
+  "execution": {
+    "private_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\preserved-clock-boundary-recovery-20261005T0724",
+    "attempts_used": 3,
+    "attempt_history": [
+      "Initial launcher invocation failed before child execution because --limit30 was not valid argparse syntax.",
+      "Correction 1 exited 1 on an irrelevant custom pad shape encountered before same-net filtering.",
+      "Correction 2 restricted unsupported-shape rejection to actual selected-cell nets and completed the unchanged proof scope."
+    ],
+    "correction_budget_exhausted": true,
+    "hard_child_limit_seconds": 30,
+    "successful_child_elapsed_seconds_receipt": 1.0,
+    "successful_analysis_elapsed_seconds": 0.832424,
+    "successful_numeric_child_returncode": 0,
+    "successful_supervisor_returncode": 0,
+    "timed_out": false,
+    "child_confirmed_exited": true,
+    "stdout_sha256": "f0b08b43f4b26ecddb1423bd08e405b8dd5b4c5dd6557be964a2d08ea3ffc16d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "receipt_sha256": "dfd31ac7a0e595502e352ea4f6c3a39b53557104d482ed318681a374c1bfb0cb",
+    "executed_script_sha256": "e28dd6e3a91bc374c5dc26c47111f2d3d5892b5f1a90aa2cdbd5f21d0e237da1",
+    "raw_result_sha256": "0398b1b9093f3d1628ec4a8049c1221655caed53cef244abf14b9bee57c233bb",
+    "python_executable_sha256": "5f7b89a612c9b8af1d6456cdfcd1dbe5ca630849e79aebced9bee9a6694952ec",
+    "supervisor_sha256": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+    "native_loads": 0,
+    "pcbnew_imports": 0,
+    "drc_runs": 0,
+    "refills": 0,
+    "source_edits": 0,
+    "pcb_or_project_creations": 0,
+    "cloud_actions": 0
+  },
+  "acceptance_boundary": "The exact clock internal paths and terminal-restoration selection contract are accepted. Complete saved-fill boundary enumeration was not performed and is not needed to preserve this internally self-contained ordinary GND cell; all functional source terminal/net and protected-private-path duties remain. Full input/placement/plane/reference/oscillator/process acceptance and cloud release are not established."
+}

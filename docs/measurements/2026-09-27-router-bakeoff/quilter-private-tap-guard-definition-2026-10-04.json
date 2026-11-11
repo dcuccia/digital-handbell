@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "title": "Source-bound private GND tap guard definition and static coverage ledger",
+  "status": "FAILED_HELD_INVALID_FOOTPRINT_TO_GLOBAL_PAD_TRANSFORM",
+  "decision": {
+    "retained177_changed": false,
+    "proposal_selected_or_serialized": false,
+    "full_input_eligible": false,
+    "route_or_output_accepted": false,
+    "summary": "HELD. The proposal uses an incorrect footprint-to-global pad transform and does not establish private-pad or complete-guard coverage. All original proposal coordinates below are retained only as invalid, unselected evidence."
+  },
+  "failure_disposition": {
+    "invalid_original_report_sha256": "522954508e0cc90615eb12573a9932b41b0c4be1bef55663095976d06b5b745f",
+    "invalid_original_raw_sha256": "4866e6362be9ce57c0f9ec79af9190768b3d2f09fa8f9aab1a667da0f8469470",
+    "preservation": "Both original byte streams were copied to the private batch before this status edit and hash-identically preserved as invalid-unselected evidence.",
+    "confirmed_against_saved_native_evidence": {
+      "artifact": "critical-block-retention-recovery-20261004T1048/native-result.json",
+      "sha256": "079b47d115db668be0fd8af196b20bfea316193426eca36398dbc98dae0ee23d",
+      "R26_2": {
+        "uuid": "3ed47a01-14b9-59e7-bdfe-95561c7f1435",
+        "invalid_report_center_mm": [86.4,112.208],
+        "saved_native_center_mm": [86.4,111.192],
+        "private_track_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+        "private_track_endpoint_mm": [86.4,111.192],
+        "contradiction_mm": 1.016,
+        "connectivity_witness": "Saved native path terminates d400cba9... -> R26.2 on F.Cu."
+      },
+      "C28_2": {
+        "uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520",
+        "invalid_report_center_mm": [102.2,114.25],
+        "saved_native_center_mm": [102.2,116.15],
+        "private_track_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629",
+        "private_track_endpoint_mm": [102.2,116.15],
+        "contradiction_mm": 1.9,
+        "existing_source_guard_y_mm": [115.279,117.021],
+        "invalid_proposed_guard_y_mm": [113.65,114.85],
+        "connectivity_witness": "Saved native R24.2-to-C28.2 path terminates a2730cca... -> C28.2 on F.Cu; separate saved native U5.4-to-C28.2 path terminates 8b095e6c... -> C28.2."
+      }
+    },
+    "cause": "The static parser applied the footprint rotation with the wrong sign when transforming pad-local coordinates to native board coordinates. This is the same class of negative-native-angle transform error previously observed for BT2.",
+    "not_reusable": [
+      "All four transformed pad centers, pad bounds, and pad-derived guard geometries in this ledger.",
+      "The claimed complete 12-object/18-layer guard coverage and coherent/pass disposition.",
+      "The 6.698090024443985 mm ordinary-GND access spare, because it was measured against an invalid guard union.",
+      "The collateral AABB counts and classifications, because the pad guard locations are invalid.",
+      "The six static controls as evidence of source-to-global pose correctness or complete guard coverage; none contained an independent native-coordinate/connectivity oracle."
+    ],
+    "still_source_bound_but_not_a_selected_guard": [
+      "Exact source track/via UUIDs, absolute track/via coordinates, widths, diameters, drills, and layer identities.",
+      "The 19 literal source rule-area polygons, flags, and family counts.",
+      "Saved native branch-connectivity witnesses and native pad coordinates in artifact 079b47d1..."
+    ],
+    "required_regression_for_any_separately_authorized_repair": [
+      "Compare every transformed private pad center and rotation against immutable saved native pad evidence before generating guards.",
+      "Require each named source-private endpoint track to contact its intended native pad in an independent connectivity witness.",
+      "Include positive and negative footprint rotations and a known BT2-style rotated-coordinate case.",
+      "Fail before coverage/control success if source-local transformation disagrees with native coordinates."
+    ],
+    "fourth_attempt_or_corrected_geometry_generated": false
+  },
+  "authoritative_bindings_sha256": {
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "retained177_report": "cc23592a8060db8a2732ff91954ff55e3177fbf733b22173b74062b7d4e5f896",
+    "retained177_raw": "639a7f81136e9e38319a55ac5d84dff42dfaaa08fe909ac87a68053fbefe23a9",
+    "core_boundary_report": "be78b4f38cc6dbcf31a83e38f0ae5dcd8cd731f8a7379053b812ff327c5fb567",
+    "core_boundary_raw": "c66c67c9936e5a0b7665d6dad3b8934fffa9098d8b3bbe7a3660767c1fdf63ce",
+    "private_raw_after_literal_pad_classification_correction": "4866e6362be9ce57c0f9ec79af9190768b3d2f09fa8f9aab1a667da0f8469470"
+  },
+  "retained_state_preserved": {
+    "copper_primitives": 177,
+    "tracks": 159,
+    "vias": 18,
+    "retained_references": 27,
+    "retained_pads": 97,
+    "mandatory_process_seeds": 5,
+    "contact_feed_segments": 30,
+    "known_ordinary_feed_vias": 5,
+    "poses_changed": 0
+  },
+  "definition": {
+    "validity": "INVALID_UNSELECTED; retained below only to identify the failed proposal",
+    "net": "GND",
+    "source_root_objects": 12,
+    "layer_obligations": 18,
+    "current_layers": ["F.Cu", "In1.Cu", "In2.Cu", "B.Cu"],
+    "halo_mm": 0.25,
+    "restrictions_for_new_objects": {
+      "tracks": "not_allowed",
+      "vias": "not_allowed",
+      "pads": "not_allowed",
+      "footprints": "not_allowed",
+      "pours": "not_allowed"
+    },
+    "preservation_rule": "Existing immutable source objects and exact existing terminal-land joins remain by source identity. The guards forbid new access; they do not delete, rename, disconnect, or reinterpret existing GND copper.",
+    "track_geometry": "Exact centerline capsule, radius = source width/2 + 0.25 mm.",
+    "via_geometry": "Exact outer-copper circle, radius = source diameter/2 + 0.25 mm, repeated on each conductive layer spanned.",
+    "pad_geometry": "Exact source oriented rectangle Minkowski-expanded by 0.25 mm; the report AABB is broad-phase only.",
+    "identifier_method": "UUIDv5(namespace 62dbd86c-fc85-488b-86c0-a983277bdfe8, source_uuid|layer|private-tap). All proposal IDs are unique and disjoint from the 19 source rule-area UUIDs."
+  },
+  "source_objects": [
+    {"uuid":"3ed47a01-14b9-59e7-bdfe-95561c7f1435","branch":"R26.2->R27.2","role":"origin_pad","ref_pad":"R26.2","kind":"rect_pad","layers":["F.Cu"],"center_mm":[86.4,112.208],"size_mm":[0.6,0.6],"rotation_deg":90},
+    {"uuid":"d400cba9-bf59-5d9f-b921-dc5efd499b8c","branch":"R26.2->R27.2","role":"private_copper","kind":"track","layers":["F.Cu"],"start_mm":[86.4,111.192],"end_mm":[86.399019,109.500966],"width_mm":0.1778},
+    {"uuid":"933e95b2-4ef8-5095-ab3d-4759e7fa0826","branch":"R26.2->R27.2","role":"target_pad","ref_pad":"R27.2","kind":"rect_pad","layers":["F.Cu"],"center_mm":[86.424019,109.500966],"size_mm":[1.15,1.4],"rotation_deg":0},
+    {"uuid":"1ba917bc-32e2-5176-954f-c3d06c7f6040","branch":"R24.2->C28.2","role":"origin_pad","ref_pad":"R24.2","kind":"rect_pad","layers":["F.Cu"],"center_mm":[98.408,111.4],"size_mm":[0.6,0.6],"rotation_deg":0},
+    {"uuid":"34d001e5-c45d-5645-a43a-6ab95d630ff0","branch":"R24.2->C28.2","role":"private_copper","kind":"track","layers":["F.Cu"],"start_mm":[98.408,111.4],"end_mm":[99.8,111.4],"width_mm":0.1778},
+    {"uuid":"51e3a8d5-1e6b-5f46-a297-c3739ea5de91","branch":"R24.2->C28.2","role":"private_copper","kind":"track","layers":["F.Cu"],"start_mm":[99.8,111.4],"end_mm":[100.2,111.9],"width_mm":0.1778},
+    {"uuid":"eafa404c-be47-5f5c-8167-d39a967ba2e5","branch":"R24.2->C28.2","role":"private_copper","kind":"through_via","source_layer_tokens":["F.Cu","B.Cu"],"conductive_layers":["F.Cu","In1.Cu","In2.Cu","B.Cu"],"at_mm":[100.2,111.9],"diameter_mm":0.6,"drill_mm":0.3},
+    {"uuid":"7b625d38-c89c-5e26-93c2-4cbe5302680a","branch":"R24.2->C28.2","role":"private_copper","kind":"track","layers":["B.Cu"],"start_mm":[100.2,111.9],"end_mm":[103.7,113.1],"width_mm":0.1778},
+    {"uuid":"1212a327-4ed4-50da-a0bb-71afc8145254","branch":"R24.2->C28.2","role":"private_copper","kind":"track","layers":["B.Cu"],"start_mm":[103.7,113.1],"end_mm":[103.7,117.5],"width_mm":0.1778},
+    {"uuid":"6623be95-c657-5a8e-bedb-c5a73d42d40b","branch":"R24.2->C28.2","role":"private_copper","kind":"through_via","source_layer_tokens":["F.Cu","B.Cu"],"conductive_layers":["F.Cu","In1.Cu","In2.Cu","B.Cu"],"at_mm":[103.7,117.5],"diameter_mm":0.6,"drill_mm":0.3},
+    {"uuid":"a2730cca-5ecb-58a3-be5f-9d176ac8a629","branch":"R24.2->C28.2","role":"private_copper","kind":"track","layers":["F.Cu"],"start_mm":[103.7,117.5],"end_mm":[102.2,116.15],"width_mm":0.1778},
+    {"uuid":"bcb9e722-fe71-5b16-8387-e04b4bcd0520","branch":"R24.2->C28.2","role":"target_pad","ref_pad":"C28.2","kind":"rect_pad","layers":["F.Cu"],"center_mm":[102.2,114.25],"size_mm":[0.7,1.3],"rotation_deg":270}
+  ],
+  "proposed_guards": [
+    {"id":"4a7bd7ae-6d78-5f8c-88f8-f5f309efeae1","source":"3ed47a01-14b9-59e7-bdfe-95561c7f1435","layer":"F.Cu","shape":"oriented_rect+halo","bounds_mm":[85.85,111.658,86.95,112.758]},
+    {"id":"63bf924e-deb9-554a-b70c-7c1e55dfe26d","source":"d400cba9-bf59-5d9f-b921-dc5efd499b8c","layer":"F.Cu","shape":"capsule_r0.3389","bounds_mm":[86.060119,109.162066,86.7389,111.5309]},
+    {"id":"d77c7d6b-048a-59f7-bcb4-3fc4eb849718","source":"933e95b2-4ef8-5095-ab3d-4759e7fa0826","layer":"F.Cu","shape":"oriented_rect+halo","bounds_mm":[85.599019,108.550966,87.249019,110.450966]},
+    {"id":"9541464a-9f46-5540-aeaa-897971f9fede","source":"1ba917bc-32e2-5176-954f-c3d06c7f6040","layer":"F.Cu","shape":"oriented_rect+halo","bounds_mm":[97.858,110.85,98.958,111.95]},
+    {"id":"77ef2976-ea87-5f00-af06-9a4500860cfc","source":"34d001e5-c45d-5645-a43a-6ab95d630ff0","layer":"F.Cu","shape":"capsule_r0.3389","bounds_mm":[98.0691,111.0611,100.1389,111.7389]},
+    {"id":"2a184c63-2b15-5ef6-8b4e-db104e74c9cc","source":"51e3a8d5-1e6b-5f46-a297-c3739ea5de91","layer":"F.Cu","shape":"capsule_r0.3389","bounds_mm":[99.4611,111.0611,100.5389,112.2389]},
+    {"id":"2d40dbd3-497b-5ab1-ac92-73dad3744efd","source":"eafa404c-be47-5f5c-8167-d39a967ba2e5","layer":"F.Cu","shape":"circle_r0.55","bounds_mm":[99.65,111.35,100.75,112.45]},
+    {"id":"53408de9-973e-51a9-911e-8bc733b3029f","source":"eafa404c-be47-5f5c-8167-d39a967ba2e5","layer":"In1.Cu","shape":"circle_r0.55","bounds_mm":[99.65,111.35,100.75,112.45]},
+    {"id":"79a9ac1b-9701-5c2d-ad20-c5c5886916e0","source":"eafa404c-be47-5f5c-8167-d39a967ba2e5","layer":"In2.Cu","shape":"circle_r0.55","bounds_mm":[99.65,111.35,100.75,112.45]},
+    {"id":"b8a59913-43a0-561b-97d1-68c63f7c67bc","source":"eafa404c-be47-5f5c-8167-d39a967ba2e5","layer":"B.Cu","shape":"circle_r0.55","bounds_mm":[99.65,111.35,100.75,112.45]},
+    {"id":"20d0b3f8-7c48-5731-ad7c-f99919c9d166","source":"7b625d38-c89c-5e26-93c2-4cbe5302680a","layer":"B.Cu","shape":"capsule_r0.3389","bounds_mm":[99.8611,111.5611,104.0389,113.4389]},
+    {"id":"1a484f55-5d27-5931-9736-c173e66f11bf","source":"1212a327-4ed4-50da-a0bb-71afc8145254","layer":"B.Cu","shape":"capsule_r0.3389","bounds_mm":[103.3611,112.7611,104.0389,117.8389]},
+    {"id":"84e6cbba-abcc-530f-b36c-0eac231f18b0","source":"6623be95-c657-5a8e-bedb-c5a73d42d40b","layer":"F.Cu","shape":"circle_r0.55","bounds_mm":[103.15,116.95,104.25,118.05]},
+    {"id":"47c5d87e-8b79-57f7-b8f4-c2dd80e1f9fa","source":"6623be95-c657-5a8e-bedb-c5a73d42d40b","layer":"In1.Cu","shape":"circle_r0.55","bounds_mm":[103.15,116.95,104.25,118.05]},
+    {"id":"e767ba06-485c-5810-90b7-77a7d78a8173","source":"6623be95-c657-5a8e-bedb-c5a73d42d40b","layer":"In2.Cu","shape":"circle_r0.55","bounds_mm":[103.15,116.95,104.25,118.05]},
+    {"id":"07348d95-7696-52aa-8cf8-f9a97b9498c5","source":"6623be95-c657-5a8e-bedb-c5a73d42d40b","layer":"B.Cu","shape":"circle_r0.55","bounds_mm":[103.15,116.95,104.25,118.05]},
+    {"id":"f24efbf5-168b-5f4a-85f3-7a4da1925ee5","source":"a2730cca-5ecb-58a3-be5f-9d176ac8a629","layer":"F.Cu","shape":"capsule_r0.3389","bounds_mm":[101.8611,115.8111,104.0389,117.8389]},
+    {"id":"549b59d6-05f6-5032-97c5-528f8b60ef91","source":"bcb9e722-fe71-5b16-8387-e04b4bcd0520","layer":"F.Cu","shape":"oriented_rect+halo","bounds_mm":[101.3,113.65,103.1,114.85]}
+  ],
+  "inherited_source_rules": {
+    "count": 19,
+    "all_are_pours_only": true,
+    "families": {
+      "F-private": ["2dc315f7-a2fe-50d1-b602-b446d39218f9","3b1d5d3d-c153-57cf-8a47-71a5630d3b20","42913f7c-fc6b-516f-acaf-761e453626aa","43721dda-d6e7-524e-8908-4eace3e7e43b","5a248834-0a96-584d-9278-530abaf7986c","753379d1-5544-5e26-a287-1ef0a204264c","76d9b828-1bbb-52a0-9aa0-db278ee0ca2e","ae51190e-a394-58cd-87f1-6f83677d0de9","f3661a20-0fd3-5f50-ab1e-e8bef7117484","f889e3e1-1268-5b69-8d4c-752ffa214caa"],
+      "In1-private": ["b4bdee5c-b67f-5638-93fb-e85cf1db5608","d84f1cbb-9996-5753-a723-42676ee16cd0"],
+      "In1-BOOST_SW": ["f45024b2-d4bf-5379-813e-bcad54ff42ce","c39613f0-be31-5517-adfd-80df3ef1f023","23ccd641-2f99-5a74-95bd-9f91755c5c0e","2d3ef692-d3b3-5783-be34-2150cc145c57","3a35dad2-fccb-59a2-a858-6e1065dc3c6a","819be28f-9f79-5708-8730-49a77725ea28"],
+      "In1-clock": ["ec1cf4dc-a7ac-503d-a7de-eac8212578d7"]
+    },
+    "exact_polygons_and_flags_binding": "The private raw contains every source polygon vertex, literal flags, source subtree hash, and contact list. Example 2dc315f7-a2fe-50d1-b602-b446d39218f9 is F.Cu polygon [[101.199,115.279],[103.201,115.279],[103.201,117.021],[101.199,117.021]].",
+    "coverage_conclusion": "Inherited areas preserve evidence and pours-only intent but are insufficient to prevent new tracks, vias, pads, or footprints. The six BOOST_SW and one clock intents remain pending separate physical stackup/map and placement qualification; they are not projected or approved here."
+  },
+  "surface_and_span_coverage": {
+    "validity": "NOT ESTABLISHED because pad pose and complete guard-union geometry are invalid",
+    "R26_branch": "Two F.Cu endpoint pads and one F.Cu track only. No inappropriate inner projection.",
+    "R24_branch": "Two F.Cu endpoint pads, three F.Cu tracks, two B.Cu tracks, and two through-vias.",
+    "B_surface_obligations": ["7b625d38-c89c-5e26-93c2-4cbe5302680a","1212a327-4ed4-50da-a0bb-71afc8145254","eafa404c-be47-5f5c-8167-d39a967ba2e5","6623be95-c657-5a8e-bedb-c5a73d42d40b"],
+    "via_current_layer_obligations": 8,
+    "future_six_layer_rule": "For each of the two through-vias, instantiate the same circle guard on every conductive copper layer the via spans in the selected stackup role map. Do not infer physical order from numeric layer IDs and do not copy F-only pad/track guards into inner GND voids."
+  },
+  "existing_intrusions_and_collateral": {
+    "validity": "PAD-DEPENDENT NUMERIC RESULTS INVALID; retained as failed evidence only",
+    "expected_named_source_intersections": [
+      {"uuid":"8b095e6c-ce66-5915-a589-2b1a247f9129","where":"C28.2 terminal/source F guard 2dc315f7","classification":"retained ordinary GND bank join; not an electrical bypass"},
+      {"uuid":"665297da-57ea-5e05-aa18-5a3aa335eedd","where":"R27.2 terminal land","classification":"retained protector/global-return join; not an electrical bypass"}
+    ],
+    "conservative_AABB_candidate_unique_count": 29,
+    "conservative_AABB_candidate_records": 14,
+    "interpretation": "The private raw lists candidates per guard. AABB overlap is not asserted actual copper overlap or a defect. Exact existing source geometry is preserved by identity; target-land halos intentionally prevent new access around existing joins. No genuinely blocked required future access was established.",
+    "ordinary_main_GND_access_witness": {
+      "source_uuid":"3598d04b-1396-5df4-953b-9f195d966b71",
+      "layer":"F.Cu",
+      "existing_track_width_mm":1.0,
+      "point_mm":[109.15,109.75],
+      "outside_every_proposed_F_guard_AABB":true,
+      "minimum_spare_beyond_track_half_width_to_guard_AABB_mm":6.698090024443985
+    }
+  },
+  "static_controls": [
+    {"name":"valid_guard_set","result":"INVALIDATED: false success on wrong transformed pad poses"},
+    {"name":"missing_B_track_protection","result":"logic exercised but does not qualify source-to-global pose"},
+    {"name":"missing_inner_via_guard","result":"logic exercised but does not qualify source-to-global pose"},
+    {"name":"F_only_object_projected_to_inner_layer","result":"logic exercised but does not qualify source-to-global pose"},
+    {"name":"wrong_restriction_flags","result":"logic exercised but does not qualify source-to-global pose"},
+    {"name":"leaked_private_object_coverage","result":"INVALIDATED as complete-coverage evidence because its geometric oracle used wrong pad poses"}
+  ],
+  "execution": {
+    "python": "3.11.9",
+    "pcbnew_or_native_loads": 0,
+    "supervisor_sha256": "b35c68cf18b409242de7f0e03f22cb1fb8def542a0cff9fca5a835cdebbed3c4",
+    "supervisor_controls": [
+      {"case":"exit0","pid":58436,"supervisor_exit":0,"child_returncode":0,"timeout":false},
+      {"case":"exit7","pid":1568,"supervisor_exit":7,"child_returncode":7,"timeout":false},
+      {"case":"timeout","pid":47196,"supervisor_exit":124,"timeout":true}
+    ],
+    "analyzer_attempts": [
+      {"attempt":1,"pid":33784,"exit":1,"elapsed_seconds":1.056831,"cause":"literal family label assertion mismatch In1-BOOST_SW"},
+      {"attempt":2,"pid":49868,"exit":1,"elapsed_seconds":0.927135,"cause":"pad records lacked kind discriminator in collateral pass"},
+      {"attempt":3,"pid":55436,"exit":0,"elapsed_seconds":1.02302,"timeout":false}
+    ],
+    "postrun_classification_correction": "The successful raw said pad shape smd because the analyzer selected the pad-type atom. Literal source declarations independently show all four endpoint pads are rect. The saved raw's four pad shape and four oriented-shape labels were corrected to rect/oriented_rect; coordinates, sizes, rotations, bounds, IDs, coverage, controls, and numeric outcomes were unchanged. The analyzer was fixed and compiled but not rerun because all three authorized executions were consumed.",
+    "compiled_final_analyzer_sha256": "e274aa3dcdacaf99b75360f8a872e2da111e5d9b0bca153eccb34b5da611aa48"
+  },
+  "scope_limits_and_remaining_gate": [
+    "FAILED/HELD: dependent guard-input, native, and Quilter work must not proceed from this proposal.",
+    "No PCB/input was generated, loaded natively, saved, refilled, DRC-checked, routed, or uploaded.",
+    "Native KiCad serialization/DRC semantics and Quilter handling of pad, footprint, pour, and all-layer restrictions are not demonstrated.",
+    "The source-supported track capsules, via circles, oriented pad rectangles, and full-copper-layer span are static geometry only.",
+    "Root must decide whether to select this purpose-specific definition for a later disposable-input behavior qualification. Exact177 and all source artifacts remain unchanged."
+  ]
+}

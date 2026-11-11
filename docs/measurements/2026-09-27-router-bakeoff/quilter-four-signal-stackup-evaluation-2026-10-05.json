@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "returned_output_review_2026_10_06": {
+    "job_state": "complete",
+    "candidate_count": 12,
+    "highest_routing_fraction": 0.9465020576131687,
+    "elapsed_seconds": 16284.099,
+    "ledger": "quilter-eight-candidate-review-2026-10-06.json",
+    "disposition": "Same best completion as four-layer run, not a demonstrated overall closure advantage. Eight2.2 retained for bounded native review; no acceptance, repair, integration or new job. Earlier running/no-results statements below are historical."
+  },
+  "continuation_2138": {
+    "authorization": "Owner resumes at21:38 after the proposed20-30minute attempt to launch the existing eight-layer draft. First Floorplanner checkpoint21:48; overall stop22:08. No source/native reconstruction, six launch, paid use or integration.",
+    "job_id": "6ac434b6a389adaff19ad80e",
+    "prelaunch_disposition": "ROOT_ACCEPTS_FOR_ONE_ISOLATED_FREE_EVALUATION; not manufacturer, placement or returned-output acceptance.",
+    "floorplanner": {
+      "decision": "Documented on-board/edge-overlapping placement regions remain the intended domain. Client1.42.0 permits Continue for a completed unchanged attempt, separately from planner success. Root selected that normal UI save once, not a resize or a rerun.",
+      "observed": "PUT floorplanner/save200 at21:40:09, revision2, finalized original requestb9353290-c8fc-452f-ab9c-5e7b01c8f414 including PINNED_ROOM_INFEASIBLE. Same room/member/Front/pinned/rectangle state; no packing pass claimed.",
+      "effective_settings": "Circuit comprehension contains the same72 room associations as four baseline, compared with multiplicity. Selected configuration now saves preferSingleSided=true, componentClearanceMm=.127; final review displays both.",
+      "documentation": "https://docs.quilter.ai/guides/placement-guide.md",
+      "saved_response_sha256": "2253a539ea0be4f6510159d5212211f96f89f19a946163e647fc89a77a12fd05"
+    },
+    "common_inputs": "All comprehension input-entry multisets match four-comprehension-1112.json:28 bypass,14 power with optional pours false,72 Front,sole primaryGND,protected In1,and both USB90-ohm pairs at1GHz with no single-ended target. No added clock/converter inference. CSV upload appends; initial57 bypass rows were cleared and replaced, final28 verified.",
+    "import_review": {
+      "basis": "Read-only saved render3.6.0 comparison against previously source-qualified four input. Decode mesh geometry/transform/item/tag indices from the actual client; compare exact polygon arrays plus XY matrix fields, without rounding. Exclude display Z/material/color changes, not electrical layer membership.",
+      "component_poses_equal": 104,
+      "fixed": 32,
+      "pin_semantic_records_equal": 325,
+      "trace_metadata_equal": 191,
+      "via_centers_diameters_drills_nets_equal": 18,
+      "pin_normalization": "Resolve component library names to reference. Normalize through membership only when exactly all enabled copper layers. Prior source-bound paste-aperture/jumper-graphic explanation remains;325 rendered PINs are not325 native copper pads.",
+      "xy_primitive_multisets": {
+        "traces": {"four": 573, "eight": 573, "lost": 0, "added": 0},
+        "positive_front_room": {"four": 94, "eight": 94, "lost": 0, "added": 0},
+        "keepouts": {"four": 1626, "eight": 1746, "lost": 0, "added": 120},
+        "pins": {"four": 349, "eight": 381, "lost": 0, "added": 32},
+        "substrate": {"four": 3, "eight": 7, "lost": 0, "added": 4}
+      },
+      "additions": "Every added keepout/pin/substrate XY primitive equals its existing In2 template on In3/In4/In5/In6, with multiplicity. No other addition/loss.58 keepout records:19 original pours-only,8 B track/via/pour guards,26 private all-types,5 F PINS-only reservations;one separate positiveFront region.",
+      "limits": "Render precision and prior four-native source bridge, not new native output geometry or body/rotation certification. Exact returned209/source identity/private isolation/planes and physical/process gates remain.",
+      "private_checker": "Initial inline geometry review failed on micro-sign spelling; corrected inline review completed. Final private helperf42b8d42 passed geometry/comprehension/minima assertions then stopped at an overbroad whole-stack equality check; it was NOT rerun or promoted. Root exact-field diff shows ONLY impedanceProfiles changed: nine initial generic profiles replaced by the freshly computed90-ohm profile. Physical layer rows/roles/settings are unchanged. Remaining profile values/source hashes were inspected separately. No PASS report from the failed helper is claimed.",
+      "failed_helper_receipt_sha256": "40769b263a9f3cdbfdb625fe67ac2638298c351ce9bd9b90c794fb1c1664afaf"
+    },
+    "fresh_impedance": {
+      "pairs": ["D+ / D-", "USB_D+ / USB_D-"],
+      "target_ohms": 90,
+      "frequency_ghz": 1,
+      "single_ended_target": null,
+      "profiles": [
+        {"layer": "F.Cu", "width_um": 227.3475863647461, "gap_um": 210, "achieved_diff_ohms": 89.96924533322829},
+        {"layer": "In2.Cu", "width_um": 186.69000000000003, "gap_um": 216.47878417968752, "achieved_diff_ohms": 89.99163998689698},
+        {"layer": "In5.Cu", "width_um": 187.34859710693362, "gap_um": 210, "achieved_diff_ohms": 89.98556911571002},
+        {"layer": "B.Cu", "width_um": 227.3475863647461, "gap_um": 210, "achieved_diff_ohms": 89.96924533322837}
+      ],
+      "disposition": "All eight pair/layer records reportOK and exceed177.8um width/200um gap; largest target error<.031ohm. Accept fresh solver-selected gaps rather than forcing supplier example. Grounds have no routed profile.",
+      "limits": "Supplier examples used254um gap and different finished-copper/mask assumptions. Saved mask/reference overrides null do not establish effective defaults;etchFactor=.5. No cross-solver equivalence, measured impedance or fabrication acceptance."
+    },
+    "warnings": "Known pin-count/16 schematic-reference/pour texts remain dispositioned as in four trial. No-power-layer notice is intentional S/G/S/G/G/S/G/S with optional power pours off. ECAD Parsed Constraints says Altium-only; this is not absent KiCad keepouts or minima, which are independently inspected. No waiver of actual isolation or routing minima.",
+    "pricing": "Official free-ai-pcb-design HTML, published October5, still declares Non-Commercial Tier, price0USD and unlimited iterations. Prior owner personal-use authorization applies; no account-specific quote, payment or new agreement.",
+    "evidence": {
+      "eight-comprehension-final-2148.json": "2136e7d6bf159af521d94bec3044bc16950e4ea34a6417c1861bf6462e4945fa",
+      "eight-config-final-2148.json": "427784d67d91b26ff4e83089540e2415d1a70879bb04c7f421a3593ae6de8dd1",
+      "eight-render-final-2148.json": "9dad585f510c442aed61177281aa421d7f50eed0a186249b88890b10257d1f49"
+    },
+    "source": "All five authoritative hashes rechecked unchanged. No native PCB load/save/refill or source edit.",
+    "launch": {
+      "local": "2026-10-05T21:53:30.545-07:00",
+      "name": "Handbell flexible 8L - JLC2116 - four signals retained209",
+      "mode": "full_layout",
+      "state": "running",
+      "url": "https://app.quilter.ai/jobs/6ac434b6a389adaff19ad80e",
+      "start_clicks": 1,
+      "http_status": 200,
+      "confirmation": "Redirected to job page; saved job state=running and launched1791262410545. UI says working on layout candidates, no results yet, and window may close while service continues.",
+      "evidence": {
+        "eight-launch-request-2153.json": "4fabdada7a0b37239dd2f513faaae7f31f3e2369dd841baada30ee4054eee1d0",
+        "eight-launch-response-2153.json": "d10ac45c4d7897bf8bea86579ebba7179dfe975a3da565d88e40dcc832f5490f",
+        "eight-launched-job-2153.json": "19d6af7edf6b6bc22e8d71366f3188b38a63d1fea15be206689bd3c1287aa715"
+      },
+      "no_actions": ["no six-layer launch", "no source/native rebuild", "no manual routing", "no payment/new agreement", "no integration", "no monitoring automation"],
+      "next": "Let the service run. Preserve native returned outputs when available; inspect source/copper/layer/plane preservation and electrical/physical findings before comparing with the four-layer shortlist. Do not automatically repair, accept or resubmit."
+    }
+  },
+  "continuation_1602": {
+    "owner_local": "2026-10-05T16:02:40-07:00",
+    "scope": "Proceed with next evaluation steps for the suggested six/eight variants.",
+    "model_disposition": {
+      "status": "Enough evidence to select the next preview candidate, not cross-solver equivalence or fabrication qualification.",
+      "selected_next_input": "JLC08161H-2116, S/G/S/G/G/S/G/S",
+      "retain_width_floor_mm": 0.1778,
+      "retain_clearance_floor_mm": 0.2,
+      "reason": "The standard eight construction clears existing minima in both tested supplier outer-layer mask models and the inner-layer example. No signal-width relaxation or unverified six-layer geometry override is needed for this next input.",
+      "six_disposition": "Preserve native3313E and complete its diagnostic independently; no claim that the supplier examples prove six layers impossible.",
+      "quilter_saved_model": {
+        "path": ".playwright-mcp/four-selected-config-1112.json",
+        "sha256": "9ce28a0dec993fe9cfc0406a33e69bc82e5bb6dd8ac9d457415b628badd9547e",
+        "outer_copper_um": 35,
+        "inner_copper_um": 15.2,
+        "dielectric_measurement_frequency_hz": 1000000000,
+        "polarization_loss_model": "WidebandDebye",
+        "etch_factor": 0.5,
+        "use_solder_mask": null,
+        "single_and_double_coat_height_um": null,
+        "limit": "Null mask/reference override fields do not prove masking is disabled or identify effective backend defaults. Read-only completed-job details expose achieved values, not those defaults."
+      },
+      "supplier_documented_model": {
+        "url": "https://jlcpcb.com/help/article/user-guide-to-the-jlcpcb-impedance-calculator",
+        "outer_finished_copper_um": 40.64,
+        "inner_half_oz_copper_um": 15.24,
+        "mask_base_and_between_traces_um": 30.48,
+        "mask_over_trace_um": 15.24,
+        "mask_Dk": 3.8,
+        "documented_trace_top_width_below_base_um": 17.78,
+        "limit": "The guide labels these reference values adjustable by JLCPCB. These finished-copper/mask/etch assumptions differ from nominal table rows and are not automatically Quilter's model."
+      },
+      "controlled_supplier_mask_comparison": {
+        "profile": "JLC08161H-2116",
+        "signal": "L1",
+        "reference": "L2",
+        "target_ohms": 90,
+        "pair_gap_mm": 0.254,
+        "with_mask_width_mil": 7.47,
+        "without_mask_width_mil": 8.32,
+        "with_mask_width_mm": 0.189738,
+        "without_mask_width_mm": 0.211328,
+        "with_mask_snapshot_sha256": "4b90cc9efaddbc967b657f9acd5720ba2e07cfc0cb5425c28ec3e554f3d32d3f",
+        "without_mask_snapshot": ".playwright-mcp/jlc-eight-2116-uncoated90-gap10-1609.yml",
+        "without_mask_snapshot_sha256": "587012ea8126961ffc050eff8f4672ffd602eebe1b3e6fdf09feb3ddc5e1f2bd",
+        "meaning": "Changing mask treatment alone moves the displayed width by21.59um. This demonstrates sensitivity, not the entire cause of the earlier four/six cross-solver discrepancy."
+      },
+      "preview_and_release_limits": [
+        "Native stackup follows the actual published nominal construction; do not silently replace it with calculator finished-copper numbers.",
+        "Two identical1080 dielectric plies may be represented by their exact0.1528mm sum at the same Dk3.91, with individual ply construction retained in the manifest; this is not mixed-material averaging.",
+        "Fresh Quilter90-ohm results must be checked against actual imported roles and unchanged routing minima.",
+        "Supplier versus effective Quilter mask/etch/frequency assumptions remain a fabrication/impedance-acceptance gate; do not claim measured or cross-fab equivalence."
+      ]
+    },
+    "six_completion_scope": {
+      "method": "Independent supervised CLI DRC on an unchanged copy of c7497180, with no pcbnew import in the orchestration host; then accurate final manifest/report binding.",
+      "reason": "Prior helper launched DRC from a still-live native Python host. Separating the host and increasing the internal60s cap to the already allowed90s is a concrete pipeline change; whether the old host caused the timeout is unknown.",
+      "executor": "ebba2350-a099-4390-928f-0634af090a8a",
+      "runtime_verified": {"model": "gpt-5.6-sol", "reasoning_effort": "medium"},
+      "execution_stop_local": "2026-10-05T16:22:00-07:00",
+      "report_due_local": "2026-10-05T16:23:00-07:00",
+      "scope_limits": "No reconstruction, native save/refill, source load/edit, exhausted-builder invocation, cloud action or geometry/width changes.",
+      "outcome": {
+        "status": "LOCAL_NATIVE_DIAGNOSTIC_COMPLETE_PREVIEW_HELD",
+        "package": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\six-four-signal-3313E-20261005T1611-sol-completion",
+        "report_sha256": "7181e10857c8ae35ce4947bade133f6d423df533f1e8f718f028d5bf95ef483f",
+        "manifest_sha256": "bef530633811f64a1be337b0b780e0f4224068d7c46f0399f972a53c49680d66",
+        "drc_sha256": "0e4259a8068549dda35709e4eb3f9efb1b1cbe1f7f4210a22f23f44093416748",
+        "drc_receipt_sha256": "e70162ea61975060a3f8e15c7aa89f9d71392a9d977c5738d54b64230a49cc3b",
+        "comparison_sha256": "28b717d7a466f04cd9f7c979c339960a87026015537da1e6de583b5953f25ecf",
+        "finalizer_sha256": "f46f8a6af356b60d04f07298dcf0105de8207258ed72cb675325d0e654094015",
+        "finalization_evidence_sha256": "166824fad0ee09c987199eeaa56be92325a2a9e169da429d9697f33762646f2b",
+        "native": {"CLI_processes": 1, "elapsed_seconds": 74.86, "limit_seconds": 90, "exit_code": 0, "timed_out": false, "orchestration_pcbnew_imports": 0, "saves": 0, "refills": 0},
+        "findings": {"violations": 321, "staged_opens": 184, "total_records": 505, "inherited_records": 498, "new_records": 7, "removed_records": 7, "unique_identities_per_board": 475, "duplicate_records_per_board": 30, "new_non_open_records": 0},
+        "classification": "Seven changed unconnected-item representatives on GND/VBAT/VAMP are consistent with preserved copper. No new non-open findings in the complete multiset. Endpoint-group electrical equivalence was not independently established; schematic parity was not enabled.",
+        "root_corrections": "Preserved first report, then corrected multiplicity loss and stale top-level current PCB hash without another native run. Current hashes and final_native_hashes agree; pre-native hash is historical provenance only.",
+        "root_preservation": "All five authoritative worktree hashes independently asserted unchanged; candidate and accepted-six files also retain their exact pins.",
+        "timeout_lesson": "Successful run exceeded the old60-second limit. This does not isolate a native-host/lock cause: host lifetime and timeout both changed."
+      }
+    },
+    "eight_input_contract": {
+      "base": "Accepted six-3313 final package, not returned routing or failed six3313E builder output",
+      "layer_map": [[0, "F.Cu", "signal"], [4, "In1.Cu", "power"], [6, "In2.Cu", "signal"], [8, "In3.Cu", "power"], [10, "In4.Cu", "power"], [12, "In5.Cu", "signal"], [14, "In6.Cu", "power"], [2, "B.Cu", "signal"]],
+      "ground_planes": ["In1.Cu", "In3.Cu", "In4.Cu", "In6.Cu"],
+      "new_objects": "Only four copies of the two exact private-through-via guard rectangles on In5/In6, and one unfilled GND plane on In6. New unique deterministic UUIDs; preserve all old source and derivative objects.",
+      "private_via_sources": ["6623be95-c657-5a8e-bedb-c5a73d42d40b", "eafa404c-be47-5f5c-8167-d39a967ba2e5"],
+      "other_allowed_changes": ["eight-layer stackup and total1.5996mm", "layer declarations", "profile and final file bindings"],
+      "unchanged": ["104refs/325pads", "32fixed/72eligible", "191tracks/18vias", "five process vias", "all existing guards/reservations", "source In1 and existing In3/In4 planes", "outline", "schematic", "project minima"],
+      "planned_counts_not_yet_verified": {"rule_areas": 59, "ground_zone_definitions": 4, "zones_total": 63},
+      "native_process_policy": "Save/reload in a bounded child that exits completely before separately supervised CLI DRC; persist phase results first.",
+      "executor": "2402eefd-7541-4013-9050-03d4e05004ef",
+      "runtime_verified": {"model": "gpt-5.6-sol", "reasoning_effort": "medium", "configured_event": "46f4ad43-80f3-4615-a820-936564372827"},
+      "execution_stop_local": "2026-10-05T16:33:00-07:00",
+      "report_due_local": "2026-10-05T16:34:00-07:00",
+      "root_checkpoint_local": "2026-10-05T16:36:00-07:00",
+      "status": "Bounded construction released after six diagnostic review; no eight-layer file generated at scope definition."
+    },
+    "eight_local_completion": {
+      "status": "ROOT_ACCEPTS_EXACT_FILES_FOR_PREVIEW_ONLY",
+      "package": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\eight-four-signal-2116-20261005T1621-sol",
+      "execution_evidence": ".playwright-mcp/eight-2116-construction",
+      "pcb_sha256": "10b04d84d3bc41b98d3b2683bc15561925d7e65281e2625673000304af999656",
+      "project_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+      "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "manifest_sha256": "ab1b77baaf9e26fa19e8822f76b56002a12f1cdf2f8b0c7b41550f130f065d82",
+      "report_sha256": "0ac22aa56587a63e8e58845e0faada5ff4e50e25c23d105210f7b8d470e8cdb3",
+      "drc_sha256": "281011364805637e9e08ef1133ea5f393035f1b938d61141a0afa923109f9a7a",
+      "native_receipt_sha256": "9f53ddbc08801dff1b54087abd2cf61378e4f70a609f1bd75f513ad1a7d35377",
+      "drc_receipt_sha256": "4357f1cab35f72dbced382442b96a09f6c7f81f439272d23110d56f350c3aee8",
+      "correction_receipt_sha256": "46ef8769cfb830b9a46dcc4b488ec88e37a75a725b90609a74c5b99c62967994",
+      "native": {"loads": 2, "saves": 1, "refills": 0, "roundtrip_seconds": 0.344, "DRC_seconds": 2.438, "exit_codes": [0, 0], "hard_limits_seconds": [90, 90]},
+      "static": "Complete ordered complement/profile before and after native; ten exercised mutation rejections; unique2218UUIDs and unchanged non-copper declarations checked.",
+      "counts": {"references": 104, "pads": 325, "fixed_references": 32, "eligible_references": 72, "tracks": 191, "vias": 18, "rule_areas": 59, "private_guards": 26, "ground_zones": 4, "zones_total": 63},
+      "finding_disposition": "505records:500 inherited, five changed each way. Three are open-item representatives; the other two identify the SAME6623/eafa vias against their added In6 guards instead of In4. Root verified actual UUIDs. No other new non-open finding; parity not enabled. Not a clean-product or electrical-equivalence claim.",
+      "corrections": "Initial launcher failed before child creation; corrected static construction succeeded. Final report-only correction fixed stale physical order, nested ground list and prior final_closure; no native rerun. All allowances exhausted, no further construction or checker run.",
+      "root_manifest_interpretation": "Four GND definitions total: three retained from accepted-six, one added onIn6. Current legacy new_plane_definitions_unfilled=3 means three beyond protectedIn1, NOT three added in this step. Structured process object preserves the same U4x4/C24x1 filled/planarized/capped duties and source provenance; its presentation change is not an electrical blocker. Do not generalize this sidecar schema without explicit count scopes.",
+      "source_preservation": "Authoritative five files, accepted-six and preserved six3313E evidence remain unchanged.",
+      "next": "One existing-project eight-layer import preview, exact three input files only; reuse common input associations, not computed results. Verify imported profile/roles/guards and fresh90-ohm geometry before any routing release."
+    },
+    "eight_preview_checkpoint": {
+      "checkpoint_local": "2026-10-05T16:49:00-07:00",
+      "status": "PARTIAL_PREVIEW_HELD_AT_FLOORPLANNER_PREFLIGHT",
+      "project_id": "6ac3d5b7fc0d2d776ed14a5f",
+      "job_id": "6ac434b6a389adaff19ad80e",
+      "url": "https://app.quilter.ai/jobs/6ac434b6a389adaff19ad80e/create/floorplan",
+      "ui_api_version": "1.42.0",
+      "upload": "Only the exact eight_local_completion PCB/project/schematic; browser-accessible copies in .playwright-mcp/eight-2116-preview-20261005. No manifest, scripts, reports, PRL or account data uploaded.",
+      "import_counts": {"components": 104, "components_to_place": 72, "service_pins": 326, "pins_to_route": 235},
+      "import_warnings": "Known pin-count mismatch, existing-pour deletion and 16 missing-schematic references remain. Counts alone are not full imported identity/guard qualification.",
+      "selected_configuration": {
+        "file": ".playwright-mcp/eight-selected-config-1646.json",
+        "sha256": "79deaa37cb780c46bc58de25878e7cc772b860fdd1071b9d0bc36a2c1e7ce0ce",
+        "roles": ["signal", "ground", "signal", "ground", "ground", "signal", "ground", "signal"],
+        "copper_thickness_um": [35, 15.2, 15.2, 15.2, 15.2, 15.2, 15.2, 35],
+        "dielectric_thickness_um": [116.4, 300, 152.8, 300, 152.8, 300, 116.4],
+        "dielectric_constants": [4.16, 4.41, 3.91, 4.41, 3.91, 4.41, 4.16],
+        "dielectric_types": ["prepreg", "core", "prepreg", "core", "prepreg", "core", "prepreg"],
+        "material_names": null,
+        "preserve_internal_copper": true,
+        "routing_minima_um": {"trace": 177.8, "clearance": 200, "via_diameter": 650, "via_drill": 350, "board_margin": 250},
+        "placement_options_before_floorplanner_continuation": {"preferSingleSided": false, "componentClearanceMm": null}
+      },
+      "floorplanner": {
+        "response_file": ".playwright-mcp/eight-floorplan-result-1646.json",
+        "response_sha256": "461eeca0ecf763facc13d1be8de6beb5e51a447e23e50cedccc738a7096546d1",
+        "attempts": 1,
+        "request_id": "b9353290-c8fc-452f-ab9c-5e7b01c8f414",
+        "started_local": "2026-10-05T16:46:08.402-07:00",
+        "completed_local": "2026-10-05T16:46:37.706-07:00",
+        "room": "QUILTER_F_PLACEMENT_ROOM",
+        "members": "Exactly the 72 eligible references; none of the fixed32. Full names persisted in the response and matched against the existing placement CSV.",
+        "side": "FRONT",
+        "pinned": true,
+        "rect_xy_um": [77500, -122500, 122500, -73150],
+        "placement_options_in_floorplanner_state": {"preferSingleSided": true, "componentClearanceMm": 0.127},
+        "status": "PINNED_ROOM_INFEASIBLE",
+        "code": 110,
+        "retryable": false,
+        "rule": "BOUNDS",
+        "actual_planner_grid_rect": [0, 0, 256, 234],
+        "required_planner_grid_bounds": [3, 3, 253, 231],
+        "solver_status": "PREFLIGHT_INFEASIBLE",
+        "solve_seconds": 0,
+        "pack_seconds": 0,
+        "returned_rooms": null,
+        "disposition": "Actual room-versus-inset-bounds failure, not a demonstrated inability to place components. No physical-distance inference from grid cells, no resize/unlock/margin waiver/retry. Continue became enabled but was not clicked; no downstream placement-option persistence established."
+      },
+      "other_raw_evidence": [
+        {"file": ".playwright-mcp/eight-initial-board-1639.json", "sha256": "56793352c1701f478f4ce9357ae0c5858f93ee00d49191ff67415cce727cc8de"},
+        {"file": ".playwright-mcp/eight-initial-comprehension-1639.json", "sha256": "8d54cd0ecc6f3430a6f587aa8bb398b29d3166e30cd777b5ad115a491171ebee"}
+      ],
+      "remaining": [
+        "Disposition the fixed-room/inset-bounds semantics without silently changing the common allowed-placement contract.",
+        "Persist and verify common28 bypass/14 power/72 Front associations, GND primary, protected In1 pour and both90-ohm USB pairs.",
+        "Complete imported identity/copper/58 restrictions plus positive-room comparison.",
+        "Obtain fresh eight-layer90-ohm geometry on all four signal layers; do not copy four-layer computed results."
+      ],
+      "stop": "UI work stopped before16:49, details dialog left open. No more engineering in this bounded preview; preserve draft and resume only with a separately bounded disposition. No routing job, paid use, source changes or integration."
+    }
+  },
+  "checkpoint_local": "2026-10-05T21:55:00-07:00",
+  "status": "eight2116 preview accepted for isolated evaluation and full-layout job running since21:53:30; six native complete but impedance-held; no output accepted",
+  "latest_checkpoint": {
+    "recommendation": "Await the running standard JLC08161H-2116 full-layout evaluation. Its native/preview input is accepted for this isolated experiment and fresh90-ohm geometry clears current minima. Returned-output and fabrication qualification remain separate.",
+    "why_selection_evolved": "The initial 3313E choice has excellent reference spacing, but the supplier calculator's 90-ohm solutions at approximately 0.21mm pair gap are narrower than the current input minimum. More layers and close planes do not by themselves resolve impedance geometry.",
+    "six_native_progress": "Preserved attempt3 native geometry is now diagnostic-complete under a new separate CLI scope:74.86s, unchanged321 violations/184 staged opens, no new non-open findings, current manifest accurately bound.",
+    "six_blocker": "90-ohm/minimum-width and preview remain held. The old three-attempt builder stays stopped; its later diagnostic completion was not a reconstruction.",
+    "source": "All five authoritative hashes and all four accepted-six package hashes reverified unchanged.",
+    "next_bounded_scope": "When results are available, preserve and review returned native identity/copper/layers/pours and electrical findings before comparing against four-layer candidates. No automatic repair or second job.",
+    "no_actions": ["no six-layer routing launch", "no source repair", "no refill", "no integration", "no paid action"]
+  },
+  "supplier_impedance_screen": {
+    "source": "Interactive JLCPCB public calculator; current selected table, not a Quilter solve",
+    "target_ohms": 90,
+    "current_project_width_floor_mm": 0.1778,
+    "six_3313E": {
+      "entered_gap_mil": 8.2677165354,
+      "displayed_gap_mil": 8.27,
+      "outer_L1_ref_L2_width_mil": 6.05,
+      "outer_width_mm": 0.15367,
+      "inner_L3_refs_L2_L5_width_mil": 5.31,
+      "inner_width_mm": 0.134874,
+      "inner_snapshot": ".playwright-mcp/jlc-six-3313E-inner90-1547.yml",
+      "disposition": "Both displayed widths are below the current floor. This single-gap result does not prove no legal geometry, and no width relaxation is approved. Supplier soldermask/finished-copper/material assumptions must be reconciled with Quilter's earlier wider solutions."
+    },
+    "eight_standard_2116": {
+      "supplier_name": "JLC08161H-2116",
+      "roles_top_to_bottom": ["signal", "GND", "signal", "GND", "GND", "signal", "GND", "signal"],
+      "gap_sequence_mm": [0.1164, 0.3, 0.1528, 0.3, 0.1528, 0.3, 0.1164],
+      "gap_materials": ["2116 prepreg", "FR4 core", "two1080 prepregs", "FR4 core", "two1080 prepregs", "FR4 core", "2116 prepreg"],
+      "gap_Dk": [4.16, 4.41, 3.91, 4.41, 3.91, 4.41, 4.16],
+      "two1080_plies_mm": [0.0764, 0.0764],
+      "copper_mm": [0.035, 0.0152, 0.0152, 0.0152, 0.0152, 0.0152, 0.0152, 0.035],
+      "sum_copper_and_dielectric_mm": 1.5996,
+      "nearest_reference_gaps_for_four_signals_mm": [0.1164, 0.1528, 0.1528, 0.1164],
+      "initial_inner_at_8_27mil_gap_width_mil": 6.86,
+      "selected_gap_mil": 10,
+      "selected_gap_mm": 0.254,
+      "outer_L1_ref_L2_width_mil": 7.47,
+      "outer_width_mm": 0.189738,
+      "inner_L3_refs_L2_L4_width_mil": 7.28,
+      "inner_width_mm": 0.184912,
+      "snapshots": [
+        ".playwright-mcp/jlc-eight-2116-inner90-gap10-1551.yml",
+        ".playwright-mcp/jlc-eight-2116-outer90-gap10-1552.yml"
+      ],
+      "disposition": "Two selected-side supplier calculations exceed the existing width floor and0.2mm spacing floor. Physical construction is symmetric; opposite-side routing was not independently executed. Exact material/solver assumptions, native guards/stackup and Quilter import remain unqualified. No eight-layer PCB was generated."
+    },
+    "limits": "Numeric calculator output is not measured impedance, functional approval, board-level return continuity or a guarantee of routing completion."
+  },
+  "six_native_attempt": {
+    "executor": "3126a53a-0802-4c0d-b01e-e19e24a4fb5a",
+    "runtime": {"model": "gpt-5.6-sol", "reasoning_effort": "medium"},
+    "attempts": 3,
+    "corrected_attempt_history": "Initial report incorrectly claimed three before attempt3; actual first two were shell310/311. Root recovered their exact tool requests, then released only the unused final correction.",
+    "failed_first_candidate": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\six-four-signal-3313E-20261005T1539-sol",
+    "stale_first_candidate_evidence": "drc*.json and semantic-before/after-native.json were copied baseline results, not new execution. Preserve privately; never use them as derivative qualification.",
+    "candidate": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\six-four-signal-3313E-20261005T1544-sol-attempt3",
+    "pcb_sha256": "c749718086f4e29166ab346d44ec89324037b77e6668d6f1a1e378b3017ae38f",
+    "unfinished_manifest_sha256": "0625b73f219990e87f5687b92d582c7269f344ebda800968de0437f57f4699b8",
+    "native_readback_sha256": "2be592b2ce561d09d4fa79c40f453463eb172de1954187819bdb6afe882cb633",
+    "execution_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\six-four-signal-3313E-20261005T1544-sol-attempt3-execution",
+    "supervisor_receipt_sha256": "6f23135fa6f4ac7d8b489ef924c4eb8033c739fba2c77a02bd87602b17e368f0",
+    "helper_private_archive": ".playwright-mcp/six-3313E-failed-execution-recovery/build_six_four_signal_3313e.py",
+    "helper_sha256": "da3f90da5607e57f70124014fbbd50a6df7eaa524bce3d78e77ff76765a0c17a",
+    "root_hash_receipt": ".playwright-mcp/six-3313E-failed-execution-recovery/root-preservation-hashes.json",
+    "root_hash_receipt_sha256": "1cdbdd542095d68d6cc98730d801a6b9016549662cd979aa8025269f2512374e",
+    "native_counts": {"loads": 2, "saves": 1, "refills": 0, "references": 104, "pads": 325, "copper_objects": 209, "copper_layers": 6, "zones": 57, "rule_areas": 55},
+    "elapsed_seconds": 68.297,
+    "outer_supervisor_limit_seconds": 90,
+    "inner_DRC_limit_seconds": 60,
+    "helper_exit_code": 1,
+    "outer_supervisor_timed_out": false,
+    "inner_DRC_timed_out": true,
+    "completion_local": "2026-10-05T15:47:09-07:00",
+    "remaining": ["native DRC finding disposition", "final manifest binding", "90-ohm model/minimum-width disposition", "Quilter import"],
+    "tooling_limit": "Failed helper is privately archived, not qualified reusable tooling. Static outcomes are evidenced by reached control flow/readback, not a separately completed static test report."
+  },
+  "authorization": {
+    "owner_local": "2026-10-05T15:26:42-07:00",
+    "scope": "Unattended evaluation of a four-routing-layer six-layer construction, with an eight-layer four-routing-layer alternative if needed.",
+    "objective": "Reduce overall engineering time and agent-token cost; bare-board cost is secondary.",
+    "not_authorized": ["paid use", "purchase or fabrication order", "source modification", "automatic output repair or integration"],
+    "old_output_checker": "Its exhausted allowance remains stopped; this is an independent input-profile task."
+  },
+  "sources": [
+    {
+      "url": "https://jlcpcb.com/impedance",
+      "local": ".playwright-mcp/jlc-stock-stackups-20261005-1528.html",
+      "sha256": "1507b8ab8596103700676cbc25cd26a78e5357e61fcdc430748cc02424af7343",
+      "selected_controls": ["1.6mm", "1oz outer", "0.5oz inner"],
+      "finding": "Fifteen named six-layer constructions are listed; old JLC06161H-3313 is not the only option."
+    },
+    {
+      "url": "https://jlcpcb.com/pcb-impedance-calculator/",
+      "response_endpoint": "https://jlcpcb.com/api/jlcTools/impedance/selectPageImpedanceDefaultTemplate",
+      "local": ".playwright-mcp/jlc-six-templates-20261005-1537.json",
+      "sha256": "dfbd3324fbd6a5d8db97c35b62a5bbadffa12da8d978ee2c34486ff79849eb8d",
+      "selected_controls": ["Rigid", "6", "1.6", "0.5oz inner", "1oz outer"],
+      "finding": "Exact current template identifies core-specific Dk values and finished 1.65mm +/-10%; use these rather than the generic core Dk4.6 table."
+    },
+    {
+      "url": "https://jlcpcb.com/pcb-impedance-calculator/",
+      "response_endpoint": "https://jlcpcb.com/api/jlcTools/impedance/selectPageImpedanceDefaultTemplate",
+      "local": ".playwright-mcp/jlc-eight-templates-20261005-1535.json",
+      "sha256": "6c56f19da718a9bdd4067a1e8c03d6fef08b8e0aef51a1121f890c07a932b256",
+      "selected_controls": ["Rigid", "8", "1.6", "0.5oz inner", "1oz outer"],
+      "finding": "Actual JLC08161H-3313 construction, not an extrapolation from six layers."
+    }
+  ],
+  "six_primary": {
+    "supplier_name": "JLC06161H-3313E",
+    "roles_top_to_bottom": ["signal", "GND", "signal", "signal", "GND", "signal"],
+    "copper_names": ["F.Cu", "In1.Cu", "In2.Cu", "In3.Cu", "In4.Cu", "B.Cu"],
+    "copper_mm": [0.035, 0.0152, 0.0152, 0.0152, 0.0152, 0.035],
+    "dielectric_gaps": [
+      [{"material": "3313 prepreg", "mm": 0.0994, "Dk": 4.1}],
+      [{"material": "FR4 core", "mm": 0.1, "Dk": 4.36}],
+      [
+        {"material": "7628 prepreg", "mm": 0.2104, "Dk": 4.4},
+        {"material": "bare FR4 core without copper faces", "mm": 0.7, "Dk": 4.53},
+        {"material": "7628 prepreg", "mm": 0.2104, "Dk": 4.4}
+      ],
+      [{"material": "FR4 core", "mm": 0.1, "Dk": 4.36}],
+      [{"material": "3313 prepreg", "mm": 0.0994, "Dk": 4.1}]
+    ],
+    "sum_copper_and_dielectric_mm": 1.6504,
+    "supplier_finished_label_mm": 1.65,
+    "supplier_finished_tolerance_percent": 10,
+    "nearest_ground_distances_for_four_signals_mm": [0.0994, 0.1, 0.1, 0.0994],
+    "central_signal_separation_mm": 1.1208,
+    "rationale": "One additional routing layer versus four-layer S/G/S/S, with a close ground reference for every signal layer. The central signal pair is separated by more than eleven times its respective 0.1mm ground distance.",
+    "representation_gate": "Separate central prepreg/core/prepreg thicknesses and Dk now survive the derivative KiCad10 roundtrip and ordered comparison. Bare addsublayer tokens share one container type. No homogeneous averaging was used. Quilter import remains unverified.",
+    "mechanical_limit": "Nominal 1.6mm selection is not exact 1.6mm construction. This is an isolated study; final thickness/tolerance, service fit and contact/mount stack need mechanical rebinding before manufacture."
+  },
+  "eight_fallback": {
+    "supplier_name": "JLC08161H-3313",
+    "roles_top_to_bottom": ["signal", "GND", "signal", "GND", "GND", "signal", "GND", "signal"],
+    "copper_mm": [0.035, 0.0152, 0.0152, 0.0152, 0.0152, 0.0152, 0.0152, 0.035],
+    "dielectric_gaps": [
+      [{"material": "3313 prepreg", "mm": 0.0994, "Dk": 4.1}],
+      [{"material": "FR4 core", "mm": 0.1, "Dk": 4.36}],
+      [{"material": "2116 prepreg", "plies_mm": [0.1164, 0.124, 0.1164], "mm": 0.3568, "Dk": 4.16}],
+      [{"material": "FR4 core", "mm": 0.3, "Dk": 4.41}],
+      [{"material": "2116 prepreg", "plies_mm": [0.1164, 0.124, 0.1164], "mm": 0.3568, "Dk": 4.16}],
+      [{"material": "FR4 core", "mm": 0.1, "Dk": 4.36}],
+      [{"material": "3313 prepreg", "mm": 0.0994, "Dk": 4.1}]
+    ],
+    "sum_copper_and_dielectric_mm": 1.5736,
+    "supplier_finished_label_mm": 1.57,
+    "supplier_finished_tolerance_percent": 10,
+    "nearest_ground_distances_for_four_signals_mm": [0.0994, 0.1, 0.1, 0.0994],
+    "rationale": "Same four routing layers and close references, with additional ground shielding between the internal signals. Not two more routing layers than the six-primary option.",
+    "activation_conditions": [
+      "Six-primary composite dielectric cannot be represented faithfully by native/imported tools.",
+      "Six-primary returned routing demonstrates a material reference/plane limitation, rather than assuming all collision reports are solved by layer count."
+    ],
+    "status": "Actual supplier alternative identified; no native input or cloud draft constructed."
+  },
+  "reference_design_disposition": {
+    "benefit": "Mature Adafruit reference designs reduce circuit and component-selection risk.",
+    "limits": "New shape, placement, shared supply/return paths and imported pads still require verification; output findings are not automatically reference-design defects.",
+    "actual_boost_reference": "Adafruit MiniBoost TPS61023 4654, not an interchangeable PowerBoost design.",
+    "preserved_strategy": "Retain reviewed boost/protector/clock cells; free ordinary placement and add usable routing capacity without reopening settled sourcing."
+  },
+  "next_input_contract": {
+    "base": "Accepted six-3313 final input, not any returned four-layer candidate",
+    "base_pcb_sha256": "c3749f5c6be862faa27a738c9b256ab8112881cae0833e3b15495f884e24fc07",
+    "preserve": ["104 references", "325 native pads", "32 fixed and 72 eligible references", "209 retained copper primitives", "source In1 GND zone", "all private/contact guards and reservations", "outline", "five protected process vias", "schematic and project minima"],
+    "allowed_delta": ["physical stackup", "In3.Cu ground-to-signal declaration", "remove only derivative-added In3 ground plane", "profile and thickness metadata"],
+    "method": "Reuse accepted input evidence and independently compare the complete remaining native subtrees; no new general-purpose output matcher.",
+    "preview_gates": ["exact physical roles/materials", "only In1/In4 reference planes", "corrected common circuit and F-placement settings", "fresh 90-ohm solutions on four signal layers", "unchanged source and private isolation obligations"],
+    "not_yet_done": ["complete native diagnostic and final manifest qualification", "Quilter selected-profile preview", "six-layer routing job"]
+  }
+}

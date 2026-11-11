@@ -1,0 +1,5 @@
+# MANIFEST.sha256 hashes these files byte-for-byte; keep git from translating
+# line endings so the committed bytes are the hashed bytes.
+*.csv -text
+*.json -text
+*.sha256 -text

@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "status": "READ_ONLY_RETENTION_CANDIDATE_NOT_STAGING_AUTHORIZATION",
+  "license_context": "Source-derived CC BY-SA 3.0 hardware data; see ATTRIBUTION.md.",
+  "source_pcb": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+  "source_pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+  "contact_mask": "docs\\measurements\\2026-09-27-router-bakeoff\\quilter-contact-via-mask-2026-10-03.json",
+  "contact_mask_sha256": "489503349d1f05968ea165237a99bbd01e4381983b1f40273a9ab98fdef17fda",
+  "method": {
+    "parser": "tools\\kicad_sexpr.py",
+    "coordinates": "Native PCB millimetres; common mask rectangles translated by +100,+100 once.",
+    "selection": "B.Cu segments on each named net reachable through identical Decimal endpoint pairs from the first contact-pad centre. Both contact-pad centres are reached.",
+    "positive_connectivity_only": true,
+    "not_proved": "Complete copper connectivity, foreign-net isolation, filled-plane behavior, current capacity, loaded-contact clearance or private-pickoff topology.",
+    "records_hash": "Select UUID/start/end/width from source segments, with coordinates and width as source atom strings. Sort records by uuid; SHA256 of UTF-8 json.dumps(records,sort_keys=True,separators=(',',':')). Net and layer are bound by selection and source hash.",
+    "via_margin": "Minimum over all eight already-0.25-mm-expanded rectangles of Euclidean point-to-closed-rectangle distance minus actual copper radius 0.300 mm. Positive is clear; do not expand the rectangles by radius again.",
+    "guard_comparisons": 40,
+    "native_executions": 0
+  },
+  "blocks": [
+    {
+      "reference": "BT1",
+      "net": "VBAT",
+      "layer": "B.Cu",
+      "contact_pad_centres_mm": [[103.62, 100], [119.63, 100]],
+      "source_B_segment_count": 10,
+      "selected_segment_count": 4,
+      "width_counts_mm": {"1.5": 4},
+      "records_sha256": "5b1fab7041f9e747d485e3b846e7c3823e3e700c264d3185c3cd5d7fe6f813be",
+      "segment_uuids": [
+        "2f49a8db-9ea0-5b01-b543-35c160616851",
+        "c2af96d9-1246-51a5-a97c-ca696ec0eb98",
+        "dbfe8896-a663-5d4f-bb1f-57e566bf1537",
+        "e888f6af-4451-50aa-b400-6a27dc2a8fff"
+      ],
+      "existing_via_candidates": [
+        {"uuid": "0ba3129d-4c2f-51a5-b83d-47c5c587ae79", "xy_mm": [98.6, 107.45], "diameter_mm": 0.6, "drill_mm": 0.3, "minimum_guard_margin_mm": 4.053670865},
+        {"uuid": "bad9068e-b03b-5869-a449-cdb7731eb117", "xy_mm": [98.6, 108.35], "diameter_mm": 0.6, "drill_mm": 0.3, "minimum_guard_margin_mm": 4.465233468}
+      ]
+    },
+    {
+      "reference": "BT2",
+      "net": "/CELL_NEG",
+      "layer": "B.Cu",
+      "contact_pad_centres_mm": [[96.38, 100], [80.37, 100]],
+      "source_B_segment_count": 26,
+      "selected_segment_count": 26,
+      "width_counts_mm": {"0.1778": 2, "0.6": 1, "1": 22, "1.5": 1},
+      "records_sha256": "b0b040e5770822591a74543208ce05bf3bf6239bf239ca5d1586e0fc27766c45",
+      "segment_uuids": [
+        "0a99f757-0108-51c9-a4ed-c61984f3c688",
+        "0b5883c0-9562-5c2c-8bea-e6ffbb3357f1",
+        "17a23a6b-a834-5ea5-b753-0a43d6265525",
+        "1ab2e2d1-537e-5dbd-9a42-234296c8b73a",
+        "312f7924-5ee2-5f0d-a693-5debbe97e1a7",
+        "458beb15-9839-5a06-a637-cfac6cd3dfdb",
+        "52d3896a-4fd8-53b3-8c37-5359536a8ec8",
+        "5c8267b9-be1f-5d7d-ae64-f56a9b712f55",
+        "67db914a-3c5c-55cd-80ab-12af8c40c674",
+        "6a4941d6-4404-5906-80d8-763f6b6fdfdd",
+        "6b2d4698-1ace-56e9-b9e5-f39306617fc2",
+        "7eee6079-5f6d-5994-bbaa-27c4fa26ffb1",
+        "8bde881a-b019-52ff-959f-f7a6e4c51094",
+        "934c946b-fb42-5eda-8c9b-e8fb9fc7d3d3",
+        "98f6c703-fd6c-500b-82a3-cb13055526cd",
+        "a2d11e56-e6c2-5a59-98bb-869a3e1ef75e",
+        "a7324a03-5212-53e5-bf3c-ade45863473f",
+        "aa530e36-49b7-5cd2-a14f-6c782e255a9f",
+        "c67ed526-e360-53b4-adb3-0e88b54a69b8",
+        "c9250072-2855-5e93-a44d-2267e26ecd1a",
+        "dcc86ab7-5506-5eb4-a5e7-09bead768a07",
+        "dd595008-6e9a-5f7c-ab5f-b8800eecc44a",
+        "ef01327c-b391-53ad-8042-27f618266943",
+        "f04846d8-55e4-5646-ae18-66da7b826688",
+        "f2cfd112-5377-57ae-9d59-bf9301553a6c",
+        "f66cb2c1-c032-528a-8d89-0815956dbc86"
+      ],
+      "existing_via_candidates": [
+        {"uuid": "248ce18d-3a6e-50d8-b9ce-c721b99a2c63", "xy_mm": [84.249175, 107.750480], "diameter_mm": 0.6, "drill_mm": 0.3, "minimum_guard_margin_mm": 1.635480},
+        {"uuid": "73f524c2-3597-5233-906e-93443fee9d54", "xy_mm": [86.949175, 107.750480], "diameter_mm": 0.6, "drill_mm": 0.3, "minimum_guard_margin_mm": 1.635480},
+        {"uuid": "14e9c925-5186-5943-8002-513435324c90", "xy_mm": [91.1, 108.7], "diameter_mm": 0.6, "drill_mm": 0.3, "minimum_guard_margin_mm": 2.585000}
+      ],
+      "front_branch_obligations": {
+        "via_248ce18d": "F segment 449a683c-47c2-5b7a-b21a-e23241fcb2a9 reaches Q5.A1 centre (84.949175,107.675480).",
+        "via_73f524c2": "F segment e5071d6e-240c-51a2-b3f8-53aaf4376f4e reaches Q5.C1 centre (86.249175,107.675480).",
+        "via_14e9c925": "F endpoint-connected branch reaches C30.2 (91.1,107.608), U6.4 (89.8,107.1), R28.2 (88.908,108.55).",
+        "disposition": "Do not discard the two narrow B segments as orphaned routing. These are raw-cell-negative duties, not the separate R26/R27 PROT_FET_RETURN quiet pickup. F copper is inspected here, not added to the proposed retention set."
+      }
+    }
+  ],
+  "engineering_disposition": {
+    "recommended_direction": "Evaluate retained contact-feed blocks plus conservative restrictions on newly generated copper, rather than forcing a fresh escape from fully guarded contact pads.",
+    "retention_set_is_candidate_only": true,
+    "five_additional_vias_are_not_process_seeds": true,
+    "inherited_via_rule_mismatch": "All five candidate ordinary vias are 0.600/0.300 mm, below proposed new-via minima 0.604/0.350. No retention exception, resizing or replacement is approved.",
+    "blocking_representation_question": "Whether Quilter can preserve these exact preplaced feeds overlapping all-track keepouts while still enforcing every restriction on new copper. Public keepout/pre-routed-trace docs do not establish precedence or an exemption.",
+    "not_authorized": ["Clear track flags", "Carve unqualified feed holes", "Add surrogate copper", "Suppress a class of DRC findings", "Assume .kicad_dru support", "Remove or resize source vias", "Stage the full input", "Upload or submit a new job"],
+    "next_item": "Bounded read-only determination of a supported preplaced-feed/keepout representation. If documentation/UI cannot settle it, specify one isolated import/control experiment and obtain a distinct scope disposition; do not repeat native blanket-rule controls."
+  }
+}

@@ -1,0 +1,1640 @@
+# Quilter playbook: an agent-assisted layout workflow
+
+Use this guide to prepare useful jobs and evaluate their results without
+relearning every experiment. Optimize for an acceptable board with bounded
+owner/agent effort, not trace aesthetics or recovery of sunk costs.
+
+Evidence reviewed through **October 6, 2026**: Quilter UI/API through1.42.0
+(earlier observations used UI1.40.0/API1.40.1) and KiCad10.0.6.
+This is a living procedure, not a platform guarantee.
+
+**November 9, 2026:** Quilter work is paused. A separate six-layer
+DeepPCB/agent-assisted candidate reached zero opens; see the
+[review brief](pcb-review-2026-11.md). It is not a Quilter completion result
+or a released board. The [agent-first workflow](agent-first-pcb-workflow.md)
+consolidates cross-tool lessons: plan power/return/data paths and complete
+critical cells before routing, including battery-contact via exclusions.
+No controlled total-cost comparison establishes a universal platform winner.
+The [workflow study](quilter-workflow-study-2026-10-02.md) retains the dated
+reasoning; its linked ledgers bind exact files and results. The
+[closure plan](pcb-closure-plan.md#owner-pause-and-next-item) controls current
+authorization and blockers. This guide does not release another job,
+native-tool retry, source edit, purchase or fabrication.
+
+**October5 paired-input update:** the flexible draft recognizes72 movers
+and the named F room, but room recognition alone does not establish member
+assignment. The uploaded stackup initially classified every copper layer
+as signal; setting In1 to Ground and enabling internal-copper preservation
+persists in the selected configuration. That configuration, not the stale
+top-level detected-stackup summary or legacy design-parameters defaults,
+is the relevant settings evidence. Two saved90-ohm USB pairs produce
+fresh per-layer calculations; this closes numeric capability uncertainty,
+not return-path or output acceptance. The same project cannot create its
+second job until the first is submitted. Plan setup order accordingly;
+never submit unreviewed defaults just to unlock another draft.
+
+**October5 first submission lessons:** bulk CSV upload **appends**, rather
+than replacing, comprehension rows. Export the old table, clear only the
+intended category, import the corrected table, then verify persisted row
+counts and values. Values with voltage suffixes were misread as100nF;
+verify capacitance as well as parent pins. Explicitly assign every eligible
+component to its region and select preserved pours; neither a recognized
+room nor the internal-copper toggle alone proves those entries exist.
+Compare per-reference/pin/net/layer records rather than aggregate counters:
+duplicate-pin suffixes, NC naming, a paste-only aperture and a copper
+graphic produce different counts here without lost connected terminals.
+Public-page Markdown omitted pricing that remained in official HTML
+structured data (non-commercial price0); distinguish that policy from an
+account-specific quote. Power values must be identified as source-backed
+routing screens versus actual operating budgets; Quilter's20C IPC2221
+check does not replace project thermal/transient acceptance.
+
+**Observed placement-stage limit, October5:** six placements arrived after
+41-46minutes and routing continued separately. Their29 passing groups
+represent28 bypass entries plus one region; first-placement details contain
+28 pin-distance checks and72 component-region checks. The bypass threshold
+is a generic10mm, not an independently accepted local-decoupling limit.
+Power/differential suites have no executed checks at this stage, and the
+placement's25.93% routing value merely repeats retained input copper.
+Workflow steps are not a routed-net percentage. Also inspect actual sides:
+`singleSided=false` correctly reflects two fixed rear contacts while all72
+eligible parts remain front-side in the checked placement.
+
+**Observed routed-result limits, October5:** the
+[first flexible outputs](measurements/2026-09-27-router-bakeoff/quilter-four-candidate-review-2026-10-05.json)
+arrived57-61minutes after launch at86-87%; another92% beta arrived about
+159minutes after launch with83 reported padstack collisions. A quiet result
+list does not prove the job stalled; workflow totals can grow. Compare
+completion alongside electrical failures and unexecuted checks, not as the
+sole objective. Identical summary metrics do not prove identical layouts.
+Physical capacitor proximity can pass while routed supply paths fail:
+candidate1.1 places C15 only2-3mm from its MCU pins but reports31-32mm
+routes. Region membership is not local electrical organization.
+
+Do not subtract incomplete-net counts from native unconnected-item counts,
+or treat a power-check pass as full-net connectivity. Preserve raw native
+outputs before inspection. Missing fill caches require a controlled output
+qualification, not an automatic claim of lost zone intent. A checker that
+collapses UUIDs or compares unnormalized pad serialization cannot qualify
+preservation; record its failure rather than rejecting the PCB on those
+false comparisons. Timeouts likewise leave evidence open. Keep promising
+candidates with a finite review list, but do not start costly manual
+closure or promote a higher-percentage output before those gates close.
+
+**Final-run supplement:** the same job finished after3h13m with12 results.
+The beta strategy achieved92.18-94.65% but reported83-178 padstack
+collisions. Candidate3.2 did improve C15's actual reported route from
+its predecessor's28mm/two switches to4-5mm/zero switches, so later
+optimization can improve electrical geometry as well as completion.
+Compare candidates with their actual placement lineage and keep both
+gains and regressions visible. Classify collision findings before treating
+them as native shorts, benign reports or a count of independent repairs.
+Evaluate error statuses separately: fewer failed decoupling checks may
+mean missing paths became uncheckable, not that they were fixed.
+Computed differential-path checks can coexist with an incomplete-net
+report; they do not establish all-terminal connectivity.
+
+**Eight-layer comparison, October6:** the
+[eight2116 run](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json)
+finished in4h31m with12 candidates and the same94.65% best completion
+as four layers. Its best2.2 reports11 incomplete nets and274 padstack
+collisions, versus four3.2's9 and178. The extra routing layer did not
+demonstrate an overall closure advantage in this run, although C15/C17
+have useful short, zero-transition paths. Different placements, impedance
+geometry and client/backend versions prevent attributing the outcome
+solely to layer count. Prefer a finite remaining-work comparison over
+another automatic stackup trial.
+
+Collision records here omit both nets and the other colliding object.
+Do not label equal empty net fields as same-net contact, count every
+reported layer witness as an independent defect, or dismiss them as
+benign. Eight2.2 also has zero failed power screens but six errors;
+VAMP's incomplete-path error is absent from its separate incomplete-net
+list. Preserve both observations rather than treating either list as
+complete electrical truth. Passing downstream placement-region checks
+does not retroactively turn the earlier Floorplanner preflight into a
+packing pass or establish physical clearance.
+
+The bounded eight-output static review did preserve all209 retained
+copper objects and63 zone definitions, but stopped with unresolved pad
+normalization at45 references. Preserve that partial evidence without a
+fourth retry or an all-pad pass. KiCad power-to-signal declaration changes
+do not alone prove ground-plane loss, just as1e-14mm serialization tails
+do not prove meaningful fixed-part movement. Compare actual layer use,
+zone definitions and filled returns separately.
+
+**Attributed support guidance, October6:** owner shared Justin's reply:
+the experimental beta router tends to introduce padstack collisions while
+increasing completion and needs detailed review. Select a collision and
+use **Focus in Viewer** to locate it. The13:21 paired diagnostic subsequently
+exercised category -> individual collision -> Focus in viewer on F/B/In1.
+Possible courtyard crossings and copper overlaps are not
+interchangeable electrical defects. Support's likely-router explanation
+does not classify our individual reports or establish their independence.
+
+Support recommends ranking by estimated finishing effort, reviewing
+placements, increasing Floorplanner component spacing and reducing
+fabrication trace/space/via minima where feasible. Compare a beta result
+with its same-placement non-beta predecessor before assuming the higher
+percentage is cheaper to finish. Justin's October12 follow-up says spacing
+generally uses the courtyard layer; body/courtyard separation alone is not
+copper escape clearance.
+Review ordinary new-route minima against a real supplier/process while
+retaining current/impedance requirements, protected process seeds and
+contact/private-return exclusions. Do not globally shrink existing copper.
+Full native DRC needs the intended project rules, not just the downloaded
+defaults. The [support disposition](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json)
+records unanswered questions; it authorizes no rerun, refill or repair.
+
+**Attributed support scope and export lesson, October16:** Justin says
+Quilter does not offer design-review services, but can investigate
+product-specific questions. He requests the width metadata because his
+internal view shows no generated below-minimum traces; export is a possible
+explanation, not a confirmed diagnosis. Send a small field-limited excerpt
+with capture date, exact job/candidate IDs, source hashes and coordinates
+from the untouched download, not full account/browser captures or a locally
+repaired board. A candidate summary field need not describe the router's
+pre-export geometry. The [width evidence](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json)
+binds177.8/162 metadata to two raw0.162mm examples without claiming causality.
+
+His recommendation to increase IC1 spacing needs an effective placement
+change: this job had104 preplaced components. A parameter change alone is
+not evidence of moved parts or more routing room. Prefer a bounded actual
+placement alternative before a multi-variable job matrix, and retain the
+existing electrical/process gates before reducing geometry or assigning a
+power plane. Product support is not a substitute for those engineering
+decisions, and advice does not itself authorize a new job.
+
+**Observed same-placement diagnostic, October6:** under the identical
+qualified input project, native2.1 has76 unconnected records and no
+short/copper-clearance/hole-clearance findings; beta2.2 has32 but adds
+7 short,114 copper-clearance and4 hole-clearance records. Some directly
+involve VBAT/CELL_NEG contact pads and signal vias. Prefer2.1 for the next
+diagnostic, not acceptance: it still has468 findings, including80 width
+violations. Neither output has saved fill caches, so this no-refill result
+does not qualify plane/return connectivity or final poured clearance.
+Native pad comparison resolves the earlier serialization uncertainty:
+325 pad records match between outputs; input differences are expected
+global transforms on the72 movers, not changed checked local pad semantics.
+
+The renderer's saved `infos.message` contains object/net codes, coordinates
+and numerical clearances missing from the ordinary violation details.
+All274 reports group into148 service object pairs:18 via pairs repeat on
+all8 layers. These are not148 proven root defects.130 reports use equal
+nonempty internal net codes,132 different codes and12 unknown; neither
+blank-net equality nor same-net copper automatically disposes hole/process
+spacing. Three viewer samples correlate to native gaps0.1779,0.1949 and
+0.1261mm against0.2mm: genuine clearance deficits, not hard shorts.
+Keep collision counts, physical object pairs and independent repair tasks
+distinct; preserve nonfinite sentinels rather than inventing distances.
+
+Use isolated, unchanged PCB copies with the intended project configuration,
+preserving returned projects separately. Both outputs contain below-floor
+tracks; classify inherited versus new copper before blaming all width
+findings on the router. Sequential CLI runs completed after concurrent
+runs timed out, but this does not establish concurrency as the cause.
+Preflight boolean CLI flags and verify copy paths before native loading:
+the first comparator wrongly read the original qualified comparison input
+without saving; its evidence was excluded and bytes remained unchanged.
+These lessons and exact hashes are in `paired_diagnostic_2026_10_06_1321`
+in the eight-output ledger. No extra retry or product acceptance follows.
+
+**Placement-first return, October13:** two outputs arrived in1h50m instead
+of the earlier eight-layer job's4h31m, but fewer candidates and a different
+input prevent attributing the runtime difference solely to placement.
+Non-beta1.1 reports86.01%/30 incomplete nets/no padstack collisions; beta1.2
+reports94.24%/12 incomplete nets/277 collisions. Short zero-transition IMU
+supply paths are useful local evidence, not an overall closure win. USB
+and power gates remain; beta's better C18 path does not dispose its collisions.
+
+Check native export metadata separately from physical content. Both preserve
+the retained209 copper and all63 zone definitions, yet their projects lower
+hole-clearance/hole-spacing minima and alter spokes/netclass rules. The
+physical copper/dielectric thickness, Dk and type rows remain despite removed
+material labels and changed declaration/setup fields. Do not call this lost
+stackup or silently adopt returned rules. Preserve the original download,
+and use an explicitly isolated intended-configuration copy for later DRC.
+
+New native routing can lack serialized UUIDs even while retained objects
+keep theirs. A UUID-only dictionary then undercounts real additions: this
+review initially reported209 objects/zero additions, while direct primitive
+counts found1563/1693 objects. Retained-UUID preservation and new-copper
+inventory need separate strategies. Anonymous new objects are not by
+themselves proof of invalid output. Likewise, explicit zero-angle insertions
+can reorder serialized children; positional traversal verified only123 of
+140 zero deltas here. Keep the remaining mapping uncertainty rather than
+calling every zero a qualified default or rerunning an unchanged checker.
+The later20:28 configured-native checkpoint resolves all140 by UUID-matched direct
+parent fields and confirmed all325 native pad records; this was a focused
+checker correction, not a change to the returned boards.
+
+**Configured native continuation, October13:** same intended project,
+schematic, parity and severity mode gives184 input unconnected records,
+80 for standard1.1 and36 for beta1.2. Standard has no native shorts/copper
+clearance findings but76 width and one hole-clearance finding. Beta has
+7 short records,117 clearance findings and six new vias in named contact-metal
+guards. Fewer opens cannot outweigh cross-net shorts or prove a finishing
+advantage over a differently staged/filled source. Native counts must still
+be interpreted alongside functional power, USB and return-path requirements.
+
+The new-route width census is now concrete:76 standard segments at0.162mm
+and255 beta segments at0.160mm, below the configured0.1778mm floor; retained
+segments meet that floor. Native DRC reports76/199 width findings in default
+first-error-per-track mode; this is not an exhaustive per-rule census.
+State the actual flags; do not infer255 safe/unsafe independent connections
+from segment counts or assume all below-floor tracks came from the input.
+
+Identical project files are necessary but not sufficient for identical
+effective setup. Returned PCBs add embedded `solder_mask_min_width 0.1`;
+the input omits it. Keep the50/64 mask-bridge reports visible without calling
+all of them new routing defects or silently relaxing the rule. All three
+compared files lack saved fill caches, so no-refill DRC cannot qualify final
+plane connectivity or filled clearance. Preserve diagnostic copies and use
+a separately scoped controlled setup/fill comparison if resolving that limit.
+
+This pass independently confirmed that every anonymous native routing object
+loads and all104 poses/325 pads match. For report comparison, preserve
+multiplicity and use physical item descriptions/positions rather than random
+UUIDs generated by separate loads; unmatched records are not automatically
+new root defects. See `configured_native_review_2001` in the eight-output ledger.
+
+**Setup preparation and finishing assessment, October13:** inspect the exact
+byte representation before editing an immutable-input derivative. A planned
+single-field mask insertion failed because its marker assumed LF while the
+baseline used CRLF. No derivative or fill was produced. Byte preservation
+requires newline-aware matching with an exact one-change assertion, not
+blind normalization. Preserve the failed helper and stop at the correction
+limit; a remaining time allowance does not authorize another retry.
+
+The separately authorized22:42 recovery resolved byte staging, not native
+fill. Keep candidate formatting independent of the baseline: the returned
+file uses spaces/trailing whitespace, whereas the baseline uses tabs/CRLF.
+An actual adjacent-marker control also exposed `bytes.count` ignoring
+overlapping matches at shared newlines; an overlap-aware count fixed that
+without removing the control. All eight final controls passed. Baseline
+mask insertion adds exactly31 bytes, candidate stays unchanged, and all12
+staged-file hashes match. Directory names are not evidence: the recovery's
+`filled` folder still contains unfilled pre-copies because native execution
+was not reached within its start cutoff. Reuse these qualified inputs;
+do not repeat staging merely to resume the next stage.
+
+The subsequent native item actually filled both copies: standard1.1 changed
+from80 to34 open records with no new non-open findings in the physical DRC
+multiset;76 width findings and one hole finding remained. Baseline filled
+nonfill/return witnesses passed, but its separate mask-only no-fill DRC timed
+out. A timed_out/supervisor124 receipt cannot become success because the
+child return field says0. Continuing after a stop-on-timeout instruction is
+a procedural deviation even when subsequent independent outputs are useful.
+Preserve the evidence and missing attribution control without hiding either.
+
+Strict serialized comparisons can reject precision/default-label changes
+while exact native geometry remains equal. Here a separate source-bound
+proof covered all differing routing structures plus the precise alias and
+material/finish-label deltas, requiring native physical and retained-object
+equality. Keep that composite proof distinct from the original HELD report;
+do not widen a generic tolerance or treat a failure-gate guard as an actual
+geometry mutation test. Candidate private-return qualification is a separate
+dependency, not implied by native zero shorts or the34-open DRC result.
+
+That candidate witness subsequently passed on the exact saved file. Its34
+remaining native opens are all non-GND across30 nets; the50 mask findings
+also match the common-mask filled input physically. This resolves useful
+candidate attribution without resurrecting the missing unfilled control.
+Do not turn a nearby headline open count into an economic comparison with
+a different source layout/layer count.
+
+For later read-only route studies, a qualified native-saved output supplies
+persistent UUIDs for previously anonymous routing. Bind those exact IDs and
+net/type/layer/width attributes to native objects rather than reconstructing
+long raw coordinates with an unqualified rounding rule. Here all76 width
+subjects matched; the native screen found no foreign-copper obstacle to the
+small proposed growth, but nine same-net contacts across+3V3/D+/VCORE.
+That supports local repair planning, not blanket width edits or a claim
+the contacts are harmless. NPTH/edge/keepout/impedance/current duties remain.
+Hash-binding an input in a supervisor does not pass it as a child CLI
+argument: preserve the actual failed invocation and check the complete
+command, not just the reviewed helper source.
+
+**Repair-planning lesson, October14:** reconcile each open net's complete
+saved terminal groups before assigning routes. Here all30 nets' record counts
+equal group-count-minus-one; that is a topology consistency check, not34
+independent repair jobs. Bind pin functions too: the isolated +3V3 terminal
+is IMU CS, POWER is GPIO/enable/gate control, and R11/D3 connects QSPI_CS
+to USBBOOT. Neither names nor a test-pad witness establish optionality.
+Seven of nine prospective same-net contacts already have literal F segment
+paths; two share one unresolved local area. Reuse such cheap static evidence
+to narrow the review, without claiming SI/current legality. Budget the hard
+core/flash/USB/power corridors before easy service closure; keep every required
+terminal in the plan. See the [bounded plan](quilter-repair-plan-2026-10-14.md).
+
+**First pilot limitation:** a completed native inventory is not a repair
+result. Six nearest-endpoint proposals here collapsed to three path shapes
+with10nm-neighbor anchors; do not count them as six distinct corridors.
+Track sums through a BFS path, especially one using a filled plane, are not
+shortest electrical lengths or loop-area evidence. The snapshot's syntax
+failure survived full code review; static syntax preflight should precede
+native dispatch. A later inline-expression syntax failure and3.520s-late
+launch remain failed/deviating evidence, not completed crossing tests.
+Reserve actual analysis/review time rather than launching at the cutoff;
+stop the item without inventing a physical PCB blocker.
+
+**Exercised continuation:** native effective-shape tests can reject a finite
+route batch without proving general impossibility. Check positive drill
+dimensions before treating `GetEffectiveHoleShape` as a physical hole:
+zero-drill SMT placeholders produced false hole-hit labels here. Preserve
+the raw report and correct its interpretation; independent copper-clearance
+rejections need not be rerun. Inspect actual Python overloads too:
+`SHAPE_CIRCLE.Collide` exposes a segment overload, while the exercised polygon
+receiver accepts a shape. AST success alone does not qualify native APIs.
+
+For ordinary through-via access, include fixed copper on every layer and
+actual rear-contact guards. Separate refillable GND-cache intersections from
+fixed obstacles, then require refill/private-island evidence before acceptance.
+Both tested sites here failed a real whole-span GND via, not their plane
+intersections. For a strictly width-only edit, source-span replacement plus
+exact inverse-byte reproduction can preserve all other geometry/fill bytes;
+native component equality adds topology evidence, not current or DRC approval.
+
+Bind the report mode before milestone validation: `--all-track-errors` needs
+the same-mode baseline, not a comparison with default first-error counts.
+The12-width derivative's default DRC timed out with empty streams and no
+report. Supervisor timeout/124 remains authoritative even if a terminated
+child records0. A leftover project lock is evidence to preserve, not proof
+of the cause. Do not count AST-only comparison controls as executed or
+reconstruct an overwritten helper revision from its hash. See the three
+October14 continuation entries in the
+[source-bound ledger](measurements/2026-09-27-router-bakeoff/quilter-eight-candidate-review-2026-10-06.json).
+
+The separately authorized paired recovery completed without refill/save:
+39.860s baseline and3.047s candidate, with exactly12 width findings removed
+and unchanged complete non-width/parity multisets. This does not explain
+the earlier timeout or prove a path/lock workaround. Raw open witnesses can
+select different objects: six records changed representatives while counts
+and saved native components stayed unchanged. Preserve the strict mismatch;
+classify each replacement against source-bound attachment evidence instead
+of normalizing away UUIDs or assuming equal counts prove equivalence.
+Persist unmatched records before evaluating proof gates. A supplement that
+only indexes segments/vias cannot prove a track-to-pad replacement; root
+rejected that helper before execution. A corrected source-bound supplement
+then resolved all six: four exact F segment joins, one solid rectangular
+pad-centre attachment and one actual track/via annular contact. For the pad,
+serialized shape/positive size/no drill and native effective-copper bounds
+qualified this specific centre; generic bbox overlap remains insufficient.
+A via's drill centre alone is not annular copper: check that real track
+extent reaches the ring. Require equal non-null representative components,
+a distinct unchanged other endpoint, and actual component/attachment/pad
+negative controls. Retain the strict raw HELD result beside that supplemental
+proof rather than rewriting it as an exact match. No open was removed.
+
+Prepared native-save comparisons must distinguish originally serialized
+UUIDs from transient IDs assigned to anonymous copper. Name every required
+invariant explicitly: suffix-filtering Boolean fields omitted a nonfill
+semantics gate in this preparation. These were code-review corrections,
+not exercised fill-preservation evidence.
+
+A retained-routing UUID set classifies routing, not source pads or saved
+filled islands. Keep those categories separate in contact/cut reports.
+Generated provenance, a GND net name or ordinary through-via dimensions do
+not qualify replacement, private-return topology or via-in-pad processing.
+Adjacency invariants are not negative mutation controls. The October14 core
+trial's contact helper failed this review before execution; its first-item
+cap ended without a qualified replacement plan. Honor that stop/go result
+instead of spending the reserved implementation time on a new tooling loop.
+Attribute the limitation to the uncompleted preparation, not the physical
+board or Quilter's routing capability.
+
+Use exact source net identities before classifying closure work. The
+saved-evidence assessment grouped76 narrow segments into eight net/layer
+packages and15 exact endpoint runs, totaling17.045255mm;53 segments are
+on+3V3/VCORE. Endpoint runs are not full pad/via connectivity components
+or guaranteed individual repairs. Of80 unfilled native open records,46
+are GND and34 span30 other nets, including all six QSPI nets. Missing
+ground fills justify a controlled comparison, not a prediction that46
+opens disappear or that the board will end at34 opens. KiCad10 name-only
+net bindings must not be read as legacy numeric root net tables. Treat
+substring-based circuit labels as heuristics: interrupts are not I2C bus
+wires, and USBBOOT is not a differential USB data conductor.
+
+Separate repair questions even when their dimensions are similar. The
+CC2/X6 hole-clearance deficit is6.3um on In2; CC2 is not among the76
+narrow F tracks. Raising0.162mm tracks to0.1778mm adds7.9um per side,
+and a pair of widened tracks loses15.8um separation. A prospective
+present-copper screen must account for both moving boundaries and test
+both cases. Such a screen does not replace hole/edge/keepout, filled-plane,
+private-return, impedance or current qualification. Here the one native
+attempt passed synthetic controls and inventory counts, then stopped at
+static/native selection equality before any copper-pair comparison. Its
+missing field-level mismatch evidence prevents a cause or widening
+conclusion; preserve that limit rather than treating76 matching counts
+as geometry proof. This is not a failed physical widening trial. See
+`setup_fill_review_2216` in the eight-output ledger for executed evidence
+and the explicit distinction from prepared, unexecuted fill tooling.
+
+**Attributed continuation guidance, October12:** Justin recommends editing
+a placement and returning it for routing. Beta candidates may still be
+generated; ignoring them is not the same as disabling that router. Use
+reviewed edited poses with the qualified retained-copper input rather than
+accidentally freezing all generated routing from a congested candidate.
+For a routing-only comparison, save and hold the actual revised placement;
+changing a spacing preference does not itself move fixed imported parts.
+Keep the stack/rules fixed for a placement experiment before considering a
+separate supplier-qualified ordinary-signal geometry change.
+
+Justin also says fabricator width constraints should apply as minima,
+with a possible BGA-fanout exception when width exceeds pitch. This is
+not an established exception for this board. Distinguish retained-input
+tracks from newly generated output, and check pad/return/transition access
+before choosing local moves. Do not turn a useful internal width audit into
+an automatic support round, global rule waiver or manual repair exercise.
+
+The bounded October12 static audit of the exact qualified eight input
+finds191 tracks, all at least0.1778mm;0.160/0.162mm do not occur. The
+previously reported narrow output widths therefore were not unchanged
+retained input tracks. This narrows attribution without restoring missing
+output coordinates or proving a particular router exception. Keep the
+retained vias' older diameters/drills separate from track-width failures;
+new-route minima are not retroactive permission to resize protected seeds.
+
+**Observed evidence-lifecycle limit, October12:** restoring tracked branch
+`fc44882` did not restore the ignored candidate archives and raw diagnostic
+files at their recorded paths. The qualified input survived in the separate
+private experiment root, but the browser required sign-in to recover the
+returned placement. A committed hash records provenance, not availability
+of its bytes. Archive raw native files, exercised helpers and receipts in a
+durable private experiment directory outside disposable worktrees; use
+worktree browser staging only as a transfer location. Recheck availability
+and hashes before promising a continuation. Do not reconstruct an allegedly
+identical placement from a summary or borrow unrelated older output.
+
+**Observed placement-preparation lessons, October12:** the regenerated
+candidate ZIP changed bytes while its embedded PCB and project matched
+their historical hashes exactly. Preserve both archive identities and
+compare the actual native payload before declaring placement drift.
+
+Study a complete local supply group, not one capacitor distance. IC4 is
+the LSM6DSOX IMU, not an amplifier: its eligible C23 bypass must remain
+local while approaching fixed C24. The finite four-pose proposal reduces
+native pad-centre distances from11.19 to2.26mm for C24 and2.33 to2.07mm
+for C23, but these are not routed lengths, service pin-distance metrics
+or electrical acceptance. R11 and TP4 moves also carry QSPI/debug
+restoration obligations. Keep the proposed poses distinct from their
+implementation: the first derivative was later rejected for a constructor
+rotation defect. A90-second DRC timeout alone supplied no placement verdict.
+
+Apply obstacle semantics by side and function. Opposing-face battery
+contact courtyards are not automatically F-component-body exclusions;
+their conductive metal still restricts B copper and through-vias.
+Missing courtyards require an explicit alternate body envelope, not a
+claim that a Fab/silk/pad bound is a native courtyard. Narrow mixed-envelope
+gaps above the placement setting do not prove copper clearance or usable
+escape space. A via probe that omits complete contact/private-guard
+polygons is not a legal transition witness. Check both supply and return
+access, reusing a protected existing return seed only when its actual
+topology and a feasible local path support that use.
+
+**Observed qualification-tooling limits, October12:** a failed native
+check saved its output before failing a later angle assertion. The corrected
+checker then saved that output again; equality on the second save proves
+idempotence, not preservation through the first save. Retain immutable
+pre-save and post-save files and the exact executed checker revision.
+Here the initial checker was overwritten, and its intended snapshot
+omitted complete footprint graphics, copper geometry, zone settings,
+outline geometry and stack/rule fields. Do not promote that partial
+snapshot into a complete source-preservation pass.
+
+Bind the actual board-matching project path/hash at diagnostic launch.
+The October12 receipt instead hashed a differently named project; a later
+correct same-stem copy cannot establish which rules the timed-out run
+used. A supervisor timeout overrides success-looking child/receipt fields
+when no result was produced. Preserve these failures explicitly and
+finish the named evidence gaps in a separately bounded item rather than
+restarting the placement search. For a deliberately unrouted input, prove
+legal local placement and feasible escapes/restoration, not already
+completed product routing; filled-return acceptance still follows routing.
+
+**Serialized equality is not physical pose preservation, October12:**
+the complete source/static/native comparator proved child-field equality,
+bounded sub-nm mover-coordinate serialization and five mutation rejections,
+but root later withdrew its physical-preservation acceptance. The builder
+changed only each parent footprint `at`; KiCad's globally serialized pad
+angles then stayed at the source pose while the pad centres moved.
+For IC4, source footprint-90/pad5=0 should become footprint180/pad5=270,
+as independently observed in recovered2.1. The bad derivative retained
+pad5=0 and also produced six adjacent U1 pad shorts. A same-file native
+roundtrip and a checker repeating the constructor's frame mistake both
+missed this.
+
+Use native footprint transforms and preserve pad orientation **relative
+to its footprint**, not an unchanged global child angle. Cross-check
+actual global pad geometry against an independent correctly transformed
+placement, and include a wrong-child-angle mutation with centres unchanged.
+Do not infer defective source lands or relax routing rules from a malformed
+derivative. Complete native DRC exposed this construction error under the
+actual intended project; all source files remained unchanged.
+
+The corrected native-transform derivative subsequently passed independent
+source-relative and recovered-placement global-pad checks, including the
+actual malformed board as a negative control. Its configured no-refill DRC
+removed all six shorts and all nine clearance findings without changing
+rules or footprints. Increased silkscreen warnings remain separate from
+copper legality; neither184 staged opens nor zero shorts means a routed,
+manufacturable board. TP4/D+1 also illustrate why a tight rectangular
+envelope is not the physical gap: both are bare circular test lands,
+with0.271516mm copper separation versus0.127543mm envelope separation.
+
+Define retry budgets in **total child launches as well as stages**. The
+corrected item used six board-processing children and three no-board API
+probes under an executor interpretation of two multi-stage pipelines.
+Do not report that as three-or-fewer native invocations. Likewise, label
+an interactive type/UUID-multiset DRC comparison as such; without a saved
+checker/report it is not a durable complete-record equivalence proof.
+
+**Observed duplicate/reupload behavior, October12, UI/API1.43:** corrected
+placement imported with104 components and zero to place. The existing
+circuit entry arrays survived replacement, but copper-layer roles reverted
+to Signal and required restoring the four Ground roles. Continue from
+circuit comprehension regenerated a genuine90-ohm profile matching the
+physical stack and minimums; initial unsolved profiles were not evidence.
+With no movable parts, Floorplanner returned `no movable member in any
+room`; normal Continue worked and removed the72 inapplicable mover-room
+associations. Do not rerun packing, move fixed parts or remove the room to
+cure a zero-work diagnostic. This is an observed preview, not a launched
+routing job or demonstrated router behavior.
+
+The separate static importer checker failed before its renderer comparison.
+Inspect actual captured schemas before spending the execution budget:
+comprehension inputs are top-level `entries`, not nullable computed outputs;
+candidate `/board` can have no component metadata even when its render is
+populated; KiCad10 nets may be name-only. Correctly bound upload bytes and
+render counts are useful but do not prove complete interpreted geometry.
+Preserve the draft and captures on that blocker rather than constructing
+another input or attributing our checker errors to Quilter.
+
+Review the **positive baseline and independent negative controls together**
+before running a replacement checker. October12's first review-ready draft
+still used recovered placement coordinates without the four intended
+translations, equated325 native and rendered declarations despite their
+different paste/jumper membership, and combined pad-angle and net mutations.
+Those were checker-code gaps caught before execution, not import failures.
+Require a healthy baseline, then one defect per control through the same
+comparison path: an elongated land rotated about its unchanged centre,
+a net change, retained-copper movement, an actual keepout-layer change and
+an outline change. A combined mutation can hide a missing check. Empty
+decoded geometry and ambiguous identities must fail, not become equal
+empty signatures; oriented bounding extents alone do not establish shape.
+
+The renewed checker reached full comparisons but remained held at the
+renderer frame/index model. A scene tree may mix geometric parents with
+layer/findable grouping; neither an isolated local matrix nor multiplying
+every ancestor is automatically correct. Establish that interpretation
+with independent fixed/moved elongated-pad witnesses before relying on
+full-board polygon comparisons. Successful decoding into nonempty arrays
+does not prove the coordinates are physical. Likewise, the populated
+`/board` capture exposed285 connected pin entries while the job reported326
+all-terminal service pins; compare like schemas and retain the separate
+native325/render325 membership reconciliation. All new failures remain
+checker holds, not demonstrated Quilter defects; no routing job was launched.
+
+**Saved-render index correction, October12:** the focused recovery establishes
+the tested scene node's item association in its third field, with
+`items[item_index][1]` indexing `infos`. Treating the third field directly
+as an info index paired geometry with unrelated identities. Seven physical
+pin identities across IC4, C24, U1, both BT2 lands and C1 now match independent
+native centres within0.000383mm and exact net/layer semantics. This is not
+a complete renderer specification: interpreting the second field as a
+geometry index still fails full-land witnesses. Five tested PIN shapes
+decode to0.002mm markers; the tested BT2 shapes also differ from its lands.
+COMPONENT-node and immediate-ancestor geometry hypotheses failed too.
+Do not generalize these observations into a proven hierarchy or universal
+world-transform rule. Resolve physical drawables from the actual schema,
+not by another index permutation or a nearest-looking polygon. A reported
+exit0 means the diagnostic completed, not that its geometry passed. Preserve
+failed hypotheses and healthy metadata witnesses separately.
+
+**Client-defined correction, October13:** reading the actually served client
+resolved the missing structural distinction. A scene is
+`[name, colorIndex, infoIndex, meshCalls]`; a mesh call is
+`[meshType, geometryIndex, materialIndex, instances]`; an instance is
+`[transformIndex, colorIndex, itemIndex, tagSetIndex]`. Only that instance's
+item indexes the item/info table. The earlier recursive-node decoder treated
+color indices as geometry indices and mesh-material indices as item indices.
+Its apparent point markers, unrelated component rectangles and keepout
+ancestors were therefore not established renderer behavior. Keep those
+failed reports, but withdraw their proposed physical interpretations.
+
+The client applies each instance's affine matrix directly to the geometry
+selected by its mesh call; it does not compose invented parent transforms.
+Its preprocessing splits board metadata from scenes without changing their
+geometry. Empty mesh calls are explicitly skipped, not malformed physical
+objects. Capture the client asset hash and implementation locators privately,
+then verify decoded physical shapes against independent native evidence.
+Source inspection resolves the schema, not the full importer acceptance gate.
+
+The same client has a material fallback: when top-level `layers` is absent,
+derive layers from its layer findables/infos/root tags before resolving
+instance tag sets. An empty default silently assigned every instance a null
+layer in our first correction. The saved input also demonstrates that one
+native track becomes three physical instances (body plus two end caps), and
+one through-via has an appearance on each of eight layers. Group by item
+and physical layer and compare every polygon/ring; do not demand one
+instance per native object or mistake144 via appearances for144 vias.
+The191 retained tracks are154F/37B, with none on inner layers. Do not invent
+an inner-layer track requirement to satisfy a planned witness.
+
+Distinguish display tessellation from native curved copper. A16-sided disc
+inscribed in a0.6mm-radius circle has approximately0.011529mm maximum inward
+deviation. Matching a native-derived16-gon representation can validate the
+represented centre, radius and approximation, but cannot establish6um
+native-curve equality. Report the independent approximation bound and check
+semantic dimensions; a rendered solid via disc also does not prove its
+drilled hole, which may exist only in metadata.
+
+**October13 complete-pad evidence:** bind identity, net, shape and layer
+expectations to the exact uploaded native file, not a recovered candidate
+used as a pose oracle. The observed compiler uses bare library identifiers
+for19 unique libraries and numeric instance suffixes for85 repeated-library
+components. Ten duplicate-number lands receive occurrence suffixes, including
+`.1`/`.2` for blank numbers. Do not discard downstream pad diagnostics just
+because an independent library-string check fails. Renderer null also covers
+ 25 explicitly named-unconnected source pads; preserve that source state
+separately from no-net, and require exactly one source copper pad and no
+track/via/pour on each such net. Connected nets still require exact equality.
+
+All110 curved-pad appearances in this exact capture match complete unions
+of native-sized core rectangles and28-sided circumscribed corner/end circles
+(`r*sec(pi/28)`, phase0), with maximum boundary error0.000560mm. Such unions
+need not have a convex-support boundary. The previously failing2.8-31um join
+edges are not floating-point zero edges; filtering them only because they
+fail a model is not qualification. Preserve every actual ring and compare
+complete occupied area/boundary against the independently specified model.
+This result covers the source's cardinal-angle shapes, not arbitrary future
+shapes, analytic copper equality or drilled-hole preservation.
+
+A healthy subset is not a healthy complete baseline. At the October13,15:43
+checkpoint, three comparisons were exhausted on CHG_EN0's graphic and the
+physical outline's vertex witness; the prepared controls had not run. Preserve
+that failed evidence. A separately authorized focused completion subsequently
+resolved both representation questions, rather than rerunning unchanged code.
+
+**Compare complete conducting unions without hiding fragment differences.**
+CHG_EN0's separately rendered graphic is0.12mm2 smaller, but that area is
+already occupied by its matched pad lands. Source and renderer complete
+pad/bridge unions both measure3.18mm2, with0.000045706mm boundary difference.
+Keep both distinct pad nets and the native net-tie declaration. Require the
+complete union to be connected and the graphic to contact both actual pads:
+each shares a0.6mm boundary despite zero overlap area. Tangency can be a real
+electrical contact. Also retain raw added/missing graphic regions and require
+any unexplained residual outside the source-or-pad union buffered by the
+existing2um positional allowance to be zero within the fixed area epsilon.
+This source-bound explanation is not permission to ignore copper graphics.
+
+**Qualify each representation step before composing precision bounds.**
+The physical outline's old direct vertex witness missed its2.423556um limit
+by62.1nm; preserve that result rather than rounding it into a pass. Independent
+metadata-to-source checks pass, and all seven mesh outlines correspond to
+metadata at238 ordered canonical points, with maximum0.000630538mm error
+against the existing2um position allowance. Corresponding segment interiors
+are bounded by their endpoint deltas. Compose the explicit triangle bound
+while retaining independent source-to-mesh whole-boundary, endpoint and
+straight-interface checks. This does not establish universal backend
+quantization, analytic-curve equality or a manufacturing clearance change.
+
+Use the decoded raw rings for that correspondence, not a geometry library's
+possibly normalized exterior. Here239 physical raw points include one exact
+repeated closing endpoint; metadata has238. Normalize only that exact closure
+for cyclic alignment, preserve the four internal duplicate points, and keep
+all raw points in direct metrics. The first integration incorrectly rejected
+that representational closure; the reviewed correction produced the healthy
+v9 saved-capture baseline. A saved baseline must still reproduce through the
+fresh raw-decode path before genuine mutations qualify the checker. Persist
+the full recomputed positive report even on failure, rather than only a
+generic blocked message. See the October13 completion entries in the ledger.
+
+On Windows, make capture encoding explicit in every entry point. The decoder
+CLI used UTF-8, but the controls harness initially used locale-default
+`Path.read_text()`. Unit-bearing metadata keys were corrupted, falsely
+unmatching all191 tracks and18 vias while geometry and numeric values stayed
+identical. A full fresh-positive diagnostic isolated all1722 differences to
+the three unit-key pairs. The correction is consistent UTF-8 input, not
+renaming captured fields, ignoring dimensional metadata or relaxing a gate.
+
+Prove a negative control's actual effect in the comparison frame. A local
+polygon-coordinate change of0.0001 produced only0.1nm after this pad's1e-6
+linear transform, so its acceptance was not a blind spot. A document-level
+serialized-metres label is not a unit contract for every mesh-local value.
+The corrected control applies an occupied-centre world affine and verifies
+the decoded width increased by0.1mm while the centre stayed fixed. Inspect
+all remaining mutation unit paths together; never keep increasing a number
+until a test fails without defining and measuring the intended physical change.
+
+Budget a test group for runtime variation, not just one previous timing.
+Our three-control group took26.594s once and then exceeded its hard30s limit;
+that timeout did not prove a board or comparator defect. The scheduling-only
+recovery kept the same comparator, mutations, tolerances and30s cap, but ran
+one case per child and saved each complete positive before the mutation.
+All13 positives matched the accepted baseline byte-for-byte; all13 negatives
+were rejected at their intended gates with unchanged non-target appearances.
+Each final child took10.782-14.562s. Those finite controls qualified this
+source-bound preview and the one16:44 submission, not arbitrary future inputs
+or the native fields that the preview does not expose.
+
+**Routing-only applicability, October13:** exact native/render keepout
+identity is a different question from preservation of the forbidden area.
+The full58-keepout diagnostic compares all147 track/via/pad/pour-layer
+obligations using complete polygon unions and matching restriction tokens.
+It finds143 exact covers and four tiny corner residuals, each bounded by
+a tested0.0001mm outward distance. Preserve raw missing polygons and measure
+distance: their6.46e-10mm2 areas equal646nm2, not "sub-nanometre-square",
+and small area alone cannot exclude a deep narrow gap. Local minimum-cover
+candidates, rather than incidental larger overlaps, show about15–16.1um
+display expansion. Do not infer the solver's exact obstacle from that border.
+
+Thirty-one native footprint prohibitions have no direct render token.
+Do not invent a `FOOTPRINTS` to `PINS` alias. The104 source footprints are
+native-unlocked; `/board` has names/pins only, while the UI independently
+declares104 preplaced components/zero to place and routing without movement.
+Root accepts these limitations only for the existing routing-only experiment,
+with unchanged native input and mandatory later comparison of every returned
+pose/rule. This is not a general placement qualification, proven backend
+enforcement, or permission to remove source restrictions. Full pad/copper/
+outline/plane checks and actual validator controls still gate submission.
+
+**False-collision control, October12:** the local checker falsely called
+C23/R23 an overlap: its orientation-product-only segment test treated
+disjoint collinear edges as intersecting. The pads' centres were19.95mm
+apart. Native `SHAPE.Collide` with separated-collinear, tangent and actual
+overlap controls disproved it; no component move was needed. Prefer
+exercised native shapes over a new hand-written intersection routine.
+Graphic strokes alone are not filled courtyard interiors; use a complete
+shape or an explicitly conservative filled extent. Preserve and retract
+the faulty report rather than fixing a board to fit a checker bug.
+
+## What the evidence supports
+
+| Finding | Evidence and limit | Working guideline |
+|---|---|---|
+| Selected existing routing can survive while Quilter adds useful routes. | Both [contact-control outputs](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json) preserve the checked inventory and connect both test pairs on B without new vias. [Recovered native DRC](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json) reports zero opens but 45 findings each. The [saved-plane supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-plane-isolation-2026-10-04.json) passes all 20 foreign-via isolation and 20 GND attachment cases. | Retain reviewed critical blocks where useful; independently verify preservation and new copper. This diagnostic behavior is qualified, not a clean or accepted product board. |
+| Preservation is not automatic for every input/configuration. | Earlier [full-board outputs](measurements/2026-09-27-router-bakeoff/quilter-output-preservation-2026-10-02.json) lacked the original inner GND zone and exact matches for 24 In2 segments. That did not prove 24 lost electrical connections. | Inspect returned copper and planes before ranking routing improvement. Distinguish record changes from connectivity loss. |
+| Import recognition is weaker than routing evidence. | The [first contact preview](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json) had zero pins to route. The later control had actual unrouted pairs and legal-path witnesses. | Submit a diagnostic only when it can exercise the behavior in question; a parsed preview alone is not that experiment. |
+| A green dashboard has a limited scope. | The contact job's one physics pass was an inferred VBAT 500 mA check; its new-violation lists were empty. Native DRC subsequently completed with inherited, rule-dependent and new isolated-fill findings. | Record which checks ran, their assumptions and whether they cover inherited or new findings. Do not translate "100%" into engineering acceptance. |
+| Time to first result differs from time to final result. | [Candidate receipts](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json) show about 6m20s for 1.1 and 2h7m15s for 1.2. | Evaluate an available useful candidate without waiting unnecessarily for final optimization. Do not extrapolate this tiny job's runtime to a full board. |
+
+Use **observed** for a result demonstrated on identified artifacts,
+**documented** for a vendor statement, and **proposed** for a workflow
+choice not yet exercised. A documented capability is not an observed
+pass; an incomplete check is not a demonstrated design failure.
+
+## 1. Decide what freedom to give the service
+
+Choose the question before editing the input:
+
+- **Complete existing routing:** retain the explicitly protected placement,
+  feeds and copper; measure preservation and remaining connectivity.
+- **Explore a fresh layout:** retain real interfaces and reviewed critical
+  or process blocks, while releasing ordinary placement/routing on a
+  disposable copy. Do not accidentally freeze an old floorplan by retaining
+  all its intermediate escape traces.
+
+The agent's job is to express engineering intent and review results;
+Quilter's job is placement/routing search. Do not use repeated manual
+LLM trace placement as the default way to compensate for an unclear input.
+
+Separate genuinely fixed requirements from preferences. Preserve real
+component dimensions, contact metal, insulation, mating/service access,
+critical current/return paths and required manufacturing processes.
+Allow approved enclosure/support changes instead of treating old plastic
+geometry as immutable. Rebind the complete assembly before accepting a
+selected layout, not after every disposable iteration.
+
+Organize functional groups around actual duties: supply pins and their
+capacitors, crystal/load capacitors, switching loops, USB, protection and
+private sense returns. Shared net names or visually grouped parts do not
+by themselves establish the right electrical associations or distances.
+For unsupported essential constraints, retain a reviewed block, provide
+an explicit independent acceptance check, or stop; never silently omit them.
+
+**Historical October 4 proposal, subsequently exercised in comparison
+inputs/jobs, not a qualified product layout:** retain only a few
+source-reviewed sensitive cells and release ordinary layout around them.
+An exact retained block needs copper identities and external terminal/
+junction obligations, not just a list of fixed footprints or a rectangular
+cut. Check private pickoffs at the actual terminal lands; shared-net
+continuity is not equivalent. The handbell's selected first-comparison
+boost/protection/clock strategy leaves72 of104 references eligible;
+input qualification and returned-output limits are recorded separately in
+the later October ledgers. This early proposal is not the current status.
+See the [common-input disposition](quilter-workflow-study-2026-10-02.md#common-input-strategy-retain-critical-cells-release-ordinary-layout).
+
+**Observed relative-constraint path, not qualified routing behavior:** the
+[October4 capability disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json)
+finds Custom Component Proximity in the current client and an existing-job
+schema: child component, parent component/pin and maximum distance in mm.
+The help explicitly says best effort, with a final distance PRC; there is
+no explicit child-pin field. Use it only for a reviewed relationship not
+already covered by bypass comprehension. Its10mm new-row default is not
+an engineering target, and proximity does not bound routed length,
+return paths or private topology. Prefer legitimate relative constraints
+over needless fixed rooms, but qualify persistence and actual behavior.
+
+Keep public documentation, client code, saved schemas and executed
+constraints separate. Timing controls remain described as unavailable
+in public prose, while the current client and old-job schema expose their
+fields; neither justifies claiming a working timing constraint. Likewise,
+the documented crystal limitation for series/load-limiting resistors
+remains relevant to R6. Manually adding a row cannot be assumed to repair
+unsupported topology. Preserve R6 and the real load-capacitor connections;
+resolve the missing contract before freezing the MCU or releasing clocks
+as generic low-speed signals.
+
+Bind physical pad number, schematic function and imported service PIN
+token separately. The [clock binding](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)
+corroborates20=XIN and21=XOUT, but descriptive20/XIN is not a verified
+API value. Nor does a GND net make every terminal a suitable ground
+anchor: pin19 is TESTEN; P$1 is the actual exposed ground.
+Keep source observations distinct from new acceptance limits. A historical
+route width, a literal old guard rectangle and a zone's min_thickness
+cannot establish a new proximity threshold or moved quiet-area margin.
+Reconcile intentional plane exclusions with reference/return intent by
+layer and purpose instead of imposing contradictory blanket rules.
+
+**Retained-cell proof discipline:** connect the selected graph to actual
+source-bound pad lands and enumerate its joins to copper that will be
+removed. A connected graph of hardcoded coordinates is not yet that proof;
+hashing an old report without comparing its relevant geometry does not
+rebind the coordinates. The initial
+[preserved-clock packet](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-qualification-2026-10-04.json)
+exposed both gaps at root review. Its executed missing-member controls
+exercise membership, not connectivity or complete identity coverage.
+Keep those claims separate even when all reported controls pass.
+The [October5 recovery](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-boundary-recovery-2026-10-05.json)
+resolves the clock pad/path gap from the already available current-source
+native inventory. Search the authoritative geometry record before reviving
+older diagnostic coordinates. For an internally self-contained ordinary
+cell, preserve its local paths and external terminal/net obligations;
+do not freeze every historical fanout, via or pour contact. This is not a
+waiver for private/Kelvin paths or final reference/return behavior.
+Name contact-incidence groups accurately: shared object identities do not
+prove one physical junction, and counting pad/via pairs as "not endpoint
+matches" is not an independent segment-interior control.
+
+**Observed local-net distinction:** every physical terminal on six
+protector/feedback nets belongs to the proposed retained cells. Retaining
+their complete source primitives preserves parallel branches missed by
+path-only selection. This is justified by the all-terminal inventory,
+not merely the net's name, and does not justify retaining global GND or
+amplifier feeds. Current-sharing and process qualification remain separate.
+See the [local-circuit evidence](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json).
+
+**Observed retention limit:** complete source-local routing can preserve
+an inherited physical conflict too. The
+[complete212 contact screen](measurements/2026-09-27-router-bakeoff/quilter-critical-retained-contact-screen-2026-10-04.json)
+finds one non-process PROT_COUT via with0.225 mm nominal metal clearance
+against required0.25 mm, although all five mandatory process seeds pass.
+Screen the complete proposed retention, not only its protected seeds.
+Distinguish an unmet clearance from actual metal overlap, and a real
+flat-edge shortfall from conservative corner-envelope effects. Hold the
+input and assess the affected route's role; neither source fidelity nor
+a small numerical shortfall authorizes a clearance waiver or silent repair.
+The [COUT dependency check](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)
+then proves that simply omitting the conflicting via breaks charge-gate
+control. Prefer a clearly scoped whole-net rerouting obligation over
+accidentally retained dangling copper when partial retention cannot
+preserve the intended function. This remains a proposed workflow choice,
+requiring all-terminal restoration and electrical/physical qualification.
+Keep selection validity, complete-input eligibility and returned-routing
+acceptance as distinct states. The [COUT contract controls](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-release-contract-2026-10-04.json)
+accept a deliberate three-terminal unrouted specification without calling
+it a connected output; they also reject the connected but contact-blocked
+old route. Counts or one passing dimension cannot substitute for the others.
+
+## 2. Build a source-bound input contract
+
+Keep the authoritative board and raw experiments immutable. Record the
+exact PCB/project/schematic/manifest hashes, reference and physical-pad
+counts, net identities, fixed/movable references, protected copper/vias,
+outline, layer roles, physical stackup and applicable process requirements.
+Publish the execution scope before an executor pins its dependencies;
+keep subsequent progress bookkeeping outside those frozen inputs. The
+first preserved-clock attempt correctly failed closed when a concurrent
+root scope update changed the pinned workflow file. That avoidable
+coordination failure consumed a correction, not evidence of a PCB defect.
+Use native poses, including footprint rotation, for both protected objects
+and candidate obstacles rather than stale proxies.
+Check any local-to-global transform against saved native coordinates and
+known source-track endpoint joins before trusting generated keepouts.
+Include signed90/270-degree cases: a180-degree case alone cannot distinguish
+rotation sign. The [failed private-guard proposal](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-definition-2026-10-04.json)
+put two guards on opposite pads while its self-consistency controls passed.
+Do not count tests sharing the same erroneous geometry as independent proof;
+prefer a previously qualified native-coordinate source over a new transform.
+
+Qualify candidate generation before trusting a precise narrow-phase result.
+The [collateral review](measurements/2026-09-27-router-bakeoff/quilter-private-guard-collateral-2026-10-04.json)
+correctly measures46 enumerated pairs, but root found the upstream broad
+phase still used the wrong transform for non-private pads. A repair of
+protected objects alone does not fix obstacle coverage; omitted pairs can
+remain untested. Rebuild conservative candidates from the same qualified
+geometry source and compare additions/removals before claiming completeness.
+The subsequent [bound-population audit](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)
+does this for all177 retained primitives and97 native fixed pads, including
+actual through-layer membership. It removes four wrong-pose pairs without
+finding new collateral contact. Keep self pairs separate from design
+conflicts, and fail on missing geometry rather than silently shrinking the
+population: one8um segment needed a separately bound saved-native source.
+This qualifies the exercised shapes and source, not arbitrary future
+geometry; a far-away shape's valid bounds do not qualify its narrow-phase
+intersection algorithm.
+Also distinguish a prospective guard-halo conflict from actual copper
+contact or minimum-clearance failure. An unchanged terminal-bank overlap
+can be intentional; reuse source-bound topology evidence instead of
+automatically redesigning the circuit or waiving all same-net findings.
+
+**Proposed reusable staging practice:** capture a compact native geometry
+record once for a specific source revision: UUID/reference/pad/net identity,
+global pose, dimensions, shape and conductive layers. Bind it to the source
+and extractor versions. Reuse that record for cheap static iterations; a
+source/dependency change requires explicit requalification, not a silent
+fallback. Keep source facts separate from derived guards, encoded ECAD
+rules and observed router behavior. A pass at one stage does not certify
+the next. This is a small evidence pipeline, not a reason to build a new
+general-purpose CAD framework for each project.
+
+**Observed local recovery:** the [private-guard repair](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-repair-2026-10-04.json)
+consumes the saved native pad inventory directly and matches all four
+private endpoints without another native load. It rejects both known bad
+poses before generating guards, separately from membership/flag checks.
+This supports reusing a qualified geometry record for unchanged source;
+it does not qualify new sources, polygon serialization or router enforcement.
+Give evidence both a resolvable artifact location and a hash: a digest alone
+is not enough for the next reviewer to find the geometry record.
+
+Define each movable part's final allowed area from the intersection of
+its side, height, access and electrical restrictions. Quilter's
+[documented region behavior](https://docs.quilter.ai/guides/placement-guide)
+combines assigned regions by **union**, not intersection. A broad F region
+plus a narrow height region can therefore enlarge, rather than restrict,
+the allowed space. Verify assignments and F-only behavior after import;
+a single-sided preference or candidate filter is not proof of enforcement.
+
+**Documented, reconfirmed October 4; movable behavior still untested here:**
+an off-board region is a grouping hint whose size, shape and side are
+ignored. An on-board or edge-overlapping region constrains placement.
+For KiCad, a named top/bottom rule area with every keepout restriction
+cleared represents a placement region; review/manual component assignment
+after import remains necessary. Do not use a true safety keepout as a
+placement room or expect an off-board grouping hint to enforce F-only.
+See [KiCad region setup](https://docs.quilter.ai/design-parameters/placement-regions.md)
+and [single-sided requirements](https://docs.quilter.ai/design-parameters/single-sided-placement.md).
+
+**Observed October5 in UI/API1.42.0:** distinguish the Floorplanner's
+rectangle-packing preflight from downstream placement-region constraints.
+Our unchanged pinned Front room, spanning the board's bounding rectangle,
+failed the planner's inset bounds before packing. On resumed review,
+the normal Continue path saved that completed failed attempt unchanged
+and the full-layout job subsequently started. No resize, unlock or margin
+waiver was needed. This is not a planner packing pass or a general claim
+that warnings can be ignored: bind the reported rule, documented region
+semantics and exact saved downstream geometry before disposition.
+
+Floorplanner state and selected configuration are separate evidence:
+72 assignments/options initially lived only in planner state; Continue
+saved the matching comprehension entries and selected placement options.
+Verify downstream persistence rather than counting UI chips as effective
+routing settings. The component picker closed after each selection;
+reopen it and inspect selected state to avoid toggling an already-selected
+component during recovery. Comprehension edits in this workflow persisted
+on Continue, not after every cell edit; stackup autosave behaved differently.
+See the [eight preview checkpoint](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json).
+
+**Observed native representation, not placer behavior:** the isolated
+[F-room control](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json)
+preserves a named F rule area with all five restrictions allowed through
+KiCad10.0.6 save/reload, without changing its overlapping restrictive guard.
+Root compares the entire new-room subtree and all58 original subtrees
+with multiplicity and checks UUID uniqueness. Merely recording a contour
+or comparing UUID-keyed dictionaries would not establish those facts.
+The deliberate overlapping-room witness is not a useful cloud-placement
+input: retain separate gates for real geometry, association and placement.
+
+Keep placement regions separate from safety keepouts. Inspect each
+keepout's actual track/via/pour flags and layers; a suggestive name is not
+a rule. Screen full copper shapes, including the B annulus of through-vias.
+Use explicit flag profiles for each rule family rather than a generic
+"all prohibited" constructor. In the first October5 full-input draft that
+shortcut changed the demonstrated contact guards, which allow pads and
+footprints while excluding new tracks/vias/pours. Private-tap guards have
+different flags; a positive placement room clears every restriction.
+A reservation written only in a sidecar is not an encoded placement
+restriction, and dielectric material named "core" does not correct a
+native layer whose type still says "prepreg".
+
+Validate the validator's actual comparisons before treating a positive
+path as useful evidence. Comparing a new draft to an unqualified prior
+draft does not independently validate the latter's outline, zones or
+profile. Negative controls must alter real inputs and demonstrate the
+specific rejection; returning "passed" beside a list of mutation names
+is not a test. The [failed October5 completion](measurements/2026-09-27-router-bakeoff/quilter-input-completion-2026-10-05.json)
+was stopped before such a placeholder could become accepted evidence.
+For native serialization differences, reuse source-bound saved-native
+pad geometry and narrowly normalize set ordering/defaults; do not
+repeatedly guess angle conventions or discard meaningful fields.
+
+Keep three comparisons distinct: independent source definitions, saved-native
+physical poses, and surgical preservation against the preceding derivative.
+The October5 checker initially made its non-pad test pass by switching its
+oracle to r2; root rejected that as source proof. The corrected checker
+compares source attributes, property values, graphic/courtyard geometry and
+layers separately, with real attribute-removal and coordinate mutations.
+Its disclosed exception is text/property angles: these remain unchanged
+from native r2, not independently source-normalized. A cosmetic limitation
+can receive an explicit disposition without dropping physical geometry.
+Default normalization must be field-typed: numeric geometry, lexical pad
+identities such as `"01"`, set-valued layers, and ordered polygon vertices
+are different contracts. Run both profile positives first; split expensive
+mutation suites into bounded chunks instead of repeatedly timing out one
+large suite or changing engineering checks to accommodate the timeout.
+For staged DRC, compare complete finding multisets before declaring each
+warning a new defect. The completed pair preserves the317 baseline item
+records and adds four expected reservation-owner findings. Keep top-level
+violation descriptions: they identify keepout names that item descriptions
+alone omit. Profile-specific selection among overlapping guards can change
+that description without changing the offending object. Record and inspect
+those deltas rather than deleting descriptions from every comparison.
+
+Re-evaluate which parts actually move before building more domain classes.
+At the handbell's selected+2mm spacing, the saved height screen leaves only
+L1 and X6 at/above the nominal3.5mm ceiling; both are fixed under the later
+27-reference retention. Thus eligible fitted movers no longer require a
+separate tall-part magnet class. This reuses source-bound height/membership
+evidence, not a new fit claim. It does not give every reference the same
+origin polygon: full body/rotation, board-edge, access and copper-feature
+obligations still need encoding. Qualify the smallest missing representation
+control before generating dozens of unnecessary regions.
+Filling or tenting a via does not remove its conductive rear land.
+
+**Purpose-specific private-return protection:** prevent new taps where the
+private copper actually conducts. Surface-only branches need surface
+track/pad/via protection; existing through-vias need isolation on every
+layer they reach, including newly added planes. Do not copy every surface
+rectangle into inner-plane voids: the handbell's two private through-vias,
+not all ten F exclusions, define its inherited conductive inner-layer
+exposure. Switching/clock coupling exclusions serve a different purpose.
+Follow the [layer-role policy](routing-agent-policy.md#first-protected-ground-candidate-release).
+Quilter's [keepout documentation](https://docs.quilter.ai/design-parameters/keepouts.md)
+generically includes components, but does not specify a KiCad pad/footprint
+flag matrix. Our fixed-component contact control does not establish
+movable-pad exclusion or all-layer private-tap protection.
+
+Do not mistake a prospective "no new taps" engineering requirement for a
+native new-objects-only rule. The
+[completed native control](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json)
+also reports the retained source objects inside the restrictive guards.
+Keep such diagnostic intrusions bound to exact identities and geometry;
+their presence does not authorize deleting the copper, a blanket same-net
+exception, or suppressing future violations. Product representation and
+the router's treatment of pre-existing copper need their own disposition.
+
+**Selected experimental pattern, not full-board exercised: restrictive
+guards plus an immutable baseline.**
+When a required guard encloses an intentionally retained connection, keep
+the guard intact and identify the existing intrusion by guard, object,
+layer, net and full geometry. Do not erase the connection to obtain a green
+input DRC, cut a hole in the guard, or exempt the whole net. A returned
+object may match that baseline only if it is genuinely unchanged; new
+objects, changed geometry and new contacts remain failures. A preserved
+zone outline/UUID never grandfathers a changed fill.
+
+This is an independent acceptance comparison, not a native rule exemption
+or proof of cloud enforcement. Reconcile the complete native input findings,
+including footprint-level findings outside a pad/track screen, before
+submission. Use the first meaningful returned layout to evaluate the
+remaining importer/router behavior rather than creating an endless series
+of zero-work controls. Prefer already-qualified conservative rectangles
+over a new curved-geometry implementation when their extra blocked area
+and affected existing objects can be explicitly accepted; smaller voids
+are an optimization, not automatically a prerequisite.
+The [native rectangle decision](measurements/2026-09-27-router-bakeoff/quilter-native-guard-encoding-2026-10-04.json)
+accepts eight explicit overcoverage relationships without changing copper.
+Its one-off measurement is not a reusable-validator qualification:
+declarative controls are not executed negative tests, and printed expected
+layer order is not parsed evidence. Reuse independently bound facts where
+valid; preserve the missing controls as requirements for the full-input
+validator rather than reporting them as passes.
+
+**Observed layer-expansion control:** the
+[private-plane experiment](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json)
+keeps both private vias0.25mm from saved inner fills in four- and six-layer
+fixtures; omitting one new inner guard creates actual copper contact.
+Extend through-via protection to every newly enabled conductive layer,
+then challenge one deliberately omitted guard. Measure saved full polygons
+with holes against whole copper shapes. A local filled witness under an
+F-only guard checks nonprojection without needlessly voiding entire planes.
+Use a separate anchor to reject empty-fill false successes, but distinguish
+anchor-via contact from a terminal-connected functional ground network.
+Verify actual serialized layer mapping and per-UUID preservation rather
+than trusting a printed expected-order list or unchanged object counts.
+These rectangle-fixture observations do not establish curved-rule fidelity,
+product grounding, supplier layer roles or importer behavior.
+
+Do not flatten elevated or moving contact geometry into an unjustified
+full-height rectangle, or assume that permitting contact pads makes every
+track beneath the metal safe. The retained-feed/blanket-guard contradiction
+in our diagnostic is intentional test evidence, not a clean product rule.
+
+## 3. Resolve a capability uncertainty with the smallest useful experiment
+
+Reuse qualified evidence when its inputs and assumptions are unchanged.
+Do not build another tiny fixture for every job. When an untested behavior
+could invalidate the larger workflow, use a bounded isolated control:
+
+1. Name the behavior and a measurable pass/fail condition.
+2. Include real routing work, an easy reference connection and a known
+   legal path for the constrained connection. Keep proof paths out of the
+   uploaded copper.
+3. Exercise the relevant failure condition in the local checker. If the
+   output takes a different layer, report what it actually exercised.
+4. Qualify the saved file and importer representation before submission.
+
+Keep a tiny diagnostic separate from the product-board project: the
+[documented project policy](https://docs.quilter.ai/using-quilter/start-a-project.md)
+requires later inputs to stay within 10% of the initial pin/component/
+footprint/BOM profile. Include the intended terminals before the first
+upload; do not assume a substantial fixture expansion is a valid iteration.
+
+## 4. Review the imported model and actual saved settings
+
+Upload only the approved design-file whitelist; never include personal
+preferences, credentials, browser state or unrelated reports. Check:
+
+- **Population and work:** fitted references, physical pads/nets, components
+  to place and pins to route. Pins-to-route is not native open-count.
+- **Placement and geometry:** fixed poses, side restrictions, region
+  assignments, keepout polygons/flags/layers and protected process seeds.
+- **Stackup and rules:** actual saved width, clearance, via size/drill,
+  board margin, layer classes and preserved-pour/inner-copper behavior.
+- **Circuit comprehension:** actual capacitor/pin associations, currents,
+  impedances, ground identity and switching topology, not plausible-looking
+  inferred labels. Never relabel a boost circuit to fit an unsupported model.
+  Verify AI-generated datasheet summaries against the actual dated primary
+  document too. Our COUT study's search summary invented routing restrictions
+  absent from the cited TI layout section. Conversely, no stated numerical
+  limit does not mean unrestricted routing or replace project insulation rules.
+
+Read expanded values, not profile names. In our control, the display kept
+"6 mil / 6 mil" and rounded width to 0.178 mm while the saved value was
+0.1778 mm. Its 0.600/0.300 mm via minima and 0.508 mm margin were
+**diagnostic choices**, not permission to replace product manufacturing rules.
+
+Check coupled fabrication limits, not just each field separately:
+`via diameter >= drill + 2 * minimum annular ring`. Our proposed new-via
+lower bounds 0.604/0.350 mm imply 0.127 mm rings; a 0.150 mm ring rule
+requires at least 0.650 mm diameter at that drill. Preserved ordinary vias,
+new vias and mandatory filled/capped seeds may need different dispositions.
+Do not silently grow a protected seed or lower a global rule to hide this
+conflict; obtain a compatible process/rule contract and recheck geometry.
+
+Four enabled copper layers do not establish a physical stackup. The
+[pre-routed-trace documentation](https://docs.quilter.ai/design-parameters/pre-routed-traces.md)
+describes fixed in-outline traces/vias but warns about inner-copper
+replacement when the input stackup is not preserved. Review the selected
+mode and returned planes; preservation checkboxes alone are insufficient.
+
+Keep different importer features distinct. The KiCad job's ECAD constraint
+table warned that parsing supported Altium only, while its geometric
+keepout metadata did contain eight B track/via/pour exclusions. Neither
+message alone settles complete constraint fidelity.
+
+Authenticated Playwright UI operation is exercised. No public documented
+API/SDK/CLI was found in our search; that is not proof that none exists.
+Prefer the supported UI workflow rather than depending on private submit
+endpoints. Already-fetched response values can clarify rounded settings;
+keep raw browser evidence local and ignored, and do not collect account
+responses merely to search for pricing.
+
+## 5. Authorize once, then evaluate native output before acceptance
+
+Confirm project eligibility, permitted data use and the exact submission
+scope. [Published free-personal terms](https://www.quilter.ai/free-ai-pcb-design),
+an account's Free Tier notice and an explicit price quote are different
+evidence. Our account's Free Tier notice appeared at **download**, not
+final submission. Absence of a price is not a zero-price quote: the owner
+explicitly authorized that one policy-based start. Do not generalize it
+into standing paid-use or unrestricted submission permission.
+
+Free-use disclosures include using inputs/metadata for training puzzles.
+Sanitized public-design upload approval does not authorize confidential
+uploads or settle output-redistribution rights. Recheck current terms when
+use changes, retain [attribution boundaries](../ATTRIBUTION.md), and stop
+at a payment, upgrade or new agreement requiring owner action.
+
+Record one confirmed launch and its job/configuration identifiers. Do not
+duplicate a job because completion is slow or silently create monitoring.
+Preserve raw complete-board archives and extract separate candidates safely.
+
+Assess in this order:
+
+1. **Preservation:** compare native component/pad/net identities and poses,
+   retained trace/via geometry, guards, outline, layer enablement and rules.
+   Normalize only demonstrated serialization differences. Changed display
+   names are not missing layers; unmatched segments require separate
+   connectivity analysis before claiming lost connections.
+2. **Added routing:** establish actual connected copper, shorts, trace
+   widths, whole-stroke/annulus clearances, layer transitions, return paths
+   and plane isolation. Check new saved fills against foreign-net vias.
+3. **Native and engineering gates:** run the applicable native checks,
+   distinguish inherited/new/configuration-dependent findings, and complete
+   electrical, process and assembly review. A static trace screen does not
+   cover inner-plane isolation or replace these gates.
+
+**Observed diagnostic limit:** a connected GND plane can still be a floating
+network. In this deliberately truncated fixture, each saved inner fill is
+one island attached to all five GND vias, but there are no GND component
+pads. The isolated-copper warnings remain valid and are explained by that
+missing terminal context, not waived or evidence of battery-net shorts.
+Measure actual filled polygons against full foreign-via copper/barrels;
+zone outlines and zero-open counts cannot prove isolation. Our minimum
+saved clearance is 0.206229 mm against 0.20 mm, only 0.006229 mm spare:
+this is a nominal exact-file check, not fabrication tolerance or powered
+protection evidence. A future refill must be qualified separately.
+See the [saved-plane evidence](measurements/2026-09-27-router-bakeoff/quilter-contact-plane-isolation-2026-10-04.json).
+
+Classify results as **retain with a finite gap**, **reject for a demonstrated
+contract violation**, or **accept for a specifically stated scope**. Preserve
+useful candidates while fixing a local validation problem. Do not rerun
+Quilter to cure a checker timeout, or automatically repair/merge an output.
+
+## 6. Spend effort on discriminating comparisons
+
+Set an **overall preparation budget and a go/no-go deliverable** before
+starting local qualification tasks. Per-item time limits do not control
+the accumulated cost of many successful or repaired items. Count scope
+definition, root review, handoff and tooling corrections as preparation,
+not just subprocess runtime. Stop a dependency chain that exceeds the
+experiment's expected learning value rather than renewing it by default.
+
+Separate input truth, submitted configuration, observed router behavior
+and hardware release. Define indispensable restrictions and output
+acceptance criteria up front, but test actual new routing, reference
+continuity and final placement on returned candidates. Do not require
+proof of an unrun outcome before starting a disposable experiment.
+Conversely, output review is not an excuse to submit missing or knowingly
+misrepresented essential input constraints. The
+[October5 stage table](quilter-workflow-study-2026-10-02.md#october-5-budgeted-path-to-a-useful-experiment)
+records this distinction for the handbell comparison.
+
+**Selected study practice:** choose layer purposes from
+the actual dielectric adjacency, not the layer count. Our
+[3313 profiles](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
+use S/G/S/S versus S/G/S/G/G/S: six layers improve reference availability
+without adding two signal layers. A nearby mixed-use layer is not
+automatically a continuous return plane. Keep electrical roles, native
+layer identities/types and service-detected purposes distinct and reconcile
+all three during import.
+
+Inspect alternative constructions before concluding that a layer count
+cannot provide useful routing capacity. The
+[October5 four-signal evaluation](measurements/2026-09-27-router-bakeoff/quilter-four-signal-stackup-evaluation-2026-10-05.json)
+finds actual JLC06161H-3313E S/G/S/S/G/S:0.1mm inner signal-to-ground gaps
+and1.1208mm between the internal signals. JLC08161H-3313 supports the same
+four routing layers with extra ground shielding, not additional routing
+capacity. Prefer the least preparation that answers the owner's total-cost
+question; do not automatically run both when six addresses it.
+
+Bind the selected supplier template, not only its generic material table.
+The current calculator provides core-specific Dk4.36/4.53 and a1.65mm
+finished label for the six-layer option, despite a nominal1.6mm selector.
+Preserve mixed-material dielectric sublayers and distinguish exact physical
+construction from a solver approximation. Never silently average them to
+fit an importer. A profile-only derivative can reuse a qualified input's
+geometry evidence through a complete narrow-delta comparison; it need not
+restart full pad/placement qualification when those subtrees are unchanged.
+
+Screen impedance geometry against existing trace/space minima before
+committing to the closest possible reference planes. In the same evaluation,
+supplier90-ohm examples for six3313E at~0.21mm pair spacing fell below
+our0.1778mm width floor; standard eight2116 examples at0.254mm spacing
+exceeded it. This is a useful alternate construction, not proof that six
+is impossible or permission to lower a minimum. Compare soldermask, finished
+copper, dielectric assumptions and actual reference layers across solvers;
+two90-ohm labels do not establish equivalent models.
+The same eight2116 outer-layer example changes0.189738->0.211328mm when
+the supplier calculator switches from coated to uncoated differential mode,
+with0.254mm spacing retained. This demonstrates material model sensitivity,
+not the entire cause of a cross-solver discrepancy. Saved Quilter null
+mask/reference overrides do not reveal effective defaults. Preserve that
+uncertainty instead of calling them false. A construction that clears
+current minima in both examples can proceed to a fresh qualified preview;
+manufacturer impedance acceptance remains a separate gate.
+
+The eight2116 preview subsequently produced fresh90-ohm results on
+F/In2/In5/B above the unchanged trace/space floors. Keep physical
+construction comparison separate from computed-profile comparison:
+the service replaces initial generic `stackup.impedanceProfiles` when
+it computes the selected circuit targets. Whole-stack equality therefore
+rejects an expected successful recomputation. Inspect the exact changed
+fields, preserving failed check evidence; never require stale widths to
+remain or silently ignore physical layer/role changes.
+
+Do not copy a qualified input directory wholesale into a new experiment:
+old DRC/semantic reports and personal PRL files can appear to certify the
+new board. Copy the intended inputs only, persist each phase's results before
+a slower phase, and bind the manifest only to final bytes. A DRC timeout
+must not erase already demonstrated native preservation, but neither does
+that preservation turn a missing diagnostic into a pass.
+The six-layer recovery completes separate CLI DRC in74.86s under90s, beyond
+the old internal60s timeout. Do not attribute success to host separation
+when the timeout changed too. Compare complete finding multisets:505 records
+here have only475 unique signatures. A set-only comparison loses30 repeated
+witnesses. Keep record counts, unique root signatures and inferred electrical
+equivalence distinct. Check every current manifest binding, not only a new
+`final_native_hashes` field; label earlier hashes as provenance explicitly.
+Move an inherited closure block into history before binding the new result;
+otherwise a correct top-level profile can coexist with old layer lists and
+old diagnostic hashes. Give counts explicit scopes: total planes, retained
+planes and planes added in this step differ. Resolve a truthful presentation
+ambiguity from the bound native evidence rather than starting another CAD
+repair; missing physical restrictions still require an actual correction.
+
+Check supported physics targets before staging, but distinguish documentation,
+client entry, backend solving and returned routing. **Documented:** Quilter
+lists85/100-ohm choices. **Observed in the current client implementation:**
+the impedance field uses numeric text entry with positive-value validation;
+the independent single-ended target can be blank. Thus the old documentation
+does not establish frontend impossibility for our90-ohm intent. At that
+checkpoint, editable-draft persistence and90-ohm solving were unverified. Keep the
+requirement, prepare the qualified stackup, and test that exact input at
+preview; do not create a circular dependency or duplicate a job merely to
+probe a selector. That was the
+[October4 capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json);
+the [October5 paired import](measurements/2026-09-27-router-bakeoff/quilter-paired-import-2026-10-05.json)
+subsequently demonstrated saved90-ohm targets and selected-model solving.
+New constructions still need their own fresh results; prior success does
+not qualify new layer roles, material models or returned routing.
+
+Inspect achieved per-layer values and current solve status, not just the
+target label or a green aggregate. The old job displays100-ohm calculations
+with different reported single-ended values; do not invent an independent
+single-ended requirement by halving the differential target. Its layer named
+"Ground Layer 2" is classified copper-signal, reinforcing the need to inspect
+actual roles. Neither those old computations nor a manual width/gap override
+qualifies a new90-ohm result. Frequency/material assumptions and any tolerance
+need an explicit basis; bit rate alone is not a carrier-frequency specification.
+
+**Observed process-screen lesson:** the
+[13-by97 source screen](measurements/2026-09-27-router-bakeoff/quilter-retained-via-pad-process-screen-2026-10-04.json)
+proves positive separation from fixed lands without a new generic curved
+geometry engine. It does not qualify solder-mask dams, tenting or assembly,
+or protect against future moved pads. Distinguish existing immutable via
+families from new-route minima: raising a global annular minimum can reject
+retained processed seeds, while lowering it can underconstrain new vias.
+Use explicit retained-versus-new checks, never silent resizing or exemptions
+that extend to changed objects.
+
+Use one qualified packaging envelope and comparable BOM, interfaces,
+electrical and manufacturing requirements for a four-/six-layer comparison.
+Use real supplier stackups and let approved placement adapt; this compares
+complete workflows, not layer count alone. Add eight layers only for a
+specific unresolved question, not as an automatic factorial experiment.
+
+**Proposed comparison gates, not completed handbell qualifications:**
+
+| Gate | Evidence required before advancing |
+|---|---|
+| Source and retained-circuit definition | Exact common BOM/pad identities, retained copper, fixed interfaces and explicit rerouting/restoration duties. |
+| Geometric truth and constraint definition | Independent native-coordinate witnesses; full-shape placement, contact/access and private-path coverage on applicable layers. A same-net bypass cannot be dismissed as electrically equivalent. |
+| Two manufacturable stackups | Real supplier constructions, explicit signal/reference roles, compatible ordinary and filled/capped vias, and stackup-specific impedance geometry. |
+| Native encoding and importer behavior | Round-trip identities/geometry, expected native rule behavior, imported movable population, region assignments and saved settings. Unsupported duties need a reviewed disposition. |
+| Comparable execution and output review | Individually authorized jobs from qualified packages; identical acceptance criteria, preserved raw outputs and an account of effort, failures and manufacturing implications. |
+
+These are release dependencies, not a ban on parallel bounded investigation:
+supplier-stackup and movable-domain evidence can advance independently.
+Each native input still needs all applicable prerequisites before release.
+
+Share requirements rather than forcing byte-identical layer-dependent
+geometry: use the same packaging envelope, population, retained circuitry,
+functional duties, minimum clearances and process requirements. Allow
+placement, signal-layer assignments, reference adjacency and impedance
+dimensions to adapt to each real stackup, documenting those differences.
+Otherwise a supposedly controlled comparison can accidentally handicap
+one construction or weaken its requirements.
+
+Prepare both packages against the same common specification before
+launching either. Parallel jobs are useful only after both independently
+pass their gates; launching an unqualified second case creates more
+results, not a better comparison. Treat routing completeness, critical
+transitions/returns, root defects and total preparation/review/process cost
+as outcomes, with preservation and safety requirements as acceptance gates.
+Do not promise a comparison date merely because one tooling blocker clears.
+
+Track setup effort, agent/owner interventions, validation effort, time to
+first/final result, actual service charges and manufacturing implications.
+Compare root defects and native outcomes, not only percent routed or
+repeated DRC witnesses. Extra layers can alter special-process cost; obtain
+an actual quote rather than assuming either four or six layers is cheaper.
+Do not infer internal compute or token cost from elapsed wall time.
+
+**Observed construction distinction:** the [3313 source screen](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
+binds actual dielectric/copper rows for the shortlisted four/six-layer
+constructions, not just nominal thickness or layer count. Both outer
+dielectrics are0.0994mm; six layers also have a thin central gap between
+two potential routing layers. Choose explicit reference purposes before
+counting useful signal layers. The earlier saved generic Quilter4-layer
+preset has different dielectric dimensions and is not an equivalent model.
+Quilter documents input-defined stackups and ground/power naming hints;
+verify the detected classes, material values and returned stackup rather
+than trusting a supplier label or layer name.
+
+Separate a supplier's dimensional capability, process conditions, order
+eligibility and price. Both protected via families meet the cited POFV
+hole/ring ranges, but that does not settle nearby-hole clearance or cap
+planarity. Preserve ambiguous diagram/quality wording for disposition
+instead of inventing tolerances or converting an advertised maximum into
+a guaranteed minimum.
+
+For hole-process screens, inventory every physical drilled pad, including
+unfitted parts, alignment holes, slots and mounts; do not use a fitted-BOM
+filter. Reuse saved native global centers and bound whole holes/copper,
+including offsets. A conservative enclosing-shape clearance above the
+threshold can establish nominal separation; one below it is inconclusive
+until exact geometry is examined. Keep an ambiguous supplier measurement
+boundary and via process classification separate from the geometric result.
+The [process-hole screen](measurements/2026-09-27-router-bakeoff/quilter-process-hole-spacing-screen-2026-10-04.json)
+exercises this method on40 component-pad and65 other-via pairs, but only
+for its bound source coordinates; new placement/routing invalidates reuse.
+
+Keep local items within the [bounded execution policy](routing-agent-policy.md).
+Use hard subprocess termination limits, not just initial output waits.
+Apply the same rule to static analyzers: the fast process-hole run completed
+successfully, but its90-second initial wait did not enforce the required
+limit. Preserve that noncompliance explicitly; neither a short duration nor
+a later report-only amendment retroactively supplies a supervisor receipt.
+Persist executable/arguments, input/tool hashes, stdout/stderr and exit or
+timeout metadata **before and throughout execution**, including failure.
+Our two initial output DRC timeouts lacked preserved streams, so their exact
+stage could not be diagnosed. The subsequent logged runs completed on
+unchanged returned bytes/settings in 42.219 and 3.844 seconds; their success
+does not identify the old timeout cause. Do not repeat an opaque invocation
+or count a timeout as a board failure. Reuse unchanged evidence and qualify
+a new binding/parser operation in a small control before expensive downstream work.
+
+**Observed native-tool trap:** both successful DRC processes exited zero
+while reporting 45 findings. Parse the report (or deliberately configure
+the supported violation-exit option); process success is not a clean-board
+result. Compare rule context as well as geometry: the returned project
+introduced a 0.15 mm annular-ring minimum that flags four unchanged 0.127 mm
+rings. Never resize preserved copper or suppress checks merely to make
+different rule contexts appear equivalent. See the
+[native recovery evidence](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json).
+
+**Repeated tooling failure, October 4:** a reused helper is not qualified
+merely because it worked against an older board/API. Preflight the exact
+Python/pcbnew ABI and separate track/via serialization: KiCad10 vias require
+an explicit layer for `GetWidth`, while the exercised track binding does
+not accept that argument. Test both object types before a whole-board
+analysis; do not blanket-replace calls or suppress a desktop assertion.
+The [retention inventory](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-2026-10-04.json)
+exhausted three attempts on these binding errors without qualifying a
+retained block. Its incomplete result is not evidence against Quilter.
+The separately authorized [recovery](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-recovery-2026-10-04.json)
+passes the type-specific tests and completes one native load in1.842s.
+Preflight the complete logging runner too, not only helper functions.
+Exercise zero exit, deliberate nonzero exit and timeout capture. A final
+`ok` marker, empty stderr and an exited PID do not establish a numeric exit
+code; keep a missing code explicit rather than synthesizing success.
+Keep timeout status separate from the killed child's platform-dependent
+code. Our qualified Windows control records child1 and supervisor124,
+not a POSIX-style negative signal code; see the
+[runner evidence](measurements/2026-09-27-router-bakeoff/quilter-critical-ground-input-interfaces-2026-10-04.json).
+Compile each changed analyzer revision before launching native work; a
+later caching edit introduced a syntax failure despite the earlier preflight.
+
+**Observed bootstrap recurrence:** the [private native control](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
+again lost module and DLL search paths in fresh children. Reuse the complete
+qualified launcher, not just its Python executable or a prior shell's
+environment. Keep the object returned by `os.add_dll_directory` alive
+through the native scope, then close it explicitly.
+The later [F-room control](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json)
+still consumed two attempts before importing pcbnew: absolute Python alone
+did not supply the module path. In the exercised Windows installation,
+`KiCad\10.0\bin` is the DLL directory and
+`KiCad\10.0\bin\Lib\site-packages` is the Python module directory; one is
+not a substitute for the other. Reuse both explicit paths in the child,
+checking their existence before native work. Count a started Python child
+that fails import as a child failure, not a launcher failure or board load.
+Snapshot each executed script before editing it: matching recovered bytes
+to an earlier receipt hash can repair evidence loss, but is not a
+pre-execution snapshot and should not become the normal workflow.
+In that same execution
+environment, preflight a known pad UUID
+and required getters before running the larger control. Missing identity
+readback must stop qualification; successful file I/O and a populated board
+are not a substitute. Preserve bounded DRC timeout evidence and diagnose
+its stage before increasing limits or rerunning the same command.
+
+Qualify the reusable runner separately from one successful native result.
+Reject reused output locations; require a successful child exit and a fresh,
+parsed report with the expected schema, not merely an existing filename.
+Write each child invocation/PID before waiting so an outer timeout leaves
+useful evidence. Process-tree supervision must contain the child before it
+can spawn descendants. Regression controls must cover these failure paths,
+not just the happy path. Bind every result to the exact executed tool
+revision; later fixes do not retroactively qualify an earlier run.
+The [initial repair](measurements/2026-09-27-router-bakeoff/quilter-native-tool-repair-2026-10-04.json)
+recovered observations but did not qualify its final changed code.
+The subsequent [completion](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json)
+binds ten supervised regressions and an actual corrected-revision replay:
+identical native readback and a DRC report differing only in date.
+Use `tools/supervise_process.py` for the exercised64-bit Windows runner;
+`tools/inspect_native_guard_fixture.py` is deliberately bound to this exact
+diagnostic fixture/project, not a general product-board validator.
+Invoke with absolute executable/script paths and separate new receipt/
+payload locations; relative scripts resolve under the child working
+directory. The ledger records the actual argument array.
+
+Save actual starting and executed tool/report copies before edits, verify
+their hashes against the invocation, and then update acceptance separately.
+A hash alone records identity but does not preserve a retrievable revision.
+The completion demonstrates this practice; the earlier repair's missing
+standalone copies remain a documented provenance limitation.
+
+**Observed selection trap:** the recovered all-pairs graph added113 objects
+beyond a62-object explicit-duty core. A path between two internal pads can
+wander through the larger board. Retain copper for named electrical duties;
+inspect boundary dependencies without automatically fixing every encountered
+component. Group graph edges by true external connection and distinguish
+layer-specific witnesses from unrestricted connectivity. A successful
+inventory is not an approved retained block.
+
+**Observed subgraph trap:** retained copper includes retained pad lands,
+not only trace/via UUIDs and the two query endpoints. Excluding intermediate
+U6.4 pad copper falsely broke the R28 witness; the saved native path
+resolved it without adding copper or rerunning KiCad. Recompute boundaries
+when reducing a selection: edges internal to the old union may become
+external. Build the effective retention union first, including independently
+protected process vias as well as the named copper set and retained pads.
+Removing a misclassified seed from a report count does not repair the
+already-computed component geometry. Count separated electrical duties, not all lost pad-pair
+combinations. See the [corrected core review](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json).
+
+**Observed protection limit:** the source's 19 areas prohibit pours, not
+new same-net tracks/vias. Saved-plane isolation is not future routing
+protection. Rule names and absence of same-layer contacts also cannot
+prove that an inner-layer exclusion covers an outer-layer circuit's XY
+projection; qualify that projection and every relevant new layer explicitly.
+
+**Observed attachment-screen limit:** subtract the actual candidate when
+labeling copper unselected, not one duty's path tree. Distinguish pads
+outside that duty from pads outside the retained footprint set. Two
+attachment UUIDs may represent a pad and track at one physical junction;
+they do not prove a distinct parallel current path. Use such screens to
+direct geometry review, not to manufacture defect counts or freeze whole
+external networks. Classify each module's interface separately: a global
+feed legitimately reaches several destination terminals. Requiring its
+entire network to touch only one land is not a useful local-cut test.
+
+**Proposed bounded takeoff practice:** if a source feeder overlaps the
+protected local bus, consider retaining that complete existing primitive
+to its next real boundary instead of clipping it or freezing its whole
+downstream network. Make the extent/placement tradeoff explicit and keep
+downstream restoration duties separate from fixed geometric ports. The
+handbell's two VAMP takeoffs and one GND feeder are a planning selection
+only; this input has not been exercised in Quilter. Numerous downstream
+contacts along one retained feeder do not make each old coordinate a
+mandatory port or require preserving the entire global network.
+
+**Observed physical-check limit:** a connectivity witness omitted a
+1.2 mm source BOOST_SW track that contributes real copper beyond the
+selected shapes. Complete-local-net inventory recovered it without new
+routing. Exact polygon work also needs explicit edge/corner-tangency and
+native contact-tolerance controls: an empty Boolean intersection is not
+proof that no graph contact exists. Cache native shapes and narrow pair
+tests conservatively by net/layer/bounds, but use actual geometry for the
+decision. The [bounded physical review](measurements/2026-09-27-router-bakeoff/quilter-critical-physical-attachments-2026-10-04.json)
+retains partial evidence after three attempts; no fourth retry follows
+merely because the overall owner time window has time remaining.
+
+**Documented cost distinction:** current JLCPCB pages separate via sizing
+from component-PTH annular rules and advertise filled/capped via-in-pad at
+no additional charge for6+ layers. Their headline board promotion is not
+a quote for our assembly. Compare the same required process on both layer
+counts, rather than dropping filled/capped seeds to make four layers look
+cheaper. See the [public-source screen](quilter-workflow-study-2026-10-02.md#independent-public-supplier-screen).
+
+## Keep the guidelines alive
+
+At each meaningful checkpoint, update the existing run ledger with the
+question, controlled changes, input/configuration/output identities,
+expected versus observed behavior, timing/effort, acceptance limits and
+one next decision. Put raw detail there, not in this guide.
+
+When a result changes how we should work, update the relevant rule here:
+state the practice, link its evidence and retain its applicability limits.
+Mark it observed, documented or proposed. If new evidence contradicts a
+rule, revise that rule and link the counterexample rather than appending
+another conflicting "latest" instruction. Do not invent a new rule when
+the experiment only confirms an existing one.
+
+The current evidence still leaves **movable F-only placement, full-board
+placement/access and circuit comprehension, product process rules, and four-/six-layer
+benefit** unresolved. Track their disposition in the closure plan; do not
+promote them to proven capabilities through repetition in progress reports.

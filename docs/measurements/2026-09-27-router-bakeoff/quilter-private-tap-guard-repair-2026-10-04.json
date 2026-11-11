@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "title": "Private GND tap guard checker repair using saved native pad geometry",
+  "status": "STATIC_CHECKER_REPAIRED_PROPOSAL_DATA_ONLY_AWAITING_ROOT",
+  "scope": {
+    "held_ledger_unchanged": "b65be6ec5659f9cf7b6c42940c99f3b91a94ea0834521a2aa265fcd345162127",
+    "invalid_original_preserved_report": "522954508e0cc90615eb12573a9932b41b0c4be1bef55663095976d06b5b745f",
+    "invalid_original_preserved_raw": "4866e6362be9ce57c0f9ec79af9190768b3d2f09fa8f9aab1a667da0f8469470",
+    "retained177_changed": false,
+    "source_changes": 0,
+    "native_loads": 0,
+    "pcb_generation_or_save": 0,
+    "fills_or_drc": 0,
+    "routing_or_cloud": 0
+  },
+  "bindings_sha256": {
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "saved_native_connectivity": "079b47d115db668be0fd8af196b20bfea316193426eca36398dbc98dae0ee23d",
+    "saved_native_constraint_inventory": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba",
+    "core_raw": "c66c67c9936e5a0b7665d6dad3b8934fffa9098d8b3bbe7a3660767c1fdf63ce",
+    "retained177_raw": "639a7f81136e9e38319a55ac5d84dff42dfaaa08fe909ac87a68053fbefe23a9",
+    "repair_raw": "f15a7743c8f5bcc205f2fabac34dd44d1901ce5c07a6204ad3b34c5085120d94",
+    "repair_analyzer": "0e9af063e991025de14256b4619a8d97ca09be62a7673e908e44dbafb94486ef"
+  },
+  "implementation_change": {
+    "production_geometry": "All four private pad global centers and orientations are consumed directly from immutable saved native inventory, keyed by exact UUID. The checker does not use a local-footprint transform to generate pad guards.",
+    "shape_and_dimensions": "Each native record binds net, pad number, copper layers, orientation, serialized source-pad hash, and native global center. Literal source is independently required to be rect and to match the native serialized dimensions.",
+    "absolute_copper": "Track and via geometry remains exact absolute source geometry. No track/via coordinates or layer obligations changed.",
+    "proposal_identity": "Repair-specific UUIDv5 namespace 97546ae5-ecce-54a2-b2d2-719a68f85cb9 avoids reusing the invalid proposal IDs."
+  },
+  "native_oracle_controls": {
+    "count": 12,
+    "all_passed": true,
+    "pads": [
+      {"uuid":"3ed47a01-14b9-59e7-bdfe-95561c7f1435","ref_pad":"R26.2","net":"GND","center_mm":[86.4,111.192],"orientation_deg":90,"size_mm":[0.6,0.6],"endpoint_mm":[86.4,111.192],"endpoint_contact":true},
+      {"uuid":"933e95b2-4ef8-5095-ab3d-4759e7fa0826","ref_pad":"R27.2","net":"GND","center_mm":[86.424019,109.500966],"orientation_deg":0,"size_mm":[1.15,1.4],"endpoint_mm":[86.399019,109.500966],"endpoint_contact":true},
+      {"uuid":"1ba917bc-32e2-5176-954f-c3d06c7f6040","ref_pad":"R24.2","net":"GND","center_mm":[98.408,111.4],"orientation_deg":0,"size_mm":[0.6,0.6],"endpoint_mm":[98.408,111.4],"endpoint_contact":true},
+      {"uuid":"bcb9e722-fe71-5b16-8387-e04b4bcd0520","ref_pad":"C28.2","net":"GND","center_mm":[102.2,116.15],"orientation_deg":270,"size_mm":[0.7,1.3],"endpoint_mm":[102.2,116.15],"endpoint_contact":true}
+    ],
+    "known_bad_centers_rejected": [[86.4,112.208],[102.2,114.25]],
+    "sign_distinguishing_cases": ["R26.2 +90 degrees", "C28.2 native 270 degrees/negative-90 equivalent"],
+    "interpretation": "These are independent source/native identity, global-geometry, and endpoint-contact regressions. They run before guard generation."
+  },
+  "guard_contract": {
+    "net_literal": "GND",
+    "blanket_GND_exception": false,
+    "root_objects": 12,
+    "layer_obligations": 18,
+    "halo_mm": 0.25,
+    "new_tracks": "not_allowed",
+    "new_vias": "not_allowed",
+    "new_pads": "not_allowed",
+    "new_footprints": "not_allowed",
+    "new_pours": "not_allowed",
+    "existing_source_joins": "Preserved by exact immutable source identity; no holes or clipping proposed.",
+    "geometry": {
+      "track": "exact centerline capsule, source width/2 + 0.25 mm radius",
+      "via": "exact outer-copper circle, source diameter/2 + 0.25 mm radius on every spanned conductive layer",
+      "pad": "native-center/native-orientation source rectangle with a 0.25 mm Minkowski halo"
+    }
+  },
+  "proposed_guards": [
+    {"id":"ba99739b-ddf3-5888-88dc-0acbc66cfb38","source":"1212a327-4ed4-50da-a0bb-71afc8145254","layer":"B.Cu","shape":"capsule","bounds_mm":[103.3611,112.7611,104.0389,117.8389]},
+    {"id":"19d78fbe-ec7b-5d86-b3cf-6beb0d851d2b","source":"1ba917bc-32e2-5176-954f-c3d06c7f6040","layer":"F.Cu","shape":"oriented_rect","bounds_mm":[97.858,110.85,98.958,111.95]},
+    {"id":"8abebb8c-df26-5d2f-adef-7222db35aa28","source":"34d001e5-c45d-5645-a43a-6ab95d630ff0","layer":"F.Cu","shape":"capsule","bounds_mm":[98.0691,111.0611,100.1389,111.7389]},
+    {"id":"aedc6476-4b62-5564-a09c-846130dc4fb1","source":"3ed47a01-14b9-59e7-bdfe-95561c7f1435","layer":"F.Cu","shape":"oriented_rect","bounds_mm":[85.85,110.642,86.95,111.742]},
+    {"id":"cc65311c-7779-5be8-a8fc-3a627876b326","source":"51e3a8d5-1e6b-5f46-a297-c3739ea5de91","layer":"F.Cu","shape":"capsule","bounds_mm":[99.4611,111.0611,100.5389,112.2389]},
+    {"id":"aa7680d4-3516-5201-b567-8bf32f7f6aae","source":"6623be95-c657-5a8e-bedb-c5a73d42d40b","layer":"F.Cu","shape":"circle","bounds_mm":[103.15,116.95,104.25,118.05]},
+    {"id":"fd652d8e-4f94-5be0-abdd-9462b2ebc068","source":"6623be95-c657-5a8e-bedb-c5a73d42d40b","layer":"In1.Cu","shape":"circle","bounds_mm":[103.15,116.95,104.25,118.05]},
+    {"id":"1aa0a42d-2d9d-572d-a60f-c7222e48516b","source":"6623be95-c657-5a8e-bedb-c5a73d42d40b","layer":"In2.Cu","shape":"circle","bounds_mm":[103.15,116.95,104.25,118.05]},
+    {"id":"3d4da8b9-e02d-5a56-8751-224cb1607081","source":"6623be95-c657-5a8e-bedb-c5a73d42d40b","layer":"B.Cu","shape":"circle","bounds_mm":[103.15,116.95,104.25,118.05]},
+    {"id":"b4ac8b95-c962-53e1-b8ae-cc3e360ae74e","source":"7b625d38-c89c-5e26-93c2-4cbe5302680a","layer":"B.Cu","shape":"capsule","bounds_mm":[99.8611,111.5611,104.0389,113.4389]},
+    {"id":"2c324d54-ed45-5d3c-8fda-4e9357102af2","source":"933e95b2-4ef8-5095-ab3d-4759e7fa0826","layer":"F.Cu","shape":"oriented_rect","bounds_mm":[85.599019,108.550966,87.249019,110.450966]},
+    {"id":"71859588-3982-55ff-a9e1-8dd2ef19aa0c","source":"a2730cca-5ecb-58a3-be5f-9d176ac8a629","layer":"F.Cu","shape":"capsule","bounds_mm":[101.8611,115.8111,104.0389,117.8389]},
+    {"id":"6926648f-fe02-5f16-9bb9-9af38f69b379","source":"bcb9e722-fe71-5b16-8387-e04b4bcd0520","layer":"F.Cu","shape":"oriented_rect","bounds_mm":[101.3,115.55,103.1,116.75]},
+    {"id":"a1479871-a2bd-5fff-bbc4-71d64ec9b88c","source":"d400cba9-bf59-5d9f-b921-dc5efd499b8c","layer":"F.Cu","shape":"capsule","bounds_mm":[86.060119,109.162066,86.7389,111.5309]},
+    {"id":"37e4811e-91cd-5f87-8c43-fbd1a19e495c","source":"eafa404c-be47-5f5c-8167-d39a967ba2e5","layer":"F.Cu","shape":"circle","bounds_mm":[99.65,111.35,100.75,112.45]},
+    {"id":"7f91e89f-1213-547b-9fe6-8e3c4a5f8a99","source":"eafa404c-be47-5f5c-8167-d39a967ba2e5","layer":"In1.Cu","shape":"circle","bounds_mm":[99.65,111.35,100.75,112.45]},
+    {"id":"61340f71-d279-5d84-887c-a4079b556e49","source":"eafa404c-be47-5f5c-8167-d39a967ba2e5","layer":"In2.Cu","shape":"circle","bounds_mm":[99.65,111.35,100.75,112.45]},
+    {"id":"f0e6077d-8512-5e5f-a6a7-ebb392bd6a3e","source":"eafa404c-be47-5f5c-8167-d39a967ba2e5","layer":"B.Cu","shape":"circle","bounds_mm":[99.65,111.35,100.75,112.45]}
+  ],
+  "layer_and_inherited_rule_result": {
+    "R26_private_branch": "F.Cu only: two endpoint pads plus d400cba9... track; no inner projection.",
+    "R24_private_branch": "Two F.Cu pads, three F.Cu tracks, two B.Cu tracks, and two through-vias.",
+    "through_via_current_obligations": 8,
+    "future_six_layer_obligation": "Repeat each private through-via circle on every conductive copper layer it spans in the selected physical stackup role map. Numeric IDs do not establish physical order. Do not project F-only pads/tracks into inner GND voids.",
+    "inherited_source_rule_areas": {"total":19,"F_private":10,"In1_private":2,"In1_BOOST_SW":6,"In1_clock":1,"all_pours_only":true},
+    "inherited_limit": "Existing areas do not establish track, via, pad, footprint, or importer enforcement. BOOST_SW and clock remain separate pending map/placement obligations."
+  },
+  "self_consistency_controls": {
+    "all_expected_results_observed": true,
+    "cases": [
+      "valid guard set passes",
+      "missing B.Cu private-track guard fails",
+      "missing inner-layer via guard fails",
+      "F-only object projected to inner layer fails",
+      "wrong restriction flags fail",
+      "leaked private-object coverage fails"
+    ],
+    "separation_from_oracle": "These controls test membership, layers, restrictions, and declared coverage only. They are not treated as source-to-global pose evidence."
+  },
+  "recomputed_collateral_and_access": {
+    "method": "AABB broad phase over corrected guard union and fixed retained source copper/pads",
+    "candidate_records": 14,
+    "unique_candidate_objects": 25,
+    "interpretation": "Counts are conservative candidates, not asserted actual intersections or defects. Full per-guard candidate identities are in repair raw f15a7743....",
+    "existing_joins": [
+      {"uuid":"8b095e6c-ce66-5915-a589-2b1a247f9129","location":"C28.2/source guard 2dc315f7","classification":"expected retained ordinary GND bank join"},
+      {"uuid":"665297da-57ea-5e05-aa18-5a3aa335eedd","location":"R27.2","classification":"expected retained protector/global-return join"}
+    ],
+    "ordinary_GND_access_witness": {
+      "uuid":"3598d04b-1396-5df4-953b-9f195d966b71",
+      "point_mm":[109.15,109.75],
+      "layer":"F.Cu",
+      "track_width_mm":1.0,
+      "outside_all_corrected_F_guard_AABBs":true,
+      "minimum_guard_AABB_spare_beyond_track_half_width_mm":7.4284472893499265,
+      "limit":"This demonstrates guard-relative access only, not a complete legal future route/via or final physical clearance."
+    }
+  },
+  "execution": {
+    "python": "3.11.9",
+    "supervisor_sha256": "b35c68cf18b409242de7f0e03f22cb1fb8def542a0cff9fca5a835cdebbed3c4",
+    "supervisor_controls": [
+      {"case":"exit0","pid":47696,"exit":0,"timeout":false},
+      {"case":"exit7","pid":45156,"exit":7,"timeout":false},
+      {"case":"timeout","pid":13144,"exit":124,"timeout":true}
+    ],
+    "attempts": [
+      {"attempt":1,"pid":11896,"exit":0,"elapsed_seconds":1.356321,"result":"geometry/control pass; repair IDs still reused invalid namespace"},
+      {"attempt":2,"pid":46200,"exit":0,"elapsed_seconds":1.169074,"result":"final; repair-specific deterministic IDs"}
+    ],
+    "authorized_attempts_remaining": 1
+  },
+  "remaining_limits_and_next_gate": [
+    "This is corrected static proposal data, not a generated or accepted full input.",
+    "No native KiCad serialization, DRC behavior, or Quilter pad/footprint/all-layer restriction behavior was exercised.",
+    "Native source-area flags do not prove importer enforcement.",
+    "Root must review the corrected proposal and separately authorize any disposable-input native-behavior gate. No follow-on work is performed here."
+  ]
+}

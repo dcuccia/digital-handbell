@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "title": "Isolated private-guard native encoding and behavior control",
+  "status": "PARTIAL_BLOCKED_ATTEMPTS_EXHAUSTED_NATIVE_BEHAVIOR_NOT_QUALIFIED",
+  "decision": {
+    "analytic_definition_changed": false,
+    "native_encoding_selected": false,
+    "full_input_eligible": false,
+    "quilter_behavior_qualified": false,
+    "summary": "The four-layer source-subset fixture passed static preflight and completed a native load/save roundtrip, but native pad-UUID pose readback was not captured and bounded CLI DRC timed out without a report. Track/via/pad/footprint keepout behavior is therefore not qualified."
+  },
+  "bindings_sha256": {
+    "authoritative_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "selected_analytic_ledger": "3ccaf019fd84adf596aeb8163e1dd16fd84697110f770fa63464e952b70b783e",
+    "selected_analytic_raw": "f15a7743c8f5bcc205f2fabac34dd44d1901ce5c07a6204ad3b34c5085120d94",
+    "saved_native_constraint_inventory": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba",
+    "saved_native_connectivity": "079b47d115db668be0fd8af196b20bfea316193426eca36398dbc98dae0ee23d",
+    "held_invalid_ledger": "b65be6ec5659f9cf7b6c42940c99f3b91a94ea0834521a2aa265fcd345162127"
+  },
+  "private_artifacts": {
+    "batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-control-20261004T1421",
+    "static_preflight": {
+      "path": "static-preflight.json",
+      "sha256": "e55496faf78e9891afeb69d8947ef530ec1c4b625caf2fec3e37ae91ea52eb59"
+    },
+    "preflight_fixture": {
+      "path": "fixture-4layer-preflight.kicad_pcb",
+      "sha256": "ae9e2e3f58deef921f2b7f3ce4c3e3122532ae9e78b0d4168eac969fc82c4241"
+    },
+    "roundtrip_fixture": {
+      "path": "fixture-4layer-roundtrip.kicad_pcb",
+      "sha256": "0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148"
+    },
+    "roundtrip_result": {
+      "path": "native-roundtrip.json",
+      "sha256": "87ad8a173da07d082ae8d9636bbb8f9c81157c6d342c1ca0237be056f0eb4d7d"
+    },
+    "drc_receipt": {
+      "path": "drc-subprocess.json",
+      "sha256": "f0095d5c0f562a41349075bcf61e14c2b528dbcac3a251914b3570a553dc1829"
+    }
+  },
+  "fixture_scope": {
+    "product_board": false,
+    "source_subset": {
+      "footprints": ["R24","R26","R27","C28"],
+      "source_footprint_count": 4,
+      "source_pad_count": 8,
+      "source_track_count": 6,
+      "source_via_count": 2,
+      "source_tracks": [
+        "d400cba9-bf59-5d9f-b921-dc5efd499b8c",
+        "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+        "51e3a8d5-1e6b-5f46-a297-c3739ea5de91",
+        "7b625d38-c89c-5e26-93c2-4cbe5302680a",
+        "1212a327-4ed4-50da-a0bb-71afc8145254",
+        "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      ],
+      "source_vias": [
+        "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      ]
+    },
+    "synthetic_controls": {
+      "diagnostic_areas": 5,
+      "probe_footprints": 4,
+      "probe_pads": 4,
+      "probe_tracks": 4,
+      "probe_vias": 2,
+      "UUIDs_disjoint_from_source_and_analytic_guards": true,
+      "areas": ["F-track-only","through-via-only","F-pad-only","F-footprint-only with F.CrtYd","In1-track-only"],
+      "same_net": "GND; no same-net keepout exception"
+    },
+    "outline": "roomy synthetic diagnostic outline; not product envelope",
+    "stackup": "source four-layer logical diagnostic profile; not supplier construction"
+  },
+  "static_preflight": {
+    "result": "PASS",
+    "source_native_loads": 0,
+    "source_identity_and_hash_gate": "PASS",
+    "source_subset_counts_and_subtrees": "PASS",
+    "probe_UUID_separation_and_positions": "PASS",
+    "physical_layer_order": ["F.Cu","In1.Cu","In2.Cu","B.Cu"],
+    "pad_native_oracle": {
+      "R26.2": {"uuid":"3ed47a01-14b9-59e7-bdfe-95561c7f1435","xy_mm":[86.4,111.192],"orientation_deg":90},
+      "R27.2": {"uuid":"933e95b2-4ef8-5095-ab3d-4759e7fa0826","xy_mm":[86.424019,109.500966],"orientation_deg":0},
+      "R24.2": {"uuid":"1ba917bc-32e2-5176-954f-c3d06c7f6040","xy_mm":[98.408,111.4],"orientation_deg":0},
+      "C28.2": {"uuid":"bcb9e722-fe71-5b16-8387-e04b4bcd0520","xy_mm":[102.2,116.15],"orientation_deg":270}
+    },
+    "known_bad_centers_rejected": [[86.4,112.208],[102.2,114.25]]
+  },
+  "guard_encoding": {
+    "four_layer_analytic_obligations": 18,
+    "representation": "Each selected analytic guard was encoded as its conservative source-object AABB plus 0.25 mm rectangular superset.",
+    "exact_curve_scope": "This exercises conservative rectangular native encoding only; it does not qualify exact curved capsules/circles or product collateral.",
+    "restrictions": {
+      "tracks": "not_allowed",
+      "vias": "not_allowed",
+      "pads": "not_allowed",
+      "footprints": "not_allowed",
+      "copperpour": "not_allowed"
+    },
+    "F_only_projection_to_inner_layers": false,
+    "private_vias_on_current_conductive_layers": 8,
+    "zones_total_with_diagnostics": 23
+  },
+  "native_roundtrip": {
+    "api": "pcbnew 10.0.6",
+    "result": "PARTIAL",
+    "input_sha256": "ae9e2e3f58deef921f2b7f3ce4c3e3122532ae9e78b0d4168eac969fc82c4241",
+    "output_sha256": "0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148",
+    "observed_total_population": {
+      "footprints": 8,
+      "pads": 12,
+      "tracks": 10,
+      "vias": 4,
+      "zones": 23
+    },
+    "population_explanation": "Totals equal the exact source subset plus synthetic diagnostic probes.",
+    "blocker": "The roundtrip script used the wrong SWIG UUID string accessor, so exact R26.2 and C28.2 UUID matches remained null. Native save/population acceptance does not qualify all-pad global-pose readback.",
+    "pad_pose_roundtrip_qualified": false,
+    "guard_flag_and_layer_readback_qualified": false
+  },
+  "native_behavior_matrix": {
+    "status": "NOT_OBSERVED",
+    "track_F_inside_outside": "not classified",
+    "track_In1_inside_outside": "not classified",
+    "through_via_inside_outside": "not classified",
+    "pad_inside_outside": "not classified",
+    "courtyard_footprint_inside_outside": "not classified",
+    "baseline_source_intrusions": "not classified",
+    "unexpected_clearance_or_unconnected": "not available because no DRC report was produced",
+    "reason": "kicad-cli DRC exceeded its explicit 30 second child timeout and was killed by exact PID; no drc.json was emitted."
+  },
+  "pour_control": {
+    "static_flag_encoded": true,
+    "native_flag_readback_qualified": false,
+    "fill_or_plane_geometry_control_run": false,
+    "plane_isolation_claim": false
+  },
+  "six_layer_profile": {
+    "status": "NOT_RUN",
+    "planned_obligations": 22,
+    "reason": "Four-layer native behavior did not complete within the attempt/time budget. No six-layer fixture was generated.",
+    "construction_approval": false
+  },
+  "execution": {
+    "python": "3.11.9",
+    "supervisor_sha256": "b35c68cf18b409242de7f0e03f22cb1fb8def542a0cff9fca5a835cdebbed3c4",
+    "supervisor_controls": [
+      {"case":"zero","pid":41428,"exit":0,"elapsed_seconds":0.054055},
+      {"case":"nonzero","pid":6092,"exit":9,"elapsed_seconds":0.039091},
+      {"case":"timeout","pid":42644,"exit":124,"timeout":true,"elapsed_seconds":0.219248}
+    ],
+    "static_preflight": {"pid":4224,"exit":0,"elapsed_seconds":0.876838},
+    "native_attempts": [
+      {"attempt":1,"pid":48548,"exit":1,"elapsed_seconds":0.081059,"failure":"pcbnew module path absent"},
+      {"attempt":2,"pid":35164,"exit":1,"elapsed_seconds":0.775586,"failure":"_pcbnew dependency DLL search path absent"},
+      {"attempt":3,"pid":57008,"exit":0,"elapsed_seconds":1.083379,"result":"fixture native load/save completed; UUID pose lookup incomplete"}
+    ],
+    "drc_within_attempt_3": {
+      "outer_supervisor_pid": 48064,
+      "outer_exit": 0,
+      "outer_elapsed_seconds": 30.228979,
+      "cli_pid": 51264,
+      "cli_executable_sha256": "393525236969434e24bc710334efe244fb285ef6596a1aea8e74353ef4db5477",
+      "child_timeout_seconds": 30,
+      "child_timed_out": true,
+      "child_post_kill_exit": 1,
+      "child_confirmed_exited": true,
+      "output_exists": false,
+      "warning": "Outer runner exit 0 records completed supervision, not clean DRC."
+    },
+    "attempt_budget_exhausted": true,
+    "hidden_or_running_subprocesses": false
+  },
+  "tool_sha256": {
+    "builder": "dcfff54c3ab52527ed0c85ec80d071dc66556aeb331ee0f96bace2bd51ad07ee",
+    "roundtrip_final": "7ef39cb8b9264efc98de11943a63f58ff436d818998cc6e5b75ab557c0642a01",
+    "drc_runner": "1722cce10e66e285e4ede9ad66730dae0699dba19a6fc8c336edfcb1af2b0c93",
+    "result_checker_not_successfully_completed": "2b6fad5dfbf998cecd718600fb47c71a420f98386daf59dc3fcb7b85cde41c55"
+  },
+  "preserved_invariants": {
+    "exact177_changed": false,
+    "source_board_or_project_loaded_natively": false,
+    "source_board_or_project_saved": false,
+    "authoritative_source_hashes_changed": false,
+    "product_copper_or_placement_changed": false
+  },
+  "remaining_gate": "A separately authorized control must fix native UUID readback in preflight, diagnose the bounded CLI DRC timeout without increasing budget blindly, and only then classify isolated restriction semantics. Native fixture behavior would still not qualify Quilter/importer enforcement."
+}

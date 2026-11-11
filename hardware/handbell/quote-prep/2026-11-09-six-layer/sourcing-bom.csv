@@ -1,0 +1,45 @@
+Designators,Qty,Value,Footprint,MPN,Manufacturer,LCSC,LCSC provenance,Status,Notes
+BT1,1,Keystone 254 POS,Keystone_254_RevC,254,,,unresolved,NEEDS LCSC CODE,unresolved
+BT2,1,Keystone 254 NEG,Keystone_254_RevC,254,,,unresolved,NEEDS LCSC CODE,unresolved
+"C1,C4,C5,C19,C20",5,10uF/16V,Murata_GRM21_10uF_Reflow,GRM21BR61C106KE15L,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+"C2,C3",2,15pF,GRM1555C1H150JA01D,GRM1555C1H150JA01D,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+"C6,C7,C9,C12,C13,C14,C16,C18,C23,C24",10,0.1uF,_0402NO,GRM155R71C104KA88D,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+"C8,C10,C11,C15,C17",5,1uF/25V,_0402NO,GRM155R61E105KA12D,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+"C21,C22",2,220pF,_0402NO,GRM1555C1H221JA01D,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+C25,1,10nF,_0402NO,GRM155R71C103KA01D,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+"C26,C27,C28",3,22uF,Murata_GRM21_22uF_Reflow,GRM21BR61C226ME44L,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+C30,1,100n 16V X7R,_0402NO,GRM155R71C104KA88D,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+CHG0,1,ORANGE,CHIPLED_0603_NOOUTLINE,APT1608LSECK/J4-PRV,Kingbright,,unresolved,NEEDS LCSC CODE,unresolved
+D3,1,1N4148,SOD-323_MINI,1N4148WS-7-F,Diodes Incorporated,,unresolved,NEEDS LCSC CODE,unresolved
+D4,1,PMEG2020AEA,SOD-323F,"PMEG2020AEA,115",Nexperia,C389354,register,VERIFY LIVE,Catalog LCSC code; stock was recorded at retrieval only and is not a guarantee.
+"FB1,FB2",2,Ferrite,Murata_BLM18SG121_WideCopper,BLM18SG121TN1D,Murata,,unresolved,NEEDS LCSC CODE,unresolved
+IC1,1,RP2040_QFN56,QFN56_7MM_REDUCEDEPAD,RP2040,Raspberry Pi,C2040,pcb-property,VERIFY LIVE,"Matches the LCSC property already stored on the PCB. hardware/handbell/parts/device-component-candidates.json:474 records that SC0914(7) is a procurement order code, not an LCSC number.; register agrees"
+IC4,1,LSM6DSOXTR,LGA-14L,LSM6DSOXTR,STMicroelectronics,C481766,register,VERIFY LIVE,"Standard PCBA only and X-ray inspection required per docs/pcba-quotation-plan.md. Assembler LGA/MSL/reflow, sourcing tier and mechanical-stress qualification remain open."
+J1,1,BM02B-ACHLKS-GAN-ETF,JST_ACHL_BM02B-ACHLKS-GAN-ETF,BM02B-ACHLKS-GAN-ETF,,C594367,register,VERIFY LIVE,"Not stored as a PCB property. Listed Extended in the November ledger. Confirm the exact ACHL part number, pickup datum, mating housing (SACH-003G crimps) and per-contact current before quotation."
+J2,1,SM02B-SRSS-TB,JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal,SM02B-SRSS-TB,,,unresolved,NEEDS LCSC CODE,unresolved
+L0,1,RED,CHIPLED_0603_NOOUTLINE,APT1608LSECK/J3-PRV,Kingbright,,unresolved,NEEDS LCSC CODE,unresolved
+L1,1,1uH,TDK_VLS5045EX_Reflow,VLS5045EX-1R0N,TDK,,unresolved,NEEDS LCSC CODE,unresolved
+Q1,1,AO3401,SOT23-WIDE,AO3401,Alpha & Omega Semiconductor,,unresolved,NEEDS LCSC CODE,unresolved
+Q2,1,AO3400A,SOT23-WIDE,AO3400A,Alpha & Omega Semiconductor,C20917,register,VERIFY LIVE,"Identity observed on JLCPCB metadata; stock and tier are not asserted. Q4 is a standard SOT23 with a rotated land while Q2 is SOT23-WIDE, so equal rotation numbers are not interchangeable."
+Q3,1,DMP2045UFY4,DFN2015-3_DrainPad,DMP2045UFY4-7,Diodes Incorporated,,unresolved,NEEDS LCSC CODE,unresolved
+Q4,1,AO3400A,SOT-23,AO3400A,,C20917,register,VERIFY LIVE,"Identity observed on JLCPCB metadata; stock and tier are not asserted. Q4 is a standard SOT23 with a rotated land while Q2 is SOT23-WIDE, so equal rotation numbers are not interchangeable."
+Q5,1,CSD83325L,CSD83325L_YJE6,CSD83325L,,,unresolved,NEEDS LCSC CODE,unresolved
+"R1,R2,R3,R4,R5,R7,R14,R15,R18,R21",10,10K,_0402NO,RC0402FR-0710KL,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+"R6,R11,R22",3,1K,_0402NO,RC0402FR-071KL,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+"R8,R12,R13",3,5.1K,_0402NO,RC0402FR-075K1L,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+"R9,R10",2,22 ohm,_0402NO,RC0402FR-0722RL,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+"R16,R17,R24",3,100K,_0402NO,RC0402FR-07100KL,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+R20,1,4.7K,_0402NO,RC0402FR-074K7L,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+R23,1,732K,_0402NO,RC0402FR-07732KL,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+R25,1,330R,_0402NO,RC0402FR-07330RL,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+R26,1,2.2k,_0402NO,RC0402FR-072K2L,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+R27,1,33m 1% 0.5W,ERJ6BW_0805_Panasonic_Example,ERJ-6BWFR033V,,,unresolved,NEEDS LCSC CODE,unresolved
+"R28,R29",2,5.1M gate discharge,_0402NO,RC0402FR-075M1L,Yageo,,unresolved,NEEDS LCSC CODE,unresolved
+U1,1,W25Q16JVUXIQ TR / 2MB,Winbond_USON8_UX_2x3,W25Q16JVUXIQ TR,,,unresolved,NEEDS LCSC CODE,unresolved
+U2,1,RT9080-3.3,SOT23-5,RT9080-33GJ5,Richtek,,unresolved,NEEDS LCSC CODE,unresolved
+U3,1,MCP73831T-2ACI/OT,SOT23-5,MCP73831T-2ACI/OT,Microchip Technology,C424093,pcb-property,VERIFY LIVE,
+U4,1,MAX98357A,QFN16_3MM,MAX98357AETE+T,Analog Devices / Maxim Integrated,,unresolved,NEEDS LCSC CODE,unresolved
+U5,1,TPS61023DRLR,TPS61023_DRL_TI_Example,TPS61023DRLR,,,unresolved,NEEDS LCSC CODE,unresolved
+U6,1,BQ29700DSER,BQ29700_DSE6,BQ29700DSER,,,unresolved,NEEDS LCSC CODE,unresolved
+X6,1,USB Type C,USB_C_HRO_TYPE_C_31_M_12_Handbell,TYPE-C-31-M-12,HRO / Korean Hroparts Elec,C165948,pcb-property,VERIFY LIVE,Manufacturer HRO / Korean Hroparts Elec. Reconciling the footprint alias CUSB31-CFM2AX-01-X with C165948 is unresolved (docs/pcba-bom-readiness.md:153; docs/usb-connector-qualification.md:30-41).; register agrees
+Y1,1,12MHz/CL10pF,ABM8_272_T3,ABM8-272-T3,Abracon,,unresolved,NEEDS LCSC CODE,unresolved

@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "checkpoint_local": "2026-10-04 19:40",
+  "status": "ROOT_ACCEPTED_SOURCE_CLOCK_BINDINGS_ENGINEERING_CRITERIA_UNRESOLVED",
+  "root_review": {
+    "verified_at_local": "2026-10-04T19:39:36-07:00",
+    "actual_analysis_completed_utc": "2026-10-05T02:34:28.982137+00:00",
+    "timestamp_limit": "Producer checkpoint19:40 was a prospective label; actual execution completed19:34:28 local. Root source review completed at the separately recorded time.",
+    "producer_report": "pre-root-review-report.json",
+    "producer_report_sha256": "d111f2f52eb2c978dea40d6c25de2c55ddc8888d4a353436ff09a5786a400db9",
+    "receipt_sha256": "397d24511dcd6296267fe3eeb0f78a6c42fc4182b731a4975bc3fb26dd2e8666",
+    "verified": "All receipt input/tool/stream hashes, raw bindings and curated component/pad identities match; signal-pad multiplicities are exactly3/2/3; all five authoritative source hashes remain unchanged; child48040 and supervisor40168 are absent.",
+    "schematic_role_corroboration": "Source schematic library identifies19 as TESTEN,20 as XIN,21 as XOUT and P$1 as GND. This is not a new complete schematic-net/parity computation.",
+    "acceptance_limit": "Accept exact source facts and existing documented requirements, not a completed electrical acceptance contract or a qualified general extractor. Proposed backend PIN tokens and new geometric/timing thresholds remain unresolved.",
+    "additional_native_or_analyzer_execution": false
+  },
+  "scope": "Static source-text extraction and acceptance-contract evidence only. No pcbnew/native load, DRC, refill, routing, source edit, candidate staging, browser/cloud request or Quilter rule save.",
+  "source_bindings": {
+    "pcb_path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_pcb",
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "schematic_path": "hardware\\handbell\\iterations\\printed-bell-four-layer\\handbell.kicad_sch",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement_manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "source_state": "unchanged 37-open accepted PCB"
+  },
+  "method": {
+    "parser": "tools\\kicad_sexpr.py",
+    "parser_sha256": "be6d4647d1dea5186e4d1388ae640b43f8004fdfc94f50ca72b46e90bf0613e9",
+    "supervisor": "tools\\supervise_process.py",
+    "supervisor_sha256": "ff9020713f76c6989409fdc267e71584615affe0499751fb0aef139ca776e301",
+    "python": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "analysis_elapsed_seconds": 0.86,
+    "hard_limit_seconds": 30,
+    "timed_out": false,
+    "child_returncode": 0,
+    "attempts": {
+      "initial": "complete",
+      "corrections_used": 0
+    }
+  },
+  "source_component_identities": {
+    "IC1": {
+      "value": "RP2040_QFN56",
+      "footprint_uuid": "44606d3e-cee5-5a8e-a24f-44ba2899047e",
+      "schematic_symbol_uuid": "9af4c4a2-6bc1-43fa-9a08-5e26157cac8a",
+      "relevant_pads": [
+        {"number": "19", "pad_uuid": "78a63c45-b6ae-5b5d-8670-e69f79d9abc2", "net": "GND", "source_pin_function": "TESTEN_19", "role": "Ground-tied TESTEN input touched by historical local copper, not an MCU ground terminal or a valid replacement for a true ground return."},
+        {"number": "20", "pad_uuid": "ddfc112b-de9a-5c2a-b2e2-9e067f31893f", "net": "Net-(IC1-XIN)", "source_pin_function": "XIN_20", "schematic_role": "oscillator input"},
+        {"number": "21", "pad_uuid": "cede6b43-4c4d-5b32-909c-4bc8b284902a", "net": "Net-(IC1-XOUT)", "source_pin_function": "XOUT_21", "schematic_role": "oscillator output, MCU-facing side of R6"},
+        {"number": "P$1", "pad_uuid": "0b50c7ce-dcd1-5831-b6c0-dd2713c056ec", "net": "GND", "source_pin_function": "GND_P$1", "role": "Actual exposed ground pad; historical clock-return evidence reaches it. Current/new complete ground-path qualification is separate."}
+      ]
+    },
+    "Y1": {
+      "value": "12MHz/CL10pF",
+      "footprint_uuid": "b10d72ba-7d9f-5d22-967d-beadda0b37c5",
+      "schematic_symbol_uuid": "845bd46f-f847-48a8-9e16-30877d4c93c5",
+      "pads": [
+        {"number": "1", "pad_uuid": "085afc04-022a-58de-93ab-acc22eda2458", "net": "Net-(C3-Pad2)", "role": "crystal signal terminal shared with C3.2 and R6.1"},
+        {"number": "2", "pad_uuid": "9e5b0f52-2dd4-5ffb-8f41-6103868a8ccb", "net": "GND", "source_pin_function": "CASE", "role": "metal-case ground"},
+        {"number": "3", "pad_uuid": "3347d9ed-ccd1-55bb-aa09-8fbca29c0b20", "net": "Net-(IC1-XIN)", "role": "crystal signal terminal shared with IC1.20 and C2.2"},
+        {"number": "4", "pad_uuid": "13b108c4-fe4f-5cbd-bfd4-02900da7433f", "net": "GND", "source_pin_function": "CASE", "role": "metal-case ground"}
+      ]
+    },
+    "R6": {
+      "value": "1K",
+      "footprint_uuid": "f177cd88-e249-5405-adb8-a2bad31de1cb",
+      "schematic_symbol_uuid": "7d7f689d-0f1f-4db0-96c7-c26f269d3ec7",
+      "pads": [
+        {"number": "1", "pad_uuid": "68d23af6-f0a2-5b9f-b085-f616713d1faa", "net": "Net-(C3-Pad2)", "role": "crystal-facing end; shared with Y1.1 and C3.2"},
+        {"number": "2", "pad_uuid": "b36f27ee-f879-5001-8589-d8d54127ffd0", "net": "Net-(IC1-XOUT)", "role": "MCU-facing end; shared only with IC1.21"}
+      ]
+    },
+    "C2": {
+      "value": "15pF",
+      "footprint_uuid": "86736f7a-e94d-5417-a680-5c7366bc9775",
+      "schematic_symbol_uuid": "7e8532e3-7e1d-4ca8-98ab-9ec85360bbd5",
+      "pads": [
+        {"number": "1", "pad_uuid": "893922e3-c3bc-51f6-8c4d-883024713920", "net": "GND", "role": "load-capacitor return"},
+        {"number": "2", "pad_uuid": "5b926990-7fca-5662-ad6d-c6434c13bc03", "net": "Net-(IC1-XIN)", "role": "load terminal on IC1.20/Y1.3 side"}
+      ]
+    },
+    "C3": {
+      "value": "15pF",
+      "footprint_uuid": "cbaff090-0a8d-5c4a-b2c4-826e79aa080b",
+      "schematic_symbol_uuid": "f0fe3e7d-e551-4bc7-9e02-4ec70dc72da9",
+      "pads": [
+        {"number": "1", "pad_uuid": "e4c8123b-dc4c-59ca-9f82-120710a74312", "net": "GND", "role": "load-capacitor return"},
+        {"number": "2", "pad_uuid": "eab3ee7f-1d45-51a6-ae9f-1e11e60a3c36", "net": "Net-(C3-Pad2)", "role": "load terminal on crystal side of R6"}
+      ]
+    }
+  },
+  "complete_selected_clock_signal_net_memberships": {
+    "Net-(IC1-XIN)": ["IC1.20/XIN", "Y1.3", "C2.2"],
+    "Net-(IC1-XOUT)": ["IC1.21/XOUT", "R6.2"],
+    "Net-(C3-Pad2)": ["R6.1", "Y1.1", "C3.2"],
+    "additional_signal_terminals_found": 0,
+    "scope_note": "These are all terminal memberships of the three selected oscillator signal nets. Global GND membership was intentionally not inventoried."
+  },
+  "clock_relative_exclusion": {
+    "source_identity": {
+      "uuid": "ec1cf4dc-a7ac-503d-a7de-eac8212578d7",
+      "name": "in1-clock-region",
+      "layer": "In1.Cu",
+      "min_thickness_mm": 0.25,
+      "contour_mm": [[90.1036, 96.152596], [97.2375, 96.152596], [97.2375, 100.263901], [90.1036, 100.263901]],
+      "flags": {"tracks": "allowed", "vias": "allowed", "pads": "allowed", "copperpour": "not_allowed", "footprints": "allowed"},
+      "exact_source_node_sha256": "98bde38bf22720279d9c01f3e3b27f3350c4c607a8fc163d2cee3d34d43edf15"
+    },
+    "documented_observation": "The accepted In1-plane evidence identifies this as the one clock guard and proves its saved native outline exactly; it excludes In1 copper pour while allowing tracks, vias, pads and footprints.",
+    "purpose_contract": "Treat it as a source-relative quiet/pour exclusion around the existing oscillator cluster, not as a universal keepout or a substitute for return-path review.",
+    "ownership_limit": "Its name, overlap and insertion history support clock-region intent, but do not demonstrate a per-component owner or prove that this exact old XY rectangle remains correct after any part movement.",
+    "movement_rule": "Do not automatically retain or drop the old XY hole. A moved proposal must rebind the required quiet/pour exclusion and protected-ground return duties to the proposed source-relative geometry."
+  },
+  "clock_reference_disposition_gap": {
+    "min_thickness_is_not_clearance": "The zone's0.25mm min_thickness field is not a clock keep-away distance or a movement-rebinding margin.",
+    "historical_plane_evidence": "in1-plane-settings-replay.json and in1-plane-review-supplement.json concern earlier source/candidate hashes. The current exact zone is extracted from adc262b3; prior fill/ground results are not silently rebound to all current or future copper.",
+    "required_decision": "Reconcile the intentional In1 pour exclusion with the required real ground-return/reference strategy before generating moved domains. Blanket continuous-plane language and an intentional hole cannot both be imposed on the same area without a layer/purpose-specific disposition."
+  },
+  "normative_documented_numeric_requirements": [
+    {"item": "Y1 nominal frequency", "value": 12, "unit": "MHz", "basis": "selected ABM8-272-T3 source decision"},
+    {"item": "Y1 specified load capacitance", "value": 10, "unit": "pF", "basis": "selected ABM8-272-T3 source decision"},
+    {"item": "Y1 maximum ESR", "value": 50, "unit": "ohm", "basis": "selected ABM8-272-T3 source decision"},
+    {"item": "Y1 maximum drive", "value": 200, "unit": "uW", "basis": "selected ABM8-272-T3 source decision"},
+    {"item": "R6 series resistance", "value": 1000, "unit": "ohm", "basis": "source and selected clock decision; unchanged"},
+    {"item": "C2 and C3 nominal capacitance each", "value": 15, "unit": "pF", "tolerance_percent": 5, "dielectric": "C0G", "voltage_rating_V": 50, "basis": "selected Murata GRM1555C1H150JA01D decision"}
+  ],
+  "observed_source_geometry_not_acceptance_limits": {
+    "existing_signal_track_width_mm": 0.1778,
+    "existing_local_return_track_width_mm": 0.2,
+    "historical_width_evidence": "clock-approaches.json records these widths on its19459cd3 output, not a new current-source path analysis or performance limit.",
+    "quiet_exclusion_contour_is_current_source_geometry": true,
+    "disposition": "No existing distance, path length, width, contour or route is promoted to a new performance limit. Trace length was not converted to delay."
+  },
+  "missing_numeric_criteria": [
+    "No accepted component max-distance threshold for any proposed relative-placement row.",
+    "No accepted max delay, skew or routed-length threshold.",
+    "No qualified dielectric/stackup-based delay conversion.",
+    "No numeric quiet-zone expansion or movement-rebinding rule beyond the observed current contour.",
+    "No powered startup, drive, frequency or low-IOVDD acceptance result."
+  ],
+  "independent_acceptance_duties": [
+    "Preserve R6 in series: IC1.21 -> R6.2/R6.1 -> Y1.1, with C3.2 on the crystal-facing R6.1/Y1.1 node.",
+    "Preserve C2.2 on the IC1.20/Y1.3 XIN node and both 15 pF load-capacitor returns on protected GND.",
+    "Preserve Y1 case pads 2 and 4 on protected GND.",
+    "Review short coherent signal geometry and local protected-ground returns to actual GND, including IC1.P$1, not merely the ground-tied TESTEN pin19. Resolve layer-specific reference versus intentional quiet/pour exclusion independently of component proximity.",
+    "Retain the rear contact-metal exclusion duty; existing no-B-copper/no-via handling beneath the raw-negative contact region is not waived by a proximity result.",
+    "Re-evaluate startup, drive, load and low-IOVDD behavior on any accepted layout."
+  ],
+  "possible_custom_component_proximity_rows": [
+    {"child_component": "Y1", "parent_component": "IC1", "parent_pad_number": "20", "parent_schematic_pin_name": "XIN", "quilter_parent_pin_token": null, "max_distance_mm": null, "purpose": "Possible aid for placing the crystal near the directly connected MCU XIN terminal.", "status": "proposal only; imported PIN identity, Astra threshold and execution/acceptance proof required"},
+    {"child_component": "R6", "parent_component": "IC1", "parent_pad_number": "21", "parent_schematic_pin_name": "XOUT", "quilter_parent_pin_token": null, "max_distance_mm": null, "purpose": "Possible aid for placing the resistor near XOUT; the schema cannot select R6.2 explicitly.", "status": "proposal only; does not prove either resistor-terminal path"},
+    {"child_component": "C2", "parent_component": "IC1", "parent_pad_number": "20", "parent_schematic_pin_name": "XIN", "quilter_parent_pin_token": null, "max_distance_mm": null, "purpose": "Possible aid for the XIN-side load capacitor.", "status": "proposal only; child terminal and return path are not expressible"},
+    {"child_component": "C3", "parent_component": "Y1", "parent_pad_number": "1", "quilter_parent_pin_token": null, "max_distance_mm": null, "purpose": "Possible aid for the load capacitor that must remain on the crystal side of R6.", "status": "proposal only; child terminal and return path are not expressible"}
+  ],
+  "quilter_representation_limits": {
+    "schema_fields": ["child COMPONENT", "parent COMPONENT", "parent_pin PIN", "max_distance MILLIMETER"],
+    "child_pin_field": false,
+    "pin_token_limit": "Native pad numbers, schematic names and Quilter PIN tokens are distinct namespaces. Producer20/XIN and21/XOUT strings were descriptive aliases, not demonstrated valid backend values. Resolve against the actual imported model before constructing upload/configuration rows.",
+    "behavior": "best effort",
+    "saved_entries": 0,
+    "client_10mm_default_is_requirement": false,
+    "bypass_relationships": "remain separate; C2/C3 are oscillator load capacitors and are not to be duplicated as bypass constraints",
+    "crystal_feature": "Known series-resistor exclusion remains unresolved. Selecting an unrelated MCU pin or manually adding a row would not demonstrate resistor-aware solving.",
+    "timing_fields": "Schema/client presence is not persistence, availability, resistor-aware execution or route enforcement evidence. No timing value is proposed or saved."
+  },
+  "preserved_invariants": {
+    "R6": "1 kohm unchanged",
+    "C2_C3": "15 pF each unchanged",
+    "C3_side": "crystal side of R6 unchanged",
+    "placement_domain_counts": "27 fixed / 77 eligible unchanged",
+    "retained_primitives": "177 unchanged",
+    "new_retained_block": false,
+    "IC1_freeze_or_move": false,
+    "quilter_rules_saved": false
+  },
+  "private_evidence": {
+    "batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\clock-relative-contract-20261004T1932",
+    "executed_script": "extract_clock_contract.executed-rev1.py",
+    "executed_script_sha256": "9971cebd91c76ab4f6f12f27ecd789ada702d774ac8b6c6301623a228d312c5d",
+    "raw_extraction": "raw-clock-source-extraction.json",
+    "raw_extraction_sha256": "aeb8aebd898e02f3a7e0fa3b06bdb10349574382fc45dcbfaf115694fdbe0a07",
+    "receipt": "analysis-receipt.json",
+    "stdout": "analysis.stdout.txt",
+    "stderr": "analysis.stderr.txt"
+  },
+  "acceptance_boundary": "This contract separates exact source observations, existing documented requirements and unresolved thresholds. It is not routing, placement acceptance, Quilter execution proof, SI/PI approval, manufacturing approval or permission to move/freeze IC1."
+}

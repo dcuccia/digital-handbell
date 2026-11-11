@@ -1,493 +1,83 @@
-# Long-term roadmap and epic specifications
+# Roadmap
 
-The roadmap captures scope; linked GitHub issues track execution, discussion,
-owners, blockers, and evidence. No calendar deadlines are imposed before the
-shell, acoustic, and assembly feasibility work.
+[Project home](../README.md) · [Documentation](README.md) · [Contributing](../CONTRIBUTING.md)
 
-## Milestones
+**Updated November 10, 2026.** We have a zero-open six-layer layout, a
+public review snapshot and a live prototype PCBA quote. We do not yet have
+a demonstrated working custom instrument or a fabrication release.
 
-| Milestone | Outcome | Epics |
+## Now: review the design we have
+
+| Workstream | Starting evidence | Next concrete outcome |
 |---|---|---|
-| [M0 - Discovery and reference proof](https://github.com/dcuccia/digital-handbell/milestone/1) | Requirements, measured envelope, reusable source baseline and bench evidence | E01-E03 |
-| [M1 - Schematic and subsystem prototypes](https://github.com/dcuccia/digital-handbell/milestone/2) | Reviewed reduced schematic, mechanical concept, instrument behavior | E04-E06 |
-| [M2 - Custom hardware prototype](https://github.com/dcuccia/digital-handbell/milestone/3) | Manufacturable layout, populated first boards, integrated bring-up | E07-E09 |
-| [M3 - Educational pilot and open release](https://github.com/dcuccia/digital-handbell/milestone/4) | Appropriate safety review, usable kit and reproducible release | E10-E11 |
-| [M4 - Future wireless exploration](https://github.com/dcuccia/digital-handbell/milestone/5) | Optional evidence-driven connected instrument | E12 |
-
-## Execution and dependencies
-
-**September 14 execution update:** the owner-approved
-[cost-aware closure plan](pcb-closure-plan.md) coordinates the remaining
-E04/E05/E07/E08 geometry, routing and quotation work. It preserves previous
-studies, batches bookkeeping and uses coherent closure milestones rather
-than open-ended routing tasks. It does not waive the completion gates below.
-
-Dependencies below are **completion gates**, not a ban on parallel investigation.
-For example, initial schematic drafting can start while the bench experiment
-runs; schematic freeze waits for its relevant electrical decisions. Measurement
-and source-import work can start together.
-
-```mermaid
-flowchart LR
-    E01 --> E03
-    E01 --> E04
-    E02 --> E04
-    E03 --> E04
-    E01 --> E05
-    E03 --> E05
-    E01 --> E06
-    E03 --> E06
-    E04 --> E07
-    E05 --> E07
-    E07 --> E08
-    E06 --> E09
-    E08 --> E09
-    E09 --> E10
-    E10 --> E11
-    E11 -. optional .-> E12
-```
-
-Use Todo / In Progress / Done on the Project board, with an explicit blocker
-noted in issue text when appropriate. An epic is done when its acceptance
-criteria and linked evidence are complete, not when a proposed plan exists.
-Create focused child issues as implementation details become known.
-
-**2026-09-07 scope update:** the
-[compact power/packaging review](compact-power-and-packaging.md) adds approved
-GPIO19-button/STEMMA removal, boosted mono audio, a printed cartridge/grille
-and early S3-MINI RF exploration. The [0.2 handoff](electrical-reduction-and-placement.md)
-now delivers the electrical reduction and an unrouted 43 mm placement; the
-[mechanical handoff](mechanical-feasibility.md) records FreeCAD feasibility.
-The broad bench, routing, sourcing and safety gates remain open.
-Early E12 work may inform carrier freeze without making
-network connectivity a prerequisite for the first sounding instrument.
-
-**2026-09-09 measurement update:** the speaker arrived and its key stations are
-recorded in the [measured-speaker study](../mechanical/studies/2026-09-09-measured-speaker/README.md).
-The PCBA proxy received positive physical fit feedback, while unspecified other
-printed parts need structural reconsideration. [PCB battery-contact research](battery-contact-options.md)
-compares compact-cell mounting without selecting a cell or freezing a layout.
-E01/E04/E05/E07 remain open; the original print snapshot is preserved.
-
-The subsequent [wing/cartridge iteration](electromechanical-wing-iteration.md)
-adds a separate native two-face placement, ground-assigned M2 mounting
-interfaces and a two-piece body/yoke concept with STEP/STL/FreeCAD files.
-Neither battery retention nor shell attachment is complete. Supplier-tier
-eligibility, actual contacts/cell, loaded retention and final routing remain completion
-gates rather than reasons to block this draft work.
-
-**2026-09-11 next revision:** the owner confirms the wing/cartridge fit and
-provides [new caliper stations](measurements/2026-09-11-shell-speaker-inputs.json),
-a corrected D21.70 speaker magnet and a 1.15 mm working wall assumption.
-The [T8 integration plan](t8-integration-plan.md) advances compact on-board
-cell protection, actual wire-free contacts/capture, 2 MB Winbond flash, a
-closer-fitting mouth profile, supported USB access and serviceable shell
-attachment. Review the complete new FreeCAD assembly **before routing**.
-This does not close the broader E04/E05/E07 electrical, retention or DFM gates.
-
-The coordinated [four-piece T8 cartridge](../mechanical/studies/2026-09-11-t8-cartridge/README.md)
-consumes the exact 83-part electrical placement and adds battery capture,
-M2 captive-nut joints, insulating shell fasteners and a mouth-open USB slot.
-Its 6.25 mm mouthward stack shift is a proposed fit tradeoff, not an owner
-approval of the increased front projection. The original fixed-stack
-interference evidence and the owner's 0.5/1.0 mm spacing comparison are retained
-separately. E05/E07 remain open for physical fit and placement approval.
-
-**2026-09-13 printed-bell direction:** the owner reports successful inert fit
-and authorizes an original one-piece printed shell, flush removable cartridge,
-black handle and all-front electronic SMT study. The
-[coordinated revision](printed-bell-revision.md) achieves D43 with 81F + two
-B contacts, and a D70/H55.8 shell with an 80 mm handle. Existing PCB mounts,
-USB and contact datums remain fixed. The owner authorizes critical routing
-after coordinated engineering interface review, without requiring another
-viewing turn first. This does not waive E04/E07 electrical or E10 physical/
-thermal/retention gates, and does not authorize fabrication.
-
-The first copper checkpoint is now published separately. An owner-requested
-[power-routing review](../hardware/handbell/iterations/printed-bell-routing/reports/power-routing-review.md)
-identified boost-loop and protector-sense corrections. The
-[separate power-rework milestone](../hardware/handbell/iterations/printed-bell-power-rework/README.md)
-implements those changes, and E05 now consumes that exact PCB and placement
-in the complete printed assembly. E07 still has 155 unconnected items and
-open power-budget work. E02/E04/E07/E08 also track the newly discovered
-[USB slot-import and land-pattern qualification gap](usb-connector-qualification.md);
-neither the old source geometry nor a global clearance waiver resolves it.
-
-**Quotation handoff:** the owner now explicitly expects complete PCB+PCBA
-upload assets for both JLCPCB and PCBWay, not only an initial routing draft.
-The [quotation plan](pcba-quotation-plan.md) defines matched Gerber/drill,
-supplier BOM/placement and assembly/process assets, including both rear
-contacts. Completing this package does not authorize a supplier upload/order
-or claim production/safety qualification.
-
-<!-- TRACKING:START -->
-**Public Project:** [Digital Handbell](https://github.com/users/dcuccia/projects/1).
-All twelve epics were initialized as Todo with a Phase field matching their
-milestone. Current status belongs on the Project/issues, not this static table.
-The first ready workstreams are E01 (requirements/measurements) and E02
-(provenance/CAD import).
-
-| Epic | GitHub issue | Completion dependencies |
-|---|---|---|
-| E01 | [#1 Requirements, shell measurements, and acceptance targets](https://github.com/dcuccia/digital-handbell/issues/1) | None |
-| E02 | [#2 Provenance, KiCad setup, and reference import](https://github.com/dcuccia/digital-handbell/issues/2) | None |
-| E03 | [#3 Bench proof of sound, motion, power, and quiet idle](https://github.com/dcuccia/digital-handbell/issues/3) | E01 |
-| E04 | [#4 Reduced handbell schematic and electrical review](https://github.com/dcuccia/digital-handbell/issues/4) | E01, E02, E03 |
-| E05 | [#5 Speaker, enclosure, and assembly architecture](https://github.com/dcuccia/digital-handbell/issues/5) | E01, E03 |
-| E06 | [#6 Instrument firmware, sound assets, and gesture behavior](https://github.com/dcuccia/digital-handbell/issues/6) | E01, E03 |
-| E07 | [#7 Circular PCB layout, DFM, and cost comparison](https://github.com/dcuccia/digital-handbell/issues/7) | E04, E05 |
-| E08 | [#8 Prototype fabrication, assembly, and production files](https://github.com/dcuccia/digital-handbell/issues/8) | E07 |
-| E09 | [#9 Board bring-up and enclosed instrument integration](https://github.com/dcuccia/digital-handbell/issues/9) | E06, E08 |
-| E10 | [#10 Safety, durability, and supervised educational pilot](https://github.com/dcuccia/digital-handbell/issues/10) | E09 |
-| E11 | [#11 Open release, kit documentation, and sustainable cost](https://github.com/dcuccia/digital-handbell/issues/11) | E10 |
-| E12 | [#12 Optional wireless and advanced sensing](https://github.com/dcuccia/digital-handbell/issues/12) | E11 for product integration only |
-
-These relationships are also recorded as GitHub native blocked-by dependencies.
-E12 does not block the first release. Initial issue checklists are seeded from
-the specifications below; maintain scope changes in both the specification and
-issue, and keep execution progress/evidence on the issue.
-<!-- TRACKING:END -->
-
-## E01 - Requirements, shell measurements, and acceptance targets
-
-**Milestone:** M0 - Discovery and reference proof
-
-**Dependencies:** None.
-
-**Goal:** Turn the concept into a measurable brief without prematurely fixing a
-speaker, battery, or board diameter.
-
-- [ ] Confirm note range, tuning, fixed/selectable notes, retrigger/damping,
-  player age, mass, volume/listening distance, and intended environments.
-- [ ] Set latency/jitter, false/missed-trigger, idle-noise/click, runtime,
-  charging, and cost criteria; distinguish must-haves from preferences.
-- [ ] Measure several shells and make a dated inner-profile drawing with
-  tolerances, clapper/handle intrusion, USB-access candidates, and photographs
-  or sketches that are licensed for publication.
-- [ ] Refine the captured B01EABRWO6 estimates into depth-indexed IDs; locate
-  the 40 mm station and measure actual speaker/cell/terminal envelopes.
-- [ ] Identify cell envelope/protection/temperature constraints and whether
-  playing during charge is required; do not select a charge resistor yet.
-- [ ] Define representative build quantities and class-set assembly/charging
-  workflow; link open decisions and requirement IDs.
-
-**Acceptance:** An updated requirements register, measurement record, and
-approved evaluation criteria make subsequent trade studies comparable.
-Unknowns have explicit owners or follow-up issues, not silent defaults.
-
-**Artifacts:** Project brief, dimensioned shell profile, acceptance matrix.
-
-## E02 - Provenance, KiCad setup, and reference import
-
-**Milestone:** M0 - Discovery and reference proof
-
-**Dependencies:** None.
-
-**Goal:** Establish a legally traceable, electrically reviewed source baseline
-that a novice can open and inspect.
-
-- [ ] Install KiCad with libraries; document the actual version and beginner
-  setup/recovery steps without introducing unnecessary plugins.
-- [ ] Pin 5768 sources and relevant comparison sources, record filenames/hashes,
-  and add full upstream license/attribution notices before importing.
-- [ ] Keep 4884 reference-only until its license version ambiguity is resolved.
-- [ ] Import unmodified EAGLE schematic/board into a reference project; compare
-  nets, symbol pin numbers, packages, footprints, layers, and design rules.
-- [ ] Record all importer repairs and upstream documentation discrepancies;
-  define the source-to-derivative block mapping.
-- [ ] Preserve notices and review the selected boost source at import; resolve
-  MiniBoost's approximately 5 V source divider versus 5.2 V prose explicitly.
-
-**Acceptance:** Another contributor can reproduce the import and open native
-files/PDFs without missing libraries. Connectivity differences are explained.
-Every imported artifact has an unambiguous provenance/license record.
-
-**Artifacts:** Reference CAD, import report, provenance inventory, setup guide.
-
-## E03 - Bench proof of sound, motion, power, and quiet idle
-
-**Milestone:** M0 - Discovery and reference proof
-
-**Dependencies:** E01.
-
-**Goal:** Reduce the largest electrical/acoustic/software uncertainties with the
-integrated 5768 before ordering custom boards.
-
-- [ ] Prepare an owner-approved prototype parts list and wiring plan; use
-  current-limited power and suitable speaker loads.
-- [ ] Run a minimal, attributed CircuitPython audio/motion demonstration with
-  versioned libraries and original or explicitly licensed sound assets.
-- [ ] Compare candidate drivers at controlled levels and representative cavity
-  conditions; record sound, clipping, current, mass, and depth.
-- [ ] Compare on-hand EK1725 and the smaller EK1794 candidate; resolve the
-  latter's 3 W/2 W seller conflict separately from the 3 W electronics target.
-- [ ] Measure strike-to-sound and ready/sleep wake behavior, idle hiss, clicks,
-  startup/reset, and USB insertion/removal; evaluate mixer buffering.
-- [ ] Evaluate the baseline power selection and establish cell/charger and
-  mute/rail questions for schematic freeze; do not infer whole-board current
-  from amplifier datasheet figures.
-
-**Acceptance:** A reproducible bench report establishes whether RP2040,
-CircuitPython, LIS3DH, and MAX98357A remain suitable candidates and records
-specific changes needed. No unexplained "sounds good" or "low power" conclusions.
-
-**Artifacts:** Bench application, asset notices, wiring, measurement report,
-electrical recommendations.
-
-## E04 - Reduced handbell schematic and electrical review
-
-**Milestone:** M1 - Schematic and subsystem prototypes
-
-**Dependencies:** E01, E02, E03.
-
-**Goal:** Produce the first actual handbell schematic by adapting understood
-reference blocks, not by merging breakout diagrams blindly.
-
-- [ ] Preserve RP2040 core/USB/flash/clock/recovery and the initial GPIO contract.
-- [ ] Remove unused servo/NeoPixel/header branches while retaining shared
-  amp switching, pullups, biasing, protection, and decoupling.
-- [ ] Remove STEMMA QT; add a keyed GPIO19-to-GND button harness, retain simple
-  charge/status LEDs, and review compact recovery/test access.
-- [ ] Integrate a pinned compact boost block after exact-part review; cover
-  default-off enable, 5 V-class rail budget, independent mute/mono mode,
-  low-cell current, USB transitions and signal-pin backfeed.
-- [ ] Select exact cell/charger current, source path, protection, temperature,
-  cutoff/off and charging-use policy from evidence.
-- [ ] Define amp gain/channel/mute, speaker connector, I2S sequencing, status,
-  controls, sensor interrupt, and programming/test access.
-- [ ] Assign reviewed MPNs/footprints and candidate assembly SKUs; resolve
-  substitution risks and stock constraints before layout.
-- [ ] Complete the schematic checklist, critical-net comparison, ERC review,
-  and an independent electrical review with resolved findings.
-
-**Acceptance:** Native KiCad sources, readable PDF, preliminary BOM and review
-record cover every required block. Charge safety, power states, and firmware
-pin mapping are explicit. No fabricated "validated" status from ERC alone.
-
-**Artifacts:** Schematic, libraries, BOM, net/pin map, source-change log,
-electrical review.
-
-## E05 - Speaker, enclosure, and assembly architecture
-
-**Milestone:** M1 - Schematic and subsystem prototypes
-
-**Dependencies:** E01, E03.
-
-**Goal:** Select a mechanically credible, acoustically evaluated packaging
-concept before imposing a PCB outline.
-
-- [ ] Compare shallow/light and deeper drivers in representative rear cavities.
-- [ ] Prototype USB-slot/opposite screw, separate speaker carrier, and
-  multilevel carrier concepts with cardboard/inert mock-ups then prints.
-- [ ] Compare a solid disk behind the magnet with near-mouth annular/offset
-  placement and an optional shallow mouth extension; do not infer fit from area.
-- [ ] Develop a removable printed cartridge/baffle/grille with a separate
-  bonded mounting interface, accessible harnesses and serviceable cell.
-- [ ] Establish USB anchor/support load path; compare SMT threaded hardware
-  against carrier-mounted captive nuts/inserts.
-- [ ] Verify outward-facing connector access and complete assembly order,
-  including speaker plug, cell retention, insulation, and service access.
-- [ ] Produce a tolerance-aware 3D stack and compare one PCB versus stacked
-  boards without committing on gross area alone.
-
-**Acceptance:** A chosen concept has measured fit, explained acoustic tradeoffs,
-safe cell/screw clearances, an assembly demonstration, and an outline/height
-keepout package suitable for PCB placement.
-
-**Artifacts:** Mechanical drawings/source CAD, mock-up results, selected speaker
-evidence, assembly sequence, PCB envelope.
-
-## E06 - Instrument firmware, sound assets, and gesture behavior
-
-**Milestone:** M1 - Schematic and subsystem prototypes
-
-**Dependencies:** E01, E03.
-
-**Goal:** Evolve demonstration code into responsive, reproducible instrument
-behavior without conflating audio buffering and motion sampling.
-
-- [ ] Record non-identifying timestamped ringing/handling/playback-vibration
-  traces; define replayable false/missed-trigger scenarios.
-- [ ] Implement and tune a nonblocking gesture state machine with hysteresis,
-  retrigger handling, orientation/gravity treatment, and velocity response.
-- [ ] Compare stock LIS3DH against the owner-approved LSM6DSOX using the same
-  strike/chest-stop/rest traces; measure false damping and justify the final
-  sensor without requiring on-chip ML.
-- [ ] Implement selected note/configuration, damping/polyphony, envelopes,
-  digital limits, and quiet/power modes with bounded resource use.
-- [ ] Map GPIO19 using EXTERNAL_BUTTON rather than stock board.BUTTON;
-  remove NeoPixel status assumptions and define selected-slot audio/mute states.
-- [ ] Establish asset provenance, firmware/library versions, USB update/recovery,
-  and custom-board definition/authorized identity requirements.
-
-**Acceptance:** Replay and hardware evidence cover required musical behavior,
-latency/jitter, false triggers, audio resource limits, and recovery. Final
-enclosed-system regression remains E09, not assumed from the bench.
-
-**Artifacts:** CircuitPython application, configuration, licensed assets,
-dataset/replay procedure, measurements, programming guide.
-
-## E07 - Circular PCB layout, DFM, and cost comparison
-
-**Milestone:** M2 - Custom hardware prototype
-
-**Dependencies:** E04, E05.
-
-**Goal:** Demonstrate a routed, manufacturable design within the measured
-envelope and compare realistic assembled costs.
-
-- [ ] Place actual courtyards/connectors/test access inside mechanical keepouts.
-- [ ] Compare RP2040 and S3-MINI floorplans using the same audio/power block;
-  account for narrow annular bands, component height and antenna clearances.
-- [ ] Attempt one-face SMT/two-layer routing with continuous return references,
-  short amp supply loops, paired BTL routing, and reviewed USB/core layout.
-- [ ] If needed, compare four layers and stacked boards with explicit
-  diameter/depth, assembly labor, yield, and cost tradeoffs.
-- [ ] Include Standard two-face factory assembly as a quoted alternative;
-  do not move only the inductor or assume bottom-terminated hand rework is easy.
-- [ ] Review footprints/polarity, 3D clearances, thermal copper, test points,
-  fiducials/panel tabs, USB overhang, and unusual fastener assembly.
-- [ ] Run DRC and independent layout review; obtain current BOM/assembly
-  feasibility and quote scenarios for JLCPCB and OSH Park plus separate assembly.
-
-**Acceptance:** Native layout, 3D stack, resolved review/DRC findings, supplier
-constraints and complete cost model justify actual diameter/layers/assembly
-side. No fit claim based only on chip area.
-
-**Artifacts:** PCB sources, fabrication-rule profiles, placement/3D images,
-BOM availability snapshot, DFM report, comparative costs.
-
-## E08 - Prototype fabrication, assembly, and production files
-
-**Milestone:** M2 - Custom hardware prototype
-
-**Dependencies:** E07.
-
-**Goal:** Obtain a small traceable prototype batch with reproducible
-manufacturing data, after explicit purchase approval.
-
-- [ ] Generate Gerbers, drills, BOM/CPL, assembly drawings and programming/test
-  instructions from a tagged source revision.
-- [ ] Inspect every assembler preview orientation/polarity, approved part
-  substitution, panel/rail/tab geometry, and connector/fastener exception.
-- [ ] Obtain owner approval of quantity, complete cost, supplier, and known
-  prototype limitations before placing any order.
-- [ ] Record actual built BOM/revisions, incoming inspection, populated-board
-  photos, assembly exceptions, and rework.
-
-**Acceptance:** The delivered batch is traceable to reviewed files and approved
-substitutions; incoming results and unexplained discrepancies are recorded.
-Delivery is not electrical bring-up or child-use qualification.
-
-**Artifacts:** Versioned fabrication package, sanitized order/build record,
-incoming inspection, assembled prototypes.
-
-## E09 - Board bring-up and enclosed instrument integration
-
-**Milestone:** M2 - Custom hardware prototype
-
-**Dependencies:** E06, E08.
-
-**Goal:** Prove the actual custom hardware and firmware together, then repeat
-key measurements in the real shell.
-
-- [ ] Perform staged current-limited bring-up: shorts/rails, recovery/flash/USB,
-  sensor/interrupt, I2S/amp, power switching and charging functions.
-- [ ] Record current, thermal, headroom, noise/clicks, latency, runtime and
-  charging transitions across defined battery/USB conditions.
-- [ ] Repeat motion tests with speaker vibration, final mounting and actual
-  handling; tune and regression-test against recorded criteria.
-- [ ] Evaluate repeated units for variation, document anomalies and corrective
-  changes, and decide whether another board spin is needed.
-
-**Acceptance:** Integrated results satisfy the approved engineering criteria or
-lead to explicit revisions. Firmware, cell, speaker, carrier and PCB versions
-are linked for every result; no unresolved blocking anomaly is hidden.
-
-**Artifacts:** Bring-up log, integrated measurement report, known issues,
-revision disposition.
-
-## E10 - Safety, durability, and supervised educational pilot
-
-**Milestone:** M3 - Educational pilot and open release
-
-**Dependencies:** E09.
-
-**Goal:** Establish the appropriate review and operational safeguards before
-any use by children or wider educational distribution.
-
-- [ ] Resolve intended age/market and instrument-versus-toy classification with
-  qualified guidance; identify applicable compliance work.
-- [ ] Review cell access/retention/temperature, sharp edges, small parts,
-  screw intrusion, cable abrasion, sound exposure and fault handling.
-- [ ] Assess USB/structural retention, foreseeable shaking/drops and wear using
-  appropriate procedures; do not improvise destructive live-cell testing.
-- [ ] Define approved charging/storage/maintenance and supervision practices.
-- [ ] Conduct only an appropriately authorized/safeguarded pilot; capture
-  non-identifying usability, assembly, reliability and musical feedback.
-
-**Acceptance:** Required reviews, safeguards, operating instructions and pilot
-authorization are recorded before deployment. Any compliance/certification
-claim is supported by its actual scope and evidence.
-
-**Artifacts:** Risk/review record, durability results, operating guidance,
-sanitized pilot findings and release blockers.
-
-## E11 - Open release, kit documentation, and sustainable cost
-
-**Milestone:** M3 - Educational pilot and open release
-
-**Dependencies:** E10.
-
-**Goal:** Publish a reproducible, attributed project that others can build,
-program, maintain, and budget without hidden expertise or missing files.
-
-- [ ] Publish native electronics/mechanical sources, PDFs, manufacturing files,
-  actual BOM/substitutes, firmware, assets, and complete license notices.
-- [ ] Write novice assembly, polarity, programming, recovery, note configuration,
-  charging, maintenance, troubleshooting and replacement-part instructions.
-- [ ] Record actual per-unit/per-set cost, assembly time, yield and manual work
-  at the built quantity; distinguish projections for larger batches.
-- [ ] Verify a fresh checkout/export and an independent build of the documented
-  revision; document tool versions and supplier-specific differences.
-- [ ] Publish known limits, evidence scope, supported configurations and
-  maintenance/contribution workflow without implying vendor endorsement.
-
-**Acceptance:** A tagged release is reproducible and fully attributed, has
-usable kit documentation, and accurately states its safety/compliance status
-and cost assumptions.
-
-**Artifacts:** Public release, build/educator guides, license inventory, actual
-cost report, supported-configuration matrix.
-
-## E12 - Optional wireless and advanced sensing
-
-**Milestone:** M4 - Future wireless exploration
-
-**Dependencies:** E11 for product integration; exploratory research may begin earlier.
-
-**Goal:** Revisit the original wireless/host/6-DOF ideas only when a concrete use
-case justifies added cost, energy, software and mechanical complexity.
-
-- [ ] Define whether wireless is for configuration, synchronization, MIDI,
-  telemetry or audio; specify latency/reliability/privacy/offline requirements.
-- [ ] Compare ESP32-S3 against C3 and historical alternatives for CircuitPython
-  APIs, USB provisioning, memory, radio power, assembly and actual cost.
-- [ ] Evaluate antenna keepouts and propagation inside the metal bell; do not
-  treat a radio-capable chip as a working RF design.
-- [ ] Prototype sound/configuration updates and optional asynchronous practice
-  telemetry with real shell/speaker/cell placement before shared-carrier freeze.
-- [ ] Evaluate learned gesture processing only for measured unmet requirements;
-  LSM6DSOX six-axis sensing is already approved in the non-wireless draft.
-- [ ] Prototype interoperability, identity/provisioning, updates and power
-  modes while preserving a usable standalone instrument.
-- [ ] Use QR/stable identity separate from musical-note assignment, explicit
-  enrollment, USB recovery and protected updates; distinguish file maintenance
-  from full interpreter OTA and verify the exact CircuitPython build.
-
-**Acceptance:** An evidence-backed go/no-go decision and separate hardware/
-firmware requirements precede any replacement of the working non-wireless
-baseline. A negative result is a valid outcome.
-
-**Artifacts:** Use-case/architecture decision, comparative prototype results,
-optional future revision plan.
+| Electrical and layout review | [Six-layer review brief](pcb-review-2026-11.md), snapshot `2f738ccb` | Disposition native rule/parity findings; review power/returns, USB, clock, decoupling and recovery. Track in [#4](https://github.com/dcuccia/digital-handbell/issues/4) / [#7](https://github.com/dcuccia/digital-handbell/issues/7). |
+| Mechanical integration | [Completed four-layer-era FreeCAD assembly](../mechanical/README.md) | Rebind the six-layer board and actual part poses; add/check the J1 speaker-plug and wire-exit relief, mounts, USB access, cell isolation and service sequence. [#5](https://github.com/dcuccia/digital-handbell/issues/5). |
+| Manufacturing and sourcing | [Quote package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md) | Resolve via-fill/process questions, R27/J2 substitutions and every placement/polarity; produce a reviewed, matched order package. [#8](https://github.com/dcuccia/digital-handbell/issues/8). |
+| Firmware and bench work | [Firmware/audio plan](firmware-and-audio.md), [sensor initialization gate](motion-sensing.md) | Reproducible audio/motion proof, custom-board pin mapping and replayable gesture cases. [#3](https://github.com/dcuccia/digital-handbell/issues/3), [#6](https://github.com/dcuccia/digital-handbell/issues/6), [#13](https://github.com/dcuccia/digital-handbell/issues/13). |
+
+These can progress in parallel. Manufacturing release depends on the
+applicable electrical, mechanical and process dispositions, not just a
+price quote. The [before-ordering checklist](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md)
+is the detailed gate; the [review brief](pcb-review-2026-11.md) owns R1-R6.
+
+The selected quote scenario is **10 PCBs with 8 assembled**, Standard
+two-sided assembly, ENIG and epoxy-filled/capped through vias: **$345.84
+before shipping and tax**, observed November 10. It is a batch quote, not
+the complete cost of eight bells or a production unit-price promise.
+Nothing has been ordered. HDI and an MCU change remain future options,
+not selected redesigns.
+
+## Next: first articles that tell us what works
+
+1. **Release a traceable prototype batch.** Close or explicitly disposition
+   blocking review items, obtain owner purchase approval, and record exact
+   source, production files, substitutions and incoming inspection.
+2. **Bring up one board in stages.** Establish a qualified, current-limited
+   plan covering protection, rails, USB/boot/debug, sensor, audio/mute,
+   charging and power transitions before relying on the rest of the batch.
+3. **Make it an instrument.** Demonstrate note playback and ringing/damping
+   behavior, then measure latency, false triggers, idle noise, thermal
+   behavior and runtime in the actual enclosure.
+4. **Decide whether to respin.** Base revisions on measurements and
+   documented anomalies, not on a successful render or connectivity count.
+
+See [validation](validation-plan.md) and
+[#9: bring-up and integration](https://github.com/dcuccia/digital-handbell/issues/9).
+No dates are promised before the remaining review and first-article results.
+
+## Later: a reproducible, approachable open instrument
+
+Publish a tested hardware/firmware combination, licensed sounds, assembly
+instructions, recovery steps and realistic complete-build costs. Establish
+the appropriate safety/durability review before a supervised educational
+pilot. Wireless, MIDI/host integration and alternative MCUs can be evaluated
+separately; the standalone bell must not depend on them.
+
+## Milestones and tracking
+
+| Milestone | Current interpretation |
+|---|---|
+| [M0: discovery and reference proof](https://github.com/dcuccia/digital-handbell/milestone/1) | Reference imports and measurements exist; a bench proof is still needed. |
+| [M1: schematic and subsystem prototypes](https://github.com/dcuccia/digital-handbell/milestone/2) | Electrical and enclosure drafts exist; review and instrument behavior remain open. |
+| [M2: custom hardware prototype](https://github.com/dcuccia/digital-handbell/milestone/3) | Current focus: routed six-layer design and quote, not yet an assembled/working prototype. |
+| [M3: educational pilot and open release](https://github.com/dcuccia/digital-handbell/milestone/4) | Later; depends on evidence from integrated hardware and appropriate safety review. |
+| [M4: future wireless exploration](https://github.com/dcuccia/digital-handbell/milestone/5) | Optional, not a first-instrument blocker. |
+
+All twelve epic issues remain open as of this update. The
+[project board](https://github.com/users/dcuccia/projects/1) tracks execution;
+[epic specifications](epics.md) preserve the original acceptance criteria
+and dependencies. We have not marked an epic complete just because a
+design file or a quote exists.
+
+## What we learned
+
+Placement and power/return paths mattered as much as router choice. Quilter
+produced useful diagnostic candidates; DeepPCB plus bounded local
+engineering led to the zero-open milestone. Different inputs and effort
+prevent a fair vendor ranking by routed percentage alone.
+
+Future revisions start with functional cells, power/return/data interfaces
+and legal transition access before freezing placement. The
+[agent-first PCB workflow](agent-first-pcb-workflow.md) captures that method.
+The [research index](README.md#history-and-research) retains the experiments;
+it is not an instruction to repeat them.

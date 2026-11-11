@@ -1,0 +1,3329 @@
+{
+  "adaptation_ledger": [
+    "supports, cell cradle, and cell cover",
+    "bezel and USB access",
+    "shell while preserving general bell shape",
+    "hardware, service access, and axial assembly"
+  ],
+  "area_proxies": {
+    "formulas": {
+      "high_body_annulus_proxy": "pi*((D/2)^2-(10.85+0.25)^2)",
+      "nominal_disk_area_proxy": "pi*(D/2)^2"
+    },
+    "limits": "AREA PROXY only; not true outline area, packing, or routing. No body-erosion, mount, contact, or edge deductions.",
+    "results": [
+      {
+        "delta_vs_D43_mm2": 0.0,
+        "high_body_annulus_proxy_mm2": 1065.1255732730835,
+        "nominal_disk_area_proxy_mm2": 1452.2012041218818,
+        "nominal_main_disk_body_diameter_mm": 43.0,
+        "percent_vs_D43": 0.0
+      },
+      {
+        "delta_vs_D43_mm2": 138.23007675795088,
+        "high_body_annulus_proxy_mm2": 1203.3556500310344,
+        "nominal_disk_area_proxy_mm2": 1590.4312808798327,
+        "nominal_main_disk_body_diameter_mm": 45.0,
+        "percent_vs_D43": 9.518658734451058
+      }
+    ]
+  },
+  "artifact_classification": "PACKAGING_SENSITIVITY_NOT_LAYOUT_OR_FIT_APPROVAL",
+  "axial_cases": [
+    {
+      "additional_board_to_speaker_spacing_dz_mm": 0.0,
+      "case_id": "D43_dz0",
+      "front_eligible_references": [
+        "C1",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C2",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C3",
+        "C30",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "CHG0",
+        "D3",
+        "D4",
+        "FB1",
+        "FB2",
+        "IC1",
+        "IC4",
+        "L0",
+        "L1",
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "R1",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R2",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "U1",
+        "U2",
+        "U3",
+        "U5",
+        "U6",
+        "Y1"
+      ],
+      "front_fitted_rows": [
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C10"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C11"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C12"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C13"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C14"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C15"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C16"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C17"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C18"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C19"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C2"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C20"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C21"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C22"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C23"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "fixed",
+          "reference": "C24"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C25"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C26"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C27"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C28"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C30"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C4"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C7"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C8"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C9"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "CHG0"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.2,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.3,
+          "placement_status": "eligible",
+          "reference": "D3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.4,
+          "placement_status": "eligible",
+          "reference": "D4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "FB1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "FB2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "IC1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "IC4"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 3.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -1.6,
+          "placement_status": "fixed",
+          "reference": "J1"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 3.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -1.6,
+          "placement_status": "fixed",
+          "reference": "J2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "L0"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 5.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -3.5,
+          "placement_status": "eligible",
+          "reference": "L1"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "Q1"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "Q2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "Q3"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "Q4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.22,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.28,
+          "placement_status": "eligible",
+          "reference": "Q5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R10"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R11"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R12"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R13"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R14"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R15"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R16"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R17"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R18"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R20"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R21"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R22"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R23"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R24"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R25"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R26"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.75,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.75,
+          "placement_status": "eligible",
+          "reference": "R27"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R28"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R29"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R7"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R8"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R9"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.6,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.9,
+          "placement_status": "eligible",
+          "reference": "U1"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "U2"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "U3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "fixed",
+          "reference": "U4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "U5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.8,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.7,
+          "placement_status": "eligible",
+          "reference": "U6"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 3.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -2.0,
+          "placement_status": "fixed",
+          "reference": "X6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "Y1"
+        }
+      ],
+      "front_fixed_references": [
+        "C24",
+        "J1",
+        "J2",
+        "U4",
+        "X6"
+      ],
+      "nominal_magnet_axial_gap_mm": 1.5,
+      "nominal_main_disk_body_diameter_mm": 43.0,
+      "stations_z_mm": {
+        "cell_center": 36.38,
+        "fixed_speaker_magnet_rear": 23.5,
+        "nominal_contact_top_B_plus_16_59": 43.19,
+        "pcb_back_B": 26.6,
+        "pcb_front_F": 25.0
+      },
+      "strict_signed_gap_classification": {
+        "equal": {
+          "count": 5,
+          "references": [
+            "Q1",
+            "Q2",
+            "Q4",
+            "U2",
+            "U3"
+          ]
+        },
+        "negative": {
+          "count": 12,
+          "references": [
+            "C1",
+            "C19",
+            "C20",
+            "C26",
+            "C27",
+            "C28",
+            "C4",
+            "C5",
+            "J1",
+            "J2",
+            "L1",
+            "X6"
+          ]
+        },
+        "positive": {
+          "count": 64,
+          "references": [
+            "C10",
+            "C11",
+            "C12",
+            "C13",
+            "C14",
+            "C15",
+            "C16",
+            "C17",
+            "C18",
+            "C2",
+            "C21",
+            "C22",
+            "C23",
+            "C24",
+            "C25",
+            "C3",
+            "C30",
+            "C6",
+            "C7",
+            "C8",
+            "C9",
+            "CHG0",
+            "D3",
+            "D4",
+            "FB1",
+            "FB2",
+            "IC1",
+            "IC4",
+            "L0",
+            "Q3",
+            "Q5",
+            "R1",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "R14",
+            "R15",
+            "R16",
+            "R17",
+            "R18",
+            "R2",
+            "R20",
+            "R21",
+            "R22",
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R7",
+            "R8",
+            "R9",
+            "U1",
+            "U4",
+            "U5",
+            "U6",
+            "Y1"
+          ]
+        }
+      }
+    },
+    {
+      "additional_board_to_speaker_spacing_dz_mm": 2.0,
+      "case_id": "D43_dz2",
+      "front_eligible_references": [
+        "C1",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C2",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C3",
+        "C30",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "CHG0",
+        "D3",
+        "D4",
+        "FB1",
+        "FB2",
+        "IC1",
+        "IC4",
+        "L0",
+        "L1",
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "R1",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R2",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "U1",
+        "U2",
+        "U3",
+        "U5",
+        "U6",
+        "Y1"
+      ],
+      "front_fitted_rows": [
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C10"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C11"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C12"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C13"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C14"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C15"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C16"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C17"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C18"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C19"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C20"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C21"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C22"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C23"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "fixed",
+          "reference": "C24"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C25"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C26"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C27"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C28"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C30"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C7"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C8"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C9"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "CHG0"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.2,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.3,
+          "placement_status": "eligible",
+          "reference": "D3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.4,
+          "placement_status": "eligible",
+          "reference": "D4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "FB1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "FB2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "IC1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "IC4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 3.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.4,
+          "placement_status": "fixed",
+          "reference": "J1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 3.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.4,
+          "placement_status": "fixed",
+          "reference": "J2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "L0"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 5.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -1.5,
+          "placement_status": "eligible",
+          "reference": "L1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "Q1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "Q2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "Q3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "Q4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.22,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 3.28,
+          "placement_status": "eligible",
+          "reference": "Q5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R10"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R11"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R12"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R13"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R14"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R15"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R16"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R17"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R18"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R20"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R21"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R22"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R23"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R24"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R25"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R26"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.75,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.75,
+          "placement_status": "eligible",
+          "reference": "R27"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R28"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R29"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R7"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R8"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R9"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.6,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.9,
+          "placement_status": "eligible",
+          "reference": "U1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "U2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "U3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "fixed",
+          "reference": "U4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "U5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.8,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.7,
+          "placement_status": "eligible",
+          "reference": "U6"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 3.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "fixed",
+          "reference": "X6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "Y1"
+        }
+      ],
+      "front_fixed_references": [
+        "C24",
+        "J1",
+        "J2",
+        "U4",
+        "X6"
+      ],
+      "nominal_magnet_axial_gap_mm": 3.5,
+      "nominal_main_disk_body_diameter_mm": 43.0,
+      "stations_z_mm": {
+        "cell_center": 38.38,
+        "fixed_speaker_magnet_rear": 23.5,
+        "nominal_contact_top_B_plus_16_59": 45.19,
+        "pcb_back_B": 28.6,
+        "pcb_front_F": 27.0
+      },
+      "strict_signed_gap_classification": {
+        "equal": {
+          "count": 1,
+          "references": [
+            "X6"
+          ]
+        },
+        "negative": {
+          "count": 1,
+          "references": [
+            "L1"
+          ]
+        },
+        "positive": {
+          "count": 79,
+          "references": [
+            "C1",
+            "C10",
+            "C11",
+            "C12",
+            "C13",
+            "C14",
+            "C15",
+            "C16",
+            "C17",
+            "C18",
+            "C19",
+            "C2",
+            "C20",
+            "C21",
+            "C22",
+            "C23",
+            "C24",
+            "C25",
+            "C26",
+            "C27",
+            "C28",
+            "C3",
+            "C30",
+            "C4",
+            "C5",
+            "C6",
+            "C7",
+            "C8",
+            "C9",
+            "CHG0",
+            "D3",
+            "D4",
+            "FB1",
+            "FB2",
+            "IC1",
+            "IC4",
+            "J1",
+            "J2",
+            "L0",
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4",
+            "Q5",
+            "R1",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "R14",
+            "R15",
+            "R16",
+            "R17",
+            "R18",
+            "R2",
+            "R20",
+            "R21",
+            "R22",
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R7",
+            "R8",
+            "R9",
+            "U1",
+            "U2",
+            "U3",
+            "U4",
+            "U5",
+            "U6",
+            "Y1"
+          ]
+        }
+      }
+    },
+    {
+      "additional_board_to_speaker_spacing_dz_mm": 0.0,
+      "case_id": "D45_dz0",
+      "front_eligible_references": [
+        "C1",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C2",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C3",
+        "C30",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "CHG0",
+        "D3",
+        "D4",
+        "FB1",
+        "FB2",
+        "IC1",
+        "IC4",
+        "L0",
+        "L1",
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "R1",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R2",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "U1",
+        "U2",
+        "U3",
+        "U5",
+        "U6",
+        "Y1"
+      ],
+      "front_fitted_rows": [
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C10"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C11"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C12"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C13"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C14"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C15"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C16"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C17"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C18"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C19"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C2"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C20"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C21"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C22"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C23"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "fixed",
+          "reference": "C24"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C25"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C26"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C27"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C28"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C30"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C4"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -0.5,
+          "placement_status": "eligible",
+          "reference": "C5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C7"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C8"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "C9"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "CHG0"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.2,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.3,
+          "placement_status": "eligible",
+          "reference": "D3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.4,
+          "placement_status": "eligible",
+          "reference": "D4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "FB1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "FB2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "IC1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "IC4"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 3.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -1.6,
+          "placement_status": "fixed",
+          "reference": "J1"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 3.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -1.6,
+          "placement_status": "fixed",
+          "reference": "J2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "L0"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 5.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -3.5,
+          "placement_status": "eligible",
+          "reference": "L1"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "Q1"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "Q2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "Q3"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "Q4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.22,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.28,
+          "placement_status": "eligible",
+          "reference": "Q5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R10"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R11"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R12"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R13"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R14"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R15"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R16"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R17"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R18"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R20"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R21"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R22"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R23"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R24"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R25"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R26"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.75,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.75,
+          "placement_status": "eligible",
+          "reference": "R27"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R28"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R29"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R7"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R8"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "R9"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.6,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.9,
+          "placement_status": "eligible",
+          "reference": "U1"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "U2"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "eligible",
+          "reference": "U3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "fixed",
+          "reference": "U4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.85,
+          "placement_status": "eligible",
+          "reference": "U5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.8,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.7,
+          "placement_status": "eligible",
+          "reference": "U6"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 3.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -2.0,
+          "placement_status": "fixed",
+          "reference": "X6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.5,
+          "placement_status": "eligible",
+          "reference": "Y1"
+        }
+      ],
+      "front_fixed_references": [
+        "C24",
+        "J1",
+        "J2",
+        "U4",
+        "X6"
+      ],
+      "nominal_magnet_axial_gap_mm": 1.5,
+      "nominal_main_disk_body_diameter_mm": 45.0,
+      "stations_z_mm": {
+        "cell_center": 36.38,
+        "fixed_speaker_magnet_rear": 23.5,
+        "nominal_contact_top_B_plus_16_59": 43.19,
+        "pcb_back_B": 26.6,
+        "pcb_front_F": 25.0
+      },
+      "strict_signed_gap_classification": {
+        "equal": {
+          "count": 5,
+          "references": [
+            "Q1",
+            "Q2",
+            "Q4",
+            "U2",
+            "U3"
+          ]
+        },
+        "negative": {
+          "count": 12,
+          "references": [
+            "C1",
+            "C19",
+            "C20",
+            "C26",
+            "C27",
+            "C28",
+            "C4",
+            "C5",
+            "J1",
+            "J2",
+            "L1",
+            "X6"
+          ]
+        },
+        "positive": {
+          "count": 64,
+          "references": [
+            "C10",
+            "C11",
+            "C12",
+            "C13",
+            "C14",
+            "C15",
+            "C16",
+            "C17",
+            "C18",
+            "C2",
+            "C21",
+            "C22",
+            "C23",
+            "C24",
+            "C25",
+            "C3",
+            "C30",
+            "C6",
+            "C7",
+            "C8",
+            "C9",
+            "CHG0",
+            "D3",
+            "D4",
+            "FB1",
+            "FB2",
+            "IC1",
+            "IC4",
+            "L0",
+            "Q3",
+            "Q5",
+            "R1",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "R14",
+            "R15",
+            "R16",
+            "R17",
+            "R18",
+            "R2",
+            "R20",
+            "R21",
+            "R22",
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R7",
+            "R8",
+            "R9",
+            "U1",
+            "U4",
+            "U5",
+            "U6",
+            "Y1"
+          ]
+        }
+      }
+    },
+    {
+      "additional_board_to_speaker_spacing_dz_mm": 2.0,
+      "case_id": "D45_dz2",
+      "front_eligible_references": [
+        "C1",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C2",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C3",
+        "C30",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "CHG0",
+        "D3",
+        "D4",
+        "FB1",
+        "FB2",
+        "IC1",
+        "IC4",
+        "L0",
+        "L1",
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "R1",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R2",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "U1",
+        "U2",
+        "U3",
+        "U5",
+        "U6",
+        "Y1"
+      ],
+      "front_fitted_rows": [
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C10"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C11"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C12"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C13"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C14"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C15"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C16"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C17"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C18"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C19"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C20"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C21"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C22"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C23"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "fixed",
+          "reference": "C24"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C25"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C26"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C27"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C28"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C30"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 2.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 1.5,
+          "placement_status": "eligible",
+          "reference": "C5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C7"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C8"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "C9"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "CHG0"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.2,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.3,
+          "placement_status": "eligible",
+          "reference": "D3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.4,
+          "placement_status": "eligible",
+          "reference": "D4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "FB1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "FB2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "IC1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "IC4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 3.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.4,
+          "placement_status": "fixed",
+          "reference": "J1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 3.1,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.4,
+          "placement_status": "fixed",
+          "reference": "J2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "L0"
+        },
+        {
+          "classification": "negative",
+          "height_mm": 5.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": -1.5,
+          "placement_status": "eligible",
+          "reference": "L1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "Q1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "Q2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "Q3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "Q4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.22,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 3.28,
+          "placement_status": "eligible",
+          "reference": "Q5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R10"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R11"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R12"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R13"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R14"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R15"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R16"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R17"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R18"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R20"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R21"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R22"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R23"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R24"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R25"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R26"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.75,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.75,
+          "placement_status": "eligible",
+          "reference": "R27"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R28"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R29"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R7"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R8"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "R9"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.6,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.9,
+          "placement_status": "eligible",
+          "reference": "U1"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "U2"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.0,
+          "placement_status": "eligible",
+          "reference": "U3"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "fixed",
+          "reference": "U4"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.65,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.85,
+          "placement_status": "eligible",
+          "reference": "U5"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 0.8,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.7,
+          "placement_status": "eligible",
+          "reference": "U6"
+        },
+        {
+          "classification": "equal",
+          "height_mm": 3.5,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 0.0,
+          "placement_status": "fixed",
+          "reference": "X6"
+        },
+        {
+          "classification": "positive",
+          "height_mm": 1.0,
+          "nominal_magnet_axial_signed_gap_minus_height_mm": 2.5,
+          "placement_status": "eligible",
+          "reference": "Y1"
+        }
+      ],
+      "front_fixed_references": [
+        "C24",
+        "J1",
+        "J2",
+        "U4",
+        "X6"
+      ],
+      "nominal_magnet_axial_gap_mm": 3.5,
+      "nominal_main_disk_body_diameter_mm": 45.0,
+      "stations_z_mm": {
+        "cell_center": 38.38,
+        "fixed_speaker_magnet_rear": 23.5,
+        "nominal_contact_top_B_plus_16_59": 45.19,
+        "pcb_back_B": 28.6,
+        "pcb_front_F": 27.0
+      },
+      "strict_signed_gap_classification": {
+        "equal": {
+          "count": 1,
+          "references": [
+            "X6"
+          ]
+        },
+        "negative": {
+          "count": 1,
+          "references": [
+            "L1"
+          ]
+        },
+        "positive": {
+          "count": 79,
+          "references": [
+            "C1",
+            "C10",
+            "C11",
+            "C12",
+            "C13",
+            "C14",
+            "C15",
+            "C16",
+            "C17",
+            "C18",
+            "C19",
+            "C2",
+            "C20",
+            "C21",
+            "C22",
+            "C23",
+            "C24",
+            "C25",
+            "C26",
+            "C27",
+            "C28",
+            "C3",
+            "C30",
+            "C4",
+            "C5",
+            "C6",
+            "C7",
+            "C8",
+            "C9",
+            "CHG0",
+            "D3",
+            "D4",
+            "FB1",
+            "FB2",
+            "IC1",
+            "IC4",
+            "J1",
+            "J2",
+            "L0",
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4",
+            "Q5",
+            "R1",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "R14",
+            "R15",
+            "R16",
+            "R17",
+            "R18",
+            "R2",
+            "R20",
+            "R21",
+            "R22",
+            "R23",
+            "R24",
+            "R25",
+            "R26",
+            "R27",
+            "R28",
+            "R29",
+            "R3",
+            "R4",
+            "R5",
+            "R6",
+            "R7",
+            "R8",
+            "R9",
+            "U1",
+            "U2",
+            "U3",
+            "U4",
+            "U5",
+            "U6",
+            "Y1"
+          ]
+        }
+      }
+    }
+  ],
+  "contact_drawing": {
+    "mpn": "Keystone 254",
+    "overall_height_nominal_mm": 16.59,
+    "overall_height_tolerance_mm": 0.38,
+    "tolerance_limit": "Drawing height tolerance is an allowance, not a full loaded-motion envelope."
+  },
+  "interpretation_limits": [
+    "A positive signed result is ONLY the nominal speaker-magnet axial screen; it is not an allowed placement domain or fit assertion.",
+    "Front space consumes rear-stack room unless shell, supports, or bezel adapt.",
+    "No claim that +2 mm shell change alone proves fit.",
+    "Real parts, footprints, fasteners, contacts, and hardware are not scaled.",
+    "Fixed X6 is not relocated; zero at dz2 is reported, not waived.",
+    "No final diameter or spacing is recommended."
+  ],
+  "reference_accounting": {
+    "contract_unique_references": 104,
+    "copper_only_no_fabricated_height": [
+      "CHG_EN0",
+      "D+1",
+      "D-1",
+      "GAIN0",
+      "TP10",
+      "TP11",
+      "TP12",
+      "TP13",
+      "TP14",
+      "TP15",
+      "TP16",
+      "TP3",
+      "TP4",
+      "TP5",
+      "TP6",
+      "TP7",
+      "TP8",
+      "TP9"
+    ],
+    "dnp_no_fabricated_height": [
+      "C29"
+    ],
+    "eligible_95": [
+      "C1",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C18",
+      "C19",
+      "C2",
+      "C20",
+      "C21",
+      "C22",
+      "C23",
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C29",
+      "C3",
+      "C30",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "CHG0",
+      "CHG_EN0",
+      "D+1",
+      "D-1",
+      "D3",
+      "D4",
+      "FB1",
+      "FB2",
+      "GAIN0",
+      "IC1",
+      "IC4",
+      "L0",
+      "L1",
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4",
+      "Q5",
+      "R1",
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R14",
+      "R15",
+      "R16",
+      "R17",
+      "R18",
+      "R2",
+      "R20",
+      "R21",
+      "R22",
+      "R23",
+      "R24",
+      "R25",
+      "R26",
+      "R27",
+      "R28",
+      "R29",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9",
+      "TP10",
+      "TP11",
+      "TP12",
+      "TP13",
+      "TP14",
+      "TP15",
+      "TP16",
+      "TP3",
+      "TP4",
+      "TP5",
+      "TP6",
+      "TP7",
+      "TP8",
+      "TP9",
+      "U1",
+      "U2",
+      "U3",
+      "U5",
+      "U6",
+      "Y1"
+    ],
+    "fitted_back": 2,
+    "fitted_back_references": [
+      "BT1",
+      "BT2"
+    ],
+    "fitted_front": 81,
+    "fitted_total": 83,
+    "initial_fixed_9": [
+      "BT1",
+      "BT2",
+      "C24",
+      "J1",
+      "J2",
+      "MH1",
+      "MH2",
+      "U4",
+      "X6"
+    ],
+    "manifest_unique_references": 104,
+    "mounts_no_fabricated_height": [
+      "MH1",
+      "MH2"
+    ],
+    "sets_equal": true
+  },
+  "schema_version": 1,
+  "scope": {
+    "cases": "Endpoint cross product D43/45 x dz0/2; four cases only",
+    "diameter_definition": "Nominal main PCB disk body, not full outline width",
+    "dz_definition": "Positive z is toward handle; PCB/contact/cell stack translates rigidly while speaker magnet rear remains fixed",
+    "not_performed": [
+      "optimization",
+      "outline generation",
+      "layout",
+      "routing",
+      "enclosure update",
+      "native CAD calls"
+    ]
+  },
+  "script": {
+    "filename": "calculate_packaging_sensitivity.py",
+    "runtime": "Python standard library only",
+    "sha256": "3186fb654af4eae0e4ed772027aa5b05f7ed6a700a2bbf6ccfb7400a4e264142"
+  },
+  "source_hashes_after": {
+    "manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e"
+  },
+  "source_hashes_before": {
+    "manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e"
+  },
+  "source_inputs": [
+    {
+      "relative_path": "hardware/handbell/iterations/printed-bell-four-layer/handbell.kicad_pcb",
+      "role": "pcb",
+      "sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314"
+    },
+    {
+      "relative_path": "hardware/handbell/iterations/printed-bell-four-layer/handbell.kicad_sch",
+      "role": "schematic",
+      "sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e"
+    },
+    {
+      "relative_path": "hardware/handbell/iterations/printed-bell-four-layer/handbell.kicad_pro",
+      "role": "project",
+      "sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990"
+    },
+    {
+      "relative_path": "hardware/handbell/iterations/printed-bell-four-layer/placement-manifest.json",
+      "role": "manifest",
+      "sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8"
+    },
+    {
+      "relative_path": "hardware/handbell/iterations/printed-bell-four-layer/battery-contact-interface.json",
+      "role": "battery_contact_interface",
+      "sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+    },
+    {
+      "relative_path": "docs/design-inputs/2026-10-02-quilter-workflow.json",
+      "role": "workflow_contract",
+      "sha256": "f9412acd0a552a7986811b5f8a07a4dd549e7251876a2818861d954e6d46cde7"
+    }
+  ],
+  "unwaived_obligations": [
+    "electrical private paths and paired supply/return paths",
+    "battery contact isolation including CELL_NEG",
+    "five mandatory filled/capped process vias",
+    "loaded contact, hardware, service, assembly, and enclosure rebind"
+  ],
+  "workflow_contract_snapshot": {
+    "exact_byte_copy": true,
+    "filename": "workflow-contract-input-snapshot.json",
+    "sha256": "f9412acd0a552a7986811b5f8a07a4dd549e7251876a2818861d954e6d46cde7"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "status": "FOUR_SUBMITTED_ONCE_1114_SIX_NOT_CREATED",
+  "placement_progress_checkpoint": {
+    "observed_local": "2026-10-05 12:05",
+    "trigger": "Owner reports available placements and asks implicitly to review current progress; bounded read-only browser review, no native execution or job change.",
+    "job_state": "running",
+    "placement_count": 6,
+    "routed_candidate_count": 0,
+    "router_steps": {"completed":33,"total":45,"not_a_routing_percentage":true},
+    "placements": [
+      {"ordinal":1,"id":"6ac3f29b4bfd48cd20a2bc63","finished_local":"11:55:26","elapsed_minutes":41.02},
+      {"ordinal":2,"id":"6ac3f2cda8e5a9e83700c020","finished_local":"11:56:16","elapsed_minutes":41.85},
+      {"ordinal":3,"id":"6ac3f2eb3f6f72c5a381b1fb","finished_local":"11:56:47","elapsed_minutes":42.36},
+      {"ordinal":4,"id":"6ac3f3a0d3508c052b4c6244","finished_local":"11:59:47","elapsed_minutes":45.37},
+      {"ordinal":5,"id":"6ac3f3be1647649088bd730a","finished_local":"12:00:18","elapsed_minutes":45.88},
+      {"ordinal":6,"id":"6ac3f3cea8153664323065ed","finished_local":"12:00:33","elapsed_minutes":46.14}
+    ],
+    "all_six_service_results": "Each reports29 successful PRC groups,100 underlying passes, zero reported warnings/errors. These are placement results, not native routed-board acceptance.",
+    "first_placement_preliminary_review": {
+      "basis": "Saved Quilter render/detail responses versus the exact saved input render. No native output downloaded or parsed.",
+      "references_equal":104,
+      "fixed_reference_transforms_equal":32,
+      "eligible_refs_repositioned":72,
+      "eligible_refs_on_front":72,
+      "back_references":["BT1","BT2"],
+      "metadata_counts_input_and_placement":{"pins":325,"tracks":191,"vias":18,"pours":1,"keepouts":50,"placement_regions":1},
+      "same_type_net_count_distributions":true,
+      "geometry_limit": "Counts/net distributions and fixed transforms are preliminary preservation evidence, not exact primitive geometry/UUID, pad-net/pose, polygon, outline, fill or native DRC qualification. Other five placements were read only at summary level.",
+      "prc_scope": "28 capacitor pin-distance checks plus72 region-membership checks. UI groups these as28 capacitor entries and one placement region. Power and differential suites contain configured entries but zero executed checks at this placement stage.",
+      "capacitor_distance_limit_mm":10,
+      "largest_reported_distances_mm":[["C26","U5.3",5.985354],["C24","IC4.8",5.143841],["C28","U5.6",3.174684],["C15","IC1.44",3.044750],["C6","IC1.50",2.973892]],
+      "distance_disposition": "The generic10mm threshold is not our electrical acceptance requirement. In particular C24 remains fixed while IC4 moves; its5.144mm reported separation needs routed return/path review before choosing this placement. No route failure is established.",
+      "placement_routing_completion":0.25925925925925924,
+      "completion_disposition": "Exactly the input's retained-copper completion, not new routing gain.",
+      "service_drc": "Placement designRulesCheckViolations.violations=[]; newCadDrcViolations=null. Do not call this native KiCad DRC-clean.",
+      "single_sided_disposition": "singleSided=false is consistent with the two deliberately retained rear battery contacts. It does not mean the72 eligible parts moved to the back.",
+      "url":"https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60?placement=1"
+    },
+    "private_evidence_sha256": {
+      "four-job-progress-1205.json":"0a49f37146d383080a41ebe4c0d50e6cfd296eff92154de1399a5039dcbd87a8",
+      "four-job-events-1205.json":"cd2cb7ef75c11689f2897b2d61566e9ac0bdf661dc3f7020717c2d16d457f697",
+      "four-placement1-render-1206.json":"9910a41f44697e4c4aac519124a26e961993cb7018824258ebc7aa142a63b9a7",
+      "four-placement1-details-1206.json":"539d969e0ad691823508f73597248dc97c119d56d68947da6b5ba924a94fa6ba",
+      "four-placement1-board-1206.json":"0fb821fa34e95c5db3e840c9fea37437a9394d32e749dcb73d671040d45d06f5"
+    },
+    "tool_limit": "Two optional batch-capture helper attempts stopped before actions because this Playwright runtime exposes neither require nor dynamic import. No repeated browser capture or native tooling repair was started; first-placement review and all-six summary evidence remain usable.",
+    "decision": "Promising observed placement-search progress: six results in41-46minutes with no agent placement search. Leave routing uninterrupted. No placement selected/approved, no new job, six-layer upload, source change, integration or background monitoring.",
+    "next": "When a routed candidate is available, preserve its native output and perform the bounded identity/placement/copper/layer/plane gate before assessing actual routing gain."
+  },
+  "submission_checkpoint": {
+    "owner_authorization_local": "2026-10-05 11:01",
+    "submitted_local": "2026-10-05 11:14:25-07:00",
+    "job_name": "Handbell flexible 4L - JLC3313 - retained209",
+    "url": "https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60",
+    "confirmation": "One normal Start Job UI click; start response200, redirect to job page, and We're working on layout candidates for your design. Subsequent job response369 confirms state=running and launched=1791224065574. Earlier response366 was stale draft; preserved, not used as running-state proof. No candidate reviewed.",
+    "pricing": "Official free-ai-pcb-design page HTML, published October5, includes Non-Commercial Tier, price0 USD, unlimited iterations. This is published policy, not an account-specific quote. Owner previously confirmed fully personal use and now explicitly requested this first start. No payment, upgrade or new agreement appeared.",
+    "bypass_rows": [
+      ["C1","U2","1",10000],["C4","U2","5",10000],["C5","U2","5",10000],
+      ["C6","IC1","50",100],["C7","IC1","45",100],["C8","IC1","45",1000],
+      ["C9","IC1","1",100],["C10","U1","8",1000],["C11","IC1","33",1000],
+      ["C12","IC1","10",100],["C13","IC1","43",100],["C14","IC1","22",100],
+      ["C15","IC1","44",1000],["C15","IC1","42",1000],["C16","U4","7",100],
+      ["C17","IC1","48",1000],["C17","IC1","49",1000],["C18","IC1","23",100],
+      ["C19","U4","8",10000],["C20","CHG_EN0","2",10000],
+      ["C21","FB2","2",0.22],["C22","FB1","2",0.22],
+      ["C23","IC4","5",100],["C24","IC4","8",100],["C25","IC1","30",10],
+      ["C26","U5","3",22000],["C27","U5","6",22000],["C28","U5","6",22000]
+    ],
+    "bypass_basis": "Rows are capacitor,parent,pin,nF. Values from exact source PCB; all parents exist on intended source nets. Flash C10/VREG C15-C8 duties reuse check_printed_bell_placement.py; C6/C7/C18 reuse accepted VCORE terminal groups; C23/C24 use motion-sensing.md. MCU remaining supply-pin associations use source functions and local placement context, not all-to-U2 inference. C15 and C17 each cover two adjacent supply pins; this is supported by documented multi-pin bypass behavior. C2/C3 omitted from generic bypass optimization because the complete series-R6 clock cell is retained. C29 DNP and C30 retained private cell remain unchanged. C21/C22/C25 remain filter-placement relationships, not newly asserted power decouplers.",
+    "power_screen_ma": {
+      "+3V3":600,"GND":2000,"VAMP":1000,"VBAT":2000,"VBUS":2000,
+      "VCORE":600,"VHI":2000,"V+":2000,"/CELL_NEG":2000,
+      "/PROT_FET_RETURN":2000,"VO+":1000,"VO-":1000,
+      "Net-(FB1-P$1)":1000,"Net-(FB2-P$1)":1000
+    },
+    "power_basis_and_limits": "Source/return2A and audio1A are provisional routing screens from printed-bell-routing/reports/power-routing-review.md. VBUS2A is a copper screen, not USB permission or a charge/play budget. Logic/core600mA deliberately uses upstream linear RT9080's documented maximum capacity as a conservative trace-sizing bound, not actual load or RP2040 regulator rating. RP2040 PDF retrieval failed; no unverified150/300mA search-summary claim was used. All14 optional power pours=false; primary GND alone still supplies the selected ground layer. Quilter's20C IPC2221 check does not close the project's10C/IPC2152, voltage-drop or transient gates. Private sense/feedback nets are not assigned blanket high-current requirements.",
+    "placement_and_planes": "Saved72 unique assignments equal exactly104 minus selected32 fixed refs; each uses QUILTER_F_PLACEMENT_ROOM. Saved preservedPours explicitly includes PROTECTED_GND_In1.Cu in addition to preserveMidLayers=true. GND is sole primary ground; PROT_FET_RETURN removed from ground inference, not from circuit or power-return duty.",
+    "import_disposition": {
+      "fixed_set_exact":32,
+      "retained_tracks":191,
+      "retained_vias":18,
+      "copper_net_counts_equal":true,
+      "connected_pin_reference_name_net_multisets_equal":285,
+      "native_copper_pad_reference_name_net_layer_multisets_equal":324,
+      "normalization": "Explicit duplicate-pin suffixes on BT1/BT2/J1/J2/X6 and unconnected-net names to empty only. All other reference/name/net/layer records match.",
+      "count_explanation": "Native325 pad objects include one U1 F.Paste-only aperture. Render325 PIN objects contain324 copper pads plus CHG_EN0's source F.Cu graphic bridge. Aggregate326 is consistent with325 native objects plus that graphic, but its internal counting implementation was not independently traced. This is not missing intended connected terminals.",
+      "keepout_classes": "50 recognized restrictions:19 original pours-only,8 B traces/vias/pours,18 private all-types,5 F PINS-only reservations. One additional positive F placement region accounts for native51 rule areas. PINS is Quilter's imported label; exact body/rotation semantics and every polygon vertex were not independently proven.",
+      "remaining_warnings": "Sixteen missing-schematic references remain;15 are fixed and U1's flash bypass is explicitly corrected. Initial pour-deletion text remains despite saved preservation choice. Neither warning is silently treated as source loss or a guarantee of output fidelity.",
+      "qualification_boundary": "Accepted for this disposable routing evaluation using saved input restrictions and independent output review, not complete importer geometry certification. Exact returned geometry, body access, retained209 identities, all terminal/net duties, private isolation and planes remain mandatory before any integration."
+    },
+    "evidence_sha256": {
+      "four-comprehension-1112.json":"ed02e2207aaf260b60d595b4420690c822d171db56b3e7314c7d98f97de03103",
+      "four-selected-config-1112.json":"9ce28a0dec993fe9cfc0406a33e69bc82e5bb6dd8ac9d457415b628badd9547e",
+      "four-render-1112.json":"4a25eaa0dd4431aec6e4baf0854bb713fa98edba821066da6e5ff6a33f952fd0",
+      "bypass-corrected-1107.csv":"696da6df71449e742d5d1bcfa1eab02a5dfb07b378f614e46a547265c82889c9",
+      "power-corrected-1110.csv":"b2ee9be714b5f6f9be7f916679d993a84c545a0567d4d0fcf6db749e7c6f8de1",
+      "placement-corrected-1110.csv":"ba1b5fe8013942706cdf4da02e0f5c256b899236f8593c1b746be3102d94f847"
+    },
+    "private_receipts": ["four-confirmed-job-1114.json","four-launched-job-1114.json","four-launched-comprehension-1114.json","four-launched-config-1114.json","four-launch-request-index-1114.txt"],
+    "preservation": "No PCB/project/schematic input changes, native loads, manual routing, refill, integration, new agreement or paid action. Old rejected draft remains preserved. Six not created or submitted; no automatic monitoring started.",
+    "next": "Six-layer counterpart may reuse these common associations after its own imported stackup/roles/guards/90-ohm profile review. Review returned four-layer native output separately when available."
+  },
+  "historical_preview_status": "FOUR_DRAFT_CONFIGURED_HELD_FOR_COMPREHENSION_AND_REGION_REVIEW_SIX_NOT_CREATED",
+  "owner_authorization_local": "2026-10-05 09:16",
+  "scope": "Playwright-driven setup and qualified free four/six comparison submissions. Owner separately approved staging six byte-identical PCB/project/schematic files inside ignored browser roots after private-path access denial.",
+  "checkpoint_local": "2026-10-05 10:03",
+  "timing": "Human staging-approval wait interrupted the initial09:31 window. Active browser work resumed09:49 with10:04 preview checkpoint.",
+  "project": {
+    "name": "Handbell flexible 4-6 layer comparison",
+    "id": "6ac3d5b7fc0d2d776ed14a5f",
+    "url": "https://app.quilter.ai/projects/6ac3d5b7fc0d2d776ed14a5f",
+    "four_job_id": "6ac3d5b7fc0d2d776ed14a60",
+    "four_job_url": "https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60/create/constraints",
+    "six_job_id": null,
+    "six_creation_gate": "UI disables New Layout Job until the first project job is submitted. Do not bypass this control or submit an unqualified first job merely to unlock it.",
+    "old_project_rejected_draft": "6ac3cdd258ed28bd0fe882ba",
+    "old_project_result": "BOARD_SIMILARITY_VALIDATION blocks Continue against the old baseline. Preserved unchanged; used normal new-project workflow for the revised comparison baseline."
+  },
+  "inputs": {
+    "four_pcb_sha256": "342c242f3f7957c8cefb7ee0519326807cbe83b343f7afe07551e61f60c46b61",
+    "six_pcb_sha256": "c3749f5c6be862faa27a738c9b256ab8112881cae0833e3b15495f884e24fc07",
+    "both_projects_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+    "both_schematics_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "staging": ".playwright-mcp\\paired-inputs-20261005",
+    "six_uploaded": false,
+    "prl_uploaded": false
+  },
+  "four_import_observations": {
+    "components": 104,
+    "components_to_place": 72,
+    "preplaced_vias": 18,
+    "service_pins": 326,
+    "native_physical_pads": 325,
+    "pins_to_route": 235,
+    "display_dimensions_mm": [45, 49.34],
+    "region": {"name": "QUILTER_F_PLACEMENT_ROOM", "side": "front", "isOnBoard": true},
+    "recognized_pour": "PROTECTED_GND_In1.Cu",
+    "warnings": [
+      "Pin count mismatch;326 service pins must be reconciled with325 native physical pads, not assumed loss or equivalence.",
+      "Same16 missing-schematic-reference warning, including14 actual source refs and board-only MH1/MH2.",
+      "Initial existing-pours-deleted notice; preserveMidLayers was subsequently enabled, but explicit preservedPours entries remain null."
+    ]
+  },
+  "four_saved_configuration": {
+    "configuration_name": "existing",
+    "saved_updated_local": "2026-10-05T09:58:33.162-07:00",
+    "stackup": "Uploaded four-layer3313 numeric construction, not a vendor preset",
+    "copper_roles": ["signal", "ground", "signal", "signal"],
+    "copper_thickness_um": [35, 15.2, 15.2, 35],
+    "dielectric_thickness_um": [99.4, 1265, 99.4],
+    "dielectric_constants": [4.1, 4.6, 4.1],
+    "material_names": "Service metadata null; imported numeric thickness/Dk/core-prepreg structure matches input.",
+    "preserve_mid_layers": true,
+    "allow_stacked_vias": false,
+    "prefer_single_sided": true,
+    "component_clearance_mm": 0.127,
+    "fabrication_minima_um": {"width":177.8,"clearance":200,"via_copper":650,"via_drill":350,"board_margin":250},
+    "usb_pairs": ["D+/D-", "USB_D+/USB_D-"],
+    "differential_target_ohm": 90,
+    "independent_single_ended_target": null,
+    "removed_inference": "VO+/VO- removed from impedance-controlled differential data pairs; class-D speaker duties remain.",
+    "computed_usb_profile": [
+      {"layer":"F.Cu","width_um":199.78312103271486,"gap_um":210,"achieved_ohm":89.99447819391496,"status":"OK"},
+      {"layer":"In2.Cu","width_um":626.6328674316405,"gap_um":210,"achieved_ohm":90.00127617197565,"status":"OK"},
+      {"layer":"B.Cu","width_um":977.7901550292968,"gap_um":210,"achieved_ohm":90.00743582836864,"status":"OK"}
+    ],
+    "impedance_limit": "Observed saved target and fresh computed dimensions, not routing/reference-continuity or supplier acceptance."
+  },
+  "unclosed_submission_gates": [
+    "Reconcile29 bypass rows with actual source pin duties before allowing72 movable parts to be placed. Low-confidence rows assign C5/C9/C10/C11/C12/C13/C14/C17/C23/C24 to U2.5; C18 is assigned IC1.23. Do not treat a common supply net as the right local bypass parent.",
+    "Seven power rows retain generic500mA values and pour requests. Bind engineering current/return intent instead of treating defaults as reviewed values.",
+    "F room is recognized, but saved placementRegions entries are null. Confirm actual eligible-component associations and all five footprint reservations plus private/contact keepouts; single-sided preference alone is not enforcement.",
+    "Confirm protected-plane preservation and imported pin/net identity, including325/326 mismatch; preserve ground versus CELL_NEG/private returns.",
+    "Confirm current free-use conditions before any first submission. No payment/upgrade/agreement screen was accepted and no zero-price quote was established.",
+    "Only after qualified first submission can the supported UI create the six-layer counterpart in this project."
+  ],
+  "private_browser_evidence": [
+    ".playwright-mcp\\four-board-0955.json",
+    ".playwright-mcp\\four-comprehension-saved.json",
+    ".playwright-mcp\\four-selected-config-1000.json",
+    ".playwright-mcp\\four-90ohm-details-1000.json",
+    ".playwright-mcp\\four-request-index.txt"
+  ],
+  "preservation": "No native source/input edits, routing, refill, support message, paid action, submission or candidate integration. Raw browser payloads remain ignored; only sanitized findings are committed.",
+  "next_bounded_item": "One source-bound comprehension/placement-association correction for the existing four-layer draft using the saved29 rows and accepted source witnesses; no new inventory or duplicate job. Reuse corrected common settings for six only after first job qualifies."
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "checkpoint_local": "2026-10-04 19:27",
+  "status": "RELATIVE_CONSTRAINT_PATHS_IDENTIFIED_PHYSICAL_DOMAINS_AND_BEHAVIOR_UNQUALIFIED",
+  "starting_commit": "017ac9d",
+  "scope": "Read-only engineering disposition using existing geometry, functional groups, public documentation, saved current-client code and existing-job response bodies. No geometry generation, source edit, native inventory, cloud configuration change or new job.",
+  "source_pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+  "source_manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+  "existing_contract_coverage": {
+    "functional_groups": 16,
+    "unique_references_without_duplicate_membership": 104,
+    "fixed_references": 27,
+    "eligible_references": 77,
+    "new_geometry_or_net_inventory": false
+  },
+  "physical_domain_disposition": {
+    "front_height": "Reuse the qualified common below-gap class for eligible fitted F movers. L1 and X6 remain fixed; do not resurrect the old tall-mover population.",
+    "regions": "Use actual on-board F regions with reviewed associations, not off-board grouping regions to enforce side. Multiple assigned regions form a union.",
+    "body_boundary": "The placement guide describes fitting components and required clearances inside regions. Exact physical-body/courtyard/origin and rotation semantics remain unobserved. Do not invent per-origin erosions, double-apply body margins or generate many tiny regions before resolving that distinction.",
+    "fixed_obstacles": "Carry source-bound J1/J2/X6 planning reservations, R3.2 mount domains and retained-copper/private-path guards. J2 already includes its0.7mm allowance. F body placement, B contact metal and through-via exclusions are different obligations.",
+    "access_limits": "Existing proxies do not qualify complete harness, tool or loaded-contact envelopes. Keep those limits explicit and require exact full-assembly rebinding before acceptance.",
+    "electrical_limits": "Membership in a functional group is not a pin-relative distance, return-path, quiet-zone or timing constraint. Do not freeze the old floorplan merely because a relative constraint is missing."
+  },
+  "evidence": {
+    "private_directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\placement-capability-20261004T1924",
+    "client_path": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\usb-impedance-capability-20261004T1845\\app-index-Dh-zycbi-response.txt",
+    "client_sha256": "ac0cf4a4c7b699a57272b9f226f0754b936874a6a9f4dc178c2b7d961220174b",
+    "existing_job": "6ab98d5ff989cc810b2fc4a1",
+    "comprehension_response_file": "existing-job-comprehension-response.txt",
+    "comprehension_response_sha256": "2ab057594406d03f192153b0e1797d1e0f07c4e57512ba935af1ae1b8f2d13a1",
+    "comprehension_response_endpoint": "https://app.quilter.ai/v2/jobs/6ab98d5ff989cc810b2fc4a1/circuit-comprehension",
+    "saved_comprehension_version": "1.12.0",
+    "saved_comprehension_updated_utc": "2026-10-01T21:31:03.978000+00:00",
+    "ecad_definition_response_file": "existing-job-constraint-definitions-response.txt",
+    "ecad_definition_response_sha256": "078eb05e9d9f5bec0d4d00eb5d3a2e603673b3c0d37a53053fc9d9d82f84d6f9",
+    "ecad_definition_limit": "Empty old-job ECAD definitions provide no positive placement or geometry evidence.",
+    "capture_limit": "Browser export to the private directory was denied by its allowed-root policy. Response-only files were instead saved under ignored .playwright-mcp and copied to the authorized evidence directory. No headers, tokens or raw browser payloads are committed."
+  },
+  "custom_component_proximity": {
+    "evidence_level": "Observed client implementation and existing-job schema; no added, saved, compiled or routed constraint.",
+    "schema_name": "user_defined_component_proximity",
+    "display_name": "Custom Component Proximity",
+    "allow_additions_in_saved_response": true,
+    "constraint_behavior": "USER_DEFINED",
+    "fields": [
+      {"name": "child", "type": "COMPONENT"},
+      {"name": "parent", "type": "COMPONENT"},
+      {"name": "parent_pin", "type": "PIN"},
+      {"name": "max_distance", "type": "MILLIMETER"}
+    ],
+    "saved_entries": 0,
+    "client_help": "Best-effort child-component placement near a specified parent pin, with a PRC for final pin-to-pin distance. Child components should be the smaller ones. Do not duplicate bypass-capacitor relationships here.",
+    "client_new_row_default_mm": 10,
+    "default_is_an_engineering_requirement": false,
+    "important_limit": "No explicit child-pin field. Proximity is not a hard allowed region, routed-path length, ground-return qualification or private/Kelvin topology guarantee."
+  },
+  "timing_sensitive_signals": {
+    "public_documentation": "Still described as internal testing and not publicly available.",
+    "observed_saved_schema": "Editable component/pin pairs, max_skew, max_delay, pin_delay and signal_frequency; allowAdditions=true, zero entries.",
+    "current_client": "Contains initialization, optional-value and editing code for this category.",
+    "disposition": "Do not repeat categorical platform unavailability solely from public prose, but schema/client presence does not establish current-account availability, persistence, resistor-aware solving or route enforcement. No timing value was entered."
+  },
+  "clock_gate": {
+    "references": ["IC1", "Y1", "R6", "C2", "C3"],
+    "known_source_requirement": "R6 remains1kohm in series; C2/C3 remain15pF and C3 remains on the crystal side of R6. This is existing source intent, not a new defect.",
+    "known_documentation_limit": "The crystal comprehension says it does not detect or function with load-limiting resistors. The September27 bakeoff already recorded this limitation.",
+    "existing_job_crystal_fields": ["crystal", "crystal_parent", "parent_signal_pin_1", "parent_signal_pin_2"],
+    "existing_job_crystal_entries": 0,
+    "disposition": "Do not bypass R6, mislabel a resistor terminal as an MCU pin, or treat a manually added crystal row as a demonstrated solution. Custom proximity is a possible placement aid only; no automatic new retention, MCU freeze, repair or manual routing.",
+    "next_bounded_item": "Bind exact source clock terminals and component-relative exclusion/return obligations, then define a finite independent acceptance contract and assess legitimate proximity/timing representations. Reuse existing source evidence; do not invent numeric limits from UI defaults or launch another general inventory."
+  },
+  "public_sources_rechecked": [
+    "https://docs.quilter.ai/guides/placement-guide",
+    "https://docs.quilter.ai/design-parameters/placement-regions.md",
+    "https://docs.quilter.ai/design-parameters/keepouts.md",
+    "https://docs.quilter.ai/physics-constraints/bypass-capacitors.md",
+    "https://docs.quilter.ai/physics-constraints/crystal-oscillators.md",
+    "https://docs.quilter.ai/physics-constraints/timing-sensitive-signals.md"
+  ],
+  "limitations": [
+    "Neither the common physical placement domains nor exact capacitor-to-pin mappings are completed by this disposition.",
+    "Saved old-job schemas are not evidence that newly configured constraints persist, execute or cover the required electrical behavior.",
+    "No new full-board input, cloud object, upload, configuration edit, recompute, paid use, repair, integration or fabrication is released."
+  ]
+}

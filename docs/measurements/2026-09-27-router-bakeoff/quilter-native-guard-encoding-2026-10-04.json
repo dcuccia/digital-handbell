@@ -1,0 +1,1255 @@
+{
+  "bindings_sha256": {
+    "analyzer": "4b64b5c402a90e6bc49da97787713aabd772abad8d8bec48ce7e979e26f76611",
+    "connectivity": "079b47d115db668be0fd8af196b20bfea316193426eca36398dbc98dae0ee23d",
+    "four": "0caf804fdd8afb18b20cdce78db05898479fafebaea6a29ee215ec22204e0148",
+    "inventory": "edba323c00da212fd881be71cc98f5d1afd8d8ca15ac4545c4b79bf609a7b7ba",
+    "parser": "be6d4647d1dea5186e4d1388ae640b43f8004fdfc94f50ca72b46e90bf0613e9",
+    "raw": "85f3f7245b3a707d96f70e1a380db8f239c5474bfaf9f72626eecf7a02a886a9",
+    "repair": "f15a7743c8f5bcc205f2fabac34dd44d1901ce5c07a6204ad3b34c5085120d94",
+    "retained": "639a7f81136e9e38319a55ac5d84dff42dfaaa08fe909ac87a68053fbefe23a9",
+    "six": "efc79c68bd33def021d73d3931042c3cdec84dda0259fb72a5578df42f9c3b8a",
+    "supplement": "4f5d16f9b631b2d01e3af7e1039dad2638462e76850bdbe6a45e4dea7ae9c72e"
+  },
+  "candidate_set_proof": {
+    "affected_relationships": [
+      {
+        "analytic_contact": false,
+        "candidate_net": "/PROT_DOUT",
+        "candidate_uuid": "fd088aad-b11f-51fc-98f8-75d55ec48e9b",
+        "disposition": "rectangle_only_overcoverage",
+        "guard_uuid": "2c324d54-ed45-5d3c-8fda-4e9357102af2",
+        "layer": "F.Cu",
+        "rectangle_contact": true,
+        "source_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826"
+      },
+      {
+        "analytic_contact": false,
+        "candidate_net": "GND",
+        "candidate_uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0",
+        "disposition": "rectangle_only_overcoverage",
+        "guard_uuid": "37e4811e-91cd-5f87-8c43-fbd1a19e495c",
+        "layer": "F.Cu",
+        "rectangle_contact": true,
+        "source_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "analytic_contact": false,
+        "candidate_net": "GND",
+        "candidate_uuid": "290b2b2e-8d6d-52c7-bffa-510f365c4e4a",
+        "disposition": "rectangle_only_overcoverage",
+        "guard_uuid": "71859588-3982-55ff-a9e1-8dd2ef19aa0c",
+        "layer": "F.Cu",
+        "rectangle_contact": true,
+        "source_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "analytic_contact": false,
+        "candidate_net": "GND",
+        "candidate_uuid": "3598d04b-1396-5df4-953b-9f195d966b71",
+        "disposition": "rectangle_only_overcoverage",
+        "guard_uuid": "71859588-3982-55ff-a9e1-8dd2ef19aa0c",
+        "layer": "F.Cu",
+        "rectangle_contact": true,
+        "source_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "analytic_contact": false,
+        "candidate_net": "GND",
+        "candidate_uuid": "39bc67ef-89cc-573c-b359-4175d59004cc",
+        "disposition": "rectangle_only_overcoverage",
+        "guard_uuid": "71859588-3982-55ff-a9e1-8dd2ef19aa0c",
+        "layer": "F.Cu",
+        "rectangle_contact": true,
+        "source_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "analytic_contact": false,
+        "candidate_net": "GND",
+        "candidate_uuid": "682e2c34-7a98-5fc9-af50-1df111589c1d",
+        "disposition": "rectangle_only_overcoverage",
+        "guard_uuid": "71859588-3982-55ff-a9e1-8dd2ef19aa0c",
+        "layer": "F.Cu",
+        "rectangle_contact": true,
+        "source_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "analytic_contact": false,
+        "candidate_net": "GND",
+        "candidate_uuid": "82b03a25-ac0f-5116-8a10-efcb713d347d",
+        "disposition": "rectangle_only_overcoverage",
+        "guard_uuid": "71859588-3982-55ff-a9e1-8dd2ef19aa0c",
+        "layer": "F.Cu",
+        "rectangle_contact": true,
+        "source_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "analytic_contact": false,
+        "candidate_net": "GND",
+        "candidate_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+        "disposition": "rectangle_only_overcoverage",
+        "guard_uuid": "8abebb8c-df26-5d2f-adef-7222db35aa28",
+        "layer": "F.Cu",
+        "rectangle_contact": true,
+        "source_uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0"
+      }
+    ],
+    "analytic_actual_private_contacts": 46,
+    "analytic_halo_only": 4,
+    "basis": "Native rectangles equal analytic guard AABBs; the pinned analytic AABB broad phase is therefore complete and conservative for rectangle/copper testing.",
+    "bound_population": 274,
+    "re_evaluated_pair_count": 60,
+    "rectangle_contacts": 58,
+    "rectangle_only_overcoverage": 8,
+    "saved_pair_count": 60
+  },
+  "controls": {
+    "all_18_unique_mappings": true,
+    "mutation_controls_executed": false,
+    "baseline_matcher_implemented_or_exercised": false,
+    "producer_claim_correction": "The original malformed/shifted/layer-omission and negative-matcher entries were declarative, not observed controls. They do not qualify the private measurement script for general reuse.",
+    "negative_matcher_requirement": "A future acceptance checker must reject new objects and changed key, geometry, net or layer membership; this requirement was not implemented here."
+  },
+  "execution": {
+    "attempt": 3,
+    "actual_measurement_children": 1,
+    "attempt_history": [
+      {"attempt":1,"result":"Executor reports direct .py association invocation returned0 without a receipt or identifiable child. No measurement evidence."},
+      {"attempt":2,"result":"Supervisor rejected bare python resolved relative to the repository; child_pid null.","receipt":"attempt-2-receipt.json"},
+      {"attempt":3,"result":"Absolute Python executable; child46496 completed in0.203 seconds, exit0, hard30-second limit.","receipt":"attempt-3-receipt.json"}
+    ],
+    "initial_plus_two_allowance_exhausted": true,
+    "executed_code_sha256": "2231489e2fc5502238519352c3c38a7ec7d1ac68237d1b37958da0d73e29ff16",
+    "python": "3.11.9",
+    "raw_sha256": "c848e970f4aeebf82487bf2b8752b17b2a0ee077f5182b3dbbf7145450c45f0a"
+  },
+  "inherited_guard_intrusion_summary": {
+    "dispositions": {
+      "analytic_halo_existing_GND": 3,
+      "clear_of_rectangle": 2,
+      "existing_terminal_bank_contact": 8,
+      "halo_only_valid_DOUT": 1,
+      "protected_internal_join": 20,
+      "rectangle_only_overcoverage": 8,
+      "self": 18
+    },
+    "raw": "raw-native-guard-encoding.json",
+    "relationships": 60
+  },
+  "intrusion_policy": {
+    "baseline_only": true,
+    "meaning": "Exact candidate acceptance differential keyed by native guard/layer and canonical bound source object.",
+    "new_or_changed_object_policy": "REQUIRED, not implemented here: reject any new object or canonical-geometry/layer/net change entering a guard. No whole net is waived and no holes are cut.",
+    "not_a_native_DRC_exemption": true,
+    "not_permission_for_new_taps": true
+  },
+  "limits": [
+    "No pcbnew/native load, save, fixture rebuild, refill, DRC, source edit, copper change, full input, cloud job, install, or generalized roundrect qualification.",
+    "This is representation and collateral reconciliation, not engineering, importer, product, manufacturing, supplier, functional, or child-use acceptance."
+  ],
+  "root_disposition": {
+    "checkpoint_local": "2026-10-04 18:26",
+    "status": "SELECT_RECTANGULAR_ENCODING_AND_ACCEPT_EXACT_SOURCE_MEASUREMENTS_ONLY",
+    "decision": "Select the already-exercised conservative native rectangles:18 four-layer source obligations and22 six-layer obligations, excluding all five diagnostic rule areas. Retain all original flags and source copper. No curved-rule implementation is needed for this comparison.",
+    "accepted_overcoverage": "Eight extra rectangle-only relationships are explicitly accepted as unchanged-source representation intrusions, not physical shorts or new-tap permission. Seven involve GND; one is DOUT fd088aad-b11f-51fc-98f8-75d55ec48e9b against R27.2.",
+    "additional_DOUT_private_copper_clearance_mm": 0.302239446,
+    "additional_DOUT_analytic_guard_clearance_mm": 0.052239446,
+    "existing_DOUT_1c54fc7b_private_clearance_mm": 0.212066,
+    "physical_order_evidence": {
+      "path": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-plane-control-20261004T1716\\static-closeout.json",
+      "sha256": "ebdf91d564cee2c85aeae8e28e03e4817ab685014489ab0d57b615c0d1248d2c",
+      "reuse": "Earlier parsed serialized layer records bind these same four/six fixture hashes. The new script's expected-order constants are not additional evidence."
+    },
+    "independent_root_review": [
+      "Actual18 reported native contours are the simple consecutive rectangle corners, not merely arbitrary polygons sharing a bounding box.",
+      "The four explicit extra source/layer pairs are eafa and6623 on In3 andIn4; no diagnostic rule is product-counted.",
+      "All saved geometry dependency, parser, executed-code and raw hashes agree with the qualified source-bound records.",
+      "All five authoritative repository hashes are unchanged. Recorded supervisor/child PIDs are absent."
+    ],
+    "tooling_limit": "The private one-off script is not promoted to a reusable validator: several dependencies are only reported rather than fail-closed pinned, malformed-contour controls were not executed, layer order is not parsed there, and no baseline matcher exists. Preserve the measurement and previous native evidence without a fourth attempt.",
+    "full_input_gate": "Before submission, bind actual complete-input native findings including footprints, and qualify the new/changed-object and fill comparison. No blanket GND exemption or automatic suppression is selected.",
+    "source_or_full_input_or_cloud_changed": false,
+    "next_independent_item": "Select explicit four/six supplier layer purposes and compatible routing/process minima; full input still also needs movable placement domains.",
+    "raw_batch": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\private-guard-native-encoding-20261004T1814",
+    "preserved_producer_ledger": "pre-root-review-report.json",
+    "preserved_producer_ledger_sha256": "153c06263d868daad2614b4f637f5e96d310dbe8822619949dfaba00064be9f2"
+  },
+  "native_encoding": {
+    "diagnostic_rule_areas_excluded": 5,
+    "four_physical_order": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "B.Cu"
+    ],
+    "result": "Every saved native source guard is one axis-aligned four-point rectangle with all five flags not_allowed and exact analytic AABB; six adds exactly four equivalent via rectangles on In3/In4.",
+    "six_extra_via_guard_count": 4,
+    "six_extra_via_guards": [
+      {
+        "bounds_difference_mm": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "layer": "In3.Cu",
+        "name": "PRIVATE_VIA_6623be95-c657-5a8e-bedb-c5a73d42d40b_In3.Cu",
+        "native_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "native_guard_uuid": "9bc0a98c-62d5-5f5c-836f-d2a866c7dfda",
+        "source_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      },
+      {
+        "bounds_difference_mm": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_bounds_mm": [
+          99.65,
+          111.35000000000001,
+          100.75,
+          112.45
+        ],
+        "layer": "In3.Cu",
+        "name": "PRIVATE_VIA_eafa404c-be47-5f5c-8167-d39a967ba2e5_In3.Cu",
+        "native_bounds_mm": [
+          99.65,
+          111.35,
+          100.75,
+          112.45
+        ],
+        "native_guard_uuid": "e2d67006-3714-51b1-8d6c-f6eb8e2e342c",
+        "source_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "bounds_difference_mm": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "layer": "In4.Cu",
+        "name": "PRIVATE_VIA_6623be95-c657-5a8e-bedb-c5a73d42d40b_In4.Cu",
+        "native_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "native_guard_uuid": "bf51d4dd-3c1c-56b2-bfb2-a1ed95354294",
+        "source_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      },
+      {
+        "bounds_difference_mm": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "expected_bounds_mm": [
+          99.65,
+          111.35000000000001,
+          100.75,
+          112.45
+        ],
+        "layer": "In4.Cu",
+        "name": "PRIVATE_VIA_eafa404c-be47-5f5c-8167-d39a967ba2e5_In4.Cu",
+        "native_bounds_mm": [
+          99.65,
+          111.35,
+          100.75,
+          112.45
+        ],
+        "native_guard_uuid": "276eb9b8-fe3f-5943-9bc7-23bcc7e3e179",
+        "source_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      }
+    ],
+    "six_physical_order": [
+      "F.Cu",
+      "In1.Cu",
+      "In2.Cu",
+      "In3.Cu",
+      "In4.Cu",
+      "B.Cu"
+    ],
+    "source_obligation_count": 18,
+    "source_obligation_mapping": [
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          97.858,
+          110.85000000000001,
+          98.958,
+          111.95
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          97.858,
+          110.85,
+          98.958,
+          111.95
+        ],
+        "native_guard_uuid": "19d78fbe-ec7b-5d86-b3cf-6beb0d851d2b",
+        "native_name": "private-tap/R24.2->C28.2/1ba917bc-32e2-5176-954f-c3d06c7f6040/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            97.858,
+            110.85
+          ],
+          [
+            98.958,
+            110.85
+          ],
+          [
+            98.958,
+            111.95
+          ],
+          [
+            97.858,
+            111.95
+          ]
+        ],
+        "source_kind": "pad",
+        "source_uuid": "1ba917bc-32e2-5176-954f-c3d06c7f6040"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "In2.Cu",
+        "native_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "native_guard_uuid": "1aa0a42d-2d9d-572d-a60f-c7222e48516b",
+        "native_name": "private-tap/R24.2->C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b/In2.Cu",
+        "native_polygon_points_mm": [
+          [
+            103.15,
+            116.95
+          ],
+          [
+            104.25,
+            116.95
+          ],
+          [
+            104.25,
+            118.05
+          ],
+          [
+            103.15,
+            118.05
+          ]
+        ],
+        "source_kind": "via",
+        "source_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          85.599019,
+          108.550966,
+          87.249019,
+          110.45096600000001
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          85.599019,
+          108.550966,
+          87.249019,
+          110.450966
+        ],
+        "native_guard_uuid": "2c324d54-ed45-5d3c-8fda-4e9357102af2",
+        "native_name": "private-tap/R26.2->R27.2/933e95b2-4ef8-5095-ab3d-4759e7fa0826/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            85.599019,
+            108.550966
+          ],
+          [
+            87.249019,
+            108.550966
+          ],
+          [
+            87.249019,
+            110.450966
+          ],
+          [
+            85.599019,
+            110.450966
+          ]
+        ],
+        "source_kind": "pad",
+        "source_uuid": "933e95b2-4ef8-5095-ab3d-4759e7fa0826"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          99.65,
+          111.35000000000001,
+          100.75,
+          112.45
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          99.65,
+          111.35,
+          100.75,
+          112.45
+        ],
+        "native_guard_uuid": "37e4811e-91cd-5f87-8c43-fbd1a19e495c",
+        "native_name": "private-tap/R24.2->C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            99.65,
+            111.35
+          ],
+          [
+            100.75,
+            111.35
+          ],
+          [
+            100.75,
+            112.45
+          ],
+          [
+            99.65,
+            112.45
+          ]
+        ],
+        "source_kind": "via",
+        "source_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "B.Cu",
+        "native_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "native_guard_uuid": "3d4da8b9-e02d-5a56-8751-224cb1607081",
+        "native_name": "private-tap/R24.2->C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b/B.Cu",
+        "native_polygon_points_mm": [
+          [
+            103.15,
+            116.95
+          ],
+          [
+            104.25,
+            116.95
+          ],
+          [
+            104.25,
+            118.05
+          ],
+          [
+            103.15,
+            118.05
+          ]
+        ],
+        "source_kind": "via",
+        "source_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          99.65,
+          111.35000000000001,
+          100.75,
+          112.45
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "In2.Cu",
+        "native_bounds_mm": [
+          99.65,
+          111.35,
+          100.75,
+          112.45
+        ],
+        "native_guard_uuid": "61340f71-d279-5d84-887c-a4079b556e49",
+        "native_name": "private-tap/R24.2->C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5/In2.Cu",
+        "native_polygon_points_mm": [
+          [
+            99.65,
+            111.35
+          ],
+          [
+            100.75,
+            111.35
+          ],
+          [
+            100.75,
+            112.45
+          ],
+          [
+            99.65,
+            112.45
+          ]
+        ],
+        "source_kind": "via",
+        "source_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          101.3,
+          115.55000000000001,
+          103.10000000000001,
+          116.75
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          -0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          101.3,
+          115.55,
+          103.1,
+          116.75
+        ],
+        "native_guard_uuid": "6926648f-fe02-5f16-9bb9-9af38f69b379",
+        "native_name": "private-tap/R24.2->C28.2/bcb9e722-fe71-5b16-8387-e04b4bcd0520/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            101.3,
+            115.55
+          ],
+          [
+            103.1,
+            115.55
+          ],
+          [
+            103.1,
+            116.75
+          ],
+          [
+            101.3,
+            116.75
+          ]
+        ],
+        "source_kind": "pad",
+        "source_uuid": "bcb9e722-fe71-5b16-8387-e04b4bcd0520"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          101.86110000000001,
+          115.81110000000001,
+          104.0389,
+          117.8389
+        ],
+        "bounds_difference_mm": [
+          -0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          101.8611,
+          115.8111,
+          104.0389,
+          117.8389
+        ],
+        "native_guard_uuid": "71859588-3982-55ff-a9e1-8dd2ef19aa0c",
+        "native_name": "private-tap/R24.2->C28.2/a2730cca-5ecb-58a3-be5f-9d176ac8a629/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            101.8611,
+            115.8111
+          ],
+          [
+            104.0389,
+            115.8111
+          ],
+          [
+            104.0389,
+            117.8389
+          ],
+          [
+            101.8611,
+            117.8389
+          ]
+        ],
+        "source_kind": "track",
+        "source_uuid": "a2730cca-5ecb-58a3-be5f-9d176ac8a629"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          99.65,
+          111.35000000000001,
+          100.75,
+          112.45
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "In1.Cu",
+        "native_bounds_mm": [
+          99.65,
+          111.35,
+          100.75,
+          112.45
+        ],
+        "native_guard_uuid": "7f91e89f-1213-547b-9fe6-8e3c4a5f8a99",
+        "native_name": "private-tap/R24.2->C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5/In1.Cu",
+        "native_polygon_points_mm": [
+          [
+            99.65,
+            111.35
+          ],
+          [
+            100.75,
+            111.35
+          ],
+          [
+            100.75,
+            112.45
+          ],
+          [
+            99.65,
+            112.45
+          ]
+        ],
+        "source_kind": "via",
+        "source_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          98.0691,
+          111.06110000000001,
+          100.13889999999999,
+          111.7389
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          98.0691,
+          111.0611,
+          100.1389,
+          111.7389
+        ],
+        "native_guard_uuid": "8abebb8c-df26-5d2f-adef-7222db35aa28",
+        "native_name": "private-tap/R24.2->C28.2/34d001e5-c45d-5645-a43a-6ab95d630ff0/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            98.0691,
+            111.0611
+          ],
+          [
+            100.1389,
+            111.0611
+          ],
+          [
+            100.1389,
+            111.7389
+          ],
+          [
+            98.0691,
+            111.7389
+          ]
+        ],
+        "source_kind": "track",
+        "source_uuid": "34d001e5-c45d-5645-a43a-6ab95d630ff0"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          86.060119,
+          109.16206600000001,
+          86.7389,
+          111.53089999999999
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          86.060119,
+          109.162066,
+          86.7389,
+          111.5309
+        ],
+        "native_guard_uuid": "a1479871-a2bd-5fff-bbc4-71d64ec9b88c",
+        "native_name": "private-tap/R26.2->R27.2/d400cba9-bf59-5d9f-b921-dc5efd499b8c/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            86.060119,
+            109.162066
+          ],
+          [
+            86.7389,
+            109.162066
+          ],
+          [
+            86.7389,
+            111.5309
+          ],
+          [
+            86.060119,
+            111.5309
+          ]
+        ],
+        "source_kind": "track",
+        "source_uuid": "d400cba9-bf59-5d9f-b921-dc5efd499b8c"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "native_guard_uuid": "aa7680d4-3516-5201-b567-8bf32f7f6aae",
+        "native_name": "private-tap/R24.2->C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            103.15,
+            116.95
+          ],
+          [
+            104.25,
+            116.95
+          ],
+          [
+            104.25,
+            118.05
+          ],
+          [
+            103.15,
+            118.05
+          ]
+        ],
+        "source_kind": "via",
+        "source_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          85.85000000000001,
+          110.642,
+          86.95,
+          111.74199999999999
+        ],
+        "bounds_difference_mm": [
+          -0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          85.85,
+          110.642,
+          86.95,
+          111.742
+        ],
+        "native_guard_uuid": "aedc6476-4b62-5564-a09c-846130dc4fb1",
+        "native_name": "private-tap/R26.2->R27.2/3ed47a01-14b9-59e7-bdfe-95561c7f1435/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            85.85,
+            110.642
+          ],
+          [
+            86.95,
+            110.642
+          ],
+          [
+            86.95,
+            111.742
+          ],
+          [
+            85.85,
+            111.742
+          ]
+        ],
+        "source_kind": "pad",
+        "source_uuid": "3ed47a01-14b9-59e7-bdfe-95561c7f1435"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          99.86110000000001,
+          111.56110000000001,
+          104.0389,
+          113.43889999999999
+        ],
+        "bounds_difference_mm": [
+          -0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "B.Cu",
+        "native_bounds_mm": [
+          99.8611,
+          111.5611,
+          104.0389,
+          113.4389
+        ],
+        "native_guard_uuid": "b4ac8b95-c962-53e1-b8ae-cc3e360ae74e",
+        "native_name": "private-tap/R24.2->C28.2/7b625d38-c89c-5e26-93c2-4cbe5302680a/B.Cu",
+        "native_polygon_points_mm": [
+          [
+            99.8611,
+            111.5611
+          ],
+          [
+            104.0389,
+            111.5611
+          ],
+          [
+            104.0389,
+            113.4389
+          ],
+          [
+            99.8611,
+            113.4389
+          ]
+        ],
+        "source_kind": "track",
+        "source_uuid": "7b625d38-c89c-5e26-93c2-4cbe5302680a"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          103.36110000000001,
+          112.7611,
+          104.0389,
+          117.8389
+        ],
+        "bounds_difference_mm": [
+          -0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "B.Cu",
+        "native_bounds_mm": [
+          103.3611,
+          112.7611,
+          104.0389,
+          117.8389
+        ],
+        "native_guard_uuid": "ba99739b-ddf3-5888-88dc-0acbc66cfb38",
+        "native_name": "private-tap/R24.2->C28.2/1212a327-4ed4-50da-a0bb-71afc8145254/B.Cu",
+        "native_polygon_points_mm": [
+          [
+            103.3611,
+            112.7611
+          ],
+          [
+            104.0389,
+            112.7611
+          ],
+          [
+            104.0389,
+            117.8389
+          ],
+          [
+            103.3611,
+            117.8389
+          ]
+        ],
+        "source_kind": "track",
+        "source_uuid": "1212a327-4ed4-50da-a0bb-71afc8145254"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          99.4611,
+          111.06110000000001,
+          100.5389,
+          112.2389
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "F.Cu",
+        "native_bounds_mm": [
+          99.4611,
+          111.0611,
+          100.5389,
+          112.2389
+        ],
+        "native_guard_uuid": "cc65311c-7779-5be8-a8fc-3a627876b326",
+        "native_name": "private-tap/R24.2->C28.2/51e3a8d5-1e6b-5f46-a297-c3739ea5de91/F.Cu",
+        "native_polygon_points_mm": [
+          [
+            99.4611,
+            111.0611
+          ],
+          [
+            100.5389,
+            111.0611
+          ],
+          [
+            100.5389,
+            112.2389
+          ],
+          [
+            99.4611,
+            112.2389
+          ]
+        ],
+        "source_kind": "track",
+        "source_uuid": "51e3a8d5-1e6b-5f46-a297-c3739ea5de91"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          99.65,
+          111.35000000000001,
+          100.75,
+          112.45
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "B.Cu",
+        "native_bounds_mm": [
+          99.65,
+          111.35,
+          100.75,
+          112.45
+        ],
+        "native_guard_uuid": "f0e6077d-8512-5e5f-a6a7-ebb392bd6a3e",
+        "native_name": "private-tap/R24.2->C28.2/eafa404c-be47-5f5c-8167-d39a967ba2e5/B.Cu",
+        "native_polygon_points_mm": [
+          [
+            99.65,
+            111.35
+          ],
+          [
+            100.75,
+            111.35
+          ],
+          [
+            100.75,
+            112.45
+          ],
+          [
+            99.65,
+            112.45
+          ]
+        ],
+        "source_kind": "via",
+        "source_uuid": "eafa404c-be47-5f5c-8167-d39a967ba2e5"
+      },
+      {
+        "all_five_flags_not_allowed": true,
+        "analytic_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "bounds_difference_mm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "layer": "In1.Cu",
+        "native_bounds_mm": [
+          103.15,
+          116.95,
+          104.25,
+          118.05
+        ],
+        "native_guard_uuid": "fd652d8e-4f94-5be0-abdd-9462b2ebc068",
+        "native_name": "private-tap/R24.2->C28.2/6623be95-c657-5a8e-bedb-c5a73d42d40b/In1.Cu",
+        "native_polygon_points_mm": [
+          [
+            103.15,
+            116.95
+          ],
+          [
+            104.25,
+            116.95
+          ],
+          [
+            104.25,
+            118.05
+          ],
+          [
+            103.15,
+            118.05
+          ]
+        ],
+        "source_kind": "via",
+        "source_uuid": "6623be95-c657-5a8e-bedb-c5a73d42d40b"
+      }
+    ]
+  },
+  "schema_version": 1,
+  "six_layer_membership": {
+    "NPTH": 2,
+    "all_layer_pad_records": 8,
+    "conductive": 6,
+    "records": [
+      {
+        "center_mm": [
+          95.675,
+          78.88
+        ],
+        "conductive": true,
+        "net": "",
+        "number": "M2",
+        "reference": "X6",
+        "shape": "oval",
+        "size_mm": [
+          2.2,
+          1.1
+        ],
+        "uuid": "21438c54-3a6d-566d-b47f-4443b5a96225"
+      },
+      {
+        "center_mm": [
+          104.325,
+          78.88
+        ],
+        "conductive": true,
+        "net": "",
+        "number": "M1",
+        "reference": "X6",
+        "shape": "oval",
+        "size_mm": [
+          2.2,
+          1.1
+        ],
+        "uuid": "2249eb1a-0b11-552f-95b3-23f088e83abf"
+      },
+      {
+        "center_mm": [
+          102.89,
+          78.38
+        ],
+        "conductive": false,
+        "net": "",
+        "number": "",
+        "reference": "X6",
+        "shape": "circle",
+        "size_mm": [
+          0.65,
+          0.65
+        ],
+        "uuid": "3189c891-57a7-5dc7-a5bb-00a7292a0f02"
+      },
+      {
+        "center_mm": [
+          90.0,
+          84.3
+        ],
+        "conductive": true,
+        "net": "GND",
+        "number": "1",
+        "reference": "MH2",
+        "shape": "circle",
+        "size_mm": [
+          4.4,
+          4.4
+        ],
+        "uuid": "3ee74a8d-7103-57b2-9dbd-d3ab3ff8c1a6"
+      },
+      {
+        "center_mm": [
+          95.675,
+          74.7
+        ],
+        "conductive": true,
+        "net": "",
+        "number": "M4",
+        "reference": "X6",
+        "shape": "oval",
+        "size_mm": [
+          1.9,
+          1.1
+        ],
+        "uuid": "82819a8f-eab5-591f-a86e-4d2773fd5728"
+      },
+      {
+        "center_mm": [
+          97.11,
+          78.38
+        ],
+        "conductive": false,
+        "net": "",
+        "number": "",
+        "reference": "X6",
+        "shape": "circle",
+        "size_mm": [
+          0.65,
+          0.65
+        ],
+        "uuid": "8e659786-985c-5a3b-8d6a-fd715282132b"
+      },
+      {
+        "center_mm": [
+          110.0,
+          115.7
+        ],
+        "conductive": true,
+        "net": "GND",
+        "number": "1",
+        "reference": "MH1",
+        "shape": "circle",
+        "size_mm": [
+          4.4,
+          4.4
+        ],
+        "uuid": "bc1f09cc-4e90-5325-bc80-08b5f58578c0"
+      },
+      {
+        "center_mm": [
+          104.325,
+          74.7
+        ],
+        "conductive": true,
+        "net": "",
+        "number": "M3",
+        "reference": "X6",
+        "shape": "oval",
+        "size_mm": [
+          1.9,
+          1.1
+        ],
+        "uuid": "ec4d64cc-8307-5be1-8378-f92b79b9c838"
+      }
+    ],
+    "retained_F_to_B_vias": 18,
+    "retained_via_uuids": [
+      "0ba3129d-4c2f-51a5-b83d-47c5c587ae79",
+      "14e9c925-5186-5943-8002-513435324c90",
+      "1cb9cba6-90b8-5033-9ae1-e912259b9b0a",
+      "1fff4429-e233-533e-8d57-49618b67d41d",
+      "248ce18d-3a6e-50d8-b9ce-c721b99a2c63",
+      "358bf155-f890-5806-b895-ec3c485c3ac2",
+      "4a6858d1-d03b-58a1-8988-c2e0fd93ac1d",
+      "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+      "6623be95-c657-5a8e-bedb-c5a73d42d40b",
+      "73f524c2-3597-5233-906e-93443fee9d54",
+      "800d4ec3-d77e-5045-aaea-e1b064b8e71f",
+      "bad9068e-b03b-5869-a449-cdb7731eb117",
+      "c63c289d-af32-592b-9732-d17507fbf476",
+      "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5",
+      "eafa404c-be47-5f5c-8167-d39a967ba2e5",
+      "eb628663-2af6-5175-bd63-91e9eecb0258",
+      "f0eb8165-a384-559b-a075-caa04a27f771",
+      "fa83a8ab-a7d3-5826-adce-43ff4f25a03d"
+    ],
+    "reuse_disposition": "Each retained through-via and each wildcard all-layer pad gains identical XY canonical geometry on In3/In4. There are no retained inner tracks. Thus the existing inner candidate relation set is reused by layer substitution for In3/In4; only the two private vias create four additional guard obligations."
+  },
+  "source_hashes": {
+    "battery_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e"
+  },
+  "status": "ROOT_SELECTED_NATIVE_RECTANGLES_EXACT_SOURCE_MEASUREMENTS_ACCEPTED_VALIDATOR_NOT_QUALIFIED"
+}

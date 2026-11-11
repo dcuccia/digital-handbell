@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "status": "OUTPUTS_PRESERVED_STATICALLY_ASSESSED_NATIVE_DRC_INCOMPLETE_NO_ACCEPTANCE",
+  "job_id": "6ac19efbfc0d2d776ed14911",
+  "license_context": "Source-derived CC BY-SA 3.0 hardware evidence; see ATTRIBUTION.md.",
+  "scope": "Read-only evaluation of complete Quilter candidates 1.1 and 1.2. No input or authoritative PCB write, refill, repair, routing, placement, upload, commit, or main-checkout access.",
+  "executor": {
+    "model_runtime_verified_by_root": "gpt-5.6-sol",
+    "reasoning_effort_runtime_verified_by_root": "medium",
+    "evaluation_started_local": "2026-10-03T21:36:57-07:00",
+    "native_and_analysis_stopped_before_local": "2026-10-03T21:45:00-07:00"
+  },
+  "reference": {
+    "pcb": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-routing-control-20261003T1713\\native\\contact-rule-fixture.kicad_pcb",
+    "pcb_sha256": "ce95303dda7b3839ce8937243a568768e4ddc857d78735523b06b40e0f743db0",
+    "project_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "baseline_raw_drc_sha256": "d28be02dd7907a7861e00b7e465fafdcb70f973d36cf9f4103c44a92c3701fd7",
+    "baseline_drc": {
+      "violations": 46,
+      "unconnected_items": 6,
+      "categories": {
+        "items_not_allowed": 24,
+        "via_dangling": 10,
+        "track_width": 2,
+        "lib_footprint_issues": 2,
+        "nonmirrored_text_on_back_layer": 8
+      },
+      "disposition": "Reused unchanged source-bound evidence; not rerun."
+    }
+  },
+  "preservation": {
+    "method": "Deterministic KiCad S-expression inventory keyed by retained UUID, with restricted numeric normalization and rectangular-pad angle modulo 180. Structural identity and connected-copper conclusions are reported separately.",
+    "common_to_both_candidates": {
+      "six_footprints_reference_uuid_library_pose_and_side": true,
+      "eight_pads_uuid_number_net_pose_shape_size_drill_and_layers": true,
+      "thirty_old_segments_uuid_full_geometry_net_width_and_layer": true,
+      "ten_vias_uuid_pose_net_size_drill_layers": true,
+      "five_special_process_vias_included_in_exact_ten_via_match": true,
+      "eight_guard_polygons_uuid_name_layer_points_and_restriction_flags": true,
+      "outline_exact": true,
+      "four_enabled_copper_layers_exact": [
+        [0, "F.Cu"],
+        [4, "In1.Cu"],
+        [6, "In2.Cu"],
+        [2, "B.Cu"]
+      ],
+      "native_net_names_nonempty": true,
+      "old_connected_copper": "All 30 original segments and 10 vias are exact UUID/geometry/net matches; no original copper was resegmented or removed.",
+      "layer_display_name_loss_claimed": false
+    }
+  },
+  "candidates": {
+    "1.1": {
+      "archive": {
+        "source_and_preserved_copy_sha256": "9dcc98ac6e9432d4edab1bdcb63f977ec0b482253f4dcf3d5d2a2d1d2bd3677e",
+        "safe_path_validation": "PASS",
+        "overwrite": false
+      },
+      "native_files_sha256": {
+        "contact-rule-fixture.kicad_pcb": "6999747c7b5fd2c2fe532f5c4c4504e2683dd62022c6122a95c9338502e21b17",
+        "contact-rule-fixture.kicad_pro": "27952625ae01bd7dbfa5cd1e6bb105d83a71461741966c6328b8d4ed8d5b1d63"
+      },
+      "preservation_pass": true,
+      "control_nets_static_connected_copper": {
+        "CTRL_CLEAR": {
+          "connected": true,
+          "segments": 5,
+          "layers": ["B.Cu"],
+          "width_mm": 0.1779778,
+          "path_length_mm": 10.0,
+          "vias": 0
+        },
+        "CTRL_GUARD": {
+          "connected": true,
+          "segments": 7,
+          "layers": ["B.Cu"],
+          "width_mm": 0.1779778,
+          "path_length_mm": 59.798894,
+          "vias": 0
+        }
+      },
+      "new_copper": {
+        "segments": 12,
+        "vias": 0,
+        "minimum_width_mm": 0.1779778,
+        "whole_stroke_guard_intersections": 0,
+        "minimum_guard_stroke_edge_gap_mm": 0.055888,
+        "via_annular_disk_B_guard_intersections": "not_applicable_no_new_vias",
+        "minimum_conservative_foreign_net_clearance_mm": 0.225109,
+        "nearest_foreign_item": {
+          "kind": "segment",
+          "uuid": "e888f6af-4451-50aa-b400-6a27dc2a8fff",
+          "net": "VBAT"
+        },
+        "minimum_outline_stroke_edge_gap_mm": 2.911011,
+        "diagnostic_minima_static_result": "Trace width >=0.1778 mm, conservative foreign clearance >=0.20 mm, and outline gap >=0.508 mm. No new via check required."
+      }
+    },
+    "1.2": {
+      "archive": {
+        "source_and_preserved_copy_sha256": "6bc6c5eefe103944d8d76a428b76d90f7e1a32dec3bd2d69fc64bbae23f85505",
+        "safe_path_validation": "PASS",
+        "overwrite": false
+      },
+      "native_files_sha256": {
+        "contact-rule-fixture.kicad_pcb": "8f5e8ce52f0fdf5314d6d79609c08ee74481608b1e9bf4be127cf8ee05873e71",
+        "contact-rule-fixture.kicad_pro": "27952625ae01bd7dbfa5cd1e6bb105d83a71461741966c6328b8d4ed8d5b1d63"
+      },
+      "preservation_pass": true,
+      "control_nets_static_connected_copper": {
+        "CTRL_CLEAR": {
+          "connected": true,
+          "segments": 1,
+          "layers": ["B.Cu"],
+          "width_mm": 0.1779778,
+          "path_length_mm": 9.999999,
+          "vias": 0
+        },
+        "CTRL_GUARD": {
+          "connected": true,
+          "segments": 8,
+          "layers": ["B.Cu"],
+          "width_mm": 0.1779778,
+          "path_length_mm": 58.065571,
+          "vias": 0
+        }
+      },
+      "new_copper": {
+        "segments": 9,
+        "vias": 0,
+        "minimum_width_mm": 0.1779778,
+        "whole_stroke_guard_intersections": 0,
+        "minimum_guard_stroke_edge_gap_mm": 0.129304,
+        "via_annular_disk_B_guard_intersections": "not_applicable_no_new_vias",
+        "minimum_conservative_foreign_net_clearance_mm": 0.424474,
+        "nearest_foreign_item": {
+          "kind": "via",
+          "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+          "net": "GND"
+        },
+        "minimum_outline_stroke_edge_gap_mm": 2.911011,
+        "diagnostic_minima_static_result": "Trace width >=0.1778 mm, conservative foreign clearance >=0.20 mm, and outline gap >=0.508 mm. No new via check required."
+      }
+    }
+  },
+  "common_output_changes": {
+    "project_configuration": "Both outputs replace the uploaded empty minimal project with the same 2913-byte project. It explicitly sets 0.1778 mm minimum/default track width, 0.20 mm clearance, 0.600/0.300 mm via, and 0.508 mm copper-edge clearance; these are diagnostic settings, not product-rule approval.",
+    "new_pours": [
+      {
+        "name": "GND.LAYER_1",
+        "net": "GND",
+        "layer": "In1.Cu",
+        "cached_filled_polygon_present": true
+      },
+      {
+        "name": "GND.LAYER_2",
+        "net": "GND",
+        "layer": "In2.Cu",
+        "cached_filled_polygon_present": true
+      }
+    ],
+    "pours_disposition": "These two GND plane definitions and cached fills are new output copper; the baseline had no pours. No refill was run during this evaluation. They are not treated as preserved baseline copper or as accepted plane/return-path engineering.",
+    "B_side_new_pours_or_fills": 0,
+    "B_only_witness_disposition": "Both candidates route both controls entirely on B.Cu with no vias. This exercises B routing, unlike a legal F detour, but native legality remains unqualified because output DRC did not complete."
+  },
+  "native_evidence": {
+    "tool": "KiCad CLI 10.0.6 installed path used by the source-bound baseline",
+    "refill": false,
+    "candidate_1_1_drc": {
+      "attempts": 1,
+      "hard_timeout_seconds": 60,
+      "result": "TIMEOUT",
+      "raw_json_created": false,
+      "executable": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\\kicad-cli.exe",
+      "arguments": [
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-routing-evaluation-20261003T2134\\candidate-1-1\\drc.json",
+        "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-routing-evaluation-20261003T2134\\candidate-1-1\\contact-rule-fixture.kicad_pcb"
+      ]
+    },
+    "candidate_1_2_drc": {
+      "attempts": 1,
+      "hard_timeout_seconds": 60,
+      "result": "TIMEOUT",
+      "raw_json_created": false,
+      "executable": "C:\\Users\\david.cuccia\\AppData\\Local\\Programs\\KiCad\\10.0\\bin\\kicad-cli.exe",
+      "arguments": [
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-routing-evaluation-20261003T2134\\candidate-1-2\\drc.json",
+        "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-routing-evaluation-20261003T2134\\candidate-1-2\\contact-rule-fixture.kicad_pcb"
+      ]
+    },
+    "candidate_timeout_record": {
+      "locally_preserved_stdout_stderr_or_execution_log": false,
+      "already_recorded_result": "Python subprocess.run raised TimeoutExpired after 60 seconds for each command. No DRC JSON was created. A project lock appeared for each candidate and was removed after confirming no surviving kicad-named process.",
+      "termination_stage": "Indeterminate. The lock proves project-open activity occurred, but there was no preserved progress/error stream and no output JSON from which to identify a later DRC stage.",
+      "fresh_diagnosis_or_retry_performed": false
+    },
+    "process_cleanup": "Timeout killed each subprocess; no surviving kicad-named process was found. Lock side effects were removed. No retry broadened the deadline.",
+    "inherited_findings": "The unchanged baseline categories remain known, but their presence in each output cannot be claimed from native output evidence.",
+    "new_findings": "UNKNOWN because neither native DRC produced output.",
+    "configuration_effects": "The returned nonempty project changes the rule configuration relative to the uploaded empty project and adds two inner GND planes. Native DRC was invoked with the returned project unchanged."
+  },
+  "source_contract": {
+    "package": "hardware/handbell/iterations/printed-bell-four-layer",
+    "source_native_loads": 0,
+    "hashes_before_and_after_equal": true,
+    "files": {
+      "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+      "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+      "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+      "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+      "battery-contact-interface.json": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b"
+    }
+  },
+  "private_evidence": {
+    "directory": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\outputs\\contact-routing-evaluation-20261003T2134",
+    "analysis_script": "analyze_outputs.py",
+    "analysis_script_sha256": "4c6853fa5d7c9016175757e0ee14747e85c4a9d1d674d59f1f613039883af46e",
+    "corrections": 2,
+    "correction_scope": "Two implementation-only fixes in the deterministic parser/connectivity checker; no candidate or source file changed.",
+    "existing_baseline_native_execution_evidence": {
+      "scope_note": "These are the pre-existing successful reference-fixture logs, not logs from the timed-out candidate runs.",
+      "native-stdout.bin": {
+        "sha256": "2f932de8380afe5876644b89957cc43fa829c2188b9cdac7978a8c2d8672f220",
+        "bytes": 96
+      },
+      "native-stderr.bin": {
+        "sha256": "9da246e12af49bbdccfa59608d51bb93cf2ca3cf9983577119816974e2b17541",
+        "bytes": 641
+      },
+      "native-subprocess.json": {
+        "sha256": "c272b838f27b3af609b8cd66b9a8a0704a9d01ee5f2cb3d11717dae0f0568a0c",
+        "bytes": 977
+      },
+      "drc-stdout.bin": {
+        "sha256": "7b91fcd2ca10407bc9f17d9ca110b672780a55029ed55ae05612c4ed8e6e406a",
+        "bytes": 201
+      },
+      "drc-stderr.bin": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "drc-subprocess.json": {
+        "sha256": "a437ef8971bf699f75d9bbd6ff4d4237cde4073d6fddcc169efa42d1aee836f0",
+        "bytes": 789
+      }
+    }
+  },
+  "limitations": [
+    "Static connected-copper and geometry checks are independent evidence, not a substitute for completed native KiCad DRC/connectivity.",
+    "Foreign-pad clearance uses a conservative enclosing-circle bound; it found margins above 0.20 mm but does not replace native shape evaluation.",
+    "The static foreign-net checks covered each new B.Cu control stroke against retained B.Cu segments, through-via annular disks, conservative B-pad bounds, the eight B guards, and the outline. They did not evaluate the saved In1/In2 GND filled polygons against foreign-net through-via antipads or barrels.",
+    "The new In1/In2 GND planes require owner review for plane continuity, return paths, and whether output-added pours are admissible.",
+    "Cloud completion or all-checks-pass claims were not used.",
+    "No functional, engineering, manufacturing, supplier, or child-use acceptance is claimed."
+  ],
+  "acceptance": false,
+  "blocker": "Native output DRC for both candidates hit the explicit 60-second termination limit and produced no raw report, so inherited-versus-new native findings and native connectivity cannot be categorized."
+}

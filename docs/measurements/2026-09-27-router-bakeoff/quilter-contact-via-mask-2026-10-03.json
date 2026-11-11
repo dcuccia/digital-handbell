@@ -1,0 +1,861 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSAL_EVIDENCE_ONLY_NOT_ACCEPTED",
+  "scope": "nominal contact-height proof, via-only B.Cu guard proposal, standalone native microfixture",
+  "input_hashes_sha256": {
+    "placement_manifest": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "contact_interface": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "trial_envelope": "4178978d8e52db4d0b498e9e12aafdca5e43f098e43a7d084877ece1ed0da655",
+    "workflow_contract": "a1a950c96caed1401c39cb9acb9f2e4e520714ed705e8873e4ed31bfb3f30b0c"
+  },
+  "source_hashes_before": {
+    "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8"
+  },
+  "source_hashes_after": {
+    "handbell.kicad_pcb": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "handbell.kicad_sch": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "handbell.kicad_pro": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "placement-manifest.json": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8"
+  },
+  "source_unchanged": true,
+  "source_native_loads": 0,
+  "source_open_count_inherited_not_measured": 37,
+  "source_parameters": {
+    "pcb_z_mm": 26.6,
+    "steel_thickness_mm": 0.3,
+    "spring_xz_polyline": [
+      [
+        18.685,
+        26.9
+      ],
+      [
+        18.685,
+        28.5
+      ],
+      [
+        17.8,
+        32.5
+      ],
+      [
+        17.0,
+        36.38
+      ],
+      [
+        17.8,
+        40.0
+      ],
+      [
+        18.2,
+        43.19
+      ]
+    ],
+    "spring_y_width_mm": 8.89,
+    "spring_thickness_mm": 0.3,
+    "spring_thickness_direction": "outward X",
+    "ears": {
+      "x_min": 5.685,
+      "axial_length": 9.53,
+      "axis_center_yz": [
+        0,
+        36.38
+      ],
+      "inner_radius": 8.2,
+      "thickness": 0.3,
+      "angle_degrees": [
+        [
+          -80,
+          52
+        ],
+        [
+          128,
+          260
+        ]
+      ],
+      "status": "Assumed conforming loaded arcs, not an allowed travel/force envelope; reconcile unloaded16.61 with actual samples."
+    },
+    "overall_height_tolerance_mm": 0.38
+  },
+  "height_proofs": [
+    {
+      "contact_B_plane_mm": 26.6,
+      "rigid_translation_mm": 0.0,
+      "base_z_mm": [
+        26.6,
+        26.9
+      ],
+      "base_gap_from_source_pcb_B_mm": 0.0,
+      "spring_lowest_z_mm": 26.9,
+      "spring_gap_from_source_pcb_B_mm": 0.29999999999999716,
+      "ear_full_circle_conservative_lower_z_mm": 27.880000000000003,
+      "ear_full_circle_gap_from_source_pcb_B_mm": 1.2800000000000011,
+      "ear_actual_sector_lower_z_mm": 28.009134099396235,
+      "ear_actual_sector_gap_from_source_pcb_B_mm": 1.4091340993962334
+    },
+    {
+      "contact_B_plane_mm": 28.6,
+      "rigid_translation_mm": 2.0,
+      "base_z_mm": [
+        28.6,
+        28.9
+      ],
+      "base_gap_from_source_pcb_B_mm": 2.0,
+      "spring_lowest_z_mm": 28.9,
+      "spring_gap_from_source_pcb_B_mm": 2.299999999999997,
+      "ear_full_circle_conservative_lower_z_mm": 29.880000000000003,
+      "ear_full_circle_gap_from_source_pcb_B_mm": 3.280000000000001,
+      "ear_actual_sector_lower_z_mm": 30.009134099396235,
+      "ear_actual_sector_gap_from_source_pcb_B_mm": 3.4091340993962334
+    }
+  ],
+  "height_limits": [
+    "0.38 mm overall-height tolerance is not treated as universal deformation or travel.",
+    "No loaded travel/preload is qualified; no C24 hole is inferred or carved."
+  ],
+  "domains": {
+    "physical_metal_rectangles": [
+      {
+        "name": "BT1.base.1",
+        "reference": "BT1",
+        "primitive": "base_tab_1",
+        "x_min_mm": 1.685,
+        "x_max_mm": 5.685,
+        "y_min_mm": -2.54,
+        "y_max_mm": 2.54
+      },
+      {
+        "name": "BT1.base.2",
+        "reference": "BT1",
+        "primitive": "base_tab_2",
+        "x_min_mm": 18.685,
+        "x_max_mm": 21.565,
+        "y_min_mm": -1.59,
+        "y_max_mm": 1.59
+      },
+      {
+        "name": "BT1.base.3",
+        "reference": "BT1",
+        "primitive": "under_cell_base",
+        "x_min_mm": 5.685,
+        "x_max_mm": 18.685,
+        "y_min_mm": -5.565,
+        "y_max_mm": 5.565
+      },
+      {
+        "name": "BT2.base.1",
+        "reference": "BT2",
+        "primitive": "base_tab_1",
+        "x_min_mm": -5.685,
+        "x_max_mm": -1.685,
+        "y_min_mm": -2.54,
+        "y_max_mm": 2.54
+      },
+      {
+        "name": "BT2.base.2",
+        "reference": "BT2",
+        "primitive": "base_tab_2",
+        "x_min_mm": -21.565,
+        "x_max_mm": -18.685,
+        "y_min_mm": -1.59,
+        "y_max_mm": 1.59
+      },
+      {
+        "name": "BT2.base.3",
+        "reference": "BT2",
+        "primitive": "under_cell_base",
+        "x_min_mm": -18.685,
+        "x_max_mm": -5.685,
+        "y_min_mm": -5.565,
+        "y_max_mm": 5.565
+      }
+    ],
+    "spring_wall_projections": [
+      {
+        "name": "BT1.spring_wall",
+        "reference": "BT1",
+        "primitive": "spring_wall_projection",
+        "x_min_mm": 17.0,
+        "x_max_mm": 18.985,
+        "y_min_mm": -4.445,
+        "y_max_mm": 4.445
+      },
+      {
+        "name": "BT2.spring_wall",
+        "reference": "BT2",
+        "primitive": "spring_wall_projection",
+        "x_min_mm": -18.985,
+        "x_max_mm": -17.0,
+        "y_min_mm": -4.445,
+        "y_max_mm": 4.445
+      }
+    ],
+    "native_via_only_rule_areas_expanded_each_edge_0_25_mm": [
+      {
+        "name": "BT1.base.1",
+        "reference": "BT1",
+        "primitive": "base_tab_1",
+        "x_min_mm": 1.435,
+        "x_max_mm": 5.935,
+        "y_min_mm": -2.79,
+        "y_max_mm": 2.79
+      },
+      {
+        "name": "BT1.base.2",
+        "reference": "BT1",
+        "primitive": "base_tab_2",
+        "x_min_mm": 18.435,
+        "x_max_mm": 21.815,
+        "y_min_mm": -1.84,
+        "y_max_mm": 1.84
+      },
+      {
+        "name": "BT1.base.3",
+        "reference": "BT1",
+        "primitive": "under_cell_base",
+        "x_min_mm": 5.435,
+        "x_max_mm": 18.935,
+        "y_min_mm": -5.815,
+        "y_max_mm": 5.815
+      },
+      {
+        "name": "BT2.base.1",
+        "reference": "BT2",
+        "primitive": "base_tab_1",
+        "x_min_mm": -5.935,
+        "x_max_mm": -1.435,
+        "y_min_mm": -2.79,
+        "y_max_mm": 2.79
+      },
+      {
+        "name": "BT2.base.2",
+        "reference": "BT2",
+        "primitive": "base_tab_2",
+        "x_min_mm": -21.815,
+        "x_max_mm": -18.435,
+        "y_min_mm": -1.84,
+        "y_max_mm": 1.84
+      },
+      {
+        "name": "BT2.base.3",
+        "reference": "BT2",
+        "primitive": "under_cell_base",
+        "x_min_mm": -18.935,
+        "x_max_mm": -5.435,
+        "y_min_mm": -5.815,
+        "y_max_mm": 5.815
+      },
+      {
+        "name": "BT1.spring_wall",
+        "reference": "BT1",
+        "primitive": "spring_wall_projection",
+        "x_min_mm": 16.75,
+        "x_max_mm": 19.235,
+        "y_min_mm": -4.695,
+        "y_max_mm": 4.695
+      },
+      {
+        "name": "BT2.spring_wall",
+        "reference": "BT2",
+        "primitive": "spring_wall_projection",
+        "x_min_mm": -19.235,
+        "x_max_mm": -16.75,
+        "y_min_mm": -4.695,
+        "y_max_mm": 4.695
+      }
+    ],
+    "point_center_masks_for_new_0_604_via_expanded_each_edge_0_552_mm": [
+      {
+        "name": "BT1.base.1",
+        "reference": "BT1",
+        "primitive": "base_tab_1",
+        "x_min_mm": 1.133,
+        "x_max_mm": 6.237,
+        "y_min_mm": -3.092,
+        "y_max_mm": 3.092
+      },
+      {
+        "name": "BT1.base.2",
+        "reference": "BT1",
+        "primitive": "base_tab_2",
+        "x_min_mm": 18.133,
+        "x_max_mm": 22.117,
+        "y_min_mm": -2.1420000000000003,
+        "y_max_mm": 2.1420000000000003
+      },
+      {
+        "name": "BT1.base.3",
+        "reference": "BT1",
+        "primitive": "under_cell_base",
+        "x_min_mm": 5.132999999999999,
+        "x_max_mm": 19.237,
+        "y_min_mm": -6.117000000000001,
+        "y_max_mm": 6.117000000000001
+      },
+      {
+        "name": "BT2.base.1",
+        "reference": "BT2",
+        "primitive": "base_tab_1",
+        "x_min_mm": -6.237,
+        "x_max_mm": -1.133,
+        "y_min_mm": -3.092,
+        "y_max_mm": 3.092
+      },
+      {
+        "name": "BT2.base.2",
+        "reference": "BT2",
+        "primitive": "base_tab_2",
+        "x_min_mm": -22.117,
+        "x_max_mm": -18.133,
+        "y_min_mm": -2.1420000000000003,
+        "y_max_mm": 2.1420000000000003
+      },
+      {
+        "name": "BT2.base.3",
+        "reference": "BT2",
+        "primitive": "under_cell_base",
+        "x_min_mm": -19.237,
+        "x_max_mm": -5.132999999999999,
+        "y_min_mm": -6.117000000000001,
+        "y_max_mm": 6.117000000000001
+      },
+      {
+        "name": "BT1.spring_wall",
+        "reference": "BT1",
+        "primitive": "spring_wall_projection",
+        "x_min_mm": 16.448,
+        "x_max_mm": 19.537,
+        "y_min_mm": -4.997,
+        "y_max_mm": 4.997
+      },
+      {
+        "name": "BT2.spring_wall",
+        "reference": "BT2",
+        "primitive": "spring_wall_projection",
+        "x_min_mm": -19.537,
+        "x_max_mm": -16.448,
+        "y_min_mm": -4.997,
+        "y_max_mm": 4.997
+      }
+    ],
+    "native_rule_note": "Do not add the 0.302 mm radius to native areas; native checks the complete via shape."
+  },
+  "protected_process_vias": [
+    {
+      "uuid": "eb628663-2af6-5175-bd63-91e9eecb0258",
+      "role": "U4 thermal via",
+      "reference": "U4",
+      "common_xy_mm": [
+        10.400323,
+        -10.412789000000004
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "all_eight_clear": true,
+      "minimum_margin_mm": 4.295789000000004,
+      "checks": [
+        {
+          "guard": "BT1.base.1",
+          "center_to_rectangle_distance_mm": 9.176877335610957,
+          "required_mm": 0.552,
+          "margin_mm": 8.624877335610957,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.2",
+          "center_to_rectangle_distance_mm": 12.10278805618152,
+          "required_mm": 0.552,
+          "margin_mm": 11.55078805618152,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.3",
+          "center_to_rectangle_distance_mm": 4.847789000000003,
+          "required_mm": 0.552,
+          "margin_mm": 4.295789000000004,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.1",
+          "center_to_rectangle_distance_mm": 14.423447530075814,
+          "required_mm": 0.552,
+          "margin_mm": 13.871447530075814,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.2",
+          "center_to_rectangle_distance_mm": 30.394039214175695,
+          "required_mm": 0.552,
+          "margin_mm": 29.842039214175696,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.3",
+          "center_to_rectangle_distance_mm": 16.79996054170515,
+          "required_mm": 0.552,
+          "margin_mm": 16.24796054170515,
+          "clear": true
+        },
+        {
+          "guard": "BT1.spring_wall",
+          "center_to_rectangle_distance_mm": 8.897766127115842,
+          "required_mm": 0.552,
+          "margin_mm": 8.345766127115843,
+          "clear": true
+        },
+        {
+          "guard": "BT2.spring_wall",
+          "center_to_rectangle_distance_mm": 28.04268542869691,
+          "required_mm": 0.552,
+          "margin_mm": 27.49068542869691,
+          "clear": true
+        }
+      ]
+    },
+    {
+      "uuid": "d9dcd570-3f7d-5000-b8d1-12b9b39f93b5",
+      "role": "U4 thermal via",
+      "reference": "U4",
+      "common_xy_mm": [
+        10.400323,
+        -9.762788999999998
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "all_eight_clear": true,
+      "minimum_margin_mm": 3.6457889999999975,
+      "checks": [
+        {
+          "guard": "BT1.base.1",
+          "center_to_rectangle_distance_mm": 8.62571457520187,
+          "required_mm": 0.552,
+          "margin_mm": 8.07371457520187,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.2",
+          "center_to_rectangle_distance_mm": 11.63745474890665,
+          "required_mm": 0.552,
+          "margin_mm": 11.08545474890665,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.3",
+          "center_to_rectangle_distance_mm": 4.1977889999999976,
+          "required_mm": 0.552,
+          "margin_mm": 3.6457889999999975,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.1",
+          "center_to_rectangle_distance_mm": 14.079194328968189,
+          "required_mm": 0.552,
+          "margin_mm": 13.52719432896819,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.2",
+          "center_to_rectangle_distance_mm": 30.211760856541446,
+          "required_mm": 0.552,
+          "margin_mm": 29.659760856541446,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.3",
+          "center_to_rectangle_distance_mm": 16.62405030378728,
+          "required_mm": 0.552,
+          "margin_mm": 16.07205030378728,
+          "clear": true
+        },
+        {
+          "guard": "BT1.spring_wall",
+          "center_to_rectangle_distance_mm": 8.475530446694766,
+          "required_mm": 0.552,
+          "margin_mm": 7.923530446694766,
+          "clear": true
+        },
+        {
+          "guard": "BT2.spring_wall",
+          "center_to_rectangle_distance_mm": 27.91158505626024,
+          "required_mm": 0.552,
+          "margin_mm": 27.35958505626024,
+          "clear": true
+        }
+      ]
+    },
+    {
+      "uuid": "545fee40-3fbd-59ae-bd8d-30ffe16436ec",
+      "role": "U4 thermal via",
+      "reference": "U4",
+      "common_xy_mm": [
+        11.050323000000006,
+        -10.412789000000004
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "all_eight_clear": true,
+      "minimum_margin_mm": 4.295789000000004,
+      "checks": [
+        {
+          "guard": "BT1.base.1",
+          "center_to_rectangle_distance_mm": 9.527197779664812,
+          "required_mm": 0.552,
+          "margin_mm": 8.975197779664812,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.2",
+          "center_to_rectangle_distance_mm": 11.66747181838679,
+          "required_mm": 0.552,
+          "margin_mm": 11.11547181838679,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.3",
+          "center_to_rectangle_distance_mm": 4.847789000000003,
+          "required_mm": 0.552,
+          "margin_mm": 4.295789000000004,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.1",
+          "center_to_rectangle_distance_mm": 14.972283010711834,
+          "required_mm": 0.552,
+          "margin_mm": 14.420283010711834,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.2",
+          "center_to_rectangle_distance_mm": 31.016625213792206,
+          "required_mm": 0.552,
+          "margin_mm": 30.464625213792207,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.3",
+          "center_to_rectangle_distance_mm": 17.42332040980852,
+          "required_mm": 0.552,
+          "margin_mm": 16.871320409808522,
+          "clear": true
+        },
+        {
+          "guard": "BT1.spring_wall",
+          "center_to_rectangle_distance_mm": 8.426930755194917,
+          "required_mm": 0.552,
+          "margin_mm": 7.874930755194917,
+          "clear": true
+        },
+        {
+          "guard": "BT2.spring_wall",
+          "center_to_rectangle_distance_mm": 28.678129749913094,
+          "required_mm": 0.552,
+          "margin_mm": 28.126129749913094,
+          "clear": true
+        }
+      ]
+    },
+    {
+      "uuid": "c63c289d-af32-592b-9732-d17507fbf476",
+      "role": "U4 thermal via",
+      "reference": "U4",
+      "common_xy_mm": [
+        11.050323000000006,
+        -9.762788999999998
+      ],
+      "diameter_mm": 0.604,
+      "drill_mm": 0.35,
+      "all_eight_clear": true,
+      "minimum_margin_mm": 3.6457889999999975,
+      "checks": [
+        {
+          "guard": "BT1.base.1",
+          "center_to_rectangle_distance_mm": 8.997520315778678,
+          "required_mm": 0.552,
+          "margin_mm": 8.445520315778678,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.2",
+          "center_to_rectangle_distance_mm": 11.184040992988619,
+          "required_mm": 0.552,
+          "margin_mm": 10.63204099298862,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.3",
+          "center_to_rectangle_distance_mm": 4.1977889999999976,
+          "required_mm": 0.552,
+          "margin_mm": 3.6457889999999975,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.1",
+          "center_to_rectangle_distance_mm": 14.640940299477016,
+          "required_mm": 0.552,
+          "margin_mm": 14.088940299477017,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.2",
+          "center_to_rectangle_distance_mm": 30.838027076206583,
+          "required_mm": 0.552,
+          "margin_mm": 30.286027076206583,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.3",
+          "center_to_rectangle_distance_mm": 17.253766788816005,
+          "required_mm": 0.552,
+          "margin_mm": 16.701766788816006,
+          "clear": true
+        },
+        {
+          "guard": "BT1.spring_wall",
+          "center_to_rectangle_distance_mm": 7.979820565203826,
+          "required_mm": 0.552,
+          "margin_mm": 7.4278205652038265,
+          "clear": true
+        },
+        {
+          "guard": "BT2.spring_wall",
+          "center_to_rectangle_distance_mm": 28.549947464975315,
+          "required_mm": 0.552,
+          "margin_mm": 27.997947464975315,
+          "clear": true
+        }
+      ]
+    },
+    {
+      "uuid": "fa83a8ab-a7d3-5826-adce-43ff4f25a03d",
+      "role": "C24 capped via",
+      "reference": "C24",
+      "common_xy_mm": [
+        -7.995917000000006,
+        -6.508330999999998
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3,
+      "all_eight_clear": true,
+      "minimum_margin_mm": 0.39333099999999793,
+      "checks": [
+        {
+          "guard": "BT1.base.1",
+          "center_to_rectangle_distance_mm": 10.462686313105737,
+          "required_mm": 0.55,
+          "margin_mm": 9.912686313105736,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.2",
+          "center_to_rectangle_distance_mm": 27.130449900185035,
+          "required_mm": 0.55,
+          "margin_mm": 26.580449900185034,
+          "clear": true
+        },
+        {
+          "guard": "BT1.base.3",
+          "center_to_rectangle_distance_mm": 13.713400866905705,
+          "required_mm": 0.55,
+          "margin_mm": 13.163400866905704,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.1",
+          "center_to_rectangle_distance_mm": 4.592165971134974,
+          "required_mm": 0.55,
+          "margin_mm": 4.042165971134974,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.2",
+          "center_to_rectangle_distance_mm": 11.766328025618266,
+          "required_mm": 0.55,
+          "margin_mm": 11.216328025618266,
+          "clear": true
+        },
+        {
+          "guard": "BT2.base.3",
+          "center_to_rectangle_distance_mm": 0.9433309999999979,
+          "required_mm": 0.55,
+          "margin_mm": 0.39333099999999793,
+          "clear": true
+        },
+        {
+          "guard": "BT1.spring_wall",
+          "center_to_rectangle_distance_mm": 25.080933026633005,
+          "required_mm": 0.55,
+          "margin_mm": 24.530933026633004,
+          "clear": true
+        },
+        {
+          "guard": "BT2.spring_wall",
+          "center_to_rectangle_distance_mm": 9.237469647389911,
+          "required_mm": 0.55,
+          "margin_mm": 8.68746964738991,
+          "clear": true
+        }
+      ]
+    }
+  ],
+  "c24_known_minimum_margin_mm": 0.39333099999999793,
+  "native_control": {
+    "available": true,
+    "kicad_build": "10.0.6",
+    "method": "standalone BOARD; native B.Cu via GetEffectiveShape versus rule-area Outline Collide",
+    "rule_area_properties": [
+      {
+        "name": "BT1.base.1",
+        "native_flags": {
+          "rule_area": true,
+          "vias_not_allowed": true,
+          "tracks_not_allowed": false,
+          "pads_not_allowed": false,
+          "zone_fills_not_allowed": false
+        }
+      },
+      {
+        "name": "BT1.base.2",
+        "native_flags": {
+          "rule_area": true,
+          "vias_not_allowed": true,
+          "tracks_not_allowed": false,
+          "pads_not_allowed": false,
+          "zone_fills_not_allowed": false
+        }
+      },
+      {
+        "name": "BT1.base.3",
+        "native_flags": {
+          "rule_area": true,
+          "vias_not_allowed": true,
+          "tracks_not_allowed": false,
+          "pads_not_allowed": false,
+          "zone_fills_not_allowed": false
+        }
+      },
+      {
+        "name": "BT2.base.1",
+        "native_flags": {
+          "rule_area": true,
+          "vias_not_allowed": true,
+          "tracks_not_allowed": false,
+          "pads_not_allowed": false,
+          "zone_fills_not_allowed": false
+        }
+      },
+      {
+        "name": "BT2.base.2",
+        "native_flags": {
+          "rule_area": true,
+          "vias_not_allowed": true,
+          "tracks_not_allowed": false,
+          "pads_not_allowed": false,
+          "zone_fills_not_allowed": false
+        }
+      },
+      {
+        "name": "BT2.base.3",
+        "native_flags": {
+          "rule_area": true,
+          "vias_not_allowed": true,
+          "tracks_not_allowed": false,
+          "pads_not_allowed": false,
+          "zone_fills_not_allowed": false
+        }
+      },
+      {
+        "name": "BT1.spring_wall",
+        "native_flags": {
+          "rule_area": true,
+          "vias_not_allowed": true,
+          "tracks_not_allowed": false,
+          "pads_not_allowed": false,
+          "zone_fills_not_allowed": false
+        }
+      },
+      {
+        "name": "BT2.spring_wall",
+        "native_flags": {
+          "rule_area": true,
+          "vias_not_allowed": true,
+          "tracks_not_allowed": false,
+          "pads_not_allowed": false,
+          "zone_fills_not_allowed": false
+        }
+      }
+    ],
+    "synthetic_probe_vias": [
+      {
+        "name": "inside_base",
+        "uuid": "651aa213-a733-465f-a4e3-2e8bf369f155",
+        "center_mm": [
+          10.0,
+          0.0
+        ],
+        "diameter_mm": 0.604,
+        "area_collisions": [
+          "BT1.base.3"
+        ],
+        "rejected_by_via_only_area": true,
+        "expected_rejected": true
+      },
+      {
+        "name": "edge_just_inside",
+        "uuid": "5a48f96a-855c-4ec5-8903-a89cc2ccf775",
+        "center_mm": [
+          10.0,
+          6.107
+        ],
+        "diameter_mm": 0.604,
+        "area_collisions": [
+          "BT1.base.3"
+        ],
+        "rejected_by_via_only_area": true,
+        "expected_rejected": true
+      },
+      {
+        "name": "edge_just_outside",
+        "uuid": "0a5f90d1-aa48-459e-9771-97aba98fe82c",
+        "center_mm": [
+          10.0,
+          6.127
+        ],
+        "diameter_mm": 0.604,
+        "area_collisions": [],
+        "rejected_by_via_only_area": false,
+        "expected_rejected": false
+      }
+    ]
+  },
+  "rulearea_fragment": {
+    "path": "contact-via-only-ruleareas.kicad_pcb.fragment",
+    "sha256": "d8963c662b85723ef70c9b7cf7d5758325e15b0b56bce1b2c94ac08bcdbcca60",
+    "count": 8,
+    "semantics": "vias_not_allowed only; tracks, pads, footprints and pours allowed"
+  },
+  "generated_script": {
+    "path": "calculate_contact_via_mask.py",
+    "sha256": "25be5690cc159bddee81064bc2cc4d8c02665ec9b4e2b832dbb7d6d4c69a324f"
+  },
+  "workflow_snapshot": {
+    "hash": "a1a950c96caed1401c39cb9acb9f2e4e520714ed705e8873e4ed31bfb3f30b0c",
+    "prior_classification": "proposal/evidence only; not an accepted PCB, allowed-domain map, import qualification, or fabrication release",
+    "prior_source_state": {
+      "accepted_source_modified": false,
+      "inherited_baseline_pcb_opens_not_newly_measured": 37,
+      "native_loads_performed": 0
+    }
+  },
+  "preserved": [
+    "authoritative 37-open PCB unchanged",
+    "five mandatory process vias unchanged",
+    "placement, copper, stackup, rules, zones, contacts and source manifests unchanged"
+  ],
+  "limitations": [
+    "No actual PCB load, inventory, staging, routing, refill, DRC, CAD build, or board acceptance.",
+    "Elevated ears/full shadow remain 3D assembly/advisory and new-return-geometry review obligations.",
+    "Via-only areas do not qualify B.Cu tracks/pours, same-net contact-land access, or foreign B-metal restriction.",
+    "No under-metal permission, physical loaded-contact qualification, manufacturing or child-use approval."
+  ]
+}

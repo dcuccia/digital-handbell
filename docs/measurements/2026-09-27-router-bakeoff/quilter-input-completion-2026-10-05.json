@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "checkpoint_local": "2026-10-05 07:58",
+  "producer_prospective_checkpoint_local": "2026-10-05 08:02",
+  "status": "BLOCKED_INCOMPLETE_SEMANTIC_CHECKER_AND_UNIMPLEMENTED_CONTROLS_THREE_ATTEMPTS_EXHAUSTED_NO_NATIVE_R3",
+  "scope": "New owner-authorized bounded completion of the paired r3 inputs. r1, r2 and authoritative source remained immutable. No source native load, refill, routing, cloud action, install, commit or root-owned documentation edit.",
+  "source": {
+    "pcb_sha256": "adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314",
+    "project_sha256": "8213261803c4a032c6351311ed43db6249720a8cb334ebd15e3daca210899990",
+    "schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "placement_manifest_sha256": "b849b5defb95f010f555d43b6d261fdea3ef37e240aee0190a607fb519c642f8",
+    "battery_contact_interface_sha256": "f96133d9f044600167477bcddbf67c43311ed0897066db9fa63d8e7f8118467b",
+    "source_native_loads": 0
+  },
+  "immutable_r2_basis": {
+    "path": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\comparison-inputs-20261005T0746-sol-r2",
+    "four_pcb_sha256": "7695b88eef1b7a249e9f930c1d735fc4a527d152bce8c17c9a14517226f969db",
+    "six_pcb_sha256": "97d99b4d2c906f5a8a7bc377f8762fff383c2dc9a2591a7fb24d9a0fa47876d2"
+  },
+  "implemented_but_unaccepted_partial_r3": {
+    "reservation_encoding": {
+      "layer": "F.Cu",
+      "flags": {
+        "tracks": "allowed",
+        "vias": "allowed",
+        "pads": "allowed",
+        "copperpour": "allowed",
+        "footprints": "not_allowed"
+      },
+      "references": ["J1", "J2", "MH1", "MH2", "X6"],
+      "J1_J2_X6_geometry": "Exact envelope polygon_common_xy_mm translated by native common+(100,100), no reflection. J2's existing 0.7 mm allowance was not duplicated.",
+      "MH1_MH2_geometry": "96-edge polygons circumscribed about nominal R3.2 circles at native (110,115.7) and (90,84.3).",
+      "nominal_radius_mm": 3.2,
+      "circumscribed_radius_mm": 3.201714,
+      "maximum_radial_overshoot_mm_approx": 0.001714,
+      "analytic_construction_intends_to_contain_nominal_circle": true,
+      "serialized_polygon_containment_verified": false,
+      "no_extra_clearance_added": true,
+      "semantics_limit": "F-only footprint reservations. They are not copper exclusions and do not qualify cable, tool, service, loaded-contact or final toleranced fit."
+    },
+    "last_partial_path": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\comparison-inputs-20261005T0801-sol-r3-c2",
+    "last_partial_four_pcb_sha256": "726783d878b7855c62c304649256c3fa75b8fab51f148bee60705a9e620d4206",
+    "last_partial_project_sha256": "917b3f1643449f86db43e6b7c987837d1b49aa1c243c7896e765510080b1971c",
+    "last_partial_schematic_sha256": "ec93cc6f6f03bb91dd05199d2e0b4cab6b542567031e484fe8098056992ab69e",
+    "warning": "Partial four-layer file is static-only, failed preflight and is not a usable input. No six-layer file was reached in the final attempt."
+  },
+  "producer_claimed_checker_scope_not_qualified": [
+    "Exact 104-reference and 325-pad UUID populations.",
+    "Pad numbers, nets, layers, sizes, drills, local geometry, shapes, custom primitives and pin fields.",
+    "Fixed32 source poses and only permitted parked72 footprint translations.",
+    "Exact retained209 UUID/net/layer/width/drill/endpoint records and absence of all35 source COUT primitives.",
+    "Source19 rule-area records, six-edge outline and absence of diagnostic areas.",
+    "Expected generated reservations, unique semantic non-zone equality to immutable r2 and no unexpected copper.",
+    "Physical layer order, core/prepreg stackup fields, plane unfilled state, project minima and exact schematic hash."
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "path": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\comparison-inputs-20261005T0758-sol-r3",
+      "result": "Failed closed because pad canonicalization treated native child ordering and explicit angle serialization as semantic changes.",
+      "receipt_sha256": "4150b4267113346a7c3f6ca68309d368e4cc26722b2bcd9a503159d4799e8f7e"
+    },
+    {
+      "attempt": 2,
+      "path": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\comparison-inputs-20261005T0800-sol-r3-c1",
+      "result": "Sorted pad fields and compared transformed geometry, but incorrectly treated KiCad's saved absolute pad angle as footprint-relative.",
+      "receipt_sha256": "b996b515a8ac5ebd7c7c76b23f3e533b7a3fedddfa01c97335cf229e871c2982"
+    },
+    {
+      "attempt": 3,
+      "path": "C:\\Projects\\dcuccia\\digital-handbell-routing-bakeoff-20260927\\quilter\\inputs\\comparison-inputs-20261005T0801-sol-r3-c2",
+      "result": "Known absolute-angle normalization closed ordinary pads, but exact BT contact/custom-pad and IC1 pad comparison still failed. The checker stopped before accepting four-layer preflight.",
+      "receipt_sha256": "58deb94d49cf0be4c6bec2d6ea6f7ce2a4ae3389455ab8dcf3f256925a0763d2"
+    }
+  ],
+  "execution": {
+    "attempts_used": 3,
+    "correction_budget_exhausted": true,
+    "hard_static_limit_seconds": 30,
+    "native_children": 0,
+    "native_loads": 0,
+    "native_saves": 0,
+    "drc_runs": 0,
+    "mutation_controls_executed": 0,
+    "executed_tool_original_path": "tools\\complete_quilter_comparison_inputs.py",
+    "archived_final_tool": "unqualified-complete-quilter-comparison-inputs.py in last_partial_path; moved unchanged out of reusable tools",
+    "final_tool_sha256": "e4053ab485c3fcbab436267c450d0c51c0d9b91a0afb4b09f918ff4601d8b14f"
+  },
+  "finite_blocker": {
+    "root_defect": "Incomplete semantic checker, not just pad normalization: independent outline/zone/guard/reservation/profile/plane comparisons and actual negative controls were not implemented. Broad field omission is prohibited; passing pad normalization alone would not close the implementation.",
+    "not_established": [
+      "No complete positive static r3 pair.",
+      "No post-save source/native semantic comparison.",
+      "No native fixed-footprint overlap list.",
+      "No negative mutation controls, because positive preflight never passed.",
+      "No r3 manifests binding native bytes.",
+      "No expanded209/164 contact/process screen or staged DRC classification."
+    ],
+    "next_scope": "Only a separately authorized bounded checker completion may proceed: use existing source-native geometry for representation normalization, implement real independent field/geometry comparisons and real input mutations, then produce a fresh pair if those controls pass. Do not load partial attempts or restart general source inventory."
+  },
+  "root_review": {
+    "decision_local": "2026-10-05 07:58",
+    "actual_last_static_completed_utc": "2026-10-05T14:54:35.137746+00:00",
+    "last_child_exit": 1,
+    "last_child_pid": 29264,
+    "last_supervisor_pid": 37368,
+    "last_elapsed_seconds": 3.531,
+    "child_and_supervisor_absent_at_root_check": true,
+    "source_and_r2_hashes_verified_unchanged": true,
+    "producer_report_preserved": "producer-report.json in last_partial_path",
+    "earlier_revision_limit": "All three receipts bind executed hashes and preserve stderr; copies of the first two executed script revisions were not located in the inspected attempt directories. Final e4053ab4 code is archived unchanged.",
+    "representative_pad_evidence": [
+      "BT1.1 UUID632683ad is an ordinary rectangular pad, not a custom pad. Source layers B.Cu/B.Paste/B.Mask versus r2 B.Cu/B.Mask/B.Paste show set ordering, not loss of a layer.",
+      "IC1.1 UUIDd5089b30 has source-file angle180 and r2 serialized angle90. The existing source-bound October2 native inventory records orientation90 at102.6,96.55 with footprint orientation-90. This is a representation witness, not an all-pad preservation pass."
+    ],
+    "rejected_or_incomplete_checker_claims": [
+      "mutation_controls merely returns passed=good.passed for eight labels. It changes no input and checks no rejection. It was not reached; no mutation result is accepted.",
+      "The expected outline records are loaded but only their count is compared; r2 equality does not independently qualify r2's outline.",
+      "Reservation checks cover flags but not saved layer/contour. contains_nominal_circle is hardcoded; six-decimal polygon serialization has no demonstrated containment check.",
+      "Most generated zones lack independent geometry/net/layer/flag comparisons; non-zone equality cannot preserve them.",
+      "Profile check verifies dielectric type but not expected thickness/material/Dk/copper rows; plane check is count/unfilled only, not net/layer/geometry.",
+      "Native overlap code, never executed, uses bounding boxes and would not prove exact physical overlap.",
+      "Failure text lists only the first eight errors, so it does not establish that BT/IC1 are the only mismatches.",
+      "Final helper archived privately instead of committed as a reusable checker."
+    ],
+    "further_execution_or_cloud_released": false
+  },
+  "acceptance_boundary": "BLOCKED. Preserve the reservation implementation and checker evidence, but do not use or upload any partial r3 file. r2 remains the latest complete native-roundtripped pair and remains held for the gaps recorded in the construction ledger."
+}

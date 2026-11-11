@@ -11,6 +11,64 @@ Tracking: [E04/#4](https://github.com/dcuccia/digital-handbell/issues/4),
 
 ## One active candidate, preserved history
 
+**Current phase, November 9: review the zero-open six-layer milestone.**
+Use [the review brief](pcb-review-2026-11.md) and its exact snapshot/evidence
+bindings. `best-0-testen` (`0051b2e3`) is the routing-continuation milestone,
+not a fabrication or powered-use release. The 37-open four-layer source,
+Quilter results and failed local trials remain preserved. Review the
+accumulated electrical/process/mechanical obligations in the PR before
+new optimization. The older continuation instructions below describe their
+own checkpoints; do not resume them as current work.
+
+**Historical support disposition, October16:** Quilter/Justin offers product-specific
+help, not layout review. The requested width metadata and original-export
+examples are prepared in a small [report](measurements/2026-09-27-router-bakeoff/quilter-width-evidence-2026-10-16.json)
+with a [reply](quilter-support-email-2026-10-14.md) the owner reports sent
+at15:58 local. Attachment inclusion was not independently checked.
+An export issue is possible but unproven. IC1-area spacing is a suggested
+placement experiment, not a promised completion gain. This all-preplaced
+input needs actual local pose changes or a deliberately revised placement
+release; a spacing parameter alone is not an implemented alternative.
+No geometry reduction, plane reassignment, new job or engineering restart.
+
+**Historical trial checkpoint, October14 12:56:** the proposed coordinated core
+trial stopped at its first contract gate without a repair. Both named GND/
+D+ obstacles are Quilter-added, but physical cut/return duties remain
+unqualified. The prepared contact helper was rejected before execution;
+correction/review missed its fixed start cutoff. No native query or PCB
+change occurred. Stop further automated rework and recommend a focused human
+MCU/core/USB layout review. This is a preparation limit, not unroutability
+proof; no paid engagement or external transfer is authorized or performed.
+
+**Retained qualified checkpoint, October14 12:30:** isolated `117cbe9a` is
+qualified as a twelve-VCORE-width-only diagnostic repair. Exact inverse-byte
+and unchanged native component proofs combine with all-track/parity DRC:
+405->393 violations,76->64 widths, unchanged34 opens/46 parity and non-width
+findings. Supplement `daae6897` proves physical equivalence for all six
+changed open representatives; the original raw HELD report remains preserved.
+One static child and six actual controls pass, with no new native operation.
+The authoritative37-open source is unchanged. Core connectivity/C18 loop
+quality remains blocked by the finite strategy results;64 widths, CC2,
+USB/power and P2-P4 remain. No product acceptance or demonstrated overall
+finishing-cost advantage. See the [current handoff](agent-handoff-2026-10-01.md).
+
+**Historical planning checkpoint, October14:** the
+[saved standard 1.1 repair plan](quilter-repair-plan-2026-10-14.md) covers all
+34 non-GND open records, 76 under-width segments, CC2 and critical USB/power
+quality gates on exact `05857d58`. The authoritative 37-open board remains
+unchanged. Planning is complete; no repair/native rerun or new cloud job is
+released. The proposed next item is a bounded core-power/C18 feasibility and
+exact-delta pilot, ahead of flash/USB/source-current gates and routine closure.
+
+**Historical Quilter checkpoint, October5 11:14:** the owner-authorized first
+flexible four-layer [job](https://app.quilter.ai/jobs/6ac3d5b7fc0d2d776ed14a60)
+is submitted and working. See the [paired-import ledger](measurements/2026-09-27-router-bakeoff/quilter-paired-import-2026-10-05.json)
+`submission_checkpoint` for corrected common settings and precise limits.
+The authoritative37-open board and accepted native inputs are unchanged.
+Six is not created; no output acceptance, automatic monitoring or integration.
+Earlier construction/import holds below are historical for this four-layer
+submission, not waived output, fabrication or powered-use gates.
+
 Continue in `hardware/handbell/iterations/printed-bell-clock-draft`.
 Starting accepted PCB SHA-256:
 `0c81f57fd3046248448d778230800849527c8a8ecaf501454314c82fffbe8db0`.
@@ -165,6 +223,708 @@ primitive proof and ERC after byte comparisons, rather than rerunning them;
 `reports/power-device-local-reuse.json` records that limited reuse explicitly.
 
 ## Owner pause and next item
+
+**November 9 current next item:** enter the PR review phase using
+[the zero-open review brief](pcb-review-2026-11.md). It controls the
+current snapshot/publication and review work. Older pauses and next-item
+instructions below retain their original scope; they do not restart failed
+Quilter/native/routing attempts or authorize spending.
+
+**October14 12:56 trial stop:** no complete core/C18 replacement contract was
+qualified within the first item's cap. Both reviewed obstructions have new
+Quilter provenance, but that alone does not authorize moving them. Preserve
+unexecuted helper48b131ff and the missing physical-branch/return dependency.
+Do not consume the remaining trial time on another correction chain.
+Recommend focused human layout review before further automated repair; the
+owner must disposition that next step. No implementation or validation phase
+started, and no claim of physical impossibility is supported.
+
+**October14 12:30 completed width-validation milestone:** retain exact
+`117cbe9a` as the isolated12-width diagnostic improvement. The six changed
+open representatives are now source-proven equivalent; no new native work
+was needed. Keep `05857d58`, the authoritative37-open board, strict raw HELD
+comparison and all failed/unexecuted evidence. This closes width validation,
+not core connectivity or C18 supply-loop quality. Next requires a bounded
+engineering disposition of the existing core/C18 blockers, not another
+checker, DRC, reconstruction, expanded route sampling or routine closure.
+P2-P4 remain unstarted; no integration or new cloud job is released.
+Exact evidence and limits are in the [handoff](agent-handoff-2026-10-01.md).
+
+**Historical October14 planning checkpoint:** use the
+[source-bound repair plan](quilter-repair-plan-2026-10-14.md), not the older
+automatic engineering continuations below. The owner's current request
+authorized planning only. Saved `05857d58` is retained; the next proposed
+15-minute core-power/C18 pilot needs implementation authorization. No
+authoritative-board changes, unbounded manual finish or new Quilter volley.
+
+**October 5 hourly milestone:** both isolated native inputs now have all
+five footprint reservations and pass source-aware comparisons before/after
+native save/reload. Four PCB`342c242f...` and six`c3749f5c...` preserve the
+209/32/72 contract. DRC completes on both:321 findings/184 staged opens,
+not a clean or routed board. The
+[hourly ledger](measurements/2026-09-27-router-bakeoff/quilter-input-hour-completion-2026-10-05.json)
+records exact files, real checker controls and root disposition of the
+expanded screen; its first overclaimed PASS is explicitly rejected.
+The corrected32/67 guard screen and13-via/164-land screen now pass; root
+dispositions staged DRC findings and accepts local input construction.
+Next is a separately authorized paired import preview, not rebuilding
+these files or restarting the old checker iterations.
+Source and all earlier experiments remain unchanged. No cloud action,
+refill, routing or integration is released by this construction milestone.
+
+**Historical October 5, 08:10:** owner authorizes one sustained local
+completion push through09:10, no new item after09:00. Finish the checker
+and real mutations, review code before its first run, then advance through
+successful dependencies to reservations/native pairs and exact finding
+disposition. Reuse saved source-native poses; no new inventory. The
+[handoff](agent-handoff-2026-10-01.md#start-here) records the replacement
+runtime-verified Sol/medium executor and first08:26 checkpoint.
+Source/r1/r2 and failures remain immutable; no routing/refill/cloud/paid use.
+
+**Prior October 5, 07:58: stop after three failed static attempts.**
+The [completion ledger](measurements/2026-09-27-router-bakeoff/quilter-input-completion-2026-10-05.json)
+records partial reservation encoding but no complete r3 pair or native
+execution. The checker needs both representation normalization and
+missing independent outline/zone/profile/plane comparisons; its nominal
+mutation helper mutates nothing and has no accepted result. Final code
+is archived privately. Source/r2 remain unchanged; r2 stays held.
+Executor exited07:54:35. A new bounded checker completion requires
+authorization; remaining wall time does not renew the exhausted retries.
+
+**Historical authorization October 5, 07:50:** finish the paired-input implementation gaps
+under a new bounded authorization. Same verified Sol/medium executor
+adds native F footprint-only MH1/MH2/J1/J2/X6 reservations and source-bound
+semantic matchers/negative controls on preserved r3 derivatives.
+Execution08:02/report08:03/root08:05, initial plus two corrections.
+Expanded209/164 screening and finding disposition remain in this finite
+completion scope if time permits. No source-native edit/load, refill,
+routing or cloud; r1/r2 stay immutable and upload remains held.
+
+**Prior October 5, 07:48: paired inputs constructed, not usable yet.**
+Preserve [r2 and its source-bound ledger](measurements/2026-09-27-router-bakeoff/quilter-input-construction-2026-10-05.json).
+Native counts104/325/209 and final manifest hashes are recorded, but
+MH1/MH2/J1/J2/X6 native reservations and semantic preservation matchers
+are incomplete. Expanded209/164 screening and finding disposition remain.
+Contact flags/core types were corrected without source changes; four DRC
+was not repeated, six has317 findings/184 opens. All three attempts are
+exhausted; executor idle since07:46:19. No preview/upload/submission release.
+One future bounded completion should target these exact encoding and
+comparison gaps, not restart the source-selection or placement search.
+
+**Historical authorization October 5, 07:36:** owner explicitly requests the two input
+packages. This new construction item may generate isolated full
+four/six derivatives from the selected209/32/72 contract, then load/save/
+reload and run bounded native diagnostics on those derivatives only.
+Verified Sol/medium`bbf4e823...` stops07:47/report07:48/root07:50.
+Source-native loads/edits, refill, routing and cloud actions are excluded.
+Constructed, native-checked and preview-qualified are separate outcomes;
+preserve partial files and name any remaining gate rather than call a
+parseable file usable by default.
+
+**Prior October 5, 07:28: clock selection accepted; full trial NO-GO.**
+The [current-source recovery](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-boundary-recovery-2026-10-05.json)
+closes pad binding and self-contained local signal/return paths. Select
+209 primitives,32 fixed references/164 pads and72 eligible for comparison
+preparation only. Ordinary interfaces carry source terminal/net restoration
+duties, not preservation of every old fanout or saved-pour contact.
+No new source or PCB bytes. The common allowed-F/electrical encoding,
+expanded209/164 coverage and two complete native inputs remain missing.
+Stop the owner-approved capped attempt early rather than launch another
+repair chain. The next separately scoped deliverable is common-input
+implementation and qualified previews, not more clock inventory.
+No source change, full input generation, cloud job or new executor item
+is released by this no-go. See the
+[stage/readiness table](quilter-workflow-study-2026-10-02.md#october-5-budgeted-path-to-a-useful-experiment).
+
+**Prior October 4, 21:26: HOLD.** The preserved-clock packet retains
+exact membership facts but does not qualify the proposed209-copper/32-fixed
+block. Y1 case-pad coordinate rebinding and complete external conductive
+contacts remain unclosed; an endpoint-only screen is insufficient.
+Both corrections are exhausted, with final child completion21:24:52.
+No demonstrated PCB defect; keep177 and27/77, source and experiments.
+A new bounded endpoint/boundary-proof authorization is required before
+further execution. No native retry, full input, cloud job or integration.
+See the [held ledger](measurements/2026-09-27-router-bakeoff/quilter-preserved-clock-qualification-2026-10-04.json).
+
+**Prior authorization October 4, 21:14:** owner explicitly selects a bounded qualification
+of preserved IC1/Y1/R6/C2/C3 for the first four/six comparison. Verified
+Sol/medium continues the reviewed clock task through21:25,
+report21:26/root21:29. Qualify complete clock signals, finite local returns
+to actual P$1 and external restoration duties before expanding177 or
+applying the prospective32/72 partition. No hidden movable-pad dependency,
+whole-GND retention, extra frozen references, native load, source change,
+full input or cloud job. This would not test MCU relocation.
+
+**Prior accepted October 4, 19:40:** source clock bindings are accepted from one
+0.86s static extraction: all eight terminals on three signal nets, correct
+R6 ends, C2/C3 loads and Y1 case grounds. Source is unchanged; executor idle.
+The [clock ledger](measurements/2026-09-27-router-bakeoff/quilter-clock-relative-contract-2026-10-04.json)
+does not complete the engineering acceptance contract. Next reconcile
+clock reference/return intent with the intentional In1 pour hole and
+choose justified study screening criteria. Native pad numbers, schematic
+names and imported PIN tokens remain separate; ground-tied TESTEN19 is
+not a true MCU return terminal. No more inventory, source/candidate change,
+automatic MCU freeze, added retention or cloud release.
+
+**Prior October 4, 19:27:** read-only domain disposition finds an
+additional relative-placement path: Custom Component Proximity, explicitly
+best effort, with parent-pin/max-distance fields but no child-pin field.
+Existing-job timing fields likewise do not prove actual availability or
+execution. Do not use the10mm UI default as an engineering threshold.
+The known R6 oscillator limitation remains. Next bind source
+IC1/Y1/R6/C2/C3 terminals and independent clock/return/exclusion obligations,
+not more arbitrary rooms, an MCU freeze or automatic added retention.
+See the [disposition](measurements/2026-09-27-router-bakeoff/quilter-movable-domain-disposition-2026-10-04.json).
+Physical domains and complete electrical/native/import gates remain open;
+no source edit, full input, cloud object or new job.
+
+**Prior accepted October 4, 19:15:** the isolated F-room native serialization
+control passes on returned`3a5f6d89...`: one new all-clear room, all58
+original subtrees/guards/fills intact, complete new-room equality and
+unique UUIDs. Two child import failures preceded the successful third
+attempt; receipts and recovered exact failed scripts are preserved.
+No fourth run. The executor is idle and all five source hashes unchanged.
+See the [control ledger](measurements/2026-09-27-router-bakeoff/quilter-f-placement-region-native-control-2026-10-04.json).
+Next is source-bound movable-domain requirements/representation from
+existing evidence. Actual product domains, importer association and
+body/rotation/F-only placement remain unqualified; no full input or cloud.
+
+**Prior October 4, 19:06: common F-height class simplified.**
+The+2mm height screen's only nonpositive cases, L1/X6, are both fixed under
+the current27/77 partition. Eligible fitted movers need no tall-part class,
+but this does not establish a whole-body/access domain. The subsequent
+native F-room serialization control is now qualified above, with all
+restrictive source guards preserved.
+No full input, cloud upload or placement/routing job. Canonical new-via
+fields are synchronized to0.650/0.350mm with0.150mm minimum ring.
+
+**Prior October 4, 18:56:90-ohm intent retained; current-client path identified.**
+The [capability disposition](measurements/2026-09-27-router-bakeoff/quilter-usb-impedance-capability-2026-10-04.json)
+finds numeric frontend entry rather than an85/100-only selector. Actual90
+persistence/solving remains unverified; saved100-ohm results are not a proxy.
+Continue independent local domain/profile qualification, then require
+nonstale90-ohm per-layer results on each qualified preview before submission.
+No duplicated job, new input, recompute request, substitution or source edit.
+Full native/import findings and returned-object/fill checks remain gates.
+
+**Prior October 4, 18:42: study roles and retained-via geometry selected.**
+The [role decision](measurements/2026-09-27-router-bakeoff/quilter-four-six-role-selection-2026-10-04.json)
+selects real JLC 3313 S/G/S/S and S/G/S/G/G/S constructions, not generic
+four/six presets. The [13-by97 screen](measurements/2026-09-27-router-bakeoff/quilter-retained-via-pad-process-screen-2026-10-04.json)
+finds no fixed-land overlap for the other13 retained vias. Their mask/
+assembly treatment remains unqualified; preserve all18 vias and the five
+required filled/planarized/capped seeds. New ordinary starting geometry
+is0.650/0.350mm with0.150mm ring, not a source resize or global-rule waiver.
+The subsequent USB capability/engineering disposition is above:
+documented85/100-ohm choices do not establish support for our90-ohm target.
+No unsupported substitution, manual routing, source change, full input or
+cloud job. Movable domains and complete native/import/output gates remain.
+
+**Prior October 4, 18:26: native rectangles selected after owner continuation.**
+The [encoding decision](measurements/2026-09-27-router-bakeoff/quilter-native-guard-encoding-2026-10-04.json)
+selects the existing 18/22 guard obligations and preserves the exact eight
+additional rectangle-only retained intrusions. No source copper changes.
+The private measurement script's unexecuted controls and unimplemented
+matcher remain unqualified; actual layer order reuses older exact-file
+evidence. Its three launcher attempts are exhausted, with no rerun.
+The subsequent layer-purpose/minimum selection is recorded above.
+Full movable domains, complete native input
+findings and new/changed returned-object/fill checks remain before jobs.
+
+**Prior October 4, 18:00: bound obstacle coverage accepted; hour closes.**
+The [coverage ledger](measurements/2026-09-27-router-bakeoff/quilter-private-guard-candidate-coverage-2026-10-04.json)
+qualifies the exact 177 retained primitives and 97 native fixed pads.
+It closes the upstream pose/layer-coverage gap without new collateral
+contact: 42 prior pairs remain, four wrong-pose false positives disappear,
+and 18 self pairs are recorded separately. Existing terminal-bank joins
+and DOUT's valid 0.212066 mm copper gap are unchanged.
+
+The three supervised executions are complete; no further run or new
+engineering item starts this hour. The 37-open source and all experiments
+remain preserved. This is source-bound geometry, not generic shape-engine
+qualification: degenerate roundrect narrow-phase handling needs a separate
+correction/test before such a pad becomes a nearby candidate; it does not
+affect this exact run's enclosing bounds or surviving pairs.
+
+Next, on continuation, select the native guard representation and exact
+retained-source intrusion contract for the four private pads, six private
+tracks and two private vias. Expected output is an encoding disposition,
+not a changed board: no blanket same-net waiver, feed removal or automatic
+input/upload. Movable placement domains, supplier layer purposes/processes,
+functional grounding and full native/importer gates remain separate.
+
+**Earlier 17:26 local plane control accepted; current hour ends18:11.**
+No new item after18:01. The
+[plane ledger](measurements/2026-09-27-router-bakeoff/quilter-private-plane-control-2026-10-04.json)
+qualifies4/8 isolated four/six-layer private-via cases at0.250000mm and
+one missing-In3-guard negative with direct fill contact. Saved source-subset
+records and physical layer order reconcile. An anchor VIA proves local
+nonempty-fill contact, not functional grounding. Three native attempts
+are exhausted, with no rerun. The collateral/retained-join item and its
+coverage follow-up are now completed as described above. No source-native load/edit,
+full product input, routing, cloud job or manufacturing release.
+
+**17:01 finite tool completion accepted:** ten supervised regressions
+and one corrected-revision native replay pass. Eight pad records/four
+pose witnesses and23 rule areas match; the2.468-second DRC differs from
+the first diagnostic result only in date. Actual revision snapshots,
+receipts and unchanged source hashes are verified in the
+[completion ledger](measurements/2026-09-27-router-bakeoff/quilter-native-tool-completion-2026-10-04.json).
+The tooling blocker is closed. Next engineering work must address full
+guard representation/retained-copper treatment, fill isolation and
+six-layer mapping before full inputs/import qualification. No product
+rules, full input, routing, cloud job or fabrication is released.
+
+**Historical16:36 tool repair partial, stopped:** native UUID/pose readback and
+diagnostic DRC now complete on the isolated fixture, but root review
+required two code corrections. Five subprocess controls pass; missing
+fixture mocks and a native replay of the final revision still prevent
+reusable-tool qualification. Next is that finite completion item, not a
+fresh inventory or product run. Preserve all evidence/source; no full
+input, six-layer/fill, routing or cloud release. See the
+[repair scope and result](quilter-workflow-study-2026-10-02.md#october-4-1636-bounded-native-tool-repair).
+
+**Current-coordinate process-hole screen accepted:** the
+[spacing ledger](measurements/2026-09-27-router-bakeoff/quilter-process-hole-spacing-screen-2026-10-04.json)
+binds five required processed vias against eight drilled component pads
+and13 other retained vias. Conservative full-copper/pad gaps exceed0.45mm
+in all40/65 pairs; minima6.907610/13.543012mm. All source hashes remain
+unchanged. This is not cap/planarity, supplier acceptance, future-geometry
+or other-via process qualification. One static run completed, but no hard
+timeout was evidenced; the ledger distinguishes initial wait from a limit.
+The separately authorized native-runner/UUID/DRC recovery is now bounded
+above. No input generation or cloud job follows from the spacing result.
+
+**Supplier screen complete, constructions not selected:** the
+[source-bound comparison packet](measurements/2026-09-27-router-bakeoff/quilter-four-six-stackup-source-screen-2026-10-04.json)
+supplies actual3313 dielectric/copper rows and POFV conditions. Exact hole
+spacing interpretation and cap/planarity remain open; published size/ring
+ranges and the subsequent current-coordinate clearance screen do not
+qualify manufacturing. The native guard blocker
+below is not waived, and no source/input/cloud changes are released.
+
+**Native-control gate held:** [1fd27e9d...](measurements/2026-09-27-router-bakeoff/quilter-private-guard-native-control-2026-10-04.json)
+establishes static source-subset preparation and native load/save, not
+complete roundtrip or rule behavior. UUID lookup is incomplete and CLI
+DRC times out at30 seconds. All three old attempts are consumed; preserve
+evidence. The new16:36 repair has its own bounded authorization, not a reset
+of those attempts. Analytic guards and selected177 remain unchanged.
+Supplier evidence does not release either full input past the native gate.
+
+**14:20 continuation:** another owner-authorized hour ends15:20, with
+no new item after15:10. First is isolated native guard-encoding/behavior
+qualification of the repaired source subset, not a full-board input.
+Analysis14:32/report14:33/root14:35; three90-second attempts maximum.
+Native fixture-only saves/loads and diagnostic fail probes are allowed;
+authoritative source edits, product routing and cloud jobs are not.
+Native behavior, importer enforcement and selected supplier constructions
+remain distinct gates even if four/six logical fixture layers pass.
+
+**Current checkpoint: analytic private guards selected after repair.** The
+[native-oracle repair](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-repair-2026-10-04.json)
+resolves the pad-transform blocker without another KiCad load. Root selects
+the corrected specification only; source177 retention is unchanged and
+native serialization/behavior and Quilter enforcement are not qualified.
+Two static executions completed; the failed proposal stays preserved.
+Stop at this checkpoint under the existing hour. Next is one bounded
+isolated native guard-encoding/behavior control, with no full-board staging
+or new job. Actual supplier stackups, movable domains and importer
+qualification remain necessary for comparable four/six-layer packages.
+
+**14:07 recovery released:** the owner explicitly asks to continue unblocking
+and preserve reusable staging/gating strategies toward a four/six-layer
+comparison. One checker-only repair uses already-saved native global pad
+geometry, with independent all-endpoint and signed-quarter-turn witnesses.
+Analysis14:14/report14:15/root14:19; three90-second executions maximum,
+zero native loads, no new downstream item after14:09. This does not
+release a full input or job. Both future layer packages require the same
+common requirements and independent native/import/process qualification.
+
+**Historical stop: private-guard geometry is invalid.** Root rejects the
+[guard proposal](measurements/2026-09-27-router-bakeoff/quilter-private-tap-guard-definition-2026-10-04.json)
+after saved native coordinates expose opposite-pad placement for R26.2
+and C28.2. This is our checker failure, not evidence against Quilter.
+Three analyzer attempts are exhausted; no fourth run or corrected guard
+generation is released by the remaining hour. Source and selected177
+are unchanged, and the executor is idle. Next requires a separately
+authorized checker-only repair using saved native coordinates, quarter-turn
+cases and actual private-track endpoint witnesses before any guard coverage
+claim. No native inventory rerun, full input, routing or cloud job.
+
+**Historical13:19 owner continuation:** stop14:19 local and start no new item after14:09.
+First define and statically qualify the COUT replacement/retention contract,
+including R29's parallel discharge duty, the exact177 retained primitives
+and all-three-terminal output restoration. Same verified Sol/medium;
+analysis13:31/report13:32/root13:34, initial plus two corrective attempts.
+No new native disposition run, source edit, manual repair, generated input
+or cloud submission is released. Proceed only through reviewed dependencies.
+
+**13:29 conditional177 selection:** the
+[static contract audit](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-release-contract-2026-10-04.json)
+qualifies exact membership and restoration semantics. Root selects that
+definition for subsequent input qualification, not actual copper removal,
+board generation or returned-route acceptance. Preserve all27 fixed refs,
+five seeds,30 feeds and non-COUT connections; restore U6.2/Q5.B2/R29.1
+and retain R29.2/PROT_FET_RETURN. The measured source floor is0.1778 mm,
+subject to stricter selected fabrication rules and later route review.
+Its private-tap guard dependency is now held as recorded above. Keep the
+actual-conducting-layer policy; do not copy F-only exclusions blindly into
+inner planes. Full geometry, stackup/process and native/import gates remain.
+
+**Historical12:57 stopping checkpoint:** the
+[PROT_COUT source disposition](measurements/2026-09-27-router-bakeoff/quilter-prot-cout-retention-disposition-2026-10-04.json)
+proves neither the offending via nor the complete five-object B branch is
+redundant. Either omission disconnects U6.2 from Q5.B2/R29.1 and leaves
+old dangling copper. Root's recommended next study is whole-net routing
+release with every terminal restored; hypothetical retained177 is not an
+approved input or permission to remove copper. COUT is charge-FET control,
+not load-current routing, and R29 is a parallel high-value discharge path.
+Complete212 remains held; source is unchanged and executor idle. No further
+item is released this hour. Next bounded item on continuation: qualify the
+one-net electrical/layer/contact/private-guard and restoration contract,
+without moving contacts, weakening clearance or resuming manual routing.
+
+**Historical12:10 owner hour:** stop13:10 local, no new item after13:00.
+Begin the separately bounded complete-retention/interface-model recovery:
+proposed186 plus five process seeds and retained pads, explicit contact
+controls and the C28.1/VAMP local bank interface. Same verified Sol/medium;
+analysis12:22/report12:23/root12:25, at most three90-second native runs.
+This supersedes the execution hold only for the new reviewed scope.
+Source, physical/input qualification and cloud/payment gates remain intact.
+
+**12:45 retained-copper contact blocker:** the
+[static screen](measurements/2026-09-27-router-bakeoff/quilter-critical-retained-contact-screen-2026-10-04.json)
+finds `/PROT_COUT` via `2f82654e...`0.225 mm from the nominal BT2 base,
+0.025 mm short of the0.25 mm requirement. This flat-side witness is not
+merely conservative corner expansion, but no nominal metal overlap exists.
+Complete212 is held; do not repair, move/remove copper, waive isolation
+or proceed to input generation. One static run/zero native loads; all
+five mandatory process seeds clear all eight guards. Next is bounded
+read-only source-role/dependency analysis of the exact PROT_COUT route.
+Private guard, placement/process and input qualification remain blocked
+dependencies, not automatic work to run past the conflict.
+
+**12:34 GND/V+ interface disposition:** root provisionally retains the18
+whole-source additions in the
+[interface report](measurements/2026-09-27-router-bakeoff/quilter-critical-ground-input-interfaces-2026-10-04.json)
+and existing1.0 mm,8.061 mm GND feeder `3598d04b...`: complete planning
+union212 including five process seeds, plus97 pads on27 proposed fixed refs.
+No clipping, new fixed parts or global-network retention. Q1 remains
+movable and its old `fce9acd5...` feeder remains unselected; ordinary net
+restoration is not a demand to preserve every old connection coordinate.
+The runner now proves numeric0/nonzero/timeout capture; all three native
+loads exited0. This item is exhausted and source is unchanged. Next is a
+bounded nominal contact-metal screen of the complete212 B copper/via
+annuli, not generation or approval of a full-board input. Private same-net
+tap prevention, placement/process and native/import gates remain.
+
+**12:22 recovered VAMP interface:** root provisionally selects the two
+complete source takeoffs identified in the
+[report](measurements/2026-09-27-router-bakeoff/quilter-critical-interface-recovery-2026-10-04.json),
+including the8.132 mm,1.0 mm-wide feeder instead of clipping it or absorbing
+the whole55-object network. Planning basis193 includes five process seeds;
+97 physical pads on27 refs remain separately bound. No source/input change.
+The item exhausted three executions/two loads; numeric exit codes were not
+retained, although final terminal output and artifacts exist. Preserve that
+limit, stop this item's executions and preflight exit capture before the
+next distinct GND/V+ interface disposition.
+
+**October 4 physical-cut stopping point:** the bounded item exhausted
+three attempts and returned partial evidence, not a retained-input approval.
+The [report](measurements/2026-09-27-router-bakeoff/quilter-critical-physical-attachments-2026-10-04.json)
+qualifies complete BOOST_SW inventory and proposes one existing 1.2 mm
+track addition for union186. The rest remains held: process-seed geometry
+was omitted from the subtraction basis, global endpoints were tested
+against an overly restrictive single-land criterion, and tangency-only
+graph contacts were not fully covered. These are qualification limits,
+not proof of defective source copper or failed Quilter routing.
+Stop native retries and preserve all source/raw evidence. The next item
+requires a separately scoped, complete-retention/module-port review,
+starting with the recorded C28.1/VAMP bus contact; no broad inventory loop,
+source change, routing, input generation or cloud is released.
+
+**Local-circuit selection evidence completed:** six source-local nets pass
+the all-physical-pad gate, with 105 complete primitives including four
+PROT_FET_RETURN vias. The [corrected report](measurements/2026-09-27-router-bakeoff/quilter-critical-local-retention-2026-10-04.json)
+binds the 185-object combined proposal and 142 boundaries. Named global
+paths are not yet physically retention-qualified. Nine per-duty attachment
+candidates are not nine defects: some copper is already retained, and
+multiple attachment UUIDs can share a physical junction.
+Next inspect exact local parallel/attachment geometry and terminal
+boundaries without widening the fixed set or retaining global amplifier
+feeds blindly. Source, earlier reports and raw outputs stay unchanged;
+no input generation, routing, repair, integration or cloud is released.
+
+**Core-only review completed:** the corrected source-bound
+[report](measurements/2026-09-27-router-bakeoff/quilter-critical-core-boundaries-2026-10-04.json)
+confirms all five boost F paths, two private GND paths and five CELL_NEG
+duties with 62 copper objects plus retained pads. A report-only correction
+restored intermediate U6.4 pad copper to the R28 witness; no extra routing
+or native rerun was needed. The 71 boundary edges and 52 lost internal
+pad-pair relationships are not independent port/repair counts.
+Current saved fills do not intersect the checked private objects; all 19
+rules remain pours-only, without qualified projected coverage or future
+private-tap prevention. Accept this evidence, not the retained set/27-77
+partition. Next select named local input-power, feedback and protector
+source paths while leaving ordinary global connections reroutable.
+No source change, full input, repair, integration or cloud is released.
+
+**Retention recovery completed:** eight preflight tests and one1.842s
+native private-copy inventory now produce five required boost F paths
+and both private GND pickoff witnesses. The corrected bindings no longer
+block analysis. Root accepts the recovered evidence only:62 explicit-duty
+objects versus113 all-pairs extras,264 graph boundaries, and coarse rule
+touches do not yet establish an approved retained block. Next qualify the
+core-only boundaries/private-pour treatment before27/77 approval or staging.
+See the [recovery report](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-recovery-2026-10-04.json);
+source and all failed evidence remain unchanged.
+
+**10:48 bounded recovery authorized:** owner permits repair/preflight of the
+retention analyzer and a conditional read-only inventory retry, preserving
+old failures. Same verified Sol/medium executor; analysis11:00, report11:01,
+root11:03; at most three90-second native analyzer executions. No source
+changes, save/refill/DRC, staging/cloud or automatic27/77 approval. The
+earlier retry stop below is superseded only for this explicitly scoped item.
+
+**October 4 retention inventory stopped:** three attempts failed on Python/
+pcbnew ABI and type-specific width serialization. The desktop assertion was
+our private child PID14516, terminated by its 90-second timeout; no Jenkins
+service was used. All three child PIDs are absent and source hashes unchanged.
+Preserve the [incomplete receipt](measurements/2026-09-27-router-bakeoff/quilter-critical-block-retention-2026-10-04.json).
+No complete copper/port set or 27-fixed/77-movable partition is approved.
+The next recovery needs separate bounded authorization and static/toolchain
+preflight before native execution, not a fourth attempt under the old item.
+The successful contact diagnostic remains qualified for its limited scope.
+
+**October 4, 09:58 continuation:** owner permits approximately two hours
+of sequential bounded work, ending by 11:58 with no new item after 11:48.
+The first item **recovered native DRC** on unchanged isolated contact-output
+copies: zero opens and 45 findings each. The
+[native supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-native-validation-2026-10-04.json)
+separates 39 inherited, four returned-rule annular-ring and two new
+isolated-fill findings. The subsequent
+[saved-plane supplement](measurements/2026-09-27-router-bakeoff/quilter-contact-plane-isolation-2026-10-04.json)
+passes 20/20 foreign-via isolation cases (minimum 0.206229 mm against
+0.20 mm) and 20/20 GND seed attachments. Each plane is one nonempty island;
+isolated-copper warnings reflect zero component GND terminals in the
+truncated fixture. Root qualifies the retained-feed/guard routing
+diagnostic only, not product/process/loaded-contact suitability or DRC
+cleanliness. No refill, repair or source change. The common-input contract
+now prefers two retained boost/protection cells, prospectively 27 fixed/
+77 movable refs, with exact source copper/port qualification still required.
+Next is that bounded retention/boundary inventory; staging/upload/submission
+remains held. Via-family/ring compatibility and actual supplier stackups
+remain explicit gates, not reasons to resize protected process seeds.
+See the [continuation contract](quilter-workflow-study-2026-10-02.md#october-4-bounded-autonomous-continuation).
+
+**Historical October 3: returned controls retained with a validation gap.**
+Both native files preserve the input inventory and connect both test nets
+entirely on B while clearing guards in the static geometry check. The
+[output review](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-output-review-2026-10-03.json)
+records added In1/In2 GND fills and two 60-second native DRC timeouts.
+This is useful routing evidence, not full native/plane acceptance and not
+a demonstrated design failure. Preserve both candidates and the unchanged
+37-open source. Next resolve the bounded native-validation blocker and
+check inner-plane isolation; do not repeat Quilter, repair/merge or stage
+the full board automatically.
+
+**Latest: contact-routing diagnostic launched at 17:49 on October 3.**
+The [job](https://app.quilter.ai/jobs/6ac19efbfc0d2d776ed14911)
+was started once after explicit owner approval to rely on the published
+free-personal policy without a displayed account-specific quote. The UI
+confirms launch and work in progress; no payment or new terms appeared.
+Six fixed components, eight pins and four pins to route remain bound by the
+[control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json);
+no output has been reviewed. Next preserve native output and assess retained
+objects/guards and new copper before routing benefit. No duplicate, broader
+trial, repair, integration or automatic monitoring.
+
+**Latest: corrected contact-routing input is qualified.** The approved
+checker/report correction passes; static/native PCB bytes are unchanged.
+The [control ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-routing-control-2026-10-03.json)
+releases only the exact native board/project pair for a separate diagnostic
+setup and one reviewed, confirmed-free routing submission. No native rerun,
+full-board staging, paid use, new agreement or fabrication.
+
+**Latest: contact-routing control held at root witness review.** The saved
+six-component native fixture preserves prior geometry, but its path checker
+misplaces BT2's rotated pads and retains a stale import-only report statement.
+Two corrections are exhausted; seek a bounded checker/report repair using
+the saved native files. No upload, native rerun or source change is released
+by the serialization result alone. See the
+[control disposition](quilter-workflow-study-2026-10-02.md#1713-approved-contact-routing-control).
+
+**Latest: separate diagnostic import preview completed.** Two files are
+Parsed after reload; eight keepout lookup entries, two components/four pins,
+zero to route. Stop here as requested: no submission or source changes.
+The [next proposal](quilter-workflow-study-2026-10-02.md#contact-feed-import-preview-completed)
+is a separately approved nonzero-work behavioral test with native-output
+preservation/guard checks, not a full-board or zero-work routing run.
+
+### Earlier checkpoints (historical; latest status above governs)
+
+**Local contact-feed fixture qualification complete.** The owner-approved
+next item is the separate diagnostic import preview using only the exact
+board/project pair in the [import ledger](measurements/2026-09-27-router-bakeoff/quilter-contact-feed-import-2026-10-03.json).
+Keep all intentional DRC contradictions visible and stop before submission;
+no full-board or manufacturing acceptance follows.
+
+**Owner approved preparation and import preview only.** Build/qualify the
+small contact-feed variant, then upload its board/project to a separate
+diagnostic draft, stopping before compilation/submission or payments.
+Propose next steps at that stopping point. Local preparation starts
+16:49:26, executor stops 17:01 and root checkpoints by 17:04; no source
+edit or full-board staging. The prior read-only hold is superseded only
+for this [bounded scope](quilter-workflow-study-2026-10-02.md#1635-quilter-diagnostic-readiness).
+
+**Latest: read-only Quilter readiness check complete.** Authentication
+works; no login needed. Public personal free use is reconfirmed, not an
+account-specific price. No new cloud object, upload or submission exists.
+Next proposed scope is a locally qualified contact-feed fixture and a
+separate diagnostic draft/import preview, pending owner approval. Keep
+that separate from actual routing-enforcement proof and the full-board
+layer trials. See the [bounded scope](quilter-workflow-study-2026-10-02.md#1635-quilter-diagnostic-readiness).
+
+**Latest: hybrid contact-feed candidate identified, representation gated.**
+The read-only [feed selection](quilter-workflow-study-2026-10-02.md#existing-contact-feed-retention-candidate)
+contains 30 B segments and five ordinary transition vias, not a new board.
+All candidate vias clear nominal contact guards; the negative sense/supply
+return branch serves C30.2/U6.4/R28.2. Keep it distinct from the R26/R27
+private pickup. Inherited via sizing and preplaced-feed/all-track-keepout
+precedence remain open. Next determine supported representation read-only
+and separately scope any necessary import control. Preserve source and
+experiments; no blanket-rule rerun, full staging or cloud release.
+
+**Latest: native contact-fixture controls established.** Six rule
+expectations and all five process-via keepout checks pass on the isolated
+fixture, with limited serialization normalization and no source change.
+The next engineering item is a read-only inspection of existing BT1/BT2
+B.Cu feeds for a retained-block strategy; the blanket track guard remains
+incompatible with an unqualified fresh contact feed. No actual-board
+staging or cloud release. See the
+[native evidence limits](quilter-workflow-study-2026-10-02.md#native-fixture-control-now-established).
+
+**October 3, 15:46 static tooling recovery:** the repaired builder and seven
+tests now produce a source-bound isolated text fixture without native loads.
+The next allowed native scope is only that fixture's load/save and explicit
+rule controls. Complete contact treatment remains unresolved: all four
+pads are inside the blanket track guards, but pad copper does not cover
+all contact metal. Preserve the source and require a reviewed retained-feed
+or net-aware treatment before any complete input staging. See the
+[current static checkpoint](quilter-workflow-study-2026-10-02.md#1546-resumption-static-builder-qualified).
+
+**October 3, 15:33 native tooling stop:** both the surface-fixture attempt
+and explicitly authorized parser repair exhausted their separate three-
+attempt budgets without saving a fixture. No new electrical or Quilter
+result is established. Source is unchanged; preserve both failed builders.
+Next requires static/source-extraction qualification before another native
+attempt, not automatic retry or whole-board staging. See the
+[repair outcome](quilter-workflow-study-2026-10-02.md#152930-explicitly-authorized-parser-repair).
+
+**October 3, 14:14 contact result:** nominal base/spring guards clear all
+five protected vias, with three synthetic in-memory native collision
+controls. This resolves the C24 projection conflict, not full input
+qualification. The raw fragment still lacks native-origin conversion,
+explicit complete flag controls and a save/reload proof; via-only rules
+do not protect against foreign B tracks/pours or preserve intended contact
+feeds by themselves. Initial plus two corrections are exhausted.
+Next proposed bounded item is a BT1/BT2 surface-rule fixture, not whole-board
+staging. Read the [exact evidence limits and height-datum correction](quilter-workflow-study-2026-10-02.md#bounded-result-and-exact-limits).
+Accepted PCB/manifest and all experiments remain preserved.
+
+**October 3, 13:46 concrete geometry result:** the
+[D45/tongue outline fragment and reservation packet](quilter-workflow-study-2026-10-02.md#october-3-trial-envelope-engineering-review)
+are retained as proposals. Source-edge containment and whole L1/mount
+screens pass; no native input was staged. Next resolve the conservative
+BT2 shadow versus protected C24 seed without deleting the via or waiving
+isolation, and explicitly carry connector-access assumptions. Actual
+C24-to-base clearance exceeds the required value by 0.393331 mm; the
+coarse shadow overlap is not a short. Full contact/load/access and native
+import qualification remain distinct gates. Source and cloud are unchanged.
+
+**October 3, 13:20 resumed with packaging flexibility:** confirmed study
+bounds are main PCB D43-45 mm and 0-2 mm additional board/speaker spacing.
+The owner permits adapting all printed enclosure pieces after selecting a
+worthwhile layout while retaining the general bell shape. Existing plastic
+supports need not constrain every placement iteration. Real component,
+contact/cell, hardware, insulation/load-path and mating/service requirements
+remain; do not uniformly scale the board or physical parts. The next study
+has completed four cheap endpoint calculations: D45 gives 9.52% more
+nominal disk area and +2 mm leaves L1 as the only eligible fitted F part
+without positive nominal magnet clearance. D45/+2 is the provisional
+target for exact trial-domain qualification, not accepted geometry.
+Use one shared qualified packaging envelope for four/six layers, not a
+cloud-job matrix. Preserve accepted
+source and all previous CAD; no manual routing or automatic integration.
+See the [updated workflow](quilter-workflow-study-2026-10-02.md#october-3-flexible-packaging-study).
+
+**October 3 mapping checkpoint:** authenticated browser observation works,
+but no new cloud input/job was created. The saved partial mechanical
+screen binds 104 references, nine fixed poses, five process vias and
+current height/contact data; source hashes remain unchanged. Full
+height-dependent support, hardware, loaded-contact and service envelopes
+are still required before PCB staging. The next bounded item is a
+read-only projection of the existing saved CAD, not an assembly rebuild
+or another inventory. The local yoke planning station z19.3 must not be
+confused with the complete yoke, whose saved geometry reaches z25.
+See the [screen, limits and exact next input](quilter-workflow-study-2026-10-02.md#october-3-allowed-domain-engineering-disposition).
+
+**October 2 recovered checkpoint:** the final bounded pass completed the
+raw native inventory: 104 footprints, 325 pads, nine fixed poses, 95 eligible
+movers, 81 F/two B fitted parts and five bound process vias. All four source
+hashes remain unchanged. The 19 native rule areas prohibit pours only;
+external mechanical/height/access allowed domains and relocated electrical
+duties must be mapped before staging. No more inventory reruns, copper
+removal, placement preparation or cloud jobs are released at this checkpoint.
+Native work ended at 14:30:57, before the owner's 15:00 deadline.
+See the [accepted raw evidence and next gate](quilter-workflow-study-2026-10-02.md#recovered-native-inventory-and-preparation-gate).
+
+**October 2, 14:22 owner resumption:** a few bounded reruns are approved,
+with work finished before 15:00 local. Recover the inventory first, with
+at most three native executions in ten minutes and a 14:34 stop.
+Stop starting new items by 14:50. No source changes or qualification-gate
+waivers follow from this deadline extension. See the [completed recovery scope](quilter-workflow-study-2026-10-02.md#completed-bounded-recovery-scope).
+
+**October 2 inventory stopping point:** the fresh-track native inventory
+exhausted its initial attempt and two corrections with no inventory output.
+Final failure: a KiCad via-accessor assertion and hard timeout. Root's
+review additionally rejects name-only keepout classification, incomplete
+polygon/fill handling and fitted-count/process-contact shortcuts.
+The four source hashes are unchanged. No automatic retry, prepared input
+or layer trial is released; a newly authorized bounded tooling repair must
+precede further native work. See the [historical blocker](quilter-workflow-study-2026-10-02.md#historical-native-inventory-blocker).
+
+**October 2 diagnostic checkpoint:** v1.2 improves saved-fill same-net graph
+opens from 37 to 22 without a detected prior pad-group split; v1.1 regresses
+to 38. Native DRC counts are 24/38 respectively, leaving v1.2's discrepancy
+unreconciled. Foreign-net contacts and native shorts preclude acceptance;
+raw counts also include inherited-via/rule mismatches and untested fill
+cache effects. See the [source-bound diagnostic](quilter-workflow-study-2026-10-02.md#existing-output-diagnostic-checkpoint).
+The separate native constraint inventory subsequently blocked as recorded
+above; output cleanup remains unreleased.
+
+**October 2, 14:05: personal workflow study approved.** The owner prioritizes
+learning an efficient agent-plus-service process, not preservation of sunk
+routing effort. Run bounded read-only diagnosis of v1.1/v1.2 and a separate
+flexible functional-group engineering brief in parallel. Then qualify native
+input/constraints before confirmed-free four/six-layer trials (eight optional).
+The [study and exact next item](quilter-workflow-study-2026-10-02.md) preserve
+fixed interfaces, five process vias, accepted sources and all experiments.
+The output-rejection decision remains; no repair/merge, manual routing,
+purchase, fabrication or powered use is released.
+
+**October 2: both Quilter outputs rejected for integration at the preservation
+gate.** Checked placement and all 325 native pad geometry/net records match,
+but the original named In1 GND zone has no exact structural substitute and
+all 24 original In2 segment records are unmatched (13 +3V3, 2 USBBOOT,
+3 /IMU_INT2, 6 SDA). Four copper layers remain enabled; renamed layer
+displays are not layer loss. Record differences are not lost-connection
+counts, and zone structural differences are not an electrical-equivalence
+proof. Native routing benefit was not measured after this stop.
+The authoritative 37-open package and raw downloads are unchanged.
+See the [corrected evidence, local artifact map and limits](agent-handoff-2026-10-01.md#october-2-bounded-preservation-result).
+No repair, merge, rerun, support loop, manual routing or CAD work is released.
+The October 1 running/waiting state below is historical.
 
 **October 1, 16:02 local: Quilter running; transition to a new session.**
 The owner reports the tool working and will supply results. No native
