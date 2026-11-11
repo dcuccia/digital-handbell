@@ -14,9 +14,9 @@ the time; their words "current" or "next" do not override newer review records.
 | [Six-layer board review](pcb-review-2026-11.md) | Exact snapshot, remaining risks and review packages R1-R6 |
 | [Hardware guide](../hardware/README.md) | Native KiCad, libraries, reference designs and revision selection |
 | [Mechanical guide](../mechanical/README.md) | FreeCAD/STEP/STL inventory and the six-layer integration gap |
-| [Quote package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md) | Source-bound BOM/CPL and export recipe |
-| [Latest quote](../hardware/handbell/quote-prep/2026-11-09-six-layer/pcba-quote-2026-11-10.md) | November 10 prices, 10-PCB/8-assembly scenario and live part selections |
-| [Before ordering](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md) | Unresolved sourcing, placement, process and approval gates |
+| [Order package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md) | Source-bound BOM/CPL, export recipe and order status |
+| [Quote record](../hardware/handbell/quote-prep/2026-11-09-six-layer/pcba-quote-2026-11-10.md) | November 10 prices, 10-PCB/8-assembly scenario and live part selections |
+| [Incoming checks](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md) | Sourcing, placement and process items to confirm on arrival |
 
 ## Understand and contribute
 

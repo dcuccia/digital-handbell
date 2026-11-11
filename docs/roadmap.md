@@ -3,8 +3,8 @@
 [Project home](../README.md) · [Documentation](README.md) · [Contributing](../CONTRIBUTING.md)
 
 **Updated November 10, 2026.** We have a zero-open six-layer layout, a
-public review snapshot and a live prototype PCBA quote. We do not yet have
-a demonstrated working custom instrument or a fabrication release.
+public review snapshot and a placed prototype PCBA order. We do not yet
+have a demonstrated working custom instrument or a fabrication release.
 
 ## Now: review the design we have
 
@@ -12,26 +12,27 @@ a demonstrated working custom instrument or a fabrication release.
 |---|---|---|
 | Electrical and layout review | [Six-layer review brief](pcb-review-2026-11.md), snapshot `2f738ccb` | Disposition native rule/parity findings; review power/returns, USB, clock, decoupling and recovery. Track in [#4](https://github.com/dcuccia/digital-handbell/issues/4) / [#7](https://github.com/dcuccia/digital-handbell/issues/7). |
 | Mechanical integration | [Completed four-layer-era FreeCAD assembly](../mechanical/README.md) | Rebind the six-layer board and actual part poses; add/check the J1 speaker-plug and wire-exit relief, mounts, USB access, cell isolation and service sequence. [#5](https://github.com/dcuccia/digital-handbell/issues/5). |
-| Manufacturing and sourcing | [Quote package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md) | Resolve via-fill/process questions, R27/J2 substitutions and every placement/polarity; produce a reviewed, matched order package. [#8](https://github.com/dcuccia/digital-handbell/issues/8). |
+| Manufacturing and sourcing | [Order package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md) | Record the placed order's final details; on arrival, check via fill, R27/J2 substitutions and every placement/polarity against the package. [#8](https://github.com/dcuccia/digital-handbell/issues/8). |
 | Firmware and bench work | [Firmware/audio plan](firmware-and-audio.md), [sensor initialization gate](motion-sensing.md) | Reproducible audio/motion proof, custom-board pin mapping and replayable gesture cases. [#3](https://github.com/dcuccia/digital-handbell/issues/3), [#6](https://github.com/dcuccia/digital-handbell/issues/6), [#13](https://github.com/dcuccia/digital-handbell/issues/13). |
 
-These can progress in parallel. Manufacturing release depends on the
-applicable electrical, mechanical and process dispositions, not just a
-price quote. The [before-ordering checklist](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md)
-is the detailed gate; the [review brief](pcb-review-2026-11.md) owns R1-R6.
+These can progress in parallel. A prototype order is a learning step,
+not a manufacturing release; that still depends on the applicable
+electrical, mechanical and process dispositions. The former
+[before-ordering checklist](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md)
+now serves as the incoming-inspection list; the [review brief](pcb-review-2026-11.md) owns R1-R6.
 
-The selected quote scenario is **10 PCBs with 8 assembled**, Standard
-two-sided assembly, ENIG and epoxy-filled/capped through vias: **$345.84
-before shipping and tax**, observed November 10. It is a batch quote, not
-the complete cost of eight bells or a production unit-price promise.
-Nothing has been ordered. HDI and an MCU change remain future options,
-not selected redesigns.
+On November 10 the owner reported placing the prototype PCBA order with
+JLCPCB. The quoted scenario was **10 PCBs with 8 assembled**, Standard two-sided
+assembly, ENIG and epoxy-filled/capped through vias; final order details
+are not yet recorded here. Dated prices stay in the
+[quote record](../hardware/handbell/quote-prep/2026-11-09-six-layer/pcba-quote-2026-11-10.md).
+HDI and an MCU change remain future options, not selected redesigns.
 
 ## Next: first articles that tell us what works
 
-1. **Release a traceable prototype batch.** Close or explicitly disposition
-   blocking review items, obtain owner purchase approval, and record exact
-   source, production files, substitutions and incoming inspection.
+1. **Receive and inspect the prototype batch.** Record the final order
+   details, then check substitutions, via fill, placements and polarity
+   before applying power.
 2. **Bring up one board in stages.** Establish a qualified, current-limited
    plan covering protection, rails, USB/boot/debug, sensor, audio/mute,
    charging and power transitions before relying on the rest of the batch.

@@ -1,10 +1,16 @@
 # Zero-open PCB milestone: review entry point
 
+**November 10 update: the owner reports that the prototype PCBA order has
+been placed.** Final order details (quantity, options, price, substitutions
+and production-file confirmation) are not yet recorded in this repository.
+The dated quote record below is unchanged history. Ordering is not a
+fabrication release, safety approval or powered-use approval.
+
 **November 10 status:** the public PCB, project and schematic remain unchanged.
 The [quote package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md)
 now has a live JLC quote and all BOM lines matched in the supplier UI:
 10 PCBs / 8 assembled, $345.84 before shipping and tax. No order or
-fabrication approval. The [gallery](design-gallery.md) distinguishes
+fabrication approval at the time of the quote. The [gallery](design-gallery.md) distinguishes
 current PCB images from older enclosure/PCBA models.
 
 The November 9 milestone closes routing connectivity on a **six-layer

@@ -1,5 +1,12 @@
 # Quote-prep package: six-layer review board (November 9-10, 2026)
 
+**Order update (November 10, 2026): the owner reports that the prototype
+PCBA order has been placed.** Final order details are not yet recorded
+here. The sections below describe the quote session as it happened. The
+[unresolved list](unresolved-before-ordering.md) now serves as the
+incoming-inspection and bring-up checklist. Ordering is not a fabrication
+release or a powered-use or child-use approval.
+
 **QUOTE ONLY - not a fabrication release.** These files prepare inputs for a
 supplier price quote from the public review snapshot. They are not an order, a
 payment, a design sign-off, or a powered-use or child-use approval. Zero opens

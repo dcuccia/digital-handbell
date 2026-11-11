@@ -1,10 +1,11 @@
 # JLCPCB and PCBWay quotation handoff
 
 **Current package:** [November six-layer quote-prep](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md).
-JLC BOM/CPL upload and part matching have occurred; the selected
-10-PCB/8-assembly scenario is quoted, not ordered. Use that package's
-before-ordering checklist. This page preserves the September requirements
-and older part/process discussion, not the current sourcing status.
+JLC BOM/CPL upload and part matching have occurred, and the owner reported
+on November 10 that the prototype PCBA order has been placed. Use that
+package's checklist for incoming inspection. This page preserves the
+September requirements and older part/process discussion, not the current
+sourcing status.
 
 ## Owner-requested endpoint
 

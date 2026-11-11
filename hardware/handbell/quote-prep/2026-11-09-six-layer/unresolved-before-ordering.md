@@ -1,5 +1,11 @@
 # Unresolved before ordering
 
+**Update (November 10, 2026): the owner reports that the prototype PCBA
+order has been placed.** The items below were not all closed beforehand.
+They now serve as incoming-inspection and bring-up checks: confirm what
+the supplier actually built (via fill, substitutions, rotations and
+polarity) before applying power. The original text follows unchanged.
+
 **QUOTE ONLY - not a fabrication release.** Every item below stands between
 this package and an actual order. Nothing has been ordered, paid or accepted.
 The [README](README.md) says what was uploaded, and

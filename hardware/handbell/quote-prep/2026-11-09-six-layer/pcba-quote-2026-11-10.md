@@ -1,6 +1,6 @@
 # JLCPCB PCBA quote session (November 10, 2026)
 
-Status: **quote only.** Nothing was ordered, paid or added to the cart.
+Status: **quote only** at the time of this session. Nothing was ordered, paid or added to the cart.
 No terms were accepted and no coupon was used. "Confirm Production file"
 was not set. The owner approved the upload and LCSC part matching on the
 JLC web quote page. Everything below is the live state observed on

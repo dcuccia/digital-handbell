@@ -21,25 +21,27 @@ connector into the assembly is still on the roadmap.*
 ## Where we are
 
 **November 2026: the six-layer PCB has reached zero unconnected items, and
-we have a prototype assembly quote.** The next step is turning a routed
-design into a reviewed, working instrument.
+the first prototype PCBA batch has been ordered.** The next step is turning
+those boards into a reviewed, working instrument.
 
 | Ready to explore | Still to do |
 |---|---|
 | Native KiCad schematic, routed PCB and local libraries | Electrical/DFM review and disposition of remaining rule findings |
 | FreeCAD enclosure/cartridge studies and inert fit-print files | Updated assembly for the six-layer board, connector/harness clearance and physical fit |
-| Supplier quote for 10 PCBs, 8 assembled: **$345.84 before shipping/tax**, observed November 10 | Review substitutions and production files; no order has been placed |
+| Prototype PCBA order placed with JLCPCB (quoted as 10 PCBs, 8 assembled) | Incoming inspection: confirm substitutions, via fill, placements and polarity on arrival, then staged bring-up |
 | Firmware, audio and gesture requirements | Implement and demonstrate a sounding instrument; measure latency, noise and runtime |
 
-This is **an engineering prototype, not a build-ready kit**. Zero opens
-means the connectivity check found no unconnected items; it does not prove
-the circuit works. The public snapshot retains 291 non-open DRC findings
+This is **an engineering prototype, not a build-ready kit**. Ordering
+first articles is how we find out what works; it is not a fabrication
+release or safety approval. Zero opens means the connectivity check found
+no unconnected items; it does not prove the circuit works. The public
+snapshot retains 291 non-open DRC findings
 and 46 schematic-parity findings. Electrical, mechanical, manufacturing
 and safety review remain open. No child-use qualification is claimed.
 
 [Board review and remaining risks](docs/pcb-review-2026-11.md) ·
-[Quote details](hardware/handbell/quote-prep/2026-11-09-six-layer/pcba-quote-2026-11-10.md) ·
-[Before ordering](hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md)
+[Order package](hardware/handbell/quote-prep/2026-11-09-six-layer/README.md) ·
+[Incoming checks](hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md)
 
 ## Inside the design
 
