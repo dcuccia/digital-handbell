@@ -38,8 +38,8 @@ the retained printed-bell assembly, **not an updated six-layer fit approval**.
 |---|---|---|
 | Bell filament | Shell (and optionally other visible parts) | **Ordered:** [ERYONE silk PLA+, bronze](https://www.amazon.com/dp/B082XTFB7T). See [section 3](#3-print-the-parts) |
 | Handle filament | Handle | Black, non-silk filament is the working choice; a material name alone does not establish strength |
-| Speaker plug | One JST **ACHLR-02V-S** housing | 8 needed; buy 10. [LCSC C566313](https://www.lcsc.com/product-detail/C566313.html) |
-| Speaker pre-crimped leads | Two **SACHL-003G-P0.2** terminated 28 AWG leads | 16 ends needed; for 10 harnesses buy 20 [ASACHLSACHL28W152](https://www.lcsc.com/product-detail/C5304083.html) double-ended 152.4 mm jumpers and keep one end per lead. If a length below about 75 mm is verified sufficient, 10 jumpers cut in half give 20 usable ends |
+| Speaker plug | One JST **ACHLR-02V-S** housing | 8 needed; buy 10. [DigiKey 455-2890-ND](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ACHLR-02V-S/5272191) |
+| Speaker pre-crimped leads | Two **SACHL-003G-P0.2** terminated 28 AWG leads | Buy 10 [ASACHLSACHL28W305 double-ended 12-inch jumpers (DigiKey 455-3258-ND)](https://www.digikey.com/en/products/detail/jst-sales-america-inc/ASACHLSACHL28W305/8107431). Cut each in half for 20 approximately 6-inch (152.4 mm) leads, enough for 10 two-wire harnesses (8 needed + 2 spares) |
 | Speaker | One 4 ohm Gikfun EK1794 | 8 needed minus stock; one spare is useful. Do not silently substitute another 40 mm driver. The seller's 3 W title conflicts with its 2 W description; output limits are unqualified |
 | Cell | One **Vapcell T8 16340 button-top**, 850 mAh typical, 4.2 V full, rated 3 A continuous ([manufacturer page](https://www.vapcelltech.com/h-pd-60.html?fromMid=470); [retail lead](https://www.18650batterystore.com/products/vapcell-16340-t8-850mah-3a-button-top-battery), stock/price unverified) | Buy **2 evaluation samples first** with insulating cases; 8 + 2 spares only after dimensions, retention and electrical tests pass |
 | Internal screws | Six M2x6, ISO 4762-style cap head | 48 needed; buy 60 or a 100-pack. Head screen D3.8/H2 mm |
@@ -92,19 +92,25 @@ screws into printed parts.
 
 ## 4. Make the speaker lead
 
-Parts per lead: one ACHLR-02V-S housing and two SACHL-003G-P0.2
-pre-crimped 28 AWG leads (note the `L`: older notes say `SACH-003G`,
-which is not the selected contact). The
+Parts per harness: one ACHLR-02V-S housing and one ASACHLSACHL28W305
+double-ended 12-inch jumper from the [procurement list](#2-procurement-for-eight-bells).
+Cutting it in half provides two approximately 6-inch, pre-crimped 28 AWG
+leads with SACHL-003G-P0.2 contacts (note the `L`: older notes say
+`SACH-003G`, which is not the selected contact). Six inches is the selected
+starting lead length for this small enclosure; trim to the actual route
+during the fit check. The
 [JST drawing](https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)
 specifies AWG 30-28 and insulation OD 0.50-0.63 mm; its 2 A rating is with
 AWG 28.
 
-1. Insert two contacts into the housing in the correct orientation until
+1. Cut the 12-inch jumper in half, retaining one factory-crimped contact
+   on each half; no contact crimping tool is needed.
+2. Insert two contacts into the housing in the correct orientation until
    they latch; tug-test each one.
-2. Both jumper wires are white: **mark pin 1** at both ends.
-3. Cut to length, strip and solder to the speaker tabs, pin 1 to the
+3. Both wires are white: **mark pin 1** at both ends.
+4. Trim to length, strip and solder to the speaker tabs, pin 1 to the
    speaker's marked positive tab. Add heat-shrink and strain relief.
-4. Check continuity: J1.1 (VO+) to speaker +, J1.2 (VO-) to the other tab.
+5. Check continuity: J1.1 (VO+) to speaker +, J1.2 (VO-) to the other tab.
    Neither lead is ground, so never tie either to a ground or case.
 
 A vendor-made harness is fine if it uses these exact parts, the polarity
