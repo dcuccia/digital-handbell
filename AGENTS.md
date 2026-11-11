@@ -1,5 +1,17 @@
 # Project guidance
 
+## Public documentation and navigation
+
+- Keep `README.md` visual and current, `docs/roadmap.md` focused on next
+  outcomes, and directory READMEs explicit about current versus historical
+  artifacts. Preserve detailed epic scope in `docs/epics.md` and dated
+  engineering evidence in its original location; do not prepend running
+  milestone logs to the landing page.
+- Use `docs/design-gallery.md` and its source manifest for published images.
+  Newly rendered old CAD is still old geometry. Label the board/CAD revision
+  and qualification limits; never imply that an enclosure render proves fit
+  for a newer PCB. Keep private account/backup material out of the repository.
+
 ## Bounded engineering work
 
 - **Read docs/agent-first-pcb-workflow.md first** for PCB routing/placement work:
@@ -1989,8 +2001,8 @@ in the linked closure plan.
 
 ## Design and provenance
 
-- This is a public educational digital-handbell project in an early planning
-  phase. Read `README.md`, `docs/roadmap.md`, and the relevant decision entries
+- This is a public educational digital-handbell project in prototype design
+  review, not a released kit. Read `README.md`, `docs/roadmap.md`, and the relevant decision entries
   before implementing.
 - Preserve the historical `Design Notes.md`, `System Diagram.pptx`, and existing
   MIT `LICENSE`. Record new decisions separately; do not silently overwrite

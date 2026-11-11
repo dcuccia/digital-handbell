@@ -1,5 +1,10 @@
 # Printed-bell four-layer routing baseline
 
+**Historical checkpoint.** The 37-open files below remain preserved.
+For current electronics review use the separate
+[zero-open six-layer snapshot](../printed-bell-six-layer-review/README.md);
+see the [revision guide](../README.md) before selecting a board.
+
 **Current acceptance: eastern MCU ground closure.** Active PCB
 `adc262b3e7056cb9031387c55262b5cf99e599ae6e28970f9784f5237e662314`
 and manifest

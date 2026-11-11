@@ -1,5 +1,10 @@
 # Parts readiness for the full PCBA quotation
 
+**Historical sourcing audit.** For the current board use the
+[November quote package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md)
+and its live-part-selection record. The CSVs and counts discussed below
+remain evidence for their original revisions, not the current BOM.
+
 This independent audit covers the preserved initial routing candidate at
 `b63a121b1ca990a64b00f231a85dd715126319af`, not the active power rework.
 Its source [BOM](../hardware/handbell/iterations/printed-bell-routing/reports/bom-draft.csv)

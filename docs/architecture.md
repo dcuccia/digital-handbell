@@ -1,21 +1,27 @@
-# Proposed architecture
+# Architecture
 
-Status: schematic integration draft, not frozen. The
-[handbell derivative](../hardware/handbell/README.md) adapts Adafruit 5768 and
-now has LSM6DSOX, TPS61023 boost, independent mute and reduced peripheral
-wiring. Cell/speaker qualification and routing remain open; the
-[0.2 handoff](electrical-reduction-and-placement.md) covers the 43 mm placement.
+**Current implementation: the [six-layer review snapshot](../hardware/handbell/iterations/printed-bell-six-layer-review/README.md).**
+It combines RP2040 and 2 MB QSPI flash, LSM6DSOX motion sensing, MAX98357A
+I2S audio, TPS61023 boost, independent mute, USB-C and on-board 1S cell
+protection. Connectivity is routed; electrical and system performance are
+not yet qualified. See the [review brief](pcb-review-2026-11.md) and
+[T8 electrical revision](t8-electrical-revision.md) for later changes to the
+original reduction, especially raw CELL_NEG versus protected GND.
+
+This page retains the block-level explanation and **reference-board GPIO
+contract**, not a replacement for the current native schematic.
 All upstream implementation claims refer to the
 [pinned source catalog](reference-designs.md), particularly the
 [5768 schematic](https://github.com/adafruit/Adafruit-RP2040-Prop-Maker-Feather-PCB/blob/408fa9a40c0a01a3a65497ef42a29e0b08fe711e/Adafruit%20Feather%20RP2040%20Prop-Maker.sch).
 
-The diagram below describes the current **0.2 boosted** circuit.
+The diagram describes the logical boosted-audio architecture; it omits
+the pin-level protection/sense wiring documented in the T8 revision.
 
 ```mermaid
 flowchart LR
     USB[USB-C: 5 V and USB data] --> SEL[USB / battery source selection]
     USB --> CHG[1S charger: cell-specific limits]
-    CHG --> BAT[Protected 1S LiPo]
+    CHG --> BAT[1S Li-ion with cell protection]
     BAT --> SEL
     SEL --> LDO[3.3 V regulator]
     LDO --> MCU[RP2040 + QSPI flash]

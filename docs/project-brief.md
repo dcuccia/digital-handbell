@@ -1,8 +1,9 @@
 # Project brief
 
-Captured from the project discussions on 2026-09-06 and 2026-09-07. Requirements below distinguish
-requested outcomes from implementation hypotheses. Numeric performance, cost,
-and mechanical limits are deliberately not invented.
+Goals captured September 6-7, with current design choices summarized
+November 10. Requirements distinguish requested outcomes from demonstrated
+behavior. For implementation progress see the [roadmap](roadmap.md);
+the dated input sections below remain historical evidence.
 
 ## Intended experience
 
@@ -11,12 +12,12 @@ digitally generated or recorded bell note through a local speaker. The concept
 should be economical enough for schools, churches, and educational groups, with
 straightforward assembly, charging, programming, and repair.
 
-The starting enclosure is a children's play handbell with its clapper removed.
-The speaker faces outward through the bell opening. A compact PCB, protected
-single-cell Li-ion battery and printed retaining structure share the remaining volume.
-A solid disk behind the speaker was the initial concept; a near-mouth
-annular/offset board is now also a fit-study candidate. The intended musical note range, player ages, and whether
-each bell has a fixed or selectable note remain open.
+The current direction is an original 3D-printed bell with a black handle
+and removable cartridge. A 40 mm speaker faces out through the opening,
+with a compact six-layer PCB and protected single-cell Li-ion design
+behind it. The original metal play-bell conversions remain fit-study
+history, not the current enclosure. Musical note range, intended player
+ages and fixed versus selectable notes remain open.
 
 ## Requirements register
 
@@ -26,20 +27,20 @@ each bell has a fixed or selectable note remain open.
 | R02 | MCU capable of I2S audio; prefer RP2040 for the first experiment | Working baseline; RP2040 implements I2S through PIO |
 | R03 | Prefer CircuitPython and novice-friendly USB programming | Working baseline; custom-board identity/provisioning still required |
 | R04 | Integrated I2S DAC/class-D amplifier and local mono 4 ohm speaker; design electronics for the 3 W high end | MAX98357A; boosted rail required for this target; 3 W low-distortion or speaker qualification is not established |
-| R05 | Rechargeable protected 1S Li-ion, pouch or cylindrical, with USB-C charging | Exact cell/contact or harness, protection, charge current, temperature handling and runtime TBD |
+| R05 | Rechargeable protected 1S Li-ion with USB-C charging | T8 cylindrical-cell/contact architecture and on-board protection drafted; charge limits, temperature, retention and runtime remain qualification work |
 | R06 | Motion sensing for a natural ringing gesture | Owner-approved LSM6DSOX in the draft; compare acceleration/gyro against stock LIS3DH for strike plus chest-stop/rest; performance and assembled BOM not frozen |
 | R07 | USB-C at the circular board edge, usable from outside the bell | Connector, shell slot, cable clearance, and load transfer TBD |
 | R08 | Speaker faces outward; package electronics behind/around it in the shell | Owner estimates and retail speaker drawing captured; axial profile, basket, cell and clearances remain open |
-| R09 | Prefer speaker-facing electronics/connectors for accessible assembly | Separate wing draft uses speaker-facing F and selective handle-facing B groups; loading and service access still need confirmation |
-| R10 | Plug-in speaker wiring, preferably a keyed JST-family connector | 0.2 selects distinct Molex Pico-Lock; final mating envelope/current qualification pending |
-| R11 | Compare one-face assembly with selective rear-wing population on a two-layer circular PCB | Owner requested a two-face draft subject to supplier-tier and total-cost review; no manufacturing route frozen |
+| R09 | Prefer speaker-facing electronics/connectors for accessible assembly | Current PCB has 81 F electronic parts and two B contacts; exact six-layer CAD/service integration remains open |
+| R10 | Plug-in speaker wiring, preferably a keyed JST-family connector | J1 is now JST ACHL BM02B-ACHLKS-GAN-ETF; mated harness and housing relief remain review work |
+| R11 | Select layer count and assembly faces using complete fit/cost evidence | Six-layer review candidate and Standard two-sided PCBA quote selected; older two-/four-layer studies preserved |
 | R12 | Consider two stacked PCBs if justified by fit or cost | Compare added height, interconnects, supports, labor, and failure points |
 | R13 | Good bell timbre, useful acoustic output, quiet between chimes | Define note range, SPL/distance, noise, distortion, and transient targets |
 | R14 | Preserve clean audio behavior when combining reference circuits | Review supply loops, return paths, startup/mute behavior, and layout |
 | R15 | Reuse mature, documented, code-supported open hardware | Prefer pinned Adafruit sources, guides, examples, and known errata |
 | R16 | Proper attribution across electronics, code, assets, and documentation | Maintain per-source license/provenance and modifications |
 | R17 | Remove Feather headers, servo/RGB branches and STEMMA QT; retain simple charge/status LEDs | Implemented in 0.2; shared rails, pullups and decoupling retained |
-| R18 | Very low total cost and straightforward novice assembly | Target unit/set prices and quantities TBD; quote complete BOM and labor |
+| R18 | Low complete-build cost and straightforward novice assembly | November 10 quote: 10 PCBs/8 assembled, $345.84 before shipping/tax; not a complete-bell cost or production target |
 | R19 | JLCPCB-compatible fabrication/assembly; evaluate OSH Park | Separate bare-board service from assembly service |
 | R20 | Beginner-friendly design tooling and instructions | KiCad recommended; record installed version and import procedure |
 | R21 | Evaluate an ESP32-S3-MINI wireless variant alongside RP2040 research | Sound programming, QR identity, optional asynchronous training telemetry; first sounding baseline stays local/offline |

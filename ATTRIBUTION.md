@@ -61,6 +61,16 @@ are not copied manufacturer STEP models.
 
 ## License boundaries
 
+The [design gallery](docs/design-gallery.md) republishes project-generated
+enclosure, PCBA-proxy and six-layer Gerber views, with only whitespace
+cropping, proportional resizing and a two-view composition. Its
+[source manifest](docs/images/showcase/sources.json) records original and
+published hashes and distinguishes the older CAD from the current PCB.
+No supplier account UI, JLCPCB model preview, vendor artwork or newly
+imported third-party CAD is included. Original mechanical geometry retains
+MIT; views of adapted electronics and mixed assemblies retain the
+CC BY-SA 3.0 hardware context and notices below, not blanket MIT.
+
 The [six-layer review snapshot](hardware/handbell/iterations/printed-bell-six-layer-review/README.md)
 retains the adapted hardware's CC BY-SA 3.0 license and credits in its
 adjacent `LICENSE.txt` and `NOTICE.md`. Its J1 footprint is an original

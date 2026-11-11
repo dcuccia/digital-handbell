@@ -8,26 +8,19 @@ is a routing milestone; see the
 
 ## What has and has not happened at the supplier
 
-- The bare-PCB Gerber/drill ZIP described below was uploaded **once**, on
-  2026-11-10, to JLCPCB's public instant-quote page in an interactive session.
-  JLC parsed it as "Detected 6 layer board of 48.35x44.5mm".
-- JLC **auto-saved** that upload to the account's "Projects > Quotes" history
-  (toast: "Success! The file has been saved to the 'Projects > Quotes' menu.").
-  This is a quote-history record, not an order and not a cart item. The owner
-  can decide whether to keep it; whether it can be removed was not checked.
-- Nothing was ordered, paid, put in the cart or accepted (no terms, no coupon).
-  No BOM or CPL file was uploaded, the "PCB Assembly" and "Stencil" options
-  stayed off, and no part was matched.
-- Display-only probes of surface finish and via covering changed only the
-  displayed price. The page was restored to JLC's defaults afterwards.
-- Later on 2026-11-10, with owner approval, the PCBA step ran on the web
-  quote page. The unchanged BOM/CPL were uploaded, all 44 lines were matched
-  to in-stock LCSC parts (two substitutions: R27 and J2), and a quote was
-  obtained: **$277.16 for 5 assembled boards before shipping**. The owner
-  then selected 10 PCBs with 8 assembled, quoted live at **$345.84** before
-  shipping. Nothing was added to the cart or ordered. See
-  [pcba-quote-2026-11-10.md](pcba-quote-2026-11-10.md); it supersedes the
-  "no BOM/CPL uploaded" statement above for that later session.
+- The exact Gerber/drill ZIP was uploaded for a bare-PCB quote, then
+  uploaded again during the owner-approved PCBA session on November 10.
+  JLC parsed 6 layers, 48.35 x 44.5 mm, and auto-saved the uploads in
+  **Projects > Quotes**. These are account-visible quote records, not orders.
+- The unchanged BOM/CPL were uploaded and all 44 BOM lines were matched
+  live, including provisional R27 and J2 substitutions. Only one placement
+  orientation was spot-checked; full polarity/rotation review remains open.
+- The selected scenario is **10 PCBs, 8 assembled, $345.84 before shipping
+  and tax**, Standard two-sided assembly, ENIG and epoxy-filled/capped
+  through vias. Earlier 5-board prices and display-only probes are history.
+- **Nothing was ordered, paid, added to the cart or accepted.** Production
+  files were not confirmed. See the [dated quote and selections](pcba-quote-2026-11-10.md)
+  and [before-ordering gates](unresolved-before-ordering.md).
 
 ## Why this exists
 
@@ -48,12 +41,13 @@ checked and what was not. The other two documents here carry the open items:
 |---|---|
 | Bare-PCB inputs (Gerber/drill ZIP) | Prepared from the exact snapshot, statically verified, and parsed by JLC once. Not a CAM acceptance and not a quote the owner has accepted. |
 | Placement file (CPL) | 83 rows, checked against the BOM and the board. Rotation conventions and the two bottom-side parts are unconfirmed at JLC. |
-| BOM | 44 rows covering 83 fitted references. Only 8 rows carry an LCSC code; 36 are `NEEDS LCSC CODE`. Nothing was matched at JLC. |
-| Fabrication options | Defaults observed live. Open questions (via-fill size, surface finish, outline tolerance, silk text) are in [fab-options.md](fab-options.md). |
+| BOM | 44 rows covering 83 fitted references. The committed upload CSV still has 8 LCSC-coded rows and 36 marked `NEEDS LCSC CODE`; all 44 were subsequently matched in JLC's UI. The separate dated record holds those selections, substitutions and stock observations. |
+| Fabrication options | ENIG, epoxy-filled/capped vias and regular +/-0.2 mm outline tolerance selected for quoting; supplier/process and silk questions remain in [fab-options.md](fab-options.md). |
 | Remaining gates | [unresolved-before-ordering.md](unresolved-before-ordering.md). |
 
-Do not call this package "quote-ready" or "order-ready" until that list is
-dispositioned.
+A quote has been obtained. Do not call this package **order-ready** until
+the remaining gates are dispositioned; a priced UI selection is not an
+approved substitution or a durable update to the hash-bound BOM.
 
 ## Source of record
 
@@ -95,13 +89,17 @@ list itself, `.gitattributes` or the narrative documents.
 | `README.md`, `fab-options.md`, `unresolved-before-ordering.md` | Narrative | no |
 
 Only 8 of the 44 BOM rows carry an LCSC code. They are catalog evidence
-recorded in this repository (status `VERIFY LIVE`), not confirmed matches,
-stock or tier. No LCSC code was guessed for the other 36 rows.
+recorded in this repository (status `VERIFY LIVE`). The CSV was deliberately
+not rewritten after live matching. Use the dated quote record for later
+selections and re-check stock/tier before ordering.
 
 ## Private export artifacts
 
-The generated exports are not committed. They live in the private evidence
-folder under the relative name `quote-prep-20261109\`:
+The generated exports are not committed. They are retained in the backed-up
+private evidence archive under `quote-prep-20261109\`; the local bakeoff
+directory was removed after backup verification on November 10. A fresh
+clone does not contain these files. Restore through the owner's private
+recovery record or re-export to a scratch directory using the recipe below.
 
 ```text
 quote-prep-20261109\
@@ -203,8 +201,11 @@ suffix is stripped first). Ten renders were produced and reviewed by eye for
 outline, pours, drills and silk placement. Nine are distinct images: the In1
 and In4 renders are byte-identical (confirmed by hash, 2026-11-10), and their
 Gerbers differ only in the FileFunction header (L2 versus L5). Both are GND
-planes with one filled polygon and ten keepouts in the snapshot. The PNGs are
-not committed.
+planes with one filled polygon and ten keepouts in the snapshot. Selected reduced-size presentation copies are now published in the
+[gallery](../../../../docs/design-gallery.md#current-six-layer-board).
+The stack renders omit Excellon drills because of the renderer's slot-parser
+limitation; they are not drill inspection images. Full-size originals and
+the other layer renders remain private.
 
 ## CPL and population conventions
 

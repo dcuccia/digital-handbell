@@ -1,5 +1,11 @@
 # JLCPCB and PCBWay quotation handoff
 
+**Current package:** [November six-layer quote-prep](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md).
+JLC BOM/CPL upload and part matching have occurred; the selected
+10-PCB/8-assembly scenario is quoted, not ordered. Use that package's
+before-ordering checklist. This page preserves the September requirements
+and older part/process discussion, not the current sourcing status.
+
 ## Owner-requested endpoint
 
 On September 13 the owner requested Gerbers and associated assets they can
@@ -9,7 +15,7 @@ checkpoint. This authorizes preparing local/public project assets, not
 uploading to suppliers, requesting quotes on the owner's behalf, purchasing
 parts or approving manufacture.
 
-**Current status: planned deliverable, not an available quote-ready package.**
+**September planning status (historical): planned deliverable, not an available quote-ready package.**
 Power corrections, remaining routing, final part/placement consistency and
 manufacturing inputs are still being developed. Do not generate an unrouted
 placeholder ZIP and call it the completed handoff.

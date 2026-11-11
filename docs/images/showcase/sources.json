@@ -1,0 +1,123 @@
+{
+  "published": "2026-11-10",
+  "purpose": "Public documentation illustrations, not manufacturing or fit qualification",
+  "provenance": "Project-generated FreeCAD and gerbonara/resvg views; original raster sources retained unchanged",
+  "licenses": "Original mechanics MIT; adapted electronics and mixed assembly views retain CC BY-SA 3.0 context; see ATTRIBUTION.md",
+  "private_source_labels": "quote-session and freecad-review identify retained session evidence, not repository paths",
+  "images": [
+    {
+      "file": "bell-and-cutaway.png",
+      "sha256": "e002bcbd19db81d536b43b46d7c738d8f1b230490ce8bf697f833fc51e4488ea",
+      "sources": [
+        {
+          "source": "mechanical/studies/2026-09-13-printed-bell/views/beauty.png",
+          "sha256": "5ef407e0b198e80a2f7ffb9e0707d100e39bf5a4cc7a632785a304a65ece3454",
+          "crop_box_pixels": [
+            321,
+            343,
+            779,
+            1220
+          ]
+        },
+        {
+          "source": "mechanical/studies/2026-09-13-printed-bell/views/cutaway.png",
+          "sha256": "4983839441710f640307c1ecf499ee5022f0500b1214e14dc01057ecb2d60879",
+          "crop_box_pixels": [
+            336,
+            343,
+            780,
+            1211
+          ]
+        }
+      ],
+      "design_source": "mechanical/studies/2026-09-13-printed-bell/printed-bell.FCStd",
+      "design_sha256": "2a923489d72297a27e0bd05760b09d3ed2e19513efced5a6510add9d7b53cb4b",
+      "scope": "Historical power-rework assembly; not the six-layer PCB or later USB-skin correction",
+      "transform": "Crop white margins, proportionally fit each view in 620x900, centre in two 700x980 columns"
+    },
+    {
+      "file": "pcb-six-layer-front.png",
+      "sha256": "158655795527add9acd3bdee2a90e9623ccd691e1159c843cccaa504eb32bbb4",
+      "sources": [
+        {
+          "source": "quote-session/pretty_top.png",
+          "sha256": "84a2a0581942fd819680240f282349ce88b54498d47ecba2d39a0334e894db3f"
+        }
+      ],
+      "design_source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
+      "design_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+      "transform": "Crop white margins, proportional resize within 1000x1100, add 24px white border",
+      "crop_box_pixels": [
+        2,
+        2,
+        1681,
+        1814
+      ],
+      "scope": "November quote Gerber illustration of six-layer snapshot; no component bodies or Excellon drills; not a drill/assembly check",
+      "gerber_zip_sha256": "0bdddd0fbe1ed08c564b101ee978906e8feba50767c9dd88f062020d0f722099",
+      "source_export_record": "hardware/handbell/quote-prep/2026-11-09-six-layer/private-artifacts.sha256"
+    },
+    {
+      "file": "pcb-six-layer-rear.png",
+      "sha256": "7c61d6fbaffec13309b9ccf3bbc985939d1b91d1c85f6712de73013e60bff827",
+      "sources": [
+        {
+          "source": "quote-session/pretty_bottom.png",
+          "sha256": "bebe2892d26aa1950c7f5bf018f7980b27853b823aade0ef27fea82cdff7c0f1"
+        }
+      ],
+      "design_source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
+      "design_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+      "transform": "Crop white margins, proportional resize within 1000x1100, add 24px white border",
+      "crop_box_pixels": [
+        2,
+        2,
+        1681,
+        1814
+      ],
+      "scope": "November quote Gerber illustration of six-layer snapshot; no component bodies or Excellon drills; not a drill/assembly check",
+      "gerber_zip_sha256": "0bdddd0fbe1ed08c564b101ee978906e8feba50767c9dd88f062020d0f722099",
+      "source_export_record": "hardware/handbell/quote-prep/2026-11-09-six-layer/private-artifacts.sha256"
+    },
+    {
+      "file": "pcba-four-layer-front.png",
+      "sha256": "b152838cb42e32857dc3dd8cfd143531d8841d6deece792de8fc3a9fed96d290",
+      "sources": [
+        {
+          "source": "freecad-review/pcba-component-side-oblique.png",
+          "sha256": "0d4099632537b267ab0f256afc36939b4da129797ba767cd638236719a0ae1a0"
+        }
+      ],
+      "design_source": "mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/printed-bell.FCStd",
+      "design_sha256": "b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d",
+      "transform": "Crop white margins, proportional resize within 1000x1100, add 24px white border",
+      "crop_box_pixels": [
+        473,
+        404,
+        1356,
+        1166
+      ],
+      "scope": "November 9-10 render of historical September 24 four-layer IMU assembly; component proxies; not current J1 or six-layer placement"
+    },
+    {
+      "file": "pcba-four-layer-rear.png",
+      "sha256": "3db621b3acf7a3f2e0f0b4188e4c28bf48d2705bb37d9feb74fd8185c2b497d7",
+      "sources": [
+        {
+          "source": "freecad-review/pcba-rear-oblique.png",
+          "sha256": "b4929ad9d3aab5dcdad673ac081c097edf0a9868b601aa916668cd7cd5cd5b47"
+        }
+      ],
+      "design_source": "mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/printed-bell.FCStd",
+      "design_sha256": "b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d",
+      "transform": "Crop white margins, proportional resize within 1000x1100, add 24px white border",
+      "crop_box_pixels": [
+        484,
+        299,
+        1374,
+        1104
+      ],
+      "scope": "November 9-10 render of historical September 24 four-layer IMU assembly; component proxies; not current J1 or six-layer placement"
+    }
+  ]
+}

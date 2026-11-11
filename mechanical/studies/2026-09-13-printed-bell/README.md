@@ -1,6 +1,11 @@
 # Original printed bell — September 13
 
-**Latest engineering review: four-layer IMU closure, September 24.**
+**Historical assembly; six-layer integration is still open.** Use the
+[mechanical asset guide](../../README.md) to choose files and the
+[gallery](../../../docs/design-gallery.md) for source-labelled views.
+The newer PCB/JST ACHL connector is not represented by these models.
+
+**Latest completed assembly here: four-layer IMU closure, September 24.**
 Open [the completed native assembly](imu-four-layer-review/extended-run/printed-bell.FCStd)
 or [complete STEP](imu-four-layer-review/extended-run/printed-bell-complete.step).
 The separate [fit report](imu-four-layer-review/extended-run/fit-report.json)

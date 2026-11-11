@@ -1,21 +1,57 @@
-# Handbell mechanical feasibility artifacts
+# Mechanical design and asset guide
 
-**Integrated wing draft:** the
-[two-piece cartridge study](studies/2026-09-09-integrated-cartridge/README.md)
-adds an integral grille/seat/support body, removable capture yoke and a new
-two-face PCBA proxy with mounting holes. It uses the separate native wing
-placement and preserves every older print below. Its D72 flange is external;
-insertion order, small nominal clearances and unqualified hardware/retention
-are described in its own handoff. Do not substitute it for a finished battery
-holder or shell attachment.
+[Project home](../README.md) · [Gallery](../docs/design-gallery.md) · [Roadmap](../docs/roadmap.md)
 
-**September 9 update:** the arrived speaker measures 40 mm OD and **19 mm**
-overall depth, with a D32 basket rear at z12 and D22 x H7 magnet. The
-[separate measured-speaker study](studies/2026-09-09-measured-speaker/README.md)
-records those stations, speaker-facing PCB conflicts, battery-space comparisons
-and physical print feedback. The files below are the unchanged September 7
-snapshot; its **18.5 mm speaker gauge is not deep enough for the measured part**.
-No reinforced carrier or new battery holder has been released.
+**Latest completed assembly: the September 24 four-layer IMU review.**
+The current electronics are newer: the zero-open six-layer PCB and relocated
+JST ACHL J1 **have not yet been rebound into this CAD**. New renders of an
+old model do not close that gap.
+
+## Which files should I open?
+
+| Need | File or guide | Status |
+|---|---|---|
+| Editable complete printed bell | [printed-bell.FCStd](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/printed-bell.FCStd) | Latest completed assembly, bound to four-layer PCB `d2a098b0` |
+| Complete assembly in another CAD tool | [printed-bell-complete.step](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/printed-bell-complete.step) | Same completed review |
+| Populated board alone | [full-populated-pcba.step](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/full-populated-pcba.step) | Historical four-layer component proxies with full contacts |
+| Structural prints / assembly instructions | [Printed-bell study guide](studies/2026-09-13-printed-bell/README.md) and [completed outputs](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/) | Inert fit-study files, not a six-layer production kit |
+| Pictures without CAD | [Design gallery](../docs/design-gallery.md) | Source-labelled enclosure, current PCB and earlier PCBA views |
+| Exact fit/evidence binding | [Fit report](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/fit-report.json), [artifact manifest](studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/artifact-manifest.json) | Nominal geometry and artifact checks, not physical qualification |
+
+Open copies for exploration rather than saving over the preserved native
+files. FreeCAD 1.1.3 has been exercised; STEP uses millimetres and **STL
+must be imported as mm at 1:1**. The inert PCBA STL omits BT1/BT2; native
+CAD and populated STEP retain them. It is not a battery-insulation gauge.
+
+## Current integration gap
+
+Review package R4 must update exact board/part poses, the low-profile J1
+body and mated harness/wire exit, speaker and cell/contact clearances,
+mounts, USB support and reversible assembly/service access. The present
+direction is a housing relief at the east tab, not an unreviewed connector
+move. See the [J1 disposition](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md#c-assembly-and-placement).
+No relief or six-layer assembly is implemented by this documentation refresh.
+
+## Preserved studies
+
+| Location | What it preserves |
+|---|---|
+| [2026-09-13 printed bell](studies/2026-09-13-printed-bell/README.md) | Original printed shell/black handle/removable cartridge; root is the power-rework model, `extended-run` is the later completed IMU model |
+| `2026-09-13-printed-bell/development/` | Frozen earlier mixed-face model; not the latest assembly |
+| `2026-09-13-printed-bell/imu-four-layer-review/` (outside `extended-run`) | Partial first export attempt; do not substitute for completed outputs |
+| [2026-09-11 T8 cartridge](studies/2026-09-11-t8-cartridge/README.md) | Earlier metal-shell contact/capture architecture and fixed-stack alternatives |
+| [2026-09-09 integrated cartridge](studies/2026-09-09-integrated-cartridge/README.md) | Mixed-face wing board and two-piece cartridge, not the printed-bell revision |
+| [2026-09-09 measured speaker](studies/2026-09-09-measured-speaker/README.md) | Measured speaker stations and packaging comparisons |
+| Files at `mechanical/` root | September 7 feasibility model and early dummy prints, documented below |
+
+These files stay in their original locations because scripts and hash-bound
+evidence reference them. They are not duplicate release packages.
+
+## Historical September 7 feasibility and dummy set
+
+The rest of this page describes the **unchanged original study**, not the
+current design. Its 18.5 mm maximum speaker gauge predates the measured
+19 mm speaker and must not be used as the current fit envelope.
 
 **Inert dimensional study, not a complete fitted assembly or child-use hardware.**
 The editable FreeCAD document includes the current 74-part placement as rectangular

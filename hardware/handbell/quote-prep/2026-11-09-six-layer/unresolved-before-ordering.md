@@ -25,8 +25,7 @@ The [README](README.md) says what was uploaded, and
    it (R4); see [Outline and tolerance](fab-options.md#outline-and-tolerance).
 5. **Silk legibility.** At least 69 text items are below the project's 0.8 mm
    minimum height, and JLC's public page quotes 1.0 mm.
-6. **Quantity, colour, lead time and panelization.** Recommendation for a
-   first-article build: 5 bare PCBs (JLC minimum), with 2-3 assembled.
+6. **Quantity, colour, lead time and panelization.**
    **Owner selection (November 10): 10 PCBs with 8 assembled**, quoted live
    at $345.84 before shipping and tax. See the
    [quote](pcba-quote-2026-11-10.md#owner-selection-10-pcbs-8-assembled-live-quote-november-10).
@@ -36,7 +35,8 @@ The [README](README.md) says what was uploaded, and
    to the account's "Projects > Quotes" history; its removal was not checked,
    so see whether it can be deleted if it is
    not wanted.
-8. **JLCONE or the web flow** for the ordering step (section H).
+8. **Web flow used for quoting.** JLCONE remains an optional ordering-time
+   comparison, not a required tool or an installed dependency (section H).
 9. **Six-layer CAD rebind (R4).** Whether and when to regenerate the
    mechanical assembly for the six-layer board.
 
@@ -83,8 +83,8 @@ Narrow margins carried into R3 (accepted for routing continuation only):
 - Only 8 of 44 BOM rows carry an LCSC code: D4 C389354, IC1 C2040, IC4
   C481766, J1 C594367, Q2 and Q4 C20917, U3 C424093 and X6 C165948. All are
   status `VERIFY LIVE`: catalog evidence recorded in this repository, not
-  confirmed matches. Nothing was matched at JLC; stock and Basic/Extended
-  tier are not asserted.
+  confirmed matches within that static CSV. Later live matching, stock and
+  Basic/Extended observations belong to the dated quote record.
 - 36 rows are `NEEDS LCSC CODE`: BT1/BT2; C1/C4/C5/C19/C20; C2/C3;
   C6/C7/C9/C12/C13/C14/C16/C18/C23/C24; C8/C10/C11/C15/C17; C21/C22; C25;
   C26/C27/C28; C30; CHG0; D3; FB1/FB2; J2; L0; L1; Q1; Q3; Q5; the resistor
@@ -102,7 +102,8 @@ Narrow margins carried into R3 (accepted for routing continuation only):
 - IC1: "SC0914(7)" is a procurement order code, not an LCSC number
   ([device-component-candidates.json](../../parts/device-component-candidates.json),
   line 474).
-- BT1/BT2 (Keystone 254) may not be stocked or placeable at JLC.
+- BT1/BT2 were matched to C6993377 in the November 10 quote. Re-check stock,
+  placement and the soldering process before ordering.
 - The manufacturer field is blank in the sourcing BOM for BT1, BT2, J1, J2,
   Q4, Q5, R27, U1, U5 and U6.
 - Codes matched in a later live session are recorded only as "verify live"
@@ -130,7 +131,8 @@ Narrow margins carried into R3 (accepted for routing continuation only):
 - X6 has four shell-anchor joints (through-board anchors). Ask JLC how they
   are soldered.
 - Panelization and stencil: the board is below JLC's 70 x 70 mm SMT panel
-  minimum, so assembly needs a panel. Stencil was left off in the live quote.
+  minimum; the PCBA quote uses JLC edge rails and includes the assembly
+  stencil fee. The separate bare-PCB stencil add-on was left off.
 - J1 body overhang (November 10, owner review): J1's ACHL body extends about
   0.3 mm past the D43 circle at its north-east corner, in the y 97.5-97.7
   strip just north of the east contact tab. Its copper pads are inside the
@@ -208,17 +210,19 @@ listed at the end of [fab-options.md](fab-options.md).
 
 ## H. Owner actions at JLC
 
-1. Look at JLC's Gerber viewer and, once assembly is open, the placement
-   preview (rotation, polarity, bottom-side parts).
-2. PCBA: BOM/CPL upload and part matching are deferred until the owner is
-   present. He deferred them twice; ask once more at that step. Record matches
-   as "verify live" candidates only, and stop before the cart, an order or
-   payment.
+1. Review JLC's Gerber and assembly placement previews against the exact
+   source (rotation, polarity, bottom-side parts).
+2. PCBA: BOM/CPL upload and all 44 line matches were completed for the
+   November 10 quote. Before ordering, review the selections, especially
+   R27/J2, and re-check stock and price. Keep the dated live-match record
+   separate from the unchanged CSVs; stop before the cart, an order or
+   payment without explicit owner approval.
 3. Keep the auto-saved "Projects > Quotes" record, or see whether it can be
    deleted (not checked).
 4. Accept or reject a quote. That is the owner's act alone: no payment,
    coupon, terms or cart save has been made.
-5. Choose JLCONE or the web flow. Per JLC's
+5. Optionally compare JLCONE at ordering time; the web flow already supports
+   the quote preparation. Per JLC's
    [FAQ](https://jlcpcb.com/help/article/jlcone-desktop-app), JLCONE is
    "a dedicated browser shell" for the existing JLCPCB site and is not
    mandatory. JLC's
@@ -234,9 +238,8 @@ listed at the end of [fab-options.md](fab-options.md).
    Recommendation for the agent-first workflow (2026-11-10): the agent does
    every preparation step on the web through Playwright: upload, options,
    BOM/CPL matching and preview review. Playwright reads the page structure
-   and uploads files directly, and it has already done the Gerber upload.
-   Driving JLCONE would need screenshot-level desktop automation for the
-   same pages and adds no capability. JLCONE is useful only as the owner's
-   checkout channel for its promotions, and only if the web-prepared quote
-   or cart is visible there. The owner installs it and checks this; the
-   agent does not.
+   and uploads files directly; the Gerber/BOM/CPL uploads and quote matching
+   are complete. JLCONE has not been installed or tested, so no additional
+   automation capability is established. Its possible value is an
+   ordering-time promotion or shipping discount, if the web-prepared quote
+   is available there. Installation still needs explicit owner approval.

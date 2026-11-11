@@ -1,5 +1,12 @@
 # Zero-open PCB milestone: review entry point
 
+**November 10 status:** the public PCB, project and schematic remain unchanged.
+The [quote package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md)
+now has a live JLC quote and all BOM lines matched in the supplier UI:
+10 PCBs / 8 assembled, $345.84 before shipping and tax. No order or
+fabrication approval. The [gallery](design-gallery.md) distinguishes
+current PCB images from older enclosure/PCBA models.
+
 The November 9 milestone closes routing connectivity on a **six-layer
 candidate**, not electrical, manufacturing, mechanical or safety acceptance.
 The owner requested a PR to `main` for both board review and lessons for
@@ -50,7 +57,7 @@ The [publication validation](../hardware/handbell/iterations/printed-bell-six-la
 binds the manufacturer source, dimensions, hashes and native results.
 All board footprints resolve; embedded schematic symbols permit review,
 but blanket library refresh remains unsupported for three documented legacy
-aliases. No current CAD/placement manifest is claimed.
+aliases. No current mechanical CAD/placement manifest is claimed.
 
 Future publication changes remain gated on an exact file allowlist, hashes,
 library completeness and applicable hardware notices. Do not copy the whole private
@@ -115,7 +122,7 @@ items and revalidate affected dependencies after a correction.
 | R2: Power, returns and critical signals | Review branch current/drop/thermal budgets, necks/vias, boost loops/private pickoffs, CELL_NEG isolation, and each MCU/IMU capacitor's supply and return. The ledger explicitly records USB initially routed as separate traces: establish coupled 90-ohm geometry and reference continuity on the actual stackup, including transitions and both resistor-side pairs. Review clock, QSPI, I2S and TESTEN/boot/recovery duties. Zero opens is not SI/PI evidence. |
 | R3: Process and margins | Inventory every filled/planarized/capped through-via, including U4/C24 and the C7/GAIN0 additions; reconcile exact via identities with pad/mask/paste and IPC-4761 Type VII fabrication notes. Confirm supplier support and cost. No HDI/laser microvias. Review the narrow-margin table below and actual rule minima. Open question for JLC: its live default is Epoxy Filled and Capped, whose tooltip says vias should be at most 0.5 mm in diameter or be left unfilled. The four U4 thermal vias are 0.604 mm land / 0.35 mm drill and C24.2 is 0.6 / 0.3, and none carries a per-via filling or capping flag (only C7.1 and GAIN0.1 do), so the written order note is their only control. Whether the limit means land or drill is unresolved; see [the quote-prep fab options](../hardware/handbell/quote-prep/2026-11-09-six-layer/fab-options.md#vias-and-via-protection-the-main-open-question). |
 | R4: Mechanical and service | Rebind the exact new board and placements into the assembly. Check contact/cell isolation, speaker height, mounts, USB mating, assembly order and service access. Include relocated JST ACHL J1 and its mating harness; preserve both BTL leads. TP5 is a 0.30 mm microprobe land, TP14 a 0.6 mm rear land, not qualified universal hand probing. Do not reuse historical CAD as if it matched: the existing 3D renders and CAD under `mechanical/studies/2026-09-13-printed-bell/` predate this board and the JST ACHL J1. |
-| R5: Assembly and quotation | Generate matched BOM/CPL, fabrication/drill and assembly outputs only from the reviewed revision. Reconcile J1 `BM02B-ACHLKS-GAN-ETF` / C594367, all fitted back-side contacts, X6 slots/placement and DNP exclusions. Carry process notes and the exact silk waiver; a supplier quote is neither an order nor functional approval. A quote-only bare-PCB package is in [quote-prep](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md); 36 of its 44 BOM rows still need an LCSC code and no assembly matching was done. |
+| R5: Assembly and quotation | Matched exports and a live 10-PCB/8-assembly quote are in [quote-prep](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md). All 44 BOM lines were matched in JLC's UI; the unchanged upload CSV still contains 36 uncoded rows. Review the separately recorded R27/J2 substitutions, every rotation/polarity, both rear contacts, X6 slots/placement, process notes and the scoped silk waiver before reconciling final production files. A quote is neither an order nor functional approval. |
 | R6: Bring-up and acceptance | Define a bounded, risk-based bring-up before powered use: protection/charging/source selection, rails, USB/boot/debug, IMU initialization, audio/mute and thermal/current behavior. The owner's limited testing preference does not establish reliability or remove these gates. No child-use claim follows from a working prototype. |
 
 Known margins/dispositions to carry into R3:
@@ -220,7 +227,7 @@ Phase 0 of [the agent-first PCB workflow](agent-first-pcb-workflow.md).
 ## Quote-only package, November 9 and 10
 
 [quote-prep/2026-11-09-six-layer](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md)
-holds a bare-PCB quote package for the exact public snapshot (PCB
+holds a PCB/PCBA quote package for the exact public snapshot (PCB
 `2f738ccb`). **Quote only: it is not a fabrication release, and zero opens
 is not fabrication approval.**
 
@@ -237,24 +244,28 @@ is not fabrication approval.**
   exports correspond to the snapshot, not functional correctness, JLC CAM
   acceptance, rotation conventions or stock.
 
-At JLC (2026-11-10, driven by the lead through a browser session):
+At JLC on November 10, the initial bare-PCB quote was followed by an
+owner-approved PCBA session. The same Gerber ZIP was uploaded again;
+JLC parsed 6 layers / 48.35 x 44.5 mm and saved account-visible quote
+history. The unchanged BOM/CPL were uploaded and all 44 lines were matched,
+with provisional R27/J2 substitutions recorded separately. One orientation
+spot check is not a complete assembly check.
 
-- One Gerber/drill ZIP (222,603 bytes) was uploaded. JLC parsed a 6-layer
-  48.35 x 44.5 mm board and **auto-saved it to the account's Projects >
-  Quotes history** (not the cart). Whether the entry can be removed was
-  not checked.
-- Option probing was display-only and defaults were restored. Live web
-  prices at quantity 5: OSP $32.00, ENIG +$16.80, shipping $26.60 for one
-  session, not a binding quote.
-- Nothing was ordered, paid or accepted: no cart, coupon, terms, BOM, CPL or
-  part matching, and no credentials were entered by the agent.
-
-Deferred to an owner-present session: the PCB Assembly flow (BOM/CPL
-upload and part matching). Everything still open before any order is in
+The selected scenario is 10 PCBs / 8 assembled, ENIG, epoxy-filled/capped
+vias and Standard two-sided assembly, **$345.84 before shipping and tax**.
+See the [dated quote](../hardware/handbell/quote-prep/2026-11-09-six-layer/pcba-quote-2026-11-10.md).
+Nothing was ordered, paid or added to the cart; production files were not
+confirmed. Everything still open before an order is in
 [unresolved-before-ordering.md](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md).
 The 3D renders and CAD under `mechanical/studies/2026-09-13-printed-bell/`
 and the C24/U4 notes in [pcba-quotation-plan.md](pcba-quotation-plan.md)
 predate the six-layer board and the JST ACHL J1.
+
+The private bakeoff directory, including raw exports and failed trials, was
+removed locally after a verified backup on November 10. Historical paths
+above identify archived evidence, not files supplied by a fresh checkout.
+Public source snapshots are unchanged; private recovery records are not
+published in this repository.
 
 ## PR and release boundaries
 
