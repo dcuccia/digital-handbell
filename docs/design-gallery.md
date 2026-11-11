@@ -29,8 +29,6 @@ remain unchanged.
 |:---:|:---:|
 | ![Front copper, solder mask and silkscreen of public six-layer snapshot 2f738ccb](images/showcase/pcb-six-layer-front.png) | ![Mirrored rear copper, solder mask and polarity markings of public six-layer snapshot 2f738ccb](images/showcase/pcb-six-layer-rear.png) |
 
-[![Interactive 3D visualization of public six-layer board 2f738ccb](images/showcase/pcba-six-layer-3d.png)](3d/)
-
 These are project-generated Gerber illustrations for **public PCB
 `2f738ccb`**, the source of the November quote. They show copper, mask and
 silkscreen without fitted component bodies. The renderer omitted Excellon
@@ -38,6 +36,10 @@ drills because its parser could not read the exported slot syntax; grey
 mounting pads therefore must not be interpreted as solid undrilled lands.
 Use the native board and drill evidence for geometry inspection. Display
 colours do not specify the selected ENIG surface finish.
+
+| Rendered component side | Rendered rear side |
+|:---:|:---:|
+| [![Oblique six-layer PCBA rendering](images/showcase/pcba-six-layer-3d.png)](3d/) | [![Rear six-layer PCB rendering without battery-contact bodies](images/showcase/pcba-six-layer-3d-rear.png)](3d/) |
 
 [Open the KiCad snapshot](../hardware/handbell/iterations/printed-bell-six-layer-review/README.md) ·
 [Review findings](pcb-review-2026-11.md) ·
@@ -82,9 +84,10 @@ prints are not live-cell restraints or a ready-to-build six-layer kit.
 
 The [showcase manifest](images/showcase/sources.json) binds source and
 published-image hashes, model/PCB revisions and image transformations.
-The only presentation changes are white-margin cropping, proportional
-resizing and combining the two enclosure views. No geometry was repaired,
-removed or synthesized for the gallery. Original assets stay in place.
+The FreeCAD and Gerber illustrations use white-margin cropping, proportional
+resizing and combining the two enclosure views. The KiCad visualization
+adds disclosed library bodies to a scratch PCB without changing the source
+board geometry. Original assets stay in place.
 
 All views are project-generated from the documented design. Original
 mechanical work remains MIT; the depicted adapted electronics retain their

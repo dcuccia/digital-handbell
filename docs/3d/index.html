@@ -88,19 +88,45 @@
 
     .details h2 { font-size: 1.05rem; margin-top: 0; }
     .details p:last-child { margin-bottom: 0; }
+    .stills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 1rem;
+    }
+    figure { margin: 0; }
+    .stills img { width: 100%; height: 320px; object-fit: contain; }
+    figcaption { margin-block: 0.5rem 1.5rem; }
     footer { border-top: 1px solid #ccd7d1; padding-top: 1rem; }
   </style>
 </head>
 <body>
   <header>
-    <a href="../../">Digital Handbell project home</a>
+    <a href="../">Digital Handbell project home</a>
     <p class="eyebrow">Prototype design visualization</p>
     <h1>Six-layer PCBA</h1>
-    <p>Rotate by dragging, zoom with the wheel or pinch, and use the controls to pause or reset the view. This is public PCB snapshot <code>2f738ccb</code>.</p>
+    <p>Static views and an interactive model of public PCB snapshot <code>2f738ccb</code>. Drag to rotate and use the wheel or pinch to zoom. The board stays centered; translation is disabled.</p>
   </header>
 
   <main>
     <p class="notice"><strong>Visualization only.</strong> This model is not an assembly drawing, mechanical-fit check, circuit review, fabrication release, or safety qualification. Some parts are represented by package models or disclosed stand-ins; others are omitted. KiCad also reported a VBUS pad-cutting/boolean warning during export, so do not use this mesh for precise geometry or measurement.</p>
+    <h2>Rendered views</h2>
+    <div class="stills">
+      <figure>
+        <img src="../images/showcase/pcba-six-layer-3d.png" alt="Oblique component-side rendering of the six-layer PCBA with package models">
+        <figcaption>Component side: package models with USB-C and inductor stand-ins.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/showcase/pcba-six-layer-3d-rear.png" alt="Rear rendering of the six-layer PCB showing battery-contact lands without contact bodies">
+        <figcaption>Rear side: battery-contact lands are shown, but contact bodies are omitted.</figcaption>
+      </figure>
+    </div>
+    <figure class="stills">
+      <a href="../design-gallery.html">
+        <img src="../images/showcase/pcba-four-layer-rear.png" alt="Historical four-layer assembly rear view with two gold-colored battery-clip proxies">
+      </a>
+      <figcaption><strong>Earlier assembly with battery clips.</strong> This preserved four-layer FreeCAD view uses simplified contact bodies, not the current six-layer PCB. It does not qualify current placement or fit.</figcaption>
+    </figure>
+    <h2>Interactive 3D view</h2>
     <model-viewer
       id="pcba"
       class="viewer"
@@ -108,21 +134,21 @@
       poster="../images/showcase/pcba-six-layer-3d.png"
       alt="Interactive three-dimensional visualization of the six-layer digital handbell prototype circuit board"
       camera-controls
-      auto-rotate
-      auto-rotate-delay="1200"
-      rotation-per-second="12deg"
+      disable-pan
+      disable-tap
+      interaction-prompt="none"
       shadow-intensity="0.7"
       exposure="1"
-      camera-orbit="0deg 65deg 0.14m"
-      min-camera-orbit="auto 10deg 30%"
-      max-camera-orbit="auto 170deg 250%"
+      camera-target="0.1m 0.00079m 0.1m"
+      camera-orbit="0deg 45deg 0.11m"
+      min-camera-orbit="auto 0deg 0.05m"
+      max-camera-orbit="auto 180deg 0.3m"
       loading="eager">
       <span slot="progress-bar"></span>
       <p slot="error">The 3D model could not be loaded. Try the <a href="./handbell-pcba.glb">GLB file</a> directly or use a recent browser.</p>
     </model-viewer>
     <div class="controls" aria-label="Model controls">
       <button id="reset-view" type="button">Reset view</button>
-      <button id="spin-toggle" type="button" aria-pressed="true">Pause rotation</button>
     </div>
 
     <div class="details">
@@ -157,18 +183,11 @@
 
   <script>
     const viewer = document.querySelector("#pcba");
-    const spinToggle = document.querySelector("#spin-toggle");
 
     document.querySelector("#reset-view").addEventListener("click", () => {
-      viewer.cameraOrbit = "0deg 65deg 0.14m";
-      viewer.cameraTarget = "auto";
+      viewer.cameraOrbit = "0deg 45deg 0.11m";
+      viewer.cameraTarget = "0.1m 0.00079m 0.1m";
       viewer.jumpCameraToGoal();
-    });
-
-    spinToggle.addEventListener("click", () => {
-      viewer.autoRotate = !viewer.autoRotate;
-      spinToggle.setAttribute("aria-pressed", String(viewer.autoRotate));
-      spinToggle.textContent = viewer.autoRotate ? "Pause rotation" : "Resume rotation";
     });
   </script>
 </body>

@@ -16,7 +16,12 @@
     "sha256": "55a7a8622c148311a7429ec1d3c23fbb4f51d6b2052905de92f480329c4bb09a",
     "render": "KiCad 10.0.6, 1800x1100, perspective, rotation -55,0,45"
   },
-  "viewer": "Google model-viewer 4.1.0",
+  "rear_still": {
+    "file": "../images/showcase/pcba-six-layer-3d-rear.png",
+    "sha256": "7a0b821fb26a831c4d0af49f794810ec0c000918a47d4aafdd6663ba3e788268",
+    "render": "Retained KiCad 10.0.6 bottom view of the same scratch visualization PCB; battery-contact bodies omitted"
+  },
+  "viewer": "Google model-viewer 4.1.0; fixed board-center target, rotation and zoom only, no automatic motion",
   "stand_ins": [
     "X6 uses the GCT USB4105-xx-A library model in place of the HRO USB-C receptacle; its main pad row is visually aligned to the local footprint.",
     "L1 uses the KiCad library 5 mm inductor package model in place of the TDK VLS5045EX."

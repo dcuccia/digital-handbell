@@ -1,7 +1,7 @@
 {
   "published": "2026-11-10",
   "purpose": "Public documentation illustrations, not manufacturing or fit qualification",
-  "provenance": "Project-generated FreeCAD and gerbonara/resvg views; original raster sources retained unchanged",
+  "provenance": "Project-generated FreeCAD, KiCad and gerbonara/resvg views; original raster sources retained unchanged",
   "licenses": "Original mechanics MIT; adapted electronics and mixed assembly views retain CC BY-SA 3.0 context; see ATTRIBUTION.md",
   "private_source_labels": "quote-session and freecad-review identify retained session evidence, not repository paths",
   "images": [
@@ -118,6 +118,20 @@
         1104
       ],
       "scope": "November 9-10 render of historical September 24 four-layer IMU assembly; component proxies; not current J1 or six-layer placement"
+    },
+    {
+      "file": "pcba-six-layer-3d-rear.png",
+      "sha256": "7a0b821fb26a831c4d0af49f794810ec0c000918a47d4aafdd6663ba3e788268",
+      "sources": [
+        {
+          "source": "pages3d/preview-bottom.png",
+          "sha256": "7a0b821fb26a831c4d0af49f794810ec0c000918a47d4aafdd6663ba3e788268"
+        }
+      ],
+      "design_source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
+      "design_sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+      "transform": "Unmodified retained KiCad 10.0.6 bottom-view render of the scratch visualization PCB",
+      "scope": "Current six-layer rear board features; battery-contact bodies omitted; not a fit or assembly check"
     },
     {
       "file": "pcba-six-layer-3d.png",

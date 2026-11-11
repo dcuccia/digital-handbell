@@ -12,6 +12,15 @@ are an additional reason not to measure the mesh or treat it as authoritative
 manufacturing geometry. See [`manifest.json`](manifest.json) for source and
 asset hashes.
 
+The component-side and rear stills remain visible above the interactive view.
+The viewer has no automatic motion. Its orbit target is the circular PCB
+center at KiCad (100, 100) mm and the board mid-plane (0.79 mm in this export),
+or glTF (0.1, 0.00079, 0.1) m. Explicit coordinates avoid the exported model's
+origin-inclusive automatic bounds. Panning and tap-to-recenter are disabled;
+only rotation and zoom are enabled.
+An additional, explicitly historical four-layer FreeCAD still shows the
+battery-clip proxies; it is not substituted for current-six-layer geometry.
+
 ## What is shown
 
 The board and copper come from public snapshot
