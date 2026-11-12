@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Shell and grille print orientation</title>
+  <desc id="desc">Schematic side views: print the shell with its open mouth on the bed and handle end up, without the separate handle attached. Print the carrier with its exterior grille face on the bed. Import STL in millimetres at 100 percent; rotate and translate, never scale. Historical four-layer print set, not a six-layer fit check.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #193247; }
+      .heading { font-size: 32px; font-weight: bold; }
+      .label { font-size: 24px; font-weight: bold; }
+      .body { font-size: 22px; }
+      .note { font-size: 19px; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#007f91"/></marker>
+  </defs>
+  <rect width="1200" height="700" fill="#fff"/>
+  <text x="40" y="55" class="heading">Print orientation: two visible surfaces</text>
+  <text x="40" y="91" class="body">Schematic only. Use the linked four-layer-era STL files, not this drawing as geometry.</text>
+  <rect x="30" y="120" width="555" height="395" rx="18" fill="#f4f7fa"/>
+  <rect x="605" y="120" width="565" height="395" rx="18" fill="#f4f7fa"/>
+  <text x="60" y="163" class="label">SHELL: open mouth down</text>
+  <text x="635" y="163" class="label">CARRIER: grille face down</text>
+  <path d="M145 437 C200 375 228 309 235 256 Q242 213 302 213 Q362 213 369 256 C376 309 404 375 459 437
+           L436 437 C385 370 357 309 351 258 Q344 232 302 232 Q260 232 253 258 C247 309 219 370 168 437 Z"
+        fill="#c9924e" stroke="#805629" stroke-width="3"/>
+  <path d="M302 297 V247" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="302" y="331" text-anchor="middle" class="note">Handle end up</text>
+  <text x="302" y="403" text-anchor="middle" class="note">Handle prints separately</text>
+  <path d="M204 427 H398" stroke="#007f91" stroke-width="3" stroke-dasharray="7 5"/>
+  <text x="302" y="481" text-anchor="middle" class="body">Open mouth touches bed</text>
+  <path d="M721 437 V396 H741 V324 H761 V396 H1011 V324 H1031 V396 H1051 V437 Z"
+        fill="#c9924e" stroke="#805629" stroke-width="3"/>
+  <path d="M766 422 H1006" stroke="#805629" stroke-width="5" stroke-dasharray="12 10"/>
+  <text x="886" y="233" text-anchor="middle" class="body">Supports / speaker seat above</text>
+  <path d="M886 253 V367" stroke="#007f91" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="886" y="481" text-anchor="middle" class="body">Visible grille face touches bed</text>
+  <path d="M90 444 H513 M665 444 H1110" stroke="#193247" stroke-width="7"/>
+  <text x="40" y="563" class="label">Millimetres / 100% size / rotate and translate only</text>
+  <text x="40" y="605" class="body">Check supports and bridges in the slicer. Bed texture transfers to the grille face.</text>
+  <text x="40" y="639" class="body">Handle, yoke, cradle and cover: inspect each orientation; no tested profile is provided.</text>
+  <text x="40" y="677" class="note">Conceptual shapes, not CAD sections. Six-layer board and new J1 harness fit remain unverified.</text>
+</svg>

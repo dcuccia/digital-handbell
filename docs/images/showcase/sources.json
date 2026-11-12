@@ -1,10 +1,62 @@
 {
   "published": "2026-11-10",
   "purpose": "Public documentation illustrations, not manufacturing or fit qualification",
-  "provenance": "Project-generated FreeCAD, KiCad and gerbonara/resvg views; original raster sources retained unchanged",
+  "provenance": "Project-generated FreeCAD, KiCad and gerbonara/resvg views plus original instruction SVGs; original raster sources retained unchanged",
   "licenses": "Original mechanics MIT; adapted electronics and mixed assembly views retain CC BY-SA 3.0 context; see ATTRIBUTION.md",
   "private_source_labels": "quote-session and freecad-review identify retained session evidence, not repository paths",
   "images": [
+    {
+      "file": "build-print-orientation.svg",
+      "published": "2026-11-11",
+      "sha256": "ff6e50088d141bd75f3c7850fb7503f358ee70c48a0f4295cafcb8bed711faa7",
+      "sources": [
+        {
+          "source": "docs/printed-bell-material-and-handle.md",
+          "git_revision": "9ef7aaffdbc40e054574c47e72fe23836810834d",
+          "sha256": "f5836d13579d48be47c1b4cefb70e9a3216d79bfe471d5f460daf96a48a81b8b",
+          "hash_basis": "git blob bytes at the specified revision"
+        }
+      ],
+      "design_source": "mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/printed-bell.FCStd",
+      "design_sha256": "b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d",
+      "scope": "Conceptual print orientation for the historical four-layer-era parts; no six-layer fit, slicer-support or physical print qualification",
+      "transform": "Original hand-authored SVG symbols from documented instructions, not CAD extraction or traced vendor artwork",
+      "license": "MIT, original documentation artwork"
+    },
+    {
+      "file": "build-speaker-harness.svg",
+      "published": "2026-11-11",
+      "sha256": "921bf15ac24833a06e3529b2b3d3f5bc3501b3b38f0865a6778f5e138129a30c",
+      "sources": [
+        {
+          "source": "docs/build-a-handbell.md",
+          "git_revision": "9ef7aaffdbc40e054574c47e72fe23836810834d",
+          "sha256": "d89027ac116b698c17e03889d90e3a9eddbd8d5620947212c4869ad01854ac5e",
+          "hash_basis": "git blob bytes at the specified revision"
+        }
+      ],
+      "scope": "Selected ACHL housing/jumper preparation and logical VO+/VO- wiring for six-layer J1; not a connector-face, crimp-orientation or physical-fit drawing",
+      "transform": "Original hand-authored SVG symbols from documented instructions; both wires shown white with added pin-1 identification bands",
+      "license": "MIT, original documentation artwork"
+    },
+    {
+      "file": "build-assembly-order.svg",
+      "published": "2026-11-11",
+      "sha256": "2f3217eaf58800121c9fd011b1f5e513cdfe1e45b3f8449c2c13f002265f681d",
+      "sources": [
+        {
+          "source": "docs/build-a-handbell.md",
+          "git_revision": "9ef7aaffdbc40e054574c47e72fe23836810834d",
+          "sha256": "d89027ac116b698c17e03889d90e3a9eddbd8d5620947212c4869ad01854ac5e",
+          "hash_basis": "git blob bytes at the specified revision"
+        }
+      ],
+      "design_source": "mechanical/studies/2026-09-13-printed-bell/imu-four-layer-review/extended-run/printed-bell.FCStd",
+      "design_sha256": "b2dff3477a5543f4f011277ab4e4d63765fbb84121a9c537709c63e3f43a610d",
+      "scope": "Historical four-layer-era handle/fastener and cartridge assembly sequence; inert fit trial only, not dimensional geometry or six-layer/new-J1 fit approval",
+      "transform": "Original hand-authored exploded SVG symbols, not a native model render or actual part/fastener pose",
+      "license": "MIT, original documentation artwork"
+    },
     {
       "file": "bell-and-cutaway.png",
       "sha256": "e002bcbd19db81d536b43b46d7c738d8f1b230490ce8bf697f833fc51e4488ea",

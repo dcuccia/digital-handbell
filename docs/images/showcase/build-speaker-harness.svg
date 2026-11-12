@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" role="img" aria-labelledby="title desc">
+  <title id="title">Make one speaker harness from one 12-inch jumper</title>
+  <desc id="desc">Cut a double-ended ASACHLSACHL28W305 jumper at its midpoint to get two approximately six-inch leads, each with one factory crimp. Latch both into ACHLR-02V-S and mark the pin-one lead at both ends. Logical wiring: J1 pin one VO plus to speaker positive, J1 pin two VO minus to speaker negative. This is not a connector mating-face or contact-insertion drawing; identify cavity one from JST documentation. Both wires are white and neither output is ground.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #193247; }
+      .heading { font-size: 32px; font-weight: bold; }
+      .label { font-size: 24px; font-weight: bold; }
+      .body { font-size: 22px; }
+      .note { font-size: 19px; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#007f91"/></marker>
+  </defs>
+  <rect width="1200" height="920" fill="#fff"/>
+  <text x="40" y="55" class="heading">One jumper makes one two-wire speaker harness</text>
+  <text x="40" y="94" class="body">ASACHLSACHL28W305: 12 inches / 305 mm / factory crimp at each end</text>
+  <rect x="30" y="120" width="1140" height="185" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="160" class="label">1. Cut once, at the midpoint</text>
+  <path d="M180 216 H550 M650 216 H1020" stroke="#526878" stroke-width="12"/>
+  <path d="M180 216 H550 M650 216 H1020" stroke="#fff" stroke-width="6"/>
+  <rect x="148" y="206" width="36" height="20" rx="3" fill="#c9924e" stroke="#805629" stroke-width="2"/>
+  <rect x="1016" y="206" width="36" height="20" rx="3" fill="#c9924e" stroke="#805629" stroke-width="2"/>
+  <path d="M600 182 V245" stroke="#c14d2b" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="367" y="272" text-anchor="middle" class="body">~6 inches / 152 mm</text>
+  <text x="833" y="272" text-anchor="middle" class="body">~6 inches / 152 mm</text>
+  <rect x="30" y="325" width="1140" height="155" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="369" class="label">2. Fit the housing; identify pin 1</text>
+  <text x="55" y="407" class="body">Latch both crimps into ACHLR-02V-S, then tug-test each lead.</text>
+  <text x="55" y="445" class="body">Both wires are white: mark the pin-1 wire at BOTH ends before soldering.</text>
+  <text x="40" y="535" class="label">3. Trim, solder, insulate and check continuity</text>
+  <text x="40" y="570" class="note">Logical wiring only, NOT a mating-face view. Identify cavity 1 using the JST drawing.</text>
+  <rect x="55" y="613" width="280" height="169" rx="12" fill="#e2f1f2" stroke="#007f91" stroke-width="2"/>
+  <text x="195" y="648" text-anchor="middle" class="label">J1 / ACHL plug</text>
+  <text x="195" y="700" text-anchor="middle" class="body">Pin 1 / VO+</text>
+  <text x="195" y="754" text-anchor="middle" class="body">Pin 2 / VO-</text>
+  <rect x="877" y="613" width="265" height="169" rx="12" fill="#f4f7fa" stroke="#526878" stroke-width="2"/>
+  <text x="1009" y="648" text-anchor="middle" class="label">Speaker tabs</text>
+  <text x="1009" y="700" text-anchor="middle" class="body">Marked +</text>
+  <text x="1009" y="754" text-anchor="middle" class="body">Other tab / -</text>
+  <path d="M335 690 H877 M335 744 H877" stroke="#526878" stroke-width="10"/>
+  <path d="M335 690 H877 M335 744 H877" stroke="#fff" stroke-width="5"/>
+  <path d="M391 681 V700 M819 681 V700" stroke="#007f91" stroke-width="15"/>
+  <text x="605" y="663" text-anchor="middle" class="note">Matching lead markers</text>
+  <rect x="30" y="810" width="1140" height="83" rx="12" fill="#fff2df"/>
+  <text x="55" y="844" class="label">Neither wire is ground. Do not connect either to the case.</text>
+  <text x="55" y="876" class="note">Use heat-shrink and strain relief. Final cable route and mated-plug clearance still need a fit check.</text>
+</svg>

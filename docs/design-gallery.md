@@ -67,6 +67,22 @@ assembly update must include that connector's mated plug and wire exit,
 not just the board outline. This is a concrete contribution opportunity in
 [#5](https://github.com/dcuccia/digital-handbell/issues/5), not a fit claim.
 
+## Assembly instruction diagrams
+
+The [build guide](build-a-handbell.md) includes these original, schematic
+drawings next to the relevant steps:
+
+| Printing orientation | Speaker harness | Assembly sequence |
+|:---:|:---:|:---:|
+| [![Shell and grille orientation on the print bed](images/showcase/build-print-orientation.svg)](build-a-handbell.md#3-print-the-parts) | [![Jumper preparation and logical speaker wiring](images/showcase/build-speaker-harness.svg)](build-a-handbell.md#4-make-the-speaker-lead) | [![Handle joint and cartridge assembly sequence](images/showcase/build-assembly-order.svg)](build-a-handbell.md#5-assemble) |
+
+These are **instruction diagrams, not CAD renders**. Printing and assembly
+refer to the completed September 24 four-layer-era model (`b2dff347`);
+the harness uses the selected JST ACHL parts for six-layer J1.
+No new fit, connector-face numbering, tolerances or tested printing
+profile are established. Original SVG artwork uses the project's MIT
+documentation terms; no vendor drawings or private supplier images are used.
+
 ## Download or inspect the models
 
 | Asset | Open |

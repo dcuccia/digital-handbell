@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Handle joint and cartridge assembly sequence</title>
+  <desc id="desc">Conceptual assembly guide for the historical four-layer fit model, not current six-layer fit approval. First fit the handle and captive nut; an M4x16 screw and large washer enter through the empty shell mouth. Outside the shell, put the speaker in the carrier before adding the yoke with two M2x6 screws. Add the PCBA and speaker lead, then the empty cradle with two M2x6 screws. Use an inert cell surrogate and fit the cover with two M2x6 screws. Align the USB bezel, slide the cartridge into the shell and secure it with three M2x8 screws. No live cell for the fit trial.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #193247; }
+      .heading { font-size: 32px; font-weight: bold; }
+      .label { font-size: 24px; font-weight: bold; }
+      .body { font-size: 22px; }
+      .note { font-size: 19px; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#007f91"/></marker>
+  </defs>
+  <rect width="1200" height="1200" fill="#fff"/>
+  <text x="40" y="55" class="heading">Assemble outside the shell, then insert the cartridge</text>
+  <text x="40" y="92" class="body">Four-layer-era assembly order. Six-layer PCB / new J1 fit NOT yet verified.</text>
+  <rect x="30" y="120" width="530" height="735" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="161" class="label">1. Handle first; shell empty</text>
+  <text x="55" y="194" class="note">Conceptual joint section, not exact geometry</text>
+  <path d="M215 230 H295 V430 H215 Z" fill="#37434c" stroke="#193247" stroke-width="3"/>
+  <path d="M229 367 H281 L294 388 281 409 H229 L216 388 Z" fill="#aebcc6" stroke="#193247" stroke-width="2"/>
+  <path d="M244 367 V409 M266 367 V409" stroke="#193247" stroke-width="2"/>
+  <path d="M405 387 H310" stroke="#007f91" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="329" y="329" class="body">M4 nut</text>
+  <text x="329" y="358" class="note">Side-load first</text>
+  <path d="M110 530 Q155 461 205 459 H305 Q365 461 412 530 L400 543 Q355 480 302 480 H208 Q160 480 122 543 Z"
+        fill="#c9924e" stroke="#805629" stroke-width="3"/>
+  <text x="331" y="448" class="note">Keyed handle</text>
+  <text x="324" y="577" class="body">Shell crown</text>
+  <rect x="209" y="594" width="92" height="12" rx="3" fill="#aebcc6" stroke="#193247" stroke-width="2"/>
+  <text x="324" y="615" class="note">DIN 9021 washer</text>
+  <rect x="247" y="641" width="16" height="77" fill="#aebcc6" stroke="#193247" stroke-width="2"/>
+  <path d="M230 718 Q255 702 280 718 V730 H230 Z" fill="#aebcc6" stroke="#193247" stroke-width="2"/>
+  <text x="324" y="693" class="body">M4x16</text>
+  <path d="M167 718 V570" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="55" y="788" class="body">Screw + washer enter through mouth.</text>
+  <text x="55" y="826" class="note">Also load the three shell M2 nut pockets.</text>
+  <rect x="585" y="120" width="585" height="735" rx="16" fill="#f4f7fa"/>
+  <text x="610" y="161" class="label">2-4. Build the cartridge on the bench</text>
+  <text x="610" y="194" class="note">Exploded symbols: not scaled, not hole locations</text>
+  <rect x="625" y="240" width="148" height="20" rx="8" fill="#c9924e" stroke="#805629" stroke-width="2"/>
+  <text x="800" y="249" class="label">4. Cover + inert surrogate</text>
+  <text x="800" y="281" class="note">2 x M2x6 + 2 nuts</text>
+  <rect x="648" y="304" width="102" height="29" rx="14" fill="#e2f1f2" stroke="#007f91" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M625 362 V403 H773 V362" fill="none" stroke="#805629" stroke-width="11"/>
+  <text x="800" y="380" class="label">3. Empty cradle</text>
+  <text x="800" y="412" class="note">2 x M2x6 + 2 nuts in yoke</text>
+  <rect x="625" y="468" width="148" height="12" rx="2" fill="#378b76" stroke="#226551" stroke-width="2"/>
+  <path d="M645 481 V497 H664 V481 M682 481 V501 H706 V481 M724 481 V494 H744 V481" fill="#37434c"/>
+  <text x="800" y="476" class="label">PCBA + speaker lead</text>
+  <text x="800" y="508" class="note">Load into open-top USB support</text>
+  <path d="M625 575 V548 H773 V575" fill="none" stroke="#805629" stroke-width="11"/>
+  <text x="800" y="561" class="label">2. Yoke AFTER speaker</text>
+  <text x="800" y="593" class="note">2 x M2x6 + 2 nuts in carrier</text>
+  <path d="M642 628 H756 L741 656 H657 Z" fill="#526878"/>
+  <rect x="678" y="611" width="42" height="17" fill="#37434c"/>
+  <text x="800" y="650" class="body">Seat the speaker first</text>
+  <rect x="619" y="699" width="160" height="16" rx="5" fill="#c9924e" stroke="#805629" stroke-width="2"/>
+  <text x="800" y="715" class="body">Carrier / grille at the front</text>
+  <path d="M609 701 V258" stroke="#007f91" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="610" y="788" class="body">Build from the carrier upward.</text>
+  <text x="610" y="826" class="note">Speaker cannot pass through the fitted yoke.</text>
+  <rect x="30" y="880" width="1140" height="140" rx="16" fill="#e2f1f2"/>
+  <text x="55" y="921" class="label">5. Align USB bezel, slide cartridge into shell</text>
+  <text x="55" y="962" class="body">Secure at the front with 3 x M2x8 into the three shell nuts.</text>
+  <text x="55" y="997" class="note">Reverse the sequence for service. Keep loose nuts in a tray; do not force or overtighten.</text>
+  <rect x="30" y="1045" width="1140" height="115" rx="16" fill="#fff2df"/>
+  <text x="55" y="1086" class="label">FIT CHECK ONLY: no live cell</text>
+  <text x="55" y="1126" class="body">Use an inert surrogate. Complete the electrical and battery safety gates separately.</text>
+</svg>

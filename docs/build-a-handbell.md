@@ -19,6 +19,14 @@ Quick links: [interactive 3D PCBA](https://dcuccia.github.io/digital-handbell/3d
 
 ## 1. What one handbell needs
 
+| Electronics side | Battery-contact side |
+|:---:|:---:|
+| [![Six-layer PCBA, component side with the speaker connector](images/showcase/pcba-six-layer-3d.png)](3d/) | [![Six-layer PCBA, rear with the two battery-clip proxies](images/showcase/pcba-six-layer-3d-rear.png)](3d/) |
+
+*Identify the supplied PCBA: snapshot `2f738ccb`. These are renders with
+package models and simplified J1/clip proxies, not assembly or fit proof.
+[Rotate the board](3d/) or see [image sources and limits](design-gallery.md).*
+
 | Group | Per bell | Notes |
 |---|---|---|
 | PCBA | 1 assembled six-layer board | Includes both battery clips (BT1/BT2, C6993377) and the board-side speaker header J1 (JST BM02B-ACHLKS-GAN-ETF, C594367) |
@@ -75,6 +83,11 @@ roofs, the raised USB surround and the handle side tunnel need support or
 bridging review in your slicer. The wide mouth gives access to remove
 internal supports before assembly.
 
+![Schematic shell mouth-down and carrier grille-face-down printing orientations](images/showcase/build-print-orientation.svg)
+
+*Orientation guide, not a support recipe or exact CAD section. The handle
+is a separate print; "handle-up" means the shell's handle end points upward.*
+
 **Starting settings for ERYONE silk PLA (0.4 mm nozzle).** Manufacturer
 range: nozzle 190-220 C, bed 55-70 C, 30-60 mm/s (the TDS says 30-100 mm/s).
 Project starting point for the bell: **0.12 mm layers, 215 C, 60 C bed,
@@ -113,6 +126,13 @@ AWG 28.
 5. Check continuity: J1.1 (VO+) to speaker +, J1.2 (VO-) to the other tab.
    Neither lead is ground, so never tie either to a ground or case.
 
+![Cut one double-ended jumper into two leads, mark pin 1 and connect VO+ to speaker positive and VO- to its other tab](images/showcase/build-speaker-harness.svg)
+
+*Logical wiring, not a connector-face drawing. Do not infer left/right
+cavity numbering or crimp insertion orientation from this diagram; use
+the linked JST drawing. The blue bands represent added lead markers,
+not supplied wire colours.*
+
 A vendor-made harness is fine if it uses these exact parts, the polarity
 above and a measured length. Generic "JST 1.2 mm" cables are not
 equivalent. Plug body and wire-exit clearance at the new J1 location
@@ -135,6 +155,13 @@ Keep loose nuts in a tray.
    cover nuts and the cover with two M2x6 screws.
 5. Align the USB bezel, slide the cartridge into the shell and fit the
    three front M2x8 screws.
+
+![Conceptual handle fastener stack and carrier-first cartridge assembly, with screw counts and an inert-cell-only warning](images/showcase/build-assembly-order.svg)
+
+*The sequence and hardware follow the completed four-layer fit model.
+Shapes and gaps are schematic, not dimensioned part drawings. The six-layer
+board, mated J1 plug and wire route still require mechanical integration.
+Use the actual STL/STEP files for part geometry.*
 
 Board firmware and audio bring-up are tracked in
 [firmware and audio](firmware-and-audio.md) and the
@@ -164,3 +191,7 @@ Sources: [cell and protection review](t8-electrical-revision.md),
 [speaker selection](mechanics-and-manufacturing.md),
 [printed-bell revision](printed-bell-revision.md) and the
 [printed-bell study guide](../mechanical/studies/2026-09-13-printed-bell/README.md).
+
+Illustration provenance: [design gallery](design-gallery.md#assembly-instruction-diagrams)
+and [source manifest](images/showcase/sources.json). These original instruction
+diagrams do not incorporate supplier screenshots or manufacturer artwork.
