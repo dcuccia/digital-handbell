@@ -76,12 +76,20 @@ drawings next to the relevant steps:
 |:---:|:---:|:---:|
 | [![Shell and grille orientation on the print bed](images/showcase/build-print-orientation.svg)](build-a-handbell.md#3-print-the-parts) | [![Jumper preparation and logical speaker wiring](images/showcase/build-speaker-harness.svg)](build-a-handbell.md#4-make-the-speaker-lead) | [![Handle joint and cartridge assembly sequence](images/showcase/build-assembly-order.svg)](build-a-handbell.md#5-assemble) |
 
+| Speaker-plug parts | Insert the contacts | Check, solder, plug in |
+|:---:|:---:|:---:|
+| [![Magnified contact and housing with cavity marks](images/showcase/build-connector-parts.svg)](build-a-handbell.md#4-make-the-speaker-lead) | [![Six contact-insertion steps](images/showcase/build-connector-insert.svg)](build-a-handbell.md#4a-prepare-and-insert) | [![Beep test, soldering and plugging into J1](images/showcase/build-connector-finish.svg)](build-a-handbell.md#4b-check-solder-and-plug-in) |
+
 These are **instruction diagrams, not CAD renders**. Printing and assembly
 refer to the completed September 24 four-layer-era model (`b2dff347`);
-the harness uses the selected JST ACHL parts for six-layer J1.
-No new fit, connector-face numbering, tolerances or tested printing
-profile are established. Original SVG artwork uses the project's MIT
-documentation terms; no vendor drawings or private supplier images are used.
+the harness and speaker-plug drawings use the selected JST ACHL parts for
+six-layer J1. The plug drawings follow the housing's own triangle and `2`
+cavity marks and J1's pad-1 silkscreen corner (PCB `2f738ccb`); they do
+not specify the contact lance face, retention force or cartridge fit.
+No new fit, tolerances or tested printing profile are established.
+Original SVG artwork uses the project's MIT documentation terms; vendor
+drawings were consulted for facts but not traced, and no private
+supplier images are used.
 
 ## Download or inspect the models
 

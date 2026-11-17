@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" role="img" aria-labelledby="title desc">
   <title id="title">Make one speaker harness from one 12-inch jumper</title>
-  <desc id="desc">Cut a double-ended ASACHLSACHL28W305 jumper at its midpoint to get two approximately six-inch leads, each with one factory crimp. Latch both into ACHLR-02V-S and mark the pin-one lead at both ends. Logical wiring: J1 pin one VO plus to speaker positive, J1 pin two VO minus to speaker negative. This is not a connector mating-face or contact-insertion drawing; identify cavity one from JST documentation. Both wires are white and neither output is ground.</desc>
+  <desc id="desc">Cut a double-ended ASACHLSACHL28W305 jumper at its midpoint to get two approximately six-inch leads, each with one factory crimp. Colour one lead red along its full length and latch it into the triangle-marked cavity one of ACHLR-02V-S; latch the plain lead into cavity two. Logical wiring: J1 pin one VO plus to speaker positive, J1 pin two VO minus to speaker negative. This is not a connector mating-face or contact-insertion drawing; the triangle on the housing marks cavity one. Both wires are white and neither output is ground.</desc>
   <defs>
     <style>
       text { font-family: Arial, sans-serif; fill: #193247; }
@@ -25,10 +25,10 @@
   <text x="833" y="272" text-anchor="middle" class="body">~6 inches / 152 mm</text>
   <rect x="30" y="325" width="1140" height="155" rx="16" fill="#f4f7fa"/>
   <text x="55" y="369" class="label">2. Fit the housing; identify pin 1</text>
-  <text x="55" y="407" class="body">Latch both crimps into ACHLR-02V-S, then tug-test each lead.</text>
-  <text x="55" y="445" class="body">Both wires are white: mark the pin-1 wire at BOTH ends before soldering.</text>
+  <text x="55" y="407" class="body">Colour one lead red, put it in the triangle (cavity 1), then tug-test each.</text>
+  <text x="55" y="445" class="body">Both wires come white: the red stripe marks + (VO+) at BOTH ends.</text>
   <text x="40" y="535" class="label">3. Trim, solder, insulate and check continuity</text>
-  <text x="40" y="570" class="note">Logical wiring only, NOT a mating-face view. Identify cavity 1 using the JST drawing.</text>
+  <text x="40" y="570" class="note">Logical wiring only, NOT a mating-face view. The triangle on the housing marks cavity 1.</text>
   <rect x="55" y="613" width="280" height="169" rx="12" fill="#e2f1f2" stroke="#007f91" stroke-width="2"/>
   <text x="195" y="648" text-anchor="middle" class="label">J1 / ACHL plug</text>
   <text x="195" y="700" text-anchor="middle" class="body">Pin 1 / VO+</text>
@@ -38,9 +38,9 @@
   <text x="1009" y="700" text-anchor="middle" class="body">Marked +</text>
   <text x="1009" y="754" text-anchor="middle" class="body">Other tab / -</text>
   <path d="M335 690 H877 M335 744 H877" stroke="#526878" stroke-width="10"/>
-  <path d="M335 690 H877 M335 744 H877" stroke="#fff" stroke-width="5"/>
-  <path d="M391 681 V700 M819 681 V700" stroke="#007f91" stroke-width="15"/>
-  <text x="605" y="663" text-anchor="middle" class="note">Matching lead markers</text>
+  <path d="M335 690 H877" stroke="#d63a2f" stroke-width="5"/>
+  <path d="M335 744 H877" stroke="#fff" stroke-width="5"/>
+  <text x="605" y="663" text-anchor="middle" class="note">Red-marked + lead</text>
   <rect x="30" y="810" width="1140" height="83" rx="12" fill="#fff2df"/>
   <text x="55" y="844" class="label">Neither wire is ground. Do not connect either to the case.</text>
   <text x="55" y="876" class="note">Use heat-shrink and strain relief. Final cable route and mated-plug clearance still need a fit check.</text>

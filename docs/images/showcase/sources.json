@@ -26,7 +26,7 @@
     {
       "file": "build-speaker-harness.svg",
       "published": "2026-11-11",
-      "sha256": "ffa1536ebe56555c5367976022bd560918d4ea42deec7a98891cbcf70ebf232d",
+      "sha256": "6da9d9072cc1b234bb380a0d549de7548ea92867cb81519df2ba13c47ba5a6d1",
       "sources": [
         {
           "source": "docs/build-a-handbell.md",
@@ -36,7 +36,71 @@
         }
       ],
       "scope": "Selected ACHL housing/jumper preparation and logical VO+/VO- wiring for six-layer J1; not a connector-face, crimp-orientation or physical-fit drawing",
-      "transform": "Original hand-authored SVG symbols from documented instructions; both wires shown white with added pin-1 identification bands",
+      "transform": "Original hand-authored SVG symbols from documented instructions; both wires shown white except a red full-length marker added to the + lead",
+      "license": "MIT, original documentation artwork",
+      "revised": "2026-11-16"
+    },
+    {
+      "file": "build-connector-parts.svg",
+      "published": "2026-11-16",
+      "sha256": "a106bda3dcf571c3a3c5a375c2f7b7821ffded4ea6d8313b7bb8855aaad7682e",
+      "sources": [
+        {
+          "source": "JST ACHL connector drawing eACHL.pdf (https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)",
+          "sha256": "b33b8099ddf7e3e78d897451d7ecd04f1ef3bd682018d3416a0be4e435012e59",
+          "hash_basis": "locally retained copy; consulted for dimensions, cavity markings and mating direction only"
+        },
+        {
+          "source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
+          "git_revision": "1f03364c8aa3c274efaa7cd18fe8571744eff184",
+          "sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+          "hash_basis": "git blob bytes at the specified revision; J1 pad 1 VO+, pad 2 VO-, pin-1 silkscreen corner"
+        }
+      ],
+      "scope": "Speaker-plug part identification: SACHL contact anatomy, ACHLR-02V-S cavity marks, real size and bench tools. Simplified, not to scale; does not specify the contact lance face; no physical insertion, retention-force or cartridge fit qualification",
+      "transform": "Original hand-authored SVG symbols; not traced vendor artwork or a CAD render",
+      "license": "MIT, original documentation artwork"
+    },
+    {
+      "file": "build-connector-insert.svg",
+      "published": "2026-11-16",
+      "sha256": "461200901ca07292b39ad7c545c1548bae91c4113cb336f7cebc18e6976ab391",
+      "sources": [
+        {
+          "source": "JST ACHL connector drawing eACHL.pdf (https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)",
+          "sha256": "b33b8099ddf7e3e78d897451d7ecd04f1ef3bd682018d3416a0be4e435012e59",
+          "hash_basis": "locally retained copy; consulted for dimensions, cavity markings and mating direction only"
+        },
+        {
+          "source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
+          "git_revision": "1f03364c8aa3c274efaa7cd18fe8571744eff184",
+          "sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+          "hash_basis": "git blob bytes at the specified revision; J1 pad 1 VO+, pad 2 VO-, pin-1 silkscreen corner"
+        }
+      ],
+      "scope": "Manual insertion of factory-crimped contacts with a colour-coded + lead, orientation retry and tug test. Simplified, not to scale; does not specify the contact lance face; no physical insertion, retention-force or cartridge fit qualification",
+      "transform": "Original hand-authored SVG symbols; not traced vendor artwork or a CAD render",
+      "license": "MIT, original documentation artwork"
+    },
+    {
+      "file": "build-connector-finish.svg",
+      "published": "2026-11-16",
+      "sha256": "8638cd886f2ce2b849f0343c1ae65958879c3c4e322b1344c1c195bc73391bb1",
+      "sources": [
+        {
+          "source": "JST ACHL connector drawing eACHL.pdf (https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)",
+          "sha256": "b33b8099ddf7e3e78d897451d7ecd04f1ef3bd682018d3416a0be4e435012e59",
+          "hash_basis": "locally retained copy; consulted for dimensions, cavity markings and mating direction only"
+        },
+        {
+          "source": "hardware/handbell/iterations/printed-bell-six-layer-review/handbell.kicad_pcb",
+          "git_revision": "1f03364c8aa3c274efaa7cd18fe8571744eff184",
+          "sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
+          "hash_basis": "git blob bytes at the specified revision; J1 pad 1 VO+, pad 2 VO-, pin-1 silkscreen corner"
+        }
+      ],
+      "scope": "Continuity check, speaker-tab soldering, strain relief and J1 mating direction. Simplified, not to scale; does not specify the contact lance face; no physical insertion, retention-force or cartridge fit qualification",
+      "transform": "Original hand-authored SVG symbols; not traced vendor artwork or a CAD render",
       "license": "MIT, original documentation artwork"
     },
     {

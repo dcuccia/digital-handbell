@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1180" viewBox="0 0 1200 1180" role="img" aria-labelledby="title desc">
+  <title id="title">Insert the two contacts into the speaker plug</title>
+  <desc id="desc">Six steps. One: colour the whole length of one lead red; it is the plus lead. Two: tape the housing to a card, top face with the triangle up and the wire-entry edge toward you, under a bright lamp with a phone camera zoomed in as a magnifier. Three: grip the wire two to three millimetres behind the crimp, never the spring tip, and push the red lead straight into cavity 1 under the triangle in small steps. Four: it should glide in with light force and stop fully seated, with a faint click. If it stops early or needs force, pull it straight back, roll it half a turn about the wire and try again. Never force it. Five: hold the housing and give the wire a gentle tug; it must not move. Six: put the plain lead into cavity 2, then check from the underside that both tips sit at the same depth. Not a manufacturer drawing; the lance face is deliberately not specified because the contact only seats one way.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #193247; }
+      .heading { font-size: 32px; font-weight: bold; }
+      .label { font-size: 23px; font-weight: bold; }
+      .body { font-size: 20px; }
+      .note { font-size: 18px; }
+      .warn { font-size: 20px; font-weight: bold; fill: #a3341a; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#007f91"/></marker>
+    <g id="housing">
+      <rect x="0" y="0" width="150" height="104" rx="6" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
+      <circle cx="0" cy="30" r="11" fill="#fff" stroke="#6b5a3a" stroke-width="2"/>
+      <circle cx="0" cy="74" r="11" fill="#fff" stroke="#6b5a3a" stroke-width="2"/>
+      <path d="M40 18 L62 30 L40 42 Z" fill="none" stroke="#193247" stroke-width="3"/>
+      <text x="112" y="82" text-anchor="middle" style="font-size:22px;font-weight:bold">2</text>
+    </g>
+  </defs>
+  <rect width="1200" height="1180" fill="#fff"/>
+  <text x="40" y="55" class="heading">Insert the contacts (about 5 minutes per plug)</text>
+  <text x="40" y="92" class="body">Practise first on a spare lead and housing: you bought 2 spare harnesses' worth.</text>
+
+  <!-- 1 colour -->
+  <rect x="30" y="115" width="555" height="320" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="153" class="label">1. Colour the + lead first</text>
+  <path d="M80 230 H520" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
+  <path d="M80 230 H520" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
+  <rect x="520" y="221" width="34" height="18" rx="3" fill="#d9a35f" stroke="#805629" stroke-width="2"/>
+  <path d="M80 300 H520" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
+  <path d="M80 300 H520" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <rect x="520" y="291" width="34" height="18" rx="3" fill="#d9a35f" stroke="#805629" stroke-width="2"/>
+  <text x="80" y="207" class="note">red marker along the WHOLE lead = + (VO+)</text>
+  <text x="80" y="340" class="note">plain lead = - (VO-)</text>
+  <text x="55" y="385" class="body">A full-length stripe can't get mixed up</text>
+  <text x="55" y="412" class="body">at the other end. Let the ink dry.</text>
+
+  <!-- 2 setup -->
+  <rect x="615" y="115" width="555" height="320" rx="16" fill="#f4f7fa"/>
+  <text x="640" y="153" class="label">2. Tape it down, light it, zoom in</text>
+  <rect x="660" y="180" width="320" height="200" rx="8" fill="#fff" stroke="#9fb0bd" stroke-width="2"/>
+  <rect x="895" y="225" width="34" height="118" fill="#7fb2e5" opacity="0.6"/>
+  <use href="#housing" x="770" y="240"/>
+  <text x="820" y="372" text-anchor="middle" class="note">wires enter from the left</text>
+  <rect x="1010" y="205" width="110" height="190" rx="18" fill="#26323c"/>
+  <rect x="1022" y="225" width="86" height="150" rx="6" fill="#cfe3f5"/>
+  <text x="1065" y="305" text-anchor="middle" class="note">3x</text>
+  <text x="640" y="415" class="note">Triangle face up. Tape over the far end only.</text>
+
+  <!-- 3 grip and push -->
+  <rect x="30" y="455" width="555" height="330" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="493" class="label">3. Grip the WIRE, push straight in</text>
+  <use href="#housing" x="380" y="560"/>
+  <path d="M90 590 H330" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
+  <path d="M90 590 H330" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
+  <rect x="330" y="581" width="34" height="18" rx="3" fill="#d9a35f" stroke="#805629" stroke-width="2"/>
+  <path d="M175 535 L300 582 M175 645 L300 598" stroke="#55606a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M220 530 H310" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="55" y="700" class="body">Hold 2-3 mm behind the crimp. Keep it level</text>
+  <text x="55" y="727" class="body">and in line with cavity 1. Push in small steps,</text>
+  <text x="55" y="754" class="body">re-gripping closer each time.</text>
+
+  <!-- 4 feel -->
+  <rect x="615" y="455" width="555" height="330" rx="16" fill="#e2f1f2"/>
+  <text x="640" y="493" class="label">4. It only fits one way</text>
+  <text x="640" y="532" class="body">Right way: glides in with light pressure and</text>
+  <text x="640" y="559" class="body">stops fully home, often with a faint click.</text>
+  <text x="640" y="606" class="warn">Stops early or needs force?</text>
+  <text x="640" y="638" class="body">Pull it straight back out, roll it half a turn</text>
+  <text x="640" y="665" class="body">around the wire, and try again.</text>
+  <path d="M1000 735 A45 30 0 1 1 1090 735" fill="none" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="1045" y="770" text-anchor="middle" class="note">half turn</text>
+  <text x="640" y="760" class="warn">Never force or bend the contact.</text>
+
+  <!-- 5 tug -->
+  <rect x="30" y="805" width="555" height="250" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="843" class="label">5. Tug test</text>
+  <use href="#housing" x="330" y="880"/>
+  <path d="M90 910 H318" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
+  <path d="M90 910 H318" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M210 960 H110" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="55" y="1010" class="body">Hold the housing; pull the wire gently.</text>
+  <text x="55" y="1037" class="body">It must not move. A loose one is not latched.</text>
+
+  <!-- 6 second lead -->
+  <rect x="615" y="805" width="555" height="250" rx="16" fill="#f4f7fa"/>
+  <text x="640" y="843" class="label">6. Plain lead into cavity 2</text>
+  <use href="#housing" x="900" y="880"/>
+  <path d="M660 910 H888" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
+  <path d="M660 910 H888" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M660 954 H888" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
+  <path d="M660 954 H888" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+  <text x="640" y="1010" class="body">Same steps. Then look at the underside:</text>
+  <text x="640" y="1037" class="body">both tips should sit at the same depth.</text>
+
+  <rect x="30" y="1075" width="1140" height="85" rx="12" fill="#fff2df"/>
+  <text x="55" y="1110" class="label">Red lead is in the "2" cavity? Don't dig it out.</text>
+  <text x="55" y="1142" class="note">Removing a latched contact can wreck it. Use a spare, or keep going and note it: one speaker works either way round.</text>
+</svg>

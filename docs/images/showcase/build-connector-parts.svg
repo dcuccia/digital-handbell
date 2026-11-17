@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Know the speaker-plug parts before you start</title>
+  <desc id="desc">Simplified, magnified drawings of one factory-crimped SACHL-003G-P0.2 contact and the ACHLR-02V-S two-way housing. The contact is about 3.2 mm long and 0.8 mm wide: insulation grip, wire grip, a tiny one-sided locking tab called the lance, and a spring tip that grips the board header. The housing is about 3.75 by 2.6 by 1.1 mm, roughly a grain of rice. Its top face carries a triangle over cavity 1 and the number 2 beside cavity 2. Wires enter the rear edge; the plug presses straight down onto the board header with the wires running along the board. A tool list follows. Not a manufacturer drawing and not to exact scale.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #193247; }
+      .heading { font-size: 32px; font-weight: bold; }
+      .label { font-size: 23px; font-weight: bold; }
+      .body { font-size: 21px; }
+      .note { font-size: 18px; }
+      .call { font-size: 19px; fill: #8a3b12; font-weight: bold; }
+    </style>
+    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4"><circle cx="4" cy="4" r="3" fill="#8a3b12"/></marker>
+  </defs>
+  <rect width="1200" height="1000" fill="#fff"/>
+  <text x="40" y="55" class="heading">Know the parts: they are tiny, but simple</text>
+  <text x="40" y="92" class="body">Greatly magnified and simplified. No crimping is needed: the contacts are already crimped at the factory.</text>
+
+  <!-- Contact panel -->
+  <rect x="30" y="115" width="1140" height="300" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="155" class="label">A. One pre-crimped contact (SACHL-003G-P0.2), seen from the side</text>
+  <path d="M60 300 H230" stroke="#526878" stroke-width="30" stroke-linecap="round"/>
+  <path d="M60 300 H230" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+  <path d="M230 300 H330" stroke="#b87333" stroke-width="10"/>
+  <path d="M215 268 L232 252 H300 L318 268 V330 H215 Z" fill="#d9a35f" stroke="#805629" stroke-width="3"/>
+  <path d="M345 278 Q345 262 360 262 H470 Q485 262 485 278 V330 H345 Z" fill="#d9a35f" stroke="#805629" stroke-width="3"/>
+  <path d="M318 318 H345 M485 318 H560 V330 H318" fill="none" stroke="#805629" stroke-width="3"/>
+  <rect x="318" y="318" width="242" height="12" fill="#d9a35f"/>
+  <path d="M560 300 H700 L760 330 H560 Z" fill="#d9a35f" stroke="#805629" stroke-width="3"/>
+  <path d="M600 284 H860 Q900 284 900 310 Q900 336 860 336 H700" fill="none" stroke="#805629" stroke-width="10" stroke-linecap="round"/>
+  <path d="M600 284 H860 Q900 284 900 310 Q900 336 860 336 H700" fill="none" stroke="#d9a35f" stroke-width="5" stroke-linecap="round"/>
+  <path d="M640 330 L610 362" stroke="#805629" stroke-width="6" stroke-linecap="round"/>
+  <path d="M640 330 L610 362" stroke="#d9a35f" stroke-width="2" stroke-linecap="round"/>
+  <text x="120" y="248" text-anchor="middle" class="note">28 AWG wire</text>
+  <text x="266" y="215" text-anchor="middle" class="call">1 insulation grip</text>
+  <text x="415" y="215" text-anchor="middle" class="call">2 wire grip</text>
+  <text x="560" y="395" text-anchor="middle" class="call">3 lance: tiny locking tab, on ONE face</text>
+  <text x="790" y="250" text-anchor="middle" class="call">4 spring tip (do not touch)</text>
+  <path d="M215 360 H900" stroke="#193247" stroke-width="2"/>
+  <path d="M215 352 V368 M900 352 V368" stroke="#193247" stroke-width="2"/>
+  <text x="1000" y="290" class="body">3.2 mm long</text>
+  <text x="1000" y="320" class="body">0.8 mm wide</text>
+  <text x="1000" y="350" class="note">(simplified)</text>
+
+  <!-- Housing panel -->
+  <rect x="30" y="435" width="1140" height="330" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="475" class="label">B. The plug housing (ACHLR-02V-S), seen from the top</text>
+  <rect x="300" y="510" width="430" height="230" rx="10" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
+  <path d="M730 535 H770 V715 H730" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
+  <path d="M410 510 V490 H520 V510 M410 740 V760 H520 V740" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
+  <circle cx="300" cy="575" r="24" fill="#fff" stroke="#6b5a3a" stroke-width="3"/>
+  <circle cx="300" cy="675" r="24" fill="#fff" stroke="#6b5a3a" stroke-width="3"/>
+  <path d="M325 575 H600 M325 675 H600" stroke="#6b5a3a" stroke-width="2" stroke-dasharray="8 6"/>
+  <path d="M430 550 L480 575 L430 600 Z" fill="none" stroke="#193247" stroke-width="4"/>
+  <rect x="610" y="650" width="44" height="50" fill="none" stroke="#193247" stroke-width="3"/>
+  <text x="632" y="687" text-anchor="middle" class="label">2</text>
+  <text x="275" y="575" text-anchor="end" class="body" dy="7">cavity 1</text>
+  <text x="275" y="675" text-anchor="end" class="body" dy="7">cavity 2</text>
+  <text x="165" y="735" text-anchor="middle" class="note">REAR: wires enter here</text>
+  <text x="800" y="555" class="call">Triangle = cavity 1 = VO+</text>
+  <text x="800" y="590" class="body">gets the coloured (+) lead</text>
+  <text x="800" y="672" class="call">"2" = cavity 2 = VO-</text>
+  <text x="800" y="707" class="body">gets the plain lead</text>
+  <text x="515" y="625" text-anchor="middle" class="note">top face</text>
+
+  <!-- Size and tools -->
+  <rect x="30" y="785" width="545" height="190" rx="16" fill="#fff2df"/>
+  <text x="55" y="823" class="label">C. Real size</text>
+  <text x="55" y="858" class="body">Plug: 3.75 x 2.6 x 1.1 mm, about a grain</text>
+  <text x="55" y="886" class="body">of rice. The pins are 1.2 mm apart.</text>
+  <text x="55" y="921" class="body">Mating: the plug presses straight DOWN</text>
+  <text x="55" y="949" class="body">onto the board; wires lie along the board.</text>
+  <rect x="595" y="785" width="575" height="190" rx="16" fill="#e2f1f2"/>
+  <text x="620" y="823" class="label">D. Tools (no microscope needed)</text>
+  <text x="620" y="856" class="note">- Fine-point tweezers (curved tips help)</text>
+  <text x="620" y="882" class="note">- Phone camera at 2-3x zoom, or a 10x loupe</text>
+  <text x="620" y="908" class="note">- Bright lamp, painter's tape, a sewing needle</text>
+  <text x="620" y="934" class="note">- Red permanent marker, flush cutters, 28-30 AWG stripper</text>
+  <text x="620" y="960" class="note">- Fine soldering tip, flux, small heat-shrink, multimeter</text>
+</svg>

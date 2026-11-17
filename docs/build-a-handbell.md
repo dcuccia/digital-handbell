@@ -54,7 +54,7 @@ the retained printed-bell assembly, **not an updated six-layer fit approval**.
 | Front cartridge screws | Three M2x8 | 24 needed; buy 30 or a 50-pack; match the recessed head envelope |
 | M2 hex nuts | Nine, DIN 934-style AF4/H1.6 mm | 72 needed; buy 100. Check the printed captive-pocket fit |
 | Handle joint | One M4x16 pan head, one M4 hex nut, one DIN 9021 washer (OD12/ID4.3/about 1 mm) | 8 sets; buy 10. M4x20 and 8-32 are **not** substitutes |
-| Consumables and bench tools | Heat-shrink, lead markers, solder/flux, insulated cell cases, USB-C data cable, DMM, current-limited supply | Shared; not fitted PCB parts. SWD recovery uses the fine probe land, not a fitted header |
+| Consumables and bench tools | Heat-shrink, red permanent marker, fine-point tweezers, sewing needle, solder/flux, insulated cell cases, USB-C data cable, DMM, current-limited supply | Shared; not fitted PCB parts. SWD recovery uses the fine probe land, not a fitted header |
 
 ## 3. Print the parts
 
@@ -116,22 +116,82 @@ during the fit check. The
 specifies AWG 30-28 and insulation OD 0.50-0.63 mm; its 2 A rating is with
 AWG 28.
 
-1. Cut the 12-inch jumper in half, retaining one factory-crimped contact
-   on each half; no contact crimping tool is needed.
-2. Insert two contacts into the housing in the correct orientation until
-   they latch; tug-test each one.
-3. Both wires are white: **mark pin 1** at both ends.
-4. Trim to length, strip and solder to the speaker tabs, pin 1 to the
-   speaker's marked positive tab. Add heat-shrink and strain relief.
-5. Check continuity: J1.1 (VO+) to speaker +, J1.2 (VO-) to the other tab.
-   Neither lead is ground, so never tie either to a ground or case.
-
 ![Cut one double-ended jumper into two leads, mark pin 1 and connect VO+ to speaker positive and VO- to its other tab](images/showcase/build-speaker-harness.svg)
 
-*Logical wiring, not a connector-face drawing. Do not infer left/right
-cavity numbering or crimp insertion orientation from this diagram; use
-the linked JST drawing. The blue bands represent added lead markers,
-not supplied wire colours.*
+*Overview: logical wiring, not a connector-face drawing. The red stripe
+is a marker you add; both supplied wires are white.*
+
+**No crimping and no microscope.** The contacts are already crimped; you
+only push two of them into a plastic housing the size of a grain of rice,
+then solder the other ends to the speaker. A phone camera zoomed to 2-3x
+under a bright lamp is enough magnification. Practise on one of the two
+spare jumpers first.
+
+![Magnified contact anatomy, housing top view with the triangle over cavity 1 and the "2" mark, real size and tools](images/showcase/build-connector-parts.svg)
+
+### 4a. Prepare and insert
+
+1. **Cut** the jumper at its midpoint with flush cutters. Each half keeps
+   one factory contact. Never cut or strip at the contact end.
+2. **Colour the + lead.** Run a red permanent marker along the *whole*
+   length of one half and let it dry. A full-length stripe cannot be
+   mixed up at the far end, unlike a band at each end.
+3. **Set up.** Tape the housing to a card, triangle face up, with the
+   wire-entry edge free and the tape over the far end only. Light it
+   brightly and look through the phone camera.
+4. **Grip the wire, not the contact,** with tweezers 2-3 mm behind the
+   crimp. Never squeeze the spring tip: a bent tip will not grip the header.
+5. **Push the red lead straight into cavity 1 (under the triangle)** in
+   small steps, keeping it level and re-gripping closer each time.
+   Correctly oriented, it glides in with light pressure and stops fully
+   home, often with a faint click.
+6. **It only fits one way.** If it stops early or needs force, pull it
+   straight back out, roll it half a turn about the wire and try again.
+   Do not force it.
+7. **Tug-test:** hold the housing and pull the wire gently. It must not move;
+   a contact that slides back out is not latched. Re-seat it.
+8. **Put the plain lead into cavity 2** (the `2` mark) the same way, then
+   check the underside: both tips should sit at the same depth.
+
+![Six insertion steps: colour the + lead, tape and magnify, grip the wire, push into cavity 1, rotate if it binds, tug-test, then the plain lead into cavity 2](images/showcase/build-connector-insert.svg)
+
+If the red lead ends up in cavity 2, **do not dig it out**: removing a
+latched contact can ruin it and the housing. Use a spare, or carry on and
+record it. A single speaker works either way round (only its acoustic
+phase inverts); it is a labelling error, not a hazard.
+
+### 4b. Check, solder and plug in
+
+1. **Beep test.** Set the multimeter to continuity. Hold a sewing needle
+   against one probe and lightly touch the contact tip from the underside
+   of the housing; put the other probe on the free end of the same lead.
+   It should beep. Turning the housing over puts cavity 1 on the other
+   side, so follow the wire, not the position.
+2. **Dry-fit first, then trim.** Route the lead in the actual parts and
+   leave a gentle loop before cutting it shorter. Six inches is a starting
+   length, not a measured one.
+3. **Solder.** Slide heat-shrink (about 1.5-2.5 mm) on first. Strip about
+   2 mm, twist and tin the wire and the speaker tab, and join each in about
+   3 s. The **red lead goes to the speaker's marked + tab**, the plain lead
+   to the other. Shrink the sleeve, keeping heat off the paper cone.
+4. **Strain relief.** Anchor the leads near the speaker (a dot of hot glue
+   or a small tie) so a pull never reaches the crimps or the plug.
+5. **Plug in.** Put the plug triangle on J1's pin-1 side (the silkscreen
+   corner mark beside pad 1) and press straight down until it sits flat.
+   The wires run along the board. Unplug by lifting the housing, never by
+   pulling the wires.
+
+![Beep test through the underside, soldering with heat-shrink, strain relief, and pressing the plug straight down onto J1](images/showcase/build-connector-finish.svg)
+
+J1 pin 1 is VO+ and pin 2 is VO- (PCB `2f738ccb`). Neither lead is
+ground, so never tie either to the case, a battery clip or ground.
+
+*These are original, simplified drawings based on the JST ACHL drawing,
+not traced manufacturer artwork, and not to scale. They do not specify
+which face of the contact the lance is on, because the contact seats only
+one way; we found no JST insertion photographs for this series. The
+cable route and plug clearance in the six-layer cartridge are not yet
+fit-checked.*
 
 A vendor-made harness is fine if it uses these exact parts, the polarity
 above and a measured length. Generic "JST 1.2 mm" cables are not
