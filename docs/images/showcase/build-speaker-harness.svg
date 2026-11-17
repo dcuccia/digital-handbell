@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920" role="img" aria-labelledby="title desc">
   <title id="title">Make one speaker harness from one 12-inch jumper</title>
-  <desc id="desc">Cut a double-ended ASACHLSACHL28W305 jumper at its midpoint to get two approximately six-inch leads, each with one factory crimp. Colour one lead red along its full length and latch it into the triangle-marked cavity one of ACHLR-02V-S; latch the plain lead into cavity two. Logical wiring: J1 pin one VO plus to speaker positive, J1 pin two VO minus to speaker negative. This is not a connector mating-face or contact-insertion drawing; the triangle on the housing marks cavity one. Both wires are white and neither output is ground.</desc>
+  <desc id="desc">Latch both factory-crimped ends of one double-ended ASACHLSACHL28W305 jumper into one ACHLR-02V-S housing, one per cavity, then colour the half running from the triangle-marked cavity one red and snip the loop at its midpoint, giving two approximately six-inch leads. Logical wiring: J1 pin one VO plus to speaker positive, J1 pin two VO minus to speaker negative. This is not a connector mating-face or contact-insertion drawing; the triangle on the housing marks cavity one. Both wires are white and neither output is ground.</desc>
   <defs>
     <style>
       text { font-family: Arial, sans-serif; fill: #193247; }
@@ -15,7 +15,7 @@
   <text x="40" y="55" class="heading">One jumper makes one two-wire speaker harness</text>
   <text x="40" y="94" class="body">ASACHLSACHL28W305: 12 inches / 305 mm / factory crimp at each end</text>
   <rect x="30" y="120" width="1140" height="185" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="160" class="label">1. Cut once, at the midpoint</text>
+  <text x="55" y="160" class="label">1. Both ends into one plug, then snip the loop at the midpoint</text>
   <path d="M180 216 H550 M650 216 H1020" stroke="#526878" stroke-width="12"/>
   <path d="M180 216 H550 M650 216 H1020" stroke="#fff" stroke-width="6"/>
   <rect x="148" y="206" width="36" height="20" rx="3" fill="#c9924e" stroke="#805629" stroke-width="2"/>
@@ -24,8 +24,8 @@
   <text x="367" y="272" text-anchor="middle" class="body">~6 inches / 152 mm</text>
   <text x="833" y="272" text-anchor="middle" class="body">~6 inches / 152 mm</text>
   <rect x="30" y="325" width="1140" height="155" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="369" class="label">2. Fit the housing; identify pin 1</text>
-  <text x="55" y="407" class="body">Colour one lead red, put it in the triangle (cavity 1), then tug-test each.</text>
+  <text x="55" y="369" class="label">2. Identify pin 1 before snipping</text>
+  <text x="55" y="407" class="body">Tug-test both. Colour the half from the triangle (cavity 1, left hole) red.</text>
   <text x="55" y="445" class="body">Both wires come white: the red stripe marks + (VO+) at BOTH ends.</text>
   <text x="40" y="535" class="label">3. Trim, solder, insulate and check continuity</text>
   <text x="40" y="570" class="note">Logical wiring only, NOT a mating-face view. The triangle on the housing marks cavity 1.</text>

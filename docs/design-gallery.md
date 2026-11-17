@@ -76,15 +76,18 @@ drawings next to the relevant steps:
 |:---:|:---:|:---:|
 | [![Shell and grille orientation on the print bed](images/showcase/build-print-orientation.svg)](build-a-handbell.md#3-print-the-parts) | [![Jumper preparation and logical speaker wiring](images/showcase/build-speaker-harness.svg)](build-a-handbell.md#4-make-the-speaker-lead) | [![Handle joint and cartridge assembly sequence](images/showcase/build-assembly-order.svg)](build-a-handbell.md#5-assemble) |
 
-| Speaker-plug parts | Insert the contacts | Check, solder, plug in |
+| Speaker-plug parts | Insert the contacts | Solder and plug in |
 |:---:|:---:|:---:|
-| [![Magnified contact and housing with cavity marks](images/showcase/build-connector-parts.svg)](build-a-handbell.md#4-make-the-speaker-lead) | [![Six contact-insertion steps](images/showcase/build-connector-insert.svg)](build-a-handbell.md#4a-prepare-and-insert) | [![Beep test, soldering and plugging into J1](images/showcase/build-connector-finish.svg)](build-a-handbell.md#4b-check-solder-and-plug-in) |
+| [![Housing faces, cavity marks and a pre-crimped contact](images/showcase/build-connector-parts.svg)](build-a-handbell.md#4-make-the-speaker-lead) | [![Six contact-insertion steps](images/showcase/build-connector-insert.svg)](build-a-handbell.md#4a-insert-both-ends-then-snip) | [![Soldering and the plug seated on J1, top view](images/showcase/build-connector-finish.svg)](build-a-handbell.md#4b-solder-and-plug-in) |
 
 These are **instruction diagrams, not CAD renders**. Printing and assembly
 refer to the completed September 24 four-layer-era model (`b2dff347`);
 the harness and speaker-plug drawings use the selected JST ACHL parts for
-six-layer J1. The plug drawings follow the housing's own triangle and `2`
-cavity marks and J1's pad-1 silkscreen corner (PCB `2f738ccb`); they do
+six-layer J1. The plug drawings model the housing from JST outline
+dimensions with
+[`tools/draw_achl_illustrations.py`](../tools/draw_achl_illustrations.py),
+including its flat two-hole face, rough mating end, triangle and `2`
+cavity marks, and J1's pad-1 silkscreen corner (PCB `2f738ccb`); they do
 not specify the contact lance face, retention force or cartridge fit.
 No new fit, tolerances or tested printing profile are established.
 Original SVG artwork uses the project's MIT documentation terms; vendor

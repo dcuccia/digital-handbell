@@ -26,7 +26,7 @@
     {
       "file": "build-speaker-harness.svg",
       "published": "2026-11-11",
-      "sha256": "6da9d9072cc1b234bb380a0d549de7548ea92867cb81519df2ba13c47ba5a6d1",
+      "sha256": "cf41496d55eaaa8933455515b6141754c05af93f991c1f2b70713c11aad3f081",
       "sources": [
         {
           "source": "docs/build-a-handbell.md",
@@ -43,7 +43,7 @@
     {
       "file": "build-connector-parts.svg",
       "published": "2026-11-16",
-      "sha256": "a106bda3dcf571c3a3c5a375c2f7b7821ffded4ea6d8313b7bb8855aaad7682e",
+      "sha256": "a5e735f062186ee423db41ae5a699a1b50f27a85a1ec394a704cacdbab20b1d9",
       "sources": [
         {
           "source": "JST ACHL connector drawing eACHL.pdf (https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)",
@@ -55,16 +55,21 @@
           "git_revision": "1f03364c8aa3c274efaa7cd18fe8571744eff184",
           "sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
           "hash_basis": "git blob bytes at the specified revision; J1 pad 1 VO+, pad 2 VO-, pin-1 silkscreen corner"
+        },
+        {
+          "source": "tools/draw_achl_illustrations.py",
+          "hash_basis": "generator committed alongside these files; rerun from the repository root"
         }
       ],
-      "scope": "Speaker-plug part identification: SACHL contact anatomy, ACHLR-02V-S cavity marks, real size and bench tools. Simplified, not to scale; does not specify the contact lance face; no physical insertion, retention-force or cartridge fit qualification",
-      "transform": "Original hand-authored SVG symbols; not traced vendor artwork or a CAD render",
-      "license": "MIT, original documentation artwork"
+      "scope": "Housing faces (flat two-hole entry face, rough mating end), triangle and 2 cavity marks, straight-on hole view with cavity 1 on the left, contact grip point and tools. Simplified; does not specify the contact lance face; no fit qualification",
+      "transform": "Generated SVG: housing extruded from JST's published ACHL outline dimensions and orthographically projected; contact, pliers, fingers, board and header are simplified original symbols, not traced vendor artwork or a CAD render",
+      "license": "MIT, original documentation artwork",
+      "revised": "2026-11-16"
     },
     {
       "file": "build-connector-insert.svg",
       "published": "2026-11-16",
-      "sha256": "461200901ca07292b39ad7c545c1548bae91c4113cb336f7cebc18e6976ab391",
+      "sha256": "e4eb4212bfa4ebf029cb408924164fcde34cc0ba4fdff87a3f9a5acf77541904",
       "sources": [
         {
           "source": "JST ACHL connector drawing eACHL.pdf (https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)",
@@ -76,16 +81,21 @@
           "git_revision": "1f03364c8aa3c274efaa7cd18fe8571744eff184",
           "sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
           "hash_basis": "git blob bytes at the specified revision; J1 pad 1 VO+, pad 2 VO-, pin-1 silkscreen corner"
+        },
+        {
+          "source": "tools/draw_achl_illustrations.py",
+          "hash_basis": "generator committed alongside these files; rerun from the repository root"
         }
       ],
-      "scope": "Manual insertion of factory-crimped contacts with a colour-coded + lead, orientation retry and tug test. Simplified, not to scale; does not specify the contact lance face; no physical insertion, retention-force or cartridge fit qualification",
-      "transform": "Original hand-authored SVG symbols; not traced vendor artwork or a CAD render",
-      "license": "MIT, original documentation artwork"
+      "scope": "Owner-practised insertion with needle-nose pliers: both ends of one jumper into one housing, then colour the cavity-1 half red and snip the loop. Simplified; does not specify the contact lance face; no retention-force or cartridge fit qualification",
+      "transform": "Generated SVG: housing extruded from JST's published ACHL outline dimensions and orthographically projected; contact, pliers, fingers, board and header are simplified original symbols, not traced vendor artwork or a CAD render",
+      "license": "MIT, original documentation artwork",
+      "revised": "2026-11-16"
     },
     {
       "file": "build-connector-finish.svg",
       "published": "2026-11-16",
-      "sha256": "8638cd886f2ce2b849f0343c1ae65958879c3c4e322b1344c1c195bc73391bb1",
+      "sha256": "05f94a30adfb9154821f1bef09c5136745ef79a8eb507a789a7ea5df4d22e45d",
       "sources": [
         {
           "source": "JST ACHL connector drawing eACHL.pdf (https://www.jst.com/wp-content/uploads/2025/06/eACHL.pdf)",
@@ -97,11 +107,16 @@
           "git_revision": "1f03364c8aa3c274efaa7cd18fe8571744eff184",
           "sha256": "2f738ccbae390424b7248feb94bac5e0c677b81224d5d8f8b290bbb0cc6792e2",
           "hash_basis": "git blob bytes at the specified revision; J1 pad 1 VO+, pad 2 VO-, pin-1 silkscreen corner"
+        },
+        {
+          "source": "tools/draw_achl_illustrations.py",
+          "hash_basis": "generator committed alongside these files; rerun from the repository root"
         }
       ],
-      "scope": "Continuity check, speaker-tab soldering, strain relief and J1 mating direction. Simplified, not to scale; does not specify the contact lance face; no physical insertion, retention-force or cartridge fit qualification",
-      "transform": "Original hand-authored SVG symbols; not traced vendor artwork or a CAD render",
-      "license": "MIT, original documentation artwork"
+      "scope": "Speaker-tab soldering, strain relief and a top view of the plug seated on J1 with its triangle side at the pad-1 silkscreen corner. Schematic board/header; no cartridge fit qualification",
+      "transform": "Generated SVG: housing extruded from JST's published ACHL outline dimensions and orthographically projected; contact, pliers, fingers, board and header are simplified original symbols, not traced vendor artwork or a CAD render",
+      "license": "MIT, original documentation artwork",
+      "revised": "2026-11-16"
     },
     {
       "file": "build-assembly-order.svg",

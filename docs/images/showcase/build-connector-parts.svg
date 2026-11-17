@@ -1,80 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
-  <title id="title">Know the speaker-plug parts before you start</title>
-  <desc id="desc">Simplified, magnified drawings of one factory-crimped SACHL-003G-P0.2 contact and the ACHLR-02V-S two-way housing. The contact is about 3.2 mm long and 0.8 mm wide: insulation grip, wire grip, a tiny one-sided locking tab called the lance, and a spring tip that grips the board header. The housing is about 3.75 by 2.6 by 1.1 mm, roughly a grain of rice. Its top face carries a triangle over cavity 1 and the number 2 beside cavity 2. Wires enter the rear edge; the plug presses straight down onto the board header with the wires running along the board. A tool list follows. Not a manufacturer drawing and not to exact scale.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1020" viewBox="0 0 1200 1020" role="img" aria-labelledby="title desc">
+  <title id="title">Know the speaker-plug parts and which face is which</title>
+  <desc id="desc">Panel A: a three-dimensional drawing of the ACHLR-02V-S plug housing. Its flat face has two holes where the contacts go in; the opposite rough end has the latch and mating features and is never used for insertion. A triangle on the top face marks cavity 1 (VO plus, red lead) and a 2 marks cavity 2 (VO minus). The top face points away from the board when plugged in. Panel B: looking straight into the holes with the triangle face up, cavity 1 is the left hole; the holes are 1.2 mm apart. Panel C: a factory-crimped SACHL contact, 3.2 mm long, gripped at the base of its metal crimp; the spring box at the front goes in first. Panel D: tools. Drawn from JST's published outline dimensions, simplified; not a manufacturer drawing.</desc>
   <defs>
     <style>
       text { font-family: Arial, sans-serif; fill: #193247; }
       .heading { font-size: 32px; font-weight: bold; }
       .label { font-size: 23px; font-weight: bold; }
-      .body { font-size: 21px; }
+      .body { font-size: 20px; }
       .note { font-size: 18px; }
+      .small { font-size: 16px; }
       .call { font-size: 19px; fill: #8a3b12; font-weight: bold; }
+      .warn { font-size: 20px; font-weight: bold; fill: #a3341a; }
     </style>
-    <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4"><circle cx="4" cy="4" r="3" fill="#8a3b12"/></marker>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6dd8f"/><stop offset="0.45" stop-color="#d9a945"/>
+      <stop offset="1" stop-color="#9c7124"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#eef1f3"/>
+      <stop offset="1" stop-color="#b7c0c7"/>
+    </linearGradient>
+    <linearGradient id="redwire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f08a80"/><stop offset="0.6" stop-color="#d63a2f"/>
+      <stop offset="1" stop-color="#9b231b"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9aa6b0"/><stop offset="1" stop-color="#3f4a53"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#007f91"/></marker>
   </defs>
-  <rect width="1200" height="1000" fill="#fff"/>
-  <text x="40" y="55" class="heading">Know the parts: they are tiny, but simple</text>
-  <text x="40" y="92" class="body">Greatly magnified and simplified. No crimping is needed: the contacts are already crimped at the factory.</text>
-
-  <!-- Contact panel -->
-  <rect x="30" y="115" width="1140" height="300" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="155" class="label">A. One pre-crimped contact (SACHL-003G-P0.2), seen from the side</text>
-  <path d="M60 300 H230" stroke="#526878" stroke-width="30" stroke-linecap="round"/>
-  <path d="M60 300 H230" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
-  <path d="M230 300 H330" stroke="#b87333" stroke-width="10"/>
-  <path d="M215 268 L232 252 H300 L318 268 V330 H215 Z" fill="#d9a35f" stroke="#805629" stroke-width="3"/>
-  <path d="M345 278 Q345 262 360 262 H470 Q485 262 485 278 V330 H345 Z" fill="#d9a35f" stroke="#805629" stroke-width="3"/>
-  <path d="M318 318 H345 M485 318 H560 V330 H318" fill="none" stroke="#805629" stroke-width="3"/>
-  <rect x="318" y="318" width="242" height="12" fill="#d9a35f"/>
-  <path d="M560 300 H700 L760 330 H560 Z" fill="#d9a35f" stroke="#805629" stroke-width="3"/>
-  <path d="M600 284 H860 Q900 284 900 310 Q900 336 860 336 H700" fill="none" stroke="#805629" stroke-width="10" stroke-linecap="round"/>
-  <path d="M600 284 H860 Q900 284 900 310 Q900 336 860 336 H700" fill="none" stroke="#d9a35f" stroke-width="5" stroke-linecap="round"/>
-  <path d="M640 330 L610 362" stroke="#805629" stroke-width="6" stroke-linecap="round"/>
-  <path d="M640 330 L610 362" stroke="#d9a35f" stroke-width="2" stroke-linecap="round"/>
-  <text x="120" y="248" text-anchor="middle" class="note">28 AWG wire</text>
-  <text x="266" y="215" text-anchor="middle" class="call">1 insulation grip</text>
-  <text x="415" y="215" text-anchor="middle" class="call">2 wire grip</text>
-  <text x="560" y="395" text-anchor="middle" class="call">3 lance: tiny locking tab, on ONE face</text>
-  <text x="790" y="250" text-anchor="middle" class="call">4 spring tip (do not touch)</text>
-  <path d="M215 360 H900" stroke="#193247" stroke-width="2"/>
-  <path d="M215 352 V368 M900 352 V368" stroke="#193247" stroke-width="2"/>
-  <text x="1000" y="290" class="body">3.2 mm long</text>
-  <text x="1000" y="320" class="body">0.8 mm wide</text>
-  <text x="1000" y="350" class="note">(simplified)</text>
-
-  <!-- Housing panel -->
-  <rect x="30" y="435" width="1140" height="330" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="475" class="label">B. The plug housing (ACHLR-02V-S), seen from the top</text>
-  <rect x="300" y="510" width="430" height="230" rx="10" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
-  <path d="M730 535 H770 V715 H730" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
-  <path d="M410 510 V490 H520 V510 M410 740 V760 H520 V740" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
-  <circle cx="300" cy="575" r="24" fill="#fff" stroke="#6b5a3a" stroke-width="3"/>
-  <circle cx="300" cy="675" r="24" fill="#fff" stroke="#6b5a3a" stroke-width="3"/>
-  <path d="M325 575 H600 M325 675 H600" stroke="#6b5a3a" stroke-width="2" stroke-dasharray="8 6"/>
-  <path d="M430 550 L480 575 L430 600 Z" fill="none" stroke="#193247" stroke-width="4"/>
-  <rect x="610" y="650" width="44" height="50" fill="none" stroke="#193247" stroke-width="3"/>
-  <text x="632" y="687" text-anchor="middle" class="label">2</text>
-  <text x="275" y="575" text-anchor="end" class="body" dy="7">cavity 1</text>
-  <text x="275" y="675" text-anchor="end" class="body" dy="7">cavity 2</text>
-  <text x="165" y="735" text-anchor="middle" class="note">REAR: wires enter here</text>
-  <text x="800" y="555" class="call">Triangle = cavity 1 = VO+</text>
-  <text x="800" y="590" class="body">gets the coloured (+) lead</text>
-  <text x="800" y="672" class="call">"2" = cavity 2 = VO-</text>
-  <text x="800" y="707" class="body">gets the plain lead</text>
-  <text x="515" y="625" text-anchor="middle" class="note">top face</text>
-
-  <!-- Size and tools -->
-  <rect x="30" y="785" width="545" height="190" rx="16" fill="#fff2df"/>
-  <text x="55" y="823" class="label">C. Real size</text>
-  <text x="55" y="858" class="body">Plug: 3.75 x 2.6 x 1.1 mm, about a grain</text>
-  <text x="55" y="886" class="body">of rice. The pins are 1.2 mm apart.</text>
-  <text x="55" y="921" class="body">Mating: the plug presses straight DOWN</text>
-  <text x="55" y="949" class="body">onto the board; wires lie along the board.</text>
-  <rect x="595" y="785" width="575" height="190" rx="16" fill="#e2f1f2"/>
-  <text x="620" y="823" class="label">D. Tools (no microscope needed)</text>
-  <text x="620" y="856" class="note">- Fine-point tweezers (curved tips help)</text>
-  <text x="620" y="882" class="note">- Phone camera at 2-3x zoom, or a 10x loupe</text>
-  <text x="620" y="908" class="note">- Bright lamp, painter's tape, a sewing needle</text>
-  <text x="620" y="934" class="note">- Red permanent marker, flush cutters, 28-30 AWG stripper</text>
-  <text x="620" y="960" class="note">- Fine soldering tip, flux, small heat-shrink, multimeter</text>
+  <rect width="1200" height="1020" fill="#fff"/>
+  <text x="40" y="55" class="heading">Know the parts: which face is which</text>
+  <text x="40" y="92" class="body">Drawn from JST's published outline dimensions, simplified and magnified. No crimping is needed.</text>
+  <rect x="30" y="115" width="1140" height="430" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="153" class="label">A. Plug housing ACHLR-02V-S: flat face in, rough end out</text>
+  <polygon points="742.6,256 728.5,264.4 728.5,186.8 742.6,178.5" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="812.5,284.8 797.9,293.6 797.9,216 812.5,207.3" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="586.5,325.2 581.3,302.4 581.3,224.8 586.5,247.6" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="880.5,328.2 859.4,340.7 859.4,263.2 880.5,250.6" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="859.4,340.7 844.6,334.5 844.6,256.9 859.4,263.2" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="844.6,334.5 813.4,353.1 813.4,275.5 844.6,256.9" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="838.6,363.7 792.6,391.1 792.6,313.5 838.6,286.1" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="792.6,391.1 747.1,392.6 747.1,315 792.6,313.5" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="670,438.6 509.4,371.2 509.4,293.6 670,361" fill="#e6dcc4" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="747.1,392.6 670,438.6 670,361 747.1,315" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="509.4,293.6 586.5,247.6 581.3,224.8 625.9,198.2 651.4,208.9 719.1,168.6 742.6,178.5 728.5,186.8 772.1,205.1 786.7,196.4 812.5,207.3 797.9,216 880.5,250.6 859.4,263.2 844.6,256.9 813.4,275.5 838.6,286.1 792.6,313.5 747.1,315 670,361" fill="#f3eedf" stroke="#6b5a3a" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="530.6,330.9 531.1,326.1 532.9,322.1 535.6,319.3 539.1,317.7 543.3,317.5 547.7,318.7 558.7,323.3 563.2,325.8 567.3,329.5 570.9,334.1 573.6,339.2 575.3,344.6 575.9,349.9 575.9,365.1 575.3,369.9 573.6,373.9 570.9,376.7 567.3,378.3 563.2,378.5 558.7,377.3 547.7,372.7 543.3,370.2 539.1,366.5 535.6,361.9 532.9,356.8 531.1,351.4 530.6,346.1" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="539.6,341.2 540,338.3 541,335.9 542.6,334.2 544.8,333.3 547.3,333.1 549.9,333.9 556.5,336.6 559.2,338.2 561.7,340.4 563.8,343.1 565.5,346.2 566.5,349.4 566.8,352.6 566.8,361.7 566.5,364.6 565.5,367 563.8,368.7 561.7,369.7 559.2,369.8 556.5,369.1 549.9,366.3 547.3,364.8 544.8,362.6 542.6,359.8 541,356.7 540,353.5 539.6,350.3" fill="#16120c"/>
+  <polygon points="604.1,361.7 604.7,356.9 606.4,353 609.1,350.1 612.7,348.5 616.8,348.3 621.3,349.5 632.3,354.2 636.7,356.7 640.9,360.4 644.4,364.9 647.1,370.1 648.9,375.5 649.4,380.7 649.4,396 648.9,400.8 647.1,404.7 644.4,407.6 640.9,409.2 636.7,409.4 632.3,408.2 621.3,403.6 616.8,401 612.7,397.4 609.1,392.8 606.4,387.6 604.7,382.2 604.1,377" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="613.2,372 613.5,369.2 614.5,366.8 616.2,365.1 618.3,364.1 620.8,364 623.5,364.7 630.1,367.5 632.7,369 635.2,371.2 637.4,374 639,377.1 640,380.3 640.4,383.5 640.4,392.6 640,395.5 639,397.8 637.4,399.6 635.2,400.5 632.7,400.6 630.1,399.9 623.5,397.1 620.8,395.6 618.3,393.4 616.2,390.7 614.5,387.6 613.5,384.3 613.2,381.2" fill="#16120c"/>
+  <polygon points="561,291.8 591.7,304.6 602.1,282.9" fill="none" stroke="#193247" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="762.7,243.2 788.4,227.9 825.1,243.3 799.4,258.6" fill="none" stroke="#193247" stroke-width="2"/>
+  <text x="793.9" y="252.8" text-anchor="middle" style="font-size:27.2px;font-weight:bold">2</text>
+  <path d="M330 215 L584.1 293.6" stroke="#8a3b12" stroke-width="2"/><circle cx="584.1" cy="293.6" r="4" fill="#8a3b12"/>
+  <text x="55" y="200" class="call">Triangle on top = cavity 1</text>
+  <text x="55" y="226" class="call">= VO+ (red lead)</text>
+  <path d="M330 470 L626.8 378.9" stroke="#8a3b12" stroke-width="2"/><circle cx="626.8" cy="378.9" r="4" fill="#8a3b12"/>
+  <text x="55" y="465" class="call">FLAT face, two holes:</text>
+  <text x="55" y="491" class="call">contacts go in here</text>
+  <path d="M880 222 L812.3 251" stroke="#8a3b12" stroke-width="2"/><circle cx="812.3" cy="251" r="4" fill="#8a3b12"/>
+  <text x="886" y="228" class="call">"2" = cavity 2 = VO-</text>
+  <path d="M880 380 L799.8 241.2" stroke="#8a3b12" stroke-width="2"/><circle cx="799.8" cy="241.2" r="4" fill="#8a3b12"/>
+  <text x="886" y="375" class="call">ROUGH end: latch and</text>
+  <text x="886" y="401" class="call">mating features.</text>
+  <text x="886" y="427" class="call">Never insert here.</text>
+  <text x="55" y="528" class="note">Top face points AWAY from the board when plugged in; the wires then lie along the board.</text>
+  <rect x="30" y="565" width="545" height="300" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="603" class="label">B. Look into the holes, triangle face up</text>
+  <path d="M229.0 635.6 l28 13 -28 13 Z" fill="none" stroke="#193247" stroke-width="3"/>
+  <text x="269" y="655.6" class="small">on top</text>
+  <rect x="175" y="673.6" width="248.9" height="106.4" rx="4" fill="#e6dcc4" stroke="#6b5a3a" stroke-width="3"/>
+  <rect x="207.8" y="686" width="70.3" height="74.1" rx="26.6" fill="#3b3226" stroke="#6b5a3a" stroke-width="2"/>
+  <rect x="321.9" y="686" width="70.3" height="74.1" rx="26.6" fill="#3b3226" stroke="#6b5a3a" stroke-width="2"/>
+  <text x="243" y="818" class="label" text-anchor="middle">1  +  red</text>
+  <text x="357" y="818" class="label" text-anchor="middle">2  -</text>
+  <text x="55" y="852" class="note">Cavity 1 is the LEFT hole. 1.2 mm between centres.</text>
+  <rect x="595" y="565" width="575" height="300" rx="16" fill="#f4f7fa"/>
+  <text x="620" y="603" class="label">C. Pre-crimped contact (SACHL-003G-P0.2)</text>
+  <rect x="634" y="698.5" width="157.5" height="63" rx="12.6" fill="url(#wire)" stroke="#526878" stroke-width="2"/>
+  <rect x="760" y="684.9" width="75.6" height="90.3" rx="14.7" fill="url(#gold)" stroke="#7a5418" stroke-width="2"/>
+  <path d="M772.6 684.9 Q804.1 730 778.9 775.1 M802 684.9 Q833.5 730 808.3 775.1" fill="none" stroke="#7a5418" stroke-width="1.6"/>
+  <rect x="835.6" y="708" width="16.8" height="44.1" fill="url(#gold)" stroke="#7a5418" stroke-width="1.5"/>
+  <rect x="850.3" y="697.5" width="63" height="65.1" rx="8.4" fill="url(#gold)" stroke="#7a5418" stroke-width="2"/>
+  <path d="M862.9 700.6 V759.4" stroke="#a37a2c" stroke-width="1.2"/>
+  <path d="M875.5 700.6 V759.4" stroke="#a37a2c" stroke-width="1.2"/>
+  <path d="M888.1 700.6 V759.4" stroke="#a37a2c" stroke-width="1.2"/>
+  <path d="M900.7 700.6 V759.4" stroke="#a37a2c" stroke-width="1.2"/>
+  <rect x="913.3" y="718.5" width="63" height="23.1" fill="url(#gold)" stroke="#7a5418" stroke-width="1.5"/>
+  <path d="M970 703.8 H1069.8 Q1096 703.8 1096 730 Q1096 756.2 1069.8 756.2 H970 Z" fill="url(#gold)" stroke="#7a5418" stroke-width="2"/>
+  <rect x="1006.8" y="720.5" width="52.5" height="18.9" fill="#8a6420" opacity="0.55"/>
+  <path d="M975.2 756.2 L1006.8 774.1" stroke="#7a5418" stroke-width="3" stroke-linecap="round"/>
+  <path d="M700 650 L812.5 690.1" stroke="#8a3b12" stroke-width="2"/><circle cx="812.5" cy="690.1" r="4" fill="#8a3b12"/>
+  <text x="640" y="645" class="call">Grip here: base of the metal</text>
+  <path d="M1080 660 L1064.5 706.9" stroke="#8a3b12" stroke-width="2"/><circle cx="1064.5" cy="706.9" r="4" fill="#8a3b12"/>
+  <text x="1000" y="650" class="call">goes in first</text>
+  <text x="620" y="815" class="note">3.2 mm long, 0.8 mm wide. Gold-plated. Don't squeeze</text>
+  <text x="620" y="840" class="note">or bend the spring box at the front.</text>
+  <rect x="30" y="885" width="1140" height="110" rx="16" fill="#e2f1f2"/>
+  <text x="55" y="922" class="label">D. Tools</text>
+  <text x="55" y="955" class="note">Fine needle-nose pliers, flush cutters, red permanent marker, bright lamp (a phone camera at 2-3x helps),</text>
+  <text x="55" y="980" class="note">fine soldering tip, flux, small heat-shrink, multimeter and a sewing needle. No microscope or crimper.</text>
 </svg>

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1060" viewBox="0 0 1200 1060" role="img" aria-labelledby="title desc">
-  <title id="title">Check, solder and plug in the speaker lead</title>
-  <desc id="desc">Four steps. One: with a multimeter on continuity, touch one probe to the stripped end of the red lead and hold a sewing needle against the other probe to touch the contact tip through the underside of cavity 1; it should beep, and the plain lead should beep at cavity 2. Two: slide heat-shrink on first, strip about 2 millimetres, twist and tin; solder the red lead to the speaker's marked plus tab and the plain lead to the other tab, about 3 seconds per joint, then shrink. Three: leave a little slack and add strain relief so that pulling the speaker never pulls the plug. Four: line up the plug triangle with the board header's pin-1 mark and press straight down until it sits flat; unplug by lifting the housing, never by the wires. Neither speaker wire is ground. Schematic only; final route and clearance are unverified.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1105" viewBox="0 0 1200 1105" role="img" aria-labelledby="title desc">
+  <title id="title">Solder the speaker lead and plug it in</title>
+  <desc id="desc">Three steps. One: slide heat-shrink on, strip about 2 mm, tin, and solder the red lead to the speaker's plus tab and the plain lead to the other tab, about 3 seconds per joint. Two: dry-fit, leave slack and anchor the leads near the speaker. Three: with the triangle face up, put the plug on the J1 header with cavity 1 on the side of the pin-1 silkscreen corner mark and press straight down until flat; the wires lie along the board; unplug by lifting the housing. Neither wire is ground. J1 pin 1 is VO plus on PCB 2f738ccb. Schematic board and header; fit not verified.</desc>
   <defs>
     <style>
       text { font-family: Arial, sans-serif; fill: #193247; }
@@ -8,91 +8,80 @@
       .label { font-size: 23px; font-weight: bold; }
       .body { font-size: 20px; }
       .note { font-size: 18px; }
+      .small { font-size: 16px; }
+      .call { font-size: 19px; fill: #8a3b12; font-weight: bold; }
       .warn { font-size: 20px; font-weight: bold; fill: #a3341a; }
     </style>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6dd8f"/><stop offset="0.45" stop-color="#d9a945"/>
+      <stop offset="1" stop-color="#9c7124"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#eef1f3"/>
+      <stop offset="1" stop-color="#b7c0c7"/>
+    </linearGradient>
+    <linearGradient id="redwire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f08a80"/><stop offset="0.6" stop-color="#d63a2f"/>
+      <stop offset="1" stop-color="#9b231b"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9aa6b0"/><stop offset="1" stop-color="#3f4a53"/>
+    </linearGradient>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#007f91"/></marker>
   </defs>
-  <rect width="1200" height="1060" fill="#fff"/>
-  <text x="40" y="55" class="heading">Check, solder and plug in</text>
-
-  <!-- 1 continuity -->
+  <rect width="1200" height="1105" fill="#fff"/>
+  <text x="40" y="55" class="heading">Solder and plug in</text>
   <rect x="30" y="80" width="555" height="400" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="118" class="label">1. Beep test before soldering</text>
-  <rect x="300" y="160" width="150" height="104" rx="6" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
-  <text x="300" y="148" class="note">underside (flipped over)</text>
-  <rect x="345" y="182" width="26" height="16" fill="#d9a35f" stroke="#805629" stroke-width="2"/>
-  <rect x="345" y="226" width="26" height="16" fill="#d9a35f" stroke="#805629" stroke-width="2"/>
-  <path d="M90 190 H300" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M90 190 H300" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
-  <path d="M90 234 H300" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M90 234 H300" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
-  <path d="M70 234 H90" stroke="#b87333" stroke-width="6"/>
-  <path d="M540 280 L364 236" stroke="#7d8790" stroke-width="3"/>
-  <path d="M540 280 L568 287" stroke="#d63a2f" stroke-width="12" stroke-linecap="round"/>
-  <path d="M40 300 Q55 260 70 236" fill="none" stroke="#1d1d1d" stroke-width="5"/>
-  <text x="462" y="196" class="note">needle</text>
-  <text x="462" y="218" class="note">on probe</text>
-  <rect x="55" y="300" width="130" height="80" rx="10" fill="#26323c"/>
-  <text x="120" y="350" text-anchor="middle" style="font-size:22px;font-weight:bold;fill:#9ef0a1">BEEP</text>
-  <text x="210" y="320" class="body">Red lead's free end to the tip</text>
-  <text x="210" y="347" class="body">at the end of the red lead: beep.</text>
-  <text x="55" y="420" class="body">Same for the plain lead. Flipped over, cavity 1</text>
-  <text x="55" y="452" class="note">is on the other side: follow the wire. Touch the tip lightly.</text>
-
-  <!-- 2 solder -->
+  <text x="55" y="118" class="label">1. Solder to the speaker tabs</text>
+  <circle cx="430" cy="270" r="115" fill="#3b4752"/><circle cx="430" cy="270" r="60" fill="#56636f"/>
+  <rect x="325" y="170" width="44" height="22" rx="4" fill="#c0c7cc" stroke="#55606a" stroke-width="2"/>
+  <rect x="325" y="348" width="44" height="22" rx="4" fill="#c0c7cc" stroke="#55606a" stroke-width="2"/>
+  <text x="347" y="164" text-anchor="middle" class="label" style="fill:#d63a2f">+</text>
+  <path d="M70 181 L300 181" fill="none" stroke="#526878" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><path d="M70 181 L300 181" fill="none" stroke="#d63a2f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M70 359 L300 359" fill="none" stroke="#526878" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><path d="M70 359 L300 359" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M300 181 H330" stroke="#b87333" stroke-width="6"/>
+  <rect x="245" y="170" width="52" height="22" rx="4" fill="#1f2a33" opacity="0.85"/>
+  <path d="M300 359 H330" stroke="#b87333" stroke-width="6"/>
+  <rect x="245" y="348" width="52" height="22" rx="4" fill="#1f2a33" opacity="0.85"/>
+  <text x="271" y="218" class="note" text-anchor="middle">heat-shrink</text>
+  <text x="55" y="262" class="body">Heat-shrink on FIRST.</text>
+  <text x="55" y="289" class="body">Strip ~2 mm, twist, tin.</text>
+  <text x="55" y="316" class="body">Red to the + tab.</text>
+  <text x="55" y="415" class="body">About 3 s per joint, then shrink, keeping</text>
+  <text x="55" y="442" class="body">heat away from the paper cone.</text>
   <rect x="615" y="80" width="555" height="400" rx="16" fill="#f4f7fa"/>
-  <text x="640" y="118" class="label">2. Solder to the speaker tabs</text>
-  <circle cx="1030" cy="270" r="115" fill="#3b4752"/>
-  <circle cx="1030" cy="270" r="60" fill="#56636f"/>
-  <rect x="925" y="170" width="44" height="22" rx="4" fill="#c0c7cc" stroke="#55606a" stroke-width="2"/>
-  <rect x="925" y="348" width="44" height="22" rx="4" fill="#c0c7cc" stroke="#55606a" stroke-width="2"/>
-  <text x="947" y="164" text-anchor="middle" class="label" style="fill:#d63a2f">+</text>
-  <path d="M660 181 H900" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M660 181 H900" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
-  <path d="M900 181 H930" stroke="#b87333" stroke-width="6"/>
-  <rect x="845" y="170" width="52" height="22" rx="4" fill="#1f2a33" opacity="0.85"/>
-  <path d="M660 359 H900" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M660 359 H900" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
-  <path d="M900 359 H930" stroke="#b87333" stroke-width="6"/>
-  <rect x="845" y="348" width="52" height="22" rx="4" fill="#1f2a33" opacity="0.85"/>
-  <text x="871" y="218" text-anchor="middle" class="note">heat-shrink</text>
-  <text x="640" y="262" class="body">Slide heat-shrink on FIRST.</text>
-  <text x="640" y="289" class="body">Strip ~2 mm, twist, tin.</text>
-  <text x="640" y="316" class="body">Red to the + tab.</text>
-  <text x="640" y="415" class="body">About 3 s per joint, then shrink, keeping</text>
-  <text x="640" y="442" class="body">heat away from the paper cone.</text>
-
-  <!-- 3 strain relief -->
-  <rect x="30" y="500" width="555" height="330" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="538" class="label">3. Slack and strain relief</text>
-  <path d="M90 640 C200 640 210 590 290 600 S390 680 480 640" fill="none" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M90 640 C200 640 210 590 290 600 S390 680 480 640" fill="none" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
-  <ellipse cx="470" cy="643" rx="30" ry="20" fill="#f5e7a8" stroke="#b49a32" stroke-width="2"/>
-  <text x="470" y="690" text-anchor="middle" class="note">glue dot / tie</text>
-  <text x="55" y="740" class="body">Trim to length only after a dry fit; leave a</text>
-  <text x="55" y="767" class="body">gentle loop. Anchor the wires near the speaker</text>
-  <text x="55" y="794" class="body">so a pull never reaches the crimps or the plug.</text>
-
-  <!-- 4 plug in -->
-  <rect x="615" y="500" width="555" height="330" rx="16" fill="#e2f1f2"/>
-  <text x="640" y="538" class="label">4. Plug in: triangle to pin 1</text>
-  <rect x="760" y="680" width="240" height="40" rx="4" fill="#2d6a3e"/>
-  <rect x="830" y="652" width="110" height="28" fill="#2a2a2a"/>
-  <text x="826" y="672" text-anchor="end" class="note" style="fill:#193247">header (J1)</text>
-  <rect x="830" y="586" width="110" height="34" rx="4" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
-  <path d="M845 595 L862 603 L845 611 Z" fill="none" stroke="#193247" stroke-width="2.5"/>
-  <path d="M670 603 H830" stroke="#526878" stroke-width="12" stroke-linecap="round"/>
-  <path d="M670 603 H830" stroke="#d63a2f" stroke-width="7" stroke-linecap="round"/>
-  <path d="M885 560 V578" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
-  <text x="900" y="570" class="note">press straight down</text>
-  <text x="640" y="765" class="body">Plug triangle on J1's pin-1 side (silkscreen</text>
-  <text x="640" y="792" class="body">corner mark). Sits flat with light pressure.</text>
-  <text x="640" y="819" class="warn">Unplug by the housing, never the wires.</text>
-
-  <rect x="30" y="850" width="1140" height="185" rx="12" fill="#fff2df"/>
-  <text x="55" y="888" class="label">Neither speaker wire is ground. Don't connect either to the case or a battery clip.</text>
-  <text x="55" y="925" class="body">J1 pin 1 is VO+ and pin 2 is VO- on PCB 2f738ccb. The amplifier drives both wires.</text>
-  <text x="55" y="960" class="note">Schematic drawing. The cable route and the plug/wire clearance inside the six-layer cartridge are</text>
-  <text x="55" y="986" class="note">not yet fit-checked: dry-fit before trimming. A single speaker wired backwards still works;</text>
-  <text x="55" y="1012" class="note">it is a labelling error, not a hazard.</text>
+  <text x="640" y="118" class="label">2. Slack and strain relief</text>
+  <path d="M660 220 C770 220 780 170 860 180 S960 260 1050 220" fill="none" stroke="#526878" stroke-width="14" stroke-linecap="round"/><path d="M660 220 C770 220 780 170 860 180 S960 260 1050 220" fill="none" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="1040" cy="223" rx="30" ry="20" fill="#f5e7a8" stroke="#b49a32" stroke-width="2"/>
+  <text x="1040" y="270" class="note" text-anchor="middle">glue dot / tie</text>
+  <text x="640" y="360" class="body">Trim only after a dry fit; leave a gentle loop.</text>
+  <text x="640" y="387" class="body">Anchor the leads near the speaker so a pull</text>
+  <text x="640" y="414" class="body">never reaches the crimps or the plug.</text>
+  <rect x="30" y="500" width="1140" height="400" rx="16" fill="#e2f1f2"/>
+  <text x="55" y="538" class="label">3. Plug in: triangle face up, on J1's pin-1 side</text>
+  <rect x="132" y="568.2" width="506" height="313.5" rx="6" fill="#2d6a3e" stroke="#173a21" stroke-width="2"/>
+  <rect x="341" y="609.5" width="242" height="231" fill="#262626" stroke="#000" stroke-width="1.5"/>
+  <path d="M596.8 595.8 L596.8 639.8" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M596.8 595.8 L552.8 595.8" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M148.5 692 L335.5 692" fill="none" stroke="#526878" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/><path d="M148.5 692 L335.5 692" fill="none" stroke="#d63a2f" stroke-width="33" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M148.5 758 L335.5 758" fill="none" stroke="#526878" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/><path d="M148.5 758 L335.5 758" fill="none" stroke="#ffffff" stroke-width="33" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="330,652.6 412.5,652.6 434.2,629.7 482,629.7 482,652.6 554.3,652.6 554.3,673.7 539.3,673.7 539.3,712.8 554.9,712.8 554.9,736 539.3,736 539.3,810.1 516.7,810.1 516.7,796.8 483.4,796.8 483.4,819.4 434.2,819.4 412.5,796.8 330,796.8" fill="#f3eedf" stroke="#6b5a3a" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="354.8,678.2 354.8,705.8 382.2,692" fill="none" stroke="#193247" stroke-width="3"/>
+  <rect x="495" y="741.5" width="27.5" height="33" fill="none" stroke="#193247" stroke-width="2"/>
+  <text x="508.8" y="766" class="label" text-anchor="middle">2</text>
+  <path d="M700 612 L596.8 595.8" stroke="#8a3b12" stroke-width="2"/><circle cx="596.8" cy="595.8" r="4" fill="#8a3b12"/>
+  <text x="706" y="608" class="call">White corner mark on the board = J1 pin 1</text>
+  <text x="706" y="634" class="note">(VO+). The triangle side of the plug goes here.</text>
+  <text x="148.5" y="645.2" class="note" style="fill:#ffffff">red = VO+ (triangle side)</text>
+  <text x="148.5" y="821.2" class="note" style="fill:#ffffff">plain = VO-</text>
+  <text x="706" y="760" class="body">Seen from above, plug seated. Press straight</text>
+  <text x="706" y="787" class="body">down until it sits flat; the wires lie along</text>
+  <text x="706" y="814" class="body">the board. Unplug by lifting the housing,</text>
+  <text x="706" y="841" class="warn">never by pulling the wires.</text>
+  <rect x="30" y="920" width="1140" height="165" rx="16" fill="#fff2df"/>
+  <text x="55" y="958" class="label">Neither speaker wire is ground. Don't connect either to the case or a battery clip.</text>
+  <text x="55" y="992" class="body">J1 pin 1 is VO+ and pin 2 is VO- on PCB 2f738ccb; the amplifier drives both wires.</text>
+  <text x="55" y="1024" class="note">Optional check: meter on continuity, one probe on a lead's free end, a needle on the other probe touching</text>
+  <text x="55" y="1048" class="note">the metal in the plug's underside opening. Cable route and plug clearance in the six-layer cartridge</text>
+  <text x="55" y="1072" class="note">are not yet fit-checked: dry-fit before trimming.</text>
 </svg>

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1180" viewBox="0 0 1200 1180" role="img" aria-labelledby="title desc">
-  <title id="title">Insert the two contacts into the speaker plug</title>
-  <desc id="desc">Six steps. One: colour the whole length of one lead red; it is the plus lead. Two: tape the housing to a card, top face with the triangle up and the wire-entry edge toward you, under a bright lamp with a phone camera zoomed in as a magnifier. Three: grip the wire two to three millimetres behind the crimp, never the spring tip, and push the red lead straight into cavity 1 under the triangle in small steps. Four: it should glide in with light force and stop fully seated, with a faint click. If it stops early or needs force, pull it straight back, roll it half a turn about the wire and try again. Never force it. Five: hold the housing and give the wire a gentle tug; it must not move. Six: put the plain lead into cavity 2, then check from the underside that both tips sit at the same depth. Not a manufacturer drawing; the lance face is deliberately not specified because the contact only seats one way.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1360" viewBox="0 0 1200 1360" role="img" aria-labelledby="title desc">
+  <title id="title">Insert the contacts: one jumper, one plug</title>
+  <desc id="desc">Six steps. One: pinch the plug housing between thumb and forefinger, triangle face up, flat hole face toward you. Two: grip the factory-crimped contact at the base of its metal with needle-nose pliers, spring box pointing forward. Three: push it straight into the left hole, cavity 1, until most of the metal is inside. Four: move the pliers back onto the wire and push gently until the contact stops flush; if it binds, pull back, roll it half a turn and retry, never force it. Five: put the other end of the same 12-inch jumper into the right hole, cavity 2, making a loop, and tug-test both. Six: colour the half from the triangle hole red as far as the middle of the loop, then cut there to make two six-inch leads: red is VO plus, plain is VO minus. Simplified drawing from JST outline dimensions.</desc>
   <defs>
     <style>
       text { font-family: Arial, sans-serif; fill: #193247; }
@@ -8,94 +8,182 @@
       .label { font-size: 23px; font-weight: bold; }
       .body { font-size: 20px; }
       .note { font-size: 18px; }
+      .small { font-size: 16px; }
+      .call { font-size: 19px; fill: #8a3b12; font-weight: bold; }
       .warn { font-size: 20px; font-weight: bold; fill: #a3341a; }
     </style>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6dd8f"/><stop offset="0.45" stop-color="#d9a945"/>
+      <stop offset="1" stop-color="#9c7124"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#eef1f3"/>
+      <stop offset="1" stop-color="#b7c0c7"/>
+    </linearGradient>
+    <linearGradient id="redwire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f08a80"/><stop offset="0.6" stop-color="#d63a2f"/>
+      <stop offset="1" stop-color="#9b231b"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9aa6b0"/><stop offset="1" stop-color="#3f4a53"/>
+    </linearGradient>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="#007f91"/></marker>
-    <g id="housing">
-      <rect x="0" y="0" width="150" height="104" rx="6" fill="#efe7d6" stroke="#6b5a3a" stroke-width="3"/>
-      <circle cx="0" cy="30" r="11" fill="#fff" stroke="#6b5a3a" stroke-width="2"/>
-      <circle cx="0" cy="74" r="11" fill="#fff" stroke="#6b5a3a" stroke-width="2"/>
-      <path d="M40 18 L62 30 L40 42 Z" fill="none" stroke="#193247" stroke-width="3"/>
-      <text x="112" y="82" text-anchor="middle" style="font-size:22px;font-weight:bold">2</text>
-    </g>
   </defs>
-  <rect width="1200" height="1180" fill="#fff"/>
-  <text x="40" y="55" class="heading">Insert the contacts (about 5 minutes per plug)</text>
-  <text x="40" y="92" class="body">Practise first on a spare lead and housing: you bought 2 spare harnesses' worth.</text>
-
-  <!-- 1 colour -->
-  <rect x="30" y="115" width="555" height="320" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="153" class="label">1. Colour the + lead first</text>
-  <path d="M80 230 H520" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M80 230 H520" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
-  <rect x="520" y="221" width="34" height="18" rx="3" fill="#d9a35f" stroke="#805629" stroke-width="2"/>
-  <path d="M80 300 H520" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M80 300 H520" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
-  <rect x="520" y="291" width="34" height="18" rx="3" fill="#d9a35f" stroke="#805629" stroke-width="2"/>
-  <text x="80" y="207" class="note">red marker along the WHOLE lead = + (VO+)</text>
-  <text x="80" y="340" class="note">plain lead = - (VO-)</text>
-  <text x="55" y="385" class="body">A full-length stripe can't get mixed up</text>
-  <text x="55" y="412" class="body">at the other end. Let the ink dry.</text>
-
-  <!-- 2 setup -->
-  <rect x="615" y="115" width="555" height="320" rx="16" fill="#f4f7fa"/>
-  <text x="640" y="153" class="label">2. Tape it down, light it, zoom in</text>
-  <rect x="660" y="180" width="320" height="200" rx="8" fill="#fff" stroke="#9fb0bd" stroke-width="2"/>
-  <rect x="895" y="225" width="34" height="118" fill="#7fb2e5" opacity="0.6"/>
-  <use href="#housing" x="770" y="240"/>
-  <text x="820" y="372" text-anchor="middle" class="note">wires enter from the left</text>
-  <rect x="1010" y="205" width="110" height="190" rx="18" fill="#26323c"/>
-  <rect x="1022" y="225" width="86" height="150" rx="6" fill="#cfe3f5"/>
-  <text x="1065" y="305" text-anchor="middle" class="note">3x</text>
-  <text x="640" y="415" class="note">Triangle face up. Tape over the far end only.</text>
-
-  <!-- 3 grip and push -->
-  <rect x="30" y="455" width="555" height="330" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="493" class="label">3. Grip the WIRE, push straight in</text>
-  <use href="#housing" x="380" y="560"/>
-  <path d="M90 590 H330" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M90 590 H330" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
-  <rect x="330" y="581" width="34" height="18" rx="3" fill="#d9a35f" stroke="#805629" stroke-width="2"/>
-  <path d="M175 535 L300 582 M175 645 L300 598" stroke="#55606a" stroke-width="7" stroke-linecap="round"/>
-  <path d="M220 530 H310" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
-  <text x="55" y="700" class="body">Hold 2-3 mm behind the crimp. Keep it level</text>
-  <text x="55" y="727" class="body">and in line with cavity 1. Push in small steps,</text>
-  <text x="55" y="754" class="body">re-gripping closer each time.</text>
-
-  <!-- 4 feel -->
-  <rect x="615" y="455" width="555" height="330" rx="16" fill="#e2f1f2"/>
-  <text x="640" y="493" class="label">4. It only fits one way</text>
-  <text x="640" y="532" class="body">Right way: glides in with light pressure and</text>
-  <text x="640" y="559" class="body">stops fully home, often with a faint click.</text>
-  <text x="640" y="606" class="warn">Stops early or needs force?</text>
-  <text x="640" y="638" class="body">Pull it straight back out, roll it half a turn</text>
-  <text x="640" y="665" class="body">around the wire, and try again.</text>
-  <path d="M1000 735 A45 30 0 1 1 1090 735" fill="none" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
-  <text x="1045" y="770" text-anchor="middle" class="note">half turn</text>
-  <text x="640" y="760" class="warn">Never force or bend the contact.</text>
-
-  <!-- 5 tug -->
-  <rect x="30" y="805" width="555" height="250" rx="16" fill="#f4f7fa"/>
-  <text x="55" y="843" class="label">5. Tug test</text>
-  <use href="#housing" x="330" y="880"/>
-  <path d="M90 910 H318" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M90 910 H318" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
-  <path d="M210 960 H110" stroke="#007f91" stroke-width="4" marker-end="url(#arrow)"/>
-  <text x="55" y="1010" class="body">Hold the housing; pull the wire gently.</text>
-  <text x="55" y="1037" class="body">It must not move. A loose one is not latched.</text>
-
-  <!-- 6 second lead -->
-  <rect x="615" y="805" width="555" height="250" rx="16" fill="#f4f7fa"/>
-  <text x="640" y="843" class="label">6. Plain lead into cavity 2</text>
-  <use href="#housing" x="900" y="880"/>
-  <path d="M660 910 H888" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M660 910 H888" stroke="#d63a2f" stroke-width="10" stroke-linecap="round"/>
-  <path d="M660 954 H888" stroke="#526878" stroke-width="16" stroke-linecap="round"/>
-  <path d="M660 954 H888" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
-  <text x="640" y="1010" class="body">Same steps. Then look at the underside:</text>
-  <text x="640" y="1037" class="body">both tips should sit at the same depth.</text>
-
-  <rect x="30" y="1075" width="1140" height="85" rx="12" fill="#fff2df"/>
-  <text x="55" y="1110" class="label">Red lead is in the "2" cavity? Don't dig it out.</text>
-  <text x="55" y="1142" class="note">Removing a latched contact can wreck it. Use a spare, or keep going and note it: one speaker works either way round.</text>
+  <rect width="1200" height="1360" fill="#fff"/>
+  <text x="40" y="55" class="heading">Insert the contacts: one jumper, one plug</text>
+  <text x="40" y="92" class="body">Both ends of ONE 12-inch jumper go into ONE housing; snip the loop afterwards. A spare is useful for practice.</text>
+  <rect x="30" y="115" width="555" height="360" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="153" class="label">1. Hold the housing</text>
+  <ellipse cx="285.5" cy="210.7" rx="46" ry="28.5" transform="rotate(-147.4 285.5 210.7)" fill="#ecbd9e" stroke="#a8765a" stroke-width="2"/>
+  <polygon points="401.5,240.3 391.5,244.2 391.5,199.6 401.5,195.7" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="433.9,260.7 423.6,264.7 423.6,220.1 433.9,216.1" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="461.7,289.2 446.9,295 446.9,250.3 461.7,244.5" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="446.9,295 440,290.6 440,246 446.9,250.3" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="440,290.6 418.1,299.2 418.1,254.5 440,246" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="429.7,306.6 397.3,319.3 397.3,274.6 429.7,262" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="317,338.7 242.7,291.1 242.7,246.5 317,294" fill="#e6dcc4" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="397.3,319.3 371.3,317.4 371.3,272.8 397.3,274.6" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="371.3,317.4 317,338.7 317,294 371.3,272.8" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="242.7,246.5 297.1,225.3 299.6,212.2 331.1,199.9 342.9,207.4 390.6,188.8 401.5,195.7 391.5,199.6 411.7,212.5 422,208.5 433.9,216.1 423.6,220.1 461.7,244.5 446.9,250.3 440,246 418.1,254.5 429.7,262 397.3,274.6 371.3,272.8 317,294" fill="#f3eedf" stroke="#6b5a3a" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="252.5,269.1 252.8,266.4 253.6,264.2 254.9,262.7 256.5,262 258.4,262.1 260.5,263.1 265.6,266.3 267.6,268 269.5,270.3 271.2,273.2 272.4,276.3 273.2,279.5 273.5,282.5 273.5,291.3 273.2,294 272.4,296.2 271.2,297.7 269.5,298.4 267.6,298.3 265.6,297.4 260.5,294.1 258.4,292.4 256.5,290.1 254.9,287.3 253.6,284.2 252.8,281 252.5,277.9" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="256.7,275.6 256.9,273.9 257.4,272.6 258.1,271.7 259.1,271.3 260.2,271.4 261.5,271.9 264.5,273.9 265.8,274.9 266.9,276.3 267.9,278 268.7,279.9 269.1,281.8 269.3,283.6 269.3,288.9 269.1,290.5 268.7,291.8 267.9,292.7 266.9,293.1 265.8,293.1 264.5,292.5 261.5,290.6 260.2,289.5 259.1,288.1 258.1,286.4 257.4,284.6 256.9,282.7 256.7,280.8" fill="#16120c"/>
+  <polygon points="286.5,290.9 286.8,288.2 287.6,286 288.8,284.5 290.5,283.8 292.4,283.9 294.4,284.8 299.5,288.1 301.6,289.8 303.5,292.1 305.1,294.9 306.4,298 307.2,301.2 307.5,304.3 307.5,313.1 307.2,315.8 306.4,318 305.1,319.5 303.5,320.2 301.6,320.1 299.5,319.1 294.4,315.9 292.4,314.2 290.5,311.8 288.8,309 287.6,305.9 286.8,302.7 286.5,299.6" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="290.7,297.3 290.9,295.7 291.3,294.4 292.1,293.5 293.1,293 294.2,293.1 295.5,293.7 298.5,295.6 299.8,296.6 300.9,298 301.9,299.7 302.6,301.6 303.1,303.5 303.3,305.4 303.3,310.6 303.1,312.2 302.6,313.6 301.9,314.5 300.9,314.9 299.8,314.8 298.5,314.3 295.5,312.3 294.2,311.3 293.1,309.9 292.1,308.2 291.3,306.3 290.9,304.4 290.7,302.6" fill="#16120c"/>
+  <polygon points="272.2,248.6 286.4,257.7 297.4,246.1" fill="none" stroke="#193247" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="397.2,233.3 415.4,226.3 432.4,237.1 414.2,244.2" fill="none" stroke="#193247" stroke-width="2"/>
+  <text x="414.8" y="240.8" text-anchor="middle" style="font-size:15.6px;font-weight:bold">2</text>
+  <ellipse cx="441.3" cy="310.4" rx="46" ry="28.5" transform="rotate(32.6 441.3 310.4)" fill="#ecbd9e" stroke="#a8765a" stroke-width="2"/><ellipse cx="431.6" cy="298.6" rx="19.3" ry="12" transform="rotate(32.6 441.3 310.4)" fill="#f7e1d5" stroke="#c99a80" stroke-width="1.5"/>
+  <text x="55" y="407" class="body">Pinch its sides between thumb and forefinger,</text>
+  <text x="55" y="433" class="body">triangle face up, flat hole face toward the</text>
+  <text x="55" y="459" class="body">pliers. The rough end points away.</text>
+  <rect x="615" y="115" width="555" height="360" rx="16" fill="#f4f7fa"/>
+  <text x="640" y="153" class="label">2. Grip the base of the metal</text>
+  <rect x="703.8" y="246.4" width="179.8" height="37.2" rx="7.4" fill="url(#wire)" stroke="#526878" stroke-width="2"/>
+  <rect x="865" y="238.3" width="44.6" height="53.3" rx="8.7" fill="url(#gold)" stroke="#7a5418" stroke-width="2"/>
+  <path d="M872.4 238.3 Q891 265 876.2 291.7 M889.8 238.3 Q908.4 265 893.5 291.7" fill="none" stroke="#7a5418" stroke-width="1.6"/>
+  <rect x="909.6" y="252" width="9.9" height="26" fill="url(#gold)" stroke="#7a5418" stroke-width="1.5"/>
+  <rect x="918.3" y="245.8" width="37.2" height="38.4" rx="5" fill="url(#gold)" stroke="#7a5418" stroke-width="2"/>
+  <path d="M925.8 247.6 V282.4" stroke="#a37a2c" stroke-width="1.2"/>
+  <path d="M933.2 247.6 V282.4" stroke="#a37a2c" stroke-width="1.2"/>
+  <path d="M940.6 247.6 V282.4" stroke="#a37a2c" stroke-width="1.2"/>
+  <path d="M948.1 247.6 V282.4" stroke="#a37a2c" stroke-width="1.2"/>
+  <rect x="955.5" y="258.2" width="37.2" height="13.6" fill="url(#gold)" stroke="#7a5418" stroke-width="1.5"/>
+  <path d="M989 249.5 H1047.9 Q1063.4 249.5 1063.4 265 Q1063.4 280.5 1047.9 280.5 H989 Z" fill="url(#gold)" stroke="#7a5418" stroke-width="2"/>
+  <rect x="1010.7" y="259.4" width="31" height="11.2" fill="#8a6420" opacity="0.55"/>
+  <path d="M992.1 280.5 L1010.7 291" stroke="#7a5418" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="909.8,237.4 841.7,218.7 798.9,235.8 702.7,202.1 700.5,217.9 797.5,245.7 840.8,225.6 909.8,237.4" fill="url(#steel)" stroke="#2b333a" stroke-width="1.5"/>
+  <polygon points="902,292.6 831.5,291.8 795,263.6 693.2,269.4 695.5,253.6 796.4,253.7 832.4,284.9 902,292.6" fill="url(#steel)" stroke="#2b333a" stroke-width="1.5"/>
+  <circle cx="797" cy="249.7" r="7" fill="#5e6a73" stroke="#2b333a" stroke-width="1.5"/>
+  <text x="640" y="407" class="body">Needle-nose pliers on the crimp at the base of</text>
+  <text x="640" y="433" class="body">the metal, contact roughly parallel to the jaws,</text>
+  <text x="640" y="459" class="body">spring box pointing forward.</text>
+  <rect x="30" y="495" width="555" height="360" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="533" class="label">3. Push it most of the way in</text>
+  <ellipse cx="335.5" cy="595.7" rx="46" ry="28.5" transform="rotate(-147.4 335.5 595.7)" fill="#ecbd9e" stroke="#a8765a" stroke-width="2"/>
+  <polygon points="451.5,625.3 441.5,629.2 441.5,584.6 451.5,580.7" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="483.9,645.7 473.6,649.7 473.6,605.1 483.9,601.1" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="511.7,674.2 496.9,680 496.9,635.3 511.7,629.5" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="496.9,680 490,675.6 490,631 496.9,635.3" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="490,675.6 468.1,684.2 468.1,639.5 490,631" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="479.7,691.6 447.3,704.3 447.3,659.6 479.7,647" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="367,723.7 292.7,676.1 292.7,631.5 367,679" fill="#e6dcc4" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="447.3,704.3 421.3,702.4 421.3,657.8 447.3,659.6" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="421.3,702.4 367,723.7 367,679 421.3,657.8" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="292.7,631.5 347.1,610.3 349.6,597.2 381.1,584.9 392.9,592.4 440.6,573.8 451.5,580.7 441.5,584.6 461.7,597.5 472,593.5 483.9,601.1 473.6,605.1 511.7,629.5 496.9,635.3 490,631 468.1,639.5 479.7,647 447.3,659.6 421.3,657.8 367,679" fill="#f3eedf" stroke="#6b5a3a" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="302.5,654.1 302.8,651.4 303.6,649.2 304.9,647.7 306.5,647 308.4,647.1 310.5,648.1 315.6,651.3 317.6,653 319.5,655.3 321.2,658.2 322.4,661.3 323.2,664.5 323.5,667.5 323.5,676.3 323.2,679 322.4,681.2 321.2,682.7 319.5,683.4 317.6,683.3 315.6,682.4 310.5,679.1 308.4,677.4 306.5,675.1 304.9,672.3 303.6,669.2 302.8,666 302.5,662.9" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="306.7,660.6 306.9,658.9 307.4,657.6 308.1,656.7 309.1,656.3 310.2,656.4 311.5,656.9 314.5,658.9 315.8,659.9 316.9,661.3 317.9,663 318.7,664.9 319.1,666.8 319.3,668.6 319.3,673.9 319.1,675.5 318.7,676.8 317.9,677.7 316.9,678.1 315.8,678.1 314.5,677.5 311.5,675.6 310.2,674.5 309.1,673.1 308.1,671.4 307.4,669.6 306.9,667.7 306.7,665.8" fill="#16120c"/>
+  <polygon points="336.5,675.9 336.8,673.2 337.6,671 338.8,669.5 340.5,668.8 342.4,668.9 344.4,669.8 349.5,673.1 351.6,674.8 353.5,677.1 355.1,679.9 356.4,683 357.2,686.2 357.5,689.3 357.5,698.1 357.2,700.8 356.4,703 355.1,704.5 353.5,705.2 351.6,705.1 349.5,704.1 344.4,700.9 342.4,699.2 340.5,696.8 338.8,694 337.6,690.9 336.8,687.7 336.5,684.6" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="340.7,682.3 340.9,680.7 341.3,679.4 342.1,678.5 343.1,678 344.2,678.1 345.5,678.7 348.5,680.6 349.8,681.6 350.9,683 351.9,684.7 352.6,686.6 353.1,688.5 353.3,690.4 353.3,695.6 353.1,697.2 352.6,698.6 351.9,699.5 350.9,699.9 349.8,699.8 348.5,699.3 345.5,697.3 344.2,696.3 343.1,694.9 342.1,693.2 341.3,691.3 340.9,689.4 340.7,687.6" fill="#16120c"/>
+  <polygon points="322.2,633.6 336.4,642.7 347.4,631.1" fill="none" stroke="#193247" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="447.2,618.3 465.4,611.3 482.4,622.1 464.2,629.2" fill="none" stroke="#193247" stroke-width="2"/>
+  <text x="464.8" y="625.8" text-anchor="middle" style="font-size:15.6px;font-weight:bold">2</text>
+  <path d="M146.3 730.4 L287.6 675.1" fill="none" stroke="#526878" stroke-width="31.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M146.3 730.4 L287.6 675.1" fill="none" stroke="#ffffff" stroke-width="27.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M280.4 678 L313 665.2" stroke="#7a5418" stroke-width="31.5" stroke-linecap="butt"/>
+  <path d="M280.4 678 L313 665.2" stroke="#ddb04f" stroke-width="28.5" stroke-linecap="butt"/>
+  <polygon points="293.2,652 224.7,669.1 192.8,697.2 134.3,698.5 140.1,713.5 196.4,706.5 227.3,675.6 293.2,652" fill="url(#steel)" stroke="#2b333a" stroke-width="1.5"/>
+  <polygon points="307.4,688.4 245.5,722.2 203,723.2 159,761.9 153.2,747 199.3,713.9 243,715.7 307.4,688.4" fill="url(#steel)" stroke="#2b333a" stroke-width="1.5"/>
+  <circle cx="197.9" cy="710.2" r="7" fill="#5e6a73" stroke="#2b333a" stroke-width="1.5"/>
+  <ellipse cx="491.3" cy="695.4" rx="46" ry="28.5" transform="rotate(32.6 491.3 695.4)" fill="#ecbd9e" stroke="#a8765a" stroke-width="2"/><ellipse cx="481.6" cy="683.6" rx="19.3" ry="12" transform="rotate(32.6 491.3 695.4)" fill="#f7e1d5" stroke="#c99a80" stroke-width="1.5"/>
+  <text x="55" y="787" class="body">Line it up with the LEFT hole (cavity 1) and push</text>
+  <text x="55" y="813" class="body">until most of the metal is inside.</text>
+  <rect x="615" y="495" width="555" height="360" rx="16" fill="#e2f1f2"/>
+  <text x="640" y="533" class="label">4. Re-grip on the wire, seat it gently</text>
+  <ellipse cx="920.5" cy="595.7" rx="46" ry="28.5" transform="rotate(-147.4 920.5 595.7)" fill="#ecbd9e" stroke="#a8765a" stroke-width="2"/>
+  <polygon points="1036.5,625.3 1026.5,629.2 1026.5,584.6 1036.5,580.7" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1068.9,645.7 1058.6,649.7 1058.6,605.1 1068.9,601.1" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1096.7,674.2 1081.9,680 1081.9,635.3 1096.7,629.5" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1081.9,680 1075,675.6 1075,631 1081.9,635.3" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1075,675.6 1053.1,684.2 1053.1,639.5 1075,631" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1064.7,691.6 1032.3,704.3 1032.3,659.6 1064.7,647" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="952,723.7 877.7,676.1 877.7,631.5 952,679" fill="#e6dcc4" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1032.3,704.3 1006.3,702.4 1006.3,657.8 1032.3,659.6" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1006.3,702.4 952,723.7 952,679 1006.3,657.8" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="877.7,631.5 932.1,610.3 934.6,597.2 966.1,584.9 977.9,592.4 1025.6,573.8 1036.5,580.7 1026.5,584.6 1046.7,597.5 1057,593.5 1068.9,601.1 1058.6,605.1 1096.7,629.5 1081.9,635.3 1075,631 1053.1,639.5 1064.7,647 1032.3,659.6 1006.3,657.8 952,679" fill="#f3eedf" stroke="#6b5a3a" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="887.5,654.1 887.8,651.4 888.6,649.2 889.9,647.7 891.5,647 893.4,647.1 895.5,648.1 900.6,651.3 902.6,653 904.5,655.3 906.2,658.2 907.4,661.3 908.2,664.5 908.5,667.5 908.5,676.3 908.2,679 907.4,681.2 906.2,682.7 904.5,683.4 902.6,683.3 900.6,682.4 895.5,679.1 893.4,677.4 891.5,675.1 889.9,672.3 888.6,669.2 887.8,666 887.5,662.9" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="891.7,660.6 891.9,658.9 892.4,657.6 893.1,656.7 894.1,656.3 895.2,656.4 896.5,656.9 899.5,658.9 900.8,659.9 901.9,661.3 902.9,663 903.7,664.9 904.1,666.8 904.3,668.6 904.3,673.9 904.1,675.5 903.7,676.8 902.9,677.7 901.9,678.1 900.8,678.1 899.5,677.5 896.5,675.6 895.2,674.5 894.1,673.1 893.1,671.4 892.4,669.6 891.9,667.7 891.7,665.8" fill="#16120c"/>
+  <polygon points="921.5,675.9 921.8,673.2 922.6,671 923.8,669.5 925.5,668.8 927.4,668.9 929.4,669.8 934.5,673.1 936.6,674.8 938.5,677.1 940.1,679.9 941.4,683 942.2,686.2 942.5,689.3 942.5,698.1 942.2,700.8 941.4,703 940.1,704.5 938.5,705.2 936.6,705.1 934.5,704.1 929.4,700.9 927.4,699.2 925.5,696.8 923.8,694 922.6,690.9 921.8,687.7 921.5,684.6" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="925.7,682.3 925.9,680.7 926.3,679.4 927.1,678.5 928.1,678 929.2,678.1 930.5,678.7 933.5,680.6 934.8,681.6 935.9,683 936.9,684.7 937.6,686.6 938.1,688.5 938.3,690.4 938.3,695.6 938.1,697.2 937.6,698.6 936.9,699.5 935.9,699.9 934.8,699.8 933.5,699.3 930.5,697.3 929.2,696.3 928.1,694.9 927.1,693.2 926.3,691.3 925.9,689.4 925.7,687.6" fill="#16120c"/>
+  <polygon points="907.2,633.6 921.4,642.7 932.4,631.1" fill="none" stroke="#193247" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="1032.2,618.3 1050.4,611.3 1067.4,622.1 1049.2,629.2" fill="none" stroke="#193247" stroke-width="2"/>
+  <text x="1049.8" y="625.8" text-anchor="middle" style="font-size:15.6px;font-weight:bold">2</text>
+  <path d="M731.3 730.4 L905.3 662.4" fill="none" stroke="#526878" stroke-width="31.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M731.3 730.4 L905.3 662.4" fill="none" stroke="#ffffff" stroke-width="27.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="860.2,664.7 791.7,681.8 757.8,705 699.3,706.3 705.1,721.2 761.5,714.3 794.3,688.3 860.2,664.7" fill="url(#steel)" stroke="#2b333a" stroke-width="1.5"/>
+  <polygon points="870.6,691.2 808.6,725.1 768,731 724.1,769.7 718.2,754.8 764.4,721.7 806.1,718.6 870.6,691.2" fill="url(#steel)" stroke="#2b333a" stroke-width="1.5"/>
+  <circle cx="762.9" cy="718" r="7" fill="#5e6a73" stroke="#2b333a" stroke-width="1.5"/>
+  <ellipse cx="1076.3" cy="695.4" rx="46" ry="28.5" transform="rotate(32.6 1076.3 695.4)" fill="#ecbd9e" stroke="#a8765a" stroke-width="2"/><ellipse cx="1066.6" cy="683.6" rx="19.3" ry="12" transform="rotate(32.6 1076.3 695.4)" fill="#f7e1d5" stroke="#c99a80" stroke-width="1.5"/>
+  <path d="M774.2 651.7 L824.9 631.9" stroke="#007f91" stroke-width="5" marker-end="url(#arrow)"/>
+  <text x="640" y="787" class="body">Move the pliers back onto the wire and push</text>
+  <text x="640" y="813" class="body">gently until it stops flush. Binds? Pull back,</text>
+  <text x="640" y="839" class="warn">roll it half a turn, retry. Never force it.</text>
+  <rect x="30" y="875" width="555" height="360" rx="16" fill="#f4f7fa"/>
+  <text x="55" y="913" class="label">5. Other end of the SAME jumper</text>
+  <polygon points="495.6,970.1 487,973.5 487,934.7 495.6,931.3" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="523.8,987.8 514.9,991.3 514.9,952.5 523.8,949" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="548,1012.5 535.1,1017.6 535.1,978.8 548,973.7" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="535.1,1017.6 529.1,1013.8 529.1,975 535.1,978.8" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="529.1,1013.8 510,1021.2 510,982.4 529.1,975" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="520.2,1027.7 492,1038.7 492,999.9 520.2,988.9" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="422.1,1055.6 357.6,1014.3 357.6,975.5 422.1,1016.8" fill="#e6dcc4" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="492,1038.7 469.4,1037.1 469.4,998.3 492,999.9" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="469.4,1037.1 422.1,1055.6 422.1,1016.8 469.4,998.3" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="357.6,975.5 404.9,957 407.1,945.6 434.4,934.9 444.7,941.4 486.2,925.2 495.6,931.3 487,934.7 504.5,945.9 513.4,942.4 523.8,949 514.9,952.5 548,973.7 535.1,978.8 529.1,975 510,982.4 520.2,988.9 492,999.9 469.4,998.3 422.1,1016.8" fill="#f3eedf" stroke="#6b5a3a" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="366.1,995.1 366.3,992.8 367,990.9 368.1,989.6 369.6,988.9 371.2,989 373,989.8 377.4,992.7 379.2,994.1 380.9,996.2 382.3,998.6 383.4,1001.3 384.1,1004.1 384.3,1006.8 384.3,1014.4 384.1,1016.8 383.4,1018.7 382.3,1020 380.9,1020.6 379.2,1020.5 377.4,1019.7 373,1016.9 371.2,1015.4 369.6,1013.3 368.1,1010.9 367,1008.2 366.3,1005.4 366.1,1002.7" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="369.8,1000.7 369.9,999.3 370.3,998.2 371,997.4 371.8,997 372.8,997 373.9,997.5 376.6,999.2 377.6,1000.1 378.6,1001.3 379.5,1002.8 380.1,1004.4 380.6,1006.1 380.7,1007.7 380.7,1012.3 380.6,1013.7 380.1,1014.8 379.5,1015.6 378.6,1016 377.6,1015.9 376.6,1015.4 373.9,1013.7 372.8,1012.9 371.8,1011.6 371,1010.2 370.3,1008.5 369.9,1006.9 369.8,1005.3" fill="#16120c"/>
+  <polygon points="395.7,1014 395.9,1011.7 396.6,1009.8 397.7,1008.5 399.1,1007.8 400.8,1007.9 402.6,1008.7 407,1011.6 408.8,1013.1 410.4,1015.1 411.9,1017.5 413,1020.3 413.7,1023 413.9,1025.7 413.9,1033.3 413.7,1035.7 413,1037.6 411.9,1038.9 410.4,1039.5 408.8,1039.4 407,1038.6 402.6,1035.8 400.8,1034.3 399.1,1032.3 397.7,1029.8 396.6,1027.1 395.9,1024.3 395.7,1021.7" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="399.3,1019.6 399.4,1018.2 399.9,1017.1 400.5,1016.3 401.4,1015.9 402.4,1016 403.4,1016.4 406.1,1018.1 407.2,1019 408.2,1020.3 409,1021.7 409.7,1023.4 410.1,1025 410.2,1026.6 410.2,1031.2 410.1,1032.6 409.7,1033.7 409,1034.5 408.2,1034.9 407.2,1034.8 406.1,1034.4 403.4,1032.7 402.4,1031.8 401.4,1030.6 400.5,1029.1 399.9,1027.5 399.4,1025.8 399.3,1024.2" fill="#16120c"/>
+  <polygon points="383.3,977.3 395.6,985.1 405.2,975" fill="none" stroke="#193247" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="491.9,964 507.7,957.8 522.5,967.3 506.7,973.4" fill="none" stroke="#193247" stroke-width="2"/>
+  <text x="507.2" y="970.4" text-anchor="middle" style="font-size:13.6px;font-weight:bold">2</text>
+  <path d="M365.8 1008.5 C135.8 1003.5 75.8 1125 215.8 1125" fill="none" stroke="#526878" stroke-width="28" stroke-linecap="round"/><path d="M215.8 1125 C325.8 1125 325.3 1097.4 395.3 1027.4" fill="none" stroke="#526878" stroke-width="28" stroke-linecap="round"/><path d="M365.8 1008.5 C135.8 1003.5 75.8 1125 215.8 1125" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="butt"/><path d="M215.8 1125 C325.8 1125 325.3 1097.4 395.3 1027.4" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="butt"/>
+  <text x="55" y="1167" class="body">Steps 2-4 again, into the RIGHT hole (cavity 2).</text>
+  <text x="55" y="1193" class="body">Hold the housing and tug each wire gently:</text>
+  <text x="55" y="1219" class="body">neither may move.</text>
+  <rect x="615" y="875" width="555" height="360" rx="16" fill="#f4f7fa"/>
+  <text x="640" y="913" class="label">6. Colour cavity 1's half red, snip</text>
+  <polygon points="1080.6,970.1 1072,973.5 1072,934.7 1080.6,931.3" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1108.8,987.8 1099.9,991.3 1099.9,952.5 1108.8,949" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1133,1012.5 1120.1,1017.6 1120.1,978.8 1133,973.7" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1120.1,1017.6 1114.1,1013.8 1114.1,975 1120.1,978.8" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1114.1,1013.8 1095,1021.2 1095,982.4 1114.1,975" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1105.2,1027.7 1077,1038.7 1077,999.9 1105.2,988.9" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1007.1,1055.6 942.6,1014.3 942.6,975.5 1007.1,1016.8" fill="#e6dcc4" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1077,1038.7 1054.4,1037.1 1054.4,998.3 1077,999.9" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="1054.4,1037.1 1007.1,1055.6 1007.1,1016.8 1054.4,998.3" fill="#d9cfb6" stroke="#6b5a3a" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="942.6,975.5 989.9,957 992.1,945.6 1019.4,934.9 1029.7,941.4 1071.2,925.2 1080.6,931.3 1072,934.7 1089.5,945.9 1098.4,942.4 1108.8,949 1099.9,952.5 1133,973.7 1120.1,978.8 1114.1,975 1095,982.4 1105.2,988.9 1077,999.9 1054.4,998.3 1007.1,1016.8" fill="#f3eedf" stroke="#6b5a3a" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="951.1,995.1 951.3,992.8 952,990.9 953.1,989.6 954.6,988.9 956.2,989 958,989.8 962.4,992.7 964.2,994.1 965.9,996.2 967.3,998.6 968.4,1001.3 969.1,1004.1 969.3,1006.8 969.3,1014.4 969.1,1016.8 968.4,1018.7 967.3,1020 965.9,1020.6 964.2,1020.5 962.4,1019.7 958,1016.9 956.2,1015.4 954.6,1013.3 953.1,1010.9 952,1008.2 951.3,1005.4 951.1,1002.7" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="954.8,1000.7 954.9,999.3 955.3,998.2 956,997.4 956.8,997 957.8,997 958.9,997.5 961.6,999.2 962.6,1000.1 963.6,1001.3 964.5,1002.8 965.1,1004.4 965.6,1006.1 965.7,1007.7 965.7,1012.3 965.6,1013.7 965.1,1014.8 964.5,1015.6 963.6,1016 962.6,1015.9 961.6,1015.4 958.9,1013.7 957.8,1012.9 956.8,1011.6 956,1010.2 955.3,1008.5 954.9,1006.9 954.8,1005.3" fill="#16120c"/>
+  <polygon points="980.7,1014 980.9,1011.7 981.6,1009.8 982.7,1008.5 984.1,1007.8 985.8,1007.9 987.6,1008.7 992,1011.6 993.8,1013.1 995.4,1015.1 996.9,1017.5 998,1020.3 998.7,1023 998.9,1025.7 998.9,1033.3 998.7,1035.7 998,1037.6 996.9,1038.9 995.4,1039.5 993.8,1039.4 992,1038.6 987.6,1035.8 985.8,1034.3 984.1,1032.3 982.7,1029.8 981.6,1027.1 980.9,1024.3 980.7,1021.7" fill="#3b3226" stroke="#6b5a3a" stroke-width="1.5"/>
+  <polygon points="984.3,1019.6 984.4,1018.2 984.9,1017.1 985.5,1016.3 986.4,1015.9 987.4,1016 988.4,1016.4 991.1,1018.1 992.2,1019 993.2,1020.3 994,1021.7 994.7,1023.4 995.1,1025 995.2,1026.6 995.2,1031.2 995.1,1032.6 994.7,1033.7 994,1034.5 993.2,1034.9 992.2,1034.8 991.1,1034.4 988.4,1032.7 987.4,1031.8 986.4,1030.6 985.5,1029.1 984.9,1027.5 984.4,1025.8 984.3,1024.2" fill="#16120c"/>
+  <polygon points="968.3,977.3 980.6,985.1 990.2,975" fill="none" stroke="#193247" stroke-width="2.5" stroke-linejoin="round"/>
+  <polygon points="1076.9,964 1092.7,957.8 1107.5,967.3 1091.7,973.4" fill="none" stroke="#193247" stroke-width="2"/>
+  <text x="1092.2" y="970.4" text-anchor="middle" style="font-size:13.6px;font-weight:bold">2</text>
+  <path d="M950.8 1008.5 C720.8 1003.5 660.8 1125 800.8 1125" fill="none" stroke="#526878" stroke-width="28" stroke-linecap="round"/><path d="M800.8 1125 C910.8 1125 910.3 1097.4 980.3 1027.4" fill="none" stroke="#526878" stroke-width="28" stroke-linecap="round"/><path d="M950.8 1008.5 C720.8 1003.5 660.8 1125 800.8 1125" fill="none" stroke="#d63a2f" stroke-width="24" stroke-linecap="butt"/><path d="M800.8 1125 C910.8 1125 910.3 1097.4 980.3 1027.4" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="butt"/>
+  <path d="M800.8 1095 V1155" stroke="#c14d2b" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="814.8" y="1105" class="small">snip</text>
+  <text x="640" y="1167" class="body">Marker from the LEFT (triangle) hole to the</text>
+  <text x="640" y="1193" class="body">middle of the loop; cut there. Two ~6-inch</text>
+  <text x="640" y="1219" class="body">leads: red = VO+, plain = VO-.</text>
+  <rect x="30" y="1255" width="1140" height="80" rx="16" fill="#fff2df"/>
+  <text x="55" y="1289" class="label">Got them the other way round? Don't dig a contact out.</text>
+  <text x="55" y="1319" class="note">Colour whichever lead is in the triangle (left) hole red instead. A single speaker works either way round.</text>
 </svg>
