@@ -223,6 +223,40 @@ acceptance. Do not invent a combined guaranteed rule or claim IPC-4761
 Type VII certification not stated by the vendor. Similarly, prefer the
 current detailed price table to conflicting older FAQ fees.
 
+## After ordering: review the supplier's engineering changes
+
+JLCPCB edits the job after the order, so check what will actually be built.
+This took minutes for the November 2026 six-layer order (PCB `2f738ccb`).
+
+1. **Bare board.** On the order's "Production file" link, download JLC's
+   processed manufacturing package (`ok/` layers, `YG/` job record and our
+   original upload).
+   - Hash the embedded upload against the pinned export manifest.
+   - Diff each processed layer against our Gerbers, raster-subtracted over
+     the board area, then inspect each changed region.
+   - Expected, harmless edits: unused inner pads removed, silkscreen
+     clipped off pads, solder mask pulled back from the edge and opened
+     around NPTH holes, and small copper fillets.
+   - The `YG/*.json` job record shows the actual layers, finish, copper
+     weights and via treatment, plus the added rails, fiducials and
+     panel break lines.
+2. **Assembly.** On the PCBA "DFM Analysis" page, tick **Show revised
+   items** and save its `bom_merge.json` response. For every part it pairs
+   our CPL position (`oc`) with the engineered position (`ec`).
+   - Remove the common panel offset, then explain every remaining position
+     or rotation change.
+   - Rotation-only changes usually match JLC's library orientation and still
+     need a polarity check.
+   - A position shift may just be their body-centre convention: J1 moved
+     1.854 mm, exactly its pad-extent centre.
+3. **Panel break edges.** Note which board edges JLC V-scored or tabbed.
+   Those edges will be rough after breakout and may need dressing before
+   mechanical fit.
+
+A blank DFM-results column means no issue was flagged, not that the
+design was qualified. Not verifiable from these files: whether
+resin-plugged vias are also capped. Check via-in-pad lands on arrival.
+
 ## Official file-format sources
 
 Read on September 13, 2026; vendor templates may change before final export.

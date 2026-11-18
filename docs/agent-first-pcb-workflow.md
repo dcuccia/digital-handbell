@@ -287,6 +287,25 @@ Routing completion is not acceptance. Before fabrication, check:
 - the mechanical re-bind;
 - fab outputs and a fresh quote.
 
+Manufacturing rules learned from the first order (JLCPCB, November 2026):
+
+- **Panel attachment points become break edges.** A small round board is
+  held in a supplier frame by its outermost straight features, which are
+  then V-scored or tabbed. Here both 4.6 mm equator ears were V-scored at
+  the 44.5 mm ear-to-ear width. Expect a rough, bevelled break on those
+  edges. Do not put fit-critical datums there unless you supply your own
+  panel or request tab routing. Keep copper at least 0.5 mm from any
+  possible score line (the supplier minimum is 0.4 mm).
+- **Footprint origin should be the pad-extent centre.** Assemblers place
+  by body or pad centre. A footprint whose origin is a pin row, like the
+  local J1, gets a CPL "correction" that someone must re-verify.
+- **Order via-in-pad treatment explicitly.** "Resin plugged" in a job
+  record does not confirm copper capping. Name filled-and-capped (POFV)
+  in the order and inspect those lands on arrival.
+
+After ordering, use the supplier-change review in the
+[quotation plan](pcba-quotation-plan.md#after-ordering-review-the-suppliers-engineering-changes).
+
 Fabrication and power-on need separate owner approval.
 Use the [zero-open milestone review](pcb-review-2026-11.md) for the current
 board's specific outstanding evidence; this generic checklist is not its
