@@ -1,0 +1,42 @@
+{
+  "v": 0,
+  "name": "handbell",
+  "bells": [
+    {"id": "C5", "sound": "sounds/C5.mp3"},
+    {"id": "D5", "sound": "sounds/D5.mp3"},
+    {"id": "E5", "sound": "sounds/E5.mp3"},
+    {"id": "F5", "sound": "sounds/F5.mp3"},
+    {"id": "G5", "sound": "sounds/G5.mp3"},
+    {"id": "A5", "sound": "sounds/A5.mp3"},
+    {"id": "B5", "sound": "sounds/B5.mp3"},
+    {"id": "C6", "sound": "sounds/C6.mp3"}
+  ],
+  "select": "cycle",
+  "mode": "play",
+  "ring": {"sens": "normal"},
+  "detector": {},
+  "controls": {
+    "timing": {"double_ms": 300, "long_ms": 800, "very_long_ms": 5000},
+    "key_velocity": 0.6,
+    "play": {
+      "ready": {"click": "next", "double": "previous", "long": "lock", "very_long": "maintenance"},
+      "sounding": {"down": "damp", "very_long": "maintenance"}
+    },
+    "accessible": {
+      "any": {"down": "ring", "very_long": "maintenance"}
+    },
+    "maintenance": {
+      "any": {"click": "exit", "double": "toggle_accessible", "very_long": "exit"}
+    }
+  },
+  "audio": {
+    "sample_rate": 22050,
+    "voices": 2,
+    "retrigger": "overlap",
+    "damp_ms": 60,
+    "level": {"min": 0.15, "max": 0.5, "curve": 0.7},
+    "preview_level": 0.2
+  },
+  "power": {"keep_awake_s": 20, "settle_ms": 50, "wake_on_motion": true},
+  "debug": {"events": true, "status_s": 5, "raw": false}
+}

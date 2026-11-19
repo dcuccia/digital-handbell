@@ -1,0 +1,41 @@
+{
+  "_comment": "Pinned toolchain. scripts/_common.py downloads each artifact once into firmware/.cache and refuses a SHA-256 mismatch. Update all fields together.",
+  "circuitpython": {
+    "version": "10.3.2",
+    "uf2": {
+      "raspberry_pi_pico": {
+        "url": "https://downloads.circuitpython.org/bin/raspberry_pi_pico/en_US/adafruit-circuitpython-raspberry_pi_pico-en_US-10.3.2.uf2",
+        "sha256": "e62df4b66a4f2f68c5920dbca151e1a2caccb66bd1de7545e8d3fe19cfc7b913"
+      }
+    }
+  },
+  "mpy_cross": {
+    "windows-amd64": {
+      "url": "https://adafruit-circuit-python.s3.amazonaws.com/bin/mpy-cross/windows/mpy-cross-windows-10.3.2.static.exe",
+      "sha256": "4941cd0d406dc54d90429e638bdd871800f1df7e3d450ae65d3dd7f47ff6bbcc"
+    },
+    "linux-amd64": {
+      "url": "https://adafruit-circuit-python.s3.amazonaws.com/bin/mpy-cross/linux-amd64/mpy-cross-linux-amd64-10.3.2.static",
+      "sha256": "3d8ac07725cf01b6b85922ecbe4a94c97b516661b12c1aad360e29efb0e379e2"
+    },
+    "linux-aarch64": {
+      "url": "https://adafruit-circuit-python.s3.amazonaws.com/bin/mpy-cross/linux-aarch64/mpy-cross-linux-aarch64-10.3.2.static-aarch64",
+      "sha256": "572de58170b5972089122eb7909157e024fe3bac6336fd9aaa3e5cfae4a10b76"
+    },
+    "macos-arm64": {
+      "url": "https://adafruit-circuit-python.s3.amazonaws.com/bin/mpy-cross/macos/mpy-cross-macos-10.3.2-arm64",
+      "sha256": "5b98612abccc50c127f858a25af8278027ef54bf61b39a904c3098f1dd4e1f5a"
+    }
+  },
+  "bundle": {
+    "tag": "20261119",
+    "url": "https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/download/20261119/adafruit-circuitpython-bundle-10.x-mpy-20261119.zip",
+    "sha256": "4472ffcf51d7979c378b384411e8011df9d259a170b3ee172bf7e2525466b2c7",
+    "libraries": ["adafruit_lsm6ds", "adafruit_register", "adafruit_bus_device"]
+  },
+  "circuitpy": {
+    "capacity_bytes": 1048576,
+    "reserve_bytes": 65536,
+    "cluster_bytes": 512
+  }
+}

@@ -16,6 +16,7 @@ the time; their words "current" or "next" do not override newer review records.
 | [Hardware guide](../hardware/README.md) | Native KiCad, libraries, reference designs and revision selection |
 | [Mechanical guide](../mechanical/README.md) | FreeCAD/STEP/STL inventory and the six-layer integration gap |
 | [Order package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md) | Source-bound BOM/CPL, export recipe and order status |
+| [Firmware](../firmware/README.md) and [firmware bring-up](firmware/bring-up.md) | CircuitPython instrument firmware, build/test/deploy scripts, first power-up steps |
 | [Quote record](../hardware/handbell/quote-prep/2026-11-09-six-layer/pcba-quote-2026-11-10.md) | November 10 prices, 10-PCB/8-assembly scenario and live part selections |
 | [Incoming checks](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md) | Sourcing, placement and process items to confirm on arrival |
 
@@ -25,7 +26,7 @@ the time; their words "current" or "next" do not override newer review records.
 |---|---|
 | Goals and requirements | [Project brief](project-brief.md), [epic specifications](epics.md), [decision log](decisions.md) |
 | Circuit architecture | [Architecture](architecture.md), [T8 electrical revision](t8-electrical-revision.md) |
-| Sound and motion | [Firmware/audio](firmware-and-audio.md), [motion sensing](motion-sensing.md) |
+| Sound and motion | [Firmware docs](firmware/README.md): [bring-up](firmware/bring-up.md), [architecture](firmware/architecture.md), [audio assets](firmware/audio-assets.md), [gesture tuning](firmware/gesture-tuning.md), [requirements](firmware/plan-and-experiments.md); [motion sensing](motion-sensing.md) |
 | Measurements and mechanics | [Printed-bell design](printed-bell-revision.md), [material/handle notes](printed-bell-material-and-handle.md), [measured inputs](measurements/2026-09-11-shell-speaker-inputs.json) |
 | Review and testing | [Validation plan](validation-plan.md), [USB qualification](usb-connector-qualification.md) |
 | Source reuse and tools | [Reference catalog](reference-designs.md), [KiCad setup](kicad-setup.md), [tool guide](../tools/README.md), [attribution](../ATTRIBUTION.md) |

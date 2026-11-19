@@ -31,7 +31,7 @@ those boards into a reviewed, working instrument.
 | Native KiCad schematic, routed PCB and local libraries | Electrical/DFM review and disposition of remaining rule findings |
 | FreeCAD enclosure/cartridge studies and inert fit-print files | Updated assembly for the six-layer board, connector/harness clearance and physical fit |
 | Prototype PCBA order placed with JLCPCB (quoted as 10 PCBs, 8 assembled) | Incoming inspection: confirm substitutions, via fill, placements and polarity on arrival, then staged bring-up |
-| Firmware, audio and gesture requirements | Implement and demonstrate a sounding instrument; measure latency, noise and runtime |
+| Firmware: CircuitPython instrument, build/test/package scripts and bring-up steps, tested on a computer ([firmware](firmware/README.md)) | Run it on the prototype boards; measure latency, false rings, noise, levels and runtime |
 
 This is **an engineering prototype, not a build-ready kit**. Ordering
 first articles is how we find out what works; it is not a fabrication
@@ -49,7 +49,7 @@ and safety review remain open. No child-use qualification is claimed.
 
 | Subsystem | Current direction |
 |---|---|
-| Processing | RP2040 with 2 MB QSPI flash; CircuitPython is the planned firmware path |
+| Processing | RP2040 with 2 MB QSPI flash running [CircuitPython firmware](firmware/README.md) (not yet run on the custom board) |
 | Motion | LSM6DSOX six-axis accelerometer/gyroscope for ringing and damping experiments |
 | Sound | MAX98357A I2S amplifier, TPS61023 boosted audio rail and a 40 mm speaker |
 | Power and service | Rechargeable 1S Li-ion design, cell protection, USB-C charging/programming and debug access |
@@ -85,7 +85,8 @@ connector are simplified project proxies. This is not a fit check.*
 | Open the enclosure or find STEP/STL files | [Mechanical asset guide](mechanical/README.md) |
 | Understand what is next | [Roadmap](docs/roadmap.md) |
 | Help with a specific part | [Contributing](CONTRIBUTING.md) |
-| Understand the circuits and intended behavior | [Architecture](docs/architecture.md) and [firmware/audio plan](docs/firmware-and-audio.md) |
+| Understand the circuits and intended behavior | [Architecture](docs/architecture.md) and [firmware architecture](docs/firmware/architecture.md) |
+| Build, flash or change the firmware | [Firmware guide](firmware/README.md) and [bring-up steps](docs/firmware/bring-up.md) |
 | Find older experiments or engineering evidence | [Documentation index](docs/README.md) and [hardware revision guide](hardware/handbell/iterations/README.md) |
 
 Keep the whole checkout when opening CAD: some library paths reference

@@ -14,16 +14,17 @@ we could tell whether it works.
 
 | Your interests | A useful first contribution | Workstream |
 |---|---|---|
-| Python / embedded software | A small, reproducible CircuitPython audio or motion experiment; document the board and library versions | [#6 Firmware and gestures](https://github.com/dcuccia/digital-handbell/issues/6), [#13 Sensor initialization](https://github.com/dcuccia/digital-handbell/issues/13) |
+| Python / embedded software | Tune or extend the [firmware](firmware/README.md): replay a gesture trace, add a test, or try it on a Prop-Maker Feather bench setup | [#6 Firmware and gestures](https://github.com/dcuccia/digital-handbell/issues/6), [#13 Sensor initialization](https://github.com/dcuccia/digital-handbell/issues/13) |
 | Music / audio | Define ringing, damping and quiet-idle test cases, or contribute an original/licensed bell sample with provenance | [#3 Bench proof](https://github.com/dcuccia/digital-handbell/issues/3), [#6](https://github.com/dcuccia/digital-handbell/issues/6) |
 | Electronics / PCB review | Review one R1-R3 item against the exact six-layer snapshot, with pin/net references and evidence | [#4 Electrical review](https://github.com/dcuccia/digital-handbell/issues/4), [#7 Layout and DFM](https://github.com/dcuccia/digital-handbell/issues/7) |
 | FreeCAD / printing | Help plan the six-layer assembly update, especially J1's mated connector, wire exit and cartridge clearance | [#5 Mechanical integration](https://github.com/dcuccia/digital-handbell/issues/5) |
 | Testing / tooling | Improve a narrowly scoped checker or design a repeatable bring-up record without modifying accepted board files | [#9 Bring-up](https://github.com/dcuccia/digital-handbell/issues/9), [#14 Tool qualification](https://github.com/dcuccia/digital-handbell/issues/14) |
 | Documentation / teaching | Try the navigation as a newcomer and improve explanations, diagrams or assembly-review checklists | [#11 Open release](https://github.com/dcuccia/digital-handbell/issues/11) |
 
-We have plans for firmware, but no released instrument application yet.
-Discuss the target board and experiment before assuming there is a
-ready-to-run firmware tree. Documentation and review contributions need
+The [firmware](firmware/README.md) is implemented and tested on a computer
+but has not yet run on the custom board. `python firmware/scripts/ci.py` runs
+the same tests, build and packaging as CI; firmware changes should keep it
+passing and add focused tests. Documentation and review contributions need
 neither hardware nor a paid router account.
 
 ## Before changing files

@@ -227,8 +227,8 @@ Shapes and gaps are schematic, not dimensioned part drawings. The six-layer
 board, mated J1 plug and wire route still require mechanical integration.
 Use the actual STL/STEP files for part geometry.*
 
-Board firmware and audio bring-up are tracked in
-[firmware and audio](firmware-and-audio.md) and the
+Board firmware and audio bring-up are in [firmware](../firmware/README.md);
+follow the [firmware bring-up guide](firmware/bring-up.md) and the
 [validation plan](validation-plan.md).
 
 ## Battery and safety gates

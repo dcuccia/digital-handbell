@@ -1,0 +1,43 @@
+# Firmware pipeline. All logic lives in firmware/scripts/*.py; this file only
+# calls them, so `python firmware/scripts/ci.py` reproduces CI locally.
+# Releases: see firmware-release.yml.
+name: firmware
+
+on:
+  push:
+    branches: [main]
+    paths: ["firmware/**", ".github/workflows/firmware.yml"]
+  pull_request:
+    paths: ["firmware/**", ".github/workflows/firmware.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pipeline:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/cache@v4
+        with:
+          path: firmware/.cache
+          key: firmware-toolchain-${{ runner.os }}-${{ hashFiles('firmware/toolchain.json') }}
+      - name: Test, build and package
+        run: python firmware/scripts/ci.py
+      - uses: actions/upload-artifact@v4
+        if: matrix.os == 'ubuntu-latest'
+        with:
+          name: firmware-package
+          path: |
+            firmware/dist/
+            firmware/build/reports/

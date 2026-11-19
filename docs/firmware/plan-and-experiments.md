@@ -1,4 +1,12 @@
-# CircuitPython, gesture, and audio plan
+# Firmware requirements, experiments and open questions
+
+[Firmware guide](../../firmware/README.md) · [Architecture](architecture.md) · [Bring-up](bring-up.md)
+
+**Moved here from `docs/firmware-and-audio.md` in November 2026.** This is
+the requirements and experiment plan the first firmware was written against.
+The implementation is in [`firmware/`](../../firmware/README.md). The open
+questions below (latency, false triggers, levels, quiet idle) still need
+bench evidence; the first firmware does not answer them.
 
 ## Starting stack
 
@@ -8,19 +16,20 @@ custom-board bring-up. The documented starting APIs are
 `adafruit_lis3dh` with `adafruit_bus_device`. `synthio` is a separate synthesis
 experiment, not a commitment to replace recorded samples.
 
-Sources and pinned revisions are in the [catalog](reference-designs.md).
+Sources and pinned revisions are in the [catalog](../reference-designs.md).
 Record the exact CircuitPython build, library bundle, application revision,
 asset hashes, wiring, and board revision for every measurement.
 
 For the explicit chest-stop/rest requirement, add the
-[LSM6DSOX comparison experiment](motion-sensing.md) to the stock LIS3DH setup.
+[LSM6DSOX comparison experiment](../motion-sensing.md) to the stock LIS3DH setup.
 The LSM6DS driver returns gyro values in **radians/second**. Use the actual
 `adafruit_lsm6ds.lsm6dsox.LSM6DSOX` class and Feather bus, not an outdated guide
 constructor or another board's IMU power aliases.
 The separate schematic now uses LSM6DSOX. Before bring-up, address the
-[pinned driver's CTRL9_XL descriptor defect](motion-sensing.md): I3C-disable
+[pinned driver's CTRL9_XL descriptor defect](../motion-sensing.md): I3C-disable
 bit 1 must be set and reserved bit 0 clear, without disturbing other fields.
-No hardware purchase or working firmware is implied by this plan.
+No hardware purchase is implied by this plan. The firmware applies a
+post-initialization CTRL9_XL correction ([architecture](architecture.md#imu-initialization-issue-13)).
 
 ## Experiments before choosing behavior
 
@@ -72,7 +81,7 @@ RP2040 use case is one or a few approximately five-second chimes. Two such
 44.1 kHz/16-bit mono recordings need 882,000 bytes before headers. Keeping
 external flash is necessary for standalone firmware/storage on this RP2040
 design; embedding audio in the firmware does not eliminate that chip.
-The [flash sourcing comparison](flash-sourcing.md) separates stocked
+The [flash sourcing comparison](../flash-sourcing.md) separates stocked
 footprint-change alternatives from near-4x4 options without verified stock.
 
 The inspected CircuitPython revision
@@ -115,10 +124,10 @@ headline power.
 
 ### Approved compact-revision behavior
 
-This scope is now wired in [0.2](electrical-reduction-and-placement.md):
+This scope is now wired in [0.2](../electrical-reduction-and-placement.md):
 GPIO20 **HIGH=mute / LOW=play**, GPIO23 enables switched input and boost,
 SD_MODE selects left audio when unmuted, and the gain jumper remains open/9 dB.
-There is no delivered firmware yet. Preserve the stock GPIO19 `EXTERNAL_BUTTON`
+The first firmware implements this contract ([architecture](architecture.md#audio-power-sequencing)); it is not yet bench-verified. Preserve the stock GPIO19 `EXTERNAL_BUTTON`
 distinction and remove the old servo/NeoPixel roles in the custom board definition.
 
 The owner now requests a 4 ohm mono speaker and electronics capable of the
@@ -126,7 +135,7 @@ The owner now requests a 4 ohm mono speaker and electronics capable of the
 are 2.5 W at 1% THD+N and 3.2 W at 10% THD+N under its specified test conditions.
 The candidate 40 mm Gikfun speaker has conflicting seller power ratings.
 Neither the electronics target nor a software volume limit qualifies that
-speaker. See the [power/fit review](compact-power-and-packaging.md).
+speaker. See the [power/fit review](../compact-power-and-packaging.md).
 
 Use an explicitly selected I2S channel, or verified identical samples in both
 slots. Mono does not eliminate BCLK/LRCLK or their valid timing. Keep 9 dB gain

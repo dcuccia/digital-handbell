@@ -12,6 +12,36 @@
   and qualification limits; never imply that an enclosure render proves fit
   for a newer PCB. Keep private account/backup material out of the repository.
 
+## Firmware (`firmware/`)
+
+- Start from `firmware/README.md` and `docs/firmware/architecture.md`. The
+  RP2040 board runs CircuitPython 10.x from the stock Pico UF2 (same W25Q16JV
+  flash family). Use the pinned Adafruit bundle libraries **unmodified**.
+  Work around a library defect with a narrow, verified post-init correction
+  (see `handbell/hw/lsm6dsox_fix.py`), not by vendoring a patched copy.
+- `handbell/core` stays hardware-free and CircuitPython-compatible: it
+  imports only `math` and core modules, and times are integer microseconds.
+  `tests/test_core_imports.py` enforces this. Adapters belong in
+  `handbell/hw`, boards in `handbell/platforms`. ESP32-S3 support means a
+  profile plus a `Link`, not a fork.
+- Keep vocabulary congruent with Go Go HarmoniYo's HGP (bell ids, gesture
+  names, event fields, detector parameter names and defaults) without a code
+  dependency. Document deliberate deviations where they are made.
+- Build, test, package and publish logic lives in standalone scripts in
+  `firmware/scripts`. CI workflows only call them, and
+  `python firmware/scripts/ci.py` reproduces CI. Pin every download by
+  SHA-256 in `firmware/toolchain.json`.
+- Preserve the hardware safety contract in firmware:
+  - muted and unpowered defaults;
+  - mute, then stop I2S, then POWER off;
+  - never drive I2S into an unpowered amplifier;
+  - conservative default levels.
+
+  Computer tests check ordering. Only bench evidence qualifies latency,
+  levels, noise and power behavior.
+- Sounds need provenance; generated sounds are MIT. Never commit
+  identifying motion recordings (`firmware/traces/local/` is ignored).
+
 ## Bounded engineering work
 
 - **Read docs/agent-first-pcb-workflow.md first** for PCB routing/placement work:
