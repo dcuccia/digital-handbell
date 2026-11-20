@@ -37,7 +37,7 @@ Pin roles come from the ordered netlist (`hardware/handbell`), via
 | GPIO20 | AMP_MUTE | **High = mute**. R20 pulls high when undriven |
 | GPIO23 | POWER | Switched input + boost. R17 pulls low when undriven |
 | GPIO13 | D13 | Status LED |
-| GPIO26-29 | unconnected | **No battery-voltage sense is available to firmware** |
+| GPIO26-29 | unconnected | **No battery-voltage sense on this board** (requested for the next revision, [#17](https://github.com/dcuccia/digital-handbell/issues/17)) |
 
 Flash is a 2 MB W25Q16JVUXIQ, the family the stock Raspberry Pi Pico build
 targets (`EXTERNAL_FLASH_DEVICES = "W25Q16JVxQ"`). The Pico build's
@@ -84,7 +84,7 @@ flowchart TB
   about an hour. Detector arithmetic uses small relative values.
 - **ports** ([`ports.py`](../../firmware/src/handbell/ports.py)) are
   documented duck-typed interfaces: Clock, MotionSource, ButtonSource, Audio,
-  Indicator, Store and Link.
+  Indicator, Store, Link and the optional PowerSense.
 - **hw** adapters assert safe pin states first: audio construction drives
   AMP_MUTE high and POWER low before anything else can fail. Startup or
   runtime errors call `shutdown()` (mute, stop clocks, power off), print the
@@ -133,6 +133,33 @@ unmodified. [`lsm6dsox_fix.py`](../../firmware/src/handbell/hw/lsm6dsox_fix.py)
 does a read-modify-write after construction: it sets bit 1, clears reserved
 bit 0, preserves bits 7..2 and verifies the readback. The startup banner
 prints before/after values, and `bringup.i2c_imu` checks them.
+
+### Battery and power sensing (next revision)
+
+The ordered board has no battery-voltage, USB-presence or charge-status
+inputs. The firmware support is ready ahead of the hardware
+([#17](https://github.com/dcuccia/digital-handbell/issues/17),
+[#18](https://github.com/dcuccia/digital-handbell/issues/18)) and is
+inactive until a profile names the pins:
+
+- **Port:** `PowerSense.read() -> (volts, usb, charging)`, any field may be None.
+- **Adapter:** [`hw/power.py`](../../firmware/src/handbell/hw/power.py)
+  `AnalogPowerSense` reads an `analogio` divider (`vbat_sense` pin times
+  `CAPS["vbat_ratio"]`), an optional VBUS input and an optional MCP73831
+  STAT input (pull-up; low = charging).
+- **Core:** [`core/battery.py`](../../firmware/src/handbell/core/battery.py)
+  `BatteryMonitor` averages readings and classifies `ok`/`low`/`critical`
+  with hysteresis. It gives an approximate Li-ion percentage; this is not a
+  fuel gauge.
+- **Instrument:**
+  - samples every `battery.sample_s`, only between notes so boost load does not sag the reading;
+  - reports `status.battery` {`v`, `pct`, `state`, `usb`, `charging`} (HGP `status.battery`);
+  - switches the idle LED to a double or triple blink;
+  - with `battery.critical_action: "silence"`, stops waking the amplifier while still detecting and reporting rings.
+
+Thresholds are provisional until measured with the selected cell. The
+requested circuit follows the Raspberry Pi Pico convention (VBAT/3 on
+GPIO29, VBUS on GPIO24), so the stock Pico build already names the pins.
 
 ## ESP32-S3 seam
 
@@ -185,5 +212,8 @@ conventions, and noting gravity-inclusive raw rows.
 ## Deliberately out of scope
 
 Wireless pairing, remote bell assignment, OTA updates, telemetry, an S3
-board, battery-level reporting (no sense line), deep sleep and IMU-interrupt
-wake are out of scope. The seams leave room for each one.
+board, deep sleep and IMU-interrupt wake are out of scope. The seams leave
+room for each one. Battery reporting is implemented but waits for the sense
+line requested in [#17](https://github.com/dcuccia/digital-handbell/issues/17).
+Board-level requests are collected per
+[hardware revision requests](../hardware-revision-requests.md).

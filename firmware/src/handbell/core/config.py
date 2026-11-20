@@ -81,6 +81,16 @@ DEFAULTS = {
         "wake_omega": 100.0,
     },
     "imu": {"rate_hz": 416, "gyro_dps": 2000, "accel_g": 16, "fast_read": True},
+    # Used only when the platform has a battery-sense line (not the Nov 2026 board).
+    # Thresholds are provisional until measured with the selected cell under load.
+    "battery": {
+        "low_v": 3.5,
+        "critical_v": 3.3,
+        "hysteresis_v": 0.05,
+        "samples": 8,
+        "sample_s": 2,
+        "critical_action": "silence",
+    },
     "debug": {"events": True, "status_s": 5, "raw": False},
 }
 
@@ -149,6 +159,15 @@ class Config:
         _require(self.imu["rate_hz"] in (104, 208, 416, 833, 1660), "imu.rate_hz must be 104, 208, 416, 833 or 1660")
         _require(self.imu["gyro_dps"] in (125, 250, 500, 1000, 2000), "imu.gyro_dps must be 125..2000")
         _require(self.imu["accel_g"] in (2, 4, 8, 16), "imu.accel_g must be 2, 4, 8 or 16")
+        self.battery = raw["battery"]
+        b = self.battery
+        _number(b, "low_v", 2.5, 4.3)
+        _number(b, "critical_v", 2.5, 4.3)
+        _number(b, "hysteresis_v", 0.0, 0.5)
+        _number(b, "samples", 1, 64)
+        _number(b, "sample_s", 0.1, 600)
+        _require(b["critical_v"] < b["low_v"], "battery.critical_v must be below battery.low_v")
+        _require(b["critical_action"] in ("silence", "warn"), "battery.critical_action must be 'silence' or 'warn'")
         self.debug = raw["debug"]
 
     @staticmethod

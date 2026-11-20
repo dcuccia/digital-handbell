@@ -41,6 +41,9 @@ HDI and an MCU change remain future options, not selected redesigns.
    behavior and runtime in the actual enclosure.
 4. **Decide whether to respin.** Base revisions on measurements and
    documented anomalies, not on a successful render or connectivity count.
+   Requests and fixes are collected in the pinned
+   [tracking issue #19](https://github.com/dcuccia/digital-handbell/issues/19)
+   ([process](hardware-revision-requests.md)).
 
 See [validation](validation-plan.md) and
 [#9: bring-up and integration](https://github.com/dcuccia/digital-handbell/issues/9).

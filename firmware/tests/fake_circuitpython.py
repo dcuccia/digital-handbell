@@ -31,14 +31,20 @@ class DigitalInOut:
     def __init__(self, pin):
         self.pin = pin
         self._value = None
+        self.pull = None
+        self.input_value = True
 
     def switch_to_output(self, value=False):
         self._value = value
         LOG.append("%s=%d" % (self.pin.name, int(value)))
 
+    def switch_to_input(self, pull=None):
+        self.pull = pull
+        self._value = None
+
     @property
     def value(self):
-        return self._value
+        return self.input_value if self._value is None else self._value
 
     @value.setter
     def value(self, v):
@@ -48,6 +54,13 @@ class DigitalInOut:
 
     def deinit(self):
         pass
+
+
+class AnalogIn:
+    def __init__(self, pin):
+        self.pin = pin
+        self.reference_voltage = 3.3
+        self.value = 0
 
 
 class I2SOut:
@@ -231,7 +244,8 @@ def install(monkeypatch):
     pin = types.SimpleNamespace(**{"GPIO%d" % i: Pin("GPIO%d" % i) for i in range(30)})
     nvm = bytearray(256)
     modules = {
-        "digitalio": _module("digitalio", DigitalInOut=DigitalInOut),
+        "digitalio": _module("digitalio", DigitalInOut=DigitalInOut, Pull=types.SimpleNamespace(UP="up", DOWN="down")),
+        "analogio": _module("analogio", AnalogIn=AnalogIn),
         "audiobusio": _module("audiobusio", I2SOut=I2SOut),
         "audiomixer": _module("audiomixer", Mixer=Mixer),
         "audiomp3": _module("audiomp3", MP3Decoder=MP3Decoder),

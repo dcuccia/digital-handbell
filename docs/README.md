@@ -16,7 +16,8 @@ the time; their words "current" or "next" do not override newer review records.
 | [Hardware guide](../hardware/README.md) | Native KiCad, libraries, reference designs and revision selection |
 | [Mechanical guide](../mechanical/README.md) | FreeCAD/STEP/STL inventory and the six-layer integration gap |
 | [Order package](../hardware/handbell/quote-prep/2026-11-09-six-layer/README.md) | Source-bound BOM/CPL, export recipe and order status |
-| [Firmware](../firmware/README.md) and [firmware bring-up](firmware/bring-up.md) | CircuitPython instrument firmware, build/test/deploy scripts, first power-up steps |
+| [Firmware](../firmware/README.md), [getting started](firmware/getting-started.md) and [firmware bring-up](firmware/bring-up.md) | CircuitPython instrument firmware, install without Python, build/test/deploy scripts, first power-up steps |
+| [Hardware revision requests](hardware-revision-requests.md) | How fixes and features for the next PCB are collected ([tracking issue #19](https://github.com/dcuccia/digital-handbell/issues/19)) |
 | [Quote record](../hardware/handbell/quote-prep/2026-11-09-six-layer/pcba-quote-2026-11-10.md) | November 10 prices, 10-PCB/8-assembly scenario and live part selections |
 | [Incoming checks](../hardware/handbell/quote-prep/2026-11-09-six-layer/unresolved-before-ordering.md) | Sourcing, placement and process items to confirm on arrival |
 

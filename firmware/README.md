@@ -14,6 +14,7 @@ E09 electrical gates before powering a board.
 
 | Read | For |
 |---|---|
+| [Getting started](../docs/firmware/getting-started.md) | Install a release zip on a board without Python |
 | [Bring-up guide](../docs/firmware/bring-up.md) | First power-up, step by step, and what to record |
 | [Architecture](../docs/firmware/architecture.md) | Layers, ports, ESP32-S3 seam, HGP alignment |
 | [Audio assets](../docs/firmware/audio-assets.md) | MP3/WAV/synth budgets on 2 MB, the measured MP3 start delay, adding sounds |
@@ -98,7 +99,9 @@ non-volatile memory (`microcontroller.nvm`) and survive power cycles.
 **Status LED (GPIO13).** Brief blink every 3 s when idle. A flash on each
 ring. After a selection change it blinks once per bell position (1 = first
 bell). Rapid double blinks mean locked. A fast continuous blink means an
-error; the serial console shows the message.
+error; the serial console shows the message. On boards with battery sensing
+(not the November 2026 board), the idle blink becomes a double blink when
+low and a triple blink when critical.
 
 **Serial messages.** One JSON object per line, shaped like Go Go
 HarmoniYo's HGP v0: `hello` at start, `gesture` (`ring`/`damp`) with
@@ -124,6 +127,7 @@ cannot pass silently. The main keys:
 | `audio` | `sample_rate` (all sounds must match), `voices`, `retrigger`, `damp_ms`, `level` {min,max,curve}, `preview_level` |
 | `power` | `keep_awake_s`, `settle_ms` (boost/amplifier settle before clocks), `wake_on_motion` |
 | `imu` | `rate_hz` (416), `gyro_dps` (2000), `accel_g` (16), `fast_read` |
+| `battery` | `low_v`, `critical_v`, `hysteresis_v`, `samples`, `sample_s`, `critical_action` (`"silence"`/`"warn"`). Used only on boards with a sense line ([#17](https://github.com/dcuccia/digital-handbell/issues/17)); thresholds are provisional |
 | `debug` | `events`, `status_s`, `raw` |
 
 `CIRCUITPY` is read-only to the firmware while it is USB-mounted. Edit

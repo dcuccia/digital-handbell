@@ -86,7 +86,8 @@ connector are simplified project proxies. This is not a fit check.*
 | Understand what is next | [Roadmap](docs/roadmap.md) |
 | Help with a specific part | [Contributing](CONTRIBUTING.md) |
 | Understand the circuits and intended behavior | [Architecture](docs/architecture.md) and [firmware architecture](docs/firmware/architecture.md) |
-| Build, flash or change the firmware | [Firmware guide](firmware/README.md) and [bring-up steps](docs/firmware/bring-up.md) |
+| Build, flash or change the firmware | [Getting started](docs/firmware/getting-started.md) (no Python needed), [firmware guide](firmware/README.md) and [bring-up steps](docs/firmware/bring-up.md) |
+| Suggest a fix or feature for the next board | [Hardware revision requests](docs/hardware-revision-requests.md) and [tracking issue #19](https://github.com/dcuccia/digital-handbell/issues/19) |
 | Find older experiments or engineering evidence | [Documentation index](docs/README.md) and [hardware revision guide](hardware/handbell/iterations/README.md) |
 
 Keep the whole checkout when opening CAD: some library paths reference

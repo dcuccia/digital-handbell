@@ -10,6 +10,7 @@ been requested.
 
 from handbell.core import config as _config
 from handbell.core import events as _events
+from handbell.core.battery import BatteryMonitor
 from handbell.core.bells import BellSet
 from handbell.core.controls import ButtonGrammar
 from handbell.core.gestures import ImpactDetector, RingDetector
@@ -37,12 +38,20 @@ class _NullStore:
 
 
 class Instrument:
-    def __init__(self, config, audio, indicator=None, store=None, link=None):
+    def __init__(self, config, audio, indicator=None, store=None, link=None, power=None):
         self.cfg = config
         self.audio = audio
         self.led = indicator if indicator is not None else _NullIndicator()
         self.store = store if store is not None else _NullStore()
         self.link = link if link is not None else _NullLink()
+        self.power = power
+        b = config.battery
+        self.battery = (
+            BatteryMonitor(b["low_v"], b["critical_v"], b["hysteresis_v"], b["samples"]) if power is not None else None
+        )
+        self._battery_every_us = int(b["sample_s"] * 1000000)
+        self._next_battery = 0
+        self._silence_when_critical = b["critical_action"] == "silence"
         self.bellset = BellSet(config.bells, config.select)
         self.ring = RingDetector(config.detector)
         self.ring.set_context(config.sensitivity)
@@ -146,7 +155,33 @@ class Instrument:
         if self._save_due is not None and now >= self._save_due:
             self._save_due = None
             self.store.save(self._persisted())
+        if self.battery is not None and now >= self._next_battery and self.quiet(now):
+            # Sample only between notes: the boost load would sag the reading.
+            self._next_battery = now + self._battery_every_us
+            self._update_battery(now)
         self._update_led(now)
+
+    @property
+    def silenced(self):
+        """True when a critical battery should not drive the amplifier."""
+        return self._silence_when_critical and self.battery is not None and self.battery.state == "critical"
+
+    def _update_battery(self, now):
+        volts, usb, charging = self.power.read()
+        changed = self.battery.update(volts, usb, charging)
+        if changed is None:
+            return
+        if self.mode != "maintenance":
+            self.pattern.background(self._idle_background(), now)
+        if self.silenced and not self.audio.is_sounding(now):
+            self._awake_requested = False
+            self.audio.sleep(now)
+        self._send_status(now)
+
+    def _idle_background(self):
+        if self.battery is not None and self.battery.state != "ok":
+            return self.battery.state + "_battery"
+        return "heartbeat"
 
     # ----- behavior --------------------------------------------------
 
@@ -154,7 +189,7 @@ class Instrument:
         self.last_strike = strike
         self._last_ring = strike.t
         bell = self.bellset.selected
-        if self.mode != "maintenance":
+        if self.mode != "maintenance" and not self.silenced:
             level = _config.level_for(self.cfg.audio, strike.intensity) * bell.gain
             self._wake(now)
             self.audio.play(bell, level, now)
@@ -204,13 +239,13 @@ class Instrument:
                 self._send_status(now)
         elif action == "exit":
             self.mode = self.base_mode
-            self.pattern.background("heartbeat", now)
+            self.pattern.background(self._idle_background(), now)
             self.pattern.show("mode", now)
             self._send_status(now)
         elif action == "toggle_accessible":
             self.base_mode = "accessible" if self.base_mode == "play" else "play"
             self.mode = self.base_mode
-            self.pattern.background("heartbeat", now)
+            self.pattern.background(self._idle_background(), now)
             self.pattern.show("mode", now)
             self._schedule_save(now)
             self._send_status(now)
@@ -226,8 +261,9 @@ class Instrument:
         bell = self.bellset.selected
         if self.audio.is_sounding(now):
             self.audio.damp(now, self._damp_ms)
-        self._wake(now)
-        self.audio.play(bell, self.cfg.audio["preview_level"] * bell.gain, now)
+        if not self.silenced:
+            self._wake(now)
+            self.audio.play(bell, self.cfg.audio["preview_level"] * bell.gain, now)
         self.pattern.show("count", now, count=self.bellset.index + 1)
         self._schedule_save(now)
         self._send_select(now)
@@ -235,6 +271,9 @@ class Instrument:
     def _key_ring(self, now):
         bell = self.bellset.selected
         vel = self.cfg.controls["key_velocity"]
+        if self.silenced:
+            self.pattern.show("locked", now)
+            return
         self._wake(now)
         self.audio.play(bell, _config.level_for(self.cfg.audio, vel) * bell.gain, now)
         self.counters["key_rings"] += 1
@@ -256,6 +295,8 @@ class Instrument:
 
     def _wake(self, now):
         self._keep_awake(now)
+        if self.silenced:
+            return
         if not self._awake_requested:
             self._awake_requested = True
             self.audio.wake(now)
@@ -286,7 +327,7 @@ class Instrument:
         self.link.send(_events.status(self.status(now)))
 
     def status(self, now):
-        return {
+        out = {
             "mode": self.mode,
             "bell": self.bellset.selected.id,
             "locked": self.locked,
@@ -294,3 +335,7 @@ class Instrument:
             "sounding": self.audio.is_sounding(now),
             "rings": self.counters["rings"],
         }
+        battery = self.battery.status() if self.battery is not None else None
+        if battery is not None:
+            out["battery"] = battery
+        return out

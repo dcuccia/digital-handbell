@@ -4,7 +4,7 @@ from handbell.ports import NullLink
 
 
 class Ports:
-    def __init__(self, clock, motion, button, audio, indicator, store, link, info):
+    def __init__(self, clock, motion, button, audio, indicator, store, link, info, power=None):
         self.clock = clock
         self.motion = motion
         self.button = button
@@ -13,6 +13,7 @@ class Ports:
         self.store = store
         self.link = link
         self.info = info
+        self.power = power
 
     def shutdown(self):
         if self.audio is not None:
@@ -38,11 +39,17 @@ def build_ports(profile, pins, caps, cfg, i2c=None):
         ports.button = KeypadButton(pins["button"], active_low=caps["button_active_low"], pull=True)
         ports.store = NvmStore()
         ports.link = ConsoleLink() if cfg.debug.get("events", True) else NullLink()
+        if pins.get("vbat_sense") is not None:
+            from handbell.hw.power import AnalogPowerSense
+
+            ports.power = AnalogPowerSense(
+                pins["vbat_sense"], caps["vbat_ratio"], pins.get("vbus_sense"), pins.get("charge_stat")
+            )
         ports.info = {
             "profile": profile,
             "sensors": ports.motion.info,
             "ctrl9_xl": ports.motion.ctrl9,
-            "battery_sense": caps.get("battery_sense", False),
+            "battery_sense": ports.power is not None,
         }
     except Exception:
         ports.shutdown()

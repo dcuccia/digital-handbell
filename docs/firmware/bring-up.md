@@ -65,6 +65,12 @@ state on exit.
 | e | `import bringup.audio_tone` | Steps 1-6 print. Quiet 440 Hz tone at level 0.05 | Supply current at each step, clicks at 2/4/6, hiss at 4. **Use a current-limited supply** |
 | f | `import bringup.audio_files` | Synth, WAV and MP3 bells play; overlapping MP3s play without glitches | `play()` times, timbre, glitches |
 | g | `import bringup.loop_rate` | New samples/s close to 416 for burst reads | Loops/s, samples/s, max loop gap, `gc.collect()` time |
+| h | `import bringup.battery` | On this board: reports that there is no sense line | Nothing; it exists for the next revision ([#17](https://github.com/dcuccia/digital-handbell/issues/17)) |
+
+Anything that points to a board change (wrong footprint, missing access,
+marginal rail) should become a
+[board revision request](../hardware-revision-requests.md) as well as a
+bring-up record.
 
 `audio_tone` and `audio_files` are the first time the boost, amplifier and
 speaker run together. Start at the default low levels. Raise

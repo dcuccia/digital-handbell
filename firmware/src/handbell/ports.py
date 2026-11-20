@@ -29,6 +29,11 @@ Audio
 Indicator
     set(on: bool)
 
+PowerSense (optional; absent on the November 2026 board)
+    read() -> (volts or None, usb or None, charging or None)
+    ``volts`` is the battery voltage in volts; ``usb`` True when USB power
+    is present; ``charging`` True/False from the charger status, or None.
+
 Store
     load() -> dict or None ({"index": int, "locked": bool, "accessible": bool})
     save(state: dict)

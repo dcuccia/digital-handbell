@@ -131,6 +131,27 @@ def test_play_during_muting_cancels_sleep_and_starts_at_once(cp):
     assert audio.state_name == "ready"
 
 
+def test_power_sense_scales_divider_and_reads_flags(cp):
+    from handbell.hw.power import AnalogPowerSense
+
+    pin = cp["microcontroller"].pin
+    sense = AnalogPowerSense(pin.GPIO29, 3.0, pin.GPIO24, pin.GPIO25)
+    sense._adc.value = int(1.3 / 3.3 * 65535)  # 1.3 V at the pin = 3.9 V cell
+    sense._vbus.input_value = True
+    sense._stat.input_value = False  # STAT pulled low by the charger
+    volts, usb, charging = sense.read()
+    assert volts == pytest.approx(3.9, abs=0.001)
+    assert usb is True and charging is True
+    assert sense._stat.pull == "up"
+
+
+def test_profile_without_sense_line_has_no_power_port(cp):
+    from handbell import platforms
+
+    ports = platforms.load().build(config.parse())
+    assert ports.power is None and ports.info["battery_sense"] is False
+
+
 def test_imu_fixes_ctrl9_and_parses_burst_in_si_units(cp):
     from handbell.hw.imu import Lsm6dsoxMotion
 

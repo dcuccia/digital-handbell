@@ -22,7 +22,7 @@ CAPS = {
     "imu_address": 0x6A,
     "button_active_low": True,
     "mute": True,
-    "battery_sense": None,
+    "vbat_ratio": None,
     "radio": "ble",
 }
 

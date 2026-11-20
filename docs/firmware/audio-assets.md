@@ -8,20 +8,21 @@ The Pico CircuitPython build reserves 1020 KiB for firmware and 4 KiB for
 settings, leaving a **1 MiB** filesystem on the W25Q16JV. `build.py` keeps a
 64 KiB reserve for FAT overhead and files CircuitPython creates, then checks
 everything against the remaining 960 KiB, counting 512-byte clusters. The
-first build measured:
+build at the time of writing measured:
 
 | Item | Bytes |
 |---|---:|
-| `handbell/` compiled to `.mpy` | 34,153 |
-| `bringup/` scripts (`.py`) | 17,045 |
+| `handbell/` compiled to `.mpy` | 37,413 |
+| `bringup/` scripts (`.py`) | 18,235 |
 | Adafruit libraries (lsm6ds, register, bus_device) | 20,417 |
 | 8 MP3 bells, C5-C6, 4 s, 64 kbit/s mono | 8 × 32,600 |
 | Test WAV `sounds/test/A5.wav`, 4 s, 22.05 kHz | 176,444 |
-| **Allocated (with clusters and directories)** | **537,088 of 983,040** |
+| **Allocated (with clusters and directories)** | **544,256 of 983,040** |
 
-That leaves about **446 KB** of headroom: roughly 13 more 4-second MP3 bells,
-or two more WAVs. Confirm real free space with `bringup.info`; the budget is
-an estimate.
+That leaves about **439 KB** of headroom: roughly 13 more 4-second MP3 bells,
+or two more WAVs. `firmware/build/reports/build.json` has the current
+figures for every build. Confirm real free space with `bringup.info`; the
+budget is an estimate.
 
 | Format (4 s mono note) | Bytes | Notes in ~850 KB | Start delay |
 |---|---:|---:|---|

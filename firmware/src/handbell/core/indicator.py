@@ -8,6 +8,8 @@ Segments alternate on/off durations in milliseconds, starting with "on".
 BACKGROUND = {
     "off": (),
     "heartbeat": (30, 2970),
+    "low_battery": (30, 150, 30, 2790),
+    "critical_battery": (30, 150, 30, 150, 30, 560),
     "maintenance": (500, 500),
     "error": (100, 100),
     "on": (1000, 0),
