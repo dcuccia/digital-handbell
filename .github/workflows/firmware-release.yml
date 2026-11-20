@@ -1,0 +1,28 @@
+# Publish a firmware release when a `firmware-v<version>` tag is pushed.
+# The tag must match handbell.__version__ (publish.py checks). Logic lives in
+# firmware/scripts; this file only calls the scripts.
+name: firmware-release
+
+on:
+  push:
+    tags: ["firmware-v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test, build, package and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python firmware/scripts/ci.py
+          python firmware/scripts/publish.py --tag "${{ github.ref_name }}"

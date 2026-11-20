@@ -129,6 +129,14 @@ No driver code is vendored or patched here, and no I2C failure has been measured
 on a physical bell. Keep hub/pass-through/OIS/DEN disabled for the draft's
 grounded SDx/SCx and NC auxiliary outputs.
 
+**November 2026 implementation:** the bundle's `adafruit_lsm6ds` 4.6.3 still
+contains the defect. The firmware keeps the library unmodified and applies a
+post-initialization read-modify-write of CTRL9_XL with readback verification
+([`lsm6dsox_fix.py`](../firmware/src/handbell/hw/lsm6dsox_fix.py)). The startup
+banner and `bringup.i2c_imu` print the before/after values. Confirming them
+on a physical board is the remaining bring-up step for #13
+([bring-up](firmware/bring-up.md)).
+
 See [LSM6DS driver source](https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS/blob/cdfc14a687a138aa0f2c6abab061bfc1bfafa561/adafruit_lsm6ds/__init__.py)
 and [LIS3DH source](https://github.com/adafruit/Adafruit_CircuitPython_LIS3DH/blob/cd40b482a098a62ecce1b4c62a1f1930be984e16/adafruit_lis3dh.py).
 

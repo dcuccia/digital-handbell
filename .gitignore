@@ -138,3 +138,6 @@ _autosave-*
 
 # Local authenticated browser snapshots and diagnostics
 .playwright-mcp/
+
+# Firmware: private local IMU recordings (curated traces are committed)
+firmware/traces/local/

@@ -154,7 +154,7 @@ attempting placement; the present 1 mm proxy does not qualify that SOP.
 
 ## Firmware support and capacity
 
-The [audio/storage plan](firmware-and-audio.md#audio-storage-and-silence)
+The [audio/storage plan](firmware/plan-and-experiments.md#audio-storage-and-silence)
 records why 2 MB is plausible and 4 MB has more room for the owner's few
 short chimes. The inspected CircuitPython commit is
 [`fd40abc29cf5c8ea111e16b3e6cc21b180974ae3`](https://github.com/adafruit/circuitpython/tree/fd40abc29cf5c8ea111e16b3e6cc21b180974ae3);
