@@ -44,6 +44,16 @@ def build_info():
         return {}
 
 
+def _cold_start():
+    """True on power-up or reset, False when code.py reloads (file save, Ctrl-D)."""
+    try:
+        import supervisor
+
+        return supervisor.runtime.run_reason == supervisor.RunReason.STARTUP
+    except (ImportError, AttributeError):
+        return False
+
+
 def _error_blink(ports, message):
     led = getattr(ports, "indicator", None) if ports is not None else None
     last_print = time.monotonic()
@@ -79,8 +89,12 @@ def main():
         app = "digital-handbell/%s" % info.get("version", __version__)
         print("digital-handbell", app, "profile", profile.NAME, "config", source)
         print("CTRL9_XL before/after: 0x%02X/0x%02X" % ports.info["ctrl9_xl"])
+        wake = ports.sleeper.wake_reason() if ports.sleeper is not None else None
+        power_on = _cold_start()
+        if wake is not None:
+            print("woke from deep sleep:", wake)
         inst = Instrument(cfg, ports.audio, ports.indicator, ports.store, ports.link, ports.power)
-        runtime.run(ports, inst, cfg, app=app, device_id=device_id())
+        runtime.run(ports, inst, cfg, app=app, device_id=device_id(), wake=wake, power_on=power_on)
     except KeyboardInterrupt:
         if ports is not None:
             ports.shutdown()

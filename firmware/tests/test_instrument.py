@@ -74,7 +74,7 @@ def test_click_selects_next_bell_with_preview_and_persists_after_delay():
     assert rig.link.messages("select")[-1]["bell"] == "D5"
     assert rig.store.saves == 0
     rig.idle(2100)
-    assert rig.store.state == {"index": 1, "locked": False, "accessible": False}
+    assert rig.store.state == {"index": 1, "locked": False, "accessible": False, "volume": 3}
 
 
 def test_double_click_selects_previous():

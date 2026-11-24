@@ -66,6 +66,13 @@ state on exit.
 | f | `import bringup.audio_files` | Synth, WAV and MP3 bells play; overlapping MP3s play without glitches | `play()` times, timbre, glitches |
 | g | `import bringup.loop_rate` | New samples/s close to 416 for burst reads | Loops/s, samples/s, max loop gap, `gc.collect()` time |
 | h | `import bringup.battery` | On this board: reports that there is no sense line | Nothing; it exists for the next revision ([#17](https://github.com/dcuccia/digital-handbell/issues/17)) |
+| i | `import bringup.wake` | One line per deliberate shake; pickup, set-down and knocks mostly don't trigger | Hits and misses at `sleep.wake_mg` (default 250 mg); adjust in `bells.json` |
+
+**Sleep check.** Leave the bell still for `sleep.after_s` (120 s). The
+console prints a `status` with `"sleep": true`, then "Pretending to deep
+sleep" while USB is connected. Shake it: the board restarts and plays the
+selected bell. On battery only (no USB), measure the sleep current at the
+cell from a current-limited 3.7 V supply.
 
 Anything that points to a board change (wrong footprint, missing access,
 marginal rail) should become a

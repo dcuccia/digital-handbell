@@ -31,7 +31,7 @@ Pin roles come from the ordered netlist (`hardware/handbell`), via
 | RP2040 | Net | Firmware role |
 |---|---|---|
 | GPIO2 / GPIO3 | SDA / SCL | LSM6DSOX at **0x6A** (SDO to GND), ST Mode 1 |
-| GPIO22 | INT (IMU INT1) | Reserved for data-ready/wake; INT2 reaches only TP6 |
+| GPIO22 | INT (IMU INT1) | Deep-sleep wake-on-motion (latched wake-up interrupt); INT2 reaches only TP6 |
 | GPIO16 / 17 / 18 | I2S DIN / BCLK / LRCLK | `audiobusio.I2SOut`; LRCLK = BCLK+1 as RP2040 PIO requires |
 | GPIO19 | BUTTON | J2 JST-SH pin 1 `BUTTON_EXT`, pin 2 GND. 10 kohm pull-up, 1 kohm series, 10 nF. **Active low** |
 | GPIO20 | AMP_MUTE | **High = mute**. R20 pulls high when undriven |
@@ -161,6 +161,58 @@ Thresholds are provisional until measured with the selected cell. The
 requested circuit follows the Raspberry Pi Pico convention (VBAT/3 on
 GPIO29, VBUS on GPIO24), so the stock Pico build already names the pins.
 
+### Power, sleep and wake (#23)
+
+The board has no off state: U2's EN is tied to VHI, so +3V3 and the RP2040
+run whenever a cell or USB is present (#22). Firmware therefore manages
+battery drain.
+
+| State | What is powered | Estimated cell current |
+|---|---|---|
+| Awake, idle (amplifier off) | RP2040 at 125 MHz in the busy loop, flash, IMU at 416 Hz | ~25-30 mA |
+| Awake, amplifier ready (up to `keep_awake_s` after a ring) | Plus boost and MAX98357A quiescent current, mute/enable pull-ups | +~4-5 mA |
+| Deep sleep | RP2040 DORMANT (crystal stopped), IMU accelerometer-only low-power wake-up, regulator/protector/charger/flash quiescent | well under 1 mA (to be measured) |
+
+These estimates come from datasheet typicals: the RP2040 core, LSM6DSOX
+0.55 mA combo, RT9080 2 µA, BQ29700 a few µA, MCP73831 discharge below
+2 µA. **They are not measurements**; measure at the cell from a
+current-limited 3.7 V supply. At an assumed 0.5 mA asleep, an 850 mAh
+cell would last roughly two months of shelf time, versus about a day
+left awake.
+
+**Going to sleep** ([`runtime.py`](../../firmware/src/handbell/runtime.py),
+[`hw/sleep.py`](../../firmware/src/handbell/hw/sleep.py)):
+
+1. After `sleep.after_s` with no activity and nothing sounding, the
+   instrument saves its state and sends `status` with `sleep: true`.
+   Activity means handling above `activity_omega`, rings, button edges or
+   sound.
+2. The audio shuts down: mute, then stop I2S, then POWER low.
+3. `arm_wake` sets up the LSM6DSOX:
+   - gyro off;
+   - accelerometer at 26 Hz in low-power mode, ±2 g;
+   - slope wake-up threshold `wake_mg`, 1-sample duration;
+   - latched INT1 (`LIR`), with wake-up routed to INT1;
+   - a settle delay, then a WAKE_UP_SRC read clears stale events.
+4. keypad releases the button, and `alarm.exit_and_deep_sleep_until_alarms`
+   is called with level-triggered PinAlarms on GPIO22 (INT1 high) and GPIO19
+   (button low).
+
+During sleep CircuitPython resets unclaimed pins with their internal pulls
+disabled, so R17 holds POWER low and R20 holds AMP_MUTE high.
+
+**Waking:** the RP2040 resets and runs code.py. The driver's software reset
+clears the IMU wake configuration. `alarm.wake_alarm` gives the reason,
+"motion" or "button". The instrument restores its persisted bell and volume
+and plays the bell as an audible "I'm awake" (`sleep.announce_wake`). It
+does the same on a cold power-up, but not on a code reload.
+
+The latch matters: motion in the milliseconds before the chip actually
+sleeps leaves INT1 high, so the board wakes immediately instead of missing
+it. While USB is connected CircuitPython only simulates deep sleep, which is
+convenient for testing. `bringup.wake` exercises the IMU interrupt without
+sleeping, so `wake_mg` can be tuned against shakes, pickup and knocks.
+
 ## ESP32-S3 seam
 
 [`esp32s3_handbell.py`](../../firmware/src/handbell/platforms/esp32s3_handbell.py)
@@ -211,9 +263,8 @@ conventions, and noting gravity-inclusive raw rows.
 
 ## Deliberately out of scope
 
-Wireless pairing, remote bell assignment, OTA updates, telemetry, an S3
-board, deep sleep and IMU-interrupt wake are out of scope. The seams leave
-room for each one. Battery reporting is implemented but waits for the sense
+Wireless pairing, remote bell assignment, OTA updates, telemetry and an S3
+board are out of scope. The seams leave room for each one. Battery reporting is implemented but waits for the sense
 line requested in [#17](https://github.com/dcuccia/digital-handbell/issues/17).
 Board-level requests are collected per
 [hardware revision requests](../hardware-revision-requests.md).

@@ -20,10 +20,14 @@ ACTIONS = (
     "maintenance",
     "exit",
     "toggle_accessible",
+    "volume",
+    "volume_up",
+    "volume_down",
 )
 MODES = ("play", "accessible", "maintenance")
 STATES = ("ready", "sounding", "any")
 RETRIGGER = ("overlap", "restart")
+WAKE_ODR_HZ = (13, 26, 52, 104)
 
 DEFAULTS = {
     "v": 0,
@@ -59,7 +63,7 @@ DEFAULTS = {
             "any": {"down": "ring", "very_long": "maintenance"},
         },
         "maintenance": {
-            "any": {"click": "exit", "double": "toggle_accessible", "very_long": "exit"},
+            "any": {"click": "exit", "double": "toggle_accessible", "long": "volume", "very_long": "exit"},
         },
     },
     "audio": {
@@ -71,6 +75,11 @@ DEFAULTS = {
         # Conservative until speaker/level limits are measured (see docs).
         "level": {"min": 0.15, "max": 0.5, "curve": 0.7},
         "preview_level": 0.2,
+        # Player volume steps: multipliers on every level above, so volume can
+        # never exceed audio.level.max. "volume" is the default step (index);
+        # the chosen step persists across power cycles.
+        "volumes": [0.25, 0.5, 0.75, 1.0],
+        "volume": 3,
     },
     "power": {
         "keep_awake_s": 20,
@@ -81,6 +90,18 @@ DEFAULTS = {
         "wake_omega": 100.0,
     },
     "imu": {"rate_hz": 416, "gyro_dps": 2000, "accel_g": 16, "fast_read": True},
+    # Inactivity deep sleep (boards with an IMU interrupt line). The IMU stays in
+    # low-power wake-up mode; a shake (wake_mg) or the button wakes the board,
+    # which restarts and plays the selected bell. after_s: 0 disables sleep.
+    "sleep": {
+        "after_s": 120,
+        "activity_omega": 30.0,
+        "wake_mg": 250,
+        "wake_odr_hz": 26,
+        "button_wakes": True,
+        "announce_wake": True,
+        "announce_power_on": True,
+    },
     # Used only when the platform has a battery-sense line (not the Nov 2026 board).
     # Thresholds are provisional until measured with the selected cell under load.
     "battery": {
@@ -168,6 +189,15 @@ class Config:
         _number(b, "sample_s", 0.1, 600)
         _require(b["critical_v"] < b["low_v"], "battery.critical_v must be below battery.low_v")
         _require(b["critical_action"] in ("silence", "warn"), "battery.critical_action must be 'silence' or 'warn'")
+        self.sleep = raw["sleep"]
+        s = self.sleep
+        _number(s, "after_s", 0, 86400)
+        _number(s, "activity_omega", 1, 2000)
+        # Wake-up threshold LSB is 2 g / 64 = 31.25 mg (accelerometer at +/-2 g while asleep).
+        _number(s, "wake_mg", 32, 1968)
+        _require(s["wake_odr_hz"] in WAKE_ODR_HZ, "sleep.wake_odr_hz must be one of %r" % (WAKE_ODR_HZ,))
+        for key in ("button_wakes", "announce_wake", "announce_power_on"):
+            _require(isinstance(s[key], bool), "sleep.%s must be true or false" % key)
         self.debug = raw["debug"]
 
     @staticmethod
@@ -211,6 +241,17 @@ class Config:
         _number(level, "max", 0.0, 1.0)
         _number(level, "curve", 0.1, 5.0)
         _require(level["min"] <= level["max"], "audio.level.min must not exceed audio.level.max")
+        steps = a["volumes"]
+        _require(isinstance(steps, list) and 1 <= len(steps) <= 10, "audio.volumes must be a list of 1-10 steps")
+        for v in steps:
+            _require(
+                isinstance(v, (int, float)) and not isinstance(v, bool) and 0.0 < v <= 1.0,
+                "audio.volumes steps must be numbers in (0, 1], got %r" % (v,),
+            )
+        _require(
+            isinstance(a["volume"], int) and not isinstance(a["volume"], bool) and 0 <= a["volume"] < len(steps),
+            "audio.volume must be an index into audio.volumes (0..%d)" % (len(steps) - 1),
+        )
 
     def action_for(self, mode, state, event):
         table = self.controls.get(mode, {})
