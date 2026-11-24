@@ -100,8 +100,11 @@ class Mixer:
 
 
 class MP3Decoder:
+    constructed = 0
+
     def __init__(self, path, buffer=None):
         self.name = path
+        MP3Decoder.constructed += 1
 
     def open(self, path):
         self.name = path
@@ -110,6 +113,7 @@ class MP3Decoder:
 class WaveFile:
     def __init__(self, f, buffer=None):
         self.name = getattr(f, "name", "wav")
+        self.buffer = buffer
 
 
 class RawSample:

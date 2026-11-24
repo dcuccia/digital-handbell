@@ -53,6 +53,30 @@ Options, in increasing complexity:
    over sample-aligned. Not implemented; it depends on a measured,
    constant decoder delay on the device.
 
+## MP3 decoders and RAM
+
+Flash is not the only budget. Each CircuitPython `audiomp3.MP3Decoder`
+costs about **37 KB of RAM** (measured on the RP2040 board: decoder state
+plus two 4,608-byte PCM buffers and the input buffer). The RP2040 heap is
+fixed at about 150 KB and the app's imports use about 65 KB, so only one
+decoder fits comfortably. The decoder allocates its buffers without first
+running garbage collection, so creating one while the app is running can
+fail with `MemoryError` even when memory would be available after a
+collection. That was the fast red blink seen on the first board.
+
+The firmware therefore creates `audio.mp3_decoders` decoders (default 1)
+once at startup, after a collection, and reuses them for every strike:
+
+- With one decoder, an MP3 strike restarts the sounding MP3 rather than
+  overlapping it. WAV and `synth` voices still overlap freely.
+- A WAV voice gets its own preallocated 1 KB read buffer.
+- Raise `mp3_decoders` (up to `voices`) only if `memFree` in the status
+  line stays healthy. Each extra decoder costs about 37 KB.
+
+On the device with one decoder, the running app reports about 24 KB of
+`memFree`. A 24-strike stress test across all eight MP3 bells, with other
+allocations churning the heap, completed without error.
+
 ## Rules for sounds
 
 - Every sound must be mono, 16-bit and at `audio.sample_rate` (22,050 Hz by

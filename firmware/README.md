@@ -148,7 +148,7 @@ cannot pass silently. The main keys:
 | `ring.sens` | `"normal"` or `"quick"` (HGP sensitivity) |
 | `detector` | Ring detector overrides, such as `{"min_decel": 5000, "axis": [1, 0, 0]}` ([tuning](../docs/firmware/gesture-tuning.md)) |
 | `controls` | Per-mode, per-state map of `click`/`double`/`long`/`very_long`/`down` to actions |
-| `audio` | `sample_rate` (all sounds must match), `voices`, `retrigger`, `damp_ms`, `level` {min,max,curve}, `preview_level`, `volumes` (step multipliers), `volume` (default step index) |
+| `audio` | `sample_rate` (all sounds must match), `voices`, `retrigger`, `damp_ms`, `level` {min,max,curve}, `preview_level`, `volumes` (step multipliers), `volume` (default step index), `mp3_decoders` (preallocated MP3 decoders, about 37 KB RAM each; default 1, so an MP3 re-strike restarts rather than overlaps) |
 | `power` | `keep_awake_s`, `settle_ms` (boost/amplifier settle before clocks), `wake_on_motion` |
 | `sleep` | `after_s` (idle seconds before deep sleep; 0 = never), `activity_omega` (deg/s of handling that counts as activity), `wake_mg` (shake threshold, 31.25 mg steps), `wake_odr_hz`, `button_wakes`, `announce_wake`, `announce_power_on` |
 | `imu` | `rate_hz` (416), `gyro_dps` (2000), `accel_g` (16), `fast_read` |

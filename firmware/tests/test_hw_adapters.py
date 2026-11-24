@@ -98,12 +98,26 @@ def test_damp_fades_file_voice_then_stops(cp):
 
 
 def test_overlap_retrigger_uses_second_voice(cp):
-    cfg, audio = make_audio()
+    cfg, audio = make_audio({"audio": {"mp3_decoders": 2}})
     audio.wake(0)
     run_until(audio, 0, 60)
     audio.play(cfg.bells[0], 0.4, 61 * MS)
     audio.play(cfg.bells[0], 0.4, 70 * MS)
     assert audio.mixer.voice[0].playing and audio.mixer.voice[1].playing
+
+
+def test_single_mp3_decoder_restarts_instead_of_overlapping(cp):
+    cfg, audio = make_audio()  # default: one shared MP3 decoder
+    audio.wake(0)
+    run_until(audio, 0, 60)
+    audio.play(cfg.bells[0], 0.4, 61 * MS)
+    audio.play(cfg.bells[1], 0.4, 70 * MS)
+    voices = audio.mixer.voice
+    assert [v.playing for v in voices[:2]] == [False, True]
+    assert voices[1].sample.name == "sounds/D5.mp3"
+    audio.play(cfg.bells[2], 0.4, 80 * MS)
+    assert [v.playing for v in voices[:2]] == [True, False]
+    assert sum(v.playing for v in voices[:2]) == 1
 
 
 def test_synth_bell_presses_partials_and_releases_after_decay(cp):
@@ -214,3 +228,22 @@ def test_unknown_board_needs_explicit_platform(cp, monkeypatch):
     monkeypatch.setenv("HANDBELL_PLATFORM", "esp32s3_handbell")
     with pytest.raises(NotImplementedError):
         platforms.load().build(config.parse())
+
+def test_decoders_are_preallocated_so_plays_never_allocate(cp, tmp_path, monkeypatch):
+    # MP3Decoder/WaveFile allocate without garbage collection on CircuitPython,
+    # so a decoder built mid-performance raised MemoryError on the first board.
+    fcp.MP3Decoder.constructed = 0
+    wav = tmp_path / "x.wav"
+    wav.write_bytes(b"RIFF")
+    cfg, audio = make_audio({"bells": [{"id": "C5", "sound": "sounds/C5.mp3"}, {"id": "D5", "sound": str(wav)}]})
+    assert fcp.MP3Decoder.constructed == 1  # one shared decoder (~37 KB), at startup
+    assert all(b is not None and len(b) % 8 == 0 for b in audio._wav_buffers)
+    audio.wake(0)
+    run_until(audio, 0, 60)
+    t = 61
+    for i in range(10):
+        audio.play(cfg.bells[i % 2], 0.3, t * MS)
+        t += 5
+    assert fcp.MP3Decoder.constructed == 1
+    wav_samples = [v.sample for v in audio.mixer.voice if isinstance(v.sample, fcp.WaveFile)]
+    assert wav_samples and all(any(s.buffer is b for b in audio._wav_buffers) for s in wav_samples)
