@@ -4,7 +4,7 @@ from handbell.ports import NullLink
 
 
 class Ports:
-    def __init__(self, clock, motion, button, audio, indicator, store, link, info, power=None):
+    def __init__(self, clock, motion, button, audio, indicator, store, link, info, power=None, sleeper=None):
         self.clock = clock
         self.motion = motion
         self.button = button
@@ -14,10 +14,15 @@ class Ports:
         self.link = link
         self.info = info
         self.power = power
+        self.sleeper = sleeper
 
     def shutdown(self):
         if self.audio is not None:
             self.audio.shutdown()
+
+    def sleep(self, sleep_cfg):
+        """Deep sleep via the sleeper (never returns on a device)."""
+        self.sleeper.sleep(sleep_cfg, self.audio, self.indicator)
 
 
 def build_ports(profile, pins, caps, cfg, i2c=None):
@@ -45,11 +50,18 @@ def build_ports(profile, pins, caps, cfg, i2c=None):
             ports.power = AnalogPowerSense(
                 pins["vbat_sense"], caps["vbat_ratio"], pins.get("vbus_sense"), pins.get("charge_stat")
             )
+        if pins.get("imu_int1") is not None:
+            from handbell.hw.sleep import DeepSleeper
+
+            ports.sleeper = DeepSleeper(
+                ports.motion, pins["imu_int1"], ports.button, pins["button"], caps["button_active_low"]
+            )
         ports.info = {
             "profile": profile,
             "sensors": ports.motion.info,
             "ctrl9_xl": ports.motion.ctrl9,
             "battery_sense": ports.power is not None,
+            "sleep": ports.sleeper is not None,
         }
     except Exception:
         ports.shutdown()

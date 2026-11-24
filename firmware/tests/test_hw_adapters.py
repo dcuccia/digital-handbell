@@ -171,8 +171,16 @@ def test_nvm_store_round_trip(cp):
 
     store = NvmStore()
     assert store.load() is None
-    store.save({"index": 5, "locked": True, "accessible": True})
-    assert store.load() == {"index": 5, "locked": True, "accessible": True}
+    store.save({"index": 5, "locked": True, "accessible": True, "volume": 2})
+    assert store.load() == {"index": 5, "locked": True, "accessible": True, "volume": 2}
+
+
+def test_nvm_store_reads_version_1_layout_without_volume(cp):
+    from handbell.hw.io import NvmStore
+
+    nvm = cp["microcontroller"].nvm
+    nvm[0:5] = bytes((0xB7, 1, 4, 1, 0xFF))
+    assert NvmStore().load() == {"index": 4, "locked": True, "accessible": False}
 
 
 def test_profile_builds_ports_and_runtime_emits_hello_and_status(cp, capsys):

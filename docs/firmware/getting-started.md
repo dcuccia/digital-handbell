@@ -57,6 +57,13 @@ The board restarts and runs the instrument by itself.
   position. **Double-click** for the previous note.
 - **Press while a note sounds** to damp it.
 - **Hold about 1 s** to lock the note so it can't change by accident.
+- **Volume:** hold the button 5 s for maintenance mode (the LED blinks
+  slowly), then hold about 1 s for each volume step. The bell plays at the
+  new volume. Click to leave maintenance mode. Volume is remembered.
+
+**Sleep.** After 2 minutes untouched the bell goes to sleep to save the
+battery; there is no power switch. **Shake it or press the button to wake
+it:** it plays the selected bell when it's ready (about a second).
 
 The full button and LED reference is in the
 [firmware guide](../../firmware/README.md#using-the-instrument).

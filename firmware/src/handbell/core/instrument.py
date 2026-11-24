@@ -79,10 +79,21 @@ class Instrument:
         self._save_due = None
         self.last_strike = None
         self.counters = {"rings": 0, "damps": 0, "selects": 0, "key_rings": 0}
+        audio_cfg = config.audio
+        self._volumes = audio_cfg["volumes"]
+        self.volume_index = audio_cfg["volume"]
+        sleep_cfg = config.sleep
+        self._sleep_after_us = int(sleep_cfg["after_s"] * 1000000)
+        self._activity_omega = sleep_cfg["activity_omega"]
+        self._last_activity = 0
+        self.wake_reason = None
 
     # ----- lifecycle -------------------------------------------------
 
-    def start(self, now):
+    def start(self, now, wake=None, power_on=False):
+        """Restore persisted state. ``wake`` is "motion"/"button" after a deep
+        sleep wake; ``power_on`` is True on a cold start (not a code reload).
+        Either may announce the selected bell so the player knows it is awake."""
         state = self.store.load()
         if state:
             index = state.get("index", 0)
@@ -92,13 +103,28 @@ class Instrument:
             if state.get("accessible"):
                 self.base_mode = "accessible"
                 self.mode = "accessible"
+            volume = state.get("volume")
+            if isinstance(volume, int) and 0 <= volume < len(self._volumes):
+                self.volume_index = volume
         self._sel_t = now
+        self._last_activity = now
+        self.wake_reason = wake
         self.pattern.show("boot", now)
+        sleep_cfg = self.cfg.sleep
+        if (wake is not None and sleep_cfg["announce_wake"]) or (
+            wake is None and power_on and sleep_cfg["announce_power_on"]
+        ):
+            self._play(self.bellset.selected, self.cfg.audio["preview_level"], now)
         self._update_led(now)
 
     @property
     def selected(self):
         return self.bellset.selected
+
+    @property
+    def volume(self):
+        """Current volume multiplier (0..1] applied to every playback level."""
+        return self._volumes[self.volume_index]
 
     def state(self, now):
         return "sounding" if self.audio.is_sounding(now) else "ready"
@@ -107,6 +133,20 @@ class Instrument:
         """True when it is a good moment for garbage collection."""
         return not self.ring.armed and not self.grammar.pressed and not self.audio.is_sounding(now)
 
+    def sleep_due(self, now):
+        """True when deep sleep is enabled and nothing has happened for ``sleep.after_s``."""
+        if self._sleep_after_us <= 0 or now - self._last_activity < self._sleep_after_us:
+            return False
+        return self.quiet(now) and not self.audio.is_awake()
+
+    def prepare_sleep(self, now):
+        """Flush persisted state and report that the instrument is going to sleep."""
+        self._save_due = None
+        self.store.save(self._persisted())
+        status = self.status(now)
+        status["sleep"] = True
+        self.link.send(_events.status(status))
+
     # ----- inputs ----------------------------------------------------
 
     def on_motion(self, now, sample):
@@ -114,6 +154,8 @@ class Instrument:
             return None
         ax, ay, az, gx, gy, gz = sample
         strike = self.ring.push(now, ax, ay, az, gx, gy, gz)
+        if abs(self.ring.last_signal) >= self._activity_omega or self.ring.armed:
+            self._last_activity = now
         if self._wake_on_motion and (self.ring.armed or abs(self.ring.last_signal) >= self._wake_omega):
             self._wake(now)
         if strike is not None:
@@ -133,6 +175,7 @@ class Instrument:
         state = self.state(now)
         self.grammar.double_enabled = self.cfg.has_event(self.mode, state, "double")
         self._keep_awake(now)
+        self._last_activity = now
         events = self.grammar.press(now) if pressed else self.grammar.release(now)
         for event in events:
             acted = self._dispatch(event, now, state)
@@ -188,12 +231,11 @@ class Instrument:
     def _on_strike(self, strike, now):
         self.last_strike = strike
         self._last_ring = strike.t
+        self._last_activity = now
         bell = self.bellset.selected
-        if self.mode != "maintenance" and not self.silenced:
-            level = _config.level_for(self.cfg.audio, strike.intensity) * bell.gain
-            self._wake(now)
-            self.audio.play(bell, level, now)
-            self.counters["rings"] += 1
+        if self.mode != "maintenance":
+            if self._play(bell, _config.level_for(self.cfg.audio, strike.intensity), now):
+                self.counters["rings"] += 1
         self.pattern.show("ring", now)
         self._seq += 1
         self.link.send(
@@ -249,6 +291,36 @@ class Instrument:
             self.pattern.show("mode", now)
             self._schedule_save(now)
             self._send_status(now)
+        elif action in ("volume", "volume_up", "volume_down"):
+            self._change_volume(action, now)
+        return True
+
+    def _change_volume(self, action, now):
+        last = len(self._volumes) - 1
+        index = self.volume_index
+        if action == "volume":
+            index = 0 if index >= last else index + 1
+        elif action == "volume_up":
+            index = min(last, index + 1)
+        else:
+            index = max(0, index - 1)
+        self.volume_index = index
+        if self.audio.is_sounding(now):
+            self.audio.damp(now, self._damp_ms)
+        self._play(self.bellset.selected, _config.level_for(self.cfg.audio, self.cfg.controls["key_velocity"]), now)
+        self.pattern.show("count", now, count=index + 1)
+        self._schedule_save(now)
+        self._send_status(now)
+
+    def _play(self, bell, level, now):
+        """Play ``bell`` at ``level`` scaled by its gain and the player volume.
+
+        Returns False (and plays nothing) when a critical battery silences output.
+        """
+        if self.silenced:
+            return False
+        self._wake(now)
+        self.audio.play(bell, level * bell.gain * self.volume, now)
         return True
 
     def _select(self, delta, now):
@@ -261,9 +333,7 @@ class Instrument:
         bell = self.bellset.selected
         if self.audio.is_sounding(now):
             self.audio.damp(now, self._damp_ms)
-        if not self.silenced:
-            self._wake(now)
-            self.audio.play(bell, self.cfg.audio["preview_level"] * bell.gain, now)
+        self._play(bell, self.cfg.audio["preview_level"], now)
         self.pattern.show("count", now, count=self.bellset.index + 1)
         self._schedule_save(now)
         self._send_select(now)
@@ -271,11 +341,9 @@ class Instrument:
     def _key_ring(self, now):
         bell = self.bellset.selected
         vel = self.cfg.controls["key_velocity"]
-        if self.silenced:
+        if not self._play(bell, _config.level_for(self.cfg.audio, vel), now):
             self.pattern.show("locked", now)
             return
-        self._wake(now)
-        self.audio.play(bell, _config.level_for(self.cfg.audio, vel) * bell.gain, now)
         self.counters["key_rings"] += 1
         self.pattern.show("ring", now)
         self._seq += 1
@@ -310,7 +378,12 @@ class Instrument:
         self._save_due = now + SAVE_DELAY_US
 
     def _persisted(self):
-        return {"index": self.bellset.index, "locked": self.locked, "accessible": self.base_mode == "accessible"}
+        return {
+            "index": self.bellset.index,
+            "locked": self.locked,
+            "accessible": self.base_mode == "accessible",
+            "volume": self.volume_index,
+        }
 
     def _update_led(self, now):
         on = self.pattern.level(now)
@@ -334,7 +407,10 @@ class Instrument:
             "awake": self.audio.is_awake(),
             "sounding": self.audio.is_sounding(now),
             "rings": self.counters["rings"],
+            "volume": self.volume_index + 1,
         }
+        if self.wake_reason is not None:
+            out["wake"] = self.wake_reason
         battery = self.battery.status() if self.battery is not None else None
         if battery is not None:
             out["battery"] = battery

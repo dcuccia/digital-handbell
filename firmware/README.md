@@ -89,12 +89,34 @@ switch, pin 2 to GND. The defaults below can be changed in `bells.json`:
 |---|---|---|---|---|
 | Silent (play mode) | Next bell, with a soft preview | Previous bell | Lock/unlock selection | Maintenance mode |
 | Sounding | Damp on press (immediate) | - | - | Maintenance mode |
-| Maintenance (LED blinks 1 Hz) | Exit | Toggle accessible mode | - | Exit |
+| Maintenance (LED blinks 1 Hz) | Exit | Toggle accessible mode | **Next volume step** | Exit |
 | Accessible mode | Press rings the selected bell | - | - | Maintenance mode |
 
 In maintenance mode, rings are detected and reported but make no sound,
-which is useful for tuning. The selected bell, lock and mode are saved in
-non-volatile memory (`microcontroller.nvm`) and survive power cycles.
+which is useful for tuning.
+
+**Volume.** In maintenance mode, each ~1 s hold steps through the volume
+settings (25%, 50%, 75%, 100% by default, then back to 25%). The bell plays
+at the new volume and the LED blinks the step number. Volume scales every
+sound, but can never exceed the speaker-safety ceiling `audio.level.max`.
+
+**Saved settings.** The selected bell, lock, accessible mode and volume are
+stored in non-volatile memory (`microcontroller.nvm`). They survive power
+cycles and sleep.
+
+**Sleep and wake.** After `sleep.after_s` (120 s by default) with no
+handling, rings or button presses, the bell goes to deep sleep:
+
+- The amplifier is muted and powered off, and the LED goes dark.
+- The motion sensor drops to a low-power wake-up mode.
+- The RP2040 stops its clock.
+
+**Shake the bell or press the button to wake it.** It restarts in about a
+second and plays the selected bell at the current volume, so you know it's
+awake. It also plays that bell at power-on. While USB is connected,
+CircuitPython only simulates sleep (the console stays up, and saving a file
+also wakes it). The board has no power switch (#22), so sleep is what
+preserves the battery.
 
 **Status LED (GPIO13).** Brief blink every 3 s when idle. A flash on each
 ring. After a selection change it blinks once per bell position (1 = first
@@ -106,7 +128,9 @@ low and a triple blink when critical.
 **Serial messages.** One JSON object per line, shaped like Go Go
 HarmoniYo's HGP v0: `hello` at start, `gesture` (`ring`/`damp`) with
 back-dated `t`, `vel` and detection delay `det`, `select` on note changes and
-`status` every 5 s with sample rate, loop timing and free memory. Set
+`status` every 5 s with sample rate, loop timing, free memory and volume
+step. A `status` with `"sleep": true` is sent just before sleeping; after a
+wake, `status` carries `"wake": "motion"` or `"button"`. Set
 `"debug": {"raw": true}` to also stream IMU rows for trace capture.
 
 ## Configuration: `bells.json`
@@ -124,8 +148,9 @@ cannot pass silently. The main keys:
 | `ring.sens` | `"normal"` or `"quick"` (HGP sensitivity) |
 | `detector` | Ring detector overrides, such as `{"min_decel": 5000, "axis": [1, 0, 0]}` ([tuning](../docs/firmware/gesture-tuning.md)) |
 | `controls` | Per-mode, per-state map of `click`/`double`/`long`/`very_long`/`down` to actions |
-| `audio` | `sample_rate` (all sounds must match), `voices`, `retrigger`, `damp_ms`, `level` {min,max,curve}, `preview_level` |
+| `audio` | `sample_rate` (all sounds must match), `voices`, `retrigger`, `damp_ms`, `level` {min,max,curve}, `preview_level`, `volumes` (step multipliers), `volume` (default step index) |
 | `power` | `keep_awake_s`, `settle_ms` (boost/amplifier settle before clocks), `wake_on_motion` |
+| `sleep` | `after_s` (idle seconds before deep sleep; 0 = never), `activity_omega` (deg/s of handling that counts as activity), `wake_mg` (shake threshold, 31.25 mg steps), `wake_odr_hz`, `button_wakes`, `announce_wake`, `announce_power_on` |
 | `imu` | `rate_hz` (416), `gyro_dps` (2000), `accel_g` (16), `fast_read` |
 | `battery` | `low_v`, `critical_v`, `hysteresis_v`, `samples`, `sample_s`, `critical_action` (`"silence"`/`"warn"`). Used only on boards with a sense line ([#17](https://github.com/dcuccia/digital-handbell/issues/17)); thresholds are provisional |
 | `debug` | `events`, `status_s`, `raw` |

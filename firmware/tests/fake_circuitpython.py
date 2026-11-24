@@ -167,10 +167,12 @@ class Keys:
     def __init__(self, pins, value_when_pressed, pull=True, interval=0.02):
         self.value_when_pressed = value_when_pressed
         self.events = EventQueue()
+        self.deinited = False
         Keys.last = self
 
     def deinit(self):
-        pass
+        self.deinited = True
+        LOG.append("keys.deinit")
 
 
 class I2C:
@@ -238,12 +240,42 @@ class LSM6DSOX:
         return (0.0, 0.0, 0.0)
 
 
+class PinAlarm:
+    def __init__(self, pin, value, edge=False, pull=False):
+        self.pin = pin
+        self.value = value
+        self.edge = edge
+        self.pull = pull
+
+
+class AlarmModule(types.ModuleType):
+    """``alarm`` stand-in: records the deep-sleep request instead of sleeping."""
+
+    def __init__(self):
+        super().__init__("alarm")
+        self.wake_alarm = None
+        self.slept_with = None
+        self.pin = _module("alarm.pin", PinAlarm=PinAlarm)
+
+    def exit_and_deep_sleep_until_alarms(self, *alarms):
+        self.slept_with = alarms
+        LOG.append("deep_sleep")
+
+
 def install(monkeypatch):
     """Install the stand-ins into sys.modules for the duration of a test."""
     del LOG[:]
     pin = types.SimpleNamespace(**{"GPIO%d" % i: Pin("GPIO%d" % i) for i in range(30)})
     nvm = bytearray(256)
+    alarm = AlarmModule()
     modules = {
+        "alarm": alarm,
+        "alarm.pin": alarm.pin,
+        "supervisor": _module(
+            "supervisor",
+            RunReason=types.SimpleNamespace(STARTUP="startup", AUTO_RELOAD="auto_reload"),
+            runtime=types.SimpleNamespace(run_reason="startup"),
+        ),
         "digitalio": _module("digitalio", DigitalInOut=DigitalInOut, Pull=types.SimpleNamespace(UP="up", DOWN="down")),
         "analogio": _module("analogio", AnalogIn=AnalogIn),
         "audiobusio": _module("audiobusio", I2SOut=I2SOut),

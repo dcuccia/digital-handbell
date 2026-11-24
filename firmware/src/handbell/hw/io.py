@@ -52,11 +52,12 @@ class NvmStore:
     """Selected bell, lock and accessibility mode in ``microcontroller.nvm``.
 
     CIRCUITPY is read-only to code while USB-mounted, so this small state
-    lives in the separate NVM sector. Layout: magic, version, index, flags.
+    lives in the separate NVM sector. Layout v2: magic, version, index,
+    flags, volume step. Version 1 (no volume byte) is still read.
     """
 
     MAGIC = 0xB7
-    VERSION = 1
+    VERSION = 2
 
     def __init__(self):
         import microcontroller
@@ -65,18 +66,24 @@ class NvmStore:
 
     def load(self):
         nvm = self._nvm
-        if nvm is None or len(nvm) < 4 or nvm[0] != self.MAGIC or nvm[1] != self.VERSION:
+        if nvm is None or len(nvm) < 5 or nvm[0] != self.MAGIC or nvm[1] not in (1, 2):
             return None
         flags = nvm[3]
-        return {"index": nvm[2], "locked": bool(flags & 1), "accessible": bool(flags & 2)}
+        state = {"index": nvm[2], "locked": bool(flags & 1), "accessible": bool(flags & 2)}
+        if nvm[1] >= 2:
+            state["volume"] = nvm[4]
+        return state
 
     def save(self, state):
         if self._nvm is None:
             return
         flags = (1 if state.get("locked") else 0) | (2 if state.get("accessible") else 0)
-        data = bytes((self.MAGIC, self.VERSION, state.get("index", 0) & 0xFF, flags))
-        if bytes(self._nvm[0:4]) != data:
-            self._nvm[0:4] = data
+        data = bytes(
+            (self.MAGIC, self.VERSION, state.get("index", 0) & 0xFF, flags, state.get("volume", 0) & 0xFF)
+        )
+        # Write only when changed: each write costs a flash sector erase.
+        if bytes(self._nvm[0:5]) != data:
+            self._nvm[0:5] = data
 
 
 class ConsoleLink:

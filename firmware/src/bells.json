@@ -26,7 +26,7 @@
       "any": {"down": "ring", "very_long": "maintenance"}
     },
     "maintenance": {
-      "any": {"click": "exit", "double": "toggle_accessible", "very_long": "exit"}
+      "any": {"click": "exit", "double": "toggle_accessible", "long": "volume", "very_long": "exit"}
     }
   },
   "audio": {
@@ -35,8 +35,17 @@
     "retrigger": "overlap",
     "damp_ms": 60,
     "level": {"min": 0.15, "max": 0.5, "curve": 0.7},
-    "preview_level": 0.2
+    "preview_level": 0.2,
+    "volumes": [0.25, 0.5, 0.75, 1.0],
+    "volume": 3
   },
   "power": {"keep_awake_s": 20, "settle_ms": 50, "wake_on_motion": true},
+  "sleep": {
+    "after_s": 120,
+    "wake_mg": 250,
+    "button_wakes": true,
+    "announce_wake": true,
+    "announce_power_on": true
+  },
   "debug": {"events": true, "status_s": 5, "raw": false}
 }
