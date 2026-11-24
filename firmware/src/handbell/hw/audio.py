@@ -24,6 +24,7 @@ CLOCKING = 2
 READY = 3
 MUTING = 4
 STATE_NAMES = ("off", "powering", "clocking", "ready", "muting")
+WAV_BUFFER_BYTES = 1024  # WaveFile double buffer per voice; multiple of 8
 
 
 def _output(pin, value):
@@ -74,8 +75,12 @@ class CircuitPythonAudio:
             samples_signed=True,
             buffer_size=audio_cfg["buffer_size"],
         )
-        self._decoders = [None] * self._file_voices
+        self._decoders = []
+        self._decoder_voice = []  # voice index currently playing each decoder, or None
+        self._mp3_decoders = audio_cfg["mp3_decoders"]
         self._files = [None] * self._file_voices
+        self._wav_buffers = [None] * self._file_voices
+        self._preallocate(bells)
         self._voice_bell = [None] * self._file_voices
         self._voice_start = [0] * self._file_voices
         self._ramps = [None] * self._file_voices
@@ -100,6 +105,37 @@ class CircuitPythonAudio:
         self.last_start_latency_us = None
 
     # ----- port interface -------------------------------------------
+
+    def _preallocate(self, bells):
+        """Allocate decoders and WAV buffers now, once, after a collection.
+
+        CircuitPython's MP3Decoder and WaveFile allocate with
+        ``m_malloc_without_collect``, so one created mid-performance fails with
+        MemoryError once the heap is fragmented. Each MP3Decoder also costs
+        about 37 KB of heap on RP2040 (measured on the first-article board),
+        so only ``audio.mp3_decoders`` (default 1) are kept and shared between
+        voices; ``MP3Decoder.open`` and caller-supplied WaveFile buffers reuse
+        these allocations.
+        """
+        import gc
+
+        gc.collect()
+        first_mp3 = None
+        has_wav = False
+        for b in bells:
+            if b.kind == "mp3" and first_mp3 is None:
+                first_mp3 = b.sound
+            elif b.kind == "wav":
+                has_wav = True
+        if first_mp3 is not None:
+            import audiomp3
+
+            for _ in range(min(self._mp3_decoders, self._file_voices)):
+                self._decoders.append(audiomp3.MP3Decoder(first_mp3))
+                self._decoder_voice.append(None)
+        if has_wav:
+            for i in range(self._file_voices):
+                self._wav_buffers[i] = bytearray(WAV_BUFFER_BYTES)
 
     @property
     def state_name(self):
@@ -269,20 +305,39 @@ class CircuitPythonAudio:
                 oldest = i
         return oldest
 
+    def _acquire_decoder(self):
+        """A decoder not in use, else the one on the oldest sounding voice.
+
+        Taking a decoder stops the voice that was playing it: with a single
+        decoder an MP3 re-strike restarts the note rather than overlapping.
+        """
+        steal = None
+        for d in range(len(self._decoders)):
+            owner = self._decoder_voice[d]
+            if owner is None or not self.mixer.voice[owner].playing:
+                return d
+            if steal is None or self._voice_start[owner] < self._voice_start[self._decoder_voice[steal]]:
+                steal = d
+        if steal is None:
+            raise RuntimeError("no MP3 decoder preallocated")
+        owner = self._decoder_voice[steal]
+        self.mixer.voice[owner].stop()
+        self._ramps[owner] = None
+        return steal
+
     def _start_file(self, bell, level, now):
         i = self._pick_voice(bell)
         voice = self.mixer.voice[i]
         voice.stop()
         self._ramps[i] = None
+        for d in range(len(self._decoder_voice)):
+            if self._decoder_voice[d] == i:
+                self._decoder_voice[d] = None
         if bell.kind == "mp3":
-            import audiomp3
-
-            decoder = self._decoders[i]
-            if decoder is None:
-                decoder = audiomp3.MP3Decoder(bell.sound)
-                self._decoders[i] = decoder
-            else:
-                decoder.open(bell.sound)
+            d = self._acquire_decoder()
+            decoder = self._decoders[d]
+            decoder.open(bell.sound)
+            self._decoder_voice[d] = i
             sample = decoder
         else:
             import audiocore
@@ -292,7 +347,8 @@ class CircuitPythonAudio:
                 old.close()
             f = open(bell.sound, "rb")
             self._files[i] = f
-            sample = audiocore.WaveFile(f)
+            buffer = self._wav_buffers[i]
+            sample = audiocore.WaveFile(f, buffer) if buffer is not None else audiocore.WaveFile(f)
         voice.level = max(0.0, min(1.0, level))
         voice.play(sample)
         self._voice_bell[i] = bell.id

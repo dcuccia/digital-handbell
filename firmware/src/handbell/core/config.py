@@ -75,6 +75,9 @@ DEFAULTS = {
         # Conservative until speaker/level limits are measured (see docs).
         "level": {"min": 0.15, "max": 0.5, "curve": 0.7},
         "preview_level": 0.2,
+        # MP3 decoders kept in RAM (~37 KB each on RP2040). With one, an MP3
+        # re-strike restarts the note; WAV and synth voices still overlap.
+        "mp3_decoders": 1,
         # Player volume steps: multipliers on every level above, so volume can
         # never exceed audio.level.max. "volume" is the default step (index);
         # the chosen step persists across power cycles.
@@ -233,6 +236,10 @@ class Config:
     def _check_audio(a):
         _require(a["sample_rate"] in (8000, 11025, 16000, 22050, 32000, 44100), "audio.sample_rate unsupported")
         _require(a["voices"] in (1, 2, 3, 4), "audio.voices must be 1..4")
+        _require(
+            isinstance(a["mp3_decoders"], int) and 1 <= a["mp3_decoders"] <= a["voices"],
+            "audio.mp3_decoders must be 1..audio.voices (each costs ~37 KB of RAM)",
+        )
         _require(a["retrigger"] in RETRIGGER, "audio.retrigger must be one of %r" % (RETRIGGER,))
         _number(a, "damp_ms", 1, 2000)
         _number(a, "preview_level", 0.0, 1.0)
