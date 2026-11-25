@@ -94,13 +94,13 @@ def test_prepare_sleep_saves_state_and_reports():
     ],
 )
 def test_announce_on_wake_and_power_on(wake, power_on, raw, plays):
-    cfg, audio, link, store, inst = make(raw, store_state={"index": 2, "locked": False, "accessible": False, "volume": 1})
+    cfg, audio, link, store, inst = make(raw, store_state={"index": 1, "locked": False, "accessible": False, "volume": 1})
     inst.start(0, wake=wake, power_on=power_on)
     idle(inst, 0, 200)
     got = audio.plays()
     assert len(got) == plays
     if plays:
-        assert got[0][2] == "E5"  # the persisted bell
+        assert got[0][2] == "G5"  # the persisted bell
         assert got[0][3] == pytest.approx(0.2 * 0.5)  # preview level x persisted volume
     if wake:
         assert inst.status(0)["wake"] == wake

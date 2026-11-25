@@ -32,15 +32,11 @@ WAKE_ODR_HZ = (13, 26, 52, 104)
 DEFAULTS = {
     "v": 0,
     "name": "handbell",
+    # Two resident notes as 16-bit WAV: MP3 decoded during play drops out
+    # under app load on RP2040 (docs/firmware/audio-assets.md).
     "bells": [
-        {"id": "C5", "sound": "sounds/C5.mp3"},
-        {"id": "D5", "sound": "sounds/D5.mp3"},
-        {"id": "E5", "sound": "sounds/E5.mp3"},
-        {"id": "F5", "sound": "sounds/F5.mp3"},
-        {"id": "G5", "sound": "sounds/G5.mp3"},
-        {"id": "A5", "sound": "sounds/A5.mp3"},
-        {"id": "B5", "sound": "sounds/B5.mp3"},
-        {"id": "C6", "sound": "sounds/C6.mp3"},
+        {"id": "C5", "sound": "sounds/C5.wav"},
+        {"id": "G5", "sound": "sounds/G5.wav"},
     ],
     "select": "cycle",
     "mode": "play",

@@ -63,7 +63,7 @@ state on exit.
 | c | `import bringup.i2c_imu` | Scan shows `0x6a`; WHO_AM_I `0x6C`; CTRL9_XL bit 1 = 1, bit 0 = 0 on re-read; at rest \|a\| ≈ 9.8 m/s², gyro ≈ 0 | Printed values. This closes the hardware part of [#13](https://github.com/dcuccia/digital-handbell/issues/13) |
 | d | `import bringup.button` (needs a switch on J2) | One `pressed`/`released` per press (no chatter); click, double, long and very_long recognized | Any chatter; switch type |
 | e | `import bringup.audio_tone` | Steps 1-6 print. Quiet 440 Hz tone at level 0.05 | Supply current at each step, clicks at 2/4/6, hiss at 4. **Use a current-limited supply** |
-| f | `import bringup.audio_files` | Synth, WAV and MP3 bells play; overlapping MP3s play without glitches | `play()` times, timbre, glitches |
+| f | `import bringup.audio_files` | Synth, WAV and MP3 versions of A5 play, then two overlapping WAV strikes | `play()` times, timbre, glitches (MP3 may drop out; see audio assets) |
 | g | `import bringup.loop_rate` | New samples/s close to 416 for burst reads | Loops/s, samples/s, max loop gap, `gc.collect()` time |
 | h | `import bringup.battery` | On this board: reports that there is no sense line | Nothing; it exists for the next revision ([#17](https://github.com/dcuccia/digital-handbell/issues/17)) |
 | i | `import bringup.wake` | One line per deliberate shake; pickup, set-down and knocks mostly don't trigger | Hits and misses at `sleep.wake_mg` (default 250 mg); adjust in `bells.json` |

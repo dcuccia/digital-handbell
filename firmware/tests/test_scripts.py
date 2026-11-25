@@ -13,12 +13,41 @@ from motion import still, stroke, write_trace
 
 def test_make_sounds_is_deterministic_and_writes_provenance(tmp_path):
     items = [("A5", 81, "sounds/A5.wav")]
-    a = make_sounds.generate(tmp_path / "a", items, 22050, 0.5, 64)
-    b = make_sounds.generate(tmp_path / "b", items, 22050, 0.5, 64)
+    a = make_sounds.generate(tmp_path / "a", items, 22050, 0.5, 64, masters=None)
+    b = make_sounds.generate(tmp_path / "b", items, 22050, 0.5, 64, masters=None)
     assert a[0]["sha256"] == b[0]["sha256"]
     with wave.open(str(tmp_path / "a" / "sounds" / "A5.wav")) as w:
         assert (w.getnchannels(), w.getsampwidth(), w.getframerate(), w.getnframes()) == (1, 2, 22050, 11025)
     assert a[0]["license"] == "MIT"
+
+
+def test_device_sounds_come_from_masters(tmp_path):
+    masters = tmp_path / "masters"
+    make_sounds.write_masters(masters, ["G5"], 22050, 0.25)
+    master = masters / "G5.wav"
+    # A master that differs from the synthesis must win, byte for byte.
+    with wave.open(str(master), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(22050)
+        w.writeframes(b"\x01\x02" * 100)
+    recs = make_sounds.generate(tmp_path / "out", [("G5", 79, "sounds/G5.wav")], 22050, 4.0, 64, masters=masters)
+    assert (tmp_path / "out" / "sounds" / "G5.wav").read_bytes() == master.read_bytes()
+    assert recs[0]["source"].startswith("master ") and recs[0]["seconds"] == round(100 / 22050, 3)
+
+
+def test_unfetched_lfs_master_fails_clearly(tmp_path):
+    (tmp_path / "C5.wav").write_bytes(b"version https://git-lfs.github.com/spec/v1\noid sha256:00\nsize 1\n")
+    with pytest.raises(SystemExit):
+        make_sounds.generate(tmp_path / "out", [("C5", 72, "sounds/C5.wav")], 22050, 1.0, 64, masters=tmp_path)
+
+
+def test_shipped_bells_have_committed_masters():
+    config = make_sounds._common.SRC / "bells.json"
+    for _, midi, rel in make_sounds.plan_from_config(config, 22050):
+        assert rel.endswith(".wav"), "instrument bells play WAV; MP3 drops out under load"
+        master = make_sounds.master_path(midi)
+        assert master.exists() and master.read_bytes()[:4] == b"RIFF", "missing master or LFS not pulled: %s" % master
 
 
 def test_make_sounds_mp3_is_small_cbr(tmp_path):
@@ -31,11 +60,10 @@ def test_make_sounds_mp3_is_small_cbr(tmp_path):
 
 def test_provided_sounds_are_not_regenerated(tmp_path):
     (tmp_path / "sounds").mkdir()
-    (tmp_path / "sounds" / "C5.mp3").write_bytes(b"mine")
+    (tmp_path / "sounds" / "C5.wav").write_bytes(b"mine")
     config = make_sounds._common.SRC / "bells.json"
     items = make_sounds.plan_from_config(config, 22050, user_root=tmp_path)
-    assert "sounds/C5.mp3" not in [i[2] for i in items]
-    assert len(items) == 7
+    assert [i[2] for i in items] == ["sounds/G5.wav"]
 
 
 def test_replay_detects_rings_in_trace(tmp_path):
