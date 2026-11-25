@@ -25,6 +25,10 @@ READY = 3
 MUTING = 4
 STATE_NAMES = ("off", "powering", "clocking", "ready", "muting")
 WAV_BUFFER_BYTES = 1024  # WaveFile double buffer per voice; multiple of 8
+# A fading voice is stopped this long after its fade: the mixer advances the
+# fade LFO only when it fills a buffer (~46 ms at 2048 bytes), so the fade lags
+# real time by up to about two buffers (measured on the first article).
+FADE_MARGIN_US = 100000
 
 
 def _output(pin, value):
@@ -83,7 +87,11 @@ class CircuitPythonAudio:
         self._preallocate(bells)
         self._voice_bell = [None] * self._file_voices
         self._voice_start = [0] * self._file_voices
+        self._voice_level = [0.0] * self._file_voices
         self._ramps = [None] * self._file_voices
+        self._fade_stop = [None] * self._file_voices  # stop time of a voice fading out
+        self._steal_us = int(audio_cfg.get("steal_ms", 0) * 1000)
+        self._fade_wave = None
         self._synth = None
         self._synth_voice = self._file_voices if self._has_synth else None
         self._synth_groups = []
@@ -181,8 +189,8 @@ class CircuitPythonAudio:
         duration = int(ms * 1000)
         for i in range(self._file_voices):
             voice = self.mixer.voice[i]
-            if voice.playing:
-                self._ramps[i] = _Ramp(voice.level, now, duration)
+            if voice.playing and self._fade_stop[i] is None:
+                self._ramps[i] = _Ramp(self._voice_level[i], now, duration)
         if self._synth is not None and self._synth_groups:
             for group in self._synth_groups:
                 self._synth.release(group[0])
@@ -259,6 +267,7 @@ class CircuitPythonAudio:
         for i in range(self._file_voices):
             self.mixer.voice[i].stop()
             self._ramps[i] = None
+            self._fade_stop[i] = None
         if self._synth is not None:
             self._synth.release_all()
             self._synth_groups = []
@@ -266,6 +275,12 @@ class CircuitPythonAudio:
 
     def _tick_ready(self, now):
         for i in range(self._file_voices):
+            stop_at = self._fade_stop[i]
+            if stop_at is not None and now >= stop_at:
+                self.mixer.voice[i].stop()
+                self._fade_stop[i] = None
+                self._ramps[i] = None
+                continue
             ramp = self._ramps[i]
             if ramp is not None:
                 level = ramp.level(now)
@@ -298,12 +313,64 @@ class CircuitPythonAudio:
                 if self._voice_bell[i] == bell.id and self.mixer.voice[i].playing:
                     return i
         oldest = 0
+        fading = None
         for i in range(self._file_voices):
             if not self.mixer.voice[i].playing:
                 return i
+            stop_at = self._fade_stop[i]
+            if stop_at is not None and (fading is None or stop_at < self._fade_stop[fading]):
+                fading = i
             if self._voice_start[i] < self._voice_start[oldest]:
                 oldest = i
-        return oldest
+        # Reuse the voice already fading out before cutting off a sounding one.
+        return fading if fading is not None else oldest
+
+    def _fade_out(self, i, now):
+        """Fade voice ``i`` to silence over ``steal_ms``, then stop it.
+
+        The fade is a once-only ``synthio.LFO`` used as the voice level, so the
+        mixer applies it every 256-sample block at zero crossings. Without
+        ``synthio.LFO`` it falls back to the per-tick ramp used for damping.
+        """
+        self._ramps[i] = None
+        level = self._voice_level[i]
+        lfo = self._fade_lfo(level)
+        if lfo is not None:
+            self.mixer.voice[i].level = lfo
+        else:
+            self._ramps[i] = _Ramp(level, now, self._steal_us)
+        self._fade_stop[i] = now + self._steal_us + FADE_MARGIN_US
+
+    def _fade_lfo(self, level):
+        try:
+            import synthio
+        except ImportError:
+            return None
+        lfo = getattr(synthio, "LFO", None)
+        if lfo is None:
+            return None
+        if self._fade_wave is None:
+            # Full scale to zero over the first quarter of one period, then held.
+            self._fade_wave = array.array("h", [32767, 0, 0, 0])
+        period_s = 4.0 * self._steal_us / 1000000.0
+        return lfo(waveform=self._fade_wave, rate=1.0 / period_s, scale=level, offset=0.0, once=True, interpolate=True)
+
+    def _make_room(self, started, now):
+        """After a strike, start fading the oldest note if no voice is left free.
+
+        The next strike then finds a fading or free voice instead of cutting
+        a sounding note off mid-waveform, which clicks.
+        """
+        if self._steal_us <= 0 or self._file_voices < 2:
+            return
+        oldest = None
+        for i in range(self._file_voices):
+            if not self.mixer.voice[i].playing or self._fade_stop[i] is not None:
+                return
+            if i != started and (oldest is None or self._voice_start[i] < self._voice_start[oldest]):
+                oldest = i
+        if oldest is not None:
+            self._fade_out(oldest, now)
 
     def _acquire_decoder(self):
         """A decoder not in use, else the one on the oldest sounding voice.
@@ -323,6 +390,7 @@ class CircuitPythonAudio:
         owner = self._decoder_voice[steal]
         self.mixer.voice[owner].stop()
         self._ramps[owner] = None
+        self._fade_stop[owner] = None
         return steal
 
     def _start_file(self, bell, level, now):
@@ -330,6 +398,7 @@ class CircuitPythonAudio:
         voice = self.mixer.voice[i]
         voice.stop()
         self._ramps[i] = None
+        self._fade_stop[i] = None
         for d in range(len(self._decoder_voice)):
             if self._decoder_voice[d] == i:
                 self._decoder_voice[d] = None
@@ -349,10 +418,13 @@ class CircuitPythonAudio:
             self._files[i] = f
             buffer = self._wav_buffers[i]
             sample = audiocore.WaveFile(f, buffer) if buffer is not None else audiocore.WaveFile(f)
-        voice.level = max(0.0, min(1.0, level))
+        level = max(0.0, min(1.0, level))
+        voice.level = level
         voice.play(sample)
         self._voice_bell[i] = bell.id
         self._voice_start[i] = now
+        self._voice_level[i] = level
+        self._make_room(i, now)
 
     def _envelope(self, decay_s):
         key = int(decay_s * 1000)

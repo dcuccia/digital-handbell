@@ -131,6 +131,12 @@ class Note:
         self.kw = kw
 
 
+class LFO:
+    def __init__(self, waveform=None, **kw):
+        self.waveform = waveform
+        self.kw = kw
+
+
 class Synthesizer:
     name = "synth"
 
@@ -286,7 +292,7 @@ def install(monkeypatch):
         "audiomixer": _module("audiomixer", Mixer=Mixer),
         "audiomp3": _module("audiomp3", MP3Decoder=MP3Decoder),
         "audiocore": _module("audiocore", WaveFile=WaveFile, RawSample=RawSample),
-        "synthio": _module("synthio", Synthesizer=Synthesizer, Note=Note, Envelope=Envelope),
+        "synthio": _module("synthio", Synthesizer=Synthesizer, Note=Note, Envelope=Envelope, LFO=LFO),
         "keypad": _module("keypad", Keys=Keys, Event=Event),
         "busio": _module("busio", I2C=I2C),
         "microcontroller": _module(

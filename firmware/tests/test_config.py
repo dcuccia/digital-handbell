@@ -54,8 +54,8 @@ def test_action_lookup_falls_back_to_any():
 def test_level_mapping_bounds():
     audio = config.parse().audio
     assert config.level_for(audio, 0) == pytest.approx(0.15)
-    assert config.level_for(audio, 1) == pytest.approx(0.5)
-    assert config.level_for(audio, 2) == pytest.approx(0.5)
+    assert config.level_for(audio, 1) == pytest.approx(audio["level"]["max"])
+    assert config.level_for(audio, 2) == pytest.approx(audio["level"]["max"])
 
 
 def test_hgp_messages_are_valid_json_with_exact_ms():

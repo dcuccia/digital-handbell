@@ -109,6 +109,51 @@ def test_overlap_retrigger_uses_second_voice(cp):
     assert audio.mixer.voice[0].playing and audio.mixer.voice[1].playing
 
 
+def test_strike_with_no_free_voice_fades_oldest_instead_of_cutting(cp):
+    cfg, audio = make_audio()  # 3 voices, steal_ms 40
+    audio.wake(0)
+    run_until(audio, 0, 60)
+    c5, g5 = cfg.bells
+    for k, t in enumerate((100, 600, 1100)):
+        audio.play((c5, g5)[k % 2], 0.5, t * MS)
+    voices = audio.mixer.voice
+    assert [v.playing for v in voices] == [True, True, True]
+    # The oldest note fades through a once-only LFO level instead of a hard stop.
+    lfo = voices[0].level
+    assert isinstance(lfo, fcp.LFO) and lfo.kw["once"] and lfo.kw["scale"] == pytest.approx(0.5)
+    run_until(audio, 1101, 1100 + 40 + 100 + 1)
+    assert [v.playing for v in voices] == [False, True, True]
+    audio.play(g5, 0.5, 1300 * MS)
+    assert voices[0].playing and voices[0].level == pytest.approx(0.5)
+
+
+def test_strike_during_fade_reuses_fading_voice(cp):
+    cfg, audio = make_audio()
+    audio.wake(0)
+    run_until(audio, 0, 60)
+    c5, g5 = cfg.bells
+    for k, t in enumerate((100, 600, 1100)):
+        audio.play((c5, g5)[k % 2], 0.5, t * MS)
+    audio.play(c5, 0.5, 1110 * MS)
+    voices = audio.mixer.voice
+    # Voice 0 (fading) was reused; the two newer notes keep sounding.
+    assert audio._voice_start[0] == 1110 * MS and voices[1].playing and voices[2].playing
+
+
+def test_fade_falls_back_to_tick_ramp_without_lfo(cp, monkeypatch):
+    import synthio
+
+    monkeypatch.delattr(synthio, "LFO")
+    cfg, audio = make_audio()
+    audio.wake(0)
+    run_until(audio, 0, 60)
+    c5, g5 = cfg.bells
+    for k, t in enumerate((100, 600, 1100)):
+        audio.play((c5, g5)[k % 2], 0.5, t * MS)
+    run_until(audio, 1101, 1120)
+    assert 0.0 < audio.mixer.voice[0].level < 0.5
+
+
 def test_single_mp3_decoder_restarts_instead_of_overlapping(cp):
     cfg, audio = make_audio(MP3_BELLS)  # default: one shared MP3 decoder
     audio.wake(0)
@@ -125,10 +170,10 @@ def test_single_mp3_decoder_restarts_instead_of_overlapping(cp):
 
 def test_synth_bell_presses_partials_and_releases_after_decay(cp):
     cfg, audio = make_audio({"bells": [{"id": "A5", "sound": "synth"}]})
-    assert len(audio.mixer.voice) == 3
+    assert len(audio.mixer.voice) == cfg.audio["voices"] + 1  # file voices + synth
     audio.play(cfg.bells[0], 0.5, 0)
     run_until(audio, 0, 60)
-    assert "voice2.play:synth" in fcp.LOG and any(e.startswith("synth.press:") for e in fcp.LOG)
+    assert "voice%d.play:synth" % cfg.audio["voices"] in fcp.LOG and any(e.startswith("synth.press:") for e in fcp.LOG)
     assert audio.is_sounding(61 * MS)
     run_until(audio, 61, 4100, step=20)
     assert any(e.startswith("synth.release:") for e in fcp.LOG)
