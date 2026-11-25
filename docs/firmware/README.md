@@ -11,6 +11,7 @@
 | [Audio assets](audio-assets.md) | Storage budget on 2 MB, the measured MP3 start delay, sound rules and provenance |
 | [Gesture tuning](gesture-tuning.md) | Ring detector, recording and replaying traces, timing budget |
 | [Requirements and experiments](plan-and-experiments.md) | The September plan and open questions the firmware still has to answer (formerly `firmware-and-audio.md`) |
+| [Custom CircuitPython build: design](custom-circuitpython-design.md) | Design draft for a board definition and second-core MP3 decode ([#29](https://github.com/dcuccia/digital-handbell/issues/29)); nothing built |
 | [Motion sensing](../motion-sensing.md) | LSM6DSOX selection, wiring and the CTRL9_XL defect background |
 
 Status: the firmware is implemented and tested on a computer, not yet on
