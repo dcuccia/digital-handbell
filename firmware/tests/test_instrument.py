@@ -47,7 +47,7 @@ def test_ring_plays_selected_bell_after_power_up_and_reports_hgp_gesture():
     assert len(plays) == 1
     _, t, bell, level, delay = plays[0]
     assert bell == "C5"
-    assert 0.15 < level < 0.5
+    assert 0.15 < level < 1.0
     # Motion pre-wakes the amplifier while the stroke is under way, so the
     # strike starts immediately instead of waiting for power-up.
     assert delay == 0

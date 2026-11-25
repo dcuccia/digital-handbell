@@ -44,10 +44,10 @@ def test_volume_scales_ring_level_and_never_exceeds_ceiling():
     inst, audio, store, link = make()
     ring(inst, 1000)
     full = audio.plays()[-1][3]
-    assert full == pytest.approx(0.5, abs=1e-3)  # vel 1.0 -> audio.level.max at volume 1.0
+    assert full == pytest.approx(1.0, abs=1e-3)  # vel 1.0 -> audio.level.max at volume 1.0
     inst.volume_index = 0
     ring(inst, 4000)
-    assert audio.plays()[-1][3] == pytest.approx(0.5 * 0.25, abs=1e-3)
+    assert audio.plays()[-1][3] == pytest.approx(1.0 * 0.25, abs=1e-3)
 
 
 def test_volume_action_cycles_wraps_previews_and_persists():

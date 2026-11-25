@@ -64,12 +64,20 @@ DEFAULTS = {
     },
     "audio": {
         "sample_rate": 22050,
-        "voices": 2,
+        # File voices. Three keep two notes overlapping while the oldest fades
+        # out instead of being cut off (see steal_ms).
+        "voices": 3,
         "buffer_size": 2048,
         "retrigger": "overlap",
         "damp_ms": 60,
-        # Conservative until speaker/level limits are measured (see docs).
-        "level": {"min": 0.15, "max": 0.5, "curve": 0.7},
+        # When a strike leaves no voice free, the oldest note fades out over
+        # this many ms (in the mixer, at zero crossings) rather than being cut
+        # off with a click by the next strike. 0 disables the fade.
+        "steal_ms": 40,
+        # Owner-approved full scale after first-article listening (Nov 2026).
+        # Check speaker temperature, rattle and battery current when raising
+        # the GAIN0 jumper; see docs/firmware/audio-assets.md.
+        "level": {"min": 0.15, "max": 1.0, "curve": 0.7},
         "preview_level": 0.2,
         # MP3 decoders kept in RAM (~37 KB each on RP2040). With one, an MP3
         # re-strike restarts the note; WAV and synth voices still overlap.
@@ -238,6 +246,7 @@ class Config:
         )
         _require(a["retrigger"] in RETRIGGER, "audio.retrigger must be one of %r" % (RETRIGGER,))
         _number(a, "damp_ms", 1, 2000)
+        _number(a, "steal_ms", 0, 500)
         _number(a, "preview_level", 0.0, 1.0)
         level = a["level"]
         _number(level, "min", 0.0, 1.0)
