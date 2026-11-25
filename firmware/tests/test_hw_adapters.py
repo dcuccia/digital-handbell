@@ -29,6 +29,9 @@ def cp(monkeypatch):
     return fcp.install(monkeypatch)
 
 
+MP3_BELLS = {"bells": [{"id": n, "sound": "sounds/%s.mp3" % n} for n in ("C5", "D5", "E5")]}
+
+
 def make_audio(raw=None):
     from handbell.hw.audio import CircuitPythonAudio
     from handbell.platforms import handbell_rp2040
@@ -58,7 +61,7 @@ def test_cold_play_sequences_power_clocks_unmute_then_note(cp):
     assert "i2s.init" not in fcp.LOG
     run_until(audio, 50, 60)
     log = fcp.LOG
-    order = [log.index(e) for e in ("GPIO23=1", "i2s.init", "i2s.play", "GPIO20=0", "voice0.play:sounds/C5.mp3")]
+    order = [log.index(e) for e in ("GPIO23=1", "i2s.init", "i2s.play", "GPIO20=0", "voice0.play:sounds/C5.wav")]
     assert order == sorted(order)
     assert audio.is_awake() and audio.last_start_latency_us >= 55 * MS
     assert audio.mixer.voice[0].level == pytest.approx(0.3)
@@ -107,7 +110,7 @@ def test_overlap_retrigger_uses_second_voice(cp):
 
 
 def test_single_mp3_decoder_restarts_instead_of_overlapping(cp):
-    cfg, audio = make_audio()  # default: one shared MP3 decoder
+    cfg, audio = make_audio(MP3_BELLS)  # default: one shared MP3 decoder
     audio.wake(0)
     run_until(audio, 0, 60)
     audio.play(cfg.bells[0], 0.4, 61 * MS)

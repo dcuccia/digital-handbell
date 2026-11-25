@@ -70,11 +70,13 @@ The full button and LED reference is in the
 
 ## 5. Change the notes
 
-Open `bells.json` on the `CIRCUITPY` drive in any text editor. The `bells`
-list holds the resident notes in button order. Delete lines to keep fewer
-notes, or reorder them. A note can use one of the included
-`sounds/<note>.mp3` files, or `"sound": "synth"` for a modelled bell at any
-pitch, for example `{"id": "G4", "sound": "synth"}`. Save the file and the
+Open `bells.json` on the `CIRCUITPY` drive in any text editor. The `bells` list holds the resident notes in button order: C5 and G5 by
+default, and a click switches between them. Delete a line to keep one
+note, or reorder them. A note can use one of the included
+`sounds/<note>.wav` files, a 16-bit mono 22.05 kHz WAV you copy into
+`sounds/`, or `"sound": "synth"` for a modelled bell at any pitch, for
+example `{"id": "G4", "sound": "synth"}`. Prefer WAV over MP3: MP3 is
+supported but can drop out while playing on this board. Save the file and the
 board restarts with the new list. If the file has a mistake, the LED blinks
 fast and the console says what is wrong.
 

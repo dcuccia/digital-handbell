@@ -1,0 +1,102 @@
+{
+ "files": [
+  {
+   "bell": "C5",
+   "bytes": 176444,
+   "file": "C5.wav",
+   "format": "wav 16-bit mono",
+   "license": "MIT",
+   "midi": 72,
+   "sample_rate": 22050,
+   "seconds": 4.0,
+   "sha256": "1ed827cd07996ce580ed3e271c0e6c78c97052438d6cefce4ed9558ba80dfd9c",
+   "source": "original synthesis (handbell.core.bell_model), digital-handbell project"
+  },
+  {
+   "bell": "D5",
+   "bytes": 176444,
+   "file": "D5.wav",
+   "format": "wav 16-bit mono",
+   "license": "MIT",
+   "midi": 74,
+   "sample_rate": 22050,
+   "seconds": 4.0,
+   "sha256": "21b0b0850f0e3c8e07bf4130668d3e99829ab7ec01ef49a06306d6029982afd7",
+   "source": "original synthesis (handbell.core.bell_model), digital-handbell project"
+  },
+  {
+   "bell": "E5",
+   "bytes": 176444,
+   "file": "E5.wav",
+   "format": "wav 16-bit mono",
+   "license": "MIT",
+   "midi": 76,
+   "sample_rate": 22050,
+   "seconds": 4.0,
+   "sha256": "5c978a7752db773a34c48d4f488e88c908372dd13bfc02ee20b8d0a38c0d0f2e",
+   "source": "original synthesis (handbell.core.bell_model), digital-handbell project"
+  },
+  {
+   "bell": "F5",
+   "bytes": 176444,
+   "file": "F5.wav",
+   "format": "wav 16-bit mono",
+   "license": "MIT",
+   "midi": 77,
+   "sample_rate": 22050,
+   "seconds": 4.0,
+   "sha256": "f66db996d43de72b1a4c51baf657aaba998379d26411c99888191e999aa6c423",
+   "source": "original synthesis (handbell.core.bell_model), digital-handbell project"
+  },
+  {
+   "bell": "G5",
+   "bytes": 176444,
+   "file": "G5.wav",
+   "format": "wav 16-bit mono",
+   "license": "MIT",
+   "midi": 79,
+   "sample_rate": 22050,
+   "seconds": 4.0,
+   "sha256": "35b91a93d9b82bba6c3745cdb301c68b260c94bcf3159077997f52fbce47bfdc",
+   "source": "original synthesis (handbell.core.bell_model), digital-handbell project"
+  },
+  {
+   "bell": "A5",
+   "bytes": 176444,
+   "file": "A5.wav",
+   "format": "wav 16-bit mono",
+   "license": "MIT",
+   "midi": 81,
+   "sample_rate": 22050,
+   "seconds": 4.0,
+   "sha256": "0422eb93253a8c3d17dea36266abada97c38f2a64b9bd7f1cbfd644152508c8f",
+   "source": "original synthesis (handbell.core.bell_model), digital-handbell project"
+  },
+  {
+   "bell": "B5",
+   "bytes": 176444,
+   "file": "B5.wav",
+   "format": "wav 16-bit mono",
+   "license": "MIT",
+   "midi": 83,
+   "sample_rate": 22050,
+   "seconds": 4.0,
+   "sha256": "004b11f974f62ec072e921eb994eb02f5de33da0af7e88a4b91277f7621df430",
+   "source": "original synthesis (handbell.core.bell_model), digital-handbell project"
+  },
+  {
+   "bell": "C6",
+   "bytes": 176444,
+   "file": "C6.wav",
+   "format": "wav 16-bit mono",
+   "license": "MIT",
+   "midi": 84,
+   "sample_rate": 22050,
+   "seconds": 4.0,
+   "sha256": "cfddf52c2e88d05b728c31236de52c504f7d676a38576cb9d2367f52db858d1e",
+   "source": "original synthesis (handbell.core.bell_model), digital-handbell project"
+  }
+ ],
+ "generator": "firmware/scripts/make_sounds.py --write-masters",
+ "model": "handbell.core.bell_model.PARTIALS"
+}

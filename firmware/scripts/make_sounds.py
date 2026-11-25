@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""Generate original synthesized bell sounds for the device.
+"""Generate the device's bell sounds from the uncompressed masters.
 
-Deterministic: the same inputs produce the same WAV bytes (MP3 bytes depend
-on the pinned LAME build in ``lameenc``). Sounds come from the modal model
-in ``handbell.core.bell_model``, so no third-party recordings are involved.
-They are released under the project's MIT license (see ATTRIBUTION.md).
+Each device sound is rendered from its master ``firmware/sounds/<NOTE>.wav``
+(16-bit mono, tracked with Git LFS) when one exists, otherwise synthesized
+from the modal model in ``handbell.core.bell_model``. Deterministic: the same
+inputs produce the same WAV bytes (MP3 bytes depend on the pinned LAME build
+in ``lameenc``). The generated sounds are original and released under the
+project's MIT license (see ATTRIBUTION.md).
 
     python firmware/scripts/make_sounds.py --out firmware/build/assets
+    python firmware/scripts/make_sounds.py --write-masters   # regenerate masters
 """
 
 import argparse
@@ -29,6 +32,10 @@ FADE_SECONDS = 0.25
 # LAME (encoder) + standard decoder priming, measured with dr_mp3 on a 22.05 kHz
 # 64 kbit/s file: first audible sample at 1106 samples (50.2 ms).
 MP3_PRIMING_SAMPLES = 1105
+MASTERS = _common.FIRMWARE / "sounds"
+# The sound library kept as masters; bells.json chooses which reach the device.
+LIBRARY = ("C5", "D5", "E5", "F5", "G5", "A5", "B5", "C6")
+LFS_POINTER = b"version https://git-lfs"
 
 
 def synthesize(midi, sample_rate, seconds):
@@ -59,6 +66,22 @@ def write_wav(path, pcm, sample_rate):
         w.setsampwidth(2)
         w.setframerate(sample_rate)
         w.writeframes(pcm)
+
+
+def master_path(midi, masters=MASTERS):
+    return Path(masters) / ("%s.wav" % pitch.midi_to_name(midi))
+
+
+def read_master(path, sample_rate):
+    """PCM bytes of a master, which must be mono 16-bit at ``sample_rate``."""
+    with open(path, "rb") as f:
+        if f.read(len(LFS_POINTER)) == LFS_POINTER:
+            _common.fail("%s is a Git LFS pointer; run: git lfs pull" % path)
+    with wave.open(str(path), "rb") as w:
+        fmt = (w.getnchannels(), w.getsampwidth(), w.getframerate())
+        if fmt != (1, 2, sample_rate):
+            _common.fail("%s must be mono 16-bit at %d Hz, got %r" % (path, sample_rate, fmt))
+        return w.readframes(w.getnframes())
 
 
 def write_mp3(path, pcm, sample_rate, kbps):
@@ -93,15 +116,28 @@ def plan_from_config(config_path, sample_rate, user_root=None):
     return items
 
 
-def generate(out_root, items, sample_rate, seconds, kbps):
-    """``items`` are (bell_id, midi, relative_path). Returns provenance records."""
+def generate(out_root, items, sample_rate, seconds, kbps, masters=MASTERS):
+    """``items`` are (bell_id, midi, relative_path). Returns provenance records.
+
+    A master in ``masters`` is used as the source for its note; ``masters=None``
+    always synthesizes.
+    """
     records = []
     cache = {}
     for bell_id, midi, rel in items:
-        pcm = cache.get(midi)
-        if pcm is None:
-            pcm = synthesize(midi, sample_rate, seconds)
-            cache[midi] = pcm
+        if midi not in cache:
+            mpath = master_path(midi, masters) if masters is not None else None
+            if mpath is not None and mpath.exists():
+                pcm = read_master(mpath, sample_rate)
+                source = "master %s (sha256 %s)" % (
+                    mpath.relative_to(_common.REPO).as_posix() if mpath.is_relative_to(_common.REPO) else mpath.name,
+                    _common.sha256_file(mpath),
+                )
+            else:
+                pcm = synthesize(midi, sample_rate, seconds)
+                source = "original synthesis (handbell.core.bell_model), digital-handbell project"
+            cache[midi] = (pcm, source)
+        pcm, source = cache[midi]
         path = out_root / rel
         if rel.lower().endswith(".mp3"):
             write_mp3(path, pcm, sample_rate, kbps)
@@ -116,13 +152,24 @@ def generate(out_root, items, sample_rate, seconds, kbps):
                 "midi": midi,
                 "format": fmt,
                 "sample_rate": sample_rate,
-                "seconds": seconds,
+                "seconds": round(len(pcm) / 2.0 / sample_rate, 3),
                 "bytes": path.stat().st_size,
                 "sha256": _common.sha256_file(path),
-                "source": "original synthesis (handbell.core.bell_model), digital-handbell project",
+                "source": source,
                 "license": "MIT",
             }
         )
+    return records
+
+
+def write_masters(masters, notes, sample_rate, seconds):
+    """Synthesize ``notes`` as uncompressed masters plus their provenance."""
+    masters = Path(masters)
+    records = generate(masters, [(n, pitch.name_to_midi(n), "%s.wav" % n) for n in notes], sample_rate, seconds, 0, None)
+    with open(masters / "provenance.json", "w", encoding="utf-8", newline="\n") as f:
+        json.dump({"generator": "firmware/scripts/make_sounds.py --write-masters", "model": "handbell.core.bell_model.PARTIALS", "files": records}, f, indent=1, sort_keys=True)
+        f.write("\n")
+    _common.log("wrote %d masters to %s" % (len(records), masters))
     return records
 
 
@@ -134,13 +181,21 @@ def main(argv=None):
     ap.add_argument("--seconds", type=float, default=4.0)
     ap.add_argument("--kbps", type=int, default=64)
     ap.add_argument("--test-wav", default="A5", help="also write sounds/test/<NOTE>.wav for bring-up comparison ('' to skip)")
+    ap.add_argument("--test-mp3", default="A5", help="also write sounds/test/<NOTE>.mp3 for bring-up comparison ('' to skip)")
+    ap.add_argument("--masters", default=str(MASTERS), help="directory of uncompressed <NOTE>.wav masters")
+    ap.add_argument("--write-masters", action="store_true", help="synthesize the library masters into --masters and exit")
     args = ap.parse_args(argv)
+
+    if args.write_masters:
+        return write_masters(args.masters, LIBRARY, args.rate, args.seconds)
 
     out_root = Path(args.out)
     items = plan_from_config(args.config, args.rate, user_root=_common.SRC)
     if args.test_wav:
         items.append((args.test_wav, pitch.name_to_midi(args.test_wav), "sounds/test/%s.wav" % args.test_wav))
-    records = generate(out_root, items, args.rate, args.seconds, args.kbps)
+    if args.test_mp3:
+        items.append((args.test_mp3, pitch.name_to_midi(args.test_mp3), "sounds/test/%s.mp3" % args.test_mp3))
+    records = generate(out_root, items, args.rate, args.seconds, args.kbps, Path(args.masters))
     provenance = {
         "generator": "firmware/scripts/make_sounds.py",
         "model": "handbell.core.bell_model.PARTIALS",

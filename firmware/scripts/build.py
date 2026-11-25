@@ -101,7 +101,10 @@ def sounds_key(args):
         Path(make_sounds.__file__),
     ):
         h.update(path.read_bytes())
-    h.update(repr((args.rate, args.seconds, args.kbps, args.test_wav)).encode())
+    h.update(repr((args.rate, args.seconds, args.kbps, args.test_wav, args.test_mp3)).encode())
+    for p in sorted(make_sounds.MASTERS.glob("*.wav")):
+        h.update(p.name.encode())
+        h.update(p.read_bytes())
     user_sounds = _common.SRC / "sounds"
     if user_sounds.exists():
         for p in sorted(user_sounds.rglob("*")):
@@ -130,6 +133,7 @@ def build_sounds(out_dir, args):
                 "--seconds", str(args.seconds),
                 "--kbps", str(args.kbps),
                 "--test-wav", args.test_wav,
+                "--test-mp3", args.test_mp3,
             ]
         )
         key_file.write_text(key)
@@ -172,6 +176,7 @@ def main(argv=None):
     ap.add_argument("--seconds", type=float, default=4.0)
     ap.add_argument("--kbps", type=int, default=64)
     ap.add_argument("--test-wav", default="A5")
+    ap.add_argument("--test-mp3", default="A5")
     ap.add_argument("--allow-over-budget", action="store_true")
     args = ap.parse_args(argv)
 

@@ -68,10 +68,10 @@ def test_click_selects_next_bell_with_preview_and_persists_after_delay():
     rig = Rig()
     rig.press()
     rig.idle(400)
-    assert rig.inst.selected.id == "D5"
-    assert rig.audio.plays()[-1][2] == "D5"
+    assert rig.inst.selected.id == "G5"
+    assert rig.audio.plays()[-1][2] == "G5"
     assert rig.audio.plays()[-1][3] == pytest.approx(0.2)
-    assert rig.link.messages("select")[-1]["bell"] == "D5"
+    assert rig.link.messages("select")[-1]["bell"] == "G5"
     assert rig.store.saves == 0
     rig.idle(2100)
     assert rig.store.state == {"index": 1, "locked": False, "accessible": False, "volume": 3}
@@ -83,7 +83,7 @@ def test_double_click_selects_previous():
     rig.idle(100)
     rig.press()
     rig.idle(3000)
-    assert rig.inst.selected.id == "C6"
+    assert rig.inst.selected.id == "G5"
 
 
 def test_press_while_sounding_damps_immediately():
@@ -155,8 +155,8 @@ def test_accessible_mode_rings_on_button_down():
 
 
 def test_restores_persisted_state():
-    rig = Rig(store_state={"index": 3, "locked": True, "accessible": False})
-    assert rig.inst.selected.id == "F5" and rig.inst.locked
+    rig = Rig(store_state={"index": 1, "locked": True, "accessible": False})
+    assert rig.inst.selected.id == "G5" and rig.inst.locked
 
 
 def test_sleeps_after_keep_awake_when_silent():

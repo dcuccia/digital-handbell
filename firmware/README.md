@@ -142,7 +142,7 @@ cannot pass silently. The main keys:
 
 | Key | Meaning |
 |---|---|
-| `bells` | Resident notes, in button order: `{"id": "C5", "sound": "sounds/C5.mp3", "gain": 1.0}`. Set `sound` to `"synth"` for a modelled bell that uses no storage |
+| `bells` | Resident notes, in button order (default C5 and G5 as 16-bit WAV): `{"id": "C5", "sound": "sounds/C5.wav", "gain": 1.0}`. Set `sound` to `"synth"` for a modelled bell that uses no storage. MP3 is supported but drops out under load on RP2040; see [audio assets](../docs/firmware/audio-assets.md#why-the-instrument-bells-are-wav) |
 | `select` | `"cycle"` (button changes the bell) or `"fixed"` |
 | `mode` | `"play"` or `"accessible"` (button rings) |
 | `ring.sens` | `"normal"` or `"quick"` (HGP sensitivity) |
