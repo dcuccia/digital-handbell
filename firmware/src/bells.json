@@ -8,7 +8,7 @@
   "select": "cycle",
   "mode": "play",
   "ring": {"sens": "normal"},
-  "detector": {},
+  "detector": {"min_peak_omega": 350.0},
   "controls": {
     "timing": {"double_ms": 300, "long_ms": 800, "very_long_ms": 5000},
     "key_velocity": 0.6,

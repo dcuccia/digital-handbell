@@ -84,6 +84,29 @@ The instrument also streams raw rows when `"debug": {"raw": true}`, which
 records real playing with detection side by side. Printing costs loop
 time; check `status.rateHz`.
 
+### First-article measurement (2026-11-25)
+
+On the assembled first-article bell, the owner reported that light taps
+rang it. A five-minute capture with deliberately low thresholds
+(`arm_omega` 60, `min_peak_omega` 80, `min_decel` 1000) printed every
+stroke while the owner tapped and rang it in separate groups:
+
+| Group | Peak angular speed (deg/s) | Max deceleration (deg/s²) | Peak acceleration (m/s²) |
+|---|---|---|---|
+| Normal rings (7) | 577-939 | 24,000-40,000 | 61-74 |
+| Soft rings (2) | 452-570 | 17,000-18,000 | 43-49 |
+| Light taps (6) | 134-251 | 12,000-45,000 | 48-77 |
+
+Taps stop as abruptly as rings and jolt as hard, so `min_decel` and
+acceleration don't separate them; peak angular speed does. The shipped
+`bells.json` and defaults therefore override **`min_peak_omega` to 350**,
+midway between the strongest tap and the softest ring. The other
+parameters keep the Go Go HarmoniYo defaults. This is a small, unlabelled
+sample: one 254 deg/s stroke was ambiguous, and no ring trace was saved.
+Lower the value toward 300 if soft rings are missed, or raise it if taps
+still ring, and repeat the capture with `capture_trace.py` before changing
+the default again.
+
 ## Timing budget to measure
 
 | Stage | Expected | How to measure |
@@ -102,6 +125,8 @@ historical [CircuitPython #7322](https://github.com/adafruit/circuitpython/issue
 
 Traces use HGP's `raw` columns, so the same recordings can be replayed
 through the TypeScript detector in that project. Parameter names, units
-and defaults match S1 at `51ae4af5`. When either side changes a detector
+and defaults match S1 at `51ae4af5`; the handbell's `min_peak_omega`
+override (350, above) is a per-instrument config value, not a changed
+default. When either side changes a detector
 default, record it in both repositories' notes rather than letting them
 drift silently.

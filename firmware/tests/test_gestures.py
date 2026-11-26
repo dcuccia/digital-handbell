@@ -112,3 +112,14 @@ def test_impact_detector_fires_once_on_spike_with_gravity_floor():
             events.append(e)
     assert len(events) == 1
     assert events[0].t == (119 * 2404 + 120 * 2404) // 2
+
+def test_shipped_detector_rejects_light_taps_but_rings_soft_strokes():
+    # First-article capture (docs/firmware/gesture-tuning.md): taps peaked at
+    # 134-251 deg/s, soft rings at 452-570, both stopping abruptly.
+    from handbell.core import config
+
+    detector = config.parse().detector
+    assert run(RingDetector(detector), stroke(1000, 250, 40, 15)) == []
+    assert len(run(RingDetector(detector), stroke(1000, 450, 150, 30))) == 1
+    # The shared Go Go HarmoniYo default alone would ring on the same tap.
+    assert len(run(RingDetector(), stroke(1000, 250, 40, 15))) == 1
