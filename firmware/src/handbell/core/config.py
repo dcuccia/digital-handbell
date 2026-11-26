@@ -41,7 +41,9 @@ DEFAULTS = {
     "select": "cycle",
     "mode": "play",
     "ring": {"sens": "normal"},
-    "detector": {},
+    # Handbell overrides of the Go Go HarmoniYo detector defaults, from
+    # first-article measurements (docs/firmware/gesture-tuning.md).
+    "detector": {"min_peak_omega": 350.0},
     "damp": {
         "enabled": False,
         "min_after_ring_ms": 150,
